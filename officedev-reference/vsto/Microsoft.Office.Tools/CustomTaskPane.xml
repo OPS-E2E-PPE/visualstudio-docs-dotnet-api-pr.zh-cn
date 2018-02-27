@@ -1,0 +1,615 @@
+<Type Name="CustomTaskPane" FullName="Microsoft.Office.Tools.CustomTaskPane">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="e0074abf4d0611f963cfd5dbc56b13898ed95852" />
+    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.translationtype" Value="HT" />
+    <Meta Name="ms.contentlocale" Value="zh-CN" />
+    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public interface CustomTaskPane : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract CustomTaskPane implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.CustomTaskPane" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.Tools.Outlook.v4.0.Utilities</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.Tools.Word.v4.0.Utilities</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("881b42fd-484d-4494-8500-779de4e4aac1")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.TypeIdentifier</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+      <span data-ttu-id="5da04-101">Represents a custom task pane in a Microsoft Office application.</span>
+      <span class="sxs-lookup">
+        <span data-stu-id="5da04-101">Represents a custom task pane in a Microsoft Office application.</span>
+      </span>
+    </summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="5da04-102">使用<xref:Microsoft.Office.Tools.CustomTaskPane>中应用程序级外接程序来修改一个自定义任务窗格或位置或自定义任务窗格可见性更改时进行响应对象。</span><span class="sxs-lookup"><span data-stu-id="5da04-102">Use a <xref:Microsoft.Office.Tools.CustomTaskPane> object in an application-level add-in to modify a custom task pane, or to respond when the location or visibility of the custom task pane changes.</span></span> <span data-ttu-id="5da04-103">任务窗格是用户界面面板，通常停靠到应用程序窗口的一侧。</span><span class="sxs-lookup"><span data-stu-id="5da04-103">Task panes are user interface panels that are typically docked to one side of an application window.</span></span> <span data-ttu-id="5da04-104">有关如何创建自定义任务窗格的信息，请参阅[自定义任务窗格](/visualstudio/vsto/custom-task-panes.md)。</span><span class="sxs-lookup"><span data-stu-id="5da04-104">For information about how to create custom task panes, see [Custom Task Panes](/visualstudio/vsto/custom-task-panes.md).</span></span>  
+  
+ <span data-ttu-id="5da04-105">若要控制的大小或自定义任务窗格的位置，可以使用属性，如<xref:Microsoft.Office.Tools.CustomTaskPane.Height%2A>， <xref:Microsoft.Office.Tools.CustomTaskPane.Width%2A>，和<xref:Microsoft.Office.Tools.CustomTaskPane.Visible%2A>。</span><span class="sxs-lookup"><span data-stu-id="5da04-105">To control the size or location of the custom task pane, you can use properties such as <xref:Microsoft.Office.Tools.CustomTaskPane.Height%2A>, <xref:Microsoft.Office.Tools.CustomTaskPane.Width%2A>, and <xref:Microsoft.Office.Tools.CustomTaskPane.Visible%2A>.</span></span>  
+  
+ <span data-ttu-id="5da04-106">若要响应自定义任务窗格移动或更改可见性时，你可以处理<xref:Microsoft.Office.Tools.CustomTaskPane.DockPositionChanged>和<xref:Microsoft.Office.Tools.CustomTaskPane.VisibleChanged>事件。</span><span class="sxs-lookup"><span data-stu-id="5da04-106">To respond when the custom task pane moves or changes visibility, you can handle the <xref:Microsoft.Office.Tools.CustomTaskPane.DockPositionChanged> and <xref:Microsoft.Office.Tools.CustomTaskPane.VisibleChanged> events.</span></span>  
+  
+ [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
+  
+## <a name="usage"></a><span data-ttu-id="5da04-107">用法</span><span class="sxs-lookup"><span data-stu-id="5da04-107">Usage</span></span>  
+ [!INCLUDE[vsto_net35mref](~/includes/vsto-net35mref-md.md)]  
+  
+   
+  
+## Examples  
+ <span data-ttu-id="5da04-108">下面的代码示例演示如何通过创建自定义任务窗格<xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%28System.Windows.Forms.UserControl%2CSystem.String%29>方法。</span><span class="sxs-lookup"><span data-stu-id="5da04-108">The following code example demonstrates how to create a custom task pane by using the <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%28System.Windows.Forms.UserControl%2CSystem.String%29> method.</span></span> <span data-ttu-id="5da04-109">该示例使用的属性<xref:Microsoft.Office.Tools.CustomTaskPane>对象设置的默认外观的自定义任务窗格，而且还定义的事件处理程序<xref:Microsoft.Office.Tools.CustomTaskPane.DockPositionChanged>事件。</span><span class="sxs-lookup"><span data-stu-id="5da04-109">The example uses properties of the <xref:Microsoft.Office.Tools.CustomTaskPane> object to set the default appearance of the custom task pane, and it defines an event handler for the <xref:Microsoft.Office.Tools.CustomTaskPane.DockPositionChanged> event.</span></span> <span data-ttu-id="5da04-110">若要编译此示例中，将代码复制到`ThisAddIn`支持自定义任务窗格的应用程序的外接程序项目中的类。</span><span class="sxs-lookup"><span data-stu-id="5da04-110">To compile this example, copy the code into the `ThisAddIn` class in an add-in project for an application that supports custom task panes.</span></span> <span data-ttu-id="5da04-111">将默认替换`ThisAddIn_Startup`中的方法`ThisAddIn`类，该类具有`ThisAddIn_Startup`在此示例中的方法。</span><span class="sxs-lookup"><span data-stu-id="5da04-111">Replace the default `ThisAddIn_Startup` method in the `ThisAddIn` class with the `ThisAddIn_Startup` method in this example.</span></span> <span data-ttu-id="5da04-112">此示例还假定该项目包含<xref:System.Windows.Forms.UserControl>名为`MyUserControl`，和<xref:System.Windows.Forms.UserControl>包含<xref:System.Windows.Forms.FlowLayoutPanel>名为`FlowPanel`。</span><span class="sxs-lookup"><span data-stu-id="5da04-112">This example also assumes that the project contains a <xref:System.Windows.Forms.UserControl> named `MyUserControl`, and the <xref:System.Windows.Forms.UserControl> contains a <xref:System.Windows.Forms.FlowLayoutPanel> named `FlowPanel`.</span></span>  
+  
+ [!code-csharp[Trin_TaskPaneReference#1](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_TaskPaneReference/CS/ThisAddIn.cs#1)]
+ [!code-vb[Trin_TaskPaneReference#1](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_TaskPaneReference/VB/ThisAddIn.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Control">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.UserControl Control { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.UserControl Control" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.CustomTaskPane.Control" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.UserControl</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="5da04-113">Gets the <see cref="T:System.Windows.Forms.UserControl" /> that provides the user interface of the custom task pane.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="5da04-113">Gets the <see cref="T:System.Windows.Forms.UserControl" /> that provides the user interface of the custom task pane.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="5da04-114">
+            <see cref="T:System.Windows.Forms.UserControl" />提供自定义任务窗格的用户界面。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="5da04-114">The <see cref="T:System.Windows.Forms.UserControl" /> that provides the user interface of the custom task pane.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="5da04-115">此属性返回<xref:System.Windows.Forms.UserControl>用于创建自定义任务窗格。</span><span class="sxs-lookup"><span data-stu-id="5da04-115">This property returns the <xref:System.Windows.Forms.UserControl> that was used to create the custom task pane.</span></span> <span data-ttu-id="5da04-116">有关详细信息，请参阅[自定义任务窗格](/visualstudio/vsto/custom-task-panes.md)。</span><span class="sxs-lookup"><span data-stu-id="5da04-116">For more information, see [Custom Task Panes](/visualstudio/vsto/custom-task-panes.md).</span></span>  
+  
+   
+  
+## Examples  
+ <span data-ttu-id="5da04-117">下面的代码示例使用<xref:Microsoft.Office.Tools.CustomTaskPane.Control%2A>属性来修改大小<xref:System.Windows.Forms.UserControl>上的事件处理程序中的任务窗格<xref:Microsoft.Office.Tools.CustomTaskPane.DockPositionChanged>事件。</span><span class="sxs-lookup"><span data-stu-id="5da04-117">The following code example uses the <xref:Microsoft.Office.Tools.CustomTaskPane.Control%2A> property to modify the size of the <xref:System.Windows.Forms.UserControl> on the task pane in the event handler for the <xref:Microsoft.Office.Tools.CustomTaskPane.DockPositionChanged> event.</span></span> <span data-ttu-id="5da04-118">此代码示例摘自更大的示例为提供<xref:Microsoft.Office.Tools.CustomTaskPane>。</span><span class="sxs-lookup"><span data-stu-id="5da04-118">This code example is part of a larger example provided for <xref:Microsoft.Office.Tools.CustomTaskPane>.</span></span>  
+  
+ [!code-csharp[Trin_TaskPaneReference#3](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_TaskPaneReference/CS/ThisAddIn.cs#3)]
+ [!code-vb[Trin_TaskPaneReference#3](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_TaskPaneReference/VB/ThisAddIn.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">
+          <span data-ttu-id="5da04-119">The <see cref="M:Microsoft.Office.Tools.CustomTaskPane.Dispose" /> method of the <see cref="T:Microsoft.Office.Tools.CustomTaskPane" /> has already been called.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="5da04-119">The <see cref="M:Microsoft.Office.Tools.CustomTaskPane.Dispose" /> method of the <see cref="T:Microsoft.Office.Tools.CustomTaskPane" /> has already been called.</span>
+          </span>
+        </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DockPosition">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Core.MsoCTPDockPosition DockPosition { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Office.Core.MsoCTPDockPosition DockPosition" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.CustomTaskPane.DockPosition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Core.MsoCTPDockPosition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="5da04-120">Gets or sets a value that specifies where the custom task pane is located relative to the application window.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="5da04-120">Gets or sets a value that specifies where the custom task pane is located relative to the application window.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="5da04-121">之一<c>Microsoft.Office.Core.MsoCTPDockPosition</c>值。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="5da04-121">One of the <c>Microsoft.Office.Core.MsoCTPDockPosition</c> values.</span>
+          </span>
+          <span data-ttu-id="5da04-122">默认值是<c>Microsoft.Office.Core.MsoCTPDockPosition.msoCTPDockPositionRight</c>。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="5da04-122">The default is <c>Microsoft.Office.Core.MsoCTPDockPosition.msoCTPDockPositionRight</c>.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="5da04-123">下表列出的值`Microsoft.Office.Core.MsoCTPDockPosition`枚举。</span><span class="sxs-lookup"><span data-stu-id="5da04-123">The following table lists the values of the `Microsoft.Office.Core.MsoCTPDockPosition` enumeration.</span></span>  
+  
+|<span data-ttu-id="5da04-124">“值”</span><span class="sxs-lookup"><span data-stu-id="5da04-124">Value</span></span>|<span data-ttu-id="5da04-125">描述</span><span class="sxs-lookup"><span data-stu-id="5da04-125">Description</span></span>|  
+|-----------|-----------------|  
+|`msoCTPDockPositionLeft`|<span data-ttu-id="5da04-126">自定义任务窗格停靠窗口的左侧。</span><span class="sxs-lookup"><span data-stu-id="5da04-126">Docks the custom task pane to the left side of the window.</span></span>|  
+|`msoCTPDockPositionTop`|<span data-ttu-id="5da04-127">自定义任务窗格停靠窗口的顶部。</span><span class="sxs-lookup"><span data-stu-id="5da04-127">Docks the custom task pane to the top of the window.</span></span>|  
+|`msoCTPDockPositionRight`|<span data-ttu-id="5da04-128">自定义任务窗格停靠窗口的右侧。</span><span class="sxs-lookup"><span data-stu-id="5da04-128">Docks the custom task pane to the right side of the window.</span></span>|  
+|`msoCTPDockPositionBottom`|<span data-ttu-id="5da04-129">自定义任务窗格停靠窗口的底部。</span><span class="sxs-lookup"><span data-stu-id="5da04-129">Docks the custom task pane to the bottom of the window.</span></span>|  
+|`msoCTPDockPositionFloating`|<span data-ttu-id="5da04-130">显示自定义任务窗格在窗口的前面。</span><span class="sxs-lookup"><span data-stu-id="5da04-130">Displays the custom task pane in front of the window.</span></span> <span data-ttu-id="5da04-131">用户可以将任务窗格拖动到窗口中的任何位置。</span><span class="sxs-lookup"><span data-stu-id="5da04-131">The user can drag the task pane to any location in the window.</span></span>|  
+  
+   
+  
+## Examples  
+ <span data-ttu-id="5da04-132">下面的代码示例创建一个自定义任务窗格，并当窗格显示在活动的应用程序窗口中的前面和它停靠时配置不同的默认大小。</span><span class="sxs-lookup"><span data-stu-id="5da04-132">The following code example creates a custom task pane and configures different default sizes for when the pane displays in front of the active application window, and when it is docked.</span></span> <span data-ttu-id="5da04-133">此代码示例摘自更大的示例为提供<xref:Microsoft.Office.Tools.CustomTaskPane>。</span><span class="sxs-lookup"><span data-stu-id="5da04-133">This code example is part of a larger example provided for <xref:Microsoft.Office.Tools.CustomTaskPane>.</span></span>  
+  
+ [!code-csharp[Trin_TaskPaneReference#2](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_TaskPaneReference/CS/ThisAddIn.cs#2)]
+ [!code-vb[Trin_TaskPaneReference#2](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_TaskPaneReference/VB/ThisAddIn.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">
+          <span data-ttu-id="5da04-134">The <see cref="M:Microsoft.Office.Tools.CustomTaskPane.Dispose" /> method of the <see cref="T:Microsoft.Office.Tools.CustomTaskPane" /> has already been called.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="5da04-134">The <see cref="M:Microsoft.Office.Tools.CustomTaskPane.Dispose" /> method of the <see cref="T:Microsoft.Office.Tools.CustomTaskPane" /> has already been called.</span>
+          </span>
+        </exception>
+        <exception cref="T:System.Runtime.InteropServices.COMException">
+          <span data-ttu-id="5da04-135">The value of the <see cref="P:Microsoft.Office.Tools.CustomTaskPane.DockPositionRestrict" /> property is <c>Microsoft.Office.Core.MsoCTPDockPosition.msoCTPDockPositionRestrictNoChange</c> when you try to change the value of the <see cref="P:Microsoft.Office.Tools.CustomTaskPane.DockPosition" /> property.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="5da04-135">The value of the <see cref="P:Microsoft.Office.Tools.CustomTaskPane.DockPositionRestrict" /> property is <c>Microsoft.Office.Core.MsoCTPDockPosition.msoCTPDockPositionRestrictNoChange</c> when you try to change the value of the <see cref="P:Microsoft.Office.Tools.CustomTaskPane.DockPosition" /> property.</span>
+          </span>
+          <span data-ttu-id="5da04-136">-or-</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="5da04-136">-or-</span>
+          </span>
+          <span data-ttu-id="5da04-137">You try to set this property in the event handler for the <see cref="E:Microsoft.Office.Tools.CustomTaskPane.DockPositionChanged" /> or <see cref="E:Microsoft.Office.Tools.CustomTaskPane.VisibleChanged" /> event.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="5da04-137">You try to set this property in the event handler for the <see cref="E:Microsoft.Office.Tools.CustomTaskPane.DockPositionChanged" /> or <see cref="E:Microsoft.Office.Tools.CustomTaskPane.VisibleChanged" /> event.</span>
+          </span>
+        </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DockPositionChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler DockPositionChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler DockPositionChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.CustomTaskPane.DockPositionChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="5da04-138">Occurs when the user changes the dock position of the custom task pane, or when code changes the value of the <see cref="P:Microsoft.Office.Tools.CustomTaskPane.DockPosition" /> property.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="5da04-138">Occurs when the user changes the dock position of the custom task pane, or when code changes the value of the <see cref="P:Microsoft.Office.Tools.CustomTaskPane.DockPosition" /> property.</span>
+          </span>
+        </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ <span data-ttu-id="5da04-139">下面的代码示例演示的事件处理程序<xref:Microsoft.Office.Tools.CustomTaskPane.DockPositionChanged>事件。</span><span class="sxs-lookup"><span data-stu-id="5da04-139">The following code example demonstrates an event handler for the <xref:Microsoft.Office.Tools.CustomTaskPane.DockPositionChanged> event.</span></span> <span data-ttu-id="5da04-140">此事件处理程序通过修改更改任务窗格上的控件的水平或垂直排列<xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A>属性<xref:System.Windows.Forms.FlowLayoutPanel>任务窗格中。</span><span class="sxs-lookup"><span data-stu-id="5da04-140">This event handler changes the horizontal or vertical arrangement of controls on the task pane by modifying the <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> property of a <xref:System.Windows.Forms.FlowLayoutPanel> on the task pane.</span></span> <span data-ttu-id="5da04-141">此代码示例假定任务窗格包含<xref:System.Windows.Forms.UserControl>名为`MyUserControl`，和<xref:System.Windows.Forms.UserControl>包含<xref:System.Windows.Forms.FlowLayoutPanel>名为`FlowPanel`。</span><span class="sxs-lookup"><span data-stu-id="5da04-141">This code example assumes that the task pane contains a <xref:System.Windows.Forms.UserControl> named `MyUserControl`, and the <xref:System.Windows.Forms.UserControl> contains a <xref:System.Windows.Forms.FlowLayoutPanel> named `FlowPanel`.</span></span> <span data-ttu-id="5da04-142">此示例摘自更大的示例为提供<xref:Microsoft.Office.Tools.CustomTaskPane>。</span><span class="sxs-lookup"><span data-stu-id="5da04-142">This example is part of a larger example provided for <xref:Microsoft.Office.Tools.CustomTaskPane>.</span></span>  
+  
+ [!code-csharp[Trin_TaskPaneReference#3](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_TaskPaneReference/CS/ThisAddIn.cs#3)]
+ [!code-vb[Trin_TaskPaneReference#3](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_TaskPaneReference/VB/ThisAddIn.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DockPositionRestrict">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Core.MsoCTPDockPositionRestrict DockPositionRestrict { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Office.Core.MsoCTPDockPositionRestrict DockPositionRestrict" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.CustomTaskPane.DockPositionRestrict" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Core.MsoCTPDockPositionRestrict</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="5da04-143">Gets or sets a value that prevents the custom task pane from being docked in the specified position.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="5da04-143">Gets or sets a value that prevents the custom task pane from being docked in the specified position.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="5da04-144">之一<c>Microsoft.Office.Core.MsoCTPDockPositionRestrict</c>值。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="5da04-144">One of the <c>Microsoft.Office.Core.MsoCTPDockPositionRestrict</c> values.</span>
+          </span>
+          <span data-ttu-id="5da04-145">默认值是<c>Microsoft.Office.Core.MsoCTPDockPosition.msoCTPDockPositionRestrictNone</c>。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="5da04-145">The default is <c>Microsoft.Office.Core.MsoCTPDockPosition.msoCTPDockPositionRestrictNone</c>.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="5da04-146">下表列出的值`Microsoft.Office.Core.MsoCTPDockPositionRestrict`枚举。</span><span class="sxs-lookup"><span data-stu-id="5da04-146">The following table lists the values of the `Microsoft.Office.Core.MsoCTPDockPositionRestrict` enumeration.</span></span>  
+  
+|<span data-ttu-id="5da04-147">“值”</span><span class="sxs-lookup"><span data-stu-id="5da04-147">Value</span></span>|<span data-ttu-id="5da04-148">描述</span><span class="sxs-lookup"><span data-stu-id="5da04-148">Description</span></span>|  
+|-----------|-----------------|  
+|`msoCTPDockPositionRestrictNone`|<span data-ttu-id="5da04-149">没有自定义任务窗格的停靠行为限制。</span><span class="sxs-lookup"><span data-stu-id="5da04-149">There are no restrictions on the docking behavior of the custom task pane.</span></span>|  
+|`msoCTPDockPositionRestrictNoChange`|<span data-ttu-id="5da04-150">无法更改的停靠位置。</span><span class="sxs-lookup"><span data-stu-id="5da04-150">The dock position cannot be changed.</span></span> <span data-ttu-id="5da04-151">如果自定义任务窗格浮动的不能停靠窗口的一侧。</span><span class="sxs-lookup"><span data-stu-id="5da04-151">If the custom task pane is floating, it cannot be docked to a side of the window.</span></span>|  
+|`msoCTPDockPositionRestrictNoHorizontal`|<span data-ttu-id="5da04-152">自定义任务窗格中不能固定到顶部或窗口的底部。</span><span class="sxs-lookup"><span data-stu-id="5da04-152">The custom task pane cannot be docked to the top or the bottom of the window.</span></span>|  
+|`msoCTPDockPositionRestrictNoVertical`|<span data-ttu-id="5da04-153">无法向左或窗口右侧停靠自定义任务窗格。</span><span class="sxs-lookup"><span data-stu-id="5da04-153">The custom task pane cannot be docked to the left or right side of the window.</span></span>|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">
+          <span data-ttu-id="5da04-154">The <see cref="M:Microsoft.Office.Tools.CustomTaskPane.Dispose" /> method of the <see cref="T:Microsoft.Office.Tools.CustomTaskPane" /> has already been called.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="5da04-154">The <see cref="M:Microsoft.Office.Tools.CustomTaskPane.Dispose" /> method of the <see cref="T:Microsoft.Office.Tools.CustomTaskPane" /> has already been called.</span>
+          </span>
+        </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Height">
+      <MemberSignature Language="C#" Value="public int Height { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Height" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.CustomTaskPane.Height" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="5da04-155">Gets or sets the height of the custom task pane, in points.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="5da04-155">Gets or sets the height of the custom task pane, in points.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="5da04-156">自定义任务窗格，以磅为单位的高度。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="5da04-156">The height of the custom task pane, in points.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="5da04-157">不要使用<xref:Microsoft.Office.Tools.CustomTaskPane.Height%2A>属性，如果自定义任务窗格停靠向左或文档窗口的右侧。</span><span class="sxs-lookup"><span data-stu-id="5da04-157">Do not use the <xref:Microsoft.Office.Tools.CustomTaskPane.Height%2A> property if the custom task pane is docked to the left or the right of the document window.</span></span> <span data-ttu-id="5da04-158">如果<xref:Microsoft.Office.Tools.CustomTaskPane.DockPosition%2A>属性是`Microsoft.Office.Core.MsoCTPDockPosition.msoCTPDockPositionRight`或`Microsoft.Office.Core.MsoCTPDockPosition.msoCTPDockPositionLeft`、<xref:Microsoft.Office.Tools.CustomTaskPane.Height%2A>属性，则返回 0，并且引发<xref:System.Runtime.InteropServices.COMException>如果你尝试将其设置。</span><span class="sxs-lookup"><span data-stu-id="5da04-158">If the <xref:Microsoft.Office.Tools.CustomTaskPane.DockPosition%2A> property is `Microsoft.Office.Core.MsoCTPDockPosition.msoCTPDockPositionRight` or `Microsoft.Office.Core.MsoCTPDockPosition.msoCTPDockPositionLeft`, the <xref:Microsoft.Office.Tools.CustomTaskPane.Height%2A> property returns 0 and throws a <xref:System.Runtime.InteropServices.COMException> if you try to set it.</span></span>  
+  
+ <span data-ttu-id="5da04-159">最大高度依赖于停靠位置。</span><span class="sxs-lookup"><span data-stu-id="5da04-159">The maximum height depends on the dock position.</span></span> <span data-ttu-id="5da04-160">自定义任务窗格停靠到顶部或文档窗口的底部，最大高度时，大约一半屏幕的高度。</span><span class="sxs-lookup"><span data-stu-id="5da04-160">When the custom task pane is docked to the top or bottom of the document window, the maximum height is approximately half the height of the screen.</span></span> <span data-ttu-id="5da04-161">当自定义任务窗格浮动的时没有任何最大高度。</span><span class="sxs-lookup"><span data-stu-id="5da04-161">When the custom task pane is floating, there is no maximum height.</span></span>  
+  
+ <span data-ttu-id="5da04-162">最小高度取决于多种因素，并可以更改在将来版本的 Microsoft Office。</span><span class="sxs-lookup"><span data-stu-id="5da04-162">The minimum height depends on several factors, and can change in future releases of Microsoft Office.</span></span> <span data-ttu-id="5da04-163">如果你尝试设置<xref:Microsoft.Office.Tools.CustomTaskPane.Height%2A>属性小于最小高度的值，应用程序将自动重新分配<xref:Microsoft.Office.Tools.CustomTaskPane.Height%2A>属性的最小高度。</span><span class="sxs-lookup"><span data-stu-id="5da04-163">If you try to set the <xref:Microsoft.Office.Tools.CustomTaskPane.Height%2A> property to a value that is less than the minimum height, the application will automatically reassign the <xref:Microsoft.Office.Tools.CustomTaskPane.Height%2A> property to the minimum height.</span></span>  
+  
+   
+  
+## Examples  
+ <span data-ttu-id="5da04-164">下面的代码示例创建一个在活动的应用程序窗口的前面显示时具有指定的高度的自定义任务窗格。</span><span class="sxs-lookup"><span data-stu-id="5da04-164">The following code example creates a custom task pane that has a specified height when it displays in front of the active application window.</span></span> <span data-ttu-id="5da04-165">此代码示例摘自更大的示例为提供<xref:Microsoft.Office.Tools.CustomTaskPane>。</span><span class="sxs-lookup"><span data-stu-id="5da04-165">This code example is part of a larger example provided for <xref:Microsoft.Office.Tools.CustomTaskPane>.</span></span>  
+  
+ [!code-csharp[Trin_TaskPaneReference#2](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_TaskPaneReference/CS/ThisAddIn.cs#2)]
+ [!code-vb[Trin_TaskPaneReference#2](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_TaskPaneReference/VB/ThisAddIn.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.COMException">
+          <span data-ttu-id="5da04-166">The value of the <see cref="P:Microsoft.Office.Tools.CustomTaskPane.DockPosition" /> property is <c>Microsoft.Office.Core.MsoCTPDockPosition.msoCTPDockPositionRight</c> or <c>Microsoft.Office.Core.MsoCTPDockPosition.msoCTPDockPositionLeft</c> when you try to set the <see cref="P:Microsoft.Office.Tools.CustomTaskPane.Height" /> property.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="5da04-166">The value of the <see cref="P:Microsoft.Office.Tools.CustomTaskPane.DockPosition" /> property is <c>Microsoft.Office.Core.MsoCTPDockPosition.msoCTPDockPositionRight</c> or <c>Microsoft.Office.Core.MsoCTPDockPosition.msoCTPDockPositionLeft</c> when you try to set the <see cref="P:Microsoft.Office.Tools.CustomTaskPane.Height" /> property.</span>
+          </span>
+          <span data-ttu-id="5da04-167">-or-</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="5da04-167">-or-</span>
+          </span>
+          <span data-ttu-id="5da04-168">You try to set the <see cref="P:Microsoft.Office.Tools.CustomTaskPane.Height" /> property in the event handler for the <see cref="E:Microsoft.Office.Tools.CustomTaskPane.DockPositionChanged" /> or <see cref="E:Microsoft.Office.Tools.CustomTaskPane.VisibleChanged" /> event.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="5da04-168">You try to set the <see cref="P:Microsoft.Office.Tools.CustomTaskPane.Height" /> property in the event handler for the <see cref="E:Microsoft.Office.Tools.CustomTaskPane.DockPositionChanged" /> or <see cref="E:Microsoft.Office.Tools.CustomTaskPane.VisibleChanged" /> event.</span>
+          </span>
+        </exception>
+        <exception cref="T:System.ObjectDisposedException">
+          <span data-ttu-id="5da04-169">The <see cref="M:Microsoft.Office.Tools.CustomTaskPane.Dispose" /> method of the <see cref="T:Microsoft.Office.Tools.CustomTaskPane" /> has already been called.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="5da04-169">The <see cref="M:Microsoft.Office.Tools.CustomTaskPane.Dispose" /> method of the <see cref="T:Microsoft.Office.Tools.CustomTaskPane" /> has already been called.</span>
+          </span>
+        </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Title">
+      <MemberSignature Language="C#" Value="public string Title { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Title" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.CustomTaskPane.Title" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="5da04-170">Gets the title of the custom task pane.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="5da04-170">Gets the title of the custom task pane.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="5da04-171">在自定义任务窗格的标题。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="5da04-171">The title of the custom task pane.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="5da04-172">若要设置自定义任务窗格的标题，请使用`title`参数<xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%2A?displayProperty=fullName>方法。</span><span class="sxs-lookup"><span data-stu-id="5da04-172">To set the title of the custom task pane, use the `title` parameter of the <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%2A?displayProperty=fullName> method.</span></span>  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">
+          <span data-ttu-id="5da04-173">The <see cref="M:Microsoft.Office.Tools.CustomTaskPane.Dispose" /> method of the <see cref="T:Microsoft.Office.Tools.CustomTaskPane" /> has already been called.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="5da04-173">The <see cref="M:Microsoft.Office.Tools.CustomTaskPane.Dispose" /> method of the <see cref="T:Microsoft.Office.Tools.CustomTaskPane" /> has already been called.</span>
+          </span>
+        </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Visible">
+      <MemberSignature Language="C#" Value="public bool Visible { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Visible" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.CustomTaskPane.Visible" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="5da04-174">Gets or sets a value that specifies whether the custom task pane is visible.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="5da04-174">Gets or sets a value that specifies whether the custom task pane is visible.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="5da04-175">
+            <see langword="true" /> 如果自定义任务窗格是可见的;否则为<see langword="false" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="5da04-175">
+              <see langword="true" /> if the custom task pane is visible; otherwise, <see langword="false" />.</span>
+          </span>
+          <span data-ttu-id="5da04-176">默认值为 <see langword="false" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="5da04-176">The default is <see langword="false" />.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="5da04-177">Microsoft Office 应用程序不提供默认的用户的 UI，以显示自定义任务窗格。</span><span class="sxs-lookup"><span data-stu-id="5da04-177">Microsoft Office applications do not provide a default UI for users to display custom task panes.</span></span> <span data-ttu-id="5da04-178">如果在外接程序中创建自定义任务窗格中，你还应创建 UI 元素，如按钮，可供用户单击以显示或隐藏自定义任务窗格。</span><span class="sxs-lookup"><span data-stu-id="5da04-178">If you create a custom task pane in your add-in, you should also create a UI element, such as a button, that users can click to display or hide your custom task pane.</span></span> <span data-ttu-id="5da04-179">有关详细信息，请参阅[自定义任务窗格](/visualstudio/vsto/custom-task-panes.md)。</span><span class="sxs-lookup"><span data-stu-id="5da04-179">For more information, see [Custom Task Panes](/visualstudio/vsto/custom-task-panes.md).</span></span>  
+  
+   
+  
+## Examples  
+ <span data-ttu-id="5da04-180">下面的代码示例创建一个自定义任务窗格，并显示它。</span><span class="sxs-lookup"><span data-stu-id="5da04-180">The following code example creates a custom task pane and displays it.</span></span> <span data-ttu-id="5da04-181">此代码示例摘自更大的示例为提供<xref:Microsoft.Office.Tools.CustomTaskPane>。</span><span class="sxs-lookup"><span data-stu-id="5da04-181">This code example is part of a larger example provided for <xref:Microsoft.Office.Tools.CustomTaskPane>.</span></span>  
+  
+ [!code-csharp[Trin_TaskPaneReference#2](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_TaskPaneReference/CS/ThisAddIn.cs#2)]
+ [!code-vb[Trin_TaskPaneReference#2](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_TaskPaneReference/VB/ThisAddIn.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.COMException">
+          <span data-ttu-id="5da04-182">You try to set this property in the event handler for the <see cref="E:Microsoft.Office.Tools.CustomTaskPane.DockPositionChanged" /> or <see cref="E:Microsoft.Office.Tools.CustomTaskPane.VisibleChanged" /> event.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="5da04-182">You try to set this property in the event handler for the <see cref="E:Microsoft.Office.Tools.CustomTaskPane.DockPositionChanged" /> or <see cref="E:Microsoft.Office.Tools.CustomTaskPane.VisibleChanged" /> event.</span>
+          </span>
+        </exception>
+        <exception cref="T:System.ObjectDisposedException">
+          <span data-ttu-id="5da04-183">The <see cref="M:Microsoft.Office.Tools.CustomTaskPane.Dispose" /> method of the <see cref="T:Microsoft.Office.Tools.CustomTaskPane" /> has already been called.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="5da04-183">The <see cref="M:Microsoft.Office.Tools.CustomTaskPane.Dispose" /> method of the <see cref="T:Microsoft.Office.Tools.CustomTaskPane" /> has already been called.</span>
+          </span>
+        </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="VisibleChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler VisibleChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler VisibleChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.CustomTaskPane.VisibleChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="5da04-184">Occurs when the user displays or closes the custom task pane, or when code changes the value of the <see cref="P:Microsoft.Office.Tools.CustomTaskPane.Visible" /> property.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="5da04-184">Occurs when the user displays or closes the custom task pane, or when code changes the value of the <see cref="P:Microsoft.Office.Tools.CustomTaskPane.Visible" /> property.</span>
+          </span>
+        </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="5da04-185">Microsoft Office 应用程序不提供默认的用户的 UI，以显示自定义任务窗格。</span><span class="sxs-lookup"><span data-stu-id="5da04-185">Microsoft Office applications do not provide a default UI for users to display custom task panes.</span></span> <span data-ttu-id="5da04-186">如果在外接程序中创建自定义任务窗格中，你还应创建 UI 元素，如按钮，可供用户单击以显示或隐藏自定义任务窗格。</span><span class="sxs-lookup"><span data-stu-id="5da04-186">If you create a custom task pane in your add-in, you should also create a UI element, such as a button, that users can click to display or hide your custom task pane.</span></span> <span data-ttu-id="5da04-187">有关详细信息，请参阅[自定义任务窗格](/visualstudio/vsto/custom-task-panes.md)。</span><span class="sxs-lookup"><span data-stu-id="5da04-187">For more information, see [Custom Task Panes](/visualstudio/vsto/custom-task-panes.md).</span></span>  
+  
+   
+  
+## Examples  
+ <span data-ttu-id="5da04-188">下面的代码示例演示的事件处理程序<xref:Microsoft.Office.Tools.CustomTaskPane.VisibleChanged>事件。</span><span class="sxs-lookup"><span data-stu-id="5da04-188">The following code example demonstrates an event handler for the <xref:Microsoft.Office.Tools.CustomTaskPane.VisibleChanged> event.</span></span> <span data-ttu-id="5da04-189">每当用户打开或关闭自定义任务窗格时，此事件处理程序更新的功能区上的切换按钮的状态。</span><span class="sxs-lookup"><span data-stu-id="5da04-189">This event handler updates the state of a toggle button on the Ribbon whenever the user opens or closes the custom task pane.</span></span> <span data-ttu-id="5da04-190">此代码示例摘自[演练： 将自定义任务窗格与功能区按钮同步](/visualstudio/vsto/walkthrough-synchronizing-a-custom-task-pane-with-a-ribbon-button.md)。</span><span class="sxs-lookup"><span data-stu-id="5da04-190">This code example is part of a larger example provided in [Walkthrough: Synchronizing a Custom Task Pane with a Ribbon Button](/visualstudio/vsto/walkthrough-synchronizing-a-custom-task-pane-with-a-ribbon-button.md).</span></span>  
+  
+ [!code-csharp[Trin_TaskPaneRibbonSynchronize#3](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_TaskPaneRibbonSynchronize/CS/ThisAddIn.cs#3)]
+ [!code-vb[Trin_TaskPaneRibbonSynchronize#3](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_TaskPaneRibbonSynchronize/VB/ThisAddIn.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Width">
+      <MemberSignature Language="C#" Value="public int Width { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Width" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.CustomTaskPane.Width" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="5da04-191">Gets or sets the width of the custom task pane, in points.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="5da04-191">Gets or sets the width of the custom task pane, in points.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="5da04-192">自定义任务窗格，以磅为单位的宽度。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="5da04-192">The width of the custom task pane, in points.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="5da04-193">不要使用<xref:Microsoft.Office.Tools.CustomTaskPane.Width%2A>属性，如果自定义任务窗格停靠到顶部或文档窗口的底部。</span><span class="sxs-lookup"><span data-stu-id="5da04-193">Do not use the <xref:Microsoft.Office.Tools.CustomTaskPane.Width%2A> property if the custom task pane is docked to the top or the bottom of the document window.</span></span> <span data-ttu-id="5da04-194">如果<xref:Microsoft.Office.Tools.CustomTaskPane.DockPosition%2A>属性是`Microsoft.Office.Core.MsoCTPDockPosition.msoCTPDockPositionTop`或`Microsoft.Office.Core.MsoCTPDockPosition.msoCTPDockPositionBottom`、<xref:Microsoft.Office.Tools.CustomTaskPane.Width%2A>属性，则返回 0，并且引发<xref:System.Runtime.InteropServices.COMException>如果你尝试将其设置。</span><span class="sxs-lookup"><span data-stu-id="5da04-194">If the <xref:Microsoft.Office.Tools.CustomTaskPane.DockPosition%2A> property is `Microsoft.Office.Core.MsoCTPDockPosition.msoCTPDockPositionTop` or `Microsoft.Office.Core.MsoCTPDockPosition.msoCTPDockPositionBottom`, the <xref:Microsoft.Office.Tools.CustomTaskPane.Width%2A> property returns 0 and throws a <xref:System.Runtime.InteropServices.COMException> if you try to set it.</span></span>  
+  
+ <span data-ttu-id="5da04-195">最大宽度取决于的停靠位置。</span><span class="sxs-lookup"><span data-stu-id="5da04-195">The maximum width depends on the dock position.</span></span> <span data-ttu-id="5da04-196">自定义任务窗格停靠到左侧或右侧的文档窗口中，最大宽度时，大约一半屏幕的宽度。</span><span class="sxs-lookup"><span data-stu-id="5da04-196">When the custom task pane is docked to the left or right of the document window, the maximum width is approximately half the width of the screen.</span></span> <span data-ttu-id="5da04-197">当自定义任务窗格浮动的时没有任何最大宽度。</span><span class="sxs-lookup"><span data-stu-id="5da04-197">When the custom task pane is floating, there is no maximum width.</span></span>  
+  
+ <span data-ttu-id="5da04-198">最小宽度取决于多种因素，并可以更改在将来版本的 Microsoft Office。</span><span class="sxs-lookup"><span data-stu-id="5da04-198">The minimum width depends on several factors, and can change in future releases of Microsoft Office.</span></span> <span data-ttu-id="5da04-199">如果你尝试设置<xref:Microsoft.Office.Tools.CustomTaskPane.Width%2A>属性小于最小宽度的值，应用程序将自动重新分配<xref:Microsoft.Office.Tools.CustomTaskPane.Width%2A>属性的最小宽度。</span><span class="sxs-lookup"><span data-stu-id="5da04-199">If you try to set the <xref:Microsoft.Office.Tools.CustomTaskPane.Width%2A> property to a value that is less than the minimum width, the application will automatically reassign the <xref:Microsoft.Office.Tools.CustomTaskPane.Width%2A> property to the minimum width.</span></span>  
+  
+   
+  
+## Examples  
+ <span data-ttu-id="5da04-200">下面的代码示例创建一个具有不同的默认宽度时它显示在活动的应用程序窗口中的前面和左侧或右侧窗口停靠时的自定义任务窗格。</span><span class="sxs-lookup"><span data-stu-id="5da04-200">The following code example creates a custom task pane that has a different default width when it displays in front of the active application window, and when it is docked to the left or right side of the window.</span></span> <span data-ttu-id="5da04-201">此代码示例摘自更大的示例为提供<xref:Microsoft.Office.Tools.CustomTaskPane>。</span><span class="sxs-lookup"><span data-stu-id="5da04-201">This code example is part of a larger example provided for <xref:Microsoft.Office.Tools.CustomTaskPane>.</span></span>  
+  
+ [!code-csharp[Trin_TaskPaneReference#2](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_TaskPaneReference/CS/ThisAddIn.cs#2)]
+ [!code-vb[Trin_TaskPaneReference#2](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_TaskPaneReference/VB/ThisAddIn.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.COMException">
+          <span data-ttu-id="5da04-202">The value of the <see cref="P:Microsoft.Office.Tools.CustomTaskPane.DockPosition" /> property is <c>Microsoft.Office.Core.MsoCTPDockPosition.msoCTPDockPositionTop</c> or <c>Microsoft.Office.Core.MsoCTPDockPosition.msoCTPDockPositionBottom</c> when you try to set the <see cref="P:Microsoft.Office.Tools.CustomTaskPane.Width" /> property.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="5da04-202">The value of the <see cref="P:Microsoft.Office.Tools.CustomTaskPane.DockPosition" /> property is <c>Microsoft.Office.Core.MsoCTPDockPosition.msoCTPDockPositionTop</c> or <c>Microsoft.Office.Core.MsoCTPDockPosition.msoCTPDockPositionBottom</c> when you try to set the <see cref="P:Microsoft.Office.Tools.CustomTaskPane.Width" /> property.</span>
+          </span>
+          <span data-ttu-id="5da04-203">-or-</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="5da04-203">-or-</span>
+          </span>
+          <span data-ttu-id="5da04-204">You try to set the <see cref="P:Microsoft.Office.Tools.CustomTaskPane.Width" /> property in the event handler for the <see cref="E:Microsoft.Office.Tools.CustomTaskPane.DockPositionChanged" /> or <see cref="E:Microsoft.Office.Tools.CustomTaskPane.VisibleChanged" /> event.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="5da04-204">You try to set the <see cref="P:Microsoft.Office.Tools.CustomTaskPane.Width" /> property in the event handler for the <see cref="E:Microsoft.Office.Tools.CustomTaskPane.DockPositionChanged" /> or <see cref="E:Microsoft.Office.Tools.CustomTaskPane.VisibleChanged" /> event.</span>
+          </span>
+        </exception>
+        <exception cref="T:System.ObjectDisposedException">
+          <span data-ttu-id="5da04-205">The <see cref="M:Microsoft.Office.Tools.CustomTaskPane.Dispose" /> method of the <see cref="T:Microsoft.Office.Tools.CustomTaskPane" /> has already been called.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="5da04-205">The <see cref="M:Microsoft.Office.Tools.CustomTaskPane.Dispose" /> method of the <see cref="T:Microsoft.Office.Tools.CustomTaskPane" /> has already been called.</span>
+          </span>
+        </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Window">
+      <MemberSignature Language="C#" Value="public object Window { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Window" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.CustomTaskPane.Window" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="5da04-206">Gets the document window that the custom task pane is associated with.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="5da04-206">Gets the document window that the custom task pane is associated with.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="5da04-207">一个对象，表示与自定义任务窗格关联的文档窗口。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="5da04-207">An object that represents the document window that the custom task pane is associated with.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="5da04-208">若要指定自定义任务窗格是与相关联的文档窗口，使用`window`参数<xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%28System.Windows.Forms.UserControl%2CSystem.String%2CSystem.Object%29>方法。</span><span class="sxs-lookup"><span data-stu-id="5da04-208">To specify the document window that the custom task pane is associated with, use the `window` parameter of the <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%28System.Windows.Forms.UserControl%2CSystem.String%2CSystem.Object%29> method.</span></span>  
+  
+ <span data-ttu-id="5da04-209">一种<xref:Microsoft.Office.Tools.CustomTaskPane.Window%2A>属性取决于应用程序。</span><span class="sxs-lookup"><span data-stu-id="5da04-209">The type of the <xref:Microsoft.Office.Tools.CustomTaskPane.Window%2A> property depends on the application.</span></span> <span data-ttu-id="5da04-210">下表列出的有效类型`window`参数。</span><span class="sxs-lookup"><span data-stu-id="5da04-210">The following table lists the valid types of the `window` parameter.</span></span>  
+  
+|<span data-ttu-id="5da04-211">应用程序</span><span class="sxs-lookup"><span data-stu-id="5da04-211">Application</span></span>|<span data-ttu-id="5da04-212">参数类型</span><span class="sxs-lookup"><span data-stu-id="5da04-212">Parameter type</span></span>|  
+|-----------------|--------------------|  
+|<span data-ttu-id="5da04-213">字</span><span class="sxs-lookup"><span data-stu-id="5da04-213">Word</span></span>|`Microsoft.Office.Interop.Word.Window`|  
+|<span data-ttu-id="5da04-214">Excel</span><span class="sxs-lookup"><span data-stu-id="5da04-214">Excel</span></span>|`Microsoft.Office.Interop.Excel.Window`|  
+|<span data-ttu-id="5da04-215">PowerPoint</span><span class="sxs-lookup"><span data-stu-id="5da04-215">PowerPoint</span></span>|`Microsoft.Office.Interop.PowerPoint.DocumentWindow`|  
+|<span data-ttu-id="5da04-216">InfoPath</span><span class="sxs-lookup"><span data-stu-id="5da04-216">InfoPath</span></span>|`Microsoft.Office.Interop.InfoPath.WindowObject`|  
+|<span data-ttu-id="5da04-217">Outlook</span><span class="sxs-lookup"><span data-stu-id="5da04-217">Outlook</span></span>|`Microsoft.Office.Interop.Outlook.Explorer`<br /><br /> <span data-ttu-id="5da04-218">或</span><span class="sxs-lookup"><span data-stu-id="5da04-218">-or-</span></span><br /><br /> `Microsoft.Office.Interop.Outlook.Inspector`|  
+  
+ <span data-ttu-id="5da04-219">有关详细信息，请参阅[自定义任务窗格](/visualstudio/vsto/custom-task-panes.md)。</span><span class="sxs-lookup"><span data-stu-id="5da04-219">For more information, see [Custom Task Panes](/visualstudio/vsto/custom-task-panes.md).</span></span>  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">
+          <span data-ttu-id="5da04-220">The <see cref="M:Microsoft.Office.Tools.CustomTaskPane.Dispose" /> method of the <see cref="T:Microsoft.Office.Tools.CustomTaskPane" /> has already been called.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="5da04-220">The <see cref="M:Microsoft.Office.Tools.CustomTaskPane.Dispose" /> method of the <see cref="T:Microsoft.Office.Tools.CustomTaskPane" /> has already been called.</span>
+          </span>
+        </exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
