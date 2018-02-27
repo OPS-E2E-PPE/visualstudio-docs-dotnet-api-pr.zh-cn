@@ -1,0 +1,474 @@
+<Type Name="PictureContentControl" FullName="Microsoft.Office.Tools.Word.PictureContentControl">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="219e73a8dd98c919e359e0648a78beda260b05db" />
+    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.translationtype" Value="HT" />
+    <Meta Name="ms.contentlocale" Value="zh-CN" />
+    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public interface PictureContentControl : IDisposable, Microsoft.Office.Tools.Word.ContentControlBase, System.ComponentModel.IComponent, System.ComponentModel.ISupportInitialize, System.Windows.Forms.IBindableComponent" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract PictureContentControl implements class Microsoft.Office.Tools.Word.ContentControlBase, class System.ComponentModel.IComponent, class System.ComponentModel.ISupportInitialize, class System.IDisposable, class System.Windows.Forms.IBindableComponent" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Word.PictureContentControl" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Office.Tools.Word.ContentControlBase</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ComponentModel.IComponent</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ComponentModel.ISupportInitialize</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Windows.Forms.IBindableComponent</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("51d2a6a8-eb22-448f-b239-2e8a3b86ea3e")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Represents a document region that displays an image.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A<xref:Microsoft.Office.Tools.Word.PictureContentControl>显示图像。 可以在设计时或运行时指定图像，用户也可以单击此控件以选择要插入文档中的图像。  
+  
+ 若要获取或设置图像，请使用<xref:Microsoft.Office.Tools.Word.PictureContentControl.Image%2A>属性。 默认情况下，用户无法更改中的图像<xref:Microsoft.Office.Tools.Word.PictureContentControl>在运行时。 如果你想要使用户能够选择要在控件中显示，请将映像<xref:Microsoft.Office.Tools.Word.PictureContentControl.ShowInsertPictureIcon%2A>属性`true`。  
+  
+ [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
+  
+## <a name="content-controls"></a>内容控件  
+ <xref:Microsoft.Office.Tools.Word.PictureContentControl>是八个类型的内容控件，可以使用设计文档和 Microsoft Office Word 中的模板之一。 内容控件具有用户界面 (UI)，具有控制类似于窗体的输入。 你可以使用内容控件来防止用户编辑受保护的部分的文档或模板，并还可以将内容控件绑定到数据源。 有关详细信息，请参阅[内容控件](/visualstudio/vsto/content-controls.md)。  
+  
+## <a name="usage"></a>用法  
+ [!INCLUDE[vsto_net35mref](~/includes/vsto-net35mref-md.md)]  
+  
+   
+  
+## Examples  
+ 下面的代码示例添加一个新<xref:Microsoft.Office.Tools.Word.PictureContentControl>到文档的开头。 此示例假定文件命名为`picture.bmp`存在 %UserProfile%\My Documents 文件夹 （对于 Windows XP 及更早版本） 或 %UserProfile%\Documents 文件夹中 （对于 Windows Vista)。  
+  
+ 此版本用于文档级自定义。 若要使用此代码，将其粘贴到`ThisDocument`中你的项目，然后调用类`AddPictureControlAtSelection`方法从`ThisDocument_Startup`方法。  
+  
+ [!code-csharp[Trin_ContentControlReference#500](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference/CS/Picture.cs#500)]
+ [!code-vb[Trin_ContentControlReference#500](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference/VB/Picture.vb#500)]  
+  
+ 此版本用于针对应用程序级外接程序。 若要使用此代码，将其粘贴到`ThisAddIn`中你的项目，然后调用类`AddPictureControlAtSelection`方法从`ThisAddIn_Startup`方法。  
+  
+ [!code-csharp[Trin_ContentControlReference_AppLevelAddIn#500](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/CS/Picture.cs#500)]
+ [!code-vb[Trin_ContentControlReference_AppLevelAddIn#500](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/VB/Picture.vb#500)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Application">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Word.Application Application { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Interop.Word.Application Application" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.PictureContentControl.Application" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Word.Application</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets a <see cref="T:Microsoft.Office.Interop.Word.Application" /> that represents the current instance of Microsoft Office Word.</summary>
+        <value>A <see cref="T:Microsoft.Office.Interop.Word.Application" /> ，表示 Microsoft Office Word 的当前实例。</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:Microsoft.Office.Tools.Word.PictureContentControl.Application%2A>属性公开有关 Word，应用于该实例的选项的当前实例的信息以及在实例中打开当前文档。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public void Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.PictureContentControl.Copy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Copies the <see cref="T:Microsoft.Office.Tools.Word.PictureContentControl" /> from the document to the Clipboard.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 当你使用<xref:Microsoft.Office.Tools.Word.PictureContentControl.Copy%2A>方法时，原始<xref:Microsoft.Office.Tools.Word.PictureContentControl>保留在文档。 一份<xref:Microsoft.Office.Tools.Word.PictureContentControl>（包括图像和所有属性设置) 将添加到剪贴板。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Creator">
+      <MemberSignature Language="C#" Value="public int Creator { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Creator" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.PictureContentControl.Creator" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets a 32-bit integer that indicates the application in which the <see cref="T:Microsoft.Office.Tools.Word.PictureContentControl" /> was created.</summary>
+        <value>一个 32 位整数，指示在其中创建该控件的应用程序。</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 如果<xref:Microsoft.Office.Tools.Word.PictureContentControl>在 Microsoft Office Word 中创建<xref:Microsoft.Office.Tools.Word.PictureContentControl.Creator%2A>属性返回表示字符串的十六进制数 4d535744， `MSWD`。 此字符串是 Word 的四个字符创建者代码。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cut">
+      <MemberSignature Language="C#" Value="public void Cut ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Cut() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.PictureContentControl.Cut" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Removes the <see cref="T:Microsoft.Office.Tools.Word.PictureContentControl" /> from the document and adds it to the Clipboard.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 当你使用<xref:Microsoft.Office.Tools.Word.PictureContentControl.Cut%2A>方法时，原始<xref:Microsoft.Office.Tools.Word.PictureContentControl>从文档中移除。 一份<xref:Microsoft.Office.Tools.Word.PictureContentControl>（包括图像和所有属性设置) 将添加到剪贴板。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Image">
+      <MemberSignature Language="C#" Value="public System.Drawing.Image Image { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Image Image" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.PictureContentControl.Image" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Image</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the image that is displayed by the <see cref="T:Microsoft.Office.Tools.Word.PictureContentControl" />.</summary>
+        <value>
+          <see cref="T:System.Drawing.Image" /> ，表示通过显示的图像<see cref="T:Microsoft.Office.Tools.Word.PictureContentControl" />。</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ 下面的代码示例添加一个新<xref:Microsoft.Office.Tools.Word.PictureContentControl>到文档的开头。 此示例使用<xref:Microsoft.Office.Tools.Word.PictureContentControl.Image%2A>要分配由控件显示的图像属性。 此示例假定文件命名为`picture.bmp`存在 %UserProfile%\My Documents 文件夹 （对于 Windows XP 及更早版本） 或 %UserProfile%\Documents 文件夹中 （对于 Windows Vista)。  
+  
+ 此版本用于文档级自定义。 若要使用此代码，将其粘贴到`ThisDocument`中你的项目，然后调用类`AddPictureControlAtSelection`方法从`ThisDocument_Startup`方法。  
+  
+ [!code-csharp[Trin_ContentControlReference#500](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference/CS/Picture.cs#500)]
+ [!code-vb[Trin_ContentControlReference#500](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference/VB/Picture.vb#500)]  
+  
+ 此版本用于针对应用程序级外接程序。 若要使用此代码，将其粘贴到`ThisAddIn`中你的项目，然后调用类`AddPictureControlAtSelection`方法从`ThisAddIn_Startup`方法。  
+  
+ [!code-csharp[Trin_ContentControlReference_AppLevelAddIn#500](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/CS/Picture.cs#500)]
+ [!code-vb[Trin_ContentControlReference_AppLevelAddIn#500](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/VB/Picture.vb#500)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LockContentControl">
+      <MemberSignature Language="C#" Value="public bool LockContentControl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool LockContentControl" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.PictureContentControl.LockContentControl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets a value that specifies whether the <see cref="T:Microsoft.Office.Tools.Word.PictureContentControl" /> can be deleted from the document.</summary>
+        <value>
+          如果可从文档删除 <see cref="T:Microsoft.Office.Tools.Word.PictureContentControl" />，则为 <see langword="true" />；如果不能删除此控件，则为 <see langword="false" />。 默认值为 <see langword="false" />。</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 若要阻止用户编辑的内容<xref:Microsoft.Office.Tools.Word.PictureContentControl>，使用<xref:Microsoft.Office.Tools.Word.PictureContentControl.LockContents%2A>属性。 有关如何使用<xref:Microsoft.Office.Tools.Word.PictureContentControl>若要保护的文档的一部分，请参阅[内容控件](/visualstudio/vsto/content-controls.md)和[如何： 使用内容控件保护文档的某些部分](/visualstudio/vsto/how-to-protect-parts-of-documents-by-using-content-controls.md)。  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.COMException">This property is set when the <see cref="P:Microsoft.Office.Tools.Word.PictureContentControl.Temporary" /> property is <see langword="true" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LockContents">
+      <MemberSignature Language="C#" Value="public bool LockContents { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool LockContents" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.PictureContentControl.LockContents" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets a value that specifies whether the contents of the <see cref="T:Microsoft.Office.Tools.Word.PictureContentControl" /> can be edited.</summary>
+        <value>
+          如果不能编辑 <see cref="T:Microsoft.Office.Tools.Word.PictureContentControl" /> 的内容，则为 <see langword="true" />；如果可以编辑内容，则为 <see langword="false" />。 默认值为 <see langword="false" />。</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 若要阻止用户删除<xref:Microsoft.Office.Tools.Word.PictureContentControl>从文档中，使用<xref:Microsoft.Office.Tools.Word.PictureContentControl.LockContentControl%2A>属性。 有关使用<xref:Microsoft.Office.Tools.Word.PictureContentControl>若要保护的文档的一部分，请参阅[内容控件](/visualstudio/vsto/content-controls.md)和[如何： 使用内容控件保护文档的某些部分](/visualstudio/vsto/how-to-protect-parts-of-documents-by-using-content-controls.md)。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="public object Parent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Parent" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.PictureContentControl.Parent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the parent of the <see cref="T:Microsoft.Office.Tools.Word.PictureContentControl" />.</summary>
+        <value>一个对象，表示的父<see cref="T:Microsoft.Office.Tools.Word.PictureContentControl" />。</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 父级<xref:Microsoft.Office.Tools.Word.PictureContentControl>是控件所在的对象。 例如，如果控件在文档的正文，则此属性将返回<xref:Microsoft.Office.Interop.Word.Document?displayProperty=fullName>对象。  
+  
+ 要获取其父类的<xref:Microsoft.Office.Tools.Word.PictureContentControl>中包含<xref:Microsoft.Office.Tools.Word.RichTextContentControl>或<xref:Microsoft.Office.Tools.Word.GroupContentControl>，使用<xref:Microsoft.Office.Tools.Word.PictureContentControl.ParentContentControl%2A>属性。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParentContentControl">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Word.ContentControl ParentContentControl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Interop.Word.ContentControl ParentContentControl" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.PictureContentControl.ParentContentControl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Word.ContentControl</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the parent content control of a <see cref="T:Microsoft.Office.Tools.Word.PictureContentControl" /> that is nested in another content control.</summary>
+        <value>A <c>Microsoft.Office.Interop.Word.ContentControl</c> ，表示在其中的内容控件<see cref="T:Microsoft.Office.Tools.Word.PictureContentControl" />嵌套;<see langword="null" />如果<see cref="T:Microsoft.Office.Tools.Word.PictureContentControl" />不嵌套在另一个内容控件。</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:Microsoft.Office.Tools.Word.RichTextContentControl>和<xref:Microsoft.Office.Tools.Word.GroupContentControl>控件是可以包含嵌套的内容控件的内容控件的唯一类型。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Range">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Word.Range Range { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Interop.Word.Range Range" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.PictureContentControl.Range" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Word.Range</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets a <see cref="T:Microsoft.Office.Interop.Word.Range" /> that represents the contents of the <see cref="T:Microsoft.Office.Tools.Word.PictureContentControl" />.</summary>
+        <value>一个 <see cref="T:Microsoft.Office.Interop.Word.Range" />，表示 <see cref="T:Microsoft.Office.Tools.Word.PictureContentControl" /> 的内容。</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 若要访问仅在显示的图像<xref:Microsoft.Office.Tools.Word.PictureContentControl>，使用<xref:Microsoft.Office.Tools.Word.PictureContentControl.Image%2A>属性。  
+  
+ 有关详细信息<xref:Microsoft.Office.Interop.Word.Range>对象，请参阅[Word 对象模型概述](/visualstudio/vsto/word-object-model-overview.md)。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowInsertPictureIcon">
+      <MemberSignature Language="C#" Value="public bool ShowInsertPictureIcon { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowInsertPictureIcon" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.PictureContentControl.ShowInsertPictureIcon" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets a value that specifies whether to display the UI that users can click to select an image to display in the control at run time.</summary>
+        <value>
+          <see langword="true" /> 如果<see cref="T:Microsoft.Office.Tools.Word.PictureContentControl" />显示的 UI 可供用户单击以选择要在控件中显示的图像运行时; 否则为<see langword="false" />。 默认值为 <see langword="false" />。</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 如果你想要使用户能够选择要在运行时在控件中显示的图像，则将此属性设置为`true`。 将此属性设置为`false`如果你想要在设计时，分配到控件的图像，并且你不希望用户在运行时更改的图像。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tag">
+      <MemberSignature Language="C#" Value="public string Tag { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Tag" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.PictureContentControl.Tag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets a string that you want to associate with the <see cref="T:Microsoft.Office.Tools.Word.PictureContentControl" />.</summary>
+        <value>你想要将与相关联的字符串<see cref="T:Microsoft.Office.Tools.Word.PictureContentControl" />。</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 你可以使用<xref:Microsoft.Office.Tools.Word.PictureContentControl.Tag%2A>属性来存储与关联的字符串<xref:Microsoft.Office.Tools.Word.PictureContentControl>文档处于打开状态时。  
+  
+ 若要查找由其标记的内容控件，使用<xref:Microsoft.Office.Tools.Word.Document.SelectContentControlsByTag%2A>方法。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Temporary">
+      <MemberSignature Language="C#" Value="public bool Temporary { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Temporary" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.PictureContentControl.Temporary" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets a value that specifies whether the <see cref="T:Microsoft.Office.Tools.Word.PictureContentControl" /> is automatically deleted from the document when the control is edited.</summary>
+        <value>
+          <see langword="true" /> 如果<see cref="T:Microsoft.Office.Tools.Word.PictureContentControl" />控件时编辑; 否则为将自动删除<see langword="false" />。 默认值为 <see langword="false" />。</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 如果<xref:Microsoft.Office.Tools.Word.PictureContentControl.Temporary%2A>属性是`true`、<xref:Microsoft.Office.Tools.Word.PictureContentControl>当用户单击在控件中，或以编程方式更改控件中的映像时，会自动删除。 当<xref:Microsoft.Office.Tools.Word.PictureContentControl>自动从文档，该映像将保持在文档中删除。  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.COMException">This property is set when the <see cref="P:Microsoft.Office.Tools.Word.PictureContentControl.LockContentControl" /> property is <see langword="true" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Title">
+      <MemberSignature Language="C#" Value="public string Title { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Title" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.PictureContentControl.Title" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the title of the <see cref="T:Microsoft.Office.Tools.Word.PictureContentControl" />.</summary>
+        <value>标题<see cref="T:Microsoft.Office.Tools.Word.PictureContentControl" />。</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 标题显示在边框<xref:Microsoft.Office.Tools.Word.PictureContentControl>当用户单击它。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XMLMapping">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Word.XMLMapping XMLMapping { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Interop.Word.XMLMapping XMLMapping" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.PictureContentControl.XMLMapping" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Word.XMLMapping</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets an <see cref="T:Microsoft.Office.Interop.Word.XMLMapping" /> that represents the binding between the <see cref="T:Microsoft.Office.Tools.Word.PictureContentControl" /> and an element in a custom XML part.</summary>
+        <value>一个 <see cref="T:Microsoft.Office.Interop.Word.XMLMapping" />，表示 <see cref="T:Microsoft.Office.Tools.Word.PictureContentControl" /> 与自定义 XML 部件中元素之间的绑定。</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 使用<xref:Microsoft.Office.Tools.Word.PictureContentControl.XMLMapping%2A>属性将绑定<xref:Microsoft.Office.Tools.Word.PictureContentControl>到一种 XML 中的元素 (也名为*自定义 XML 部件*) 嵌入在文档中。 有关详细信息，请参阅[内容控件](/visualstudio/vsto/content-controls.md)和[自定义 XML 部件概述](/visualstudio/vsto/custom-xml-parts-overview.md)。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

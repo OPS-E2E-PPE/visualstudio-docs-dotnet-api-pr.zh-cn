@@ -1,0 +1,188 @@
+<Type Name="OutlookAddInBase" FullName="Microsoft.Office.Tools.Outlook.OutlookAddInBase">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="bcf484559998d8341af7eec2291f6a3ca549d620" />
+    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.translationtype" Value="HT" />
+    <Meta Name="ms.contentlocale" Value="zh-CN" />
+    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public abstract class OutlookAddInBase : Microsoft.Office.Tools.AddInBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit OutlookAddInBase extends Microsoft.Office.Tools.AddInBase" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Outlook.OutlookAddInBase" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.Tools.Outlook.v4.0.Utilities</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Office.Tools.AddInBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Provides the base class for the <c>ThisAddIn</c> class in Outlook add-ins that you create by using Visual Studio.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:Microsoft.Office.Tools.Outlook.OutlookAddInBase>类提供用于 Outlook 的外接程序通过使用 Visual Studio 中的 Office 开发工具创建的功能。 <xref:Microsoft.Office.Tools.Outlook.OutlookAddInBase>类扩展<xref:Microsoft.Office.Tools.AddInBase>类通过提供可用于访问项目中的窗体区域的方法。 有关详细信息，请参阅[VSTO 外接程序编程](/visualstudio/vsto/programming-vsto-add-ins.md)。  
+  
+## <a name="usage"></a>用法  
+ [!INCLUDE[vsto_net4utilities](~/includes/vsto-net4utilities-md.md)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected OutlookAddInBase (Microsoft.Office.Tools.Outlook.Factory factory, IServiceProvider serviceProvider, string primaryCookie, string identifier);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class Microsoft.Office.Tools.Outlook.Factory factory, class System.IServiceProvider serviceProvider, string primaryCookie, string identifier) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Outlook.OutlookAddInBase.#ctor(Microsoft.Office.Tools.Outlook.Factory,System.IServiceProvider,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Outlook.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="factory" Type="Microsoft.Office.Tools.Outlook.Factory" />
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+        <Parameter Name="primaryCookie" Type="System.String" />
+        <Parameter Name="identifier" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="factory">To be added.</param>
+        <param name="serviceProvider">To be added.</param>
+        <param name="primaryCookie">To be added.</param>
+        <param name="identifier">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Base">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Tools.Outlook.OutlookAddIn Base { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Tools.Outlook.OutlookAddIn Base" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Outlook.OutlookAddInBase.Base" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Outlook.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Outlook.OutlookAddIn</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the <see cref="T:Microsoft.Office.Tools.Outlook.OutlookAddIn" /> object that this <see cref="T:Microsoft.Office.Tools.Outlook.OutlookAddInBase" /> object extends.</summary>
+        <value>对象此<see cref="T:Microsoft.Office.Tools.Outlook.OutlookAddInBase" />对象扩展。</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FormRegionFactoryResolve">
+      <MemberSignature Language="C#" Value="public event Microsoft.Office.Tools.Outlook.FormRegionFactoryResolveEventHandler FormRegionFactoryResolve;" />
+      <MemberSignature Language="ILAsm" Value=".event class Microsoft.Office.Tools.Outlook.FormRegionFactoryResolveEventHandler FormRegionFactoryResolve" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.Outlook.OutlookAddInBase.FormRegionFactoryResolve" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Outlook.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Outlook.FormRegionFactoryResolveEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Occurs when the add-in loads, and when a form region name that is specified in the registry does not match the name of any form regions defined in the add-in.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 你可以使用此事件以便在外接程序加载时提供一个或多个窗体区域。 在注册表中的窗体区域，你必须将其描述。 有关窗体区域注册表项的详细信息，请参阅[VSTO 外接程序的注册表项](/visualstudio/vsto/registry-entries-for-vsto-add-ins.md)。  
+  
+ 确保在注册表中指定的名称必须在外接程序中定义任何窗体区域的名称不匹配。  
+  
+ 在事件处理程序方法集中<xref:Microsoft.Office.Tools.Outlook.FormRegionFactoryResolveEventArgs.FormRegionFactory%2A>到任何实现类的实例<xref:Microsoft.Office.Tools.Outlook.IFormRegionFactory>接口。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFormRegions">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;Microsoft.Office.Tools.Outlook.IFormRegion&gt; GetFormRegions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IList`1&lt;class Microsoft.Office.Tools.Outlook.IFormRegion&gt; GetFormRegions() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Outlook.OutlookAddInBase.GetFormRegions" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Outlook.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;Microsoft.Office.Tools.Outlook.IFormRegion&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFormRegions">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;Microsoft.Office.Tools.Outlook.IFormRegion&gt; GetFormRegions (Microsoft.Office.Interop.Outlook.Explorer explorer, Type customCollectionType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IList`1&lt;class Microsoft.Office.Tools.Outlook.IFormRegion&gt; GetFormRegions(class Microsoft.Office.Interop.Outlook.Explorer explorer, class System.Type customCollectionType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Outlook.OutlookAddInBase.GetFormRegions(Microsoft.Office.Interop.Outlook.Explorer,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Outlook.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;Microsoft.Office.Tools.Outlook.IFormRegion&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="explorer" Type="Microsoft.Office.Interop.Outlook.Explorer" />
+        <Parameter Name="customCollectionType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="explorer">To be added.</param>
+        <param name="customCollectionType">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFormRegions">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;Microsoft.Office.Tools.Outlook.IFormRegion&gt; GetFormRegions (Microsoft.Office.Interop.Outlook.Inspector inspector, Type customCollectionType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IList`1&lt;class Microsoft.Office.Tools.Outlook.IFormRegion&gt; GetFormRegions(class Microsoft.Office.Interop.Outlook.Inspector inspector, class System.Type customCollectionType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Outlook.OutlookAddInBase.GetFormRegions(Microsoft.Office.Interop.Outlook.Inspector,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Outlook.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;Microsoft.Office.Tools.Outlook.IFormRegion&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inspector" Type="Microsoft.Office.Interop.Outlook.Inspector" />
+        <Parameter Name="customCollectionType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="inspector">To be added.</param>
+        <param name="customCollectionType">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
