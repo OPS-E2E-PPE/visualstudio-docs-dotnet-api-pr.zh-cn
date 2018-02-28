@@ -1,0 +1,444 @@
+<Type Name="SmartTagCollection" FullName="Microsoft.Office.Tools.SmartTagCollection">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="669167dd5190b39f40188d67c90346bbb97357b7" />
+    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.translationtype" Value="HT" />
+    <Meta Name="ms.contentlocale" Value="zh-CN" />
+    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public interface SmartTagCollection : IDisposable, System.Collections.IEnumerable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract SmartTagCollection implements class System.Collections.IEnumerable, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.SmartTagCollection" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.Tools.Word.v4.0.Utilities</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("30a90086-8c89-4e19-8299-47765d808408")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.TypeIdentifier</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+      <span data-ttu-id="4b184-101">表示一个 Word 或 Excel 解决方案中的智能标记的集合，该解决方案通过使用 Visual Studio 中的 Office 开发工具创建。</span>
+      <span class="sxs-lookup">
+        <span data-stu-id="4b184-101">Represents a collection of smart tags in a Word or Excel solution created by using the Office development tools in Visual Studio.</span>
+      </span>
+    </summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="4b184-102">当你创建的智能标记时，你将添加<xref:Microsoft.Office.Tools.SmartTagBase>对象传递给<xref:Microsoft.Office.Tools.Excel.Workbook.VstoSmartTags%2A?displayProperty=fullName>或<xref:Microsoft.Office.Tools.Word.Document.VstoSmartTags%2A?displayProperty=fullName>属性。</span><span class="sxs-lookup"><span data-stu-id="4b184-102">When you create a smart tag, you add a <xref:Microsoft.Office.Tools.SmartTagBase> object to the <xref:Microsoft.Office.Tools.Excel.Workbook.VstoSmartTags%2A?displayProperty=fullName> or <xref:Microsoft.Office.Tools.Word.Document.VstoSmartTags%2A?displayProperty=fullName> properties.</span></span> <span data-ttu-id="4b184-103">这些属性具有类型<xref:Microsoft.Office.Tools.SmartTagCollection>。</span><span class="sxs-lookup"><span data-stu-id="4b184-103">These properties have the type <xref:Microsoft.Office.Tools.SmartTagCollection>.</span></span>  
+  
+ [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
+  
+## <a name="usage"></a><span data-ttu-id="4b184-104">用法</span><span class="sxs-lookup"><span data-stu-id="4b184-104">Usage</span></span>  
+ <span data-ttu-id="4b184-105">此类型旨在使用仅在项目中，适用于 Excel 2007 和 Word 2007。</span><span class="sxs-lookup"><span data-stu-id="4b184-105">This type is intended to be used only in projects for Excel 2007 and Word 2007.</span></span> <span data-ttu-id="4b184-106">Word 2010 和 Excel 2010 中已弃用智能标记。</span><span class="sxs-lookup"><span data-stu-id="4b184-106">Smart tags are deprecated in Excel 2010 and Word 2010.</span></span>  
+  
+ [!INCLUDE[vsto_net35mref](~/includes/vsto-net35mref-md.md)]  
+  
+   
+  
+## Examples  
+ <span data-ttu-id="4b184-107">下面的代码使用<xref:Microsoft.Office.Tools.SmartTagCollection.Add%2A>方法将添加<xref:Microsoft.Office.Tools.Excel.SmartTag?displayProperty=fullName>到公开的智能标记的集合<xref:Microsoft.Office.Tools.Excel.Workbook.VstoSmartTags%2A?displayProperty=fullName>属性。</span><span class="sxs-lookup"><span data-stu-id="4b184-107">The following code uses the <xref:Microsoft.Office.Tools.SmartTagCollection.Add%2A> method to add a <xref:Microsoft.Office.Tools.Excel.SmartTag?displayProperty=fullName> to the collection of smart tags exposed by the <xref:Microsoft.Office.Tools.Excel.Workbook.VstoSmartTags%2A?displayProperty=fullName> property.</span></span> <span data-ttu-id="4b184-108">此代码示例摘自更大的示例为提供<xref:Microsoft.Office.Tools.Excel.Action?displayProperty=fullName>。</span><span class="sxs-lookup"><span data-stu-id="4b184-108">This code example is part of a larger example provided for <xref:Microsoft.Office.Tools.Excel.Action?displayProperty=fullName>.</span></span>  
+  
+ <span data-ttu-id="4b184-109">此示例适用于文档级自定义。</span><span class="sxs-lookup"><span data-stu-id="4b184-109">This example is for a document-level customization.</span></span>  
+  
+ [!code-csharp[Trin_ExcelSmartTags#2](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelSmartTags/CS/Trin_ExcelSmartTags.cs#2)]
+ [!code-vb[Trin_ExcelSmartTags#2](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelSmartTags/VB/ThisWorkbook.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (Microsoft.Office.Tools.SmartTagBase value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 Add(class Microsoft.Office.Tools.SmartTagBase value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.SmartTagCollection.Add(Microsoft.Office.Tools.SmartTagBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="Microsoft.Office.Tools.SmartTagBase" />
+      </Parameters>
+      <Docs>
+        <param name="value">
+          <span data-ttu-id="4b184-110">要添加的智能标记实例。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="4b184-110">The smart tag instance to be added.</span>
+          </span>
+        </param>
+        <summary>
+          <span data-ttu-id="4b184-111">将智能标记添加到 <see cref="T:Microsoft.Office.Tools.SmartTagCollection" /> 的末尾。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="4b184-111">Adds a smart tag to the end of the <see cref="T:Microsoft.Office.Tools.SmartTagCollection" />.</span>
+          </span> [!INCLUDE[vsto_smart_tags](~/includes/vsto-smart-tags-md.md)]<span data-ttu-id="4b184-112">。</span><span class="sxs-lookup"><span data-stu-id="4b184-112">.</span></span></summary>
+        <returns>
+          <span data-ttu-id="4b184-113">新智能标记在 <see cref="T:Microsoft.Office.Tools.SmartTagCollection" /> 中的索引。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="4b184-113">The index of the new smart tag in the <see cref="T:Microsoft.Office.Tools.SmartTagCollection" />.</span>
+          </span>
+        </returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ <span data-ttu-id="4b184-114">下面的代码使用<xref:Microsoft.Office.Tools.SmartTagCollection.Add%2A>方法将添加<xref:Microsoft.Office.Tools.Excel.SmartTag?displayProperty=fullName>到公开的智能标记的集合<xref:Microsoft.Office.Tools.Excel.Workbook.VstoSmartTags%2A?displayProperty=fullName>属性。</span><span class="sxs-lookup"><span data-stu-id="4b184-114">The following code uses the <xref:Microsoft.Office.Tools.SmartTagCollection.Add%2A> method to add a <xref:Microsoft.Office.Tools.Excel.SmartTag?displayProperty=fullName> to the collection of smart tags exposed by the <xref:Microsoft.Office.Tools.Excel.Workbook.VstoSmartTags%2A?displayProperty=fullName> property.</span></span> <span data-ttu-id="4b184-115">此代码示例摘自更大的示例为提供<xref:Microsoft.Office.Tools.Excel.Action?displayProperty=fullName>。</span><span class="sxs-lookup"><span data-stu-id="4b184-115">This code example is part of a larger example provided for <xref:Microsoft.Office.Tools.Excel.Action?displayProperty=fullName>.</span></span>  
+  
+ <span data-ttu-id="4b184-116">此示例适用于文档级自定义。</span><span class="sxs-lookup"><span data-stu-id="4b184-116">This example is for a document-level customization.</span></span>  
+  
+ [!code-csharp[Trin_ExcelSmartTags#2](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelSmartTags/CS/Trin_ExcelSmartTags.cs#2)]
+ [!code-vb[Trin_ExcelSmartTags#2](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelSmartTags/VB/ThisWorkbook.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public void AddRange (Microsoft.Office.Tools.SmartTagBase[] smartTags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddRange(class Microsoft.Office.Tools.SmartTagBase[] smartTags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.SmartTagCollection.AddRange(Microsoft.Office.Tools.SmartTagBase[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="smartTags" Type="Microsoft.Office.Tools.SmartTagBase[]" />
+      </Parameters>
+      <Docs>
+        <param name="smartTags">
+          <span data-ttu-id="4b184-117">要添加的智能标记对象的数组。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="4b184-117">The array of smart tag objects to be added.</span>
+          </span>
+        </param>
+        <summary>
+          <span data-ttu-id="4b184-118">将一个智能标记数组添加到 <see cref="T:Microsoft.Office.Tools.SmartTagCollection" />[!INCLUDE[vsto_smart_tags](~/includes/vsto-smart-tags-md.md)] 的末尾。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="4b184-118">Adds an array of smart tags to the end of the <see cref="T:Microsoft.Office.Tools.SmartTagCollection" />[!INCLUDE[vsto_smart_tags](~/includes/vsto-smart-tags-md.md)].</span>
+          </span>
+        </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginInit">
+      <MemberSignature Language="C#" Value="public void BeginInit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void BeginInit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.SmartTagCollection.BeginInit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (Microsoft.Office.Tools.SmartTagBase smartTag);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Contains(class Microsoft.Office.Tools.SmartTagBase smartTag) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.SmartTagCollection.Contains(Microsoft.Office.Tools.SmartTagBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="smartTag" Type="Microsoft.Office.Tools.SmartTagBase" />
+      </Parameters>
+      <Docs>
+        <param name="smartTag">
+          <span data-ttu-id="4b184-119">要检查的智能标记实例。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="4b184-119">The smart tag instance that you want to check for.</span>
+          </span>
+        </param>
+        <summary>
+          <span data-ttu-id="4b184-120">确定 <see cref="T:Microsoft.Office.Tools.SmartTagCollection" /> 是否包含特定的智能标记。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="4b184-120">Determines whether the <see cref="T:Microsoft.Office.Tools.SmartTagCollection" /> contains a specific smart tag.</span>
+          </span> [!INCLUDE[vsto_smart_tags](~/includes/vsto-smart-tags-md.md)]<span data-ttu-id="4b184-121">。</span><span class="sxs-lookup"><span data-stu-id="4b184-121">.</span></span></summary>
+        <returns>
+          <span data-ttu-id="4b184-122">如果 <see cref="T:Microsoft.Office.Tools.SmartTagCollection" /> 包含指定的智能标记，则为 <see langword="true" />；否则为 <see langword="false" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="4b184-122">
+              <see langword="true" /> if the <see cref="T:Microsoft.Office.Tools.SmartTagCollection" /> contains the specified smart tag; otherwise, <see langword="false" />.</span>
+          </span>
+        </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (Microsoft.Office.Tools.SmartTagBase[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class Microsoft.Office.Tools.SmartTagBase[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.SmartTagCollection.CopyTo(Microsoft.Office.Tools.SmartTagBase[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="Microsoft.Office.Tools.SmartTagBase[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">
+          <span data-ttu-id="4b184-123">从集合复制的智能标记的目标位置。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="4b184-123">The destination of the smart tags copied from the collection.</span>
+          </span>
+        </param>
+        <param name="index">
+          <span data-ttu-id="4b184-124">复制开始处的数组索引。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="4b184-124">The index of the array at which to begin copying.</span>
+          </span>
+        </param>
+        <summary>
+          <span data-ttu-id="4b184-125">将 <see cref="T:Microsoft.Office.Tools.SmartTagCollection" /> 中的智能标记复制到一个一维的智能标记数组中，并从指定的索引处开始。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="4b184-125">Copies the smart tags in the <see cref="T:Microsoft.Office.Tools.SmartTagCollection" /> to a one-dimensional array of smart tags, starting at a specified index.</span>
+          </span> [!INCLUDE[vsto_smart_tags](~/includes/vsto-smart-tags-md.md)]<span data-ttu-id="4b184-126">。</span><span class="sxs-lookup"><span data-stu-id="4b184-126">.</span></span></summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <span data-ttu-id="4b184-127">目标数组是多维数组，或者 <see cref="T:Microsoft.Office.Tools.SmartTagCollection" /> 中的元素数目大于 <paramref name="index" /> 参数指定的目标数组索引与目标数组末尾之间的可用空间。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="4b184-127">The destination array is multidimensional, or the number of elements in the <see cref="T:Microsoft.Office.Tools.SmartTagCollection" /> is greater than the available space between the index of the target array specified by the <paramref name="index" /> parameter and the end of the target array.</span>
+          </span>
+        </exception>
+        <exception cref="T:System.ArgumentNullException">
+          <span data-ttu-id="4b184-128">
+            <paramref name="array" /> 参数为 <see langword="null" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="4b184-128">The <paramref name="array" /> parameter is <see langword="null" />.</span>
+          </span>
+        </exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <span data-ttu-id="4b184-129">
+            <paramref name="index" /> 参数小于目标数组的最小索引。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="4b184-129">The <paramref name="index" /> parameter is less than the target array's minimum index.</span>
+          </span>
+        </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndInit">
+      <MemberSignature Language="C#" Value="public void EndInit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndInit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.SmartTagCollection.EndInit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (Microsoft.Office.Tools.SmartTagBase value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 IndexOf(class Microsoft.Office.Tools.SmartTagBase value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.SmartTagCollection.IndexOf(Microsoft.Office.Tools.SmartTagBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="Microsoft.Office.Tools.SmartTagBase" />
+      </Parameters>
+      <Docs>
+        <param name="value">
+          <span data-ttu-id="4b184-130">要在集合中定位的智能标记。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="4b184-130">The smart tag to locate in the collection.</span>
+          </span>
+        </param>
+        <summary>
+          <span data-ttu-id="4b184-131">确定指定的智能标记在 <see cref="T:Microsoft.Office.Tools.SmartTagCollection" /> 中的索引。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="4b184-131">Determines the index of a specified smart tag in the <see cref="T:Microsoft.Office.Tools.SmartTagCollection" />.</span>
+          </span> [!INCLUDE[vsto_smart_tags](~/includes/vsto-smart-tags-md.md)]<span data-ttu-id="4b184-132">。</span><span class="sxs-lookup"><span data-stu-id="4b184-132">.</span></span></summary>
+        <returns>
+          <span data-ttu-id="4b184-133">指定智能标记在 <see cref="T:Microsoft.Office.Tools.SmartTagCollection" /> 中的索引。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="4b184-133">The index of a specified smart tag in the <see cref="T:Microsoft.Office.Tools.SmartTagCollection" />.</span>
+          </span>
+          <span data-ttu-id="4b184-134">如果智能标记不在集合中，则返回 -1。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="4b184-134">If the smart tag is not in the collection, returns -1.</span>
+          </span>
+        </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, Microsoft.Office.Tools.SmartTagBase value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Insert(int32 index, class Microsoft.Office.Tools.SmartTagBase value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.SmartTagCollection.Insert(System.Int32,Microsoft.Office.Tools.SmartTagBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="Microsoft.Office.Tools.SmartTagBase" />
+      </Parameters>
+      <Docs>
+        <param name="index">
+          <span data-ttu-id="4b184-135">智能标记插入位置的索引，从 0 开始。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="4b184-135">The zero-based index at which the smart tag should be inserted.</span>
+          </span>
+        </param>
+        <param name="value">
+          <span data-ttu-id="4b184-136">要添加到集合的智能标记。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="4b184-136">The smart tag to add to the collection.</span>
+          </span>
+        </param>
+        <summary>
+          <span data-ttu-id="4b184-137">将智能标记插入 <see cref="T:Microsoft.Office.Tools.SmartTagCollection" /> 的指定索引处。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="4b184-137">Inserts a smart tag into the <see cref="T:Microsoft.Office.Tools.SmartTagCollection" /> at the specified index.</span>
+          </span> [!INCLUDE[vsto_smart_tags](~/includes/vsto-smart-tags-md.md)]<span data-ttu-id="4b184-138">。</span><span class="sxs-lookup"><span data-stu-id="4b184-138">.</span></span></summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Tools.SmartTagBase this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Tools.SmartTagBase Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.SmartTagCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.SmartTagBase</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">
+          <span data-ttu-id="4b184-139">要获取的智能标记的索引（从 0 开始）。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="4b184-139">The zero-based index of the smart tag to get.</span>
+          </span>
+        </param>
+        <summary>
+          <span data-ttu-id="4b184-140">获取指定索引处的智能标记。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="4b184-140">Gets the smart tag at the specified index.</span>
+          </span> [!INCLUDE[vsto_smart_tags](~/includes/vsto-smart-tags-md.md)]<span data-ttu-id="4b184-141">。</span><span class="sxs-lookup"><span data-stu-id="4b184-141">.</span></span></summary>
+        <value>
+          <span data-ttu-id="4b184-142">返回 <see cref="T:Microsoft.Office.Tools.SmartTagBase" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="4b184-142">Returns <see cref="T:Microsoft.Office.Tools.SmartTagBase" />.</span>
+          </span>
+        </value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (Microsoft.Office.Tools.SmartTagBase value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Remove(class Microsoft.Office.Tools.SmartTagBase value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.SmartTagCollection.Remove(Microsoft.Office.Tools.SmartTagBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="Microsoft.Office.Tools.SmartTagBase" />
+      </Parameters>
+      <Docs>
+        <param name="value">
+          <span data-ttu-id="4b184-143">要移除的智能标记。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="4b184-143">The smart tag to be removed.</span>
+          </span>
+        </param>
+        <summary>
+          <span data-ttu-id="4b184-144">从 <see cref="T:Microsoft.Office.Tools.SmartTagCollection" /> 中移除智能标记。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="4b184-144">Removes a smart tag from the <see cref="T:Microsoft.Office.Tools.SmartTagCollection" />.</span>
+          </span> [!INCLUDE[vsto_smart_tags](~/includes/vsto-smart-tags-md.md)]<span data-ttu-id="4b184-145">。</span><span class="sxs-lookup"><span data-stu-id="4b184-145">.</span></span></summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="4b184-146">如果集合包含相同的智能标记的多个匹配项，则只有第一个被删除。</span><span class="sxs-lookup"><span data-stu-id="4b184-146">If the collection contains more than one occurrence of the same smart tag, only the first one is removed.</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

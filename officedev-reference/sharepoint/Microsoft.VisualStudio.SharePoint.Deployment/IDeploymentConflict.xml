@@ -1,0 +1,168 @@
+<Type Name="IDeploymentConflict" FullName="Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflict">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="a869340a61c731ac8d7a68446be935118efcd2b4" />
+    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.translationtype" Value="HT" />
+    <Meta Name="ms.contentlocale" Value="zh-CN" />
+    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public interface IDeploymentConflict : System.ComponentModel.INotifyPropertyChanged" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDeploymentConflict implements class System.ComponentModel.INotifyPropertyChanged" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflict" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.INotifyPropertyChanged</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+      <span data-ttu-id="8e946-101">表示 SharePoint 项目项所部署的项与 SharePoint 站点上的项之间的冲突。</span>
+      <span class="sxs-lookup">
+        <span data-stu-id="8e946-101">Represents a conflict between items being deployed by a SharePoint project item and items on the SharePoint site.</span>
+      </span>
+    </summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="8e946-102">若要创建一个新<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflict>对象以处理部署冲突，请使用<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflictCollection.Add%2A?displayProperty=fullName>方法。</span><span class="sxs-lookup"><span data-stu-id="8e946-102">To create a new <xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflict> object to handle a deployment conflict, use the <xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflictCollection.Add%2A?displayProperty=fullName> method.</span></span> <span data-ttu-id="8e946-103">有关示例，请参阅[如何： 处理部署冲突](/visualstudio/sharepoint/how-to-handle-deployment-conflicts.md)。</span><span class="sxs-lookup"><span data-stu-id="8e946-103">For an example, see [How to: Handle Deployment Conflicts](/visualstudio/sharepoint/how-to-handle-deployment-conflicts.md).</span></span>  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflict.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="8e946-104">部署冲突的说明。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="8e946-104">The description of the deployment conflict.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="8e946-105">一个表示部署冲突说明的字符串。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="8e946-105">A string representing the description of a deployment conflict.</span>
+          </span>
+        </value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProjectItem">
+      <MemberSignature Language="C#" Value="public Microsoft.VisualStudio.SharePoint.ISharePointProjectItem ProjectItem { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.VisualStudio.SharePoint.ISharePointProjectItem ProjectItem" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflict.ProjectItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualStudio.SharePoint.ISharePointProjectItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="8e946-106">与此部署冲突相关联的 SharePoint 项目项。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="8e946-106">The SharePoint project item that is associated with this deployment conflict.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="8e946-107">一个表示 SharePoint 项目项的对象。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="8e946-107">A object representing a SharePoint project item.</span>
+          </span>
+        </value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PromptBeforeResolve">
+      <MemberSignature Language="C#" Value="public bool PromptBeforeResolve { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PromptBeforeResolve" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflict.PromptBeforeResolve" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="8e946-108">指示执行 <see cref="M:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflict.Resolve" /> 方法之前是否提示用户。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="8e946-108">Indicates whether to prompt the user before executing the <see cref="M:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflict.Resolve" /> method.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="8e946-109">如果提示用户，则为 <see langword="True" />；否则为 <see langword="false" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="8e946-109">
+              <see langword="True" /> if the user is prompted; <see langword="false" /> otherwise.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="8e946-110">更改此属性会通知通过<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.ProjectItemPropertyChanged>事件</span><span class="sxs-lookup"><span data-stu-id="8e946-110">Changes to this property are notified through the <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.ProjectItemPropertyChanged> event</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Resolve">
+      <MemberSignature Language="C#" Value="public bool Resolve ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Resolve() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflict.Resolve" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+          <span data-ttu-id="8e946-111">如果可能，将解决当前实例所表示的部署冲突。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="8e946-111">Resolves the deployment conflict represented by the current instance, if possible.</span>
+          </span>
+        </summary>
+        <returns>
+          <span data-ttu-id="8e946-112">如果解决成功，则为 <see langword="True " />；否则为 <see langword="false" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="8e946-112">
+              <see langword="True " />if resolution was successful; otherwise, <see langword="false" />.</span>
+          </span>
+        </returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="8e946-113">在调用此方法时，Visual Studio 将执行传递给该方法`resolve`参数<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflictCollection.Add%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="8e946-113">When you call this method, Visual Studio executes the method that you passed to the `resolve` parameter of the <xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflictCollection.Add%2A> method.</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

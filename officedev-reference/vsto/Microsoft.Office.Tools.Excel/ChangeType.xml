@@ -1,0 +1,173 @@
+<Type Name="ChangeType" FullName="Microsoft.Office.Tools.Excel.ChangeType">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="59989a20f6076fc30193f820b68af4f06dd31f2e" />
+    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.translationtype" Value="HT" />
+    <Meta Name="ms.contentlocale" Value="zh-CN" />
+    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public enum ChangeType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ChangeType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Excel.ChangeType" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+      <span data-ttu-id="ebb4b-101">提供 <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 控件是如何还原被用户更改的数据的相关信息。</span>
+      <span class="sxs-lookup">
+        <span data-stu-id="ebb4b-101">Provides information about how a <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> control restored data that was changed by a user.</span>
+      </span>
+    </summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="ebb4b-102">当<xref:Microsoft.Office.Tools.Excel.ListObject>控件绑定到数据以及用户执行的操作，不允许，<xref:Microsoft.Office.Tools.Excel.ListObject>控件将自身还原为其以前的状态并引发<xref:Microsoft.Office.Tools.Excel.ListObject.OriginalDataRestored>事件。</span><span class="sxs-lookup"><span data-stu-id="ebb4b-102">When the <xref:Microsoft.Office.Tools.Excel.ListObject> control is bound to data and the user performs an operation that is not allowed, the <xref:Microsoft.Office.Tools.Excel.ListObject> control restores itself to its previous state and raises the <xref:Microsoft.Office.Tools.Excel.ListObject.OriginalDataRestored> event.</span></span> <span data-ttu-id="ebb4b-103"><xref:Microsoft.Office.Tools.Excel.ChangeType>枚举提供了有关发生的还原类型信息。</span><span class="sxs-lookup"><span data-stu-id="ebb4b-103">The <xref:Microsoft.Office.Tools.Excel.ChangeType> enumeration provides information about the kind of restoration that occurred.</span></span>  
+  
+   
+  
+## Examples  
+ <span data-ttu-id="ebb4b-104">下面的代码示例创建<xref:System.Data.DataTable>和<xref:Microsoft.Office.Tools.Excel.ListObject>，并将绑定<xref:Microsoft.Office.Tools.Excel.ListObject>到<xref:System.Data.DataTable>。</span><span class="sxs-lookup"><span data-stu-id="ebb4b-104">The following code example creates a <xref:System.Data.DataTable> and a <xref:Microsoft.Office.Tools.Excel.ListObject>, and binds the <xref:Microsoft.Office.Tools.Excel.ListObject> to the <xref:System.Data.DataTable>.</span></span> <span data-ttu-id="ebb4b-105">然后，它创建<xref:Microsoft.Office.Tools.Excel.ListObject.OriginalDataRestored>事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="ebb4b-105">It then creates an <xref:Microsoft.Office.Tools.Excel.ListObject.OriginalDataRestored> event handler.</span></span> <span data-ttu-id="ebb4b-106">要测试此事件，请右键单击上方的列字母<xref:Microsoft.Office.Tools.Excel.ListObject>在工作表 1，然后单击**删除**的快捷菜单中。</span><span class="sxs-lookup"><span data-stu-id="ebb4b-106">To test the event, right-click a column letter above the <xref:Microsoft.Office.Tools.Excel.ListObject> on sheet 1 and then click **Delete** in the shortcut menu.</span></span> <span data-ttu-id="ebb4b-107">事件处理程序替换列和列标题数据，并显示一条指示什么类型的数据已还原消息和，还原原始数据的原因。</span><span class="sxs-lookup"><span data-stu-id="ebb4b-107">The event handler replaces the column and column header data and displays a message indicating what kind of data was restored and the reason that the original data was restored.</span></span>  
+  
+ <span data-ttu-id="ebb4b-108">此示例适用于文档级自定义。</span><span class="sxs-lookup"><span data-stu-id="ebb4b-108">This example is for a document-level customization.</span></span>  
+  
+ [!code-csharp[Trin_ExcelListObject#25](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelListObject/CS/Trin_ExcelListObject.cs#25)]
+ [!code-vb[Trin_ExcelListObject#25](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelListObject/VB/Sheet1.vb#25)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ColumnAdded">
+      <MemberSignature Language="C#" Value="ColumnAdded" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.Tools.Excel.ChangeType ColumnAdded = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.Tools.Excel.ChangeType.ColumnAdded" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Excel.ChangeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="ebb4b-109">已添加到 <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 控件中的列。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="ebb4b-109">A column was added to the <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> control.</span>
+          </span>
+        </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ColumnHeaderRestored">
+      <MemberSignature Language="C#" Value="ColumnHeaderRestored" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.Tools.Excel.ChangeType ColumnHeaderRestored = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.Tools.Excel.ChangeType.ColumnHeaderRestored" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Excel.ChangeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="ebb4b-110">列标题文本已还原到为原始值。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="ebb4b-110">The text for the column header was restored to its original value.</span>
+          </span>
+        </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ColumnRemoved">
+      <MemberSignature Language="C#" Value="ColumnRemoved" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.Tools.Excel.ChangeType ColumnRemoved = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.Tools.Excel.ChangeType.ColumnRemoved" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Excel.ChangeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="ebb4b-111">已从 <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 控件移除的列。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="ebb4b-111">A column was removed from the <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> control.</span>
+          </span>
+        </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RangeValueRestored">
+      <MemberSignature Language="C#" Value="RangeValueRestored" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.Tools.Excel.ChangeType RangeValueRestored = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.Tools.Excel.ChangeType.RangeValueRestored" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Excel.ChangeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="ebb4b-112">一个范围内的值已还原为数据源中的值。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="ebb4b-112">The values in a range were restored to the values in the data source.</span>
+          </span>
+        </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RowAdded">
+      <MemberSignature Language="C#" Value="RowAdded" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.Tools.Excel.ChangeType RowAdded = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.Tools.Excel.ChangeType.RowAdded" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Excel.ChangeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="ebb4b-113">已添加到 <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 控件中的行。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="ebb4b-113">A row was added to the <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> control.</span>
+          </span>
+        </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RowRemoved">
+      <MemberSignature Language="C#" Value="RowRemoved" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.Tools.Excel.ChangeType RowRemoved = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.Tools.Excel.ChangeType.RowRemoved" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Excel.ChangeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="ebb4b-114">已从 <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 控件移除的行。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="ebb4b-114">A row was removed from the <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> control.</span>
+          </span>
+        </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

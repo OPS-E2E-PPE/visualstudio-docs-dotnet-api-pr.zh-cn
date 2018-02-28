@@ -1,0 +1,150 @@
+<Type Name="StackStyle" FullName="Microsoft.Office.Tools.StackStyle">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="7b7c05c296618c5c1130b815b84623f235c8e82c" />
+    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.translationtype" Value="HT" />
+    <Meta Name="ms.contentlocale" Value="zh-CN" />
+    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public enum StackStyle" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed StackStyle extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.StackStyle" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+      <span data-ttu-id="6f6f2-101">指定控件在操作窗格上堆叠的方向。</span>
+      <span class="sxs-lookup">
+        <span data-stu-id="6f6f2-101">Specifies the direction that controls will be stacked on an actions pane.</span>
+      </span>
+    </summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="6f6f2-102">此枚举由<xref:Microsoft.Office.Tools.ActionsPane.StackOrder%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="6f6f2-102">This enumeration is used by the <xref:Microsoft.Office.Tools.ActionsPane.StackOrder%2A> property.</span></span> <span data-ttu-id="6f6f2-103">关于操作窗格的详细信息，请参阅[操作窗格概述](/visualstudio/vsto/actions-pane-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="6f6f2-103">For more information about actions panes, see [Actions Pane Overview](/visualstudio/vsto/actions-pane-overview.md).</span></span>  
+  
+   
+  
+## Examples  
+ <span data-ttu-id="6f6f2-104">下面的代码示例演示的效果<xref:Microsoft.Office.Tools.ActionsPane.StackOrder%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="6f6f2-104">The following code example demonstrates the effects of the <xref:Microsoft.Office.Tools.ActionsPane.StackOrder%2A> property.</span></span> <span data-ttu-id="6f6f2-105">A<xref:System.Windows.Forms.Button>操作窗格上的控件交替的值<xref:Microsoft.Office.Tools.ActionsPane.StackOrder%2A>(例如，如果操作窗格的方向为垂直单击按钮时，然后值<xref:Microsoft.Office.Tools.ActionsPane.StackOrder%2A>属性更改从`FromTop`到`FromBottom`).</span><span class="sxs-lookup"><span data-stu-id="6f6f2-105">A <xref:System.Windows.Forms.Button> control on the actions pane alternates the value of <xref:Microsoft.Office.Tools.ActionsPane.StackOrder%2A> (for example, if the orientation of the actions pane is vertical when the button is clicked, then a value of the <xref:Microsoft.Office.Tools.ActionsPane.StackOrder%2A> property changes from `FromTop` to `FromBottom`).</span></span> <span data-ttu-id="6f6f2-106">如果将操作窗格移动并引发<xref:Microsoft.Office.Tools.ActionsPane.OrientationChanged>事件，事件处理程序还会更新<xref:Microsoft.Office.Tools.ActionsPane.StackOrder%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="6f6f2-106">If you move the actions pane and raise the <xref:Microsoft.Office.Tools.ActionsPane.OrientationChanged> event, the event handler also updates the <xref:Microsoft.Office.Tools.ActionsPane.StackOrder%2A> property.</span></span>  
+  
+ [!code-csharp[Trin_ActionsPane#1](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ActionsPane/CS/thisworkbook.cs#1)]
+ [!code-vb[Trin_ActionsPane#1](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ActionsPane/VB/thisworkbook.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="FromBottom">
+      <MemberSignature Language="C#" Value="FromBottom" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.Tools.StackStyle FromBottom = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.Tools.StackStyle.FromBottom" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.StackStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="6f6f2-107">从操作窗格底部堆叠。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="6f6f2-107">Stack from the bottom of the actions pane.</span>
+          </span>
+        </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FromLeft">
+      <MemberSignature Language="C#" Value="FromLeft" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.Tools.StackStyle FromLeft = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.Tools.StackStyle.FromLeft" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.StackStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="6f6f2-108">从操作窗格左侧堆叠。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="6f6f2-108">Stack from the left of the actions pane.</span>
+          </span>
+        </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FromRight">
+      <MemberSignature Language="C#" Value="FromRight" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.Tools.StackStyle FromRight = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.Tools.StackStyle.FromRight" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.StackStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="6f6f2-109">从操作窗格右侧堆叠。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="6f6f2-109">Stack from the right of the actions pane.</span>
+          </span>
+        </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FromTop">
+      <MemberSignature Language="C#" Value="FromTop" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.Tools.StackStyle FromTop = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.Tools.StackStyle.FromTop" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.StackStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="6f6f2-110">从操作窗格顶部堆叠。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="6f6f2-110">Stack from the top of the actions pane.</span>
+          </span>
+        </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.Tools.StackStyle None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.Tools.StackStyle.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.StackStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="6f6f2-111">未定义堆叠顺序；由开发人员控制顺序。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="6f6f2-111">No stacking order defined; order is controlled by the developer.</span>
+          </span>
+        </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

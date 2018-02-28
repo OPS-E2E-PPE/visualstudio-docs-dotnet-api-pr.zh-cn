@@ -1,0 +1,678 @@
+<Type Name="RibbonComboBox" FullName="Microsoft.Office.Tools.Ribbon.RibbonComboBox">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="cfb7dc15c2faf38a0e807ab9e16ca197871d712a" />
+    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.translationtype" Value="HT" />
+    <Meta Name="ms.contentlocale" Value="zh-CN" />
+    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public interface RibbonComboBox : IDisposable, Microsoft.Office.Tools.Ribbon.RibbonControl, System.ComponentModel.IComponent" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract RibbonComboBox implements class Microsoft.Office.Tools.Ribbon.RibbonComponent, class Microsoft.Office.Tools.Ribbon.RibbonControl, class System.ComponentModel.IComponent, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Ribbon.RibbonComboBox" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Office.Tools.Ribbon.RibbonControl</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ComponentModel.IComponent</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("97074be3-d4bb-4923-881a-7a6e225738af")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+      <span data-ttu-id="8a3fa-101">表示自定义功能区上的组合框。</span>
+      <span class="sxs-lookup">
+        <span data-stu-id="8a3fa-101">Represents a combo box on a custom Ribbon.</span>
+      </span>
+    </summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="8a3fa-102">组合框向用户提供一个文本输入字段，以及下拉列表菜单中的选项列表。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-102">A combo box presents a user with a text entry field and a list of choices in a drop-down menu.</span></span>  
+  
+ <span data-ttu-id="8a3fa-103">你可以创建<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox>通过使用在运行时<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.CreateRibbonComboBox%2A>方法<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory>对象。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-103">You can create a <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox> at run time by using the <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.CreateRibbonComboBox%2A> method of the <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory> object.</span></span>  
+  
+ <span data-ttu-id="8a3fa-104">可通过两种方法来访问 <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory> 对象：</span><span class="sxs-lookup"><span data-stu-id="8a3fa-104">There are two ways to access the <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory> object:</span></span>  
+  
+-   <span data-ttu-id="8a3fa-105">通过使用 Ribbon 类的 `Factory` 属性。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-105">By using the `Factory` property of the Ribbon class.</span></span> <span data-ttu-id="8a3fa-106">可从 Ribbon 类中的代码使用此方法。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-106">Use this approach from code in your Ribbon class.</span></span>  
+  
+-   <span data-ttu-id="8a3fa-107">通过使用 `Globals.Factory.GetRibbonFactory` 方法。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-107">By using the `Globals.Factory.GetRibbonFactory` method.</span></span> <span data-ttu-id="8a3fa-108">可从 Ribbon 类外的代码使用此方法。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-108">Use this approach from code outside your Ribbon class.</span></span>  
+  
+ <span data-ttu-id="8a3fa-109">只能在功能区加载到 Office 应用程序之前，可以设置此类型的某些成员。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-109">Some members of this type can be set only before the Ribbon is loaded into the Office application.</span></span> <span data-ttu-id="8a3fa-110">有关设置这些属性的信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-110">For information about setting these properties, see [Ribbon Object Model Overview](/visualstudio/vsto/ribbon-object-model-overview.md).</span></span>  
+  
+ [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
+  
+## <a name="usage"></a><span data-ttu-id="8a3fa-111">用法</span><span class="sxs-lookup"><span data-stu-id="8a3fa-111">Usage</span></span>  
+ [!INCLUDE[vsto_net35mref](~/includes/vsto-net35mref-md.md)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Image">
+      <MemberSignature Language="C#" Value="public System.Drawing.Image Image { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Image Image" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Image" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Image</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="8a3fa-112">获取或设置显示在此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonComboBox" /> 上的图像。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="8a3fa-112">Gets or sets an image this is displayed on this <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonComboBox" />.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="8a3fa-113">显示在 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonComboBox" /> 上的图像。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="8a3fa-113">The image that is displayed on this <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonComboBox" />.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="8a3fa-114">建议的图像格式是 PNG，因为 PNG 格式的图像支持通过其 alpha 通道的透明度。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-114">The recommended image format is PNG, because images in the PNG format support transparency through their alpha channel.</span></span>  
+  
+ <span data-ttu-id="8a3fa-115"><xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Image%2A>属性标识由控件显示的图像。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-115">The <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Image%2A> property identifies an image that is displayed by the control.</span></span> <span data-ttu-id="8a3fa-116">在设计时或在运行时，可以设置此属性。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-116">This property can be set at design time or at run time.</span></span> <span data-ttu-id="8a3fa-117">如果在运行时中更新此属性，将更新控件的外观，以反映更改。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-117">If you update this property at run time, the control's appearance is updated to reflect the change.</span></span>  
+  
+ <span data-ttu-id="8a3fa-118">建议的图像格式是 PNG，因为 PNG 格式的图像支持通过其 Alpha 通道的透明度。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-118">The recommended image format is PNG, because images in the PNG format support transparency through their Alpha channel.</span></span>  
+  
+ <span data-ttu-id="8a3fa-119">如果<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Image%2A>设置属性，<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.OfficeImageId%2A>和<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ImageName%2A>属性会被忽略。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-119">If the <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Image%2A> property is set, the <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.OfficeImageId%2A> and <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ImageName%2A> properties are ignored.</span></span> <span data-ttu-id="8a3fa-120">尽管<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Image%2A>属性提供更好地控制比其他两个属性，因为每次对控件进行更新时，图像对象被发送到 Office 应用程序会比较慢。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-120">Although the <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Image%2A> property gives you more control than the other two properties do, it can be slower because the image object is sent to the Office application every time the control is updated.</span></span>  
+  
+ <span data-ttu-id="8a3fa-121"><xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ShowImage%2A>属性必须为`true`要显示图像的控件。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-121">The <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ShowImage%2A> property must be `true` for the control to display the image.</span></span> <span data-ttu-id="8a3fa-122">当你将设置<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Image%2A>属性在设计时，Visual Studio 将自动设置<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ShowImage%2A>属性`true`。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-122">When you set the <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Image%2A> property at design time, Visual Studio automatically sets the <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ShowImage%2A> property to `true`.</span></span> <span data-ttu-id="8a3fa-123">如果你设置<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Image%2A>属性在运行时，你必须设置<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ShowImage%2A>属性`true`在代码中。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-123">If you set the <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Image%2A> property at run time, you must set the <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ShowImage%2A> property to `true` in your code.</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageName">
+      <MemberSignature Language="C#" Value="public string ImageName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ImageName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ImageName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="8a3fa-124">获取或设置一个名称，该名称可用于在 <see cref="E:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage" /> 事件处理程序中标识控件图像。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="8a3fa-124">Gets or sets the name that you can use in the <see cref="E:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage" /> event handler to identify an image for the control.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="8a3fa-125">一个字符串，可用于在 <see cref="E:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage" /> 事件处理程序中标识控件图像。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="8a3fa-125">A string that you can use in the <see cref="E:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage" /> event handler to identify an image for the control.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="8a3fa-126">在运行时仅在某些情况下，可以设置此属性。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-126">This property can be set at run time only under certain conditions.</span></span> <span data-ttu-id="8a3fa-127">有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-127">For more information, see [Ribbon Object Model Overview](/visualstudio/vsto/ribbon-object-model-overview.md).</span></span>  
+  
+ <span data-ttu-id="8a3fa-128">有关设置此属性的信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-128">For information about setting this property, see [Ribbon Object Model Overview](/visualstudio/vsto/ribbon-object-model-overview.md).</span></span>  
+  
+ <span data-ttu-id="8a3fa-129"><xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ImageName%2A>属性标识由控件显示的图像。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-129">The <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ImageName%2A> property identifies an image that is displayed by the control.</span></span> <span data-ttu-id="8a3fa-130">Office 应用程序检索此映像从你的解决方案一次，以提高性能。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-130">The Office application retrieves this image from your solution only once, to improve performance.</span></span> <span data-ttu-id="8a3fa-131">此属性可以设置仅在设计时，因为它标识的图像加载期间<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>事件。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-131">This property can be set only at design time, because the image it identifies is loaded during the <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage> event.</span></span> <span data-ttu-id="8a3fa-132"><xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage> 时将引发一次每个映像名称将显示功能区。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-132"><xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage> is raised only once per image name, when the Ribbon is displayed.</span></span> <span data-ttu-id="8a3fa-133">之后，无法使用此属性更改控件图像。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-133">After that, the control image cannot be changed by using this property.</span></span>  
+  
+ <span data-ttu-id="8a3fa-134">若要加载的映像，将代码添加到<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-134">To load the image, add code to the <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage> event handler.</span></span> <span data-ttu-id="8a3fa-135">检查<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs.ImageName%2A>属性<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs>并设置<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs.Image%2A>属性<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs>到想要加载的映像的对象。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-135">Check the <xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs.ImageName%2A> property of the <xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs> and set the <xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs.Image%2A> property of the <xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs> object to the image that you want to load.</span></span>  
+  
+ <span data-ttu-id="8a3fa-136">如果忽略此属性<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Image%2A>属性或<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.OfficeImageId%2A>属性设置。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-136">This property is ignored if either the <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Image%2A> property or the <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.OfficeImageId%2A> property is set.</span></span> <span data-ttu-id="8a3fa-137">标识的图像<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ImageName%2A>属性可以由标识的图像以外会稍微快一些加载<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Image%2A>显示属性，因为 Office 应用程序将检索映像你解决方案仅在首次从功能区。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-137">Images identified by the <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ImageName%2A> property can be loaded slightly faster than images identified by the <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Image%2A> property, because the Office application retrieves the image from your solution only the first time the Ribbon is displayed.</span></span>  
+  
+ <span data-ttu-id="8a3fa-138"><xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ShowImage%2A>属性必须为`true`要显示图像的控件。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-138">The <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ShowImage%2A> property must be `true` for the control to display the image.</span></span> <span data-ttu-id="8a3fa-139">当你将设置<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ImageName%2A>属性在设计时，Visual Studio 将自动设置<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ShowImage%2A>属性`true`。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-139">When you set the <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ImageName%2A> property at design time, Visual Studio automatically sets the <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ShowImage%2A> property to `true`.</span></span> <span data-ttu-id="8a3fa-140">如果你设置<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ImageName%2A>属性在运行时，你必须设置<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ShowImage%2A>属性`true`在代码中。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-140">If you set the <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ImageName%2A> property at run time, you must set the <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ShowImage%2A> property to `true` in your code.</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Items">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;Microsoft.Office.Tools.Ribbon.RibbonDropDownItem&gt; Items { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;class Microsoft.Office.Tools.Ribbon.RibbonDropDownItem&gt; Items" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Items" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;Microsoft.Office.Tools.Ribbon.RibbonDropDownItem&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="8a3fa-141">获取此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonComboBox" /> 中项的集合。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="8a3fa-141">Gets a collection of the items in this <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonComboBox" />.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="8a3fa-142">此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonComboBox" /> 中的 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem" /> 对象集合。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="8a3fa-142">A collection of <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem" /> objects in this <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonComboBox" />.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="8a3fa-143">你可以添加、 删除或更新<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem>对象在设计时或在运行时。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-143">You can add, remove, or update <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem> objects at design time or at run time.</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemsLoading">
+      <MemberSignature Language="C#" Value="public event Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler ItemsLoading;" />
+      <MemberSignature Language="ILAsm" Value=".event class Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler ItemsLoading" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ItemsLoading" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="8a3fa-144">在此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonComboBox" /> 的下拉列表打开时发生。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="8a3fa-144">Occurs when the drop-down list for this <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonComboBox" /> is opened.</span>
+          </span>
+        </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="8a3fa-145">添加到的项<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox>其下拉列表框处于关闭状态时才加载到 Office 应用程序在用户打开下拉列表。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-145">Items added to a <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox> while its drop-down list is closed are not loaded into the Office application until the user opens the drop-down list.</span></span>  
+  
+ <span data-ttu-id="8a3fa-146">你可以使用此事件以更新中此项的列表<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox>显示给用户之前。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-146">You can use this event to update the list of items in this <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox> before it is shown to the user.</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyTip">
+      <MemberSignature Language="C#" Value="public string KeyTip { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string KeyTip" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Ribbon.RibbonComboBox.KeyTip" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="8a3fa-147">获取或设置此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonComboBox" /> 的键盘快捷键。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="8a3fa-147">Gets or sets the keyboard shortcut for this <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonComboBox" />.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="8a3fa-148">此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonComboBox" /> 的当前键盘快捷键。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="8a3fa-148">The current keyboard shortcut for this <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonComboBox" />.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="8a3fa-149">快捷键提示必须包含 1 到 3 个大写字符，并且必须包含空格、 制表符或换行字符。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-149">A KeyTip must have from 1 to 3 uppercase characters, and must not contain spaces, tabs, or newline characters.</span></span>  
+  
+ <span data-ttu-id="8a3fa-150">键提示有时也称为访问密钥或快捷键，可用作激活控件的快捷组合键。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-150">KeyTips are sometimes known as access keys or accelerators and are used as shortcut key combinations that activate controls.</span></span> <span data-ttu-id="8a3fa-151">当你按下 ALT 键时，键提示将显示在功能区上。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-151">KeyTips appear on the Ribbon when you press the ALT key.</span></span> <span data-ttu-id="8a3fa-152">如果内置控件或从其他加载项，则与键提示中你快捷键提示相冲突，Microsoft Office 可能自动分配不冲突快捷键提示值。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-152">If your KeyTip conflicts with KeyTips for built-in controls or from other add-ins, Microsoft Office might assign non-conflicting KeyTip values automatically.</span></span>  
+  
+ <span data-ttu-id="8a3fa-153">有关详细信息，请参阅[使用键盘来使用功能区程序](http://go.microsoft.com/fwlink/?LinkId=93523)。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-153">For more information, see [Use the keyboard to work with Ribbon programs](http://go.microsoft.com/fwlink/?LinkId=93523).</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Label">
+      <MemberSignature Language="C#" Value="public string Label { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Label" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Label" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="8a3fa-154">获取或设置此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonComboBox" /> 上显示的文本。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="8a3fa-154">Gets or sets the text that appears on this <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonComboBox" />.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="8a3fa-155">此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonComboBox" /> 上显示的文本。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="8a3fa-155">The text that appears on this <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonComboBox" />.</span>
+          </span>
+        </value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxLength">
+      <MemberSignature Language="C#" Value="public int MaxLength { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxLength" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Ribbon.RibbonComboBox.MaxLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="8a3fa-156">获取或设置一个值，该值指示此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonComboBox" /> 中每次允许输入的最大字符数。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="8a3fa-156">Gets or sets a value that indicates the maximum number of characters allowed per entry in this <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonComboBox" />.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="8a3fa-157">一个整数值，该值指示此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonComboBox" /> 中每次允许输入的最大字符数。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="8a3fa-157">An integer value that indicates the maximum number of characters allowed per entry in this <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonComboBox" />.</span>
+          </span>
+          <span data-ttu-id="8a3fa-158">值为 0 指示没有任何预定义限制。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="8a3fa-158">A value of 0 indicates that there is no predefined limit.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="8a3fa-159">在运行时仅在某些情况下，可以设置此属性。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-159">This property can be set at run time only under certain conditions.</span></span> <span data-ttu-id="8a3fa-160">有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-160">For more information, see [Ribbon Object Model Overview](/visualstudio/vsto/ribbon-object-model-overview.md).</span></span>  
+  
+ <span data-ttu-id="8a3fa-161"><xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.MaxLength%2A>属性并不指定显示多少输入字符串。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-161">The <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.MaxLength%2A> property does not specify how much of the input string is displayed.</span></span> <span data-ttu-id="8a3fa-162">若要更改显示限制，设置<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.SizeString%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-162">To change the display limit, set the <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.SizeString%2A> property.</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OfficeImageId">
+      <MemberSignature Language="C#" Value="public string OfficeImageId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OfficeImageId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Ribbon.RibbonComboBox.OfficeImageId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="8a3fa-163">如果要使用内置 Microsoft Office 图标，请获取或设置要在 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonComboBox" /> 上显示的图像。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="8a3fa-163">Gets or sets the image to display on the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonComboBox" />, if you want to use a built-in Microsoft Office icon.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="8a3fa-164">作为此控件图标的内置 Microsoft Office 图标的 ID。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="8a3fa-164">The ID of a built-in Microsoft Office icon that serves as the icon for this control.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="8a3fa-165"><xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.OfficeImageId%2A>属性标识由控件显示 Office 图标。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-165">The <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.OfficeImageId%2A> property identifies an Office icon that is displayed by the control.</span></span> <span data-ttu-id="8a3fa-166">属性值是一个字符串，标识`imageMso`所选图标的值。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-166">The property value is a string that identifies the `imageMso` value of the selected icon.</span></span> <span data-ttu-id="8a3fa-167">在设计时或在运行时，可以设置此属性。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-167">This property can be set at design time or at run time.</span></span> <span data-ttu-id="8a3fa-168">如果在运行时中更新此属性，将更新控件的外观，以反映更改。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-168">If you update this property at run time, the control's appearance is updated to reflect the change.</span></span>  
+  
+ <span data-ttu-id="8a3fa-169">有关的列表`imageMso`值，请参阅 Microsoft 下载中心页面[Office 2010 外接程序： 图标库](http://go.microsoft.com/fwlink/?LinkID=220760)。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-169">For a list of `imageMso` values, see the Microsoft Download Center page [Office 2010 Add-In: Icons Gallery](http://go.microsoft.com/fwlink/?LinkID=220760).</span></span>  
+  
+ <span data-ttu-id="8a3fa-170">如果忽略此属性<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Image%2A>属性设置。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-170">This property is ignored if the <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Image%2A> property is set.</span></span> <span data-ttu-id="8a3fa-171">标识的图像<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.OfficeImageId%2A>属性可以由标识的图像以外会稍微快一些加载<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Image%2A>属性，因为这些图像缓存在 Office 应用程序。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-171">Images identified by the <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.OfficeImageId%2A> property can be loaded slightly faster than images identified by the <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Image%2A> property, because the images are cached in the Office application.</span></span>  
+  
+ <span data-ttu-id="8a3fa-172"><xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ShowImage%2A>属性必须为`true`要显示图像的控件。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-172">The <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ShowImage%2A> property must be `true` for the control to display the image.</span></span> <span data-ttu-id="8a3fa-173">当你将设置<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.OfficeImageId%2A>属性在设计时，Visual Studio 将自动设置<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ShowImage%2A>属性`true`。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-173">When you set the <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.OfficeImageId%2A> property at design time, Visual Studio automatically sets the <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ShowImage%2A> property to `true`.</span></span> <span data-ttu-id="8a3fa-174">如果你设置<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.OfficeImageId%2A>属性在运行时，你必须设置<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ShowImage%2A>属性`true`在代码中。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-174">If you set the <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.OfficeImageId%2A> property at run time, you must set the <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ShowImage%2A> property to `true` in your code.</span></span>  
+  
+   
+  
+## Examples  
+ <span data-ttu-id="8a3fa-175">下面的示例将为组合框的 Microsoft Office 筛选器图标。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-175">The following example assigns a Microsoft Office filter icon to a combo box.</span></span>  
+  
+ <span data-ttu-id="8a3fa-176">若要运行此代码示例，必须首先执行以下步骤：</span><span class="sxs-lookup"><span data-stu-id="8a3fa-176">To run this code example, you must first perform the following steps:</span></span>  
+  
+1.  <span data-ttu-id="8a3fa-177">添加**功能区 （可视化设计器）**项到 Office 项目。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-177">Add a **Ribbon (Visual Designer)** item to an Office project.</span></span>  
+  
+2.  <span data-ttu-id="8a3fa-178">将组添加到自定义选项卡。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-178">Add a group to the custom tab.</span></span>  
+  
+3.  <span data-ttu-id="8a3fa-179">将组合框添加到组。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-179">Add a combo box to the group.</span></span>  
+  
+ [!code-csharp[Trin_Ribbon_ControlProperties#2](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_Ribbon_ControlProperties/CS/Ribbon1.cs#2)]
+ [!code-vb[Trin_Ribbon_ControlProperties#2](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_Ribbon_ControlProperties/VB/Ribbon1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScreenTip">
+      <MemberSignature Language="C#" Value="public string ScreenTip { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ScreenTip" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ScreenTip" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="8a3fa-180">获取或设置用户将指针移到 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonComboBox" /> 上方时显示的提示文本。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="8a3fa-180">Gets or sets tip text that appears when the user moves the pointer over the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonComboBox" />.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="8a3fa-181">用户将指针移到控件上方时显示的文本。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="8a3fa-181">The text that appears when the user moves the pointer over the control.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="8a3fa-182">值必须少于 1024年个字符的长度。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-182">The value must be less than 1024 characters in length.</span></span>  
+  
+ <span data-ttu-id="8a3fa-183">当<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.SuperTip%2A>设置属性，<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ScreenTip%2A>文本显示的标题为<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.SuperTip%2A>。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-183">When the <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.SuperTip%2A> property is set, the <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ScreenTip%2A> text appears as the title of the <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.SuperTip%2A>.</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowImage">
+      <MemberSignature Language="C#" Value="public bool ShowImage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowImage" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ShowImage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="8a3fa-184">获取或设置一个值，该值指示与 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonComboBox" /> 关联的图像是否可见。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="8a3fa-184">Gets or sets a value that indicates whether the image that is associated with the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonComboBox" /> is visible.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="8a3fa-185">如果与控件关联的图像可见，则为 <see langword="true" />；否则为 <see langword="false" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="8a3fa-185">
+              <see langword="true" /> if the image that is associated with the control is visible; otherwise, <see langword="false" />.</span>
+          </span>
+          <span data-ttu-id="8a3fa-186">默认值为 <see langword="false" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="8a3fa-186">The default is <see langword="false" />.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="8a3fa-187">此属性自动设置为`true`如果你设置<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Image%2A>， <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ImageName%2A>，或<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.OfficeImageId%2A>在功能区设计器中的属性。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-187">This property is automatically set to `true` if you set the <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Image%2A>, <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ImageName%2A>, or <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.OfficeImageId%2A> property in the Ribbon Designer.</span></span> <span data-ttu-id="8a3fa-188">你可以将其设置为`false`若要使此控制选项可隐藏与关联的图像。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-188">You can set it to `false` to cause the image associated with this control to be hidden.</span></span>  
+  
+ <span data-ttu-id="8a3fa-189">设置<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Image%2A>， <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ImageName%2A>，或<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.OfficeImageId%2A>属性在运行时不会更改的值<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ShowImage%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-189">Setting the <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Image%2A>, <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ImageName%2A>, or <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.OfficeImageId%2A> property at run time does not change the value of the <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ShowImage%2A> property.</span></span>  
+  
+ <span data-ttu-id="8a3fa-190">此属性不起作用的此实例按钮快速访问工具栏上显示。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-190">This property has no effect for instances of this button that are displayed on the Quick Access Toolbar.</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowItemImage">
+      <MemberSignature Language="C#" Value="public bool ShowItemImage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowItemImage" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ShowItemImage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="8a3fa-191">获取或设置一个值，该值指示是否为下拉菜单中的项显示图像。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="8a3fa-191">Gets or sets a value that indicates whether images are displayed for the items in the drop-down menu.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="8a3fa-192">如果显示图像，则为 <see langword="true" />；否则为 <see langword="false" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="8a3fa-192">
+              <see langword="true" /> if the images are displayed; otherwise, <see langword="false" />.</span>
+          </span>
+          <span data-ttu-id="8a3fa-193">默认值为 <see langword="true" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="8a3fa-193">The default is <see langword="true" />.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="8a3fa-194">在运行时仅在某些情况下，可以设置此属性。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-194">This property can be set at run time only under certain conditions.</span></span> <span data-ttu-id="8a3fa-195">有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-195">For more information, see [Ribbon Object Model Overview](/visualstudio/vsto/ribbon-object-model-overview.md).</span></span>  
+  
+ <span data-ttu-id="8a3fa-196">有关设置此属性的信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-196">For information about setting this property, see [Ribbon Object Model Overview](/visualstudio/vsto/ribbon-object-model-overview.md).</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowLabel">
+      <MemberSignature Language="C#" Value="public bool ShowLabel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowLabel" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ShowLabel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="8a3fa-197">获取或设置一个值，该值指示此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonComboBox" /> 的标签是否可见。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="8a3fa-197">Gets or sets a value that indicates whether the label for this <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonComboBox" /> is visible.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="8a3fa-198">如果标签可见，则为 <see langword="true" />；否则为 <see langword="false" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="8a3fa-198">
+              <see langword="true" /> if the label is visible; otherwise, <see langword="false" />.</span>
+          </span>
+          <span data-ttu-id="8a3fa-199">默认值为 <see langword="true" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="8a3fa-199">The default is <see langword="true" />.</span>
+          </span>
+        </value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SizeString">
+      <MemberSignature Language="C#" Value="public string SizeString { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SizeString" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Ribbon.RibbonComboBox.SizeString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="8a3fa-200">获取或设置一个字符串，该字符串确定 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonComboBox" /> 的大小。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="8a3fa-200">Gets or sets a string that determines the size of the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonComboBox" />.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="8a3fa-201">一个字符串，其长度可确定此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonComboBox" /> 的大小。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="8a3fa-201">A string, the length of which determines the size of this <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonComboBox" />.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="8a3fa-202">当你将设置<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.SizeString%2A>大小在功能区设计器中的属性，Microsoft Office 应用程序尝试<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox>以便将足以显示整个字符串。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-202">When you set the <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.SizeString%2A> property in the Ribbon Designer, the Microsoft Office application tries to size the <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox> so that it will be large enough to display the entire string.</span></span> <span data-ttu-id="8a3fa-203">尽管 Visual Studio 允许的长度最多为 1024年个字符的字符串，在实践中可用的字符串长度可能短得多。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-203">Although Visual Studio allows a string of up to 1024 characters in length, in practice the usable string length might be much shorter.</span></span>  
+  
+ <span data-ttu-id="8a3fa-204">在运行时仅在某些情况下，可以设置此属性。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-204">This property can be set at run time only under certain conditions.</span></span> <span data-ttu-id="8a3fa-205">有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-205">For more information, see [Ribbon Object Model Overview](/visualstudio/vsto/ribbon-object-model-overview.md).</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SuperTip">
+      <MemberSignature Language="C#" Value="public string SuperTip { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SuperTip" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Ribbon.RibbonComboBox.SuperTip" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="8a3fa-206">获取或设置用户将指针移到 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonComboBox" /> 上时显示的多行提示文本。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="8a3fa-206">Gets or sets multiline tip text that appears when the user moves the pointer over the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonComboBox" />.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="8a3fa-207">包含多行提示文本的字符串。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="8a3fa-207">A string that contains multiline tip text.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="8a3fa-208">字符串必须是长度小于 1024年个字符。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-208">The string must be less than 1024 characters in length.</span></span>  
+  
+ <span data-ttu-id="8a3fa-209"><xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.SuperTip%2A>下显示<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ScreenTip%2A>文本。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-209">The <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.SuperTip%2A> appears under <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ScreenTip%2A> text.</span></span> <span data-ttu-id="8a3fa-210">与不同<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ScreenTip%2A>、<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.SuperTip%2A>字符串中的启用分行符。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-210">Unlike the <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ScreenTip%2A>, the <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.SuperTip%2A> enables line breaks in the string.</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="8a3fa-211">获取或设置在此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonComboBox" /> 中显示的文本。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="8a3fa-211">Gets or sets the text that appears in this <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonComboBox" />.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="8a3fa-212">在此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonComboBox" /> 中显示的文本。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="8a3fa-212">The text that appears in the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonComboBox" />.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="8a3fa-213">如果您更改此属性以编程方式，<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.TextChanged>不会引发事件。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-213">If you change this property programmatically, the <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.TextChanged> event is not raised.</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextChanged">
+      <MemberSignature Language="C#" Value="public event Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler TextChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler TextChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.Ribbon.RibbonComboBox.TextChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="8a3fa-214">在用户更改 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonComboBox" /> 中的文本时发生。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="8a3fa-214">Occurs when a user changes the text in the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonComboBox" />.</span>
+          </span>
+        </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="8a3fa-215"><xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox>用户时用户更改文本之后, 将输入的焦点移到另一个控件更改文本后, 按 ENTER 键时或当用户在不同于当前显示的文字的列表中选择某个项时引发此事件播放。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-215">The <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox> raises this event when a user presses the ENTER key after changing the text, when the user moves the input focus to another control after changing the text, or when the user selects an item in the list that is different from the text that is currently displayed.</span></span> <span data-ttu-id="8a3fa-216">不引发该事件时的文本更改通过分配新值赋给<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Text%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="8a3fa-216">It is not raised when the text is changed by assigning a new value to the <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Text%2A> property.</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

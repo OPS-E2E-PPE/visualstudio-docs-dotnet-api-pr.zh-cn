@@ -1,0 +1,878 @@
+<Type Name="BuildingBlockGalleryContentControl" FullName="Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="68322488e787957cc0dfe55b32e27f8258064804" />
+    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.translationtype" Value="HT" />
+    <Meta Name="ms.contentlocale" Value="zh-CN" />
+    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public interface BuildingBlockGalleryContentControl : IDisposable, Microsoft.Office.Tools.Word.ContentControlBase, System.ComponentModel.IComponent, System.ComponentModel.ISupportInitialize, System.Windows.Forms.IBindableComponent" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract BuildingBlockGalleryContentControl implements class Microsoft.Office.Tools.Word.ContentControlBase, class System.ComponentModel.IComponent, class System.ComponentModel.ISupportInitialize, class System.IDisposable, class System.Windows.Forms.IBindableComponent" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Office.Tools.Word.ContentControlBase</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ComponentModel.IComponent</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ComponentModel.ISupportInitialize</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Windows.Forms.IBindableComponent</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("d8d887a2-69fe-4a86-a8dd-352003dc0e7e")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+      <span data-ttu-id="a0508-101">表示文档构建基块的库，用户可将其插入到文档。</span>
+      <span class="sxs-lookup">
+        <span data-stu-id="a0508-101">Represents a gallery of document building blocks that users can insert into a document.</span>
+      </span>
+    </summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="a0508-102">A<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>显示的列表*文档构建基块*用户可以将插入到文档。</span><span class="sxs-lookup"><span data-stu-id="a0508-102">A <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl> displays a list of *document building blocks* that users can insert into a document.</span></span> <span data-ttu-id="a0508-103">文档构建基块是为了多次使用而创建的一段内容，例如共同的封面页、格式化表格或标头。</span><span class="sxs-lookup"><span data-stu-id="a0508-103">A document building block is a piece of content that has been created to be used multiple times, such as a common cover page, a formatted table, or a header.</span></span> <span data-ttu-id="a0508-104">若要选择想要显示构建基块，使用<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.BuildingBlockCategory%2A>和<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.BuildingBlockType%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="a0508-104">To choose the building blocks that you want to display, use the <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.BuildingBlockCategory%2A> and <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.BuildingBlockType%2A> properties.</span></span>  
+  
+ <span data-ttu-id="a0508-105">有关文档构建基块的详细信息，请参阅[Word 2007 中的开发人员的新增](http://msdn.microsoft.com/en-us/74aa6688-65b3-4167-997d-131f26ad8f84)。</span><span class="sxs-lookup"><span data-stu-id="a0508-105">For more information about document building blocks, see [What's New for Developers in Word 2007](http://msdn.microsoft.com/en-us/74aa6688-65b3-4167-997d-131f26ad8f84).</span></span>  
+  
+ [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
+  
+## <a name="content-controls"></a><span data-ttu-id="a0508-106">内容控件</span><span class="sxs-lookup"><span data-stu-id="a0508-106">Content Controls</span></span>  
+ <span data-ttu-id="a0508-107"><xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>是八个类型的内容控件，可以使用设计文档和 Microsoft Office Word 中的模板之一。</span><span class="sxs-lookup"><span data-stu-id="a0508-107">The <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl> is one of eight types of content controls that you can use to design documents and templates in Microsoft Office Word.</span></span> <span data-ttu-id="a0508-108">内容控件具有用户界面 (UI)，具有控制类似于窗体的输入。</span><span class="sxs-lookup"><span data-stu-id="a0508-108">Content controls have a user interface (UI) that has controlled input like a form.</span></span> <span data-ttu-id="a0508-109">你可以使用内容控件来防止用户编辑受保护的部分的文档或模板，并还可以将内容控件绑定到数据源。</span><span class="sxs-lookup"><span data-stu-id="a0508-109">You can use content controls to prevent users from editing protected sections of the document or template, and you can also bind content controls to a data source.</span></span> <span data-ttu-id="a0508-110">有关详细信息，请参阅[内容控件](/visualstudio/vsto/content-controls.md)。</span><span class="sxs-lookup"><span data-stu-id="a0508-110">For more information, see [Content Controls](/visualstudio/vsto/content-controls.md).</span></span>  
+  
+## <a name="usage"></a><span data-ttu-id="a0508-111">用法</span><span class="sxs-lookup"><span data-stu-id="a0508-111">Usage</span></span>  
+ [!INCLUDE[vsto_net35mref](~/includes/vsto-net35mref-md.md)]  
+  
+   
+  
+## Examples  
+ <span data-ttu-id="a0508-112">下面的代码示例添加一个新<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>到文档的开头。</span><span class="sxs-lookup"><span data-stu-id="a0508-112">The following code example adds a new <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl> to the beginning of the document.</span></span> <span data-ttu-id="a0508-113"><xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>显示由 Microsoft Office Word 的公式构建基块。</span><span class="sxs-lookup"><span data-stu-id="a0508-113">The <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl> displays equation building blocks that are provided by Microsoft Office Word.</span></span>  
+  
+ <span data-ttu-id="a0508-114">此版本用于文档级自定义。</span><span class="sxs-lookup"><span data-stu-id="a0508-114">This version is for a document-level customization.</span></span> <span data-ttu-id="a0508-115">若要使用此代码，将其粘贴到`ThisDocument`中你的项目，然后调用类`AddBuildingBlockControlAtSelection`方法从`ThisDocument_Startup`方法。</span><span class="sxs-lookup"><span data-stu-id="a0508-115">To use this code, paste it into the `ThisDocument` class in your project, and call the `AddBuildingBlockControlAtSelection` method from the `ThisDocument_Startup` method.</span></span>  
+  
+ [!code-csharp[Trin_ContentControlReference#1](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference/CS/BuildingBlockGallery.cs#1)]
+ [!code-vb[Trin_ContentControlReference#1](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference/VB/BuildingBlockGallery.vb#1)]  
+  
+ <span data-ttu-id="a0508-116">此版本用于针对应用程序级外接程序。</span><span class="sxs-lookup"><span data-stu-id="a0508-116">This version is for an application-level add-in.</span></span> <span data-ttu-id="a0508-117">若要使用此代码，将其粘贴到`ThisAddIn`中你的项目，然后调用类`AddBuildingBlockControlAtSelection`方法从`ThisAddIn_Startup`方法。</span><span class="sxs-lookup"><span data-stu-id="a0508-117">To use this code, paste it into the `ThisAddIn` class in your project, and call the `AddBuildingBlockControlAtSelection` method from the `ThisAddIn_Startup` method.</span></span>  
+  
+ [!code-csharp[Trin_ContentControlReference_AppLevelAddIn#1](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/CS/BuildingBlockGallery.cs#1)]
+ [!code-vb[Trin_ContentControlReference_AppLevelAddIn#1](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/VB/BuildingBlockGallery.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Application">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Word.Application Application { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Interop.Word.Application Application" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.Application" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Word.Application</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="a0508-118">获取一个表示 Microsoft Office Word 当前实例的 <see cref="T:Microsoft.Office.Interop.Word.Application" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a0508-118">Gets a <see cref="T:Microsoft.Office.Interop.Word.Application" /> that represents the current instance of Microsoft Office Word.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="a0508-119">一个表示 Microsoft Office Word 当前实例的 <see cref="T:Microsoft.Office.Interop.Word.Application" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a0508-119">A <see cref="T:Microsoft.Office.Interop.Word.Application" /> that represents the current instance of Microsoft Office Word.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="a0508-120"><xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.Application%2A>属性公开有关 Word，应用于该实例的选项的当前实例的信息以及在实例中打开当前文档。</span><span class="sxs-lookup"><span data-stu-id="a0508-120">The <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.Application%2A> property exposes information about the current instance of Word, the options applied to that instance, and the current documents open within the instance.</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildingBlockCategory">
+      <MemberSignature Language="C#" Value="public string BuildingBlockCategory { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BuildingBlockCategory" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.BuildingBlockCategory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="a0508-121">获取或设置在 <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" /> 中显示的构造块的类别。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a0508-121">Gets or sets the category of the building blocks that are displayed in the <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" />.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="a0508-122">在 <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" /> 中显示的生成块的类别。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a0508-122">The category of the building blocks that are displayed in the <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" />.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="a0508-123">所有构建基块都所属的类别和一个库。</span><span class="sxs-lookup"><span data-stu-id="a0508-123">All building blocks belong to a category and a gallery.</span></span> <span data-ttu-id="a0508-124">使用<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.BuildingBlockCategory%2A>属性指定的构建基块，显示的类别<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>。</span><span class="sxs-lookup"><span data-stu-id="a0508-124">Use the <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.BuildingBlockCategory%2A> property to specify the category of the building blocks that are displayed by the <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>.</span></span> <span data-ttu-id="a0508-125">你可以设置到此属性的值`Built-In`或`General`类别定义的 Microsoft Office Word 中，也可以指定自定义的类别。</span><span class="sxs-lookup"><span data-stu-id="a0508-125">You can set the value of this property to the `Built-In` or `General` categories defined by Microsoft Office Word, or you can specify a custom category.</span></span>  
+  
+ <span data-ttu-id="a0508-126">若要指定的库中显示的构建基块<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>，使用<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.BuildingBlockType%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="a0508-126">To specify which gallery of building blocks to display in the <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>, use the <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.BuildingBlockType%2A> property.</span></span>  
+  
+   
+  
+## Examples  
+ <span data-ttu-id="a0508-127">下面的代码示例添加一个新<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>到文档的开头。</span><span class="sxs-lookup"><span data-stu-id="a0508-127">The following code example adds a new <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl> to the beginning of the document.</span></span> <span data-ttu-id="a0508-128"><xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>显示由 Microsoft Office Word 的公式构建基块。</span><span class="sxs-lookup"><span data-stu-id="a0508-128">The <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl> displays equation building blocks that are provided by Microsoft Office Word.</span></span> <span data-ttu-id="a0508-129">该示例设置<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.BuildingBlockCategory%2A>属性`Built-In`类别。</span><span class="sxs-lookup"><span data-stu-id="a0508-129">The example sets the <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.BuildingBlockCategory%2A> property to the `Built-In` category.</span></span>  
+  
+ <span data-ttu-id="a0508-130">此版本用于文档级自定义。</span><span class="sxs-lookup"><span data-stu-id="a0508-130">This version is for a document-level customization.</span></span> <span data-ttu-id="a0508-131">若要使用此代码，将其粘贴到`ThisDocument`中你的项目，然后调用类`AddBuildingBlockControlAtSelection`方法从`ThisDocument_Startup`方法。</span><span class="sxs-lookup"><span data-stu-id="a0508-131">To use this code, paste it into the `ThisDocument` class in your project, and call the `AddBuildingBlockControlAtSelection` method from the `ThisDocument_Startup` method.</span></span>  
+  
+ [!code-csharp[Trin_ContentControlReference#1](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference/CS/BuildingBlockGallery.cs#1)]
+ [!code-vb[Trin_ContentControlReference#1](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference/VB/BuildingBlockGallery.vb#1)]  
+  
+ <span data-ttu-id="a0508-132">此版本用于针对应用程序级外接程序。</span><span class="sxs-lookup"><span data-stu-id="a0508-132">This version is for an application-level add-in.</span></span> <span data-ttu-id="a0508-133">若要使用此代码，将其粘贴到`ThisAddIn`中你的项目，然后调用类`AddBuildingBlockControlAtSelection`方法从`ThisAddIn_Startup`方法。</span><span class="sxs-lookup"><span data-stu-id="a0508-133">To use this code, paste it into the `ThisAddIn` class in your project, and call the `AddBuildingBlockControlAtSelection` method from the `ThisAddIn_Startup` method.</span></span>  
+  
+ [!code-csharp[Trin_ContentControlReference_AppLevelAddIn#1](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/CS/BuildingBlockGallery.cs#1)]
+ [!code-vb[Trin_ContentControlReference_AppLevelAddIn#1](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/VB/BuildingBlockGallery.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildingBlockType">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Word.WdBuildingBlockTypes BuildingBlockType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Office.Interop.Word.WdBuildingBlockTypes BuildingBlockType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.BuildingBlockType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Word.WdBuildingBlockTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="a0508-134">获取或设置在 <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" /> 中显示的生成块的类型。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a0508-134">Gets or sets the type of the building blocks that are displayed in the <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" />.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="a0508-135">
+            <see cref="T:Microsoft.Office.Interop.Word.WdBuildingBlockTypes" /> 值之一。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a0508-135">One of the <see cref="T:Microsoft.Office.Interop.Word.WdBuildingBlockTypes" /> values.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="a0508-136">所有构建基块都属于库和一个类别。</span><span class="sxs-lookup"><span data-stu-id="a0508-136">All building blocks belong to a gallery and a category.</span></span> <span data-ttu-id="a0508-137">使用<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.BuildingBlockType%2A>属性来指定哪些库中显示的构建基块<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>。</span><span class="sxs-lookup"><span data-stu-id="a0508-137">Use the <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.BuildingBlockType%2A> property to specify which gallery of building blocks to display in the <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>.</span></span>  
+  
+ <span data-ttu-id="a0508-138">A<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>只能显示某些库的构建基块。</span><span class="sxs-lookup"><span data-stu-id="a0508-138">A <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl> can display only certain galleries of building blocks.</span></span> <span data-ttu-id="a0508-139"><xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.BuildingBlockType%2A>属性可以设置只为以下<xref:Microsoft.Office.Interop.Word.WdBuildingBlockTypes?displayProperty=fullName>值：</span><span class="sxs-lookup"><span data-stu-id="a0508-139">The <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.BuildingBlockType%2A> property can be set only to the following <xref:Microsoft.Office.Interop.Word.WdBuildingBlockTypes?displayProperty=fullName> values:</span></span>  
+  
+-   `wdTypeAutoText`  
+  
+-   `wdTypeCustom1`  
+  
+-   `wdTypeCustom2`  
+  
+-   `wdTypeCustom3`  
+  
+-   `wdTypeCustom4`  
+  
+-   `wdTypeCustom5`  
+  
+-   `wdTypeCustomAutoText`  
+  
+-   `wdTypeCustomEquations`  
+  
+-   `wdTypeCustomQuickParts`  
+  
+-   `wdTypeCustomTables`  
+  
+-   `wdTypeEquations`  
+  
+-   `wdTypeQuickParts`  
+  
+-   `wdTypeTables`  
+  
+ <span data-ttu-id="a0508-140">指定的构建基块显示的类别<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>，使用<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.BuildingBlockCategory%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="a0508-140">To specify the category of building blocks that are displayed by the <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>, use the <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.BuildingBlockCategory%2A> property.</span></span>  
+  
+   
+  
+## Examples  
+ <span data-ttu-id="a0508-141">下面的代码示例添加一个新<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>到文档的开头。</span><span class="sxs-lookup"><span data-stu-id="a0508-141">The following code example adds a new <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl> to the beginning of the document.</span></span> <span data-ttu-id="a0508-142"><xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>显示由 Microsoft Office Word 的公式构建基块。</span><span class="sxs-lookup"><span data-stu-id="a0508-142">The <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl> displays equation building blocks that are provided by Microsoft Office Word.</span></span> <span data-ttu-id="a0508-143">该示例设置<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.BuildingBlockType%2A>属性`wdTypeEquations`。</span><span class="sxs-lookup"><span data-stu-id="a0508-143">The example sets the <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.BuildingBlockType%2A> property to `wdTypeEquations`.</span></span>  
+  
+ <span data-ttu-id="a0508-144">此版本用于文档级自定义。</span><span class="sxs-lookup"><span data-stu-id="a0508-144">This version is for a document-level customization.</span></span> <span data-ttu-id="a0508-145">若要使用此代码，将其粘贴到`ThisDocument`中你的项目，然后调用类`AddBuildingBlockControlAtSelection`方法从`ThisDocument_Startup`方法。</span><span class="sxs-lookup"><span data-stu-id="a0508-145">To use this code, paste it into the `ThisDocument` class in your project, and call the `AddBuildingBlockControlAtSelection` method from the `ThisDocument_Startup` method.</span></span>  
+  
+ [!code-csharp[Trin_ContentControlReference#1](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference/CS/BuildingBlockGallery.cs#1)]
+ [!code-vb[Trin_ContentControlReference#1](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference/VB/BuildingBlockGallery.vb#1)]  
+  
+ <span data-ttu-id="a0508-146">此版本用于针对应用程序级外接程序。</span><span class="sxs-lookup"><span data-stu-id="a0508-146">This version is for an application-level add-in.</span></span> <span data-ttu-id="a0508-147">若要使用此代码，将其粘贴到`ThisAddIn`中你的项目，然后调用类`AddBuildingBlockControlAtSelection`方法从`ThisAddIn_Startup`方法。</span><span class="sxs-lookup"><span data-stu-id="a0508-147">To use this code, paste it into the `ThisAddIn` class in your project, and call the `AddBuildingBlockControlAtSelection` method from the `ThisAddIn_Startup` method.</span></span>  
+  
+ [!code-csharp[Trin_ContentControlReference_AppLevelAddIn#1](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/CS/BuildingBlockGallery.cs#1)]
+ [!code-vb[Trin_ContentControlReference_AppLevelAddIn#1](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/VB/BuildingBlockGallery.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.COMException">
+          <span data-ttu-id="a0508-148">属性设置为 <see cref="T:Microsoft.Office.Interop.Word.WdBuildingBlockTypes" /> 值，该值标识无法在 <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" /> 中显示的构造块的类别。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a0508-148">The property is set to a <see cref="T:Microsoft.Office.Interop.Word.WdBuildingBlockTypes" /> value that identifies a category of building blocks that cannot be displayed in a <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" />.</span>
+          </span>
+        </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public void Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.Copy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+          <span data-ttu-id="a0508-149">将 <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" /> 从文档复制到剪贴板。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a0508-149">Copies the <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" /> from the document to the Clipboard.</span>
+          </span>
+        </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="a0508-150">当你使用<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.Copy%2A>方法时，原始<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>保留在文档。</span><span class="sxs-lookup"><span data-stu-id="a0508-150">When you use the <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.Copy%2A> method, the original <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl> remains on the document.</span></span> <span data-ttu-id="a0508-151">一份<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>（包括所有文本和属性设置) 将添加到剪贴板。</span><span class="sxs-lookup"><span data-stu-id="a0508-151">A copy of the <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>, including all text and property settings, is added to the Clipboard.</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Creator">
+      <MemberSignature Language="C#" Value="public int Creator { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Creator" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.Creator" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="a0508-152">获取一个 32 位整数，该整数指示已在其中创建 <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" /> 的应用程序。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a0508-152">Gets a 32-bit integer that indicates the application in which the <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" /> was created.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="a0508-153">一个 32 位整数，该整数指示已在其中创建该控件的应用程序。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a0508-153">A 32-bit integer that indicates the application in which the control was created.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="a0508-154">如果<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>在 Microsoft Office Word 中创建<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.Creator%2A>属性返回表示字符串的十六进制数 4d535744， `MSWD`。</span><span class="sxs-lookup"><span data-stu-id="a0508-154">If the <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl> was created in Microsoft Office Word, the <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.Creator%2A> property returns the hexadecimal number 4D535744, which represents the string `MSWD`.</span></span> <span data-ttu-id="a0508-155">此字符串是 Word 的四个字符创建者代码。</span><span class="sxs-lookup"><span data-stu-id="a0508-155">This string is the four-character creator code for Word.</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cut">
+      <MemberSignature Language="C#" Value="public void Cut ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Cut() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.Cut" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+          <span data-ttu-id="a0508-156">从文档中移除 <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" />，然后将其添加到剪贴板中。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a0508-156">Removes the <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" /> from the document and adds it to the Clipboard.</span>
+          </span>
+        </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="a0508-157">当你使用<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.Cut%2A>方法时，原始<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>从文档中移除。</span><span class="sxs-lookup"><span data-stu-id="a0508-157">When you use the <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.Cut%2A> method, the original <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl> is removed from the document.</span></span> <span data-ttu-id="a0508-158">一份<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>（包括所有文本和属性设置) 将添加到剪贴板。</span><span class="sxs-lookup"><span data-stu-id="a0508-158">A copy of the <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>, including all text and property settings, is added to the Clipboard.</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultTextStyle">
+      <MemberSignature Language="C#" Value="public string DefaultTextStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultTextStyle" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.DefaultTextStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="a0508-159">获取用于设置 <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" /> 中的文本格式的字符样式的名称。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a0508-159">Gets the name of the character style to use to format text in the <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" />.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="a0508-160">用于设置 <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" /> 中的文本格式的字符样式的名称。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a0508-160">The name of the character style to use to format text in the <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" />.</span>
+          </span>
+          <span data-ttu-id="a0508-161">默认值是**默认段落字体**。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a0508-161">The default is **Default Paragraph Font**.</span>
+          </span>
+        </value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LockContentControl">
+      <MemberSignature Language="C#" Value="public bool LockContentControl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool LockContentControl" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.LockContentControl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="a0508-162">获取或设置一个值，该值指示是否可从文档删除 <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a0508-162">Gets or sets a value that specifies whether the <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" /> can be deleted from the document.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="a0508-163">如果可从文档删除 <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" />，则为 <see langword="true" />；如果不能删除此控件，则为 <see langword="false" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a0508-163">
+              <see langword="true" /> if the <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" /> cannot be deleted from the document; <see langword="false" /> if the control can be deleted.</span>
+          </span>
+          <span data-ttu-id="a0508-164">默认值为 <see langword="false" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a0508-164">The default is <see langword="false" />.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="a0508-165">若要阻止用户编辑的内容<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>，使用<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.LockContents%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="a0508-165">To prevent users from editing the contents of a <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>, use the <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.LockContents%2A> property.</span></span> <span data-ttu-id="a0508-166">有关如何使用<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>若要保护的文档的一部分，请参阅[内容控件](/visualstudio/vsto/content-controls.md)和[如何： 使用内容控件保护文档的某些部分](/visualstudio/vsto/how-to-protect-parts-of-documents-by-using-content-controls.md)。</span><span class="sxs-lookup"><span data-stu-id="a0508-166">For more information about how to use a <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl> to protect a part of a document, see [Content Controls](/visualstudio/vsto/content-controls.md) and [How to: Protect Parts of Documents by Using Content Controls](/visualstudio/vsto/how-to-protect-parts-of-documents-by-using-content-controls.md).</span></span>  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.COMException">
+          <span data-ttu-id="a0508-167">
+            <see cref="P:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.Temporary" /> 属性为 <see langword="true" /> 时，设置此属性。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a0508-167">This property is set when the <see cref="P:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.Temporary" /> property is <see langword="true" />.</span>
+          </span>
+        </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LockContents">
+      <MemberSignature Language="C#" Value="public bool LockContents { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool LockContents" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.LockContents" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="a0508-168">获取或设置一个值，该值指示能否编辑 <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" /> 的内容。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a0508-168">Gets or sets a value that specifies whether the contents of the <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" /> can be edited.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="a0508-169">如果不能编辑 <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" /> 的内容，则为 <see langword="true" />；如果可以编辑内容，则为 <see langword="false" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a0508-169">
+              <see langword="true" /> if the contents of the <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" /> cannot be edited; <see langword="false" /> if the content can be edited.</span>
+          </span>
+          <span data-ttu-id="a0508-170">默认值为 <see langword="false" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a0508-170">The default is <see langword="false" />.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="a0508-171">若要阻止用户删除<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>从文档中，使用<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.LockContentControl%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="a0508-171">To prevent users from deleting a <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl> from the document, use the <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.LockContentControl%2A> property.</span></span> <span data-ttu-id="a0508-172">有关使用<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>若要保护的文档的一部分，请参阅[内容控件](/visualstudio/vsto/content-controls.md)和[如何： 使用内容控件保护文档的某些部分](/visualstudio/vsto/how-to-protect-parts-of-documents-by-using-content-controls.md)。</span><span class="sxs-lookup"><span data-stu-id="a0508-172">For more information about using a <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl> to protect a part of a document, see [Content Controls](/visualstudio/vsto/content-controls.md) and [How to: Protect Parts of Documents by Using Content Controls](/visualstudio/vsto/how-to-protect-parts-of-documents-by-using-content-controls.md).</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="public object Parent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Parent" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.Parent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="a0508-173">获取 <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" /> 的父级。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a0508-173">Gets the parent of the <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" />.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="a0508-174">一个对象，表示 <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" /> 的父级。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a0508-174">An object that represents the parent of the <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" />.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="a0508-175">父级<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>是控件所在的对象。</span><span class="sxs-lookup"><span data-stu-id="a0508-175">The parent of the <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl> is the object in which the control is contained.</span></span> <span data-ttu-id="a0508-176">例如，如果控件在文档的正文，则此属性将返回<xref:Microsoft.Office.Interop.Word.Document?displayProperty=fullName>对象。</span><span class="sxs-lookup"><span data-stu-id="a0508-176">For example, if the control is in the body of the document, this property will return a <xref:Microsoft.Office.Interop.Word.Document?displayProperty=fullName> object.</span></span>  
+  
+ <span data-ttu-id="a0508-177">要获取其父类的<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>中包含<xref:Microsoft.Office.Tools.Word.RichTextContentControl>或<xref:Microsoft.Office.Tools.Word.GroupContentControl>，使用<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.ParentContentControl%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="a0508-177">To get the parent of a <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl> that is contained in a <xref:Microsoft.Office.Tools.Word.RichTextContentControl> or a <xref:Microsoft.Office.Tools.Word.GroupContentControl>, use the <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.ParentContentControl%2A> property.</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParentContentControl">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Word.ContentControl ParentContentControl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Interop.Word.ContentControl ParentContentControl" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.ParentContentControl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Word.ContentControl</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="a0508-178">获取嵌套在另一个内容控件内的 <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" /> 的父内容控件。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a0508-178">Gets the parent content control of a <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" /> that is nested in another content control.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="a0508-179">一个 <see cref="T:Microsoft.Office.Interop.Word.ContentControl" />，表示 <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" /> 嵌套在其中的内容控件；如果 <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" /> 未嵌套在另一个内容控件中，则为 <see langword="null" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a0508-179">A <see cref="T:Microsoft.Office.Interop.Word.ContentControl" /> that represents the content control in which the <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" /> is nested; <see langword="null" /> if the <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" /> is not nested in another content control.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="a0508-180"><xref:Microsoft.Office.Tools.Word.RichTextContentControl>和<xref:Microsoft.Office.Tools.Word.GroupContentControl>控件是可以包含嵌套的内容控件的内容控件的唯一类型。</span><span class="sxs-lookup"><span data-stu-id="a0508-180">The <xref:Microsoft.Office.Tools.Word.RichTextContentControl> and <xref:Microsoft.Office.Tools.Word.GroupContentControl> controls are the only types of content controls that can contain nested content controls.</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PlaceholderText">
+      <MemberSignature Language="C#" Value="public string PlaceholderText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PlaceholderText" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.PlaceholderText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="a0508-181">获取或设置在用户操作或某个其他操作更改文本之前在 <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" /> 中显示的文本。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a0508-181">Gets or sets the text that is displayed in the <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" /> until the text is changed by a user action or some other operation.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="a0508-182">在用户操作或某个其他操作更改文本之前，在控件中显示的文本。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a0508-182">The text that is displayed in the control until the text is changed by a user action or some other operation.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="a0508-183">用户选择构建基块，或使用数据源的数据填充控件之前，将显示占位符文本。</span><span class="sxs-lookup"><span data-stu-id="a0508-183">The placeholder text is displayed until a user selects a building block or the control is populated with data from a data source.</span></span>  
+  
+ <span data-ttu-id="a0508-184">若要设置中的占位符文本<xref:Microsoft.Office.Interop.Word.BuildingBlock>或<xref:Microsoft.Office.Interop.Word.Range>，使用<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.SetPlaceholderText%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="a0508-184">To set the placeholder text to text that is in a <xref:Microsoft.Office.Interop.Word.BuildingBlock> or a <xref:Microsoft.Office.Interop.Word.Range>, use the <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.SetPlaceholderText%2A> method.</span></span>  
+  
+   
+  
+## Examples  
+ <span data-ttu-id="a0508-185">下面的代码示例添加一个新<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>到文档的开头。</span><span class="sxs-lookup"><span data-stu-id="a0508-185">The following code example adds a new <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl> to the beginning of the document.</span></span> <span data-ttu-id="a0508-186"><xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>显示由 Microsoft Office Word 的公式构建基块。</span><span class="sxs-lookup"><span data-stu-id="a0508-186">The <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl> displays equation building blocks that are provided by Microsoft Office Word.</span></span> <span data-ttu-id="a0508-187">该示例设置<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.PlaceholderText%2A>提示用户选择一个公式的字符串属性。</span><span class="sxs-lookup"><span data-stu-id="a0508-187">The example sets the <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.PlaceholderText%2A> property to a string that prompts the user to choose an equation.</span></span>  
+  
+ <span data-ttu-id="a0508-188">此版本用于文档级自定义。</span><span class="sxs-lookup"><span data-stu-id="a0508-188">This version is for a document-level customization.</span></span> <span data-ttu-id="a0508-189">若要使用此代码，将其粘贴到`ThisDocument`中你的项目，然后调用类`AddBuildingBlockControlAtSelection`方法从`ThisDocument_Startup`方法。</span><span class="sxs-lookup"><span data-stu-id="a0508-189">To use this code, paste it into the `ThisDocument` class in your project, and call the `AddBuildingBlockControlAtSelection` method from the `ThisDocument_Startup` method.</span></span>  
+  
+ [!code-csharp[Trin_ContentControlReference#1](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference/CS/BuildingBlockGallery.cs#1)]
+ [!code-vb[Trin_ContentControlReference#1](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference/VB/BuildingBlockGallery.vb#1)]  
+  
+ <span data-ttu-id="a0508-190">此版本用于针对应用程序级外接程序。</span><span class="sxs-lookup"><span data-stu-id="a0508-190">This version is for an application-level add-in.</span></span> <span data-ttu-id="a0508-191">若要使用此代码，将其粘贴到`ThisAddIn`中你的项目，然后调用类`AddBuildingBlockControlAtSelection`方法从`ThisAddIn_Startup`方法。</span><span class="sxs-lookup"><span data-stu-id="a0508-191">To use this code, paste it into the `ThisAddIn` class in your project, and call the `AddBuildingBlockControlAtSelection` method from the `ThisAddIn_Startup` method.</span></span>  
+  
+ [!code-csharp[Trin_ContentControlReference_AppLevelAddIn#1](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/CS/BuildingBlockGallery.cs#1)]
+ [!code-vb[Trin_ContentControlReference_AppLevelAddIn#1](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/VB/BuildingBlockGallery.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Range">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Word.Range Range { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Interop.Word.Range Range" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.Range" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Word.Range</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="a0508-192">获取一个 <see cref="T:Microsoft.Office.Interop.Word.Range" />，表示 <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" /> 的内容。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a0508-192">Gets a <see cref="T:Microsoft.Office.Interop.Word.Range" /> that represents the contents of the <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" />.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="a0508-193">一个 <see cref="T:Microsoft.Office.Interop.Word.Range" />，表示 <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" /> 的内容。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a0508-193">A <see cref="T:Microsoft.Office.Interop.Word.Range" /> that represents the contents of the <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" />.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="a0508-194">使用<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.Range%2A>属性来访问中的项的所有<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>。</span><span class="sxs-lookup"><span data-stu-id="a0508-194">Use the <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.Range%2A> property to access all of the items in the <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>.</span></span> <span data-ttu-id="a0508-195">你还可以使用此属性来访问控件中文本的格式设置和其他文本属性。</span><span class="sxs-lookup"><span data-stu-id="a0508-195">You can also use this property to access the formatting of the text in the control and other text properties.</span></span> <span data-ttu-id="a0508-196">有关详细信息<xref:Microsoft.Office.Interop.Word.Range>对象，请参阅[Word 对象模型概述](/visualstudio/vsto/word-object-model-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="a0508-196">For more information about <xref:Microsoft.Office.Interop.Word.Range> objects, see [Word Object Model Overview](/visualstudio/vsto/word-object-model-overview.md).</span></span>  
+  
+ <span data-ttu-id="a0508-197">若要访问文本中显示<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>，使用<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.Text%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="a0508-197">To access only the text that is displayed in the <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>, use the <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.Text%2A> property.</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetPlaceholderText">
+      <MemberSignature Language="C#" Value="public void SetPlaceholderText (Microsoft.Office.Interop.Word.BuildingBlock BuildingBlock = null, Microsoft.Office.Interop.Word.Range Range = null, string Text = &quot;&quot;);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetPlaceholderText(class Microsoft.Office.Interop.Word.BuildingBlock BuildingBlock, class Microsoft.Office.Interop.Word.Range Range, string Text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.SetPlaceholderText(Microsoft.Office.Interop.Word.BuildingBlock,Microsoft.Office.Interop.Word.Range,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="BuildingBlock" Type="Microsoft.Office.Interop.Word.BuildingBlock" />
+        <Parameter Name="Range" Type="Microsoft.Office.Interop.Word.Range" />
+        <Parameter Name="Text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="BuildingBlock">
+          <span data-ttu-id="a0508-198">包含占位符文本的 <see cref="T:Microsoft.Office.Interop.Word.BuildingBlock" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a0508-198">A <see cref="T:Microsoft.Office.Interop.Word.BuildingBlock" /> that contains the placeholder text.</span>
+          </span>
+        </param>
+        <param name="Range">
+          <span data-ttu-id="a0508-199">包含占位符文本的 <see cref="T:Microsoft.Office.Interop.Word.Range" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a0508-199">A <see cref="T:Microsoft.Office.Interop.Word.Range" /> that contains the placeholder text.</span>
+          </span>
+        </param>
+        <param name="Text">
+          <span data-ttu-id="a0508-200">占位符文本。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a0508-200">The placeholder text.</span>
+          </span>
+        </param>
+        <summary>
+          <span data-ttu-id="a0508-201">将 <see cref="T:Microsoft.Office.Interop.Word.BuildingBlock" />、<see cref="T:Microsoft.Office.Interop.Word.Range" /> 或字符串中的文本显示为 <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" /> 中的占位符文本。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a0508-201">Displays text that is in a <see cref="T:Microsoft.Office.Interop.Word.BuildingBlock" />, a <see cref="T:Microsoft.Office.Interop.Word.Range" />, or a string as the placeholder text in the <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" />.</span>
+          </span>
+        </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="a0508-202">用户选择构建基块，或使用数据源的数据填充控件之前，将显示占位符文本。</span><span class="sxs-lookup"><span data-stu-id="a0508-202">The placeholder text is displayed until a user selects a building block or the control is populated with data from a data source.</span></span>  
+  
+ <span data-ttu-id="a0508-203">在调用时使用唯一的参数之一<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.SetPlaceholderText%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="a0508-203">Only one of the parameters is used when you call the <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.SetPlaceholderText%2A> method.</span></span> <span data-ttu-id="a0508-204">如果指定多个参数，则 Microsoft Office Word 将使用第一个指定的参数。</span><span class="sxs-lookup"><span data-stu-id="a0508-204">If more than one parameter is specified, Microsoft Office Word uses the first specified parameter.</span></span> <span data-ttu-id="a0508-205">如果所有参数都被都省略，占位符文本是空字符串。</span><span class="sxs-lookup"><span data-stu-id="a0508-205">If all parameters are omitted, the placeholder text is an empty string.</span></span>  
+  
+ <span data-ttu-id="a0508-206">若要获取的占位符文本<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>，使用<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.PlaceholderText%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="a0508-206">To get the placeholder text of a <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>, use the <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.PlaceholderText%2A> property.</span></span> <span data-ttu-id="a0508-207">你还可以使用此属性将占位符文本设置为一个字符串。</span><span class="sxs-lookup"><span data-stu-id="a0508-207">You can also use this property to set the placeholder text to a string.</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowingPlaceholderText">
+      <MemberSignature Language="C#" Value="public bool ShowingPlaceholderText { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowingPlaceholderText" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.ShowingPlaceholderText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="a0508-208">获取一个值，该值指示 <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" /> 当前是否显示占位符文本。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a0508-208">Gets a value that indicates whether the <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" /> is currently displaying placeholder text.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="a0508-209">如果 <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" /> 当前显示占位符文本，则为 <see langword="true" />；否则为 <see langword="false" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a0508-209">
+              <see langword="true" /> if the <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" /> is currently displaying placeholder text; otherwise, <see langword="false" />.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="a0508-210">中的文本之前会显示的占位符文本<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>由用户操作或一些其他操作更改。</span><span class="sxs-lookup"><span data-stu-id="a0508-210">The placeholder text is displayed until the text in the <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl> is changed by a user action or some other operation.</span></span> <span data-ttu-id="a0508-211">若要获取或设置占位符文本，请使用<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.PlaceholderText%2A>属性或<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.SetPlaceholderText%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="a0508-211">To get or set the placeholder text, use the <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.PlaceholderText%2A> property or the <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.SetPlaceholderText%2A> method.</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tag">
+      <MemberSignature Language="C#" Value="public string Tag { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Tag" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.Tag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="a0508-212">获取或设置要与 <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" /> 关联的字符串。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a0508-212">Gets or sets a string that you want to associate with the <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" />.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="a0508-213">一个要与 <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" /> 关联的字符串。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a0508-213">A string that you want to associate with the <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" />.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="a0508-214">你可以使用<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.Tag%2A>属性来存储与关联的字符串<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>文档处于打开状态时。</span><span class="sxs-lookup"><span data-stu-id="a0508-214">You can use the <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.Tag%2A> property to store a string that is associated with the <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl> while the document is open.</span></span>  
+  
+ <span data-ttu-id="a0508-215">你可以使用<xref:Microsoft.Office.Tools.Word.Document.SelectContentControlsByTag%2A>方法以查找由其标记在内容控件。</span><span class="sxs-lookup"><span data-stu-id="a0508-215">You can use the <xref:Microsoft.Office.Tools.Word.Document.SelectContentControlsByTag%2A> method to find a content control by its tag.</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Temporary">
+      <MemberSignature Language="C#" Value="public bool Temporary { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Temporary" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.Temporary" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="a0508-216">获取或设置一个值，该值指定在编辑 <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" /> 时是否自动将该控件从文档中删除。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a0508-216">Gets or sets a value that specifies whether the <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" /> is automatically deleted from the document when the control is edited.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="a0508-217">如果要在编辑 <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" /> 时自动将该控件删除，则为 <see langword="true" />；否则为 <see langword="false" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a0508-217">
+              <see langword="true" /> if the <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" /> is automatically deleted when the control is edited; otherwise, <see langword="false" />.</span>
+          </span>
+          <span data-ttu-id="a0508-218">默认值为 <see langword="false" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a0508-218">The default is <see langword="false" />.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="a0508-219">如果<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.Temporary%2A>属性是`true`、<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>当用户在控件中，键入或以编程方式更改控件中的文本自动删除。</span><span class="sxs-lookup"><span data-stu-id="a0508-219">If the <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.Temporary%2A> property is `true`, the <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl> is automatically deleted when the user types in the control, or when the text in the control is changed programmatically.</span></span> <span data-ttu-id="a0508-220">当<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>自动从文档，该控件将保持在文档中的文本中删除。</span><span class="sxs-lookup"><span data-stu-id="a0508-220">When the <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl> is automatically deleted from the document, the text in the control remains in the document.</span></span>  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.COMException">
+          <span data-ttu-id="a0508-221">
+            <see cref="P:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.LockContentControl" /> 属性为 <see langword="true" /> 时，设置此属性。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a0508-221">This property is set when the <see cref="P:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.LockContentControl" /> property is <see langword="true" />.</span>
+          </span>
+        </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="a0508-222">获取或设置 <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" /> 中的文本。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a0508-222">Gets or sets the text in the <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" />.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="a0508-223">
+            <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" /> 中的文本。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a0508-223">The text in the <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" />.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="a0508-224">若要访问控件和其他文本属性中的文本的格式，使用<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.Range%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="a0508-224">To access the formatting of the text in the control and other text properties, use the <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.Range%2A> property.</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Title">
+      <MemberSignature Language="C#" Value="public string Title { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Title" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.Title" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="a0508-225">获取或设置 <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" /> 的标题。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a0508-225">Gets or sets the title of the <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" />.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="a0508-226">
+            <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" /> 的标题。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a0508-226">The title of the <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" />.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="a0508-227">标题显示在边框<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>当用户单击它。</span><span class="sxs-lookup"><span data-stu-id="a0508-227">The title is displayed in the border of the <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl> when the user clicks it.</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

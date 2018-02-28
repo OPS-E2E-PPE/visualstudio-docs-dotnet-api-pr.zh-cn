@@ -1,0 +1,1140 @@
+<Type Name="ControlCollection" FullName="Microsoft.Office.Tools.Excel.ControlCollection">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="53a5ce2e30a61a81dcd8428ee77c66caa4af08a1" />
+    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.translationtype" Value="HT" />
+    <Meta Name="ms.contentlocale" Value="zh-CN" />
+    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public interface ControlCollection : System.Collections.IEnumerable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ControlCollection implements class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Excel.ControlCollection" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("0B027FC3-018C-4917-AE33-A09E0A30A661")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.TypeIdentifier</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+      <span data-ttu-id="c13b8-101">表示 Office 解决方案中 Excel 工作表中的托管控件的集合。</span>
+      <span class="sxs-lookup">
+        <span data-stu-id="c13b8-101">Represents a collection of managed controls on an Excel worksheet in an Office solution.</span>
+      </span>
+    </summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="c13b8-102">使用的方法和属性<xref:Microsoft.Office.Tools.Excel.ControlCollection>界面来管理 Excel 工作表上的控件。</span><span class="sxs-lookup"><span data-stu-id="c13b8-102">Use the methods and properties of the <xref:Microsoft.Office.Tools.Excel.ControlCollection> interface to manage controls on an Excel worksheet.</span></span> <span data-ttu-id="c13b8-103">有关详细信息，请参阅[在运行时向 Office 文档添加控件](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time.md)。</span><span class="sxs-lookup"><span data-stu-id="c13b8-103">For more information, see [Adding Controls to Office Documents at Run Time](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time.md).</span></span>  
+  
+ <span data-ttu-id="c13b8-104">无法在代码中，创建此接口的实例，因为它没有任何公共构造函数。</span><span class="sxs-lookup"><span data-stu-id="c13b8-104">You cannot create an instance of this interface in your code, because it does not have any public constructors.</span></span> <span data-ttu-id="c13b8-105">若要获取在文档级项目中的此接口的实例，请使用<xref:Microsoft.Office.Tools.Excel.Worksheet.Controls%2A>属性之一的`Sheet` * n *你的项目中的类。</span><span class="sxs-lookup"><span data-stu-id="c13b8-105">To get an instance of this interface in a document-level project, use the <xref:Microsoft.Office.Tools.Excel.Worksheet.Controls%2A> property of one of the `Sheet`*n* classes in your project.</span></span> <span data-ttu-id="c13b8-106">若要获取在文档级项目中的此接口的实例，请使用<xref:Microsoft.Office.Tools.Excel.Worksheet.Controls%2A>属性<xref:Microsoft.Office.Tools.Excel.Worksheet>，则在运行时以编程方式创建宿主项。</span><span class="sxs-lookup"><span data-stu-id="c13b8-106">To get an instance of this interface in a document-level project, use the <xref:Microsoft.Office.Tools.Excel.Worksheet.Controls%2A> property of a <xref:Microsoft.Office.Tools.Excel.Worksheet> host item that you create programmatically at run time.</span></span> <span data-ttu-id="c13b8-107">有关详细信息，请参阅[扩展 Word 文档和 Excel VSTO 外接程序在运行时中的工作簿](/visualstudio/vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)。</span><span class="sxs-lookup"><span data-stu-id="c13b8-107">For more information, see [Extending Word Documents and Excel Workbooks in VSTO Add-ins at Run Time](/visualstudio/vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md).</span></span>  
+  
+ <span data-ttu-id="c13b8-108">下表显示如何使用<xref:Microsoft.Office.Tools.Excel.ControlCollection>成员来执行一些常见的任务相关的文档上的控件。</span><span class="sxs-lookup"><span data-stu-id="c13b8-108">The following table shows how to use <xref:Microsoft.Office.Tools.Excel.ControlCollection> members to perform some common tasks related to controls on documents.</span></span>  
+  
+|<span data-ttu-id="c13b8-109">任务</span><span class="sxs-lookup"><span data-stu-id="c13b8-109">Task</span></span>|<span data-ttu-id="c13b8-110">操作</span><span class="sxs-lookup"><span data-stu-id="c13b8-110">Action</span></span>|  
+|----------|------------|  
+|<span data-ttu-id="c13b8-111">向工作表添加控件。</span><span class="sxs-lookup"><span data-stu-id="c13b8-111">Add a control to the worksheet.</span></span>|<span data-ttu-id="c13b8-112">使用添加之一*\<控件 >*方法。</span><span class="sxs-lookup"><span data-stu-id="c13b8-112">Use one of the Add*\<control>* methods.</span></span> <span data-ttu-id="c13b8-113">例如，若要添加<xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName>，使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.AddListObject%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="c13b8-113">For example, to add a <xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName>, use the <xref:Microsoft.Office.Tools.Excel.ControlCollection.AddListObject%2A> method.</span></span>|  
+|<span data-ttu-id="c13b8-114">从工作表中移除的控件。</span><span class="sxs-lookup"><span data-stu-id="c13b8-114">Remove a control from the worksheet.</span></span>|<span data-ttu-id="c13b8-115">使用 <xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="c13b8-115">Use the <xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A> method.</span></span>|  
+|<span data-ttu-id="c13b8-116">确定控件是否在集合中。</span><span class="sxs-lookup"><span data-stu-id="c13b8-116">Determine whether a control is in the collection.</span></span>|<span data-ttu-id="c13b8-117">将控件或其名称传递<xref:Microsoft.Office.Tools.Excel.ControlCollection.Contains%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="c13b8-117">Pass the control or its name to the <xref:Microsoft.Office.Tools.Excel.ControlCollection.Contains%2A> method.</span></span>|  
+|<span data-ttu-id="c13b8-118">集合中获取控件的索引。</span><span class="sxs-lookup"><span data-stu-id="c13b8-118">Get the index of a control in the collection.</span></span>|<span data-ttu-id="c13b8-119">将控件或其名称传递<xref:Microsoft.Office.Tools.Excel.ControlCollection.IndexOf%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="c13b8-119">Pass the control or its name to the <xref:Microsoft.Office.Tools.Excel.ControlCollection.IndexOf%2A> method.</span></span>|  
+|<span data-ttu-id="c13b8-120">从集合中获取一个控件。</span><span class="sxs-lookup"><span data-stu-id="c13b8-120">Get a control from the collection.</span></span>|<span data-ttu-id="c13b8-121">将索引或该控件的名称传递<xref:Microsoft.Office.Tools.Excel.ControlCollection.Item%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="c13b8-121">Pass the index or name of the control to the <xref:Microsoft.Office.Tools.Excel.ControlCollection.Item%2A> property.</span></span>|  
+  
+ [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
+  
+## <a name="usage"></a><span data-ttu-id="c13b8-122">用法</span><span class="sxs-lookup"><span data-stu-id="c13b8-122">Usage</span></span>  
+ [!INCLUDE[vsto_net35mref](~/includes/vsto-net35mref-md.md)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="_VtblGap1_5">
+      <MemberSignature Language="C#" Value="public void _VtblGap1_5 ();" />
+      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void _VtblGap1_5() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.ControlCollection._VtblGap1_5" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddChart">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Tools.Excel.Chart AddChart (Microsoft.Office.Interop.Excel.Range range, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.Tools.Excel.Chart AddChart(class Microsoft.Office.Interop.Excel.Range range, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.ControlCollection.AddChart(Microsoft.Office.Interop.Excel.Range,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Excel.Chart</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="range" Type="Microsoft.Office.Interop.Excel.Range" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="range">
+          <span data-ttu-id="c13b8-123">提供控件的边界的 <see cref="T:Microsoft.Office.Interop.Excel.Range" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-123">A <see cref="T:Microsoft.Office.Interop.Excel.Range" /> that provides the bounds for the control.</span>
+          </span>
+        </param>
+        <param name="name">
+          <span data-ttu-id="c13b8-124">可用于索引 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例中控件的控件名称。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-124">The name of the control that can be used to index the control in the <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> instance.</span>
+          </span>
+        </param>
+        <summary>
+          <span data-ttu-id="c13b8-125">在工作表中的指定范围添加一个新的 <see cref="T:Microsoft.Office.Tools.Excel.Chart" /> 控件。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-125">Adds a new <see cref="T:Microsoft.Office.Tools.Excel.Chart" /> control to the worksheet at the range specified.</span>
+          </span>
+        </summary>
+        <returns>
+          <span data-ttu-id="c13b8-126">添加到 <see cref="T:Microsoft.Office.Tools.Excel.Chart" /> 实例的 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 控件。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-126">The <see cref="T:Microsoft.Office.Tools.Excel.Chart" /> control that was added to the <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> instance.</span>
+          </span>
+        </returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="c13b8-127"><xref:Microsoft.Office.Tools.Excel.ControlCollection.AddChart%2A>方法使您能够添加<xref:Microsoft.Office.Tools.Excel.Chart>控件添加到末尾<xref:Microsoft.Office.Tools.Excel.ControlCollection>。</span><span class="sxs-lookup"><span data-stu-id="c13b8-127">The <xref:Microsoft.Office.Tools.Excel.ControlCollection.AddChart%2A> method enables you to add <xref:Microsoft.Office.Tools.Excel.Chart> controls to the end of the <xref:Microsoft.Office.Tools.Excel.ControlCollection>.</span></span> <span data-ttu-id="c13b8-128">若要删除<xref:Microsoft.Office.Tools.Excel.Chart>之前以编程方式添加的控件，请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="c13b8-128">To remove a <xref:Microsoft.Office.Tools.Excel.Chart> control that was previously added programmatically, use the <xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A> method.</span></span>  
+  
+   
+  
+## Examples  
+ <span data-ttu-id="c13b8-129">下面的代码示例将插入到单元格的数字 16 **E1**通过**E3** ，到单元格将数字 24 **F1**通过**F3**。</span><span class="sxs-lookup"><span data-stu-id="c13b8-129">The following code example inserts the number 16 to cells **E1** through **E3** and the number 24 to cells **F1** through **F3**.</span></span> <span data-ttu-id="c13b8-130">该代码随后创建<xref:Microsoft.Office.Tools.Excel.Chart>控件添加到单元格**A1**通过**C8**并将传递单元格**E1**通过**F3**到<xref:Microsoft.Office.Tools.Excel.Chart.SetSourceData%2A>方法来填充图表的数据。</span><span class="sxs-lookup"><span data-stu-id="c13b8-130">The code then creates a <xref:Microsoft.Office.Tools.Excel.Chart> control to cells **A1** through **C8** and passes cells **E1** through **F3** to the <xref:Microsoft.Office.Tools.Excel.Chart.SetSourceData%2A> method to populate the chart with data.</span></span>  
+  
+ [!code-csharp[Trin_ExcelControlCollection#58](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#58)]
+ [!code-vb[Trin_ExcelControlCollection#58](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#58)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <span data-ttu-id="c13b8-131">名称参数或范围参数为 <see langword="null" />，或者名称参数长度为零。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-131">The name or range argument is <see langword="null" />, or the name argument has zero length.</span>
+          </span>
+        </exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
+          <span data-ttu-id="c13b8-132">
+            <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例中已存在一个同名控件。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-132">A control with the same name is already in the <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> instance.</span>
+          </span>
+        </exception>
+        <exception cref="T:Microsoft.Office.Tools.InvalidRangeException">
+          <span data-ttu-id="c13b8-133">指定的范围无效。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-133">The range that was specified is not valid.</span>
+          </span>
+          <span data-ttu-id="c13b8-134">不能使用多区域范围。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-134">Multi-area ranges cannot be used.</span>
+          </span>
+          <span data-ttu-id="c13b8-135">该范围应与 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例同在一个工作表中。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-135">The range should be on the same worksheet as the <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> instance.</span>
+          </span>
+        </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddChart">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Tools.Excel.Chart AddChart (double left, double top, double width, double height, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.Tools.Excel.Chart AddChart(float64 left, float64 top, float64 width, float64 height, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.ControlCollection.AddChart(System.Double,System.Double,System.Double,System.Double,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Excel.Chart</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Double" />
+        <Parameter Name="top" Type="System.Double" />
+        <Parameter Name="width" Type="System.Double" />
+        <Parameter Name="height" Type="System.Double" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="left">
+          <span data-ttu-id="c13b8-136">控件左边缘与工作表左边缘之间的距离（以磅为单位）。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-136">The distance in points between the left edge of the control and the left edge of the worksheet.</span>
+          </span>
+        </param>
+        <param name="top">
+          <span data-ttu-id="c13b8-137">控件上边缘与工作表上边缘之间的距离（以磅为单位）。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-137">The distance in points between the top edge of the control and the top edge of the worksheet.</span>
+          </span>
+        </param>
+        <param name="width">
+          <span data-ttu-id="c13b8-138">控件的宽度（以磅为单位）。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-138">The width of the control in points.</span>
+          </span>
+        </param>
+        <param name="height">
+          <span data-ttu-id="c13b8-139">控件的高度（以磅为单位）。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-139">The height of the control in points.</span>
+          </span>
+        </param>
+        <param name="name">
+          <span data-ttu-id="c13b8-140">控件的名称。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-140">The name of the control.</span>
+          </span>
+        </param>
+        <summary>
+          <span data-ttu-id="c13b8-141">按照指定的大小和位置向工作表添加一个新的 <see cref="T:Microsoft.Office.Tools.Excel.Chart" /> 控件。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-141">Adds a new <see cref="T:Microsoft.Office.Tools.Excel.Chart" /> control to the worksheet in the specified size and location.</span>
+          </span>
+        </summary>
+        <returns>
+          <span data-ttu-id="c13b8-142">添加到 <see cref="T:Microsoft.Office.Tools.Excel.Chart" /> 实例的 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 控件。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-142">The <see cref="T:Microsoft.Office.Tools.Excel.Chart" /> control that was added to the <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> instance.</span>
+          </span>
+        </returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="c13b8-143"><xref:Microsoft.Office.Tools.Excel.ControlCollection.AddChart%2A>方法使您能够添加<xref:Microsoft.Office.Tools.Excel.Chart>控件添加到末尾<xref:Microsoft.Office.Tools.Excel.ControlCollection>。</span><span class="sxs-lookup"><span data-stu-id="c13b8-143">The <xref:Microsoft.Office.Tools.Excel.ControlCollection.AddChart%2A> method enables you to add <xref:Microsoft.Office.Tools.Excel.Chart> controls to the end of the <xref:Microsoft.Office.Tools.Excel.ControlCollection>.</span></span> <span data-ttu-id="c13b8-144">若要删除<xref:Microsoft.Office.Tools.Excel.Chart>之前以编程方式添加的控件，请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="c13b8-144">To remove a <xref:Microsoft.Office.Tools.Excel.Chart> control that was previously added programmatically, use the <xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A> method.</span></span>  
+  
+   
+  
+## Examples  
+ <span data-ttu-id="c13b8-145">下面的代码示例将插入到单元格的数字 16 **E1**通过**E3** ，到单元格将数字 24 **F1**通过**F3**。</span><span class="sxs-lookup"><span data-stu-id="c13b8-145">The following code example inserts the number 16 to cells **E1** through **E3** and the number 24 to cells **F1** through **F3**.</span></span> <span data-ttu-id="c13b8-146">该代码随后创建<xref:Microsoft.Office.Tools.Excel.Chart>控件添加到工作表并将传递单元格顶部**E1**通过**F3**到<xref:Microsoft.Office.Tools.Excel.Chart.SetSourceData%2A>方法来填充图表的数据。</span><span class="sxs-lookup"><span data-stu-id="c13b8-146">The code then creates a <xref:Microsoft.Office.Tools.Excel.Chart> control to the top of the worksheet and passes cells **E1** through **F3** to the <xref:Microsoft.Office.Tools.Excel.Chart.SetSourceData%2A> method to populate the chart with data.</span></span>  
+  
+ [!code-csharp[Trin_ExcelControlCollection#59](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#59)]
+ [!code-vb[Trin_ExcelControlCollection#59](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#59)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <span data-ttu-id="c13b8-147">名称参数为 <see langword="null" /> 或长度为零。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-147">The name argument is <see langword="null" /> or has zero length.</span>
+          </span>
+        </exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
+          <span data-ttu-id="c13b8-148">
+            <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例中已存在一个同名控件。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-148">A control with the same name is already in the <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> instance.</span>
+          </span>
+        </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddControl">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Tools.Excel.ControlSite AddControl (System.Windows.Forms.Control control, Microsoft.Office.Interop.Excel.Range range, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.Tools.Excel.ControlSite AddControl(class System.Windows.Forms.Control control, class Microsoft.Office.Interop.Excel.Range range, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.ControlCollection.AddControl(System.Windows.Forms.Control,Microsoft.Office.Interop.Excel.Range,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Excel.ControlSite</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Windows.Forms.Control" />
+        <Parameter Name="range" Type="Microsoft.Office.Interop.Excel.Range" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="control">
+          <span data-ttu-id="c13b8-149">要添加到 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例的控件。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-149">The control to be added to the <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> instance.</span>
+          </span>
+        </param>
+        <param name="range">
+          <span data-ttu-id="c13b8-150">提供控件的边界的 <see cref="T:Microsoft.Office.Interop.Excel.Range" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-150">A <see cref="T:Microsoft.Office.Interop.Excel.Range" /> that provides the bounds for the control.</span>
+          </span>
+        </param>
+        <param name="name">
+          <span data-ttu-id="c13b8-151">可用于索引 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例中控件的控件名称。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-151">The name of the control that can be used to index the control in the <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> instance.</span>
+          </span>
+        </param>
+        <summary>
+          <span data-ttu-id="c13b8-152">将指定的 <see cref="T:System.Windows.Forms.Control" /> 添加到 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 中的指定范围。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-152">Adds the specified <see cref="T:System.Windows.Forms.Control" /> to the <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> at the specified range.</span>
+          </span>
+        </summary>
+        <returns>
+          <span data-ttu-id="c13b8-153">一个表示控件的对象，它包含工作表中的指定控件。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-153">An object that represents the control that contains the specified control on the worksheet.</span>
+          </span>
+        </returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="c13b8-154">此方法可以用于任何将控件添加到<xref:Microsoft.Office.Tools.Excel.ControlCollection>在运行时。</span><span class="sxs-lookup"><span data-stu-id="c13b8-154">This method can be used to add any control to the <xref:Microsoft.Office.Tools.Excel.ControlCollection> at run time.</span></span> <span data-ttu-id="c13b8-155">有关详细信息，请参阅[在运行时向 Office 文档添加控件](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time.md)。</span><span class="sxs-lookup"><span data-stu-id="c13b8-155">For more information, see [Adding Controls to Office Documents at Run Time](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time.md).</span></span>  
+  
+   
+  
+## Examples  
+ <span data-ttu-id="c13b8-156">下面的代码示例将两个自定义用户控件添加到工作表使用`AddControl`方法。</span><span class="sxs-lookup"><span data-stu-id="c13b8-156">The following code example adds two custom user controls to the worksheet using the `AddControl` method.</span></span> <span data-ttu-id="c13b8-157">第一个控件添加到单元格区域。</span><span class="sxs-lookup"><span data-stu-id="c13b8-157">The first control is added to a range of cells.</span></span> <span data-ttu-id="c13b8-158">第二个控件添加到的特定位置。</span><span class="sxs-lookup"><span data-stu-id="c13b8-158">The second control is added to a specific location.</span></span> <span data-ttu-id="c13b8-159">代码更改<xref:System.Windows.Forms.Control.Top%2A>的第一个自定义用户控件，只会将移动控件的属性相对于<xref:Microsoft.Office.Tools.Excel.ControlSite>，其中包含工作表上的控件。</span><span class="sxs-lookup"><span data-stu-id="c13b8-159">The code changes the <xref:System.Windows.Forms.Control.Top%2A> property of the first custom user control, which only moves the control relative to the <xref:Microsoft.Office.Tools.Excel.ControlSite> that contains the control on the worksheet.</span></span> <span data-ttu-id="c13b8-160">代码随后设置<xref:System.Windows.Forms.Control.Top%2A>属性<xref:Microsoft.Office.Tools.Excel.ControlSite>返回的第二个的用户控件，用于说明设置的正确方式<xref:System.Windows.Forms.Control.Top%2A>的控件属性。</span><span class="sxs-lookup"><span data-stu-id="c13b8-160">The code then sets the <xref:System.Windows.Forms.Control.Top%2A> property of the <xref:Microsoft.Office.Tools.Excel.ControlSite> returned by the second user control to illustrate the correct way to set the <xref:System.Windows.Forms.Control.Top%2A> property of the control.</span></span>  
+  
+ [!code-csharp[Trin_ExcelControlCollection#10](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#10)]
+ [!code-vb[Trin_ExcelControlCollection#10](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <span data-ttu-id="c13b8-161">控件参数、名称参数或范围参数为 <see langword="null" />，或者名称参数长度为零。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-161">The control, name or range argument is <see langword="null" />, or the name argument has zero length.</span>
+          </span>
+        </exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
+          <span data-ttu-id="c13b8-162">
+            <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例中已存在一个同名控件。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-162">A control with the same name is already in the <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> instance.</span>
+          </span>
+        </exception>
+        <exception cref="T:Microsoft.Office.Tools.InvalidRangeException">
+          <span data-ttu-id="c13b8-163">指定的范围无效。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-163">The range that was specified is not valid.</span>
+          </span>
+          <span data-ttu-id="c13b8-164">不能使用多区域范围。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-164">Multi-area ranges cannot be used.</span>
+          </span>
+          <span data-ttu-id="c13b8-165">该范围应与 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例同在一个工作表中。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-165">The range should be on the same worksheet as the <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> instance.</span>
+          </span>
+        </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddControl">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Tools.Excel.ControlSite AddControl (System.Windows.Forms.Control control, double left, double top, double width, double height, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.Tools.Excel.ControlSite AddControl(class System.Windows.Forms.Control control, float64 left, float64 top, float64 width, float64 height, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.ControlCollection.AddControl(System.Windows.Forms.Control,System.Double,System.Double,System.Double,System.Double,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Excel.ControlSite</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Windows.Forms.Control" />
+        <Parameter Name="left" Type="System.Double" />
+        <Parameter Name="top" Type="System.Double" />
+        <Parameter Name="width" Type="System.Double" />
+        <Parameter Name="height" Type="System.Double" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="control">
+          <span data-ttu-id="c13b8-166">要添加到 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例的控件。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-166">The control to be added to the <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> instance.</span>
+          </span>
+        </param>
+        <param name="left">
+          <span data-ttu-id="c13b8-167">控件左边缘与工作表左边缘之间的距离（以磅为单位）。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-167">The distance in points between the left edge of the control and the left edge of the worksheet.</span>
+          </span>
+        </param>
+        <param name="top">
+          <span data-ttu-id="c13b8-168">控件上边缘与工作表上边缘之间的距离（以磅为单位）。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-168">The distance in points between the top edge of the control and the top edge of the worksheet.</span>
+          </span>
+        </param>
+        <param name="width">
+          <span data-ttu-id="c13b8-169">控件的宽度（以磅为单位）。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-169">The width of the control in points.</span>
+          </span>
+        </param>
+        <param name="height">
+          <span data-ttu-id="c13b8-170">控件的高度（以磅为单位）。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-170">The height of the control in points.</span>
+          </span>
+        </param>
+        <param name="name">
+          <span data-ttu-id="c13b8-171">控件的名称。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-171">The name of the control.</span>
+          </span>
+        </param>
+        <summary>
+          <span data-ttu-id="c13b8-172">按照指定的位置和大小将指定的 <see cref="T:System.Windows.Forms.Control" /> 添加到 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-172">Adds the specified <see cref="T:System.Windows.Forms.Control" /> to the <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> at the location and size specified.</span>
+          </span>
+        </summary>
+        <returns>
+          <span data-ttu-id="c13b8-173">一个表示控件的对象，它包含工作表中的指定控件。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-173">An object that represents the control that contains the specified control on the worksheet.</span>
+          </span>
+        </returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="c13b8-174">此方法可以用于任何将控件添加到<xref:Microsoft.Office.Tools.Excel.ControlCollection>在运行时。</span><span class="sxs-lookup"><span data-stu-id="c13b8-174">This method can be used to add any control to the <xref:Microsoft.Office.Tools.Excel.ControlCollection> at run time.</span></span> <span data-ttu-id="c13b8-175">有关详细信息，请参阅[在运行时向 Office 文档添加控件](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time.md)。</span><span class="sxs-lookup"><span data-stu-id="c13b8-175">For more information, see [Adding Controls to Office Documents at Run Time](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time.md).</span></span>  
+  
+   
+  
+## Examples  
+ <span data-ttu-id="c13b8-176">下面的代码示例将两个自定义用户控件添加到工作表使用`AddControl`方法。</span><span class="sxs-lookup"><span data-stu-id="c13b8-176">The following code example adds two custom user controls to the worksheet using the `AddControl` method.</span></span> <span data-ttu-id="c13b8-177">第一个控件添加到单元格区域。</span><span class="sxs-lookup"><span data-stu-id="c13b8-177">The first control is added to a range of cells.</span></span> <span data-ttu-id="c13b8-178">第二个控件添加到的特定位置。</span><span class="sxs-lookup"><span data-stu-id="c13b8-178">The second control is added to a specific location.</span></span> <span data-ttu-id="c13b8-179">代码更改<xref:System.Windows.Forms.Control.Top%2A>的第一个自定义用户控件，只会将移动控件的属性相对于<xref:Microsoft.Office.Tools.Excel.ControlSite>，其中包含工作表上的控件。</span><span class="sxs-lookup"><span data-stu-id="c13b8-179">The code changes the <xref:System.Windows.Forms.Control.Top%2A> property of the first custom user control, which only moves the control relative to the <xref:Microsoft.Office.Tools.Excel.ControlSite> that contains the control on the worksheet.</span></span> <span data-ttu-id="c13b8-180">代码随后设置<xref:System.Windows.Forms.Control.Top%2A>属性<xref:Microsoft.Office.Tools.Excel.ControlSite>返回的第二个的用户控件，用于说明设置的正确方式<xref:System.Windows.Forms.Control.Top%2A>的控件属性。</span><span class="sxs-lookup"><span data-stu-id="c13b8-180">The code then sets the <xref:System.Windows.Forms.Control.Top%2A> property of the <xref:Microsoft.Office.Tools.Excel.ControlSite> returned by the second user control to illustrate the correct way to set the <xref:System.Windows.Forms.Control.Top%2A> property of the control.</span></span>  
+  
+ [!code-csharp[Trin_ExcelControlCollection#10](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#10)]
+ [!code-vb[Trin_ExcelControlCollection#10](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <span data-ttu-id="c13b8-181">控件参数或名称参数为 <see langword="null" /> 或长度为零。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-181">The control or name argument is <see langword="null" /> or has zero length.</span>
+          </span>
+        </exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
+          <span data-ttu-id="c13b8-182">
+            <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例中已存在一个同名控件。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-182">A control with the same name is already in the <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> instance.</span>
+          </span>
+        </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddListObject">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Tools.Excel.ListObject AddListObject (Microsoft.Office.Interop.Excel.ListObject listObject);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.Tools.Excel.ListObject AddListObject(class Microsoft.Office.Interop.Excel.ListObject listObject) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.ControlCollection.AddListObject(Microsoft.Office.Interop.Excel.ListObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Excel.ListObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="listObject" Type="Microsoft.Office.Interop.Excel.ListObject" />
+      </Parameters>
+      <Docs>
+        <param name="listObject">
+          <span data-ttu-id="c13b8-183">本机 <see cref="T:Microsoft.Office.Interop.Excel.ListObject" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-183">The native <see cref="T:Microsoft.Office.Interop.Excel.ListObject" />.</span>
+          </span>
+        </param>
+        <summary>
+          <span data-ttu-id="c13b8-184">将一个 Visual Studio <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 添加到基于指定的本机 <see cref="T:Microsoft.Office.Interop.Excel.ListObject" /> 的控件集合。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-184">Adds a Visual Studio <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> to the control collection based on the specified native <see cref="T:Microsoft.Office.Interop.Excel.ListObject" />.</span>
+          </span>
+        </summary>
+        <returns>
+          <span data-ttu-id="c13b8-185">已添加到控件集合中的 Visual Studio <see cref="T:Microsoft.Office.Tools.Excel.ListObject" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-185">The Visual Studio <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> that was added to the control collection.</span>
+          </span>
+        </returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="c13b8-186">不应在代码中直接调用此方法。</span><span class="sxs-lookup"><span data-stu-id="c13b8-186">You should not call this method directly from your code.</span></span> <span data-ttu-id="c13b8-187">而应调用<xref:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.GetVstoObject%2A?displayProperty=fullName>扩展方法来获取 Visual Studio <xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName>。</span><span class="sxs-lookup"><span data-stu-id="c13b8-187">Instead, call the <xref:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.GetVstoObject%2A?displayProperty=fullName> extension method to obtain a Visual Studio <xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName>.</span></span>  
+  
+ <span data-ttu-id="c13b8-188"><xref:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.GetVstoObject%2A?displayProperty=fullName>扩展方法使用此方法来生成 Visual Studio<xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName>对应于一个本机实例<xref:Microsoft.Office.Interop.Excel.ListObject?displayProperty=fullName>。</span><span class="sxs-lookup"><span data-stu-id="c13b8-188">The <xref:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.GetVstoObject%2A?displayProperty=fullName> extension method uses this method to generate a Visual Studio <xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName> that corresponds to an instance of a native <xref:Microsoft.Office.Interop.Excel.ListObject?displayProperty=fullName>.</span></span>  
+  
+ <span data-ttu-id="c13b8-189"><xref:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.GetVstoObject%2A?displayProperty=fullName>扩展方法创建扩展<xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName>仅一次。</span><span class="sxs-lookup"><span data-stu-id="c13b8-189">The <xref:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.GetVstoObject%2A?displayProperty=fullName> extension method creates an extended <xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName> only once.</span></span> <span data-ttu-id="c13b8-190">它将在后续调用中返回现有的扩展对象的同一个实例。</span><span class="sxs-lookup"><span data-stu-id="c13b8-190">It returns the same instance of the existing extended object in subsequent calls.</span></span> <span data-ttu-id="c13b8-191">与此相反，<xref:Microsoft.Office.Tools.Excel.ControlCollection.AddListObject%2A>创建一个新扩展<xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName>每次。</span><span class="sxs-lookup"><span data-stu-id="c13b8-191">In contrast, <xref:Microsoft.Office.Tools.Excel.ControlCollection.AddListObject%2A> creates a new extended <xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName> each time.</span></span>  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <span data-ttu-id="c13b8-192">
+            <paramref name="listObject" /> 参数为 <see langword="null" /> 或长度为零。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-192">The <paramref name="listObject" /> argument is <see langword="null" />, or has zero length.</span>
+          </span>
+        </exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
+          <span data-ttu-id="c13b8-193">一个同名 <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 控件已经添加到 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例中。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-193">A <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> control with the same name has already been added to the <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> instance.</span>
+          </span>
+        </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddListObject">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Tools.Excel.ListObject AddListObject (Microsoft.Office.Interop.Excel.Range range, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.Tools.Excel.ListObject AddListObject(class Microsoft.Office.Interop.Excel.Range range, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.ControlCollection.AddListObject(Microsoft.Office.Interop.Excel.Range,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Excel.ListObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="range" Type="Microsoft.Office.Interop.Excel.Range" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="range">
+          <span data-ttu-id="c13b8-194">提供控件的边界的 <see cref="T:Microsoft.Office.Interop.Excel.Range" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-194">A <see cref="T:Microsoft.Office.Interop.Excel.Range" /> that provides the bounds for the control.</span>
+          </span>
+        </param>
+        <param name="name">
+          <span data-ttu-id="c13b8-195">可用于索引 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例中控件的控件名称。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-195">The name of the control that can be used to index the control in the <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> instance.</span>
+          </span>
+        </param>
+        <summary>
+          <span data-ttu-id="c13b8-196">在工作表中的指定范围添加一个新的 <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 控件。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-196">Adds a new <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> control to the worksheet at the range specified.</span>
+          </span>
+        </summary>
+        <returns>
+          <span data-ttu-id="c13b8-197">添加到 <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 实例的 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 控件。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-197">The <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> control that was added to the <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> instance.</span>
+          </span>
+        </returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="c13b8-198"><xref:Microsoft.Office.Tools.Excel.ControlCollection.AddListObject%2A>方法使您能够添加<xref:Microsoft.Office.Tools.Excel.ListObject>控件添加到末尾<xref:Microsoft.Office.Tools.Excel.ControlCollection>。</span><span class="sxs-lookup"><span data-stu-id="c13b8-198">The <xref:Microsoft.Office.Tools.Excel.ControlCollection.AddListObject%2A> method enables you to add <xref:Microsoft.Office.Tools.Excel.ListObject> controls to the end of the <xref:Microsoft.Office.Tools.Excel.ControlCollection>.</span></span> <span data-ttu-id="c13b8-199">若要删除<xref:Microsoft.Office.Tools.Excel.ListObject>之前以编程方式添加的控件，请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="c13b8-199">To remove a <xref:Microsoft.Office.Tools.Excel.ListObject> control that was previously added programmatically, use the <xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A> method.</span></span>  
+  
+   
+  
+## Examples  
+ <span data-ttu-id="c13b8-200">下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.ListObject>控制转移到顶部的工作表，然后显示一个消息框显示中的行数<xref:Microsoft.Office.Tools.Excel.ListObject>。</span><span class="sxs-lookup"><span data-stu-id="c13b8-200">The following code example adds a <xref:Microsoft.Office.Tools.Excel.ListObject> control to the top of the worksheet, and then displays a message box showing the number of rows in the <xref:Microsoft.Office.Tools.Excel.ListObject>.</span></span>  
+  
+ [!code-csharp[Trin_ExcelControlCollection#57](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#57)]
+ [!code-vb[Trin_ExcelControlCollection#57](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#57)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <span data-ttu-id="c13b8-201">名称参数或范围参数为 <see langword="null" />，或者名称参数长度为零。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-201">The name or range argument is <see langword="null" />, or the name argument has zero length.</span>
+          </span>
+        </exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
+          <span data-ttu-id="c13b8-202">
+            <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例中已存在一个同名控件。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-202">A control with the same name is already in the <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> instance.</span>
+          </span>
+        </exception>
+        <exception cref="T:Microsoft.Office.Tools.InvalidRangeException">
+          <span data-ttu-id="c13b8-203">指定的范围无效。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-203">The range that was specified is not valid.</span>
+          </span>
+          <span data-ttu-id="c13b8-204">不能使用多区域范围。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-204">Multi-area ranges cannot be used.</span>
+          </span>
+          <span data-ttu-id="c13b8-205">该范围应与 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例同在一个工作表中。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-205">The range should be on the same worksheet as the <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> instance.</span>
+          </span>
+        </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddNamedRange">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Tools.Excel.NamedRange AddNamedRange (Microsoft.Office.Interop.Excel.Range range, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.Tools.Excel.NamedRange AddNamedRange(class Microsoft.Office.Interop.Excel.Range range, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.ControlCollection.AddNamedRange(Microsoft.Office.Interop.Excel.Range,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Excel.NamedRange</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="range" Type="Microsoft.Office.Interop.Excel.Range" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="range">
+          <span data-ttu-id="c13b8-206">提供控件的边界的 <see cref="T:Microsoft.Office.Interop.Excel.Range" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-206">A <see cref="T:Microsoft.Office.Interop.Excel.Range" /> that provides the bounds for the control.</span>
+          </span>
+        </param>
+        <param name="name">
+          <span data-ttu-id="c13b8-207">可用于索引 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例中控件的控件名称。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-207">The name of the control that can be used to index the control in the <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> instance.</span>
+          </span>
+        </param>
+        <summary>
+          <span data-ttu-id="c13b8-208">在工作表中的指定范围添加一个新的 <see cref="T:Microsoft.Office.Tools.Excel.NamedRange" /> 控件。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-208">Adds a new <see cref="T:Microsoft.Office.Tools.Excel.NamedRange" /> control to the worksheet at the range specified.</span>
+          </span>
+        </summary>
+        <returns>
+          <span data-ttu-id="c13b8-209">添加到 <see cref="T:Microsoft.Office.Tools.Excel.NamedRange" /> 实例的 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 控件。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-209">The <see cref="T:Microsoft.Office.Tools.Excel.NamedRange" /> control that was added to the <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> instance.</span>
+          </span>
+        </returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="c13b8-210"><xref:Microsoft.Office.Tools.Excel.ControlCollection.AddNamedRange%2A>方法使您能够添加<xref:Microsoft.Office.Tools.Excel.NamedRange>控件添加到末尾<xref:Microsoft.Office.Tools.Excel.ControlCollection>。</span><span class="sxs-lookup"><span data-stu-id="c13b8-210">The <xref:Microsoft.Office.Tools.Excel.ControlCollection.AddNamedRange%2A> method enables you to add <xref:Microsoft.Office.Tools.Excel.NamedRange> controls to the end of the <xref:Microsoft.Office.Tools.Excel.ControlCollection>.</span></span> <span data-ttu-id="c13b8-211">若要删除<xref:Microsoft.Office.Tools.Excel.NamedRange>之前以编程方式添加的控件，请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="c13b8-211">To remove a <xref:Microsoft.Office.Tools.Excel.NamedRange> control that was previously added programmatically, use the <xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A> method.</span></span>  
+  
+   
+  
+## Examples  
+ <span data-ttu-id="c13b8-212">下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.NamedRange>控件添加到单元格**A1**，然后将命名范围的值设置为 100%。</span><span class="sxs-lookup"><span data-stu-id="c13b8-212">The following code example adds a <xref:Microsoft.Office.Tools.Excel.NamedRange> control to cell **A1**, and then sets the value of the named range to 100%.</span></span>  
+  
+ [!code-csharp[Trin_ExcelControlCollection#1](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#1)]
+ [!code-vb[Trin_ExcelControlCollection#1](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <span data-ttu-id="c13b8-213">名称参数或范围参数为 <see langword="null" />，或者名称参数长度为零。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-213">The name or range argument is <see langword="null" />, or the name argument has zero length.</span>
+          </span>
+        </exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
+          <span data-ttu-id="c13b8-214">
+            <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例中已存在一个同名控件。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-214">A control with the same name is already in the <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> instance.</span>
+          </span>
+        </exception>
+        <exception cref="T:Microsoft.Office.Tools.InvalidRangeException">
+          <span data-ttu-id="c13b8-215">指定的范围无效。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-215">The range that was specified is not valid.</span>
+          </span>
+          <span data-ttu-id="c13b8-216">不能使用多区域范围。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-216">Multi-area ranges cannot be used.</span>
+          </span>
+          <span data-ttu-id="c13b8-217">该范围应与 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例同在一个工作表中。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-217">The range should be on the same worksheet as the <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> instance.</span>
+          </span>
+        </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (object control);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Contains(object control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.ControlCollection.Contains(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="control">
+          <span data-ttu-id="c13b8-218">要在 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例中搜索的控件。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-218">The control that you want to search for in the <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> instance.</span>
+          </span>
+        </param>
+        <summary>
+          <span data-ttu-id="c13b8-219">确定指定的控件是否为 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例的成员。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-219">Determines whether the specified control is a member of the <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> instance.</span>
+          </span>
+        </summary>
+        <returns>
+          <span data-ttu-id="c13b8-220">如果在集合中找到了该控件，则为 <see langword="true" />；否则为 <see langword="false" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-220">
+              <see langword="true" /> if the control was found in the collection; otherwise, <see langword="false" />.</span>
+          </span>
+        </returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ <span data-ttu-id="c13b8-221">下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.Controls.Button>控制转移到顶部的工作表，然后显示一个消息框中的按钮的索引。</span><span class="sxs-lookup"><span data-stu-id="c13b8-221">The following code example adds a <xref:Microsoft.Office.Tools.Excel.Controls.Button> control to the top of the worksheet, and then displays the index of the button in a message box.</span></span>  
+  
+ [!code-csharp[Trin_ExcelControlCollection#54](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#54)]
+ [!code-vb[Trin_ExcelControlCollection#54](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#54)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Contains(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.ControlCollection.Contains(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">
+          <span data-ttu-id="c13b8-222">要在 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例中搜索的控件的名称。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-222">The name of the control you want to search for in the <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> instance.</span>
+          </span>
+        </param>
+        <summary>
+          <span data-ttu-id="c13b8-223">确定具有指定名称的控件是否为 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例的成员。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-223">Determines whether a control with the specified name is a member of the <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> instance.</span>
+          </span>
+        </summary>
+        <returns>
+          <span data-ttu-id="c13b8-224">如果在集合中找到了该控件，则为 <see langword="true" />；否则为 <see langword="false" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-224">
+              <see langword="true" /> if the control was found in the collection; otherwise, <see langword="false" />.</span>
+          </span>
+        </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Excel.ControlCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="c13b8-225">获取 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 中控件的数目。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-225">Gets the number of controls in the <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" />.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="c13b8-226">
+            <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 中控件的数目。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-226">The number of controls in the <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" />.</span>
+          </span>
+        </value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (object control);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 IndexOf(object control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.ControlCollection.IndexOf(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="control">
+          <span data-ttu-id="c13b8-227">索引待查找的控件。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-227">The control to find the index of.</span>
+          </span>
+        </param>
+        <summary>
+          <span data-ttu-id="c13b8-228">搜索指定控件，并返回该控件在 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例中的第一个匹配项的从零开始的索引。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-228">Searches for the specified control and returns the zero-based index of the first occurrence in the <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> instance.</span>
+          </span>
+        </summary>
+        <returns>
+          <span data-ttu-id="c13b8-229">控件的索引，如果控件不在 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例中，则为 -1。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-229">The index of the control, or -1 if the control is not in the <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> instance.</span>
+          </span>
+        </returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ <span data-ttu-id="c13b8-230">下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.Controls.Button>控制转移到顶部的工作表，然后显示一个消息框中的按钮的索引。</span><span class="sxs-lookup"><span data-stu-id="c13b8-230">The following code example adds a <xref:Microsoft.Office.Tools.Excel.Controls.Button> control to the top of the worksheet, and then displays the index of the button in a message box.</span></span>  
+  
+ [!code-csharp[Trin_ExcelControlCollection#54](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#54)]
+ [!code-vb[Trin_ExcelControlCollection#54](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#54)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 IndexOf(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.ControlCollection.IndexOf(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">
+          <span data-ttu-id="c13b8-231">要查找其索引的控件的名称。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-231">The name of the control that you want to find the index of.</span>
+          </span>
+        </param>
+        <summary>
+          <span data-ttu-id="c13b8-232">搜索具有指定名称的控件在 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例中的第一个匹配项。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-232">Searches for the first occurrence of a control with the specified name in the <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> instance.</span>
+          </span>
+        </summary>
+        <returns>
+          <span data-ttu-id="c13b8-233">一个表示控件索引的整数，如果控件不在 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例中，则为 -1。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-233">An integer that is the index of the control, or -1 if the control is not in the <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> instance.</span>
+          </span>
+        </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Excel.ControlCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">
+          <span data-ttu-id="c13b8-234">要获取的控件从零开始的索引。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-234">The zero-based index of the control to get.</span>
+          </span>
+        </param>
+        <summary>
+          <span data-ttu-id="c13b8-235">获取指定索引处的控件。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-235">Gets the control at the specified index.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="c13b8-236">指定索引处的控件。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-236">The control at the specified index.</span>
+          </span>
+        </value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[string name] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(string)" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Excel.ControlCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">
+          <span data-ttu-id="c13b8-237">表示控件名称的字符串。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-237">The string that represents the name of the control.</span>
+          </span>
+        </param>
+        <summary>
+          <span data-ttu-id="c13b8-238">获取具有指定名称的控件。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-238">Gets the control with the specified name.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="c13b8-239">具有指定名称的控件。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-239">The control with the specified name.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="c13b8-240">以编程方式，添加的控件`name`参数应包含指定为添加的最后一个参数的名称*\<控件 >*方法，不`Name`的控件属性。</span><span class="sxs-lookup"><span data-stu-id="c13b8-240">For controls that you add programmatically, the `name` parameter should contain the name that you specify as the last parameter of the Add*\<control>* method, not the `Name` property of the control.</span></span>  
+  
+ <span data-ttu-id="c13b8-241">在设计时添加的控件`name`参数应包含的标识符。</span><span class="sxs-lookup"><span data-stu-id="c13b8-241">For controls that you add at design time, the `name` parameter should contain the identifier.</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (object control);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Remove(object control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.ControlCollection.Remove(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="control">
+          <span data-ttu-id="c13b8-242">要从 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例中移除的控件。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-242">The control to be removed from the <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> instance.</span>
+          </span>
+        </param>
+        <summary>
+          <span data-ttu-id="c13b8-243">从 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例中移除指定的控件。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-243">Removes the specified control from the <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> instance.</span>
+          </span>
+        </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="c13b8-244">在设计时添加的控件不能从删除<xref:Microsoft.Office.Tools.Excel.ControlCollection>实例。</span><span class="sxs-lookup"><span data-stu-id="c13b8-244">Controls that are added at design time cannot be removed from the <xref:Microsoft.Office.Tools.Excel.ControlCollection> instance.</span></span> <span data-ttu-id="c13b8-245">你只能使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法来删除在运行时添加控件。</span><span class="sxs-lookup"><span data-stu-id="c13b8-245">You can only use the <xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A> method to remove controls added at run time.</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public bool Remove (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Remove(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.ControlCollection.Remove(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">
+          <span data-ttu-id="c13b8-246">要从 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例中移除的控件的名称。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-246">The name of the control to be removed from the <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> instance.</span>
+          </span>
+        </param>
+        <summary>
+          <span data-ttu-id="c13b8-247">从 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例中移除具有指定名称的控件。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-247">Removes the control with the specified name from the <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> instance.</span>
+          </span>
+        </summary>
+        <returns>To be added.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="c13b8-248">在设计时添加的控件不能从删除<xref:Microsoft.Office.Tools.Excel.ControlCollection>实例。</span><span class="sxs-lookup"><span data-stu-id="c13b8-248">Controls that were added at design time cannot be removed from the <xref:Microsoft.Office.Tools.Excel.ControlCollection> instance.</span></span> <span data-ttu-id="c13b8-249">你只能使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法来删除在运行时添加控件。</span><span class="sxs-lookup"><span data-stu-id="c13b8-249">You can only use the <xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A> method to remove controls added at run time.</span></span>  
+  
+   
+  
+## Examples  
+ <span data-ttu-id="c13b8-250">下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.Controls.Button>控件和<xref:Microsoft.Office.Tools.Excel.Controls.MonthCalendar>到工作表中的控件。</span><span class="sxs-lookup"><span data-stu-id="c13b8-250">The following code example adds a <xref:Microsoft.Office.Tools.Excel.Controls.Button> control and a <xref:Microsoft.Office.Tools.Excel.Controls.MonthCalendar> control to the worksheet.</span></span> <span data-ttu-id="c13b8-251">单击按钮时，代码用于删除<xref:Microsoft.Office.Tools.Excel.Controls.MonthCalendar>控件。</span><span class="sxs-lookup"><span data-stu-id="c13b8-251">When the button is clicked, the code removes the <xref:Microsoft.Office.Tools.Excel.Controls.MonthCalendar> control.</span></span>  
+  
+ [!code-csharp[Trin_ExcelControlCollection#55](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#55)]
+ [!code-vb[Trin_ExcelControlCollection#55](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#55)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.ControlCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">
+          <span data-ttu-id="c13b8-252">要从 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例移除的控件的从零开始的索引。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-252">The zero-based index of the control to remove from the <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> instance.</span>
+          </span>
+        </param>
+        <summary>
+          <span data-ttu-id="c13b8-253">移除 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例中指定索引处的控件。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-253">Removes the control at the specified index in the <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> instance.</span>
+          </span>
+        </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="c13b8-254">在设计时添加的控件不能从删除<xref:Microsoft.Office.Tools.Excel.ControlCollection>实例。</span><span class="sxs-lookup"><span data-stu-id="c13b8-254">Controls that were added at design time cannot be removed from the <xref:Microsoft.Office.Tools.Excel.ControlCollection> instance.</span></span> <span data-ttu-id="c13b8-255">你只能使用<xref:Microsoft.Office.Tools.Word.ControlCollection.RemoveAt%2A>方法来删除在运行时添加控件。</span><span class="sxs-lookup"><span data-stu-id="c13b8-255">You can only use the <xref:Microsoft.Office.Tools.Word.ControlCollection.RemoveAt%2A> method to remove controls added at run time.</span></span>  
+  
+   
+  
+## Examples  
+ <span data-ttu-id="c13b8-256">下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.Controls.Button>控件和<xref:Microsoft.Office.Tools.Excel.Controls.MonthCalendar>到工作表中的控件。</span><span class="sxs-lookup"><span data-stu-id="c13b8-256">The following code example adds a <xref:Microsoft.Office.Tools.Excel.Controls.Button> control and a <xref:Microsoft.Office.Tools.Excel.Controls.MonthCalendar> control to the worksheet.</span></span> <span data-ttu-id="c13b8-257">单击按钮时，代码用于删除<xref:Microsoft.Office.Tools.Excel.Controls.MonthCalendar>由索引指定的控件。</span><span class="sxs-lookup"><span data-stu-id="c13b8-257">When the button is clicked, the code removes the <xref:Microsoft.Office.Tools.Excel.Controls.MonthCalendar> control specified by the index.</span></span>  
+  
+ [!code-csharp[Trin_ExcelControlCollection#56](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#56)]
+ [!code-vb[Trin_ExcelControlCollection#56](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#56)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <span data-ttu-id="c13b8-258">索引小于零或者索引等于或大于计数。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-258">Index is less than zero or index is equal to or greater than count.</span>
+          </span>
+        </exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Contains">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>
+          <span data-ttu-id="c13b8-259">确定指定的控件是否为 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例的成员。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="c13b8-259">Determines whether the specified control is a member of the <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> instance.</span>
+          </span>
+        </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="c13b8-260">此方法可确定控件是否属于集合，然后再尝试对控件执行操作。</span><span class="sxs-lookup"><span data-stu-id="c13b8-260">This method enables you to determine whether a control is a member of the collection before attempting to perform operations on the control.</span></span> <span data-ttu-id="c13b8-261">你可以使用此方法以确认的控件已添加到或仍是的成员<xref:Microsoft.Office.Tools.Excel.ControlCollection>实例。</span><span class="sxs-lookup"><span data-stu-id="c13b8-261">You can use this method to confirm that a control has been added to, or is still a member of, the <xref:Microsoft.Office.Tools.Excel.ControlCollection> instance.</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+  </Members>
+</Type>

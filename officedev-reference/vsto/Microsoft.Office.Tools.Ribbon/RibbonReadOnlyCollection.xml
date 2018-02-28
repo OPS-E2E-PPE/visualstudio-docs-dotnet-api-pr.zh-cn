@@ -1,0 +1,128 @@
+<Type Name="RibbonReadOnlyCollection" FullName="Microsoft.Office.Tools.Ribbon.RibbonReadOnlyCollection">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="1cb6f5e566e03b3edb6ffdc14f14952e55d3c0db" />
+    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.translationtype" Value="HT" />
+    <Meta Name="ms.contentlocale" Value="zh-CN" />
+    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public interface RibbonReadOnlyCollection : System.Collections.Generic.ICollection&lt;Microsoft.Office.Tools.Ribbon.IRibbonExtension&gt;, System.Collections.Generic.IEnumerable&lt;Microsoft.Office.Tools.Ribbon.IRibbonExtension&gt;, System.Collections.Generic.IList&lt;Microsoft.Office.Tools.Ribbon.IRibbonExtension&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract RibbonReadOnlyCollection implements class System.Collections.Generic.ICollection`1&lt;class Microsoft.Office.Tools.Ribbon.IRibbonExtension&gt;, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Office.Tools.Ribbon.IRibbonExtension&gt;, class System.Collections.Generic.IList`1&lt;class Microsoft.Office.Tools.Ribbon.IRibbonExtension&gt;, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Ribbon.RibbonReadOnlyCollection" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.ICollection&lt;Microsoft.Office.Tools.Ribbon.IRibbonExtension&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;Microsoft.Office.Tools.Ribbon.IRibbonExtension&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IList&lt;Microsoft.Office.Tools.Ribbon.IRibbonExtension&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("c3b587bc-42bc-401b-a1e7-f85777d5156a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.TypeIdentifier</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+      <span data-ttu-id="60f85-101">提供对功能区自定义中 <see cref="T:Microsoft.Office.Tools.Ribbon.IRibbonExtension" /> 对象的访问。</span>
+      <span class="sxs-lookup">
+        <span data-stu-id="60f85-101">Provides access to the <see cref="T:Microsoft.Office.Tools.Ribbon.IRibbonExtension" /> objects in a Ribbon customization.</span>
+      </span>
+    </summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="60f85-102">此对象所表示的集合可以包含任一 all<xref:Microsoft.Office.Tools.Ribbon.IRibbonExtension>在功能区自定义项，或只有任意类型的对象<xref:Microsoft.Office.Tools.Ribbon.IRibbonExtension>特定消息类或 Microsoft Office 应用程序的对象。</span><span class="sxs-lookup"><span data-stu-id="60f85-102">The collection represented by this object can contain either all <xref:Microsoft.Office.Tools.Ribbon.IRibbonExtension> objects of any type in a Ribbon customization, or only those <xref:Microsoft.Office.Tools.Ribbon.IRibbonExtension> objects for a particular message class or Microsoft Office application.</span></span>  
+  
+ <span data-ttu-id="60f85-103">在功能区添加到项目中时，Visual Studio 添加`Globals`到你的应用程序的类。</span><span class="sxs-lookup"><span data-stu-id="60f85-103">When you add a Ribbon to a project, Visual Studio adds the `Globals` class to your application.</span></span> <span data-ttu-id="60f85-104">`Ribbons`属性`Globals`类返回一个实例，它派生自<xref:Microsoft.Office.Tools.Ribbon.RibbonCollectionBase>类。</span><span class="sxs-lookup"><span data-stu-id="60f85-104">The `Ribbons` property of the `Globals` class returns an instance that is derived from the <xref:Microsoft.Office.Tools.Ribbon.RibbonCollectionBase> class.</span></span> <span data-ttu-id="60f85-105">你可以使用`Globals.Ribbons`要访问与 Office 自定义项关联的功能区集合。</span><span class="sxs-lookup"><span data-stu-id="60f85-105">You can use the `Globals.Ribbons` collection to access Ribbons that are associated with your Office customization.</span></span>  
+  
+ [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
+  
+## <a name="usage"></a><span data-ttu-id="60f85-106">用法</span><span class="sxs-lookup"><span data-stu-id="60f85-106">Usage</span></span>  
+ [!INCLUDE[vsto_net35mref](~/includes/vsto-net35mref-md.md)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetRibbon">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Tools.Ribbon.IRibbonExtension GetRibbon (Type customRibbonType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.Tools.Ribbon.IRibbonExtension GetRibbon(class System.Type customRibbonType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Ribbon.RibbonReadOnlyCollection.GetRibbon(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Ribbon.IRibbonExtension</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="customRibbonType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="customRibbonType">To be added.</param>
+        <summary>
+          <span data-ttu-id="60f85-107">如果在此 <see cref="T:Microsoft.Office.Tools.Ribbon.IRibbonExtension" /> 中存在指定类型的 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonReadOnlyCollection" /> 实例，则返回该实例。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="60f85-107">Returns an instance of an <see cref="T:Microsoft.Office.Tools.Ribbon.IRibbonExtension" /> of the specified type, if it exists in this <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonReadOnlyCollection" />.</span>
+          </span>
+        </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRibbonContextCollection">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;Microsoft.Office.Tools.Ribbon.IRibbonExtension&gt; GetRibbonContextCollection (object contextWindow, Type customRibbonType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IList`1&lt;class Microsoft.Office.Tools.Ribbon.IRibbonExtension&gt; GetRibbonContextCollection(object contextWindow, class System.Type customRibbonType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Ribbon.RibbonReadOnlyCollection.GetRibbonContextCollection(System.Object,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;Microsoft.Office.Tools.Ribbon.IRibbonExtension&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contextWindow" Type="System.Object" />
+        <Parameter Name="customRibbonType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="contextWindow">To be added.</param>
+        <param name="customRibbonType">To be added.</param>
+        <summary>
+          <span data-ttu-id="60f85-108">返回与指定的邮件类或应用程序关联的 <see cref="T:Microsoft.Office.Tools.Ribbon.IRibbonExtension" /> 对象的集合。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="60f85-108">Returns a collection of <see cref="T:Microsoft.Office.Tools.Ribbon.IRibbonExtension" /> objects that are associated with a specified message class or application.</span>
+          </span>
+        </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
