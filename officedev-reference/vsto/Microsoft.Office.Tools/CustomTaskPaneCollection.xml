@@ -1,0 +1,296 @@
+<Type Name="CustomTaskPaneCollection" FullName="Microsoft.Office.Tools.CustomTaskPaneCollection">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="fd39a34f300f33ab21313f5509974c20634e402a" />
+    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.translationtype" Value="HT" />
+    <Meta Name="ms.contentlocale" Value="zh-CN" />
+    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public interface CustomTaskPaneCollection : IDisposable, System.Collections.Generic.IEnumerable&lt;Microsoft.Office.Tools.CustomTaskPane&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract CustomTaskPaneCollection implements class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Office.Tools.CustomTaskPane&gt;, class System.Collections.IEnumerable, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.CustomTaskPaneCollection" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;Microsoft.Office.Tools.CustomTaskPane&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("c3a84bf1-e95b-4d23-952d-59e35673958e")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>表示 Microsoft Office 应用程序中的自定义任务窗格集合。</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 使用<xref:Microsoft.Office.Tools.CustomTaskPaneCollection>中应用程序级外接程序将自定义任务窗格添加到应用程序，删除一个自定义任务窗格或访问现有的自定义任务窗格对象。 访问<xref:Microsoft.Office.Tools.CustomTaskPaneCollection>对象，请使用`CustomTaskPanes`字段`ThisAddIn`外接程序项目中的类。 有关详细信息，请参阅[VSTO 外接程序编程](/visualstudio/vsto/programming-vsto-add-ins.md)。  
+  
+ 任务窗格是用户界面面板，通常停靠到应用程序窗口的一侧。 有关如何创建自定义任务窗格的详细信息，请参阅[自定义任务窗格](/visualstudio/vsto/custom-task-panes.md)。  
+  
+ [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
+  
+## <a name="usage"></a>用法  
+ [!INCLUDE[vsto_net35mref](~/includes/vsto-net35mref-md.md)]  
+  
+   
+  
+## Examples  
+ 下面的代码示例演示如何通过创建自定义任务窗格<xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%28System.Windows.Forms.UserControl%2CSystem.String%29>方法。 此示例还使用的属性<xref:Microsoft.Office.Tools.CustomTaskPane>对象以修改自定义任务窗格的默认外观。 此代码示例摘自更大的示例为提供<xref:Microsoft.Office.Tools.CustomTaskPane>。  
+  
+ [!code-csharp[Trin_TaskPaneReference#2](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_TaskPaneReference/CS/ThisAddIn.cs#2)]
+ [!code-vb[Trin_TaskPaneReference#2](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_TaskPaneReference/VB/ThisAddIn.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Tools.CustomTaskPane Add (System.Windows.Forms.UserControl control, string title);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.Tools.CustomTaskPane Add(class System.Windows.Forms.UserControl control, string title) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.CustomTaskPaneCollection.Add(System.Windows.Forms.UserControl,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.CustomTaskPane</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Windows.Forms.UserControl" />
+        <Parameter Name="title" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="control">一个 <see cref="T:System.Windows.Forms.UserControl" />，为新的自定义任务窗格提供用户界面。</param>
+        <param name="title">新自定义任务窗格的标题栏中显示的文本。</param>
+        <summary>创建一个新的 <see cref="T:Microsoft.Office.Tools.CustomTaskPane" />，并将其添加到当前 <see cref="T:Microsoft.Office.Tools.CustomTaskPaneCollection" /> 中。 自定义任务窗格基于指定的 <see cref="T:System.Windows.Forms.UserControl" /> 并具有指定的标题。</summary>
+        <returns>一个 <see cref="T:Microsoft.Office.Tools.CustomTaskPane" />，表示新自定义任务窗格。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 使用此方法创建一个新<xref:Microsoft.Office.Tools.CustomTaskPane>Microsoft Office 应用程序的活动窗口与该键相关联。  
+  
+ 尽管<xref:Microsoft.Office.Tools.CustomTaskPaneCollection>对象是一个集合的<xref:Microsoft.Office.Tools.CustomTaskPane>对象，<xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%2A>方法接受<xref:System.Windows.Forms.UserControl>对象而不是<xref:Microsoft.Office.Tools.CustomTaskPane>对象。 有关详细信息，请参阅[自定义任务窗格](/visualstudio/vsto/custom-task-panes.md)。  
+  
+ 如果你想要指定特定窗口并将自定义任务窗格与它相关联，请使用<xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%28System.Windows.Forms.UserControl%2CSystem.String%2CSystem.Object%29>方法。  
+  
+   
+  
+## Examples  
+ 下面的代码示例演示如何通过创建自定义任务窗格<xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%28System.Windows.Forms.UserControl%2CSystem.String%29>方法。 此示例还使用的属性<xref:Microsoft.Office.Tools.CustomTaskPane>对象以修改自定义任务窗格的默认外观。 此代码示例摘自更大的示例为提供<xref:Microsoft.Office.Tools.CustomTaskPane>。  
+  
+ [!code-csharp[Trin_TaskPaneReference#2](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_TaskPaneReference/CS/ThisAddIn.cs#2)]
+ [!code-vb[Trin_TaskPaneReference#2](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_TaskPaneReference/VB/ThisAddIn.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="control" /> 或 <paramref name="title" /> 为 <see langword="null" />。</exception>
+        <exception cref="T:System.ObjectDisposedException">已在 <see cref="T:Microsoft.Office.Tools.CustomTaskPaneCollection" /> 上调用 <see cref="M:Microsoft.Office.Tools.CustomTaskPaneCollection.Dispose" /> 方法。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Tools.CustomTaskPane Add (System.Windows.Forms.UserControl control, string title, object window);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.Tools.CustomTaskPane Add(class System.Windows.Forms.UserControl control, string title, object window) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.CustomTaskPaneCollection.Add(System.Windows.Forms.UserControl,System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.CustomTaskPane</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Windows.Forms.UserControl" />
+        <Parameter Name="title" Type="System.String" />
+        <Parameter Name="window" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="control">一个 <see cref="T:System.Windows.Forms.UserControl" />，为新的自定义任务窗格提供用户界面。</param>
+        <param name="title">新自定义任务窗格的标题栏中显示的文本。</param>
+        <param name="window">一个对象，表示与新自定义任务窗格关联的应用程序窗口。</param>
+        <summary>创建一个新的 <see cref="T:Microsoft.Office.Tools.CustomTaskPane" />，并将其添加到当前 <see cref="T:Microsoft.Office.Tools.CustomTaskPaneCollection" /> 中。 自定义任务窗格基于指定的 <see cref="T:System.Windows.Forms.UserControl" />，它具有指定的标题，并与指定的应用程序窗口关联。</summary>
+        <returns>一个 <see cref="T:Microsoft.Office.Tools.CustomTaskPane" />，表示新自定义任务窗格。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 使用此方法创建一个新<xref:Microsoft.Office.Tools.CustomTaskPane>一个特定的应用程序窗口与该键相关联。 此方法很有用，如果你想要创建具有多个检查器或资源管理器在 Outlook 中，或包含多个文档在 Word 或 InfoPath 中可见的自定义任务窗格。  
+  
+ 一种`window`参数取决于应用程序。 下表列出的有效类型`window`参数。  
+  
+|应用程序|参数类型|  
+|-----------------|--------------------|  
+|字|<xref:Microsoft.Office.Interop.Word.Window?displayProperty=fullName>|  
+|Excel|<xref:Microsoft.Office.Interop.Excel.Window?displayProperty=fullName>|  
+|PowerPoint|`Microsoft.Office.Interop.PowerPoint.DocumentWindow`|  
+|InfoPath|<xref:Microsoft.Office.Interop.InfoPath.WindowObject?displayProperty=fullName>|  
+|Outlook|<xref:Microsoft.Office.Interop.Outlook.Explorer?displayProperty=fullName><br /><br /> 或<br /><br /> <xref:Microsoft.Office.Interop.Outlook.Inspector?displayProperty=fullName>|  
+  
+ 尽管<xref:Microsoft.Office.Tools.CustomTaskPaneCollection>是一套<xref:Microsoft.Office.Tools.CustomTaskPane>对象，<xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%2A>方法接受<xref:System.Windows.Forms.UserControl>对象而不是<xref:Microsoft.Office.Tools.CustomTaskPane>对象。 有关详细信息，请参阅[自定义任务窗格](/visualstudio/vsto/custom-task-panes.md)。  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="control" /> 或 <paramref name="title" /> 为 <see langword="null" />。</exception>
+        <exception cref="T:System.ObjectDisposedException">已在 <see cref="T:Microsoft.Office.Tools.CustomTaskPaneCollection" /> 上调用 <see cref="M:Microsoft.Office.Tools.CustomTaskPaneCollection.Dispose" /> 方法。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginInit">
+      <MemberSignature Language="C#" Value="public void BeginInit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void BeginInit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.CustomTaskPaneCollection.BeginInit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.CustomTaskPaneCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>获取当前 <see cref="T:Microsoft.Office.Tools.CustomTaskPane" /> 中的 <see cref="T:Microsoft.Office.Tools.CustomTaskPaneCollection" /> 对象的数目。</summary>
+        <value>当前 <see cref="T:Microsoft.Office.Tools.CustomTaskPane" /> 中的 <see cref="T:Microsoft.Office.Tools.CustomTaskPaneCollection" /> 对象数。</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">已在 <see cref="T:Microsoft.Office.Tools.CustomTaskPaneCollection" /> 上调用 <see cref="M:Microsoft.Office.Tools.CustomTaskPaneCollection.Dispose" /> 方法。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndInit">
+      <MemberSignature Language="C#" Value="public void EndInit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndInit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.CustomTaskPaneCollection.EndInit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Tools.CustomTaskPane this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Tools.CustomTaskPane Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.CustomTaskPaneCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.CustomTaskPane</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">要获取的 <see cref="T:Microsoft.Office.Tools.CustomTaskPane" /> 的从零开始的索引。</param>
+        <summary>获取位于指定索引处的 <see cref="T:Microsoft.Office.Tools.CustomTaskPane" />。</summary>
+        <value>位于指定索引处的 <see cref="T:Microsoft.Office.Tools.CustomTaskPane" />。</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">已在 <see cref="T:Microsoft.Office.Tools.CustomTaskPaneCollection" /> 上调用 <see cref="M:Microsoft.Office.Tools.CustomTaskPaneCollection.Dispose" /> 方法。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public bool Remove (Microsoft.Office.Tools.CustomTaskPane customTaskPane);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Remove(class Microsoft.Office.Tools.CustomTaskPane customTaskPane) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.CustomTaskPaneCollection.Remove(Microsoft.Office.Tools.CustomTaskPane)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="customTaskPane" Type="Microsoft.Office.Tools.CustomTaskPane" />
+      </Parameters>
+      <Docs>
+        <param name="customTaskPane">要从该集合中移除的 <see cref="T:Microsoft.Office.Tools.CustomTaskPane" />。</param>
+        <summary>从 <see cref="T:Microsoft.Office.Tools.CustomTaskPane" /> 中移除指定的 <see cref="T:Microsoft.Office.Tools.CustomTaskPaneCollection" />。</summary>
+        <returns>
+          如果从集合中成功移除了 <see cref="T:Microsoft.Office.Tools.CustomTaskPane" />，则为 <see langword="true" />；如果集合中不包含指定的 <see cref="T:Microsoft.Office.Tools.CustomTaskPane" />，则为 <see langword="false" />。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 如果外接程序中不再需要自定义任务窗格，则可以使用<xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Remove%2A>方法以清理外接程序仍在运行时任务窗格使用的资源。 当你使用此方法，<xref:Microsoft.Office.Tools.CustomTaskPane.Dispose%2A>方法指定的<xref:Microsoft.Office.Tools.CustomTaskPane>对象自动调用。  
+  
+ [!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]自动清理外接程序卸载时，自定义任务窗格使用的资源。 不要调用<xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Remove%2A>中的方法`ThisAddIn_Shutdown`项目中的事件处理程序。 此方法将引发<xref:System.ObjectDisposedException>，这是因为[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]清理所使用的资源<xref:Microsoft.Office.Tools.CustomTaskPane>对象之前`ThisAddIn_Shutdown`调用。  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="customTaskPane" /> 为 <see langword="null" />。</exception>
+        <exception cref="T:System.ObjectDisposedException">已在 <see cref="T:Microsoft.Office.Tools.CustomTaskPaneCollection" /> 上调用 <see cref="M:Microsoft.Office.Tools.CustomTaskPaneCollection.Dispose" /> 方法。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.CustomTaskPaneCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">要移除的 <see cref="T:Microsoft.Office.Tools.CustomTaskPane" /> 的从零开始的索引。</param>
+        <summary>移除 <see cref="T:Microsoft.Office.Tools.CustomTaskPane" /> 的指定索引处的 <see cref="T:Microsoft.Office.Tools.CustomTaskPaneCollection" />。</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 如果外接程序中不再需要自定义任务窗格，则可以使用<xref:Microsoft.Office.Tools.CustomTaskPaneCollection.RemoveAt%2A>方法以清理外接程序仍在运行时任务窗格使用的资源。 当你使用此方法，<xref:Microsoft.Office.Tools.CustomTaskPane.Dispose%2A>方法指定的<xref:Microsoft.Office.Tools.CustomTaskPane>对象自动调用。  
+  
+ [!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]自动清理外接程序卸载时，自定义任务窗格使用的资源。 不要调用<xref:Microsoft.Office.Tools.CustomTaskPaneCollection.RemoveAt%2A>中的方法`ThisAddIn_Shutdown`项目中的事件处理程序。 此方法将引发<xref:System.ObjectDisposedException>，这是因为[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]清理所使用的资源<xref:Microsoft.Office.Tools.CustomTaskPane>对象之前`ThisAddIn_Shutdown`调用。  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">集合的 <paramref name="index" /> 处不包含 <see cref="T:Microsoft.Office.Tools.CustomTaskPane" />。</exception>
+        <exception cref="T:System.ObjectDisposedException">已在 <see cref="T:Microsoft.Office.Tools.CustomTaskPaneCollection" /> 上调用 <see cref="M:Microsoft.Office.Tools.CustomTaskPaneCollection.Dispose" /> 方法。</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

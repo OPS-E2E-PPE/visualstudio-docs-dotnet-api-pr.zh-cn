@@ -1,0 +1,49 @@
+<Type Name="BeforeAddDataBoundRowEventHandler" FullName="Microsoft.Office.Tools.Excel.BeforeAddDataBoundRowEventHandler">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="bc5ea7aa2ef98bd006ed4bcadc7102e9bbb9d988" />
+    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.translationtype" Value="HT" />
+    <Meta Name="ms.contentlocale" Value="zh-CN" />
+    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public delegate void BeforeAddDataBoundRowEventHandler(object sender, BeforeAddDataBoundRowEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed BeforeAddDataBoundRowEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Excel.BeforeAddDataBoundRowEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="Microsoft.Office.Tools.Excel.BeforeAddDataBoundRowEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">事件源。</param>
+    <param name="e">包含事件数据的 <see cref="T:Microsoft.Office.Tools.Excel.BeforeAddDataBoundRowEventArgs" />。</param>
+    <summary>表示将用来处理 <see cref="E:Microsoft.Office.Tools.Excel.ListObject.BeforeAddDataBoundRow" /> 的 <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 事件的方法。</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 创建 <xref:Microsoft.Office.Tools.Excel.BeforeAddDataBoundRowEventHandler> 委托时，需要标识将处理该事件的方法。 若要将事件与事件处理程序关联，请将该委托的一个实例添加到事件中。 每当发生该事件时，直到移除了该委托，都会调用事件处理程序。  
+  
+   
+  
+## Examples  
+ 下面的代码示例创建<xref:System.Data.DataTable>和<xref:Microsoft.Office.Tools.Excel.ListObject>，并将绑定<xref:Microsoft.Office.Tools.Excel.ListObject>到<xref:System.Data.DataTable>。 然后，它创建<xref:Microsoft.Office.Tools.Excel.ListObject.BeforeAddDataBoundRow>取消添加新行的事件处理程序。 若要测试事件，手动向其中添加新行<xref:Microsoft.Office.Tools.Excel.ListObject>表 1 上。  
+  
+ 此示例适用于文档级自定义。  
+  
+ [!code-csharp[Trin_ExcelListObject#9](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelListObject/CS/Trin_ExcelListObject.cs#9)]
+ [!code-vb[Trin_ExcelListObject#9](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelListObject/VB/Sheet1.vb#9)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

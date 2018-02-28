@@ -1,0 +1,117 @@
+<Type Name="Action" FullName="Microsoft.Office.Tools.Excel.Action">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="1f8b186b3b2e3f0f69c04ec2101a9b5c720b660a" />
+    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.translationtype" Value="HT" />
+    <Meta Name="ms.contentlocale" Value="zh-CN" />
+    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public interface Action : Microsoft.Office.Tools.ActionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Action implements class Microsoft.Office.Tools.ActionBase" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Excel.Action" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Office.Tools.ActionBase</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("37e25b46-6941-4833-9b08-e692cf461982")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>表示一个 Excel 工作簿中的智能标记操作，该工作簿通过使用 Visual Studio 中的 Office 开发工具进行自定义。</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 识别特定类型的智能标记时，操作是智能标记快捷菜单上的可用选项。 若要创建操作，使用`Globals.Factory.CreateAction`方法来创建<xref:Microsoft.Office.Tools.Excel.Action>对象...  
+  
+ [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
+  
+## <a name="usage"></a>用法  
+ 此类型旨在用于 Excel 2007 仅在项目中。 Excel 2010 中已弃用智能标记。  
+  
+ [!INCLUDE[vsto_net35mref](~/includes/vsto-net35mref-md.md)]  
+  
+   
+  
+## Examples  
+ 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.SmartTag>与<xref:Microsoft.Office.Tools.Excel.Action>，识别术语"销售"和正则表达式"[我 &#124; 我] ssue\s\d {5，6}"。 该操作修改在运行时的操作的菜单标题，并显示已识别出的文本的地址。 若要测试示例，在一个单元格中键入单词"销售"和字符串在另一个单元格中的"颁发 12345"，然后重的智能标记操作。  
+  
+ [!code-csharp[Trin_ExcelSmartTags#1](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelSmartTags/CS/Trin_ExcelSmartTags.cs#1)]
+ [!code-vb[Trin_ExcelSmartTags#1](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelSmartTags/VB/ThisWorkbook.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BeforeCaptionShow">
+      <MemberSignature Language="C#" Value="public event Microsoft.Office.Tools.Excel.BeforeCaptionShowEventHandler BeforeCaptionShow;" />
+      <MemberSignature Language="ILAsm" Value=".event class Microsoft.Office.Tools.Excel.BeforeCaptionShowEventHandler BeforeCaptionShow" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.Excel.Action.BeforeCaptionShow" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Excel.BeforeCaptionShowEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>在用户单击智能标记图标之后、智能标记菜单显示之前发生。 [!INCLUDE[vsto_smart_tags](~/includes/vsto-smart-tags-md.md)]。</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此事件，能够更改基于上下文的智能标记标题。  
+  
+   
+  
+## Examples  
+ 下面的代码示例演示的处理程序<xref:Microsoft.Office.Tools.Excel.Action.BeforeCaptionShow>事件。 事件处理程序修改操作的菜单标题。 此代码示例摘自更大的示例为提供<xref:Microsoft.Office.Tools.Excel.Action>接口。  
+  
+ 此示例适用于文档级自定义。  
+  
+ [!code-csharp[Trin_ExcelSmartTags#3](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelSmartTags/CS/Trin_ExcelSmartTags.cs#3)]
+ [!code-vb[Trin_ExcelSmartTags#3](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelSmartTags/VB/ThisWorkbook.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Click">
+      <MemberSignature Language="C#" Value="public event Microsoft.Office.Tools.Excel.ActionClickEventHandler Click;" />
+      <MemberSignature Language="ILAsm" Value=".event class Microsoft.Office.Tools.Excel.ActionClickEventHandler Click" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.Excel.Action.Click" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Excel.ActionClickEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>在智能标记菜单中的操作被单击时发生。 [!INCLUDE[vsto_smart_tags](~/includes/vsto-smart-tags-md.md)]。</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ 下面的代码示例演示的处理程序<xref:Microsoft.Office.Tools.Excel.Action.Click>事件。 事件处理程序会显示包含识别的智能标记词或表达式的单元格的地址。 此代码示例摘自更大的示例为提供<xref:Microsoft.Office.Tools.Excel.Action>接口。  
+  
+ 此示例适用于文档级自定义。  
+  
+ [!code-csharp[Trin_ExcelSmartTags#4](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelSmartTags/CS/Trin_ExcelSmartTags.cs#4)]
+ [!code-vb[Trin_ExcelSmartTags#4](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelSmartTags/VB/ThisWorkbook.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

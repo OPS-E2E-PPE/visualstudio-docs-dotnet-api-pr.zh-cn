@@ -1,0 +1,2664 @@
+<Type Name="ControlExtensions" FullName="Microsoft.Office.Tools.Word.ControlExtensions">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="58816b04b6be5a405cb320dc55a4a19e6f0d7046" />
+    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.translationtype" Value="HT" />
+    <Meta Name="ms.contentlocale" Value="zh-CN" />
+    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public static class ControlExtensions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit ControlExtensions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Word.ControlExtensions" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.Tools.Word.v4.0.Utilities</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerNonUserCode</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>提供扩展方法，它可用于向使用 Visual Studio 中的 Office 开发工具自定义的 Word 文档添加 Windows 窗体控件。</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:Microsoft.Office.Tools.Word.ControlExtensions>方法是可用的扩展方法<xref:Microsoft.Office.Tools.Word.ControlCollection>返回对象<xref:Microsoft.Office.Tools.Word.Document.Controls%2A?displayProperty=fullName>（在应用程序级项目中） 的属性或<xref:Microsoft.Office.Tools.Word.DocumentBase.Controls%2A?displayProperty=fullName>在运行时 （在文档级项目中） 的属性。 若要将特定控件添加到文档中，使用在方法名称中包含的控件名称的方法。 例如，若要添加<xref:System.Windows.Forms.Button>，使用<xref:Microsoft.Office.Tools.Word.ControlExtensions.AddButton%2A>方法。  
+  
+ 有关将控件添加到文档的详细信息，请参阅[在运行时向 Office 文档添加控件](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time.md)。 有关扩展方法的详细信息，请参阅[扩展方法](http://msdn.microsoft.com/library/175ce3ff-9bbf-4e64-8421-faeb81a0bb51)和[扩展方法](http://msdn.microsoft.com/library/b8020aae-374d-46a9-bcb7-8cc2390b93b6)。  
+  
+> [!NOTE]
+>  在 Word 外接程序项目面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]，可以访问之前，必须添加对 Microsoft.Office.Tools.Word.v4.0.Utilities.dll 程序集的引用<xref:Microsoft.Office.Tools.Word.ControlExtensions>方法。  
+  
+   
+  
+## Examples  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.ControlExtensions.AddButton%2A>方法将添加<xref:Microsoft.Office.Tools.Word.Controls.Button>控制转移到在文档中，第一个段落，然后将文本添加到按钮。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+  
+ [!code-csharp[Trin_WordControlCollection#2](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#2)]
+ [!code-vb[Trin_WordControlCollection#2](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddButton">
+      <MemberSignature Language="C#" Value="public static Microsoft.Office.Tools.Word.Controls.Button AddButton (this Microsoft.Office.Tools.Word.ControlCollection controls, Microsoft.Office.Interop.Word.Range range, float width, float height, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Office.Tools.Word.Controls.Button AddButton(class Microsoft.Office.Tools.Word.ControlCollection controls, class Microsoft.Office.Interop.Word.Range range, float32 width, float32 height, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.ControlExtensions.AddButton(Microsoft.Office.Tools.Word.ControlCollection,Microsoft.Office.Interop.Word.Range,System.Single,System.Single,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Word.Controls.Button</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controls" Type="Microsoft.Office.Tools.Word.ControlCollection" RefType="this" />
+        <Parameter Name="range" Type="Microsoft.Office.Interop.Word.Range" />
+        <Parameter Name="width" Type="System.Single" />
+        <Parameter Name="height" Type="System.Single" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="controls">要添加控件的集合。 请勿自己提供此参数。 对 <see cref="P:Microsoft.Office.Tools.Word.Document.Controls" /> 属性（在应用程序级项目中）或 <see cref="P:Microsoft.Office.Tools.Word.DocumentBase.Controls" /> 属性（在文档级项目中）返回的集合调用此方法时，将自动提供此参数。</param>
+        <param name="range">控件的位置。</param>
+        <param name="width">控件的宽度（以磅为单位）。</param>
+        <param name="height">控件的高度（以磅为单位）。</param>
+        <param name="name">可用于索引 <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中控件的名称。</param>
+        <summary>按照指定的大小和位置向文档中添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.Controls.Button" /> 控件。</summary>
+        <returns>添加到文档的控件。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此方法可以添加<xref:Microsoft.Office.Tools.Word.Controls.Button>到末尾的对象<xref:Microsoft.Office.Tools.Word.ControlCollection>。  
+  
+ 若要删除<xref:Microsoft.Office.Tools.Word.Controls.Button>以编程方式添加，请使用<xref:Microsoft.Office.Tools.Word.ControlCollection.Remove%2A>方法。  
+  
+   
+  
+## Examples  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.Button>控制转移到在文档中，第一个段落，然后将文本添加到按钮。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+  
+ [!code-csharp[Trin_WordControlCollection#2](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#2)]
+ [!code-vb[Trin_WordControlCollection#2](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> 或 <paramref name="range" /> 参数为 <see langword="null" />，或者 name 参数长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
+          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中已存在一个同名控件。</exception>
+        <exception cref="T:Microsoft.Office.Tools.InvalidRangeException">指定的范围无效。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddButton">
+      <MemberSignature Language="C#" Value="public static Microsoft.Office.Tools.Word.Controls.Button AddButton (this Microsoft.Office.Tools.Word.ControlCollection controls, float left, float top, float width, float height, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Office.Tools.Word.Controls.Button AddButton(class Microsoft.Office.Tools.Word.ControlCollection controls, float32 left, float32 top, float32 width, float32 height, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.ControlExtensions.AddButton(Microsoft.Office.Tools.Word.ControlCollection,System.Single,System.Single,System.Single,System.Single,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Word.Controls.Button</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controls" Type="Microsoft.Office.Tools.Word.ControlCollection" RefType="this" />
+        <Parameter Name="left" Type="System.Single" />
+        <Parameter Name="top" Type="System.Single" />
+        <Parameter Name="width" Type="System.Single" />
+        <Parameter Name="height" Type="System.Single" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="controls">要添加控件的集合。 请勿自己提供此参数。 对 <see cref="P:Microsoft.Office.Tools.Word.Document.Controls" /> 属性（在应用程序级项目中）或 <see cref="P:Microsoft.Office.Tools.Word.DocumentBase.Controls" /> 属性（在文档级项目中）返回的集合调用此方法时，将自动提供此参数。</param>
+        <param name="left">控件左边缘与文档左边缘之间的距离（以磅为单位）。</param>
+        <param name="top">控件上边缘和文档上边缘之间的距离（以磅为单位）。</param>
+        <param name="width">控件的宽度（以磅为单位）。</param>
+        <param name="height">控件的高度（以磅为单位）。</param>
+        <param name="name">可用于索引 <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中控件的名称。</param>
+        <summary>按照指定的大小和位置向文档中添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.Controls.Button" /> 控件。</summary>
+        <returns>添加到文档的控件。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此方法可以添加<xref:Microsoft.Office.Tools.Word.Controls.Button>到末尾的对象<xref:Microsoft.Office.Tools.Word.ControlCollection>。  
+  
+ 若要删除<xref:Microsoft.Office.Tools.Word.Controls.Button>以编程方式添加，请使用<xref:Microsoft.Office.Tools.Word.ControlCollection.Remove%2A>方法。  
+  
+   
+  
+## Examples  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.Button>控件拖到该文档的开始，然后将文本添加到按钮。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+  
+ [!code-csharp[Trin_WordControlCollection#3](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#3)]
+ [!code-vb[Trin_WordControlCollection#3](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> 参数为 <see langword="null" /> 或长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
+          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中已存在一个同名控件。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddCheckBox">
+      <MemberSignature Language="C#" Value="public static Microsoft.Office.Tools.Word.Controls.CheckBox AddCheckBox (this Microsoft.Office.Tools.Word.ControlCollection controls, Microsoft.Office.Interop.Word.Range range, float width, float height, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Office.Tools.Word.Controls.CheckBox AddCheckBox(class Microsoft.Office.Tools.Word.ControlCollection controls, class Microsoft.Office.Interop.Word.Range range, float32 width, float32 height, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.ControlExtensions.AddCheckBox(Microsoft.Office.Tools.Word.ControlCollection,Microsoft.Office.Interop.Word.Range,System.Single,System.Single,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Word.Controls.CheckBox</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controls" Type="Microsoft.Office.Tools.Word.ControlCollection" RefType="this" />
+        <Parameter Name="range" Type="Microsoft.Office.Interop.Word.Range" />
+        <Parameter Name="width" Type="System.Single" />
+        <Parameter Name="height" Type="System.Single" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="controls">要添加控件的集合。 请勿自己提供此参数。 对 <see cref="P:Microsoft.Office.Tools.Word.Document.Controls" /> 属性（在应用程序级项目中）或 <see cref="P:Microsoft.Office.Tools.Word.DocumentBase.Controls" /> 属性（在文档级项目中）返回的集合调用此方法时，将自动提供此参数。</param>
+        <param name="range">控件的位置。</param>
+        <param name="width">控件的宽度（以磅为单位）。</param>
+        <param name="height">控件的高度（以磅为单位）。</param>
+        <param name="name">可用于索引 <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中控件的名称。</param>
+        <summary>按照指定的大小和位置向文档中添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.Controls.CheckBox" /> 控件。</summary>
+        <returns>添加到文档的控件。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此方法可以添加<xref:Microsoft.Office.Tools.Word.Controls.CheckBox>到末尾的对象<xref:Microsoft.Office.Tools.Word.ControlCollection>。  
+  
+ 若要删除<xref:Microsoft.Office.Tools.Word.Controls.CheckBox>以编程方式添加，请使用<xref:Microsoft.Office.Tools.Word.ControlCollection.Remove%2A>方法。  
+  
+   
+  
+## Examples  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.CheckBox>控制转移到在文档中，第一个段落，然后将文本添加到复选框。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+  
+ [!code-csharp[Trin_WordControlCollection#4](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#4)]
+ [!code-vb[Trin_WordControlCollection#4](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> 或 <paramref name="range" /> 参数为 <see langword="null" />，或者 <paramref name="name" /> 参数长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
+          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中已存在一个同名控件。</exception>
+        <exception cref="T:Microsoft.Office.Tools.InvalidRangeException">指定的范围无效。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddCheckBox">
+      <MemberSignature Language="C#" Value="public static Microsoft.Office.Tools.Word.Controls.CheckBox AddCheckBox (this Microsoft.Office.Tools.Word.ControlCollection controls, float left, float top, float width, float height, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Office.Tools.Word.Controls.CheckBox AddCheckBox(class Microsoft.Office.Tools.Word.ControlCollection controls, float32 left, float32 top, float32 width, float32 height, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.ControlExtensions.AddCheckBox(Microsoft.Office.Tools.Word.ControlCollection,System.Single,System.Single,System.Single,System.Single,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Word.Controls.CheckBox</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controls" Type="Microsoft.Office.Tools.Word.ControlCollection" RefType="this" />
+        <Parameter Name="left" Type="System.Single" />
+        <Parameter Name="top" Type="System.Single" />
+        <Parameter Name="width" Type="System.Single" />
+        <Parameter Name="height" Type="System.Single" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="controls">要添加控件的集合。 请勿自己提供此参数。 对 <see cref="P:Microsoft.Office.Tools.Word.Document.Controls" /> 属性（在应用程序级项目中）或 <see cref="P:Microsoft.Office.Tools.Word.DocumentBase.Controls" /> 属性（在文档级项目中）返回的集合调用此方法时，将自动提供此参数。</param>
+        <param name="left">控件左边缘与文档左边缘之间的距离（以磅为单位）。</param>
+        <param name="top">控件上边缘和文档上边缘之间的距离（以磅为单位）。</param>
+        <param name="width">控件的宽度（以磅为单位）。</param>
+        <param name="height">控件的高度（以磅为单位）。</param>
+        <param name="name">可用于索引 <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中控件的名称。</param>
+        <summary>按照指定的大小和位置向文档中添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.Controls.CheckBox" /> 控件。</summary>
+        <returns>添加到文档的控件。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.CheckBox>控件拖到该文档的开始，然后将文本添加到复选框。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+  
+ [!code-csharp[Trin_WordControlCollection#5](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#5)]
+ [!code-vb[Trin_WordControlCollection#5](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> 参数为 <see langword="null" /> 或长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
+          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中已存在一个同名控件。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddCheckedListBox">
+      <MemberSignature Language="C#" Value="public static Microsoft.Office.Tools.Word.Controls.CheckedListBox AddCheckedListBox (this Microsoft.Office.Tools.Word.ControlCollection controls, Microsoft.Office.Interop.Word.Range range, float width, float height, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Office.Tools.Word.Controls.CheckedListBox AddCheckedListBox(class Microsoft.Office.Tools.Word.ControlCollection controls, class Microsoft.Office.Interop.Word.Range range, float32 width, float32 height, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.ControlExtensions.AddCheckedListBox(Microsoft.Office.Tools.Word.ControlCollection,Microsoft.Office.Interop.Word.Range,System.Single,System.Single,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Word.Controls.CheckedListBox</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controls" Type="Microsoft.Office.Tools.Word.ControlCollection" RefType="this" />
+        <Parameter Name="range" Type="Microsoft.Office.Interop.Word.Range" />
+        <Parameter Name="width" Type="System.Single" />
+        <Parameter Name="height" Type="System.Single" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="controls">要添加控件的集合。 请勿自己提供此参数。 对 <see cref="P:Microsoft.Office.Tools.Word.Document.Controls" /> 属性（在应用程序级项目中）或 <see cref="P:Microsoft.Office.Tools.Word.DocumentBase.Controls" /> 属性（在文档级项目中）返回的集合调用此方法时，将自动提供此参数。</param>
+        <param name="range">控件的位置。</param>
+        <param name="width">控件的宽度（以磅为单位）。</param>
+        <param name="height">控件的高度（以磅为单位）。</param>
+        <param name="name">可用于索引 <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中控件的名称。</param>
+        <summary>按照指定的大小和位置向文档中添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.Controls.CheckedListBox" /> 控件。</summary>
+        <returns>添加到文档的控件。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此方法可以添加<xref:Microsoft.Office.Tools.Word.Controls.CheckedListBox>到末尾的对象<xref:Microsoft.Office.Tools.Word.ControlCollection>。  
+  
+ 若要删除<xref:Microsoft.Office.Tools.Word.Controls.CheckedListBox>以编程方式添加，请使用<xref:Microsoft.Office.Tools.Word.ControlCollection.Remove%2A>方法。  
+  
+   
+  
+## Examples  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.CheckedListBox>控件在文档中的第一个段落，请向选中的列表框中，添加两个项，然后选择`First Item`复选框。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+  
+ [!code-csharp[Trin_WordControlCollection#6](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#6)]
+ [!code-vb[Trin_WordControlCollection#6](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> 或 <paramref name="range" /> 参数为 <see langword="null" />，或者 <paramref name="name" /> 参数长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
+          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中已存在一个同名控件。</exception>
+        <exception cref="T:Microsoft.Office.Tools.InvalidRangeException">指定的范围无效。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddCheckedListBox">
+      <MemberSignature Language="C#" Value="public static Microsoft.Office.Tools.Word.Controls.CheckedListBox AddCheckedListBox (this Microsoft.Office.Tools.Word.ControlCollection controls, float left, float top, float width, float height, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Office.Tools.Word.Controls.CheckedListBox AddCheckedListBox(class Microsoft.Office.Tools.Word.ControlCollection controls, float32 left, float32 top, float32 width, float32 height, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.ControlExtensions.AddCheckedListBox(Microsoft.Office.Tools.Word.ControlCollection,System.Single,System.Single,System.Single,System.Single,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Word.Controls.CheckedListBox</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controls" Type="Microsoft.Office.Tools.Word.ControlCollection" RefType="this" />
+        <Parameter Name="left" Type="System.Single" />
+        <Parameter Name="top" Type="System.Single" />
+        <Parameter Name="width" Type="System.Single" />
+        <Parameter Name="height" Type="System.Single" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="controls">要添加控件的集合。 请勿自己提供此参数。 对 <see cref="P:Microsoft.Office.Tools.Word.Document.Controls" /> 属性（在应用程序级项目中）或 <see cref="P:Microsoft.Office.Tools.Word.DocumentBase.Controls" /> 属性（在文档级项目中）返回的集合调用此方法时，将自动提供此参数。</param>
+        <param name="left">控件左边缘与文档左边缘之间的距离（以磅为单位）。</param>
+        <param name="top">控件上边缘和文档上边缘之间的距离（以磅为单位）。</param>
+        <param name="width">控件的宽度（以磅为单位）。</param>
+        <param name="height">控件的高度（以磅为单位）。</param>
+        <param name="name">可用于索引 <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中控件的名称。</param>
+        <summary>按照指定的大小和位置向文档中添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.Controls.CheckedListBox" /> 控件。</summary>
+        <returns>添加到文档的控件。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此方法可以添加<xref:Microsoft.Office.Tools.Word.Controls.CheckedListBox>到末尾的对象<xref:Microsoft.Office.Tools.Word.ControlCollection>。  
+  
+ 若要删除<xref:Microsoft.Office.Tools.Word.Controls.CheckedListBox>以编程方式添加，请使用<xref:Microsoft.Office.Tools.Word.ControlCollection.Remove%2A>方法。  
+  
+   
+  
+## Examples  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.CheckedListBox>控件拖到文档的开头、 向选中的列表框中，添加两个项，然后选择`First Item`复选框。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+  
+ [!code-csharp[Trin_WordControlCollection#7](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#7)]
+ [!code-vb[Trin_WordControlCollection#7](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> 参数为 <see langword="null" /> 或长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
+          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中已存在一个同名控件。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddComboBox">
+      <MemberSignature Language="C#" Value="public static Microsoft.Office.Tools.Word.Controls.ComboBox AddComboBox (this Microsoft.Office.Tools.Word.ControlCollection controls, Microsoft.Office.Interop.Word.Range range, float width, float height, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Office.Tools.Word.Controls.ComboBox AddComboBox(class Microsoft.Office.Tools.Word.ControlCollection controls, class Microsoft.Office.Interop.Word.Range range, float32 width, float32 height, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.ControlExtensions.AddComboBox(Microsoft.Office.Tools.Word.ControlCollection,Microsoft.Office.Interop.Word.Range,System.Single,System.Single,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Word.Controls.ComboBox</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controls" Type="Microsoft.Office.Tools.Word.ControlCollection" RefType="this" />
+        <Parameter Name="range" Type="Microsoft.Office.Interop.Word.Range" />
+        <Parameter Name="width" Type="System.Single" />
+        <Parameter Name="height" Type="System.Single" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="controls">要添加控件的集合。 请勿自己提供此参数。 对 <see cref="P:Microsoft.Office.Tools.Word.Document.Controls" /> 属性（在应用程序级项目中）或 <see cref="P:Microsoft.Office.Tools.Word.DocumentBase.Controls" /> 属性（在文档级项目中）返回的集合调用此方法时，将自动提供此参数。</param>
+        <param name="range">控件的位置。</param>
+        <param name="width">控件的宽度（以磅为单位）。</param>
+        <param name="height">控件的高度（以磅为单位）。</param>
+        <param name="name">可用于索引 <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中控件的名称。</param>
+        <summary>按照指定的大小和位置向文档中添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.Controls.ComboBox" /> 控件。</summary>
+        <returns>添加到文档的控件。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此方法可以添加<xref:Microsoft.Office.Tools.Word.Controls.ComboBox>到末尾的对象<xref:Microsoft.Office.Tools.Word.ControlCollection>。  
+  
+ 若要删除<xref:Microsoft.Office.Tools.Word.Controls.ComboBox>以编程方式添加，请使用<xref:Microsoft.Office.Tools.Word.ControlCollection.Remove%2A>方法。  
+  
+   
+  
+## Examples  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.ComboBox>控件在文档中的第一个段落，请将两个项添加到组合框中，，然后选择第一个项。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+  
+ [!code-csharp[Trin_WordControlCollection#8](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#8)]
+ [!code-vb[Trin_WordControlCollection#8](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> 或 <paramref name="range" /> 参数为 <see langword="null" />，或者 <paramref name="name" /> 参数长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
+          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中已存在一个同名控件。</exception>
+        <exception cref="T:Microsoft.Office.Tools.InvalidRangeException">指定的范围无效。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddComboBox">
+      <MemberSignature Language="C#" Value="public static Microsoft.Office.Tools.Word.Controls.ComboBox AddComboBox (this Microsoft.Office.Tools.Word.ControlCollection controls, float left, float top, float width, float height, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Office.Tools.Word.Controls.ComboBox AddComboBox(class Microsoft.Office.Tools.Word.ControlCollection controls, float32 left, float32 top, float32 width, float32 height, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.ControlExtensions.AddComboBox(Microsoft.Office.Tools.Word.ControlCollection,System.Single,System.Single,System.Single,System.Single,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Word.Controls.ComboBox</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controls" Type="Microsoft.Office.Tools.Word.ControlCollection" RefType="this" />
+        <Parameter Name="left" Type="System.Single" />
+        <Parameter Name="top" Type="System.Single" />
+        <Parameter Name="width" Type="System.Single" />
+        <Parameter Name="height" Type="System.Single" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="controls">要添加控件的集合。 请勿自己提供此参数。 对 <see cref="P:Microsoft.Office.Tools.Word.Document.Controls" /> 属性（在应用程序级项目中）或 <see cref="P:Microsoft.Office.Tools.Word.DocumentBase.Controls" /> 属性（在文档级项目中）返回的集合调用此方法时，将自动提供此参数。</param>
+        <param name="left">控件左边缘与文档左边缘之间的距离（以磅为单位）。</param>
+        <param name="top">控件上边缘和文档上边缘之间的距离（以磅为单位）。</param>
+        <param name="width">控件的宽度（以磅为单位）。</param>
+        <param name="height">控件的高度（以磅为单位）。</param>
+        <param name="name">可用于索引 <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中控件的名称。</param>
+        <summary>按照指定的大小和位置向文档中添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.Controls.ComboBox" /> 控件。</summary>
+        <returns>添加到文档的控件。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此方法可以添加<xref:Microsoft.Office.Tools.Word.Controls.ComboBox>到末尾的对象<xref:Microsoft.Office.Tools.Word.ControlCollection>。  
+  
+ 若要删除<xref:Microsoft.Office.Tools.Word.Controls.ComboBox>以编程方式添加，请使用<xref:Microsoft.Office.Tools.Word.ControlCollection.Remove%2A>方法。  
+  
+   
+  
+## Examples  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.ComboBox>控件拖到文档的开头到组合框中，添加两个项，然后选择第一个项。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+  
+ [!code-csharp[Trin_WordControlCollection#9](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#9)]
+ [!code-vb[Trin_WordControlCollection#9](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> 参数为 <see langword="null" /> 或长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
+          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中已存在一个同名控件。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddDataGridView">
+      <MemberSignature Language="C#" Value="public static Microsoft.Office.Tools.Word.Controls.DataGridView AddDataGridView (this Microsoft.Office.Tools.Word.ControlCollection controls, Microsoft.Office.Interop.Word.Range range, float width, float height, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Office.Tools.Word.Controls.DataGridView AddDataGridView(class Microsoft.Office.Tools.Word.ControlCollection controls, class Microsoft.Office.Interop.Word.Range range, float32 width, float32 height, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.ControlExtensions.AddDataGridView(Microsoft.Office.Tools.Word.ControlCollection,Microsoft.Office.Interop.Word.Range,System.Single,System.Single,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Word.Controls.DataGridView</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controls" Type="Microsoft.Office.Tools.Word.ControlCollection" RefType="this" />
+        <Parameter Name="range" Type="Microsoft.Office.Interop.Word.Range" />
+        <Parameter Name="width" Type="System.Single" />
+        <Parameter Name="height" Type="System.Single" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="controls">要添加控件的集合。 请勿自己提供此参数。 对 <see cref="P:Microsoft.Office.Tools.Word.Document.Controls" /> 属性（在应用程序级项目中）或 <see cref="P:Microsoft.Office.Tools.Word.DocumentBase.Controls" /> 属性（在文档级项目中）返回的集合调用此方法时，将自动提供此参数。</param>
+        <param name="range">控件的位置。</param>
+        <param name="width">控件的宽度（以磅为单位）。</param>
+        <param name="height">控件的高度（以磅为单位）。</param>
+        <param name="name">可用于索引 <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中控件的名称。</param>
+        <summary>按照指定的大小和位置向文档中添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.Controls.DataGridView" /> 控件。</summary>
+        <returns>添加到文档的控件。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此方法可以添加<xref:Microsoft.Office.Tools.Word.Controls.DataGridView>到末尾的对象<xref:Microsoft.Office.Tools.Word.ControlCollection>。  
+  
+ 若要删除<xref:Microsoft.Office.Tools.Word.Controls.DataGridView>以编程方式添加，请使用<xref:Microsoft.Office.Tools.Word.ControlCollection.Remove%2A>方法。  
+  
+   
+  
+## Examples  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.DataGridView>控制转移到在文档中，第一个段落，然后将两个列添加到控件。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+  
+ [!code-csharp[Trin_WordControlCollection#11](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#11)]
+ [!code-vb[Trin_WordControlCollection#11](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> 或 <paramref name="range" /> 参数为 <see langword="null" />，或者 <paramref name="name" /> 参数长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
+          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中已存在一个同名控件。</exception>
+        <exception cref="T:Microsoft.Office.Tools.InvalidRangeException">指定的范围无效。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddDataGridView">
+      <MemberSignature Language="C#" Value="public static Microsoft.Office.Tools.Word.Controls.DataGridView AddDataGridView (this Microsoft.Office.Tools.Word.ControlCollection controls, float left, float top, float width, float height, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Office.Tools.Word.Controls.DataGridView AddDataGridView(class Microsoft.Office.Tools.Word.ControlCollection controls, float32 left, float32 top, float32 width, float32 height, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.ControlExtensions.AddDataGridView(Microsoft.Office.Tools.Word.ControlCollection,System.Single,System.Single,System.Single,System.Single,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Word.Controls.DataGridView</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controls" Type="Microsoft.Office.Tools.Word.ControlCollection" RefType="this" />
+        <Parameter Name="left" Type="System.Single" />
+        <Parameter Name="top" Type="System.Single" />
+        <Parameter Name="width" Type="System.Single" />
+        <Parameter Name="height" Type="System.Single" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="controls">要添加控件的集合。 请勿自己提供此参数。 对 <see cref="P:Microsoft.Office.Tools.Word.Document.Controls" /> 属性（在应用程序级项目中）或 <see cref="P:Microsoft.Office.Tools.Word.DocumentBase.Controls" /> 属性（在文档级项目中）返回的集合调用此方法时，将自动提供此参数。</param>
+        <param name="left">控件左边缘与文档左边缘之间的距离（以磅为单位）。</param>
+        <param name="top">控件上边缘和文档上边缘之间的距离（以磅为单位）。</param>
+        <param name="width">控件的宽度（以磅为单位）。</param>
+        <param name="height">控件的高度（以磅为单位）。</param>
+        <param name="name">可用于索引 <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中控件的名称。</param>
+        <summary>按照指定的大小和位置向文档中添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.Controls.DataGridView" /> 控件。</summary>
+        <returns>添加到文档的控件。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此方法可以添加<xref:Microsoft.Office.Tools.Word.Controls.DataGridView>到末尾的对象<xref:Microsoft.Office.Tools.Word.ControlCollection>。  
+  
+ 若要删除<xref:Microsoft.Office.Tools.Word.Controls.DataGridView>以编程方式添加，请使用<xref:Microsoft.Office.Tools.Word.ControlCollection.Remove%2A>方法。  
+  
+   
+  
+## Examples  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.DataGridView>控件拖到该文档的开始，然后将两个列添加到控件。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+  
+ [!code-csharp[Trin_WordControlCollection#12](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#12)]
+ [!code-vb[Trin_WordControlCollection#12](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#12)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> 参数为 <see langword="null" /> 或长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
+          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中已存在一个同名控件。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddDateTimePicker">
+      <MemberSignature Language="C#" Value="public static Microsoft.Office.Tools.Word.Controls.DateTimePicker AddDateTimePicker (this Microsoft.Office.Tools.Word.ControlCollection controls, Microsoft.Office.Interop.Word.Range range, float width, float height, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Office.Tools.Word.Controls.DateTimePicker AddDateTimePicker(class Microsoft.Office.Tools.Word.ControlCollection controls, class Microsoft.Office.Interop.Word.Range range, float32 width, float32 height, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.ControlExtensions.AddDateTimePicker(Microsoft.Office.Tools.Word.ControlCollection,Microsoft.Office.Interop.Word.Range,System.Single,System.Single,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Word.Controls.DateTimePicker</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controls" Type="Microsoft.Office.Tools.Word.ControlCollection" RefType="this" />
+        <Parameter Name="range" Type="Microsoft.Office.Interop.Word.Range" />
+        <Parameter Name="width" Type="System.Single" />
+        <Parameter Name="height" Type="System.Single" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="controls">要添加控件的集合。 请勿自己提供此参数。 对 <see cref="P:Microsoft.Office.Tools.Word.Document.Controls" /> 属性（在应用程序级项目中）或 <see cref="P:Microsoft.Office.Tools.Word.DocumentBase.Controls" /> 属性（在文档级项目中）返回的集合调用此方法时，将自动提供此参数。</param>
+        <param name="range">控件的位置。</param>
+        <param name="width">控件的宽度（以磅为单位）。</param>
+        <param name="height">控件的高度（以磅为单位）。</param>
+        <param name="name">可用于索引 <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中控件的名称。</param>
+        <summary>按照指定的大小和位置向文档中添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.Controls.DateTimePicker" /> 控件。</summary>
+        <returns>添加到文档的控件。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此方法可以添加<xref:Microsoft.Office.Tools.Word.Controls.DateTimePicker>到末尾的对象<xref:Microsoft.Office.Tools.Word.ControlCollection>。  
+  
+ 若要删除<xref:Microsoft.Office.Tools.Word.Controls.DateTimePicker>以编程方式添加，请使用<xref:Microsoft.Office.Tools.Word.ControlCollection.Remove%2A>方法。  
+  
+   
+  
+## Examples  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.DateTimePicker>然后设置和文档中的第一个段落中控制为浅蓝色日历的背景。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+  
+ [!code-csharp[Trin_WordControlCollection#13](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#13)]
+ [!code-vb[Trin_WordControlCollection#13](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#13)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> 或 <paramref name="range" /> 参数为 <see langword="null" />，或者 <paramref name="name" /> 参数长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
+          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中已存在一个同名控件。</exception>
+        <exception cref="T:Microsoft.Office.Tools.InvalidRangeException">指定的范围无效。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddDateTimePicker">
+      <MemberSignature Language="C#" Value="public static Microsoft.Office.Tools.Word.Controls.DateTimePicker AddDateTimePicker (this Microsoft.Office.Tools.Word.ControlCollection controls, float left, float top, float width, float height, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Office.Tools.Word.Controls.DateTimePicker AddDateTimePicker(class Microsoft.Office.Tools.Word.ControlCollection controls, float32 left, float32 top, float32 width, float32 height, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.ControlExtensions.AddDateTimePicker(Microsoft.Office.Tools.Word.ControlCollection,System.Single,System.Single,System.Single,System.Single,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Word.Controls.DateTimePicker</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controls" Type="Microsoft.Office.Tools.Word.ControlCollection" RefType="this" />
+        <Parameter Name="left" Type="System.Single" />
+        <Parameter Name="top" Type="System.Single" />
+        <Parameter Name="width" Type="System.Single" />
+        <Parameter Name="height" Type="System.Single" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="controls">要添加控件的集合。 请勿自己提供此参数。 对 <see cref="P:Microsoft.Office.Tools.Word.Document.Controls" /> 属性（在应用程序级项目中）或 <see cref="P:Microsoft.Office.Tools.Word.DocumentBase.Controls" /> 属性（在文档级项目中）返回的集合调用此方法时，将自动提供此参数。</param>
+        <param name="left">控件左边缘与文档左边缘之间的距离（以磅为单位）。</param>
+        <param name="top">控件上边缘和文档上边缘之间的距离（以磅为单位）。</param>
+        <param name="width">控件的宽度（以磅为单位）。</param>
+        <param name="height">控件的高度（以磅为单位）。</param>
+        <param name="name">可用于索引 <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中控件的名称。</param>
+        <summary>按照指定的大小和位置向文档中添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.Controls.DateTimePicker" /> 控件。</summary>
+        <returns>添加到文档的控件。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此方法可以添加<xref:Microsoft.Office.Tools.Word.Controls.DateTimePicker>到末尾的对象<xref:Microsoft.Office.Tools.Word.ControlCollection>。  
+  
+ 若要删除<xref:Microsoft.Office.Tools.Word.Controls.DateTimePicker>以编程方式添加，请使用<xref:Microsoft.Office.Tools.Word.ControlCollection.Remove%2A>方法。  
+  
+   
+  
+## Examples  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.DateTimePicker>控件拖到个文档，然后设置开始为浅蓝色日历的背景。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+  
+ [!code-csharp[Trin_WordControlCollection#14](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#14)]
+ [!code-vb[Trin_WordControlCollection#14](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#14)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="nam" /> 参数为 <see langword="null" /> 或长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
+          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中已存在一个同名控件。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddDomainUpDown">
+      <MemberSignature Language="C#" Value="public static Microsoft.Office.Tools.Word.Controls.DomainUpDown AddDomainUpDown (this Microsoft.Office.Tools.Word.ControlCollection controls, Microsoft.Office.Interop.Word.Range range, float width, float height, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Office.Tools.Word.Controls.DomainUpDown AddDomainUpDown(class Microsoft.Office.Tools.Word.ControlCollection controls, class Microsoft.Office.Interop.Word.Range range, float32 width, float32 height, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.ControlExtensions.AddDomainUpDown(Microsoft.Office.Tools.Word.ControlCollection,Microsoft.Office.Interop.Word.Range,System.Single,System.Single,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Word.Controls.DomainUpDown</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controls" Type="Microsoft.Office.Tools.Word.ControlCollection" RefType="this" />
+        <Parameter Name="range" Type="Microsoft.Office.Interop.Word.Range" />
+        <Parameter Name="width" Type="System.Single" />
+        <Parameter Name="height" Type="System.Single" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="controls">要添加控件的集合。 请勿自己提供此参数。 对 <see cref="P:Microsoft.Office.Tools.Word.Document.Controls" /> 属性（在应用程序级项目中）或 <see cref="P:Microsoft.Office.Tools.Word.DocumentBase.Controls" /> 属性（在文档级项目中）返回的集合调用此方法时，将自动提供此参数。</param>
+        <param name="range">控件的位置。</param>
+        <param name="width">控件的宽度（以磅为单位）。</param>
+        <param name="height">控件的高度（以磅为单位）。</param>
+        <param name="name">可用于索引 <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中控件的名称。</param>
+        <summary>按照指定的大小和位置向文档中添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.Controls.DomainUpDown" /> 控件。</summary>
+        <returns>添加到文档的控件。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此方法可以添加<xref:Microsoft.Office.Tools.Word.Controls.DomainUpDown>到末尾的对象<xref:Microsoft.Office.Tools.Word.ControlCollection>。  
+  
+ 若要删除<xref:Microsoft.Office.Tools.Word.Controls.DomainUpDown>以编程方式添加，请使用<xref:Microsoft.Office.Tools.Word.ControlCollection.Remove%2A>方法。  
+  
+   
+  
+## Examples  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.DomainUpDown>控制设置和文档中的第一个段落黄色该控件的背景。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+  
+ [!code-csharp[Trin_WordControlCollection#15](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#15)]
+ [!code-vb[Trin_WordControlCollection#15](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#15)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> 或 <paramref name="range" /> 参数为 <see langword="null" />，或者 name 参数长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
+          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中已存在一个同名控件。</exception>
+        <exception cref="T:Microsoft.Office.Tools.InvalidRangeException">指定的范围无效。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddDomainUpDown">
+      <MemberSignature Language="C#" Value="public static Microsoft.Office.Tools.Word.Controls.DomainUpDown AddDomainUpDown (this Microsoft.Office.Tools.Word.ControlCollection controls, float left, float top, float width, float height, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Office.Tools.Word.Controls.DomainUpDown AddDomainUpDown(class Microsoft.Office.Tools.Word.ControlCollection controls, float32 left, float32 top, float32 width, float32 height, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.ControlExtensions.AddDomainUpDown(Microsoft.Office.Tools.Word.ControlCollection,System.Single,System.Single,System.Single,System.Single,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Word.Controls.DomainUpDown</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controls" Type="Microsoft.Office.Tools.Word.ControlCollection" RefType="this" />
+        <Parameter Name="left" Type="System.Single" />
+        <Parameter Name="top" Type="System.Single" />
+        <Parameter Name="width" Type="System.Single" />
+        <Parameter Name="height" Type="System.Single" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="controls">要添加控件的集合。 请勿自己提供此参数。 对 <see cref="P:Microsoft.Office.Tools.Word.Document.Controls" /> 属性（在应用程序级项目中）或 <see cref="P:Microsoft.Office.Tools.Word.DocumentBase.Controls" /> 属性（在文档级项目中）返回的集合调用此方法时，将自动提供此参数。</param>
+        <param name="left">控件左边缘与文档左边缘之间的距离（以磅为单位）。</param>
+        <param name="top">控件上边缘和文档上边缘之间的距离（以磅为单位）。</param>
+        <param name="width">控件的宽度（以磅为单位）。</param>
+        <param name="height">控件的高度（以磅为单位）。</param>
+        <param name="name">可用于索引 <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中控件的名称。</param>
+        <summary>按照指定的大小和位置向文档中添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.Controls.DomainUpDown" /> 控件。</summary>
+        <returns>添加到文档的控件。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此方法可以添加<xref:Microsoft.Office.Tools.Word.Controls.DomainUpDown>到末尾的对象<xref:Microsoft.Office.Tools.Word.ControlCollection>。  
+  
+ 若要删除<xref:Microsoft.Office.Tools.Word.Controls.DomainUpDown>以编程方式添加，请使用<xref:Microsoft.Office.Tools.Word.ControlCollection.Remove%2A>方法。  
+  
+   
+  
+## Examples  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.DomainUpDown>控件拖到个文档，然后设置开始为黄色控件的背景。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+  
+ [!code-csharp[Trin_WordControlCollection#16](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#16)]
+ [!code-vb[Trin_WordControlCollection#16](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#16)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> 参数为 <see langword="null" /> 或长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
+          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中已存在一个同名控件。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddHScrollBar">
+      <MemberSignature Language="C#" Value="public static Microsoft.Office.Tools.Word.Controls.HScrollBar AddHScrollBar (this Microsoft.Office.Tools.Word.ControlCollection controls, Microsoft.Office.Interop.Word.Range range, float width, float height, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Office.Tools.Word.Controls.HScrollBar AddHScrollBar(class Microsoft.Office.Tools.Word.ControlCollection controls, class Microsoft.Office.Interop.Word.Range range, float32 width, float32 height, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.ControlExtensions.AddHScrollBar(Microsoft.Office.Tools.Word.ControlCollection,Microsoft.Office.Interop.Word.Range,System.Single,System.Single,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Word.Controls.HScrollBar</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controls" Type="Microsoft.Office.Tools.Word.ControlCollection" RefType="this" />
+        <Parameter Name="range" Type="Microsoft.Office.Interop.Word.Range" />
+        <Parameter Name="width" Type="System.Single" />
+        <Parameter Name="height" Type="System.Single" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="controls">要添加控件的集合。 请勿自己提供此参数。 对 <see cref="P:Microsoft.Office.Tools.Word.Document.Controls" /> 属性（在应用程序级项目中）或 <see cref="P:Microsoft.Office.Tools.Word.DocumentBase.Controls" /> 属性（在文档级项目中）返回的集合调用此方法时，将自动提供此参数。</param>
+        <param name="range">控件的位置。</param>
+        <param name="width">控件的宽度（以磅为单位）。</param>
+        <param name="height">控件的高度（以磅为单位）。</param>
+        <param name="name">可用于索引 <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中控件的名称。</param>
+        <summary>按照指定的大小和位置向文档中添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.Controls.HScrollBar" /> 控件。</summary>
+        <returns>添加到文档的控件。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此方法可以添加<xref:Microsoft.Office.Tools.Word.Controls.HScrollBar>到末尾的对象<xref:Microsoft.Office.Tools.Word.ControlCollection>。  
+  
+ 若要删除<xref:Microsoft.Office.Tools.Word.Controls.HScrollBar>以编程方式添加的控件，请使用<xref:Microsoft.Office.Tools.Word.ControlCollection.Remove%2A>方法。  
+  
+   
+  
+## Examples  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.HScrollBar>控制文档，，然后移动第一个段落的滚动条的滚动框到中心。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+  
+ [!code-csharp[Trin_WordControlCollection#17](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#17)]
+ [!code-vb[Trin_WordControlCollection#17](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#17)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> 或 <paramref name="range" /> 参数为 <see langword="null" />，或者 <paramref name="name" /> 参数长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
+          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中已存在一个同名控件。</exception>
+        <exception cref="T:Microsoft.Office.Tools.InvalidRangeException">指定的范围无效。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddHScrollBar">
+      <MemberSignature Language="C#" Value="public static Microsoft.Office.Tools.Word.Controls.HScrollBar AddHScrollBar (this Microsoft.Office.Tools.Word.ControlCollection controls, float left, float top, float width, float height, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Office.Tools.Word.Controls.HScrollBar AddHScrollBar(class Microsoft.Office.Tools.Word.ControlCollection controls, float32 left, float32 top, float32 width, float32 height, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.ControlExtensions.AddHScrollBar(Microsoft.Office.Tools.Word.ControlCollection,System.Single,System.Single,System.Single,System.Single,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Word.Controls.HScrollBar</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controls" Type="Microsoft.Office.Tools.Word.ControlCollection" RefType="this" />
+        <Parameter Name="left" Type="System.Single" />
+        <Parameter Name="top" Type="System.Single" />
+        <Parameter Name="width" Type="System.Single" />
+        <Parameter Name="height" Type="System.Single" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="controls">要添加控件的集合。 请勿自己提供此参数。 对 <see cref="P:Microsoft.Office.Tools.Word.Document.Controls" /> 属性（在应用程序级项目中）或 <see cref="P:Microsoft.Office.Tools.Word.DocumentBase.Controls" /> 属性（在文档级项目中）返回的集合调用此方法时，将自动提供此参数。</param>
+        <param name="left">控件左边缘与文档左边缘之间的距离（以磅为单位）。</param>
+        <param name="top">控件上边缘和文档上边缘之间的距离（以磅为单位）。</param>
+        <param name="width">控件的宽度（以磅为单位）。</param>
+        <param name="height">控件的高度（以磅为单位）。</param>
+        <param name="name">可用于索引 <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中控件的名称。</param>
+        <summary>按照指定的大小和位置向文档中添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.Controls.HScrollBar" /> 控件。</summary>
+        <returns>添加到文档的控件。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此方法可以添加<xref:Microsoft.Office.Tools.Word.Controls.HScrollBar>到末尾的对象<xref:Microsoft.Office.Tools.Word.ControlCollection>。  
+  
+ 若要删除<xref:Microsoft.Office.Tools.Word.Controls.HScrollBar>以编程方式添加的控件，请使用<xref:Microsoft.Office.Tools.Word.ControlCollection.Remove%2A>方法。  
+  
+   
+  
+## Examples  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.HScrollBar>控制到起始位置的文档，，然后移动到中心滚动条的滚动框。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+  
+ [!code-csharp[Trin_WordControlCollection#18](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#18)]
+ [!code-vb[Trin_WordControlCollection#18](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#18)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> 参数为 <see langword="null" /> 或长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
+          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中已存在一个同名控件。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddLabel">
+      <MemberSignature Language="C#" Value="public static Microsoft.Office.Tools.Word.Controls.Label AddLabel (this Microsoft.Office.Tools.Word.ControlCollection controls, Microsoft.Office.Interop.Word.Range range, float width, float height, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Office.Tools.Word.Controls.Label AddLabel(class Microsoft.Office.Tools.Word.ControlCollection controls, class Microsoft.Office.Interop.Word.Range range, float32 width, float32 height, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.ControlExtensions.AddLabel(Microsoft.Office.Tools.Word.ControlCollection,Microsoft.Office.Interop.Word.Range,System.Single,System.Single,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Word.Controls.Label</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controls" Type="Microsoft.Office.Tools.Word.ControlCollection" RefType="this" />
+        <Parameter Name="range" Type="Microsoft.Office.Interop.Word.Range" />
+        <Parameter Name="width" Type="System.Single" />
+        <Parameter Name="height" Type="System.Single" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="controls">要添加控件的集合。 请勿自己提供此参数。 对 <see cref="P:Microsoft.Office.Tools.Word.Document.Controls" /> 属性（在应用程序级项目中）或 <see cref="P:Microsoft.Office.Tools.Word.DocumentBase.Controls" /> 属性（在文档级项目中）返回的集合调用此方法时，将自动提供此参数。</param>
+        <param name="range">控件的位置。</param>
+        <param name="width">控件的宽度（以磅为单位）。</param>
+        <param name="height">控件的高度（以磅为单位）。</param>
+        <param name="name">可用于索引 <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中控件的名称。</param>
+        <summary>按照指定的大小和位置向文档中添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.Controls.Label" /> 控件。</summary>
+        <returns>添加到文档的控件。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此方法可以添加<xref:Microsoft.Office.Tools.Word.Controls.Label>到末尾的对象<xref:Microsoft.Office.Tools.Word.ControlCollection>。  
+  
+ 若要删除<xref:Microsoft.Office.Tools.Word.Controls.Label>以编程方式添加，请使用<xref:Microsoft.Office.Tools.Word.ControlCollection.Remove%2A>方法。  
+  
+   
+  
+## Examples  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.Label>控制然后更改和文档中的第一个段落的文本到`First Name`。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+  
+ [!code-csharp[Trin_WordControlCollection#19](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#19)]
+ [!code-vb[Trin_WordControlCollection#19](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#19)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> 或 <paramref name="range" /> 参数为 <see langword="null" />，或者 <paramref name="name" /> 参数长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
+          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中已存在一个同名控件。</exception>
+        <exception cref="T:Microsoft.Office.Tools.InvalidRangeException">指定的范围无效。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddLabel">
+      <MemberSignature Language="C#" Value="public static Microsoft.Office.Tools.Word.Controls.Label AddLabel (this Microsoft.Office.Tools.Word.ControlCollection controls, float left, float top, float width, float height, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Office.Tools.Word.Controls.Label AddLabel(class Microsoft.Office.Tools.Word.ControlCollection controls, float32 left, float32 top, float32 width, float32 height, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.ControlExtensions.AddLabel(Microsoft.Office.Tools.Word.ControlCollection,System.Single,System.Single,System.Single,System.Single,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Word.Controls.Label</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controls" Type="Microsoft.Office.Tools.Word.ControlCollection" RefType="this" />
+        <Parameter Name="left" Type="System.Single" />
+        <Parameter Name="top" Type="System.Single" />
+        <Parameter Name="width" Type="System.Single" />
+        <Parameter Name="height" Type="System.Single" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="controls">要添加控件的集合。 请勿自己提供此参数。 对 <see cref="P:Microsoft.Office.Tools.Word.Document.Controls" /> 属性（在应用程序级项目中）或 <see cref="P:Microsoft.Office.Tools.Word.DocumentBase.Controls" /> 属性（在文档级项目中）返回的集合调用此方法时，将自动提供此参数。</param>
+        <param name="left">控件左边缘与文档左边缘之间的距离（以磅为单位）。</param>
+        <param name="top">控件上边缘和文档上边缘之间的距离（以磅为单位）。</param>
+        <param name="width">控件的宽度（以磅为单位）。</param>
+        <param name="height">控件的高度（以磅为单位）。</param>
+        <param name="name">可用于索引 <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中控件的名称。</param>
+        <summary>按照指定的大小和位置向文档中添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.Controls.Label" /> 控件。</summary>
+        <returns>添加到文档的控件。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此方法可以添加<xref:Microsoft.Office.Tools.Word.Controls.Label>到末尾的对象<xref:Microsoft.Office.Tools.Word.ControlCollection>。  
+  
+ 若要删除<xref:Microsoft.Office.Tools.Word.Controls.Label>以编程方式添加，请使用<xref:Microsoft.Office.Tools.Word.ControlCollection.Remove%2A>方法。  
+  
+   
+  
+## Examples  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.Label>控制到个文档，然后更改开始到文本`First Name`。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+  
+ [!code-csharp[Trin_WordControlCollection#20](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#20)]
+ [!code-vb[Trin_WordControlCollection#20](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#20)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> 参数为 <see langword="null" /> 或长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
+          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中已存在一个同名控件。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddLinkLabel">
+      <MemberSignature Language="C#" Value="public static Microsoft.Office.Tools.Word.Controls.LinkLabel AddLinkLabel (this Microsoft.Office.Tools.Word.ControlCollection controls, Microsoft.Office.Interop.Word.Range range, float width, float height, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Office.Tools.Word.Controls.LinkLabel AddLinkLabel(class Microsoft.Office.Tools.Word.ControlCollection controls, class Microsoft.Office.Interop.Word.Range range, float32 width, float32 height, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.ControlExtensions.AddLinkLabel(Microsoft.Office.Tools.Word.ControlCollection,Microsoft.Office.Interop.Word.Range,System.Single,System.Single,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Word.Controls.LinkLabel</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controls" Type="Microsoft.Office.Tools.Word.ControlCollection" RefType="this" />
+        <Parameter Name="range" Type="Microsoft.Office.Interop.Word.Range" />
+        <Parameter Name="width" Type="System.Single" />
+        <Parameter Name="height" Type="System.Single" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="controls">要添加控件的集合。 请勿自己提供此参数。 对 <see cref="P:Microsoft.Office.Tools.Word.Document.Controls" /> 属性（在应用程序级项目中）或 <see cref="P:Microsoft.Office.Tools.Word.DocumentBase.Controls" /> 属性（在文档级项目中）返回的集合调用此方法时，将自动提供此参数。</param>
+        <param name="range">控件的位置。</param>
+        <param name="width">控件的宽度（以磅为单位）。</param>
+        <param name="height">控件的高度（以磅为单位）。</param>
+        <param name="name">可用于索引 <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中控件的控件名称。</param>
+        <summary>按照指定的大小和位置向文档中添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.Controls.LinkLabel" /> 控件。</summary>
+        <returns>添加到文档的控件。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此方法可以添加<xref:Microsoft.Office.Tools.Word.Controls.LinkLabel>到末尾的对象<xref:Microsoft.Office.Tools.Word.ControlCollection>。  
+  
+ 若要删除<xref:Microsoft.Office.Tools.Word.Controls.LinkLabel>以编程方式添加，请使用<xref:Microsoft.Office.Tools.Word.ControlCollection.Remove%2A>方法。  
+  
+   
+  
+## Examples  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.LinkLabel>控制然后更改和文档中的第一个段落的文本到`First Name`。 然后，代码更改为蓝色的链接的颜色并设置<xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A>属性`HoverUnderline`值<xref:System.Windows.Forms.LinkBehavior>枚举。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+  
+ [!code-csharp[Trin_WordControlCollection#21](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#21)]
+ [!code-vb[Trin_WordControlCollection#21](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#21)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> 或 <paramref name="range" /> 参数为 <see langword="null" />，或者 <paramref name="name" /> 参数长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
+          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中已存在一个同名控件。</exception>
+        <exception cref="T:Microsoft.Office.Tools.InvalidRangeException">指定的范围无效。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddLinkLabel">
+      <MemberSignature Language="C#" Value="public static Microsoft.Office.Tools.Word.Controls.LinkLabel AddLinkLabel (this Microsoft.Office.Tools.Word.ControlCollection controls, float left, float top, float width, float height, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Office.Tools.Word.Controls.LinkLabel AddLinkLabel(class Microsoft.Office.Tools.Word.ControlCollection controls, float32 left, float32 top, float32 width, float32 height, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.ControlExtensions.AddLinkLabel(Microsoft.Office.Tools.Word.ControlCollection,System.Single,System.Single,System.Single,System.Single,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Word.Controls.LinkLabel</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controls" Type="Microsoft.Office.Tools.Word.ControlCollection" RefType="this" />
+        <Parameter Name="left" Type="System.Single" />
+        <Parameter Name="top" Type="System.Single" />
+        <Parameter Name="width" Type="System.Single" />
+        <Parameter Name="height" Type="System.Single" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="controls">要添加控件的集合。 请勿自己提供此参数。 对 <see cref="P:Microsoft.Office.Tools.Word.Document.Controls" /> 属性（在应用程序级项目中）或 <see cref="P:Microsoft.Office.Tools.Word.DocumentBase.Controls" /> 属性（在文档级项目中）返回的集合调用此方法时，将自动提供此参数。</param>
+        <param name="left">控件左边缘与文档左边缘之间的距离（以磅为单位）。</param>
+        <param name="top">控件上边缘和文档上边缘之间的距离（以磅为单位）。</param>
+        <param name="width">控件的宽度（以磅为单位）。</param>
+        <param name="height">控件的高度（以磅为单位）。</param>
+        <param name="name">可用于索引 <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中控件的名称。</param>
+        <summary>按照指定的大小和位置向文档中添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.Controls.LinkLabel" /> 控件。</summary>
+        <returns>添加到文档的控件。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此方法可以添加<xref:Microsoft.Office.Tools.Word.Controls.LinkLabel>到末尾的对象<xref:Microsoft.Office.Tools.Word.ControlCollection>。  
+  
+ 若要删除<xref:Microsoft.Office.Tools.Word.Controls.LinkLabel>以编程方式添加，请使用<xref:Microsoft.Office.Tools.Word.ControlCollection.Remove%2A>方法。  
+  
+   
+  
+## Examples  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.LinkLabel>控制到个文档，然后更改开始到文本`First Name`。 然后，代码更改为蓝色的链接的颜色并设置<xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A>属性`HoverUnderline`值<xref:System.Windows.Forms.LinkBehavior>枚举。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+  
+ [!code-csharp[Trin_WordControlCollection#22](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#22)]
+ [!code-vb[Trin_WordControlCollection#22](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#22)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> 参数为 <see langword="null" /> 或长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
+          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中已存在一个同名控件。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddListBox">
+      <MemberSignature Language="C#" Value="public static Microsoft.Office.Tools.Word.Controls.ListBox AddListBox (this Microsoft.Office.Tools.Word.ControlCollection controls, Microsoft.Office.Interop.Word.Range range, float width, float height, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Office.Tools.Word.Controls.ListBox AddListBox(class Microsoft.Office.Tools.Word.ControlCollection controls, class Microsoft.Office.Interop.Word.Range range, float32 width, float32 height, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.ControlExtensions.AddListBox(Microsoft.Office.Tools.Word.ControlCollection,Microsoft.Office.Interop.Word.Range,System.Single,System.Single,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Word.Controls.ListBox</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controls" Type="Microsoft.Office.Tools.Word.ControlCollection" RefType="this" />
+        <Parameter Name="range" Type="Microsoft.Office.Interop.Word.Range" />
+        <Parameter Name="width" Type="System.Single" />
+        <Parameter Name="height" Type="System.Single" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="controls">要添加控件的集合。 请勿自己提供此参数。 对 <see cref="P:Microsoft.Office.Tools.Word.Document.Controls" /> 属性（在应用程序级项目中）或 <see cref="P:Microsoft.Office.Tools.Word.DocumentBase.Controls" /> 属性（在文档级项目中）返回的集合调用此方法时，将自动提供此参数。</param>
+        <param name="range">控件的位置。</param>
+        <param name="width">控件的宽度（以磅为单位）。</param>
+        <param name="height">控件的高度（以磅为单位）。</param>
+        <param name="name">可用于索引 <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中控件的名称。</param>
+        <summary>按照指定的大小和位置向文档中添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.Controls.ListBox" /> 控件。</summary>
+        <returns>添加到文档的控件。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此方法可以添加<xref:Microsoft.Office.Tools.Word.Controls.ListBox>到末尾的对象<xref:Microsoft.Office.Tools.Word.ControlCollection>。  
+  
+ 若要删除<xref:Microsoft.Office.Tools.Word.Controls.ListBox>以编程方式添加，请使用<xref:Microsoft.Office.Tools.Word.ControlCollection.Remove%2A>方法。  
+  
+   
+  
+## Examples  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.ListBox>控件在文档中的第一个段落，请将两个项添加到列表框中，，然后选择第一个项。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+  
+ [!code-csharp[Trin_WordControlCollection#23](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#23)]
+ [!code-vb[Trin_WordControlCollection#23](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#23)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> 或 <paramref name="range" /> 参数为 <see langword="null" />，或者 <paramref name="name" /> 参数长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
+          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中已存在一个同名控件。</exception>
+        <exception cref="T:Microsoft.Office.Tools.InvalidRangeException">指定的范围无效。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddListBox">
+      <MemberSignature Language="C#" Value="public static Microsoft.Office.Tools.Word.Controls.ListBox AddListBox (this Microsoft.Office.Tools.Word.ControlCollection controls, float left, float top, float width, float height, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Office.Tools.Word.Controls.ListBox AddListBox(class Microsoft.Office.Tools.Word.ControlCollection controls, float32 left, float32 top, float32 width, float32 height, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.ControlExtensions.AddListBox(Microsoft.Office.Tools.Word.ControlCollection,System.Single,System.Single,System.Single,System.Single,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Word.Controls.ListBox</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controls" Type="Microsoft.Office.Tools.Word.ControlCollection" RefType="this" />
+        <Parameter Name="left" Type="System.Single" />
+        <Parameter Name="top" Type="System.Single" />
+        <Parameter Name="width" Type="System.Single" />
+        <Parameter Name="height" Type="System.Single" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="controls">要添加控件的集合。 请勿自己提供此参数。 对 <see cref="P:Microsoft.Office.Tools.Word.Document.Controls" /> 属性（在应用程序级项目中）或 <see cref="P:Microsoft.Office.Tools.Word.DocumentBase.Controls" /> 属性（在文档级项目中）返回的集合调用此方法时，将自动提供此参数。</param>
+        <param name="left">控件左边缘与文档左边缘之间的距离（以磅为单位）。</param>
+        <param name="top">控件上边缘和文档上边缘之间的距离（以磅为单位）。</param>
+        <param name="width">控件的宽度（以磅为单位）。</param>
+        <param name="height">控件的高度（以磅为单位）。</param>
+        <param name="name">可用于索引 <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中控件的名称。</param>
+        <summary>按照指定的大小和位置向文档中添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.Controls.ListBox" /> 控件。</summary>
+        <returns>添加到文档的控件。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此方法可以添加<xref:Microsoft.Office.Tools.Word.Controls.ListBox>到末尾的对象<xref:Microsoft.Office.Tools.Word.ControlCollection>。  
+  
+ 若要删除<xref:Microsoft.Office.Tools.Word.Controls.ListBox>以编程方式添加，请使用<xref:Microsoft.Office.Tools.Word.ControlCollection.Remove%2A>方法。  
+  
+   
+  
+## Examples  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.ListBox>控件拖到文档的开头，将两个项添加到列表框中，然后选择第一个项。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+  
+ [!code-csharp[Trin_WordControlCollection#24](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#24)]
+ [!code-vb[Trin_WordControlCollection#24](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#24)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> 参数为 <see langword="null" /> 或长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
+          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中已存在一个同名控件。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddListView">
+      <MemberSignature Language="C#" Value="public static Microsoft.Office.Tools.Word.Controls.ListView AddListView (this Microsoft.Office.Tools.Word.ControlCollection controls, Microsoft.Office.Interop.Word.Range range, float width, float height, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Office.Tools.Word.Controls.ListView AddListView(class Microsoft.Office.Tools.Word.ControlCollection controls, class Microsoft.Office.Interop.Word.Range range, float32 width, float32 height, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.ControlExtensions.AddListView(Microsoft.Office.Tools.Word.ControlCollection,Microsoft.Office.Interop.Word.Range,System.Single,System.Single,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Word.Controls.ListView</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controls" Type="Microsoft.Office.Tools.Word.ControlCollection" RefType="this" />
+        <Parameter Name="range" Type="Microsoft.Office.Interop.Word.Range" />
+        <Parameter Name="width" Type="System.Single" />
+        <Parameter Name="height" Type="System.Single" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="controls">要添加控件的集合。 请勿自己提供此参数。 对 <see cref="P:Microsoft.Office.Tools.Word.Document.Controls" /> 属性（在应用程序级项目中）或 <see cref="P:Microsoft.Office.Tools.Word.DocumentBase.Controls" /> 属性（在文档级项目中）返回的集合调用此方法时，将自动提供此参数。</param>
+        <param name="range">控件的位置。</param>
+        <param name="width">控件的宽度（以磅为单位）。</param>
+        <param name="height">控件的高度（以磅为单位）。</param>
+        <param name="name">可用于索引 <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中控件的名称。</param>
+        <summary>按照指定的大小和位置向文档中添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.Controls.ListView" /> 控件。</summary>
+        <returns>添加到文档的控件。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此方法可以添加<xref:Microsoft.Office.Tools.Word.Controls.ListView>到末尾的对象<xref:Microsoft.Office.Tools.Word.ControlCollection>。  
+  
+ 若要删除<xref:Microsoft.Office.Tools.Word.Controls.ListView>以编程方式添加，请使用<xref:Microsoft.Office.Tools.Word.ControlCollection.Remove%2A>方法。  
+  
+   
+  
+## Examples  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.ListView>控件在文档中的第一个段落，将视图更改为`List`，然后将添加到两个项<xref:Microsoft.Office.Tools.Word.Controls.ListView>。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+  
+ [!code-csharp[Trin_WordControlCollection#25](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#25)]
+ [!code-vb[Trin_WordControlCollection#25](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#25)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> 或 <paramref name="range" /> 参数为 <see langword="null" />，或者 <paramref name="name" /> 参数长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
+          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中已存在一个同名控件。</exception>
+        <exception cref="T:Microsoft.Office.Tools.InvalidRangeException">指定的范围无效。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddListView">
+      <MemberSignature Language="C#" Value="public static Microsoft.Office.Tools.Word.Controls.ListView AddListView (this Microsoft.Office.Tools.Word.ControlCollection controls, float left, float top, float width, float height, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Office.Tools.Word.Controls.ListView AddListView(class Microsoft.Office.Tools.Word.ControlCollection controls, float32 left, float32 top, float32 width, float32 height, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.ControlExtensions.AddListView(Microsoft.Office.Tools.Word.ControlCollection,System.Single,System.Single,System.Single,System.Single,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Word.Controls.ListView</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controls" Type="Microsoft.Office.Tools.Word.ControlCollection" RefType="this" />
+        <Parameter Name="left" Type="System.Single" />
+        <Parameter Name="top" Type="System.Single" />
+        <Parameter Name="width" Type="System.Single" />
+        <Parameter Name="height" Type="System.Single" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="controls">要添加控件的集合。 请勿自己提供此参数。 对 <see cref="P:Microsoft.Office.Tools.Word.Document.Controls" /> 属性（在应用程序级项目中）或 <see cref="P:Microsoft.Office.Tools.Word.DocumentBase.Controls" /> 属性（在文档级项目中）返回的集合调用此方法时，将自动提供此参数。</param>
+        <param name="left">控件左边缘与文档左边缘之间的距离（以磅为单位）。</param>
+        <param name="top">控件上边缘和文档上边缘之间的距离（以磅为单位）。</param>
+        <param name="width">控件的宽度（以磅为单位）。</param>
+        <param name="height">控件的高度（以磅为单位）。</param>
+        <param name="name">可用于索引 <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中控件的名称。</param>
+        <summary>按照指定的大小和位置向文档中添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.Controls.ListView" /> 控件。</summary>
+        <returns>添加到文档的控件。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此方法可以添加<xref:Microsoft.Office.Tools.Word.Controls.ListView>到末尾的对象<xref:Microsoft.Office.Tools.Word.ControlCollection>。  
+  
+ 若要删除<xref:Microsoft.Office.Tools.Word.Controls.ListView>以编程方式添加，请使用<xref:Microsoft.Office.Tools.Word.ControlCollection.Remove%2A>方法。  
+  
+   
+  
+## Examples  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.ListView>控制到文档的开头，将视图更改为`List`，然后将添加到两个项<xref:Microsoft.Office.Tools.Word.Controls.ListView>。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+  
+ [!code-csharp[Trin_WordControlCollection#26](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#26)]
+ [!code-vb[Trin_WordControlCollection#26](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#26)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> 参数为 <see langword="null" /> 或长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
+          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中已存在一个同名控件。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddMaskedTextBox">
+      <MemberSignature Language="C#" Value="public static Microsoft.Office.Tools.Word.Controls.MaskedTextBox AddMaskedTextBox (this Microsoft.Office.Tools.Word.ControlCollection controls, Microsoft.Office.Interop.Word.Range range, float width, float height, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Office.Tools.Word.Controls.MaskedTextBox AddMaskedTextBox(class Microsoft.Office.Tools.Word.ControlCollection controls, class Microsoft.Office.Interop.Word.Range range, float32 width, float32 height, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.ControlExtensions.AddMaskedTextBox(Microsoft.Office.Tools.Word.ControlCollection,Microsoft.Office.Interop.Word.Range,System.Single,System.Single,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Word.Controls.MaskedTextBox</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controls" Type="Microsoft.Office.Tools.Word.ControlCollection" RefType="this" />
+        <Parameter Name="range" Type="Microsoft.Office.Interop.Word.Range" />
+        <Parameter Name="width" Type="System.Single" />
+        <Parameter Name="height" Type="System.Single" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="controls">要添加控件的集合。 请勿自己提供此参数。 对 <see cref="P:Microsoft.Office.Tools.Word.Document.Controls" /> 属性（在应用程序级项目中）或 <see cref="P:Microsoft.Office.Tools.Word.DocumentBase.Controls" /> 属性（在文档级项目中）返回的集合调用此方法时，将自动提供此参数。</param>
+        <param name="range">控件的位置。</param>
+        <param name="width">控件的宽度（以磅为单位）。</param>
+        <param name="height">控件的高度（以磅为单位）。</param>
+        <param name="name">可用于索引 <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中控件的名称。</param>
+        <summary>按照指定的大小和位置向文档中添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.Controls.MaskedTextBox" /> 控件。</summary>
+        <returns>添加到文档的控件。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此方法可以添加<xref:Microsoft.Office.Tools.Word.Controls.MaskedTextBox>到末尾的对象<xref:Microsoft.Office.Tools.Word.ControlCollection>。  
+  
+ 若要删除<xref:Microsoft.Office.Tools.Word.Controls.MaskedTextBox>以编程方式添加，请使用<xref:Microsoft.Office.Tools.Word.ControlCollection.Remove%2A>方法。  
+  
+   
+  
+## Examples  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.MaskedTextBox>控件添加到文档中，然后设置中的第一个段落`Mask`为 00/00/0000 的属性。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+  
+ [!code-csharp[Trin_WordControlCollection#27](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#27)]
+ [!code-vb[Trin_WordControlCollection#27](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#27)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddMaskedTextBox">
+      <MemberSignature Language="C#" Value="public static Microsoft.Office.Tools.Word.Controls.MaskedTextBox AddMaskedTextBox (this Microsoft.Office.Tools.Word.ControlCollection controls, float left, float top, float width, float height, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Office.Tools.Word.Controls.MaskedTextBox AddMaskedTextBox(class Microsoft.Office.Tools.Word.ControlCollection controls, float32 left, float32 top, float32 width, float32 height, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.ControlExtensions.AddMaskedTextBox(Microsoft.Office.Tools.Word.ControlCollection,System.Single,System.Single,System.Single,System.Single,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Word.Controls.MaskedTextBox</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controls" Type="Microsoft.Office.Tools.Word.ControlCollection" RefType="this" />
+        <Parameter Name="left" Type="System.Single" />
+        <Parameter Name="top" Type="System.Single" />
+        <Parameter Name="width" Type="System.Single" />
+        <Parameter Name="height" Type="System.Single" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="controls">要添加控件的集合。 请勿自己提供此参数。 对 <see cref="P:Microsoft.Office.Tools.Word.Document.Controls" /> 属性（在应用程序级项目中）或 <see cref="P:Microsoft.Office.Tools.Word.DocumentBase.Controls" /> 属性（在文档级项目中）返回的集合调用此方法时，将自动提供此参数。</param>
+        <param name="left">控件左边缘与文档左边缘之间的距离（以磅为单位）。</param>
+        <param name="top">控件上边缘和文档上边缘之间的距离（以磅为单位）。</param>
+        <param name="width">控件的宽度（以磅为单位）。</param>
+        <param name="height">控件的高度（以磅为单位）。</param>
+        <param name="name">可用于索引 <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中控件的名称。</param>
+        <summary>按照指定的大小和位置向文档中添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.Controls.MaskedTextBox" /> 控件。</summary>
+        <returns>添加到文档的控件。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此方法可以添加<xref:Microsoft.Office.Tools.Word.Controls.MaskedTextBox>到末尾的对象<xref:Microsoft.Office.Tools.Word.ControlCollection>。  
+  
+ 若要删除<xref:Microsoft.Office.Tools.Word.Controls.MaskedTextBox>以编程方式添加，请使用<xref:Microsoft.Office.Tools.Word.ControlCollection.Remove%2A>方法。  
+  
+   
+  
+## Examples  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.MaskedTextBox>控件添加到的文档，然后设置开始`Mask`为 00/00/0000 的属性。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+  
+ [!code-csharp[Trin_WordControlCollection#28](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#28)]
+ [!code-vb[Trin_WordControlCollection#28](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#28)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddMonthCalendar">
+      <MemberSignature Language="C#" Value="public static Microsoft.Office.Tools.Word.Controls.MonthCalendar AddMonthCalendar (this Microsoft.Office.Tools.Word.ControlCollection controls, Microsoft.Office.Interop.Word.Range range, float width, float height, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Office.Tools.Word.Controls.MonthCalendar AddMonthCalendar(class Microsoft.Office.Tools.Word.ControlCollection controls, class Microsoft.Office.Interop.Word.Range range, float32 width, float32 height, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.ControlExtensions.AddMonthCalendar(Microsoft.Office.Tools.Word.ControlCollection,Microsoft.Office.Interop.Word.Range,System.Single,System.Single,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Word.Controls.MonthCalendar</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controls" Type="Microsoft.Office.Tools.Word.ControlCollection" RefType="this" />
+        <Parameter Name="range" Type="Microsoft.Office.Interop.Word.Range" />
+        <Parameter Name="width" Type="System.Single" />
+        <Parameter Name="height" Type="System.Single" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="controls">要添加控件的集合。 请勿自己提供此参数。 对 <see cref="P:Microsoft.Office.Tools.Word.Document.Controls" /> 属性（在应用程序级项目中）或 <see cref="P:Microsoft.Office.Tools.Word.DocumentBase.Controls" /> 属性（在文档级项目中）返回的集合调用此方法时，将自动提供此参数。</param>
+        <param name="range">控件的位置。</param>
+        <param name="width">控件的宽度（以磅为单位）。</param>
+        <param name="height">控件的高度（以磅为单位）。</param>
+        <param name="name">可用于索引 <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中控件的名称。</param>
+        <summary>按照指定的大小和位置向文档中添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.Controls.MonthCalendar" /> 控件。</summary>
+        <returns>添加到文档的控件。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此方法可以添加<xref:Microsoft.Office.Tools.Word.Controls.MonthCalendar>到末尾的对象<xref:Microsoft.Office.Tools.Word.ControlCollection>。  
+  
+ 若要删除<xref:Microsoft.Office.Tools.Word.Controls.MonthCalendar>以编程方式添加的控件，请使用<xref:Microsoft.Office.Tools.Word.ControlCollection.Remove%2A>方法。  
+  
+   
+  
+## Examples  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.MonthCalendar>控件添加到文档中，然后设置中的第一个段落<xref:System.Windows.Forms.MonthCalendar.FirstDayOfWeek%2A>到星期一的属性。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+  
+ [!code-csharp[Trin_WordControlCollection#29](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#29)]
+ [!code-vb[Trin_WordControlCollection#29](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#29)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> 或 <paramref name="range" /> 参数为 <see langword="null" />，或者 <paramref name="name" /> 参数长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
+          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中已存在一个同名控件。</exception>
+        <exception cref="T:Microsoft.Office.Tools.InvalidRangeException">指定的范围无效。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddMonthCalendar">
+      <MemberSignature Language="C#" Value="public static Microsoft.Office.Tools.Word.Controls.MonthCalendar AddMonthCalendar (this Microsoft.Office.Tools.Word.ControlCollection controls, float left, float top, float width, float height, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Office.Tools.Word.Controls.MonthCalendar AddMonthCalendar(class Microsoft.Office.Tools.Word.ControlCollection controls, float32 left, float32 top, float32 width, float32 height, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.ControlExtensions.AddMonthCalendar(Microsoft.Office.Tools.Word.ControlCollection,System.Single,System.Single,System.Single,System.Single,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Word.Controls.MonthCalendar</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controls" Type="Microsoft.Office.Tools.Word.ControlCollection" RefType="this" />
+        <Parameter Name="left" Type="System.Single" />
+        <Parameter Name="top" Type="System.Single" />
+        <Parameter Name="width" Type="System.Single" />
+        <Parameter Name="height" Type="System.Single" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="controls">要添加控件的集合。 请勿自己提供此参数。 对 <see cref="P:Microsoft.Office.Tools.Word.Document.Controls" /> 属性（在应用程序级项目中）或 <see cref="P:Microsoft.Office.Tools.Word.DocumentBase.Controls" /> 属性（在文档级项目中）返回的集合调用此方法时，将自动提供此参数。</param>
+        <param name="left">控件左边缘与文档左边缘之间的距离（以磅为单位）。</param>
+        <param name="top">控件上边缘和文档上边缘之间的距离（以磅为单位）。</param>
+        <param name="width">控件的宽度（以磅为单位）。</param>
+        <param name="height">控件的高度（以磅为单位）。</param>
+        <param name="name">可用于索引 <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中控件的名称。</param>
+        <summary>按照指定的大小和位置向文档中添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.Controls.MonthCalendar" /> 控件。</summary>
+        <returns>添加到文档的控件。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此方法可以添加<xref:Microsoft.Office.Tools.Word.Controls.MonthCalendar>到末尾的对象<xref:Microsoft.Office.Tools.Word.ControlCollection>。  
+  
+ 若要删除<xref:Microsoft.Office.Tools.Word.Controls.MonthCalendar>以编程方式添加的控件，请使用<xref:Microsoft.Office.Tools.Word.ControlCollection.Remove%2A>方法。  
+  
+   
+  
+## Examples  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.MonthCalendar>控件添加到的文档，然后设置开始<xref:System.Windows.Forms.MonthCalendar.FirstDayOfWeek%2A>到星期一的属性。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+  
+ [!code-csharp[Trin_WordControlCollection#30](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#30)]
+ [!code-vb[Trin_WordControlCollection#30](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#30)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> 参数为 <see langword="null" /> 或长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
+          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中已存在一个同名控件。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddNumericUpDown">
+      <MemberSignature Language="C#" Value="public static Microsoft.Office.Tools.Word.Controls.NumericUpDown AddNumericUpDown (this Microsoft.Office.Tools.Word.ControlCollection controls, Microsoft.Office.Interop.Word.Range range, float width, float height, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Office.Tools.Word.Controls.NumericUpDown AddNumericUpDown(class Microsoft.Office.Tools.Word.ControlCollection controls, class Microsoft.Office.Interop.Word.Range range, float32 width, float32 height, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.ControlExtensions.AddNumericUpDown(Microsoft.Office.Tools.Word.ControlCollection,Microsoft.Office.Interop.Word.Range,System.Single,System.Single,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Word.Controls.NumericUpDown</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controls" Type="Microsoft.Office.Tools.Word.ControlCollection" RefType="this" />
+        <Parameter Name="range" Type="Microsoft.Office.Interop.Word.Range" />
+        <Parameter Name="width" Type="System.Single" />
+        <Parameter Name="height" Type="System.Single" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="controls">要添加控件的集合。 请勿自己提供此参数。 对 <see cref="P:Microsoft.Office.Tools.Word.Document.Controls" /> 属性（在应用程序级项目中）或 <see cref="P:Microsoft.Office.Tools.Word.DocumentBase.Controls" /> 属性（在文档级项目中）返回的集合调用此方法时，将自动提供此参数。</param>
+        <param name="range">控件的位置。</param>
+        <param name="width">控件的宽度（以磅为单位）。</param>
+        <param name="height">控件的高度（以磅为单位）。</param>
+        <param name="name">可用于索引 <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中控件的名称。</param>
+        <summary>按照指定的大小和位置向文档中添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.Controls.NumericUpDown" /> 控件。</summary>
+        <returns>添加到文档的控件。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此方法可以添加<xref:Microsoft.Office.Tools.Word.Controls.NumericUpDown>到末尾的对象<xref:Microsoft.Office.Tools.Word.ControlCollection>。  
+  
+ 若要删除<xref:Microsoft.Office.Tools.Word.Controls.NumericUpDown>以编程方式添加的控件，请使用<xref:Microsoft.Office.Tools.Word.ControlCollection.Remove%2A>方法。  
+  
+   
+  
+## Examples  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.NumericUpDown>控制设置和文档中的第一个段落的值为 10。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+  
+ [!code-csharp[Trin_WordControlCollection#31](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#31)]
+ [!code-vb[Trin_WordControlCollection#31](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#31)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> 或 <paramref name="range" /> 参数为 <see langword="null" />，或者 <paramref name="name" /> 参数长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
+          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中已存在一个同名控件。</exception>
+        <exception cref="T:Microsoft.Office.Tools.InvalidRangeException">指定的范围无效。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddNumericUpDown">
+      <MemberSignature Language="C#" Value="public static Microsoft.Office.Tools.Word.Controls.NumericUpDown AddNumericUpDown (this Microsoft.Office.Tools.Word.ControlCollection controls, float left, float top, float width, float height, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Office.Tools.Word.Controls.NumericUpDown AddNumericUpDown(class Microsoft.Office.Tools.Word.ControlCollection controls, float32 left, float32 top, float32 width, float32 height, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.ControlExtensions.AddNumericUpDown(Microsoft.Office.Tools.Word.ControlCollection,System.Single,System.Single,System.Single,System.Single,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Word.Controls.NumericUpDown</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controls" Type="Microsoft.Office.Tools.Word.ControlCollection" RefType="this" />
+        <Parameter Name="left" Type="System.Single" />
+        <Parameter Name="top" Type="System.Single" />
+        <Parameter Name="width" Type="System.Single" />
+        <Parameter Name="height" Type="System.Single" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="controls">要添加控件的集合。 请勿自己提供此参数。 对 <see cref="P:Microsoft.Office.Tools.Word.Document.Controls" /> 属性（在应用程序级项目中）或 <see cref="P:Microsoft.Office.Tools.Word.DocumentBase.Controls" /> 属性（在文档级项目中）返回的集合调用此方法时，将自动提供此参数。</param>
+        <param name="left">控件左边缘与文档左边缘之间的距离（以磅为单位）。</param>
+        <param name="top">控件上边缘和文档上边缘之间的距离（以磅为单位）。</param>
+        <param name="width">控件的宽度（以磅为单位）。</param>
+        <param name="height">控件的高度（以磅为单位）。</param>
+        <param name="name">可用于索引 <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中控件的名称。</param>
+        <summary>按照指定的大小和位置向文档中添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.Controls.NumericUpDown" /> 控件。</summary>
+        <returns>添加到文档的控件。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此方法可以添加<xref:Microsoft.Office.Tools.Word.Controls.NumericUpDown>到末尾的对象<xref:Microsoft.Office.Tools.Word.ControlCollection>。  
+  
+ 若要删除<xref:Microsoft.Office.Tools.Word.Controls.NumericUpDown>以编程方式添加的控件，请使用<xref:Microsoft.Office.Tools.Word.ControlCollection.Remove%2A>方法。  
+  
+   
+  
+## Examples  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.NumericUpDown>控件拖到个文档，然后设置开始的值为 10。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+  
+ [!code-csharp[Trin_WordControlCollection#32](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#32)]
+ [!code-vb[Trin_WordControlCollection#32](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#32)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> 参数为 <see langword="null" /> 或长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
+          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中已存在一个同名控件。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddPictureBox">
+      <MemberSignature Language="C#" Value="public static Microsoft.Office.Tools.Word.Controls.PictureBox AddPictureBox (this Microsoft.Office.Tools.Word.ControlCollection controls, Microsoft.Office.Interop.Word.Range range, float width, float height, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Office.Tools.Word.Controls.PictureBox AddPictureBox(class Microsoft.Office.Tools.Word.ControlCollection controls, class Microsoft.Office.Interop.Word.Range range, float32 width, float32 height, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.ControlExtensions.AddPictureBox(Microsoft.Office.Tools.Word.ControlCollection,Microsoft.Office.Interop.Word.Range,System.Single,System.Single,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Word.Controls.PictureBox</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controls" Type="Microsoft.Office.Tools.Word.ControlCollection" RefType="this" />
+        <Parameter Name="range" Type="Microsoft.Office.Interop.Word.Range" />
+        <Parameter Name="width" Type="System.Single" />
+        <Parameter Name="height" Type="System.Single" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="controls">要添加控件的集合。 请勿自己提供此参数。 对 <see cref="P:Microsoft.Office.Tools.Word.Document.Controls" /> 属性（在应用程序级项目中）或 <see cref="P:Microsoft.Office.Tools.Word.DocumentBase.Controls" /> 属性（在文档级项目中）返回的集合调用此方法时，将自动提供此参数。</param>
+        <param name="range">控件的位置。</param>
+        <param name="width">控件的宽度（以磅为单位）。</param>
+        <param name="height">控件的高度（以磅为单位）。</param>
+        <param name="name">可用于索引 <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中控件的名称。</param>
+        <summary>按照指定的大小和位置向文档中添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.Controls.PictureBox" /> 控件。</summary>
+        <returns>添加到文档的控件。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此方法可以添加<xref:Microsoft.Office.Tools.Word.Controls.PictureBox>到末尾的对象<xref:Microsoft.Office.Tools.Word.ControlCollection>。  
+  
+ 若要删除<xref:Microsoft.Office.Tools.Word.Controls.PictureBox>以编程方式添加，请使用<xref:Microsoft.Office.Tools.Word.ControlCollection.Remove%2A>方法。  
+  
+   
+  
+## Examples  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.PictureBox>控件在文档中的第一个段落，然后添加图像。 该示例假定名为的文件`Image.jpg`C 目录的根目录上存在。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+  
+ [!code-csharp[Trin_WordControlCollection#33](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#33)]
+ [!code-vb[Trin_WordControlCollection#33](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#33)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> 或 <paramref name="range" /> 参数为 <see langword="null" />，或者 <paramref name="name" /> 参数长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
+          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中已存在一个同名控件。</exception>
+        <exception cref="T:Microsoft.Office.Tools.InvalidRangeException">指定的范围无效。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddPictureBox">
+      <MemberSignature Language="C#" Value="public static Microsoft.Office.Tools.Word.Controls.PictureBox AddPictureBox (this Microsoft.Office.Tools.Word.ControlCollection controls, float left, float top, float width, float height, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Office.Tools.Word.Controls.PictureBox AddPictureBox(class Microsoft.Office.Tools.Word.ControlCollection controls, float32 left, float32 top, float32 width, float32 height, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.ControlExtensions.AddPictureBox(Microsoft.Office.Tools.Word.ControlCollection,System.Single,System.Single,System.Single,System.Single,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Word.Controls.PictureBox</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controls" Type="Microsoft.Office.Tools.Word.ControlCollection" RefType="this" />
+        <Parameter Name="left" Type="System.Single" />
+        <Parameter Name="top" Type="System.Single" />
+        <Parameter Name="width" Type="System.Single" />
+        <Parameter Name="height" Type="System.Single" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="controls">要添加控件的集合。 请勿自己提供此参数。 对 <see cref="P:Microsoft.Office.Tools.Word.Document.Controls" /> 属性（在应用程序级项目中）或 <see cref="P:Microsoft.Office.Tools.Word.DocumentBase.Controls" /> 属性（在文档级项目中）返回的集合调用此方法时，将自动提供此参数。</param>
+        <param name="left">控件左边缘与文档左边缘之间的距离（以磅为单位）。</param>
+        <param name="top">控件上边缘和文档上边缘之间的距离（以磅为单位）。</param>
+        <param name="width">控件的宽度（以磅为单位）。</param>
+        <param name="height">控件的高度（以磅为单位）。</param>
+        <param name="name">可用于索引 <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中控件的名称。</param>
+        <summary>按照指定的大小和位置向文档中添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.Controls.PictureBox" /> 控件。</summary>
+        <returns>添加到文档的控件。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此方法可以添加<xref:Microsoft.Office.Tools.Word.Controls.PictureBox>到末尾的对象<xref:Microsoft.Office.Tools.Word.ControlCollection>。  
+  
+ 若要删除<xref:Microsoft.Office.Tools.Word.Controls.PictureBox>以编程方式添加，请使用<xref:Microsoft.Office.Tools.Word.ControlCollection.Remove%2A>方法。  
+  
+   
+  
+## Examples  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.PictureBox>控件拖到该文档的开始，然后添加图像。 该示例假定名为的文件`Image.jpg`C 目录的根目录上存在。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+  
+ [!code-csharp[Trin_WordControlCollection#34](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#34)]
+ [!code-vb[Trin_WordControlCollection#34](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#34)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> 参数为 <see langword="null" /> 或长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
+          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中已存在一个同名控件。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddProgressBar">
+      <MemberSignature Language="C#" Value="public static Microsoft.Office.Tools.Word.Controls.ProgressBar AddProgressBar (this Microsoft.Office.Tools.Word.ControlCollection controls, Microsoft.Office.Interop.Word.Range range, float width, float height, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Office.Tools.Word.Controls.ProgressBar AddProgressBar(class Microsoft.Office.Tools.Word.ControlCollection controls, class Microsoft.Office.Interop.Word.Range range, float32 width, float32 height, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.ControlExtensions.AddProgressBar(Microsoft.Office.Tools.Word.ControlCollection,Microsoft.Office.Interop.Word.Range,System.Single,System.Single,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Word.Controls.ProgressBar</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controls" Type="Microsoft.Office.Tools.Word.ControlCollection" RefType="this" />
+        <Parameter Name="range" Type="Microsoft.Office.Interop.Word.Range" />
+        <Parameter Name="width" Type="System.Single" />
+        <Parameter Name="height" Type="System.Single" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="controls">要添加控件的集合。 请勿自己提供此参数。 对 <see cref="P:Microsoft.Office.Tools.Word.Document.Controls" /> 属性（在应用程序级项目中）或 <see cref="P:Microsoft.Office.Tools.Word.DocumentBase.Controls" /> 属性（在文档级项目中）返回的集合调用此方法时，将自动提供此参数。</param>
+        <param name="range">控件的位置。</param>
+        <param name="width">控件的宽度（以磅为单位）。</param>
+        <param name="height">控件的高度（以磅为单位）。</param>
+        <param name="name">可用于索引 <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中控件的名称。</param>
+        <summary>按照指定的大小和位置向文档中添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.Controls.ProgressBar" /> 控件。</summary>
+        <returns>添加到文档的控件。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此方法可以添加<xref:Microsoft.Office.Tools.Word.Controls.ProgressBar>到末尾的对象<xref:Microsoft.Office.Tools.Word.ControlCollection>。  
+  
+ 若要删除<xref:Microsoft.Office.Tools.Word.Controls.ProgressBar>以编程方式添加，请使用<xref:Microsoft.Office.Tools.Word.ControlCollection.Remove%2A>方法。  
+  
+   
+  
+## Examples  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.ProgressBar>控制然后会增加和文档中的第一个段落的当前位置<xref:Microsoft.Office.Tools.Word.Controls.ProgressBar>为 50。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+  
+ [!code-csharp[Trin_WordControlCollection#35](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#35)]
+ [!code-vb[Trin_WordControlCollection#35](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#35)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> 或 <paramref name="range" /> 参数为 <see langword="null" />，或者 <paramref name="name" /> 参数长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
+          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中已存在一个同名控件。</exception>
+        <exception cref="T:Microsoft.Office.Tools.InvalidRangeException">指定的范围无效。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddProgressBar">
+      <MemberSignature Language="C#" Value="public static Microsoft.Office.Tools.Word.Controls.ProgressBar AddProgressBar (this Microsoft.Office.Tools.Word.ControlCollection controls, float left, float top, float width, float height, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Office.Tools.Word.Controls.ProgressBar AddProgressBar(class Microsoft.Office.Tools.Word.ControlCollection controls, float32 left, float32 top, float32 width, float32 height, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.ControlExtensions.AddProgressBar(Microsoft.Office.Tools.Word.ControlCollection,System.Single,System.Single,System.Single,System.Single,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Word.Controls.ProgressBar</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controls" Type="Microsoft.Office.Tools.Word.ControlCollection" RefType="this" />
+        <Parameter Name="left" Type="System.Single" />
+        <Parameter Name="top" Type="System.Single" />
+        <Parameter Name="width" Type="System.Single" />
+        <Parameter Name="height" Type="System.Single" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="controls">要添加控件的集合。 请勿自己提供此参数。 对 <see cref="P:Microsoft.Office.Tools.Word.Document.Controls" /> 属性（在应用程序级项目中）或 <see cref="P:Microsoft.Office.Tools.Word.DocumentBase.Controls" /> 属性（在文档级项目中）返回的集合调用此方法时，将自动提供此参数。</param>
+        <param name="left">控件左边缘与文档左边缘之间的距离（以磅为单位）。</param>
+        <param name="top">控件上边缘和文档上边缘之间的距离（以磅为单位）。</param>
+        <param name="width">控件的宽度（以磅为单位）。</param>
+        <param name="height">控件的高度（以磅为单位）。</param>
+        <param name="name">可用于索引 <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中控件的名称。</param>
+        <summary>按照指定的大小和位置向文档中添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.Controls.ProgressBar" /> 控件。</summary>
+        <returns>添加到文档的控件。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此方法可以添加<xref:Microsoft.Office.Tools.Word.Controls.ProgressBar>到末尾的对象<xref:Microsoft.Office.Tools.Word.ControlCollection>。  
+  
+ 若要删除<xref:Microsoft.Office.Tools.Word.Controls.ProgressBar>以编程方式添加，请使用<xref:Microsoft.Office.Tools.Word.ControlCollection.Remove%2A>方法。  
+  
+   
+  
+## Examples  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.ProgressBar>控件拖到文档中，然后增加开头的当前位置<xref:Microsoft.Office.Tools.Word.Controls.ProgressBar>为 50。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+  
+ [!code-csharp[Trin_WordControlCollection#36](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#36)]
+ [!code-vb[Trin_WordControlCollection#36](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#36)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> 参数为 <see langword="null" /> 或长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
+          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中已存在一个同名控件。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddPropertyGrid">
+      <MemberSignature Language="C#" Value="public static Microsoft.Office.Tools.Word.Controls.PropertyGrid AddPropertyGrid (this Microsoft.Office.Tools.Word.ControlCollection controls, Microsoft.Office.Interop.Word.Range range, float width, float height, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Office.Tools.Word.Controls.PropertyGrid AddPropertyGrid(class Microsoft.Office.Tools.Word.ControlCollection controls, class Microsoft.Office.Interop.Word.Range range, float32 width, float32 height, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.ControlExtensions.AddPropertyGrid(Microsoft.Office.Tools.Word.ControlCollection,Microsoft.Office.Interop.Word.Range,System.Single,System.Single,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Word.Controls.PropertyGrid</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controls" Type="Microsoft.Office.Tools.Word.ControlCollection" RefType="this" />
+        <Parameter Name="range" Type="Microsoft.Office.Interop.Word.Range" />
+        <Parameter Name="width" Type="System.Single" />
+        <Parameter Name="height" Type="System.Single" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="controls">要添加控件的集合。 请勿自己提供此参数。 对 <see cref="P:Microsoft.Office.Tools.Word.Document.Controls" /> 属性（在应用程序级项目中）或 <see cref="P:Microsoft.Office.Tools.Word.DocumentBase.Controls" /> 属性（在文档级项目中）返回的集合调用此方法时，将自动提供此参数。</param>
+        <param name="range">控件的位置。</param>
+        <param name="width">控件的宽度（以磅为单位）。</param>
+        <param name="height">控件的高度（以磅为单位）。</param>
+        <param name="name">可用于索引 <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中控件的名称。</param>
+        <summary>按照指定的大小和位置向文档中添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.Controls.PropertyGrid" /> 控件。</summary>
+        <returns>添加到文档的控件。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此方法可以添加<xref:Microsoft.Office.Tools.Word.Controls.PropertyGrid>到末尾的对象<xref:Microsoft.Office.Tools.Word.ControlCollection>。  
+  
+ 若要删除<xref:Microsoft.Office.Tools.Word.Controls.PropertyGrid>以编程方式添加，请使用<xref:Microsoft.Office.Tools.Word.ControlCollection.Remove%2A>方法。  
+  
+   
+  
+## Examples  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.PropertyGrid>控件添加到第一个段落和<xref:Microsoft.Office.Tools.Word.Controls.Button>到第三个段落的控件。 然后在属性网格中显示该按钮的属性。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+  
+ [!code-csharp[Trin_WordControlCollection#37](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#37)]
+ [!code-vb[Trin_WordControlCollection#37](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#37)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> 或 <paramref name="range" /> 参数为 <see langword="null" />，或者 <paramref name="name" /> 参数长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
+          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中已存在一个同名控件。</exception>
+        <exception cref="T:Microsoft.Office.Tools.InvalidRangeException">指定的范围无效。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddPropertyGrid">
+      <MemberSignature Language="C#" Value="public static Microsoft.Office.Tools.Word.Controls.PropertyGrid AddPropertyGrid (this Microsoft.Office.Tools.Word.ControlCollection controls, float left, float top, float width, float height, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Office.Tools.Word.Controls.PropertyGrid AddPropertyGrid(class Microsoft.Office.Tools.Word.ControlCollection controls, float32 left, float32 top, float32 width, float32 height, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.ControlExtensions.AddPropertyGrid(Microsoft.Office.Tools.Word.ControlCollection,System.Single,System.Single,System.Single,System.Single,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Word.Controls.PropertyGrid</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controls" Type="Microsoft.Office.Tools.Word.ControlCollection" RefType="this" />
+        <Parameter Name="left" Type="System.Single" />
+        <Parameter Name="top" Type="System.Single" />
+        <Parameter Name="width" Type="System.Single" />
+        <Parameter Name="height" Type="System.Single" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="controls">要添加控件的集合。 请勿自己提供此参数。 对 <see cref="P:Microsoft.Office.Tools.Word.Document.Controls" /> 属性（在应用程序级项目中）或 <see cref="P:Microsoft.Office.Tools.Word.DocumentBase.Controls" /> 属性（在文档级项目中）返回的集合调用此方法时，将自动提供此参数。</param>
+        <param name="left">控件左边缘与文档左边缘之间的距离（以磅为单位）。</param>
+        <param name="top">控件上边缘和文档上边缘之间的距离（以磅为单位）。</param>
+        <param name="width">控件的宽度（以磅为单位）。</param>
+        <param name="height">控件的高度（以磅为单位）。</param>
+        <param name="name">可用于索引 <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中控件的名称。</param>
+        <summary>按照指定的大小和位置向文档中添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.Controls.PropertyGrid" /> 控件。</summary>
+        <returns>添加到文档的控件。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此方法可以添加<xref:Microsoft.Office.Tools.Word.Controls.PropertyGrid>到末尾的对象<xref:Microsoft.Office.Tools.Word.ControlCollection>。  
+  
+ 若要删除<xref:Microsoft.Office.Tools.Word.Controls.PropertyGrid>以编程方式添加，请使用<xref:Microsoft.Office.Tools.Word.ControlCollection.Remove%2A>方法。  
+  
+   
+  
+## Examples  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.PropertyGrid>控件添加到文档的开头和<xref:Microsoft.Office.Tools.Word.Controls.Button>控制下<xref:Microsoft.Office.Tools.Word.Controls.PropertyGrid>控件。 然后在属性网格中显示该按钮的属性。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+  
+ [!code-csharp[Trin_WordControlCollection#38](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#38)]
+ [!code-vb[Trin_WordControlCollection#38](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#38)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> 参数为 <see langword="null" /> 或长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
+          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中已存在一个同名控件。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRadioButton">
+      <MemberSignature Language="C#" Value="public static Microsoft.Office.Tools.Word.Controls.RadioButton AddRadioButton (this Microsoft.Office.Tools.Word.ControlCollection controls, Microsoft.Office.Interop.Word.Range range, float width, float height, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Office.Tools.Word.Controls.RadioButton AddRadioButton(class Microsoft.Office.Tools.Word.ControlCollection controls, class Microsoft.Office.Interop.Word.Range range, float32 width, float32 height, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.ControlExtensions.AddRadioButton(Microsoft.Office.Tools.Word.ControlCollection,Microsoft.Office.Interop.Word.Range,System.Single,System.Single,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Word.Controls.RadioButton</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controls" Type="Microsoft.Office.Tools.Word.ControlCollection" RefType="this" />
+        <Parameter Name="range" Type="Microsoft.Office.Interop.Word.Range" />
+        <Parameter Name="width" Type="System.Single" />
+        <Parameter Name="height" Type="System.Single" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="controls">要添加控件的集合。 请勿自己提供此参数。 对 <see cref="P:Microsoft.Office.Tools.Word.Document.Controls" /> 属性（在应用程序级项目中）或 <see cref="P:Microsoft.Office.Tools.Word.DocumentBase.Controls" /> 属性（在文档级项目中）返回的集合调用此方法时，将自动提供此参数。</param>
+        <param name="range">控件的位置。</param>
+        <param name="width">控件的宽度（以磅为单位）。</param>
+        <param name="height">控件的高度（以磅为单位）。</param>
+        <param name="name">可用于索引 <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中控件的名称。</param>
+        <summary>按照指定的大小和位置向文档中添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.Controls.RadioButton" /> 控件。</summary>
+        <returns>添加到文档的控件。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此方法可以添加<xref:Microsoft.Office.Tools.Word.Controls.RadioButton>到末尾的对象<xref:Microsoft.Office.Tools.Word.ControlCollection>。  
+  
+ 若要删除<xref:Microsoft.Office.Tools.Word.Controls.RadioButton>以编程方式添加，请使用<xref:Microsoft.Office.Tools.Word.ControlCollection.Remove%2A>方法。  
+  
+ 当您直接向文档添加多个单选按钮时，单选按钮不互相排斥。 你可以编写代码以使单选按钮互斥;但是，首选的方法是向用户控件添加单选按钮，然后将用户控件添加到文档。  
+  
+   
+  
+## Examples  
+ 下面的代码示例添加两个<xref:Microsoft.Office.Tools.Word.Controls.RadioButton>控件添加到第一个和第二个段落中的文档，然后将文本分配给每个控件。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+  
+ [!code-csharp[Trin_WordControlCollection#39](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#39)]
+ [!code-vb[Trin_WordControlCollection#39](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#39)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> 或 <paramref name="range" /> 参数为 <see langword="null" />，或者 <paramref name="name" /> 参数长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
+          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中已存在一个同名控件。</exception>
+        <exception cref="T:Microsoft.Office.Tools.InvalidRangeException">指定的范围无效。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRadioButton">
+      <MemberSignature Language="C#" Value="public static Microsoft.Office.Tools.Word.Controls.RadioButton AddRadioButton (this Microsoft.Office.Tools.Word.ControlCollection controls, float left, float top, float width, float height, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Office.Tools.Word.Controls.RadioButton AddRadioButton(class Microsoft.Office.Tools.Word.ControlCollection controls, float32 left, float32 top, float32 width, float32 height, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.ControlExtensions.AddRadioButton(Microsoft.Office.Tools.Word.ControlCollection,System.Single,System.Single,System.Single,System.Single,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Word.Controls.RadioButton</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controls" Type="Microsoft.Office.Tools.Word.ControlCollection" RefType="this" />
+        <Parameter Name="left" Type="System.Single" />
+        <Parameter Name="top" Type="System.Single" />
+        <Parameter Name="width" Type="System.Single" />
+        <Parameter Name="height" Type="System.Single" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="controls">要添加控件的集合。 请勿自己提供此参数。 对 <see cref="P:Microsoft.Office.Tools.Word.Document.Controls" /> 属性（在应用程序级项目中）或 <see cref="P:Microsoft.Office.Tools.Word.DocumentBase.Controls" /> 属性（在文档级项目中）返回的集合调用此方法时，将自动提供此参数。</param>
+        <param name="left">控件左边缘与文档左边缘之间的距离（以磅为单位）。</param>
+        <param name="top">控件上边缘和文档上边缘之间的距离（以磅为单位）。</param>
+        <param name="width">控件的宽度（以磅为单位）。</param>
+        <param name="height">控件的高度（以磅为单位）。</param>
+        <param name="name">可用于索引 <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中控件的名称。</param>
+        <summary>按照指定的大小和位置向文档中添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.Controls.RadioButton" /> 控件。</summary>
+        <returns>添加到文档的控件。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此方法可以添加<xref:Microsoft.Office.Tools.Word.Controls.RadioButton>到末尾的对象<xref:Microsoft.Office.Tools.Word.ControlCollection>。  
+  
+ 若要删除<xref:Microsoft.Office.Tools.Word.Controls.RadioButton>以编程方式添加，请使用<xref:Microsoft.Office.Tools.Word.ControlCollection.Remove%2A>方法。  
+  
+ 当您直接向文档添加多个单选按钮时，单选按钮不互相排斥。 你可以编写代码以使单选按钮互斥;但是，首选的方法是向用户控件添加单选按钮，然后将用户控件添加到文档。  
+  
+   
+  
+## Examples  
+ 下面的代码示例添加两个<xref:Microsoft.Office.Tools.Word.Controls.RadioButton>控件添加到文档中，然后将文本分配给每个控件。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+  
+ [!code-csharp[Trin_WordControlCollection#40](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#40)]
+ [!code-vb[Trin_WordControlCollection#40](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#40)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> 参数为 <see langword="null" /> 或长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
+          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中已存在一个同名控件。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRichTextBox">
+      <MemberSignature Language="C#" Value="public static Microsoft.Office.Tools.Word.Controls.RichTextBox AddRichTextBox (this Microsoft.Office.Tools.Word.ControlCollection controls, Microsoft.Office.Interop.Word.Range range, float width, float height, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Office.Tools.Word.Controls.RichTextBox AddRichTextBox(class Microsoft.Office.Tools.Word.ControlCollection controls, class Microsoft.Office.Interop.Word.Range range, float32 width, float32 height, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.ControlExtensions.AddRichTextBox(Microsoft.Office.Tools.Word.ControlCollection,Microsoft.Office.Interop.Word.Range,System.Single,System.Single,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Word.Controls.RichTextBox</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controls" Type="Microsoft.Office.Tools.Word.ControlCollection" RefType="this" />
+        <Parameter Name="range" Type="Microsoft.Office.Interop.Word.Range" />
+        <Parameter Name="width" Type="System.Single" />
+        <Parameter Name="height" Type="System.Single" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="controls">要添加控件的集合。 请勿自己提供此参数。 对 <see cref="P:Microsoft.Office.Tools.Word.Document.Controls" /> 属性（在应用程序级项目中）或 <see cref="P:Microsoft.Office.Tools.Word.DocumentBase.Controls" /> 属性（在文档级项目中）返回的集合调用此方法时，将自动提供此参数。</param>
+        <param name="range">控件的位置。</param>
+        <param name="width">控件的宽度（以磅为单位）。</param>
+        <param name="height">控件的高度（以磅为单位）。</param>
+        <param name="name">可用于索引 <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中控件的名称。</param>
+        <summary>按照指定的大小和位置向文档中添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.Controls.RichTextBox" /> 控件。</summary>
+        <returns>添加到文档的控件。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此方法可以添加<xref:Microsoft.Office.Tools.Word.Controls.RichTextBox>到末尾的对象<xref:Microsoft.Office.Tools.Word.ControlCollection>。  
+  
+ 若要删除<xref:Microsoft.Office.Tools.Word.Controls.RichTextBox>以编程方式添加，请使用<xref:Microsoft.Office.Tools.Word.ControlCollection.Remove%2A>方法。  
+  
+   
+  
+## Examples  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.RichTextBox>控制在文档中，将分配到控件，并且然后格式的文本的第一个段落的文本。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+  
+ [!code-csharp[Trin_WordControlCollection#41](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#41)]
+ [!code-vb[Trin_WordControlCollection#41](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#41)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> 或 <paramref name="range" /> 参数为 <see langword="null" />，或者 <paramref name="name" /> 参数长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
+          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中已存在一个同名控件。</exception>
+        <exception cref="T:Microsoft.Office.Tools.InvalidRangeException">指定的范围无效。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRichTextBox">
+      <MemberSignature Language="C#" Value="public static Microsoft.Office.Tools.Word.Controls.RichTextBox AddRichTextBox (this Microsoft.Office.Tools.Word.ControlCollection controls, float left, float top, float width, float height, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Office.Tools.Word.Controls.RichTextBox AddRichTextBox(class Microsoft.Office.Tools.Word.ControlCollection controls, float32 left, float32 top, float32 width, float32 height, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.ControlExtensions.AddRichTextBox(Microsoft.Office.Tools.Word.ControlCollection,System.Single,System.Single,System.Single,System.Single,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Word.Controls.RichTextBox</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controls" Type="Microsoft.Office.Tools.Word.ControlCollection" RefType="this" />
+        <Parameter Name="left" Type="System.Single" />
+        <Parameter Name="top" Type="System.Single" />
+        <Parameter Name="width" Type="System.Single" />
+        <Parameter Name="height" Type="System.Single" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="controls">要添加控件的集合。 请勿自己提供此参数。 对 <see cref="P:Microsoft.Office.Tools.Word.Document.Controls" /> 属性（在应用程序级项目中）或 <see cref="P:Microsoft.Office.Tools.Word.DocumentBase.Controls" /> 属性（在文档级项目中）返回的集合调用此方法时，将自动提供此参数。</param>
+        <param name="left">控件左边缘与文档左边缘之间的距离（以磅为单位）。</param>
+        <param name="top">控件上边缘和文档上边缘之间的距离（以磅为单位）。</param>
+        <param name="width">控件的宽度（以磅为单位）。</param>
+        <param name="height">控件的高度（以磅为单位）。</param>
+        <param name="name">可用于索引 <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中控件的名称。</param>
+        <summary>按照指定的大小和位置向文档中添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.Controls.RichTextBox" /> 控件。</summary>
+        <returns>添加到文档的控件。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此方法可以添加<xref:Microsoft.Office.Tools.Word.Controls.RichTextBox>到末尾的对象<xref:Microsoft.Office.Tools.Word.ControlCollection>。  
+  
+ 若要删除<xref:Microsoft.Office.Tools.Word.Controls.RichTextBox>以编程方式添加，请使用<xref:Microsoft.Office.Tools.Word.ControlCollection.Remove%2A>方法。  
+  
+   
+  
+## Examples  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.RichTextBox>控制到的文档，将分配到控件，并且然后格式的文本开头的文本。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+  
+ [!code-csharp[Trin_WordControlCollection#42](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#42)]
+ [!code-vb[Trin_WordControlCollection#42](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#42)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> 参数为 <see langword="null" /> 或长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
+          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中已存在一个同名控件。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddTextBox">
+      <MemberSignature Language="C#" Value="public static Microsoft.Office.Tools.Word.Controls.TextBox AddTextBox (this Microsoft.Office.Tools.Word.ControlCollection controls, Microsoft.Office.Interop.Word.Range range, float width, float height, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Office.Tools.Word.Controls.TextBox AddTextBox(class Microsoft.Office.Tools.Word.ControlCollection controls, class Microsoft.Office.Interop.Word.Range range, float32 width, float32 height, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.ControlExtensions.AddTextBox(Microsoft.Office.Tools.Word.ControlCollection,Microsoft.Office.Interop.Word.Range,System.Single,System.Single,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Word.Controls.TextBox</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controls" Type="Microsoft.Office.Tools.Word.ControlCollection" RefType="this" />
+        <Parameter Name="range" Type="Microsoft.Office.Interop.Word.Range" />
+        <Parameter Name="width" Type="System.Single" />
+        <Parameter Name="height" Type="System.Single" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="controls">要添加控件的集合。 请勿自己提供此参数。 对 <see cref="P:Microsoft.Office.Tools.Word.Document.Controls" /> 属性（在应用程序级项目中）或 <see cref="P:Microsoft.Office.Tools.Word.DocumentBase.Controls" /> 属性（在文档级项目中）返回的集合调用此方法时，将自动提供此参数。</param>
+        <param name="range">控件的位置。</param>
+        <param name="width">控件的宽度（以磅为单位）。</param>
+        <param name="height">控件的高度（以磅为单位）。</param>
+        <param name="name">可用于索引 <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中控件的名称。</param>
+        <summary>按照指定的大小和位置向文档中添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.Controls.TextBox" /> 控件。</summary>
+        <returns>添加到文档的控件。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此方法可以添加<xref:Microsoft.Office.Tools.Word.Controls.TextBox>到末尾的对象<xref:Microsoft.Office.Tools.Word.ControlCollection>。  
+  
+ 若要删除<xref:Microsoft.Office.Tools.Word.Controls.TextBox>以编程方式添加，请使用<xref:Microsoft.Office.Tools.Word.ControlCollection.Remove%2A>方法。  
+  
+   
+  
+## Examples  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.TextBox>控件添加到文档中，然后为该控件指定文本的第一个段落。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+  
+ [!code-csharp[Trin_WordControlCollection#43](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#43)]
+ [!code-vb[Trin_WordControlCollection#43](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#43)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> 或 <paramref name="range" /> 参数为 <see langword="null" />，或者 <paramref name="name" /> 参数长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
+          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中已存在一个同名控件。</exception>
+        <exception cref="T:Microsoft.Office.Tools.InvalidRangeException">指定的范围无效。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddTextBox">
+      <MemberSignature Language="C#" Value="public static Microsoft.Office.Tools.Word.Controls.TextBox AddTextBox (this Microsoft.Office.Tools.Word.ControlCollection controls, float left, float top, float width, float height, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Office.Tools.Word.Controls.TextBox AddTextBox(class Microsoft.Office.Tools.Word.ControlCollection controls, float32 left, float32 top, float32 width, float32 height, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.ControlExtensions.AddTextBox(Microsoft.Office.Tools.Word.ControlCollection,System.Single,System.Single,System.Single,System.Single,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Word.Controls.TextBox</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controls" Type="Microsoft.Office.Tools.Word.ControlCollection" RefType="this" />
+        <Parameter Name="left" Type="System.Single" />
+        <Parameter Name="top" Type="System.Single" />
+        <Parameter Name="width" Type="System.Single" />
+        <Parameter Name="height" Type="System.Single" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="controls">要添加控件的集合。 请勿自己提供此参数。 对 <see cref="P:Microsoft.Office.Tools.Word.Document.Controls" /> 属性（在应用程序级项目中）或 <see cref="P:Microsoft.Office.Tools.Word.DocumentBase.Controls" /> 属性（在文档级项目中）返回的集合调用此方法时，将自动提供此参数。</param>
+        <param name="left">控件左边缘与文档左边缘之间的距离（以磅为单位）。</param>
+        <param name="top">控件上边缘和文档上边缘之间的距离（以磅为单位）。</param>
+        <param name="width">控件的宽度（以磅为单位）。</param>
+        <param name="height">控件的高度（以磅为单位）。</param>
+        <param name="name">可用于索引 <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中控件的名称。</param>
+        <summary>按照指定的大小和位置向文档中添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.Controls.TextBox" /> 控件。</summary>
+        <returns>添加到文档的控件。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此方法可以添加<xref:Microsoft.Office.Tools.Word.Controls.TextBox>到末尾的对象<xref:Microsoft.Office.Tools.Word.ControlCollection>。  
+  
+ 若要删除<xref:Microsoft.Office.Tools.Word.Controls.TextBox>以编程方式添加，请使用<xref:Microsoft.Office.Tools.Word.ControlCollection.Remove%2A>方法。  
+  
+   
+  
+## Examples  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.TextBox>到文档中，然后为该控件指定文本的起始位置的控件。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+  
+ [!code-csharp[Trin_WordControlCollection#44](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#44)]
+ [!code-vb[Trin_WordControlCollection#44](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#44)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> 参数为 <see langword="null" /> 或长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
+          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中已存在一个同名控件。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddTrackBar">
+      <MemberSignature Language="C#" Value="public static Microsoft.Office.Tools.Word.Controls.TrackBar AddTrackBar (this Microsoft.Office.Tools.Word.ControlCollection controls, Microsoft.Office.Interop.Word.Range range, float width, float height, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Office.Tools.Word.Controls.TrackBar AddTrackBar(class Microsoft.Office.Tools.Word.ControlCollection controls, class Microsoft.Office.Interop.Word.Range range, float32 width, float32 height, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.ControlExtensions.AddTrackBar(Microsoft.Office.Tools.Word.ControlCollection,Microsoft.Office.Interop.Word.Range,System.Single,System.Single,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Word.Controls.TrackBar</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controls" Type="Microsoft.Office.Tools.Word.ControlCollection" RefType="this" />
+        <Parameter Name="range" Type="Microsoft.Office.Interop.Word.Range" />
+        <Parameter Name="width" Type="System.Single" />
+        <Parameter Name="height" Type="System.Single" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="controls">要添加控件的集合。 请勿自己提供此参数。 对 <see cref="P:Microsoft.Office.Tools.Word.Document.Controls" /> 属性（在应用程序级项目中）或 <see cref="P:Microsoft.Office.Tools.Word.DocumentBase.Controls" /> 属性（在文档级项目中）返回的集合调用此方法时，将自动提供此参数。</param>
+        <param name="range">控件的位置。</param>
+        <param name="width">控件的宽度（以磅为单位）。</param>
+        <param name="height">控件的高度（以磅为单位）。</param>
+        <param name="name">可用于索引 <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中控件的名称。</param>
+        <summary>按照指定的大小和位置向文档中添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.Controls.TrackBar" /> 控件。</summary>
+        <returns>添加到文档的控件。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此方法可以添加<xref:Microsoft.Office.Tools.Word.Controls.TrackBar>到末尾的对象<xref:Microsoft.Office.Tools.Word.ControlCollection>。  
+  
+ 若要删除<xref:Microsoft.Office.Tools.Word.Controls.TrackBar>以编程方式添加，请使用<xref:Microsoft.Office.Tools.Word.ControlCollection.Remove%2A>方法。  
+  
+   
+  
+## Examples  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.TrackBar>控制设置和文档中的第一个段落的之间的位置数<xref:System.TimeSpan.Ticks%2A>上<xref:Microsoft.Office.Tools.Word.Controls.TrackBar>。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+  
+ [!code-csharp[Trin_WordControlCollection#45](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#45)]
+ [!code-vb[Trin_WordControlCollection#45](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#45)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> 或 <paramref name="range" /> 参数为 <see langword="null" />，或者 <paramref name="name" /> 参数长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
+          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中已存在一个同名控件。</exception>
+        <exception cref="T:Microsoft.Office.Tools.InvalidRangeException">指定的范围无效。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddTrackBar">
+      <MemberSignature Language="C#" Value="public static Microsoft.Office.Tools.Word.Controls.TrackBar AddTrackBar (this Microsoft.Office.Tools.Word.ControlCollection controls, float left, float top, float width, float height, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Office.Tools.Word.Controls.TrackBar AddTrackBar(class Microsoft.Office.Tools.Word.ControlCollection controls, float32 left, float32 top, float32 width, float32 height, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.ControlExtensions.AddTrackBar(Microsoft.Office.Tools.Word.ControlCollection,System.Single,System.Single,System.Single,System.Single,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Word.Controls.TrackBar</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controls" Type="Microsoft.Office.Tools.Word.ControlCollection" RefType="this" />
+        <Parameter Name="left" Type="System.Single" />
+        <Parameter Name="top" Type="System.Single" />
+        <Parameter Name="width" Type="System.Single" />
+        <Parameter Name="height" Type="System.Single" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="controls">要添加控件的集合。 请勿自己提供此参数。 对 <see cref="P:Microsoft.Office.Tools.Word.Document.Controls" /> 属性（在应用程序级项目中）或 <see cref="P:Microsoft.Office.Tools.Word.DocumentBase.Controls" /> 属性（在文档级项目中）返回的集合调用此方法时，将自动提供此参数。</param>
+        <param name="left">控件左边缘与文档左边缘之间的距离（以磅为单位）。</param>
+        <param name="top">控件上边缘和文档上边缘之间的距离（以磅为单位）。</param>
+        <param name="width">控件的宽度（以磅为单位）。</param>
+        <param name="height">控件的高度（以磅为单位）。</param>
+        <param name="name">可用于索引 <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中控件的名称。</param>
+        <summary>按照指定的大小和位置向文档中添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.Controls.TrackBar" /> 控件。</summary>
+        <returns>添加到文档的控件。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此方法可以添加<xref:Microsoft.Office.Tools.Word.Controls.TrackBar>到末尾的对象<xref:Microsoft.Office.Tools.Word.ControlCollection>。  
+  
+ 若要删除<xref:Microsoft.Office.Tools.Word.Controls.TrackBar>以编程方式添加，请使用<xref:Microsoft.Office.Tools.Word.ControlCollection.Remove%2A>方法。  
+  
+   
+  
+## Examples  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.TrackBar>控件拖到个文档，然后设置开始的位置之间数<xref:System.TimeSpan.Ticks%2A>上<xref:Microsoft.Office.Tools.Word.Controls.TrackBar>。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+  
+ [!code-csharp[Trin_WordControlCollection#46](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#46)]
+ [!code-vb[Trin_WordControlCollection#46](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#46)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> 参数为 <see langword="null" /> 或长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
+          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中已存在一个同名控件。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddTreeView">
+      <MemberSignature Language="C#" Value="public static Microsoft.Office.Tools.Word.Controls.TreeView AddTreeView (this Microsoft.Office.Tools.Word.ControlCollection controls, Microsoft.Office.Interop.Word.Range range, float width, float height, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Office.Tools.Word.Controls.TreeView AddTreeView(class Microsoft.Office.Tools.Word.ControlCollection controls, class Microsoft.Office.Interop.Word.Range range, float32 width, float32 height, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.ControlExtensions.AddTreeView(Microsoft.Office.Tools.Word.ControlCollection,Microsoft.Office.Interop.Word.Range,System.Single,System.Single,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Word.Controls.TreeView</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controls" Type="Microsoft.Office.Tools.Word.ControlCollection" RefType="this" />
+        <Parameter Name="range" Type="Microsoft.Office.Interop.Word.Range" />
+        <Parameter Name="width" Type="System.Single" />
+        <Parameter Name="height" Type="System.Single" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="controls">要添加控件的集合。 请勿自己提供此参数。 对 <see cref="P:Microsoft.Office.Tools.Word.Document.Controls" /> 属性（在应用程序级项目中）或 <see cref="P:Microsoft.Office.Tools.Word.DocumentBase.Controls" /> 属性（在文档级项目中）返回的集合调用此方法时，将自动提供此参数。</param>
+        <param name="range">控件的位置。</param>
+        <param name="width">控件的宽度（以磅为单位）。</param>
+        <param name="height">控件的高度（以磅为单位）。</param>
+        <param name="name">可用于索引 <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中控件的名称。</param>
+        <summary>按照指定的大小和位置向文档中添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.Controls.TreeView" /> 控件。</summary>
+        <returns>添加到文档的控件。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此方法可以添加<xref:Microsoft.Office.Tools.Word.Controls.TreeView>到末尾的对象<xref:Microsoft.Office.Tools.Word.ControlCollection>。  
+  
+ 若要删除<xref:Microsoft.Office.Tools.Word.Controls.TreeView>以编程方式添加的控件，请使用<xref:Microsoft.Office.Tools.Word.ControlCollection.Remove%2A>方法。  
+  
+   
+  
+## Examples  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.TreeView>控件在文档中的第一个段落，然后添加到控件的父节点和两个子节点。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+  
+ [!code-csharp[Trin_WordControlCollection#47](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#47)]
+ [!code-vb[Trin_WordControlCollection#47](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#47)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> 或 <paramref name="range" /> 参数为 <see langword="null" />，或者 <paramref name="name" /> 参数长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
+          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中已存在一个同名控件。</exception>
+        <exception cref="T:Microsoft.Office.Tools.InvalidRangeException">指定的范围无效。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddTreeView">
+      <MemberSignature Language="C#" Value="public static Microsoft.Office.Tools.Word.Controls.TreeView AddTreeView (this Microsoft.Office.Tools.Word.ControlCollection controls, float left, float top, float width, float height, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Office.Tools.Word.Controls.TreeView AddTreeView(class Microsoft.Office.Tools.Word.ControlCollection controls, float32 left, float32 top, float32 width, float32 height, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.ControlExtensions.AddTreeView(Microsoft.Office.Tools.Word.ControlCollection,System.Single,System.Single,System.Single,System.Single,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Word.Controls.TreeView</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controls" Type="Microsoft.Office.Tools.Word.ControlCollection" RefType="this" />
+        <Parameter Name="left" Type="System.Single" />
+        <Parameter Name="top" Type="System.Single" />
+        <Parameter Name="width" Type="System.Single" />
+        <Parameter Name="height" Type="System.Single" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="controls">要添加控件的集合。 请勿自己提供此参数。 对 <see cref="P:Microsoft.Office.Tools.Word.Document.Controls" /> 属性（在应用程序级项目中）或 <see cref="P:Microsoft.Office.Tools.Word.DocumentBase.Controls" /> 属性（在文档级项目中）返回的集合调用此方法时，将自动提供此参数。</param>
+        <param name="left">控件左边缘与文档左边缘之间的距离（以磅为单位）。</param>
+        <param name="top">控件上边缘和文档上边缘之间的距离（以磅为单位）。</param>
+        <param name="width">控件的宽度（以磅为单位）。</param>
+        <param name="height">控件的高度（以磅为单位）。</param>
+        <param name="name">可用于索引 <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中控件的名称。</param>
+        <summary>按照指定的大小和位置向文档中添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.Controls.TreeView" /> 控件。</summary>
+        <returns>添加到文档的控件。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此方法可以添加<xref:Microsoft.Office.Tools.Word.Controls.TreeView>到末尾的对象<xref:Microsoft.Office.Tools.Word.ControlCollection>。  
+  
+ 若要删除<xref:Microsoft.Office.Tools.Word.Controls.TreeView>以编程方式添加的控件，请使用<xref:Microsoft.Office.Tools.Word.ControlCollection.Remove%2A>方法。  
+  
+   
+  
+## Examples  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.TreeView>控制到文档中，并将父节点和两个子节点然后添加到控件。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+  
+ [!code-csharp[Trin_WordControlCollection#48](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#48)]
+ [!code-vb[Trin_WordControlCollection#48](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#48)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> 参数为 <see langword="null" /> 或长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
+          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中已存在一个同名控件。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddVScrollBar">
+      <MemberSignature Language="C#" Value="public static Microsoft.Office.Tools.Word.Controls.VScrollBar AddVScrollBar (this Microsoft.Office.Tools.Word.ControlCollection controls, Microsoft.Office.Interop.Word.Range range, float width, float height, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Office.Tools.Word.Controls.VScrollBar AddVScrollBar(class Microsoft.Office.Tools.Word.ControlCollection controls, class Microsoft.Office.Interop.Word.Range range, float32 width, float32 height, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.ControlExtensions.AddVScrollBar(Microsoft.Office.Tools.Word.ControlCollection,Microsoft.Office.Interop.Word.Range,System.Single,System.Single,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Word.Controls.VScrollBar</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controls" Type="Microsoft.Office.Tools.Word.ControlCollection" RefType="this" />
+        <Parameter Name="range" Type="Microsoft.Office.Interop.Word.Range" />
+        <Parameter Name="width" Type="System.Single" />
+        <Parameter Name="height" Type="System.Single" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="controls">要添加控件的集合。 请勿自己提供此参数。 对 <see cref="P:Microsoft.Office.Tools.Word.Document.Controls" /> 属性（在应用程序级项目中）或 <see cref="P:Microsoft.Office.Tools.Word.DocumentBase.Controls" /> 属性（在文档级项目中）返回的集合调用此方法时，将自动提供此参数。</param>
+        <param name="range">控件的位置。</param>
+        <param name="width">控件的宽度（以磅为单位）。</param>
+        <param name="height">控件的高度（以磅为单位）。</param>
+        <param name="name">可用于索引 <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中控件的名称。</param>
+        <summary>按照指定的大小和位置向文档中添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.Controls.VScrollBar" /> 控件。</summary>
+        <returns>添加到文档的控件。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此方法可以添加<xref:Microsoft.Office.Tools.Word.Controls.VScrollBar>到末尾的对象<xref:Microsoft.Office.Tools.Word.ControlCollection>。  
+  
+ 若要删除<xref:Microsoft.Office.Tools.Word.Controls.VScrollBar>以编程方式添加的控件，请使用<xref:Microsoft.Office.Tools.Word.ControlCollection.Remove%2A>方法。  
+  
+   
+  
+## Examples  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.VScrollBar>控制文档，，然后移动第一个段落的滚动条的滚动框到中心。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+  
+ [!code-csharp[Trin_WordControlCollection#49](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#49)]
+ [!code-vb[Trin_WordControlCollection#49](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#49)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> 或 <paramref name="range" /> 参数为 <see langword="null" />，或者 <paramref name="name" /> 参数长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
+          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中已存在一个同名控件。</exception>
+        <exception cref="T:Microsoft.Office.Tools.InvalidRangeException">指定的范围无效。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddVScrollBar">
+      <MemberSignature Language="C#" Value="public static Microsoft.Office.Tools.Word.Controls.VScrollBar AddVScrollBar (this Microsoft.Office.Tools.Word.ControlCollection controls, float left, float top, float width, float height, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Office.Tools.Word.Controls.VScrollBar AddVScrollBar(class Microsoft.Office.Tools.Word.ControlCollection controls, float32 left, float32 top, float32 width, float32 height, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.ControlExtensions.AddVScrollBar(Microsoft.Office.Tools.Word.ControlCollection,System.Single,System.Single,System.Single,System.Single,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Word.Controls.VScrollBar</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controls" Type="Microsoft.Office.Tools.Word.ControlCollection" RefType="this" />
+        <Parameter Name="left" Type="System.Single" />
+        <Parameter Name="top" Type="System.Single" />
+        <Parameter Name="width" Type="System.Single" />
+        <Parameter Name="height" Type="System.Single" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="controls">要添加控件的集合。 请勿自己提供此参数。 对 <see cref="P:Microsoft.Office.Tools.Word.Document.Controls" /> 属性（在应用程序级项目中）或 <see cref="P:Microsoft.Office.Tools.Word.DocumentBase.Controls" /> 属性（在文档级项目中）返回的集合调用此方法时，将自动提供此参数。</param>
+        <param name="left">控件左边缘与文档左边缘之间的距离（以磅为单位）。</param>
+        <param name="top">控件上边缘和文档上边缘之间的距离（以磅为单位）。</param>
+        <param name="width">控件的宽度（以磅为单位）。</param>
+        <param name="height">控件的高度（以磅为单位）。</param>
+        <param name="name">可用于索引 <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中控件的名称。</param>
+        <summary>按照指定的大小和位置向文档中添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.Controls.VScrollBar" /> 控件。</summary>
+        <returns>添加到文档的控件。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此方法可以添加<xref:Microsoft.Office.Tools.Word.Controls.VScrollBar>到末尾的对象<xref:Microsoft.Office.Tools.Word.ControlCollection>。  
+  
+ 若要删除<xref:Microsoft.Office.Tools.Word.Controls.VScrollBar>以编程方式添加的控件，请使用<xref:Microsoft.Office.Tools.Word.ControlCollection.Remove%2A>方法。  
+  
+   
+  
+## Examples  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.VScrollBar>控制到起始位置的文档，，然后移动到中心滚动条的滚动框。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+  
+ [!code-csharp[Trin_WordControlCollection#50](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#50)]
+ [!code-vb[Trin_WordControlCollection#50](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#50)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> 参数为 <see langword="null" /> 或长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
+          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中已存在一个同名控件。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddWebBrowser">
+      <MemberSignature Language="C#" Value="public static Microsoft.Office.Tools.Word.Controls.WebBrowser AddWebBrowser (this Microsoft.Office.Tools.Word.ControlCollection controls, Microsoft.Office.Interop.Word.Range range, float width, float height, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Office.Tools.Word.Controls.WebBrowser AddWebBrowser(class Microsoft.Office.Tools.Word.ControlCollection controls, class Microsoft.Office.Interop.Word.Range range, float32 width, float32 height, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.ControlExtensions.AddWebBrowser(Microsoft.Office.Tools.Word.ControlCollection,Microsoft.Office.Interop.Word.Range,System.Single,System.Single,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Word.Controls.WebBrowser</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controls" Type="Microsoft.Office.Tools.Word.ControlCollection" RefType="this" />
+        <Parameter Name="range" Type="Microsoft.Office.Interop.Word.Range" />
+        <Parameter Name="width" Type="System.Single" />
+        <Parameter Name="height" Type="System.Single" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="controls">要添加控件的集合。 请勿自己提供此参数。 对 <see cref="P:Microsoft.Office.Tools.Word.Document.Controls" /> 属性（在应用程序级项目中）或 <see cref="P:Microsoft.Office.Tools.Word.DocumentBase.Controls" /> 属性（在文档级项目中）返回的集合调用此方法时，将自动提供此参数。</param>
+        <param name="range">控件的位置。</param>
+        <param name="width">控件的宽度（以磅为单位）。</param>
+        <param name="height">控件的高度（以磅为单位）。</param>
+        <param name="name">可用于索引 <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中控件的名称。</param>
+        <summary>按照指定的大小和位置向文档中添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.Controls.WebBrowser" /> 控件。</summary>
+        <returns>添加到文档的控件。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此方法可以添加<xref:Microsoft.Office.Tools.Word.Controls.WebBrowser>到末尾的对象<xref:Microsoft.Office.Tools.Word.ControlCollection>。  
+  
+ 若要删除<xref:Microsoft.Office.Tools.Word.Controls.WebBrowser>以编程方式添加，请使用<xref:Microsoft.Office.Tools.Word.ControlCollection.Remove%2A>方法。  
+  
+   
+  
+## Examples  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.WebBrowser>控制转移到在文档中，第一个段落，然后导航到 www.microsoft.com。若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+  
+ [!code-csharp[Trin_WordControlCollection#51](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#51)]
+ [!code-vb[Trin_WordControlCollection#51](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#51)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> 或 <paramref name="range" /> 参数为 <see langword="null" />，或者 <paramref name="name" /> 参数长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
+          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中已存在一个同名控件。</exception>
+        <exception cref="T:Microsoft.Office.Tools.InvalidRangeException">指定的范围无效。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddWebBrowser">
+      <MemberSignature Language="C#" Value="public static Microsoft.Office.Tools.Word.Controls.WebBrowser AddWebBrowser (this Microsoft.Office.Tools.Word.ControlCollection controls, float left, float top, float width, float height, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Office.Tools.Word.Controls.WebBrowser AddWebBrowser(class Microsoft.Office.Tools.Word.ControlCollection controls, float32 left, float32 top, float32 width, float32 height, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.ControlExtensions.AddWebBrowser(Microsoft.Office.Tools.Word.ControlCollection,System.Single,System.Single,System.Single,System.Single,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Word.Controls.WebBrowser</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controls" Type="Microsoft.Office.Tools.Word.ControlCollection" RefType="this" />
+        <Parameter Name="left" Type="System.Single" />
+        <Parameter Name="top" Type="System.Single" />
+        <Parameter Name="width" Type="System.Single" />
+        <Parameter Name="height" Type="System.Single" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="controls">要添加控件的集合。 请勿自己提供此参数。 对 <see cref="P:Microsoft.Office.Tools.Word.Document.Controls" /> 属性（在应用程序级项目中）或 <see cref="P:Microsoft.Office.Tools.Word.DocumentBase.Controls" /> 属性（在文档级项目中）返回的集合调用此方法时，将自动提供此参数。</param>
+        <param name="left">控件左边缘与文档左边缘之间的距离（以磅为单位）。</param>
+        <param name="top">控件上边缘和文档上边缘之间的距离（以磅为单位）。</param>
+        <param name="width">控件的宽度（以磅为单位）。</param>
+        <param name="height">控件的高度（以磅为单位）。</param>
+        <param name="name">可用于索引 <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中控件的名称。</param>
+        <summary>按照指定的大小和位置向文档中添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.Controls.WebBrowser" /> 控件。</summary>
+        <returns>添加到文档的控件。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此方法可以添加<xref:Microsoft.Office.Tools.Word.Controls.WebBrowser>到末尾的对象<xref:Microsoft.Office.Tools.Word.ControlCollection>。  
+  
+ 若要删除<xref:Microsoft.Office.Tools.Word.Controls.WebBrowser>以编程方式添加，请使用<xref:Microsoft.Office.Tools.Word.ControlCollection.Remove%2A>方法。  
+  
+   
+  
+## Examples  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.WebBrowser>控件拖到该文档的开始，然后导航到 www.microsoft.com。若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+  
+ [!code-csharp[Trin_WordControlCollection#52](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#52)]
+ [!code-vb[Trin_WordControlCollection#52](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#52)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> 参数为 <see langword="null" /> 或长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
+          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中已存在一个同名控件。</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,90 @@
+<Type Name="FormRegionKindConstants" FullName="Microsoft.Office.Tools.Outlook.FormRegionKindConstants">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="1fb5f48413cb0caa0ac46074b0c2f8ca36575b49" />
+    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.translationtype" Value="HT" />
+    <Meta Name="ms.contentlocale" Value="zh-CN" />
+    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public enum FormRegionKindConstants" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed FormRegionKindConstants extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Outlook.FormRegionKindConstants" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.Tools.Outlook</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>包含一些常量，这些常量指定窗体区域工厂创建的窗体区域是基于用户控件，还是基于 Outlook 窗体存储 (.ofs) 文件。</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 如果在代码中创建的窗体区域，则返回中的这些常量中的一个<xref:Microsoft.Office.Tools.Outlook.IFormRegionFactory.Kind%2A>窗体区域工厂类的属性。 窗体区域工厂类是创建实现任何类<xref:Microsoft.Office.Tools.Outlook.IFormRegionFactory>。  
+  
+ 外接程序获取的值<xref:Microsoft.Office.Tools.Outlook.IFormRegionFactory.Kind%2A>属性来确定哪种类型的窗体区域创建。  
+  
+ 如果返回<xref:Microsoft.Office.Tools.Outlook.FormRegionKindConstants.WindowsForms>中<xref:Microsoft.Office.Tools.Outlook.IFormRegionFactory.Kind%2A>属性，窗体区域工厂创建的窗体区域必须继承自<xref:System.Windows.Forms.Control>。  
+  
+ 如果返回<xref:Microsoft.Office.Tools.Outlook.FormRegionKindConstants.Ofs>中<xref:Microsoft.Office.Tools.Outlook.IFormRegionFactory.Kind%2A>属性，窗体区域工厂创建的窗体区域必须继承自<xref:Microsoft.Office.Tools.Outlook.ImportedFormRegion>。  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Ofs">
+      <MemberSignature Language="C#" Value="Ofs" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.Tools.Outlook.FormRegionKindConstants Ofs = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.Tools.Outlook.FormRegionKindConstants.Ofs" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Outlook</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Outlook.FormRegionKindConstants</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>指定窗体区域从 Outlook 导入。</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此常量指定窗体区域继承自<xref:Microsoft.Office.Tools.Outlook.ImportedFormRegion>。  
+  
+ 如果返回此常量在<xref:Microsoft.Office.Tools.Outlook.IFormRegionFactory.Kind%2A>窗体区域工厂类的属性，您必须返回中的有效 Outlook 窗体存储文件<xref:Microsoft.Office.Tools.Outlook.IFormRegionFactory.GetFormRegionStorage%2A>窗体区域工厂类的方法。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WindowsForms">
+      <MemberSignature Language="C#" Value="WindowsForms" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.Tools.Outlook.FormRegionKindConstants WindowsForms = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.Tools.Outlook.FormRegionKindConstants.WindowsForms" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Outlook</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Outlook.FormRegionKindConstants</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>指定窗体区域基于用户控件。</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此常量指定窗体区域继承自<xref:System.Windows.Forms.Control>。  
+  
+ 如果返回此常量在<xref:Microsoft.Office.Tools.Outlook.IFormRegionFactory.Kind%2A>窗体区域工厂类的属性，该外接程序不会调用<xref:Microsoft.Office.Tools.Outlook.IFormRegionFactory.GetFormRegionStorage%2A>窗体区域工厂类的方法。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

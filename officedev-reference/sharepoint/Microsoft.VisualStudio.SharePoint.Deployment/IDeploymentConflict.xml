@@ -1,0 +1,123 @@
+<Type Name="IDeploymentConflict" FullName="Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflict">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="a869340a61c731ac8d7a68446be935118efcd2b4" />
+    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.translationtype" Value="HT" />
+    <Meta Name="ms.contentlocale" Value="zh-CN" />
+    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public interface IDeploymentConflict : System.ComponentModel.INotifyPropertyChanged" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDeploymentConflict implements class System.ComponentModel.INotifyPropertyChanged" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflict" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.INotifyPropertyChanged</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>表示 SharePoint 项目项所部署的项与 SharePoint 站点上的项之间的冲突。</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 若要创建一个新<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflict>对象以处理部署冲突，请使用<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflictCollection.Add%2A?displayProperty=fullName>方法。 有关示例，请参阅[如何： 处理部署冲突](/visualstudio/sharepoint/how-to-handle-deployment-conflicts.md)。  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflict.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>部署冲突的说明。</summary>
+        <value>一个表示部署冲突说明的字符串。</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProjectItem">
+      <MemberSignature Language="C#" Value="public Microsoft.VisualStudio.SharePoint.ISharePointProjectItem ProjectItem { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.VisualStudio.SharePoint.ISharePointProjectItem ProjectItem" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflict.ProjectItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualStudio.SharePoint.ISharePointProjectItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>与此部署冲突相关联的 SharePoint 项目项。</summary>
+        <value>一个表示 SharePoint 项目项的对象。</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PromptBeforeResolve">
+      <MemberSignature Language="C#" Value="public bool PromptBeforeResolve { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PromptBeforeResolve" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflict.PromptBeforeResolve" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>指示执行 <see cref="M:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflict.Resolve" /> 方法之前是否提示用户。</summary>
+        <value>
+          如果提示用户，则为 <see langword="True" />；否则为 <see langword="false" />。</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 更改此属性会通知通过<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.ProjectItemPropertyChanged>事件  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Resolve">
+      <MemberSignature Language="C#" Value="public bool Resolve ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Resolve() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflict.Resolve" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>如果可能，将解决当前实例所表示的部署冲突。</summary>
+        <returns>
+          如果解决成功，则为 <see langword="True " />；否则为 <see langword="false" />。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 在调用此方法时，Visual Studio 将执行传递给该方法`resolve`参数<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflictCollection.Add%2A>方法。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,320 @@
+<Type Name="ISharePointProjectService" FullName="Microsoft.VisualStudio.SharePoint.ISharePointProjectService">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="f3bfea326191a36e979d7ae150e2dcbdff928b37" />
+    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.translationtype" Value="HT" />
+    <Meta Name="ms.contentlocale" Value="zh-CN" />
+    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public interface ISharePointProjectService : Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISharePointProjectService implements class Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectService" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("A70F6506-018F-40FD-A2B6-21E23362E47D")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>表示 SharePoint 项目服务，即 SharePoint 项目对象模型的根对象。</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CodeRefactoringEvents">
+      <MemberSignature Language="C#" Value="public Microsoft.VisualStudio.SharePoint.ICodeRefactoringEvents CodeRefactoringEvents { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.VisualStudio.SharePoint.ICodeRefactoringEvents CodeRefactoringEvents" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.CodeRefactoringEvents" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualStudio.SharePoint.ICodeRefactoringEvents</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>获取一个提供对与重构操作相关事件的访问的对象。</summary>
+        <value>一个提供对事件的访问的对象。</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Convert&lt;TInput,TOutput&gt;">
+      <MemberSignature Language="C#" Value="public TOutput Convert&lt;TInput,TOutput&gt; (TInput value) where TInput : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !!TOutput Convert&lt;class TInput, TOutput&gt;(!!TInput value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.Convert``2(``0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TOutput</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TInput">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+        <TypeParameter Name="TOutput" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="value" Type="TInput" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TInput">输出类型参数。 支持下列类型：  
+  
+ ISharePointProject  
+  
+ ISharePointProjectItem  
+  
+ ISharePointProjectFeature  
+  
+ ISharePointProjectPackage  
+  
+ EnvDTE.Project  
+  
+ EnvDTE.ProjectItem  
+  
+ Visual Studio 项目接口，如 Microsoft.VisualStudio.Shell.Interop.IVsHierarchy 和 Microsoft.VisualStudio.Shell.Interop.IVsProject。  
+  
+ <see langword="UInt32" /> 可用于检索 Microsoft.VisualStudio.Shell.Interop.IVsHierarchy 项 ID。</typeparam>
+        <typeparam name="TOutput">输入类型参数。 支持下列类型：  
+  
+ ISharePointProject  
+  
+ ISharePointProjectItem  
+  
+ ISharePointProjectFeature  
+  
+ ISharePointProjectPackage  
+  
+ EnvDTE.Project  
+  
+ EnvDTE.ProjectItem  
+  
+ Visual Studio 项目接口，如 Microsoft.VisualStudio.Shell.Interop.IVsHierarchy 和 Microsoft.VisualStudio.Shell.Interop.IVsProject。</typeparam>
+        <param name="value">要转换的值。</param>
+        <summary>转换项目类型。</summary>
+        <returns>转换后的值。 具体值取决于所选择的输出类型。</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSharePointConnection">
+      <MemberSignature Language="C#" Value="public Microsoft.VisualStudio.SharePoint.ISharePointConnection CreateSharePointConnection (Uri siteUrl, bool alwaysCreateRemoteConnection = false);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.VisualStudio.SharePoint.ISharePointConnection CreateSharePointConnection(class System.Uri siteUrl, bool alwaysCreateRemoteConnection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.CreateSharePointConnection(System.Uri,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualStudio.SharePoint.ISharePointConnection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="siteUrl" Type="System.Uri" />
+        <Parameter Name="alwaysCreateRemoteConnection" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="siteUrl">要连接的目标网站的 URL。</param>
+        <param name="alwaysCreateRemoteConnection">
+          如果即使目标站点在本地计算机上也应创建远程连接，则为 <see langword="true" />；否则为 <see langword="false" />。</param>
+        <summary>用给定的网站 URL 创建本地或远程连接。</summary>
+        <returns>具有给定网站 URL 的本地或远程连接。</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeploymentSteps">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStepInfo&gt; DeploymentSteps { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStepInfo&gt; DeploymentSteps" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.DeploymentSteps" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStepInfo&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>获取在扩展目录中找到的安装的部署步骤的列表。</summary>
+        <value>部署步骤的集合。</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 某些属性的<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStepInfo>未被初始化之前运行的步骤。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSharePointInstalled">
+      <MemberSignature Language="C#" Value="public bool IsSharePointInstalled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSharePointInstalled" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.IsSharePointInstalled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>返回是否在本地计算机上安装了 SharePoint。</summary>
+        <value>
+          如果 SharePoint 已安装，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Logger">
+      <MemberSignature Language="C#" Value="public Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger Logger { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger Logger" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.Logger" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>获取日志记录服务的实例。</summary>
+        <value>一个表示日志记录服务的对象。</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PackageValidationProvider">
+      <MemberSignature Language="C#" Value="public Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationProvider PackageValidationProvider { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationProvider PackageValidationProvider" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.PackageValidationProvider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationProvider</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>获取有助于验证项目功能和项目包的 <see cref="T:Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationProvider" /> 的实例。</summary>
+        <value>一个验证功能和包的对象。</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProjectItemTypes">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,Microsoft.VisualStudio.SharePoint.ISharePointProjectItemType&gt; ProjectItemTypes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, class Microsoft.VisualStudio.SharePoint.ISharePointProjectItemType&gt; ProjectItemTypes" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.ProjectItemTypes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,Microsoft.VisualStudio.SharePoint.ISharePointProjectItemType&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>获取具有所有可用的项目项类型的字典。</summary>
+        <value>项目项类型的字典。</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 项目项类型 ID 用作键。  
+  
+ 字典使用不区分大小写的序号字符串比较器。  
+  
+ 如果未初始化的检索到的项目项类型，，它被初始化之前它返回的状态。  
+  
+ 如果项目项类型请求时进行初始化，则若要避免递归调用，请返回的项目项类型"作为-是"，没有任何进一步尝试会进行初始化，并且不会引发异常。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Projects">
+      <MemberSignature Language="C#" Value="public Microsoft.VisualStudio.SharePoint.ISharePointProjectCollection Projects { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.VisualStudio.SharePoint.ISharePointProjectCollection Projects" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.Projects" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualStudio.SharePoint.ISharePointProjectCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>获取 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 解决方案中 SharePoint 项目的集合。</summary>
+        <value>项目的集合。</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServiceProvider">
+      <MemberSignature Language="C#" Value="public IServiceProvider ServiceProvider { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IServiceProvider ServiceProvider" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.ServiceProvider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IServiceProvider</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>获取 SharePoint 项目包的全局服务提供程序。</summary>
+        <value>一个表示全局服务提供程序的对象。</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SharePointConnection">
+      <MemberSignature Language="C#" Value="public Microsoft.VisualStudio.SharePoint.ISharePointConnection SharePointConnection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.VisualStudio.SharePoint.ISharePointConnection SharePointConnection" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.SharePointConnection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualStudio.SharePoint.ISharePointConnection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>获取项目服务的 SharePoint 连接。</summary>
+        <value>一个表示 SharePoint 连接的对象。</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SharePointInstallPath">
+      <MemberSignature Language="C#" Value="public string SharePointInstallPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SharePointInstallPath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.SharePointInstallPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>获取 SharePoint 的安装路径（如果 SharePoint 安装在系统上）。</summary>
+        <value>如果已安装 SharePoint，则为安装路径；如果未安装 SharePoint，则为 <see langword="null" />。</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

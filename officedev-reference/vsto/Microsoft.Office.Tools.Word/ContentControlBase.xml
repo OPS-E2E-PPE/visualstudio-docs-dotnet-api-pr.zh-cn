@@ -1,0 +1,466 @@
+<Type Name="ContentControlBase" FullName="Microsoft.Office.Tools.Word.ContentControlBase">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="cf1732b4e9fe0b9fc90811425cc78ea3c3d5bc17" />
+    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.translationtype" Value="HT" />
+    <Meta Name="ms.contentlocale" Value="zh-CN" />
+    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public interface ContentControlBase : IDisposable, System.ComponentModel.IComponent, System.ComponentModel.ISupportInitialize, System.Windows.Forms.IBindableComponent" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ContentControlBase implements class System.ComponentModel.IComponent, class System.ComponentModel.ISupportInitialize, class System.IDisposable, class System.Windows.Forms.IBindableComponent" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Word.ContentControlBase" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.Tools.Word.v4.0.Utilities</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.IComponent</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ComponentModel.ISupportInitialize</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Windows.Forms.IBindableComponent</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("6E36F826-A7DA-441D-87E3-2D7BE852867E")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.TypeIdentifier</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>为 Word 解决方案中的内容控件提供基接口，该解决方案通过使用 Visual Studio 中的 Office 开发工具创建。</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:Microsoft.Office.Tools.Word.ContentControlBase>接口定义由所有内容控件共享的成员。 有八个类型的内容控件，可以使用设计文档和 Microsoft Office Word 中的模板。 内容控件具有用户界面 (UI)，具有控制类似于窗体的输入。 你可以使用内容控件来防止用户编辑受保护的部分的文档或模板，并还可以将内容控件绑定到数据源。 有关详细信息，请参阅[内容控件](/visualstudio/vsto/content-controls.md)。  
+  
+ [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
+  
+## <a name="usage"></a>用法  
+ [!INCLUDE[vsto_net35mref](~/includes/vsto-net35mref-md.md)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Added">
+      <MemberSignature Language="C#" Value="public event Microsoft.Office.Tools.Word.ContentControlAddedEventHandler Added;" />
+      <MemberSignature Language="ILAsm" Value=".event class Microsoft.Office.Tools.Word.ContentControlAddedEventHandler Added" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.Word.ContentControlBase.Added" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Word.ContentControlAddedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>在内容控件添加到文档后发生。</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:Microsoft.Office.Tools.Word.ContentControlBase.Added>内容控件添加到重做或撤消操作后的文档时引发事件。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindingContextChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler BindingContextChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler BindingContextChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.Word.ContentControlBase.BindingContextChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>当 <see cref="P:System.Windows.Forms.IBindableComponent.BindingContext" /> 的 <see cref="T:Microsoft.Office.Tools.Word.ContentControlBase" /> 属性的值更改时发生。</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 如果将引发此事件<xref:System.Windows.Forms.IBindableComponent.BindingContext%2A>属性更改通过以编程方式修改或用户交互更改。 有关详细信息有关的用途<xref:System.Windows.Forms.IBindableComponent.BindingContext%2A>属性，请参阅<xref:System.Windows.Forms.BindingContext>类。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Container">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.IContainer Container { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.IContainer Container" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.ContentControlBase.Container" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.IContainer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainerComponent">
+      <MemberSignature Language="C#" Value="public object ContainerComponent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object ContainerComponent" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.ContentControlBase.ContainerComponent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentUpdating">
+      <MemberSignature Language="C#" Value="public event Microsoft.Office.Tools.Word.ContentControlContentUpdatingEventHandler ContentUpdating;" />
+      <MemberSignature Language="ILAsm" Value=".event class Microsoft.Office.Tools.Word.ContentControlContentUpdatingEventHandler ContentUpdating" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.Word.ContentControlBase.ContentUpdating" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Word.ContentControlContentUpdatingEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>如果内容控件绑定到自定义 XML 部件，则此事件在 Microsoft Office Word 更新内容控件中的文本之前发生。</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 你可以将内容控件绑定到一种 XML 中的元素 (也名为*自定义 XML 部件*) 嵌入在文档中。 有关详细信息，请参阅[内容控件](/visualstudio/vsto/content-controls.md)和[自定义 XML 部件概述](/visualstudio/vsto/custom-xml-parts-overview.md)。  
+  
+ <xref:Microsoft.Office.Tools.Word.ContentControlBase.ContentUpdating>仅当打开文档时修改自定义 XML 部件中的数据，将引发事件。 在打开文档和关闭文档时，已修改的自定义 XML 部件中的数据时，不被引发此事件。  
+  
+   
+  
+## Examples  
+ 下面的代码示例演示了事件处理程序<xref:Microsoft.Office.Tools.Word.ContentControlBase.ContentUpdating>和<xref:Microsoft.Office.Tools.Word.ContentControlBase.StoreUpdating>事件。 此示例假定文档包含<xref:Microsoft.Office.Tools.Word.PlainTextContentControl>名为`plainTextContentControl1`，它绑定到自定义 XML 部件中的元素。 有关演示如何将内容控件绑定到自定义 XML 部件中的元素的代码示例，请参阅[演练： 将内容控件绑定到自定义 XML 部件](/visualstudio/vsto/walkthrough-binding-content-controls-to-custom-xml-parts.md)。  
+  
+ 若要使用此代码，将其粘贴到`ThisDocument`项目中的类。 对于 C# 中，你必须还将附加到的事件处理程序<xref:Microsoft.Office.Tools.Word.ContentControlBase.ContentUpdating>和<xref:Microsoft.Office.Tools.Word.ContentControlBase.StoreUpdating>的事件`plainTextContentControl1`。  
+  
+ 此示例适用于文档级自定义。  
+  
+ [!code-csharp[Trin_ContentControlXmlPartWalkthrough#7](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlXmlPartWalkthrough/CS/ThisDocument.cs#7)]
+ [!code-vb[Trin_ContentControlXmlPartWalkthrough#7](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlXmlPartWalkthrough/VB/ThisDocument.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultDataSourceUpdateMode">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataSourceUpdateMode DefaultDataSourceUpdateMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataSourceUpdateMode DefaultDataSourceUpdateMode" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.ContentControlBase.DefaultDataSourceUpdateMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataSourceUpdateMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>获取或设置 <see cref="T:System.Windows.Forms.DataSourceUpdateMode" /> 的默认 <see cref="T:Microsoft.Office.Tools.Word.ContentControlBase" />。</summary>
+        <value>
+          <see cref="T:System.Windows.Forms.DataSourceUpdateMode" /> 值之一。 默认值是<c>System.Windows.Forms.DataSourceUpdateMode.Never</c>。</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 在情况下使用此属性其中<xref:System.Windows.Forms.Binding>而无需<xref:System.Windows.Forms.Binding.DataSourceUpdateMode%2A>指定值添加到<xref:System.Windows.Forms.IBindableComponent.DataBindings%2A>集合。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="public void Delete (bool deleteContent);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Delete(bool deleteContent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.ContentControlBase.Delete(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="deleteContent" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="deleteContent">
+          若要删除控件内容，请使用 <see langword="true" />；若要保留文档中的控件内容，则使用 <see langword="false" />。</param>
+        <summary>从文档中删除动态创建的内容控件，并将其从文档的 <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 中移除。</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此方法应仅用于删除在运行时以编程方式创建的内容控件。 如果在设计时添加到文档的内容控件上调用此方法，将引发异常。  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:Microsoft.Office.Tools.CannotRemoveControlException">内容控件已在设计时添加到文档。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Deleting">
+      <MemberSignature Language="C#" Value="public event Microsoft.Office.Tools.Word.ContentControlDeletingEventHandler Deleting;" />
+      <MemberSignature Language="ILAsm" Value=".event class Microsoft.Office.Tools.Word.ContentControlDeletingEventHandler Deleting" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.Word.ContentControlBase.Deleting" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Word.ContentControlDeletingEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>在内容控件从文档中删除之前发生。</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Entering">
+      <MemberSignature Language="C#" Value="public event Microsoft.Office.Tools.Word.ContentControlEnteringEventHandler Entering;" />
+      <MemberSignature Language="ILAsm" Value=".event class Microsoft.Office.Tools.Word.ContentControlEnteringEventHandler Entering" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.Word.ContentControlBase.Entering" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Word.ContentControlEnteringEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>当用户在内容控件中单击，或者以编程方式将光标移到内容控件中时发生。</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 如果内容控件嵌套在另一个内容控件，<xref:Microsoft.Office.Tools.Word.ContentControlBase.Entering>仅对嵌套的控件，而不是父控件引发事件。 例如，如果用户单击中<xref:Microsoft.Office.Tools.Word.PlainTextContentControl>嵌套在<xref:Microsoft.Office.Tools.Word.GroupContentControl>，仅对引发此事件<xref:Microsoft.Office.Tools.Word.PlainTextContentControl>; 对于不引发此事件<xref:Microsoft.Office.Tools.Word.GroupContentControl>。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Exiting">
+      <MemberSignature Language="C#" Value="public event Microsoft.Office.Tools.Word.ContentControlExitingEventHandler Exiting;" />
+      <MemberSignature Language="ILAsm" Value=".event class Microsoft.Office.Tools.Word.ContentControlExitingEventHandler Exiting" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.Word.ContentControlBase.Exiting" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Word.ContentControlExitingEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>当用户在内容控件外单击，或者以编程方式将光标移出内容控件时发生。</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 如果内容控件嵌套在另一个内容控件，<xref:Microsoft.Office.Tools.Word.ContentControlBase.Exiting>仅对嵌套的控件，而不是父控件引发事件。 例如，如果用户在外部单击<xref:Microsoft.Office.Tools.Word.PlainTextContentControl>嵌套在<xref:Microsoft.Office.Tools.Word.GroupContentControl>，仅将引发此事件<xref:Microsoft.Office.Tools.Word.PlainTextContentControl>; 对于不引发此事件<xref:Microsoft.Office.Tools.Word.GroupContentControl>。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ID">
+      <MemberSignature Language="C#" Value="public string ID { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ID" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.ContentControlBase.ID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>获取标识内容控件的唯一编号。</summary>
+        <value>标识内容控件的唯一编号。</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 值<xref:Microsoft.Office.Tools.Word.ContentControlBase.ID%2A>属性由 Microsoft Office Word。 此值可用于标识代码中的内容控件。 值是唯一的每个内容控件并且无法更改它。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InnerObject">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Word.ContentControl InnerObject { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Interop.Word.ContentControl InnerObject" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.ContentControlBase.InnerObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Word.ContentControl</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>获取 <see cref="T:Microsoft.Office.Tools.Word.ContentControlBase" /> 的基础 <see cref="T:Microsoft.Office.Interop.Word.ContentControl" /> 对象。</summary>
+        <value>
+          <see cref="T:Microsoft.Office.Tools.Word.ContentControlBase" /> 的基础 <see cref="T:Microsoft.Office.Interop.Word.ContentControl" /> 对象。</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Office 项目中的每个主机控件在主机应用程序的对象模型中有一个基础对象。 使用<xref:Microsoft.Office.Tools.Word.ContentControlBase.InnerObject%2A>来访问基础的 Word 项目中的属性<xref:Microsoft.Office.Interop.Word.ContentControl?displayProperty=fullName>对象<xref:Microsoft.Office.Tools.Word.ContentControlBase?displayProperty=fullName>对象。 有关详细信息，请参阅[主机项和主机控件概述](/visualstudio/vsto/host-items-and-host-controls-overview.md)和[限制的主机项和主机控件编程](/visualstudio/vsto/programmatic-limitations-of-host-items-and-host-controls.md)。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StoreUpdating">
+      <MemberSignature Language="C#" Value="public event Microsoft.Office.Tools.Word.ContentControlStoreUpdatingEventHandler StoreUpdating;" />
+      <MemberSignature Language="ILAsm" Value=".event class Microsoft.Office.Tools.Word.ContentControlStoreUpdatingEventHandler StoreUpdating" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.Word.ContentControlBase.StoreUpdating" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Word.ContentControlStoreUpdatingEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>在 Microsoft Office Word 正要更新已绑定到内容控件的自定义 XML 部件中的数据之前（即在内容控件中的文本更改之后）发生。</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 你可以将内容控件绑定到一种 XML 中的元素 (也名为*自定义 XML 部件*) 嵌入在文档中。 有关详细信息，请参阅[内容控件](/visualstudio/vsto/content-controls.md)和[自定义 XML 部件概述](/visualstudio/vsto/custom-xml-parts-overview.md)。  
+  
+ <xref:Microsoft.Office.Tools.Word.ContentControlBase.StoreUpdating>内容控件中的文本更改，并且该内容控件绑定到自定义 XML 部件中的元素时引发事件。  
+  
+   
+  
+## Examples  
+ 下面的代码示例演示了事件处理程序<xref:Microsoft.Office.Tools.Word.ContentControlBase.StoreUpdating>和<xref:Microsoft.Office.Tools.Word.ContentControlBase.ContentUpdating>事件。 此示例假定文档包含<xref:Microsoft.Office.Tools.Word.PlainTextContentControl>名为`plainTextContentControl1`，它绑定到自定义 XML 部件中的元素。 有关演示如何将内容控件绑定到自定义 XML 部件中的元素的代码示例，请参阅[演练： 将内容控件绑定到自定义 XML 部件](/visualstudio/vsto/walkthrough-binding-content-controls-to-custom-xml-parts.md)。  
+  
+ 若要使用此代码，将其粘贴到`ThisDocument`项目中的类。 对于 C# 中，你必须还将附加到的事件处理程序<xref:Microsoft.Office.Tools.Word.ContentControlBase.StoreUpdating>和<xref:Microsoft.Office.Tools.Word.ContentControlBase.ContentUpdating>的事件`plainTextContentControl1`。  
+  
+ [!code-csharp[Trin_ContentControlXmlPartWalkthrough#7](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlXmlPartWalkthrough/CS/ThisDocument.cs#7)]
+ [!code-vb[Trin_ContentControlXmlPartWalkthrough#7](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlXmlPartWalkthrough/VB/ThisDocument.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validated">
+      <MemberSignature Language="C#" Value="public event EventHandler Validated;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Validated" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.Word.ContentControlBase.Validated" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>在成功验证内容控件时发生。</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 处理<xref:Microsoft.Office.Tools.Word.ContentControlBase.Validated>事件之后已成功验证内容的控件运行代码。  
+  
+ 若要验证内容的控件，处理<xref:Microsoft.Office.Tools.Word.ContentControlBase.Validating>事件。 在验证内容的控件时，请确保在控件中的文本符合特定条件。 例如，如果你有包含电话号码的内容控件，你可以验证它包含仅的相应字符 （数字、 括号、 连字符）。  
+  
+   
+  
+## Examples  
+ 下面的代码示例演示了事件处理程序<xref:Microsoft.Office.Tools.Word.ContentControlBase.Validated>和<xref:Microsoft.Office.Tools.Word.ContentControlBase.Validating>事件。 验证内容控件的值后，事件处理程序<xref:Microsoft.Office.Tools.Word.ContentControlBase.Validated>事件向最终用户显示一个消息框。  
+  
+ 此示例假定文档包含<xref:Microsoft.Office.Tools.Word.PlainTextContentControl>名为`plainTextContentControl1`。 若要使用此代码，将其粘贴到`ThisDocument`项目中的类。 对于 C# 中，你必须还将附加到的事件处理程序<xref:Microsoft.Office.Tools.Word.ContentControlBase.Validated>和<xref:Microsoft.Office.Tools.Word.ContentControlBase.Validating>的事件`plainTextContentControl1`。  
+  
+ 此示例适用于文档级自定义。  
+  
+ [!code-csharp[Trin_ContentControlXmlPartWalkthrough#6](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlXmlPartWalkthrough/CS/ThisDocument.cs#6)]
+ [!code-vb[Trin_ContentControlXmlPartWalkthrough#6](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlXmlPartWalkthrough/VB/ThisDocument.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validating">
+      <MemberSignature Language="C#" Value="public event System.ComponentModel.CancelEventHandler Validating;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.ComponentModel.CancelEventHandler Validating" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.Word.ContentControlBase.Validating" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.CancelEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>在验证内容控件的内容时发生。</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:Microsoft.Office.Tools.Word.ContentControlBase.Validating>控件没有焦点时引发事件。 处理<xref:Microsoft.Office.Tools.Word.ContentControlBase.Validating>事件，以确定内容控件中的文本是否有效，根据你选择的条件。 例如，如果你有包含电话号码的内容控件，你可以验证它包含仅的相应字符 （数字、 括号、 连字符）。 如果内容不是有效的可以取消的事件并将焦点返回到控件，通过设置<xref:System.ComponentModel.CancelEventArgs.Cancel%2A>属性<xref:System.ComponentModel.CancelEventArgs>的事件处理程序参数`true`。 产生的实际效果是有效的文本之前，用户无法退出该控件。  
+  
+ 若要在成功验证内容的控件之后，请运行代码，处理<xref:Microsoft.Office.Tools.Word.ContentControlBase.Validated>事件。  
+  
+   
+  
+## Examples  
+ 下面的代码示例演示了事件处理程序<xref:Microsoft.Office.Tools.Word.ContentControlBase.Validating>和<xref:Microsoft.Office.Tools.Word.ContentControlBase.Validated>事件。 最终用户更改的内容中的文本之后的控制，事件处理程序<xref:Microsoft.Office.Tools.Word.ContentControlBase.Validating>事件使用正则表达式来验证文本不包含整数。  
+  
+ 此示例假定文档包含<xref:Microsoft.Office.Tools.Word.PlainTextContentControl>名为`plainTextContentControl1`。 若要使用此代码，将其粘贴到`ThisDocument`项目中的类。 对于 C# 中，你必须还将附加到的事件处理程序<xref:Microsoft.Office.Tools.Word.ContentControlBase.Validated>和<xref:Microsoft.Office.Tools.Word.ContentControlBase.Validating>的事件`plainTextContentControl1`。  
+  
+ 此示例适用于文档级自定义。  
+  
+ [!code-csharp[Trin_ContentControlXmlPartWalkthrough#6](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlXmlPartWalkthrough/CS/ThisDocument.cs#6)]
+ [!code-vb[Trin_ContentControlXmlPartWalkthrough#6](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlXmlPartWalkthrough/VB/ThisDocument.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

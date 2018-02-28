@@ -1,0 +1,250 @@
+<Type Name="ISharePointConnection" FullName="Microsoft.VisualStudio.SharePoint.ISharePointConnection">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="ec69987e20505a670347b0e934cebe83c8c1dad5" />
+    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.translationtype" Value="HT" />
+    <Meta Name="ms.contentlocale" Value="zh-CN" />
+    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public interface ISharePointConnection : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISharePointConnection implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.SharePoint.ISharePointConnection" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>提供可用于执行 SharePoint 命令的方法，该命令在 Visual Studio 中从 SharePoint 工具扩展调用到 SharePoint 服务器对象模型。</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ *SharePoint 命令*是可以用于在 SharePoint 工具扩展中调入 SharePoint 服务器对象模型的方法。 在定义 SharePoint 命令后，你可以通过获取执行它<xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection>对象，然后再调用之一`ExecuteCommand`方法。 有关详细信息，请参阅[如何： 执行 SharePoint 命令](/visualstudio/sharepoint/how-to-execute-a-sharepoint-command.md)。  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AuthenticationMode">
+      <MemberSignature Language="C#" Value="public Microsoft.VisualStudio.SharePoint.SharePointAuthenticationMode AuthenticationMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.VisualStudio.SharePoint.SharePointAuthenticationMode AuthenticationMode" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualStudio.SharePoint.ISharePointConnection.AuthenticationMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualStudio.SharePoint.SharePointAuthenticationMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>获取此 SharePoint 连接的身份验证模式。</summary>
+        <value>此 SharePoint 连接的身份验证模式。</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteCommand">
+      <MemberSignature Language="C#" Value="public void ExecuteCommand (string commandId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ExecuteCommand(string commandId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualStudio.SharePoint.ISharePointConnection.ExecuteCommand(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commandId" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="commandId">要执行的 SharePoint 命令的标识符。</param>
+        <summary>使用指定的标识符执行 SharePoint 命令。</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 使用此方法以执行 SharePoint 命令，没有自定义的参数或返回值。 有关详细信息，请参阅[如何： 创建 SharePoint 命令](/visualstudio/sharepoint/how-to-create-a-sharepoint-command.md)和[如何： 执行 SharePoint 命令](/visualstudio/sharepoint/how-to-execute-a-sharepoint-command.md)。  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:Microsoft.VisualStudio.SharePoint.SharePointConnectionException">与 SharePoint 连接时发生错误。</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="commandId" /> 与任何可用的 SharePoint 命令都不匹配。</exception>
+        <exception cref="T:Microsoft.VisualStudio.SharePoint.SharePointCommandException">SharePoint 命令失败引发异常。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteCommand&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public void ExecuteCommand&lt;T&gt; (string commandId, T arg);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ExecuteCommand&lt;T&gt;(string commandId, !!T arg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualStudio.SharePoint.ISharePointConnection.ExecuteCommand``1(System.String,``0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="commandId" Type="System.String" />
+        <Parameter Name="arg" Type="T" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">要执行的 SharePoint 命令的参数的类型。 这必须是可由 Windows Communication Foundation (WCF) 序列化的类型。</typeparam>
+        <param name="commandId">要执行的 SharePoint 命令的标识符。</param>
+        <param name="arg">要传递给 SharePoint 命令的参数。</param>
+        <summary>使用指定的标识符和参数类型执行 SharePoint 命令。</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 使用此方法来执行 SharePoint 命令具有自定义参数，但没有返回值。 有关详细信息，请参阅[如何： 创建 SharePoint 命令](/visualstudio/sharepoint/how-to-create-a-sharepoint-command.md)和[如何： 执行 SharePoint 命令](/visualstudio/sharepoint/how-to-execute-a-sharepoint-command.md)。  
+  
+ 有关可序列化的 Windows Communication Foundation (WCF) 的类型的详细信息，请参阅[类型受数据协定序列化程序](http://msdn.microsoft.com/library/7381b200-437a-4506-9556-d77bf1bc3f34)和[使用 XmlSerializer 类](http://msdn.microsoft.com/library/c680602d-39d3-44f1-bf22-8e6654ad5069)。  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">SharePoint 命令的参数类型与 <paramref name="T" /> 类型不匹配。</exception>
+        <exception cref="T:Microsoft.VisualStudio.SharePoint.SharePointConnectionException">与 SharePoint 连接时发生错误。</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="commandId" /> 与任何可用的 SharePoint 命令都不匹配。</exception>
+        <exception cref="T:Microsoft.VisualStudio.SharePoint.SharePointCommandException">SharePoint 命令失败引发异常。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteCommand&lt;TResult&gt;">
+      <MemberSignature Language="C#" Value="public TResult ExecuteCommand&lt;TResult&gt; (string commandId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !!TResult ExecuteCommand&lt;TResult&gt;(string commandId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualStudio.SharePoint.ISharePointConnection.ExecuteCommand``1(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="commandId" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TResult">要执行的 SharePoint 命令的返回值的类型。 这必须是可由 Windows Communication Foundation (WCF) 序列化的类型。</typeparam>
+        <param name="commandId">要执行的 SharePoint 命令的标识符。</param>
+        <summary>使用指定的标识符和返回值类型执行 SharePoint 命令。</summary>
+        <returns>SharePoint 命令的返回值。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 使用此方法来执行 SharePoint 命令具有返回值，但没有自定义参数。 有关详细信息，请参阅[如何： 创建 SharePoint 命令](/visualstudio/sharepoint/how-to-create-a-sharepoint-command.md)和[如何： 执行 SharePoint 命令](/visualstudio/sharepoint/how-to-execute-a-sharepoint-command.md)。  
+  
+ 有关可序列化的 Windows Communication Foundation (WCF) 的类型的详细信息，请参阅[类型受数据协定序列化程序](http://msdn.microsoft.com/library/7381b200-437a-4506-9556-d77bf1bc3f34)和[使用 XmlSerializer 类](http://msdn.microsoft.com/library/c680602d-39d3-44f1-bf22-8e6654ad5069)。  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">SharePoint 命令的返回值类型与 <paramref name="TResult" /> 类型不匹配。</exception>
+        <exception cref="T:Microsoft.VisualStudio.SharePoint.SharePointConnectionException">与 SharePoint 连接时发生错误。</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="commandId" /> 与任何可用的 SharePoint 命令都不匹配。</exception>
+        <exception cref="T:Microsoft.VisualStudio.SharePoint.SharePointCommandException">SharePoint 命令失败引发异常。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteCommand&lt;T,TResult&gt;">
+      <MemberSignature Language="C#" Value="public TResult ExecuteCommand&lt;T,TResult&gt; (string commandId, T arg);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !!TResult ExecuteCommand&lt;T, TResult&gt;(string commandId, !!T arg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualStudio.SharePoint.ISharePointConnection.ExecuteCommand``2(System.String,``0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="commandId" Type="System.String" />
+        <Parameter Name="arg" Type="T" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">要执行的 SharePoint 命令的参数的类型。 这必须是可由 Windows Communication Foundation (WCF) 序列化的类型。</typeparam>
+        <typeparam name="TResult">要执行的 SharePoint 命令的返回值的类型。 这必须是可由 Windows Communication Foundation (WCF) 序列化的类型。</typeparam>
+        <param name="commandId">要执行的 SharePoint 命令的标识符。</param>
+        <param name="arg">要传递给 SharePoint 命令的参数。</param>
+        <summary>使用指定的标识符、参数类型和返回值类型执行 SharePoint 命令。</summary>
+        <returns>SharePoint 命令的返回值。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 使用此方法来执行 SharePoint 命令返回的值和自定义参数。 有关详细信息，请参阅[如何： 创建 SharePoint 命令](/visualstudio/sharepoint/how-to-create-a-sharepoint-command.md)和[如何： 执行 SharePoint 命令](/visualstudio/sharepoint/how-to-execute-a-sharepoint-command.md)。  
+  
+ 有关可序列化的 Windows Communication Foundation (WCF) 的类型的详细信息，请参阅[类型受数据协定序列化程序](http://msdn.microsoft.com/library/7381b200-437a-4506-9556-d77bf1bc3f34)和[使用 XmlSerializer 类](http://msdn.microsoft.com/library/c680602d-39d3-44f1-bf22-8e6654ad5069)。  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">SharePoint 命令的参数类型与 <paramref name="T" /> 类型不匹配。  
+  
+ 或  
+  
+ SharePoint 命令的返回值类型与 <paramref name="TResult" /> 类型不匹配。</exception>
+        <exception cref="T:Microsoft.VisualStudio.SharePoint.SharePointConnectionException">与 SharePoint 连接时发生错误。</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="commandId" /> 与任何可用的 SharePoint 命令都不匹配。</exception>
+        <exception cref="T:Microsoft.VisualStudio.SharePoint.SharePointCommandException">SharePoint 命令失败引发异常。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEnabled">
+      <MemberSignature Language="C#" Value="public bool IsEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEnabled" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualStudio.SharePoint.ISharePointConnection.IsEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>获取或设置一个指示是否已启用连接的标志。</summary>
+        <value>
+          如果启用该连接，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SiteUrl">
+      <MemberSignature Language="C#" Value="public Uri SiteUrl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri SiteUrl" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualStudio.SharePoint.ISharePointConnection.SiteUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>获取连接到的 SharePoint 网站的 URL。</summary>
+        <value>连接到的 SharePoint 网站的 URL。</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

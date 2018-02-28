@@ -1,0 +1,394 @@
+<Type Name="FormRegionManifestIcons" FullName="Microsoft.Office.Tools.Outlook.FormRegionManifestIcons">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="239e2305ab982756f6ef888b777f5407e05740a0" />
+    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.translationtype" Value="HT" />
+    <Meta Name="ms.contentlocale" Value="zh-CN" />
+    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public interface FormRegionManifestIcons" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract FormRegionManifestIcons" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Outlook.FormRegionManifestIcons" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.Tools.Outlook</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("41827daa-9694-407d-bb60-e47a08ae6a14")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>表示为单独、替换和全部替换窗体区域显示的图标的集合。</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 使用在此界面中的属性可以提供你希望在其中显示的 Outlook 项的每个状态的图标。 例如，设置<xref:Microsoft.Office.Tools.Outlook.FormRegionManifestIcons.Forwarded%2A>属性<xref:System.Drawing.Icon>你想要显示当 Outlook 显示转发的项。  
+  
+ <xref:Microsoft.Office.Tools.Outlook.FormRegionManifestIcons.Page%2A>图标是为单独的窗体区域显示的唯一图标。 对于替换和全部替换窗体区域会显示所有其他图标。  
+  
+ 有关如何实现最佳的视觉质量窗体区域图标的信息，请参阅[创建 Outlook 窗体区域的准则](/visualstudio/vsto/guidelines-for-creating-outlook-form-regions.md)  
+  
+ [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
+  
+## <a name="usage"></a>用法  
+ [!INCLUDE[vsto_net35mref](~/includes/vsto-net35mref-md.md)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public System.Drawing.Icon Default { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Icon Default" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Outlook.FormRegionManifestIcons.Default" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Outlook</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Icon</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>获取或设置为替换和全部替换窗体区域显示的默认图标。</summary>
+        <value>在显示替换和全部替换窗体区域的资源管理器中默认显示的 <see cref="T:System.Drawing.Icon" />。</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 指定没有其他图标时，将显示此图标。 例如，如果未设置<xref:Microsoft.Office.Tools.Outlook.FormRegionManifestIcons.Forwarded%2A>属性，为转发项在 Outlook 中将显示默认图标。  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">与此对象关联的 <see cref="P:Microsoft.Office.Tools.Outlook.FormRegionManifest.Locked" /> 对象的 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionManifest" /> 属性为 <see langword="true" />。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Encrypted">
+      <MemberSignature Language="C#" Value="public System.Drawing.Icon Encrypted { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Icon Encrypted" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Outlook.FormRegionManifestIcons.Encrypted" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Outlook</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Icon</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>获取或设置为具有替换或全部替换窗体区域的加密项显示的图标。</summary>
+        <value>为具有替换或全部替换窗体区域的加密项显示的 <see cref="T:System.Drawing.Icon" />。</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">与此对象关联的 <see cref="P:Microsoft.Office.Tools.Outlook.FormRegionManifest.Locked" /> 对象的 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionManifest" /> 属性为 <see langword="true" />。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Forwarded">
+      <MemberSignature Language="C#" Value="public System.Drawing.Icon Forwarded { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Icon Forwarded" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Outlook.FormRegionManifestIcons.Forwarded" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Outlook</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Icon</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>获取或设置为具有替换或全部替换窗体区域的转发项显示的图标。</summary>
+        <value>为具有替换或全部替换窗体区域的转发项显示的 <see cref="T:System.Drawing.Icon" />。</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">与此对象关联的 <see cref="P:Microsoft.Office.Tools.Outlook.FormRegionManifest.Locked" /> 对象的 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionManifest" /> 属性为 <see langword="true" />。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetIcon">
+      <MemberSignature Language="C#" Value="public stdole.IPictureDisp GetIcon (Microsoft.Office.Interop.Outlook.OlFormRegionIcon icon);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class stdole.IPictureDisp GetIcon(valuetype Microsoft.Office.Interop.Outlook.OlFormRegionIcon icon) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Outlook.FormRegionManifestIcons.GetIcon(Microsoft.Office.Interop.Outlook.OlFormRegionIcon)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Outlook</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>stdole.IPictureDisp</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="icon" Type="Microsoft.Office.Interop.Outlook.OlFormRegionIcon" />
+      </Parameters>
+      <Docs>
+        <param name="icon">
+          <see langword="Microsoft.Office.Interop.Outlook.OlFormRegionIcon" />，表示要返回的图标类型。</param>
+        <summary>返回将为窗体区域的特定类型图标显示的图像。</summary>
+        <returns>一个表示图标的 <see cref="T:stdole.IPictureDisp" />。</returns>
+        <remarks>To be added.</remarks>
+        <altCompliant cref="" />
+      </Docs>
+    </Member>
+    <Member MemberName="Manifest">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Tools.Outlook.FormRegionManifest Manifest { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Tools.Outlook.FormRegionManifest Manifest" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Outlook.FormRegionManifestIcons.Manifest" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Outlook</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Outlook.FormRegionManifest</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>与此 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionManifest" /> 关联的 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionManifestIcons" /> 实例。</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Page">
+      <MemberSignature Language="C#" Value="public System.Drawing.Image Page { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Image Page" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Outlook.FormRegionManifestIcons.Page" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Outlook</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Image</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>获取或设置一个图标，该图标显示在具有单独、替换或全部替换窗体区域的项的检查器的功能区中。</summary>
+        <value>一个 <see cref="T:System.Drawing.Image" />，它显示在具有单独、替换或全部替换窗体区域的项的检查器的功能区中。</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 使用此映像的可移植网络图形 (PNG) 文件格式。  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">与此对象关联的 <see cref="P:Microsoft.Office.Tools.Outlook.FormRegionManifest.Locked" /> 对象的 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionManifest" /> 属性为 <see langword="true" />。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public System.Drawing.Icon Read { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Icon Read" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Outlook.FormRegionManifestIcons.Read" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Outlook</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Icon</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>获取或设置为具有替换或全部替换窗体区域并标记为已读的项显示的图标。</summary>
+        <value>为具有替换或全部替换窗体区域并标记为已读的项显示的 <see cref="T:System.Drawing.Icon" />。</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">与此对象关联的 <see cref="P:Microsoft.Office.Tools.Outlook.FormRegionManifest.Locked" /> 对象的 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionManifest" /> 属性为 <see langword="true" />。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Recurring">
+      <MemberSignature Language="C#" Value="public System.Drawing.Icon Recurring { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Icon Recurring" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Outlook.FormRegionManifestIcons.Recurring" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Outlook</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Icon</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>获取或设置为具有替换或全部替换窗体区域的重复项显示的图标。</summary>
+        <value>为具有替换或全部替换窗体区域的重复项显示的 <see cref="T:System.Drawing.Icon" />。</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">与此对象关联的 <see cref="P:Microsoft.Office.Tools.Outlook.FormRegionManifest.Locked" /> 对象的 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionManifest" /> 属性为 <see langword="true" />。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Replied">
+      <MemberSignature Language="C#" Value="public System.Drawing.Icon Replied { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Icon Replied" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Outlook.FormRegionManifestIcons.Replied" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Outlook</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Icon</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>获取或设置为具有替换或全部替换窗体区域的回复项显示的图标。</summary>
+        <value>为具有替换或全部替换窗体区域的回复项显示的 <see cref="T:System.Drawing.Icon" />。</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">与此对象关联的 <see cref="P:Microsoft.Office.Tools.Outlook.FormRegionManifest.Locked" /> 对象的 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionManifest" /> 属性为 <see langword="true" />。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Signed">
+      <MemberSignature Language="C#" Value="public System.Drawing.Icon Signed { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Icon Signed" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Outlook.FormRegionManifestIcons.Signed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Outlook</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Icon</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>获取或设置为具有替换或全部替换窗体区域的数字签名项显示的图标。</summary>
+        <value>为具有替换或全部替换窗体区域的数字签名项显示的 <see cref="T:System.Drawing.Icon" />。</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">与此对象关联的 <see cref="P:Microsoft.Office.Tools.Outlook.FormRegionManifest.Locked" /> 对象的 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionManifest" /> 属性为 <see langword="true" />。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Submitted">
+      <MemberSignature Language="C#" Value="public System.Drawing.Icon Submitted { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Icon Submitted" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Outlook.FormRegionManifestIcons.Submitted" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Outlook</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Icon</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>获取或设置为具有替换或全部替换窗体区域的已提交项显示的图标。</summary>
+        <value>为具有替换或全部替换窗体区域的已提交项显示的 <see cref="T:System.Drawing.Icon" />。</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">与此对象关联的 <see cref="P:Microsoft.Office.Tools.Outlook.FormRegionManifest.Locked" /> 对象的 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionManifest" /> 属性为 <see langword="true" />。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToXml">
+      <MemberSignature Language="C#" Value="public string ToXml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string ToXml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Outlook.FormRegionManifestIcons.ToXml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Outlook</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>创建一个以 XML 形式表示 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionManifestIcons" /> 的字符串。</summary>
+        <returns>一个以 XML 形式表示 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionManifestIcons" /> 的字符串。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 使用<xref:Microsoft.Office.Tools.Outlook.FormRegionManifestIcons.ToXml%2A>方法如果你想要创建 XML 清单文件描述窗体区域。 此方法返回一个字符串，包含元素和属性，用于描述<xref:Microsoft.Office.Tools.Outlook.FormRegionManifestIcons>。  
+  
+ 你可以调用`ToXML`中其他类型的方法<xref:Microsoft.Office.Tools.Outlook>命名空间以生成完整的 XML 清单文件。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToXml">
+      <MemberSignature Language="C#" Value="public void ToXml (System.Xml.XmlWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ToXml(class System.Xml.XmlWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Outlook.FormRegionManifestIcons.ToXml(System.Xml.XmlWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Outlook</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">要将字符串写入其中的 <see cref="T:System.Xml.XmlTextWriter" />。</param>
+        <summary>以字符串形式创建 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionManifestIcons" /> 的 XML 表示形式，并将其保存到 <see cref="T:System.Xml.XmlTextWriter" /> 实例。</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Unread">
+      <MemberSignature Language="C#" Value="public System.Drawing.Icon Unread { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Icon Unread" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Outlook.FormRegionManifestIcons.Unread" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Outlook</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Icon</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>获取或设置为具有替换或全部替换窗体区域并标记为未读的项显示的图标。</summary>
+        <value>为具有替换或全部替换窗体区域并标记为未读的项显示的 <see cref="T:System.Drawing.Icon" />。</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">与此对象关联的 <see cref="P:Microsoft.Office.Tools.Outlook.FormRegionManifest.Locked" /> 对象的 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionManifest" /> 属性为 <see langword="true" />。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Unsent">
+      <MemberSignature Language="C#" Value="public System.Drawing.Icon Unsent { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Icon Unsent" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Outlook.FormRegionManifestIcons.Unsent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Outlook</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Icon</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>获取或设置为具有替换或全部替换窗体区域的未发送项显示的图标。</summary>
+        <value>为具有替换或全部替换窗体区域的未发送项显示的 <see cref="T:System.Drawing.Icon" />。</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">与此对象关联的 <see cref="P:Microsoft.Office.Tools.Outlook.FormRegionManifest.Locked" /> 对象的 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionManifest" /> 属性为 <see langword="true" />。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Window">
+      <MemberSignature Language="C#" Value="public System.Drawing.Icon Window { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Icon Window" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Outlook.FormRegionManifestIcons.Window" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Outlook</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Icon</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>获取或设置一个图标，该图标显示在通知区域中，而对于显示替换和全部替换窗体区域的打开项，该图标显示在通知区域和“ALT+TAB”对话框中。</summary>
+        <value>一个 <see cref="T:System.Drawing.Icon" />，该图标显示在通知区域中，而对于显示替换和全部替换窗体区域的打开项，该图标显示在通知区域和“ALT+TAB”对话框中。</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 窗口图标应为 32 x 32 像素。  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">与此对象关联的 <see cref="P:Microsoft.Office.Tools.Outlook.FormRegionManifest.Locked" /> 对象的 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionManifest" /> 属性为 <see langword="true" />。</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

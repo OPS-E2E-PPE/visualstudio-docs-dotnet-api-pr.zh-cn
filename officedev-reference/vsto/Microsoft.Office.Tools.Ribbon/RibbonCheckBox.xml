@@ -1,0 +1,254 @@
+<Type Name="RibbonCheckBox" FullName="Microsoft.Office.Tools.Ribbon.RibbonCheckBox">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="f6f4024ebc0c1085b3a15b7a8454f65cb4f537a0" />
+    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.translationtype" Value="HT" />
+    <Meta Name="ms.contentlocale" Value="zh-CN" />
+    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public interface RibbonCheckBox : IDisposable, Microsoft.Office.Tools.Ribbon.RibbonControl, System.ComponentModel.IComponent" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract RibbonCheckBox implements class Microsoft.Office.Tools.Ribbon.RibbonComponent, class Microsoft.Office.Tools.Ribbon.RibbonControl, class System.ComponentModel.IComponent, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Ribbon.RibbonCheckBox" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Office.Tools.Ribbon.RibbonControl</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ComponentModel.IComponent</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("2119eecb-0ee2-4a64-8b87-b76bd1fa395e")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>表示功能区上的一个复选框控件。</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 你可以在运行时创建此控件的实例，并将其添加到动态菜单。 如果你设置动态菜单是其<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Dynamic%2A>属性`true`。  
+  
+ 只能在功能区加载到 Office 应用程序之前，或者在运行时将控件添加到动态菜单之前，可以设置此控件的某些属性。 有关设置这些属性的信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。  
+  
+ 你可以创建<xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox>通过使用在运行时<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.CreateRibbonCheckBox%2A>方法<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory>对象。  
+  
+ 可通过两种方法来访问 <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory> 对象：  
+  
+-   通过使用 Ribbon 类的 `Factory` 属性。 可从 Ribbon 类中的代码使用此方法。  
+  
+-   通过使用 `Globals.Factory.GetRibbonFactory` 方法。 可从 Ribbon 类外的代码使用此方法。  
+  
+ [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
+  
+## <a name="usage"></a>用法  
+ [!INCLUDE[vsto_net35mref](~/includes/vsto-net35mref-md.md)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Checked">
+      <MemberSignature Language="C#" Value="public bool Checked { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Checked" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.Checked" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>获取或设置一个值，该值指示是否选中此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonCheckBox" />。</summary>
+        <value>
+          如果选中此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonCheckBox" />，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="false" />。</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Click">
+      <MemberSignature Language="C#" Value="public event Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler Click;" />
+      <MemberSignature Language="ILAsm" Value=".event class Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler Click" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.Click" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>用户单击复选框时发生。</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.Click>用户单击复选框时，将引发事件。 后引发<xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.Checked%2A>已更新以反映用户的操作。 在用户通过添加测试的最新的值的代码签复选框时，例如，可以更新的功能区接口<xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.Checked%2A>到<xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.Click>事件处理程序。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>获取或设置此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonCheckBox" /> 的说明，它将在其父级控件的 <see langword="ItemSize" /> 属性设置为 <see cref="F:Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge" /> 时显示。</summary>
+        <value>有关此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonCheckBox" /> 的说明。</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 当这<xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox>位于<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu>或<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton>具有其`ItemSize`属性设置为`Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge`的值<xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.Description%2A>属性显示在标签下。 否则，设置<xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.Description%2A>属性不起作用。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyTip">
+      <MemberSignature Language="C#" Value="public string KeyTip { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string KeyTip" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.KeyTip" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>获取或设置此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonCheckBox" /> 的键盘快捷键。</summary>
+        <value>此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonCheckBox" /> 的当前键盘快捷键。</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 快捷键提示必须包含 1 到 3 个大写字符，并且必须包含空格、 制表符或换行字符。  
+  
+ 键提示有时也称为访问密钥或快捷键，可用作激活控件的快捷组合键。 当你按下 ALT 键时，键提示将显示在功能区上。 如果内置控件或从其他加载项，则与键提示中你快捷键提示相冲突，Microsoft Office 可能自动分配不冲突快捷键提示值。  
+  
+ 有关详细信息，请参阅[使用键盘来使用功能区程序](http://go.microsoft.com/fwlink/?LinkId=93523)。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Label">
+      <MemberSignature Language="C#" Value="public string Label { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Label" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.Label" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>获取或设置此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonCheckBox" /> 上显示的文本。</summary>
+        <value>此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonCheckBox" /> 上显示的文本。</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Position">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Tools.Ribbon.RibbonPosition Position { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Tools.Ribbon.RibbonPosition Position" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.Position" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Ribbon.RibbonPosition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>如果复选框位于 Microsoft Office 菜单上，请获取或设置复选框的位置。</summary>
+        <value>一个 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonPosition" />，表示 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonCheckBox" /> 的位置（如果该控件位于 Microsoft Office 菜单上）。</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 在运行时仅在某些情况下，可以设置此属性。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。  
+  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.Position%2A>属性时复选框放置在功能区选项卡上没有任何作用。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScreenTip">
+      <MemberSignature Language="C#" Value="public string ScreenTip { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ScreenTip" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.ScreenTip" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>获取或设置用户将指针移到 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonCheckBox" /> 上方时显示的提示文本。</summary>
+        <value>用户将指针移到控件上方时显示的文本。</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 当<xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.SuperTip%2A>设置属性，<xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.ScreenTip%2A>值将显示的标题为<xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.SuperTip%2A>。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SuperTip">
+      <MemberSignature Language="C#" Value="public string SuperTip { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SuperTip" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.SuperTip" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>获取或设置用户将指针移到 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonCheckBox" /> 上时显示的多行提示文本。</summary>
+        <value>包含多行提示文本的字符串。</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 字符串必须是长度小于 1024年个字符。  
+  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.SuperTip%2A>下显示<xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.ScreenTip%2A>文本。 与不同<xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.ScreenTip%2A>、<xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.SuperTip%2A>字符串中的启用分行符。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

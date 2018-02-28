@@ -1,0 +1,402 @@
+<Type Name="ApplicationFactory" FullName="Microsoft.Office.Tools.Excel.ApplicationFactory">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="bad593865ba6808ee62b760aebcb38500b0d8c2b" />
+    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.translationtype" Value="HT" />
+    <Meta Name="ms.contentlocale" Value="zh-CN" />
+    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public interface ApplicationFactory : Microsoft.Office.Tools.Factory" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ApplicationFactory implements class Microsoft.Office.Tools.Factory" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Excel.ApplicationFactory" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Office.Tools.Factory</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("7FB273FD-6B13-4113-B557-8F9BDF4E1B2D")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.TypeIdentifier</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>提供可用于在应用程序级外接程序中执行杂项任务（如在运行时创建功能区控件以及向工作表添加智能标记）的方法。</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 若要获取<xref:Microsoft.Office.Tools.Excel.Factory>对象，请使用`Globals.Factory`项目中的属性。 有关详细信息，请参阅[对 Office 项目中对象的全局访问](/visualstudio/vsto/global-access-to-objects-in-office-projects.md)。  
+  
+ [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="_VtblGap1_2">
+      <MemberSignature Language="C#" Value="public void _VtblGap1_2 ();" />
+      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void _VtblGap1_2() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.ApplicationFactory._VtblGap1_2" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateAction">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Tools.Excel.Action CreateAction (string caption);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.Tools.Excel.Action CreateAction(string caption) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.ApplicationFactory.CreateAction(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Excel.Action</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="caption" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="caption">智能标记菜单显示的操作的名称。</param>
+        <summary>创建一个 <see cref="T:Microsoft.Office.Tools.Excel.Action" /> 对象，该对象表示智能标记的一个操作。 [!INCLUDE[vsto_smart_tags](~/includes/vsto-smart-tags-md.md)]。</summary>
+        <returns>新智能标记操作。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ 下面的代码示例演示如何在 Excel 工作簿项目中创建智能标记和操作。 若要使用此示例中，运行中的代码`ThisAddIn`类。  
+  
+ [!code-csharp[Trin_ExcelSmartTags#2](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelSmartTags/CS/Trin_ExcelSmartTags.cs#2)]
+ [!code-vb[Trin_ExcelSmartTags#2](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelSmartTags/VB/ThisWorkbook.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSmartTag">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Tools.Excel.SmartTag CreateSmartTag (string smartTagType, string caption, Microsoft.Office.Tools.Excel.ISmartTagExtension extension = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.Tools.Excel.SmartTag CreateSmartTag(string smartTagType, string caption, class Microsoft.Office.Tools.Excel.ISmartTagExtension extension) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.ApplicationFactory.CreateSmartTag(System.String,System.String,Microsoft.Office.Tools.Excel.ISmartTagExtension)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Excel.SmartTag</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="smartTagType" Type="System.String" />
+        <Parameter Name="caption" Type="System.String" />
+        <Parameter Name="extension" Type="Microsoft.Office.Tools.Excel.ISmartTagExtension" />
+      </Parameters>
+      <Docs>
+        <param name="smartTagType">智能标记的唯一标识符，由命名空间 URI 和标记类型名组成，两部分之间用数字符号 (#) 分隔。</param>
+        <param name="caption">智能标记菜单上显示的智能标记的名称。</param>
+        <param name="extension">可选。 一个扩展对象，用于为智能标记定义自定义识别器。</param>
+        <summary>创建一个 <see cref="T:Microsoft.Office.Tools.Excel.SmartTag" /> 对象，该对象表示工作表中的一个智能标记。 [!INCLUDE[vsto_smart_tags](~/includes/vsto-smart-tags-md.md)]。</summary>
+        <returns>新智能标记。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 针对的有效字符串的示例`smartTagType`参数是 http://smarttags.contoso.com#TagName。 字符串格式正确的智能标记类型不包含空格，并且下划线 (_) 或冒号 （:） 以字母 (a-z、 A-Z)，它启动。  
+  
+   
+  
+## Examples  
+ 下面的代码示例演示如何创建 Excel 外接程序项目中的智能标记和操作。 若要使用此示例中，运行中的代码`ThisAddIn`类。  
+  
+ [!code-csharp[Trin_ExcelSmartTags#2](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelSmartTags/CS/Trin_ExcelSmartTags.cs#2)]
+ [!code-vb[Trin_ExcelSmartTags#2](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelSmartTags/VB/ThisWorkbook.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="smartTagType" /> 或 <paramref name="caption" /> 为 <see langword="null" /> 或为空，或者 <paramref name="smartTagType" /> 无效。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetVstoObject">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Tools.Excel.Workbook GetVstoObject (Microsoft.Office.Interop.Excel._Workbook workbook);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.Tools.Excel.Workbook GetVstoObject(class Microsoft.Office.Interop.Excel._Workbook workbook) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.ApplicationFactory.GetVstoObject(Microsoft.Office.Interop.Excel._Workbook)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Excel.Workbook</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="workbook" Type="Microsoft.Office.Interop.Excel._Workbook" />
+      </Parameters>
+      <Docs>
+        <param name="workbook">要为其检索扩展对象的本机工作簿对象。 虽然此参数的类型是 <see cref="T:Microsoft.Office.Interop.Excel._Workbook" />，但通常会将 <see cref="T:Microsoft.Office.Interop.Excel.Workbook" /> 对象传递到此方法。</param>
+        <summary>返回 <see cref="T:Microsoft.Office.Tools.Excel.Workbook" /> 主机项，它将展开指定本机工作簿对象的功能。</summary>
+        <returns>主机项可扩展本机工作簿对象的功能。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 在应用程序级外接程序自定义任何 Excel 中打开的工作簿中调用此方法。 此方法将生成一个新<xref:Microsoft.Office.Tools.Excel.Workbook?displayProperty=fullName>对象如果已生成无此对象。 后续调用此方法返回现有的缓存的实例<xref:Microsoft.Office.Tools.Excel.Workbook?displayProperty=fullName>对象。 有关详细信息，请参阅[扩展 Word 文档和 Excel VSTO 外接程序在运行时中的工作簿](/visualstudio/vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)。  
+  
+> [!NOTE]
+>  在设置为"宏已启用"或"默认情况下禁用宏"时 VSTO 遵循"自动化安全"Office 组策略设置。 但是，VSTO 将始终允许在默认情况下，设置为"使用应用程序宏安全级别"，而不考虑应用程序设置时要运行的自动化。 若要防止 VSTO 允许可用于运行自动化，请选择"默认情况下的禁用宏"设置。  
+>   
+>  `workbook`形参属于类型<xref:Microsoft.Office.Interop.Excel._Workbook?displayProperty=fullName>，即的父接口<xref:Microsoft.Office.Interop.Excel.Workbook?displayProperty=fullName>。 因此，此方法可以接受这两种类型的对象：<xref:Microsoft.Office.Interop.Excel._Workbook?displayProperty=fullName>和<xref:Microsoft.Office.Interop.Excel.Workbook?displayProperty=fullName>。 通常，当引用 Excel 工作簿时，你使用<xref:Microsoft.Office.Interop.Excel.Workbook?displayProperty=fullName>。  
+  
+   
+  
+## Examples  
+ 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.Workbook?displayProperty=fullName>活动 Excel 工作簿主机项。 若要使用此代码，请在针对 `ThisAddIn` 或 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]的 Excel 外接程序项目中从 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 类运行它。  
+  
+ [!code-csharp[Trin_ExcelAddIn_Extensions#1](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelAddIn_Extensions/cs/ThisAddIn.cs#1)]
+ [!code-vb[Trin_ExcelAddIn_Extensions#1](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelAddIn_Extensions/vb/ThisAddIn.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetVstoObject">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Tools.Excel.Worksheet GetVstoObject (Microsoft.Office.Interop.Excel._Worksheet worksheet);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.Tools.Excel.Worksheet GetVstoObject(class Microsoft.Office.Interop.Excel._Worksheet worksheet) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.ApplicationFactory.GetVstoObject(Microsoft.Office.Interop.Excel._Worksheet)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Excel.Worksheet</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="worksheet" Type="Microsoft.Office.Interop.Excel._Worksheet" />
+      </Parameters>
+      <Docs>
+        <param name="worksheet">要为其检索扩展对象的本机工作表对象。 虽然此参数的类型是 <see cref="T:Microsoft.Office.Interop.Excel._Worksheet" />，但通常会将 <see cref="T:Microsoft.Office.Interop.Excel.Worksheet" /> 对象传递到此方法。</param>
+        <summary>返回 <see cref="T:Microsoft.Office.Tools.Excel.Worksheet" /> 主机项，它将展开指定本机工作簿对象的功能。</summary>
+        <returns>一个扩展本机工作表对象功能的宿主项。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 在应用程序级外接程序自定义任何 Excel 中打开的工作表中调用此方法。 此方法将生成一个新<xref:Microsoft.Office.Tools.Excel.Worksheet?displayProperty=fullName>对象如果已生成无此对象。 后续调用此方法返回现有的缓存的实例<xref:Microsoft.Office.Tools.Excel.Worksheet?displayProperty=fullName>对象。 有关详细信息，请参阅[扩展 Word 文档和 Excel VSTO 外接程序在运行时中的工作簿](/visualstudio/vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)。  
+  
+> [!NOTE]
+>  `worksheet`形参属于类型<xref:Microsoft.Office.Interop.Excel._Worksheet?displayProperty=fullName>，即的父接口<xref:Microsoft.Office.Interop.Excel.Worksheet?displayProperty=fullName>。 因此，此方法可以接受这两种类型的对象：<xref:Microsoft.Office.Interop.Excel._Worksheet?displayProperty=fullName>和<xref:Microsoft.Office.Interop.Excel.Worksheet?displayProperty=fullName>。 通常，当引用 Excel 工作表，你使用<xref:Microsoft.Office.Interop.Excel.Worksheet?displayProperty=fullName>。  
+  
+   
+  
+## Examples  
+ 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.Worksheet?displayProperty=fullName>每个主机项<xref:Microsoft.Office.Interop.Excel.Workbook?displayProperty=fullName>具有主机项的对象。 若要使用此代码，请在针对 `ThisAddIn` 或 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]的 Excel 外接程序项目中从 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 类运行它。  
+  
+ [!code-csharp[Trin_ExcelAddIn_Extensions#2](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelAddIn_Extensions/cs/ThisAddIn.cs#2)]
+ [!code-vb[Trin_ExcelAddIn_Extensions#2](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelAddIn_Extensions/vb/ThisAddIn.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetVstoObject">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Tools.Excel.ListObject GetVstoObject (Microsoft.Office.Interop.Excel.ListObject listObject);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.Tools.Excel.ListObject GetVstoObject(class Microsoft.Office.Interop.Excel.ListObject listObject) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.ApplicationFactory.GetVstoObject(Microsoft.Office.Interop.Excel.ListObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Excel.ListObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="listObject" Type="Microsoft.Office.Interop.Excel.ListObject" />
+      </Parameters>
+      <Docs>
+        <param name="listObject">要为其检索扩展对象的本机列表对象。</param>
+        <summary>返回 <see cref="T:Microsoft.Office.Tools.Excel.ListObject" />，它将展开指定的本机列表对象的功能。</summary>
+        <returns>一个对象，可扩展本机列表对象的功能。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 在应用程序级外接程序自定义任何 Excel 工作表中的列表对象中调用此方法。 此方法将生成一个新<xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName>对象如果已生成无此对象。 后续调用此方法返回现有的缓存的实例<xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName>对象。 有关详细信息，请参阅[扩展 Word 文档和 Excel VSTO 外接程序在运行时中的工作簿](/visualstudio/vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)。  
+  
+   
+  
+## Examples  
+ 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName>主机项。 若要使用此代码，请在针对 `ThisAddIn` 或 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]的 Excel 外接程序项目中从 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 类运行它。  
+  
+ [!code-csharp[Trin_ExcelAddIn_Extensions#4](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelAddIn_Extensions/cs/ThisAddIn.cs#4)]
+ [!code-vb[Trin_ExcelAddIn_Extensions#4](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelAddIn_Extensions/vb/ThisAddIn.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasVstoObject">
+      <MemberSignature Language="C#" Value="public bool HasVstoObject (Microsoft.Office.Interop.Excel._Workbook workbook);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool HasVstoObject(class Microsoft.Office.Interop.Excel._Workbook workbook) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.ApplicationFactory.HasVstoObject(Microsoft.Office.Interop.Excel._Workbook)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="workbook" Type="Microsoft.Office.Interop.Excel._Workbook" />
+      </Parameters>
+      <Docs>
+        <param name="workbook">要测试的本机工作簿对象。 虽然此参数的类型是 <see cref="T:Microsoft.Office.Interop.Excel._Workbook" />，但通常会将 <see cref="T:Microsoft.Office.Interop.Excel.Workbook" /> 对象传递到此方法。</param>
+        <summary>返回一个值，该值指示指定的 Excel 工作簿对象是否存在 <see cref="T:Microsoft.Office.Tools.Excel.Workbook" /> 宿主项。</summary>
+        <returns>
+          如果指定的 <see cref="T:Microsoft.Office.Tools.Excel.Workbook" /> 对象存在 <see cref="T:Microsoft.Office.Interop.Excel.Workbook" /> 宿主项，则为 <see langword="true" />；否则为 <see langword="false" />。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 在应用程序级外接程序来测试存在你想要关闭或保存 Excel 工作簿之前保留的托管控件，可以调用此方法。  
+  
+> [!NOTE]
+>  `workbook`形参属于类型<xref:Microsoft.Office.Interop.Excel._Workbook?displayProperty=fullName>，即的父接口<xref:Microsoft.Office.Interop.Excel.Workbook?displayProperty=fullName>。 因此，此方法可以接受这两种类型的对象：<xref:Microsoft.Office.Interop.Excel._Workbook?displayProperty=fullName>和<xref:Microsoft.Office.Interop.Excel.Workbook?displayProperty=fullName>。 通常，当引用 Excel 工作簿时，你使用<xref:Microsoft.Office.Interop.Excel.Workbook?displayProperty=fullName>。  
+  
+   
+  
+## Examples  
+ 下面的代码示例检查当前工作簿是否具有关联的宿主项。 若要使用此代码，请在针对 `ThisAddIn` 或 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]的 Excel 外接程序项目中从 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 类运行它。  
+  
+ [!code-csharp[Trin_ExcelAddIn_Extensions#2](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelAddIn_Extensions/cs/ThisAddIn.cs#2)]
+ [!code-vb[Trin_ExcelAddIn_Extensions#2](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelAddIn_Extensions/vb/ThisAddIn.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasVstoObject">
+      <MemberSignature Language="C#" Value="public bool HasVstoObject (Microsoft.Office.Interop.Excel._Worksheet worksheet);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool HasVstoObject(class Microsoft.Office.Interop.Excel._Worksheet worksheet) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.ApplicationFactory.HasVstoObject(Microsoft.Office.Interop.Excel._Worksheet)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="worksheet" Type="Microsoft.Office.Interop.Excel._Worksheet" />
+      </Parameters>
+      <Docs>
+        <param name="worksheet">要测试的本机工作表对象。 虽然此参数的类型是 <see cref="T:Microsoft.Office.Interop.Excel._Worksheet" />，但通常会将 <see cref="T:Microsoft.Office.Interop.Excel.Worksheet" /> 对象传递到此方法。</param>
+        <summary>返回一个值，该值指示指定的 Excel 工作表对象是否存在 <see cref="T:Microsoft.Office.Tools.Excel.Worksheet" /> 宿主项。</summary>
+        <returns>
+          如果指定的 <see cref="T:Microsoft.Office.Tools.Excel.Worksheet" /> 对象存在 <see cref="T:Microsoft.Office.Interop.Excel.Worksheet" /> 宿主项，则为 <see langword="true" />；否则为 <see langword="false" />。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 在应用程序级外接程序来测试存在你想要关闭或保存 Excel 工作表之前保留的托管控件，可以调用此方法。  
+  
+> [!NOTE]
+>  `worksheet`形参属于类型<xref:Microsoft.Office.Interop.Excel._Worksheet?displayProperty=fullName>，即的父接口<xref:Microsoft.Office.Interop.Excel.Worksheet?displayProperty=fullName>。 因此，此方法可以接受这两种类型的对象：<xref:Microsoft.Office.Interop.Excel._Worksheet?displayProperty=fullName>和<xref:Microsoft.Office.Interop.Excel.Worksheet?displayProperty=fullName>。 通常，当引用 Excel 工作表，你使用<xref:Microsoft.Office.Interop.Excel.Worksheet?displayProperty=fullName>。  
+  
+   
+  
+## Examples  
+ 下面的代码示例检查当前工作簿中的工作表是否具有关联的宿主项。 若要使用此代码，请在针对 `ThisAddIn` 或 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]的 Excel 外接程序项目中从 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 类运行它。  
+  
+ [!code-csharp[Trin_ExcelAddIn_Extensions#2](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelAddIn_Extensions/cs/ThisAddIn.cs#2)]
+ [!code-vb[Trin_ExcelAddIn_Extensions#2](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelAddIn_Extensions/vb/ThisAddIn.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasVstoObject">
+      <MemberSignature Language="C#" Value="public bool HasVstoObject (Microsoft.Office.Interop.Excel.ListObject listObject);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool HasVstoObject(class Microsoft.Office.Interop.Excel.ListObject listObject) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.ApplicationFactory.HasVstoObject(Microsoft.Office.Interop.Excel.ListObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="listObject" Type="Microsoft.Office.Interop.Excel.ListObject" />
+      </Parameters>
+      <Docs>
+        <param name="listObject">要测试的本机 Excel 列表对象。</param>
+        <summary>返回一个值，该值指示指定的本机列表对象是否存在 <see cref="T:Microsoft.Office.Tools.Excel.ListObject" />。</summary>
+        <returns>
+          如果指定的 <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 对象存在 <see cref="T:Microsoft.Office.Interop.Excel.ListObject" />，则为 <see langword="true" />；否则为 <see langword="false" />。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ 下面的代码示例检查以确定关联的宿主项的列表对象是否工作表中每个本机列表对象。 若要使用此代码，请在针对 `ThisAddIn` 或 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]的 Excel 外接程序项目中从 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 类运行它。  
+  
+ [!code-csharp[Trin_ExcelAddIn_Extensions#5](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelAddIn_Extensions/cs/ThisAddIn.cs#5)]
+ [!code-vb[Trin_ExcelAddIn_Extensions#5](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelAddIn_Extensions/vb/ThisAddIn.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

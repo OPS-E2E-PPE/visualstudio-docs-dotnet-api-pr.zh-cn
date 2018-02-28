@@ -1,0 +1,141 @@
+<Type Name="ChangeReason" FullName="Microsoft.Office.Tools.Excel.ChangeReason">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="d1a3dafbd3b659746c6fc413740370a5a0c294a5" />
+    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.translationtype" Value="HT" />
+    <Meta Name="ms.contentlocale" Value="zh-CN" />
+    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public enum ChangeReason" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ChangeReason extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Excel.ChangeReason" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>提供将原始数据还原为绑定到数据的 <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 的原因。</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 当<xref:Microsoft.Office.Tools.Excel.ListObject>绑定到数据和用户执行的操作，不允许，<xref:Microsoft.Office.Tools.Excel.ListObject>将自身还原到以前的状态并引发<xref:Microsoft.Office.Tools.Excel.ListObject.OriginalDataRestored>事件。 <xref:Microsoft.Office.Tools.Excel.ChangeReason>枚举提供了有关此还原的发生原因的信息。  
+  
+   
+  
+## Examples  
+ 下面的代码示例创建<xref:System.Data.DataTable>和<xref:Microsoft.Office.Tools.Excel.ListObject>，并将绑定<xref:Microsoft.Office.Tools.Excel.ListObject>到<xref:System.Data.DataTable>。 然后，它创建<xref:Microsoft.Office.Tools.Excel.ListObject.OriginalDataRestored>事件处理程序。 要测试此事件，请右键单击上方的列字母<xref:Microsoft.Office.Tools.Excel.ListObject>在工作表 1，然后单击**删除**的快捷菜单中。 事件处理程序替换列和列标题数据，并显示一条指示什么类型的数据已还原消息和，还原原始数据的原因。  
+  
+ 此示例适用于文档级自定义。  
+  
+ [!code-csharp[Trin_ExcelListObject#25](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelListObject/CS/Trin_ExcelListObject.cs#25)]
+ [!code-vb[Trin_ExcelListObject#25](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelListObject/VB/Sheet1.vb#25)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DataBoundColumnHeaderIsAutoSet">
+      <MemberSignature Language="C#" Value="DataBoundColumnHeaderIsAutoSet" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.Tools.Excel.ChangeReason DataBoundColumnHeaderIsAutoSet = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.Tools.Excel.ChangeReason.DataBoundColumnHeaderIsAutoSet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Excel.ChangeReason</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>如果 <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 控件的 <see cref="P:Microsoft.Office.Tools.Excel.ListObject.AutoSetDataBoundColumnHeaders" /> 属性设为 <see langword="true" />，则 <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 控件不允许用户更改列标题。</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorInCommit">
+      <MemberSignature Language="C#" Value="ErrorInCommit" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.Tools.Excel.ChangeReason ErrorInCommit = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.Tools.Excel.ChangeReason.ErrorInCommit" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Excel.ChangeReason</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>不能将对 <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 控件中数据所做的更改提交到绑定控件的数据源中。</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FixedLengthDataSource">
+      <MemberSignature Language="C#" Value="FixedLengthDataSource" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.Tools.Excel.ChangeReason FixedLengthDataSource = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.Tools.Excel.ChangeReason.FixedLengthDataSource" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Excel.ChangeReason</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 控件绑定的数据源不允许添加或删除行。</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FixedNumberOfColumnsInDataBoundList">
+      <MemberSignature Language="C#" Value="FixedNumberOfColumnsInDataBoundList" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.Tools.Excel.ChangeReason FixedNumberOfColumnsInDataBoundList = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.Tools.Excel.ChangeReason.FixedNumberOfColumnsInDataBoundList" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Excel.ChangeReason</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 控件在与数据绑定后，不允许添加或移除列。</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Other">
+      <MemberSignature Language="C#" Value="Other" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.Tools.Excel.ChangeReason Other = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.Tools.Excel.ChangeReason.Other" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Excel.ChangeReason</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>原始数据出于某个原因被还原，该原因不是由任何其他 <see cref="T:Microsoft.Office.Tools.Excel.ChangeReason" /> 值所指定。</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadOnlyDataSource">
+      <MemberSignature Language="C#" Value="ReadOnlyDataSource" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.Tools.Excel.ChangeReason ReadOnlyDataSource = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.Tools.Excel.ChangeReason.ReadOnlyDataSource" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Excel.ChangeReason</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 控件绑定到的数据源为只读。</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

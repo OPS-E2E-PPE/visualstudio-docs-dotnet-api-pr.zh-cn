@@ -1,0 +1,231 @@
+<Type Name="FormRegionControl" FullName="Microsoft.Office.Tools.Outlook.FormRegionControl">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="3867349c1cba175a6a028ee918c4ce6b2ed9c122" />
+    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.translationtype" Value="HT" />
+    <Meta Name="ms.contentlocale" Value="zh-CN" />
+    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public interface FormRegionControl : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract FormRegionControl implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Outlook.FormRegionControl" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.Tools.Outlook</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.Tools.Outlook.v4.0.Utilities</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("78db499d-9c54-4fd3-9746-8b9ab0455df1")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.TypeIdentifier</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>表示基于用户控件的 Outlook 窗体区域。</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Visual Studio 将生成的类的实现实例<xref:Microsoft.Office.Tools.Outlook.FormRegionControl>接口设计 Visual Studio 中的新窗体区域时。  
+  
+ 在大多数情况下，无需直接使用此类。 相反，你可以使用 Visual Studio 将生成时添加新窗体区域类**Outlook 窗体区域**到你的项目的项。  
+  
+ 窗体区域类继承自<xref:Microsoft.Office.Tools.Outlook.FormRegionBase>。 你可以完成通过使用窗体区域类中的事件和属性相关联到窗体区域的大多数任务。  
+  
+ 如果你想要使用<xref:Microsoft.Office.Tools.Outlook.FormRegionControl>直接调用<xref:Microsoft.Office.Tools.Outlook.FormRegionBase.Base%2A>属性<xref:Microsoft.Office.Tools.Outlook.FormRegionBase>类。  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Factory">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Tools.Outlook.IFormRegionFactory Factory { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Tools.Outlook.IFormRegionFactory Factory" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Outlook.FormRegionControl.Factory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Outlook</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Outlook.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Outlook.IFormRegionFactory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>获取或设置与此 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionControl" /> 关联的窗体区域工厂。</summary>
+        <value>一个实现 <see cref="T:Microsoft.Office.Tools.Outlook.IFormRegionFactory" /> 接口的对象。</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 你可以使用此属性来跟踪创建的当前实例的窗体区域工厂类<xref:Microsoft.Office.Tools.Outlook.FormRegionControl>。  
+  
+ 有关如何创建的实例的详细信息<xref:Microsoft.Office.Tools.Outlook.FormRegionControl>，请参阅<xref:Microsoft.Office.Tools.Outlook.IFormRegionFactory.CreateFormRegion%2A>方法<xref:Microsoft.Office.Tools.Outlook.IFormRegionFactory>接口。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FormRegionClosed">
+      <MemberSignature Language="C#" Value="public event EventHandler FormRegionClosed;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler FormRegionClosed" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.Outlook.FormRegionControl.FormRegionClosed" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Outlook</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Outlook.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>在窗体区域关闭之前发生。</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 若要获取在其中显示窗体区域的 Outlook 项，请调用<xref:Microsoft.Office.Tools.Outlook.FormRegionControl.OutlookItem%2A>属性。  
+  
+ 若要获取显示的 Outlook 项的检查器，请调用<xref:Microsoft.Office.Tools.Outlook.FormRegionControl.OutlookFormRegion%2A>要获取其实例的<xref:Microsoft.Office.Interop.Outlook._FormRegion?displayProperty=fullName>，然后调用<xref:Microsoft.Office.Interop.Outlook._FormRegion.Inspector%2A>属性<xref:Microsoft.Office.Interop.Outlook._FormRegion?displayProperty=fullName>对象。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FormRegionShowing">
+      <MemberSignature Language="C#" Value="public event EventHandler FormRegionShowing;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler FormRegionShowing" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.Outlook.FormRegionControl.FormRegionShowing" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Outlook</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Outlook.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>在创建窗体区域的实例之后且在窗体区域显示之前发生。</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 若要获取在其中显示窗体区域的 Outlook 项，请调用<xref:Microsoft.Office.Tools.Outlook.FormRegionControl.OutlookItem%2A>属性。  
+  
+ 若要获取显示的 Outlook 项的检查器，请调用<xref:Microsoft.Office.Tools.Outlook.FormRegionControl.OutlookFormRegion%2A>要获取其实例的<xref:Microsoft.Office.Interop.Outlook._FormRegion?displayProperty=fullName>，然后调用<xref:Microsoft.Office.Interop.Outlook._FormRegion.Inspector%2A>属性<xref:Microsoft.Office.Interop.Outlook._FormRegion?displayProperty=fullName>对象。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Manifest">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Tools.Outlook.FormRegionManifest Manifest { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Tools.Outlook.FormRegionManifest Manifest" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Outlook.FormRegionControl.Manifest" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Outlook</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Outlook.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Outlook.FormRegionManifest</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>获取一个 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionManifest" />，它描述窗体区域在 Outlook 中的显示方式。</summary>
+        <value>
+          <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionManifest" />，它描述窗体区域在 Outlook 中的显示方式。</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此属性返回的只读<xref:Microsoft.Office.Tools.Outlook.FormRegionManifest>对象。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutlookFormRegion">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Outlook.FormRegion OutlookFormRegion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Interop.Outlook.FormRegion OutlookFormRegion" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Outlook.FormRegionControl.OutlookFormRegion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Outlook</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Outlook.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Outlook.FormRegion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>获取或设置本机窗体区域对象。</summary>
+        <value>一个表示窗体区域的 <see cref="T:Microsoft.Office.Interop.Outlook._FormRegion" />。</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 你可以调用<xref:Microsoft.Office.Interop.Outlook._FormRegion.Inspector%2A>属性<xref:Microsoft.Office.Interop.Outlook._FormRegion?displayProperty=fullName>要获取的检查器显示窗体区域的实例对象。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutlookItem">
+      <MemberSignature Language="C#" Value="public object OutlookItem { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object OutlookItem" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Outlook.FormRegionControl.OutlookItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Outlook</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Outlook.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>获取显示窗体区域的 Outlook 项。</summary>
+        <value>一个 <see cref="T:System.Object" />，表示显示窗体区域的 Outlook 项。</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 强制转换到窗体区域关联的项类型的对象。 例如，如果窗体区域与联系人项目相关联，将对象强制转换返回<xref:Microsoft.Office.Tools.Outlook.FormRegionControl.OutlookItem%2A>属性<xref:Microsoft.Office.Interop.Outlook.ContactItem>。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

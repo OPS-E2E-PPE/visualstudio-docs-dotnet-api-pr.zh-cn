@@ -1,0 +1,151 @@
+<Type Name="IDeployableFile" FullName="Microsoft.VisualStudio.SharePoint.IDeployableFile">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="f696628c85bc9a539f9e220c73f8714dc56f468b" />
+    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.translationtype" Value="HT" />
+    <Meta Name="ms.contentlocale" Value="zh-CN" />
+    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public interface IDeployableFile" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDeployableFile" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.SharePoint.IDeployableFile" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>为所有可打包到 WSP 文件且可部署到 SharePoint 的文件提供基接口。 这些文件共享一组与部署相关的属性。</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DeploymentPath">
+      <MemberSignature Language="C#" Value="public string DeploymentPath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DeploymentPath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualStudio.SharePoint.IDeployableFile.DeploymentPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>获取或设置将在 SharePoint 中部署文件的路径，该路径相对于由 <see cref="P:Microsoft.VisualStudio.SharePoint.IDeployableFile.DeploymentRoot" /> 表示的基路径。</summary>
+        <value>一个表示文件路径的字符串值。</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeploymentPathChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.VisualStudio.SharePoint.DeploymentPathChangedEventArgs&gt; DeploymentPathChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.VisualStudio.SharePoint.DeploymentPathChangedEventArgs&gt; DeploymentPathChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualStudio.SharePoint.IDeployableFile.DeploymentPathChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.VisualStudio.SharePoint.DeploymentPathChangedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>在更改 <see cref="P:Microsoft.VisualStudio.SharePoint.IDeployableFile.DeploymentPath" /> 时发生。</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeploymentRoot">
+      <MemberSignature Language="C#" Value="public string DeploymentRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DeploymentRoot" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualStudio.SharePoint.IDeployableFile.DeploymentRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>获取 SharePoint 将存储文件的基路径。</summary>
+        <value>一个表示文件路径的字符串值。</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此值使用以下令牌：  
+  
+|标记名称|描述|  
+|----------------|-----------------|  
+|{SharePointRoot}|SharePoint hive 的根。|  
+|{FeatureName}|在其中功能的名称`ProjectItem`包含。|  
+|{ClassResourcePath}|SharePoint 上的类资源路径。 此值取决于程序集是否部署到全局程序集缓存 (GAC) 或 Web 应用程序。|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeploymentType">
+      <MemberSignature Language="C#" Value="public Microsoft.VisualStudio.SharePoint.DeploymentType DeploymentType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.VisualStudio.SharePoint.DeploymentType DeploymentType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualStudio.SharePoint.IDeployableFile.DeploymentType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualStudio.SharePoint.DeploymentType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>获取要对文件执行的部署类型。</summary>
+        <value>一个表示部署类型的对象。</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeploymentTypeChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.VisualStudio.SharePoint.DeploymentTypeChangedEventArgs&gt; DeploymentTypeChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.VisualStudio.SharePoint.DeploymentTypeChangedEventArgs&gt; DeploymentTypeChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualStudio.SharePoint.IDeployableFile.DeploymentTypeChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.VisualStudio.SharePoint.DeploymentTypeChangedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>在更改 <see cref="P:Microsoft.VisualStudio.SharePoint.IDeployableFile.DeploymentType" /> 时发生。</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 中的更改<xref:Microsoft.VisualStudio.SharePoint.IDeployableFile.DeploymentType%2A>属性后面通常跟随<xref:Microsoft.VisualStudio.SharePoint.IDeployableFile.DeploymentPathChanged>事件。  
+  
+ 中时，在<xref:Microsoft.VisualStudio.SharePoint.IDeployableFile.DeploymentTypeChanged>事件处理程序，你可以访问的旧值仅<xref:Microsoft.VisualStudio.SharePoint.IDeployableFile.DeploymentPath%2A>属性。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeploymentUrl">
+      <MemberSignature Language="C#" Value="public Uri DeploymentUrl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri DeploymentUrl" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualStudio.SharePoint.IDeployableFile.DeploymentUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>获取文件将在其中部署的绝对 SharePoint URL。</summary>
+        <value>文件将在其中部署的绝对 SharePoint URL。</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

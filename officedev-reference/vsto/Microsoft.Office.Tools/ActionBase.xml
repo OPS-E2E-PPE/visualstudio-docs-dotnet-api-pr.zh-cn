@@ -1,0 +1,83 @@
+<Type Name="ActionBase" FullName="Microsoft.Office.Tools.ActionBase">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="77984da13eb9553b7354e0447e89203b6c038702" />
+    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.translationtype" Value="HT" />
+    <Meta Name="ms.contentlocale" Value="zh-CN" />
+    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public interface ActionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ActionBase" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.ActionBase" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.Tools.Word.v4.0.Utilities</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("fb74efb9-1a89-41cd-805e-02ac50bd5021")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.TypeIdentifier</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>定义 Office Word 和 Excel 解决方案中的智能标记操作的共享功能。</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 识别的智能标记时，操作是智能标记快捷菜单上的可用选项。 例如，"到联系人文件夹的添加 name"将有关其类型的字符串的一个可能的操作人员的姓名。  
+  
+ <xref:Microsoft.Office.Tools.ActionBase>接口是的基接口<xref:Microsoft.Office.Tools.Word.Action?displayProperty=fullName>和<xref:Microsoft.Office.Tools.Excel.Action?displayProperty=fullName>。 若要为 Word 或 Excel 的 Office 解决方案中创建智能标记操作，使用`Globals.Factory.CreateAction`方法来创建<xref:Microsoft.Office.Tools.Word.Action?displayProperty=fullName>或<xref:Microsoft.Office.Tools.Excel.Action?displayProperty=fullName>对象。  
+  
+ [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
+  
+## <a name="usage"></a>用法  
+ 此类型旨在使用仅在项目中，适用于 Excel 2007 和 Word 2007。 Word 2010 和 Excel 2010 中已弃用智能标记。  
+  
+ [!INCLUDE[vsto_net35mref](~/includes/vsto-net35mref-md.md)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Caption">
+      <MemberSignature Language="C#" Value="public string Caption { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Caption" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.ActionBase.Caption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>获取或设置操作的名称，如智能标记菜单中所示。 [!INCLUDE[vsto_smart_tags](~/includes/vsto-smart-tags-md.md)]。</summary>
+        <value>操作的名称。</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ 下面的代码示例演示的处理程序<xref:Microsoft.Office.Tools.Excel.Action.BeforeCaptionShow>事件。 事件处理程序使用<xref:Microsoft.Office.Tools.ActionBase.Caption%2A>属性将识别的智能标记字词添加到的智能标记操作的菜单标题。 此代码示例摘自更大的示例为提供<xref:Microsoft.Office.Tools.Excel.Action?displayProperty=fullName>。  
+  
+ [!code-csharp[Trin_ExcelSmartTags#3](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelSmartTags/CS/Trin_ExcelSmartTags.cs#3)]
+ [!code-vb[Trin_ExcelSmartTags#3](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelSmartTags/VB/ThisWorkbook.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

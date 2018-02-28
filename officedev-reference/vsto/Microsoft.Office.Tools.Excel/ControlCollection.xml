@@ -1,0 +1,698 @@
+<Type Name="ControlCollection" FullName="Microsoft.Office.Tools.Excel.ControlCollection">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="53a5ce2e30a61a81dcd8428ee77c66caa4af08a1" />
+    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.translationtype" Value="HT" />
+    <Meta Name="ms.contentlocale" Value="zh-CN" />
+    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public interface ControlCollection : System.Collections.IEnumerable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ControlCollection implements class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Excel.ControlCollection" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("0B027FC3-018C-4917-AE33-A09E0A30A661")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.TypeIdentifier</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>表示 Office 解决方案中 Excel 工作表中的托管控件的集合。</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 使用的方法和属性<xref:Microsoft.Office.Tools.Excel.ControlCollection>界面来管理 Excel 工作表上的控件。 有关详细信息，请参阅[在运行时向 Office 文档添加控件](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time.md)。  
+  
+ 无法在代码中，创建此接口的实例，因为它没有任何公共构造函数。 若要获取在文档级项目中的此接口的实例，请使用<xref:Microsoft.Office.Tools.Excel.Worksheet.Controls%2A>属性之一的`Sheet` * n *你的项目中的类。 若要获取在文档级项目中的此接口的实例，请使用<xref:Microsoft.Office.Tools.Excel.Worksheet.Controls%2A>属性<xref:Microsoft.Office.Tools.Excel.Worksheet>，则在运行时以编程方式创建宿主项。 有关详细信息，请参阅[扩展 Word 文档和 Excel VSTO 外接程序在运行时中的工作簿](/visualstudio/vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)。  
+  
+ 下表显示如何使用<xref:Microsoft.Office.Tools.Excel.ControlCollection>成员来执行一些常见的任务相关的文档上的控件。  
+  
+|任务|操作|  
+|----------|------------|  
+|向工作表添加控件。|使用添加之一*\<控件 >*方法。 例如，若要添加<xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName>，使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.AddListObject%2A>方法。|  
+|从工作表中移除的控件。|使用 <xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A> 方法。|  
+|确定控件是否在集合中。|将控件或其名称传递<xref:Microsoft.Office.Tools.Excel.ControlCollection.Contains%2A>方法。|  
+|集合中获取控件的索引。|将控件或其名称传递<xref:Microsoft.Office.Tools.Excel.ControlCollection.IndexOf%2A>方法。|  
+|从集合中获取一个控件。|将索引或该控件的名称传递<xref:Microsoft.Office.Tools.Excel.ControlCollection.Item%2A>属性。|  
+  
+ [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
+  
+## <a name="usage"></a>用法  
+ [!INCLUDE[vsto_net35mref](~/includes/vsto-net35mref-md.md)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="_VtblGap1_5">
+      <MemberSignature Language="C#" Value="public void _VtblGap1_5 ();" />
+      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void _VtblGap1_5() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.ControlCollection._VtblGap1_5" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddChart">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Tools.Excel.Chart AddChart (Microsoft.Office.Interop.Excel.Range range, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.Tools.Excel.Chart AddChart(class Microsoft.Office.Interop.Excel.Range range, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.ControlCollection.AddChart(Microsoft.Office.Interop.Excel.Range,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Excel.Chart</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="range" Type="Microsoft.Office.Interop.Excel.Range" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="range">提供控件的边界的 <see cref="T:Microsoft.Office.Interop.Excel.Range" />。</param>
+        <param name="name">可用于索引 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例中控件的控件名称。</param>
+        <summary>在工作表中的指定范围添加一个新的 <see cref="T:Microsoft.Office.Tools.Excel.Chart" /> 控件。</summary>
+        <returns>添加到 <see cref="T:Microsoft.Office.Tools.Excel.Chart" /> 实例的 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 控件。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:Microsoft.Office.Tools.Excel.ControlCollection.AddChart%2A>方法使您能够添加<xref:Microsoft.Office.Tools.Excel.Chart>控件添加到末尾<xref:Microsoft.Office.Tools.Excel.ControlCollection>。 若要删除<xref:Microsoft.Office.Tools.Excel.Chart>之前以编程方式添加的控件，请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法。  
+  
+   
+  
+## Examples  
+ 下面的代码示例将插入到单元格的数字 16 **E1**通过**E3** ，到单元格将数字 24 **F1**通过**F3**。 该代码随后创建<xref:Microsoft.Office.Tools.Excel.Chart>控件添加到单元格**A1**通过**C8**并将传递单元格**E1**通过**F3**到<xref:Microsoft.Office.Tools.Excel.Chart.SetSourceData%2A>方法来填充图表的数据。  
+  
+ [!code-csharp[Trin_ExcelControlCollection#58](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#58)]
+ [!code-vb[Trin_ExcelControlCollection#58](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#58)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">名称参数或范围参数为 <see langword="null" />，或者名称参数长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
+          <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例中已存在一个同名控件。</exception>
+        <exception cref="T:Microsoft.Office.Tools.InvalidRangeException">指定的范围无效。 不能使用多区域范围。 该范围应与 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例同在一个工作表中。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddChart">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Tools.Excel.Chart AddChart (double left, double top, double width, double height, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.Tools.Excel.Chart AddChart(float64 left, float64 top, float64 width, float64 height, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.ControlCollection.AddChart(System.Double,System.Double,System.Double,System.Double,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Excel.Chart</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Double" />
+        <Parameter Name="top" Type="System.Double" />
+        <Parameter Name="width" Type="System.Double" />
+        <Parameter Name="height" Type="System.Double" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="left">控件左边缘与工作表左边缘之间的距离（以磅为单位）。</param>
+        <param name="top">控件上边缘与工作表上边缘之间的距离（以磅为单位）。</param>
+        <param name="width">控件的宽度（以磅为单位）。</param>
+        <param name="height">控件的高度（以磅为单位）。</param>
+        <param name="name">控件的名称。</param>
+        <summary>按照指定的大小和位置向工作表添加一个新的 <see cref="T:Microsoft.Office.Tools.Excel.Chart" /> 控件。</summary>
+        <returns>添加到 <see cref="T:Microsoft.Office.Tools.Excel.Chart" /> 实例的 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 控件。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:Microsoft.Office.Tools.Excel.ControlCollection.AddChart%2A>方法使您能够添加<xref:Microsoft.Office.Tools.Excel.Chart>控件添加到末尾<xref:Microsoft.Office.Tools.Excel.ControlCollection>。 若要删除<xref:Microsoft.Office.Tools.Excel.Chart>之前以编程方式添加的控件，请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法。  
+  
+   
+  
+## Examples  
+ 下面的代码示例将插入到单元格的数字 16 **E1**通过**E3** ，到单元格将数字 24 **F1**通过**F3**。 该代码随后创建<xref:Microsoft.Office.Tools.Excel.Chart>控件添加到工作表并将传递单元格顶部**E1**通过**F3**到<xref:Microsoft.Office.Tools.Excel.Chart.SetSourceData%2A>方法来填充图表的数据。  
+  
+ [!code-csharp[Trin_ExcelControlCollection#59](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#59)]
+ [!code-vb[Trin_ExcelControlCollection#59](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#59)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">名称参数为 <see langword="null" /> 或长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
+          <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例中已存在一个同名控件。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddControl">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Tools.Excel.ControlSite AddControl (System.Windows.Forms.Control control, Microsoft.Office.Interop.Excel.Range range, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.Tools.Excel.ControlSite AddControl(class System.Windows.Forms.Control control, class Microsoft.Office.Interop.Excel.Range range, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.ControlCollection.AddControl(System.Windows.Forms.Control,Microsoft.Office.Interop.Excel.Range,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Excel.ControlSite</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Windows.Forms.Control" />
+        <Parameter Name="range" Type="Microsoft.Office.Interop.Excel.Range" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="control">要添加到 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例的控件。</param>
+        <param name="range">提供控件的边界的 <see cref="T:Microsoft.Office.Interop.Excel.Range" />。</param>
+        <param name="name">可用于索引 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例中控件的控件名称。</param>
+        <summary>将指定的 <see cref="T:System.Windows.Forms.Control" /> 添加到 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 中的指定范围。</summary>
+        <returns>一个表示控件的对象，它包含工作表中的指定控件。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此方法可以用于任何将控件添加到<xref:Microsoft.Office.Tools.Excel.ControlCollection>在运行时。 有关详细信息，请参阅[在运行时向 Office 文档添加控件](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time.md)。  
+  
+   
+  
+## Examples  
+ 下面的代码示例将两个自定义用户控件添加到工作表使用`AddControl`方法。 第一个控件添加到单元格区域。 第二个控件添加到的特定位置。 代码更改<xref:System.Windows.Forms.Control.Top%2A>的第一个自定义用户控件，只会将移动控件的属性相对于<xref:Microsoft.Office.Tools.Excel.ControlSite>，其中包含工作表上的控件。 代码随后设置<xref:System.Windows.Forms.Control.Top%2A>属性<xref:Microsoft.Office.Tools.Excel.ControlSite>返回的第二个的用户控件，用于说明设置的正确方式<xref:System.Windows.Forms.Control.Top%2A>的控件属性。  
+  
+ [!code-csharp[Trin_ExcelControlCollection#10](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#10)]
+ [!code-vb[Trin_ExcelControlCollection#10](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">控件参数、名称参数或范围参数为 <see langword="null" />，或者名称参数长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
+          <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例中已存在一个同名控件。</exception>
+        <exception cref="T:Microsoft.Office.Tools.InvalidRangeException">指定的范围无效。 不能使用多区域范围。 该范围应与 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例同在一个工作表中。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddControl">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Tools.Excel.ControlSite AddControl (System.Windows.Forms.Control control, double left, double top, double width, double height, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.Tools.Excel.ControlSite AddControl(class System.Windows.Forms.Control control, float64 left, float64 top, float64 width, float64 height, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.ControlCollection.AddControl(System.Windows.Forms.Control,System.Double,System.Double,System.Double,System.Double,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Excel.ControlSite</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Windows.Forms.Control" />
+        <Parameter Name="left" Type="System.Double" />
+        <Parameter Name="top" Type="System.Double" />
+        <Parameter Name="width" Type="System.Double" />
+        <Parameter Name="height" Type="System.Double" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="control">要添加到 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例的控件。</param>
+        <param name="left">控件左边缘与工作表左边缘之间的距离（以磅为单位）。</param>
+        <param name="top">控件上边缘与工作表上边缘之间的距离（以磅为单位）。</param>
+        <param name="width">控件的宽度（以磅为单位）。</param>
+        <param name="height">控件的高度（以磅为单位）。</param>
+        <param name="name">控件的名称。</param>
+        <summary>按照指定的位置和大小将指定的 <see cref="T:System.Windows.Forms.Control" /> 添加到 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" />。</summary>
+        <returns>一个表示控件的对象，它包含工作表中的指定控件。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此方法可以用于任何将控件添加到<xref:Microsoft.Office.Tools.Excel.ControlCollection>在运行时。 有关详细信息，请参阅[在运行时向 Office 文档添加控件](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time.md)。  
+  
+   
+  
+## Examples  
+ 下面的代码示例将两个自定义用户控件添加到工作表使用`AddControl`方法。 第一个控件添加到单元格区域。 第二个控件添加到的特定位置。 代码更改<xref:System.Windows.Forms.Control.Top%2A>的第一个自定义用户控件，只会将移动控件的属性相对于<xref:Microsoft.Office.Tools.Excel.ControlSite>，其中包含工作表上的控件。 代码随后设置<xref:System.Windows.Forms.Control.Top%2A>属性<xref:Microsoft.Office.Tools.Excel.ControlSite>返回的第二个的用户控件，用于说明设置的正确方式<xref:System.Windows.Forms.Control.Top%2A>的控件属性。  
+  
+ [!code-csharp[Trin_ExcelControlCollection#10](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#10)]
+ [!code-vb[Trin_ExcelControlCollection#10](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">控件参数或名称参数为 <see langword="null" /> 或长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
+          <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例中已存在一个同名控件。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddListObject">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Tools.Excel.ListObject AddListObject (Microsoft.Office.Interop.Excel.ListObject listObject);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.Tools.Excel.ListObject AddListObject(class Microsoft.Office.Interop.Excel.ListObject listObject) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.ControlCollection.AddListObject(Microsoft.Office.Interop.Excel.ListObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Excel.ListObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="listObject" Type="Microsoft.Office.Interop.Excel.ListObject" />
+      </Parameters>
+      <Docs>
+        <param name="listObject">本机 <see cref="T:Microsoft.Office.Interop.Excel.ListObject" />。</param>
+        <summary>将一个 Visual Studio <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 添加到基于指定的本机 <see cref="T:Microsoft.Office.Interop.Excel.ListObject" /> 的控件集合。</summary>
+        <returns>已添加到控件集合中的 Visual Studio <see cref="T:Microsoft.Office.Tools.Excel.ListObject" />。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 不应在代码中直接调用此方法。 而应调用<xref:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.GetVstoObject%2A?displayProperty=fullName>扩展方法来获取 Visual Studio <xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName>。  
+  
+ <xref:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.GetVstoObject%2A?displayProperty=fullName>扩展方法使用此方法来生成 Visual Studio<xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName>对应于一个本机实例<xref:Microsoft.Office.Interop.Excel.ListObject?displayProperty=fullName>。  
+  
+ <xref:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.GetVstoObject%2A?displayProperty=fullName>扩展方法创建扩展<xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName>仅一次。 它将在后续调用中返回现有的扩展对象的同一个实例。 与此相反，<xref:Microsoft.Office.Tools.Excel.ControlCollection.AddListObject%2A>创建一个新扩展<xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName>每次。  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="listObject" /> 参数为 <see langword="null" /> 或长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">一个同名 <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 控件已经添加到 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例中。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddListObject">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Tools.Excel.ListObject AddListObject (Microsoft.Office.Interop.Excel.Range range, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.Tools.Excel.ListObject AddListObject(class Microsoft.Office.Interop.Excel.Range range, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.ControlCollection.AddListObject(Microsoft.Office.Interop.Excel.Range,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Excel.ListObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="range" Type="Microsoft.Office.Interop.Excel.Range" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="range">提供控件的边界的 <see cref="T:Microsoft.Office.Interop.Excel.Range" />。</param>
+        <param name="name">可用于索引 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例中控件的控件名称。</param>
+        <summary>在工作表中的指定范围添加一个新的 <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 控件。</summary>
+        <returns>添加到 <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 实例的 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 控件。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:Microsoft.Office.Tools.Excel.ControlCollection.AddListObject%2A>方法使您能够添加<xref:Microsoft.Office.Tools.Excel.ListObject>控件添加到末尾<xref:Microsoft.Office.Tools.Excel.ControlCollection>。 若要删除<xref:Microsoft.Office.Tools.Excel.ListObject>之前以编程方式添加的控件，请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法。  
+  
+   
+  
+## Examples  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.ListObject>控制转移到顶部的工作表，然后显示一个消息框显示中的行数<xref:Microsoft.Office.Tools.Excel.ListObject>。  
+  
+ [!code-csharp[Trin_ExcelControlCollection#57](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#57)]
+ [!code-vb[Trin_ExcelControlCollection#57](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#57)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">名称参数或范围参数为 <see langword="null" />，或者名称参数长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
+          <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例中已存在一个同名控件。</exception>
+        <exception cref="T:Microsoft.Office.Tools.InvalidRangeException">指定的范围无效。 不能使用多区域范围。 该范围应与 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例同在一个工作表中。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddNamedRange">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Tools.Excel.NamedRange AddNamedRange (Microsoft.Office.Interop.Excel.Range range, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.Tools.Excel.NamedRange AddNamedRange(class Microsoft.Office.Interop.Excel.Range range, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.ControlCollection.AddNamedRange(Microsoft.Office.Interop.Excel.Range,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Excel.NamedRange</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="range" Type="Microsoft.Office.Interop.Excel.Range" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="range">提供控件的边界的 <see cref="T:Microsoft.Office.Interop.Excel.Range" />。</param>
+        <param name="name">可用于索引 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例中控件的控件名称。</param>
+        <summary>在工作表中的指定范围添加一个新的 <see cref="T:Microsoft.Office.Tools.Excel.NamedRange" /> 控件。</summary>
+        <returns>添加到 <see cref="T:Microsoft.Office.Tools.Excel.NamedRange" /> 实例的 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 控件。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:Microsoft.Office.Tools.Excel.ControlCollection.AddNamedRange%2A>方法使您能够添加<xref:Microsoft.Office.Tools.Excel.NamedRange>控件添加到末尾<xref:Microsoft.Office.Tools.Excel.ControlCollection>。 若要删除<xref:Microsoft.Office.Tools.Excel.NamedRange>之前以编程方式添加的控件，请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法。  
+  
+   
+  
+## Examples  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.NamedRange>控件添加到单元格**A1**，然后将命名范围的值设置为 100%。  
+  
+ [!code-csharp[Trin_ExcelControlCollection#1](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#1)]
+ [!code-vb[Trin_ExcelControlCollection#1](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">名称参数或范围参数为 <see langword="null" />，或者名称参数长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
+          <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例中已存在一个同名控件。</exception>
+        <exception cref="T:Microsoft.Office.Tools.InvalidRangeException">指定的范围无效。 不能使用多区域范围。 该范围应与 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例同在一个工作表中。</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (object control);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Contains(object control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.ControlCollection.Contains(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="control">要在 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例中搜索的控件。</param>
+        <summary>确定指定的控件是否为 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例的成员。</summary>
+        <returns>
+          如果在集合中找到了该控件，则为 <see langword="true" />；否则为 <see langword="false" />。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.Controls.Button>控制转移到顶部的工作表，然后显示一个消息框中的按钮的索引。  
+  
+ [!code-csharp[Trin_ExcelControlCollection#54](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#54)]
+ [!code-vb[Trin_ExcelControlCollection#54](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#54)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Contains(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.ControlCollection.Contains(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">要在 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例中搜索的控件的名称。</param>
+        <summary>确定具有指定名称的控件是否为 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例的成员。</summary>
+        <returns>
+          如果在集合中找到了该控件，则为 <see langword="true" />；否则为 <see langword="false" />。</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Excel.ControlCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>获取 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 中控件的数目。</summary>
+        <value>
+          <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 中控件的数目。</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (object control);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 IndexOf(object control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.ControlCollection.IndexOf(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="control">索引待查找的控件。</param>
+        <summary>搜索指定控件，并返回该控件在 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例中的第一个匹配项的从零开始的索引。</summary>
+        <returns>控件的索引，如果控件不在 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例中，则为 -1。</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.Controls.Button>控制转移到顶部的工作表，然后显示一个消息框中的按钮的索引。  
+  
+ [!code-csharp[Trin_ExcelControlCollection#54](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#54)]
+ [!code-vb[Trin_ExcelControlCollection#54](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#54)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 IndexOf(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.ControlCollection.IndexOf(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">要查找其索引的控件的名称。</param>
+        <summary>搜索具有指定名称的控件在 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例中的第一个匹配项。</summary>
+        <returns>一个表示控件索引的整数，如果控件不在 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例中，则为 -1。</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Excel.ControlCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">要获取的控件从零开始的索引。</param>
+        <summary>获取指定索引处的控件。</summary>
+        <value>指定索引处的控件。</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[string name] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(string)" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Excel.ControlCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">表示控件名称的字符串。</param>
+        <summary>获取具有指定名称的控件。</summary>
+        <value>具有指定名称的控件。</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 以编程方式，添加的控件`name`参数应包含指定为添加的最后一个参数的名称*\<控件 >*方法，不`Name`的控件属性。  
+  
+ 在设计时添加的控件`name`参数应包含的标识符。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (object control);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Remove(object control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.ControlCollection.Remove(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="control">要从 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例中移除的控件。</param>
+        <summary>从 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例中移除指定的控件。</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 在设计时添加的控件不能从删除<xref:Microsoft.Office.Tools.Excel.ControlCollection>实例。 你只能使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法来删除在运行时添加控件。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public bool Remove (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Remove(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.ControlCollection.Remove(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">要从 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例中移除的控件的名称。</param>
+        <summary>从 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例中移除具有指定名称的控件。</summary>
+        <returns>To be added.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 在设计时添加的控件不能从删除<xref:Microsoft.Office.Tools.Excel.ControlCollection>实例。 你只能使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法来删除在运行时添加控件。  
+  
+   
+  
+## Examples  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.Controls.Button>控件和<xref:Microsoft.Office.Tools.Excel.Controls.MonthCalendar>到工作表中的控件。 单击按钮时，代码用于删除<xref:Microsoft.Office.Tools.Excel.Controls.MonthCalendar>控件。  
+  
+ [!code-csharp[Trin_ExcelControlCollection#55](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#55)]
+ [!code-vb[Trin_ExcelControlCollection#55](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#55)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.ControlCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">要从 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例移除的控件的从零开始的索引。</param>
+        <summary>移除 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例中指定索引处的控件。</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 在设计时添加的控件不能从删除<xref:Microsoft.Office.Tools.Excel.ControlCollection>实例。 你只能使用<xref:Microsoft.Office.Tools.Word.ControlCollection.RemoveAt%2A>方法来删除在运行时添加控件。  
+  
+   
+  
+## Examples  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.Controls.Button>控件和<xref:Microsoft.Office.Tools.Excel.Controls.MonthCalendar>到工作表中的控件。 单击按钮时，代码用于删除<xref:Microsoft.Office.Tools.Excel.Controls.MonthCalendar>由索引指定的控件。  
+  
+ [!code-csharp[Trin_ExcelControlCollection#56](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#56)]
+ [!code-vb[Trin_ExcelControlCollection#56](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#56)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">索引小于零或者索引等于或大于计数。</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Contains">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>确定指定的控件是否为 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例的成员。</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此方法可确定控件是否属于集合，然后再尝试对控件执行操作。 你可以使用此方法以确认的控件已添加到或仍是的成员<xref:Microsoft.Office.Tools.Excel.ControlCollection>实例。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+  </Members>
+</Type>

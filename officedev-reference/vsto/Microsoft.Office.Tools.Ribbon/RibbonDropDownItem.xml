@@ -1,0 +1,337 @@
+<Type Name="RibbonDropDownItem" FullName="Microsoft.Office.Tools.Ribbon.RibbonDropDownItem">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="e475e387a44da5811c377afd24c6d60832ce66f5" />
+    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.translationtype" Value="HT" />
+    <Meta Name="ms.contentlocale" Value="zh-CN" />
+    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public interface RibbonDropDownItem" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract RibbonDropDownItem" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("e715f92b-e5a0-434e-b8d2-9c43f4a6c0c2")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>表示一个下拉列表（该列表位于功能区下拉列表中）中的项。</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem>对象包含需要用于以可视方式表示在列表中的项的所有数据<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox>， <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>，或<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>。 <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem> 项都具有一个标签和关联的图像，（可选）。 它们还可以具有屏幕提示和增强屏幕提示，这是当用户将鼠标指针悬停在一个控件时，显示这两个说明。  
+  
+ 你可以创建<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem>通过使用在运行时<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.CreateRibbonDropDownItem%2A>方法<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory>对象。  
+  
+ 可通过两种方法来访问 <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory> 对象：  
+  
+-   通过使用 Ribbon 类的 `Factory` 属性。 可从 Ribbon 类中的代码使用此方法。  
+  
+-   通过使用 `Globals.Factory.GetRibbonFactory` 方法。 可从 Ribbon 类外的代码使用此方法。  
+  
+ [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
+  
+## <a name="usage"></a>用法  
+ [!INCLUDE[vsto_net35mref](~/includes/vsto-net35mref-md.md)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public string Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Id" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>获取 Microsoft Office 用来标识此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem" /> 的唯一字符串。</summary>
+        <value>Office 用来标识此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem" /> 的唯一字符串。</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Image">
+      <MemberSignature Language="C#" Value="public System.Drawing.Image Image { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Image Image" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.Image" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Image</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>获取或设置显示在此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem" /> 上的图像。</summary>
+        <value>显示在 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem" /> 上的图像。</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 建议的图像格式是 PNG，因为 PNG 格式的图像支持通过其 alpha 通道的透明度。  
+  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.Image%2A>属性标识由控件显示的图像。 在设计时或在运行时，可以设置此属性。 如果在运行时中更新此属性，将更新控件的外观，以反映更改。  
+  
+ 如果<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.Image%2A>设置属性，<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.OfficeImageId%2A>忽略属性。 尽管<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.Image%2A>属性提供更好地控制比其他两个属性，因为每次对控件进行更新时，图像对象被发送到 Office 应用程序会比较慢。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Label">
+      <MemberSignature Language="C#" Value="public string Label { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Label" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.Label" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>获取或设置通过此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem" /> 显示的文本。</summary>
+        <value>通过此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem" /> 显示的文本。</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OfficeImageId">
+      <MemberSignature Language="C#" Value="public string OfficeImageId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OfficeImageId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.OfficeImageId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>如果要使用内置 Microsoft Office 图标，请获取或设置要在 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem" /> 上显示的图像。</summary>
+        <value>要在 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem" /> 上显示的图像（如果要使用内置 Microsoft Office 图标）。</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.OfficeImageId%2A>属性标识由控件显示 Office 图标。 属性值是一个字符串，标识`imageMso`所选图标的值。 在设计时或在运行时，可以设置此属性。 如果在运行时中更新此属性，将更新控件的外观，以反映更改。  
+  
+ 有关的列表`imageMso`值，请参阅 Microsoft 下载中心页面[Office 2010 外接程序： 图标库](http://go.microsoft.com/fwlink/?LinkID=220760)。  
+  
+ 如果忽略此属性<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.Image%2A>属性设置。 标识的图像<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.OfficeImageId%2A>属性可以由标识的图像以外会稍微快一些加载<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.Image%2A>属性，因为这些图像缓存在 Office 应用程序。  
+  
+   
+  
+## Examples  
+ 下面的示例将 Microsoft Office 图标分配给在下拉框中的两个项。  
+  
+ 若要运行此代码示例，必须首先执行以下步骤：  
+  
+1.  添加**功能区 （可视化设计器）**到通过使用 Visual Studio 中的 Office 开发工具创建的项目的项。  
+  
+2.  将组添加到自定义选项卡。  
+  
+3.  添加到组下拉列表框。  
+  
+ [!code-csharp[Trin_Ribbon_ControlProperties#4](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_Ribbon_ControlProperties/CS/Ribbon1.cs#4)]
+ [!code-vb[Trin_Ribbon_ControlProperties#4](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_Ribbon_ControlProperties/VB/Ribbon1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Tools.Ribbon.RibbonComponent Parent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Tools.Ribbon.RibbonComponent Parent" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.Parent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Ribbon.RibbonComponent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>获取此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem" /> 所属的 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonComponent" />。</summary>
+        <value>此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem" /> 所属的 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonComponent" />。</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 如果此<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem>尚未添加到控件，则<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.Parent%2A>属性返回`null`。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Ribbon">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Tools.Ribbon.OfficeRibbon Ribbon { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Tools.Ribbon.OfficeRibbon Ribbon" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.Ribbon" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Ribbon.OfficeRibbon</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>获取包含其余控件层次结构的顶级 <see cref="P:Microsoft.Office.Tools.Ribbon.RibbonComponent.Ribbon" /> 对象。</summary>
+        <value>包含其余控件层次结构的顶级 <see cref="P:Microsoft.Office.Tools.Ribbon.RibbonComponent.Ribbon" /> 对象。</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.Ribbon%2A>属性在最适合用于导航到控件层次结构的顶部附近的控件。 如果你有略有上述层次结构中的访问控件，或你想要查找该控件的下方，则可以考虑使用其<xref:Microsoft.Office.Tools.Ribbon.RibbonComponent.Parent%2A>属性或它的子项目，以导航到你想要获取的项集合。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScreenTip">
+      <MemberSignature Language="C#" Value="public string ScreenTip { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ScreenTip" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.ScreenTip" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>获取或设置用户将指针移到 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem" /> 上方时显示的提示文本。</summary>
+        <value>用户将指针移到下拉列表项上方时显示的文本。</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 屏幕提示值必须少于 1024年个字符的长度。  
+  
+ 当<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.SuperTip%2A>设置属性，<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.ScreenTip%2A>值将显示的标题为<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.SuperTip%2A>。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SuperTip">
+      <MemberSignature Language="C#" Value="public string SuperTip { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SuperTip" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.SuperTip" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>获取或设置用户将指针移到 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem" /> 上时显示的多行提示文本。</summary>
+        <value>包含多行提示文本的字符串。</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.SuperTip%2A>下显示<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.ScreenTip%2A>文本。 与不同<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.ScreenTip%2A>、<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.SuperTip%2A>字符串中的启用分行符。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tag">
+      <MemberSignature Language="C#" Value="public object Tag { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Tag" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.Tag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>获取或设置与此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem" /> 关联的应用程序特定的数据。</summary>
+        <value>一个对象，表示与此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem" /> 关联的应用程序特定的数据。</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 从派生的任何类型`System.Object`类可以分配给此属性。 但是，如果你设置<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.Tag%2A>Visual Studio 中的属性**属性**窗口中，你可以仅将文本分配。  
+  
+ 一个常见用途<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.Tag%2A>属性是用于存储与项紧密关联的数据。  
+  
+   
+  
+## Examples  
+ 下面的示例设置<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.Tag%2A>属性<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem>下拉框中。  
+  
+ 若要运行此代码示例，必须首先执行以下步骤：  
+  
+1.  添加**功能区 （可视化设计器）**到通过使用 Visual Studio 中的 Office 开发工具创建的项目的项。  
+  
+2.  将下拉列表框中添加到默认组`Group1`。  
+  
+ [!code-csharp[Trin_Ribbon_ControlProperties#13](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_Ribbon_ControlProperties/CS/Ribbon1.cs#13)]
+ [!code-vb[Trin_Ribbon_ControlProperties#13](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_Ribbon_ControlProperties/VB/Ribbon1.vb#13)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

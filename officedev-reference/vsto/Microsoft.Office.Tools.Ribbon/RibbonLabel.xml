@@ -1,0 +1,154 @@
+<Type Name="RibbonLabel" FullName="Microsoft.Office.Tools.Ribbon.RibbonLabel">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="7789c2ba2cd1fd06650b6ef47b9d6e36e5933587" />
+    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.translationtype" Value="HT" />
+    <Meta Name="ms.contentlocale" Value="zh-CN" />
+    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public interface RibbonLabel : IDisposable, Microsoft.Office.Tools.Ribbon.RibbonControl, System.ComponentModel.IComponent" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract RibbonLabel implements class Microsoft.Office.Tools.Ribbon.RibbonComponent, class Microsoft.Office.Tools.Ribbon.RibbonControl, class System.ComponentModel.IComponent, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Ribbon.RibbonLabel" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Office.Tools.Ribbon.RibbonControl</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ComponentModel.IComponent</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("7182361b-5a62-424e-9ab4-6d9a78432fb7")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>表示 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonGroup" /> 或 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBox" /> 上的标签。</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Visual Studio 将创建<xref:Microsoft.Office.Tools.Ribbon.RibbonLabel>对象为你在拖动时**标签**从**Office 功能区控件**选项卡**工具箱**拖动到功能区设计器。  
+  
+ 若要在运行时将标签添加到组，创建一个新<xref:Microsoft.Office.Tools.Ribbon.RibbonLabel>对象，并将为此对象<xref:Microsoft.Office.Tools.Ribbon.RibbonGroup.Items%2A>集合<xref:Microsoft.Office.Tools.Ribbon.RibbonGroup>或<xref:Microsoft.Office.Tools.Ribbon.RibbonBox.Items%2A>集合<xref:Microsoft.Office.Tools.Ribbon.RibbonBox>。 只能在加载功能区之前，你可以执行此操作。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。  
+  
+ 你可以创建<xref:Microsoft.Office.Tools.Ribbon.RibbonLabel>通过使用在运行时<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.CreateRibbonLabel%2A>方法<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory>对象。  
+  
+ 可通过两种方法来访问 <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory> 对象：  
+  
+-   通过使用 Ribbon 类的 `Factory` 属性。 可从 Ribbon 类中的代码使用此方法。  
+  
+-   通过使用 `Globals.Factory.GetRibbonFactory` 方法。 可从 Ribbon 类外的代码使用此方法。  
+  
+ [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
+  
+## <a name="usage"></a>用法  
+ [!INCLUDE[vsto_net35mref](~/includes/vsto-net35mref-md.md)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Label">
+      <MemberSignature Language="C#" Value="public string Label { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Label" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Ribbon.RibbonLabel.Label" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>获取或设置通过标签显示的文本。</summary>
+        <value>通过标签显示的文本。</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 若要隐藏标签，设置<xref:Microsoft.Office.Tools.Ribbon.RibbonLabel.ShowLabel%2A>属性`false`。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScreenTip">
+      <MemberSignature Language="C#" Value="public string ScreenTip { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ScreenTip" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Ribbon.RibbonLabel.ScreenTip" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>此属性无效果。</summary>
+        <value>To be added.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 2007 Microsoft Office system 中的功能区标签不显示提示文本。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowLabel">
+      <MemberSignature Language="C#" Value="public bool ShowLabel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowLabel" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Ribbon.RibbonLabel.ShowLabel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>获取或设置一个值，该值指示标签显示的文本是否可见。</summary>
+        <value>
+          如果标签显示的文本可见，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="true" />。</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SuperTip">
+      <MemberSignature Language="C#" Value="public string SuperTip { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SuperTip" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Ribbon.RibbonLabel.SuperTip" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>此属性无效果。</summary>
+        <value>To be added.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 2007 Microsoft Office system 中的功能区标签不显示提示文本。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

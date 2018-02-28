@@ -1,0 +1,119 @@
+<Type Name="ICodeRefactoringEvents" FullName="Microsoft.VisualStudio.SharePoint.ICodeRefactoringEvents">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="06774a7db00ec0298989b3f690c0d4f56a3c6c30" />
+    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.translationtype" Value="HT" />
+    <Meta Name="ms.contentlocale" Value="zh-CN" />
+    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public interface ICodeRefactoringEvents" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ICodeRefactoringEvents" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.SharePoint.ICodeRefactoringEvents" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>提供用于通知发生重构操作的事件。</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ClassNameChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.VisualStudio.SharePoint.ClassNameChangedEventArgs&gt; ClassNameChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.VisualStudio.SharePoint.ClassNameChangedEventArgs&gt; ClassNameChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualStudio.SharePoint.ICodeRefactoringEvents.ClassNameChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.VisualStudio.SharePoint.ClassNameChangedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>在更改类名称之后发生。</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 在这种情况，可以执行自定义重构代码。 声明中添加任何其他文件<xref:Microsoft.VisualStudio.SharePoint.ICodeRefactoringEvents.ClassNameChanging>此处未列出事件。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClassNameChanging">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.VisualStudio.SharePoint.ClassNameChangingEventArgs&gt; ClassNameChanging;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.VisualStudio.SharePoint.ClassNameChangingEventArgs&gt; ClassNameChanging" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualStudio.SharePoint.ICodeRefactoringEvents.ClassNameChanging" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.VisualStudio.SharePoint.ClassNameChangingEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>在即将更改类名称时发生。</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 使用事件自变量列表其他文件，也可能会影响你的代码或取消重构。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NamespaceNameChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.VisualStudio.SharePoint.NamespaceNameChangedEventArgs&gt; NamespaceNameChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.VisualStudio.SharePoint.NamespaceNameChangedEventArgs&gt; NamespaceNameChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualStudio.SharePoint.ICodeRefactoringEvents.NamespaceNameChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.VisualStudio.SharePoint.NamespaceNameChangedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>在更改命名空间名称之后发生</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 在这种情况，可以执行自定义重构代码。 声明中添加任何其他文件<xref:Microsoft.VisualStudio.SharePoint.ICodeRefactoringEvents.NamespaceNameChanged>未在此处列出。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NamespaceNameChanging">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.VisualStudio.SharePoint.NamespaceNameChangingEventArgs&gt; NamespaceNameChanging;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.VisualStudio.SharePoint.NamespaceNameChangingEventArgs&gt; NamespaceNameChanging" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualStudio.SharePoint.ICodeRefactoringEvents.NamespaceNameChanging" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.VisualStudio.SharePoint.NamespaceNameChangingEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>在即将更改命名空间名称时发生。</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 使用事件自变量列表其他文件，也可能会影响你的代码或取消重构。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

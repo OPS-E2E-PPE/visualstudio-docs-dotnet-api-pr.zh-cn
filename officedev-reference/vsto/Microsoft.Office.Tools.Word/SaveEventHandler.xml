@@ -1,0 +1,58 @@
+<Type Name="SaveEventHandler" FullName="Microsoft.Office.Tools.Word.SaveEventHandler">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="39d32fbd7ca2e4b60f76ab689df3f71a326f47ed" />
+    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.translationtype" Value="HT" />
+    <Meta Name="ms.contentlocale" Value="zh-CN" />
+    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public delegate void SaveEventHandler(object sender, SaveEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SaveEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Word.SaveEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.Tools.Word.v4.0.Utilities</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.TypeIdentifier("4207AD1E-362C-4DB4-A3A7-7CC03A7EF41B", "Microsoft.Office.Tools.Word.SaveEventHandler")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="Microsoft.Office.Tools.Word.SaveEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">事件源。</param>
+    <param name="e">包含事件数据的 <see cref="T:Microsoft.Office.Tools.Word.SaveEventArgs" />。</param>
+    <summary>表示将用来处理 <see cref="E:Microsoft.Office.Tools.Word.Document.BeforeSave" /> 的 <see cref="T:Microsoft.Office.Tools.Word.Document" /> 事件的方法。</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 创建 <xref:Microsoft.Office.Tools.Word.SaveEventHandler> 委托时，需要标识将处理该事件的方法。 若要将事件与事件处理程序关联，请将该委托的一个实例添加到事件中。 每当发生该事件时，直到移除了该委托，都会调用事件处理程序。  
+  
+   
+  
+## Examples  
+ 下面的代码示例演示的事件处理程序<xref:Microsoft.Office.Tools.Word.Document.BeforeSave>事件。 当保存文档时，事件处理程序会提示你取消或继续保存操作。  
+  
+ 此示例适用于文档级自定义。  
+  
+ [!code-csharp[Trin_WordDocument#60](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordDocument/CS/ThisDocument.cs#60)]
+ [!code-vb[Trin_WordDocument#60](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordDocument/VB/ThisDocument.vb#60)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

@@ -1,0 +1,422 @@
+<Type Name="RibbonDialogLauncher" FullName="Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="556f7e4b88eee39b257346f1bd314251ed3aa89e" />
+    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.translationtype" Value="HT" />
+    <Meta Name="ms.contentlocale" Value="zh-CN" />
+    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public interface RibbonDialogLauncher : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract RibbonDialogLauncher implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("e143d5e9-e844-4052-9793-2070185d351d")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>表示组上的标准化小图标，可用于打开对话框。</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher>右下角的一组默认显示。  
+  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher.Image%2A>， <xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher.ImageName%2A>，和<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher.OfficeImageId%2A>属性有明显的效果时<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher>显示在功能区上的组。 但是，当用户添加<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher>到快速访问工具栏中，这些属性控制显示图像的行为。 此外，<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher.Visible%2A>属性不会隐藏<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher>快速访问工具栏上显示时。 用户可以添加<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher>到通过快速访问工具栏**功能区 (XML)**项。 有关详细信息，请参阅[功能区概述](/visualstudio/vsto/ribbon-overview.md)。  
+  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher>仅适用于<xref:Microsoft.Office.Tools.Ribbon.RibbonGroup>。 <xref:Microsoft.Office.Tools.Ribbon.RibbonGroup>对象具有<xref:Microsoft.Office.Tools.Ribbon.RibbonGroup.DialogLauncher%2A>的成员<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher>类型。 有关如何添加<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher>到<xref:Microsoft.Office.Tools.Ribbon.RibbonGroup>，请参阅[如何： 向功能区组添加对话框启动器](/visualstudio/vsto/how-to-add-a-dialog-box-launcher-to-a-ribbon-group.md)。  
+  
+ 你可以创建<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher>通过使用在运行时<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.CreateRibbonDialogLauncher%2A>方法<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory>对象。  
+  
+ 可通过两种方法来访问 <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory> 对象：  
+  
+-   通过使用 Ribbon 类的 `Factory` 属性。 可从 Ribbon 类中的代码使用此方法。  
+  
+-   通过使用 `Globals.Factory.GetRibbonFactory` 方法。 可从 Ribbon 类外的代码使用此方法。  
+  
+ 只能在功能区加载到 Office 应用程序之前，可以设置此控件的某些属性。 有关设置这些属性的信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。  
+  
+ [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
+  
+## <a name="usage"></a>用法  
+ [!INCLUDE[vsto_net35mref](~/includes/vsto-net35mref-md.md)]  
+  
+   
+  
+## Examples  
+ 下面的示例演示如何将添加<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher>单击时，则功能区组以及如何启动自定义对话框，使用户能够选择高级设置<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher>的右下角中的图标<xref:Microsoft.Office.Tools.Ribbon.RibbonGroup>。  
+  
+ 若要运行此代码示例，必须首先执行以下步骤：  
+  
+1.  添加**功能区 （可视化设计器）**项到 Office 项目。  
+  
+2.  添加<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher>到默认组`Group1`中所述[如何： 向功能区组添加对话框启动器](/visualstudio/vsto/how-to-add-a-dialog-box-launcher-to-a-ribbon-group.md)。  
+  
+3.  如果你使用的 Visual Basic，添加新**对话框**到项目的项。 如果你使用的 C#，添加新**Windows 窗体**项，然后将其转换为一个对话框，通过添加**确定**和**取消**按钮到窗体并创建为按钮的单击事件处理程序事件。  
+  
+4.  设置**（名称）**属性到对话框`advancedSettingsDialog`。 通过添加控件并设置更多属性，可以自定义对话框。  
+  
+5.  添加<xref:Microsoft.Office.Tools.Ribbon.RibbonGroup.DialogLauncherClick>到你的代码的事件处理程序。  
+  
+6.  将以下方法到的内容放<xref:Microsoft.Office.Tools.Ribbon.RibbonGroup.DialogLauncherClick>事件处理程序。  
+  
+ [!code-csharp[Trin_Ribbon_ControlProperties#10](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_Ribbon_ControlProperties/CS/Ribbon1.Designer.cs#10)]
+ [!code-vb[Trin_Ribbon_ControlProperties#10](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_Ribbon_ControlProperties/VB/Ribbon1.Designer.vb#10)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public bool Enabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>获取或设置一个值，该值指示是否启用此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher" />。</summary>
+        <value>
+          如果启用 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher" />，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="true" />。</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Image">
+      <MemberSignature Language="C#" Value="public System.Drawing.Image Image { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Image Image" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher.Image" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Image</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>获取或设置一个图像，在将其添加到快速访问工具栏时，它将在此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher" /> 上显示。</summary>
+        <value>一个图像，在将其添加到快速访问工具栏时，它将在此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher" /> 上显示。</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 建议的图像格式是 PNG，因为 PNG 格式的图像支持通过其 alpha 通道的透明度。  
+  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher.Image%2A>属性具有明显的效果时<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher>显示在功能区上的组。 但是，当用户添加<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher>到快速访问工具栏中，此属性控制显示图像的行为。  
+  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher.Image%2A>属性标识由控件显示的图像。 在设计时或在运行时，可以设置此属性。 如果在运行时中更新此属性，将更新控件的外观，以反映更改。  
+  
+ 如果<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher.Image%2A>设置属性，<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher.OfficeImageId%2A>和<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher.ImageName%2A>属性会被忽略。 尽管<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher.Image%2A>属性提供更好地控制比其他两个属性，因为每次对控件进行更新时，图像对象被发送到 Office 应用程序会比较慢。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageName">
+      <MemberSignature Language="C#" Value="public string ImageName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ImageName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher.ImageName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>获取或设置一个标识符，它用于在此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher" /> 添加到快速访问工具栏时将图像分配给它。</summary>
+        <value>一个标识符，它用于在此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher" /> 添加到快速访问工具栏时将图像分配给它。</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 在运行时仅在某些情况下，可以设置此属性。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。  
+  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher.ImageName%2A>属性具有明显的效果时<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher>显示在功能区上的组。 但是，当用户添加<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher>到快速访问工具栏中，此属性控制所示，映像的行为，除非<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher.Image%2A>或<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher.OfficeImageId%2A>也设置属性。  
+  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher.ImageName%2A>属性标识由控件显示的图像。 Office 应用程序检索此映像从你的解决方案一次，以提高性能。 此属性可以设置仅在设计时，因为它标识的图像加载期间<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>事件。 <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage> 时将引发一次每个映像名称将显示功能区。 之后，无法使用此属性更改控件图像。  
+  
+ 若要加载的映像，将代码添加到<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>事件处理程序。 检查<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs.ImageName%2A>属性<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs>并设置<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs.Image%2A>属性<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs>到想要加载的映像的对象。  
+  
+ 如果忽略此属性<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher.Image%2A>属性或<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher.OfficeImageId%2A>属性设置。 标识的图像<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher.ImageName%2A>属性可以由标识的图像以外会稍微快一些加载<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher.Image%2A>显示属性，因为 Office 应用程序将检索映像你解决方案仅在首次从功能区。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyTip">
+      <MemberSignature Language="C#" Value="public string KeyTip { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string KeyTip" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher.KeyTip" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>获取或设置此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher" /> 的键盘快捷键。</summary>
+        <value>此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher" /> 的当前键盘快捷键。</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 快捷键提示必须包含 1 到 3 个大写字符，并且必须包含空格、 制表符或换行字符。  
+  
+ 键提示有时也称为访问密钥或快捷键，可用作激活控件的快捷组合键。 当你按下 ALT 键时，键提示将显示在功能区上。 如果内置控件或从其他加载项，则与键提示中你快捷键提示相冲突，Microsoft Office 可能自动分配不冲突快捷键提示值。  
+  
+ 有关详细信息，请参阅[使用键盘来使用功能区程序](http://go.microsoft.com/fwlink/?LinkId=93523)。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OfficeImageId">
+      <MemberSignature Language="C#" Value="public string OfficeImageId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OfficeImageId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher.OfficeImageId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>如果要使用内置 Microsoft Office 图标，请获取或设置要在此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher" /> 上显示的图像。</summary>
+        <value>Microsoft Office 图标的 ID，该图标将在此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher" /> 上显示。</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher.OfficeImageId%2A>属性标识由控件显示 Office 图标。 属性值是一个字符串，标识`imageMso`所选图标的值。 在设计时或在运行时，可以设置此属性。 如果在运行时中更新此属性，将更新控件的外观，以反映更改。  
+  
+ 有关的列表`imageMso`值，请参阅 Microsoft 下载中心页面[Office 2010 外接程序： 图标库](http://go.microsoft.com/fwlink/?LinkID=220760)。  
+  
+ 如果忽略此属性<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher.Image%2A>属性设置。 标识的图像<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher.OfficeImageId%2A>属性可以由标识的图像以外会稍微快一些加载<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher.Image%2A>属性，因为这些图像缓存在 Office 应用程序。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Tools.Ribbon.RibbonComponent Parent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Tools.Ribbon.RibbonComponent Parent" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher.Parent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Ribbon.RibbonComponent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>获取一个 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonGroup" /> 对象，此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher" /> 是其成员。</summary>
+        <value>一个 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonGroup" /> 对象，此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher" /> 是其成员。</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 你可以添加<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher>到<xref:Microsoft.Office.Tools.Ribbon.RibbonGroup>在设计时或在运行时在功能区加载到 Microsoft Office 应用程序之前。 因此，<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher.Parent%2A>加载功能区后，将不会更改属性。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResumeLayout">
+      <MemberSignature Language="C#" Value="public void ResumeLayout ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ResumeLayout() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher.ResumeLayout" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>取消 <see cref="M:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher.SuspendLayout" /> 方法的效果。</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 每次<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher.SuspendLayout%2A>调用时，内部计数器即会递增。 <xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher.ResumeLayout%2A> 递减此相同的计数器。 当此内部计数器变为等于零时，Microsoft Office 重绘控件。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Ribbon">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Tools.Ribbon.OfficeRibbon Ribbon { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Tools.Ribbon.OfficeRibbon Ribbon" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher.Ribbon" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Ribbon.OfficeRibbon</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>获取此 <see cref="T:Microsoft.Office.Tools.Ribbon.OfficeRibbon" /> 所在的 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher" />。</summary>
+        <value>此 <see cref="T:Microsoft.Office.Tools.Ribbon.OfficeRibbon" /> 所在的 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher" />。</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScreenTip">
+      <MemberSignature Language="C#" Value="public string ScreenTip { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ScreenTip" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher.ScreenTip" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>获取或设置用户将指针移到 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher" /> 上方时显示的提示文本。</summary>
+        <value>用户将指针移到控件上方时显示的文本。</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher.ScreenTip%2A>值必须少于 1024年个字符的长度。  
+  
+ 当<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher.SuperTip%2A>设置属性，<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher.ScreenTip%2A>值将显示的标题为<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher.SuperTip%2A>。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SuperTip">
+      <MemberSignature Language="C#" Value="public string SuperTip { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SuperTip" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher.SuperTip" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>获取或设置用户将指针移到 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher" /> 上时显示的多行提示文本。</summary>
+        <value>包含多行提示文本的字符串。</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 字符串必须是长度小于 1024年个字符。  
+  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher.SuperTip%2A>下显示<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher.ScreenTip%2A>文本。 与不同<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher.ScreenTip%2A>、<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher.SuperTip%2A>字符串中的启用分行符。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SuspendLayout">
+      <MemberSignature Language="C#" Value="public void SuspendLayout ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SuspendLayout() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher.SuspendLayout" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>阻止 Microsoft Office 应用程序刷新 <see cref="T:Microsoft.Office.Tools.Ribbon.OfficeRibbon" /> 中的控件状态。</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 调用<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher.SuspendLayout%2A>可能会导致性能稍有增加，如果你的应用程序具有很多会频繁更新的控件。  
+  
+ 更改每个控件的状态后，你可以调用<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher.ResumeLayout%2A>以允许 UI 进行刷新。  
+  
+ 每次<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher.SuspendLayout%2A>调用时，内部计数器即会递增。 <xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher.ResumeLayout%2A> 递减此相同的计数器。 当此内部计数器变为等于零时，Microsoft Office 重绘控件。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visible">
+      <MemberSignature Language="C#" Value="public bool Visible { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Visible" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher.Visible" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>获取或设置一个值，该值指示此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher" /> 是否可见。</summary>
+        <value>
+          如果 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher" /> 可见，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher>右下角的一组默认显示。 当<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher>位于此默认位置，<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher.Visible%2A>属性确定是否这<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher>可见。  
+  
+ 但是，<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher.Visible%2A>属性未包含任何时生效<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher>快速访问工具栏上显示。 例如，如果这两个快速访问工具栏和对其组<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher>所属可见，然后设置<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher.Visible%2A>属性`false`将导致<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher>上组消失，但上快速访问工具栏将保持可见。  
+  
+ 此外，设置<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher.Visible%2A>属性`false`不会影响是否<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher>快速访问工具栏上启用。 若要禁用它，请将设置其<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher.Enabled%2A>属性`false`。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

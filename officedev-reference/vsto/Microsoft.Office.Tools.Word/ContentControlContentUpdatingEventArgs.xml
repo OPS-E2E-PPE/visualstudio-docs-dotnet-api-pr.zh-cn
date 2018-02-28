@@ -1,0 +1,81 @@
+<Type Name="ContentControlContentUpdatingEventArgs" FullName="Microsoft.Office.Tools.Word.ContentControlContentUpdatingEventArgs">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="808b6cae44d72fbc3105ed5b840177728cbd13cc" />
+    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.translationtype" Value="HT" />
+    <Meta Name="ms.contentlocale" Value="zh-CN" />
+    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public interface ContentControlContentUpdatingEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ContentControlContentUpdatingEventArgs" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Word.ContentControlContentUpdatingEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("a2f71dcd-984c-4fed-8395-1ca5588190d6")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>为内容控件的 <see cref="E:Microsoft.Office.Tools.Word.ContentControlBase.ContentUpdating" /> 事件提供数据。</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ 下面的代码示例演示了事件处理程序<xref:Microsoft.Office.Tools.Word.ContentControlBase.ContentUpdating>和<xref:Microsoft.Office.Tools.Word.ContentControlBase.StoreUpdating>事件。 此示例假定文档包含<xref:Microsoft.Office.Tools.Word.PlainTextContentControl>名为`plainTextContentControl1`，它绑定到自定义 XML 部件中的元素。 有关演示如何将内容控件绑定到自定义 XML 部件中的元素的代码示例，请参阅[演练： 将内容控件绑定到自定义 XML 部件](/visualstudio/vsto/walkthrough-binding-content-controls-to-custom-xml-parts.md)。  
+  
+ 若要使用此代码，将其粘贴到`ThisDocument`项目中的类。 对于 C# 中，你必须还将附加到的事件处理程序<xref:Microsoft.Office.Tools.Word.ContentControlBase.ContentUpdating>和<xref:Microsoft.Office.Tools.Word.ContentControlBase.StoreUpdating>的事件`plainTextContentControl1`。  
+  
+ 此示例适用于文档级自定义。  
+  
+ [!code-csharp[Trin_ContentControlXmlPartWalkthrough#7](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlXmlPartWalkthrough/CS/ThisDocument.cs#7)]
+ [!code-vb[Trin_ContentControlXmlPartWalkthrough#7](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlXmlPartWalkthrough/VB/ThisDocument.vb#7)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Content">
+      <MemberSignature Language="C#" Value="public string Content { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Content" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.ContentControlContentUpdatingEventArgs.Content" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>获取或设置正从绑定到控件的自定义 XML 部件写入到内容控件的文本。</summary>
+        <value>正从绑定到控件的自定义 XML 部件写入到内容控件的文本。</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 你可以将内容控件绑定到一种 XML 中的元素 (也名为*自定义 XML 部件*) 嵌入在文档中。 使用<xref:Microsoft.Office.Tools.Word.ContentControlContentUpdatingEventArgs.Content%2A>属性可以在 Microsoft Office Word 更新控件之前更改文本。  
+  
+ 有关详细信息，请参阅[内容控件](/visualstudio/vsto/content-controls.md)和[自定义 XML 部件概述](/visualstudio/vsto/custom-xml-parts-overview.md)。  
+  
+   
+  
+## Examples  
+ 下面的代码示例演示了事件处理程序<xref:Microsoft.Office.Tools.Word.ContentControlBase.ContentUpdating>和<xref:Microsoft.Office.Tools.Word.ContentControlBase.StoreUpdating>事件。 此示例假定文档包含<xref:Microsoft.Office.Tools.Word.PlainTextContentControl>名为`plainTextContentControl1`，它绑定到自定义 XML 部件中的元素。 有关演示如何将内容控件绑定到自定义 XML 部件中的元素的代码示例，请参阅[演练： 将内容控件绑定到自定义 XML 部件](/visualstudio/vsto/walkthrough-binding-content-controls-to-custom-xml-parts.md)。  
+  
+ 若要使用此代码，将其粘贴到`ThisDocument`项目中的类。 对于 C# 中，你必须还将附加到的事件处理程序<xref:Microsoft.Office.Tools.Word.ContentControlBase.ContentUpdating>和<xref:Microsoft.Office.Tools.Word.ContentControlBase.StoreUpdating>的事件`plainTextContentControl1`。  
+  
+ 此示例适用于文档级自定义。 你可以修改其在应用程序级外接程序中运行。 有关详细信息，请参阅[扩展 Word 文档和 Excel VSTO 外接程序在运行时中的工作簿](/visualstudio/vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)。  
+  
+ [!code-csharp[Trin_ContentControlXmlPartWalkthrough#7](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlXmlPartWalkthrough/CS/ThisDocument.cs#7)]
+ [!code-vb[Trin_ContentControlXmlPartWalkthrough#7](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlXmlPartWalkthrough/VB/ThisDocument.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

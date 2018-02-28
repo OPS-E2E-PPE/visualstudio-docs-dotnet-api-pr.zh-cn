@@ -1,0 +1,92 @@
+<Type Name="RibbonButtonGroup" FullName="Microsoft.Office.Tools.Ribbon.RibbonButtonGroup">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="7379eef9273e4a3e6a2d8f703e221472a280e3e6" />
+    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.translationtype" Value="HT" />
+    <Meta Name="ms.contentlocale" Value="zh-CN" />
+    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public interface RibbonButtonGroup : IDisposable, Microsoft.Office.Tools.Ribbon.RibbonControl, System.ComponentModel.IComponent" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract RibbonButtonGroup implements class Microsoft.Office.Tools.Ribbon.RibbonComponent, class Microsoft.Office.Tools.Ribbon.RibbonControl, class System.ComponentModel.IComponent, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Ribbon.RibbonButtonGroup" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Office.Tools.Ribbon.RibbonControl</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ComponentModel.IComponent</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("06e951b9-5334-4b3f-b058-8c16aa59ea94")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>表示功能区上的一组按钮控件。</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonButtonGroup> 控件可以包含按钮，切换按钮、 菜单、 拆分按钮和库。  
+  
+ 你可以添加<xref:Microsoft.Office.Tools.Ribbon.RibbonButtonGroup>向你 Office 自定义项，在设计时或在运行时在功能区加载到 Microsoft Office 应用程序之前的对象。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。  
+  
+ 你可以创建<xref:Microsoft.Office.Tools.Ribbon.RibbonButtonGroup>通过使用在运行时<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.CreateRibbonButtonGroup%2A>方法<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory>对象。  
+  
+ 可通过两种方法来访问 <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory> 对象：  
+  
+-   通过使用 Ribbon 类的 `Factory` 属性。 可从 Ribbon 类中的代码使用此方法。  
+  
+-   通过使用 `Globals.Factory.GetRibbonFactory` 方法。 可从 Ribbon 类外的代码使用此方法。  
+  
+ [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
+  
+## <a name="usage"></a>用法  
+ [!INCLUDE[vsto_net35mref](~/includes/vsto-net35mref-md.md)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Items">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;Microsoft.Office.Tools.Ribbon.RibbonControl&gt; Items { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;class Microsoft.Office.Tools.Ribbon.RibbonControl&gt; Items" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Ribbon.RibbonButtonGroup.Items" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;Microsoft.Office.Tools.Ribbon.RibbonControl&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>获取此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonButtonGroup" /> 中包含的项。</summary>
+        <value>在设计时添加到此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonButtonGroup" /> 的控件集合。</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 若要将控件添加到<xref:Microsoft.Office.Tools.Ribbon.RibbonButtonGroup>，拖动**按钮**，**库**，**菜单**， **SplitButton**，或**切换按钮**从**Office 功能区控件**选项卡**工具箱**到**功能区设计器**。  
+  
+ 你可以将控件添加到<xref:Microsoft.Office.Tools.Ribbon.RibbonButtonGroup>在设计时的集合。 可以将控件添加到此集合在运行时仅在某些情况下。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
