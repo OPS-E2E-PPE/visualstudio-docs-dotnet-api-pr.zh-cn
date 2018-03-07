@@ -1,86 +1,80 @@
-<Type Name="ISmartTagExtension" FullName="Microsoft.Office.Tools.Excel.ISmartTagExtension">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="dfd079a6b99032f3895369eba5e96b075ef18e5c" />
-    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
-    <Meta Name="ms.translationtype" Value="HT" />
-    <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface ISmartTagExtension : Microsoft.Office.Tools.IExtension" />
-  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISmartTagExtension implements class Microsoft.Office.Tools.IExtension" />
-  <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Excel.ISmartTagExtension" />
-  <AssemblyInfo>
-    <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
-    <AssemblyVersion>10.0.0.0</AssemblyVersion>
-  </AssemblyInfo>
-  <Interfaces>
-    <Interface>
-      <InterfaceName>Microsoft.Office.Tools.IExtension</InterfaceName>
-    </Interface>
-  </Interfaces>
-  <Attributes>
-    <Attribute>
-      <AttributeName>System.Runtime.InteropServices.Guid("baa275c5-e25c-49ba-87be-dbe0712f7eb1")</AttributeName>
-    </Attribute>
-  </Attributes>
-  <Docs>
-    <summary>Represents an extension of a smart tag in an Excel worksheet that is customized by using Office development tools in Visual Studio. The extension defines a custom recognizer for the smart tag.</summary>
-    <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- 实现<xref:Microsoft.Office.Tools.Excel.ISmartTagExtension>接口如果你想要控制 Excel 如何识别在工作表中的智能标记。  
-  
-## <a name="usage"></a>用法  
- 此类型旨在用于 Excel 2007 仅在项目中。 Excel 2010 中已弃用智能标记。  
-  
-   
-  
-## Examples  
- 下面的代码示例演示如何实现<xref:Microsoft.Office.Tools.Excel.ISmartTagExtension>创建你自己的智能标记识别器。 该示例实现<xref:Microsoft.Office.Tools.Excel.ISmartTagExtension.Recognize%2A>方法以识别每个智能标记术语找到在单元格中。 此示例假定你已添加到的引用**Microsoft.Office.Interop.SmartTag**从**.NET**选项卡**添加引用**对话框。  
-  
- [!code-csharp[Trin_ExcelDerivedSmartTags#1](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelDerivedSmartTags/CS/CustomSmartTag.cs#1)]
- [!code-vb[Trin_ExcelDerivedSmartTags#1](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelDerivedSmartTags/VB/CustomSmartTag.vb#1)]  
-  
- ]]></format>
-    </remarks>
-  </Docs>
-  <Members>
-    <Member MemberName="Recognize">
-      <MemberSignature Language="C#" Value="public void Recognize (string text, Microsoft.Office.Interop.SmartTag.ISmartTagRecognizerSite site, Microsoft.Office.Interop.SmartTag.ISmartTagTokenList tokenList, Microsoft.Office.Tools.Excel.SmartTagRecognizeContext context);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Recognize(string text, class Microsoft.Office.Interop.SmartTag.ISmartTagRecognizerSite site, class Microsoft.Office.Interop.SmartTag.ISmartTagTokenList tokenList, class Microsoft.Office.Tools.Excel.SmartTagRecognizeContext context) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.ISmartTagExtension.Recognize(System.String,Microsoft.Office.Interop.SmartTag.ISmartTagRecognizerSite,Microsoft.Office.Interop.SmartTag.ISmartTagTokenList,Microsoft.Office.Tools.Excel.SmartTagRecognizeContext)" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
-        <AssemblyVersion>10.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Void</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="text" Type="System.String" />
-        <Parameter Name="site" Type="Microsoft.Office.Interop.SmartTag.ISmartTagRecognizerSite" />
-        <Parameter Name="tokenList" Type="Microsoft.Office.Interop.SmartTag.ISmartTagTokenList" />
-        <Parameter Name="context" Type="Microsoft.Office.Tools.Excel.SmartTagRecognizeContext" />
-      </Parameters>
-      <Docs>
-        <param name="text">The text to search for recognized terms.</param>
-        <param name="site">The location of the text in the workbook or document.</param>
-        <param name="tokenList">The text to search for recognized terms, broken down into a list of tokens.</param>
-        <param name="context">An object that provides the text from the cell that is sent to the recognizer and a method you can call to indicate that the smart tag was found.</param>
-        <summary>Searches text in the cell for recognized terms. [!INCLUDE[vsto_smart_tags](~/includes/vsto-smart-tags-md.md)].</summary>
-        <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- 调用此方法[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]要识别出的词汇搜索文本。 如果你想要合并你自己的搜索算法来运行此外到标准识别器，则实现此方法。  
-  
- 若要查看示例代码，请参见本主题的 Microsoft Visual Studio 2008/.NET Framework 3.5 版。  
-  
- ]]></format>
-        </remarks>
-      </Docs>
-    </Member>
-  </Members>
-</Type>
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="ISmartTagExtension.xml" source-language="en-US" target-language="zh-CN">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-38f25dd" tool-company="Microsoft" />
+      <xliffext:skl_file_name xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">b4690f9a-9e49-426d-9091-855b10fda4dbdfd079a6b99032f3895369eba5e96b075ef18e5c.skl</xliffext:skl_file_name>
+      <xliffext:version xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">1.2</xliffext:version>
+      <xliffext:ms.openlocfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">dfd079a6b99032f3895369eba5e96b075ef18e5c</xliffext:ms.openlocfilehash>
+      <xliffext:ms.sourcegitcommit xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">bb8a3a96823cedeffbdbcc0c41a8118399de8074</xliffext:ms.sourcegitcommit>
+      <xliffext:ms.lasthandoff xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">02/21/2018</xliffext:ms.lasthandoff>
+      <xliffext:moniker_ids xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">vsto-2017</xliffext:moniker_ids>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve" uid="T:Microsoft.Office.Tools.Excel.ISmartTagExtension">
+          <source>Represents an extension of a smart tag in an Excel worksheet that is customized by using Office development tools in Visual Studio.</source>
+          
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve" uid="T:Microsoft.Office.Tools.Excel.ISmartTagExtension">
+          <source>The extension defines a custom recognizer for the smart tag.</source>
+          
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve" extradata="MT" uid="T:Microsoft.Office.Tools.Excel.ISmartTagExtension">
+          <source>Implement the <ph id="ph1">&lt;xref:Microsoft.Office.Tools.Excel.ISmartTagExtension&gt;</ph> interface if you want to control how Excel recognizes smart tags in worksheets.</source>
+          <target state="translated">实现<ph id="ph1">&lt;xref:Microsoft.Office.Tools.Excel.ISmartTagExtension&gt;</ph>接口如果你想要控制 Excel 如何识别在工作表中的智能标记。</target>       </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve" extradata="MT" uid="T:Microsoft.Office.Tools.Excel.ISmartTagExtension">
+          <source>Usage</source>
+          <target state="translated">用法</target>       </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve" extradata="MT" uid="T:Microsoft.Office.Tools.Excel.ISmartTagExtension">
+          <source>This type is intended to be used only in projects for Excel 2007.</source>
+          <target state="translated">此类型旨在用于 Excel 2007 仅在项目中。</target>       </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve" extradata="MT" uid="T:Microsoft.Office.Tools.Excel.ISmartTagExtension">
+          <source>Smart tags are deprecated in Excel 2010.</source>
+          <target state="translated">Excel 2010 中已弃用智能标记。</target>       </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve" extradata="MT" uid="T:Microsoft.Office.Tools.Excel.ISmartTagExtension">
+          <source>The following code example demonstrates how to implement <ph id="ph1">&lt;xref:Microsoft.Office.Tools.Excel.ISmartTagExtension&gt;</ph> to create your own smart tag recognizer.</source>
+          <target state="translated">下面的代码示例演示如何实现<ph id="ph1">&lt;xref:Microsoft.Office.Tools.Excel.ISmartTagExtension&gt;</ph>创建你自己的智能标记识别器。</target>       </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve" extradata="MT" uid="T:Microsoft.Office.Tools.Excel.ISmartTagExtension">
+          <source>The example implements the <ph id="ph1">&lt;xref:Microsoft.Office.Tools.Excel.ISmartTagExtension.Recognize%2A&gt;</ph> method to recognize each smart tag term found in a cell.</source>
+          <target state="translated">该示例实现<ph id="ph1">&lt;xref:Microsoft.Office.Tools.Excel.ISmartTagExtension.Recognize%2A&gt;</ph>方法以识别每个智能标记术语找到在单元格中。</target>       </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve" extradata="MT" uid="T:Microsoft.Office.Tools.Excel.ISmartTagExtension">
+          <source>This example assumes that you have added a reference to <bpt id="p1">**</bpt>Microsoft.Office.Interop.SmartTag<ept id="p1">**</ept> from the <bpt id="p2">**</bpt>.NET<ept id="p2">**</ept> tab of the <bpt id="p3">**</bpt>Add Reference<ept id="p3">**</ept> dialog box.</source>
+          <target state="translated">此示例假定你已添加到的引用<bpt id="p1">**</bpt>Microsoft.Office.Interop.SmartTag<ept id="p1">**</ept>从<bpt id="p2">**</bpt>.NET<ept id="p2">**</ept>选项卡<bpt id="p3">**</bpt>添加引用<ept id="p3">**</ept>对话框。</target>       </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve" uid="M:Microsoft.Office.Tools.Excel.ISmartTagExtension.Recognize(System.String,Microsoft.Office.Interop.SmartTag.ISmartTagRecognizerSite,Microsoft.Office.Interop.SmartTag.ISmartTagTokenList,Microsoft.Office.Tools.Excel.SmartTagRecognizeContext)">
+          <source>The text to search for recognized terms.</source>
+          
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve" uid="M:Microsoft.Office.Tools.Excel.ISmartTagExtension.Recognize(System.String,Microsoft.Office.Interop.SmartTag.ISmartTagRecognizerSite,Microsoft.Office.Interop.SmartTag.ISmartTagTokenList,Microsoft.Office.Tools.Excel.SmartTagRecognizeContext)">
+          <source>The location of the text in the workbook or document.</source>
+          
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve" uid="M:Microsoft.Office.Tools.Excel.ISmartTagExtension.Recognize(System.String,Microsoft.Office.Interop.SmartTag.ISmartTagRecognizerSite,Microsoft.Office.Interop.SmartTag.ISmartTagTokenList,Microsoft.Office.Tools.Excel.SmartTagRecognizeContext)">
+          <source>The text to search for recognized terms, broken down into a list of tokens.</source>
+          
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve" uid="M:Microsoft.Office.Tools.Excel.ISmartTagExtension.Recognize(System.String,Microsoft.Office.Interop.SmartTag.ISmartTagRecognizerSite,Microsoft.Office.Interop.SmartTag.ISmartTagTokenList,Microsoft.Office.Tools.Excel.SmartTagRecognizeContext)">
+          <source>An object that provides the text from the cell that is sent to the recognizer and a method you can call to indicate that the smart tag was found.</source>
+          
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve" uid="M:Microsoft.Office.Tools.Excel.ISmartTagExtension.Recognize(System.String,Microsoft.Office.Interop.SmartTag.ISmartTagRecognizerSite,Microsoft.Office.Interop.SmartTag.ISmartTagTokenList,Microsoft.Office.Tools.Excel.SmartTagRecognizeContext)">
+          <source>Searches text in the cell for recognized terms.</source>
+          
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve" uid="M:Microsoft.Office.Tools.Excel.ISmartTagExtension.Recognize(System.String,Microsoft.Office.Interop.SmartTag.ISmartTagRecognizerSite,Microsoft.Office.Interop.SmartTag.ISmartTagTokenList,Microsoft.Office.Tools.Excel.SmartTagRecognizeContext)">
+          <source><ph id="ph1">[!INCLUDE[vsto_smart_tags](~/includes/vsto-smart-tags-md.md)]</ph>.</source>
+          
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve" extradata="MT" uid="M:Microsoft.Office.Tools.Excel.ISmartTagExtension.Recognize(System.String,Microsoft.Office.Interop.SmartTag.ISmartTagRecognizerSite,Microsoft.Office.Interop.SmartTag.ISmartTagTokenList,Microsoft.Office.Tools.Excel.SmartTagRecognizeContext)">
+          <source>This method is called by the <ph id="ph1">[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]</ph> to search text for recognized terms.</source>
+          <target state="translated">调用此方法<ph id="ph1">[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]</ph>要识别出的词汇搜索文本。</target>       </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve" extradata="MT" uid="M:Microsoft.Office.Tools.Excel.ISmartTagExtension.Recognize(System.String,Microsoft.Office.Interop.SmartTag.ISmartTagRecognizerSite,Microsoft.Office.Interop.SmartTag.ISmartTagTokenList,Microsoft.Office.Tools.Excel.SmartTagRecognizeContext)">
+          <source>Implement this method if you want to incorporate your own search algorithms to run in addition to the standard recognizers.</source>
+          <target state="translated">如果你想要合并你自己的搜索算法来运行此外到标准识别器，则实现此方法。</target>       </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve" extradata="MT" uid="M:Microsoft.Office.Tools.Excel.ISmartTagExtension.Recognize(System.String,Microsoft.Office.Interop.SmartTag.ISmartTagRecognizerSite,Microsoft.Office.Interop.SmartTag.ISmartTagTokenList,Microsoft.Office.Tools.Excel.SmartTagRecognizeContext)">
+          <source>To view a code example, see the Microsoft Visual Studio 2008/.NET Framework 3.5 version of this topic.</source>
+          <target state="translated">若要查看示例代码，请参见本主题的 Microsoft Visual Studio 2008/.NET Framework 3.5 版。</target>       </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
