@@ -1,0 +1,73 @@
+<Type Name="NodeInsertAndDeleteEventArgs" FullName="Microsoft.Office.Tools.Word.NodeInsertAndDeleteEventArgs">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="cb20cbcc3f6e2923091c1f81fd79628bdcb7497c" />
+    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.translationtype" Value="HT" />
+    <Meta Name="ms.contentlocale" Value="zh-CN" />
+    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public interface NodeInsertAndDeleteEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract NodeInsertAndDeleteEventArgs" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Word.NodeInsertAndDeleteEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("c878142e-6a71-4bf4-82fc-ba9122596104")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+      <span data-ttu-id="7d9b4-101">提供有关 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 控件的 <see cref="E:Microsoft.Office.Tools.Word.XMLNode.AfterInsert" /> 和 <see cref="E:Microsoft.Office.Tools.Word.XMLNode.BeforeDelete" /> 事件的数据，以及 <see cref="T:Microsoft.Office.Tools.Word.XMLNodes" /> 控件的 <see cref="E:Microsoft.Office.Tools.Word.XMLNodes.AfterInsert" /> 和 <see cref="E:Microsoft.Office.Tools.Word.XMLNodes.BeforeDelete" /> 事件的数据。</span>
+      <span class="sxs-lookup">
+        <span data-stu-id="7d9b4-101">Provides data for the <see cref="E:Microsoft.Office.Tools.Word.XMLNode.AfterInsert" /> and <see cref="E:Microsoft.Office.Tools.Word.XMLNode.BeforeDelete" /> events of an <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> control, and for the <see cref="E:Microsoft.Office.Tools.Word.XMLNodes.AfterInsert" /> and <see cref="E:Microsoft.Office.Tools.Word.XMLNodes.BeforeDelete" /> events of an <see cref="T:Microsoft.Office.Tools.Word.XMLNodes" /> control.</span>
+      </span>
+    </summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ <span data-ttu-id="7d9b4-102">下面的代码示例演示了事件处理程序<xref:Microsoft.Office.Tools.Word.XMLNode.AfterInsert>和<xref:Microsoft.Office.Tools.Word.XMLNode.BeforeDelete>事件。</span><span class="sxs-lookup"><span data-stu-id="7d9b4-102">The following code example demonstrates event handlers for the <xref:Microsoft.Office.Tools.Word.XMLNode.AfterInsert> and <xref:Microsoft.Office.Tools.Word.XMLNode.BeforeDelete> events.</span></span> <span data-ttu-id="7d9b4-103">这些事件处理程序显示消息框，然后<xref:Microsoft.Office.Tools.Word.XMLNode>文档，而后删除<xref:Microsoft.Office.Tools.Word.XMLNode>添加到文档。</span><span class="sxs-lookup"><span data-stu-id="7d9b4-103">These event handlers display a message box before an <xref:Microsoft.Office.Tools.Word.XMLNode> is deleted from the document, and after an <xref:Microsoft.Office.Tools.Word.XMLNode> is added to the document.</span></span> <span data-ttu-id="7d9b4-104">此示例还使用<xref:Microsoft.Office.Tools.Word.XMLNode.RemoveChild%2A>方法来删除节点，并以编程方式引发<xref:Microsoft.Office.Tools.Word.XMLNode.BeforeDelete>事件。</span><span class="sxs-lookup"><span data-stu-id="7d9b4-104">The example also uses the <xref:Microsoft.Office.Tools.Word.XMLNode.RemoveChild%2A> method to delete a node and programmatically raise the <xref:Microsoft.Office.Tools.Word.XMLNode.BeforeDelete> event.</span></span> <span data-ttu-id="7d9b4-105">此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`，其中包含一个名为的子节点`CustomerDateNode`。</span><span class="sxs-lookup"><span data-stu-id="7d9b4-105">This example assumes that the current document contains an <xref:Microsoft.Office.Tools.Word.XMLNode> named `CustomerNode` that contains a child node named `CustomerDateNode`.</span></span>  
+  
+ [!code-csharp[Trin_WordXMLNode#200](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#200)]
+ [!code-vb[Trin_WordXMLNode#200](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#200)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="InUndoRedo">
+      <MemberSignature Language="C#" Value="public bool InUndoRedo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool InUndoRedo" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.NodeInsertAndDeleteEventArgs.InUndoRedo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="7d9b4-106">获取一个值，该值指示某操作是否为撤消或恢复命令的结果。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="7d9b4-106">Gets a value that indicates whether an action was a result of an undo or redo command.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="7d9b4-107">
+            <see langword="true" /> 如果操作的结果的撤消或重做命令中;否则为<see langword="false" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="7d9b4-107">
+              <see langword="true" /> if the action was a result of an undo or redo command; otherwise, <see langword="false" />.</span>
+          </span>
+        </value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

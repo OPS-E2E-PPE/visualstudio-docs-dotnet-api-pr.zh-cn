@@ -1,0 +1,2173 @@
+<Type Name="XMLNode" FullName="Microsoft.Office.Tools.Word.XMLNode">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="1858ea8885fd95a9a8e1089f620c206aee857f83" />
+    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.translationtype" Value="HT" />
+    <Meta Name="ms.contentlocale" Value="zh-CN" />
+    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public interface XMLNode : IDisposable, System.ComponentModel.IComponent, System.ComponentModel.ISupportInitialize, System.Windows.Forms.IBindableComponent" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract XMLNode implements class System.ComponentModel.IComponent, class System.ComponentModel.ISupportInitialize, class System.IDisposable, class System.Windows.Forms.IBindableComponent" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Word.XMLNode" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.IComponent</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ComponentModel.ISupportInitialize</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Windows.Forms.IBindableComponent</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("29b82cde-df64-4c6f-a64f-87561e588ecb")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+      <span data-ttu-id="26531-101">表示文档上单个 XML 节点（可公开事件并可绑定到数据）。</span>
+      <span class="sxs-lookup">
+        <span data-stu-id="26531-101">Represents a single XML node on a document that exposes events and that can be bound to data.</span>
+      </span>
+    </summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="26531-102">当你在设计时映射到 Microsoft Office Word 文档中的非重复架构元素时，Visual Studio 将创建<xref:Microsoft.Office.Tools.Word.XMLNode>允许出现在文档中一次每个元素的控件。</span><span class="sxs-lookup"><span data-stu-id="26531-102">When you map non-repeating schema elements onto a Microsoft Office Word document at design time, Visual Studio creates an <xref:Microsoft.Office.Tools.Word.XMLNode> control for each elements that are allowed to appear only once in a document.</span></span> <span data-ttu-id="26531-103">非重复架构元素是具有的元素`maxOccurs`属性设置为 1。</span><span class="sxs-lookup"><span data-stu-id="26531-103">A non-repeating schema element is an element with the `maxOccurs` attribute set to 1.</span></span>  
+  
+ <span data-ttu-id="26531-104"><xref:Microsoft.Office.Tools.Word.XMLNode> 在设计时，可以仅在 Word 文档级项目中创建控件。</span><span class="sxs-lookup"><span data-stu-id="26531-104"><xref:Microsoft.Office.Tools.Word.XMLNode> controls can be created only in Word document-level projects at design time.</span></span> <span data-ttu-id="26531-105">也不能在运行时或在应用程序级项目中创建。</span><span class="sxs-lookup"><span data-stu-id="26531-105">They cannot be created at run time or in application-level projects.</span></span> <span data-ttu-id="26531-106">有关详细信息，请参阅[XMLNode 控件](/visualstudio/vsto/xmlnode-control.md)和[如何： 向 Word 文档添加 XMLNode 控件](/visualstudio/vsto/how-to-add-xmlnode-controls-to-word-documents.md)。</span><span class="sxs-lookup"><span data-stu-id="26531-106">For more information, see [XMLNode Control](/visualstudio/vsto/xmlnode-control.md) and [How to: Add XMLNode Controls to Word Documents](/visualstudio/vsto/how-to-add-xmlnode-controls-to-word-documents.md).</span></span>  
+  
+ [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
+  
+## <a name="usage"></a><span data-ttu-id="26531-107">用法</span><span class="sxs-lookup"><span data-stu-id="26531-107">Usage</span></span>  
+ [!INCLUDE[vsto_net35mref](~/includes/vsto-net35mref-md.md)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AfterInsert">
+      <MemberSignature Language="C#" Value="public event Microsoft.Office.Tools.Word.NodeInsertAndDeleteEventHandler AfterInsert;" />
+      <MemberSignature Language="ILAsm" Value=".event class Microsoft.Office.Tools.Word.NodeInsertAndDeleteEventHandler AfterInsert" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.Word.XMLNode.AfterInsert" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Word.NodeInsertAndDeleteEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="26531-108">当用户向文档添加新的 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 控件时发生。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-108">Occurs when the user adds a new <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> control to the document.</span>
+          </span>
+        </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ <span data-ttu-id="26531-109">下面的代码示例演示了事件处理程序<xref:Microsoft.Office.Tools.Word.XMLNode.AfterInsert>和<xref:Microsoft.Office.Tools.Word.XMLNode.BeforeDelete>事件。</span><span class="sxs-lookup"><span data-stu-id="26531-109">The following code example demonstrates event handlers for the <xref:Microsoft.Office.Tools.Word.XMLNode.AfterInsert> and <xref:Microsoft.Office.Tools.Word.XMLNode.BeforeDelete> events.</span></span> <span data-ttu-id="26531-110">代码将显示消息框，然后<xref:Microsoft.Office.Tools.Word.XMLNode>从文档和之后删除<xref:Microsoft.Office.Tools.Word.XMLNode>添加到文档。</span><span class="sxs-lookup"><span data-stu-id="26531-110">The code displays a message box before an <xref:Microsoft.Office.Tools.Word.XMLNode> is deleted from the document and after an <xref:Microsoft.Office.Tools.Word.XMLNode> is added to the document.</span></span> <span data-ttu-id="26531-111">此示例还使用<xref:Microsoft.Office.Tools.Word.XMLNode.RemoveChild%2A>方法来删除节点，并以编程方式引发<xref:Microsoft.Office.Tools.Word.XMLNode.BeforeDelete>事件。</span><span class="sxs-lookup"><span data-stu-id="26531-111">The example also uses the <xref:Microsoft.Office.Tools.Word.XMLNode.RemoveChild%2A> method to delete a node and programmatically raise the <xref:Microsoft.Office.Tools.Word.XMLNode.BeforeDelete> event.</span></span> <span data-ttu-id="26531-112">此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`，其中包含一个名为的子节点`CustomerDateNode`。</span><span class="sxs-lookup"><span data-stu-id="26531-112">This example assumes that the current document contains an <xref:Microsoft.Office.Tools.Word.XMLNode> named `CustomerNode` that contains a child node named `CustomerDateNode`.</span></span>  
+  
+ [!code-csharp[Trin_WordXMLNode#200](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#200)]
+ [!code-vb[Trin_WordXMLNode#200](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#200)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Application">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Word.Application Application { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Interop.Word.Application Application" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.XMLNode.Application" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Word.Application</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="26531-113">获取一个表示该 <see cref="T:Microsoft.Office.Interop.Word.Application" /> 控件的创建者的 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-113">Gets an <see cref="T:Microsoft.Office.Interop.Word.Application" /> that represents the creator of the <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> control.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="26531-114">一个 <see cref="T:Microsoft.Office.Interop.Word.Application" />，表示 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 控件的创建者。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-114">An <see cref="T:Microsoft.Office.Interop.Word.Application" /> that represents the creator of the <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> control.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ <span data-ttu-id="26531-115">下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.Application%2A>属性以最小化活动应用程序窗口。</span><span class="sxs-lookup"><span data-stu-id="26531-115">The following code example uses the <xref:Microsoft.Office.Tools.Word.XMLNode.Application%2A> property to minimize the active application window.</span></span> <span data-ttu-id="26531-116">此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerLastNameNode`。</span><span class="sxs-lookup"><span data-stu-id="26531-116">This example assumes that the current document contains an <xref:Microsoft.Office.Tools.Word.XMLNode> named `CustomerLastNameNode`.</span></span>  
+  
+ [!code-csharp[Trin_WordXMLNode#1](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#1)]
+ [!code-vb[Trin_WordXMLNode#1](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Attributes">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Word.XMLNodes Attributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Interop.Word.XMLNodes Attributes" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.XMLNode.Attributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Word.XMLNodes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="26531-117">获取一个 <see cref="T:Microsoft.Office.Interop.Word.XMLNodes" /> 集合，该集合表示 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 控件的特性。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-117">Gets a <see cref="T:Microsoft.Office.Interop.Word.XMLNodes" /> collection that represents the attributes for the <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> control.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="26531-118">一个 <see cref="T:Microsoft.Office.Interop.Word.XMLNodes" /> 集合，表示 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 控件的特性。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-118">A <see cref="T:Microsoft.Office.Interop.Word.XMLNodes" /> collection that represents the attributes for the <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> control.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="26531-119">所有<xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName>中控制<xref:Microsoft.Office.Interop.Word.XMLNodes?displayProperty=fullName>通过使用返回的集合<xref:Microsoft.Office.Tools.Word.XMLNode.Attributes%2A>属性具有<xref:Microsoft.Office.Interop.Word.XMLNode.NodeType%2A?displayProperty=fullName>属性值<xref:Microsoft.Office.Interop.Word.WdXMLNodeType.wdXMLNodeAttribute>。</span><span class="sxs-lookup"><span data-stu-id="26531-119">All <xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName> controls in the <xref:Microsoft.Office.Interop.Word.XMLNodes?displayProperty=fullName> collection returned by using the <xref:Microsoft.Office.Tools.Word.XMLNode.Attributes%2A> property have a <xref:Microsoft.Office.Interop.Word.XMLNode.NodeType%2A?displayProperty=fullName> property value of <xref:Microsoft.Office.Interop.Word.WdXMLNodeType.wdXMLNodeAttribute>.</span></span>  
+  
+   
+  
+## Examples  
+ <span data-ttu-id="26531-120">下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.Attributes%2A>属性添加到属性<xref:Microsoft.Office.Tools.Word.XMLNode>控件。</span><span class="sxs-lookup"><span data-stu-id="26531-120">The following code example uses the <xref:Microsoft.Office.Tools.Word.XMLNode.Attributes%2A> property to add an attribute to an <xref:Microsoft.Office.Tools.Word.XMLNode> control.</span></span> <span data-ttu-id="26531-121"><xref:Microsoft.Office.Tools.Word.XMLNode.NamespaceURI%2A>属性用于指定架构命名空间。</span><span class="sxs-lookup"><span data-stu-id="26531-121">The <xref:Microsoft.Office.Tools.Word.XMLNode.NamespaceURI%2A> property is used to specify the schema namespace.</span></span> <span data-ttu-id="26531-122">然后，该示例循环访问中的每个属性<xref:Microsoft.Office.Tools.Word.XMLNode>并显示属性名称和它的值。</span><span class="sxs-lookup"><span data-stu-id="26531-122">The example then iterates through every attribute in the <xref:Microsoft.Office.Tools.Word.XMLNode> and displays the attribute name and its value.</span></span> <span data-ttu-id="26531-123">名称<xref:Microsoft.Office.Tools.Word.XMLNode>从获取<xref:Microsoft.Office.Tools.Word.XMLNode.BaseName%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="26531-123">The name of the <xref:Microsoft.Office.Tools.Word.XMLNode> is obtained from the <xref:Microsoft.Office.Tools.Word.XMLNode.BaseName%2A> property.</span></span> <span data-ttu-id="26531-124">此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`具有`NewCustomer`架构中声明的属性。</span><span class="sxs-lookup"><span data-stu-id="26531-124">This example assumes that the current document contains an <xref:Microsoft.Office.Tools.Word.XMLNode> named `CustomerNode` that has a `NewCustomer` attribute declared in the schema.</span></span>  
+  
+ [!code-csharp[Trin_WordXMLNode#2](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#2)]
+ [!code-vb[Trin_WordXMLNode#2](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseName">
+      <MemberSignature Language="C#" Value="public string BaseName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BaseName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.XMLNode.BaseName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="26531-125">获取 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 控件不带任何前缀的名称。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-125">Gets the name of the <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> control without any prefix.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="26531-126">
+            <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 控件不带任何前缀的名称。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-126">The name of the <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> control without any prefix.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ <span data-ttu-id="26531-127">下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.Attributes%2A>属性添加到属性<xref:Microsoft.Office.Tools.Word.XMLNode>控件。</span><span class="sxs-lookup"><span data-stu-id="26531-127">The following code example uses the <xref:Microsoft.Office.Tools.Word.XMLNode.Attributes%2A> property to add an attribute to an <xref:Microsoft.Office.Tools.Word.XMLNode> control.</span></span> <span data-ttu-id="26531-128"><xref:Microsoft.Office.Tools.Word.XMLNode.NamespaceURI%2A>属性用于指定架构命名空间。</span><span class="sxs-lookup"><span data-stu-id="26531-128">The <xref:Microsoft.Office.Tools.Word.XMLNode.NamespaceURI%2A> property is used to specify the schema namespace.</span></span> <span data-ttu-id="26531-129">然后，该示例循环访问中的每个属性<xref:Microsoft.Office.Tools.Word.XMLNode>并显示属性名称和它的值。</span><span class="sxs-lookup"><span data-stu-id="26531-129">The example then iterates through every attribute in the <xref:Microsoft.Office.Tools.Word.XMLNode> and displays the attribute name and its value.</span></span> <span data-ttu-id="26531-130">名称<xref:Microsoft.Office.Tools.Word.XMLNode>从获取<xref:Microsoft.Office.Tools.Word.XMLNode.BaseName%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="26531-130">The name of the <xref:Microsoft.Office.Tools.Word.XMLNode> is obtained from the <xref:Microsoft.Office.Tools.Word.XMLNode.BaseName%2A> property.</span></span> <span data-ttu-id="26531-131">此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`具有`NewCustomer`架构中声明的属性。</span><span class="sxs-lookup"><span data-stu-id="26531-131">This example assumes that the current document contains an <xref:Microsoft.Office.Tools.Word.XMLNode> named `CustomerNode` that has a `NewCustomer` attribute declared in the schema.</span></span>  
+  
+ [!code-csharp[Trin_WordXMLNode#2](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#2)]
+ [!code-vb[Trin_WordXMLNode#2](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeforeDelete">
+      <MemberSignature Language="C#" Value="public event Microsoft.Office.Tools.Word.NodeInsertAndDeleteEventHandler BeforeDelete;" />
+      <MemberSignature Language="ILAsm" Value=".event class Microsoft.Office.Tools.Word.NodeInsertAndDeleteEventHandler BeforeDelete" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.Word.XMLNode.BeforeDelete" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Word.NodeInsertAndDeleteEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="26531-132">当用户从文档中删除 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 控件时，在删除控件之前发生。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-132">Occurs when the user deletes an <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> control from the document, before the control is deleted.</span>
+          </span>
+        </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="26531-133">如果`InUndoRedo`参数是`true`，不应更改文档中的 XML。</span><span class="sxs-lookup"><span data-stu-id="26531-133">If the `InUndoRedo` parameter is `true`, you should not change the XML in the document.</span></span>  
+  
+   
+  
+## Examples  
+ <span data-ttu-id="26531-134">下面的代码示例演示了事件处理程序<xref:Microsoft.Office.Tools.Word.XMLNode.AfterInsert>和<xref:Microsoft.Office.Tools.Word.XMLNode.BeforeDelete>事件。</span><span class="sxs-lookup"><span data-stu-id="26531-134">The following code example demonstrates event handlers for the <xref:Microsoft.Office.Tools.Word.XMLNode.AfterInsert> and <xref:Microsoft.Office.Tools.Word.XMLNode.BeforeDelete> events.</span></span> <span data-ttu-id="26531-135">代码将显示消息框，然后<xref:Microsoft.Office.Tools.Word.XMLNode>从文档和之后删除<xref:Microsoft.Office.Tools.Word.XMLNode>添加到文档。</span><span class="sxs-lookup"><span data-stu-id="26531-135">The code displays a message box before an <xref:Microsoft.Office.Tools.Word.XMLNode> is deleted from the document and after an <xref:Microsoft.Office.Tools.Word.XMLNode> is added to the document.</span></span> <span data-ttu-id="26531-136">此示例还使用<xref:Microsoft.Office.Tools.Word.XMLNode.RemoveChild%2A>方法来删除节点，并以编程方式引发<xref:Microsoft.Office.Tools.Word.XMLNode.BeforeDelete>事件。</span><span class="sxs-lookup"><span data-stu-id="26531-136">The example also uses the <xref:Microsoft.Office.Tools.Word.XMLNode.RemoveChild%2A> method to delete a node and programmatically raise the <xref:Microsoft.Office.Tools.Word.XMLNode.BeforeDelete> event.</span></span> <span data-ttu-id="26531-137">此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`，其中包含一个名为的子节点`CustomerDateNode`。</span><span class="sxs-lookup"><span data-stu-id="26531-137">This example assumes that the current document contains an <xref:Microsoft.Office.Tools.Word.XMLNode> named `CustomerNode` that contains a child node named `CustomerDateNode`.</span></span>  
+  
+ [!code-csharp[Trin_WordXMLNode#200](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#200)]
+ [!code-vb[Trin_WordXMLNode#200](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#200)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindingContextChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler BindingContextChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler BindingContextChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.Word.XMLNode.BindingContextChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="26531-138">当 <see cref="P:System.Windows.Forms.IBindableComponent.BindingContext" /> 的 <see cref="T:Microsoft.Office.Tools.Word.ContentControlBase" /> 属性的值更改时发生。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-138">Occurs when the value of the <see cref="P:System.Windows.Forms.IBindableComponent.BindingContext" /> property of the <see cref="T:Microsoft.Office.Tools.Word.ContentControlBase" /> changes.</span>
+          </span>
+        </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="26531-139">如果将引发此事件<xref:System.Windows.Forms.IBindableComponent.BindingContext%2A>属性更改通过以编程方式修改或用户交互更改。</span><span class="sxs-lookup"><span data-stu-id="26531-139">This event is raised if the <xref:System.Windows.Forms.IBindableComponent.BindingContext%2A> property is changed is changed by either a programmatic modification or user interaction.</span></span> <span data-ttu-id="26531-140">有关详细信息有关的用途<xref:System.Windows.Forms.IBindableComponent.BindingContext%2A>属性，请参阅<xref:System.Windows.Forms.BindingContext>类。</span><span class="sxs-lookup"><span data-stu-id="26531-140">For more information about the purpose of the <xref:System.Windows.Forms.IBindableComponent.BindingContext%2A> property, see the <xref:System.Windows.Forms.BindingContext> class.</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChildNodes">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Word.XMLNodes ChildNodes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Interop.Word.XMLNodes ChildNodes" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.XMLNode.ChildNodes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Word.XMLNodes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="26531-141">获取一个 <see cref="T:Microsoft.Office.Interop.Word.XMLNodes" /> 集合，该集合表示 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 控件的子元素。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-141">Gets a <see cref="T:Microsoft.Office.Interop.Word.XMLNodes" /> collection that represents the child elements of an <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> control.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="26531-142">一个 <see cref="T:Microsoft.Office.Interop.Word.XMLNodes" /> 集合，表示 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 控件的子元素。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-142">A <see cref="T:Microsoft.Office.Interop.Word.XMLNodes" /> collection that represents the child elements of an <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> control.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ <span data-ttu-id="26531-143">下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.ChildNodes%2A>要创建的所有子节点的名称的列表属性<xref:Microsoft.Office.Tools.Word.XMLNode>控件。</span><span class="sxs-lookup"><span data-stu-id="26531-143">The following code example uses the <xref:Microsoft.Office.Tools.Word.XMLNode.ChildNodes%2A> property to create a list of the names of all child nodes of an <xref:Microsoft.Office.Tools.Word.XMLNode> control.</span></span> <span data-ttu-id="26531-144">它然后在消息框中显示的列表。</span><span class="sxs-lookup"><span data-stu-id="26531-144">It then displays the list in a message box.</span></span> <span data-ttu-id="26531-145">此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`。</span><span class="sxs-lookup"><span data-stu-id="26531-145">This example assumes that the current document contains an <xref:Microsoft.Office.Tools.Word.XMLNode> named `CustomerNode`.</span></span>  
+  
+ [!code-csharp[Trin_WordXMLNode#3](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#3)]
+ [!code-vb[Trin_WordXMLNode#3](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChildNodeSuggestions">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Word.XMLChildNodeSuggestions ChildNodeSuggestions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Interop.Word.XMLChildNodeSuggestions ChildNodeSuggestions" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.XMLNode.ChildNodeSuggestions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Word.XMLChildNodeSuggestions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="26531-146">获取一个 <see cref="T:Microsoft.Office.Interop.Word.XMLChildNodeSuggestions" /> 集合，该集合表示可以是当前 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 控件的有效子元素的元素。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-146">Gets an <see cref="T:Microsoft.Office.Interop.Word.XMLChildNodeSuggestions" /> collection that represents the elements that may be valid children of the current <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> control.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="26531-147">一个 <see cref="T:Microsoft.Office.Interop.Word.XMLChildNodeSuggestions" /> 集合，表示可以是当前 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 控件的有效子元素的元素。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-147">An <see cref="T:Microsoft.Office.Interop.Word.XMLChildNodeSuggestions" /> collection that represents the elements that may be valid children of the current <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> control.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="26531-148">每个<xref:Microsoft.Office.Interop.Word.XMLChildNodeSuggestion>中<xref:Microsoft.Office.Interop.Word.XMLChildNodeSuggestions>集合是允许在底部的 XML 元素的列表中的项**XML 结构**任务窗格。</span><span class="sxs-lookup"><span data-stu-id="26531-148">Each <xref:Microsoft.Office.Interop.Word.XMLChildNodeSuggestion> in an <xref:Microsoft.Office.Interop.Word.XMLChildNodeSuggestions> collection is an item in the list of allowed XML elements at the bottom of the **XML Structure** task pane.</span></span>  
+  
+   
+  
+## Examples  
+ <span data-ttu-id="26531-149">下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.ChildNodeSuggestions%2A>要添加的所有子元素的属性<xref:Microsoft.Office.Tools.Word.XMLNode>。</span><span class="sxs-lookup"><span data-stu-id="26531-149">The following code example uses the <xref:Microsoft.Office.Tools.Word.XMLNode.ChildNodeSuggestions%2A> property to add all of the child elements of an <xref:Microsoft.Office.Tools.Word.XMLNode>.</span></span> <span data-ttu-id="26531-150">此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`。</span><span class="sxs-lookup"><span data-stu-id="26531-150">This example assumes that the current document contains an <xref:Microsoft.Office.Tools.Word.XMLNode> named `CustomerNode`.</span></span>  
+  
+ [!code-csharp[Trin_WordXMLNode#4](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#4)]
+ [!code-vb[Trin_WordXMLNode#4](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Container">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.IContainer Container { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.IContainer Container" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.XMLNode.Container" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.IContainer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextEnter">
+      <MemberSignature Language="C#" Value="public event Microsoft.Office.Tools.Word.ContextChangeEventHandler ContextEnter;" />
+      <MemberSignature Language="ILAsm" Value=".event class Microsoft.Office.Tools.Word.ContextChangeEventHandler ContextEnter" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.Word.XMLNode.ContextEnter" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Word.ContextChangeEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="26531-151">当光标从 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 节点的上下文外的区域移入该节点或它的一个子节点内时发生此事件。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-151">Occurs when the cursor is placed inside an <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> or one of its descendent nodes, from an area outside of the context of the node.</span>
+          </span>
+        </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="26531-152"><xref:Microsoft.Office.Tools.Word.XMLNode.ContextEnter>事件区别<xref:Microsoft.Office.Tools.Word.XMLNode.Select>事件。</span><span class="sxs-lookup"><span data-stu-id="26531-152">The <xref:Microsoft.Office.Tools.Word.XMLNode.ContextEnter> event differs from the <xref:Microsoft.Office.Tools.Word.XMLNode.Select> event.</span></span> <span data-ttu-id="26531-153"><xref:Microsoft.Office.Tools.Word.XMLNode.ContextEnter>仅上下文更改时引发事件。</span><span class="sxs-lookup"><span data-stu-id="26531-153">The <xref:Microsoft.Office.Tools.Word.XMLNode.ContextEnter> event is raised only when the context changes.</span></span> <span data-ttu-id="26531-154">有关详细信息，请参阅[XMLNode 控件](/visualstudio/vsto/xmlnode-control.md)。</span><span class="sxs-lookup"><span data-stu-id="26531-154">For more information, see [XMLNode Control](/visualstudio/vsto/xmlnode-control.md).</span></span>  
+  
+   
+  
+## Examples  
+ <span data-ttu-id="26531-155">下面的代码示例演示了事件处理程序<xref:Microsoft.Office.Tools.Word.XMLNode.Select>， <xref:Microsoft.Office.Tools.Word.XMLNode.Deselect>， <xref:Microsoft.Office.Tools.Word.XMLNode.ContextEnter>，和<xref:Microsoft.Office.Tools.Word.XMLNode.ContextLeave>事件。</span><span class="sxs-lookup"><span data-stu-id="26531-155">The following code example demonstrates event handlers for the <xref:Microsoft.Office.Tools.Word.XMLNode.Select>, <xref:Microsoft.Office.Tools.Word.XMLNode.Deselect>, <xref:Microsoft.Office.Tools.Word.XMLNode.ContextEnter>, and <xref:Microsoft.Office.Tools.Word.XMLNode.ContextLeave> events.</span></span> <span data-ttu-id="26531-156">当<xref:Microsoft.Office.Tools.Word.XMLNode.Select>和<xref:Microsoft.Office.Tools.Word.XMLNode.Deselect>将引发事件，事件处理程序添加到所选内容的边框的双线或删除双线，具体取决于事件。</span><span class="sxs-lookup"><span data-stu-id="26531-156">When the <xref:Microsoft.Office.Tools.Word.XMLNode.Select> and <xref:Microsoft.Office.Tools.Word.XMLNode.Deselect> events are raised, the event handlers add double lines to the borders of the selection or remove the double lines, depending on the event.</span></span> <span data-ttu-id="26531-157">当<xref:Microsoft.Office.Tools.Word.XMLNode.ContextEnter>和<xref:Microsoft.Office.Tools.Word.XMLNode.ContextLeave>将引发事件，事件处理程序显示消息，指出新选择的节点和先前选择的节点的名称。</span><span class="sxs-lookup"><span data-stu-id="26531-157">When the <xref:Microsoft.Office.Tools.Word.XMLNode.ContextEnter> and <xref:Microsoft.Office.Tools.Word.XMLNode.ContextLeave> events are raised, the event handlers display messages that state the names of the newly selected node and the previously selected node.</span></span> <span data-ttu-id="26531-158">此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`。</span><span class="sxs-lookup"><span data-stu-id="26531-158">This example assumes that the current document contains an <xref:Microsoft.Office.Tools.Word.XMLNode> named `CustomerNode`.</span></span>  
+  
+ [!code-csharp[Trin_WordXMLNode#201](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#201)]
+ [!code-vb[Trin_WordXMLNode#201](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#201)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextLeave">
+      <MemberSignature Language="C#" Value="public event Microsoft.Office.Tools.Word.ContextChangeEventHandler ContextLeave;" />
+      <MemberSignature Language="ILAsm" Value=".event class Microsoft.Office.Tools.Word.ContextChangeEventHandler ContextLeave" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.Word.XMLNode.ContextLeave" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Word.ContextChangeEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="26531-159">当光标从 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 控件或它的一个子代节点移到原始节点上下文以外的区域时发生。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-159">Occurs when the cursor is moved from the <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> control, or one of its descendent nodes, to an area outside of the context of the original node.</span>
+          </span>
+        </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="26531-160"><xref:Microsoft.Office.Tools.Word.XMLNode.ContextLeave>事件区别<xref:Microsoft.Office.Tools.Word.XMLNode.Deselect>事件。</span><span class="sxs-lookup"><span data-stu-id="26531-160">The <xref:Microsoft.Office.Tools.Word.XMLNode.ContextLeave> event differs from the <xref:Microsoft.Office.Tools.Word.XMLNode.Deselect> event.</span></span> <span data-ttu-id="26531-161"><xref:Microsoft.Office.Tools.Word.XMLNode.ContextLeave>仅上下文更改时引发事件。</span><span class="sxs-lookup"><span data-stu-id="26531-161">The <xref:Microsoft.Office.Tools.Word.XMLNode.ContextLeave> event is raised only when the context changes.</span></span> <span data-ttu-id="26531-162">有关详细信息，请参阅[XMLNode 控件](/visualstudio/vsto/xmlnode-control.md)。</span><span class="sxs-lookup"><span data-stu-id="26531-162">For more information, see [XMLNode Control](/visualstudio/vsto/xmlnode-control.md).</span></span>  
+  
+   
+  
+## Examples  
+ <span data-ttu-id="26531-163">下面的代码示例演示了事件处理程序<xref:Microsoft.Office.Tools.Word.XMLNode.Select>， <xref:Microsoft.Office.Tools.Word.XMLNode.Deselect>， <xref:Microsoft.Office.Tools.Word.XMLNode.ContextEnter>，和<xref:Microsoft.Office.Tools.Word.XMLNode.ContextLeave>事件。</span><span class="sxs-lookup"><span data-stu-id="26531-163">The following code example demonstrates event handlers for the <xref:Microsoft.Office.Tools.Word.XMLNode.Select>, <xref:Microsoft.Office.Tools.Word.XMLNode.Deselect>, <xref:Microsoft.Office.Tools.Word.XMLNode.ContextEnter>, and <xref:Microsoft.Office.Tools.Word.XMLNode.ContextLeave> events.</span></span> <span data-ttu-id="26531-164">当<xref:Microsoft.Office.Tools.Word.XMLNode.Select>和<xref:Microsoft.Office.Tools.Word.XMLNode.Deselect>将引发事件，事件处理程序添加到所选内容的边框的双线或删除双线，具体取决于事件。</span><span class="sxs-lookup"><span data-stu-id="26531-164">When the <xref:Microsoft.Office.Tools.Word.XMLNode.Select> and <xref:Microsoft.Office.Tools.Word.XMLNode.Deselect> events are raised, the event handlers add double lines to the borders of the selection or remove the double lines, depending on the event.</span></span> <span data-ttu-id="26531-165">当<xref:Microsoft.Office.Tools.Word.XMLNode.ContextEnter>和<xref:Microsoft.Office.Tools.Word.XMLNode.ContextLeave>将引发事件，事件处理程序显示消息，指出新选择的节点和先前选择的节点的名称。</span><span class="sxs-lookup"><span data-stu-id="26531-165">When the <xref:Microsoft.Office.Tools.Word.XMLNode.ContextEnter> and <xref:Microsoft.Office.Tools.Word.XMLNode.ContextLeave> events are raised, the event handlers display messages that state the names of the newly selected node and the previously selected node.</span></span> <span data-ttu-id="26531-166">此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`。</span><span class="sxs-lookup"><span data-stu-id="26531-166">This example assumes that the current document contains an <xref:Microsoft.Office.Tools.Word.XMLNode> named `CustomerNode`.</span></span>  
+  
+ [!code-csharp[Trin_WordXMLNode#201](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#201)]
+ [!code-vb[Trin_WordXMLNode#201](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#201)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public void Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.XMLNode.Copy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+          <span data-ttu-id="26531-167">将 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 控件的内容复制到剪贴板。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-167">Copies the contents of the <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> control to the Clipboard.</span>
+          </span>
+        </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Creator">
+      <MemberSignature Language="C#" Value="public int Creator { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Creator" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.XMLNode.Creator" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="26531-168">获取在其中创建 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 控件的应用程序。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-168">Gets the application in which the <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> control was created.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="26531-169">在其中创建 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 控件的应用程序。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-169">The application in which the <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> control was created.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="26531-170">因为<xref:Microsoft.Office.Tools.Word.XMLNode>在 Microsoft Office Word 中创建控件，则此属性返回的十六进制数 4d535744，它表示字符串"MSWD。"</span><span class="sxs-lookup"><span data-stu-id="26531-170">Because the <xref:Microsoft.Office.Tools.Word.XMLNode> control was created in Microsoft Office Word, this property returns the hexadecimal number 4D535744, which represents the string "MSWD."</span></span> <span data-ttu-id="26531-171">此值也可以表示由常数<xref:Microsoft.Office.Interop.Word.WdConstants.wdCreatorCode>。</span><span class="sxs-lookup"><span data-stu-id="26531-171">This value can also be represented by the constant <xref:Microsoft.Office.Interop.Word.WdConstants.wdCreatorCode>.</span></span>  
+  
+   
+  
+## Examples  
+ <span data-ttu-id="26531-172">下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.Creator%2A>属性来显示一个消息，该值指示是否<xref:Microsoft.Office.Tools.Word.XMLNode>在 Microsoft Office Word 中创建控件。</span><span class="sxs-lookup"><span data-stu-id="26531-172">The following code example uses the <xref:Microsoft.Office.Tools.Word.XMLNode.Creator%2A> property to display a message indicating whether an <xref:Microsoft.Office.Tools.Word.XMLNode> control was created in Microsoft Office Word.</span></span> <span data-ttu-id="26531-173">此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`。</span><span class="sxs-lookup"><span data-stu-id="26531-173">This example assumes that the current document contains an <xref:Microsoft.Office.Tools.Word.XMLNode> named `CustomerNode`.</span></span>  
+  
+ [!code-csharp[Trin_WordXMLNode#5](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#5)]
+ [!code-vb[Trin_WordXMLNode#5](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cut">
+      <MemberSignature Language="C#" Value="public void Cut ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Cut() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.XMLNode.Cut" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+          <span data-ttu-id="26531-174">移除 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 控件的内容，并将内容放入剪贴板。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-174">Removes the contents of the <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> control and places the contents onto the Clipboard.</span>
+          </span>
+        </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultDataSourceUpdateMode">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataSourceUpdateMode DefaultDataSourceUpdateMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataSourceUpdateMode DefaultDataSourceUpdateMode" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.XMLNode.DefaultDataSourceUpdateMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataSourceUpdateMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="26531-175">获取或设置 <see cref="T:System.Windows.Forms.DataSourceUpdateMode" /> 的默认 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-175">Gets or sets the default <see cref="T:System.Windows.Forms.DataSourceUpdateMode" /> for the <see cref="T:Microsoft.Office.Tools.Word.XMLNode" />.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="26531-176">
+            <see cref="T:System.Windows.Forms.DataSourceUpdateMode" /> 值之一。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-176">One of the <see cref="T:System.Windows.Forms.DataSourceUpdateMode" /> values.</span>
+          </span>
+          <span data-ttu-id="26531-177">默认值是<c>System.Windows.Forms.DataSourceUpdateMode.Never</c>。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-177">The default is <c>System.Windows.Forms.DataSourceUpdateMode.Never</c>.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="26531-178">在情况下使用此属性其中<xref:System.Windows.Forms.Binding>而无需<xref:System.Windows.Forms.Binding.DataSourceUpdateMode%2A>指定值添加到<xref:System.Windows.Forms.IBindableComponent.DataBindings%2A>集合。</span><span class="sxs-lookup"><span data-stu-id="26531-178">This property is used in cases where a <xref:System.Windows.Forms.Binding> without a <xref:System.Windows.Forms.Binding.DataSourceUpdateMode%2A> value specified is added to the <xref:System.Windows.Forms.IBindableComponent.DataBindings%2A> collection.</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Deselect">
+      <MemberSignature Language="C#" Value="public event Microsoft.Office.Tools.Word.ContextChangeEventHandler Deselect;" />
+      <MemberSignature Language="ILAsm" Value=".event class Microsoft.Office.Tools.Word.ContextChangeEventHandler Deselect" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.Word.XMLNode.Deselect" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Word.ContextChangeEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="26531-179">当光标从 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 控件移出时发生。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-179">Occurs when the cursor is moved out of the <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> control.</span>
+          </span>
+        </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="26531-180"><xref:Microsoft.Office.Tools.Word.XMLNode.Deselect>事件区别<xref:Microsoft.Office.Tools.Word.XMLNode.ContextLeave>事件。</span><span class="sxs-lookup"><span data-stu-id="26531-180">The <xref:Microsoft.Office.Tools.Word.XMLNode.Deselect> event differs from the <xref:Microsoft.Office.Tools.Word.XMLNode.ContextLeave> event.</span></span> <span data-ttu-id="26531-181">有关详细信息，请参阅[XMLNode 控件](/visualstudio/vsto/xmlnode-control.md)。</span><span class="sxs-lookup"><span data-stu-id="26531-181">For more information, see [XMLNode Control](/visualstudio/vsto/xmlnode-control.md).</span></span>  
+  
+   
+  
+## Examples  
+ <span data-ttu-id="26531-182">下面的代码示例演示了事件处理程序<xref:Microsoft.Office.Tools.Word.XMLNode.Select>， <xref:Microsoft.Office.Tools.Word.XMLNode.Deselect>， <xref:Microsoft.Office.Tools.Word.XMLNode.ContextEnter>，和<xref:Microsoft.Office.Tools.Word.XMLNode.ContextLeave>事件。</span><span class="sxs-lookup"><span data-stu-id="26531-182">The following code example demonstrates event handlers for the <xref:Microsoft.Office.Tools.Word.XMLNode.Select>, <xref:Microsoft.Office.Tools.Word.XMLNode.Deselect>, <xref:Microsoft.Office.Tools.Word.XMLNode.ContextEnter>, and <xref:Microsoft.Office.Tools.Word.XMLNode.ContextLeave> events.</span></span> <span data-ttu-id="26531-183">当<xref:Microsoft.Office.Tools.Word.XMLNode.Select>和<xref:Microsoft.Office.Tools.Word.XMLNode.Deselect>将引发事件，事件处理程序添加到所选内容的边框的双线或删除双线，具体取决于事件。</span><span class="sxs-lookup"><span data-stu-id="26531-183">When the <xref:Microsoft.Office.Tools.Word.XMLNode.Select> and <xref:Microsoft.Office.Tools.Word.XMLNode.Deselect> events are raised, the event handlers add double lines to the borders of the selection or remove the double lines, depending on the event.</span></span> <span data-ttu-id="26531-184">当<xref:Microsoft.Office.Tools.Word.XMLNode.ContextEnter>和<xref:Microsoft.Office.Tools.Word.XMLNode.ContextLeave>将引发事件，事件处理程序显示消息，指出新选择的节点和先前选择的节点的名称。</span><span class="sxs-lookup"><span data-stu-id="26531-184">When the <xref:Microsoft.Office.Tools.Word.XMLNode.ContextEnter> and <xref:Microsoft.Office.Tools.Word.XMLNode.ContextLeave> events are raised, the event handlers display messages that state the names of the newly selected node and the previously selected node.</span></span> <span data-ttu-id="26531-185">此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`。</span><span class="sxs-lookup"><span data-stu-id="26531-185">This example assumes that the current document contains an <xref:Microsoft.Office.Tools.Word.XMLNode> named `CustomerNode`.</span></span>  
+  
+ [!code-csharp[Trin_WordXMLNode#201](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#201)]
+ [!code-vb[Trin_WordXMLNode#201](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#201)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FirstChild">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Word.XMLNode FirstChild { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Interop.Word.XMLNode FirstChild" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.XMLNode.FirstChild" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Word.XMLNode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="26531-186">获取一个 <see cref="T:Microsoft.Office.Interop.Word.XMLNode" /> 对象，该对象表示 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 控件中的第一个子节点。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-186">Gets a <see cref="T:Microsoft.Office.Interop.Word.XMLNode" /> object that represents the first child node in the <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> control.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="26531-187">一个 <see cref="T:Microsoft.Office.Interop.Word.XMLNode" /> 对象，表示 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 控件中的第一个子节点。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-187">A <see cref="T:Microsoft.Office.Interop.Word.XMLNode" /> object that represents the first child node in the <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> control.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="26531-188">使用<xref:Microsoft.Office.Tools.Word.XMLNode.LastChild%2A>属性来访问最后一个子节点。</span><span class="sxs-lookup"><span data-stu-id="26531-188">Use the <xref:Microsoft.Office.Tools.Word.XMLNode.LastChild%2A> property to access the last child node.</span></span>  
+  
+   
+  
+## Examples  
+ <span data-ttu-id="26531-189">下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.FirstChild%2A>属性来显示的第一个子节点的名称<xref:Microsoft.Office.Tools.Word.XMLNode>控件。</span><span class="sxs-lookup"><span data-stu-id="26531-189">The following code example uses the <xref:Microsoft.Office.Tools.Word.XMLNode.FirstChild%2A> property to display the name of the first child node of an <xref:Microsoft.Office.Tools.Word.XMLNode> control.</span></span> <span data-ttu-id="26531-190">此示例还使用<xref:Microsoft.Office.Tools.Word.XMLNode.HasChildNodes%2A>属性来确定是否<xref:Microsoft.Office.Tools.Word.XMLNode>控件具有任何子节点。</span><span class="sxs-lookup"><span data-stu-id="26531-190">The example also uses the <xref:Microsoft.Office.Tools.Word.XMLNode.HasChildNodes%2A> property to determine whether the <xref:Microsoft.Office.Tools.Word.XMLNode> control has any child nodes.</span></span> <span data-ttu-id="26531-191">此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`。</span><span class="sxs-lookup"><span data-stu-id="26531-191">This example assumes that the current document contains an <xref:Microsoft.Office.Tools.Word.XMLNode> named `CustomerNode`.</span></span>  
+  
+ [!code-csharp[Trin_WordXMLNode#6](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#6)]
+ [!code-vb[Trin_WordXMLNode#6](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasChildNodes">
+      <MemberSignature Language="C#" Value="public bool HasChildNodes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasChildNodes" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.XMLNode.HasChildNodes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="26531-192">获取一个值，该值指示 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 控件是否有子元素。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-192">Gets a value that indicates whether the <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> control has child elements.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="26531-193">如果 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 控件有子元素，则为 <see langword="true" />；否则为 <see langword="false" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-193">
+              <see langword="true" /> if the <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> control has child elements; otherwise, <see langword="false" />.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ <span data-ttu-id="26531-194">下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.FirstChild%2A>属性来显示的第一个子节点的名称<xref:Microsoft.Office.Tools.Word.XMLNode>控件。</span><span class="sxs-lookup"><span data-stu-id="26531-194">The following code example uses the <xref:Microsoft.Office.Tools.Word.XMLNode.FirstChild%2A> property to display the name of the first child node of an <xref:Microsoft.Office.Tools.Word.XMLNode> control.</span></span> <span data-ttu-id="26531-195">此示例还使用<xref:Microsoft.Office.Tools.Word.XMLNode.HasChildNodes%2A>属性来确定是否<xref:Microsoft.Office.Tools.Word.XMLNode>控件具有任何子节点。</span><span class="sxs-lookup"><span data-stu-id="26531-195">The example also uses the <xref:Microsoft.Office.Tools.Word.XMLNode.HasChildNodes%2A> property to determine whether the <xref:Microsoft.Office.Tools.Word.XMLNode> control has any child nodes.</span></span> <span data-ttu-id="26531-196">此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`。</span><span class="sxs-lookup"><span data-stu-id="26531-196">This example assumes that the current document contains an <xref:Microsoft.Office.Tools.Word.XMLNode> named `CustomerNode`.</span></span>  
+  
+ [!code-csharp[Trin_WordXMLNode#6](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#6)]
+ [!code-vb[Trin_WordXMLNode#6](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InnerObject">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Word.XMLNode InnerObject { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Interop.Word.XMLNode InnerObject" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.XMLNode.InnerObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Word.XMLNode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="26531-197">获取一个 <see cref="T:Microsoft.Office.Interop.Word.XMLNode" />，表示 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 的基础本机对象。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-197">Gets a <see cref="T:Microsoft.Office.Interop.Word.XMLNode" /> that represents the underlying native object for the <see cref="T:Microsoft.Office.Tools.Word.XMLNode" />.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="26531-198">一个 <see cref="T:Microsoft.Office.Interop.Word.XMLNode" />，表示 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 的基础本机对象。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-198">A <see cref="T:Microsoft.Office.Interop.Word.XMLNode" /> that represents the underlying native object for the <see cref="T:Microsoft.Office.Tools.Word.XMLNode" />.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="26531-199">不能将传递<xref:Microsoft.Office.Tools.Word.XMLNode?displayProperty=fullName>主机到方法或属性需要基础对象的控件 ( <xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName>)。</span><span class="sxs-lookup"><span data-stu-id="26531-199">You cannot pass a <xref:Microsoft.Office.Tools.Word.XMLNode?displayProperty=fullName> host control to a method or property that expects the underlying object (a <xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName>).</span></span> <span data-ttu-id="26531-200">必须使用<xref:Microsoft.Office.Tools.Word.XMLNode.InnerObject%2A>属性<xref:Microsoft.Office.Tools.Word.XMLNode?displayProperty=fullName>主机控件来访问基础<xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName>。</span><span class="sxs-lookup"><span data-stu-id="26531-200">You must use the <xref:Microsoft.Office.Tools.Word.XMLNode.InnerObject%2A> property of the <xref:Microsoft.Office.Tools.Word.XMLNode?displayProperty=fullName> host control to access the underlying <xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName>.</span></span> <span data-ttu-id="26531-201">然后将该对象传递给方法或属性需要<xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName>。</span><span class="sxs-lookup"><span data-stu-id="26531-201">You then pass this object to a method or property that expects a <xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName>.</span></span> <span data-ttu-id="26531-202">有关详细信息，请参阅[限制的主机项和主机控件编程](/visualstudio/vsto/programmatic-limitations-of-host-items-and-host-controls.md)。</span><span class="sxs-lookup"><span data-stu-id="26531-202">For more information, see [Programmatic Limitations of Host Items and Host Controls](/visualstudio/vsto/programmatic-limitations-of-host-items-and-host-controls.md).</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LastChild">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Word.XMLNode LastChild { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Interop.Word.XMLNode LastChild" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.XMLNode.LastChild" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Word.XMLNode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="26531-203">获取一个 <see cref="T:Microsoft.Office.Interop.Word.XMLNode" /> 对象，该对象表示 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 控件的最后一个子节点。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-203">Gets a <see cref="T:Microsoft.Office.Interop.Word.XMLNode" /> object that represents the last child node of the <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> control.</span>
+          </span>
+        </summary>
+        <value>To be added.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="26531-204">使用<xref:Microsoft.Office.Tools.Word.XMLNode.FirstChild%2A>属性来访问第一个子节点。</span><span class="sxs-lookup"><span data-stu-id="26531-204">Use the <xref:Microsoft.Office.Tools.Word.XMLNode.FirstChild%2A> property to access the first child node.</span></span>  
+  
+   
+  
+## Examples  
+ <span data-ttu-id="26531-205">下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.LastChild%2A>属性来显示的最后一个子节点的名称<xref:Microsoft.Office.Tools.Word.XMLNode>控件。</span><span class="sxs-lookup"><span data-stu-id="26531-205">The following code example uses the <xref:Microsoft.Office.Tools.Word.XMLNode.LastChild%2A> property to display the name of the last child node of an <xref:Microsoft.Office.Tools.Word.XMLNode> control.</span></span> <span data-ttu-id="26531-206">此示例还使用<xref:Microsoft.Office.Tools.Word.XMLNode.HasChildNodes%2A>属性来确定是否<xref:Microsoft.Office.Tools.Word.XMLNode>控件具有任何子节点。</span><span class="sxs-lookup"><span data-stu-id="26531-206">The example also uses the <xref:Microsoft.Office.Tools.Word.XMLNode.HasChildNodes%2A> property to determine whether the <xref:Microsoft.Office.Tools.Word.XMLNode> control has any child nodes.</span></span> <span data-ttu-id="26531-207">此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`。</span><span class="sxs-lookup"><span data-stu-id="26531-207">This example assumes that the current document contains an <xref:Microsoft.Office.Tools.Word.XMLNode> named `CustomerNode`.</span></span>  
+  
+ [!code-csharp[Trin_WordXMLNode#8](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#8)]
+ [!code-vb[Trin_WordXMLNode#8](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Level">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Word.WdXMLNodeLevel Level { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Office.Interop.Word.WdXMLNodeLevel Level" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.XMLNode.Level" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Word.WdXMLNodeLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="26531-208">获取 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 控件的级别。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-208">Gets the level of the <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> control.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="26531-209">
+            <see cref="T:Microsoft.Office.Interop.Word.WdXMLNodeLevel" /> 值之一。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-209">One of the <see cref="T:Microsoft.Office.Interop.Word.WdXMLNodeLevel" /> values.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ <span data-ttu-id="26531-210">下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.Level%2A>属性显示的级别<xref:Microsoft.Office.Tools.Word.XMLNode>控件。</span><span class="sxs-lookup"><span data-stu-id="26531-210">The following code example uses the <xref:Microsoft.Office.Tools.Word.XMLNode.Level%2A> property to display the level of an <xref:Microsoft.Office.Tools.Word.XMLNode> control.</span></span> <span data-ttu-id="26531-211">此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`。</span><span class="sxs-lookup"><span data-stu-id="26531-211">This example assumes that the current document contains an <xref:Microsoft.Office.Tools.Word.XMLNode> named `CustomerNode`.</span></span>  
+  
+ [!code-csharp[Trin_WordXMLNode#9](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#9)]
+ [!code-vb[Trin_WordXMLNode#9](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Load">
+      <MemberSignature Language="C#" Value="public void Load (string fileName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Load(string fileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.XMLNode.Load(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">
+          <span data-ttu-id="26531-212">要从中读取 XML 的文件的路径。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-212">The path to the file from which to read the XML.</span>
+          </span>
+        </param>
+        <summary>
+          <span data-ttu-id="26531-213">使用来自指定 XML 文件的数据更新 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 控件</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-213">Updates an <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> control with data from the specified XML file</span>
+          </span>
+        </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="26531-214">此方法不会添加其他<xref:Microsoft.Office.Tools.Word.XMLNode>控件或删除不必要<xref:Microsoft.Office.Tools.Word.XMLNode>从文档的控件。</span><span class="sxs-lookup"><span data-stu-id="26531-214">This method does not add additional <xref:Microsoft.Office.Tools.Word.XMLNode> controls or delete unnecessary <xref:Microsoft.Office.Tools.Word.XMLNode> controls from the document.</span></span>  
+  
+ <span data-ttu-id="26531-215">此方法将更新的所有属性<xref:Microsoft.Office.Tools.Word.XMLNode>控件。</span><span class="sxs-lookup"><span data-stu-id="26531-215">This method updates all attributes of the <xref:Microsoft.Office.Tools.Word.XMLNode> control.</span></span>  
+  
+   
+  
+## Examples  
+ <span data-ttu-id="26531-216">下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.Load%2A>方法以填充<xref:Microsoft.Office.Tools.Word.XMLNode>XML 文件中的数据。</span><span class="sxs-lookup"><span data-stu-id="26531-216">The following code example uses the <xref:Microsoft.Office.Tools.Word.XMLNode.Load%2A> method to fill an <xref:Microsoft.Office.Tools.Word.XMLNode> with data from an XML file.</span></span> <span data-ttu-id="26531-217">此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`。</span><span class="sxs-lookup"><span data-stu-id="26531-217">This example assumes that the current document contains an <xref:Microsoft.Office.Tools.Word.XMLNode> named `CustomerNode`.</span></span> <span data-ttu-id="26531-218">此示例还假定 XML 文件名为 Customers.xml，符合与关联架构`CustomerNode`，D 目录的根目录上存在。</span><span class="sxs-lookup"><span data-stu-id="26531-218">This example also assumes that an XML file named Customers.xml, which conforms to the schema associated with `CustomerNode`, exists at the root of the D directory.</span></span>  
+  
+ [!code-csharp[Trin_WordXMLNode#100](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#100)]
+ [!code-vb[Trin_WordXMLNode#100](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#100)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadXml">
+      <MemberSignature Language="C#" Value="public void LoadXml (string xml);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void LoadXml(string xml) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.XMLNode.LoadXml(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xml" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="xml">
+          <span data-ttu-id="26531-219">要从中读取数据的 XML 字符串。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-219">The XML string to read data from.</span>
+          </span>
+        </param>
+        <summary>
+          <span data-ttu-id="26531-220">使用来自指定 XML 字符串的数据填充 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 控件。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-220">Populates an <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> control with data from the specified XML string.</span>
+          </span>
+        </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="26531-221">此方法不会添加其他<xref:Microsoft.Office.Tools.Word.XMLNode>控件或删除不必要<xref:Microsoft.Office.Tools.Word.XMLNode>从文档的控件。</span><span class="sxs-lookup"><span data-stu-id="26531-221">This method does not add additional <xref:Microsoft.Office.Tools.Word.XMLNode> controls or delete unnecessary <xref:Microsoft.Office.Tools.Word.XMLNode> controls from the document.</span></span>  
+  
+ <span data-ttu-id="26531-222">此方法将更新的所有属性<xref:Microsoft.Office.Tools.Word.XMLNode>控件。</span><span class="sxs-lookup"><span data-stu-id="26531-222">This method updates all attributes of the <xref:Microsoft.Office.Tools.Word.XMLNode> control.</span></span>  
+  
+   
+  
+## Examples  
+ <span data-ttu-id="26531-223">下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.LoadXml%2A>方法以填充<xref:Microsoft.Office.Tools.Word.XMLNode>与 XML 字符串中的数据的控件。</span><span class="sxs-lookup"><span data-stu-id="26531-223">The following code example uses the <xref:Microsoft.Office.Tools.Word.XMLNode.LoadXml%2A> method to fill an <xref:Microsoft.Office.Tools.Word.XMLNode> control with data from an XML string.</span></span> <span data-ttu-id="26531-224">此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`，且与关联架构的命名空间和中的 XML 字符串描述元素符合`CustomerNode`。</span><span class="sxs-lookup"><span data-stu-id="26531-224">This example assumes that the current document contains an <xref:Microsoft.Office.Tools.Word.XMLNode> named `CustomerNode`, and the namespace and elements described in the XML string conform to the schema associated with `CustomerNode`.</span></span>  
+  
+ [!code-csharp[Trin_WordXMLNode#101](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#101)]
+ [!code-vb[Trin_WordXMLNode#101](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#101)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadXml">
+      <MemberSignature Language="C#" Value="public void LoadXml (System.Xml.XmlDocument document);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void LoadXml(class System.Xml.XmlDocument document) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.XMLNode.LoadXml(System.Xml.XmlDocument)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="document" Type="System.Xml.XmlDocument" />
+      </Parameters>
+      <Docs>
+        <param name="document">
+          <span data-ttu-id="26531-225">包含数据的 <see cref="T:System.Xml.XmlDocument" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-225">The <see cref="T:System.Xml.XmlDocument" /> that contains the data.</span>
+          </span>
+        </param>
+        <summary>
+          <span data-ttu-id="26531-226">使用来自指定 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 的根节点的数据填充 <see cref="T:System.Xml.XmlDocument" /> 控件。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-226">Populates an <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> control with data from the root node of the specified <see cref="T:System.Xml.XmlDocument" />.</span>
+          </span>
+        </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="26531-227">此方法不会添加其他<xref:Microsoft.Office.Tools.Word.XMLNode>控件或删除不必要<xref:Microsoft.Office.Tools.Word.XMLNode>从文档的控件。</span><span class="sxs-lookup"><span data-stu-id="26531-227">This method does not add additional <xref:Microsoft.Office.Tools.Word.XMLNode> controls or delete unnecessary <xref:Microsoft.Office.Tools.Word.XMLNode> controls from the document.</span></span>  
+  
+ <span data-ttu-id="26531-228">此方法将更新的所有属性<xref:Microsoft.Office.Tools.Word.XMLNode>控件。</span><span class="sxs-lookup"><span data-stu-id="26531-228">This method updates all attributes of the <xref:Microsoft.Office.Tools.Word.XMLNode> control.</span></span>  
+  
+   
+  
+## Examples  
+ <span data-ttu-id="26531-229">下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.LoadXml%2A>方法以填充<xref:Microsoft.Office.Tools.Word.XMLNode>中的数据<xref:System.Xml.XmlDocument>。</span><span class="sxs-lookup"><span data-stu-id="26531-229">The following code example uses the <xref:Microsoft.Office.Tools.Word.XMLNode.LoadXml%2A> method to fill an <xref:Microsoft.Office.Tools.Word.XMLNode> with data from an <xref:System.Xml.XmlDocument>.</span></span> <span data-ttu-id="26531-230">该示例读取到 XML 文件的内容<xref:System.IO.StreamReader>，加载此<xref:System.IO.StreamReader>到<xref:System.Xml.XmlDocument>，然后使用<xref:System.Xml.XmlDocument>为`document`参数<xref:Microsoft.Office.Tools.Word.XMLNode.LoadXml%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="26531-230">The example reads the contents of an XML file into a <xref:System.IO.StreamReader>, loads this <xref:System.IO.StreamReader> into an <xref:System.Xml.XmlDocument>, and then uses the <xref:System.Xml.XmlDocument> for the `document` parameter of the <xref:Microsoft.Office.Tools.Word.XMLNode.LoadXml%2A> method.</span></span> <span data-ttu-id="26531-231">此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`。</span><span class="sxs-lookup"><span data-stu-id="26531-231">This example assumes that the current document contains an <xref:Microsoft.Office.Tools.Word.XMLNode> named `CustomerNode`.</span></span> <span data-ttu-id="26531-232">此示例还假定 XML 文件名为 Customers.xml，符合与关联架构`CustomerNode`，D 目录的根目录上存在。</span><span class="sxs-lookup"><span data-stu-id="26531-232">This example also assumes that an XML file named Customers.xml, which conforms to the schema associated with `CustomerNode`, exists at the root of the D directory.</span></span>  
+  
+ [!code-csharp[Trin_WordXMLNode#102](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#102)]
+ [!code-vb[Trin_WordXMLNode#102](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#102)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadXml">
+      <MemberSignature Language="C#" Value="public void LoadXml (System.Xml.XmlElement xmlElement);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void LoadXml(class System.Xml.XmlElement xmlElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.XMLNode.LoadXml(System.Xml.XmlElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xmlElement" Type="System.Xml.XmlElement" />
+      </Parameters>
+      <Docs>
+        <param name="xmlElement">
+          <span data-ttu-id="26531-233">包含数据的 XML 元素。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-233">The XML element that contains the data.</span>
+          </span>
+        </param>
+        <summary>
+          <span data-ttu-id="26531-234">使用来自 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 的数据填充 <see cref="T:System.Xml.XmlElement" /> 控件。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-234">Populates an <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> control with data from an <see cref="T:System.Xml.XmlElement" />.</span>
+          </span>
+        </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="26531-235">此方法不会添加其他<xref:Microsoft.Office.Tools.Word.XMLNode>控件或删除不必要<xref:Microsoft.Office.Tools.Word.XMLNode>从文档的控件。</span><span class="sxs-lookup"><span data-stu-id="26531-235">This method does not add additional <xref:Microsoft.Office.Tools.Word.XMLNode> controls or delete unnecessary <xref:Microsoft.Office.Tools.Word.XMLNode> controls from the document.</span></span>  
+  
+ <span data-ttu-id="26531-236">此方法将更新的所有属性<xref:Microsoft.Office.Tools.Word.XMLNode>控件。</span><span class="sxs-lookup"><span data-stu-id="26531-236">This method updates all attributes of the <xref:Microsoft.Office.Tools.Word.XMLNode> control.</span></span>  
+  
+   
+  
+## Examples  
+ <span data-ttu-id="26531-237">下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.LoadXml%2A>方法以填充<xref:Microsoft.Office.Tools.Word.XMLNode>中的数据<xref:System.Xml.XmlElement>。</span><span class="sxs-lookup"><span data-stu-id="26531-237">The following code example uses the <xref:Microsoft.Office.Tools.Word.XMLNode.LoadXml%2A> method to fill an <xref:Microsoft.Office.Tools.Word.XMLNode> with data from an <xref:System.Xml.XmlElement>.</span></span> <span data-ttu-id="26531-238">该示例读取到 XML 文件的内容<xref:System.IO.StreamReader>，加载此<xref:System.IO.StreamReader>到<xref:System.Xml.XmlDocument>，然后初始化<xref:System.Xml.XmlElement>表示中的第一个子元素<xref:System.Xml.XmlDocument>。</span><span class="sxs-lookup"><span data-stu-id="26531-238">The example reads the contents of an XML file into a <xref:System.IO.StreamReader>, loads this <xref:System.IO.StreamReader> into an <xref:System.Xml.XmlDocument>, and then initializes an <xref:System.Xml.XmlElement> that represents the first child element in the <xref:System.Xml.XmlDocument>.</span></span> <span data-ttu-id="26531-239">这<xref:System.Xml.XmlElement>然后用于`xmlElement`参数<xref:Microsoft.Office.Tools.Word.XMLNode.LoadXml%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="26531-239">This <xref:System.Xml.XmlElement> is then used for the `xmlElement` parameter of the <xref:Microsoft.Office.Tools.Word.XMLNode.LoadXml%2A> method.</span></span> <span data-ttu-id="26531-240">此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerLastNameNode`相对应的关联的架构中的第一个子元素。</span><span class="sxs-lookup"><span data-stu-id="26531-240">This example assumes that the current document contains an <xref:Microsoft.Office.Tools.Word.XMLNode> named `CustomerLastNameNode` that corresponds to the first child element in the associated schema.</span></span> <span data-ttu-id="26531-241">此示例还假定一个名为 Customers.xml，与关联的架构一致的 XML 文件位于 D 目录的根目录。</span><span class="sxs-lookup"><span data-stu-id="26531-241">This example also assumes that an XML file named Customers.xml, which conforms to the associated schema, exists at the root of the D directory.</span></span>  
+  
+ [!code-csharp[Trin_WordXMLNode#103](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#103)]
+ [!code-vb[Trin_WordXMLNode#103](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#103)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NamespaceURI">
+      <MemberSignature Language="C#" Value="public string NamespaceURI { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NamespaceURI" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.XMLNode.NamespaceURI" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="26531-242">获取 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 控件的架构命名空间的统一资源标识符 (URI)。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-242">Gets the Uniform Resource Identifier (URI) of the schema namespace for the <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> control.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="26531-243">
+            <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 控件的架构命名空间的 URI。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-243">The URI of the schema namespace for the <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> control.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="26531-244">如果创作用于 Microsoft Office Word 的 XML 架构时，强烈建议您指定<xref:System.Xml.Schema.XmlSchema.TargetNamespace%2A>设置在架构中。</span><span class="sxs-lookup"><span data-stu-id="26531-244">If you are authoring XML schemas for use with Microsoft Office Word, it is highly recommended that you specify the <xref:System.Xml.Schema.XmlSchema.TargetNamespace%2A> setting in the schema.</span></span>  
+  
+   
+  
+## Examples  
+ <span data-ttu-id="26531-245">下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.Attributes%2A>属性添加到属性<xref:Microsoft.Office.Tools.Word.XMLNode>控件。</span><span class="sxs-lookup"><span data-stu-id="26531-245">The following code example uses the <xref:Microsoft.Office.Tools.Word.XMLNode.Attributes%2A> property to add an attribute to an <xref:Microsoft.Office.Tools.Word.XMLNode> control.</span></span> <span data-ttu-id="26531-246"><xref:Microsoft.Office.Tools.Word.XMLNode.NamespaceURI%2A>属性用于指定架构命名空间。</span><span class="sxs-lookup"><span data-stu-id="26531-246">The <xref:Microsoft.Office.Tools.Word.XMLNode.NamespaceURI%2A> property is used to specify the schema namespace.</span></span> <span data-ttu-id="26531-247">然后，该示例循环访问中的每个属性<xref:Microsoft.Office.Tools.Word.XMLNode>并显示属性名称和它的值。</span><span class="sxs-lookup"><span data-stu-id="26531-247">The example then iterates through every attribute in the <xref:Microsoft.Office.Tools.Word.XMLNode> and displays the attribute name and its value.</span></span> <span data-ttu-id="26531-248">名称<xref:Microsoft.Office.Tools.Word.XMLNode>从获取<xref:Microsoft.Office.Tools.Word.XMLNode.BaseName%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="26531-248">The name of the <xref:Microsoft.Office.Tools.Word.XMLNode> is obtained from the <xref:Microsoft.Office.Tools.Word.XMLNode.BaseName%2A> property.</span></span> <span data-ttu-id="26531-249">此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`具有`NewCustomer`架构中声明的属性。</span><span class="sxs-lookup"><span data-stu-id="26531-249">This example assumes that the current document contains an <xref:Microsoft.Office.Tools.Word.XMLNode> named `CustomerNode` that has a `NewCustomer` attribute declared in the schema.</span></span>  
+  
+ [!code-csharp[Trin_WordXMLNode#2](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#2)]
+ [!code-vb[Trin_WordXMLNode#2](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NextSibling">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Word.XMLNode NextSibling { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Interop.Word.XMLNode NextSibling" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.XMLNode.NextSibling" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Word.XMLNode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="26531-250">获取一个 <see cref="T:Microsoft.Office.Interop.Word.XMLNode" /> 对象，该对象表示文档中的下一个与 <see cref="T:Microsoft.Office.Interop.Word.XMLNode" /> 控件处于相同级别的 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 对象。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-250">Gets a <see cref="T:Microsoft.Office.Interop.Word.XMLNode" /> object that represents the next <see cref="T:Microsoft.Office.Interop.Word.XMLNode" /> object in the document that is at the same level as the <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> control.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="26531-251">一个 <see cref="T:Microsoft.Office.Interop.Word.XMLNode" /> 控件，表示文档中的下一个与指定元素处于相同级别的元素。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-251">A <see cref="T:Microsoft.Office.Interop.Word.XMLNode" /> control that represents the next element in the document that is at the same level as the specified element.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="26531-252">如果指定的元素是中的最后一个元素<xref:Microsoft.Office.Tools.Word.XMLNodes?displayProperty=fullName>此级别的集合，此属性返回`null`。</span><span class="sxs-lookup"><span data-stu-id="26531-252">If the specified element is the last element in the <xref:Microsoft.Office.Tools.Word.XMLNodes?displayProperty=fullName> collection at this level, this property returns `null`.</span></span>  
+  
+   
+  
+## Examples  
+ <span data-ttu-id="26531-253">下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.PreviousSibling%2A>和<xref:Microsoft.Office.Tools.Word.XMLNode.NextSibling%2A>要之前和之后显示的元素的名称的属性<xref:Microsoft.Office.Tools.Word.XMLNode>控件。</span><span class="sxs-lookup"><span data-stu-id="26531-253">The following code example uses the <xref:Microsoft.Office.Tools.Word.XMLNode.PreviousSibling%2A> and <xref:Microsoft.Office.Tools.Word.XMLNode.NextSibling%2A> properties to display the names of the elements before and after an <xref:Microsoft.Office.Tools.Word.XMLNode> control.</span></span> <span data-ttu-id="26531-254">此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerFirstNameNode`。</span><span class="sxs-lookup"><span data-stu-id="26531-254">This example assumes that the current document contains an <xref:Microsoft.Office.Tools.Word.XMLNode> named `CustomerFirstNameNode`.</span></span>  
+  
+ [!code-csharp[Trin_WordXMLNode#10](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#10)]
+ [!code-vb[Trin_WordXMLNode#10](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NodeText">
+      <MemberSignature Language="C#" Value="public string NodeText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NodeText" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.XMLNode.NodeText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="26531-255">获取或设置 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 控件的文本值。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-255">Gets or sets the text value of the <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> control.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="26531-256">
+            <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 控件的文本值。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-256">The text value of the <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> control.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="26531-257">设置文本值不会删除任何现有书签内的<xref:Microsoft.Office.Tools.Word.XMLNode>控件。</span><span class="sxs-lookup"><span data-stu-id="26531-257">Setting the text value does not delete any existing bookmarks inside the <xref:Microsoft.Office.Tools.Word.XMLNode> control.</span></span>  
+  
+   
+  
+## Examples  
+ <span data-ttu-id="26531-258">下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.NodeType%2A>属性来确定是否<xref:Microsoft.Office.Tools.Word.XMLNode>是一个元素或属性节点。</span><span class="sxs-lookup"><span data-stu-id="26531-258">The following code example uses the <xref:Microsoft.Office.Tools.Word.XMLNode.NodeType%2A> property to determine whether an <xref:Microsoft.Office.Tools.Word.XMLNode> is an element or attribute node.</span></span> <span data-ttu-id="26531-259">如果<xref:Microsoft.Office.Tools.Word.XMLNode>为元素，该示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.NodeText%2A>属性来设置元素中的文本。</span><span class="sxs-lookup"><span data-stu-id="26531-259">If the <xref:Microsoft.Office.Tools.Word.XMLNode> is an element, the example uses the <xref:Microsoft.Office.Tools.Word.XMLNode.NodeText%2A> property to set the text in the element.</span></span> <span data-ttu-id="26531-260">如果<xref:Microsoft.Office.Tools.Word.XMLNode>是一个特性，此示例将使用<xref:Microsoft.Office.Tools.Word.XMLNode.NodeValue%2A>属性来设置属性值。</span><span class="sxs-lookup"><span data-stu-id="26531-260">If the <xref:Microsoft.Office.Tools.Word.XMLNode> is an attribute, the example uses the <xref:Microsoft.Office.Tools.Word.XMLNode.NodeValue%2A> property to set the attribute value.</span></span> <span data-ttu-id="26531-261">此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerLastNameNode`。</span><span class="sxs-lookup"><span data-stu-id="26531-261">This example assumes that the current document contains an <xref:Microsoft.Office.Tools.Word.XMLNode> named `CustomerLastNameNode`.</span></span>  
+  
+ [!code-csharp[Trin_WordXMLNode#11](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#11)]
+ [!code-vb[Trin_WordXMLNode#11](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NodeType">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Word.WdXMLNodeType NodeType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Office.Interop.Word.WdXMLNodeType NodeType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.XMLNode.NodeType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Word.WdXMLNodeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="26531-262">获取一个值，该值指示 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 是特性还是元素。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-262">Gets a value that indicates whether an <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> is an attribute or an element.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="26531-263">表示节点类型的 <see cref="T:Microsoft.Office.Interop.Word.WdXMLNodeType" /> 值之一。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-263">One of the <see cref="T:Microsoft.Office.Interop.Word.WdXMLNodeType" /> values that represents the type of node.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="26531-264"><xref:Microsoft.Office.Tools.Word.XMLNode.NodeType%2A>属性可以是下列项之一<xref:Microsoft.Office.Interop.Word.WdXMLNodeType>值：</span><span class="sxs-lookup"><span data-stu-id="26531-264">The <xref:Microsoft.Office.Tools.Word.XMLNode.NodeType%2A> property can be one of the following <xref:Microsoft.Office.Interop.Word.WdXMLNodeType> values:</span></span>  
+  
+-   <span data-ttu-id="26531-265"><xref:Microsoft.Office.Interop.Word.WdXMLNodeType.wdXMLNodeAttribute> 指示属性节点。</span><span class="sxs-lookup"><span data-stu-id="26531-265"><xref:Microsoft.Office.Interop.Word.WdXMLNodeType.wdXMLNodeAttribute> indicates an attribute node.</span></span>  
+  
+-   <span data-ttu-id="26531-266"><xref:Microsoft.Office.Interop.Word.WdXMLNodeType.wdXMLNodeElement> 表示一个元素节点。</span><span class="sxs-lookup"><span data-stu-id="26531-266"><xref:Microsoft.Office.Interop.Word.WdXMLNodeType.wdXMLNodeElement> indicates an element node.</span></span>  
+  
+ <span data-ttu-id="26531-267">使用<xref:Microsoft.Office.Tools.Word.XMLNode.NodeType%2A>属性来确定哪种类型的节点你正在使用，以便不尝试对节点执行无效操作。</span><span class="sxs-lookup"><span data-stu-id="26531-267">Use the <xref:Microsoft.Office.Tools.Word.XMLNode.NodeType%2A> property to determine which type of node you are working with so that you do not attempt to perform invalid operations on the node.</span></span> <span data-ttu-id="26531-268">例如，<xref:Microsoft.Office.Interop.Word.XMLNode.Attributes%2A>属性仅适用于元素节点，但它会显示在列表中的可用属性的<xref:Microsoft.Office.Tools.Word.XMLNode>控件。</span><span class="sxs-lookup"><span data-stu-id="26531-268">For example, the <xref:Microsoft.Office.Interop.Word.XMLNode.Attributes%2A> property applies only to element nodes, although it appears in the list of available properties for the <xref:Microsoft.Office.Tools.Word.XMLNode> control.</span></span>  
+  
+   
+  
+## Examples  
+ <span data-ttu-id="26531-269">下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.NodeType%2A>属性来确定是否<xref:Microsoft.Office.Tools.Word.XMLNode>是一个元素或属性节点。</span><span class="sxs-lookup"><span data-stu-id="26531-269">The following code example uses the <xref:Microsoft.Office.Tools.Word.XMLNode.NodeType%2A> property to determine whether an <xref:Microsoft.Office.Tools.Word.XMLNode> is an element or attribute node.</span></span> <span data-ttu-id="26531-270">如果<xref:Microsoft.Office.Tools.Word.XMLNode>为元素，该示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.NodeText%2A>属性来设置元素中的文本。</span><span class="sxs-lookup"><span data-stu-id="26531-270">If the <xref:Microsoft.Office.Tools.Word.XMLNode> is an element, the example uses the <xref:Microsoft.Office.Tools.Word.XMLNode.NodeText%2A> property to set the text in the element.</span></span> <span data-ttu-id="26531-271">如果<xref:Microsoft.Office.Tools.Word.XMLNode>是一个特性，此示例将使用<xref:Microsoft.Office.Tools.Word.XMLNode.NodeValue%2A>属性来设置属性值。</span><span class="sxs-lookup"><span data-stu-id="26531-271">If the <xref:Microsoft.Office.Tools.Word.XMLNode> is an attribute, the example uses the <xref:Microsoft.Office.Tools.Word.XMLNode.NodeValue%2A> property to set the attribute value.</span></span> <span data-ttu-id="26531-272">此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerLastNameNode`。</span><span class="sxs-lookup"><span data-stu-id="26531-272">This example assumes that the current document contains an <xref:Microsoft.Office.Tools.Word.XMLNode> named `CustomerLastNameNode`.</span></span>  
+  
+ [!code-csharp[Trin_WordXMLNode#11](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#11)]
+ [!code-vb[Trin_WordXMLNode#11](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NodeValue">
+      <MemberSignature Language="C#" Value="public string NodeValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NodeValue" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.XMLNode.NodeValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="26531-273">获取或设置表示特性的 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 的值。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-273">Gets or sets the value of an <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> that represents an attribute.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="26531-274">表示特性的 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 的值。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-274">The value of the <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> that represents an attribute.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="26531-275">使用<xref:Microsoft.Office.Tools.Word.XMLNode.NodeType%2A>属性来确定哪种类型的节点你正在使用。</span><span class="sxs-lookup"><span data-stu-id="26531-275">Use the <xref:Microsoft.Office.Tools.Word.XMLNode.NodeType%2A> property to determine which type of node you are working with.</span></span>  
+  
+ <span data-ttu-id="26531-276">有关<xref:Microsoft.Office.Tools.Word.XMLNode>控制与<xref:Microsoft.Office.Interop.Word.XMLNode.NodeType%2A>值<xref:Microsoft.Office.Interop.Word.WdXMLNodeType.wdXMLNodeElement>、<xref:Microsoft.Office.Interop.Word.XMLNode.NodeValue%2A>属性会返回任何内容。</span><span class="sxs-lookup"><span data-stu-id="26531-276">For <xref:Microsoft.Office.Tools.Word.XMLNode> controls with a <xref:Microsoft.Office.Interop.Word.XMLNode.NodeType%2A> value of <xref:Microsoft.Office.Interop.Word.WdXMLNodeType.wdXMLNodeElement>, the <xref:Microsoft.Office.Interop.Word.XMLNode.NodeValue%2A> property returns nothing.</span></span>  
+  
+   
+  
+## Examples  
+ <span data-ttu-id="26531-277">下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.NodeType%2A>属性来确定是否<xref:Microsoft.Office.Tools.Word.XMLNode>是一个元素或属性节点。</span><span class="sxs-lookup"><span data-stu-id="26531-277">The following code example uses the <xref:Microsoft.Office.Tools.Word.XMLNode.NodeType%2A> property to determine whether an <xref:Microsoft.Office.Tools.Word.XMLNode> is an element or attribute node.</span></span> <span data-ttu-id="26531-278">如果<xref:Microsoft.Office.Tools.Word.XMLNode>为元素，该示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.NodeText%2A>属性来设置元素中的文本。</span><span class="sxs-lookup"><span data-stu-id="26531-278">If the <xref:Microsoft.Office.Tools.Word.XMLNode> is an element, the example uses the <xref:Microsoft.Office.Tools.Word.XMLNode.NodeText%2A> property to set the text in the element.</span></span> <span data-ttu-id="26531-279">如果<xref:Microsoft.Office.Tools.Word.XMLNode>是一个特性，此示例将使用<xref:Microsoft.Office.Tools.Word.XMLNode.NodeValue%2A>属性来设置属性值。</span><span class="sxs-lookup"><span data-stu-id="26531-279">If the <xref:Microsoft.Office.Tools.Word.XMLNode> is an attribute, the example uses the <xref:Microsoft.Office.Tools.Word.XMLNode.NodeValue%2A> property to set the attribute value.</span></span> <span data-ttu-id="26531-280">此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerLastNameNode`。</span><span class="sxs-lookup"><span data-stu-id="26531-280">This example assumes that the current document contains an <xref:Microsoft.Office.Tools.Word.XMLNode> named `CustomerLastNameNode`.</span></span>  
+  
+ [!code-csharp[Trin_WordXMLNode#11](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#11)]
+ [!code-vb[Trin_WordXMLNode#11](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OwnerDocument">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Word.Document OwnerDocument { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Interop.Word.Document OwnerDocument" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.XMLNode.OwnerDocument" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Word.Document</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="26531-281">获取一个 <see cref="T:Microsoft.Office.Interop.Word.Document" />，该对象表示指定 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 控件的父文档。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-281">Gets a <see cref="T:Microsoft.Office.Interop.Word.Document" /> that represents the parent document of the specified <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> control.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="26531-282">一个 <see cref="T:Microsoft.Office.Interop.Word.Document" /> 对象，表示指定 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 控件的父文档。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-282">A <see cref="T:Microsoft.Office.Interop.Word.Document" /> object that represents the parent document of the specified <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> control.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="26531-283"><xref:Microsoft.Office.Tools.Word.XMLNode.OwnerDocument%2A>属性返回与相同的结果<xref:Microsoft.Office.Tools.Word.XMLNode.Parent%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="26531-283">The <xref:Microsoft.Office.Tools.Word.XMLNode.OwnerDocument%2A> property returns the same result as the <xref:Microsoft.Office.Tools.Word.XMLNode.Parent%2A> property.</span></span>  
+  
+   
+  
+## Examples  
+ <span data-ttu-id="26531-284">下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.OwnerDocument%2A>属性显示的所有者文档的名称<xref:Microsoft.Office.Tools.Word.XMLNode>控件。</span><span class="sxs-lookup"><span data-stu-id="26531-284">The following code example uses the <xref:Microsoft.Office.Tools.Word.XMLNode.OwnerDocument%2A> property to display the name of the owner document of an <xref:Microsoft.Office.Tools.Word.XMLNode> control.</span></span> <span data-ttu-id="26531-285">此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`。</span><span class="sxs-lookup"><span data-stu-id="26531-285">This example assumes that the current document contains an <xref:Microsoft.Office.Tools.Word.XMLNode> named `CustomerNode`.</span></span>  
+  
+ [!code-csharp[Trin_WordXMLNode#12](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#12)]
+ [!code-vb[Trin_WordXMLNode#12](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#12)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="public object Parent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Parent" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.XMLNode.Parent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="26531-286">获取一个 <see cref="T:Microsoft.Office.Interop.Word.Document" />，它表示包含指定 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 控件的文档。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-286">Gets a <see cref="T:Microsoft.Office.Interop.Word.Document" /> that represents the document containing the specified <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> control.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="26531-287">一个 <see cref="T:Microsoft.Office.Interop.Word.Document" />，表示包含指定 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 控件的文档。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-287">A <see cref="T:Microsoft.Office.Interop.Word.Document" /> that represents the document containing the specified <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> control.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ <span data-ttu-id="26531-288">下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.Parent%2A>属性来显示的名称的父文档<xref:Microsoft.Office.Tools.Word.XMLNode>控件。</span><span class="sxs-lookup"><span data-stu-id="26531-288">The following code example uses the <xref:Microsoft.Office.Tools.Word.XMLNode.Parent%2A> property to display the name of the parent document of an <xref:Microsoft.Office.Tools.Word.XMLNode> control.</span></span> <span data-ttu-id="26531-289">此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`。</span><span class="sxs-lookup"><span data-stu-id="26531-289">This example assumes that the current document contains an <xref:Microsoft.Office.Tools.Word.XMLNode> named `CustomerNode`.</span></span>  
+  
+ [!code-csharp[Trin_WordXMLNode#13](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#13)]
+ [!code-vb[Trin_WordXMLNode#13](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#13)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParentNode">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Word.XMLNode ParentNode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Interop.Word.XMLNode ParentNode" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.XMLNode.ParentNode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Word.XMLNode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="26531-290">获取一个 <see cref="T:Microsoft.Office.Interop.Word.XMLNode" /> 对象，该对象表示指定 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 控件的父元素。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-290">Gets a <see cref="T:Microsoft.Office.Interop.Word.XMLNode" /> object that represents the parent element of the specified <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> control.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="26531-291">一个 <see cref="T:Microsoft.Office.Interop.Word.XMLNode" /> 控件，表示指定 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 对象的父元素。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-291">A <see cref="T:Microsoft.Office.Interop.Word.XMLNode" /> control that represents the parent element of the specified <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> object.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="26531-292">对于根节点，<xref:Microsoft.Office.Tools.Word.XMLNode.ParentNode%2A>属性返回`null`。</span><span class="sxs-lookup"><span data-stu-id="26531-292">For a root node, the <xref:Microsoft.Office.Tools.Word.XMLNode.ParentNode%2A> property returns `null`.</span></span>  
+  
+   
+  
+## Examples  
+ <span data-ttu-id="26531-293">下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.ParentNode%2A>属性来显示的父节点的名称<xref:Microsoft.Office.Tools.Word.XMLNode>控件。</span><span class="sxs-lookup"><span data-stu-id="26531-293">The following code example uses the <xref:Microsoft.Office.Tools.Word.XMLNode.ParentNode%2A> property to display the name of the parent node of an <xref:Microsoft.Office.Tools.Word.XMLNode> control.</span></span> <span data-ttu-id="26531-294">此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerFirstNameNode`。</span><span class="sxs-lookup"><span data-stu-id="26531-294">This example assumes that the current document contains an <xref:Microsoft.Office.Tools.Word.XMLNode> named `CustomerFirstNameNode`.</span></span>  
+  
+ [!code-csharp[Trin_WordXMLNode#14](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#14)]
+ [!code-vb[Trin_WordXMLNode#14](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#14)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PlaceholderText">
+      <MemberSignature Language="C#" Value="public string PlaceholderText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PlaceholderText" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.XMLNode.PlaceholderText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="26531-295">获取或设置为不包含任何文本的 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 控件显示的文本。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-295">Gets or sets the text displayed for an <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> control that contains no text.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="26531-296">为不包含任何文本的 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 控件显示的文本。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-296">The text displayed for an <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> control that contains no text.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="26531-297">Microsoft Office Word 中显示占位符文本时，才**显示 XML 文档中标记**中的复选框**XML 结构**清除任务窗格。</span><span class="sxs-lookup"><span data-stu-id="26531-297">Placeholder text is displayed in Microsoft Office Word only when the **Show XML tags in the document** check box in the **XML Structure** task pane is cleared.</span></span> <span data-ttu-id="26531-298">**显示 XML 文档中标记**复选框对应于<xref:Microsoft.Office.Interop.Word.View.ShowXMLMarkup%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="26531-298">The **Show XML tags in the document** check box corresponds to the <xref:Microsoft.Office.Interop.Word.View.ShowXMLMarkup%2A> property.</span></span>  
+  
+   
+  
+## Examples  
+ <span data-ttu-id="26531-299">下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.PlaceholderText%2A>属性设置的默认文本<xref:Microsoft.Office.Tools.Word.XMLNode>，然后将设置<xref:Microsoft.Office.Interop.Word.View.ShowXMLMarkup%2A>属性设为 0 （零），以便不显示的 XML 标记。</span><span class="sxs-lookup"><span data-stu-id="26531-299">The following code example uses the <xref:Microsoft.Office.Tools.Word.XMLNode.PlaceholderText%2A> property to set the default text of an <xref:Microsoft.Office.Tools.Word.XMLNode>, and then sets the <xref:Microsoft.Office.Interop.Word.View.ShowXMLMarkup%2A> property to 0 (zero) so that the XML tags are not displayed.</span></span> <span data-ttu-id="26531-300">此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerFirstNameNode`。</span><span class="sxs-lookup"><span data-stu-id="26531-300">This example assumes that the current document contains an <xref:Microsoft.Office.Tools.Word.XMLNode> named `CustomerFirstNameNode`.</span></span>  
+  
+ [!code-csharp[Trin_WordXMLNode#15](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#15)]
+ [!code-vb[Trin_WordXMLNode#15](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#15)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviousSibling">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Word.XMLNode PreviousSibling { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Interop.Word.XMLNode PreviousSibling" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.XMLNode.PreviousSibling" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Word.XMLNode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="26531-301">获取一个 <see cref="T:Microsoft.Office.Interop.Word.XMLNode" /> 对象，该对象表示文档中的上一个与 <see cref="T:Microsoft.Office.Interop.Word.XMLNode" /> 控件处于相同级别的 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 对象。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-301">Gets a <see cref="T:Microsoft.Office.Interop.Word.XMLNode" /> object that represents the previous <see cref="T:Microsoft.Office.Interop.Word.XMLNode" /> object in the document that is at the same level as the <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> control.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="26531-302">一个 <see cref="T:Microsoft.Office.Interop.Word.XMLNode" /> 对象，表示文档中的上一个与 <see cref="T:Microsoft.Office.Interop.Word.XMLNode" /> 控件处于相同级别的 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 对象。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-302">A <see cref="T:Microsoft.Office.Interop.Word.XMLNode" /> object that represents the previous <see cref="T:Microsoft.Office.Interop.Word.XMLNode" /> object in the document that is at the same level as the <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> control.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="26531-303">如果当前<xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName>中的第一个元素<xref:Microsoft.Office.Interop.Word.XMLNodes?displayProperty=fullName>集合，此属性返回`null`。</span><span class="sxs-lookup"><span data-stu-id="26531-303">If the current <xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName> is the first element in the <xref:Microsoft.Office.Interop.Word.XMLNodes?displayProperty=fullName> collection, this property returns `null`.</span></span>  
+  
+   
+  
+## Examples  
+ <span data-ttu-id="26531-304">下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.PreviousSibling%2A>和<xref:Microsoft.Office.Tools.Word.XMLNode.NextSibling%2A>要之前和之后显示的元素的名称的属性<xref:Microsoft.Office.Tools.Word.XMLNode>控件。</span><span class="sxs-lookup"><span data-stu-id="26531-304">The following code example uses the <xref:Microsoft.Office.Tools.Word.XMLNode.PreviousSibling%2A> and <xref:Microsoft.Office.Tools.Word.XMLNode.NextSibling%2A> properties to display the names of the elements before and after an <xref:Microsoft.Office.Tools.Word.XMLNode> control.</span></span> <span data-ttu-id="26531-305">此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerFirstNameNode`。</span><span class="sxs-lookup"><span data-stu-id="26531-305">This example assumes that the current document contains an <xref:Microsoft.Office.Tools.Word.XMLNode> named `CustomerFirstNameNode`.</span></span>  
+  
+ [!code-csharp[Trin_WordXMLNode#10](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#10)]
+ [!code-vb[Trin_WordXMLNode#10](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Range">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Word.Range Range { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Interop.Word.Range Range" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.XMLNode.Range" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Word.Range</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="26531-306">获取一个 <see cref="T:Microsoft.Office.Interop.Word.Range" /> 对象，该对象表示包含在 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 控件中的文档部分。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-306">Gets a <see cref="T:Microsoft.Office.Interop.Word.Range" /> object that represents the portion of a document that is contained in the <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> control.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="26531-307">一个 <see cref="T:Microsoft.Office.Interop.Word.Range" /> 对象，表示包含在 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 控件中的文档部分。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-307">A <see cref="T:Microsoft.Office.Interop.Word.Range" /> object that represents the portion of a document that is contained in the <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> control.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ <span data-ttu-id="26531-308">下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.Range%2A>属性来设置的字体和应用粗体格式中的文本<xref:Microsoft.Office.Tools.Word.XMLNode>。</span><span class="sxs-lookup"><span data-stu-id="26531-308">The following code example uses the <xref:Microsoft.Office.Tools.Word.XMLNode.Range%2A> property to set the font and apply bold formatting to the text in an <xref:Microsoft.Office.Tools.Word.XMLNode>.</span></span> <span data-ttu-id="26531-309">此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerLastNameNode`。</span><span class="sxs-lookup"><span data-stu-id="26531-309">This example assumes that the current document contains an <xref:Microsoft.Office.Tools.Word.XMLNode> named `CustomerLastNameNode`.</span></span>  
+  
+ [!code-csharp[Trin_WordXMLNode#16](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#16)]
+ [!code-vb[Trin_WordXMLNode#16](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#16)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveChild">
+      <MemberSignature Language="C#" Value="public void RemoveChild (Microsoft.Office.Interop.Word.XMLNode childElement);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveChild(class Microsoft.Office.Interop.Word.XMLNode childElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.XMLNode.RemoveChild(Microsoft.Office.Interop.Word.XMLNode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="childElement" Type="Microsoft.Office.Interop.Word.XMLNode" />
+      </Parameters>
+      <Docs>
+        <param name="childElement">
+          <span data-ttu-id="26531-310">
+            <see cref="T:Microsoft.Office.Interop.Word.XMLNode" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-310">
+              <see cref="T:Microsoft.Office.Interop.Word.XMLNode" />.</span>
+          </span>
+          <span data-ttu-id="26531-311">要移除的子元素。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-311">The child element to be removed.</span>
+          </span>
+        </param>
+        <summary>
+          <span data-ttu-id="26531-312">从 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 控件中移除指定的子元素。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-312">Removes the specified child element from the <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> control.</span>
+          </span>
+        </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ <span data-ttu-id="26531-313">下面的代码示例演示了事件处理程序<xref:Microsoft.Office.Tools.Word.XMLNode.AfterInsert>和<xref:Microsoft.Office.Tools.Word.XMLNode.BeforeDelete>事件。</span><span class="sxs-lookup"><span data-stu-id="26531-313">The following code example demonstrates event handlers for the <xref:Microsoft.Office.Tools.Word.XMLNode.AfterInsert> and <xref:Microsoft.Office.Tools.Word.XMLNode.BeforeDelete> events.</span></span> <span data-ttu-id="26531-314">代码将显示消息框，然后<xref:Microsoft.Office.Tools.Word.XMLNode>从文档和之后删除<xref:Microsoft.Office.Tools.Word.XMLNode>添加到文档。</span><span class="sxs-lookup"><span data-stu-id="26531-314">The code displays a message box before an <xref:Microsoft.Office.Tools.Word.XMLNode> is deleted from the document and after an <xref:Microsoft.Office.Tools.Word.XMLNode> is added to the document.</span></span> <span data-ttu-id="26531-315">此示例还使用<xref:Microsoft.Office.Tools.Word.XMLNode.RemoveChild%2A>方法来删除节点，并以编程方式引发<xref:Microsoft.Office.Tools.Word.XMLNode.BeforeDelete>事件。</span><span class="sxs-lookup"><span data-stu-id="26531-315">The example also uses the <xref:Microsoft.Office.Tools.Word.XMLNode.RemoveChild%2A> method to delete a node and programmatically raise the <xref:Microsoft.Office.Tools.Word.XMLNode.BeforeDelete> event.</span></span> <span data-ttu-id="26531-316">此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`，其中包含一个名为的子节点`CustomerDateNode`。</span><span class="sxs-lookup"><span data-stu-id="26531-316">This example assumes that the current document contains an <xref:Microsoft.Office.Tools.Word.XMLNode> named `CustomerNode` that contains a child node named `CustomerDateNode`.</span></span>  
+  
+ [!code-csharp[Trin_WordXMLNode#200](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#200)]
+ [!code-vb[Trin_WordXMLNode#200](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#200)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Select">
+      <MemberSignature Language="C#" Value="public event Microsoft.Office.Tools.Word.ContextChangeEventHandler Select;" />
+      <MemberSignature Language="ILAsm" Value=".event class Microsoft.Office.Tools.Word.ContextChangeEventHandler Select" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.Word.XMLNode.Select" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Word.ContextChangeEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="26531-317">当光标置于 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 控件内时发生。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-317">Occurs when the cursor is placed inside an <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> control.</span>
+          </span>
+        </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="26531-318"><xref:Microsoft.Office.Tools.Word.XMLNode.Select>事件区别<xref:Microsoft.Office.Tools.Word.XMLNode.ContextEnter>事件。</span><span class="sxs-lookup"><span data-stu-id="26531-318">The <xref:Microsoft.Office.Tools.Word.XMLNode.Select> event differs from the <xref:Microsoft.Office.Tools.Word.XMLNode.ContextEnter> event.</span></span> <span data-ttu-id="26531-319">有关详细信息，请参阅[XMLNode 控件](/visualstudio/vsto/xmlnode-control.md)。</span><span class="sxs-lookup"><span data-stu-id="26531-319">For more information, see [XMLNode Control](/visualstudio/vsto/xmlnode-control.md).</span></span>  
+  
+   
+  
+## Examples  
+ <span data-ttu-id="26531-320">下面的代码示例演示了事件处理程序<xref:Microsoft.Office.Tools.Word.XMLNode.Select>， <xref:Microsoft.Office.Tools.Word.XMLNode.Deselect>， <xref:Microsoft.Office.Tools.Word.XMLNode.ContextEnter>，和<xref:Microsoft.Office.Tools.Word.XMLNode.ContextLeave>事件。</span><span class="sxs-lookup"><span data-stu-id="26531-320">The following code example demonstrates event handlers for the <xref:Microsoft.Office.Tools.Word.XMLNode.Select>, <xref:Microsoft.Office.Tools.Word.XMLNode.Deselect>, <xref:Microsoft.Office.Tools.Word.XMLNode.ContextEnter>, and <xref:Microsoft.Office.Tools.Word.XMLNode.ContextLeave> events.</span></span> <span data-ttu-id="26531-321">当<xref:Microsoft.Office.Tools.Word.XMLNode.Select>和<xref:Microsoft.Office.Tools.Word.XMLNode.Deselect>将引发事件，事件处理程序添加到所选内容的边框的双线或删除双线，具体取决于事件。</span><span class="sxs-lookup"><span data-stu-id="26531-321">When the <xref:Microsoft.Office.Tools.Word.XMLNode.Select> and <xref:Microsoft.Office.Tools.Word.XMLNode.Deselect> events are raised, the event handlers add double lines to the borders of the selection or remove the double lines, depending on the event.</span></span> <span data-ttu-id="26531-322">当<xref:Microsoft.Office.Tools.Word.XMLNode.ContextEnter>和<xref:Microsoft.Office.Tools.Word.XMLNode.ContextLeave>将引发事件，事件处理程序显示消息，指出新选择的节点和先前选择的节点的名称。</span><span class="sxs-lookup"><span data-stu-id="26531-322">When the <xref:Microsoft.Office.Tools.Word.XMLNode.ContextEnter> and <xref:Microsoft.Office.Tools.Word.XMLNode.ContextLeave> events are raised, the event handlers display messages that state the names of the newly selected node and the previously selected node.</span></span> <span data-ttu-id="26531-323">此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`。</span><span class="sxs-lookup"><span data-stu-id="26531-323">This example assumes that the current document contains an <xref:Microsoft.Office.Tools.Word.XMLNode> named `CustomerNode`.</span></span>  
+  
+ [!code-csharp[Trin_WordXMLNode#201](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#201)]
+ [!code-vb[Trin_WordXMLNode#201](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#201)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectNodes">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Word.XMLNodes SelectNodes (string XPath, string PrefixMapping = &quot;&quot;, bool FastSearchSkippingTextNodes = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.Interop.Word.XMLNodes SelectNodes(string XPath, string PrefixMapping, bool FastSearchSkippingTextNodes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.XMLNode.SelectNodes(System.String,System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Word.XMLNodes</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="XPath" Type="System.String" />
+        <Parameter Name="PrefixMapping" Type="System.String" />
+        <Parameter Name="FastSearchSkippingTextNodes" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="XPath">
+          <span data-ttu-id="26531-324">有效的 XPath 字符串。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-324">A valid XPath string.</span>
+          </span>
+        </param>
+        <param name="PrefixMapping">
+          <span data-ttu-id="26531-325">提供架构中用作搜索依据的前缀。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-325">Provides the prefix in the schema against which to perform the search.</span>
+          </span>
+          <span data-ttu-id="26531-326">如果 <c>XPath</c> 参数使用名称搜索元素，请使用 <c>PrefixMapping</c> 参数。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-326">Use the <c>PrefixMapping</c> parameter if your <c>XPath</c> parameter uses names to search for elements.</span>
+          </span>
+        </param>
+        <param name="FastSearchSkippingTextNodes">
+          <span data-ttu-id="26531-327">如果为 <see langword="true" />，则在搜索指定的节点时，忽略所有文本节点。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-327">
+              <see langword="true" /> to skip all text nodes while searching for the specified node.</span>
+          </span>
+          <span data-ttu-id="26531-328">如果为 <see langword="false" />，则在搜索中包含文本节点。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-328">
+              <see langword="false" /> to include text nodes in the search.</span>
+          </span>
+          <span data-ttu-id="26531-329">默认值是 <see langword="false" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-329">Default value is <see langword="false" />.</span>
+          </span>
+        </param>
+        <summary>
+          <span data-ttu-id="26531-330">获取一个 <see cref="T:Microsoft.Office.Interop.Word.XMLNodes" /> 集合，该集合表示与 <paramref name="XPath" /> 参数匹配的所有节点，且以出现在 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 控件中的顺序为序。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-330">Gets a <see cref="T:Microsoft.Office.Interop.Word.XMLNodes" /> collection that represents all the nodes that match the <paramref name="XPath" /> parameter in the order in which they appear in the <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> control.</span>
+          </span>
+        </summary>
+        <returns>
+          <span data-ttu-id="26531-331">与 <paramref name="XPath" /> 参数匹配的节点，以在 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 控件中出现的顺序为序。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-331">The nodes that match the <paramref name="XPath" /> parameter in the order in which they appear in the <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> control.</span>
+          </span>
+        </returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="26531-332">设置`FastSearchSkippingTextNodes`参数`false`会降低性能，因为 Microsoft Office Word 搜索文本节点中包含文档中的所有节点。</span><span class="sxs-lookup"><span data-stu-id="26531-332">Setting the `FastSearchSkippingTextNodes` parameter to `false` diminishes performance, because Microsoft Office Word searches all nodes in a document for the text contained in the node.</span></span>  
+  
+## <a name="optional-parameters"></a><span data-ttu-id="26531-333">可选参数</span><span class="sxs-lookup"><span data-stu-id="26531-333">Optional Parameters</span></span>  
+ <span data-ttu-id="26531-334">可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。</span><span class="sxs-lookup"><span data-stu-id="26531-334">For information on optional parameters, see [Optional Parameters in Office Solutions](/visualstudio/vsto/optional-parameters-in-office-solutions.md).</span></span>  
+  
+   
+  
+## Examples  
+ <span data-ttu-id="26531-335">下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.SelectNodes%2A>方法来获取与匹配的节点的子集合给定`XPath`参数。</span><span class="sxs-lookup"><span data-stu-id="26531-335">The following code example uses the <xref:Microsoft.Office.Tools.Word.XMLNode.SelectNodes%2A> method to get a collection of the child nodes that match the given `XPath` parameter.</span></span> <span data-ttu-id="26531-336">此示例然后显示找到的节点数。</span><span class="sxs-lookup"><span data-stu-id="26531-336">The example then displays the number of nodes that were found.</span></span> <span data-ttu-id="26531-337">此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`与匹配的架构元素包含一个或多个名为的子节点`FirstName`。</span><span class="sxs-lookup"><span data-stu-id="26531-337">This example assumes that the current document contains an <xref:Microsoft.Office.Tools.Word.XMLNode> named `CustomerNode` with a matching schema element that contains one or more child nodes named `FirstName`.</span></span>  
+  
+ [!code-csharp[Trin_WordXMLNode#104](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#104)]
+ [!code-vb[Trin_WordXMLNode#104](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#104)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectSingleNode">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Word.XMLNode SelectSingleNode (string XPath, string PrefixMapping = &quot;&quot;, bool FastSearchSkippingTextNodes = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.Interop.Word.XMLNode SelectSingleNode(string XPath, string PrefixMapping, bool FastSearchSkippingTextNodes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.XMLNode.SelectSingleNode(System.String,System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Word.XMLNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="XPath" Type="System.String" />
+        <Parameter Name="PrefixMapping" Type="System.String" />
+        <Parameter Name="FastSearchSkippingTextNodes" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="XPath">
+          <span data-ttu-id="26531-338">有效的 XPath 字符串。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-338">A valid XPath string.</span>
+          </span>
+        </param>
+        <param name="PrefixMapping">
+          <span data-ttu-id="26531-339">提供架构中用作搜索依据的前缀。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-339">Provides the prefix in the schema against which to perform the search.</span>
+          </span>
+          <span data-ttu-id="26531-340">如果 <c>XPath</c> 参数使用名称搜索元素，请使用 <c>PrefixMapping</c> 参数。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-340">Use the <c>PrefixMapping</c> parameter if your <c>XPath</c> parameter uses names to search for elements.</span>
+          </span>
+        </param>
+        <param name="FastSearchSkippingTextNodes">
+          <span data-ttu-id="26531-341">如果为 <see langword="true" />，则在搜索指定的节点时，忽略所有文本节点。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-341">
+              <see langword="true" /> to skip all text nodes while searching for the specified node.</span>
+          </span>
+          <span data-ttu-id="26531-342">如果为 <see langword="false" />，则在搜索中包含文本节点。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-342">
+              <see langword="false" /> to include text nodes in the search.</span>
+          </span>
+          <span data-ttu-id="26531-343">默认值是 <see langword="true" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-343">Default value is <see langword="true" />.</span>
+          </span>
+        </param>
+        <summary>
+          <span data-ttu-id="26531-344">获取一个 <see cref="T:Microsoft.Office.Interop.Word.XMLNode" /> 对象，该对象表示 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 控件中与 <paramref name="XPath" /> 参数匹配的第一个子节点。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-344">Gets a <see cref="T:Microsoft.Office.Interop.Word.XMLNode" /> object that represents the first child node that matches the <paramref name="XPath" /> parameter in the <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> control.</span>
+          </span>
+        </summary>
+        <returns>
+          <span data-ttu-id="26531-345">
+            <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 控件中与 <paramref name="XPath" /> 参数匹配的第一个子节点。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-345">The first child node that matches the <paramref name="XPath" /> parameter in the <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> control.</span>
+          </span>
+        </returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="26531-346">设置`FastSearchSkippingTextNodes`参数`false`会降低性能，因为 Microsoft Office Word 搜索文本节点中包含文档中的所有节点。</span><span class="sxs-lookup"><span data-stu-id="26531-346">Setting the `FastSearchSkippingTextNodes` parameter to `false` diminishes performance because Microsoft Office Word searches all nodes in a document for the text contained in the node.</span></span>  
+  
+## <a name="optional-parameters"></a><span data-ttu-id="26531-347">可选参数</span><span class="sxs-lookup"><span data-stu-id="26531-347">Optional Parameters</span></span>  
+ <span data-ttu-id="26531-348">可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。</span><span class="sxs-lookup"><span data-stu-id="26531-348">For information on optional parameters, see [Optional Parameters in Office Solutions](/visualstudio/vsto/optional-parameters-in-office-solutions.md).</span></span>  
+  
+   
+  
+## Examples  
+ <span data-ttu-id="26531-349">下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.SelectSingleNode%2A>方法以获取与匹配的子节点给定`XPath`参数。</span><span class="sxs-lookup"><span data-stu-id="26531-349">The following code example uses the <xref:Microsoft.Office.Tools.Word.XMLNode.SelectSingleNode%2A> method to get a child node that matches the given `XPath` parameter.</span></span> <span data-ttu-id="26531-350">此示例然后显示找到的节点的名称。</span><span class="sxs-lookup"><span data-stu-id="26531-350">The example then displays the name of the node that was found.</span></span> <span data-ttu-id="26531-351">此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`与匹配的架构元素包含一个或多个名为的子节点`LastName`。</span><span class="sxs-lookup"><span data-stu-id="26531-351">This example assumes that the current document contains an <xref:Microsoft.Office.Tools.Word.XMLNode> named `CustomerNode` with a matching schema element that contains one or more child nodes named `LastName`.</span></span>  
+  
+ [!code-csharp[Trin_WordXMLNode#105](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#105)]
+ [!code-vb[Trin_WordXMLNode#105](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#105)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetValidationError">
+      <MemberSignature Language="C#" Value="public void SetValidationError (Microsoft.Office.Interop.Word.WdXMLValidationStatus Status, ref object ErrorText, bool ClearedAutomatically = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetValidationError(valuetype Microsoft.Office.Interop.Word.WdXMLValidationStatus Status, object ErrorText, bool ClearedAutomatically) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.XMLNode.SetValidationError(Microsoft.Office.Interop.Word.WdXMLValidationStatus,System.Object@,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Status" Type="Microsoft.Office.Interop.Word.WdXMLValidationStatus" />
+        <Parameter Name="ErrorText" Type="System.Object&amp;" RefType="ref" />
+        <Parameter Name="ClearedAutomatically" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="Status">
+          <span data-ttu-id="26531-352">
+            <see cref="T:Microsoft.Office.Interop.Word.WdXMLValidationStatus" /> 值之一，该值指定是设置验证状态错误文本 (<see cref="F:Microsoft.Office.Interop.Word.WdXMLValidationStatus.wdXMLValidationStatusCustom" />) 还是清除验证状态错误文本 (<see cref="F:Microsoft.Office.Interop.Word.WdXMLValidationStatus.wdXMLValidationStatusOK" />)。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-352">One of the <see cref="T:Microsoft.Office.Interop.Word.WdXMLValidationStatus" /> values that specifies whether to set the validation status error text (<see cref="F:Microsoft.Office.Interop.Word.WdXMLValidationStatus.wdXMLValidationStatusCustom" />) or to clear the validation status error text (<see cref="F:Microsoft.Office.Interop.Word.WdXMLValidationStatus.wdXMLValidationStatusOK" />).</span>
+          </span>
+        </param>
+        <param name="ErrorText">
+          <span data-ttu-id="26531-353">显示给用户的文本。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-353">The text displayed to the user.</span>
+          </span>
+          <span data-ttu-id="26531-354">当 <c>Status</c> 参数设置为 <see cref="F:Microsoft.Office.Interop.Word.WdXMLValidationStatus.wdXMLValidationStatusOK" /> 时保留为空。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-354">Leave blank when the <c>Status</c> parameter is set to <see cref="F:Microsoft.Office.Interop.Word.WdXMLValidationStatus.wdXMLValidationStatusOK" />.</span>
+          </span>
+        </param>
+        <param name="ClearedAutomatically">
+          <span data-ttu-id="26531-355">如果为 <see langword="true" />，则在针对指定节点发生下一个验证事件后，立即自动清除错误消息。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-355">
+              <see langword="true" /> to automatically clear the error message as soon as the next validation event occurs on the specified node.</span>
+          </span>
+          <span data-ttu-id="26531-356">如果为 <see langword="false" />，则要求以 <c>Status</c> 参数 <see cref="F:Microsoft.Office.Interop.Word.WdXMLValidationStatus.wdXMLValidationStatusOK" /> 运行 <see cref="M:Microsoft.Office.Tools.Word.XMLNode.SetValidationError(Microsoft.Office.Interop.Word.WdXMLValidationStatus,System.Object@,System.Boolean)" /> 方法，以清除自定义错误文本。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-356">
+              <see langword="false" /> to require running the <see cref="M:Microsoft.Office.Tools.Word.XMLNode.SetValidationError(Microsoft.Office.Interop.Word.WdXMLValidationStatus,System.Object@,System.Boolean)" /> method with a <c>Status</c> parameter of <see cref="F:Microsoft.Office.Interop.Word.WdXMLValidationStatus.wdXMLValidationStatusOK" /> to clear the custom error text.</span>
+          </span>
+        </param>
+        <summary>
+          <span data-ttu-id="26531-357">更改向用户显示的 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 控件的验证错误文本，并强制 Microsoft Office Word 将节点报告为无效。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-357">Changes the validation error text displayed to a user for an <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> control and forces Microsoft Office Word to report a node as invalid.</span>
+          </span>
+        </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="26531-358">若要设置自定义错误文本，请使用<xref:Microsoft.Office.Interop.Word.WdXMLValidationStatus.wdXMLValidationStatusCustom>常量。</span><span class="sxs-lookup"><span data-stu-id="26531-358">To set custom error text, use the <xref:Microsoft.Office.Interop.Word.WdXMLValidationStatus.wdXMLValidationStatusCustom> constant.</span></span>  
+  
+## <a name="optional-parameters"></a><span data-ttu-id="26531-359">可选参数</span><span class="sxs-lookup"><span data-stu-id="26531-359">Optional Parameters</span></span>  
+ <span data-ttu-id="26531-360">可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。</span><span class="sxs-lookup"><span data-stu-id="26531-360">For information on optional parameters, see [Optional Parameters in Office Solutions](/visualstudio/vsto/optional-parameters-in-office-solutions.md).</span></span>  
+  
+   
+  
+## Examples  
+ <span data-ttu-id="26531-361">下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.SetValidationError%2A>方法以设置自定义验证错误消息，以<xref:Microsoft.Office.Tools.Word.XMLNode>。</span><span class="sxs-lookup"><span data-stu-id="26531-361">The following code example uses the <xref:Microsoft.Office.Tools.Word.XMLNode.SetValidationError%2A> method to set a custom validation error message for an <xref:Microsoft.Office.Tools.Word.XMLNode>.</span></span> <span data-ttu-id="26531-362">事件处理程序<xref:Microsoft.Office.Tools.Word.XMLNode.ValidationError>事件显示的自定义验证错误消息，如果<xref:Microsoft.Office.Tools.Word.XMLNode>不会验证。</span><span class="sxs-lookup"><span data-stu-id="26531-362">An event handler for the <xref:Microsoft.Office.Tools.Word.XMLNode.ValidationError> event displays the custom validation error message if the <xref:Microsoft.Office.Tools.Word.XMLNode> does not validate.</span></span> <span data-ttu-id="26531-363">此示例假定当前文档包含两个<xref:Microsoft.Office.Tools.Word.XMLNode>对象命名的`CustomerAddress1Node`和`CustomerZipNode`，它将映射到具有整数数据类型的架构元素。</span><span class="sxs-lookup"><span data-stu-id="26531-363">This example assumes that the current document contains two <xref:Microsoft.Office.Tools.Word.XMLNode> objects named `CustomerAddress1Node` and `CustomerZipNode` that map to schema elements with an integer data type.</span></span>  
+  
+ [!code-csharp[Trin_WordXMLNode#202](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#202)]
+ [!code-vb[Trin_WordXMLNode#202](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#202)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SmartTag">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Word.SmartTag SmartTag { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Interop.Word.SmartTag SmartTag" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.XMLNode.SmartTag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Word.SmartTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tag">
+      <MemberSignature Language="C#" Value="public object Tag { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Tag" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.XMLNode.Tag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.XMLNode.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="26531-364">获取或设置 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 控件的无格式纯文本。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-364">Gets or sets the plain unformatted text of the <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> control.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="26531-365">
+            <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 控件的无格式纯文本。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-365">The plain unformatted text of the <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> control.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="26531-366">设置此属性将替换所有内的文本<xref:Microsoft.Office.Tools.Word.XMLNode>，包括任何子节点。</span><span class="sxs-lookup"><span data-stu-id="26531-366">Setting this property replaces all of the text inside the <xref:Microsoft.Office.Tools.Word.XMLNode>, including any child nodes.</span></span>  
+  
+ <span data-ttu-id="26531-367">此属性在设计时是只读的。</span><span class="sxs-lookup"><span data-stu-id="26531-367">This property is read-only during design time.</span></span> <span data-ttu-id="26531-368">它只能设置在运行时。</span><span class="sxs-lookup"><span data-stu-id="26531-368">It can only be set during run time.</span></span>  
+  
+   
+  
+## Examples  
+ <span data-ttu-id="26531-369">下面的代码示例显示子节点的数目<xref:Microsoft.Office.Tools.Word.XMLNode>，替换内的文本<xref:Microsoft.Office.Tools.Word.XMLNode>使用<xref:Microsoft.Office.Tools.Word.XMLNode.Text%2A>属性，然后再次显示的子节点数。</span><span class="sxs-lookup"><span data-stu-id="26531-369">The following code example displays the number of child nodes in an <xref:Microsoft.Office.Tools.Word.XMLNode>, replaces the text inside the <xref:Microsoft.Office.Tools.Word.XMLNode> by using the <xref:Microsoft.Office.Tools.Word.XMLNode.Text%2A> property, and then displays the number of child nodes again.</span></span> <span data-ttu-id="26531-370">设置后<xref:Microsoft.Office.Tools.Word.XMLNode.Text%2A>属性，子节点数为零。</span><span class="sxs-lookup"><span data-stu-id="26531-370">After setting the <xref:Microsoft.Office.Tools.Word.XMLNode.Text%2A> property, the number of child nodes is zero.</span></span> <span data-ttu-id="26531-371">此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`。</span><span class="sxs-lookup"><span data-stu-id="26531-371">This example assumes that the current document contains an <xref:Microsoft.Office.Tools.Word.XMLNode> named `CustomerNode`.</span></span>  
+  
+ [!code-csharp[Trin_WordXMLNode#19](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#19)]
+ [!code-vb[Trin_WordXMLNode#19](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#19)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="public void Validate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Validate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.XMLNode.Validate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+          <span data-ttu-id="26531-372">根据附加的一个或多个 XML 架构验证单个 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 控件。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-372">Validates an individual <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> control against the attached XML schema or schemas.</span>
+          </span>
+        </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="26531-373">使用<xref:Microsoft.Office.Tools.Word.XMLNode.Validate%2A>方法替换<xref:Microsoft.Office.Tools.Word.XMLNode.ValidationStatus%2A>和<xref:Microsoft.Office.Tools.Word.XMLNode.ValidationErrorText%2A>属性来确定是否根据应用的架构有效的 XML 元素和要向用户显示哪些错误文本。</span><span class="sxs-lookup"><span data-stu-id="26531-373">Use the <xref:Microsoft.Office.Tools.Word.XMLNode.Validate%2A> method with the <xref:Microsoft.Office.Tools.Word.XMLNode.ValidationStatus%2A> and <xref:Microsoft.Office.Tools.Word.XMLNode.ValidationErrorText%2A> properties to determine whether an XML element is valid according to the applied schema and what error text to display to the user.</span></span> <span data-ttu-id="26531-374">使用<xref:Microsoft.Office.Tools.Word.XMLNode.SetValidationError%2A>方法重写具有自定义的验证错误的架构冲突。</span><span class="sxs-lookup"><span data-stu-id="26531-374">Use the <xref:Microsoft.Office.Tools.Word.XMLNode.SetValidationError%2A> method to override the schema violations with custom validation errors.</span></span>  
+  
+ <span data-ttu-id="26531-375">当你运行<xref:Microsoft.Office.Tools.Word.XMLNode.Validate%2A>方法，Microsoft Office Word 填充<xref:Microsoft.Office.Interop.Word._Document.XMLSchemaViolations%2A>与具有验证错误的 XML 节点的集合。</span><span class="sxs-lookup"><span data-stu-id="26531-375">When you run the <xref:Microsoft.Office.Tools.Word.XMLNode.Validate%2A> method, Microsoft Office Word populates the <xref:Microsoft.Office.Interop.Word._Document.XMLSchemaViolations%2A> collection with the XML nodes that have validation errors.</span></span>  
+  
+   
+  
+## Examples  
+ <span data-ttu-id="26531-376">下面的代码示例设置的文本值<xref:Microsoft.Office.Tools.Word.XMLNode>并通过使用验证节点<xref:Microsoft.Office.Tools.Word.XMLNode.Validate%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="26531-376">The following code example sets the text value of an <xref:Microsoft.Office.Tools.Word.XMLNode> and validates the node by using the <xref:Microsoft.Office.Tools.Word.XMLNode.Validate%2A> method.</span></span> <span data-ttu-id="26531-377">然后该示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.ValidationStatus%2A>属性来确定节点是否验证。</span><span class="sxs-lookup"><span data-stu-id="26531-377">The example then uses the <xref:Microsoft.Office.Tools.Word.XMLNode.ValidationStatus%2A> property to determine whether the node validated.</span></span> <span data-ttu-id="26531-378">如果节点尚未验证，则该示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.ValidationErrorText%2A>属性显示验证错误消息。</span><span class="sxs-lookup"><span data-stu-id="26531-378">If the node did not validate, then the example uses the <xref:Microsoft.Office.Tools.Word.XMLNode.ValidationErrorText%2A> property to display the validation error message.</span></span> <span data-ttu-id="26531-379">此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerAddress1Node`。</span><span class="sxs-lookup"><span data-stu-id="26531-379">This example assumes that the current document contains an <xref:Microsoft.Office.Tools.Word.XMLNode> named `CustomerAddress1Node`.</span></span> <span data-ttu-id="26531-380">如果`CustomerAddress1Node`映射到具有整数数据的架构元素类型，则验证将失败。</span><span class="sxs-lookup"><span data-stu-id="26531-380">If `CustomerAddress1Node` maps to a schema element that has an integer data type, then the validation will fail.</span></span>  
+  
+ [!code-csharp[Trin_WordXMLNode#20](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#20)]
+ [!code-vb[Trin_WordXMLNode#20](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#20)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidationError">
+      <MemberSignature Language="C#" Value="public event EventHandler ValidationError;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ValidationError" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.Word.XMLNode.ValidationError" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="26531-381">当在 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 控件中存在验证错误时发生。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-381">Occurs when there is a validation error in the <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> control.</span>
+          </span>
+        </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ <span data-ttu-id="26531-382">下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.SetValidationError%2A>方法以设置自定义验证错误消息，以<xref:Microsoft.Office.Tools.Word.XMLNode>。</span><span class="sxs-lookup"><span data-stu-id="26531-382">The following code example uses the <xref:Microsoft.Office.Tools.Word.XMLNode.SetValidationError%2A> method to set a custom validation error message for an <xref:Microsoft.Office.Tools.Word.XMLNode>.</span></span> <span data-ttu-id="26531-383">事件处理程序<xref:Microsoft.Office.Tools.Word.XMLNode.ValidationError>事件显示的自定义验证错误消息，如果<xref:Microsoft.Office.Tools.Word.XMLNode>不会验证。</span><span class="sxs-lookup"><span data-stu-id="26531-383">An event handler for the <xref:Microsoft.Office.Tools.Word.XMLNode.ValidationError> event displays the custom validation error message if the <xref:Microsoft.Office.Tools.Word.XMLNode> does not validate.</span></span> <span data-ttu-id="26531-384">此示例假定当前文档包含两个<xref:Microsoft.Office.Tools.Word.XMLNode>对象命名的`CustomerAddress1Node`和`CustomerZipNode`，它将映射到具有整数数据类型的架构元素。</span><span class="sxs-lookup"><span data-stu-id="26531-384">This example assumes that the current document contains two <xref:Microsoft.Office.Tools.Word.XMLNode> objects named `CustomerAddress1Node` and `CustomerZipNode` that map to schema elements with an integer data type.</span></span>  
+  
+ [!code-csharp[Trin_WordXMLNode#202](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#202)]
+ [!code-vb[Trin_WordXMLNode#202](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#202)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidationErrorText">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Tools.Word.XMLNode_ValidationErrorTextType ValidationErrorText { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Tools.Word.XMLNode_ValidationErrorTextType ValidationErrorText" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.XMLNode.ValidationErrorText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Word.XMLNode_ValidationErrorTextType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="26531-385">获取一个字符串，该字符串表示对 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 控件的验证错误的说明。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-385">Gets a string that represents the description for a validation error on an <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> control.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="26531-386">一个字符串，表示对 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 控件的验证错误的说明。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-386">A string that represents the description for a validation error on an <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> control.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="26531-387"><xref:Microsoft.Office.Tools.Word.XMLNode.ValidationErrorText%2A>属性应与以下参数一起使用。</span><span class="sxs-lookup"><span data-stu-id="26531-387">The <xref:Microsoft.Office.Tools.Word.XMLNode.ValidationErrorText%2A> property is intended to be used with the following parameter.</span></span>  
+  
+|<span data-ttu-id="26531-388">参数</span><span class="sxs-lookup"><span data-stu-id="26531-388">Parameter</span></span>|<span data-ttu-id="26531-389">描述</span><span class="sxs-lookup"><span data-stu-id="26531-389">Description</span></span>|  
+|---------------|-----------------|  
+|`Advanced`|<span data-ttu-id="26531-390">`true` 若要显示验证错误描述、 来自包含使用 Microsoft Office Word; MSXML 5.0 组件的高级的版本否则为`false`。</span><span class="sxs-lookup"><span data-stu-id="26531-390">`true` to display the advanced version of the validation error description, which comes from the MSXML 5.0 component included with Microsoft Office Word; otherwise, `false`.</span></span>|  
+  
+ <span data-ttu-id="26531-391">如果你使用<xref:Microsoft.Office.Tools.Word.XMLNode.ValidationErrorText%2A>未指定参数的属性，它返回<xref:Microsoft.Office.Tools.Word.XMLNode_ValidationErrorTextType>不应在代码中直接使用的对象。</span><span class="sxs-lookup"><span data-stu-id="26531-391">If you use the <xref:Microsoft.Office.Tools.Word.XMLNode.ValidationErrorText%2A> property without specifying a parameter, it returns a <xref:Microsoft.Office.Tools.Word.XMLNode_ValidationErrorTextType> object that not intended to be used directly from your code.</span></span>  
+  
+## <a name="optional-parameters"></a><span data-ttu-id="26531-392">可选参数</span><span class="sxs-lookup"><span data-stu-id="26531-392">Optional Parameters</span></span>  
+ <span data-ttu-id="26531-393">可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。</span><span class="sxs-lookup"><span data-stu-id="26531-393">For information on optional parameters, see [Optional Parameters in Office Solutions](/visualstudio/vsto/optional-parameters-in-office-solutions.md).</span></span>  
+  
+   
+  
+## Examples  
+ <span data-ttu-id="26531-394">下面的代码示例设置的文本值<xref:Microsoft.Office.Tools.Word.XMLNode>并通过使用验证节点<xref:Microsoft.Office.Tools.Word.XMLNode.Validate%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="26531-394">The following code example sets the text value of an <xref:Microsoft.Office.Tools.Word.XMLNode> and validates the node by using the <xref:Microsoft.Office.Tools.Word.XMLNode.Validate%2A> method.</span></span> <span data-ttu-id="26531-395">然后该示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.ValidationStatus%2A>属性来确定节点是否验证。</span><span class="sxs-lookup"><span data-stu-id="26531-395">The example then uses the <xref:Microsoft.Office.Tools.Word.XMLNode.ValidationStatus%2A> property to determine whether the node validated.</span></span> <span data-ttu-id="26531-396">如果节点尚未验证，则该示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.ValidationErrorText%2A>属性显示验证错误消息。</span><span class="sxs-lookup"><span data-stu-id="26531-396">If the node did not validate, then the example uses the <xref:Microsoft.Office.Tools.Word.XMLNode.ValidationErrorText%2A> property to display the validation error message.</span></span> <span data-ttu-id="26531-397">此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerAddress1Node`。</span><span class="sxs-lookup"><span data-stu-id="26531-397">This example assumes that the current document contains an <xref:Microsoft.Office.Tools.Word.XMLNode> named `CustomerAddress1Node`.</span></span> <span data-ttu-id="26531-398">如果`CustomerAddress1Node`映射到具有整数数据的架构元素类型，则验证将失败。</span><span class="sxs-lookup"><span data-stu-id="26531-398">If `CustomerAddress1Node` maps to a schema element that has an integer data type, then the validation will fail.</span></span>  
+  
+ [!code-csharp[Trin_WordXMLNode#20](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#20)]
+ [!code-vb[Trin_WordXMLNode#20](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#20)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidationStatus">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Word.WdXMLValidationStatus ValidationStatus { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Office.Interop.Word.WdXMLValidationStatus ValidationStatus" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.XMLNode.ValidationStatus" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Word.WdXMLValidationStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="26531-399">获取一个值，该值指定某一元素或特性对于附加的架构是否有效。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-399">Gets a value that specifies whether an element or attribute is valid according to the attached schema.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="26531-400">
+            <see cref="T:Microsoft.Office.Interop.Word.WdXMLValidationStatus" /> 值之一。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-400">One of the <see cref="T:Microsoft.Office.Interop.Word.WdXMLValidationStatus" /> values.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="26531-401"><xref:Microsoft.Office.Tools.Word.XMLNode.ValidationStatus%2A>属性可以是下列项之一<xref:Microsoft.Office.Interop.Word.WdXMLValidationStatus>值：</span><span class="sxs-lookup"><span data-stu-id="26531-401">The <xref:Microsoft.Office.Tools.Word.XMLNode.ValidationStatus%2A> property can be one of the following <xref:Microsoft.Office.Interop.Word.WdXMLValidationStatus> values:</span></span>  
+  
+-   <span data-ttu-id="26531-402"><xref:Microsoft.Office.Interop.Word.WdXMLValidationStatus.wdXMLValidationStatusCustom> 指示<xref:Microsoft.Office.Interop.Word.XMLNode.SetValidationError%2A>方法用于设置<xref:Microsoft.Office.Interop.Word.XMLNode.ValidationErrorText%2A>为自定义文本字符串的属性。</span><span class="sxs-lookup"><span data-stu-id="26531-402"><xref:Microsoft.Office.Interop.Word.WdXMLValidationStatus.wdXMLValidationStatusCustom> indicates that the <xref:Microsoft.Office.Interop.Word.XMLNode.SetValidationError%2A> method was used to set the <xref:Microsoft.Office.Interop.Word.XMLNode.ValidationErrorText%2A> property to a custom text string.</span></span>  
+  
+-   <span data-ttu-id="26531-403"><xref:Microsoft.Office.Interop.Word.WdXMLValidationStatus.wdXMLValidationStatusOK> 指示 XML 元素或属性有效根据附加的架构。</span><span class="sxs-lookup"><span data-stu-id="26531-403"><xref:Microsoft.Office.Interop.Word.WdXMLValidationStatus.wdXMLValidationStatusOK> indicates an XML element or attribute is valid according to the attached schema.</span></span>  
+  
+ <span data-ttu-id="26531-404">虽然这些并是仅有两个已命名的常数<xref:Microsoft.Office.Tools.Word.XMLNode.ValidationStatus%2A>属性允许，有许多多未命名的来自 Microsoft Office Word 中附带的 MSXML 5.0 组件的值。</span><span class="sxs-lookup"><span data-stu-id="26531-404">While these are the only two named constants the <xref:Microsoft.Office.Tools.Word.XMLNode.ValidationStatus%2A> property allows, there are many more unnamed values that come from the MSXML 5.0 component included with Microsoft Office Word.</span></span>  
+  
+   
+  
+## Examples  
+ <span data-ttu-id="26531-405">下面的代码示例设置的文本值<xref:Microsoft.Office.Tools.Word.XMLNode>并通过使用验证节点<xref:Microsoft.Office.Tools.Word.XMLNode.Validate%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="26531-405">The following code example sets the text value of an <xref:Microsoft.Office.Tools.Word.XMLNode> and validates the node by using the <xref:Microsoft.Office.Tools.Word.XMLNode.Validate%2A> method.</span></span> <span data-ttu-id="26531-406">然后该示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.ValidationStatus%2A>属性来确定节点是否验证。</span><span class="sxs-lookup"><span data-stu-id="26531-406">The example then uses the <xref:Microsoft.Office.Tools.Word.XMLNode.ValidationStatus%2A> property to determine whether the node validated.</span></span> <span data-ttu-id="26531-407">如果节点尚未验证，则该示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.ValidationErrorText%2A>属性显示验证错误消息。</span><span class="sxs-lookup"><span data-stu-id="26531-407">If the node did not validate, then the example uses the <xref:Microsoft.Office.Tools.Word.XMLNode.ValidationErrorText%2A> property to display the validation error message.</span></span> <span data-ttu-id="26531-408">此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerAddress1Node`。</span><span class="sxs-lookup"><span data-stu-id="26531-408">This example assumes that the current document contains an <xref:Microsoft.Office.Tools.Word.XMLNode> named `CustomerAddress1Node`.</span></span> <span data-ttu-id="26531-409">如果`CustomerAddress1Node`映射到具有整数数据的架构元素类型，则验证将失败。</span><span class="sxs-lookup"><span data-stu-id="26531-409">If `CustomerAddress1Node` maps to a schema element that has an integer data type, then the validation will fail.</span></span>  
+  
+ [!code-csharp[Trin_WordXMLNode#20](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#20)]
+ [!code-vb[Trin_WordXMLNode#20](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#20)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WordOpenXML">
+      <MemberSignature Language="C#" Value="public string WordOpenXML { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string WordOpenXML" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.XMLNode.WordOpenXML" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="26531-410">获取一个 XML 字符串，该字符串以 Microsoft Office Word Open XML 格式表示 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-410">Gets an XML string that represents the <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> in the Microsoft Office Word Open XML format.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="26531-411">一个 XML 字符串，该字符串以 Microsoft Office Word Open XML 格式表示 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-411">An XML string that represents the <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> in the Microsoft Office Word Open XML format.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="26531-412">此属性只返回的 XML 中表示指定的 XML 节点所需的文档。</span><span class="sxs-lookup"><span data-stu-id="26531-412">This property returns only the XML in the document that is needed to represent the specified XML node.</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XML">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Tools.Word.XMLNode_XMLType XML { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Tools.Word.XMLNode_XMLType XML" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.XMLNode.XML" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Word.XMLNode_XMLType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="26531-413">获取一个字符串，该字符串表示 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 控件中的 XML 文本。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-413">Gets a string that represents the XML text in the <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> control.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="26531-414">一个字符串，表示 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 控件中的 XML 文本。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-414">A string that represents the XML text in the <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> control.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="26531-415"><xref:Microsoft.Office.Tools.Word.XMLNode.XML%2A>属性应与以下参数一起使用。</span><span class="sxs-lookup"><span data-stu-id="26531-415">The <xref:Microsoft.Office.Tools.Word.XMLNode.XML%2A> property is intended to be used with the following parameter.</span></span>  
+  
+|<span data-ttu-id="26531-416">参数</span><span class="sxs-lookup"><span data-stu-id="26531-416">Parameter</span></span>|<span data-ttu-id="26531-417">描述</span><span class="sxs-lookup"><span data-stu-id="26531-417">Description</span></span>|  
+|---------------|-----------------|  
+|`ListTemplate`|<span data-ttu-id="26531-418">`true` 若要返回的而不使用 Word XML 标记中; XML 文本否则为`false`。</span><span class="sxs-lookup"><span data-stu-id="26531-418">`true` to return the text of the XML without the Word XML markup; otherwise, `false`.</span></span> <span data-ttu-id="26531-419">默认值为 `false`。</span><span class="sxs-lookup"><span data-stu-id="26531-419">The default is `false`.</span></span>|  
+  
+ <span data-ttu-id="26531-420">如果你使用<xref:Microsoft.Office.Tools.Word.XMLNode.XML%2A>未指定参数的属性，它返回<xref:Microsoft.Office.Tools.Word.XMLNode_XMLType>不应在代码中直接使用的对象。</span><span class="sxs-lookup"><span data-stu-id="26531-420">If you use the <xref:Microsoft.Office.Tools.Word.XMLNode.XML%2A> property without specifying a parameter, it returns an <xref:Microsoft.Office.Tools.Word.XMLNode_XMLType> object that is not intended to be used directly from your code.</span></span>  
+  
+## <a name="optional-parameters"></a><span data-ttu-id="26531-421">可选参数</span><span class="sxs-lookup"><span data-stu-id="26531-421">Optional Parameters</span></span>  
+ <span data-ttu-id="26531-422">可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。</span><span class="sxs-lookup"><span data-stu-id="26531-422">For information on optional parameters, see [Optional Parameters in Office Solutions](/visualstudio/vsto/optional-parameters-in-office-solutions.md).</span></span>  
+  
+   
+  
+## Examples  
+ <span data-ttu-id="26531-423">下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.XML%2A>属性显示的 XML 内容<xref:Microsoft.Office.Tools.Word.XMLNode>使用和不使用 Word XML 标记。</span><span class="sxs-lookup"><span data-stu-id="26531-423">The following code example uses the <xref:Microsoft.Office.Tools.Word.XMLNode.XML%2A> property to display the XML contents of an <xref:Microsoft.Office.Tools.Word.XMLNode> with and without the Word XML markup.</span></span> <span data-ttu-id="26531-424">此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`。</span><span class="sxs-lookup"><span data-stu-id="26531-424">This example assumes that the current document contains an <xref:Microsoft.Office.Tools.Word.XMLNode> named `CustomerNode`.</span></span>  
+  
+ [!code-csharp[Trin_WordXMLNode#21](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#21)]
+ [!code-vb[Trin_WordXMLNode#21](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#21)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="LoadXml">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>
+          <span data-ttu-id="26531-425">使用数据填充 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 控件。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="26531-425">Populates an <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> control with data.</span>
+          </span>
+        </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="26531-426">此方法不会添加其他<xref:Microsoft.Office.Tools.Word.XMLNode>控件或删除不必要<xref:Microsoft.Office.Tools.Word.XMLNode>从文档的控件。</span><span class="sxs-lookup"><span data-stu-id="26531-426">This method does not add additional <xref:Microsoft.Office.Tools.Word.XMLNode> controls or delete unnecessary <xref:Microsoft.Office.Tools.Word.XMLNode> controls from the document.</span></span>  
+  
+ <span data-ttu-id="26531-427">此方法将更新的所有属性<xref:Microsoft.Office.Tools.Word.XMLNode>控件。</span><span class="sxs-lookup"><span data-stu-id="26531-427">This method updates all attributes of the <xref:Microsoft.Office.Tools.Word.XMLNode> control.</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+  </Members>
+</Type>

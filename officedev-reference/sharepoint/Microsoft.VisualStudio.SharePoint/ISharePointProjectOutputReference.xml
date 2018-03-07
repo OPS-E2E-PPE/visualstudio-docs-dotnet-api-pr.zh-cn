@@ -1,0 +1,167 @@
+<Type Name="ISharePointProjectOutputReference" FullName="Microsoft.VisualStudio.SharePoint.ISharePointProjectOutputReference">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="35c8dfec0c2a1869fbdb7cb3259e98e679456192" />
+    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.translationtype" Value="HT" />
+    <Meta Name="ms.contentlocale" Value="zh-CN" />
+    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public interface ISharePointProjectOutputReference : Microsoft.VisualStudio.SharePoint.IDeployableFile, Microsoft.VisualStudio.SharePoint.INotifyObjectDisposed, Microsoft.VisualStudio.SharePoint.INotifyObjectDisposing, System.ComponentModel.INotifyPropertyChanged" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISharePointProjectOutputReference implements class Microsoft.VisualStudio.SharePoint.IDeployableFile, class Microsoft.VisualStudio.SharePoint.INotifyObjectDisposed, class Microsoft.VisualStudio.SharePoint.INotifyObjectDisposing, class System.ComponentModel.INotifyPropertyChanged" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectOutputReference" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.VisualStudio.SharePoint.IDeployableFile</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>Microsoft.VisualStudio.SharePoint.INotifyObjectDisposed</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>Microsoft.VisualStudio.SharePoint.INotifyObjectDisposing</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ComponentModel.INotifyPropertyChanged</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+      <span data-ttu-id="6d290-101">表示引用 Visual Studio 项目的主输出。</span>
+      <span class="sxs-lookup">
+        <span data-stu-id="6d290-101">Represents the primary output of a referenced Visual Studio project.</span>
+      </span>
+    </summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="6d290-102">通常情况下，项目的输出是一个 DLL，如编译的程序集文件，但项目输出取决于项目类型。</span><span class="sxs-lookup"><span data-stu-id="6d290-102">Typically, the output of a project is a compiled assembly file such as a DLL, but the project output depends on the project type.</span></span> <span data-ttu-id="6d290-103">例如，Silverlight 应用程序项目的属性的值与 Silverlight DLL，但。XAP 文件是打包的实际文件。</span><span class="sxs-lookup"><span data-stu-id="6d290-103">For example, with Silverlight application projects, the value of the property is the Silverlight DLL, but the .XAP file is the actual file that is packaged.</span></span> <span data-ttu-id="6d290-104">因此，在这种情况下，此属性返回的路径。XAP 文件，不 DLL。</span><span class="sxs-lookup"><span data-stu-id="6d290-104">So, in this case, this property returns the path of the .XAP file, not the DLL.</span></span>  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="OutputFullPath">
+      <MemberSignature Language="C#" Value="public string OutputFullPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OutputFullPath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectOutputReference.OutputFullPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="6d290-105">获取项目输出的完整路径。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="6d290-105">Gets the full path to the output of the project.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="6d290-106">表示到项目输出文件的路径的字符串。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="6d290-106">A string representing the path to the project output file.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="6d290-107">通常情况下，项目的输出是一个 DLL，如编译的程序集文件，但项目输出取决于项目类型。</span><span class="sxs-lookup"><span data-stu-id="6d290-107">Typically, the output of a project is a compiled assembly file such as a DLL, but the project output depends on the project type.</span></span> <span data-ttu-id="6d290-108">例如，Silverlight 应用程序项目的属性的值与 Silverlight DLL，但。XAP 文件是打包的实际文件。</span><span class="sxs-lookup"><span data-stu-id="6d290-108">For example, with Silverlight application projects, the value of the property is the Silverlight DLL, but the .XAP file is the actual file that is packaged.</span></span> <span data-ttu-id="6d290-109">因此，在这种情况下，此属性返回的路径。XAP 文件，不 DLL。</span><span class="sxs-lookup"><span data-stu-id="6d290-109">So, in this case, this property returns the path of the .XAP file, not the DLL.</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProjectFullPath">
+      <MemberSignature Language="C#" Value="public string ProjectFullPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ProjectFullPath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectOutputReference.ProjectFullPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="6d290-110">获取引用项目的路径。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="6d290-110">Gets the path to the referenced project.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="6d290-111">表示到项目文件的路径的字符串。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="6d290-111">A string representing the path to the project file.</span>
+          </span>
+        </value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProjectId">
+      <MemberSignature Language="C#" Value="public Guid ProjectId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid ProjectId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectOutputReference.ProjectId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="6d290-112">获取引用项目的 ID。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="6d290-112">Gets the ID of the referenced project.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="6d290-113">表示项目的 ID 的 GUID。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="6d290-113">A GUID representing the ID of the project.</span>
+          </span>
+        </value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProjectItem">
+      <MemberSignature Language="C#" Value="public Microsoft.VisualStudio.SharePoint.ISharePointProjectItem ProjectItem { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.VisualStudio.SharePoint.ISharePointProjectItem ProjectItem" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectOutputReference.ProjectItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualStudio.SharePoint.ISharePointProjectItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="6d290-114">获取对包含此项目输出引用的项目项的引用。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="6d290-114">Gets the reference to the project item that contains this project output reference.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="6d290-115">表示项目项的对象。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="6d290-115">An object representing the project item.</span>
+          </span>
+        </value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

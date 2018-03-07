@@ -1,0 +1,64 @@
+<Type Name="ErrorAddDataBoundRowEventHandler" FullName="Microsoft.Office.Tools.Excel.ErrorAddDataBoundRowEventHandler">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="53c04d9c14862887d0295ef5b73e1e509a8a8671" />
+    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.translationtype" Value="HT" />
+    <Meta Name="ms.contentlocale" Value="zh-CN" />
+    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public delegate void ErrorAddDataBoundRowEventHandler(object sender, ErrorAddDataBoundRowEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ErrorAddDataBoundRowEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Excel.ErrorAddDataBoundRowEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.Tools.Excel</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="Microsoft.Office.Tools.Excel.ErrorAddDataBoundRowEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">
+      <span data-ttu-id="78d8f-101">事件源。</span>
+      <span class="sxs-lookup">
+        <span data-stu-id="78d8f-101">The source of the event.</span>
+      </span>
+    </param>
+    <param name="e">
+      <span data-ttu-id="78d8f-102">包含事件数据的 <see cref="T:Microsoft.Office.Tools.Excel.ErrorAddDataBoundRowEventArgs" />。</span>
+      <span class="sxs-lookup">
+        <span data-stu-id="78d8f-102">An <see cref="T:Microsoft.Office.Tools.Excel.ErrorAddDataBoundRowEventArgs" /> that contains the event data.</span>
+      </span>
+    </param>
+    <summary>
+      <span data-ttu-id="78d8f-103">表示 <see cref="E:Microsoft.Office.Tools.Excel.ListObject.ErrorAddDataBoundRow" /> 事件的处理方法。</span>
+      <span class="sxs-lookup">
+        <span data-stu-id="78d8f-103">Represents the method that handles an <see cref="E:Microsoft.Office.Tools.Excel.ListObject.ErrorAddDataBoundRow" /> event.</span>
+      </span>
+    </summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="78d8f-104">创建 <xref:Microsoft.Office.Tools.Excel.ErrorAddDataBoundRowEventHandler> 委托时，需要标识将要处理该事件的方法。</span><span class="sxs-lookup"><span data-stu-id="78d8f-104">When you create an <xref:Microsoft.Office.Tools.Excel.ErrorAddDataBoundRowEventHandler> delegate, you identify the method that will handle the event.</span></span> <span data-ttu-id="78d8f-105">若要将事件与事件处理程序关联，请将该委托的一个实例添加到事件中。</span><span class="sxs-lookup"><span data-stu-id="78d8f-105">To associate the event with your event handler, add an instance of the delegate to the event.</span></span> <span data-ttu-id="78d8f-106">每次事件发生时，除非移除了该委托调用事件处理程序方法。</span><span class="sxs-lookup"><span data-stu-id="78d8f-106">The event handler method is called whenever the event occurs unless you remove the delegate.</span></span>  
+  
+   
+  
+## Examples  
+ <span data-ttu-id="78d8f-107">下面的代码示例创建<xref:System.Data.DataTable>和<xref:Microsoft.Office.Tools.Excel.ListObject>，并将绑定<xref:Microsoft.Office.Tools.Excel.ListObject>到<xref:System.Data.DataTable>。</span><span class="sxs-lookup"><span data-stu-id="78d8f-107">The following code example creates a <xref:System.Data.DataTable> and a <xref:Microsoft.Office.Tools.Excel.ListObject>, and binds the <xref:Microsoft.Office.Tools.Excel.ListObject> to the <xref:System.Data.DataTable>.</span></span> <span data-ttu-id="78d8f-108">然后，它创建<xref:Microsoft.Office.Tools.Excel.ListObject.ErrorAddDataBoundRow>事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="78d8f-108">It then creates an <xref:Microsoft.Office.Tools.Excel.ListObject.ErrorAddDataBoundRow> event handler.</span></span> <span data-ttu-id="78d8f-109">若要测试事件，手动向其中添加新行<xref:Microsoft.Office.Tools.Excel.ListObject>输入姓氏"通道"和第一个名称。</span><span class="sxs-lookup"><span data-stu-id="78d8f-109">To test the event, manually add a new row to the <xref:Microsoft.Office.Tools.Excel.ListObject> and enter the last name "Chan" and a first name.</span></span> <span data-ttu-id="78d8f-110">事件处理程序会显示一条消息。</span><span class="sxs-lookup"><span data-stu-id="78d8f-110">The event handler displays a message.</span></span>  
+  
+ <span data-ttu-id="78d8f-111">此示例适用于文档级自定义。</span><span class="sxs-lookup"><span data-stu-id="78d8f-111">This example is for a document-level customization.</span></span>  
+  
+ [!code-csharp[Trin_ExcelListObject#20](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelListObject/CS/Trin_ExcelListObject.cs#20)]
+ [!code-vb[Trin_ExcelListObject#20](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelListObject/VB/Sheet1.vb#20)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

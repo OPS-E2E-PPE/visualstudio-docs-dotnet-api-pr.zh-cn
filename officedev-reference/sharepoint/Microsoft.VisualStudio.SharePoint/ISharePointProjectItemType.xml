@@ -1,0 +1,267 @@
+<Type Name="ISharePointProjectItemType" FullName="Microsoft.VisualStudio.SharePoint.ISharePointProjectItemType">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="85e056f18fe86f02850893ae8b44c491d0fc8b06" />
+    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.translationtype" Value="HT" />
+    <Meta Name="ms.contentlocale" Value="zh-CN" />
+    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public interface ISharePointProjectItemType : Microsoft.VisualStudio.SharePoint.IAnnotatedObject, Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents, Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFileEvents" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISharePointProjectItemType implements class Microsoft.VisualStudio.SharePoint.IAnnotatedObject, class Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents, class Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFileEvents" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemType" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.VisualStudio.SharePoint.IAnnotatedObject</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFileEvents</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+      <span data-ttu-id="e8d94-101">表示 SharePoint 项目项的类型。</span>
+      <span class="sxs-lookup">
+        <span data-stu-id="e8d94-101">Represents a type of a SharePoint project item.</span>
+      </span>
+      <span data-ttu-id="e8d94-102">它使用户能够将自定义数据与类型关联，因为它继承自 <see cref="T:Microsoft.VisualStudio.SharePoint.IAnnotatedObject" /> 接口。</span>
+      <span class="sxs-lookup">
+        <span data-stu-id="e8d94-102">It enables users to associate custom data with a type because it inherits from the <see cref="T:Microsoft.VisualStudio.SharePoint.IAnnotatedObject" /> interface.</span>
+      </span>
+    </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public string Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Id" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemType.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="e8d94-103">获取 SharePoint 项目项类型的唯一 ID。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e8d94-103">Gets the unique ID of the SharePoint project item type.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="e8d94-104">一个字符串，表示一个 id。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e8d94-104">A string representing an ID.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="e8d94-105">该 ID 通常是一个字符串，它显示为命名空间限定类型。</span><span class="sxs-lookup"><span data-stu-id="e8d94-105">The ID is usually a string which appears as a namespace qualified type.</span></span> <span data-ttu-id="e8d94-106">通过从 SharePointProjectItemTypeAttribute 项目初始化 ID。<xref:Microsoft.VisualStudio.SharePoint.SharePointProjectItemTypeAttribute.ProjectItemTypeId%2A>为提供值<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider>组件。</span><span class="sxs-lookup"><span data-stu-id="e8d94-106">The ID is initialized by the project from the SharePointProjectItemTypeAttribute.<xref:Microsoft.VisualStudio.SharePoint.SharePointProjectItemTypeAttribute.ProjectItemTypeId%2A> value provided for the <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider> component.</span></span>  
+  
+ <span data-ttu-id="e8d94-107">ID 必须匹配中存储的 ID。SPData 文件。</span><span class="sxs-lookup"><span data-stu-id="e8d94-107">The ID must match the ID stored in the .SPData file.</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValid">
+      <MemberSignature Language="C#" Value="public bool IsValid { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsValid" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemType.IsValid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="e8d94-108">了解项目项是否有效。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e8d94-108">Gets whether the project item is valid.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="e8d94-109">
+            <see langword="True" /> 如果项目项是有效，则为<see langword="false" />否则为。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e8d94-109">
+              <see langword="True" /> if the project item is valid; <see langword="false" /> otherwise.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="e8d94-110">项目项类型被视为如果 SharePoint 项目可以找到组件实现相应项目项类型提供程序，并且能够成功创建并初始化此类型提供程序是否可有效。</span><span class="sxs-lookup"><span data-stu-id="e8d94-110">A project item type is considered to be valid if the SharePoint project can find a component implementing the corresponding project item type provider, and if the provider was able to successfully create and initialize the type.</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemType.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="e8d94-111">获取设计器中显示类型的友好名称。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e8d94-111">Gets the friendly name of type shown in designers.</span>
+          </span>
+          <span data-ttu-id="e8d94-112">默认情况下，名称为 ID。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e8d94-112">By default, the name is the ID.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="e8d94-113">表示类型名称的字符串。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e8d94-113">A string representing a type name.</span>
+          </span>
+        </value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProjectService">
+      <MemberSignature Language="C#" Value="public Microsoft.VisualStudio.SharePoint.ISharePointProjectService ProjectService { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.VisualStudio.SharePoint.ISharePointProjectService ProjectService" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemType.ProjectService" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualStudio.SharePoint.ISharePointProjectService</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="e8d94-114">获取 SharePoint 项目服务的实例。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e8d94-114">Gets an instance of the SharePoint project service.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="e8d94-115">表示一个 SharePoint 项目服务实例的对象。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e8d94-115">An object representing a SharePoint project service instance.</span>
+          </span>
+        </value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportedAssemblyDeploymentTargets">
+      <MemberSignature Language="C#" Value="public Microsoft.VisualStudio.SharePoint.SupportedAssemblyDeploymentTargets SupportedAssemblyDeploymentTargets { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.VisualStudio.SharePoint.SupportedAssemblyDeploymentTargets SupportedAssemblyDeploymentTargets" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemType.SupportedAssemblyDeploymentTargets" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualStudio.SharePoint.SupportedAssemblyDeploymentTargets</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="e8d94-116">获取此 <see cref="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFile.ProjectItem" /> 支持的程序集的部署位置。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e8d94-116">Gets the deployment location of the assembly that is supported by this <see cref="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFile.ProjectItem" />.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="e8d94-117">表示一个部署位置的对象。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e8d94-117">An object representing a deployment location.</span>
+          </span>
+        </value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportedDeploymentScopes">
+      <MemberSignature Language="C#" Value="public Microsoft.VisualStudio.SharePoint.SupportedDeploymentScopes SupportedDeploymentScopes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.VisualStudio.SharePoint.SupportedDeploymentScopes SupportedDeploymentScopes" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemType.SupportedDeploymentScopes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualStudio.SharePoint.SupportedDeploymentScopes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="e8d94-118">获取 SharePoint 中支持 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem" /> 部署的范围。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e8d94-118">Gets the scope at which the deployment of the <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem" /> is supported in SharePoint.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="e8d94-119">表示部署范围的对象。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e8d94-119">An object representing a deployment scope.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="e8d94-120">在选择包括为兼容的功能和限制功能和包设计器用户界面，对于其他用户使用此属性。</span><span class="sxs-lookup"><span data-stu-id="e8d94-120">This property used in selecting a compatible feature for auto-add and restricting the feature and package designer UIs, among other uses.</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportedTrustLevels">
+      <MemberSignature Language="C#" Value="public Microsoft.VisualStudio.SharePoint.SupportedTrustLevels SupportedTrustLevels { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.VisualStudio.SharePoint.SupportedTrustLevels SupportedTrustLevels" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemType.SupportedTrustLevels" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualStudio.SharePoint.SupportedTrustLevels</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="e8d94-121">获取 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem" /> 支持的 SharePoint 中的信任级别。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e8d94-121">Gets the trust levels in SharePoint supported by the <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem" />.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="e8d94-122">表示信任级别的对象。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e8d94-122">An object representing trust levels.</span>
+          </span>
+        </value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

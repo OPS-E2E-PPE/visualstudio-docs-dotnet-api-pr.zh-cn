@@ -1,0 +1,132 @@
+<Type Name="ISharePointProjectItemDeploymentContext" FullName="Microsoft.VisualStudio.SharePoint.Deployment.ISharePointProjectItemDeploymentContext">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="38f1b1208cb202666d5590007f6974d3479eb1ae" />
+    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.translationtype" Value="HT" />
+    <Meta Name="ms.contentlocale" Value="zh-CN" />
+    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public interface ISharePointProjectItemDeploymentContext : Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISharePointProjectItemDeploymentContext implements class Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext, class Microsoft.VisualStudio.SharePoint.IAnnotatedObject" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.SharePoint.Deployment.ISharePointProjectItemDeploymentContext" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+      <span data-ttu-id="91907-101">表示特定项目项的部署上下文。</span>
+      <span class="sxs-lookup">
+        <span data-stu-id="91907-101">Represents the deployment context of a specific project item.</span>
+      </span>
+    </summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="91907-102">使用<xref:Microsoft.VisualStudio.SharePoint.Deployment.ISharePointProjectItemDeploymentContext>对象以确定部署的项目项和其服务器上的文件的位置。</span><span class="sxs-lookup"><span data-stu-id="91907-102">Use <xref:Microsoft.VisualStudio.SharePoint.Deployment.ISharePointProjectItemDeploymentContext> objects to determine the location of the deployed project item and its files on the server.</span></span> <span data-ttu-id="91907-103">Visual Studio 将传递<xref:Microsoft.VisualStudio.SharePoint.Deployment.ISharePointProjectItemDeploymentContext>的对象添加到事件处理程序<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.DeploymentStepStarted>， <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.DeploymentStepCompleted>，和<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition.ProjectItemStartupUrlRequested>事件。</span><span class="sxs-lookup"><span data-stu-id="91907-103">Visual Studio passes <xref:Microsoft.VisualStudio.SharePoint.Deployment.ISharePointProjectItemDeploymentContext> objects to the event handlers for the <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.DeploymentStepStarted>, <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.DeploymentStepCompleted>, and <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition.ProjectItemStartupUrlRequested> events.</span></span>  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Feature">
+      <MemberSignature Language="C#" Value="public Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature Feature { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature Feature" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualStudio.SharePoint.Deployment.ISharePointProjectItemDeploymentContext.Feature" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="91907-104">获取与项目项关联的主要功能。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="91907-104">Gets the primary feature associated with the project item.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="91907-105">一个表示 SharePoint 功能对象。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="91907-105">An object representing a SharePoint feature.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="91907-106">如果项目项是否存在于多个功能，则使用最具体的部署范围的功能。</span><span class="sxs-lookup"><span data-stu-id="91907-106">If the project item is present in multiple features, the feature with the most specific deployment scope is used.</span></span>  
+  
+ <span data-ttu-id="91907-107">如果多个功能具有相同的部署范围，则使用任意功能。</span><span class="sxs-lookup"><span data-stu-id="91907-107">If multiple features have the same deployment scope, an arbitrary feature is used.</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FeatureScope">
+      <MemberSignature Language="C#" Value="public Nullable&lt;Microsoft.VisualStudio.SharePoint.Features.FeatureScope&gt; FeatureScope { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype Microsoft.VisualStudio.SharePoint.Features.FeatureScope&gt; FeatureScope" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualStudio.SharePoint.Deployment.ISharePointProjectItemDeploymentContext.FeatureScope" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;Microsoft.VisualStudio.SharePoint.Features.FeatureScope&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="91907-108">获取一个值，该值表示正在部署的项目项的功能的范围。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="91907-108">Gets a value representing the scope at which the project item's feature is being deployed.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="91907-109">表示功能范围的对象。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="91907-109">An object representing a feature scope.</span>
+          </span>
+        </value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProjectItem">
+      <MemberSignature Language="C#" Value="public Microsoft.VisualStudio.SharePoint.ISharePointProjectItem ProjectItem { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.VisualStudio.SharePoint.ISharePointProjectItem ProjectItem" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualStudio.SharePoint.Deployment.ISharePointProjectItemDeploymentContext.ProjectItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualStudio.SharePoint.ISharePointProjectItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="91907-110">获取正在部署的项目项。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="91907-110">Gets the project item being deployed.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="91907-111">表示 SharePoint 项目项的对象。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="91907-111">An object representing a SharePoint project item.</span>
+          </span>
+        </value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

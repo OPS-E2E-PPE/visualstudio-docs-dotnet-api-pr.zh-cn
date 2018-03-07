@@ -1,0 +1,1373 @@
+<Type Name="ContentControl" FullName="Microsoft.Office.Tools.Word.ContentControl">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="102e91cd5e0110be88bbfddd4e6393c66863bf7c" />
+    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.translationtype" Value="HT" />
+    <Meta Name="ms.contentlocale" Value="zh-CN" />
+    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public interface ContentControl : IDisposable, Microsoft.Office.Tools.Word.ContentControlBase, System.ComponentModel.IComponent, System.ComponentModel.ISupportInitialize, System.Windows.Forms.IBindableComponent" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ContentControl implements class Microsoft.Office.Tools.Word.ContentControlBase, class System.ComponentModel.IComponent, class System.ComponentModel.ISupportInitialize, class System.IDisposable, class System.Windows.Forms.IBindableComponent" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Word.ContentControl" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Office.Tools.Word.ContentControlBase</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ComponentModel.IComponent</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ComponentModel.ISupportInitialize</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Windows.Forms.IBindableComponent</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("ee82979b-2814-48b1-95dd-4bfcc636a7ec")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+      <span data-ttu-id="e51b5-101">表示文档中的内容控件。</span>
+      <span class="sxs-lookup">
+        <span data-stu-id="e51b5-101">Represents a content control a document.</span>
+      </span>
+    </summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="e51b5-102">A<xref:Microsoft.Office.Tools.Word.ContentControl>对象是可变的控件，它可以表示任何可以使用 Microsoft Office Word 中的内容控件的八个类型。</span><span class="sxs-lookup"><span data-stu-id="e51b5-102">A <xref:Microsoft.Office.Tools.Word.ContentControl> object is a mutable control that can represent any of the eight types of content controls that you can use in Microsoft Office Word.</span></span> <span data-ttu-id="e51b5-103">例如，如果你创建<xref:Microsoft.Office.Tools.Word.ContentControl>最初具有纯文本控件的功能，你可以更改它在运行时，以便其行为类似于组合框。</span><span class="sxs-lookup"><span data-stu-id="e51b5-103">For example, if you create a <xref:Microsoft.Office.Tools.Word.ContentControl> that initially has the functionality of a plain text control, you can change it at run time so that it behaves like a combo box.</span></span> <span data-ttu-id="e51b5-104">其他内容控件不能在这种方式。</span><span class="sxs-lookup"><span data-stu-id="e51b5-104">Other content controls cannot be used in this way.</span></span> <span data-ttu-id="e51b5-105">例如，<xref:Microsoft.Office.Tools.Word.RichTextContentControl>只能表示多信息文本控件。</span><span class="sxs-lookup"><span data-stu-id="e51b5-105">For example, a <xref:Microsoft.Office.Tools.Word.RichTextContentControl> can only represent a rich text control.</span></span> <span data-ttu-id="e51b5-106">有关内容控件的详细信息，请参阅[内容控件](/visualstudio/vsto/content-controls.md)。</span><span class="sxs-lookup"><span data-stu-id="e51b5-106">For more information about content controls, see [Content Controls](/visualstudio/vsto/content-controls.md).</span></span>  
+  
+ <span data-ttu-id="e51b5-107">若要创建<xref:Microsoft.Office.Tools.Word.ContentControl>，使用之一<xref:Microsoft.Office.Tools.Word.ControlCollection.AddContentControl%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="e51b5-107">To create a <xref:Microsoft.Office.Tools.Word.ContentControl>, use one of the <xref:Microsoft.Office.Tools.Word.ControlCollection.AddContentControl%2A> methods.</span></span> <span data-ttu-id="e51b5-108">无法添加<xref:Microsoft.Office.Tools.Word.ContentControl>在设计时向文档。</span><span class="sxs-lookup"><span data-stu-id="e51b5-108">You cannot add a <xref:Microsoft.Office.Tools.Word.ContentControl> to a document at design time.</span></span>  
+  
+ <span data-ttu-id="e51b5-109">当你创建<xref:Microsoft.Office.Tools.Word.ContentControl>，你必须指定你想要创建的内容控件的类型，也可以基于现有的内容控件上的新控件。</span><span class="sxs-lookup"><span data-stu-id="e51b5-109">When you create a <xref:Microsoft.Office.Tools.Word.ContentControl>, you must specify the type of the content control that you want to create, or you can base the new control on an existing content control.</span></span> <span data-ttu-id="e51b5-110">在创建后<xref:Microsoft.Office.Tools.Word.ContentControl>，你可以更改它表示使用的内容控件的类型<xref:Microsoft.Office.Tools.Word.ContentControl.Type%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="e51b5-110">After you create a <xref:Microsoft.Office.Tools.Word.ContentControl>, you can change the type of content control that it represents by using the <xref:Microsoft.Office.Tools.Word.ContentControl.Type%2A> property.</span></span>  
+  
+ <span data-ttu-id="e51b5-111">某些<xref:Microsoft.Office.Tools.Word.ContentControl>成员将引发异常，如果该控件设置为一种不应使用这些成员的控件时，会使用它们。</span><span class="sxs-lookup"><span data-stu-id="e51b5-111">Some <xref:Microsoft.Office.Tools.Word.ContentControl> members will throw an exception if you use them while the control is set to a type of control that is not intended to use the member.</span></span> <span data-ttu-id="e51b5-112">例如，<xref:Microsoft.Office.Tools.Word.ContentControl.DateCalendarType%2A>属性将引发异常，如果你尝试使用在<xref:Microsoft.Office.Tools.Word.ContentControl>不表示日期选取器。</span><span class="sxs-lookup"><span data-stu-id="e51b5-112">For example, the <xref:Microsoft.Office.Tools.Word.ContentControl.DateCalendarType%2A> property will throw an exception if you try to use it on a <xref:Microsoft.Office.Tools.Word.ContentControl> that does not represent a date picker.</span></span>  
+  
+ [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
+  
+## <a name="usage"></a><span data-ttu-id="e51b5-113">用法</span><span class="sxs-lookup"><span data-stu-id="e51b5-113">Usage</span></span>  
+ [!INCLUDE[vsto_net35mref](~/includes/vsto-net35mref-md.md)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Application">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Word.Application Application { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Interop.Word.Application Application" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.ContentControl.Application" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Word.Application</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="e51b5-114">获取一个表示 Microsoft Office Word 当前实例的 <see cref="T:Microsoft.Office.Interop.Word.Application" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-114">Gets a <see cref="T:Microsoft.Office.Interop.Word.Application" /> that represents the current instance of Microsoft Office Word.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="e51b5-115">Microsoft Office Word 的当前实例。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-115">The current instance of Microsoft Office Word.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="e51b5-116"><xref:Microsoft.Office.Tools.Word.ContentControl.Application%2A>属性公开有关 Word，应用于该实例的选项的当前实例的信息以及在实例中打开当前文档。</span><span class="sxs-lookup"><span data-stu-id="e51b5-116">The <xref:Microsoft.Office.Tools.Word.ContentControl.Application%2A> property exposes information about the current instance of Word, the options applied to that instance, and the current documents open within the instance.</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildingBlockCategory">
+      <MemberSignature Language="C#" Value="public string BuildingBlockCategory { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BuildingBlockCategory" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.ContentControl.BuildingBlockCategory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="e51b5-117">获取或设置在表示生成块库的 <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> 中显示的生成块的类别。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-117">Gets or sets the category of building blocks that are displayed in a <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> that represents a building block gallery.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="e51b5-118">在 <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> 中显示的生成块的类别。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-118">The category of the building blocks that are displayed in the <see cref="T:Microsoft.Office.Tools.Word.ContentControl" />.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="e51b5-119">此属性应仅当使用<xref:Microsoft.Office.Tools.Word.ContentControl.Type%2A>属性<xref:Microsoft.Office.Tools.Word.ContentControl>具有值`Microsoft.Office.Interop.Word.WdContentControlType.wdContentControlBuildingBlockGallery`。</span><span class="sxs-lookup"><span data-stu-id="e51b5-119">This property is intended to be used only if the <xref:Microsoft.Office.Tools.Word.ContentControl.Type%2A> property of the <xref:Microsoft.Office.Tools.Word.ContentControl> has the value `Microsoft.Office.Interop.Word.WdContentControlType.wdContentControlBuildingBlockGallery`.</span></span> <span data-ttu-id="e51b5-120">否则，此属性没有任何影响。</span><span class="sxs-lookup"><span data-stu-id="e51b5-120">Otherwise, this property does nothing.</span></span>  
+  
+ <span data-ttu-id="e51b5-121">所有构建基块都所属的类别和一个库。</span><span class="sxs-lookup"><span data-stu-id="e51b5-121">All building blocks belong to a category and a gallery.</span></span> <span data-ttu-id="e51b5-122">使用<xref:Microsoft.Office.Tools.Word.ContentControl.BuildingBlockCategory%2A>属性指定的构建基块，显示的类别<xref:Microsoft.Office.Tools.Word.ContentControl>。</span><span class="sxs-lookup"><span data-stu-id="e51b5-122">Use the <xref:Microsoft.Office.Tools.Word.ContentControl.BuildingBlockCategory%2A> property to specify the category of the building blocks that are displayed by the <xref:Microsoft.Office.Tools.Word.ContentControl>.</span></span> <span data-ttu-id="e51b5-123">你可以设置到此属性的值`Built-In`或`General`类别定义的 Microsoft Office Word 中，也可以指定自定义的类别。</span><span class="sxs-lookup"><span data-stu-id="e51b5-123">You can set the value of this property to the `Built-In` or `General` categories defined by Microsoft Office Word, or you can specify a custom category.</span></span>  
+  
+ <span data-ttu-id="e51b5-124">若要指定的库中显示的构建基块<xref:Microsoft.Office.Tools.Word.ContentControl>，使用<xref:Microsoft.Office.Tools.Word.ContentControl.BuildingBlockType%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="e51b5-124">To specify which gallery of building blocks to display in the <xref:Microsoft.Office.Tools.Word.ContentControl>, use the <xref:Microsoft.Office.Tools.Word.ContentControl.BuildingBlockType%2A> property.</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildingBlockType">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Word.WdBuildingBlockTypes BuildingBlockType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Office.Interop.Word.WdBuildingBlockTypes BuildingBlockType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.ContentControl.BuildingBlockType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Word.WdBuildingBlockTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="e51b5-125">获取或设置在表示生成块库的 <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> 中显示的生成块的类型。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-125">Gets or sets the type of the building blocks that are displayed in a <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> that represents a building block gallery.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="e51b5-126">在控件中显示的生成块的类别。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-126">The type of the building blocks that are displayed in the control.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="e51b5-127">此属性应仅当使用<xref:Microsoft.Office.Tools.Word.ContentControl.Type%2A>属性<xref:Microsoft.Office.Tools.Word.ContentControl>具有值`Microsoft.Office.Interop.Word.WdContentControlType.wdContentControlBuildingBlockGallery`。</span><span class="sxs-lookup"><span data-stu-id="e51b5-127">This property is intended to be used only if the <xref:Microsoft.Office.Tools.Word.ContentControl.Type%2A> property of the <xref:Microsoft.Office.Tools.Word.ContentControl> has the value `Microsoft.Office.Interop.Word.WdContentControlType.wdContentControlBuildingBlockGallery`.</span></span> <span data-ttu-id="e51b5-128">否则，此属性没有任何影响。</span><span class="sxs-lookup"><span data-stu-id="e51b5-128">Otherwise, this property does nothing.</span></span>  
+  
+ <span data-ttu-id="e51b5-129">所有构建基块都属于库和一个类别。</span><span class="sxs-lookup"><span data-stu-id="e51b5-129">All building blocks belong to a gallery and a category.</span></span> <span data-ttu-id="e51b5-130">使用<xref:Microsoft.Office.Tools.Word.ContentControl.BuildingBlockType%2A>属性来指定哪些库中显示的构建基块<xref:Microsoft.Office.Tools.Word.ContentControl>。</span><span class="sxs-lookup"><span data-stu-id="e51b5-130">Use the <xref:Microsoft.Office.Tools.Word.ContentControl.BuildingBlockType%2A> property to specify which gallery of building blocks to display in the <xref:Microsoft.Office.Tools.Word.ContentControl>.</span></span>  
+  
+ <span data-ttu-id="e51b5-131">A<xref:Microsoft.Office.Tools.Word.ContentControl>只能显示某些库的构建基块。</span><span class="sxs-lookup"><span data-stu-id="e51b5-131">A <xref:Microsoft.Office.Tools.Word.ContentControl> can display only certain galleries of building blocks.</span></span> <span data-ttu-id="e51b5-132"><xref:Microsoft.Office.Tools.Word.ContentControl.BuildingBlockType%2A>属性可以设置只为以下`Microsoft.Office.Interop.Word.WdBuildingBlockTypes`值：</span><span class="sxs-lookup"><span data-stu-id="e51b5-132">The <xref:Microsoft.Office.Tools.Word.ContentControl.BuildingBlockType%2A> property can be set only to the following `Microsoft.Office.Interop.Word.WdBuildingBlockTypes` values:</span></span>  
+  
+-   `wdTypeAutoText`  
+  
+-   `wdTypeCustom1`  
+  
+-   `wdTypeCustom2`  
+  
+-   `wdTypeCustom3`  
+  
+-   `wdTypeCustom4`  
+  
+-   `wdTypeCustom5`  
+  
+-   `wdTypeCustomAutoText`  
+  
+-   `wdTypeCustomEquations`  
+  
+-   `wdTypeCustomQuickParts`  
+  
+-   `wdTypeCustomTables`  
+  
+-   `wdTypeEquations`  
+  
+-   `wdTypeQuickParts`  
+  
+-   `wdTypeTables`  
+  
+ <span data-ttu-id="e51b5-133">指定的构建基块显示的类别<xref:Microsoft.Office.Tools.Word.ContentControl>，使用<xref:Microsoft.Office.Tools.Word.ContentControl.BuildingBlockCategory%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="e51b5-133">To specify the category of building blocks that are displayed by the <xref:Microsoft.Office.Tools.Word.ContentControl>, use the <xref:Microsoft.Office.Tools.Word.ContentControl.BuildingBlockCategory%2A> property.</span></span>  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.COMException">
+          <span data-ttu-id="e51b5-134">属性设置为 <c>Microsoft.Office.Interop.Word.WdBuildingBlockTypes</c> 值，该值标识无法在 <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> 中显示的构造块的类别。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-134">The property is set to a <c>Microsoft.Office.Interop.Word.WdBuildingBlockTypes</c> value that identifies a category of building blocks that cannot be displayed in a <see cref="T:Microsoft.Office.Tools.Word.ContentControl" />.</span>
+          </span>
+        </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Checked">
+      <MemberSignature Language="C#" Value="public bool Checked { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Checked" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.ContentControl.Checked" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="e51b5-135">获取或设置一个值，该值指示 <see cref="T:Microsoft.Office.Tools.Word.ContentControl" />（代表复选框控件）已选中还是未选中。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-135">Gets or sets a value that indicates whether a <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> that represents a check box control is checked or unchecked.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="e51b5-136">如果已选中该内容控件，则为 <see langword="true" />；否则为 <see langword="false" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-136">
+              <see langword="true" /> if the content control is checked; otherwise, <see langword="false" />.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="e51b5-137">可以使用此属性，仅当<xref:Microsoft.Office.Tools.Word.ContentControl>表示复选框内容控件。</span><span class="sxs-lookup"><span data-stu-id="e51b5-137">This property can be used only if the <xref:Microsoft.Office.Tools.Word.ContentControl> represents a check box content control.</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="e51b5-138">此方法将显示在 IntelliSense Word 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="e51b5-138">This method appears in IntelliSense in Word 2007 projects that target the [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)].</span></span> <span data-ttu-id="e51b5-139">但是，无法在 Word 2007 项目中使用此属性。</span><span class="sxs-lookup"><span data-stu-id="e51b5-139">However, this property cannot be used in Word 2007 projects.</span></span>  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.MissingMemberException">
+          <span data-ttu-id="e51b5-140">在 Word 2007 项目中使用此属性。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-140">This property is used in a Word 2007 project.</span>
+          </span>
+        </exception>
+        <exception cref="T:System.Runtime.InteropServices.COMException">
+          <span data-ttu-id="e51b5-141">
+            <see cref="P:Microsoft.Office.Tools.Word.ContentControl.Type" /> 属性不具有值 <c>Microsoft.Office.Interop.Word.WdContentControlType.wdContentControlCheckBox</c>。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-141">The <see cref="P:Microsoft.Office.Tools.Word.ContentControl.Type" /> property does not have the value <c>Microsoft.Office.Interop.Word.WdContentControlType.wdContentControlCheckBox</c>.</span>
+          </span>
+        </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public void Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.ContentControl.Copy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+          <span data-ttu-id="e51b5-142">将 <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> 从文档复制到剪贴板。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-142">Copies the <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> from the document to the Clipboard.</span>
+          </span>
+        </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="e51b5-143">当你使用<xref:Microsoft.Office.Tools.Word.ContentControl.Copy%2A>方法时，原始<xref:Microsoft.Office.Tools.Word.ContentControl>保留在文档。</span><span class="sxs-lookup"><span data-stu-id="e51b5-143">When you use the <xref:Microsoft.Office.Tools.Word.ContentControl.Copy%2A> method, the original <xref:Microsoft.Office.Tools.Word.ContentControl> remains on the document.</span></span> <span data-ttu-id="e51b5-144">一份<xref:Microsoft.Office.Tools.Word.ContentControl>（包括所有文本和属性设置) 将添加到剪贴板。</span><span class="sxs-lookup"><span data-stu-id="e51b5-144">A copy of the <xref:Microsoft.Office.Tools.Word.ContentControl>, including all text and property settings, is added to the Clipboard.</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Creator">
+      <MemberSignature Language="C#" Value="public int Creator { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Creator" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.ContentControl.Creator" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="e51b5-145">获取一个 32 位整数，该整数指示已在其中创建 <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> 的应用程序。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-145">Gets a 32-bit integer that indicates the application in which the <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> was created.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="e51b5-146">一个 32 位整数，该整数指示已在其中创建该控件的应用程序。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-146">A 32-bit integer that indicates the application in which the control was created.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="e51b5-147">如果<xref:Microsoft.Office.Tools.Word.ContentControl>在 Microsoft Office Word 中创建<xref:Microsoft.Office.Tools.Word.ContentControl.Creator%2A>属性返回表示字符串的十六进制数 4d535744， `MSWD`。</span><span class="sxs-lookup"><span data-stu-id="e51b5-147">If the <xref:Microsoft.Office.Tools.Word.ContentControl> was created in Microsoft Office Word, the <xref:Microsoft.Office.Tools.Word.ContentControl.Creator%2A> property returns the hexadecimal number 4D535744, which represents the string `MSWD`.</span></span> <span data-ttu-id="e51b5-148">此字符串是 Word 的四个字符创建者代码。</span><span class="sxs-lookup"><span data-stu-id="e51b5-148">This string is the four-character creator code for Word.</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cut">
+      <MemberSignature Language="C#" Value="public void Cut ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Cut() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.ContentControl.Cut" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+          <span data-ttu-id="e51b5-149">从文档中移除 <see cref="T:Microsoft.Office.Tools.Word.ContentControl" />，然后将其添加到剪贴板中。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-149">Removes the <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> from the document and adds it to the Clipboard.</span>
+          </span>
+        </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="e51b5-150">当你使用<xref:Microsoft.Office.Tools.Word.ContentControl.Cut%2A>方法时，原始<xref:Microsoft.Office.Tools.Word.ContentControl>从文档中移除。</span><span class="sxs-lookup"><span data-stu-id="e51b5-150">When you use the <xref:Microsoft.Office.Tools.Word.ContentControl.Cut%2A> method, the original <xref:Microsoft.Office.Tools.Word.ContentControl> is removed from the document.</span></span> <span data-ttu-id="e51b5-151">一份<xref:Microsoft.Office.Tools.Word.ContentControl>（包括所有文本和属性设置) 将添加到剪贴板。</span><span class="sxs-lookup"><span data-stu-id="e51b5-151">A copy of the <xref:Microsoft.Office.Tools.Word.ContentControl>, including all text and property settings, is added to the Clipboard.</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DateCalendarType">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Word.WdCalendarType DateCalendarType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Office.Interop.Word.WdCalendarType DateCalendarType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.ContentControl.DateCalendarType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Word.WdCalendarType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="e51b5-152">获取或设置在表示日期选择器的 <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> 中显示的日历的类型。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-152">Gets or sets the type of calendar that is displayed in a <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> that represents a date picker.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="e51b5-153">在控件中显示的日历的类型。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-153">The type of calendar that is displayed in the control.</span>
+          </span>
+          <span data-ttu-id="e51b5-154">默认值取决于操作系统的当前区域设置。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-154">The default depends on the current locale setting of the operating system.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="e51b5-155">可以使用此属性，仅当<xref:Microsoft.Office.Tools.Word.ContentControl>表示日期选取器。</span><span class="sxs-lookup"><span data-stu-id="e51b5-155">This property can be used only if the <xref:Microsoft.Office.Tools.Word.ContentControl> represents a date picker.</span></span>  
+  
+ <span data-ttu-id="e51b5-156">默认日历类型取决于操作系统的区域设置。</span><span class="sxs-lookup"><span data-stu-id="e51b5-156">The default calendar type depends on the locale setting of the operating system.</span></span> <span data-ttu-id="e51b5-157">例如，英语 （美国） 的区域设置的默认日历类型是`wdCalendarWestern`。</span><span class="sxs-lookup"><span data-stu-id="e51b5-157">For example, the default calendar type for the locale English (United States) is `wdCalendarWestern`.</span></span>  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.COMException">
+          <span data-ttu-id="e51b5-158">
+            <see cref="P:Microsoft.Office.Tools.Word.ContentControl.Type" /> 属性不具有值 <c>Microsoft.Office.Interop.Word.WdContentControlType.wdContentControlDate</c>。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-158">The <see cref="P:Microsoft.Office.Tools.Word.ContentControl.Type" /> property does not have the value <c>Microsoft.Office.Interop.Word.WdContentControlType.wdContentControlDate</c>.</span>
+          </span>
+        </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DateDisplayFormat">
+      <MemberSignature Language="C#" Value="public string DateDisplayFormat { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DateDisplayFormat" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.ContentControl.DateDisplayFormat" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="e51b5-159">获取或设置一个字符串，该字符串指定在表示日期选择器的 <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> 中显示日期的格式。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-159">Gets or sets a string that specifies the format of dates that are displayed in a <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> that represents a date picker.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="e51b5-160">一个字符串，该字符串指定 <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> 显示日期所用的格式。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-160">A string that specifies the format in which the <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> displays dates.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="e51b5-161">可以使用此属性，仅当<xref:Microsoft.Office.Tools.Word.ContentControl>表示日期选取器。</span><span class="sxs-lookup"><span data-stu-id="e51b5-161">This property can be used only if the <xref:Microsoft.Office.Tools.Word.ContentControl> represents a date picker.</span></span>  
+  
+ <span data-ttu-id="e51b5-162">默认日期格式为 Microsoft Office Word 中，这通常取决于操作系统的区域设置中指定的格式设置。</span><span class="sxs-lookup"><span data-stu-id="e51b5-162">The default date format is the format setting specified in Microsoft Office Word, which usually depends on the locale setting of the operating system.</span></span> <span data-ttu-id="e51b5-163">例如，英语 （美国） 的区域设置的日期的默认格式是`mm/dd/yyyy`。</span><span class="sxs-lookup"><span data-stu-id="e51b5-163">For example, the default format of dates for the locale English (United States) is `mm/dd/yyyy`.</span></span>  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.COMException">
+          <span data-ttu-id="e51b5-164">
+            <see cref="P:Microsoft.Office.Tools.Word.ContentControl.Type" /> 属性不具有值 <c>Microsoft.Office.Interop.Word.WdContentControlType.wdContentControlDate</c>。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-164">The <see cref="P:Microsoft.Office.Tools.Word.ContentControl.Type" /> property does not have the value <c>Microsoft.Office.Interop.Word.WdContentControlType.wdContentControlDate</c>.</span>
+          </span>
+        </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DateDisplayLocale">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Word.WdLanguageID DateDisplayLocale { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Office.Interop.Word.WdLanguageID DateDisplayLocale" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.ContentControl.DateDisplayLocale" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Word.WdLanguageID</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="e51b5-165">获取或设置在表示日期选择器的 <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> 中显示的日期的语言格式。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-165">Gets or sets the language format of the date that is displayed in a <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> that represents a date picker.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="e51b5-166">在控件中显示的日期的语言格式。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-166">The language format of the date that is displayed in the control.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="e51b5-167">可以使用此属性，仅当<xref:Microsoft.Office.Tools.Word.ContentControl>表示日期选取器。</span><span class="sxs-lookup"><span data-stu-id="e51b5-167">This property can be used only if the <xref:Microsoft.Office.Tools.Word.ContentControl> represents a date picker.</span></span>  
+  
+ <span data-ttu-id="e51b5-168">默认值<xref:Microsoft.Office.Tools.Word.ContentControl.DateDisplayLocale%2A>属性依赖于 Microsoft Office Word 中指定的编辑语言。</span><span class="sxs-lookup"><span data-stu-id="e51b5-168">The default value of the <xref:Microsoft.Office.Tools.Word.ContentControl.DateDisplayLocale%2A> property depends on the editing language specified in Microsoft Office Word.</span></span> <span data-ttu-id="e51b5-169">例如，英语 （美国） 的默认语言格式是`wdEnglishUS`。</span><span class="sxs-lookup"><span data-stu-id="e51b5-169">For example, the default language format for English (United States) is `wdEnglishUS`.</span></span>  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.COMException">
+          <span data-ttu-id="e51b5-170">
+            <see cref="P:Microsoft.Office.Tools.Word.ContentControl.Type" /> 属性不具有值 <c>Microsoft.Office.Interop.Word.WdContentControlType.wdContentControlDate</c>。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-170">The <see cref="P:Microsoft.Office.Tools.Word.ContentControl.Type" /> property does not have the value <c>Microsoft.Office.Interop.Word.WdContentControlType.wdContentControlDate</c>.</span>
+          </span>
+        </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DateStorageFormat">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Word.WdContentControlDateStorageFormat DateStorageFormat { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Office.Interop.Word.WdContentControlDateStorageFormat DateStorageFormat" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.ContentControl.DateStorageFormat" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Word.WdContentControlDateStorageFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="e51b5-171">获取或设置一个格式，<see cref="T:Microsoft.Office.Tools.Word.ContentControl" />（表示日期选取器）以此格式将数据保存到自定义 XML 部件中。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-171">Gets or sets the format in which dates are saved in a custom XML part by a <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> that represents a date picker.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="e51b5-172">数据保存到自定义 XML 部件中的格式。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-172">The format in which dates are saved in a custom XML part.</span>
+          </span>
+          <span data-ttu-id="e51b5-173">默认值是<c>值</c>。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-173">The default is <c>wdContentControlDateStorageDateTime</c>.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="e51b5-174">可以使用此属性，仅当<xref:Microsoft.Office.Tools.Word.ContentControl>表示日期选取器。</span><span class="sxs-lookup"><span data-stu-id="e51b5-174">This property can be used only if the <xref:Microsoft.Office.Tools.Word.ContentControl> represents a date picker.</span></span>  
+  
+ <span data-ttu-id="e51b5-175">如果<xref:Microsoft.Office.Tools.Word.ContentControl>绑定到*自定义 XML 部件*在文档中，<xref:Microsoft.Office.Tools.Word.ContentControl.DateStorageFormat%2A>属性指定控件如何以 xml 格式保存日期。</span><span class="sxs-lookup"><span data-stu-id="e51b5-175">If the <xref:Microsoft.Office.Tools.Word.ContentControl> is bound to a *custom XML part* in the document, the <xref:Microsoft.Office.Tools.Word.ContentControl.DateStorageFormat%2A> property specifies how the control saves dates in XML.</span></span> <span data-ttu-id="e51b5-176">您可以保留为 XML 架构日期的日期 (`xsd:date`)，XML 架构日期/时间 (`xsd:dateTime`)，或为文本。</span><span class="sxs-lookup"><span data-stu-id="e51b5-176">You can persist dates as an XML schema date (`xsd:date`), an XML schema date/time (`xsd:dateTime`), or as text.</span></span>  
+  
+ <span data-ttu-id="e51b5-177">有关内容控件绑定到自定义 XML 部件的详细信息，请参阅[内容控件](/visualstudio/vsto/content-controls.md)和[自定义 XML 部件概述](/visualstudio/vsto/custom-xml-parts-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="e51b5-177">For more information about binding content controls to custom XML parts, see [Content Controls](/visualstudio/vsto/content-controls.md) and [Custom XML Parts Overview](/visualstudio/vsto/custom-xml-parts-overview.md).</span></span>  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.COMException">
+          <span data-ttu-id="e51b5-178">
+            <see cref="P:Microsoft.Office.Tools.Word.ContentControl.Type" /> 属性不具有值 <c>Microsoft.Office.Interop.Word.WdContentControlType.wdContentControlDate</c>。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-178">The <see cref="P:Microsoft.Office.Tools.Word.ContentControl.Type" /> property does not have the value <c>Microsoft.Office.Interop.Word.WdContentControlType.wdContentControlDate</c>.</span>
+          </span>
+        </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultTextStyle">
+      <MemberSignature Language="C#" Value="public object DefaultTextStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object DefaultTextStyle" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.ContentControl.DefaultTextStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="e51b5-179">获取用于设置 <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> 中的文本格式的字符样式的名称。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-179">Gets the name of the character style that is used to format text in the <see cref="T:Microsoft.Office.Tools.Word.ContentControl" />.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="e51b5-180">用于设置 <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> 中的文本格式的字符样式的名称。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-180">The name of the character style to use to format text in the <see cref="T:Microsoft.Office.Tools.Word.ContentControl" />.</span>
+          </span>
+          <span data-ttu-id="e51b5-181">默认值是**默认段落字体**。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-181">The default is **Default Paragraph Font**.</span>
+          </span>
+        </value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DropDownListEntries">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Word.ContentControlListEntries DropDownListEntries { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Interop.Word.ContentControlListEntries DropDownListEntries" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.ContentControl.DropDownListEntries" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Word.ContentControlListEntries</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="e51b5-182">获取由表示下拉列表或组合框的 <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> 所显示的项的集合。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-182">Gets the collection of items that are displayed by a <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> that represents a drop-down list or a combo box.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="e51b5-183">
+            <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> 所显示的项。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-183">The items that are displayed by the <see cref="T:Microsoft.Office.Tools.Word.ContentControl" />.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="e51b5-184">可以使用此属性，仅当<xref:Microsoft.Office.Tools.Word.ContentControl>表示下拉列表或组合框。</span><span class="sxs-lookup"><span data-stu-id="e51b5-184">This property can be used only if the <xref:Microsoft.Office.Tools.Word.ContentControl> represents a drop-down list or a combo box.</span></span>  
+  
+ <span data-ttu-id="e51b5-185">当你创建<xref:Microsoft.Office.Tools.Word.ContentControl>表示下拉列表或组合框，默认情况下不包含任何项。</span><span class="sxs-lookup"><span data-stu-id="e51b5-185">When you create a <xref:Microsoft.Office.Tools.Word.ContentControl> that represents a drop-down list or a combo box, it contains no items by default.</span></span> <span data-ttu-id="e51b5-186">若要添加项，请使用`Add`方法<xref:Microsoft.Office.Tools.Word.ContentControl.DropDownListEntries%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="e51b5-186">To add items, use the `Add` method of the <xref:Microsoft.Office.Tools.Word.ContentControl.DropDownListEntries%2A> property.</span></span>  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.COMException">
+          <span data-ttu-id="e51b5-187">
+            <see cref="P:Microsoft.Office.Tools.Word.ContentControl.Type" /> 属性不具有值 <c>Microsoft.Office.Interop.Word.WdContentControlType.wdContentControlComboBox</c> 或 <c>Microsoft.Office.Interop.Word.WdContentControlType.wdContentControlDropdownList</c>。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-187">The <see cref="P:Microsoft.Office.Tools.Word.ContentControl.Type" /> property does not have the value <c>Microsoft.Office.Interop.Word.WdContentControlType.wdContentControlComboBox</c> or <c>Microsoft.Office.Interop.Word.WdContentControlType.wdContentControlDropdownList</c>.</span>
+          </span>
+        </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LockContentControl">
+      <MemberSignature Language="C#" Value="public bool LockContentControl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool LockContentControl" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.ContentControl.LockContentControl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="e51b5-188">获取或设置一个值，该值指示是否可从文档删除 <see cref="T:Microsoft.Office.Tools.Word.ContentControl" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-188">Gets or sets a value that specifies whether the <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> can be deleted from the document.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="e51b5-189">如果可从文档删除 <see cref="T:Microsoft.Office.Tools.Word.ContentControl" />，则为 <see langword="true" />；如果不能删除此控件，则为 <see langword="false" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-189">
+              <see langword="true" /> if the <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> cannot be deleted from the document; <see langword="false" /> if the control can be deleted.</span>
+          </span>
+          <span data-ttu-id="e51b5-190">默认值为 <see langword="false" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-190">The default is <see langword="false" />.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="e51b5-191">若要阻止用户编辑的内容<xref:Microsoft.Office.Tools.Word.ContentControl>，使用<xref:Microsoft.Office.Tools.Word.ContentControl.LockContents%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="e51b5-191">To prevent users from editing the contents of a <xref:Microsoft.Office.Tools.Word.ContentControl>, use the <xref:Microsoft.Office.Tools.Word.ContentControl.LockContents%2A> property.</span></span> <span data-ttu-id="e51b5-192">有关如何使用<xref:Microsoft.Office.Tools.Word.ContentControl>若要保护的文档的一部分，请参阅[内容控件](/visualstudio/vsto/content-controls.md)和[如何： 使用内容控件保护文档的某些部分](/visualstudio/vsto/how-to-protect-parts-of-documents-by-using-content-controls.md)。</span><span class="sxs-lookup"><span data-stu-id="e51b5-192">For more information about how to use a <xref:Microsoft.Office.Tools.Word.ContentControl> to protect a part of a document, see [Content Controls](/visualstudio/vsto/content-controls.md) and [How to: Protect Parts of Documents by Using Content Controls](/visualstudio/vsto/how-to-protect-parts-of-documents-by-using-content-controls.md).</span></span>  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.COMException">
+          <span data-ttu-id="e51b5-193">
+            <see cref="P:Microsoft.Office.Tools.Word.ContentControl.Temporary" /> 属性为 <see langword="true" /> 时，设置此属性。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-193">This property is set when the <see cref="P:Microsoft.Office.Tools.Word.ContentControl.Temporary" /> property is <see langword="true" />.</span>
+          </span>
+        </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LockContents">
+      <MemberSignature Language="C#" Value="public bool LockContents { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool LockContents" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.ContentControl.LockContents" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="e51b5-194">获取或设置一个值，该值指示能否编辑 <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> 的内容。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-194">Gets or sets a value that specifies whether the contents of the <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> can be edited.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="e51b5-195">如果不能编辑 <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> 的内容，则为 <see langword="true" />；如果可以编辑控件内容，则为 <see langword="false" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-195">
+              <see langword="true" /> if the contents of the <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> cannot be edited; <see langword="false" /> if the contents of the control can be edited.</span>
+          </span>
+          <span data-ttu-id="e51b5-196">默认值为 <see langword="false" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-196">The default is <see langword="false" />.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="e51b5-197">若要阻止用户删除<xref:Microsoft.Office.Tools.Word.ContentControl>从文档中，使用<xref:Microsoft.Office.Tools.Word.ContentControl.LockContentControl%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="e51b5-197">To prevent users from deleting a <xref:Microsoft.Office.Tools.Word.ContentControl> from the document, use the <xref:Microsoft.Office.Tools.Word.ContentControl.LockContentControl%2A> property.</span></span>  
+  
+ <span data-ttu-id="e51b5-198">有关使用<xref:Microsoft.Office.Tools.Word.ContentControl>若要保护的文档的一部分，请参阅[内容控件](/visualstudio/vsto/content-controls.md)和[如何： 使用内容控件保护文档的某些部分](/visualstudio/vsto/how-to-protect-parts-of-documents-by-using-content-controls.md)。</span><span class="sxs-lookup"><span data-stu-id="e51b5-198">For more information about using a <xref:Microsoft.Office.Tools.Word.ContentControl> to protect a part of a document, see [Content Controls](/visualstudio/vsto/content-controls.md) and [How to: Protect Parts of Documents by Using Content Controls](/visualstudio/vsto/how-to-protect-parts-of-documents-by-using-content-controls.md).</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MultiLine">
+      <MemberSignature Language="C#" Value="public bool MultiLine { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool MultiLine" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.ContentControl.MultiLine" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="e51b5-199">获取或设置一个值，该值指定 <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> 是否可以包含换行符。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-199">Gets or sets a value that specifies whether the <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> can contain line breaks.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="e51b5-200">如果 <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> 可以包含换行符，则为 <see langword="true" />；否则为 <see langword="false" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-200">
+              <see langword="true" /> if the <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> can contain line breaks; otherwise, <see langword="false" />.</span>
+          </span>
+          <span data-ttu-id="e51b5-201">默认值为 <see langword="false" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-201">The default is <see langword="false" />.</span>
+          </span>
+        </value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="public object Parent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Parent" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.ContentControl.Parent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="e51b5-202">获取 <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> 的父级。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-202">Gets the parent of the <see cref="T:Microsoft.Office.Tools.Word.ContentControl" />.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="e51b5-203">一个对象，表示 <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> 的父级。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-203">An object that represents the parent of the <see cref="T:Microsoft.Office.Tools.Word.ContentControl" />.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="e51b5-204">父级<xref:Microsoft.Office.Tools.Word.ContentControl>是控件所在的对象。</span><span class="sxs-lookup"><span data-stu-id="e51b5-204">The parent of the <xref:Microsoft.Office.Tools.Word.ContentControl> is the object in which the control is contained.</span></span> <span data-ttu-id="e51b5-205">例如，如果控件在文档的正文，则此属性将返回<xref:Microsoft.Office.Interop.Word.Document?displayProperty=fullName>对象。</span><span class="sxs-lookup"><span data-stu-id="e51b5-205">For example, if the control is in the body of the document, this property will return a <xref:Microsoft.Office.Interop.Word.Document?displayProperty=fullName> object.</span></span>  
+  
+ <span data-ttu-id="e51b5-206">要获取其父类的<xref:Microsoft.Office.Tools.Word.ContentControl>中包含<xref:Microsoft.Office.Tools.Word.RichTextContentControl>或<xref:Microsoft.Office.Tools.Word.GroupContentControl>，使用<xref:Microsoft.Office.Tools.Word.ContentControl.ParentContentControl%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="e51b5-206">To get the parent of a <xref:Microsoft.Office.Tools.Word.ContentControl> that is contained in a <xref:Microsoft.Office.Tools.Word.RichTextContentControl> or a <xref:Microsoft.Office.Tools.Word.GroupContentControl>, use the <xref:Microsoft.Office.Tools.Word.ContentControl.ParentContentControl%2A> property.</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParentContentControl">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Word.ContentControl ParentContentControl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Interop.Word.ContentControl ParentContentControl" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.ContentControl.ParentContentControl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Word.ContentControl</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="e51b5-207">获取嵌套在另一个内容控件内的 <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> 的父内容控件。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-207">Gets the parent content control of a <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> that is nested in another content control.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="e51b5-208">嵌套了 <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> 的内容控件；如果 <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> 未嵌套在另一个内容控件中，则为 <see langword="null" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-208">The content control in which the <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> is nested; <see langword="null" /> if the <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> is not nested in another content control.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="e51b5-209"><xref:Microsoft.Office.Tools.Word.RichTextContentControl>和<xref:Microsoft.Office.Tools.Word.GroupContentControl>控件是可以包含嵌套的内容控件的内容控件的唯一类型。</span><span class="sxs-lookup"><span data-stu-id="e51b5-209">The <xref:Microsoft.Office.Tools.Word.RichTextContentControl> and <xref:Microsoft.Office.Tools.Word.GroupContentControl> controls are the only types of content controls that can contain nested content controls.</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PlaceholderText">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Word.BuildingBlock PlaceholderText { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Interop.Word.BuildingBlock PlaceholderText" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.ContentControl.PlaceholderText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Word.BuildingBlock</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="e51b5-210">获取在用户操作或某个其他操作更改文本之前在 <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> 中显示的文本。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-210">Gets the text that is displayed in the <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> until the text is changed by a user action or some other operation.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="e51b5-211">在用户操作或某个其他操作更改文本之前，在控件中显示的文本。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-211">The text that is displayed in the control until the text is changed by a user action or some other operation.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="e51b5-212">用户编辑控件、 控件中填充数据的源的数据或者控件的内容被删除之前，会显示的占位符文本。</span><span class="sxs-lookup"><span data-stu-id="e51b5-212">The placeholder text is displayed until a user edits the control, the control is populated with data from a data source, or the control's contents are deleted.</span></span>  
+  
+ <span data-ttu-id="e51b5-213">若要设置占位符文本，请使用<xref:Microsoft.Office.Tools.Word.ContentControl.SetPlaceholderText%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="e51b5-213">To set the placeholder text, use the <xref:Microsoft.Office.Tools.Word.ContentControl.SetPlaceholderText%2A> method.</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Range">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Word.Range Range { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Interop.Word.Range Range" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.ContentControl.Range" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Word.Range</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="e51b5-214">获取一个 <see cref="T:Microsoft.Office.Interop.Word.Range" />，表示 <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> 的内容。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-214">Gets a <see cref="T:Microsoft.Office.Interop.Word.Range" /> that represents the contents of the <see cref="T:Microsoft.Office.Tools.Word.ContentControl" />.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="e51b5-215">
+            <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> 的内容。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-215">The contents of the <see cref="T:Microsoft.Office.Tools.Word.ContentControl" />.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="e51b5-216">有关详细信息<xref:Microsoft.Office.Interop.Word.Range>对象，请参阅[Word 对象模型概述](/visualstudio/vsto/word-object-model-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="e51b5-216">For more information about <xref:Microsoft.Office.Interop.Word.Range> objects, see [Word Object Model Overview](/visualstudio/vsto/word-object-model-overview.md).</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetCheckedSymbol">
+      <MemberSignature Language="C#" Value="public void SetCheckedSymbol (int CharacterNumber, string Font = &quot;&quot;);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetCheckedSymbol(int32 CharacterNumber, string Font) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.ContentControl.SetCheckedSymbol(System.Int32,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="CharacterNumber" Type="System.Int32" />
+        <Parameter Name="Font" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="CharacterNumber">
+          <span data-ttu-id="e51b5-217">指定符号的 Unicode 字符数。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-217">The Unicode character number for the specified symbol.</span>
+          </span>
+          <span data-ttu-id="e51b5-218">此值将始终为 31（字体开始处的控件符号编号）与对应于该符号在符号表中的位置的数字（从左向右数）之和。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-218">This value will always be the sum of 31 (the number of control symbols at the beginning of the font) and the number that corresponds to the position of the symbol in the table of symbols (counting from left to right).</span>
+          </span>
+          <span data-ttu-id="e51b5-219">例如，要指定在 Symbol 字体中位于符号表中位置 37 处的增量字符，请将 <c>CharacterNumber</c> 设置为 68。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-219">For example, to specify a delta character at position 37 in the table of symbols in the Symbol font, set <c>CharacterNumber</c> to 68.</span>
+          </span>
+        </param>
+        <param name="Font">
+          <span data-ttu-id="e51b5-220">包含符号的字体的名称。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-220">The name of the font that contains the symbol.</span>
+          </span>
+        </param>
+        <summary>
+          <span data-ttu-id="e51b5-221">设置用于表示 <see cref="T:Microsoft.Office.Tools.Word.ContentControl" />（代表复选框控件）的已选中状态的符号。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-221">Sets the symbol used to represent the checked state of a <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> that represents a check box control.</span>
+          </span>
+        </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="e51b5-222">可以使用此属性，仅当<xref:Microsoft.Office.Tools.Word.ContentControl>表示复选框内容控件。</span><span class="sxs-lookup"><span data-stu-id="e51b5-222">This property can be used only if the <xref:Microsoft.Office.Tools.Word.ContentControl> represents a check box content control.</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="e51b5-223">此方法将显示在 IntelliSense Word 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="e51b5-223">This method appears in IntelliSense in Word 2007 projects that target the [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)].</span></span> <span data-ttu-id="e51b5-224">但是，无法在 Word 2007 项目中使用此属性。</span><span class="sxs-lookup"><span data-stu-id="e51b5-224">However, this property cannot be used in Word 2007 projects.</span></span>  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.MissingMemberException">
+          <span data-ttu-id="e51b5-225">在 Word 2007 项目中使用此属性。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-225">This property is used in a Word 2007 project.</span>
+          </span>
+        </exception>
+        <exception cref="T:System.Runtime.InteropServices.COMException">
+          <span data-ttu-id="e51b5-226">
+            <see cref="P:Microsoft.Office.Tools.Word.ContentControl.Type" /> 属性不具有值 <c>Microsoft.Office.Interop.Word.WdContentControlType.wdContentControlCheckBox</c>。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-226">The <see cref="P:Microsoft.Office.Tools.Word.ContentControl.Type" /> property does not have the value <c>Microsoft.Office.Interop.Word.WdContentControlType.wdContentControlCheckBox</c>.</span>
+          </span>
+        </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetPlaceholderText">
+      <MemberSignature Language="C#" Value="public void SetPlaceholderText (Microsoft.Office.Interop.Word.BuildingBlock BuildingBlock = null, Microsoft.Office.Interop.Word.Range Range = null, string Text = &quot;&quot;);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetPlaceholderText(class Microsoft.Office.Interop.Word.BuildingBlock BuildingBlock, class Microsoft.Office.Interop.Word.Range Range, string Text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.ContentControl.SetPlaceholderText(Microsoft.Office.Interop.Word.BuildingBlock,Microsoft.Office.Interop.Word.Range,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="BuildingBlock" Type="Microsoft.Office.Interop.Word.BuildingBlock" />
+        <Parameter Name="Range" Type="Microsoft.Office.Interop.Word.Range" />
+        <Parameter Name="Text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="BuildingBlock">
+          <span data-ttu-id="e51b5-227">包含占位符文本的 <see cref="T:Microsoft.Office.Interop.Word.BuildingBlock" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-227">A <see cref="T:Microsoft.Office.Interop.Word.BuildingBlock" /> that contains the placeholder text.</span>
+          </span>
+        </param>
+        <param name="Range">
+          <span data-ttu-id="e51b5-228">包含占位符文本的 <see cref="T:Microsoft.Office.Interop.Word.Range" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-228">A <see cref="T:Microsoft.Office.Interop.Word.Range" /> that contains the placeholder text.</span>
+          </span>
+        </param>
+        <param name="Text">
+          <span data-ttu-id="e51b5-229">占位符文本。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-229">The placeholder text.</span>
+          </span>
+        </param>
+        <summary>
+          <span data-ttu-id="e51b5-230">将 <see cref="T:Microsoft.Office.Interop.Word.BuildingBlock" />、<see cref="T:Microsoft.Office.Interop.Word.Range" /> 或字符串中的文本显示为 <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> 中的占位符文本。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-230">Displays text that is in a <see cref="T:Microsoft.Office.Interop.Word.BuildingBlock" />, a <see cref="T:Microsoft.Office.Interop.Word.Range" />, or a string as the placeholder text in the <see cref="T:Microsoft.Office.Tools.Word.ContentControl" />.</span>
+          </span>
+        </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="e51b5-231">用户编辑控件、 控件中填充数据的源的数据或者控件的内容被删除之前，会显示的占位符文本。</span><span class="sxs-lookup"><span data-stu-id="e51b5-231">The placeholder text is displayed until a user edits the control, the control is populated with data from a data source, or the control's contents are deleted.</span></span>  
+  
+ <span data-ttu-id="e51b5-232">在调用时使用唯一的参数之一<xref:Microsoft.Office.Tools.Word.ContentControl.SetPlaceholderText%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="e51b5-232">Only one of the parameters is used when you call the <xref:Microsoft.Office.Tools.Word.ContentControl.SetPlaceholderText%2A> method.</span></span> <span data-ttu-id="e51b5-233">如果指定多个参数，则 Microsoft Office Word 将使用第一个指定的参数。</span><span class="sxs-lookup"><span data-stu-id="e51b5-233">If more than one parameter is specified, Microsoft Office Word uses the first specified parameter.</span></span> <span data-ttu-id="e51b5-234">如果所有参数都被都省略，占位符文本是空字符串。</span><span class="sxs-lookup"><span data-stu-id="e51b5-234">If all parameters are omitted, the placeholder text is an empty string.</span></span>  
+  
+ <span data-ttu-id="e51b5-235">若要获取的占位符文本<xref:Microsoft.Office.Tools.Word.ContentControl>，使用<xref:Microsoft.Office.Tools.Word.ContentControl.PlaceholderText%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="e51b5-235">To get the placeholder text of a <xref:Microsoft.Office.Tools.Word.ContentControl>, use the <xref:Microsoft.Office.Tools.Word.ContentControl.PlaceholderText%2A> property.</span></span> <span data-ttu-id="e51b5-236">你还可以使用此属性将占位符文本设置为一个字符串。</span><span class="sxs-lookup"><span data-stu-id="e51b5-236">You can also use this property to set the placeholder text to a string.</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetUncheckedSymbol">
+      <MemberSignature Language="C#" Value="public void SetUncheckedSymbol (int CharacterNumber, string Font = &quot;&quot;);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetUncheckedSymbol(int32 CharacterNumber, string Font) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.ContentControl.SetUncheckedSymbol(System.Int32,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="CharacterNumber" Type="System.Int32" />
+        <Parameter Name="Font" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="CharacterNumber">
+          <span data-ttu-id="e51b5-237">指定符号的 Unicode 字符数。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-237">The Unicode character number for the specified symbol.</span>
+          </span>
+          <span data-ttu-id="e51b5-238">此值将始终为 31（字体开始处的控件符号编号）与对应于该符号在符号表中的位置的数字（从左向右数）之和。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-238">This value will always be the sum of 31 (the number of control symbols at the beginning of the font) and the number that corresponds to the position of the symbol in the table of symbols (counting from left to right).</span>
+          </span>
+          <span data-ttu-id="e51b5-239">例如，要指定在 Symbol 字体中位于符号表中位置 37 处的增量字符，请将 <c>CharacterNumber</c> 设置为 68。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-239">For example, to specify a delta character at position 37 in the table of symbols in the Symbol font, set <c>CharacterNumber</c> to 68.</span>
+          </span>
+        </param>
+        <param name="Font">
+          <span data-ttu-id="e51b5-240">包含符号的字体的名称。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-240">The name of the font that contains the symbol.</span>
+          </span>
+        </param>
+        <summary>
+          <span data-ttu-id="e51b5-241">设置用于表示 <see cref="T:Microsoft.Office.Tools.Word.ContentControl" />（代表复选框控件）的未选中状态的符号</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-241">Sets the symbol used to represent the unchecked state of a <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> that represents a check box control</span>
+          </span>
+        </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="e51b5-242">可以使用此属性，仅当<xref:Microsoft.Office.Tools.Word.ContentControl>表示复选框内容控件。</span><span class="sxs-lookup"><span data-stu-id="e51b5-242">This property can be used only if the <xref:Microsoft.Office.Tools.Word.ContentControl> represents a check box content control.</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="e51b5-243">此方法将显示在 IntelliSense Word 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="e51b5-243">This method appears in IntelliSense in Word 2007 projects that target the [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)].</span></span> <span data-ttu-id="e51b5-244">但是，无法在 Word 2007 项目中使用此属性。</span><span class="sxs-lookup"><span data-stu-id="e51b5-244">However, this property cannot be used in Word 2007 projects.</span></span>  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.MissingMemberException">
+          <span data-ttu-id="e51b5-245">在 Word 2007 项目中使用此属性。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-245">This property is used in a Word 2007 project.</span>
+          </span>
+        </exception>
+        <exception cref="T:System.Runtime.InteropServices.COMException">
+          <span data-ttu-id="e51b5-246">
+            <see cref="P:Microsoft.Office.Tools.Word.ContentControl.Type" /> 属性不具有值 <c>Microsoft.Office.Interop.Word.WdContentControlType.wdContentControlCheckBox</c>。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-246">The <see cref="P:Microsoft.Office.Tools.Word.ContentControl.Type" /> property does not have the value <c>Microsoft.Office.Interop.Word.WdContentControlType.wdContentControlCheckBox</c>.</span>
+          </span>
+        </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowingPlaceholderText">
+      <MemberSignature Language="C#" Value="public bool ShowingPlaceholderText { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowingPlaceholderText" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.ContentControl.ShowingPlaceholderText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="e51b5-247">获取一个值，该值指定 <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> 当前是否显示占位符文本。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-247">Gets a value that specifies whether the <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> is currently displaying placeholder text.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="e51b5-248">如果 <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> 当前显示占位符文本，则为 <see langword="true" />；否则为 <see langword="false" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-248">
+              <see langword="true" /> if the <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> is currently displaying placeholder text; otherwise, <see langword="false" />.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="e51b5-249">中的文本之前会显示的占位符文本<xref:Microsoft.Office.Tools.Word.ContentControl>由用户操作或一些其他操作更改。</span><span class="sxs-lookup"><span data-stu-id="e51b5-249">The placeholder text is displayed until the text in the <xref:Microsoft.Office.Tools.Word.ContentControl> is changed by a user action or some other operation.</span></span> <span data-ttu-id="e51b5-250">若要获取或设置占位符文本，请使用<xref:Microsoft.Office.Tools.Word.ContentControl.PlaceholderText%2A>属性或<xref:Microsoft.Office.Tools.Word.ContentControl.SetPlaceholderText%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="e51b5-250">To get or set the placeholder text, use the <xref:Microsoft.Office.Tools.Word.ContentControl.PlaceholderText%2A> property or the <xref:Microsoft.Office.Tools.Word.ContentControl.SetPlaceholderText%2A> method.</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tag">
+      <MemberSignature Language="C#" Value="public string Tag { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Tag" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.ContentControl.Tag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="e51b5-251">获取或设置要与 <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> 关联的字符串。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-251">Gets or sets a string that you want to associate with the <see cref="T:Microsoft.Office.Tools.Word.ContentControl" />.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="e51b5-252">一个要与 <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> 关联的字符串。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-252">A string that you want to associate with the <see cref="T:Microsoft.Office.Tools.Word.ContentControl" />.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="e51b5-253">你可以使用<xref:Microsoft.Office.Tools.Word.ContentControl.Tag%2A>属性来存储与关联的字符串<xref:Microsoft.Office.Tools.Word.ContentControl>文档处于打开状态时。</span><span class="sxs-lookup"><span data-stu-id="e51b5-253">You can use the <xref:Microsoft.Office.Tools.Word.ContentControl.Tag%2A> property to store a string that is associated with the <xref:Microsoft.Office.Tools.Word.ContentControl> while the document is open.</span></span>  
+  
+ <span data-ttu-id="e51b5-254">若要查找由其标记的内容控件，使用<xref:Microsoft.Office.Tools.Word.Document.SelectContentControlsByTag%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="e51b5-254">To find a content control by its tag, use the <xref:Microsoft.Office.Tools.Word.Document.SelectContentControlsByTag%2A> method.</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Temporary">
+      <MemberSignature Language="C#" Value="public bool Temporary { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Temporary" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.ContentControl.Temporary" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="e51b5-255">获取或设置一个值，该值指定在编辑 <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> 时是否自动将该控件从文档中删除。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-255">Gets or sets a value that specifies whether the <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> is automatically deleted from the document when the control is edited.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="e51b5-256">如果要在编辑 <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> 时自动将该控件删除，则为 <see langword="true" />；否则为 <see langword="false" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-256">
+              <see langword="true" /> if the <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> is automatically deleted when the control is edited; otherwise, <see langword="false" />.</span>
+          </span>
+          <span data-ttu-id="e51b5-257">默认值为 <see langword="false" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-257">The default is <see langword="false" />.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="e51b5-258">如果<xref:Microsoft.Office.Tools.Word.ContentControl.Temporary%2A>属性是`true`、<xref:Microsoft.Office.Tools.Word.ContentControl>当用户在控件中，键入或以编程方式更改控件中的文本自动删除。</span><span class="sxs-lookup"><span data-stu-id="e51b5-258">If the <xref:Microsoft.Office.Tools.Word.ContentControl.Temporary%2A> property is `true`, the <xref:Microsoft.Office.Tools.Word.ContentControl> is automatically deleted when the user types in the control, or when the text in the control is changed programmatically.</span></span> <span data-ttu-id="e51b5-259">当<xref:Microsoft.Office.Tools.Word.ContentControl>自动从文档，该控件将保持在文档中的文本中删除。</span><span class="sxs-lookup"><span data-stu-id="e51b5-259">When the <xref:Microsoft.Office.Tools.Word.ContentControl> is automatically deleted from the document, the text in the control remains in the document.</span></span>  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.COMException">
+          <span data-ttu-id="e51b5-260">
+            <see cref="P:Microsoft.Office.Tools.Word.ContentControl.LockContentControl" /> 属性为 <see langword="true" /> 时，设置此属性。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-260">This property is set when the <see cref="P:Microsoft.Office.Tools.Word.ContentControl.LockContentControl" /> property is <see langword="true" />.</span>
+          </span>
+        </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Title">
+      <MemberSignature Language="C#" Value="public string Title { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Title" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.ContentControl.Title" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="e51b5-261">获取或设置 <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> 的标题。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-261">Gets or sets the title of the <see cref="T:Microsoft.Office.Tools.Word.ContentControl" />.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="e51b5-262">
+            <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> 的标题。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-262">The title of the <see cref="T:Microsoft.Office.Tools.Word.ContentControl" />.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="e51b5-263">标题显示在边框<xref:Microsoft.Office.Tools.Word.ContentControl>当用户单击它。</span><span class="sxs-lookup"><span data-stu-id="e51b5-263">The title is displayed in the border of the <xref:Microsoft.Office.Tools.Word.ContentControl> when the user clicks it.</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Word.WdContentControlType Type { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Office.Interop.Word.WdContentControlType Type" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.ContentControl.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Word.WdContentControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="e51b5-264">获取或设置一个值，该值指定 <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> 所表示的内容控件的类型。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-264">Gets or sets a value that specifies the type of content control that the <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> represents.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="e51b5-265">
+            <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> 所表示的内容控件的类型。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-265">The type of content control that the <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> represents.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="e51b5-266">你可以使用<xref:Microsoft.Office.Tools.Word.ContentControl.Type%2A>属性可以更改的 UI 和功能<xref:Microsoft.Office.Tools.Word.ContentControl>在运行时。</span><span class="sxs-lookup"><span data-stu-id="e51b5-266">You can use the <xref:Microsoft.Office.Tools.Word.ContentControl.Type%2A> property to change the UI and functionality of the <xref:Microsoft.Office.Tools.Word.ContentControl> at run time.</span></span>  
+  
+ <span data-ttu-id="e51b5-267">下表列出`Microsoft.Office.Interop.Word.WdContentControlType`值和控件的类型控制每个指定。</span><span class="sxs-lookup"><span data-stu-id="e51b5-267">The following table lists the `Microsoft.Office.Interop.Word.WdContentControlType` values and the type of control control that each specifies.</span></span> <span data-ttu-id="e51b5-268">有关不同类型的内容控件的详细信息，请参阅[内容控件](/visualstudio/vsto/content-controls.md)。</span><span class="sxs-lookup"><span data-stu-id="e51b5-268">For more information about the different types of content controls, see [Content Controls](/visualstudio/vsto/content-controls.md).</span></span>  
+  
+|<span data-ttu-id="e51b5-269">“值”</span><span class="sxs-lookup"><span data-stu-id="e51b5-269">Value</span></span>|<span data-ttu-id="e51b5-270">控件</span><span class="sxs-lookup"><span data-stu-id="e51b5-270">Control</span></span>|  
+|-----------|-------------|  
+|`wdContentControlBuildingBlockGallery`|<span data-ttu-id="e51b5-271">构建基块库。</span><span class="sxs-lookup"><span data-stu-id="e51b5-271">Building block gallery.</span></span>|  
+|`wdContentControlComboBox`|<span data-ttu-id="e51b5-272">组合框。</span><span class="sxs-lookup"><span data-stu-id="e51b5-272">Combo box.</span></span>|  
+|`wdContentControlDate`|<span data-ttu-id="e51b5-273">日期选取器。</span><span class="sxs-lookup"><span data-stu-id="e51b5-273">Date picker.</span></span>|  
+|`wdContentControlGroup`|<span data-ttu-id="e51b5-274">Group</span><span class="sxs-lookup"><span data-stu-id="e51b5-274">Group</span></span>|  
+|`wdContentControlDropdownList`|<span data-ttu-id="e51b5-275">下拉列表</span><span class="sxs-lookup"><span data-stu-id="e51b5-275">Drop-down list</span></span>|  
+|`wdContentControlPicture`|<span data-ttu-id="e51b5-276">Picture</span><span class="sxs-lookup"><span data-stu-id="e51b5-276">Picture</span></span>|  
+|`wdContentControlRichText`|<span data-ttu-id="e51b5-277">格式文本</span><span class="sxs-lookup"><span data-stu-id="e51b5-277">Rich text</span></span>|  
+|`wdContentControlText`|<span data-ttu-id="e51b5-278">纯文本</span><span class="sxs-lookup"><span data-stu-id="e51b5-278">Plain text</span></span>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Ungroup">
+      <MemberSignature Language="C#" Value="public void Ungroup ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Ungroup() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.ContentControl.Ungroup" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+          <span data-ttu-id="e51b5-279">从文档中移除包含 <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> 的分组内容控件，以使该区域不再受保护。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-279">Removes the group content control that contains the <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> from the document so that the region is no longer protected.</span>
+          </span>
+        </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="e51b5-280">你可以使用<xref:Microsoft.Office.Tools.Word.GroupContentControl>来防止用户编辑文档的一部分。</span><span class="sxs-lookup"><span data-stu-id="e51b5-280">You can use a <xref:Microsoft.Office.Tools.Word.GroupContentControl> to prevent users from editing a part of a document.</span></span> <span data-ttu-id="e51b5-281">如果<xref:Microsoft.Office.Tools.Word.ContentControl>嵌套在<xref:Microsoft.Office.Tools.Word.GroupContentControl>，你可以使用<xref:Microsoft.Office.Tools.Word.ContentControl.Ungroup%2A>方法来删除父<xref:Microsoft.Office.Tools.Word.GroupContentControl>从文档。</span><span class="sxs-lookup"><span data-stu-id="e51b5-281">If a <xref:Microsoft.Office.Tools.Word.ContentControl> is nested in a <xref:Microsoft.Office.Tools.Word.GroupContentControl>, you can use the <xref:Microsoft.Office.Tools.Word.ContentControl.Ungroup%2A> method to remove the parent <xref:Microsoft.Office.Tools.Word.GroupContentControl> from the document.</span></span> <span data-ttu-id="e51b5-282">如果你这样做，请的所有项中包含的<xref:Microsoft.Office.Tools.Word.GroupContentControl>不再受保护。</span><span class="sxs-lookup"><span data-stu-id="e51b5-282">If you do this, all of the items that were in the <xref:Microsoft.Office.Tools.Word.GroupContentControl> are no longer protected.</span></span>  
+  
+ <span data-ttu-id="e51b5-283">有关如何使用<xref:Microsoft.Office.Tools.Word.GroupContentControl>若要保护的文档的某些部分，请参阅[内容控件](/visualstudio/vsto/content-controls.md)和[如何： 使用内容控件保护文档的某些部分](/visualstudio/vsto/how-to-protect-parts-of-documents-by-using-content-controls.md)。</span><span class="sxs-lookup"><span data-stu-id="e51b5-283">For more information about how to use a <xref:Microsoft.Office.Tools.Word.GroupContentControl> to protect parts of a document, see [Content Controls](/visualstudio/vsto/content-controls.md) and [How to: Protect Parts of Documents by Using Content Controls](/visualstudio/vsto/how-to-protect-parts-of-documents-by-using-content-controls.md).</span></span>  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.COMException">
+          <span data-ttu-id="e51b5-284">
+            <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> 不在 <see cref="T:Microsoft.Office.Tools.Word.GroupContentControl" /> 中。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-284">The <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> is not in a <see cref="T:Microsoft.Office.Tools.Word.GroupContentControl" />.</span>
+          </span>
+        </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="XMLMapping">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Word.XMLMapping XMLMapping { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Interop.Word.XMLMapping XMLMapping" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.ContentControl.XMLMapping" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Word.XMLMapping</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="e51b5-285">获取一个 <see cref="T:Microsoft.Office.Interop.Word.XMLMapping" />，表示 <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> 与自定义 XML 部件中元素之间的绑定。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-285">Gets an <see cref="T:Microsoft.Office.Interop.Word.XMLMapping" /> that represents the binding between the <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> and an element in a custom XML part.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="e51b5-286">一个对象，表示 <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> 与自定义 XML 部件中元素之间的绑定。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-286">An object that represents the binding between the <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> and an element in a custom XML part.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="e51b5-287">使用<xref:Microsoft.Office.Tools.Word.ContentControl.XMLMapping%2A>属性将绑定<xref:Microsoft.Office.Tools.Word.ContentControl>到一种 XML 中的元素 (也名为*自定义 XML 部件*) 嵌入在文档中。</span><span class="sxs-lookup"><span data-stu-id="e51b5-287">Use the <xref:Microsoft.Office.Tools.Word.ContentControl.XMLMapping%2A> property to bind a <xref:Microsoft.Office.Tools.Word.ContentControl> to an element in a piece of XML (also named *custom XML part*) that is embedded in the document.</span></span> <span data-ttu-id="e51b5-288">有关详细信息，请参阅[内容控件](/visualstudio/vsto/content-controls.md)和[自定义 XML 部件概述](/visualstudio/vsto/custom-xml-parts-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="e51b5-288">For more information, see [Content Controls](/visualstudio/vsto/content-controls.md) and [Custom XML Parts Overview](/visualstudio/vsto/custom-xml-parts-overview.md).</span></span>  
+  
+ <span data-ttu-id="e51b5-289">无法将构建基块库控件、 组控件和多格式文本控件绑定到自定义 XML 部件。</span><span class="sxs-lookup"><span data-stu-id="e51b5-289">You cannot bind building block gallery controls, group controls, and rich text controls to custom XML parts.</span></span>  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.COMException">
+          <span data-ttu-id="e51b5-290">
+            <see cref="P:Microsoft.Office.Tools.Word.ContentControl.Type" /> 属性具有值 <c>Microsoft.Office.Interop.Word.WdContentControlType.wdContentControlBuildingBlockGallery</c>、<c>Microsoft.Office.Interop.Word.WdContentControlType.wdContentControlGroup</c> 或 <c>Microsoft.Office.Interop.Word.WdContentControlType.wdContentControlRichText</c>。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="e51b5-290">The <see cref="P:Microsoft.Office.Tools.Word.ContentControl.Type" /> property has the value <c>Microsoft.Office.Interop.Word.WdContentControlType.wdContentControlBuildingBlockGallery</c>, <c>Microsoft.Office.Interop.Word.WdContentControlType.wdContentControlGroup</c> or <c>Microsoft.Office.Interop.Word.WdContentControlType.wdContentControlRichText</c>.</span>
+          </span>
+        </exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

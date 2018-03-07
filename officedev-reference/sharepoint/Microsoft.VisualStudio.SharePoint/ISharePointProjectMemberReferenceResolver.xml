@@ -1,0 +1,183 @@
+<Type Name="ISharePointProjectMemberReferenceResolver" FullName="Microsoft.VisualStudio.SharePoint.ISharePointProjectMemberReferenceResolver">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="4a994e6b03e54c920a01fa357b772d20f3be4cfe" />
+    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.translationtype" Value="HT" />
+    <Meta Name="ms.contentlocale" Value="zh-CN" />
+    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public interface ISharePointProjectMemberReferenceResolver" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISharePointProjectMemberReferenceResolver" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectMemberReferenceResolver" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("2BFE4625-40CB-47f8-BC7E-A4D86E3A0ACA")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+      <span data-ttu-id="04fac-101">指定一个 API，该 API 可解析 SharePoint 项目项与项本身之间的引用。</span>
+      <span class="sxs-lookup">
+        <span data-stu-id="04fac-101">Specifies an API that resolves references between SharePoint project items and the items themselves.</span>
+      </span>
+    </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ResolveReference&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public T ResolveReference&lt;T&gt; (Microsoft.VisualStudio.SharePoint.ISharePointProjectMemberReference reference) where T : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !!T ResolveReference&lt;class T&gt;(class Microsoft.VisualStudio.SharePoint.ISharePointProjectMemberReference reference) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectMemberReferenceResolver.ResolveReference``1(Microsoft.VisualStudio.SharePoint.ISharePointProjectMemberReference)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="reference" Type="Microsoft.VisualStudio.SharePoint.ISharePointProjectMemberReference" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">
+          <span data-ttu-id="04fac-102">与引用项关联的对象模型的类型。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="04fac-102">The type of the object model associated with the referenced item.</span>
+          </span>
+        </typeparam>
+        <param name="reference">
+          <span data-ttu-id="04fac-103">对 SharePoint 项目项的引用。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="04fac-103">A reference to a SharePoint project item.</span>
+          </span>
+        </param>
+        <summary>
+          <span data-ttu-id="04fac-104">返回与引用的 SharePoint 项目项关联的对象模型。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="04fac-104">Returns the object model associated with the referenced SharePoint project item.</span>
+          </span>
+        </summary>
+        <returns>
+          <span data-ttu-id="04fac-105">引用项的对象模型，或者，如果无法解析该项，为 <see langword="null" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="04fac-105">The object model of the reference item, or <see langword="null" /> if the item cannot be resolved.</span>
+          </span>
+        </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveReference&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public T ResolveReference&lt;T&gt; (Guid itemId) where T : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !!T ResolveReference&lt;class T&gt;(valuetype System.Guid itemId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectMemberReferenceResolver.ResolveReference``1(System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="itemId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">
+          <span data-ttu-id="04fac-106">与引用项关联的对象模型的类型。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="04fac-106">The type of the object model associated with the referenced item.</span>
+          </span>
+        </typeparam>
+        <param name="itemId">
+          <span data-ttu-id="04fac-107">所引用项的 ID。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="04fac-107">The ID of the referenced item.</span>
+          </span>
+        </param>
+        <summary>
+          <span data-ttu-id="04fac-108">返回与引用的 SharePoint 项目项关联的对象模型。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="04fac-108">Returns the object model associated with the referenced SharePoint project item.</span>
+          </span>
+        </summary>
+        <returns>
+          <span data-ttu-id="04fac-109">引用项的对象模型，或者，如果无法解析该项，为 <see langword="null" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="04fac-109">The object model of the reference item, or <see langword="null" /> if the item cannot be resolved.</span>
+          </span>
+        </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveReference&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public T ResolveReference&lt;T&gt; (string path) where T : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !!T ResolveReference&lt;class T&gt;(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectMemberReferenceResolver.ResolveReference``1(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">
+          <span data-ttu-id="04fac-110">与引用项关联的对象模型的类型。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="04fac-110">The type of the object model associated with the referenced item.</span>
+          </span>
+        </typeparam>
+        <param name="path">
+          <span data-ttu-id="04fac-111">SharePoint 项目项定义的路径。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="04fac-111">The path to the definition of a SharePoint project item.</span>
+          </span>
+        </param>
+        <summary>
+          <span data-ttu-id="04fac-112">返回与引用的 SharePoint 项目项关联的对象模型。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="04fac-112">Returns the object model associated with the referenced SharePoint project item.</span>
+          </span>
+        </summary>
+        <returns>
+          <span data-ttu-id="04fac-113">引用项的对象模型，或者，如果无法解析该项，为 <see langword="null" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="04fac-113">The object model of the reference item, or <see langword="null" /> if the item cannot be resolved.</span>
+          </span>
+        </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,945 @@
+<Type Name="RibbonBase" FullName="Microsoft.Office.Tools.Ribbon.RibbonBase">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="6d2df6c5119e3333f9c06d459cb222ca5514b315" />
+    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.translationtype" Value="HT" />
+    <Meta Name="ms.contentlocale" Value="zh-CN" />
+    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public abstract class RibbonBase : System.ComponentModel.Component, IDisposable, Microsoft.Office.Tools.Ribbon.IRibbonExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit RibbonBase extends System.ComponentModel.Component implements class Microsoft.Office.Tools.IExtension, class Microsoft.Office.Tools.Ribbon.IRibbonExtension, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Ribbon.RibbonBase" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.Component</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Office.Tools.Ribbon.IRibbonExtension</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Design.Serialization.DesignerSerializer("Microsoft.VisualStudio.Tools.Office.Ribbon.Serialization.RibbonTypeCodeDomSerializer, Microsoft.VisualStudio.Tools.Office.Designer, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "System.ComponentModel.Design.Serialization.TypeCodeDomSerializer, System.Design")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+      <span data-ttu-id="059c4-101">作为 Microsoft Office 功能区自定义项的基类。</span>
+      <span class="sxs-lookup">
+        <span data-stu-id="059c4-101">Serves as the base class for Microsoft Office Ribbon customizations.</span>
+      </span>
+    </summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="059c4-102">添加新**功能区 （可视化设计器）**项到 Office 项目，Visual Studio 将添加功能区类，该类继承<xref:Microsoft.Office.Tools.Ribbon.RibbonBase>到项目。</span><span class="sxs-lookup"><span data-stu-id="059c4-102">When you add a new **Ribbon (Visual Designer)** item to an Office project, Visual Studio adds a Ribbon class that inherits from <xref:Microsoft.Office.Tools.Ribbon.RibbonBase> to the project.</span></span> <span data-ttu-id="059c4-103"><xref:Microsoft.Office.Tools.Ribbon.RibbonBase> 包含方法和属性所共有的所有功能区类。</span><span class="sxs-lookup"><span data-stu-id="059c4-103"><xref:Microsoft.Office.Tools.Ribbon.RibbonBase> contains methods and properties that are common to all Ribbon classes.</span></span>  <span data-ttu-id="059c4-104">有关详细信息，请参阅[功能区设计器](/visualstudio/vsto/ribbon-designer.md)。</span><span class="sxs-lookup"><span data-stu-id="059c4-104">For more information, see [Ribbon Designer](/visualstudio/vsto/ribbon-designer.md).</span></span>  
+  
+ <span data-ttu-id="059c4-105">某些属性<xref:Microsoft.Office.Tools.Ribbon.RibbonBase>只能在功能区加载到 Office 应用程序之前，才可以设置。</span><span class="sxs-lookup"><span data-stu-id="059c4-105">Some properties of <xref:Microsoft.Office.Tools.Ribbon.RibbonBase> can be set only before the Ribbon is loaded into the Office application.</span></span> <span data-ttu-id="059c4-106">有关设置这些属性的信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="059c4-106">For information about setting these properties, see [Ribbon Object Model Overview](/visualstudio/vsto/ribbon-object-model-overview.md).</span></span>  
+  
+## <a name="usage"></a><span data-ttu-id="059c4-107">用法</span><span class="sxs-lookup"><span data-stu-id="059c4-107">Usage</span></span>  
+ [!INCLUDE[vsto_net4utilities](~/includes/vsto-net4utilities-md.md)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RibbonBase (Microsoft.Office.Tools.Ribbon.RibbonFactory factory);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Office.Tools.Ribbon.RibbonFactory factory) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Ribbon.RibbonBase.#ctor(Microsoft.Office.Tools.Ribbon.RibbonFactory)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="factory" Type="Microsoft.Office.Tools.Ribbon.RibbonFactory" />
+      </Parameters>
+      <Docs>
+        <param name="factory">To be added.</param>
+        <summary>
+          <span data-ttu-id="059c4-108">初始化 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" /> 类的新实例。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="059c4-108">Initializes a new instance of the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" /> class.</span>
+          </span>
+        </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="059c4-109">不使用此构造函数创建的实例<xref:Microsoft.Office.Tools.Ribbon.RibbonBase>类。</span><span class="sxs-lookup"><span data-stu-id="059c4-109">Do not use this constructor to create an instance of the <xref:Microsoft.Office.Tools.Ribbon.RibbonBase> class.</span></span> <span data-ttu-id="059c4-110">添加新**功能区 （可视化设计器）**项目到项目，Visual Studio 创建继承自的类的实例<xref:Microsoft.Office.Tools.Ribbon.RibbonBase>。</span><span class="sxs-lookup"><span data-stu-id="059c4-110">When you add a new **Ribbon (Visual Designer)** item to a project, Visual Studio creates an instance of a class that inherits from <xref:Microsoft.Office.Tools.Ribbon.RibbonBase>.</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Base">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Tools.Ribbon.OfficeRibbon Base { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Tools.Ribbon.OfficeRibbon Base" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Ribbon.RibbonBase.Base" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Ribbon.OfficeRibbon</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="059c4-111">获取此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" /> 对象扩展的 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" /> 对象。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="059c4-111">Gets the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" /> object that this <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" /> object extends.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="059c4-112">此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" /> 对象扩展的对象。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="059c4-112">The object that this <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" /> object extends.</span>
+          </span>
+        </value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public event EventHandler Close;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Close" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.Ribbon.RibbonBase.Close" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="059c4-113">关闭此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" /> 实例时发生。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="059c4-113">Occurs when this <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" /> instance is closing.</span>
+          </span>
+        </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="059c4-114">你可以使用此事件来释放已分配更早版本，例如，在应用程序特定资源<xref:Microsoft.Office.Tools.Ribbon.RibbonBase.Load>事件。</span><span class="sxs-lookup"><span data-stu-id="059c4-114">You can use this event to release application-specific resources that were allocated earlier, for example, in the <xref:Microsoft.Office.Tools.Ribbon.RibbonBase.Load> event.</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Context">
+      <MemberSignature Language="C#" Value="public object Context { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Context" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Ribbon.RibbonBase.Context" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="059c4-115">获取 Outlook 中与此功能区关联的检查器窗口或资源管理器窗口。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="059c4-115">Gets the Inspector window, or the Explorer window in Outlook, that is associated with this Ribbon.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="059c4-116">一个 <see cref="T:System.Object" />，表示与此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" /> 对象关联的检查器窗口或资源管理器窗口。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="059c4-116">An <see cref="T:System.Object" /> that represents the Inspector window or Explorer window that is associated with this <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" /> object.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="059c4-117">在 Outlook 中，此属性指的检查器窗口或资源管理器窗口中此<xref:Microsoft.Office.Tools.Ribbon.RibbonBase>显示。</span><span class="sxs-lookup"><span data-stu-id="059c4-117">In Outlook, this property refers to the Inspector window or Explorer window in which this <xref:Microsoft.Office.Tools.Ribbon.RibbonBase> is displayed.</span></span>  
+  
+ <span data-ttu-id="059c4-118">在所有其他 Office 项目中，此属性返回 null。</span><span class="sxs-lookup"><span data-stu-id="059c4-118">In all other Office projects, this property returns null.</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Ribbon.RibbonBase.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <span data-ttu-id="059c4-119">若要释放托管资源和非托管资源，则为 <see langword="true" />；若仅释放非托管资源，则为 <see langword="false" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="059c4-119">
+              <see langword="true" /> to release both managed and unmanaged resources; <see langword="false" /> to release only unmanaged resources.</span>
+          </span>
+        </param>
+        <summary>
+          <span data-ttu-id="059c4-120">释放 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" /> 类使用的非托管资源，并可以选择释放托管资源。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="059c4-120">Releases the unmanaged resources used by the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" /> class and optionally releases the managed resources.</span>
+          </span>
+        </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="059c4-121">此方法称为由公共`Dispose()`方法和<xref:System.Object.Finalize%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="059c4-121">This method is called by the public `Dispose()` method and the <xref:System.Object.Finalize%2A> method.</span></span> <span data-ttu-id="059c4-122">`Dispose()` 调用受保护`Dispose(Boolean)`方法替换`disposing`参数设置为`true`。</span><span class="sxs-lookup"><span data-stu-id="059c4-122">`Dispose()` invokes the protected `Dispose(Boolean)` method with the `disposing` parameter set to `true`.</span></span> <span data-ttu-id="059c4-123"><xref:System.Object.Finalize%2A> 调用`Dispose`与`disposing`设置为`false`。</span><span class="sxs-lookup"><span data-stu-id="059c4-123"><xref:System.Object.Finalize%2A> invokes `Dispose` with `disposing` set to `false`.</span></span>  
+  
+ <span data-ttu-id="059c4-124">当`disposing`参数为 true 时，此方法释放由任何托管对象持有的全部资源此<xref:Microsoft.Office.Tools.Ribbon.RibbonBase>引用。</span><span class="sxs-lookup"><span data-stu-id="059c4-124">When the `disposing` parameter is true, this method releases all resources held by any managed objects that this <xref:Microsoft.Office.Tools.Ribbon.RibbonBase> references.</span></span> <span data-ttu-id="059c4-125">此方法调用每个引用对象的 `Dispose()` 方法。</span><span class="sxs-lookup"><span data-stu-id="059c4-125">This method invokes the `Dispose()` method of each referenced object.</span></span>  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <span data-ttu-id="059c4-126">
+              <see langword="Dispose" /> 可以由其他对象多次调用。</span>
+            <span class="sxs-lookup">
+              <span data-stu-id="059c4-126">
+                <see langword="Dispose" /> can be called multiple times by other objects.</span>
+            </span>
+            <span data-ttu-id="059c4-127">在重写<see langword="Dispose(Boolean) " />请注意不要引用已释放的以前调用中的对象<see langword="Dispose" />。</span>
+            <span class="sxs-lookup">
+              <span data-stu-id="059c4-127">When overriding <see langword="Dispose(Boolean) " />be careful not to reference objects that have been previously disposed of in an earlier call to <see langword="Dispose" />.</span>
+            </span>
+            <span data-ttu-id="059c4-128">有关如何实现详细信息<see langword=" Dispose(Boolean)" />，请参阅[实现 Dispose 方法](http://msdn.microsoft.com/library/eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9)。</span>
+            <span class="sxs-lookup">
+              <span data-stu-id="059c4-128">For more information about how to implement<see langword=" Dispose(Boolean)" />, see [Implementing a Dispose Method](http://msdn.microsoft.com/library/eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9).</span>
+            </span>
+            <span data-ttu-id="059c4-129">有关详细信息<see langword="Dispose" />和<see cref="M:System.Object.Finalize" />，请参阅[清洗向上非托管资源](http://msdn.microsoft.com/library/a17b0066-71c2-4ba4-9822-8e19332fc213)。</span>
+            <span class="sxs-lookup">
+              <span data-stu-id="059c4-129">For more information about <see langword="Dispose" /> and <see cref="M:System.Object.Finalize" />, see [Cleaning Up Unmanaged Resources](http://msdn.microsoft.com/library/a17b0066-71c2-4ba4-9822-8e19332fc213).</span>
+            </span>
+          </para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Factory">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Tools.Ribbon.RibbonFactory Factory { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Tools.Ribbon.RibbonFactory Factory" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Ribbon.RibbonBase.Factory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Ribbon.RibbonFactory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="059c4-130">获取或设置与此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" /> 关联的功能区工厂。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="059c4-130">Gets or sets the Ribbon factory that is associated with this <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" />.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="059c4-131">一个实现 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonFactory" /> 接口的对象。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="059c4-131">An object that implements the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonFactory" /> interface.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="059c4-132">你可以使用此属性来跟踪创建的当前实例的功能区工厂类<xref:Microsoft.Office.Tools.Ribbon.RibbonBase>。</span><span class="sxs-lookup"><span data-stu-id="059c4-132">You can use this property to track the Ribbon factory class that created the current instance of the <xref:Microsoft.Office.Tools.Ribbon.RibbonBase>.</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Global">
+      <MemberSignature Language="C#" Value="public bool Global { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Global" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Ribbon.RibbonBase.Global" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="059c4-133">获取或设置一个值，该值确定此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" /> 是否可以同时在多个上下文中使用。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="059c4-133">Gets or sets a value that determines whether this <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" /> can be used in multiple contexts simultaneously.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="059c4-134">如果此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" /> 对象在多个上下文中共享，则为 <see langword="true" />；否则为 <see langword="false" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="059c4-134">
+              <see langword="true" /> if this <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" /> object is shared among multiple contexts; otherwise, <see langword="false" />.</span>
+          </span>
+          <span data-ttu-id="059c4-135">默认值为 <see langword="true" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="059c4-135">The default is <see langword="true" />.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="059c4-136"><xref:Microsoft.Office.Tools.Ribbon.RibbonBase> 具有此属性设置为对象`false`每次打开新的 Outlook 检查器时创建。</span><span class="sxs-lookup"><span data-stu-id="059c4-136"><xref:Microsoft.Office.Tools.Ribbon.RibbonBase> objects that have this property set to `false` are created every time a new Outlook Inspector is opened.</span></span>  
+  
+ <span data-ttu-id="059c4-137">只能在功能区加载到 Office 应用程序之前，可以设置此属性。</span><span class="sxs-lookup"><span data-stu-id="059c4-137">This property can be set only before the Ribbon is loaded into the Office application.</span></span> <span data-ttu-id="059c4-138">有关设置此属性的信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="059c4-138">For information about setting this property, see [Ribbon Object Model Overview](/visualstudio/vsto/ribbon-object-model-overview.md).</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Load">
+      <MemberSignature Language="C#" Value="public event Microsoft.Office.Tools.Ribbon.RibbonUIEventHandler Load;" />
+      <MemberSignature Language="ILAsm" Value=".event class Microsoft.Office.Tools.Ribbon.RibbonUIEventHandler Load" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.Ribbon.RibbonBase.Load" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Ribbon.RibbonUIEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="059c4-139">当 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" /> 加载到 Microsoft Office 应用程序时发生。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="059c4-139">Occurs when the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" /> is loaded into the Microsoft Office application.</span>
+          </span>
+        </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="059c4-140"><xref:Microsoft.Office.Tools.Ribbon.RibbonBase.Load>事件处理程序将自动添加到功能区代码文件。</span><span class="sxs-lookup"><span data-stu-id="059c4-140">The <xref:Microsoft.Office.Tools.Ribbon.RibbonBase.Load> event handler is automatically added to the Ribbon code file.</span></span> <span data-ttu-id="059c4-141">使用此事件处理程序功能区加载时运行自定义代码。</span><span class="sxs-lookup"><span data-stu-id="059c4-141">Use this event handler to run custom code when the Ribbon loads.</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadImage">
+      <MemberSignature Language="C#" Value="public event Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventHandler LoadImage;" />
+      <MemberSignature Language="ILAsm" Value=".event class Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventHandler LoadImage" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.Ribbon.RibbonBase.LoadImage" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="059c4-142">如果为一个或多个控件设置 ImageName 属性，则在 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" /> 加载时发生。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="059c4-142">Occurs when the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" /> loads, if the **ImageName** property is set for one or more controls.</span>
+          </span>
+        </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="059c4-143"><xref:Microsoft.Office.Tools.Ribbon.RibbonBase.LoadImage>事件，可以缓存中功能区自定义项，这可以提高性能的映像。</span><span class="sxs-lookup"><span data-stu-id="059c4-143">The <xref:Microsoft.Office.Tools.Ribbon.RibbonBase.LoadImage> event enables you to cache images in the Ribbon customization, which can improve performance.</span></span>  
+  
+ <span data-ttu-id="059c4-144">默认情况下，映像加载到功能区，每次用户显示包含图像的选项卡。</span><span class="sxs-lookup"><span data-stu-id="059c4-144">By default, an image is loaded into the Ribbon every time the user displays a tab that contains the image.</span></span> <span data-ttu-id="059c4-145">映像重新加载，以编程方式更改图像将显示的控件的属性的任何时间。</span><span class="sxs-lookup"><span data-stu-id="059c4-145">An image is reloaded any time that you programmatically change the properties of a control on which the image appears.</span></span>  
+  
+ <span data-ttu-id="059c4-146">使用<xref:Microsoft.Office.Tools.Ribbon.RibbonBase.LoadImage>事件将分配给控件的图像。</span><span class="sxs-lookup"><span data-stu-id="059c4-146">Use the <xref:Microsoft.Office.Tools.Ribbon.RibbonBase.LoadImage> event to assign an image to a control.</span></span> <span data-ttu-id="059c4-147">当用户选择功能区上的选项卡时，Microsoft Office 应用程序将使用缓存的映像。</span><span class="sxs-lookup"><span data-stu-id="059c4-147">When the user selects a tab on the Ribbon, the Microsoft Office application uses the cached image.</span></span> <span data-ttu-id="059c4-148">如果在运行时修改控件属性，Microsoft Office 应用程序将不重新加载该控件上的映像。</span><span class="sxs-lookup"><span data-stu-id="059c4-148">If you modify a control property at run time, the Microsoft Office application will not reload the image on the control.</span></span> <span data-ttu-id="059c4-149">这可以为你提供可略微提高性能。</span><span class="sxs-lookup"><span data-stu-id="059c4-149">This can give you a small performance gain.</span></span>  
+  
+ <span data-ttu-id="059c4-150">如果你想要缓存的控件图像，设置**ImageName**的控件属性。</span><span class="sxs-lookup"><span data-stu-id="059c4-150">If you want to cache the image of a control, set the **ImageName** property of the control.</span></span> <span data-ttu-id="059c4-151"><xref:Microsoft.Office.Tools.Ribbon.RibbonBase.LoadImage>除非你设置，则不会引发事件**ImageName**至少一个控件的属性。</span><span class="sxs-lookup"><span data-stu-id="059c4-151">The <xref:Microsoft.Office.Tools.Ribbon.RibbonBase.LoadImage> event is not raised unless you set the **ImageName** property of at least one control.</span></span>  
+  
+   
+  
+## Examples  
+ <span data-ttu-id="059c4-152">下面的示例适用于两个缓存图像<xref:Microsoft.Office.Tools.Ribbon.RibbonButton>控件。</span><span class="sxs-lookup"><span data-stu-id="059c4-152">The following example caches the images for two <xref:Microsoft.Office.Tools.Ribbon.RibbonButton> controls.</span></span>  
+  
+ <span data-ttu-id="059c4-153">若要运行此代码示例，必须首先执行以下步骤：</span><span class="sxs-lookup"><span data-stu-id="059c4-153">To run this code example, you must first perform the following steps:</span></span>  
+  
+-   <span data-ttu-id="059c4-154">添加**功能区 （可视化设计器）**到 Office 项目。</span><span class="sxs-lookup"><span data-stu-id="059c4-154">Add a **Ribbon (Visual Designer)** to an Office project.</span></span>  
+  
+-   <span data-ttu-id="059c4-155">如果你使用的 Visual Basic 项目，到功能区代码文件的顶部添加以下语句： `Imports Microsoft.Office.Tools.Ribbon`</span><span class="sxs-lookup"><span data-stu-id="059c4-155">If you are using a Visual Basic project, add the following statement to the top of the Ribbon code file: `Imports Microsoft.Office.Tools.Ribbon`</span></span>  
+  
+ <span data-ttu-id="059c4-156">然后可以在生成的功能区类中运行此代码。</span><span class="sxs-lookup"><span data-stu-id="059c4-156">You can then run this code in the generated Ribbon class.</span></span>  
+  
+```vb  
+Private Sub Ribbon1_LoadImage(sender As Object, e As RibbonLoadImageEventArgs)  
+   Select Case e.ImageName  
+      Case "Button1Image"  
+         e.Image = My.Resources.Image1  
+      Case "Button2Image"  
+         e.Image = My.Resources.Image2  
+   End Select  
+End Sub  
+```  
+  
+```csharp  
+private void Ribbon1_LoadImage(object sender, RibbonLoadImageEventArgs e)  
+{  
+    switch (e.ImageName)  
+    {  
+        case "Button1Image":  
+            e.Image = Properties.Resources.Image1;  
+            break;  
+        case "Button2Image":  
+            e.Image = Properties.Resources.Image2;  
+            break;  
+    }  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Microsoft.Office.Tools.IExtension.ExtensionBase">
+      <MemberSignature Language="C#" Value="object Microsoft.Office.Tools.IExtension.ExtensionBase { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Microsoft.Office.Tools.IExtension.ExtensionBase" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Ribbon.RibbonBase.Microsoft#Office#Tools#IExtension#ExtensionBase" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Ribbon.RibbonBase.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="059c4-157">获取或设置此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" /> 的名称。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="059c4-157">Gets or sets the name of this <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" />.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="059c4-158">一个字符串，包含此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" /> 的名称。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="059c4-158">A string that contains the name of this <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" />.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="059c4-159">控件的名称显示在**属性**窗口。</span><span class="sxs-lookup"><span data-stu-id="059c4-159">The name of a control shows up in the **Properties** window.</span></span> <span data-ttu-id="059c4-160">它是 Microsoft Office 可以使用以确定该 ID <xref:Microsoft.Office.Tools.Ribbon.RibbonBase>，它是此实例的名称和<xref:Microsoft.Office.Tools.Ribbon.RibbonBase>在代码中。</span><span class="sxs-lookup"><span data-stu-id="059c4-160">It is the ID that Microsoft Office uses to identify this <xref:Microsoft.Office.Tools.Ribbon.RibbonBase>, and it is the name of the instance of this <xref:Microsoft.Office.Tools.Ribbon.RibbonBase> in your code.</span></span>  
+  
+ <span data-ttu-id="059c4-161">在运行时仅在某些情况下，可以设置此属性。</span><span class="sxs-lookup"><span data-stu-id="059c4-161">This property can be set at run time only under certain conditions.</span></span> <span data-ttu-id="059c4-162">有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="059c4-162">For more information, see [Ribbon Object Model Overview](/visualstudio/vsto/ribbon-object-model-overview.md).</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OfficeMenu">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Tools.Ribbon.RibbonOfficeMenu OfficeMenu { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Tools.Ribbon.RibbonOfficeMenu OfficeMenu" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Ribbon.RibbonBase.OfficeMenu" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Ribbon.RibbonOfficeMenu</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="059c4-163">获取一个表示 Microsoft Office 菜单自定义项的 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonOfficeMenu" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="059c4-163">Gets a <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonOfficeMenu" /> that represents the Microsoft Office Menu customization.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="059c4-164">一个 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonOfficeMenu" />，表示 Microsoft Office 菜单自定义项。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="059c4-164">A <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonOfficeMenu" /> that represents the Microsoft Office Menu customization.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="059c4-165">Microsoft Office 菜单是当单击打开的菜单**文件**选项卡 （对于 Microsoft Office 2010) 或**Microsoft Office 按钮**（适用于 2007 Microsoft Office 系统）。</span><span class="sxs-lookup"><span data-stu-id="059c4-165">The Microsoft Office Menu is the menu that opens when you click the **File** tab (for Microsoft Office 2010) or the **Microsoft Office Button** (for the 2007 Microsoft Office system).</span></span> <span data-ttu-id="059c4-166">只能通过使用功能区设计器，可以将控件添加到 Microsoft Office 菜单。</span><span class="sxs-lookup"><span data-stu-id="059c4-166">You can add controls to the Microsoft Office Menu only by using the Ribbon Designer.</span></span> <span data-ttu-id="059c4-167">有关详细信息，请参阅[如何： 将控件添加到 Backstage 视图](/visualstudio/vsto/how-to-add-controls-to-the-backstage-view.md)。</span><span class="sxs-lookup"><span data-stu-id="059c4-167">For more information, see [How to: Add Controls to the Backstage View](/visualstudio/vsto/how-to-add-controls-to-the-backstage-view.md).</span></span>  
+  
+ <span data-ttu-id="059c4-168">可以在运行时的 Microsoft Office 菜单自定义项中的功能区控件的只读集合的访问通过使用<xref:Microsoft.Office.Tools.Ribbon.RibbonOfficeMenu.Items%2A>属性<xref:Microsoft.Office.Tools.Ribbon.RibbonOfficeMenu>公开由的实例<xref:Microsoft.Office.Tools.Ribbon.RibbonBase.OfficeMenu%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="059c4-168">You can access a read-only collection of Ribbon controls in the Microsoft Office Menu customization at run time by using the <xref:Microsoft.Office.Tools.Ribbon.RibbonOfficeMenu.Items%2A> property of the <xref:Microsoft.Office.Tools.Ribbon.RibbonOfficeMenu> instance that is exposed by the <xref:Microsoft.Office.Tools.Ribbon.RibbonBase.OfficeMenu%2A> property.</span></span>  
+  
+   
+  
+## Examples  
+ <span data-ttu-id="059c4-169">下面的示例获取 Microsoft Office 菜单自定义项中的自定义控件的数量。</span><span class="sxs-lookup"><span data-stu-id="059c4-169">The following example gets the number of custom controls in the Microsoft Office Menu customization.</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="059c4-170">若要运行此代码示例，必须首先添加**功能区 （可视化设计器）**到 Office 项目。</span><span class="sxs-lookup"><span data-stu-id="059c4-170">To run this code example, you must first add a **Ribbon (Visual Designer)** to an Office project.</span></span> <span data-ttu-id="059c4-171">然后可以在生成的功能区类中运行此代码。</span><span class="sxs-lookup"><span data-stu-id="059c4-171">You can then run this code in the generated Ribbon class.</span></span>  
+  
+```vb  
+Dim numControlsInOfficeMenu As Integer = Me.OfficeMenu.Items.Count  
+```  
+  
+```csharp  
+int numControlsInOfficeMenu = this.OfficeMenu.Items.Count;  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Tools.Ribbon.RibbonComponent Parent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Tools.Ribbon.RibbonComponent Parent" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Ribbon.RibbonBase.Parent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Tools.Ribbon.RibbonComponent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="059c4-172">获取一个表示此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonComponent" /> 的 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonComponent" /> 的父级的 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="059c4-172">Gets a <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonComponent" /> that represents the parent of the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonComponent" /> of this <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" />.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="059c4-173">一个表示此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonComponent" /> 的 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonComponent" /> 的父级的 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="059c4-173">A <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonComponent" /> that represents the parent of the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonComponent" /> of this <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" />.</span>
+          </span>
+        </value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PerformDynamicLayout">
+      <MemberSignature Language="C#" Value="public void PerformDynamicLayout ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void PerformDynamicLayout() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Ribbon.RibbonBase.PerformDynamicLayout" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+          <span data-ttu-id="059c4-174">如果 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" /> 的 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonComponent" /> 具有一个动态父级（如动态菜单）且布局未挂起，则调用父控件的 <c>Microsoft.Office.Core.IRibbonUI.InvalidateControl</c> 方法。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="059c4-174">Calls the <c>Microsoft.Office.Core.IRibbonUI.InvalidateControl</c> method of the parent control if the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonComponent" /> of the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" /> has a dynamic parent, such as a dynamic menu, and layout is not suspended.</span>
+          </span>
+        </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="059c4-175">如果父不是动态的此方法调用`Microsoft.Office.Core.IRibbonUI.InvalidateControl`如果布局则不会挂起当前控件的方法。</span><span class="sxs-lookup"><span data-stu-id="059c4-175">If the parent is not dynamic, this method calls the `Microsoft.Office.Core.IRibbonUI.InvalidateControl` method of the current control if the layout is not suspended.</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PerformLayout">
+      <MemberSignature Language="C#" Value="public void PerformLayout ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void PerformLayout() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Ribbon.RibbonBase.PerformLayout" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+          <span data-ttu-id="059c4-176">刷新功能区用户界面。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="059c4-176">Refreshes the Ribbon user interface.</span>
+          </span>
+        </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="059c4-177">调用此方法<xref:Microsoft.Office.Tools.Ribbon.RibbonComponent.ResumeLayout%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="059c4-177">This method is called by the <xref:Microsoft.Office.Tools.Ribbon.RibbonComponent.ResumeLayout%2A> method.</span></span>  
+  
+ <span data-ttu-id="059c4-178">此方法在内部调用`Microsoft.Office.Core.IRibbonUI.Invalidate`方法。</span><span class="sxs-lookup"><span data-stu-id="059c4-178">Internally, this method calls the `Microsoft.Office.Core.IRibbonUI.Invalidate` method.</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResumeLayout">
+      <MemberSignature Language="C#" Value="public void ResumeLayout ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ResumeLayout() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Ribbon.RibbonBase.ResumeLayout" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+          <span data-ttu-id="059c4-179">取消 <see cref="M:Microsoft.Office.Tools.Ribbon.RibbonBase.SuspendLayout" /> 方法的效果。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="059c4-179">Reverses the effect of the <see cref="M:Microsoft.Office.Tools.Ribbon.RibbonBase.SuspendLayout" /> method.</span>
+          </span>
+        </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="059c4-180">调用<xref:Microsoft.Office.Tools.Ribbon.RibbonBase.SuspendLayout%2A>可能会导致性能稍有增加，如果你的应用程序具有很多会频繁更新的控件。</span><span class="sxs-lookup"><span data-stu-id="059c4-180">Calling <xref:Microsoft.Office.Tools.Ribbon.RibbonBase.SuspendLayout%2A> may result in a slight performance increase if your application has many controls that are frequently updated.</span></span>  
+  
+ <span data-ttu-id="059c4-181">更改每个控件的状态后，你可以调用<xref:Microsoft.Office.Tools.Ribbon.RibbonBase.ResumeLayout%2A>以允许 UI 进行刷新。</span><span class="sxs-lookup"><span data-stu-id="059c4-181">After you change the state of each control, you can call <xref:Microsoft.Office.Tools.Ribbon.RibbonBase.ResumeLayout%2A> to allow the UI to be refreshed.</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResumeLayout">
+      <MemberSignature Language="C#" Value="public void ResumeLayout (bool performLayout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ResumeLayout(bool performLayout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Ribbon.RibbonBase.ResumeLayout(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="performLayout" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="performLayout">
+          <span data-ttu-id="059c4-182">若要调用 <see cref="M:Microsoft.Office.Tools.Ribbon.RibbonBase.PerformLayout" /> 方法，请使用 <see langword="true" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="059c4-182">
+              <see langword="true" /> to call the <see cref="M:Microsoft.Office.Tools.Ribbon.RibbonBase.PerformLayout" /> method.</span>
+          </span>
+          <span data-ttu-id="059c4-183">若要启用 UI 刷新，而不调用 <see cref="M:Microsoft.Office.Tools.Ribbon.RibbonBase.PerformLayout" />，请使用 <see langword="false" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="059c4-183">
+              <see langword="false" /> to enable UI refreshes without calling <see cref="M:Microsoft.Office.Tools.Ribbon.RibbonBase.PerformLayout" />.</span>
+          </span>
+        </param>
+        <summary>
+          <span data-ttu-id="059c4-184">取消 <see cref="M:Microsoft.Office.Tools.Ribbon.RibbonBase.SuspendLayout" /> 方法的效果。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="059c4-184">Reverses the effect of the <see cref="M:Microsoft.Office.Tools.Ribbon.RibbonBase.SuspendLayout" /> method.</span>
+          </span>
+        </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RibbonId">
+      <MemberSignature Language="C#" Value="public string RibbonId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RibbonId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Ribbon.RibbonBase.RibbonId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="059c4-185">获取用于创建 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" /> 类的此实例的功能区 ID。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="059c4-185">Gets the Ribbon ID that was used to create this instance of the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" /> class.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="059c4-186">用于创建 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" /> 类的此实例的功能区 ID。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="059c4-186">The Ribbon ID that was used to create this instance of the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" /> class.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="059c4-187">不应尝试设置此属性。</span><span class="sxs-lookup"><span data-stu-id="059c4-187">You should not attempt to set this property.</span></span>  
+  
+ <span data-ttu-id="059c4-188">你可以使用<xref:Microsoft.Office.Tools.Ribbon.RibbonBase.RibbonType%2A>要获取与此相关联的功能区 Id 的所有属性<xref:Microsoft.Office.Tools.Ribbon.RibbonBase>实例。</span><span class="sxs-lookup"><span data-stu-id="059c4-188">You can use the <xref:Microsoft.Office.Tools.Ribbon.RibbonBase.RibbonType%2A> property to get all of the Ribbon IDs that are associated with this <xref:Microsoft.Office.Tools.Ribbon.RibbonBase> instance.</span></span> <span data-ttu-id="059c4-189"><xref:Microsoft.Office.Tools.Ribbon.RibbonBase.RibbonId%2A>属性返回仅用于创建此单个 ID<xref:Microsoft.Office.Tools.Ribbon.RibbonBase>实例。</span><span class="sxs-lookup"><span data-stu-id="059c4-189">The <xref:Microsoft.Office.Tools.Ribbon.RibbonBase.RibbonId%2A> property returns only the single ID that was used to create this <xref:Microsoft.Office.Tools.Ribbon.RibbonBase> instance.</span></span> <span data-ttu-id="059c4-190">例如，可以使用此属性来确定是否正在邮件组合项中显示的此功能区实例。</span><span class="sxs-lookup"><span data-stu-id="059c4-190">For example, you can use this property to determine whether this Ribbon instance is being displayed in a mail composition item.</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RibbonType">
+      <MemberSignature Language="C#" Value="public string RibbonType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RibbonType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Ribbon.RibbonBase.RibbonType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="059c4-191">获取功能区 ID 的逗号分隔的列表，这些功能区 ID 与此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" /> 实例相关联。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="059c4-191">Gets a comma-separated list of Ribbon IDs that are associated with this <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" /> instance.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="059c4-192">功能区 ID 的逗号分隔的列表，这些功能区 ID 与此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" /> 实例相关联。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="059c4-192">A comma-separated list of Ribbon IDs that are associated with this <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" /> instance.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="059c4-193">Excel、 Word 和 PowerPoint 通常在此属性中具有只有一个功能区 ID。</span><span class="sxs-lookup"><span data-stu-id="059c4-193">Excel, Word, and PowerPoint typically have only one Ribbon ID in this property.</span></span> <span data-ttu-id="059c4-194">Outlook 可以拥有多个 Id，为其对应的各个消息类特定<xref:Microsoft.Office.Tools.Ribbon.RibbonBase>实例无效。</span><span class="sxs-lookup"><span data-stu-id="059c4-194">Outlook can have several IDs, corresponding to the various message classes for which the particular <xref:Microsoft.Office.Tools.Ribbon.RibbonBase> instance is valid.</span></span>  
+  
+ <span data-ttu-id="059c4-195">设计器提供有效的功能区 Id 的下拉列表。</span><span class="sxs-lookup"><span data-stu-id="059c4-195">The designer provides a drop-down list of valid Ribbon IDs.</span></span>  
+  
+ <span data-ttu-id="059c4-196">功能区 Id 用于将功能区类与特定的上下文窗口相关联。</span><span class="sxs-lookup"><span data-stu-id="059c4-196">Ribbon IDs are used to associate a Ribbon class with a particular context window.</span></span>  
+  
+ <span data-ttu-id="059c4-197">只能在功能区加载到 Office 应用程序之前，可以设置此属性。</span><span class="sxs-lookup"><span data-stu-id="059c4-197">This property can be set only before the Ribbon is loaded into the Office application.</span></span> <span data-ttu-id="059c4-198">有关设置此属性的信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="059c4-198">For information about setting this property, see [Ribbon Object Model Overview](/visualstudio/vsto/ribbon-object-model-overview.md).</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RibbonUI">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Core.IRibbonUI RibbonUI { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Core.IRibbonUI RibbonUI" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Ribbon.RibbonBase.RibbonUI" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Core.IRibbonUI</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="059c4-199">获取 Microsoft Office 应用程序提供给功能区扩展性代码的 <c>IRibbonUI</c> 实例。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="059c4-199">Gets the <c>IRibbonUI</c> instance that is provided by the Microsoft Office application to the Ribbon extensibility code.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="059c4-200">
+            <c>IRibbonUI</c>提供了功能区扩展性代码 Office 应用程序的实例。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="059c4-200">The <c>IRibbonUI</c> instance that is provided by the Office application to the Ribbon extensibility code.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="059c4-201">此属性可以用于更新功能区 UI。</span><span class="sxs-lookup"><span data-stu-id="059c4-201">This property can be used to update Ribbon UI.</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartFromScratch">
+      <MemberSignature Language="C#" Value="public bool StartFromScratch { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool StartFromScratch" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Ribbon.RibbonBase.StartFromScratch" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="059c4-202">获取或设置一个值，该值指示是否隐藏功能区上的所有内置选项卡和 Microsoft Office 菜单上的大部分命令，并且是否仅显示在此功能区项中定义的自定义项。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="059c4-202">Gets or sets a value that indicates whether to hide all built-in tabs on the Ribbon and most commands on the Microsoft Office Menu and display only the customizations that are defined in this Ribbon item.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="059c4-203">如果功能区仅显示在此功能区项中定义的自定义项，则为 <see langword="true" />；否则为 <see langword="false" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="059c4-203">
+              <see langword="true" /> if the Ribbon displays only the customizations that are defined in this Ribbon item; otherwise, <see langword="false" />.</span>
+          </span>
+          <span data-ttu-id="059c4-204">默认值为 <see langword="false" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="059c4-204">The default is <see langword="false" />.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="059c4-205">只能在功能区加载到 Office 应用程序之前，可以设置此属性。</span><span class="sxs-lookup"><span data-stu-id="059c4-205">This property can be set only before the Ribbon is loaded into the Office application.</span></span> <span data-ttu-id="059c4-206">有关设置此属性的信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="059c4-206">For information about setting this property, see [Ribbon Object Model Overview](/visualstudio/vsto/ribbon-object-model-overview.md).</span></span>  
+  
+ <span data-ttu-id="059c4-207">你不能在运行时更改的自定义选项卡可见性，如果此属性设置为`true`。</span><span class="sxs-lookup"><span data-stu-id="059c4-207">You cannot change the visibility of custom tabs at run time if this property is set to `true`.</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SuspendLayout">
+      <MemberSignature Language="C#" Value="public void SuspendLayout ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SuspendLayout() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Ribbon.RibbonBase.SuspendLayout" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+          <span data-ttu-id="059c4-208">阻止 Microsoft Office 应用程序刷新功能区上的控件状态。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="059c4-208">Prevents the Microsoft Office application from refreshing the state of controls on the Ribbon.</span>
+          </span>
+        </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="059c4-209">调用<xref:Microsoft.Office.Tools.Ribbon.RibbonBase.SuspendLayout%2A>可能会导致性能稍有增加，如果你的应用程序具有很多会频繁更新的控件。</span><span class="sxs-lookup"><span data-stu-id="059c4-209">Calling <xref:Microsoft.Office.Tools.Ribbon.RibbonBase.SuspendLayout%2A> may result in a slight performance increase if your application has many controls that are frequently updated.</span></span>  
+  
+ <span data-ttu-id="059c4-210">更改每个控件的状态后，你可以调用<xref:Microsoft.Office.Tools.Ribbon.RibbonBase.ResumeLayout%2A>以允许 UI 进行刷新。</span><span class="sxs-lookup"><span data-stu-id="059c4-210">After you change the state of each control, you can call <xref:Microsoft.Office.Tools.Ribbon.RibbonBase.ResumeLayout%2A> to allow the UI to be refreshed.</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tabs">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;Microsoft.Office.Tools.Ribbon.RibbonTab&gt; Tabs { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;class Microsoft.Office.Tools.Ribbon.RibbonTab&gt; Tabs" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Ribbon.RibbonBase.Tabs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;Microsoft.Office.Tools.Ribbon.RibbonTab&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="059c4-211">获取 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonTab" /> 中 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonOfficeMenu" /> 对象的集合。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="059c4-211">Gets a collection of <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonTab" /> objects in the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonOfficeMenu" />.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="059c4-212">
+            <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonTab" /> 中 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonOfficeMenu" /> 对象的集合。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="059c4-212">A collection of <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonTab" /> objects in the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonOfficeMenu" />.</span>
+          </span>
+        </value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tag">
+      <MemberSignature Language="C#" Value="public object Tag { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Tag" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Ribbon.RibbonBase.Tag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="059c4-213">获取或设置与此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" /> 关联的应用程序特定的数据。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="059c4-213">Gets or sets application-specific data that is associated with this <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" />.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="059c4-214">
+            <c>System.Object</c>表示与此关联的应用程序特定数据<see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="059c4-214">An <c>System.Object</c> that represents application-specific data that is associated with this <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" />.</span>
+          </span>
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="059c4-215">从派生的任何类型`System.Object`类可以分配给此属性。</span><span class="sxs-lookup"><span data-stu-id="059c4-215">Any type derived from the `System.Object` class can be assigned to this property.</span></span> <span data-ttu-id="059c4-216">但是，如果你设置<xref:Microsoft.Office.Tools.Ribbon.RibbonBase.Tag%2A>Visual Studio 中的属性**属性**窗口中，你可以仅将文本分配。</span><span class="sxs-lookup"><span data-stu-id="059c4-216">However, if you set the <xref:Microsoft.Office.Tools.Ribbon.RibbonBase.Tag%2A> property in the Visual Studio **Properties** window, you can only assign text.</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
