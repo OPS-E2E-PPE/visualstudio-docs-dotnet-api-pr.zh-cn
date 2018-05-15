@@ -1,317 +1,96 @@
-<Type Name="IDeploymentContext" FullName="Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="31db528d68ea786576a0ca417bc210e231473fb5" />
-    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
-    <Meta Name="ms.translationtype" Value="HT" />
-    <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface IDeploymentContext : Microsoft.VisualStudio.SharePoint.IAnnotatedObject" />
-  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDeploymentContext implements class Microsoft.VisualStudio.SharePoint.IAnnotatedObject" />
-  <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext" />
-  <AssemblyInfo>
-    <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
-    <AssemblyVersion>15.0.0.0</AssemblyVersion>
-  </AssemblyInfo>
-  <Interfaces>
-    <Interface>
-      <InterfaceName>Microsoft.VisualStudio.SharePoint.IAnnotatedObject</InterfaceName>
-    </Interface>
-  </Interfaces>
-  <Docs>
-    <summary>
-      <span data-ttu-id="32649-101">表示当部署或撤消 SharePoint 项目时执行的部署步骤的上下文。</span>
-      <span class="sxs-lookup">
-        <span data-stu-id="32649-101">Represents the context of a deployment step that is being executed while a SharePoint project is being deployed or retracted.</span>
-      </span>
-    </summary>
-    <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- <span data-ttu-id="32649-102">Visual Studio 将传递<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext>到<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep.CanExecute%2A>和<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep.Execute%2A>的部署步骤的方法。</span><span class="sxs-lookup"><span data-stu-id="32649-102">Visual Studio passes <xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext> to the <xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep.CanExecute%2A> and <xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep.Execute%2A> methods of deployment steps.</span></span> <span data-ttu-id="32649-103">在开始部署和收回操作初始化新的部署上下文。</span><span class="sxs-lookup"><span data-stu-id="32649-103">A new deployment context is initialized at the start of a deployment and retraction operation.</span></span>  
-  
- <span data-ttu-id="32649-104"><xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext>接口实现<xref:Microsoft.VisualStudio.SharePoint.IAnnotatedObject>以便部署步骤来存储和步骤之间传递数据。</span><span class="sxs-lookup"><span data-stu-id="32649-104">The <xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext> interface implements the <xref:Microsoft.VisualStudio.SharePoint.IAnnotatedObject> to enable deployment steps to store and pass data between steps.</span></span>  
-  
- ]]></format>
-    </remarks>
-  </Docs>
-  <Members>
-    <Member MemberName="IsCanceled">
-      <MemberSignature Language="C#" Value="public bool IsCanceled { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance bool IsCanceled" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext.IsCanceled" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
-        <AssemblyVersion>15.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Boolean</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-          <span data-ttu-id="32649-105">获取部署是否已被用户取消。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="32649-105">Gets whether the deployment was canceled by the user.</span>
-          </span>
-        </summary>
-        <value>
-          <span data-ttu-id="32649-106">如果部署已被用户取消，则为 <see langword="true" />；否则为 <see langword="false" />。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="32649-106">
-              <see langword="true" /> if the deployment was canceled by the user; otherwise, <see langword="false" />.</span>
-          </span>
-        </value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="IsDeploying">
-      <MemberSignature Language="C#" Value="public bool IsDeploying { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance bool IsDeploying" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext.IsDeploying" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
-        <AssemblyVersion>15.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Boolean</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-          <span data-ttu-id="32649-107">确定该项目是否正被部署。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="32649-107">Gets whether the project is being deployed.</span>
-          </span>
-        </summary>
-        <value>
-          <span data-ttu-id="32649-108">如果正在部署项目，则为 <see langword="true" />；否则为 <see langword="false" />。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="32649-108">
-              <see langword="true" /> if the project is being deployed; otherwise, <see langword="false" />.</span>
-          </span>
-        </value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="IsRetracting">
-      <MemberSignature Language="C#" Value="public bool IsRetracting { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance bool IsRetracting" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext.IsRetracting" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
-        <AssemblyVersion>15.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Boolean</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-          <span data-ttu-id="32649-109">确定该项目是否正被收回。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="32649-109">Gets whether the project is being retracted.</span>
-          </span>
-        </summary>
-        <value>
-          <span data-ttu-id="32649-110">如果正在撤消项目，则为 <see langword="true" />；否则为 <see langword="false" />。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="32649-110">
-              <see langword="true" /> if the project is being retracted; otherwise, <see langword="false" />.</span>
-          </span>
-        </value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="Logger">
-      <MemberSignature Language="C#" Value="public Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger Logger { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger Logger" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext.Logger" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
-        <AssemblyVersion>15.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-          <span data-ttu-id="32649-111">获取对项目记录器的访问。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="32649-111">Gets the access to the project logger.</span>
-          </span>
-        </summary>
-        <value>
-          <span data-ttu-id="32649-112">表示项目记录器的对象。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="32649-112">The object representing a project logger.</span>
-          </span>
-        </value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="Project">
-      <MemberSignature Language="C#" Value="public Microsoft.VisualStudio.SharePoint.ISharePointProject Project { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.VisualStudio.SharePoint.ISharePointProject Project" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext.Project" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
-        <AssemblyVersion>15.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Microsoft.VisualStudio.SharePoint.ISharePointProject</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-          <span data-ttu-id="32649-113">获取对正在被部署或收回的当前项目的访问。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="32649-113">Gets the access to the current project that is being deployed or retracted.</span>
-          </span>
-        </summary>
-        <value>
-          <span data-ttu-id="32649-114">当前项目正被部署或收回。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="32649-114">The current project that is being deployed or retracted.</span>
-          </span>
-        </value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="SiteCollectionUrl">
-      <MemberSignature Language="C#" Value="public Uri SiteCollectionUrl ();" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Uri SiteCollectionUrl() cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext.SiteCollectionUrl" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
-        <AssemblyVersion>15.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Uri</ReturnType>
-      </ReturnValue>
-      <Parameters />
-      <Docs>
-        <summary>
-          <span data-ttu-id="32649-115">返回项目根据 SharePoint 连接到的 <c>Microsoft.SharePoint.SPSite</c> 的规范 URL。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="32649-115">Returns the canonical URL of the <c>Microsoft.SharePoint.SPSite</c> that the project is connected to, according to SharePoint.</span>
-          </span>
-        </summary>
-        <returns>
-          <span data-ttu-id="32649-116">项目根据 SharePoint 连接到的 <c>Microsoft.SharePoint.SPSite</c> 的规范 URL。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="32649-116">The canonical URL of the <c>Microsoft.SharePoint.SPSite</c> that the project is connected to, according to SharePoint.</span>
-          </span>
-        </returns>
-        <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- <span data-ttu-id="32649-117">可能是 SiteUrl 相同，如果该站点 WebRoot 其站点集合。</span><span class="sxs-lookup"><span data-stu-id="32649-117">May be the same as the SiteUrl if that site is WebRoot of its site collection.</span></span>  
-  
- ]]></format>
-        </remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="SiteUrl">
-      <MemberSignature Language="C#" Value="public Uri SiteUrl ();" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Uri SiteUrl() cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext.SiteUrl" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
-        <AssemblyVersion>15.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Uri</ReturnType>
-      </ReturnValue>
-      <Parameters />
-      <Docs>
-        <summary>
-          <span data-ttu-id="32649-118">返回项目根据 SharePoint 连接到的 <c>Microsoft.SharePoint.SPWeb</c> 的规范 URL。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="32649-118">Returns the canonical URL of the <c>Microsoft.SharePoint.SPWeb</c> that the project is connected to, according to SharePoint.</span>
-          </span>
-        </summary>
-        <returns>
-          <span data-ttu-id="32649-119">项目根据 SharePoint 连接到的 <c>Microsoft.SharePoint.SPWeb</c> 的规范 URL。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="32649-119">The canonical URL of the <c>Microsoft.SharePoint.SPWeb</c> that the project is connected to, according to SharePoint.</span>
-          </span>
-        </returns>
-        <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- <span data-ttu-id="32649-120">这可能或可能不能与相同<xref:Microsoft.VisualStudio.SharePoint.ISharePointProject.SiteUrl%2A?displayProperty=fullName>，但它们指向相同的资源。</span><span class="sxs-lookup"><span data-stu-id="32649-120">This may or may not be identical to <xref:Microsoft.VisualStudio.SharePoint.ISharePointProject.SiteUrl%2A?displayProperty=fullName>, but they point to the same resource.</span></span>  
-  
- <span data-ttu-id="32649-121">此值将从 SharePoint 查询，以便与 SiteCollectionUrl 一致。</span><span class="sxs-lookup"><span data-stu-id="32649-121">This value is queried from SharePoint so that it is consistent with SiteCollectionUrl.</span></span>  
-  
- <span data-ttu-id="32649-122">例如，<xref:Microsoft.VisualStudio.SharePoint.ISharePointProject.SiteUrl%2A?displayProperty=fullName>可能 http://localhost，但 SharePoint 将将其解析为 http://hostname。</span><span class="sxs-lookup"><span data-stu-id="32649-122">For example, the <xref:Microsoft.VisualStudio.SharePoint.ISharePointProject.SiteUrl%2A?displayProperty=fullName> may be http://localhost, but SharePoint will resolve it to http://hostname.</span></span>  
-  
- ]]></format>
-        </remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="StartMode">
-      <MemberSignature Language="C#" Value="public Microsoft.VisualStudio.SharePoint.Deployment.StartMode StartMode { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.VisualStudio.SharePoint.Deployment.StartMode StartMode" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext.StartMode" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
-        <AssemblyVersion>15.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Microsoft.VisualStudio.SharePoint.Deployment.StartMode</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-          <span data-ttu-id="32649-123">为访问启动模式获取启动部署的原因。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="32649-123">Gets the access to the start mode the reason why deployment was initiated.</span>
-          </span>
-        </summary>
-        <value>
-          <span data-ttu-id="32649-124">一个表示 SharePoint 项目的对象。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="32649-124">An object representing a SharePoint project.</span>
-          </span>
-        </value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="WebApplicationUrl">
-      <MemberSignature Language="C#" Value="public Uri WebApplicationUrl ();" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Uri WebApplicationUrl() cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext.WebApplicationUrl" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
-        <AssemblyVersion>15.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Uri</ReturnType>
-      </ReturnValue>
-      <Parameters />
-      <Docs>
-        <summary>
-          <span data-ttu-id="32649-125">返回 SPWebApplication 的根 URL。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="32649-125">Returns the root URL of the SPWebApplication.</span>
-          </span>
-        </summary>
-        <returns>
-          <span data-ttu-id="32649-126">SPWebApplication 的根 URL。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="32649-126">The root URL of the SPWebApplication.</span>
-          </span>
-        </returns>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-  </Members>
-</Type>
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="IDeploymentContext.xml" source-language="en-US" target-language="zh-CN">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-38f25dd" tool-company="Microsoft" />
+      <xliffext:skl_file_name xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">b4690f9a-9e49-426d-9091-855b10fda4db31db528d68ea786576a0ca417bc210e231473fb5.skl</xliffext:skl_file_name>
+      <xliffext:version xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">1.2</xliffext:version>
+      <xliffext:ms.openlocfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">31db528d68ea786576a0ca417bc210e231473fb5</xliffext:ms.openlocfilehash>
+      <xliffext:ms.sourcegitcommit xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">bb8a3a96823cedeffbdbcc0c41a8118399de8074</xliffext:ms.sourcegitcommit>
+      <xliffext:ms.lasthandoff xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">02/21/2018</xliffext:ms.lasthandoff>
+      <xliffext:moniker_ids xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">sharepoint-projects-2017</xliffext:moniker_ids>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve" uid="T:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext">
+          <source>Represents the context of a deployment step that is being executed while a SharePoint project is being deployed or retracted.</source>
+          <target state="translated">表示当部署或撤消 SharePoint 项目时执行的部署步骤的上下文。</target>       </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve" extradata="MT" uid="T:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext">
+          <source>Visual Studio passes <ph id="ph1">&lt;xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext&gt;</ph> to the <ph id="ph2">&lt;xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep.CanExecute%2A&gt;</ph> and <ph id="ph3">&lt;xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep.Execute%2A&gt;</ph> methods of deployment steps.</source>
+          <target state="translated">Visual Studio 将传递<ph id="ph1">&lt;xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext&gt;</ph>到<ph id="ph2">&lt;xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep.CanExecute%2A&gt;</ph>和<ph id="ph3">&lt;xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep.Execute%2A&gt;</ph>的部署步骤的方法。</target>       </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve" extradata="MT" uid="T:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext">
+          <source>A new deployment context is initialized at the start of a deployment and retraction operation.</source>
+          <target state="translated">在开始部署和收回操作初始化新的部署上下文。</target>       </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve" extradata="MT" uid="T:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext">
+          <source>The <ph id="ph1">&lt;xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext&gt;</ph> interface implements the <ph id="ph2">&lt;xref:Microsoft.VisualStudio.SharePoint.IAnnotatedObject&gt;</ph> to enable deployment steps to store and pass data between steps.</source>
+          <target state="translated"><ph id="ph1">&lt;xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext&gt;</ph>接口实现<ph id="ph2">&lt;xref:Microsoft.VisualStudio.SharePoint.IAnnotatedObject&gt;</ph>以便部署步骤来存储和步骤之间传递数据。</target>       </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve" uid="P:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext.IsCanceled">
+          <source>Gets whether the deployment was canceled by the user.</source>
+          <target state="translated">获取部署是否已被用户取消。</target>       </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve" extradata="MT" uid="P:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext.IsCanceled">
+          <source><ph id="ph1">&lt;see langword="true" /&gt;</ph> if the deployment was canceled by the user; otherwise, <ph id="ph2">&lt;see langword="false" /&gt;</ph>.</source>
+          <target state="translated">如果部署已被用户取消，则为 <ph id="ph1">&lt;see langword="true" /&gt;</ph>；否则为 <ph id="ph2">&lt;see langword="false" /&gt;</ph>。</target>       </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve" uid="P:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext.IsDeploying">
+          <source>Gets whether the project is being deployed.</source>
+          <target state="translated">确定该项目是否正被部署。</target>       </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve" extradata="MT" uid="P:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext.IsDeploying">
+          <source><ph id="ph1">&lt;see langword="true" /&gt;</ph> if the project is being deployed; otherwise, <ph id="ph2">&lt;see langword="false" /&gt;</ph>.</source>
+          <target state="translated">如果正在部署项目，则为 <ph id="ph1">&lt;see langword="true" /&gt;</ph>；否则为 <ph id="ph2">&lt;see langword="false" /&gt;</ph>。</target>       </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve" uid="P:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext.IsRetracting">
+          <source>Gets whether the project is being retracted.</source>
+          <target state="translated">确定该项目是否正被收回。</target>       </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve" extradata="MT" uid="P:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext.IsRetracting">
+          <source><ph id="ph1">&lt;see langword="true" /&gt;</ph> if the project is being retracted; otherwise, <ph id="ph2">&lt;see langword="false" /&gt;</ph>.</source>
+          <target state="translated">如果正在撤消项目，则为 <ph id="ph1">&lt;see langword="true" /&gt;</ph>；否则为 <ph id="ph2">&lt;see langword="false" /&gt;</ph>。</target>       </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve" uid="P:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext.Logger">
+          <source>Gets the access to the project logger.</source>
+          <target state="translated">获取对项目记录器的访问。</target>       </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve" extradata="MT" uid="P:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext.Logger">
+          <source>The object representing a project logger.</source>
+          <target state="translated">表示项目记录器的对象。</target>       </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve" uid="P:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext.Project">
+          <source>Gets the access to the current project that is being deployed or retracted.</source>
+          <target state="translated">获取对正在被部署或收回的当前项目的访问。</target>       </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve" extradata="MT" uid="P:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext.Project">
+          <source>The current project that is being deployed or retracted.</source>
+          <target state="translated">当前项目正被部署或收回。</target>       </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext.SiteCollectionUrl">
+          <source>Returns the canonical URL of the <bpt id="p1">&lt;c&gt;</bpt>Microsoft.SharePoint.SPSite<ept id="p1">&lt;/c&gt;</ept> that the project is connected to, according to SharePoint.</source>
+          <target state="translated">返回项目根据 SharePoint 连接到的 <bpt id="p1">&lt;c&gt;</bpt>Microsoft.SharePoint.SPSite<ept id="p1">&lt;/c&gt;</ept> 的规范 URL。</target>       </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext.SiteCollectionUrl">
+          <source>The canonical URL of the <bpt id="p1">&lt;c&gt;</bpt>Microsoft.SharePoint.SPSite<ept id="p1">&lt;/c&gt;</ept> that the project is connected to, according to SharePoint.</source>
+          <target state="translated">项目根据 SharePoint 连接到的 <bpt id="p1">&lt;c&gt;</bpt>Microsoft.SharePoint.SPSite<ept id="p1">&lt;/c&gt;</ept> 的规范 URL。</target>       </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve" extradata="MT" uid="M:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext.SiteCollectionUrl">
+          <source>May be the same as the SiteUrl if that site is WebRoot of its site collection.</source>
+          <target state="translated">可能是 SiteUrl 相同，如果该站点 WebRoot 其站点集合。</target>       </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext.SiteUrl">
+          <source>Returns the canonical URL of the <bpt id="p1">&lt;c&gt;</bpt>Microsoft.SharePoint.SPWeb<ept id="p1">&lt;/c&gt;</ept> that the project is connected to, according to SharePoint.</source>
+          <target state="translated">返回项目根据 SharePoint 连接到的 <bpt id="p1">&lt;c&gt;</bpt>Microsoft.SharePoint.SPWeb<ept id="p1">&lt;/c&gt;</ept> 的规范 URL。</target>       </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext.SiteUrl">
+          <source>The canonical URL of the <bpt id="p1">&lt;c&gt;</bpt>Microsoft.SharePoint.SPWeb<ept id="p1">&lt;/c&gt;</ept> that the project is connected to, according to SharePoint.</source>
+          <target state="translated">项目根据 SharePoint 连接到的 <bpt id="p1">&lt;c&gt;</bpt>Microsoft.SharePoint.SPWeb<ept id="p1">&lt;/c&gt;</ept> 的规范 URL。</target>       </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve" extradata="MT" uid="M:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext.SiteUrl">
+          <source>This may or may not be identical to <ph id="ph1">&lt;xref:Microsoft.VisualStudio.SharePoint.ISharePointProject.SiteUrl%2A?displayProperty=fullName&gt;</ph>, but they point to the same resource.</source>
+          <target state="translated">这可能或可能不能与相同<ph id="ph1">&lt;xref:Microsoft.VisualStudio.SharePoint.ISharePointProject.SiteUrl%2A?displayProperty=fullName&gt;</ph>，但它们指向相同的资源。</target>       </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve" extradata="MT" uid="M:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext.SiteUrl">
+          <source>This value is queried from SharePoint so that it is consistent with SiteCollectionUrl.</source>
+          <target state="translated">此值将从 SharePoint 查询，以便与 SiteCollectionUrl 一致。</target>       </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve" extradata="MT" uid="M:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext.SiteUrl">
+          <source>For example, the <ph id="ph1">&lt;xref:Microsoft.VisualStudio.SharePoint.ISharePointProject.SiteUrl%2A?displayProperty=fullName&gt;</ph> may be http://localhost, but SharePoint will resolve it to http://hostname.</source>
+          <target state="translated">例如，<ph id="ph1">&lt;xref:Microsoft.VisualStudio.SharePoint.ISharePointProject.SiteUrl%2A?displayProperty=fullName&gt;</ph>可能 http://localhost，但 SharePoint 将将其解析为 http://hostname。</target>       </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve" uid="P:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext.StartMode">
+          <source>Gets the access to the start mode the reason why deployment was initiated.</source>
+          <target state="translated">为访问启动模式获取启动部署的原因。</target>       </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve" extradata="MT" uid="P:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext.StartMode">
+          <source>An object representing a SharePoint project.</source>
+          <target state="translated">一个表示 SharePoint 项目的对象。</target>       </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext.WebApplicationUrl">
+          <source>Returns the root URL of the SPWebApplication.</source>
+          <target state="translated">返回 SPWebApplication 的根 URL。</target>       </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext.WebApplicationUrl">
+          <source>The root URL of the SPWebApplication.</source>
+          <target state="translated">SPWebApplication 的根 URL。</target>       </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

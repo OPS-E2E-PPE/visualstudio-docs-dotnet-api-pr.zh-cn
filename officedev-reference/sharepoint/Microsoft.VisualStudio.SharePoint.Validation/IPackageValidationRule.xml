@@ -1,166 +1,72 @@
-<Type Name="IPackageValidationRule" FullName="Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationRule">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="e3587687f1f0ec4224a67f439743aacd81c02e80" />
-    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
-    <Meta Name="ms.translationtype" Value="HT" />
-    <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface IPackageValidationRule" />
-  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IPackageValidationRule" />
-  <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationRule" />
-  <AssemblyInfo>
-    <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
-    <AssemblyVersion>15.0.0.0</AssemblyVersion>
-  </AssemblyInfo>
-  <Interfaces />
-  <Docs>
-    <summary>
-      <span data-ttu-id="d6353-101">表示要在验证 SharePoint 项目中的包时应用的规则。</span>
-      <span class="sxs-lookup">
-        <span data-stu-id="d6353-101">Represents a rule to applied when validating a package in a SharePoint project.</span>
-      </span>
-    </summary>
-    <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- <span data-ttu-id="d6353-102">实现<xref:Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationRule>接口可定义自定义验证规则来帮助验证 SharePoint 项目中的包是否有效。</span><span class="sxs-lookup"><span data-stu-id="d6353-102">Implement the <xref:Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationRule> interface to define a custom validation rule to help verify that the package in a SharePoint project is valid.</span></span> <span data-ttu-id="d6353-103">有关详细信息，请参阅[如何： 创建自定义功能和包验证规则，为 SharePoint 解决方案](/visualstudio/sharepoint/how-to-create-custom-feature-and-package-validation-rules-for-sharepoint-solutions.md)。</span><span class="sxs-lookup"><span data-stu-id="d6353-103">For more information, see [How to: Create Custom Feature and Package Validation Rules for SharePoint Solutions](/visualstudio/sharepoint/how-to-create-custom-feature-and-package-validation-rules-for-sharepoint-solutions.md).</span></span>  
-  
- <span data-ttu-id="d6353-104">实现此接口的类必须包括<xref:System.ComponentModel.Composition.ExportAttribute?displayProperty=fullName>项目系统发现。</span><span class="sxs-lookup"><span data-stu-id="d6353-104">Classes that implement this interface must include the <xref:System.ComponentModel.Composition.ExportAttribute?displayProperty=fullName> to be discovered by the project system.</span></span>  
-  
-   
-  
-## Examples  
-  
-|<span data-ttu-id="d6353-105">日期</span><span class="sxs-lookup"><span data-stu-id="d6353-105">Date</span></span>|<span data-ttu-id="d6353-106">历史记录</span><span class="sxs-lookup"><span data-stu-id="d6353-106">History</span></span>|<span data-ttu-id="d6353-107">原因</span><span class="sxs-lookup"><span data-stu-id="d6353-107">Reason</span></span>|  
-|----------|-------------|------------|  
-|[!INCLUDE[dev10_cpub1](~/includes/dev10-cpub1-md.md)]|<span data-ttu-id="d6353-108">添加了新注释以链接到演示如何实现此接口的主题</span><span class="sxs-lookup"><span data-stu-id="d6353-108">Added new remarks with links to topics that show how to implement this interface</span></span>|[!INCLUDE[enhancement](~/includes/enhancement-md.md)]|  
-  
- ]]></format>
-    </remarks>
-  </Docs>
-  <Members>
-    <Member MemberName="ValidateFeature">
-      <MemberSignature Language="C#" Value="public void ValidateFeature (Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationContext context, Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature feature);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ValidateFeature(class Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationContext context, class Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature feature) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationRule.ValidateFeature(Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationContext,Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature)" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
-        <AssemblyVersion>15.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Void</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="context" Type="Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationContext" />
-        <Parameter Name="feature" Type="Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature" />
-      </Parameters>
-      <Docs>
-        <param name="context">
-          <span data-ttu-id="d6353-109">与包和验证关联的上下文数据。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="d6353-109">Contextual data associated with the package and validation.</span>
-          </span>
-        </param>
-        <param name="feature">
-          <span data-ttu-id="d6353-110">用来验证包的功能。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="d6353-110">The feature with which to validate the package.</span>
-          </span>
-        </param>
-        <summary>
-          <span data-ttu-id="d6353-111">确定如果添加指定的功能，包是否会与此规则冲突。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="d6353-111">Determines whether a package would violate this rule if the specified feature were added.</span>
-          </span>
-        </summary>
-        <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- <span data-ttu-id="d6353-112">如果此规则仅适用于在包中的项目项，则此方法将执行执行任何操作。</span><span class="sxs-lookup"><span data-stu-id="d6353-112">If this rule applies only to project items in a package, then this method does nothing.</span></span>  
-  
- ]]></format>
-        </remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="ValidatePackage">
-      <MemberSignature Language="C#" Value="public void ValidatePackage (Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationContext context);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ValidatePackage(class Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationContext context) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationRule.ValidatePackage(Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationContext)" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
-        <AssemblyVersion>15.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Void</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="context" Type="Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationContext" />
-      </Parameters>
-      <Docs>
-        <param name="context">
-          <span data-ttu-id="d6353-113">与包和验证关联的上下文数据。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="d6353-113">Contextual data associated with the package and validation.</span>
-          </span>
-        </param>
-        <summary>
-          <span data-ttu-id="d6353-114">确定包当前是否与此规则冲突。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="d6353-114">Determines whether a package currently violates this rule.</span>
-          </span>
-        </summary>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="ValidateProjectItem">
-      <MemberSignature Language="C#" Value="public void ValidateProjectItem (Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationContext context, Microsoft.VisualStudio.SharePoint.ISharePointProjectItem projectItem);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ValidateProjectItem(class Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationContext context, class Microsoft.VisualStudio.SharePoint.ISharePointProjectItem projectItem) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationRule.ValidateProjectItem(Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationContext,Microsoft.VisualStudio.SharePoint.ISharePointProjectItem)" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
-        <AssemblyVersion>15.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Void</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="context" Type="Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationContext" />
-        <Parameter Name="projectItem" Type="Microsoft.VisualStudio.SharePoint.ISharePointProjectItem" />
-      </Parameters>
-      <Docs>
-        <param name="context">
-          <span data-ttu-id="d6353-115">与包和验证关联的上下文数据。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="d6353-115">Contextual data associated with the package and validation.</span>
-          </span>
-        </param>
-        <param name="projectItem">
-          <span data-ttu-id="d6353-116">用来验证包的项目项。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="d6353-116">The project item with which to validate the package.</span>
-          </span>
-        </param>
-        <summary>
-          <span data-ttu-id="d6353-117">确定如果添加指定的项目项，包是否会与此规则冲突。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="d6353-117">Determines whether a package would violate this rule if the specified project item is added.</span>
-          </span>
-        </summary>
-        <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- <span data-ttu-id="d6353-118">如果此规则仅适用于在包中的功能，则此方法将执行执行任何操作。</span><span class="sxs-lookup"><span data-stu-id="d6353-118">If this rule applies only to features in a package, then this method does nothing.</span></span>  
-  
- ]]></format>
-        </remarks>
-      </Docs>
-    </Member>
-  </Members>
-</Type>
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="IPackageValidationRule.xml" source-language="en-US" target-language="zh-CN">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-38f25dd" tool-company="Microsoft" />
+      <xliffext:skl_file_name xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">b4690f9a-9e49-426d-9091-855b10fda4dbe3587687f1f0ec4224a67f439743aacd81c02e80.skl</xliffext:skl_file_name>
+      <xliffext:version xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">1.2</xliffext:version>
+      <xliffext:ms.openlocfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">e3587687f1f0ec4224a67f439743aacd81c02e80</xliffext:ms.openlocfilehash>
+      <xliffext:ms.sourcegitcommit xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">bb8a3a96823cedeffbdbcc0c41a8118399de8074</xliffext:ms.sourcegitcommit>
+      <xliffext:ms.lasthandoff xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">02/21/2018</xliffext:ms.lasthandoff>
+      <xliffext:moniker_ids xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">sharepoint-projects-2017</xliffext:moniker_ids>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve" uid="T:Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationRule">
+          <source>Represents a rule to applied when validating a package in a SharePoint project.</source>
+          <target state="translated">表示要在验证 SharePoint 项目中的包时应用的规则。</target>       </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve" extradata="MT" uid="T:Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationRule">
+          <source>Implement the <ph id="ph1">&lt;xref:Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationRule&gt;</ph> interface to define a custom validation rule to help verify that the package in a SharePoint project is valid.</source>
+          <target state="translated">实现<ph id="ph1">&lt;xref:Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationRule&gt;</ph>接口可定义自定义验证规则来帮助验证 SharePoint 项目中的包是否有效。</target>       </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve" extradata="MT" uid="T:Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationRule">
+          <source>For more information, see <bpt id="p1">[</bpt>How to: Create Custom Feature and Package Validation Rules for SharePoint Solutions<ept id="p1">](/visualstudio/sharepoint/how-to-create-custom-feature-and-package-validation-rules-for-sharepoint-solutions.md)</ept>.</source>
+          <target state="translated">有关详细信息，请参阅<bpt id="p1">[</bpt>如何： 创建自定义功能和包验证规则，为 SharePoint 解决方案<ept id="p1">](/visualstudio/sharepoint/how-to-create-custom-feature-and-package-validation-rules-for-sharepoint-solutions.md)</ept>。</target>       </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve" extradata="MT" uid="T:Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationRule">
+          <source>Classes that implement this interface must include the <ph id="ph1">&lt;xref:System.ComponentModel.Composition.ExportAttribute?displayProperty=fullName&gt;</ph> to be discovered by the project system.</source>
+          <target state="translated">实现此接口的类必须包括<ph id="ph1">&lt;xref:System.ComponentModel.Composition.ExportAttribute?displayProperty=fullName&gt;</ph>项目系统发现。</target>       </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve" extradata="MT" uid="T:Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationRule">
+          <source>Date</source>
+          <target state="translated">日期</target>       </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve" extradata="MT" uid="T:Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationRule">
+          <source>History</source>
+          <target state="translated">历史记录</target>       </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve" extradata="MT" uid="T:Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationRule">
+          <source>Reason</source>
+          <target state="translated">原因</target>       </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve" extradata="MT" uid="T:Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationRule">
+          <source>Added new remarks with links to topics that show how to implement this interface</source>
+          <target state="translated">添加了新注释以链接到演示如何实现此接口的主题</target>       </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationRule.ValidateFeature(Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationContext,Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature)">
+          <source>Contextual data associated with the package and validation.</source>
+          <target state="translated">与包和验证关联的上下文数据。</target>       </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationRule.ValidateFeature(Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationContext,Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature)">
+          <source>The feature with which to validate the package.</source>
+          <target state="translated">用来验证包的功能。</target>       </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationRule.ValidateFeature(Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationContext,Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature)">
+          <source>Determines whether a package would violate this rule if the specified feature were added.</source>
+          <target state="translated">确定如果添加指定的功能，包是否会与此规则冲突。</target>       </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve" extradata="MT" uid="M:Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationRule.ValidateFeature(Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationContext,Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature)">
+          <source>If this rule applies only to project items in a package, then this method does nothing.</source>
+          <target state="translated">如果此规则仅适用于在包中的项目项，则此方法将执行执行任何操作。</target>       </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationRule.ValidatePackage(Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationContext)">
+          <source>Contextual data associated with the package and validation.</source>
+          <target state="translated">与包和验证关联的上下文数据。</target>       </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationRule.ValidatePackage(Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationContext)">
+          <source>Determines whether a package currently violates this rule.</source>
+          <target state="translated">确定包当前是否与此规则冲突。</target>       </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationRule.ValidateProjectItem(Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationContext,Microsoft.VisualStudio.SharePoint.ISharePointProjectItem)">
+          <source>Contextual data associated with the package and validation.</source>
+          <target state="translated">与包和验证关联的上下文数据。</target>       </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationRule.ValidateProjectItem(Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationContext,Microsoft.VisualStudio.SharePoint.ISharePointProjectItem)">
+          <source>The project item with which to validate the package.</source>
+          <target state="translated">用来验证包的项目项。</target>       </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationRule.ValidateProjectItem(Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationContext,Microsoft.VisualStudio.SharePoint.ISharePointProjectItem)">
+          <source>Determines whether a package would violate this rule if the specified project item is added.</source>
+          <target state="translated">确定如果添加指定的项目项，包是否会与此规则冲突。</target>       </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve" extradata="MT" uid="M:Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationRule.ValidateProjectItem(Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationContext,Microsoft.VisualStudio.SharePoint.ISharePointProjectItem)">
+          <source>If this rule applies only to features in a package, then this method does nothing.</source>
+          <target state="translated">如果此规则仅适用于在包中的功能，则此方法将执行执行任何操作。</target>       </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

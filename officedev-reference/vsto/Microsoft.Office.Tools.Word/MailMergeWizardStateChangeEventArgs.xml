@@ -1,138 +1,48 @@
-<Type Name="MailMergeWizardStateChangeEventArgs" FullName="Microsoft.Office.Tools.Word.MailMergeWizardStateChangeEventArgs">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="7608882d14ccb2fba23f058e7fb0dcaea5d599ad" />
-    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
-    <Meta Name="ms.translationtype" Value="HT" />
-    <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface MailMergeWizardStateChangeEventArgs" />
-  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract MailMergeWizardStateChangeEventArgs" />
-  <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Word.MailMergeWizardStateChangeEventArgs" />
-  <AssemblyInfo>
-    <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
-    <AssemblyVersion>10.0.0.0</AssemblyVersion>
-  </AssemblyInfo>
-  <AssemblyInfo>
-    <AssemblyName>Microsoft.Office.Tools.Word.v4.0.Utilities</AssemblyName>
-    <AssemblyVersion>10.0.0.0</AssemblyVersion>
-  </AssemblyInfo>
-  <Interfaces />
-  <Attributes>
-    <Attribute>
-      <AttributeName>System.Runtime.InteropServices.Guid("439434ab-eec3-47b3-a0d3-5433474f260e")</AttributeName>
-    </Attribute>
-    <Attribute>
-      <AttributeName>System.Runtime.InteropServices.TypeIdentifier</AttributeName>
-    </Attribute>
-  </Attributes>
-  <Docs>
-    <summary>
-      <span data-ttu-id="e8cea-101">为 <see cref="E:Microsoft.Office.Tools.Word.Document.MailMergeWizardStateChange" /> 事件提供数据。</span>
-      <span class="sxs-lookup">
-        <span data-stu-id="e8cea-101">Provides data for the <see cref="E:Microsoft.Office.Tools.Word.Document.MailMergeWizardStateChange" /> event.</span>
-      </span>
-    </summary>
-    <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Examples  
- <span data-ttu-id="e8cea-102">下面的代码示例演示的事件处理程序<xref:Microsoft.Office.Tools.Word.Document.MailMergeWizardStateChange>事件。</span><span class="sxs-lookup"><span data-stu-id="e8cea-102">The following code example demonstrates an event handler for the <xref:Microsoft.Office.Tools.Word.Document.MailMergeWizardStateChange> event.</span></span> <span data-ttu-id="e8cea-103">事件处理程序显示一条消息，每次用户前进到下一个步骤**邮件合并**向导。</span><span class="sxs-lookup"><span data-stu-id="e8cea-103">The event handler displays a message each time the user advances to the next step in the **Mail Merge** wizard.</span></span>  
-  
- <span data-ttu-id="e8cea-104">此示例适用于文档级自定义。</span><span class="sxs-lookup"><span data-stu-id="e8cea-104">This example is for a document-level customization.</span></span>  
-  
- [!code-csharp[Trin_WordDocument#116](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordDocument/CS/ThisDocument.cs#116)]
- [!code-vb[Trin_WordDocument#116](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordDocument/VB/ThisDocument.vb#116)]  
-  
- ]]></format>
-    </remarks>
-  </Docs>
-  <Members>
-    <Member MemberName="FromState">
-      <MemberSignature Language="C#" Value="public int FromState { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance int32 FromState" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.MailMergeWizardStateChangeEventArgs.FromState" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
-        <AssemblyVersion>10.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Int32</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-          <span data-ttu-id="e8cea-105">获取“邮件合并”向导步骤，用户将从其中移动。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="e8cea-105">Gets the **Mail Merge** wizard step from which a user is moving.</span>
-          </span>
-        </summary>
-        <value>
-          <span data-ttu-id="e8cea-106">**邮件合并**用户正在移动的向导步骤。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="e8cea-106">The **Mail Merge** wizard step from which a user is moving.</span>
-          </span>
-        </value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="Handled">
-      <MemberSignature Language="C#" Value="public bool Handled { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance bool Handled" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.MailMergeWizardStateChangeEventArgs.Handled" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
-        <AssemblyVersion>10.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Boolean</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-          <span data-ttu-id="e8cea-107">获取一个值，该值指示是否将用户移动到“邮件合并”向导的下一步。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="e8cea-107">Gets a value indicating whether to move the user to the next step in the **Mail Merge** wizard.</span>
-          </span>
-        </summary>
-        <value>
-          <span data-ttu-id="e8cea-108">
-            <see langword="true" /> 若要将用户移到下一步中;否则为<see langword="false" />。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="e8cea-108">
-              <see langword="true" /> to move the user to the next step; otherwise, <see langword="false" />.</span>
-          </span>
-        </value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="ToState">
-      <MemberSignature Language="C#" Value="public int ToState { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance int32 ToState" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.MailMergeWizardStateChangeEventArgs.ToState" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
-        <AssemblyVersion>10.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Int32</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-          <span data-ttu-id="e8cea-109">获取一个整数，用于指示用户将移动到的“邮件合并”向导步骤。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="e8cea-109">Gets an integer indicating the **Mail Merge** wizard step to which a user is moving.</span>
-          </span>
-        </summary>
-        <value>
-          <span data-ttu-id="e8cea-110">**邮件合并**用户正在移动的向导步骤。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="e8cea-110">The **Mail Merge** wizard step to which a user is moving.</span>
-          </span>
-        </value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-  </Members>
-</Type>
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="MailMergeWizardStateChangeEventArgs.xml" source-language="en-US" target-language="zh-CN">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-38f25dd" tool-company="Microsoft" />
+      <xliffext:skl_file_name xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">b4690f9a-9e49-426d-9091-855b10fda4db7608882d14ccb2fba23f058e7fb0dcaea5d599ad.skl</xliffext:skl_file_name>
+      <xliffext:version xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">1.2</xliffext:version>
+      <xliffext:ms.openlocfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">7608882d14ccb2fba23f058e7fb0dcaea5d599ad</xliffext:ms.openlocfilehash>
+      <xliffext:ms.sourcegitcommit xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">bb8a3a96823cedeffbdbcc0c41a8118399de8074</xliffext:ms.sourcegitcommit>
+      <xliffext:ms.lasthandoff xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">02/21/2018</xliffext:ms.lasthandoff>
+      <xliffext:moniker_ids xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">vsto-2017</xliffext:moniker_ids>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve" uid="T:Microsoft.Office.Tools.Word.MailMergeWizardStateChangeEventArgs">
+          <source>Provides data for the <ph id="ph1">&lt;see cref="E:Microsoft.Office.Tools.Word.Document.MailMergeWizardStateChange" /&gt;</ph> event.</source>
+          <target state="translated">为 <ph id="ph1">&lt;see cref="E:Microsoft.Office.Tools.Word.Document.MailMergeWizardStateChange" /&gt;</ph> 事件提供数据。</target>       </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve" extradata="MT" uid="T:Microsoft.Office.Tools.Word.MailMergeWizardStateChangeEventArgs">
+          <source>The following code example demonstrates an event handler for the <ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.Document.MailMergeWizardStateChange&gt;</ph> event.</source>
+          <target state="translated">下面的代码示例演示的事件处理程序<ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.Document.MailMergeWizardStateChange&gt;</ph>事件。</target>       </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve" extradata="MT" uid="T:Microsoft.Office.Tools.Word.MailMergeWizardStateChangeEventArgs">
+          <source>The event handler displays a message each time the user advances to the next step in the <bpt id="p1">**</bpt>Mail Merge<ept id="p1">**</ept> wizard.</source>
+          <target state="translated">事件处理程序显示一条消息，每次用户前进到下一个步骤<bpt id="p1">**</bpt>邮件合并<ept id="p1">**</ept>向导。</target>       </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve" extradata="MT" uid="T:Microsoft.Office.Tools.Word.MailMergeWizardStateChangeEventArgs">
+          <source>This example is for a document-level customization.</source>
+          <target state="translated">此示例适用于文档级自定义。</target>       </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve" uid="P:Microsoft.Office.Tools.Word.MailMergeWizardStateChangeEventArgs.FromState">
+          <source>Gets the <bpt id="p1">**</bpt>Mail Merge<ept id="p1">**</ept> wizard step from which a user is moving.</source>
+          <target state="translated">获取“邮件合并”向导步骤，用户将从其中移动。</target>       </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve" extradata="MT" uid="P:Microsoft.Office.Tools.Word.MailMergeWizardStateChangeEventArgs.FromState">
+          <source>The <bpt id="p1">**</bpt>Mail Merge<ept id="p1">**</ept> wizard step from which a user is moving.</source>
+          <target state="translated"><bpt id="p1">**</bpt>邮件合并<ept id="p1">**</ept>用户正在移动的向导步骤。</target>       </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve" uid="P:Microsoft.Office.Tools.Word.MailMergeWizardStateChangeEventArgs.Handled">
+          <source>Gets a value indicating whether to move the user to the next step in the <bpt id="p1">**</bpt>Mail Merge<ept id="p1">**</ept> wizard.</source>
+          <target state="translated">获取一个值，该值指示是否将用户移动到“邮件合并”向导的下一步。</target>       </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve" extradata="MT" uid="P:Microsoft.Office.Tools.Word.MailMergeWizardStateChangeEventArgs.Handled">
+          <source><ph id="ph1">&lt;see langword="true" /&gt;</ph> to move the user to the next step; otherwise, <ph id="ph2">&lt;see langword="false" /&gt;</ph>.</source>
+          <target state="translated"><ph id="ph1">&lt;see langword="true" /&gt;</ph> 若要将用户移到下一步中;否则为<ph id="ph2">&lt;see langword="false" /&gt;</ph>。</target>       </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve" uid="P:Microsoft.Office.Tools.Word.MailMergeWizardStateChangeEventArgs.ToState">
+          <source>Gets an integer indicating the <bpt id="p1">**</bpt>Mail Merge<ept id="p1">**</ept> wizard step to which a user is moving.</source>
+          <target state="translated">获取一个整数，用于指示用户将移动到的“邮件合并”向导步骤。</target>       </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve" extradata="MT" uid="P:Microsoft.Office.Tools.Word.MailMergeWizardStateChangeEventArgs.ToState">
+          <source>The <bpt id="p1">**</bpt>Mail Merge<ept id="p1">**</ept> wizard step to which a user is moving.</source>
+          <target state="translated"><bpt id="p1">**</bpt>邮件合并<ept id="p1">**</ept>用户正在移动的向导步骤。</target>       </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

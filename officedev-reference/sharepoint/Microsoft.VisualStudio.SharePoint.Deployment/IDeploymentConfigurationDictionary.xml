@@ -1,134 +1,51 @@
-<Type Name="IDeploymentConfigurationDictionary" FullName="Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConfigurationDictionary">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="05fcd1cacfda0fc0e87b5f9077497873ea4f7820" />
-    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
-    <Meta Name="ms.translationtype" Value="HT" />
-    <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface IDeploymentConfigurationDictionary : System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;string,Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConfiguration&gt;&gt;, System.Collections.Generic.IDictionary&lt;string,Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConfiguration&gt;, System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;string,Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConfiguration&gt;&gt;" />
-  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDeploymentConfigurationDictionary implements class System.Collections.Generic.ICollection`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;string, class Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConfiguration&gt;&gt;, class System.Collections.Generic.IDictionary`2&lt;string, class Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConfiguration&gt;, class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;string, class Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConfiguration&gt;&gt;, class System.Collections.IEnumerable" />
-  <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConfigurationDictionary" />
-  <AssemblyInfo>
-    <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
-    <AssemblyVersion>15.0.0.0</AssemblyVersion>
-  </AssemblyInfo>
-  <Interfaces>
-    <Interface>
-      <InterfaceName>System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;System.String,Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConfiguration&gt;&gt;</InterfaceName>
-    </Interface>
-    <Interface>
-      <InterfaceName>System.Collections.Generic.IDictionary&lt;System.String,Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConfiguration&gt;</InterfaceName>
-    </Interface>
-    <Interface>
-      <InterfaceName>System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;System.String,Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConfiguration&gt;&gt;</InterfaceName>
-    </Interface>
-  </Interfaces>
-  <Docs>
-    <summary>
-      <span data-ttu-id="75419-101">包含部署步骤的集合。</span>
-      <span class="sxs-lookup">
-        <span data-stu-id="75419-101">Contains a collection of deployment steps.</span>
-      </span>
-    </summary>
-    <remarks>To be added.</remarks>
-  </Docs>
-  <Members>
-    <Member MemberName="Add">
-      <MemberSignature Language="C#" Value="public Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConfiguration Add (string name);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConfiguration Add(string name) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConfigurationDictionary.Add(System.String)" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
-        <AssemblyVersion>15.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConfiguration</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="name" Type="System.String" />
-      </Parameters>
-      <Docs>
-        <param name="name">
-          <span data-ttu-id="75419-102">部署配置的名称。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="75419-102">Name of the deployment configuration.</span>
-          </span>
-        </param>
-        <summary>
-          <span data-ttu-id="75419-103">将部署配置添加到字典。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="75419-103">Adds a deployment configuration to the dictionary.</span>
-          </span>
-          <span data-ttu-id="75419-104">使用此方法添加的部署配置不会存储在项目文件或用户文件中。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="75419-104">The deployment configuration added by using this method is not stored in the project file or user file.</span>
-          </span>
-        </summary>
-        <returns>
-          <span data-ttu-id="75419-105">创建的部署配置。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="75419-105">The deployment configuration that was created.</span>
-          </span>
-        </returns>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="Add">
-      <MemberSignature Language="C#" Value="public Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConfiguration Add (string name, System.Collections.Generic.IEnumerable&lt;string&gt; deploymentSteps, System.Collections.Generic.IEnumerable&lt;string&gt; retractionSteps);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConfiguration Add(string name, class System.Collections.Generic.IEnumerable`1&lt;string&gt; deploymentSteps, class System.Collections.Generic.IEnumerable`1&lt;string&gt; retractionSteps) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConfigurationDictionary.Add(System.String,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String})" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
-        <AssemblyVersion>15.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConfiguration</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="name" Type="System.String" />
-        <Parameter Name="deploymentSteps" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
-        <Parameter Name="retractionSteps" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
-      </Parameters>
-      <Docs>
-        <param name="name">
-          <span data-ttu-id="75419-106">部署配置的名称。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="75419-106">Name of the deployment configuration.</span>
-          </span>
-        </param>
-        <param name="deploymentSteps">
-          <span data-ttu-id="75419-107">属于部署配置中部署操作的一部分的步骤。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="75419-107">Steps that are part of the deploy operation in the deployment configuration.</span>
-          </span>
-        </param>
-        <param name="retractionSteps">
-          <span data-ttu-id="75419-108">属于部署配置中收回操作的一部分的步骤。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="75419-108">Steps that are part of the retract operation in the deployment configuration.</span>
-          </span>
-        </param>
-        <summary>
-          <span data-ttu-id="75419-109">将部署配置添加到字典。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="75419-109">Adds a deployment configuration to the dictionary.</span>
-          </span>
-          <span data-ttu-id="75419-110">使用此方法添加的部署配置不会存储在项目文件或用户文件中。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="75419-110">The deployment configuration added by using this method is not stored in the project file or user file.</span>
-          </span>
-        </summary>
-        <returns>
-          <span data-ttu-id="75419-111">创建的部署配置。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="75419-111">The deployment configuration that was created.</span>
-          </span>
-        </returns>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-  </Members>
-</Type>
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="IDeploymentConfigurationDictionary.xml" source-language="en-US" target-language="zh-CN">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-38f25dd" tool-company="Microsoft" />
+      <xliffext:skl_file_name xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">b4690f9a-9e49-426d-9091-855b10fda4db05fcd1cacfda0fc0e87b5f9077497873ea4f7820.skl</xliffext:skl_file_name>
+      <xliffext:version xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">1.2</xliffext:version>
+      <xliffext:ms.openlocfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">05fcd1cacfda0fc0e87b5f9077497873ea4f7820</xliffext:ms.openlocfilehash>
+      <xliffext:ms.sourcegitcommit xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">bb8a3a96823cedeffbdbcc0c41a8118399de8074</xliffext:ms.sourcegitcommit>
+      <xliffext:ms.lasthandoff xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">02/21/2018</xliffext:ms.lasthandoff>
+      <xliffext:moniker_ids xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">sharepoint-projects-2017</xliffext:moniker_ids>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve" uid="T:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConfigurationDictionary">
+          <source>Contains a collection of deployment steps.</source>
+          <target state="translated">包含部署步骤的集合。</target>       </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConfigurationDictionary.Add(System.String)">
+          <source>Name of the deployment configuration.</source>
+          <target state="translated">部署配置的名称。</target>       </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConfigurationDictionary.Add(System.String)">
+          <source>Adds a deployment configuration to the dictionary.</source>
+          <target state="translated">将部署配置添加到字典。</target>       </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConfigurationDictionary.Add(System.String)">
+          <source>The deployment configuration added by using this method is not stored in the project file or user file.</source>
+          <target state="translated">使用此方法添加的部署配置不会存储在项目文件或用户文件中。</target>       </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConfigurationDictionary.Add(System.String)">
+          <source>The deployment configuration that was created.</source>
+          <target state="translated">创建的部署配置。</target>       </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConfigurationDictionary.Add(System.String,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String})">
+          <source>Name of the deployment configuration.</source>
+          <target state="translated">部署配置的名称。</target>       </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConfigurationDictionary.Add(System.String,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String})">
+          <source>Steps that are part of the deploy operation in the deployment configuration.</source>
+          <target state="translated">属于部署配置中部署操作的一部分的步骤。</target>       </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConfigurationDictionary.Add(System.String,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String})">
+          <source>Steps that are part of the retract operation in the deployment configuration.</source>
+          <target state="translated">属于部署配置中收回操作的一部分的步骤。</target>       </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConfigurationDictionary.Add(System.String,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String})">
+          <source>Adds a deployment configuration to the dictionary.</source>
+          <target state="translated">将部署配置添加到字典。</target>       </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConfigurationDictionary.Add(System.String,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String})">
+          <source>The deployment configuration added by using this method is not stored in the project file or user file.</source>
+          <target state="translated">使用此方法添加的部署配置不会存储在项目文件或用户文件中。</target>       </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConfigurationDictionary.Add(System.String,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String})">
+          <source>The deployment configuration that was created.</source>
+          <target state="translated">创建的部署配置。</target>       </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

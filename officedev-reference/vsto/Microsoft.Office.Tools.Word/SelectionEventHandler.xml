@@ -1,73 +1,45 @@
-<Type Name="SelectionEventHandler" FullName="Microsoft.Office.Tools.Word.SelectionEventHandler">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="17759a3fd0e9231751e22f0ea731faea2fb616a4" />
-    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
-    <Meta Name="ms.translationtype" Value="HT" />
-    <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public delegate void SelectionEventHandler(object sender, SelectionEventArgs e);" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SelectionEventHandler extends System.MulticastDelegate" />
-  <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Word.SelectionEventHandler" />
-  <AssemblyInfo>
-    <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
-    <AssemblyVersion>10.0.0.0</AssemblyVersion>
-  </AssemblyInfo>
-  <AssemblyInfo>
-    <AssemblyName>Microsoft.Office.Tools.Word.v4.0.Utilities</AssemblyName>
-    <AssemblyVersion>10.0.0.0</AssemblyVersion>
-  </AssemblyInfo>
-  <Base>
-    <BaseTypeName>System.Delegate</BaseTypeName>
-  </Base>
-  <Attributes>
-    <Attribute>
-      <AttributeName>System.Runtime.InteropServices.TypeIdentifier("4207AD1E-362C-4DB4-A3A7-7CC03A7EF41B", "Microsoft.Office.Tools.Word.SelectionEventHandler")</AttributeName>
-    </Attribute>
-  </Attributes>
-  <Parameters>
-    <Parameter Name="sender" Type="System.Object" />
-    <Parameter Name="e" Type="Microsoft.Office.Tools.Word.SelectionEventArgs" />
-  </Parameters>
-  <ReturnValue>
-    <ReturnType>System.Void</ReturnType>
-  </ReturnValue>
-  <Docs>
-    <param name="sender">
-      <span data-ttu-id="f9f2f-101">事件源。</span>
-      <span class="sxs-lookup">
-        <span data-stu-id="f9f2f-101">The source of the event.</span>
-      </span>
-    </param>
-    <param name="e">
-      <span data-ttu-id="f9f2f-102">包含事件数据的 <see cref="T:Microsoft.Office.Tools.Word.SelectionEventArgs" />。</span>
-      <span class="sxs-lookup">
-        <span data-stu-id="f9f2f-102">A <see cref="T:Microsoft.Office.Tools.Word.SelectionEventArgs" /> that contains the event data.</span>
-      </span>
-    </param>
-    <summary>
-      <span data-ttu-id="f9f2f-103">表示处理 <see cref="T:Microsoft.Office.Tools.Word.Bookmark" /> 控件的 <see cref="E:Microsoft.Office.Tools.Word.Bookmark.SelectionChange" />、<see cref="E:Microsoft.Office.Tools.Word.Bookmark.Selected" /> 和 <see cref="E:Microsoft.Office.Tools.Word.Bookmark.Deselected" /> 事件的方法。</span>
-      <span class="sxs-lookup">
-        <span data-stu-id="f9f2f-103">Represents the method that handles the <see cref="E:Microsoft.Office.Tools.Word.Bookmark.SelectionChange" />, <see cref="E:Microsoft.Office.Tools.Word.Bookmark.Selected" />, and <see cref="E:Microsoft.Office.Tools.Word.Bookmark.Deselected" /> events of a <see cref="T:Microsoft.Office.Tools.Word.Bookmark" /> control.</span>
-      </span>
-    </summary>
-    <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- <span data-ttu-id="f9f2f-104">创建 <xref:Microsoft.Office.Tools.Word.SelectionEventHandler> 委托时，需要标识将处理该事件的方法。</span><span class="sxs-lookup"><span data-stu-id="f9f2f-104">When you create a <xref:Microsoft.Office.Tools.Word.SelectionEventHandler> delegate, you identify the method that will handle the event.</span></span> <span data-ttu-id="f9f2f-105">若要将事件与事件处理程序关联，请将该委托的一个实例添加到事件中。</span><span class="sxs-lookup"><span data-stu-id="f9f2f-105">To associate the event with your event handler, add an instance of the delegate to the event.</span></span> <span data-ttu-id="f9f2f-106">每当发生该事件时，直到移除了该委托，都会调用事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="f9f2f-106">The event handler is called whenever the event occurs, until you remove the delegate.</span></span>  
-  
-   
-  
-## Examples  
- <span data-ttu-id="f9f2f-107">下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件带到文档的文本，然后创建一个事件处理程序<xref:Microsoft.Office.Tools.Word.Bookmark.Selected>事件。</span><span class="sxs-lookup"><span data-stu-id="f9f2f-107">The following code example adds a <xref:Microsoft.Office.Tools.Word.Bookmark> control with text to the document and then creates an event handler for the <xref:Microsoft.Office.Tools.Word.Bookmark.Selected> event.</span></span> <span data-ttu-id="f9f2f-108">当你将光标移到书签时，显示一个消息框。</span><span class="sxs-lookup"><span data-stu-id="f9f2f-108">A message box is displayed when you move the cursor into the bookmark.</span></span>  
-  
- <span data-ttu-id="f9f2f-109">此示例适用于文档级自定义。</span><span class="sxs-lookup"><span data-stu-id="f9f2f-109">This example is for a document-level customization.</span></span>  
-  
- [!code-csharp[Trin_WordBookmark#95](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordBookMark/CS/Trin_WordBookMark.cs#95)]
- [!code-vb[Trin_WordBookmark#95](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordBookMark/VB/ThisDocument.vb#95)]  
-  
- ]]></format>
-    </remarks>
-  </Docs>
-</Type>
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="SelectionEventHandler.xml" source-language="en-US" target-language="zh-CN">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-38f25dd" tool-company="Microsoft" />
+      <xliffext:skl_file_name xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">b4690f9a-9e49-426d-9091-855b10fda4db17759a3fd0e9231751e22f0ea731faea2fb616a4.skl</xliffext:skl_file_name>
+      <xliffext:version xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">1.2</xliffext:version>
+      <xliffext:ms.openlocfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">17759a3fd0e9231751e22f0ea731faea2fb616a4</xliffext:ms.openlocfilehash>
+      <xliffext:ms.sourcegitcommit xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">bb8a3a96823cedeffbdbcc0c41a8118399de8074</xliffext:ms.sourcegitcommit>
+      <xliffext:ms.lasthandoff xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">02/21/2018</xliffext:ms.lasthandoff>
+      <xliffext:moniker_ids xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">vsto-2017</xliffext:moniker_ids>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve" uid="T:Microsoft.Office.Tools.Word.SelectionEventHandler">
+          <source>The source of the event.</source>
+          <target state="translated">事件源。</target>       </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve" uid="T:Microsoft.Office.Tools.Word.SelectionEventHandler">
+          <source>A <ph id="ph1">&lt;see cref="T:Microsoft.Office.Tools.Word.SelectionEventArgs" /&gt;</ph> that contains the event data.</source>
+          <target state="translated">包含事件数据的 <ph id="ph1">&lt;see cref="T:Microsoft.Office.Tools.Word.SelectionEventArgs" /&gt;</ph>。</target>       </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve" uid="T:Microsoft.Office.Tools.Word.SelectionEventHandler">
+          <source>Represents the method that handles the <ph id="ph1">&lt;see cref="E:Microsoft.Office.Tools.Word.Bookmark.SelectionChange" /&gt;</ph>, <ph id="ph2">&lt;see cref="E:Microsoft.Office.Tools.Word.Bookmark.Selected" /&gt;</ph>, and <ph id="ph3">&lt;see cref="E:Microsoft.Office.Tools.Word.Bookmark.Deselected" /&gt;</ph> events of a <ph id="ph4">&lt;see cref="T:Microsoft.Office.Tools.Word.Bookmark" /&gt;</ph> control.</source>
+          <target state="translated">表示处理 <ph id="ph4">&lt;see cref="T:Microsoft.Office.Tools.Word.Bookmark" /&gt;</ph> 控件的 <ph id="ph1">&lt;see cref="E:Microsoft.Office.Tools.Word.Bookmark.SelectionChange" /&gt;</ph>、<ph id="ph2">&lt;see cref="E:Microsoft.Office.Tools.Word.Bookmark.Selected" /&gt;</ph> 和 <ph id="ph3">&lt;see cref="E:Microsoft.Office.Tools.Word.Bookmark.Deselected" /&gt;</ph> 事件的方法。</target>       </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve" extradata="MT" uid="T:Microsoft.Office.Tools.Word.SelectionEventHandler">
+          <source>When you create a <ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.SelectionEventHandler&gt;</ph> delegate, you identify the method that will handle the event.</source>
+          <target state="translated">创建 <ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.SelectionEventHandler&gt;</ph> 委托时，需要标识将处理该事件的方法。</target>       </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve" extradata="MT" uid="T:Microsoft.Office.Tools.Word.SelectionEventHandler">
+          <source>To associate the event with your event handler, add an instance of the delegate to the event.</source>
+          <target state="translated">若要将事件与事件处理程序关联，请将该委托的一个实例添加到事件中。</target>       </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve" extradata="MT" uid="T:Microsoft.Office.Tools.Word.SelectionEventHandler">
+          <source>The event handler is called whenever the event occurs, until you remove the delegate.</source>
+          <target state="translated">每当发生该事件时，直到移除了该委托，都会调用事件处理程序。</target>       </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve" extradata="MT" uid="T:Microsoft.Office.Tools.Word.SelectionEventHandler">
+          <source>The following code example adds a <ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.Bookmark&gt;</ph> control with text to the document and then creates an event handler for the <ph id="ph2">&lt;xref:Microsoft.Office.Tools.Word.Bookmark.Selected&gt;</ph> event.</source>
+          <target state="translated">下面的代码示例将添加<ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.Bookmark&gt;</ph>控件带到文档的文本，然后创建一个事件处理程序<ph id="ph2">&lt;xref:Microsoft.Office.Tools.Word.Bookmark.Selected&gt;</ph>事件。</target>       </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve" extradata="MT" uid="T:Microsoft.Office.Tools.Word.SelectionEventHandler">
+          <source>A message box is displayed when you move the cursor into the bookmark.</source>
+          <target state="translated">当你将光标移到书签时，显示一个消息框。</target>       </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve" extradata="MT" uid="T:Microsoft.Office.Tools.Word.SelectionEventHandler">
+          <source>This example is for a document-level customization.</source>
+          <target state="translated">此示例适用于文档级自定义。</target>       </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

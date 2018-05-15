@@ -1,148 +1,48 @@
-<Type Name="ISharePointCommandContext" FullName="Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="3e4334fac62da9e2bb186718b778e57585f4d18a" />
-    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
-    <Meta Name="ms.translationtype" Value="HT" />
-    <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface ISharePointCommandContext" />
-  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISharePointCommandContext" />
-  <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext" />
-  <AssemblyInfo>
-    <AssemblyName>Microsoft.VisualStudio.SharePoint.Commands</AssemblyName>
-    <AssemblyVersion>15.0.0.0</AssemblyVersion>
-  </AssemblyInfo>
-  <Interfaces />
-  <Attributes>
-    <Attribute>
-      <AttributeName>System.CLSCompliant(false)</AttributeName>
-    </Attribute>
-  </Attributes>
-  <Docs>
-    <summary>
-      <span data-ttu-id="c6413-101">提供在其中执行 SharePoint 命令的上下文。</span>
-      <span class="sxs-lookup">
-        <span data-stu-id="c6413-101">Provides the context in which a SharePoint command is being executed.</span>
-      </span>
-    </summary>
-    <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- <span data-ttu-id="c6413-102"><xref:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext>传递给每个 SharePoint 命令的第一个参数。</span><span class="sxs-lookup"><span data-stu-id="c6413-102">An <xref:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext> is passed to the first parameter of every SharePoint command.</span></span> <span data-ttu-id="c6413-103">有关详细信息，请参阅[如何： 创建 SharePoint 命令](/visualstudio/sharepoint/how-to-create-a-sharepoint-command.md)。</span><span class="sxs-lookup"><span data-stu-id="c6413-103">For more information, see [How to: Create a SharePoint Command](/visualstudio/sharepoint/how-to-create-a-sharepoint-command.md).</span></span>  
-  
- ]]></format>
-    </remarks>
-  </Docs>
-  <Members>
-    <Member MemberName="Logger">
-      <MemberSignature Language="C#" Value="public Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandLogger Logger { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandLogger Logger" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext.Logger" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.VisualStudio.SharePoint.Commands</AssemblyName>
-        <AssemblyVersion>15.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandLogger</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-          <span data-ttu-id="c6413-104">获取可用于将消息写入 Visual Studio 中的“输出”窗口或“错误列表”窗口的日志服务。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="c6413-104">Gets the log service which you can use to write messages to the **Output** window or **Error List** window in Visual Studio.</span>
-          </span>
-        </summary>
-        <value>
-          <span data-ttu-id="c6413-105">
-            <see cref="T:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandLogger" />表示的日志服务的实例。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="c6413-105">An <see cref="T:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandLogger" /> instance representing the log service.</span>
-          </span>
-        </value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="Refresh">
-      <MemberSignature Language="C#" Value="public void Refresh ();" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Refresh() cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext.Refresh" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.VisualStudio.SharePoint.Commands</AssemblyName>
-        <AssemblyVersion>15.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Void</ReturnType>
-      </ReturnValue>
-      <Parameters />
-      <Docs>
-        <summary>
-          <span data-ttu-id="c6413-106">使用 <c>Microsoft.SharePoint.SPSite</c> 和 <c>Microsoft.SharePoint.SPWeb</c> 对象的新实例刷新上下文。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="c6413-106">Refreshes the context with new instances of the <c>Microsoft.SharePoint.SPSite</c> and <c>Microsoft.SharePoint.SPWeb</c> objects.</span>
-          </span>
-        </summary>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="Site">
-      <MemberSignature Language="C#" Value="public Microsoft.SharePoint.SPSite Site { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.SharePoint.SPSite Site" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext.Site" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.VisualStudio.SharePoint.Commands</AssemblyName>
-        <AssemblyVersion>15.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Microsoft.SharePoint.SPSite</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-          <span data-ttu-id="c6413-107">获取表示对其运行该命令的 SharePoint 站点集合的 <c>Microsoft.SharePoint.SPSite</c>。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="c6413-107">Gets a <c>Microsoft.SharePoint.SPSite</c> that represents the SharePoint site collection on which the command is run.</span>
-          </span>
-        </summary>
-        <value>
-          <span data-ttu-id="c6413-108">SharePoint 站点集合在其运行该命令。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="c6413-108">The SharePoint site collection on which the command is run.</span>
-          </span>
-        </value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="Web">
-      <MemberSignature Language="C#" Value="public Microsoft.SharePoint.SPWeb Web { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.SharePoint.SPWeb Web" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext.Web" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.VisualStudio.SharePoint.Commands</AssemblyName>
-        <AssemblyVersion>15.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Microsoft.SharePoint.SPWeb</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-          <span data-ttu-id="c6413-109">获取表示对其运行该命令的 SharePoint 站点的 Microsoft.SharePoint.SPWeb<c></c>。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="c6413-109">Gets a <c>Microsoft.SharePoint.SPWeb</c> that represents the SharePoint site on which the command is run.</span>
-          </span>
-        </summary>
-        <value>
-          <span data-ttu-id="c6413-110">SharePoint 站点，在其运行该命令。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="c6413-110">The SharePoint site on which the command is run.</span>
-          </span>
-        </value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-  </Members>
-</Type>
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="ISharePointCommandContext.xml" source-language="en-US" target-language="zh-CN">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-38f25dd" tool-company="Microsoft" />
+      <xliffext:skl_file_name xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">b4690f9a-9e49-426d-9091-855b10fda4db3e4334fac62da9e2bb186718b778e57585f4d18a.skl</xliffext:skl_file_name>
+      <xliffext:version xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">1.2</xliffext:version>
+      <xliffext:ms.openlocfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">3e4334fac62da9e2bb186718b778e57585f4d18a</xliffext:ms.openlocfilehash>
+      <xliffext:ms.sourcegitcommit xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">bb8a3a96823cedeffbdbcc0c41a8118399de8074</xliffext:ms.sourcegitcommit>
+      <xliffext:ms.lasthandoff xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">02/21/2018</xliffext:ms.lasthandoff>
+      <xliffext:moniker_ids xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">sharepoint-projects-2017</xliffext:moniker_ids>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve" uid="T:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext">
+          <source>Provides the context in which a SharePoint command is being executed.</source>
+          <target state="translated">提供在其中执行 SharePoint 命令的上下文。</target>       </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve" extradata="MT" uid="T:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext">
+          <source>An <ph id="ph1">&lt;xref:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext&gt;</ph> is passed to the first parameter of every SharePoint command.</source>
+          <target state="translated"><ph id="ph1">&lt;xref:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext&gt;</ph>传递给每个 SharePoint 命令的第一个参数。</target>       </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve" extradata="MT" uid="T:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext">
+          <source>For more information, see <bpt id="p1">[</bpt>How to: Create a SharePoint Command<ept id="p1">](/visualstudio/sharepoint/how-to-create-a-sharepoint-command.md)</ept>.</source>
+          <target state="translated">有关详细信息，请参阅<bpt id="p1">[</bpt>如何： 创建 SharePoint 命令<ept id="p1">](/visualstudio/sharepoint/how-to-create-a-sharepoint-command.md)</ept>。</target>       </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve" uid="P:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext.Logger">
+          <source>Gets the log service which you can use to write messages to the <bpt id="p1">**</bpt>Output<ept id="p1">**</ept> window or <bpt id="p2">**</bpt>Error List<ept id="p2">**</ept> window in Visual Studio.</source>
+          <target state="translated">获取可用于将消息写入 Visual Studio 中的“输出”窗口或“错误列表”窗口的日志服务。</target>       </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve" extradata="MT" uid="P:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext.Logger">
+          <source>An <ph id="ph1">&lt;see cref="T:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandLogger" /&gt;</ph> instance representing the log service.</source>
+          <target state="translated"><ph id="ph1">&lt;see cref="T:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandLogger" /&gt;</ph>表示的日志服务的实例。</target>       </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext.Refresh">
+          <source>Refreshes the context with new instances of the <bpt id="p1">&lt;c&gt;</bpt>Microsoft.SharePoint.SPSite<ept id="p1">&lt;/c&gt;</ept> and <bpt id="p2">&lt;c&gt;</bpt>Microsoft.SharePoint.SPWeb<ept id="p2">&lt;/c&gt;</ept> objects.</source>
+          <target state="translated">使用 <bpt id="p1">&lt;c&gt;</bpt>Microsoft.SharePoint.SPSite<ept id="p1">&lt;/c&gt;</ept> 和 <bpt id="p2">&lt;c&gt;</bpt>Microsoft.SharePoint.SPWeb<ept id="p2">&lt;/c&gt;</ept> 对象的新实例刷新上下文。</target>       </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve" uid="P:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext.Site">
+          <source>Gets a <bpt id="p1">&lt;c&gt;</bpt>Microsoft.SharePoint.SPSite<ept id="p1">&lt;/c&gt;</ept> that represents the SharePoint site collection on which the command is run.</source>
+          <target state="translated">获取表示对其运行该命令的 SharePoint 站点集合的 <bpt id="p1">&lt;c&gt;</bpt>Microsoft.SharePoint.SPSite<ept id="p1">&lt;/c&gt;</ept>。</target>       </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve" extradata="MT" uid="P:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext.Site">
+          <source>The SharePoint site collection on which the command is run.</source>
+          <target state="translated">SharePoint 站点集合在其运行该命令。</target>       </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve" uid="P:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext.Web">
+          <source>Gets a <bpt id="p1">&lt;c&gt;</bpt>Microsoft.SharePoint.SPWeb<ept id="p1">&lt;/c&gt;</ept> that represents the SharePoint site on which the command is run.</source>
+          <target state="translated">获取表示对其运行该命令的 SharePoint 站点的 Microsoft.SharePoint.SPWeb<bpt id="p1">&lt;c&gt;</bpt><ept id="p1">&lt;/c&gt;</ept>。</target>       </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve" extradata="MT" uid="P:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext.Web">
+          <source>The SharePoint site on which the command is run.</source>
+          <target state="translated">SharePoint 站点，在其运行该命令。</target>       </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

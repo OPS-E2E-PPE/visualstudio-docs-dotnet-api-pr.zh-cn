@@ -1,320 +1,195 @@
-<Type Name="ListObjectExtensions" FullName="Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="a876bafa962405a4a96b0c18bdd0b12d31396e5f" />
-    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
-    <Meta Name="ms.translationtype" Value="HT" />
-    <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public static class ListObjectExtensions" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit ListObjectExtensions extends System.Object" />
-  <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions" />
-  <AssemblyInfo>
-    <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
-    <AssemblyVersion>10.0.0.0</AssemblyVersion>
-  </AssemblyInfo>
-  <Base>
-    <BaseTypeName>System.Object</BaseTypeName>
-  </Base>
-  <Interfaces />
-  <Docs>
-    <summary>
-      <span data-ttu-id="29553-101">通过为 <see cref="T:Microsoft.Office.Interop.Excel.ListObject" /> 对象生成主机控件，以及测试是否存在已生成的主机控件，提供可用于扩展 Microsoft Office Excel 列表对象的方法。</span>
-      <span class="sxs-lookup">
-        <span data-stu-id="29553-101">Provides methods you can use to extend Microsoft Office Excel list objects by generating host controls for <see cref="T:Microsoft.Office.Interop.Excel.ListObject" /> objects and by testing for the existence of the generated host controls.</span>
-      </span>
-    </summary>
-    <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- <span data-ttu-id="29553-102"><xref:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions>类包含*扩展方法*旨在上访问<xref:Microsoft.Office.Interop.Excel.ListObject?displayProperty=fullName>对象。</span><span class="sxs-lookup"><span data-stu-id="29553-102">The <xref:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions> class contains *extension methods* that are designed to be accessed on <xref:Microsoft.Office.Interop.Excel.ListObject?displayProperty=fullName> objects.</span></span> <span data-ttu-id="29553-103">有关扩展方法的详细信息，请参阅[扩展方法](http://msdn.microsoft.com/library/175ce3ff-9bbf-4e64-8421-faeb81a0bb51)和[扩展方法](http://msdn.microsoft.com/library/b8020aae-374d-46a9-bcb7-8cc2390b93b6)。</span><span class="sxs-lookup"><span data-stu-id="29553-103">For more information about extension methods, see [Extension Methods](http://msdn.microsoft.com/library/175ce3ff-9bbf-4e64-8421-faeb81a0bb51) and [Extension Methods](http://msdn.microsoft.com/library/b8020aae-374d-46a9-bcb7-8cc2390b93b6).</span></span>  
-  
- <span data-ttu-id="29553-104">中的扩展方法<xref:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions>类都重定为向后兼容的 Office 项目，从.NET Framework 3.5 到[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]或[!INCLUDE[net_v45](~/includes/net-v45-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="29553-104">The extension methods in the <xref:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions> class are provided for backward compatibility with Office projects that you retarget from the .NET Framework 3.5 to the [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] or the [!INCLUDE[net_v45](~/includes/net-v45-md.md)].</span></span> <span data-ttu-id="29553-105">在面向 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的新项目中，应调用由您的项目中的 `GetVstoObject` 对象提供的 `HasVstoObject` 和 `Globals.Factory` 方法。</span><span class="sxs-lookup"><span data-stu-id="29553-105">In new projects that target the [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] or the [!INCLUDE[net_v45](~/includes/net-v45-md.md)], you should call the `GetVstoObject` and `HasVstoObject` methods that are provided by the `Globals.Factory` object in your project.</span></span> <span data-ttu-id="29553-106">有关详细信息，请参阅[扩展 Word 文档和 Excel VSTO 外接程序在运行时中的工作簿](/visualstudio/vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)和[文档级自定义项编程](/visualstudio/vsto/programming-document-level-customizations.md)。</span><span class="sxs-lookup"><span data-stu-id="29553-106">For more information, see [Extending Word Documents and Excel Workbooks in VSTO Add-ins at Run Time](/visualstudio/vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md) and [Programming Document-Level Customizations](/visualstudio/vsto/programming-document-level-customizations.md).</span></span>  
-  
- ]]></format>
-    </remarks>
-  </Docs>
-  <Members>
-    <Member MemberName="GetVstoObject">
-      <MemberSignature Language="C#" Value="public static Microsoft.Office.Tools.Excel.ListObject GetVstoObject (this Microsoft.Office.Interop.Excel.ListObject listObject, Microsoft.Office.Tools.Excel.ApplicationFactory factory);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Office.Tools.Excel.ListObject GetVstoObject(class Microsoft.Office.Interop.Excel.ListObject listObject, class Microsoft.Office.Tools.Excel.ApplicationFactory factory) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.GetVstoObject(Microsoft.Office.Interop.Excel.ListObject,Microsoft.Office.Tools.Excel.ApplicationFactory)" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
-        <AssemblyVersion>10.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Microsoft.Office.Tools.Excel.ListObject</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="listObject" Type="Microsoft.Office.Interop.Excel.ListObject" RefType="this" />
-        <Parameter Name="factory" Type="Microsoft.Office.Tools.Excel.ApplicationFactory" />
-      </Parameters>
-      <Docs>
-        <param name="listObject">
-          <span data-ttu-id="29553-107">要扩展的本机列表对象。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="29553-107">The native list object to extend.</span>
-          </span>
-          <span data-ttu-id="29553-108">请勿自己提供此参数。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="29553-108">Do not supply this parameter yourself.</span>
-          </span>
-          <span data-ttu-id="29553-109">在 Excel 列表对象中调用此方法时，运行时会提供此参数。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="29553-109">When you call this method on an Excel list object, the runtime supplies this parameter.</span>
-          </span>
-        </param>
-        <param name="factory">
-          <span data-ttu-id="29553-110">一个对象，可访问应用程序级外接程序中某些功能。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="29553-110">An object that provides access to certain features in your application-level add-in.</span>
-          </span>
-          <span data-ttu-id="29553-111">将 <see langword="Globals.Factory" /> 对象传递到此参数。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="29553-111">Pass the <see langword="Globals.Factory" /> object to this parameter.</span>
-          </span>
-        </param>
-        <summary>
-          <span data-ttu-id="29553-112">返回一个 <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 主机控件，它可扩展应用程序级外接程序中当前 <see cref="T:Microsoft.Office.Interop.Excel.ListObject" /> 对象的功能。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="29553-112">Returns a <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> host control that extends the functionality of the current <see cref="T:Microsoft.Office.Interop.Excel.ListObject" /> object in an application-level add-in.</span>
-          </span>
-          <span data-ttu-id="29553-113">将项目中的 <c>Globals.Factory</c> 对象传递到 <paramref name="factory" /> 参数。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="29553-113">Pass the <c>Globals.Factory</c> object in your project to the <paramref name="factory" /> parameter.</span>
-          </span>
-        </summary>
-        <returns>
-          <span data-ttu-id="29553-114">一个主机控件，可扩展当前 <see cref="T:Microsoft.Office.Interop.Excel.ListObject" /> 对象的功能。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="29553-114">A host control that extends the functionality of the current <see cref="T:Microsoft.Office.Interop.Excel.ListObject" /> object.</span>
-          </span>
-        </returns>
-        <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- <span data-ttu-id="29553-115">在应用程序级外接程序，调用此方法以扩展在 Excel 中打开任何列表对象。</span><span class="sxs-lookup"><span data-stu-id="29553-115">In an application-level add-in, call this method to extend any list object that is open in Excel.</span></span> <span data-ttu-id="29553-116">此方法将生成一个新<xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName>主机控件，如果已为生成无此对象<xref:Microsoft.Office.Interop.Excel.ListObject?displayProperty=fullName>对其调用此方法的对象。</span><span class="sxs-lookup"><span data-stu-id="29553-116">This method generates a new <xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName> host control if no such object has already been generated for the <xref:Microsoft.Office.Interop.Excel.ListObject?displayProperty=fullName> object on which you call this method.</span></span> <span data-ttu-id="29553-117">后续调用此方法对同一个<xref:Microsoft.Office.Interop.Excel.ListObject?displayProperty=fullName>对象返回相同<xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName>实例。</span><span class="sxs-lookup"><span data-stu-id="29553-117">Subsequent calls to this method on the same <xref:Microsoft.Office.Interop.Excel.ListObject?displayProperty=fullName> object return the same <xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName> instance.</span></span>  
-  
- <span data-ttu-id="29553-118">此方法用于实现与 Office 项目 (将其目标从 .NET Framework 3.5 重定为 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)]) 的向后兼容。</span><span class="sxs-lookup"><span data-stu-id="29553-118">This method is provided for backward compatibility with Office projects that you retarget from the .NET Framework 3.5 to the [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] or the [!INCLUDE[net_v45](~/includes/net-v45-md.md)].</span></span> <span data-ttu-id="29553-119">在面向 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的新项目中，应调用由您的项目中的 `GetVstoObject` 对象提供的 `Globals.Factory` 方法。</span><span class="sxs-lookup"><span data-stu-id="29553-119">In new projects that target the [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] or the [!INCLUDE[net_v45](~/includes/net-v45-md.md)], you should call the `GetVstoObject` method that is provided by the `Globals.Factory` object in your project.</span></span>  
-  
- <span data-ttu-id="29553-120">有关详细信息，请参阅[扩展 Word 文档和 Excel VSTO 外接程序在运行时中的工作簿](/visualstudio/vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)。</span><span class="sxs-lookup"><span data-stu-id="29553-120">For more information, see [Extending Word Documents and Excel Workbooks in VSTO Add-ins at Run Time](/visualstudio/vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md).</span></span>  
-  
- ]]></format>
-        </remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="GetVstoObject">
-      <MemberSignature Language="C#" Value="public static Microsoft.Office.Tools.Excel.ListObject GetVstoObject (this Microsoft.Office.Interop.Excel.ListObject listObject, Microsoft.Office.Tools.Excel.Factory factory);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Office.Tools.Excel.ListObject GetVstoObject(class Microsoft.Office.Interop.Excel.ListObject listObject, class Microsoft.Office.Tools.Excel.Factory factory) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.GetVstoObject(Microsoft.Office.Interop.Excel.ListObject,Microsoft.Office.Tools.Excel.Factory)" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
-        <AssemblyVersion>10.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Microsoft.Office.Tools.Excel.ListObject</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="listObject" Type="Microsoft.Office.Interop.Excel.ListObject" RefType="this" />
-        <Parameter Name="factory" Type="Microsoft.Office.Tools.Excel.Factory" />
-      </Parameters>
-      <Docs>
-        <param name="listObject">
-          <span data-ttu-id="29553-121">要扩展的本机列表对象。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="29553-121">The native list object to extend.</span>
-          </span>
-          <span data-ttu-id="29553-122">请勿自己提供此参数。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="29553-122">Do not supply this parameter yourself.</span>
-          </span>
-          <span data-ttu-id="29553-123">在 Excel 列表对象中调用此方法时，运行时会提供此参数。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="29553-123">When you call this method on an Excel list object, the runtime supplies this parameter.</span>
-          </span>
-        </param>
-        <param name="factory">
-          <span data-ttu-id="29553-124">一个对象，用于提供对文档级自定义中某些功能的访问权限。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="29553-124">An object that provides access to certain features in your document-level customization.</span>
-          </span>
-          <span data-ttu-id="29553-125">将 <see langword="Globals.Factory" /> 对象传递到此参数。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="29553-125">Pass the <see langword="Globals.Factory" /> object to this parameter.</span>
-          </span>
-        </param>
-        <summary>
-          <span data-ttu-id="29553-126">返回一个 <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 宿主控件，该宿主控件可扩展文档级自定义项中的当前 <see cref="T:Microsoft.Office.Interop.Excel.ListObject" /> 对象的功能。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="29553-126">Returns a <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> host control that extends the functionality of the current <see cref="T:Microsoft.Office.Interop.Excel.ListObject" /> object in a document-level customization.</span>
-          </span>
-          <span data-ttu-id="29553-127">将项目中的 <c>Globals.Factory</c> 对象传递到 <paramref name="factory" /> 参数。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="29553-127">Pass the <c>Globals.Factory</c> object in your project to the <paramref name="factory" /> parameter.</span>
-          </span>
-        </summary>
-        <returns>
-          <span data-ttu-id="29553-128">一个主机控件，可扩展当前 <see cref="T:Microsoft.Office.Interop.Excel.ListObject" /> 对象的功能。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="29553-128">A host control that extends the functionality of the current <see cref="T:Microsoft.Office.Interop.Excel.ListObject" /> object.</span>
-          </span>
-        </returns>
-        <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- <span data-ttu-id="29553-129">文档级自定义项，可以调用此方法以获取<xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName>主机当前自定义项中的控件。</span><span class="sxs-lookup"><span data-stu-id="29553-129">In a document-level customization, you can call this method to get a <xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName> host control that is in the current customization.</span></span> <span data-ttu-id="29553-130">如果<xref:Microsoft.Office.Interop.Excel.ListObject?displayProperty=fullName>的基础对象不是在其调用此方法的对象<xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName>主机控件中当前自定义情况，此方法返回`null`。</span><span class="sxs-lookup"><span data-stu-id="29553-130">If the <xref:Microsoft.Office.Interop.Excel.ListObject?displayProperty=fullName> object on which you call this method is not the underlying object of a <xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName> host control in the current customization, this method returns `null`.</span></span>  
-  
- <span data-ttu-id="29553-131">此方法用于实现与 Office 项目 (将其目标从 .NET Framework 3.5 重定为 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)]) 的向后兼容。</span><span class="sxs-lookup"><span data-stu-id="29553-131">This method is provided for backward compatibility with Office projects that you retarget from the .NET Framework 3.5 to the [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] or the [!INCLUDE[net_v45](~/includes/net-v45-md.md)].</span></span> <span data-ttu-id="29553-132">在面向 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的新项目中，应调用由您的项目中的 `GetVstoObject` 对象提供的 `Globals.Factory` 方法。</span><span class="sxs-lookup"><span data-stu-id="29553-132">In new projects that target the [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] or the [!INCLUDE[net_v45](~/includes/net-v45-md.md)], you should call the `GetVstoObject` method that is provided by the `Globals.Factory` object in your project.</span></span> <span data-ttu-id="29553-133">有关详细信息，请参阅[文档级自定义项编程](/visualstudio/vsto/programming-document-level-customizations.md)。</span><span class="sxs-lookup"><span data-stu-id="29553-133">For more information, see [Programming Document-Level Customizations](/visualstudio/vsto/programming-document-level-customizations.md).</span></span>  
-  
- ]]></format>
-        </remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="HasVstoObject">
-      <MemberSignature Language="C#" Value="public static bool HasVstoObject (this Microsoft.Office.Interop.Excel.ListObject listObject, Microsoft.Office.Tools.Excel.ApplicationFactory factory);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool HasVstoObject(class Microsoft.Office.Interop.Excel.ListObject listObject, class Microsoft.Office.Tools.Excel.ApplicationFactory factory) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.HasVstoObject(Microsoft.Office.Interop.Excel.ListObject,Microsoft.Office.Tools.Excel.ApplicationFactory)" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
-        <AssemblyVersion>10.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Boolean</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="listObject" Type="Microsoft.Office.Interop.Excel.ListObject" RefType="this" />
-        <Parameter Name="factory" Type="Microsoft.Office.Tools.Excel.ApplicationFactory" />
-      </Parameters>
-      <Docs>
-        <param name="listObject">
-          <span data-ttu-id="29553-134">要测试的本机列表对象。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="29553-134">The native list object to test.</span>
-          </span>
-          <span data-ttu-id="29553-135">请勿自己提供此参数。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="29553-135">Do not supply this parameter yourself.</span>
-          </span>
-          <span data-ttu-id="29553-136">在 Excel 列表对象中调用此方法时，运行时会提供此参数。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="29553-136">When you call this method on an Excel list object, the runtime supplies this parameter.</span>
-          </span>
-        </param>
-        <param name="factory">
-          <span data-ttu-id="29553-137">一个对象，可访问应用程序级外接程序中某些功能。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="29553-137">An object that provides access to certain features in your application-level add-in.</span>
-          </span>
-          <span data-ttu-id="29553-138">将 <see langword="Globals.Factory" /> 对象传递到此参数。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="29553-138">Pass the <see langword="Globals.Factory" /> object to this parameter.</span>
-          </span>
-        </param>
-        <summary>
-          <span data-ttu-id="29553-139">返回一个值，该值指示是否为应用程序级外接程序中的当前 <see cref="T:Microsoft.Office.Interop.Excel.ListObject" /> 对象创建 <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 主机控件。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="29553-139">Returns a value that indicates whether a <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> host control has been created for the current <see cref="T:Microsoft.Office.Interop.Excel.ListObject" /> object in an application-level add-in.</span>
-          </span>
-          <span data-ttu-id="29553-140">将项目中的 <c>Globals.Factory</c> 对象传递到 <paramref name="factory" /> 参数。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="29553-140">Pass the <c>Globals.Factory</c> object in your project to the <paramref name="factory" /> parameter.</span>
-          </span>
-        </summary>
-        <returns>
-          <span data-ttu-id="29553-141">如果已为当前 <see cref="T:Microsoft.Office.Interop.Excel.ListObject" /> 对象创建 <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 主机控件，则为 <see langword="true" />，否则为 <see langword="false" />。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="29553-141">
-              <see langword="true" /> if a <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> host control has been created for the current <see cref="T:Microsoft.Office.Interop.Excel.ListObject" /> object; otherwise, <see langword="false" />.</span>
-          </span>
-        </returns>
-        <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- <span data-ttu-id="29553-142">在应用程序级外接程序，你可以调用此方法以确定是否<xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName>宿主控件存在任何<xref:Microsoft.Office.Interop.Excel.ListObject?displayProperty=fullName>对象。</span><span class="sxs-lookup"><span data-stu-id="29553-142">In an application-level add-in, you can call this method to determine whether a <xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName> host control exists for any <xref:Microsoft.Office.Interop.Excel.ListObject?displayProperty=fullName> object.</span></span> <span data-ttu-id="29553-143">通常情况下，你可以使用此方法以测试存在托管你想要关闭或保存的 Excel 列表对象之前保留的控件。</span><span class="sxs-lookup"><span data-stu-id="29553-143">Typically, you use this method to test for the existence of managed controls that you want to persist before closing or saving an Excel list object.</span></span>  
-  
- <span data-ttu-id="29553-144">此方法用于实现与 Office 项目 (将其目标从 .NET Framework 3.5 重定为 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)]) 的向后兼容。</span><span class="sxs-lookup"><span data-stu-id="29553-144">This method is provided for backward compatibility with Office projects that you retarget from the .NET Framework 3.5 to the [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] or the [!INCLUDE[net_v45](~/includes/net-v45-md.md)].</span></span> <span data-ttu-id="29553-145">在面向 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的新项目中，应调用由您的项目中的 `GetVstoObject` 对象提供的 `Globals.Factory` 方法。</span><span class="sxs-lookup"><span data-stu-id="29553-145">In new projects that target the [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] or the [!INCLUDE[net_v45](~/includes/net-v45-md.md)], you should call the `GetVstoObject` method that is provided by the `Globals.Factory` object in your project.</span></span> <span data-ttu-id="29553-146">有关详细信息，请参阅[扩展 Word 文档和 Excel VSTO 外接程序在运行时中的工作簿](/visualstudio/vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)。</span><span class="sxs-lookup"><span data-stu-id="29553-146">For more information, see [Extending Word Documents and Excel Workbooks in VSTO Add-ins at Run Time](/visualstudio/vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md).</span></span>  
-  
- ]]></format>
-        </remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="HasVstoObject">
-      <MemberSignature Language="C#" Value="public static bool HasVstoObject (this Microsoft.Office.Interop.Excel.ListObject listObject, Microsoft.Office.Tools.Excel.Factory factory);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool HasVstoObject(class Microsoft.Office.Interop.Excel.ListObject listObject, class Microsoft.Office.Tools.Excel.Factory factory) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.HasVstoObject(Microsoft.Office.Interop.Excel.ListObject,Microsoft.Office.Tools.Excel.Factory)" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
-        <AssemblyVersion>10.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Boolean</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="listObject" Type="Microsoft.Office.Interop.Excel.ListObject" RefType="this" />
-        <Parameter Name="factory" Type="Microsoft.Office.Tools.Excel.Factory" />
-      </Parameters>
-      <Docs>
-        <param name="listObject">
-          <span data-ttu-id="29553-147">要测试的本机列表对象。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="29553-147">The native list object to test.</span>
-          </span>
-          <span data-ttu-id="29553-148">请勿自己提供此参数。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="29553-148">Do not supply this parameter yourself.</span>
-          </span>
-          <span data-ttu-id="29553-149">在 Excel 列表对象中调用此方法时，运行时会提供此参数。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="29553-149">When you call this method on an Excel list object, the runtime supplies this parameter.</span>
-          </span>
-        </param>
-        <param name="factory">
-          <span data-ttu-id="29553-150">一个对象，用于提供对文档级自定义中某些功能的访问权限。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="29553-150">An object that provides access to certain features in your document-level customization.</span>
-          </span>
-          <span data-ttu-id="29553-151">将 <see langword="Globals.Factory" /> 对象传递到此参数。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="29553-151">Pass the <see langword="Globals.Factory" /> object to this parameter.</span>
-          </span>
-        </param>
-        <summary>
-          <span data-ttu-id="29553-152">返回一个值，该值指示是否为文档级自定义中的当前 <see cref="T:Microsoft.Office.Interop.Excel.ListObject" /> 对象创建 <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 主机控件。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="29553-152">Returns a value that indicates whether a <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> host control has been created for the current <see cref="T:Microsoft.Office.Interop.Excel.ListObject" /> object in a document-level customization.</span>
-          </span>
-          <span data-ttu-id="29553-153">将项目中的 <c>Globals.Factory</c> 对象传递到 <paramref name="factory" /> 参数。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="29553-153">Pass the <c>Globals.Factory</c> object in your project to the <paramref name="factory" /> parameter.</span>
-          </span>
-        </summary>
-        <returns>
-          <span data-ttu-id="29553-154">如果已为当前 <see cref="T:Microsoft.Office.Interop.Excel.ListObject" /> 对象创建 <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 主机控件，则为 <see langword="true" />，否则为 <see langword="false" />。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="29553-154">
-              <see langword="true" /> if a <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> host control has been created for the current <see cref="T:Microsoft.Office.Interop.Excel.ListObject" /> object; otherwise, <see langword="false" />.</span>
-          </span>
-        </returns>
-        <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- <span data-ttu-id="29553-155">文档级自定义项，此方法返回`true`才<xref:Microsoft.Office.Interop.Excel.ListObject?displayProperty=fullName>的基础对象是在其调用此方法的对象<xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName>主机当前自定义项中的控件。</span><span class="sxs-lookup"><span data-stu-id="29553-155">In a document-level customization, this method returns `true` only if the <xref:Microsoft.Office.Interop.Excel.ListObject?displayProperty=fullName> object on which you call this method is the underlying object of a <xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName> host control in the current customization.</span></span> <span data-ttu-id="29553-156">否则，此方法返回 `false`。</span><span class="sxs-lookup"><span data-stu-id="29553-156">Otherwise, this method returns `false`.</span></span>  
-  
- <span data-ttu-id="29553-157">此方法用于实现与 Office 项目 (将其目标从 .NET Framework 3.5 重定为 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)]) 的向后兼容。</span><span class="sxs-lookup"><span data-stu-id="29553-157">This method is provided for backward compatibility with Office projects that you retarget from the .NET Framework 3.5 to the [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] or the [!INCLUDE[net_v45](~/includes/net-v45-md.md)].</span></span> <span data-ttu-id="29553-158">在面向 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的新项目中，应调用由您的项目中的 `HasVstoObject` 对象提供的 `Globals.Factory` 方法。</span><span class="sxs-lookup"><span data-stu-id="29553-158">In new projects that target the [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] or the [!INCLUDE[net_v45](~/includes/net-v45-md.md)], you should call the `HasVstoObject` method that is provided by the `Globals.Factory` object in your project.</span></span> <span data-ttu-id="29553-159">有关详细信息，请参阅[文档级自定义项编程](/visualstudio/vsto/programming-document-level-customizations.md)。</span><span class="sxs-lookup"><span data-stu-id="29553-159">For more information, see [Programming Document-Level Customizations](/visualstudio/vsto/programming-document-level-customizations.md).</span></span>  
-  
- ]]></format>
-        </remarks>
-      </Docs>
-    </Member>
-  </Members>
-</Type>
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="ListObjectExtensions.xml" source-language="en-US" target-language="zh-CN">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-38f25dd" tool-company="Microsoft" />
+      <xliffext:skl_file_name xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">b4690f9a-9e49-426d-9091-855b10fda4dba876bafa962405a4a96b0c18bdd0b12d31396e5f.skl</xliffext:skl_file_name>
+      <xliffext:version xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">1.2</xliffext:version>
+      <xliffext:ms.openlocfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">a876bafa962405a4a96b0c18bdd0b12d31396e5f</xliffext:ms.openlocfilehash>
+      <xliffext:ms.sourcegitcommit xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">bb8a3a96823cedeffbdbcc0c41a8118399de8074</xliffext:ms.sourcegitcommit>
+      <xliffext:ms.lasthandoff xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">02/21/2018</xliffext:ms.lasthandoff>
+      <xliffext:moniker_ids xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">vsto-2017</xliffext:moniker_ids>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve" uid="T:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions">
+          <source>Provides methods you can use to extend Microsoft Office Excel list objects by generating host controls for <ph id="ph1">&lt;see cref="T:Microsoft.Office.Interop.Excel.ListObject" /&gt;</ph> objects and by testing for the existence of the generated host controls.</source>
+          <target state="translated">通过为 <ph id="ph1">&lt;see cref="T:Microsoft.Office.Interop.Excel.ListObject" /&gt;</ph> 对象生成主机控件，以及测试是否存在已生成的主机控件，提供可用于扩展 Microsoft Office Excel 列表对象的方法。</target>       </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve" extradata="MT" uid="T:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions">
+          <source>The <ph id="ph1">&lt;xref:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions&gt;</ph> class contains <bpt id="p1">*</bpt>extension methods<ept id="p1">*</ept> that are designed to be accessed on <ph id="ph2">&lt;xref:Microsoft.Office.Interop.Excel.ListObject?displayProperty=fullName&gt;</ph> objects.</source>
+          <target state="translated"><ph id="ph1">&lt;xref:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions&gt;</ph>类包含<bpt id="p1">*</bpt>扩展方法<ept id="p1">*</ept>旨在上访问<ph id="ph2">&lt;xref:Microsoft.Office.Interop.Excel.ListObject?displayProperty=fullName&gt;</ph>对象。</target>       </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve" extradata="MT" uid="T:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions">
+          <source>For more information about extension methods, see <bpt id="p1">[</bpt>Extension Methods<ept id="p1">](http://msdn.microsoft.com/library/175ce3ff-9bbf-4e64-8421-faeb81a0bb51)</ept> and <bpt id="p2">[</bpt>Extension Methods<ept id="p2">](http://msdn.microsoft.com/library/b8020aae-374d-46a9-bcb7-8cc2390b93b6)</ept>.</source>
+          <target state="translated">有关扩展方法的详细信息，请参阅<bpt id="p1">[</bpt>扩展方法<ept id="p1">](http://msdn.microsoft.com/library/175ce3ff-9bbf-4e64-8421-faeb81a0bb51)</ept>和<bpt id="p2">[</bpt>扩展方法<ept id="p2">](http://msdn.microsoft.com/library/b8020aae-374d-46a9-bcb7-8cc2390b93b6)</ept>。</target>       </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve" extradata="MT" uid="T:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions">
+          <source>The extension methods in the <ph id="ph1">&lt;xref:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions&gt;</ph> class are provided for backward compatibility with Office projects that you retarget from the .NET Framework 3.5 to the <ph id="ph2">[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]</ph> or the <ph id="ph3">[!INCLUDE[net_v45](~/includes/net-v45-md.md)]</ph>.</source>
+          <target state="translated">中的扩展方法<ph id="ph1">&lt;xref:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions&gt;</ph>类都重定为向后兼容的 Office 项目，从.NET Framework 3.5 到<ph id="ph2">[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]</ph>或<ph id="ph3">[!INCLUDE[net_v45](~/includes/net-v45-md.md)]</ph>。</target>       </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve" extradata="MT" uid="T:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions">
+          <source>In new projects that target the <ph id="ph1">[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]</ph> or the <ph id="ph2">[!INCLUDE[net_v45](~/includes/net-v45-md.md)]</ph>, you should call the <ph id="ph3">`GetVstoObject`</ph> and <ph id="ph4">`HasVstoObject`</ph> methods that are provided by the <ph id="ph5">`Globals.Factory`</ph> object in your project.</source>
+          <target state="translated">在面向 <ph id="ph1">[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]</ph> 或 <ph id="ph2">[!INCLUDE[net_v45](~/includes/net-v45-md.md)]</ph> 的新项目中，应调用由您的项目中的 <ph id="ph3">`GetVstoObject`</ph> 对象提供的 <ph id="ph4">`HasVstoObject`</ph> 和 <ph id="ph5">`Globals.Factory`</ph> 方法。</target>       </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve" extradata="MT" uid="T:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions">
+          <source>For more information, see <bpt id="p1">[</bpt>Extending Word Documents and Excel Workbooks in VSTO Add-ins at Run Time<ept id="p1">](/visualstudio/vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)</ept> and <bpt id="p2">[</bpt>Programming Document-Level Customizations<ept id="p2">](/visualstudio/vsto/programming-document-level-customizations.md)</ept>.</source>
+          <target state="translated">有关详细信息，请参阅<bpt id="p1">[</bpt>扩展 Word 文档和 Excel VSTO 外接程序在运行时中的工作簿<ept id="p1">](/visualstudio/vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)</ept>和<bpt id="p2">[</bpt>文档级自定义项编程<ept id="p2">](/visualstudio/vsto/programming-document-level-customizations.md)</ept>。</target>       </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve" uid="M:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.GetVstoObject(Microsoft.Office.Interop.Excel.ListObject,Microsoft.Office.Tools.Excel.ApplicationFactory)">
+          <source>The native list object to extend.</source>
+          <target state="translated">要扩展的本机列表对象。</target>       </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve" uid="M:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.GetVstoObject(Microsoft.Office.Interop.Excel.ListObject,Microsoft.Office.Tools.Excel.ApplicationFactory)">
+          <source>Do not supply this parameter yourself.</source>
+          <target state="translated">请勿自己提供此参数。</target>       </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve" uid="M:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.GetVstoObject(Microsoft.Office.Interop.Excel.ListObject,Microsoft.Office.Tools.Excel.ApplicationFactory)">
+          <source>When you call this method on an Excel list object, the runtime supplies this parameter.</source>
+          <target state="translated">在 Excel 列表对象中调用此方法时，运行时会提供此参数。</target>       </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve" uid="M:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.GetVstoObject(Microsoft.Office.Interop.Excel.ListObject,Microsoft.Office.Tools.Excel.ApplicationFactory)">
+          <source>An object that provides access to certain features in your application-level add-in.</source>
+          <target state="translated">一个对象，可访问应用程序级外接程序中某些功能。</target>       </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve" uid="M:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.GetVstoObject(Microsoft.Office.Interop.Excel.ListObject,Microsoft.Office.Tools.Excel.ApplicationFactory)">
+          <source>Pass the <ph id="ph1">&lt;see langword="Globals.Factory" /&gt;</ph> object to this parameter.</source>
+          <target state="translated">将 <ph id="ph1">&lt;see langword="Globals.Factory" /&gt;</ph> 对象传递到此参数。</target>       </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve" uid="M:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.GetVstoObject(Microsoft.Office.Interop.Excel.ListObject,Microsoft.Office.Tools.Excel.ApplicationFactory)">
+          <source>Returns a <ph id="ph1">&lt;see cref="T:Microsoft.Office.Tools.Excel.ListObject" /&gt;</ph> host control that extends the functionality of the current <ph id="ph2">&lt;see cref="T:Microsoft.Office.Interop.Excel.ListObject" /&gt;</ph> object in an application-level add-in.</source>
+          <target state="translated">返回一个 <ph id="ph1">&lt;see cref="T:Microsoft.Office.Tools.Excel.ListObject" /&gt;</ph> 主机控件，它可扩展应用程序级外接程序中当前 <ph id="ph2">&lt;see cref="T:Microsoft.Office.Interop.Excel.ListObject" /&gt;</ph> 对象的功能。</target>       </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve" uid="M:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.GetVstoObject(Microsoft.Office.Interop.Excel.ListObject,Microsoft.Office.Tools.Excel.ApplicationFactory)">
+          <source>Pass the <bpt id="p1">&lt;c&gt;</bpt>Globals.Factory<ept id="p1">&lt;/c&gt;</ept> object in your project to the <ph id="ph1">&lt;paramref name="factory" /&gt;</ph> parameter.</source>
+          <target state="translated">将项目中的 <bpt id="p1">&lt;c&gt;</bpt>Globals.Factory<ept id="p1">&lt;/c&gt;</ept> 对象传递到 <ph id="ph1">&lt;paramref name="factory" /&gt;</ph> 参数。</target>       </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve" uid="M:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.GetVstoObject(Microsoft.Office.Interop.Excel.ListObject,Microsoft.Office.Tools.Excel.ApplicationFactory)">
+          <source>A host control that extends the functionality of the current <ph id="ph1">&lt;see cref="T:Microsoft.Office.Interop.Excel.ListObject" /&gt;</ph> object.</source>
+          <target state="translated">一个主机控件，可扩展当前 <ph id="ph1">&lt;see cref="T:Microsoft.Office.Interop.Excel.ListObject" /&gt;</ph> 对象的功能。</target>       </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve" extradata="MT" uid="M:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.GetVstoObject(Microsoft.Office.Interop.Excel.ListObject,Microsoft.Office.Tools.Excel.ApplicationFactory)">
+          <source>In an application-level add-in, call this method to extend any list object that is open in Excel.</source>
+          <target state="translated">在应用程序级外接程序，调用此方法以扩展在 Excel 中打开任何列表对象。</target>       </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve" extradata="MT" uid="M:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.GetVstoObject(Microsoft.Office.Interop.Excel.ListObject,Microsoft.Office.Tools.Excel.ApplicationFactory)">
+          <source>This method generates a new <ph id="ph1">&lt;xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName&gt;</ph> host control if no such object has already been generated for the <ph id="ph2">&lt;xref:Microsoft.Office.Interop.Excel.ListObject?displayProperty=fullName&gt;</ph> object on which you call this method.</source>
+          <target state="translated">此方法将生成一个新<ph id="ph1">&lt;xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName&gt;</ph>主机控件，如果已为生成无此对象<ph id="ph2">&lt;xref:Microsoft.Office.Interop.Excel.ListObject?displayProperty=fullName&gt;</ph>对其调用此方法的对象。</target>       </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve" extradata="MT" uid="M:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.GetVstoObject(Microsoft.Office.Interop.Excel.ListObject,Microsoft.Office.Tools.Excel.ApplicationFactory)">
+          <source>Subsequent calls to this method on the same <ph id="ph1">&lt;xref:Microsoft.Office.Interop.Excel.ListObject?displayProperty=fullName&gt;</ph> object return the same <ph id="ph2">&lt;xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName&gt;</ph> instance.</source>
+          <target state="translated">后续调用此方法对同一个<ph id="ph1">&lt;xref:Microsoft.Office.Interop.Excel.ListObject?displayProperty=fullName&gt;</ph>对象返回相同<ph id="ph2">&lt;xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName&gt;</ph>实例。</target>       </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve" extradata="MT" uid="M:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.GetVstoObject(Microsoft.Office.Interop.Excel.ListObject,Microsoft.Office.Tools.Excel.ApplicationFactory)">
+          <source>This method is provided for backward compatibility with Office projects that you retarget from the .NET Framework 3.5 to the <ph id="ph1">[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]</ph> or the <ph id="ph2">[!INCLUDE[net_v45](~/includes/net-v45-md.md)]</ph>.</source>
+          <target state="translated">此方法用于实现与 Office 项目 (将其目标从 .NET Framework 3.5 重定为 <ph id="ph1">[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]</ph> 或 <ph id="ph2">[!INCLUDE[net_v45](~/includes/net-v45-md.md)]</ph>) 的向后兼容。</target>       </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve" extradata="MT" uid="M:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.GetVstoObject(Microsoft.Office.Interop.Excel.ListObject,Microsoft.Office.Tools.Excel.ApplicationFactory)">
+          <source>In new projects that target the <ph id="ph1">[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]</ph> or the <ph id="ph2">[!INCLUDE[net_v45](~/includes/net-v45-md.md)]</ph>, you should call the <ph id="ph3">`GetVstoObject`</ph> method that is provided by the <ph id="ph4">`Globals.Factory`</ph> object in your project.</source>
+          <target state="translated">在面向 <ph id="ph1">[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]</ph> 或 <ph id="ph2">[!INCLUDE[net_v45](~/includes/net-v45-md.md)]</ph> 的新项目中，应调用由您的项目中的 <ph id="ph3">`GetVstoObject`</ph> 对象提供的 <ph id="ph4">`Globals.Factory`</ph> 方法。</target>       </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve" extradata="MT" uid="M:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.GetVstoObject(Microsoft.Office.Interop.Excel.ListObject,Microsoft.Office.Tools.Excel.ApplicationFactory)">
+          <source>For more information, see <bpt id="p1">[</bpt>Extending Word Documents and Excel Workbooks in VSTO Add-ins at Run Time<ept id="p1">](/visualstudio/vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)</ept>.</source>
+          <target state="translated">有关详细信息，请参阅<bpt id="p1">[</bpt>扩展 Word 文档和 Excel VSTO 外接程序在运行时中的工作簿<ept id="p1">](/visualstudio/vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)</ept>。</target>       </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve" uid="M:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.GetVstoObject(Microsoft.Office.Interop.Excel.ListObject,Microsoft.Office.Tools.Excel.Factory)">
+          <source>The native list object to extend.</source>
+          <target state="translated">要扩展的本机列表对象。</target>       </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve" uid="M:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.GetVstoObject(Microsoft.Office.Interop.Excel.ListObject,Microsoft.Office.Tools.Excel.Factory)">
+          <source>Do not supply this parameter yourself.</source>
+          <target state="translated">请勿自己提供此参数。</target>       </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve" uid="M:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.GetVstoObject(Microsoft.Office.Interop.Excel.ListObject,Microsoft.Office.Tools.Excel.Factory)">
+          <source>When you call this method on an Excel list object, the runtime supplies this parameter.</source>
+          <target state="translated">在 Excel 列表对象中调用此方法时，运行时会提供此参数。</target>       </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve" uid="M:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.GetVstoObject(Microsoft.Office.Interop.Excel.ListObject,Microsoft.Office.Tools.Excel.Factory)">
+          <source>An object that provides access to certain features in your document-level customization.</source>
+          <target state="translated">一个对象，用于提供对文档级自定义中某些功能的访问权限。</target>       </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve" uid="M:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.GetVstoObject(Microsoft.Office.Interop.Excel.ListObject,Microsoft.Office.Tools.Excel.Factory)">
+          <source>Pass the <ph id="ph1">&lt;see langword="Globals.Factory" /&gt;</ph> object to this parameter.</source>
+          <target state="translated">将 <ph id="ph1">&lt;see langword="Globals.Factory" /&gt;</ph> 对象传递到此参数。</target>       </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve" uid="M:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.GetVstoObject(Microsoft.Office.Interop.Excel.ListObject,Microsoft.Office.Tools.Excel.Factory)">
+          <source>Returns a <ph id="ph1">&lt;see cref="T:Microsoft.Office.Tools.Excel.ListObject" /&gt;</ph> host control that extends the functionality of the current <ph id="ph2">&lt;see cref="T:Microsoft.Office.Interop.Excel.ListObject" /&gt;</ph> object in a document-level customization.</source>
+          <target state="translated">返回一个 <ph id="ph1">&lt;see cref="T:Microsoft.Office.Tools.Excel.ListObject" /&gt;</ph> 宿主控件，该宿主控件可扩展文档级自定义项中的当前 <ph id="ph2">&lt;see cref="T:Microsoft.Office.Interop.Excel.ListObject" /&gt;</ph> 对象的功能。</target>       </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve" uid="M:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.GetVstoObject(Microsoft.Office.Interop.Excel.ListObject,Microsoft.Office.Tools.Excel.Factory)">
+          <source>Pass the <bpt id="p1">&lt;c&gt;</bpt>Globals.Factory<ept id="p1">&lt;/c&gt;</ept> object in your project to the <ph id="ph1">&lt;paramref name="factory" /&gt;</ph> parameter.</source>
+          <target state="translated">将项目中的 <bpt id="p1">&lt;c&gt;</bpt>Globals.Factory<ept id="p1">&lt;/c&gt;</ept> 对象传递到 <ph id="ph1">&lt;paramref name="factory" /&gt;</ph> 参数。</target>       </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve" uid="M:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.GetVstoObject(Microsoft.Office.Interop.Excel.ListObject,Microsoft.Office.Tools.Excel.Factory)">
+          <source>A host control that extends the functionality of the current <ph id="ph1">&lt;see cref="T:Microsoft.Office.Interop.Excel.ListObject" /&gt;</ph> object.</source>
+          <target state="translated">一个主机控件，可扩展当前 <ph id="ph1">&lt;see cref="T:Microsoft.Office.Interop.Excel.ListObject" /&gt;</ph> 对象的功能。</target>       </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve" extradata="MT" uid="M:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.GetVstoObject(Microsoft.Office.Interop.Excel.ListObject,Microsoft.Office.Tools.Excel.Factory)">
+          <source>In a document-level customization, you can call this method to get a <ph id="ph1">&lt;xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName&gt;</ph> host control that is in the current customization.</source>
+          <target state="translated">文档级自定义项，可以调用此方法以获取<ph id="ph1">&lt;xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName&gt;</ph>主机当前自定义项中的控件。</target>       </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve" extradata="MT" uid="M:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.GetVstoObject(Microsoft.Office.Interop.Excel.ListObject,Microsoft.Office.Tools.Excel.Factory)">
+          <source>If the <ph id="ph1">&lt;xref:Microsoft.Office.Interop.Excel.ListObject?displayProperty=fullName&gt;</ph> object on which you call this method is not the underlying object of a <ph id="ph2">&lt;xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName&gt;</ph> host control in the current customization, this method returns <ph id="ph3">`null`</ph>.</source>
+          <target state="translated">如果<ph id="ph1">&lt;xref:Microsoft.Office.Interop.Excel.ListObject?displayProperty=fullName&gt;</ph>的基础对象不是在其调用此方法的对象<ph id="ph2">&lt;xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName&gt;</ph>主机控件中当前自定义情况，此方法返回<ph id="ph3">`null`</ph>。</target>       </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve" extradata="MT" uid="M:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.GetVstoObject(Microsoft.Office.Interop.Excel.ListObject,Microsoft.Office.Tools.Excel.Factory)">
+          <source>This method is provided for backward compatibility with Office projects that you retarget from the .NET Framework 3.5 to the <ph id="ph1">[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]</ph> or the <ph id="ph2">[!INCLUDE[net_v45](~/includes/net-v45-md.md)]</ph>.</source>
+          <target state="translated">此方法用于实现与 Office 项目 (将其目标从 .NET Framework 3.5 重定为 <ph id="ph1">[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]</ph> 或 <ph id="ph2">[!INCLUDE[net_v45](~/includes/net-v45-md.md)]</ph>) 的向后兼容。</target>       </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve" extradata="MT" uid="M:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.GetVstoObject(Microsoft.Office.Interop.Excel.ListObject,Microsoft.Office.Tools.Excel.Factory)">
+          <source>In new projects that target the <ph id="ph1">[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]</ph> or the <ph id="ph2">[!INCLUDE[net_v45](~/includes/net-v45-md.md)]</ph>, you should call the <ph id="ph3">`GetVstoObject`</ph> method that is provided by the <ph id="ph4">`Globals.Factory`</ph> object in your project.</source>
+          <target state="translated">在面向 <ph id="ph1">[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]</ph> 或 <ph id="ph2">[!INCLUDE[net_v45](~/includes/net-v45-md.md)]</ph> 的新项目中，应调用由您的项目中的 <ph id="ph3">`GetVstoObject`</ph> 对象提供的 <ph id="ph4">`Globals.Factory`</ph> 方法。</target>       </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve" extradata="MT" uid="M:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.GetVstoObject(Microsoft.Office.Interop.Excel.ListObject,Microsoft.Office.Tools.Excel.Factory)">
+          <source>For more information, see <bpt id="p1">[</bpt>Programming Document-Level Customizations<ept id="p1">](/visualstudio/vsto/programming-document-level-customizations.md)</ept>.</source>
+          <target state="translated">有关详细信息，请参阅<bpt id="p1">[</bpt>文档级自定义项编程<ept id="p1">](/visualstudio/vsto/programming-document-level-customizations.md)</ept>。</target>       </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve" uid="M:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.HasVstoObject(Microsoft.Office.Interop.Excel.ListObject,Microsoft.Office.Tools.Excel.ApplicationFactory)">
+          <source>The native list object to test.</source>
+          <target state="translated">要测试的本机列表对象。</target>       </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve" uid="M:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.HasVstoObject(Microsoft.Office.Interop.Excel.ListObject,Microsoft.Office.Tools.Excel.ApplicationFactory)">
+          <source>Do not supply this parameter yourself.</source>
+          <target state="translated">请勿自己提供此参数。</target>       </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve" uid="M:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.HasVstoObject(Microsoft.Office.Interop.Excel.ListObject,Microsoft.Office.Tools.Excel.ApplicationFactory)">
+          <source>When you call this method on an Excel list object, the runtime supplies this parameter.</source>
+          <target state="translated">在 Excel 列表对象中调用此方法时，运行时会提供此参数。</target>       </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve" uid="M:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.HasVstoObject(Microsoft.Office.Interop.Excel.ListObject,Microsoft.Office.Tools.Excel.ApplicationFactory)">
+          <source>An object that provides access to certain features in your application-level add-in.</source>
+          <target state="translated">一个对象，可访问应用程序级外接程序中某些功能。</target>       </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve" uid="M:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.HasVstoObject(Microsoft.Office.Interop.Excel.ListObject,Microsoft.Office.Tools.Excel.ApplicationFactory)">
+          <source>Pass the <ph id="ph1">&lt;see langword="Globals.Factory" /&gt;</ph> object to this parameter.</source>
+          <target state="translated">将 <ph id="ph1">&lt;see langword="Globals.Factory" /&gt;</ph> 对象传递到此参数。</target>       </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve" uid="M:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.HasVstoObject(Microsoft.Office.Interop.Excel.ListObject,Microsoft.Office.Tools.Excel.ApplicationFactory)">
+          <source>Returns a value that indicates whether a <ph id="ph1">&lt;see cref="T:Microsoft.Office.Tools.Excel.ListObject" /&gt;</ph> host control has been created for the current <ph id="ph2">&lt;see cref="T:Microsoft.Office.Interop.Excel.ListObject" /&gt;</ph> object in an application-level add-in.</source>
+          <target state="translated">返回一个值，该值指示是否为应用程序级外接程序中的当前 <ph id="ph2">&lt;see cref="T:Microsoft.Office.Interop.Excel.ListObject" /&gt;</ph> 对象创建 <ph id="ph1">&lt;see cref="T:Microsoft.Office.Tools.Excel.ListObject" /&gt;</ph> 主机控件。</target>       </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve" uid="M:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.HasVstoObject(Microsoft.Office.Interop.Excel.ListObject,Microsoft.Office.Tools.Excel.ApplicationFactory)">
+          <source>Pass the <bpt id="p1">&lt;c&gt;</bpt>Globals.Factory<ept id="p1">&lt;/c&gt;</ept> object in your project to the <ph id="ph1">&lt;paramref name="factory" /&gt;</ph> parameter.</source>
+          <target state="translated">将项目中的 <bpt id="p1">&lt;c&gt;</bpt>Globals.Factory<ept id="p1">&lt;/c&gt;</ept> 对象传递到 <ph id="ph1">&lt;paramref name="factory" /&gt;</ph> 参数。</target>       </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve" uid="M:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.HasVstoObject(Microsoft.Office.Interop.Excel.ListObject,Microsoft.Office.Tools.Excel.ApplicationFactory)">
+          <source><ph id="ph1">&lt;see langword="true" /&gt;</ph> if a <ph id="ph2">&lt;see cref="T:Microsoft.Office.Tools.Excel.ListObject" /&gt;</ph> host control has been created for the current <ph id="ph3">&lt;see cref="T:Microsoft.Office.Interop.Excel.ListObject" /&gt;</ph> object; otherwise, <ph id="ph4">&lt;see langword="false" /&gt;</ph>.</source>
+          <target state="translated">如果已为当前 <ph id="ph3">&lt;see cref="T:Microsoft.Office.Interop.Excel.ListObject" /&gt;</ph> 对象创建 <ph id="ph2">&lt;see cref="T:Microsoft.Office.Tools.Excel.ListObject" /&gt;</ph> 主机控件，则为 <ph id="ph1">&lt;see langword="true" /&gt;</ph>，否则为 <ph id="ph4">&lt;see langword="false" /&gt;</ph>。</target>       </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve" extradata="MT" uid="M:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.HasVstoObject(Microsoft.Office.Interop.Excel.ListObject,Microsoft.Office.Tools.Excel.ApplicationFactory)">
+          <source>In an application-level add-in, you can call this method to determine whether a <ph id="ph1">&lt;xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName&gt;</ph> host control exists for any <ph id="ph2">&lt;xref:Microsoft.Office.Interop.Excel.ListObject?displayProperty=fullName&gt;</ph> object.</source>
+          <target state="translated">在应用程序级外接程序，你可以调用此方法以确定是否<ph id="ph1">&lt;xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName&gt;</ph>宿主控件存在任何<ph id="ph2">&lt;xref:Microsoft.Office.Interop.Excel.ListObject?displayProperty=fullName&gt;</ph>对象。</target>       </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve" extradata="MT" uid="M:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.HasVstoObject(Microsoft.Office.Interop.Excel.ListObject,Microsoft.Office.Tools.Excel.ApplicationFactory)">
+          <source>Typically, you use this method to test for the existence of managed controls that you want to persist before closing or saving an Excel list object.</source>
+          <target state="translated">通常情况下，你可以使用此方法以测试存在托管你想要关闭或保存的 Excel 列表对象之前保留的控件。</target>       </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve" extradata="MT" uid="M:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.HasVstoObject(Microsoft.Office.Interop.Excel.ListObject,Microsoft.Office.Tools.Excel.ApplicationFactory)">
+          <source>This method is provided for backward compatibility with Office projects that you retarget from the .NET Framework 3.5 to the <ph id="ph1">[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]</ph> or the <ph id="ph2">[!INCLUDE[net_v45](~/includes/net-v45-md.md)]</ph>.</source>
+          <target state="translated">此方法用于实现与 Office 项目 (将其目标从 .NET Framework 3.5 重定为 <ph id="ph1">[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]</ph> 或 <ph id="ph2">[!INCLUDE[net_v45](~/includes/net-v45-md.md)]</ph>) 的向后兼容。</target>       </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve" extradata="MT" uid="M:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.HasVstoObject(Microsoft.Office.Interop.Excel.ListObject,Microsoft.Office.Tools.Excel.ApplicationFactory)">
+          <source>In new projects that target the <ph id="ph1">[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]</ph> or the <ph id="ph2">[!INCLUDE[net_v45](~/includes/net-v45-md.md)]</ph>, you should call the <ph id="ph3">`GetVstoObject`</ph> method that is provided by the <ph id="ph4">`Globals.Factory`</ph> object in your project.</source>
+          <target state="translated">在面向 <ph id="ph1">[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]</ph> 或 <ph id="ph2">[!INCLUDE[net_v45](~/includes/net-v45-md.md)]</ph> 的新项目中，应调用由您的项目中的 <ph id="ph3">`GetVstoObject`</ph> 对象提供的 <ph id="ph4">`Globals.Factory`</ph> 方法。</target>       </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve" extradata="MT" uid="M:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.HasVstoObject(Microsoft.Office.Interop.Excel.ListObject,Microsoft.Office.Tools.Excel.ApplicationFactory)">
+          <source>For more information, see <bpt id="p1">[</bpt>Extending Word Documents and Excel Workbooks in VSTO Add-ins at Run Time<ept id="p1">](/visualstudio/vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)</ept>.</source>
+          <target state="translated">有关详细信息，请参阅<bpt id="p1">[</bpt>扩展 Word 文档和 Excel VSTO 外接程序在运行时中的工作簿<ept id="p1">](/visualstudio/vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)</ept>。</target>       </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve" uid="M:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.HasVstoObject(Microsoft.Office.Interop.Excel.ListObject,Microsoft.Office.Tools.Excel.Factory)">
+          <source>The native list object to test.</source>
+          <target state="translated">要测试的本机列表对象。</target>       </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve" uid="M:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.HasVstoObject(Microsoft.Office.Interop.Excel.ListObject,Microsoft.Office.Tools.Excel.Factory)">
+          <source>Do not supply this parameter yourself.</source>
+          <target state="translated">请勿自己提供此参数。</target>       </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve" uid="M:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.HasVstoObject(Microsoft.Office.Interop.Excel.ListObject,Microsoft.Office.Tools.Excel.Factory)">
+          <source>When you call this method on an Excel list object, the runtime supplies this parameter.</source>
+          <target state="translated">在 Excel 列表对象中调用此方法时，运行时会提供此参数。</target>       </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve" uid="M:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.HasVstoObject(Microsoft.Office.Interop.Excel.ListObject,Microsoft.Office.Tools.Excel.Factory)">
+          <source>An object that provides access to certain features in your document-level customization.</source>
+          <target state="translated">一个对象，用于提供对文档级自定义中某些功能的访问权限。</target>       </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve" uid="M:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.HasVstoObject(Microsoft.Office.Interop.Excel.ListObject,Microsoft.Office.Tools.Excel.Factory)">
+          <source>Pass the <ph id="ph1">&lt;see langword="Globals.Factory" /&gt;</ph> object to this parameter.</source>
+          <target state="translated">将 <ph id="ph1">&lt;see langword="Globals.Factory" /&gt;</ph> 对象传递到此参数。</target>       </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve" uid="M:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.HasVstoObject(Microsoft.Office.Interop.Excel.ListObject,Microsoft.Office.Tools.Excel.Factory)">
+          <source>Returns a value that indicates whether a <ph id="ph1">&lt;see cref="T:Microsoft.Office.Tools.Excel.ListObject" /&gt;</ph> host control has been created for the current <ph id="ph2">&lt;see cref="T:Microsoft.Office.Interop.Excel.ListObject" /&gt;</ph> object in a document-level customization.</source>
+          <target state="translated">返回一个值，该值指示是否为文档级自定义中的当前 <ph id="ph2">&lt;see cref="T:Microsoft.Office.Interop.Excel.ListObject" /&gt;</ph> 对象创建 <ph id="ph1">&lt;see cref="T:Microsoft.Office.Tools.Excel.ListObject" /&gt;</ph> 主机控件。</target>       </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve" uid="M:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.HasVstoObject(Microsoft.Office.Interop.Excel.ListObject,Microsoft.Office.Tools.Excel.Factory)">
+          <source>Pass the <bpt id="p1">&lt;c&gt;</bpt>Globals.Factory<ept id="p1">&lt;/c&gt;</ept> object in your project to the <ph id="ph1">&lt;paramref name="factory" /&gt;</ph> parameter.</source>
+          <target state="translated">将项目中的 <bpt id="p1">&lt;c&gt;</bpt>Globals.Factory<ept id="p1">&lt;/c&gt;</ept> 对象传递到 <ph id="ph1">&lt;paramref name="factory" /&gt;</ph> 参数。</target>       </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve" uid="M:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.HasVstoObject(Microsoft.Office.Interop.Excel.ListObject,Microsoft.Office.Tools.Excel.Factory)">
+          <source><ph id="ph1">&lt;see langword="true" /&gt;</ph> if a <ph id="ph2">&lt;see cref="T:Microsoft.Office.Tools.Excel.ListObject" /&gt;</ph> host control has been created for the current <ph id="ph3">&lt;see cref="T:Microsoft.Office.Interop.Excel.ListObject" /&gt;</ph> object; otherwise, <ph id="ph4">&lt;see langword="false" /&gt;</ph>.</source>
+          <target state="translated">如果已为当前 <ph id="ph3">&lt;see cref="T:Microsoft.Office.Interop.Excel.ListObject" /&gt;</ph> 对象创建 <ph id="ph2">&lt;see cref="T:Microsoft.Office.Tools.Excel.ListObject" /&gt;</ph> 主机控件，则为 <ph id="ph1">&lt;see langword="true" /&gt;</ph>，否则为 <ph id="ph4">&lt;see langword="false" /&gt;</ph>。</target>       </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve" extradata="MT" uid="M:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.HasVstoObject(Microsoft.Office.Interop.Excel.ListObject,Microsoft.Office.Tools.Excel.Factory)">
+          <source>In a document-level customization, this method returns <ph id="ph1">`true`</ph> only if the <ph id="ph2">&lt;xref:Microsoft.Office.Interop.Excel.ListObject?displayProperty=fullName&gt;</ph> object on which you call this method is the underlying object of a <ph id="ph3">&lt;xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName&gt;</ph> host control in the current customization.</source>
+          <target state="translated">文档级自定义项，此方法返回<ph id="ph1">`true`</ph>才<ph id="ph2">&lt;xref:Microsoft.Office.Interop.Excel.ListObject?displayProperty=fullName&gt;</ph>的基础对象是在其调用此方法的对象<ph id="ph3">&lt;xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName&gt;</ph>主机当前自定义项中的控件。</target>       </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve" extradata="MT" uid="M:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.HasVstoObject(Microsoft.Office.Interop.Excel.ListObject,Microsoft.Office.Tools.Excel.Factory)">
+          <source>Otherwise, this method returns <ph id="ph1">`false`</ph>.</source>
+          <target state="translated">否则，此方法返回 <ph id="ph1">`false`</ph>。</target>       </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve" extradata="MT" uid="M:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.HasVstoObject(Microsoft.Office.Interop.Excel.ListObject,Microsoft.Office.Tools.Excel.Factory)">
+          <source>This method is provided for backward compatibility with Office projects that you retarget from the .NET Framework 3.5 to the <ph id="ph1">[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]</ph> or the <ph id="ph2">[!INCLUDE[net_v45](~/includes/net-v45-md.md)]</ph>.</source>
+          <target state="translated">此方法用于实现与 Office 项目 (将其目标从 .NET Framework 3.5 重定为 <ph id="ph1">[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]</ph> 或 <ph id="ph2">[!INCLUDE[net_v45](~/includes/net-v45-md.md)]</ph>) 的向后兼容。</target>       </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve" extradata="MT" uid="M:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.HasVstoObject(Microsoft.Office.Interop.Excel.ListObject,Microsoft.Office.Tools.Excel.Factory)">
+          <source>In new projects that target the <ph id="ph1">[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]</ph> or the <ph id="ph2">[!INCLUDE[net_v45](~/includes/net-v45-md.md)]</ph>, you should call the <ph id="ph3">`HasVstoObject`</ph> method that is provided by the <ph id="ph4">`Globals.Factory`</ph> object in your project.</source>
+          <target state="translated">在面向 <ph id="ph1">[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]</ph> 或 <ph id="ph2">[!INCLUDE[net_v45](~/includes/net-v45-md.md)]</ph> 的新项目中，应调用由您的项目中的 <ph id="ph3">`HasVstoObject`</ph> 对象提供的 <ph id="ph4">`Globals.Factory`</ph> 方法。</target>       </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve" extradata="MT" uid="M:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.HasVstoObject(Microsoft.Office.Interop.Excel.ListObject,Microsoft.Office.Tools.Excel.Factory)">
+          <source>For more information, see <bpt id="p1">[</bpt>Programming Document-Level Customizations<ept id="p1">](/visualstudio/vsto/programming-document-level-customizations.md)</ept>.</source>
+          <target state="translated">有关详细信息，请参阅<bpt id="p1">[</bpt>文档级自定义项编程<ept id="p1">](/visualstudio/vsto/programming-document-level-customizations.md)</ept>。</target>       </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

@@ -1,712 +1,330 @@
-<Type Name="XMLNodes" FullName="Microsoft.Office.Tools.Word.XMLNodes">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="6849ccb01d8d8107184c3af50e6f0563f6ba074e" />
-    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
-    <Meta Name="ms.translationtype" Value="HT" />
-    <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface XMLNodes : IDisposable, System.ComponentModel.ISupportInitialize" />
-  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract XMLNodes implements class System.ComponentModel.ISupportInitialize, class System.IDisposable" />
-  <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Word.XMLNodes" />
-  <AssemblyInfo>
-    <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
-    <AssemblyVersion>10.0.0.0</AssemblyVersion>
-  </AssemblyInfo>
-  <Interfaces>
-    <Interface>
-      <InterfaceName>System.ComponentModel.ISupportInitialize</InterfaceName>
-    </Interface>
-    <Interface>
-      <InterfaceName>System.IDisposable</InterfaceName>
-    </Interface>
-  </Interfaces>
-  <Attributes>
-    <Attribute>
-      <AttributeName>System.Runtime.InteropServices.Guid("23ba8297-db6f-48b4-8730-8056ebde2d56")</AttributeName>
-    </Attribute>
-  </Attributes>
-  <Docs>
-    <summary>
-      <span data-ttu-id="35201-101">一个 <see cref="T:Microsoft.Office.Interop.Word.XMLNode" /> 对象集合，表示“XML 结构”任务窗格的树状视图（指示用户应用于文档的元素）中的节点。</span>
-      <span class="sxs-lookup">
-        <span data-stu-id="35201-101">A collection of <see cref="T:Microsoft.Office.Interop.Word.XMLNode" /> objects that represent the nodes in the tree view of the **XML Structure** task pane, which indicates the elements that a user has applied to a document.</span>
-      </span>
-    </summary>
-    <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- <span data-ttu-id="35201-102"><xref:Microsoft.Office.Tools.Word.XMLNodes>控件表示具有相同名称的 XML 元素的集合。</span><span class="sxs-lookup"><span data-stu-id="35201-102">The <xref:Microsoft.Office.Tools.Word.XMLNodes> control represents a collection of XML elements with the same name.</span></span> <span data-ttu-id="35201-103">当你映射架构允许显示不止一次到 Microsoft Office Word 文档在设计时，Visual Studio 创建的元素<xref:Microsoft.Office.Tools.Word.XMLNodes>的元素。</span><span class="sxs-lookup"><span data-stu-id="35201-103">When you map elements that the schema allows to appear more than once onto a Microsoft Office Word document at design time, Visual Studio creates <xref:Microsoft.Office.Tools.Word.XMLNodes> for the elements.</span></span> <span data-ttu-id="35201-104">架构可以允许元素时出现一次以上`maxOccurs`元素或元素的上级特性设置为 > 1。</span><span class="sxs-lookup"><span data-stu-id="35201-104">A schema can allow an element to appear more than once when the `maxOccurs` attribute of the element or the element's ancestors is set to > 1.</span></span>  
-  
- <span data-ttu-id="35201-105">如果架构集`maxOccurs`元素及其上级为 1，Visual Studio 的属性创建<xref:Microsoft.Office.Tools.Word.XMLNode>改为控制。</span><span class="sxs-lookup"><span data-stu-id="35201-105">If the schema sets the `maxOccurs` attribute for the element and its ancestors to 1, Visual Studio creates an <xref:Microsoft.Office.Tools.Word.XMLNode> control instead.</span></span>  
-  
- <span data-ttu-id="35201-106"><xref:Microsoft.Office.Tools.Word.XMLNodes> 在设计时，可以仅在 Word 文档级项目中创建控件。</span><span class="sxs-lookup"><span data-stu-id="35201-106"><xref:Microsoft.Office.Tools.Word.XMLNodes> controls can be created only in Word document-level projects at design time.</span></span> <span data-ttu-id="35201-107">也不能在运行时或在应用程序级项目中创建。</span><span class="sxs-lookup"><span data-stu-id="35201-107">They cannot be created at run time or in application-level projects.</span></span> <span data-ttu-id="35201-108">有关详细信息，请参阅[XMLNodes 控件](/visualstudio/vsto/xmlnodes-control.md)和[如何： 向 Word 文档添加 XMLNodes 控件](/visualstudio/vsto/how-to-add-xmlnodes-controls-to-word-documents.md)。</span><span class="sxs-lookup"><span data-stu-id="35201-108">For more information, see [XMLNodes Control](/visualstudio/vsto/xmlnodes-control.md) and [How to: Add XMLNodes Controls to Word Documents](/visualstudio/vsto/how-to-add-xmlnodes-controls-to-word-documents.md).</span></span>  
-  
- [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
-  
-## <a name="usage"></a><span data-ttu-id="35201-109">用法</span><span class="sxs-lookup"><span data-stu-id="35201-109">Usage</span></span>  
- [!INCLUDE[vsto_net35mref](~/includes/vsto-net35mref-md.md)]  
-  
- ]]></format>
-    </remarks>
-  </Docs>
-  <Members>
-    <Member MemberName="Add">
-      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Word.XMLNode Add (string Name, string Namespace, ref object Range);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.Interop.Word.XMLNode Add(string Name, string Namespace, object Range) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.XMLNodes.Add(System.String,System.String,System.Object@)" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
-        <AssemblyVersion>10.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Microsoft.Office.Interop.Word.XMLNode</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="Name" Type="System.String" />
-        <Parameter Name="Namespace" Type="System.String" />
-        <Parameter Name="Range" Type="System.Object&amp;" RefType="ref" />
-      </Parameters>
-      <Docs>
-        <param name="Name">
-          <span data-ttu-id="35201-110">在 <c>Namespace</c> 参数中指定的 XML 架构中的元素的名称。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="35201-110">The name of the element in the XML schema designated in the <c>Namespace</c> parameter.</span>
-          </span>
-          <span data-ttu-id="35201-111">因为 XML 区分大小写，所以在 <c>Namespace</c> 参数中指定的元素的拼写必须和它在架构中显示的完全一致。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="35201-111">Because XML is case-sensitive, the spelling of the element specified in the <c>Name</c> parameter must be exactly as it appears in the schema.</span>
-          </span>
-          <span data-ttu-id="35201-112">如果它与在 <c>Namespace</c> 参数中指定的架构中的任何一个元素名称都不匹配，则会显示一个错误。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="35201-112">If it does not match any of the element names in the schema specified in the <c>Namespace</c> parameter, an error is displayed.</span>
-          </span>
-        </param>
-        <param name="Namespace">
-          <span data-ttu-id="35201-113">在架构中定义的架构名称。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="35201-113">The name of the schema as defined in the schema.</span>
-          </span>
-          <span data-ttu-id="35201-114">
-            <c>Namespace</c> 参数区分大小写并且必须和它在架构中显示的名称拼写完全一致。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="35201-114">The <c>Namespace</c> parameter is case-sensitive and must be spelled exactly as it appears in the schema.</span>
-          </span>
-          <span data-ttu-id="35201-115">如果在附加到文档的任何架构中均无法找到指定的命名空间，则显示一个错误。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="35201-115">If the specified namespace cannot be found in any of the schemas attached to the document, an error is displayed.</span>
-          </span>
-        </param>
-        <param name="Range">
-          <span data-ttu-id="35201-116">要将该元素应用到的范围。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="35201-116">The range to which you want to apply the element.</span>
-          </span>
-          <span data-ttu-id="35201-117">默认为将元素标记放在插入点处或选定内容的周围（如果选择了一段文本）。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="35201-117">The default is to place the element tags at the insertion point or around the selection if a text is selected.</span>
-          </span>
-        </param>
-        <summary>
-          <span data-ttu-id="35201-118">获取一个表示新添加的元素的 <see cref="T:Microsoft.Office.Interop.Word.XMLNode" /> 对象。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="35201-118">Gets a <see cref="T:Microsoft.Office.Interop.Word.XMLNode" /> object that represents a newly added element.</span>
-          </span>
-        </summary>
-        <returns>
-          <span data-ttu-id="35201-119">一个表示新添加的元素的 <see cref="T:Microsoft.Office.Interop.Word.XMLNode" /> 对象。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="35201-119">A <see cref="T:Microsoft.Office.Interop.Word.XMLNode" /> object that represents a newly added element.</span>
-          </span>
-        </returns>
-        <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
-  
-## <a name="optional-parameters"></a><span data-ttu-id="35201-120">可选参数</span><span class="sxs-lookup"><span data-stu-id="35201-120">Optional Parameters</span></span>  
- <span data-ttu-id="35201-121">可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。</span><span class="sxs-lookup"><span data-stu-id="35201-121">For information on optional parameters, see [Optional Parameters in Office Solutions](/visualstudio/vsto/optional-parameters-in-office-solutions.md).</span></span>  
-  
-   
-  
-## Examples  
- <span data-ttu-id="35201-122">下面的代码示例演示了事件处理程序<xref:Microsoft.Office.Tools.Word.XMLNodes.AfterInsert>和<xref:Microsoft.Office.Tools.Word.XMLNodes.BeforeDelete>事件。</span><span class="sxs-lookup"><span data-stu-id="35201-122">The following code example demonstrates event handlers for the <xref:Microsoft.Office.Tools.Word.XMLNodes.AfterInsert> and <xref:Microsoft.Office.Tools.Word.XMLNodes.BeforeDelete> events.</span></span> <span data-ttu-id="35201-123">代码将显示消息框，然后<xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName>从文档和之后删除<xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName>添加到文档。</span><span class="sxs-lookup"><span data-stu-id="35201-123">The code displays a message box before a <xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName> is deleted from the document and after a <xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName> is added to the document.</span></span> <span data-ttu-id="35201-124">此示例还使用<xref:Microsoft.Office.Tools.Word.XMLNodes.Add%2A>方法添加到新的元素<xref:Microsoft.Office.Tools.Word.XMLNodes>集合在指定范围内并以编程方式引发<xref:Microsoft.Office.Tools.Word.XMLNodes.AfterInsert>事件。</span><span class="sxs-lookup"><span data-stu-id="35201-124">The example also uses the <xref:Microsoft.Office.Tools.Word.XMLNodes.Add%2A> method to add a new element to an <xref:Microsoft.Office.Tools.Word.XMLNodes> collection at a specified range and programmatically raise the <xref:Microsoft.Office.Tools.Word.XMLNodes.AfterInsert> event.</span></span> <span data-ttu-id="35201-125">此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNodes>集合名为`SampleInsertNodes`，其中具有父<xref:Microsoft.Office.Tools.Word.XMLNode>名为`SampleNode`。</span><span class="sxs-lookup"><span data-stu-id="35201-125">This example assumes that the current document contains an <xref:Microsoft.Office.Tools.Word.XMLNodes> collection named `SampleInsertNodes`, which has a parent <xref:Microsoft.Office.Tools.Word.XMLNode> named `SampleNode`.</span></span>  
-  
- [!code-csharp[Trin_WordXMLNodes#200](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNodes/CS/ThisDocument.cs#200)]
- [!code-vb[Trin_WordXMLNodes#200](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNodes/VB/ThisDocument.vb#200)]  
-  
- ]]></format>
-        </remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="AfterInsert">
-      <MemberSignature Language="C#" Value="public event Microsoft.Office.Tools.Word.NodeInsertAndDeleteEventHandler AfterInsert;" />
-      <MemberSignature Language="ILAsm" Value=".event class Microsoft.Office.Tools.Word.NodeInsertAndDeleteEventHandler AfterInsert" />
-      <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.Word.XMLNodes.AfterInsert" />
-      <MemberType>Event</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
-        <AssemblyVersion>10.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Microsoft.Office.Tools.Word.NodeInsertAndDeleteEventHandler</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-          <span data-ttu-id="35201-126">在用户向集合或其子代之一添加新的 <see cref="T:Microsoft.Office.Interop.Word.XMLNode" /> 时发生。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="35201-126">Occurs when the user adds a new <see cref="T:Microsoft.Office.Interop.Word.XMLNode" /> to the collection or to one of its descendents.</span>
-          </span>
-        </summary>
-        <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Examples  
- <span data-ttu-id="35201-127">下面的代码示例演示了事件处理程序<xref:Microsoft.Office.Tools.Word.XMLNodes.AfterInsert>和<xref:Microsoft.Office.Tools.Word.XMLNodes.BeforeDelete>事件。</span><span class="sxs-lookup"><span data-stu-id="35201-127">The following code example demonstrates event handlers for the <xref:Microsoft.Office.Tools.Word.XMLNodes.AfterInsert> and <xref:Microsoft.Office.Tools.Word.XMLNodes.BeforeDelete> events.</span></span> <span data-ttu-id="35201-128">代码将显示消息框，然后<xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName>从文档和之后删除<xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName>添加到文档。</span><span class="sxs-lookup"><span data-stu-id="35201-128">The code displays a message box before a <xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName> is deleted from the document and after a <xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName> is added to the document.</span></span> <span data-ttu-id="35201-129">此示例还使用<xref:Microsoft.Office.Tools.Word.XMLNodes.Add%2A>方法添加到新的元素<xref:Microsoft.Office.Tools.Word.XMLNodes>集合在指定范围内并以编程方式引发<xref:Microsoft.Office.Tools.Word.XMLNodes.AfterInsert>事件。</span><span class="sxs-lookup"><span data-stu-id="35201-129">The example also uses the <xref:Microsoft.Office.Tools.Word.XMLNodes.Add%2A> method to add a new element to an <xref:Microsoft.Office.Tools.Word.XMLNodes> collection at a specified range and programmatically raise the <xref:Microsoft.Office.Tools.Word.XMLNodes.AfterInsert> event.</span></span> <span data-ttu-id="35201-130">此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNodes>集合名为`SampleInsertNodes`，其中具有父<xref:Microsoft.Office.Tools.Word.XMLNode>名为`SampleNode`。</span><span class="sxs-lookup"><span data-stu-id="35201-130">This example assumes that the current document contains an <xref:Microsoft.Office.Tools.Word.XMLNodes> collection named `SampleInsertNodes`, which has a parent <xref:Microsoft.Office.Tools.Word.XMLNode> named `SampleNode`.</span></span>  
-  
- [!code-csharp[Trin_WordXMLNodes#200](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNodes/CS/ThisDocument.cs#200)]
- [!code-vb[Trin_WordXMLNodes#200](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNodes/VB/ThisDocument.vb#200)]  
-  
- ]]></format>
-        </remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="Application">
-      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Word.Application Application { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Interop.Word.Application Application" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.XMLNodes.Application" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
-        <AssemblyVersion>10.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Microsoft.Office.Interop.Word.Application</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-          <span data-ttu-id="35201-131">获取一个表示 Microsoft Office Word 应用程序的 <see cref="T:Microsoft.Office.Interop.Word.Application" /> 对象。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="35201-131">Gets a <see cref="T:Microsoft.Office.Interop.Word.Application" /> object that represents the Microsoft Office Word application.</span>
-          </span>
-        </summary>
-        <value>
-          <span data-ttu-id="35201-132">一个表示 Microsoft Office Word 应用程序的 <see cref="T:Microsoft.Office.Interop.Word.Application" /> 对象。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="35201-132">A <see cref="T:Microsoft.Office.Interop.Word.Application" /> object that represents the Microsoft Office Word application.</span>
-          </span>
-        </value>
-        <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Examples  
- <span data-ttu-id="35201-133">下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNodes.Application%2A>属性以最小化活动应用程序窗口。</span><span class="sxs-lookup"><span data-stu-id="35201-133">The following code example uses the <xref:Microsoft.Office.Tools.Word.XMLNodes.Application%2A> property to minimize the active application window.</span></span> <span data-ttu-id="35201-134">此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNodes>控件名为`InsertMemoToNodes`。</span><span class="sxs-lookup"><span data-stu-id="35201-134">This example assumes that the current document contains an <xref:Microsoft.Office.Tools.Word.XMLNodes> control named `InsertMemoToNodes`.</span></span>  
-  
- [!code-csharp[Trin_WordXMLNodes#1](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNodes/CS/ThisDocument.cs#1)]
- [!code-vb[Trin_WordXMLNodes#1](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNodes/VB/ThisDocument.vb#1)]  
-  
- ]]></format>
-        </remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="BeforeDelete">
-      <MemberSignature Language="C#" Value="public event Microsoft.Office.Tools.Word.NodeInsertAndDeleteEventHandler BeforeDelete;" />
-      <MemberSignature Language="ILAsm" Value=".event class Microsoft.Office.Tools.Word.NodeInsertAndDeleteEventHandler BeforeDelete" />
-      <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.Word.XMLNodes.BeforeDelete" />
-      <MemberType>Event</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
-        <AssemblyVersion>10.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Microsoft.Office.Tools.Word.NodeInsertAndDeleteEventHandler</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-          <span data-ttu-id="35201-135">当用户从集合中删除 <see cref="T:Microsoft.Office.Interop.Word.XMLNode" /> 或子代节点时，在该控件被删除之前发生。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="35201-135">Occurs when the user deletes a <see cref="T:Microsoft.Office.Interop.Word.XMLNode" /> or descendent node from the collection, before the control is deleted.</span>
-          </span>
-        </summary>
-        <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- <span data-ttu-id="35201-136">如果`InUndoRedo`参数是`true`，不应更改文档中的 XML。</span><span class="sxs-lookup"><span data-stu-id="35201-136">If the `InUndoRedo` parameter is `true`, you should not change the XML in the document.</span></span>  
-  
-   
-  
-## Examples  
- <span data-ttu-id="35201-137">下面的代码示例演示了事件处理程序<xref:Microsoft.Office.Tools.Word.XMLNodes.AfterInsert>和<xref:Microsoft.Office.Tools.Word.XMLNodes.BeforeDelete>事件。</span><span class="sxs-lookup"><span data-stu-id="35201-137">The following code example demonstrates event handlers for the <xref:Microsoft.Office.Tools.Word.XMLNodes.AfterInsert> and <xref:Microsoft.Office.Tools.Word.XMLNodes.BeforeDelete> events.</span></span> <span data-ttu-id="35201-138">代码将显示消息框，然后<xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName>从文档和之后删除<xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName>添加到文档。</span><span class="sxs-lookup"><span data-stu-id="35201-138">The code displays a message box before a <xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName> is deleted from the document and after a <xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName> is added to the document.</span></span> <span data-ttu-id="35201-139">此示例还使用<xref:Microsoft.Office.Tools.Word.XMLNodes.Add%2A>方法添加到新的元素<xref:Microsoft.Office.Tools.Word.XMLNodes>集合在指定范围内并以编程方式引发<xref:Microsoft.Office.Tools.Word.XMLNodes.AfterInsert>事件。</span><span class="sxs-lookup"><span data-stu-id="35201-139">The example also uses the <xref:Microsoft.Office.Tools.Word.XMLNodes.Add%2A> method to add a new element to an <xref:Microsoft.Office.Tools.Word.XMLNodes> collection at a specified range and programmatically raise the <xref:Microsoft.Office.Tools.Word.XMLNodes.AfterInsert> event.</span></span> <span data-ttu-id="35201-140">此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNodes>集合名为`SampleInsertNodes`，其中具有父<xref:Microsoft.Office.Tools.Word.XMLNode>名为`SampleNode`。</span><span class="sxs-lookup"><span data-stu-id="35201-140">This example assumes that the current document contains an <xref:Microsoft.Office.Tools.Word.XMLNodes> collection named `SampleInsertNodes`, which has a parent <xref:Microsoft.Office.Tools.Word.XMLNode> named `SampleNode`.</span></span>  
-  
- [!code-csharp[Trin_WordXMLNodes#200](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNodes/CS/ThisDocument.cs#200)]
- [!code-vb[Trin_WordXMLNodes#200](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNodes/VB/ThisDocument.vb#200)]  
-  
- ]]></format>
-        </remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="Container">
-      <MemberSignature Language="C#" Value="public System.ComponentModel.IContainer Container { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.IContainer Container" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.XMLNodes.Container" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
-        <AssemblyVersion>10.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.ComponentModel.IContainer</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="ContextEnter">
-      <MemberSignature Language="C#" Value="public event Microsoft.Office.Tools.Word.ContextChangeEventHandler ContextEnter;" />
-      <MemberSignature Language="ILAsm" Value=".event class Microsoft.Office.Tools.Word.ContextChangeEventHandler ContextEnter" />
-      <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter" />
-      <MemberType>Event</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
-        <AssemblyVersion>10.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Microsoft.Office.Tools.Word.ContextChangeEventHandler</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-          <span data-ttu-id="35201-141">当光标从节点上下文以外的区域移入 <see cref="T:Microsoft.Office.Tools.Word.XMLNodes" /> 集合的节点或子代节点之一时发生。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="35201-141">Occurs when the cursor is placed inside one of the nodes or descendant nodes of the <see cref="T:Microsoft.Office.Tools.Word.XMLNodes" /> collection, from an area outside of the context of the node.</span>
-          </span>
-        </summary>
-        <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- <span data-ttu-id="35201-142"><xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter>事件区别<xref:Microsoft.Office.Tools.Word.XMLNodes.Select>事件。</span><span class="sxs-lookup"><span data-stu-id="35201-142">The <xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter> event differs from the <xref:Microsoft.Office.Tools.Word.XMLNodes.Select> event.</span></span> <span data-ttu-id="35201-143"><xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter>仅上下文更改时引发事件并会引发多个<xref:Microsoft.Office.Tools.Word.XMLNodes>控件嵌套处于相同层次结构级别。</span><span class="sxs-lookup"><span data-stu-id="35201-143">The <xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter> event is raised only when the context changes and can be raised for multiple <xref:Microsoft.Office.Tools.Word.XMLNodes> controls nested at the same hierarchical level.</span></span> <span data-ttu-id="35201-144">有关详细信息，请参阅[XMLNodes 控件](/visualstudio/vsto/xmlnodes-control.md)。</span><span class="sxs-lookup"><span data-stu-id="35201-144">For more information, see [XMLNodes Control](/visualstudio/vsto/xmlnodes-control.md).</span></span>  
-  
-   
-  
-## Examples  
- <span data-ttu-id="35201-145">下面的代码示例演示了事件处理程序<xref:Microsoft.Office.Tools.Word.XMLNodes.Select>， <xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect>， <xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter>，和<xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave>事件。</span><span class="sxs-lookup"><span data-stu-id="35201-145">The following code example demonstrates event handlers for the <xref:Microsoft.Office.Tools.Word.XMLNodes.Select>, <xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect>, <xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter>, and <xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave> events.</span></span> <span data-ttu-id="35201-146">当<xref:Microsoft.Office.Tools.Word.XMLNodes.Select>和<xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect>将引发事件，事件处理程序添加到所选内容的边框的双线或删除双线，具体取决于事件。</span><span class="sxs-lookup"><span data-stu-id="35201-146">When the <xref:Microsoft.Office.Tools.Word.XMLNodes.Select> and <xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect> events are raised, the event handlers add double lines to the borders of the selection or remove the double lines, depending on the event.</span></span> <span data-ttu-id="35201-147">当<xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter>和<xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave>将引发事件，事件处理程序显示消息，指出新选择的节点和先前选择的节点的名称。</span><span class="sxs-lookup"><span data-stu-id="35201-147">When the <xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter> and <xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave> events are raised, the event handlers display messages that state the names of the newly selected node and the previously selected node.</span></span> <span data-ttu-id="35201-148">此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNodes>集合名为`SampleInsertNodes`。</span><span class="sxs-lookup"><span data-stu-id="35201-148">This example assumes that the current document contains an <xref:Microsoft.Office.Tools.Word.XMLNodes> collection named `SampleInsertNodes`.</span></span>  
-  
- [!code-csharp[Trin_WordXMLNodes#201](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNodes/CS/ThisDocument.cs#201)]
- [!code-vb[Trin_WordXMLNodes#201](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNodes/VB/ThisDocument.vb#201)]  
-  
- ]]></format>
-        </remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="ContextLeave">
-      <MemberSignature Language="C#" Value="public event Microsoft.Office.Tools.Word.ContextChangeEventHandler ContextLeave;" />
-      <MemberSignature Language="ILAsm" Value=".event class Microsoft.Office.Tools.Word.ContextChangeEventHandler ContextLeave" />
-      <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave" />
-      <MemberType>Event</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
-        <AssemblyVersion>10.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Microsoft.Office.Tools.Word.ContextChangeEventHandler</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-          <span data-ttu-id="35201-149">当光标从 <see cref="T:Microsoft.Office.Tools.Word.XMLNodes" /> 集合的节点或子代节点之一移到原始节点上下文以外的区域时发生。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="35201-149">Occurs when the cursor is moved from one of the nodes or descendant nodes of the <see cref="T:Microsoft.Office.Tools.Word.XMLNodes" /> collection, to an area outside of the context of the original node.</span>
-          </span>
-        </summary>
-        <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- <span data-ttu-id="35201-150"><xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave>事件区别<xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect>事件。</span><span class="sxs-lookup"><span data-stu-id="35201-150">The <xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave> event differs from the <xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect> event.</span></span> <span data-ttu-id="35201-151"><xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave>仅上下文更改时引发事件并会引发多个<xref:Microsoft.Office.Tools.Word.XMLNodes>控件嵌套处于相同层次结构级别。</span><span class="sxs-lookup"><span data-stu-id="35201-151">The <xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave> event is raised only when the context changes and can be raised for multiple <xref:Microsoft.Office.Tools.Word.XMLNodes> controls nested at the same hierarchical level.</span></span> <span data-ttu-id="35201-152">有关详细信息，请参阅[XMLNodes 控件](/visualstudio/vsto/xmlnodes-control.md)。</span><span class="sxs-lookup"><span data-stu-id="35201-152">For more information, see [XMLNodes Control](/visualstudio/vsto/xmlnodes-control.md).</span></span>  
-  
-   
-  
-## Examples  
- <span data-ttu-id="35201-153">下面的代码示例演示了事件处理程序<xref:Microsoft.Office.Tools.Word.XMLNodes.Select>， <xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect>， <xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter>，和<xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave>事件。</span><span class="sxs-lookup"><span data-stu-id="35201-153">The following code example demonstrates event handlers for the <xref:Microsoft.Office.Tools.Word.XMLNodes.Select>, <xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect>, <xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter>, and <xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave> events.</span></span> <span data-ttu-id="35201-154">当<xref:Microsoft.Office.Tools.Word.XMLNodes.Select>和<xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect>将引发事件，事件处理程序添加到所选内容的边框的双线或删除双线，具体取决于事件。</span><span class="sxs-lookup"><span data-stu-id="35201-154">When the <xref:Microsoft.Office.Tools.Word.XMLNodes.Select> and <xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect> events are raised, the event handlers add double lines to the borders of the selection or remove the double lines, depending on the event.</span></span> <span data-ttu-id="35201-155">当<xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter>和<xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave>将引发事件，事件处理程序显示消息，指出新选择的节点和先前选择的节点的名称。</span><span class="sxs-lookup"><span data-stu-id="35201-155">When the <xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter> and <xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave> events are raised, the event handlers display messages that state the names of the newly selected node and the previously selected node.</span></span> <span data-ttu-id="35201-156">此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNodes>集合名为`SampleInsertNodes`。</span><span class="sxs-lookup"><span data-stu-id="35201-156">This example assumes that the current document contains an <xref:Microsoft.Office.Tools.Word.XMLNodes> collection named `SampleInsertNodes`.</span></span>  
-  
- [!code-csharp[Trin_WordXMLNodes#201](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNodes/CS/ThisDocument.cs#201)]
- [!code-vb[Trin_WordXMLNodes#201](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNodes/VB/ThisDocument.vb#201)]  
-  
- ]]></format>
-        </remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="Count">
-      <MemberSignature Language="C#" Value="public int Count { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.XMLNodes.Count" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
-        <AssemblyVersion>10.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Int32</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-          <span data-ttu-id="35201-157">获取 <see cref="T:Microsoft.Office.Tools.Word.XMLNodes" /> 集合中项的数目。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="35201-157">Gets the number of items in the <see cref="T:Microsoft.Office.Tools.Word.XMLNodes" /> collection.</span>
-          </span>
-        </summary>
-        <value>
-          <span data-ttu-id="35201-158">
-            <see cref="T:Microsoft.Office.Tools.Word.XMLNodes" /> 集合中项的数目。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="35201-158">The number of items in the <see cref="T:Microsoft.Office.Tools.Word.XMLNodes" /> collection.</span>
-          </span>
-        </value>
-        <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Examples  
- <span data-ttu-id="35201-159">下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNodes.Count%2A>属性来显示中的项的数目<xref:Microsoft.Office.Tools.Word.XMLNodes>集合。</span><span class="sxs-lookup"><span data-stu-id="35201-159">The following code example uses the <xref:Microsoft.Office.Tools.Word.XMLNodes.Count%2A> property to display the number of items in an <xref:Microsoft.Office.Tools.Word.XMLNodes> collection.</span></span> <span data-ttu-id="35201-160">此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNodes>控件名为`SampleInsertNodes`。</span><span class="sxs-lookup"><span data-stu-id="35201-160">This example assumes that the current document contains an <xref:Microsoft.Office.Tools.Word.XMLNodes> control named `SampleInsertNodes`.</span></span>  
-  
- [!code-csharp[Trin_WordXMLNodes#2](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNodes/CS/ThisDocument.cs#2)]
- [!code-vb[Trin_WordXMLNodes#2](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNodes/VB/ThisDocument.vb#2)]  
-  
- ]]></format>
-        </remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="Creator">
-      <MemberSignature Language="C#" Value="public int Creator { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance int32 Creator" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.XMLNodes.Creator" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
-        <AssemblyVersion>10.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Int32</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-          <span data-ttu-id="35201-161">获取在其中创建 <see cref="T:Microsoft.Office.Tools.Word.XMLNodes" /> 控件的应用程序。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="35201-161">Gets the application in which the <see cref="T:Microsoft.Office.Tools.Word.XMLNodes" /> control was created.</span>
-          </span>
-        </summary>
-        <value>
-          <span data-ttu-id="35201-162">在其中创建 <see cref="T:Microsoft.Office.Tools.Word.XMLNodes" /> 控件的应用程序。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="35201-162">The application in which the <see cref="T:Microsoft.Office.Tools.Word.XMLNodes" /> control was created.</span>
-          </span>
-        </value>
-        <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- <span data-ttu-id="35201-163">因为<xref:Microsoft.Office.Tools.Word.XMLNodes>在 Microsoft Office Word 中创建集合，则此属性返回的十六进制数 4d535744，它表示字符串"MSWD。"</span><span class="sxs-lookup"><span data-stu-id="35201-163">Because the <xref:Microsoft.Office.Tools.Word.XMLNodes> collection was created in Microsoft Office Word, this property returns the hexadecimal number 4D535744, which represents the string "MSWD."</span></span> <span data-ttu-id="35201-164">此值也可以表示由常数<xref:Microsoft.Office.Interop.Word.WdConstants.wdCreatorCode>。</span><span class="sxs-lookup"><span data-stu-id="35201-164">This value can also be represented by the constant <xref:Microsoft.Office.Interop.Word.WdConstants.wdCreatorCode>.</span></span>  
-  
-   
-  
-## Examples  
- <span data-ttu-id="35201-165">下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNodes.Count%2A>属性来显示是否<xref:Microsoft.Office.Tools.Word.XMLNodes>在 Microsoft Office Word 中创建控件。</span><span class="sxs-lookup"><span data-stu-id="35201-165">The following code example uses the <xref:Microsoft.Office.Tools.Word.XMLNodes.Count%2A> property to display whether an <xref:Microsoft.Office.Tools.Word.XMLNodes> control was created in Microsoft Office Word.</span></span> <span data-ttu-id="35201-166">此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNodes>控件名为`InsertMemoToNodes`。</span><span class="sxs-lookup"><span data-stu-id="35201-166">This example assumes that the current document contains an <xref:Microsoft.Office.Tools.Word.XMLNodes> control named `InsertMemoToNodes`.</span></span>  
-  
- [!code-csharp[Trin_WordXMLNodes#3](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNodes/CS/ThisDocument.cs#3)]
- [!code-vb[Trin_WordXMLNodes#3](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNodes/VB/ThisDocument.vb#3)]  
-  
- ]]></format>
-        </remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="Deselect">
-      <MemberSignature Language="C#" Value="public event Microsoft.Office.Tools.Word.ContextChangeEventHandler Deselect;" />
-      <MemberSignature Language="ILAsm" Value=".event class Microsoft.Office.Tools.Word.ContextChangeEventHandler Deselect" />
-      <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.Word.XMLNodes.Deselect" />
-      <MemberType>Event</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
-        <AssemblyVersion>10.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Microsoft.Office.Tools.Word.ContextChangeEventHandler</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-          <span data-ttu-id="35201-167">当光标从 <see cref="T:Microsoft.Office.Tools.Word.XMLNodes" /> 集合的节点之一移出时发生。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="35201-167">Occurs when the cursor is moved out of one of the nodes of the <see cref="T:Microsoft.Office.Tools.Word.XMLNodes" /> collection.</span>
-          </span>
-        </summary>
-        <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- <span data-ttu-id="35201-168"><xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect>事件区别<xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave>事件。</span><span class="sxs-lookup"><span data-stu-id="35201-168">The <xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect> event differs from the <xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave> event.</span></span> <span data-ttu-id="35201-169">有关详细信息，请参阅[XMLNodes 控件](/visualstudio/vsto/xmlnodes-control.md)。</span><span class="sxs-lookup"><span data-stu-id="35201-169">For more information, see [XMLNodes Control](/visualstudio/vsto/xmlnodes-control.md).</span></span>  
-  
-   
-  
-## Examples  
- <span data-ttu-id="35201-170">下面的代码示例演示了事件处理程序<xref:Microsoft.Office.Tools.Word.XMLNodes.Select>， <xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect>， <xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter>，和<xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave>事件。</span><span class="sxs-lookup"><span data-stu-id="35201-170">The following code example demonstrates event handlers for the <xref:Microsoft.Office.Tools.Word.XMLNodes.Select>, <xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect>, <xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter>, and <xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave> events.</span></span> <span data-ttu-id="35201-171">当<xref:Microsoft.Office.Tools.Word.XMLNodes.Select>和<xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect>将引发事件，事件处理程序添加到所选内容的边框的双线或删除双线，具体取决于事件。</span><span class="sxs-lookup"><span data-stu-id="35201-171">When the <xref:Microsoft.Office.Tools.Word.XMLNodes.Select> and <xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect> events are raised, the event handlers add double lines to the borders of the selection or remove the double lines, depending on the event.</span></span> <span data-ttu-id="35201-172">当<xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter>和<xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave>将引发事件，事件处理程序显示消息，指出新选择的节点和先前选择的节点的名称。</span><span class="sxs-lookup"><span data-stu-id="35201-172">When the <xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter> and <xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave> events are raised, the event handlers display messages that state the names of the newly selected node and the previously selected node.</span></span> <span data-ttu-id="35201-173">此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNodes>集合名为`SampleInsertNodes`。</span><span class="sxs-lookup"><span data-stu-id="35201-173">This example assumes that the current document contains an <xref:Microsoft.Office.Tools.Word.XMLNodes> collection named `SampleInsertNodes`.</span></span>  
-  
- [!code-csharp[Trin_WordXMLNodes#201](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNodes/CS/ThisDocument.cs#201)]
- [!code-vb[Trin_WordXMLNodes#201](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNodes/VB/ThisDocument.vb#201)]  
-  
- ]]></format>
-        </remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="GetEnumerator">
-      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.XMLNodes.GetEnumerator" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
-        <AssemblyVersion>10.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Collections.IEnumerator</ReturnType>
-      </ReturnValue>
-      <Parameters />
-      <Docs>
-        <summary>
-          <span data-ttu-id="35201-174">获取 <see cref="T:Microsoft.Office.Tools.Word.XMLNodes" /> 控件的枚举器。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="35201-174">Gets the enumerator for the <see cref="T:Microsoft.Office.Tools.Word.XMLNodes" /> control.</span>
-          </span>
-        </summary>
-        <returns>
-          <span data-ttu-id="35201-175">
-            <see cref="T:Microsoft.Office.Tools.Word.XMLNodes" /> 控件的枚举器。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="35201-175">The enumerator for the <see cref="T:Microsoft.Office.Tools.Word.XMLNodes" /> control.</span>
-          </span>
-        </returns>
-        <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Examples  
- <span data-ttu-id="35201-176">下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNodes.GetEnumerator%2A>方法以获取的枚举数<xref:Microsoft.Office.Tools.Word.XMLNodes>集合，然后循环访问集合。</span><span class="sxs-lookup"><span data-stu-id="35201-176">The following code example uses the <xref:Microsoft.Office.Tools.Word.XMLNodes.GetEnumerator%2A> method to get an enumerator for an <xref:Microsoft.Office.Tools.Word.XMLNodes> collection and then iterate through the collection.</span></span> <span data-ttu-id="35201-177">此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNodes>控件名为`SampleInsertNodes`。</span><span class="sxs-lookup"><span data-stu-id="35201-177">This example assumes that the current document contains an <xref:Microsoft.Office.Tools.Word.XMLNodes> control named `SampleInsertNodes`.</span></span>  
-  
- [!code-csharp[Trin_WordXMLNodes#100](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNodes/CS/ThisDocument.cs#100)]
- [!code-vb[Trin_WordXMLNodes#100](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNodes/VB/ThisDocument.vb#100)]  
-  
- ]]></format>
-        </remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="InnerObject">
-      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Word.XMLNodes InnerObject { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Interop.Word.XMLNodes InnerObject" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.XMLNodes.InnerObject" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
-        <AssemblyVersion>10.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Microsoft.Office.Interop.Word.XMLNodes</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-          <span data-ttu-id="35201-178">获取一个 <see cref="T:Microsoft.Office.Interop.Word.XMLNodes" />，它表示 <see cref="T:Microsoft.Office.Tools.Word.XMLNodes" /> 控件的基础本机对象。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="35201-178">Gets a <see cref="T:Microsoft.Office.Interop.Word.XMLNodes" /> that represents the underlying native object for the <see cref="T:Microsoft.Office.Tools.Word.XMLNodes" /> control.</span>
-          </span>
-        </summary>
-        <value>
-          <span data-ttu-id="35201-179">一个 <see cref="T:Microsoft.Office.Interop.Word.XMLNodes" />，表示 <see cref="T:Microsoft.Office.Tools.Word.XMLNodes" /> 控件的基础本机对象。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="35201-179">A <see cref="T:Microsoft.Office.Interop.Word.XMLNodes" /> that represents the underlying native object for the <see cref="T:Microsoft.Office.Tools.Word.XMLNodes" /> control.</span>
-          </span>
-        </value>
-        <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- <span data-ttu-id="35201-180">不能将传递<xref:Microsoft.Office.Tools.Word.XMLNodes?displayProperty=fullName>控件添加到方法或属性需要基础对象 ( <xref:Microsoft.Office.Interop.Word.XMLNodes?displayProperty=fullName>)。</span><span class="sxs-lookup"><span data-stu-id="35201-180">You cannot pass a <xref:Microsoft.Office.Tools.Word.XMLNodes?displayProperty=fullName> control to a method or property that expects the underlying object (a <xref:Microsoft.Office.Interop.Word.XMLNodes?displayProperty=fullName>).</span></span> <span data-ttu-id="35201-181">必须使用<xref:Microsoft.Office.Tools.Word.XMLNodes.InnerObject%2A>属性<xref:Microsoft.Office.Tools.Word.XMLNodes?displayProperty=fullName>控件，用于访问基础<xref:Microsoft.Office.Interop.Word.XMLNodes?displayProperty=fullName>。</span><span class="sxs-lookup"><span data-stu-id="35201-181">You must use the <xref:Microsoft.Office.Tools.Word.XMLNodes.InnerObject%2A> property of the <xref:Microsoft.Office.Tools.Word.XMLNodes?displayProperty=fullName> control to access the underlying <xref:Microsoft.Office.Interop.Word.XMLNodes?displayProperty=fullName>.</span></span> <span data-ttu-id="35201-182">然后将该对象传递给方法或属性需要<xref:Microsoft.Office.Interop.Word.XMLNodes?displayProperty=fullName>。</span><span class="sxs-lookup"><span data-stu-id="35201-182">You then pass this object to a method or property that expects a <xref:Microsoft.Office.Interop.Word.XMLNodes?displayProperty=fullName>.</span></span> <span data-ttu-id="35201-183">有关详细信息，请参阅[限制的主机项和主机控件编程](/visualstudio/vsto/programmatic-limitations-of-host-items-and-host-controls.md)。</span><span class="sxs-lookup"><span data-stu-id="35201-183">For more information, see [Programmatic Limitations of Host Items and Host Controls](/visualstudio/vsto/programmatic-limitations-of-host-items-and-host-controls.md).</span></span>  
-  
- ]]></format>
-        </remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="Item">
-      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Word.XMLNode this[int Index] { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Interop.Word.XMLNode Item(int32)" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.XMLNodes.Item(System.Int32)" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
-        <AssemblyVersion>10.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Microsoft.Office.Interop.Word.XMLNode</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="Index" Type="System.Int32" />
-      </Parameters>
-      <Docs>
-        <param name="Index">
-          <span data-ttu-id="35201-184">指示要检索的节点的位置。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="35201-184">Indicates the position of the node that you want to retrieve.</span>
-          </span>
-        </param>
-        <summary>
-          <span data-ttu-id="35201-185">获取位于指定索引处的 <see cref="T:Microsoft.Office.Interop.Word.XMLNode" />。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="35201-185">Gets the <see cref="T:Microsoft.Office.Interop.Word.XMLNode" /> at the specified index.</span>
-          </span>
-        </summary>
-        <value>
-          <span data-ttu-id="35201-186">位于指定索引处的 <see cref="T:Microsoft.Office.Interop.Word.XMLNode" />。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="35201-186">The <see cref="T:Microsoft.Office.Interop.Word.XMLNode" /> at the specified index.</span>
-          </span>
-        </value>
-        <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- <span data-ttu-id="35201-187"><xref:Microsoft.Office.Tools.Word.XMLNodes.Item%2A>属性返回<xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName>对象而不是<xref:Microsoft.Office.Tools.Word.XMLNode?displayProperty=fullName>控件。</span><span class="sxs-lookup"><span data-stu-id="35201-187">The <xref:Microsoft.Office.Tools.Word.XMLNodes.Item%2A> property returns a <xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName> object rather than a <xref:Microsoft.Office.Tools.Word.XMLNode?displayProperty=fullName> control.</span></span> <span data-ttu-id="35201-188">有关详细信息，请参阅[限制的主机项和主机控件编程](/visualstudio/vsto/programmatic-limitations-of-host-items-and-host-controls.md)。</span><span class="sxs-lookup"><span data-stu-id="35201-188">For more information, see [Programmatic Limitations of Host Items and Host Controls](/visualstudio/vsto/programmatic-limitations-of-host-items-and-host-controls.md).</span></span>  
-  
-   
-  
-## Examples  
- <span data-ttu-id="35201-189">下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNodes.Item%2A>属性来获取第一个<xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName>中<xref:Microsoft.Office.Tools.Word.XMLNodes>集合。</span><span class="sxs-lookup"><span data-stu-id="35201-189">The following code example uses the <xref:Microsoft.Office.Tools.Word.XMLNodes.Item%2A> property to get the first <xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName> in an <xref:Microsoft.Office.Tools.Word.XMLNodes> collection.</span></span> <span data-ttu-id="35201-190">该示例使用<xref:Microsoft.Office.Tools.Word.XMLNodes.Item%2A>指定集合中的特定索引时隐式的属性。</span><span class="sxs-lookup"><span data-stu-id="35201-190">The example uses the <xref:Microsoft.Office.Tools.Word.XMLNodes.Item%2A> property implicitly when a specific index of the collection is specified.</span></span> <span data-ttu-id="35201-191">此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNodes>控件名为`SampleInsertNodes`。</span><span class="sxs-lookup"><span data-stu-id="35201-191">This example assumes that the current document contains an <xref:Microsoft.Office.Tools.Word.XMLNodes> control named `SampleInsertNodes`.</span></span>  
-  
- [!code-csharp[Trin_WordXMLNodes#4](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNodes/CS/ThisDocument.cs#4)]
- [!code-vb[Trin_WordXMLNodes#4](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNodes/VB/ThisDocument.vb#4)]  
-  
- ]]></format>
-        </remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="Parent">
-      <MemberSignature Language="C#" Value="public object Parent { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance object Parent" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.XMLNodes.Parent" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
-        <AssemblyVersion>10.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Object</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-          <span data-ttu-id="35201-192">获取一个 <see cref="T:Microsoft.Office.Interop.Word.Document" />，它表示包含 <see cref="T:Microsoft.Office.Tools.Word.XMLNodes" /> 集合的文档。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="35201-192">Gets a <see cref="T:Microsoft.Office.Interop.Word.Document" /> that represents the document containing the <see cref="T:Microsoft.Office.Tools.Word.XMLNodes" /> collection.</span>
-          </span>
-        </summary>
-        <value>
-          <span data-ttu-id="35201-193">一个 <see cref="T:Microsoft.Office.Interop.Word.Document" />，表示包含 <see cref="T:Microsoft.Office.Tools.Word.XMLNodes" /> 集合的文档。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="35201-193">A <see cref="T:Microsoft.Office.Interop.Word.Document" /> that represents the document containing the <see cref="T:Microsoft.Office.Tools.Word.XMLNodes" /> collection.</span>
-          </span>
-        </value>
-        <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Examples  
- <span data-ttu-id="35201-194">下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNodes.Parent%2A>属性来显示的名称的父文档<xref:Microsoft.Office.Tools.Word.XMLNodes>集合。</span><span class="sxs-lookup"><span data-stu-id="35201-194">The following code example uses the <xref:Microsoft.Office.Tools.Word.XMLNodes.Parent%2A> property to display the name of the parent document of an <xref:Microsoft.Office.Tools.Word.XMLNodes> collection.</span></span> <span data-ttu-id="35201-195">此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNodes>控件名为`SampleInsertNodes`。</span><span class="sxs-lookup"><span data-stu-id="35201-195">This example assumes that the current document contains an <xref:Microsoft.Office.Tools.Word.XMLNodes> control named `SampleInsertNodes`.</span></span>  
-  
- [!code-csharp[Trin_WordXMLNodes#5](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNodes/CS/ThisDocument.cs#5)]
- [!code-vb[Trin_WordXMLNodes#5](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNodes/VB/ThisDocument.vb#5)]  
-  
- ]]></format>
-        </remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="Select">
-      <MemberSignature Language="C#" Value="public event Microsoft.Office.Tools.Word.ContextChangeEventHandler Select;" />
-      <MemberSignature Language="ILAsm" Value=".event class Microsoft.Office.Tools.Word.ContextChangeEventHandler Select" />
-      <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.Word.XMLNodes.Select" />
-      <MemberType>Event</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
-        <AssemblyVersion>10.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Microsoft.Office.Tools.Word.ContextChangeEventHandler</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-          <span data-ttu-id="35201-196">当光标放置在 <see cref="T:Microsoft.Office.Tools.Word.XMLNodes" /> 集合的一个节点中时发生此事件。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="35201-196">Occurs when the cursor is placed inside one of the nodes of the <see cref="T:Microsoft.Office.Tools.Word.XMLNodes" /> collection.</span>
-          </span>
-        </summary>
-        <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- <span data-ttu-id="35201-197"><xref:Microsoft.Office.Tools.Word.XMLNodes.Select>事件区别<xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter>事件。</span><span class="sxs-lookup"><span data-stu-id="35201-197">The <xref:Microsoft.Office.Tools.Word.XMLNodes.Select> event differs from the <xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter> event.</span></span> <span data-ttu-id="35201-198">有关详细信息，请参阅[XMLNodes 控件](/visualstudio/vsto/xmlnodes-control.md)。</span><span class="sxs-lookup"><span data-stu-id="35201-198">For more information, see [XMLNodes Control](/visualstudio/vsto/xmlnodes-control.md).</span></span>  
-  
-   
-  
-## Examples  
- <span data-ttu-id="35201-199">下面的代码示例演示了事件处理程序<xref:Microsoft.Office.Tools.Word.XMLNodes.Select>， <xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect>， <xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter>，和<xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave>事件。</span><span class="sxs-lookup"><span data-stu-id="35201-199">The following code example demonstrates event handlers for the <xref:Microsoft.Office.Tools.Word.XMLNodes.Select>, <xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect>, <xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter>, and <xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave> events.</span></span> <span data-ttu-id="35201-200">当<xref:Microsoft.Office.Tools.Word.XMLNodes.Select>和<xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect>将引发事件，事件处理程序添加到所选内容的边框的双线或删除双线，具体取决于事件。</span><span class="sxs-lookup"><span data-stu-id="35201-200">When the <xref:Microsoft.Office.Tools.Word.XMLNodes.Select> and <xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect> events are raised, the event handlers add double lines to the borders of the selection or remove the double lines, depending on the event.</span></span> <span data-ttu-id="35201-201">当<xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter>和<xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave>将引发事件，事件处理程序显示消息，指出新选择的节点和先前选择的节点的名称。</span><span class="sxs-lookup"><span data-stu-id="35201-201">When the <xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter> and <xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave> events are raised, the event handlers display messages that state the names of the newly selected node and the previously selected node.</span></span> <span data-ttu-id="35201-202">此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNodes>集合名为`SampleInsertNodes`。</span><span class="sxs-lookup"><span data-stu-id="35201-202">This example assumes that the current document contains an <xref:Microsoft.Office.Tools.Word.XMLNodes> collection named `SampleInsertNodes`.</span></span>  
-  
- [!code-csharp[Trin_WordXMLNodes#201](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNodes/CS/ThisDocument.cs#201)]
- [!code-vb[Trin_WordXMLNodes#201](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNodes/VB/ThisDocument.vb#201)]  
-  
- ]]></format>
-        </remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="Tag">
-      <MemberSignature Language="C#" Value="public object Tag { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance object Tag" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Word.XMLNodes.Tag" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
-        <AssemblyVersion>10.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Object</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="ValidationError">
-      <MemberSignature Language="C#" Value="public event EventHandler ValidationError;" />
-      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ValidationError" />
-      <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.Word.XMLNodes.ValidationError" />
-      <MemberType>Event</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
-        <AssemblyVersion>10.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.EventHandler</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-          <span data-ttu-id="35201-203">当在 <see cref="T:Microsoft.Office.Tools.Word.XMLNodes" /> 控件中存在验证错误时发生。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="35201-203">Occurs when there is a validation error in the <see cref="T:Microsoft.Office.Tools.Word.XMLNodes" /> control.</span>
-          </span>
-        </summary>
-        <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- <span data-ttu-id="35201-204">如果**附加架构验证文档**设置选项，则为集合中每个无效元素，将引发此事件。</span><span class="sxs-lookup"><span data-stu-id="35201-204">If the **Validate document against attached schema** option is set, this event is raised for every invalid element in the collection.</span></span>  
-  
- ]]></format>
-        </remarks>
-      </Docs>
-    </Member>
-  </Members>
-</Type>
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="XMLNodes.xml" source-language="en-US" target-language="zh-CN">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-38f25dd" tool-company="Microsoft" />
+      <xliffext:skl_file_name xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">b4690f9a-9e49-426d-9091-855b10fda4db6849ccb01d8d8107184c3af50e6f0563f6ba074e.skl</xliffext:skl_file_name>
+      <xliffext:version xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">1.2</xliffext:version>
+      <xliffext:ms.openlocfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">6849ccb01d8d8107184c3af50e6f0563f6ba074e</xliffext:ms.openlocfilehash>
+      <xliffext:ms.sourcegitcommit xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">bb8a3a96823cedeffbdbcc0c41a8118399de8074</xliffext:ms.sourcegitcommit>
+      <xliffext:ms.lasthandoff xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">02/21/2018</xliffext:ms.lasthandoff>
+      <xliffext:moniker_ids xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">vsto-2017</xliffext:moniker_ids>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve" uid="T:Microsoft.Office.Tools.Word.XMLNodes">
+          <source>A collection of <ph id="ph1">&lt;see cref="T:Microsoft.Office.Interop.Word.XMLNode" /&gt;</ph> objects that represent the nodes in the tree view of the <bpt id="p1">**</bpt>XML Structure<ept id="p1">**</ept> task pane, which indicates the elements that a user has applied to a document.</source>
+          <target state="translated">一个 <ph id="ph1">&lt;see cref="T:Microsoft.Office.Interop.Word.XMLNode" /&gt;</ph> 对象集合，表示“XML 结构”任务窗格的树状视图（指示用户应用于文档的元素）中的节点。</target>       </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve" extradata="MT" uid="T:Microsoft.Office.Tools.Word.XMLNodes">
+          <source>The <ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes&gt;</ph> control represents a collection of XML elements with the same name.</source>
+          <target state="translated"><ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes&gt;</ph>控件表示具有相同名称的 XML 元素的集合。</target>       </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve" extradata="MT" uid="T:Microsoft.Office.Tools.Word.XMLNodes">
+          <source>When you map elements that the schema allows to appear more than once onto a Microsoft Office Word document at design time, Visual Studio creates <ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes&gt;</ph> for the elements.</source>
+          <target state="translated">当你映射架构允许显示不止一次到 Microsoft Office Word 文档在设计时，Visual Studio 创建的元素<ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes&gt;</ph>的元素。</target>       </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve" extradata="MT" uid="T:Microsoft.Office.Tools.Word.XMLNodes">
+          <source>A schema can allow an element to appear more than once when the <ph id="ph1">`maxOccurs`</ph> attribute of the element or the element's ancestors is set to &gt; 1.</source>
+          <target state="translated">架构可以允许元素时出现一次以上<ph id="ph1">`maxOccurs`</ph>元素或元素的上级特性设置为 &gt; 1。</target>       </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve" extradata="MT" uid="T:Microsoft.Office.Tools.Word.XMLNodes">
+          <source>If the schema sets the <ph id="ph1">`maxOccurs`</ph> attribute for the element and its ancestors to 1, Visual Studio creates an <ph id="ph2">&lt;xref:Microsoft.Office.Tools.Word.XMLNode&gt;</ph> control instead.</source>
+          <target state="translated">如果架构集<ph id="ph1">`maxOccurs`</ph>元素及其上级为 1，Visual Studio 的属性创建<ph id="ph2">&lt;xref:Microsoft.Office.Tools.Word.XMLNode&gt;</ph>改为控制。</target>       </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve" extradata="MT" uid="T:Microsoft.Office.Tools.Word.XMLNodes">
+          <source><ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes&gt;</ph> controls can be created only in Word document-level projects at design time.</source>
+          <target state="translated"><ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes&gt;</ph> 在设计时，可以仅在 Word 文档级项目中创建控件。</target>       </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve" extradata="MT" uid="T:Microsoft.Office.Tools.Word.XMLNodes">
+          <source>They cannot be created at run time or in application-level projects.</source>
+          <target state="translated">也不能在运行时或在应用程序级项目中创建。</target>       </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve" extradata="MT" uid="T:Microsoft.Office.Tools.Word.XMLNodes">
+          <source>For more information, see <bpt id="p1">[</bpt>XMLNodes Control<ept id="p1">](/visualstudio/vsto/xmlnodes-control.md)</ept> and <bpt id="p2">[</bpt>How to: Add XMLNodes Controls to Word Documents<ept id="p2">](/visualstudio/vsto/how-to-add-xmlnodes-controls-to-word-documents.md)</ept>.</source>
+          <target state="translated">有关详细信息，请参阅<bpt id="p1">[</bpt>XMLNodes 控件<ept id="p1">](/visualstudio/vsto/xmlnodes-control.md)</ept>和<bpt id="p2">[</bpt>如何： 向 Word 文档添加 XMLNodes 控件<ept id="p2">](/visualstudio/vsto/how-to-add-xmlnodes-controls-to-word-documents.md)</ept>。</target>       </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve" extradata="MT" uid="T:Microsoft.Office.Tools.Word.XMLNodes">
+          <source>Usage</source>
+          <target state="translated">用法</target>       </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve" uid="M:Microsoft.Office.Tools.Word.XMLNodes.Add(System.String,System.String,System.Object@)">
+          <source>The name of the element in the XML schema designated in the <bpt id="p1">&lt;c&gt;</bpt>Namespace<ept id="p1">&lt;/c&gt;</ept> parameter.</source>
+          <target state="translated">在 <bpt id="p1">&lt;c&gt;</bpt>Namespace<ept id="p1">&lt;/c&gt;</ept> 参数中指定的 XML 架构中的元素的名称。</target>       </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve" uid="M:Microsoft.Office.Tools.Word.XMLNodes.Add(System.String,System.String,System.Object@)">
+          <source>Because XML is case-sensitive, the spelling of the element specified in the <bpt id="p1">&lt;c&gt;</bpt>Name<ept id="p1">&lt;/c&gt;</ept> parameter must be exactly as it appears in the schema.</source>
+          <target state="translated">因为 XML 区分大小写，所以在 <bpt id="p1">&lt;c&gt;</bpt>Namespace<ept id="p1">&lt;/c&gt;</ept> 参数中指定的元素的拼写必须和它在架构中显示的完全一致。</target>       </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve" uid="M:Microsoft.Office.Tools.Word.XMLNodes.Add(System.String,System.String,System.Object@)">
+          <source>If it does not match any of the element names in the schema specified in the <bpt id="p1">&lt;c&gt;</bpt>Namespace<ept id="p1">&lt;/c&gt;</ept> parameter, an error is displayed.</source>
+          <target state="translated">如果它与在 <bpt id="p1">&lt;c&gt;</bpt>Namespace<ept id="p1">&lt;/c&gt;</ept> 参数中指定的架构中的任何一个元素名称都不匹配，则会显示一个错误。</target>       </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve" uid="M:Microsoft.Office.Tools.Word.XMLNodes.Add(System.String,System.String,System.Object@)">
+          <source>The name of the schema as defined in the schema.</source>
+          <target state="translated">在架构中定义的架构名称。</target>       </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve" uid="M:Microsoft.Office.Tools.Word.XMLNodes.Add(System.String,System.String,System.Object@)">
+          <source>The <bpt id="p1">&lt;c&gt;</bpt>Namespace<ept id="p1">&lt;/c&gt;</ept> parameter is case-sensitive and must be spelled exactly as it appears in the schema.</source>
+          <target state="translated"><bpt id="p1">&lt;c&gt;</bpt>Namespace<ept id="p1">&lt;/c&gt;</ept> 参数区分大小写并且必须和它在架构中显示的名称拼写完全一致。</target>       </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve" uid="M:Microsoft.Office.Tools.Word.XMLNodes.Add(System.String,System.String,System.Object@)">
+          <source>If the specified namespace cannot be found in any of the schemas attached to the document, an error is displayed.</source>
+          <target state="translated">如果在附加到文档的任何架构中均无法找到指定的命名空间，则显示一个错误。</target>       </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve" uid="M:Microsoft.Office.Tools.Word.XMLNodes.Add(System.String,System.String,System.Object@)">
+          <source>The range to which you want to apply the element.</source>
+          <target state="translated">要将该元素应用到的范围。</target>       </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve" uid="M:Microsoft.Office.Tools.Word.XMLNodes.Add(System.String,System.String,System.Object@)">
+          <source>The default is to place the element tags at the insertion point or around the selection if a text is selected.</source>
+          <target state="translated">默认为将元素标记放在插入点处或选定内容的周围（如果选择了一段文本）。</target>       </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve" uid="M:Microsoft.Office.Tools.Word.XMLNodes.Add(System.String,System.String,System.Object@)">
+          <source>Gets a <ph id="ph1">&lt;see cref="T:Microsoft.Office.Interop.Word.XMLNode" /&gt;</ph> object that represents a newly added element.</source>
+          <target state="translated">获取一个表示新添加的元素的 <ph id="ph1">&lt;see cref="T:Microsoft.Office.Interop.Word.XMLNode" /&gt;</ph> 对象。</target>       </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve" uid="M:Microsoft.Office.Tools.Word.XMLNodes.Add(System.String,System.String,System.Object@)">
+          <source>A <ph id="ph1">&lt;see cref="T:Microsoft.Office.Interop.Word.XMLNode" /&gt;</ph> object that represents a newly added element.</source>
+          <target state="translated">一个表示新添加的元素的 <ph id="ph1">&lt;see cref="T:Microsoft.Office.Interop.Word.XMLNode" /&gt;</ph> 对象。</target>       </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve" extradata="MT" uid="M:Microsoft.Office.Tools.Word.XMLNodes.Add(System.String,System.String,System.Object@)">
+          <source>Optional Parameters</source>
+          <target state="translated">可选参数</target>       </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve" extradata="MT" uid="M:Microsoft.Office.Tools.Word.XMLNodes.Add(System.String,System.String,System.Object@)">
+          <source>For information on optional parameters, see <bpt id="p1">[</bpt>Optional Parameters in Office Solutions<ept id="p1">](/visualstudio/vsto/optional-parameters-in-office-solutions.md)</ept>.</source>
+          <target state="translated">可选参数的信息，请参阅<bpt id="p1">[</bpt>Office 解决方案中的可选参数<ept id="p1">](/visualstudio/vsto/optional-parameters-in-office-solutions.md)</ept>。</target>       </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve" extradata="MT" uid="M:Microsoft.Office.Tools.Word.XMLNodes.Add(System.String,System.String,System.Object@)">
+          <source>The following code example demonstrates event handlers for the <ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.AfterInsert&gt;</ph> and <ph id="ph2">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.BeforeDelete&gt;</ph> events.</source>
+          <target state="translated">下面的代码示例演示了事件处理程序<ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.AfterInsert&gt;</ph>和<ph id="ph2">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.BeforeDelete&gt;</ph>事件。</target>       </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve" extradata="MT" uid="M:Microsoft.Office.Tools.Word.XMLNodes.Add(System.String,System.String,System.Object@)">
+          <source>The code displays a message box before a <ph id="ph1">&lt;xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName&gt;</ph> is deleted from the document and after a <ph id="ph2">&lt;xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName&gt;</ph> is added to the document.</source>
+          <target state="translated">代码将显示消息框，然后<ph id="ph1">&lt;xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName&gt;</ph>从文档和之后删除<ph id="ph2">&lt;xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName&gt;</ph>添加到文档。</target>       </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve" extradata="MT" uid="M:Microsoft.Office.Tools.Word.XMLNodes.Add(System.String,System.String,System.Object@)">
+          <source>The example also uses the <ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.Add%2A&gt;</ph> method to add a new element to an <ph id="ph2">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes&gt;</ph> collection at a specified range and programmatically raise the <ph id="ph3">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.AfterInsert&gt;</ph> event.</source>
+          <target state="translated">此示例还使用<ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.Add%2A&gt;</ph>方法添加到新的元素<ph id="ph2">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes&gt;</ph>集合在指定范围内并以编程方式引发<ph id="ph3">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.AfterInsert&gt;</ph>事件。</target>       </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve" extradata="MT" uid="M:Microsoft.Office.Tools.Word.XMLNodes.Add(System.String,System.String,System.Object@)">
+          <source>This example assumes that the current document contains an <ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes&gt;</ph> collection named <ph id="ph2">`SampleInsertNodes`</ph>, which has a parent <ph id="ph3">&lt;xref:Microsoft.Office.Tools.Word.XMLNode&gt;</ph> named <ph id="ph4">`SampleNode`</ph>.</source>
+          <target state="translated">此示例假定当前文档包含<ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes&gt;</ph>集合名为<ph id="ph2">`SampleInsertNodes`</ph>，其中具有父<ph id="ph3">&lt;xref:Microsoft.Office.Tools.Word.XMLNode&gt;</ph>名为<ph id="ph4">`SampleNode`</ph>。</target>       </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve" uid="E:Microsoft.Office.Tools.Word.XMLNodes.AfterInsert">
+          <source>Occurs when the user adds a new <ph id="ph1">&lt;see cref="T:Microsoft.Office.Interop.Word.XMLNode" /&gt;</ph> to the collection or to one of its descendents.</source>
+          <target state="translated">在用户向集合或其子代之一添加新的 <ph id="ph1">&lt;see cref="T:Microsoft.Office.Interop.Word.XMLNode" /&gt;</ph> 时发生。</target>       </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve" extradata="MT" uid="E:Microsoft.Office.Tools.Word.XMLNodes.AfterInsert">
+          <source>The following code example demonstrates event handlers for the <ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.AfterInsert&gt;</ph> and <ph id="ph2">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.BeforeDelete&gt;</ph> events.</source>
+          <target state="translated">下面的代码示例演示了事件处理程序<ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.AfterInsert&gt;</ph>和<ph id="ph2">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.BeforeDelete&gt;</ph>事件。</target>       </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve" extradata="MT" uid="E:Microsoft.Office.Tools.Word.XMLNodes.AfterInsert">
+          <source>The code displays a message box before a <ph id="ph1">&lt;xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName&gt;</ph> is deleted from the document and after a <ph id="ph2">&lt;xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName&gt;</ph> is added to the document.</source>
+          <target state="translated">代码将显示消息框，然后<ph id="ph1">&lt;xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName&gt;</ph>从文档和之后删除<ph id="ph2">&lt;xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName&gt;</ph>添加到文档。</target>       </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve" extradata="MT" uid="E:Microsoft.Office.Tools.Word.XMLNodes.AfterInsert">
+          <source>The example also uses the <ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.Add%2A&gt;</ph> method to add a new element to an <ph id="ph2">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes&gt;</ph> collection at a specified range and programmatically raise the <ph id="ph3">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.AfterInsert&gt;</ph> event.</source>
+          <target state="translated">此示例还使用<ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.Add%2A&gt;</ph>方法添加到新的元素<ph id="ph2">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes&gt;</ph>集合在指定范围内并以编程方式引发<ph id="ph3">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.AfterInsert&gt;</ph>事件。</target>       </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve" extradata="MT" uid="E:Microsoft.Office.Tools.Word.XMLNodes.AfterInsert">
+          <source>This example assumes that the current document contains an <ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes&gt;</ph> collection named <ph id="ph2">`SampleInsertNodes`</ph>, which has a parent <ph id="ph3">&lt;xref:Microsoft.Office.Tools.Word.XMLNode&gt;</ph> named <ph id="ph4">`SampleNode`</ph>.</source>
+          <target state="translated">此示例假定当前文档包含<ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes&gt;</ph>集合名为<ph id="ph2">`SampleInsertNodes`</ph>，其中具有父<ph id="ph3">&lt;xref:Microsoft.Office.Tools.Word.XMLNode&gt;</ph>名为<ph id="ph4">`SampleNode`</ph>。</target>       </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve" uid="P:Microsoft.Office.Tools.Word.XMLNodes.Application">
+          <source>Gets a <ph id="ph1">&lt;see cref="T:Microsoft.Office.Interop.Word.Application" /&gt;</ph> object that represents the Microsoft Office Word application.</source>
+          <target state="translated">获取一个表示 Microsoft Office Word 应用程序的 <ph id="ph1">&lt;see cref="T:Microsoft.Office.Interop.Word.Application" /&gt;</ph> 对象。</target>       </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve" extradata="MT" uid="P:Microsoft.Office.Tools.Word.XMLNodes.Application">
+          <source>A <ph id="ph1">&lt;see cref="T:Microsoft.Office.Interop.Word.Application" /&gt;</ph> object that represents the Microsoft Office Word application.</source>
+          <target state="translated">一个表示 Microsoft Office Word 应用程序的 <ph id="ph1">&lt;see cref="T:Microsoft.Office.Interop.Word.Application" /&gt;</ph> 对象。</target>       </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve" extradata="MT" uid="P:Microsoft.Office.Tools.Word.XMLNodes.Application">
+          <source>The following code example uses the <ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.Application%2A&gt;</ph> property to minimize the active application window.</source>
+          <target state="translated">下面的代码示例使用<ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.Application%2A&gt;</ph>属性以最小化活动应用程序窗口。</target>       </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve" extradata="MT" uid="P:Microsoft.Office.Tools.Word.XMLNodes.Application">
+          <source>This example assumes that the current document contains an <ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes&gt;</ph> control named <ph id="ph2">`InsertMemoToNodes`</ph>.</source>
+          <target state="translated">此示例假定当前文档包含<ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes&gt;</ph>控件名为<ph id="ph2">`InsertMemoToNodes`</ph>。</target>       </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve" uid="E:Microsoft.Office.Tools.Word.XMLNodes.BeforeDelete">
+          <source>Occurs when the user deletes a <ph id="ph1">&lt;see cref="T:Microsoft.Office.Interop.Word.XMLNode" /&gt;</ph> or descendent node from the collection, before the control is deleted.</source>
+          <target state="translated">当用户从集合中删除 <ph id="ph1">&lt;see cref="T:Microsoft.Office.Interop.Word.XMLNode" /&gt;</ph> 或子代节点时，在该控件被删除之前发生。</target>       </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve" extradata="MT" uid="E:Microsoft.Office.Tools.Word.XMLNodes.BeforeDelete">
+          <source>If the <ph id="ph1">`InUndoRedo`</ph> parameter is <ph id="ph2">`true`</ph>, you should not change the XML in the document.</source>
+          <target state="translated">如果<ph id="ph1">`InUndoRedo`</ph>参数是<ph id="ph2">`true`</ph>，不应更改文档中的 XML。</target>       </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve" extradata="MT" uid="E:Microsoft.Office.Tools.Word.XMLNodes.BeforeDelete">
+          <source>The following code example demonstrates event handlers for the <ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.AfterInsert&gt;</ph> and <ph id="ph2">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.BeforeDelete&gt;</ph> events.</source>
+          <target state="translated">下面的代码示例演示了事件处理程序<ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.AfterInsert&gt;</ph>和<ph id="ph2">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.BeforeDelete&gt;</ph>事件。</target>       </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve" extradata="MT" uid="E:Microsoft.Office.Tools.Word.XMLNodes.BeforeDelete">
+          <source>The code displays a message box before a <ph id="ph1">&lt;xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName&gt;</ph> is deleted from the document and after a <ph id="ph2">&lt;xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName&gt;</ph> is added to the document.</source>
+          <target state="translated">代码将显示消息框，然后<ph id="ph1">&lt;xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName&gt;</ph>从文档和之后删除<ph id="ph2">&lt;xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName&gt;</ph>添加到文档。</target>       </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve" extradata="MT" uid="E:Microsoft.Office.Tools.Word.XMLNodes.BeforeDelete">
+          <source>The example also uses the <ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.Add%2A&gt;</ph> method to add a new element to an <ph id="ph2">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes&gt;</ph> collection at a specified range and programmatically raise the <ph id="ph3">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.AfterInsert&gt;</ph> event.</source>
+          <target state="translated">此示例还使用<ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.Add%2A&gt;</ph>方法添加到新的元素<ph id="ph2">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes&gt;</ph>集合在指定范围内并以编程方式引发<ph id="ph3">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.AfterInsert&gt;</ph>事件。</target>       </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve" extradata="MT" uid="E:Microsoft.Office.Tools.Word.XMLNodes.BeforeDelete">
+          <source>This example assumes that the current document contains an <ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes&gt;</ph> collection named <ph id="ph2">`SampleInsertNodes`</ph>, which has a parent <ph id="ph3">&lt;xref:Microsoft.Office.Tools.Word.XMLNode&gt;</ph> named <ph id="ph4">`SampleNode`</ph>.</source>
+          <target state="translated">此示例假定当前文档包含<ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes&gt;</ph>集合名为<ph id="ph2">`SampleInsertNodes`</ph>，其中具有父<ph id="ph3">&lt;xref:Microsoft.Office.Tools.Word.XMLNode&gt;</ph>名为<ph id="ph4">`SampleNode`</ph>。</target>       </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve" uid="E:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter">
+          <source>Occurs when the cursor is placed inside one of the nodes or descendant nodes of the <ph id="ph1">&lt;see cref="T:Microsoft.Office.Tools.Word.XMLNodes" /&gt;</ph> collection, from an area outside of the context of the node.</source>
+          <target state="translated">当光标从节点上下文以外的区域移入 <ph id="ph1">&lt;see cref="T:Microsoft.Office.Tools.Word.XMLNodes" /&gt;</ph> 集合的节点或子代节点之一时发生。</target>       </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve" extradata="MT" uid="E:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter">
+          <source>The <ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter&gt;</ph> event differs from the <ph id="ph2">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.Select&gt;</ph> event.</source>
+          <target state="translated"><ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter&gt;</ph>事件区别<ph id="ph2">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.Select&gt;</ph>事件。</target>       </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve" extradata="MT" uid="E:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter">
+          <source>The <ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter&gt;</ph> event is raised only when the context changes and can be raised for multiple <ph id="ph2">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes&gt;</ph> controls nested at the same hierarchical level.</source>
+          <target state="translated"><ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter&gt;</ph>仅上下文更改时引发事件并会引发多个<ph id="ph2">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes&gt;</ph>控件嵌套处于相同层次结构级别。</target>       </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve" extradata="MT" uid="E:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter">
+          <source>For more information, see <bpt id="p1">[</bpt>XMLNodes Control<ept id="p1">](/visualstudio/vsto/xmlnodes-control.md)</ept>.</source>
+          <target state="translated">有关详细信息，请参阅<bpt id="p1">[</bpt>XMLNodes 控件<ept id="p1">](/visualstudio/vsto/xmlnodes-control.md)</ept>。</target>       </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve" extradata="MT" uid="E:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter">
+          <source>The following code example demonstrates event handlers for the <ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.Select&gt;</ph>, <ph id="ph2">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect&gt;</ph>, <ph id="ph3">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter&gt;</ph>, and <ph id="ph4">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave&gt;</ph> events.</source>
+          <target state="translated">下面的代码示例演示了事件处理程序<ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.Select&gt;</ph>， <ph id="ph2">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect&gt;</ph>， <ph id="ph3">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter&gt;</ph>，和<ph id="ph4">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave&gt;</ph>事件。</target>       </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve" extradata="MT" uid="E:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter">
+          <source>When the <ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.Select&gt;</ph> and <ph id="ph2">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect&gt;</ph> events are raised, the event handlers add double lines to the borders of the selection or remove the double lines, depending on the event.</source>
+          <target state="translated">当<ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.Select&gt;</ph>和<ph id="ph2">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect&gt;</ph>将引发事件，事件处理程序添加到所选内容的边框的双线或删除双线，具体取决于事件。</target>       </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve" extradata="MT" uid="E:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter">
+          <source>When the <ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter&gt;</ph> and <ph id="ph2">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave&gt;</ph> events are raised, the event handlers display messages that state the names of the newly selected node and the previously selected node.</source>
+          <target state="translated">当<ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter&gt;</ph>和<ph id="ph2">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave&gt;</ph>将引发事件，事件处理程序显示消息，指出新选择的节点和先前选择的节点的名称。</target>       </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve" extradata="MT" uid="E:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter">
+          <source>This example assumes that the current document contains an <ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes&gt;</ph> collection named <ph id="ph2">`SampleInsertNodes`</ph>.</source>
+          <target state="translated">此示例假定当前文档包含<ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes&gt;</ph>集合名为<ph id="ph2">`SampleInsertNodes`</ph>。</target>       </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve" uid="E:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave">
+          <source>Occurs when the cursor is moved from one of the nodes or descendant nodes of the <ph id="ph1">&lt;see cref="T:Microsoft.Office.Tools.Word.XMLNodes" /&gt;</ph> collection, to an area outside of the context of the original node.</source>
+          <target state="translated">当光标从 <ph id="ph1">&lt;see cref="T:Microsoft.Office.Tools.Word.XMLNodes" /&gt;</ph> 集合的节点或子代节点之一移到原始节点上下文以外的区域时发生。</target>       </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve" extradata="MT" uid="E:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave">
+          <source>The <ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave&gt;</ph> event differs from the <ph id="ph2">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect&gt;</ph> event.</source>
+          <target state="translated"><ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave&gt;</ph>事件区别<ph id="ph2">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect&gt;</ph>事件。</target>       </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve" extradata="MT" uid="E:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave">
+          <source>The <ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave&gt;</ph> event is raised only when the context changes and can be raised for multiple <ph id="ph2">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes&gt;</ph> controls nested at the same hierarchical level.</source>
+          <target state="translated"><ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave&gt;</ph>仅上下文更改时引发事件并会引发多个<ph id="ph2">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes&gt;</ph>控件嵌套处于相同层次结构级别。</target>       </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve" extradata="MT" uid="E:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave">
+          <source>For more information, see <bpt id="p1">[</bpt>XMLNodes Control<ept id="p1">](/visualstudio/vsto/xmlnodes-control.md)</ept>.</source>
+          <target state="translated">有关详细信息，请参阅<bpt id="p1">[</bpt>XMLNodes 控件<ept id="p1">](/visualstudio/vsto/xmlnodes-control.md)</ept>。</target>       </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve" extradata="MT" uid="E:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave">
+          <source>The following code example demonstrates event handlers for the <ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.Select&gt;</ph>, <ph id="ph2">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect&gt;</ph>, <ph id="ph3">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter&gt;</ph>, and <ph id="ph4">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave&gt;</ph> events.</source>
+          <target state="translated">下面的代码示例演示了事件处理程序<ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.Select&gt;</ph>， <ph id="ph2">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect&gt;</ph>， <ph id="ph3">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter&gt;</ph>，和<ph id="ph4">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave&gt;</ph>事件。</target>       </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve" extradata="MT" uid="E:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave">
+          <source>When the <ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.Select&gt;</ph> and <ph id="ph2">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect&gt;</ph> events are raised, the event handlers add double lines to the borders of the selection or remove the double lines, depending on the event.</source>
+          <target state="translated">当<ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.Select&gt;</ph>和<ph id="ph2">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect&gt;</ph>将引发事件，事件处理程序添加到所选内容的边框的双线或删除双线，具体取决于事件。</target>       </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve" extradata="MT" uid="E:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave">
+          <source>When the <ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter&gt;</ph> and <ph id="ph2">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave&gt;</ph> events are raised, the event handlers display messages that state the names of the newly selected node and the previously selected node.</source>
+          <target state="translated">当<ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter&gt;</ph>和<ph id="ph2">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave&gt;</ph>将引发事件，事件处理程序显示消息，指出新选择的节点和先前选择的节点的名称。</target>       </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve" extradata="MT" uid="E:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave">
+          <source>This example assumes that the current document contains an <ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes&gt;</ph> collection named <ph id="ph2">`SampleInsertNodes`</ph>.</source>
+          <target state="translated">此示例假定当前文档包含<ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes&gt;</ph>集合名为<ph id="ph2">`SampleInsertNodes`</ph>。</target>       </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve" uid="P:Microsoft.Office.Tools.Word.XMLNodes.Count">
+          <source>Gets the number of items in the <ph id="ph1">&lt;see cref="T:Microsoft.Office.Tools.Word.XMLNodes" /&gt;</ph> collection.</source>
+          <target state="translated">获取 <ph id="ph1">&lt;see cref="T:Microsoft.Office.Tools.Word.XMLNodes" /&gt;</ph> 集合中项的数目。</target>       </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve" extradata="MT" uid="P:Microsoft.Office.Tools.Word.XMLNodes.Count">
+          <source>The number of items in the <ph id="ph1">&lt;see cref="T:Microsoft.Office.Tools.Word.XMLNodes" /&gt;</ph> collection.</source>
+          <target state="translated"><ph id="ph1">&lt;see cref="T:Microsoft.Office.Tools.Word.XMLNodes" /&gt;</ph> 集合中项的数目。</target>       </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve" extradata="MT" uid="P:Microsoft.Office.Tools.Word.XMLNodes.Count">
+          <source>The following code example uses the <ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.Count%2A&gt;</ph> property to display the number of items in an <ph id="ph2">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes&gt;</ph> collection.</source>
+          <target state="translated">下面的代码示例使用<ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.Count%2A&gt;</ph>属性来显示中的项的数目<ph id="ph2">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes&gt;</ph>集合。</target>       </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve" extradata="MT" uid="P:Microsoft.Office.Tools.Word.XMLNodes.Count">
+          <source>This example assumes that the current document contains an <ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes&gt;</ph> control named <ph id="ph2">`SampleInsertNodes`</ph>.</source>
+          <target state="translated">此示例假定当前文档包含<ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes&gt;</ph>控件名为<ph id="ph2">`SampleInsertNodes`</ph>。</target>       </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve" uid="P:Microsoft.Office.Tools.Word.XMLNodes.Creator">
+          <source>Gets the application in which the <ph id="ph1">&lt;see cref="T:Microsoft.Office.Tools.Word.XMLNodes" /&gt;</ph> control was created.</source>
+          <target state="translated">获取在其中创建 <ph id="ph1">&lt;see cref="T:Microsoft.Office.Tools.Word.XMLNodes" /&gt;</ph> 控件的应用程序。</target>       </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve" extradata="MT" uid="P:Microsoft.Office.Tools.Word.XMLNodes.Creator">
+          <source>The application in which the <ph id="ph1">&lt;see cref="T:Microsoft.Office.Tools.Word.XMLNodes" /&gt;</ph> control was created.</source>
+          <target state="translated">在其中创建 <ph id="ph1">&lt;see cref="T:Microsoft.Office.Tools.Word.XMLNodes" /&gt;</ph> 控件的应用程序。</target>       </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve" extradata="MT" uid="P:Microsoft.Office.Tools.Word.XMLNodes.Creator">
+          <source>Because the <ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes&gt;</ph> collection was created in Microsoft Office Word, this property returns the hexadecimal number 4D535744, which represents the string "MSWD."</source>
+          <target state="translated">因为<ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes&gt;</ph>在 Microsoft Office Word 中创建集合，则此属性返回的十六进制数 4d535744，它表示字符串"MSWD。"</target>       </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve" extradata="MT" uid="P:Microsoft.Office.Tools.Word.XMLNodes.Creator">
+          <source>This value can also be represented by the constant <ph id="ph1">&lt;xref:Microsoft.Office.Interop.Word.WdConstants.wdCreatorCode&gt;</ph>.</source>
+          <target state="translated">此值也可以表示由常数<ph id="ph1">&lt;xref:Microsoft.Office.Interop.Word.WdConstants.wdCreatorCode&gt;</ph>。</target>       </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve" extradata="MT" uid="P:Microsoft.Office.Tools.Word.XMLNodes.Creator">
+          <source>The following code example uses the <ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.Count%2A&gt;</ph> property to display whether an <ph id="ph2">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes&gt;</ph> control was created in Microsoft Office Word.</source>
+          <target state="translated">下面的代码示例使用<ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.Count%2A&gt;</ph>属性来显示是否<ph id="ph2">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes&gt;</ph>在 Microsoft Office Word 中创建控件。</target>       </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve" extradata="MT" uid="P:Microsoft.Office.Tools.Word.XMLNodes.Creator">
+          <source>This example assumes that the current document contains an <ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes&gt;</ph> control named <ph id="ph2">`InsertMemoToNodes`</ph>.</source>
+          <target state="translated">此示例假定当前文档包含<ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes&gt;</ph>控件名为<ph id="ph2">`InsertMemoToNodes`</ph>。</target>       </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve" uid="E:Microsoft.Office.Tools.Word.XMLNodes.Deselect">
+          <source>Occurs when the cursor is moved out of one of the nodes of the <ph id="ph1">&lt;see cref="T:Microsoft.Office.Tools.Word.XMLNodes" /&gt;</ph> collection.</source>
+          <target state="translated">当光标从 <ph id="ph1">&lt;see cref="T:Microsoft.Office.Tools.Word.XMLNodes" /&gt;</ph> 集合的节点之一移出时发生。</target>       </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve" extradata="MT" uid="E:Microsoft.Office.Tools.Word.XMLNodes.Deselect">
+          <source>The <ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect&gt;</ph> event differs from the <ph id="ph2">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave&gt;</ph> event.</source>
+          <target state="translated"><ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect&gt;</ph>事件区别<ph id="ph2">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave&gt;</ph>事件。</target>       </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve" extradata="MT" uid="E:Microsoft.Office.Tools.Word.XMLNodes.Deselect">
+          <source>For more information, see <bpt id="p1">[</bpt>XMLNodes Control<ept id="p1">](/visualstudio/vsto/xmlnodes-control.md)</ept>.</source>
+          <target state="translated">有关详细信息，请参阅<bpt id="p1">[</bpt>XMLNodes 控件<ept id="p1">](/visualstudio/vsto/xmlnodes-control.md)</ept>。</target>       </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve" extradata="MT" uid="E:Microsoft.Office.Tools.Word.XMLNodes.Deselect">
+          <source>The following code example demonstrates event handlers for the <ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.Select&gt;</ph>, <ph id="ph2">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect&gt;</ph>, <ph id="ph3">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter&gt;</ph>, and <ph id="ph4">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave&gt;</ph> events.</source>
+          <target state="translated">下面的代码示例演示了事件处理程序<ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.Select&gt;</ph>， <ph id="ph2">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect&gt;</ph>， <ph id="ph3">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter&gt;</ph>，和<ph id="ph4">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave&gt;</ph>事件。</target>       </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve" extradata="MT" uid="E:Microsoft.Office.Tools.Word.XMLNodes.Deselect">
+          <source>When the <ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.Select&gt;</ph> and <ph id="ph2">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect&gt;</ph> events are raised, the event handlers add double lines to the borders of the selection or remove the double lines, depending on the event.</source>
+          <target state="translated">当<ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.Select&gt;</ph>和<ph id="ph2">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect&gt;</ph>将引发事件，事件处理程序添加到所选内容的边框的双线或删除双线，具体取决于事件。</target>       </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve" extradata="MT" uid="E:Microsoft.Office.Tools.Word.XMLNodes.Deselect">
+          <source>When the <ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter&gt;</ph> and <ph id="ph2">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave&gt;</ph> events are raised, the event handlers display messages that state the names of the newly selected node and the previously selected node.</source>
+          <target state="translated">当<ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter&gt;</ph>和<ph id="ph2">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave&gt;</ph>将引发事件，事件处理程序显示消息，指出新选择的节点和先前选择的节点的名称。</target>       </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve" extradata="MT" uid="E:Microsoft.Office.Tools.Word.XMLNodes.Deselect">
+          <source>This example assumes that the current document contains an <ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes&gt;</ph> collection named <ph id="ph2">`SampleInsertNodes`</ph>.</source>
+          <target state="translated">此示例假定当前文档包含<ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes&gt;</ph>集合名为<ph id="ph2">`SampleInsertNodes`</ph>。</target>       </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve" uid="M:Microsoft.Office.Tools.Word.XMLNodes.GetEnumerator">
+          <source>Gets the enumerator for the <ph id="ph1">&lt;see cref="T:Microsoft.Office.Tools.Word.XMLNodes" /&gt;</ph> control.</source>
+          <target state="translated">获取 <ph id="ph1">&lt;see cref="T:Microsoft.Office.Tools.Word.XMLNodes" /&gt;</ph> 控件的枚举器。</target>       </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve" uid="M:Microsoft.Office.Tools.Word.XMLNodes.GetEnumerator">
+          <source>The enumerator for the <ph id="ph1">&lt;see cref="T:Microsoft.Office.Tools.Word.XMLNodes" /&gt;</ph> control.</source>
+          <target state="translated"><ph id="ph1">&lt;see cref="T:Microsoft.Office.Tools.Word.XMLNodes" /&gt;</ph> 控件的枚举器。</target>       </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve" extradata="MT" uid="M:Microsoft.Office.Tools.Word.XMLNodes.GetEnumerator">
+          <source>The following code example uses the <ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.GetEnumerator%2A&gt;</ph> method to get an enumerator for an <ph id="ph2">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes&gt;</ph> collection and then iterate through the collection.</source>
+          <target state="translated">下面的代码示例使用<ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.GetEnumerator%2A&gt;</ph>方法以获取的枚举数<ph id="ph2">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes&gt;</ph>集合，然后循环访问集合。</target>       </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve" extradata="MT" uid="M:Microsoft.Office.Tools.Word.XMLNodes.GetEnumerator">
+          <source>This example assumes that the current document contains an <ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes&gt;</ph> control named <ph id="ph2">`SampleInsertNodes`</ph>.</source>
+          <target state="translated">此示例假定当前文档包含<ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes&gt;</ph>控件名为<ph id="ph2">`SampleInsertNodes`</ph>。</target>       </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve" uid="P:Microsoft.Office.Tools.Word.XMLNodes.InnerObject">
+          <source>Gets a <ph id="ph1">&lt;see cref="T:Microsoft.Office.Interop.Word.XMLNodes" /&gt;</ph> that represents the underlying native object for the <ph id="ph2">&lt;see cref="T:Microsoft.Office.Tools.Word.XMLNodes" /&gt;</ph> control.</source>
+          <target state="translated">获取一个 <ph id="ph1">&lt;see cref="T:Microsoft.Office.Interop.Word.XMLNodes" /&gt;</ph>，它表示 <ph id="ph2">&lt;see cref="T:Microsoft.Office.Tools.Word.XMLNodes" /&gt;</ph> 控件的基础本机对象。</target>       </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve" extradata="MT" uid="P:Microsoft.Office.Tools.Word.XMLNodes.InnerObject">
+          <source>A <ph id="ph1">&lt;see cref="T:Microsoft.Office.Interop.Word.XMLNodes" /&gt;</ph> that represents the underlying native object for the <ph id="ph2">&lt;see cref="T:Microsoft.Office.Tools.Word.XMLNodes" /&gt;</ph> control.</source>
+          <target state="translated">一个 <ph id="ph1">&lt;see cref="T:Microsoft.Office.Interop.Word.XMLNodes" /&gt;</ph>，表示 <ph id="ph2">&lt;see cref="T:Microsoft.Office.Tools.Word.XMLNodes" /&gt;</ph> 控件的基础本机对象。</target>       </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve" extradata="MT" uid="P:Microsoft.Office.Tools.Word.XMLNodes.InnerObject">
+          <source>You cannot pass a <ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes?displayProperty=fullName&gt;</ph> control to a method or property that expects the underlying object (a <ph id="ph2">&lt;xref:Microsoft.Office.Interop.Word.XMLNodes?displayProperty=fullName&gt;</ph>).</source>
+          <target state="translated">不能将传递<ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes?displayProperty=fullName&gt;</ph>控件添加到方法或属性需要基础对象 ( <ph id="ph2">&lt;xref:Microsoft.Office.Interop.Word.XMLNodes?displayProperty=fullName&gt;</ph>)。</target>       </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve" extradata="MT" uid="P:Microsoft.Office.Tools.Word.XMLNodes.InnerObject">
+          <source>You must use the <ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.InnerObject%2A&gt;</ph> property of the <ph id="ph2">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes?displayProperty=fullName&gt;</ph> control to access the underlying <ph id="ph3">&lt;xref:Microsoft.Office.Interop.Word.XMLNodes?displayProperty=fullName&gt;</ph>.</source>
+          <target state="translated">必须使用<ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.InnerObject%2A&gt;</ph>属性<ph id="ph2">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes?displayProperty=fullName&gt;</ph>控件，用于访问基础<ph id="ph3">&lt;xref:Microsoft.Office.Interop.Word.XMLNodes?displayProperty=fullName&gt;</ph>。</target>       </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve" extradata="MT" uid="P:Microsoft.Office.Tools.Word.XMLNodes.InnerObject">
+          <source>You then pass this object to a method or property that expects a <ph id="ph1">&lt;xref:Microsoft.Office.Interop.Word.XMLNodes?displayProperty=fullName&gt;</ph>.</source>
+          <target state="translated">然后将该对象传递给方法或属性需要<ph id="ph1">&lt;xref:Microsoft.Office.Interop.Word.XMLNodes?displayProperty=fullName&gt;</ph>。</target>       </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve" extradata="MT" uid="P:Microsoft.Office.Tools.Word.XMLNodes.InnerObject">
+          <source>For more information, see <bpt id="p1">[</bpt>Programmatic Limitations of Host Items and Host Controls<ept id="p1">](/visualstudio/vsto/programmatic-limitations-of-host-items-and-host-controls.md)</ept>.</source>
+          <target state="translated">有关详细信息，请参阅<bpt id="p1">[</bpt>限制的主机项和主机控件编程<ept id="p1">](/visualstudio/vsto/programmatic-limitations-of-host-items-and-host-controls.md)</ept>。</target>       </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve" uid="P:Microsoft.Office.Tools.Word.XMLNodes.Item(System.Int32)">
+          <source>Indicates the position of the node that you want to retrieve.</source>
+          <target state="translated">指示要检索的节点的位置。</target>       </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve" uid="P:Microsoft.Office.Tools.Word.XMLNodes.Item(System.Int32)">
+          <source>Gets the <ph id="ph1">&lt;see cref="T:Microsoft.Office.Interop.Word.XMLNode" /&gt;</ph> at the specified index.</source>
+          <target state="translated">获取位于指定索引处的 <ph id="ph1">&lt;see cref="T:Microsoft.Office.Interop.Word.XMLNode" /&gt;</ph>。</target>       </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve" extradata="MT" uid="P:Microsoft.Office.Tools.Word.XMLNodes.Item(System.Int32)">
+          <source>The <ph id="ph1">&lt;see cref="T:Microsoft.Office.Interop.Word.XMLNode" /&gt;</ph> at the specified index.</source>
+          <target state="translated">位于指定索引处的 <ph id="ph1">&lt;see cref="T:Microsoft.Office.Interop.Word.XMLNode" /&gt;</ph>。</target>       </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve" extradata="MT" uid="P:Microsoft.Office.Tools.Word.XMLNodes.Item(System.Int32)">
+          <source>The <ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.Item%2A&gt;</ph> property returns a <ph id="ph2">&lt;xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName&gt;</ph> object rather than a <ph id="ph3">&lt;xref:Microsoft.Office.Tools.Word.XMLNode?displayProperty=fullName&gt;</ph> control.</source>
+          <target state="translated"><ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.Item%2A&gt;</ph>属性返回<ph id="ph2">&lt;xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName&gt;</ph>对象而不是<ph id="ph3">&lt;xref:Microsoft.Office.Tools.Word.XMLNode?displayProperty=fullName&gt;</ph>控件。</target>       </trans-unit>
+        <trans-unit id="188" translate="yes" xml:space="preserve" extradata="MT" uid="P:Microsoft.Office.Tools.Word.XMLNodes.Item(System.Int32)">
+          <source>For more information, see <bpt id="p1">[</bpt>Programmatic Limitations of Host Items and Host Controls<ept id="p1">](/visualstudio/vsto/programmatic-limitations-of-host-items-and-host-controls.md)</ept>.</source>
+          <target state="translated">有关详细信息，请参阅<bpt id="p1">[</bpt>限制的主机项和主机控件编程<ept id="p1">](/visualstudio/vsto/programmatic-limitations-of-host-items-and-host-controls.md)</ept>。</target>       </trans-unit>
+        <trans-unit id="189" translate="yes" xml:space="preserve" extradata="MT" uid="P:Microsoft.Office.Tools.Word.XMLNodes.Item(System.Int32)">
+          <source>The following code example uses the <ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.Item%2A&gt;</ph> property to get the first <ph id="ph2">&lt;xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName&gt;</ph> in an <ph id="ph3">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes&gt;</ph> collection.</source>
+          <target state="translated">下面的代码示例使用<ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.Item%2A&gt;</ph>属性来获取第一个<ph id="ph2">&lt;xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName&gt;</ph>中<ph id="ph3">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes&gt;</ph>集合。</target>       </trans-unit>
+        <trans-unit id="190" translate="yes" xml:space="preserve" extradata="MT" uid="P:Microsoft.Office.Tools.Word.XMLNodes.Item(System.Int32)">
+          <source>The example uses the <ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.Item%2A&gt;</ph> property implicitly when a specific index of the collection is specified.</source>
+          <target state="translated">该示例使用<ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.Item%2A&gt;</ph>指定集合中的特定索引时隐式的属性。</target>       </trans-unit>
+        <trans-unit id="191" translate="yes" xml:space="preserve" extradata="MT" uid="P:Microsoft.Office.Tools.Word.XMLNodes.Item(System.Int32)">
+          <source>This example assumes that the current document contains an <ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes&gt;</ph> control named <ph id="ph2">`SampleInsertNodes`</ph>.</source>
+          <target state="translated">此示例假定当前文档包含<ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes&gt;</ph>控件名为<ph id="ph2">`SampleInsertNodes`</ph>。</target>       </trans-unit>
+        <trans-unit id="192" translate="yes" xml:space="preserve" uid="P:Microsoft.Office.Tools.Word.XMLNodes.Parent">
+          <source>Gets a <ph id="ph1">&lt;see cref="T:Microsoft.Office.Interop.Word.Document" /&gt;</ph> that represents the document containing the <ph id="ph2">&lt;see cref="T:Microsoft.Office.Tools.Word.XMLNodes" /&gt;</ph> collection.</source>
+          <target state="translated">获取一个 <ph id="ph1">&lt;see cref="T:Microsoft.Office.Interop.Word.Document" /&gt;</ph>，它表示包含 <ph id="ph2">&lt;see cref="T:Microsoft.Office.Tools.Word.XMLNodes" /&gt;</ph> 集合的文档。</target>       </trans-unit>
+        <trans-unit id="193" translate="yes" xml:space="preserve" extradata="MT" uid="P:Microsoft.Office.Tools.Word.XMLNodes.Parent">
+          <source>A <ph id="ph1">&lt;see cref="T:Microsoft.Office.Interop.Word.Document" /&gt;</ph> that represents the document containing the <ph id="ph2">&lt;see cref="T:Microsoft.Office.Tools.Word.XMLNodes" /&gt;</ph> collection.</source>
+          <target state="translated">一个 <ph id="ph1">&lt;see cref="T:Microsoft.Office.Interop.Word.Document" /&gt;</ph>，表示包含 <ph id="ph2">&lt;see cref="T:Microsoft.Office.Tools.Word.XMLNodes" /&gt;</ph> 集合的文档。</target>       </trans-unit>
+        <trans-unit id="194" translate="yes" xml:space="preserve" extradata="MT" uid="P:Microsoft.Office.Tools.Word.XMLNodes.Parent">
+          <source>The following code example uses the <ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.Parent%2A&gt;</ph> property to display the name of the parent document of an <ph id="ph2">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes&gt;</ph> collection.</source>
+          <target state="translated">下面的代码示例使用<ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.Parent%2A&gt;</ph>属性来显示的名称的父文档<ph id="ph2">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes&gt;</ph>集合。</target>       </trans-unit>
+        <trans-unit id="195" translate="yes" xml:space="preserve" extradata="MT" uid="P:Microsoft.Office.Tools.Word.XMLNodes.Parent">
+          <source>This example assumes that the current document contains an <ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes&gt;</ph> control named <ph id="ph2">`SampleInsertNodes`</ph>.</source>
+          <target state="translated">此示例假定当前文档包含<ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes&gt;</ph>控件名为<ph id="ph2">`SampleInsertNodes`</ph>。</target>       </trans-unit>
+        <trans-unit id="196" translate="yes" xml:space="preserve" uid="E:Microsoft.Office.Tools.Word.XMLNodes.Select">
+          <source>Occurs when the cursor is placed inside one of the nodes of the <ph id="ph1">&lt;see cref="T:Microsoft.Office.Tools.Word.XMLNodes" /&gt;</ph> collection.</source>
+          <target state="translated">当光标放置在 <ph id="ph1">&lt;see cref="T:Microsoft.Office.Tools.Word.XMLNodes" /&gt;</ph> 集合的一个节点中时发生此事件。</target>       </trans-unit>
+        <trans-unit id="197" translate="yes" xml:space="preserve" extradata="MT" uid="E:Microsoft.Office.Tools.Word.XMLNodes.Select">
+          <source>The <ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.Select&gt;</ph> event differs from the <ph id="ph2">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter&gt;</ph> event.</source>
+          <target state="translated"><ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.Select&gt;</ph>事件区别<ph id="ph2">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter&gt;</ph>事件。</target>       </trans-unit>
+        <trans-unit id="198" translate="yes" xml:space="preserve" extradata="MT" uid="E:Microsoft.Office.Tools.Word.XMLNodes.Select">
+          <source>For more information, see <bpt id="p1">[</bpt>XMLNodes Control<ept id="p1">](/visualstudio/vsto/xmlnodes-control.md)</ept>.</source>
+          <target state="translated">有关详细信息，请参阅<bpt id="p1">[</bpt>XMLNodes 控件<ept id="p1">](/visualstudio/vsto/xmlnodes-control.md)</ept>。</target>       </trans-unit>
+        <trans-unit id="199" translate="yes" xml:space="preserve" extradata="MT" uid="E:Microsoft.Office.Tools.Word.XMLNodes.Select">
+          <source>The following code example demonstrates event handlers for the <ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.Select&gt;</ph>, <ph id="ph2">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect&gt;</ph>, <ph id="ph3">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter&gt;</ph>, and <ph id="ph4">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave&gt;</ph> events.</source>
+          <target state="translated">下面的代码示例演示了事件处理程序<ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.Select&gt;</ph>， <ph id="ph2">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect&gt;</ph>， <ph id="ph3">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter&gt;</ph>，和<ph id="ph4">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave&gt;</ph>事件。</target>       </trans-unit>
+        <trans-unit id="200" translate="yes" xml:space="preserve" extradata="MT" uid="E:Microsoft.Office.Tools.Word.XMLNodes.Select">
+          <source>When the <ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.Select&gt;</ph> and <ph id="ph2">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect&gt;</ph> events are raised, the event handlers add double lines to the borders of the selection or remove the double lines, depending on the event.</source>
+          <target state="translated">当<ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.Select&gt;</ph>和<ph id="ph2">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect&gt;</ph>将引发事件，事件处理程序添加到所选内容的边框的双线或删除双线，具体取决于事件。</target>       </trans-unit>
+        <trans-unit id="201" translate="yes" xml:space="preserve" extradata="MT" uid="E:Microsoft.Office.Tools.Word.XMLNodes.Select">
+          <source>When the <ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter&gt;</ph> and <ph id="ph2">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave&gt;</ph> events are raised, the event handlers display messages that state the names of the newly selected node and the previously selected node.</source>
+          <target state="translated">当<ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter&gt;</ph>和<ph id="ph2">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave&gt;</ph>将引发事件，事件处理程序显示消息，指出新选择的节点和先前选择的节点的名称。</target>       </trans-unit>
+        <trans-unit id="202" translate="yes" xml:space="preserve" extradata="MT" uid="E:Microsoft.Office.Tools.Word.XMLNodes.Select">
+          <source>This example assumes that the current document contains an <ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes&gt;</ph> collection named <ph id="ph2">`SampleInsertNodes`</ph>.</source>
+          <target state="translated">此示例假定当前文档包含<ph id="ph1">&lt;xref:Microsoft.Office.Tools.Word.XMLNodes&gt;</ph>集合名为<ph id="ph2">`SampleInsertNodes`</ph>。</target>       </trans-unit>
+        <trans-unit id="203" translate="yes" xml:space="preserve" uid="E:Microsoft.Office.Tools.Word.XMLNodes.ValidationError">
+          <source>Occurs when there is a validation error in the <ph id="ph1">&lt;see cref="T:Microsoft.Office.Tools.Word.XMLNodes" /&gt;</ph> control.</source>
+          <target state="translated">当在 <ph id="ph1">&lt;see cref="T:Microsoft.Office.Tools.Word.XMLNodes" /&gt;</ph> 控件中存在验证错误时发生。</target>       </trans-unit>
+        <trans-unit id="204" translate="yes" xml:space="preserve" extradata="MT" uid="E:Microsoft.Office.Tools.Word.XMLNodes.ValidationError">
+          <source>If the <bpt id="p1">**</bpt>Validate document against attached schema<ept id="p1">**</ept> option is set, this event is raised for every invalid element in the collection.</source>
+          <target state="translated">如果<bpt id="p1">**</bpt>附加架构验证文档<ept id="p1">**</ept>设置选项，则为集合中每个无效元素，将引发此事件。</target>       </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

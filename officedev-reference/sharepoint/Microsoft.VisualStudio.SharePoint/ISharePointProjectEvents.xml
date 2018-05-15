@@ -1,259 +1,57 @@
-<Type Name="ISharePointProjectEvents" FullName="Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="58672e7163592ab390b60afbf4d43e854d9b2372" />
-    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
-    <Meta Name="ms.translationtype" Value="HT" />
-    <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface ISharePointProjectEvents" />
-  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISharePointProjectEvents" />
-  <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents" />
-  <AssemblyInfo>
-    <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
-    <AssemblyVersion>15.0.0.0</AssemblyVersion>
-  </AssemblyInfo>
-  <Interfaces />
-  <Docs>
-    <summary>
-      <span data-ttu-id="2344c-101">定义与 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProject" /> 对象相关的事件。</span>
-      <span class="sxs-lookup">
-        <span data-stu-id="2344c-101">Defines the events relevant to <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProject" /> objects.</span>
-      </span>
-      <span data-ttu-id="2344c-102">实现对象可定义这些事件发生的上下文。</span>
-      <span class="sxs-lookup">
-        <span data-stu-id="2344c-102">The implementing object defines the context on which these events occur.</span>
-      </span>
-    </summary>
-    <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- <span data-ttu-id="2344c-103">中的所有事件的发送方应<xref:Microsoft.VisualStudio.SharePoint.ISharePointProject>与事件相关的实例。</span><span class="sxs-lookup"><span data-stu-id="2344c-103">The sender in all events should be the <xref:Microsoft.VisualStudio.SharePoint.ISharePointProject> instance related to the event.</span></span>  
-  
- ]]></format>
-    </remarks>
-  </Docs>
-  <Members>
-    <Member MemberName="DeploymentCompleted">
-      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.VisualStudio.SharePoint.DeploymentEventArgs&gt; DeploymentCompleted;" />
-      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.VisualStudio.SharePoint.DeploymentEventArgs&gt; DeploymentCompleted" />
-      <MemberSignature Language="DocId" Value="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.DeploymentCompleted" />
-      <MemberType>Event</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
-        <AssemblyVersion>15.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.EventHandler&lt;Microsoft.VisualStudio.SharePoint.DeploymentEventArgs&gt;</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-          <span data-ttu-id="2344c-104">在部署 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProject" /> 实例后发生。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="2344c-104">Occurs after you deploy an <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProject" /> instance.</span>
-          </span>
-        </summary>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="DeploymentStarted">
-      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.VisualStudio.SharePoint.DeploymentEventArgs&gt; DeploymentStarted;" />
-      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.VisualStudio.SharePoint.DeploymentEventArgs&gt; DeploymentStarted" />
-      <MemberSignature Language="DocId" Value="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.DeploymentStarted" />
-      <MemberType>Event</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
-        <AssemblyVersion>15.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.EventHandler&lt;Microsoft.VisualStudio.SharePoint.DeploymentEventArgs&gt;</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-          <span data-ttu-id="2344c-105">在开始部署 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProject" /> 实例后发生。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="2344c-105">Occurs after you begin deploying an <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProject" /> instance.</span>
-          </span>
-        </summary>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="ProjectAdded">
-      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.VisualStudio.SharePoint.SharePointProjectEventArgs&gt; ProjectAdded;" />
-      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.VisualStudio.SharePoint.SharePointProjectEventArgs&gt; ProjectAdded" />
-      <MemberSignature Language="DocId" Value="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.ProjectAdded" />
-      <MemberType>Event</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
-        <AssemblyVersion>15.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.EventHandler&lt;Microsoft.VisualStudio.SharePoint.SharePointProjectEventArgs&gt;</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-          <span data-ttu-id="2344c-106">在添加新 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProject" /> 实例时发生。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="2344c-106">Occurs when you add a new <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProject" /> instance.</span>
-          </span>
-        </summary>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="ProjectDisposing">
-      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.VisualStudio.SharePoint.SharePointProjectEventArgs&gt; ProjectDisposing;" />
-      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.VisualStudio.SharePoint.SharePointProjectEventArgs&gt; ProjectDisposing" />
-      <MemberSignature Language="DocId" Value="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.ProjectDisposing" />
-      <MemberType>Event</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
-        <AssemblyVersion>15.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.EventHandler&lt;Microsoft.VisualStudio.SharePoint.SharePointProjectEventArgs&gt;</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-          <span data-ttu-id="2344c-107">在释放新 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProject" /> 实例时发生。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="2344c-107">Occurs when you dispose an <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProject" /> instance.</span>
-          </span>
-        </summary>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="ProjectInitialized">
-      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.VisualStudio.SharePoint.SharePointProjectEventArgs&gt; ProjectInitialized;" />
-      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.VisualStudio.SharePoint.SharePointProjectEventArgs&gt; ProjectInitialized" />
-      <MemberSignature Language="DocId" Value="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.ProjectInitialized" />
-      <MemberType>Event</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
-        <AssemblyVersion>15.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.EventHandler&lt;Microsoft.VisualStudio.SharePoint.SharePointProjectEventArgs&gt;</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-          <span data-ttu-id="2344c-108">在初始化 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProject" /> 实例时发生。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="2344c-108">Occurs when you initialize an <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProject" /> instance.</span>
-          </span>
-        </summary>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="ProjectMenuItemsRequested">
-      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.VisualStudio.SharePoint.SharePointProjectMenuItemsRequestedEventArgs&gt; ProjectMenuItemsRequested;" />
-      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.VisualStudio.SharePoint.SharePointProjectMenuItemsRequestedEventArgs&gt; ProjectMenuItemsRequested" />
-      <MemberSignature Language="DocId" Value="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.ProjectMenuItemsRequested" />
-      <MemberType>Event</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
-        <AssemblyVersion>15.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.EventHandler&lt;Microsoft.VisualStudio.SharePoint.SharePointProjectMenuItemsRequestedEventArgs&gt;</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-          <span data-ttu-id="2344c-109">在请求 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProject" /> 实例的上下文菜单项时发生。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="2344c-109">Occurs when you request context menu items from an <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProject" /> instance.</span>
-          </span>
-        </summary>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="ProjectNameChanged">
-      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.VisualStudio.SharePoint.NameChangedEventArgs&gt; ProjectNameChanged;" />
-      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.VisualStudio.SharePoint.NameChangedEventArgs&gt; ProjectNameChanged" />
-      <MemberSignature Language="DocId" Value="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.ProjectNameChanged" />
-      <MemberType>Event</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
-        <AssemblyVersion>15.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.EventHandler&lt;Microsoft.VisualStudio.SharePoint.NameChangedEventArgs&gt;</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-          <span data-ttu-id="2344c-110">在重命名 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProject" /> 实例时发生。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="2344c-110">Occurs when you rename an <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProject" /> instance.</span>
-          </span>
-        </summary>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="ProjectPropertiesRequested">
-      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.VisualStudio.SharePoint.SharePointProjectPropertiesRequestedEventArgs&gt; ProjectPropertiesRequested;" />
-      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.VisualStudio.SharePoint.SharePointProjectPropertiesRequestedEventArgs&gt; ProjectPropertiesRequested" />
-      <MemberSignature Language="DocId" Value="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.ProjectPropertiesRequested" />
-      <MemberType>Event</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
-        <AssemblyVersion>15.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.EventHandler&lt;Microsoft.VisualStudio.SharePoint.SharePointProjectPropertiesRequestedEventArgs&gt;</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-          <span data-ttu-id="2344c-111">在查询 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProject" /> 实例的属性时发生。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="2344c-111">Occurs when you query an <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProject" /> instance for its properties.</span>
-          </span>
-        </summary>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="ProjectPropertyChanged">
-      <MemberSignature Language="C#" Value="public event System.ComponentModel.PropertyChangedEventHandler ProjectPropertyChanged;" />
-      <MemberSignature Language="ILAsm" Value=".event class System.ComponentModel.PropertyChangedEventHandler ProjectPropertyChanged" />
-      <MemberSignature Language="DocId" Value="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.ProjectPropertyChanged" />
-      <MemberType>Event</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
-        <AssemblyVersion>15.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.ComponentModel.PropertyChangedEventHandler</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-          <span data-ttu-id="2344c-112">在 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProject" /> 实例中更改项目属性值时发生。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="2344c-112">Occurs when you change a project property value in an <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProject" /> instance.</span>
-          </span>
-        </summary>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="ProjectRemoved">
-      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.VisualStudio.SharePoint.SharePointProjectEventArgs&gt; ProjectRemoved;" />
-      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.VisualStudio.SharePoint.SharePointProjectEventArgs&gt; ProjectRemoved" />
-      <MemberSignature Language="DocId" Value="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.ProjectRemoved" />
-      <MemberType>Event</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
-        <AssemblyVersion>15.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.EventHandler&lt;Microsoft.VisualStudio.SharePoint.SharePointProjectEventArgs&gt;</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-          <span data-ttu-id="2344c-113">在删除 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProject" /> 实例时发生。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="2344c-113">Occurs when you remove an <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProject" /> instance.</span>
-          </span>
-        </summary>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-  </Members>
-</Type>
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="ISharePointProjectEvents.xml" source-language="en-US" target-language="zh-CN">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-38f25dd" tool-company="Microsoft" />
+      <xliffext:skl_file_name xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">b4690f9a-9e49-426d-9091-855b10fda4db58672e7163592ab390b60afbf4d43e854d9b2372.skl</xliffext:skl_file_name>
+      <xliffext:version xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">1.2</xliffext:version>
+      <xliffext:ms.openlocfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">58672e7163592ab390b60afbf4d43e854d9b2372</xliffext:ms.openlocfilehash>
+      <xliffext:ms.sourcegitcommit xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">bb8a3a96823cedeffbdbcc0c41a8118399de8074</xliffext:ms.sourcegitcommit>
+      <xliffext:ms.lasthandoff xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">02/21/2018</xliffext:ms.lasthandoff>
+      <xliffext:moniker_ids xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">sharepoint-projects-2017</xliffext:moniker_ids>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve" uid="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents">
+          <source>Defines the events relevant to <ph id="ph1">&lt;see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProject" /&gt;</ph> objects.</source>
+          <target state="translated">定义与 <ph id="ph1">&lt;see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProject" /&gt;</ph> 对象相关的事件。</target>       </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve" uid="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents">
+          <source>The implementing object defines the context on which these events occur.</source>
+          <target state="translated">实现对象可定义这些事件发生的上下文。</target>       </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve" extradata="MT" uid="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents">
+          <source>The sender in all events should be the <ph id="ph1">&lt;xref:Microsoft.VisualStudio.SharePoint.ISharePointProject&gt;</ph> instance related to the event.</source>
+          <target state="translated">中的所有事件的发送方应<ph id="ph1">&lt;xref:Microsoft.VisualStudio.SharePoint.ISharePointProject&gt;</ph>与事件相关的实例。</target>       </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve" uid="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.DeploymentCompleted">
+          <source>Occurs after you deploy an <ph id="ph1">&lt;see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProject" /&gt;</ph> instance.</source>
+          <target state="translated">在部署 <ph id="ph1">&lt;see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProject" /&gt;</ph> 实例后发生。</target>       </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve" uid="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.DeploymentStarted">
+          <source>Occurs after you begin deploying an <ph id="ph1">&lt;see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProject" /&gt;</ph> instance.</source>
+          <target state="translated">在开始部署 <ph id="ph1">&lt;see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProject" /&gt;</ph> 实例后发生。</target>       </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve" uid="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.ProjectAdded">
+          <source>Occurs when you add a new <ph id="ph1">&lt;see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProject" /&gt;</ph> instance.</source>
+          <target state="translated">在添加新 <ph id="ph1">&lt;see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProject" /&gt;</ph> 实例时发生。</target>       </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve" uid="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.ProjectDisposing">
+          <source>Occurs when you dispose an <ph id="ph1">&lt;see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProject" /&gt;</ph> instance.</source>
+          <target state="translated">在释放新 <ph id="ph1">&lt;see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProject" /&gt;</ph> 实例时发生。</target>       </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve" uid="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.ProjectInitialized">
+          <source>Occurs when you initialize an <ph id="ph1">&lt;see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProject" /&gt;</ph> instance.</source>
+          <target state="translated">在初始化 <ph id="ph1">&lt;see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProject" /&gt;</ph> 实例时发生。</target>       </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve" uid="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.ProjectMenuItemsRequested">
+          <source>Occurs when you request context menu items from an <ph id="ph1">&lt;see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProject" /&gt;</ph> instance.</source>
+          <target state="translated">在请求 <ph id="ph1">&lt;see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProject" /&gt;</ph> 实例的上下文菜单项时发生。</target>       </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve" uid="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.ProjectNameChanged">
+          <source>Occurs when you rename an <ph id="ph1">&lt;see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProject" /&gt;</ph> instance.</source>
+          <target state="translated">在重命名 <ph id="ph1">&lt;see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProject" /&gt;</ph> 实例时发生。</target>       </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve" uid="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.ProjectPropertiesRequested">
+          <source>Occurs when you query an <ph id="ph1">&lt;see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProject" /&gt;</ph> instance for its properties.</source>
+          <target state="translated">在查询 <ph id="ph1">&lt;see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProject" /&gt;</ph> 实例的属性时发生。</target>       </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve" uid="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.ProjectPropertyChanged">
+          <source>Occurs when you change a project property value in an <ph id="ph1">&lt;see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProject" /&gt;</ph> instance.</source>
+          <target state="translated">在 <ph id="ph1">&lt;see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProject" /&gt;</ph> 实例中更改项目属性值时发生。</target>       </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve" uid="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.ProjectRemoved">
+          <source>Occurs when you remove an <ph id="ph1">&lt;see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProject" /&gt;</ph> instance.</source>
+          <target state="translated">在删除 <ph id="ph1">&lt;see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProject" /&gt;</ph> 实例时发生。</target>       </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

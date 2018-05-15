@@ -1,155 +1,57 @@
-<Type Name="LogCategory" FullName="Microsoft.VisualStudio.SharePoint.LogCategory">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="0a9837999a17e3ffeb00a98a1b33fd75cd6320bf" />
-    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
-    <Meta Name="ms.translationtype" Value="HT" />
-    <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public enum LogCategory" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed LogCategory extends System.Enum" />
-  <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.SharePoint.LogCategory" />
-  <AssemblyInfo>
-    <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
-    <AssemblyVersion>15.0.0.0</AssemblyVersion>
-  </AssemblyInfo>
-  <Base>
-    <BaseTypeName>System.Enum</BaseTypeName>
-  </Base>
-  <Docs>
-    <summary>
-      <span data-ttu-id="70ce0-101">指定使用 SharePoint 日志服务编写的消息出现在“输出”窗口和“错误列表”窗口的什么位置。</span>
-      <span class="sxs-lookup">
-        <span data-stu-id="70ce0-101">Specifies where messages written by using the SharePoint log service appear in the **Output** window and **Error List** window.</span>
-      </span>
-    </summary>
-    <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- <span data-ttu-id="70ce0-102"><xref:Microsoft.VisualStudio.SharePoint.LogCategory>值指定在是否显示消息**输出**窗口或**错误列表**窗口 （或两者），和组中显示的消息**错误列表**窗口。</span><span class="sxs-lookup"><span data-stu-id="70ce0-102">The <xref:Microsoft.VisualStudio.SharePoint.LogCategory> values specify whether a message appears in the **Output** window or **Error List** window (or both), and the group in which the message appears in the **Error List** window.</span></span>  
-  
- <span data-ttu-id="70ce0-103">要写入到消息**输出**窗口或**错误列表**中的 SharePoint 项目系统中，扩展窗口使用之一<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine%2A>方法<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger>对象。</span><span class="sxs-lookup"><span data-stu-id="70ce0-103">To write a message to the **Output** window or **Error List** window from an extension of the SharePoint project system, use one of the <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine%2A> methods of an <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger> object.</span></span>  
-  
-## <a name="enabling-verbose-messages"></a><span data-ttu-id="70ce0-104">启用详细消息</span><span class="sxs-lookup"><span data-stu-id="70ce0-104">Enabling Verbose Messages</span></span>  
- <span data-ttu-id="70ce0-105">要显示详细消息中的**输出**窗口中，HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\10.0\SharePointTools 必须设置为 1 的注册表项下的 EnableDiagnostics 值。</span><span class="sxs-lookup"><span data-stu-id="70ce0-105">To display verbose messages in the **Output** window, the EnableDiagnostics value under the registry key HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\10.0\SharePointTools must be set to 1.</span></span> <span data-ttu-id="70ce0-106">有关详细信息，请参阅[调试 SharePoint 解决方案](/visualstudio/sharepoint/debugging-sharepoint-solutions.md)。</span><span class="sxs-lookup"><span data-stu-id="70ce0-106">For more information, see [Debugging SharePoint Solutions](/visualstudio/sharepoint/debugging-sharepoint-solutions.md).</span></span>  
-  
- ]]></format>
-    </remarks>
-  </Docs>
-  <Members>
-    <Member MemberName="Error">
-      <MemberSignature Language="C#" Value="Error" />
-      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualStudio.SharePoint.LogCategory Error = int32(0)" />
-      <MemberSignature Language="DocId" Value="F:Microsoft.VisualStudio.SharePoint.LogCategory.Error" />
-      <MemberType>Field</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
-        <AssemblyVersion>15.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Microsoft.VisualStudio.SharePoint.LogCategory</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-          <span data-ttu-id="70ce0-107">指定消息显示在“输出”窗口和“错误列表”窗口的“错误”组中。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="70ce0-107">Specifies that the message appears in the **Output** window and in the **Errors** group of the **Error List** window.</span>
-          </span>
-        </summary>
-      </Docs>
-    </Member>
-    <Member MemberName="Message">
-      <MemberSignature Language="C#" Value="Message" />
-      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualStudio.SharePoint.LogCategory Message = int32(3)" />
-      <MemberSignature Language="DocId" Value="F:Microsoft.VisualStudio.SharePoint.LogCategory.Message" />
-      <MemberType>Field</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
-        <AssemblyVersion>15.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Microsoft.VisualStudio.SharePoint.LogCategory</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-          <span data-ttu-id="70ce0-108">指定消息显示在“输出”窗口和“错误列表”窗口的“消息”组中。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="70ce0-108">Specifies that the message appears in the **Output** window and in the **Message** group of the **Error List** window.</span>
-          </span>
-        </summary>
-      </Docs>
-    </Member>
-    <Member MemberName="Status">
-      <MemberSignature Language="C#" Value="Status" />
-      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualStudio.SharePoint.LogCategory Status = int32(4)" />
-      <MemberSignature Language="DocId" Value="F:Microsoft.VisualStudio.SharePoint.LogCategory.Status" />
-      <MemberType>Field</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
-        <AssemblyVersion>15.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Microsoft.VisualStudio.SharePoint.LogCategory</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-          <span data-ttu-id="70ce0-109">指定消息只出现在“输出”窗口。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="70ce0-109">Specifies that the message appears only in the **Output** window.</span>
-          </span>
-          <span data-ttu-id="70ce0-110">消息不会出现在“错误列表”窗口。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="70ce0-110">The message does not appear in the **Error List** window.</span>
-          </span>
-        </summary>
-      </Docs>
-    </Member>
-    <Member MemberName="Verbose">
-      <MemberSignature Language="C#" Value="Verbose" />
-      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualStudio.SharePoint.LogCategory Verbose = int32(2)" />
-      <MemberSignature Language="DocId" Value="F:Microsoft.VisualStudio.SharePoint.LogCategory.Verbose" />
-      <MemberType>Field</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
-        <AssemblyVersion>15.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Microsoft.VisualStudio.SharePoint.LogCategory</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-          <span data-ttu-id="70ce0-111">指定如果启用了详细消息则消息只出现在“输出”窗口。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="70ce0-111">Specifies that the message appears only in the **Output** window, if verbose messages are enabled.</span>
-          </span>
-          <span data-ttu-id="70ce0-112">消息不会出现在“错误列表”窗口。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="70ce0-112">The message does not appear in the **Error List** window.</span>
-          </span>
-        </summary>
-      </Docs>
-    </Member>
-    <Member MemberName="Warning">
-      <MemberSignature Language="C#" Value="Warning" />
-      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualStudio.SharePoint.LogCategory Warning = int32(1)" />
-      <MemberSignature Language="DocId" Value="F:Microsoft.VisualStudio.SharePoint.LogCategory.Warning" />
-      <MemberType>Field</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
-        <AssemblyVersion>15.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Microsoft.VisualStudio.SharePoint.LogCategory</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-          <span data-ttu-id="70ce0-113">指定消息显示在“输出”窗口和“错误列表”窗口的“警告”组中。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="70ce0-113">Specifies that the message appears in the **Output** window and in the **Warning** group of the **Error List** window.</span>
-          </span>
-        </summary>
-      </Docs>
-    </Member>
-  </Members>
-</Type>
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="LogCategory.xml" source-language="en-US" target-language="zh-CN">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-38f25dd" tool-company="Microsoft" />
+      <xliffext:skl_file_name xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">b4690f9a-9e49-426d-9091-855b10fda4db0a9837999a17e3ffeb00a98a1b33fd75cd6320bf.skl</xliffext:skl_file_name>
+      <xliffext:version xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">1.2</xliffext:version>
+      <xliffext:ms.openlocfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">0a9837999a17e3ffeb00a98a1b33fd75cd6320bf</xliffext:ms.openlocfilehash>
+      <xliffext:ms.sourcegitcommit xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">bb8a3a96823cedeffbdbcc0c41a8118399de8074</xliffext:ms.sourcegitcommit>
+      <xliffext:ms.lasthandoff xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">02/21/2018</xliffext:ms.lasthandoff>
+      <xliffext:moniker_ids xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">sharepoint-projects-2017</xliffext:moniker_ids>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve" uid="T:Microsoft.VisualStudio.SharePoint.LogCategory">
+          <source>Specifies where messages written by using the SharePoint log service appear in the <bpt id="p1">**</bpt>Output<ept id="p1">**</ept> window and <bpt id="p2">**</bpt>Error List<ept id="p2">**</ept> window.</source>
+          <target state="translated">指定使用 SharePoint 日志服务编写的消息出现在“输出”窗口和“错误列表”窗口的什么位置。</target>       </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve" extradata="MT" uid="T:Microsoft.VisualStudio.SharePoint.LogCategory">
+          <source>The <ph id="ph1">&lt;xref:Microsoft.VisualStudio.SharePoint.LogCategory&gt;</ph> values specify whether a message appears in the <bpt id="p1">**</bpt>Output<ept id="p1">**</ept> window or <bpt id="p2">**</bpt>Error List<ept id="p2">**</ept> window (or both), and the group in which the message appears in the <bpt id="p3">**</bpt>Error List<ept id="p3">**</ept> window.</source>
+          <target state="translated"><ph id="ph1">&lt;xref:Microsoft.VisualStudio.SharePoint.LogCategory&gt;</ph>值指定在是否显示消息<bpt id="p1">**</bpt>输出<ept id="p1">**</ept>窗口或<bpt id="p2">**</bpt>错误列表<ept id="p2">**</ept>窗口 （或两者），和组中显示的消息<bpt id="p3">**</bpt>错误列表<ept id="p3">**</ept>窗口。</target>       </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve" extradata="MT" uid="T:Microsoft.VisualStudio.SharePoint.LogCategory">
+          <source>To write a message to the <bpt id="p1">**</bpt>Output<ept id="p1">**</ept> window or <bpt id="p2">**</bpt>Error List<ept id="p2">**</ept> window from an extension of the SharePoint project system, use one of the <ph id="ph1">&lt;xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine%2A&gt;</ph> methods of an <ph id="ph2">&lt;xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger&gt;</ph> object.</source>
+          <target state="translated">要写入到消息<bpt id="p1">**</bpt>输出<ept id="p1">**</ept>窗口或<bpt id="p2">**</bpt>错误列表<ept id="p2">**</ept>中的 SharePoint 项目系统中，扩展窗口使用之一<ph id="ph1">&lt;xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine%2A&gt;</ph>方法<ph id="ph2">&lt;xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger&gt;</ph>对象。</target>       </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve" extradata="MT" uid="T:Microsoft.VisualStudio.SharePoint.LogCategory">
+          <source>Enabling Verbose Messages</source>
+          <target state="translated">启用详细消息</target>       </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve" extradata="MT" uid="T:Microsoft.VisualStudio.SharePoint.LogCategory">
+          <source>To display verbose messages in the <bpt id="p1">**</bpt>Output<ept id="p1">**</ept> window, the EnableDiagnostics value under the registry key HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\10.0\SharePointTools must be set to 1.</source>
+          <target state="translated">要显示详细消息中的<bpt id="p1">**</bpt>输出<ept id="p1">**</ept>窗口中，HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\10.0\SharePointTools 必须设置为 1 的注册表项下的 EnableDiagnostics 值。</target>       </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve" extradata="MT" uid="T:Microsoft.VisualStudio.SharePoint.LogCategory">
+          <source>For more information, see <bpt id="p1">[</bpt>Debugging SharePoint Solutions<ept id="p1">](/visualstudio/sharepoint/debugging-sharepoint-solutions.md)</ept>.</source>
+          <target state="translated">有关详细信息，请参阅<bpt id="p1">[</bpt>调试 SharePoint 解决方案<ept id="p1">](/visualstudio/sharepoint/debugging-sharepoint-solutions.md)</ept>。</target>       </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve" uid="F:Microsoft.VisualStudio.SharePoint.LogCategory.Error">
+          <source>Specifies that the message appears in the <bpt id="p1">**</bpt>Output<ept id="p1">**</ept> window and in the <bpt id="p2">**</bpt>Errors<ept id="p2">**</ept> group of the <bpt id="p3">**</bpt>Error List<ept id="p3">**</ept> window.</source>
+          <target state="translated">指定消息显示在“输出”窗口和“错误列表”窗口的“错误”组中。</target>       </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve" uid="F:Microsoft.VisualStudio.SharePoint.LogCategory.Message">
+          <source>Specifies that the message appears in the <bpt id="p1">**</bpt>Output<ept id="p1">**</ept> window and in the <bpt id="p2">**</bpt>Message<ept id="p2">**</ept> group of the <bpt id="p3">**</bpt>Error List<ept id="p3">**</ept> window.</source>
+          <target state="translated">指定消息显示在“输出”窗口和“错误列表”窗口的“消息”组中。</target>       </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve" uid="F:Microsoft.VisualStudio.SharePoint.LogCategory.Status">
+          <source>Specifies that the message appears only in the <bpt id="p1">**</bpt>Output<ept id="p1">**</ept> window.</source>
+          <target state="translated">指定消息只出现在“输出”窗口。</target>       </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve" uid="F:Microsoft.VisualStudio.SharePoint.LogCategory.Status">
+          <source>The message does not appear in the <bpt id="p1">**</bpt>Error List<ept id="p1">**</ept> window.</source>
+          <target state="translated">消息不会出现在“错误列表”窗口。</target>       </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve" uid="F:Microsoft.VisualStudio.SharePoint.LogCategory.Verbose">
+          <source>Specifies that the message appears only in the <bpt id="p1">**</bpt>Output<ept id="p1">**</ept> window, if verbose messages are enabled.</source>
+          <target state="translated">指定如果启用了详细消息则消息只出现在“输出”窗口。</target>       </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve" uid="F:Microsoft.VisualStudio.SharePoint.LogCategory.Verbose">
+          <source>The message does not appear in the <bpt id="p1">**</bpt>Error List<ept id="p1">**</ept> window.</source>
+          <target state="translated">消息不会出现在“错误列表”窗口。</target>       </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve" uid="F:Microsoft.VisualStudio.SharePoint.LogCategory.Warning">
+          <source>Specifies that the message appears in the <bpt id="p1">**</bpt>Output<ept id="p1">**</ept> window and in the <bpt id="p2">**</bpt>Warning<ept id="p2">**</ept> group of the <bpt id="p3">**</bpt>Error List<ept id="p3">**</ept> window.</source>
+          <target state="translated">指定消息显示在“输出”窗口和“错误列表”窗口的“警告”组中。</target>       </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

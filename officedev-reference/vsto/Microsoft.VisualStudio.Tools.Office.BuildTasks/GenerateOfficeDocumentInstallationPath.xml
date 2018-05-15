@@ -1,218 +1,81 @@
-<Type Name="GenerateOfficeDocumentInstallationPath" FullName="Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeDocumentInstallationPath">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="2757cc7edd8f4cafca340fc993152742c5397cd9" />
-    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
-    <Meta Name="ms.translationtype" Value="HT" />
-    <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public sealed class GenerateOfficeDocumentInstallationPath : Microsoft.VisualStudio.Tools.Office.BuildTasks.BuildTask" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit GenerateOfficeDocumentInstallationPath extends Microsoft.VisualStudio.Tools.Office.BuildTasks.BuildTask" />
-  <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeDocumentInstallationPath" />
-  <AssemblyInfo>
-    <AssemblyName>Microsoft.VisualStudio.Tools.Office.BuildTasks</AssemblyName>
-    <AssemblyVersion>10.0.0.0</AssemblyVersion>
-  </AssemblyInfo>
-  <Base>
-    <BaseTypeName>Microsoft.VisualStudio.Tools.Office.BuildTasks.BuildTask</BaseTypeName>
-  </Base>
-  <Interfaces />
-  <Attributes>
-    <Attribute>
-      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
-    </Attribute>
-  </Attributes>
-  <Docs>
-    <summary>
-      <span data-ttu-id="b5edb-101">定义一个 MSBuild 任务，该任务返回要写入自定义文档的安装文件夹的路径。</span>
-      <span class="sxs-lookup">
-        <span data-stu-id="b5edb-101">Defines an MSBuild task that returns a path to the installation folder to be written into a customized document.</span>
-      </span>
-      <span data-ttu-id="b5edb-102">此类不能被继承。</span>
-      <span class="sxs-lookup">
-        <span data-stu-id="b5edb-102">This class cannot be inherited.</span>
-      </span>
-    </summary>
-    <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- <span data-ttu-id="b5edb-103">文档必须是 2007 Microsoft Office 系统应用程序的 Office 开发项目的一部分。</span><span class="sxs-lookup"><span data-stu-id="b5edb-103">The document must be part of an Office development project for a 2007 Microsoft Office system application.</span></span>  
-  
- <span data-ttu-id="b5edb-104">设置所有<xref:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeDocumentInstallationPath>属性，，然后调用<xref:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeDocumentInstallationPath.Execute%2A>若要运行此任务。</span><span class="sxs-lookup"><span data-stu-id="b5edb-104">Set all of the <xref:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeDocumentInstallationPath> properties, and then call <xref:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeDocumentInstallationPath.Execute%2A> to run this task.</span></span>  
-  
- <span data-ttu-id="b5edb-105">Microsoft Build Engine 使用<xref:Microsoft.VisualStudio.Tools.Office.BuildTasks>生成和部署 Office 解决方案。</span><span class="sxs-lookup"><span data-stu-id="b5edb-105">The Microsoft Build Engine uses <xref:Microsoft.VisualStudio.Tools.Office.BuildTasks> to build and deploy Office solutions.</span></span> <span data-ttu-id="b5edb-106">但是，可以使用这些类并基于 MSBuild XML 项目文件来创建你自己生成系统。</span><span class="sxs-lookup"><span data-stu-id="b5edb-106">However, you can create your own build system by using these classes and the MSBuild XML-based project files.</span></span> <span data-ttu-id="b5edb-107">有关详细信息，请参阅[MSBuild 参考](~/msbuild/msbuild-reference.md)。</span><span class="sxs-lookup"><span data-stu-id="b5edb-107">For more information, see [MSBuild Reference](~/msbuild/msbuild-reference.md).</span></span>  
-  
- ]]></format>
-    </remarks>
-  </Docs>
-  <Members>
-    <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public GenerateOfficeDocumentInstallationPath ();" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeDocumentInstallationPath.#ctor" />
-      <MemberType>Constructor</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.VisualStudio.Tools.Office.BuildTasks</AssemblyName>
-        <AssemblyVersion>10.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <Parameters />
-      <Docs>
-        <summary>
-          <span data-ttu-id="b5edb-108">初始化 <see cref="T:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeDocumentInstallationPath" /> 类的新实例。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="b5edb-108">Initializes a new instance of the <see cref="T:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeDocumentInstallationPath" /> class.</span>
-          </span>
-        </summary>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="Execute">
-      <MemberSignature Language="C#" Value="public override bool Execute ();" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Execute() cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeDocumentInstallationPath.Execute" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.VisualStudio.Tools.Office.BuildTasks</AssemblyName>
-        <AssemblyVersion>10.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Boolean</ReturnType>
-      </ReturnValue>
-      <Parameters />
-      <Docs>
-        <summary>
-          <span data-ttu-id="b5edb-109">在发布自定义文档的位置创建输出文件夹和安装文件夹（如果适用）。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="b5edb-109">Creates the output folder and, if applicable, the installation folder, where the customized document is published.</span>
-          </span>
-        </summary>
-        <returns>
-          <span data-ttu-id="b5edb-110">如果成功生成该文档的输出文件夹，则为 <see langword="true" />；否则为 <see langword="false" />。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="b5edb-110">
-              <see langword="true" /> if the output folder for the document was generated successfully; otherwise, <see langword="false" />.</span>
-          </span>
-          <span data-ttu-id="b5edb-111">默认值为 <see langword="false" />。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="b5edb-111">The default is <see langword="false" />.</span>
-          </span>
-        </returns>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="InstallationPath">
-      <MemberSignature Language="C#" Value="public string InstallationPath { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance string InstallationPath" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeDocumentInstallationPath.InstallationPath" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.VisualStudio.Tools.Office.BuildTasks</AssemblyName>
-        <AssemblyVersion>10.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <Attributes>
-        <Attribute>
-          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
-        </Attribute>
-      </Attributes>
-      <ReturnValue>
-        <ReturnType>System.String</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-          <span data-ttu-id="b5edb-112">获取要写入自定义文档的安装文件夹的相对路径或绝对路径。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="b5edb-112">Gets the relative or fully qualified path of the installation folder to be written into a customized document.</span>
-          </span>
-        </summary>
-        <value>
-          <span data-ttu-id="b5edb-113">A <see cref="T:System.String" /> ，它表示要向其中写入一个自定义文档的安装文件夹的相对或完全限定路径。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="b5edb-113">A <see cref="T:System.String" /> that represents the relative or fully qualified path of the installation folder to be written into a customized document.</span>
-          </span>
-          <span data-ttu-id="b5edb-114">对于本地驱动器和网络驱动器，此路径可以是相对路径，但 HTTP/HTTPS 位置必须是完全限定路径。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="b5edb-114">This path can be relative for local drives and network drives, but HTTP/HTTPS locations must be a fully qualified path.</span>
-          </span>
-        </value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="InstallUrl">
-      <MemberSignature Language="C#" Value="public string InstallUrl { set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance string InstallUrl" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeDocumentInstallationPath.InstallUrl" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.VisualStudio.Tools.Office.BuildTasks</AssemblyName>
-        <AssemblyVersion>10.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.String</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-          <span data-ttu-id="b5edb-115">设置安装路径，自定义文档将复制到此处以用于安装。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="b5edb-115">Sets the installation path where the customized document is copied for installation.</span>
-          </span>
-        </summary>
-        <value>
-          <span data-ttu-id="b5edb-116">一个字符串，表示用于安装的自定义文档的相对或完全限定路径。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="b5edb-116">A string that represents the relative or fully qualified path of the customized document for installation.</span>
-          </span>
-          <span data-ttu-id="b5edb-117">对于本地驱动器和网络驱动器，此路径可以是相对路径，但 HTTP/HTTPS 位置必须是完全限定路径。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="b5edb-117">This path can be relative for local drives and network drives, but HTTP/HTTPS locations must be a fully qualified path.</span>
-          </span>
-        </value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="PublishUrl">
-      <MemberSignature Language="C#" Value="public string PublishUrl { set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance string PublishUrl" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeDocumentInstallationPath.PublishUrl" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.VisualStudio.Tools.Office.BuildTasks</AssemblyName>
-        <AssemblyVersion>10.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <Attributes>
-        <Attribute>
-          <AttributeName>Microsoft.Build.Framework.Required</AttributeName>
-        </Attribute>
-      </Attributes>
-      <ReturnValue>
-        <ReturnType>System.String</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-          <span data-ttu-id="b5edb-118">设置发布路径，自定义文档将复制到此处以用于发布。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="b5edb-118">Sets the publish path where the customized document is copied for publishing.</span>
-          </span>
-        </summary>
-        <value>
-          <span data-ttu-id="b5edb-119">一个字符串，表示用于发布的自定义文档的相对或完全限定路径。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="b5edb-119">A string that represents the relative or fully qualified path of the customized document for publishing.</span>
-          </span>
-          <span data-ttu-id="b5edb-120">对于本地驱动器和网络驱动器，此路径可以是相对路径，但 HTTP/HTTPS 位置必须是完全限定路径。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="b5edb-120">This path can be relative for local drives and network drives, but HTTP/HTTPS locations must be a fully qualified path.</span>
-          </span>
-        </value>
-        <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- <span data-ttu-id="b5edb-121"><xref:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeDocumentInstallationPath.PublishUrl%2A>属性必须之前分配<xref:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeDocumentInstallationPath.Execute%2A>调用。</span><span class="sxs-lookup"><span data-stu-id="b5edb-121">The <xref:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeDocumentInstallationPath.PublishUrl%2A> property must be assigned before <xref:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeDocumentInstallationPath.Execute%2A> is called.</span></span>  
-  
- ]]></format>
-        </remarks>
-      </Docs>
-    </Member>
-  </Members>
-</Type>
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="GenerateOfficeDocumentInstallationPath.xml" source-language="en-US" target-language="zh-CN">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-38f25dd" tool-company="Microsoft" />
+      <xliffext:skl_file_name xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">b4690f9a-9e49-426d-9091-855b10fda4db2757cc7edd8f4cafca340fc993152742c5397cd9.skl</xliffext:skl_file_name>
+      <xliffext:version xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">1.2</xliffext:version>
+      <xliffext:ms.openlocfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">2757cc7edd8f4cafca340fc993152742c5397cd9</xliffext:ms.openlocfilehash>
+      <xliffext:ms.sourcegitcommit xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">bb8a3a96823cedeffbdbcc0c41a8118399de8074</xliffext:ms.sourcegitcommit>
+      <xliffext:ms.lasthandoff xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">02/21/2018</xliffext:ms.lasthandoff>
+      <xliffext:moniker_ids xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">vsto-2017</xliffext:moniker_ids>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve" uid="T:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeDocumentInstallationPath">
+          <source>Defines an MSBuild task that returns a path to the installation folder to be written into a customized document.</source>
+          <target state="translated">定义一个 MSBuild 任务，该任务返回要写入自定义文档的安装文件夹的路径。</target>       </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve" uid="T:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeDocumentInstallationPath">
+          <source>This class cannot be inherited.</source>
+          <target state="translated">此类不能被继承。</target>       </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve" extradata="MT" uid="T:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeDocumentInstallationPath">
+          <source>The document must be part of an Office development project for a 2007 Microsoft Office system application.</source>
+          <target state="translated">文档必须是 2007 Microsoft Office 系统应用程序的 Office 开发项目的一部分。</target>       </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve" extradata="MT" uid="T:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeDocumentInstallationPath">
+          <source>Set all of the <ph id="ph1">&lt;xref:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeDocumentInstallationPath&gt;</ph> properties, and then call <ph id="ph2">&lt;xref:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeDocumentInstallationPath.Execute%2A&gt;</ph> to run this task.</source>
+          <target state="translated">设置所有<ph id="ph1">&lt;xref:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeDocumentInstallationPath&gt;</ph>属性，，然后调用<ph id="ph2">&lt;xref:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeDocumentInstallationPath.Execute%2A&gt;</ph>若要运行此任务。</target>       </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve" extradata="MT" uid="T:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeDocumentInstallationPath">
+          <source>The Microsoft Build Engine uses <ph id="ph1">&lt;xref:Microsoft.VisualStudio.Tools.Office.BuildTasks&gt;</ph> to build and deploy Office solutions.</source>
+          <target state="translated">Microsoft Build Engine 使用<ph id="ph1">&lt;xref:Microsoft.VisualStudio.Tools.Office.BuildTasks&gt;</ph>生成和部署 Office 解决方案。</target>       </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve" extradata="MT" uid="T:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeDocumentInstallationPath">
+          <source>However, you can create your own build system by using these classes and the MSBuild XML-based project files.</source>
+          <target state="translated">但是，可以使用这些类并基于 MSBuild XML 项目文件来创建你自己生成系统。</target>       </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve" extradata="MT" uid="T:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeDocumentInstallationPath">
+          <source>For more information, see <bpt id="p1">[</bpt>MSBuild Reference<ept id="p1">](~/msbuild/msbuild-reference.md)</ept>.</source>
+          <target state="translated">有关详细信息，请参阅<bpt id="p1">[</bpt>MSBuild 参考<ept id="p1">](~/msbuild/msbuild-reference.md)</ept>。</target>       </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeDocumentInstallationPath.#ctor">
+          <source>Initializes a new instance of the <ph id="ph1">&lt;see cref="T:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeDocumentInstallationPath" /&gt;</ph> class.</source>
+          <target state="translated">初始化 <ph id="ph1">&lt;see cref="T:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeDocumentInstallationPath" /&gt;</ph> 类的新实例。</target>       </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeDocumentInstallationPath.Execute">
+          <source>Creates the output folder and, if applicable, the installation folder, where the customized document is published.</source>
+          <target state="translated">在发布自定义文档的位置创建输出文件夹和安装文件夹（如果适用）。</target>       </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeDocumentInstallationPath.Execute">
+          <source><ph id="ph1">&lt;see langword="true" /&gt;</ph> if the output folder for the document was generated successfully; otherwise, <ph id="ph2">&lt;see langword="false" /&gt;</ph>.</source>
+          <target state="translated">如果成功生成该文档的输出文件夹，则为 <ph id="ph1">&lt;see langword="true" /&gt;</ph>；否则为 <ph id="ph2">&lt;see langword="false" /&gt;</ph>。</target>       </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeDocumentInstallationPath.Execute">
+          <source>The default is <ph id="ph1">&lt;see langword="false" /&gt;</ph>.</source>
+          <target state="translated">默认值为 <ph id="ph1">&lt;see langword="false" /&gt;</ph>。</target>       </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve" uid="P:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeDocumentInstallationPath.InstallationPath">
+          <source>Gets the relative or fully qualified path of the installation folder to be written into a customized document.</source>
+          <target state="translated">获取要写入自定义文档的安装文件夹的相对路径或绝对路径。</target>       </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve" extradata="MT" uid="P:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeDocumentInstallationPath.InstallationPath">
+          <source>A <ph id="ph1">&lt;see cref="T:System.String" /&gt;</ph> that represents the relative or fully qualified path of the installation folder to be written into a customized document.</source>
+          <target state="translated">A <ph id="ph1">&lt;see cref="T:System.String" /&gt;</ph> ，它表示要向其中写入一个自定义文档的安装文件夹的相对或完全限定路径。</target>       </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve" extradata="MT" uid="P:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeDocumentInstallationPath.InstallationPath">
+          <source>This path can be relative for local drives and network drives, but HTTP/HTTPS locations must be a fully qualified path.</source>
+          <target state="translated">对于本地驱动器和网络驱动器，此路径可以是相对路径，但 HTTP/HTTPS 位置必须是完全限定路径。</target>       </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve" uid="P:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeDocumentInstallationPath.InstallUrl">
+          <source>Sets the installation path where the customized document is copied for installation.</source>
+          <target state="translated">设置安装路径，自定义文档将复制到此处以用于安装。</target>       </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve" extradata="MT" uid="P:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeDocumentInstallationPath.InstallUrl">
+          <source>A string that represents the relative or fully qualified path of the customized document for installation.</source>
+          <target state="translated">一个字符串，表示用于安装的自定义文档的相对或完全限定路径。</target>       </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve" extradata="MT" uid="P:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeDocumentInstallationPath.InstallUrl">
+          <source>This path can be relative for local drives and network drives, but HTTP/HTTPS locations must be a fully qualified path.</source>
+          <target state="translated">对于本地驱动器和网络驱动器，此路径可以是相对路径，但 HTTP/HTTPS 位置必须是完全限定路径。</target>       </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve" uid="P:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeDocumentInstallationPath.PublishUrl">
+          <source>Sets the publish path where the customized document is copied for publishing.</source>
+          <target state="translated">设置发布路径，自定义文档将复制到此处以用于发布。</target>       </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve" extradata="MT" uid="P:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeDocumentInstallationPath.PublishUrl">
+          <source>A string that represents the relative or fully qualified path of the customized document for publishing.</source>
+          <target state="translated">一个字符串，表示用于发布的自定义文档的相对或完全限定路径。</target>       </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve" extradata="MT" uid="P:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeDocumentInstallationPath.PublishUrl">
+          <source>This path can be relative for local drives and network drives, but HTTP/HTTPS locations must be a fully qualified path.</source>
+          <target state="translated">对于本地驱动器和网络驱动器，此路径可以是相对路径，但 HTTP/HTTPS 位置必须是完全限定路径。</target>       </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve" extradata="MT" uid="P:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeDocumentInstallationPath.PublishUrl">
+          <source>The <ph id="ph1">&lt;xref:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeDocumentInstallationPath.PublishUrl%2A&gt;</ph> property must be assigned before <ph id="ph2">&lt;xref:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeDocumentInstallationPath.Execute%2A&gt;</ph> is called.</source>
+          <target state="translated"><ph id="ph1">&lt;xref:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeDocumentInstallationPath.PublishUrl%2A&gt;</ph>属性必须之前分配<ph id="ph2">&lt;xref:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeDocumentInstallationPath.Execute%2A&gt;</ph>调用。</target>       </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

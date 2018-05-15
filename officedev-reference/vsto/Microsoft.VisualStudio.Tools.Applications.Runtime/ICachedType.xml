@@ -1,171 +1,51 @@
-<Type Name="ICachedType" FullName="Microsoft.VisualStudio.Tools.Applications.Runtime.ICachedType">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="a8c02216754f648198df033d0f252d603042dc5e" />
-    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
-    <Meta Name="ms.translationtype" Value="HT" />
-    <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface ICachedType" />
-  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ICachedType" />
-  <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.Tools.Applications.Runtime.ICachedType" />
-  <AssemblyInfo>
-    <AssemblyName>Microsoft.VisualStudio.Tools.Applications.Runtime</AssemblyName>
-    <AssemblyVersion>10.0.0.0</AssemblyVersion>
-  </AssemblyInfo>
-  <Interfaces />
-  <Docs>
-    <summary>
-      <span data-ttu-id="01415-101">自定义文档级自定义中的类型的缓存行为。</span>
-      <span class="sxs-lookup">
-        <span data-stu-id="01415-101">Customizes the caching behavior of a type in document-level customizations.</span>
-      </span>
-    </summary>
-    <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- <span data-ttu-id="01415-102">类实现<xref:Microsoft.VisualStudio.Tools.Applications.Runtime.ICachedType>提供更大程度上控制缓存行为向开发人员只需遵守的要求的类比<xref:System.Xml.Serialization.XmlSerializer>。</span><span class="sxs-lookup"><span data-stu-id="01415-102">Classes that implement <xref:Microsoft.VisualStudio.Tools.Applications.Runtime.ICachedType> offer a greater degree of control over caching behavior to the developer than classes that simply conform to the requirements of <xref:System.Xml.Serialization.XmlSerializer>.</span></span> <span data-ttu-id="01415-103">有关详细信息，请参阅[缓存数据](/visualstudio/vsto/caching-data.md)。</span><span class="sxs-lookup"><span data-stu-id="01415-103">For more information, see [Caching Data](/visualstudio/vsto/caching-data.md).</span></span>  
-  
- ]]></format>
-    </remarks>
-  </Docs>
-  <Members>
-    <Member MemberName="AfterLoad">
-      <MemberSignature Language="C#" Value="public void AfterLoad ();" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AfterLoad() cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.VisualStudio.Tools.Applications.Runtime.ICachedType.AfterLoad" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.VisualStudio.Tools.Applications.Runtime</AssemblyName>
-        <AssemblyVersion>10.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Void</ReturnType>
-      </ReturnValue>
-      <Parameters />
-      <Docs>
-        <summary>
-          <span data-ttu-id="01415-104">在 [!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)] 完成加载类型之后调用。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="01415-104">Called after the [!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)] has finished loading the type.</span>
-          </span>
-        </summary>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="AfterSave">
-      <MemberSignature Language="C#" Value="public void AfterSave ();" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AfterSave() cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.VisualStudio.Tools.Applications.Runtime.ICachedType.AfterSave" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.VisualStudio.Tools.Applications.Runtime</AssemblyName>
-        <AssemblyVersion>10.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Void</ReturnType>
-      </ReturnValue>
-      <Parameters />
-      <Docs>
-        <summary>
-          <span data-ttu-id="01415-105">在完成类型的保存操作之后调用。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="01415-105">Called after a save operation is completed for the type.</span>
-          </span>
-        </summary>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="BeforeLoad">
-      <MemberSignature Language="C#" Value="public bool BeforeLoad ();" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool BeforeLoad() cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.VisualStudio.Tools.Applications.Runtime.ICachedType.BeforeLoad" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.VisualStudio.Tools.Applications.Runtime</AssemblyName>
-        <AssemblyVersion>10.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Boolean</ReturnType>
-      </ReturnValue>
-      <Parameters />
-      <Docs>
-        <summary>
-          <span data-ttu-id="01415-106">在 [!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)] 加载类型之前调用。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="01415-106">Called before the [!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)] loads the type.</span>
-          </span>
-        </summary>
-        <returns>
-          <span data-ttu-id="01415-107">如果不应从数据缓存中加载类型的状态，则为 <see langword="false" />；否则为 <see langword="true" />。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="01415-107">
-              <see langword="false" /> if the state of the type should not be loaded from the data cache; otherwise, <see langword="true" />.</span>
-          </span>
-        </returns>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="BeforeSave">
-      <MemberSignature Language="C#" Value="public bool BeforeSave ();" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool BeforeSave() cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.VisualStudio.Tools.Applications.Runtime.ICachedType.BeforeSave" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.VisualStudio.Tools.Applications.Runtime</AssemblyName>
-        <AssemblyVersion>10.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Boolean</ReturnType>
-      </ReturnValue>
-      <Parameters />
-      <Docs>
-        <summary>
-          <span data-ttu-id="01415-108">在 [!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)] 将类型保留在文档中之前调用。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="01415-108">Called before the [!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)] persists the type into the document.</span>
-          </span>
-        </summary>
-        <returns>
-          <span data-ttu-id="01415-109">如果不应保存类型的状态，则为 <see langword="false" />；否则为 <see langword="true" />。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="01415-109">
-              <see langword="false" /> if the state of the type should not be saved; otherwise, <see langword="true" />.</span>
-          </span>
-        </returns>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="IsDirty">
-      <MemberSignature Language="C#" Value="public bool IsDirty { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance bool IsDirty" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.VisualStudio.Tools.Applications.Runtime.ICachedType.IsDirty" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.VisualStudio.Tools.Applications.Runtime</AssemblyName>
-        <AssemblyVersion>10.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Boolean</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-          <span data-ttu-id="01415-110">获取一个值，该值指示自上次保存缓存类型以来，该缓存类型是否更改。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="01415-110">Gets a value that indicates whether the cached type has changed since the last time it was saved.</span>
-          </span>
-        </summary>
-        <value>
-          <span data-ttu-id="01415-111">
-            <see langword="true" /> 如果缓存的类型已更改自上次，保存;否则为<see langword="false" />。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="01415-111">
-              <see langword="true" /> if the cached type has been changed since it was last saved; otherwise, <see langword="false" />.</span>
-          </span>
-        </value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-  </Members>
-</Type>
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="ICachedType.xml" source-language="en-US" target-language="zh-CN">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-38f25dd" tool-company="Microsoft" />
+      <xliffext:skl_file_name xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">b4690f9a-9e49-426d-9091-855b10fda4dba8c02216754f648198df033d0f252d603042dc5e.skl</xliffext:skl_file_name>
+      <xliffext:version xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">1.2</xliffext:version>
+      <xliffext:ms.openlocfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">a8c02216754f648198df033d0f252d603042dc5e</xliffext:ms.openlocfilehash>
+      <xliffext:ms.sourcegitcommit xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">bb8a3a96823cedeffbdbcc0c41a8118399de8074</xliffext:ms.sourcegitcommit>
+      <xliffext:ms.lasthandoff xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">02/21/2018</xliffext:ms.lasthandoff>
+      <xliffext:moniker_ids xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">vsto-2017</xliffext:moniker_ids>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve" uid="T:Microsoft.VisualStudio.Tools.Applications.Runtime.ICachedType">
+          <source>Customizes the caching behavior of a type in document-level customizations.</source>
+          <target state="translated">自定义文档级自定义中的类型的缓存行为。</target>       </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve" extradata="MT" uid="T:Microsoft.VisualStudio.Tools.Applications.Runtime.ICachedType">
+          <source>Classes that implement <ph id="ph1">&lt;xref:Microsoft.VisualStudio.Tools.Applications.Runtime.ICachedType&gt;</ph> offer a greater degree of control over caching behavior to the developer than classes that simply conform to the requirements of <ph id="ph2">&lt;xref:System.Xml.Serialization.XmlSerializer&gt;</ph>.</source>
+          <target state="translated">类实现<ph id="ph1">&lt;xref:Microsoft.VisualStudio.Tools.Applications.Runtime.ICachedType&gt;</ph>提供更大程度上控制缓存行为向开发人员只需遵守的要求的类比<ph id="ph2">&lt;xref:System.Xml.Serialization.XmlSerializer&gt;</ph>。</target>       </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve" extradata="MT" uid="T:Microsoft.VisualStudio.Tools.Applications.Runtime.ICachedType">
+          <source>For more information, see <bpt id="p1">[</bpt>Caching Data<ept id="p1">](/visualstudio/vsto/caching-data.md)</ept>.</source>
+          <target state="translated">有关详细信息，请参阅<bpt id="p1">[</bpt>缓存数据<ept id="p1">](/visualstudio/vsto/caching-data.md)</ept>。</target>       </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.Tools.Applications.Runtime.ICachedType.AfterLoad">
+          <source>Called after the <ph id="ph1">[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]</ph> has finished loading the type.</source>
+          <target state="translated">在 <ph id="ph1">[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]</ph> 完成加载类型之后调用。</target>       </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.Tools.Applications.Runtime.ICachedType.AfterSave">
+          <source>Called after a save operation is completed for the type.</source>
+          <target state="translated">在完成类型的保存操作之后调用。</target>       </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.Tools.Applications.Runtime.ICachedType.BeforeLoad">
+          <source>Called before the <ph id="ph1">[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]</ph> loads the type.</source>
+          <target state="translated">在 <ph id="ph1">[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]</ph> 加载类型之前调用。</target>       </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.Tools.Applications.Runtime.ICachedType.BeforeLoad">
+          <source><ph id="ph1">&lt;see langword="false" /&gt;</ph> if the state of the type should not be loaded from the data cache; otherwise, <ph id="ph2">&lt;see langword="true" /&gt;</ph>.</source>
+          <target state="translated">如果不应从数据缓存中加载类型的状态，则为 <ph id="ph1">&lt;see langword="false" /&gt;</ph>；否则为 <ph id="ph2">&lt;see langword="true" /&gt;</ph>。</target>       </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.Tools.Applications.Runtime.ICachedType.BeforeSave">
+          <source>Called before the <ph id="ph1">[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]</ph> persists the type into the document.</source>
+          <target state="translated">在 <ph id="ph1">[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]</ph> 将类型保留在文档中之前调用。</target>       </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.Tools.Applications.Runtime.ICachedType.BeforeSave">
+          <source><ph id="ph1">&lt;see langword="false" /&gt;</ph> if the state of the type should not be saved; otherwise, <ph id="ph2">&lt;see langword="true" /&gt;</ph>.</source>
+          <target state="translated">如果不应保存类型的状态，则为 <ph id="ph1">&lt;see langword="false" /&gt;</ph>；否则为 <ph id="ph2">&lt;see langword="true" /&gt;</ph>。</target>       </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve" uid="P:Microsoft.VisualStudio.Tools.Applications.Runtime.ICachedType.IsDirty">
+          <source>Gets a value that indicates whether the cached type has changed since the last time it was saved.</source>
+          <target state="translated">获取一个值，该值指示自上次保存缓存类型以来，该缓存类型是否更改。</target>       </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve" extradata="MT" uid="P:Microsoft.VisualStudio.Tools.Applications.Runtime.ICachedType.IsDirty">
+          <source><ph id="ph1">&lt;see langword="true" /&gt;</ph> if the cached type has been changed since it was last saved; otherwise, <ph id="ph2">&lt;see langword="false" /&gt;</ph>.</source>
+          <target state="translated"><ph id="ph1">&lt;see langword="true" /&gt;</ph> 如果缓存的类型已更改自上次，保存;否则为<ph id="ph2">&lt;see langword="false" /&gt;</ph>。</target>       </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
