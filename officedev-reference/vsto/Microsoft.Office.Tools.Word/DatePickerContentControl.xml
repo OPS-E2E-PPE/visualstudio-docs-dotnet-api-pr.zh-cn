@@ -36,39 +36,34 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>
-      <span data-ttu-id="12921-101">表示文档上的日期选取器控件。</span>
-      <span class="sxs-lookup">
-        <span data-stu-id="12921-101">Represents a date picker control on a document.</span>
-      </span>
-    </summary>
+    <summary>表示文档上的日期选取器控件。</summary>
     <remarks>
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="12921-102">A<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>提供一个使用户能够选择一个日期的日历。</span><span class="sxs-lookup"><span data-stu-id="12921-102">A <xref:Microsoft.Office.Tools.Word.DatePickerContentControl> provides a calendar that enables users to select a date.</span></span> <span data-ttu-id="12921-103">最终用户单击控件中的下拉箭头时，就会显示日历。</span><span class="sxs-lookup"><span data-stu-id="12921-103">The calendar appears when the end user clicks the drop-down arrow in the control.</span></span>  
+ A<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>提供一个使用户能够选择一个日期的日历。 最终用户单击控件中的下拉箭头时，就会显示日历。  
   
- <span data-ttu-id="12921-104">若要指定的日期的显示格式，使用<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.DateDisplayFormat%2A>和<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.DateDisplayLocale%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="12921-104">To specify the format of the date that is displayed, use the <xref:Microsoft.Office.Tools.Word.DatePickerContentControl.DateDisplayFormat%2A> and <xref:Microsoft.Office.Tools.Word.DatePickerContentControl.DateDisplayLocale%2A> properties.</span></span> <span data-ttu-id="12921-105">若要选择区域日历，使用<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.DateCalendarType%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="12921-105">To choose a regional calendar, use the <xref:Microsoft.Office.Tools.Word.DatePickerContentControl.DateCalendarType%2A> property.</span></span>  
+ 若要指定的日期的显示格式，使用<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.DateDisplayFormat%2A>和<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.DateDisplayLocale%2A>属性。 若要选择区域日历，使用<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.DateCalendarType%2A>属性。  
   
  [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
   
-## <a name="content-controls"></a><span data-ttu-id="12921-106">内容控件</span><span class="sxs-lookup"><span data-stu-id="12921-106">Content Controls</span></span>  
- <span data-ttu-id="12921-107"><xref:Microsoft.Office.Tools.Word.DatePickerContentControl>是八个类型的内容控件，可以使用设计文档和 Microsoft Office Word 中的模板之一。</span><span class="sxs-lookup"><span data-stu-id="12921-107">The <xref:Microsoft.Office.Tools.Word.DatePickerContentControl> is one of eight types of content controls that you can use to design documents and templates in Microsoft Office Word.</span></span> <span data-ttu-id="12921-108">内容控件具有用户界面 (UI)，具有控制类似于窗体的输入。</span><span class="sxs-lookup"><span data-stu-id="12921-108">Content controls have a user interface (UI) that has controlled input like a form.</span></span> <span data-ttu-id="12921-109">你可以使用内容控件来防止用户编辑受保护的部分的文档或模板，并还可以将内容控件绑定到数据源。</span><span class="sxs-lookup"><span data-stu-id="12921-109">You can use content controls to prevent users from editing protected sections of the document or template, and you can also bind content controls to a data source.</span></span> <span data-ttu-id="12921-110">有关详细信息，请参阅[内容控件](/visualstudio/vsto/content-controls.md)。</span><span class="sxs-lookup"><span data-stu-id="12921-110">For more information, see [Content Controls](/visualstudio/vsto/content-controls.md).</span></span>  
+## <a name="content-controls"></a>内容控件  
+ <xref:Microsoft.Office.Tools.Word.DatePickerContentControl>是八个类型的内容控件，可以使用设计文档和 Microsoft Office Word 中的模板之一。 内容控件具有用户界面 (UI)，具有控制类似于窗体的输入。 你可以使用内容控件来防止用户编辑受保护的部分的文档或模板，并还可以将内容控件绑定到数据源。 有关详细信息，请参阅[内容控件](/visualstudio/vsto/content-controls.md)。  
   
-## <a name="usage"></a><span data-ttu-id="12921-111">用法</span><span class="sxs-lookup"><span data-stu-id="12921-111">Usage</span></span>  
+## <a name="usage"></a>用法  
  [!INCLUDE[vsto_net35mref](~/includes/vsto-net35mref-md.md)]  
   
    
   
 ## Examples  
- <span data-ttu-id="12921-112">下面的代码示例添加一个新<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>到文档的开头。</span><span class="sxs-lookup"><span data-stu-id="12921-112">The following code example adds a new <xref:Microsoft.Office.Tools.Word.DatePickerContentControl> to the beginning of the document.</span></span> <span data-ttu-id="12921-113">该示例还会修改该控件显示日期的格式。</span><span class="sxs-lookup"><span data-stu-id="12921-113">The example also modifies the format in which the control displays dates.</span></span>  
+ 下面的代码示例添加一个新<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>到文档的开头。 该示例还会修改该控件显示日期的格式。  
   
- <span data-ttu-id="12921-114">此版本用于文档级自定义。</span><span class="sxs-lookup"><span data-stu-id="12921-114">This version is for a document-level customization.</span></span> <span data-ttu-id="12921-115">若要使用此代码，将其粘贴到`ThisDocument`中你的项目，然后调用类`AddDatePickerControlAtSelection`方法从`ThisDocument_Startup`方法。</span><span class="sxs-lookup"><span data-stu-id="12921-115">To use this code, paste it into the `ThisDocument` class in your project, and call the `AddDatePickerControlAtSelection` method from the `ThisDocument_Startup` method.</span></span>  
+ 此版本用于文档级自定义。 若要使用此代码，将其粘贴到`ThisDocument`中你的项目，然后调用类`AddDatePickerControlAtSelection`方法从`ThisDocument_Startup`方法。  
   
  [!code-csharp[Trin_ContentControlReference#200](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference/CS/DatePicker.cs#200)]
  [!code-vb[Trin_ContentControlReference#200](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference/VB/DatePicker.vb#200)]  
   
- <span data-ttu-id="12921-116">此版本用于针对应用程序级外接程序。</span><span class="sxs-lookup"><span data-stu-id="12921-116">This version is for an application-level add-in.</span></span> <span data-ttu-id="12921-117">若要使用此代码，将其粘贴到`ThisAddIn`中你的项目，然后调用类`AddDatePickerControlAtSelection`方法从`ThisAddIn_Startup`方法。</span><span class="sxs-lookup"><span data-stu-id="12921-117">To use this code, paste it into the `ThisAddIn` class in your project, and call the `AddDatePickerControlAtSelection` method from the `ThisAddIn_Startup` method.</span></span>  
+ 此版本用于针对应用程序级外接程序。 若要使用此代码，将其粘贴到`ThisAddIn`中你的项目，然后调用类`AddDatePickerControlAtSelection`方法从`ThisAddIn_Startup`方法。  
   
  [!code-csharp[Trin_ContentControlReference_AppLevelAddIn#200](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/CS/DatePicker.cs#200)]
  [!code-vb[Trin_ContentControlReference_AppLevelAddIn#200](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/VB/DatePicker.vb#200)]  
@@ -90,23 +85,13 @@
         <ReturnType>Microsoft.Office.Interop.Word.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <span data-ttu-id="12921-118">获取一个表示 Microsoft Office Word 当前实例的 <see cref="T:Microsoft.Office.Interop.Word.Application" />。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="12921-118">Gets a <see cref="T:Microsoft.Office.Interop.Word.Application" /> that represents the current instance of Microsoft Office Word.</span>
-          </span>
-        </summary>
-        <value>
-          <span data-ttu-id="12921-119">一个表示 Microsoft Office Word 当前实例的 <see cref="T:Microsoft.Office.Interop.Word.Application" />。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="12921-119">A <see cref="T:Microsoft.Office.Interop.Word.Application" /> that represents the current instance of Microsoft Office Word.</span>
-          </span>
-        </value>
+        <summary>获取一个表示 Microsoft Office Word 当前实例的 <see cref="T:Microsoft.Office.Interop.Word.Application" />。</summary>
+        <value>一个表示 Microsoft Office Word 当前实例的 <see cref="T:Microsoft.Office.Interop.Word.Application" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="12921-120"><xref:Microsoft.Office.Tools.Word.DatePickerContentControl.Application%2A>属性公开有关 Word，应用于该实例的选项的当前实例的信息以及在实例中打开当前文档。</span><span class="sxs-lookup"><span data-stu-id="12921-120">The <xref:Microsoft.Office.Tools.Word.DatePickerContentControl.Application%2A> property exposes information about the current instance of Word, the options applied to that instance, and the current documents open within the instance.</span></span>  
+ <xref:Microsoft.Office.Tools.Word.DatePickerContentControl.Application%2A>属性公开有关 Word，应用于该实例的选项的当前实例的信息以及在实例中打开当前文档。  
   
  ]]></format>
         </remarks>
@@ -126,17 +111,12 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>
-          <span data-ttu-id="12921-121">将 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 从文档复制到剪贴板。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="12921-121">Copies the <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> from the document to the Clipboard.</span>
-          </span>
-        </summary>
+        <summary>将 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 从文档复制到剪贴板。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="12921-122">当你使用<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.Copy%2A>方法时，原始<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>保留在文档。</span><span class="sxs-lookup"><span data-stu-id="12921-122">When you use the <xref:Microsoft.Office.Tools.Word.DatePickerContentControl.Copy%2A> method, the original <xref:Microsoft.Office.Tools.Word.DatePickerContentControl> remains on the document.</span></span> <span data-ttu-id="12921-123">一份<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>（包括所有文本和属性设置) 将添加到剪贴板。</span><span class="sxs-lookup"><span data-stu-id="12921-123">A copy of the <xref:Microsoft.Office.Tools.Word.DatePickerContentControl>, including all text and property settings, is added to the Clipboard.</span></span>  
+ 当你使用<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.Copy%2A>方法时，原始<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>保留在文档。 一份<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>（包括所有文本和属性设置) 将添加到剪贴板。  
   
  ]]></format>
         </remarks>
@@ -155,23 +135,13 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <span data-ttu-id="12921-124">获取一个 32 位整数，该整数指示已在其中创建 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 的应用程序。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="12921-124">Gets a 32-bit integer that indicates the application in which the <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> was created.</span>
-          </span>
-        </summary>
-        <value>
-          <span data-ttu-id="12921-125">一个 32 位整数，该整数指示已在其中创建该控件的应用程序。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="12921-125">A 32-bit integer that indicates the application in which the control was created.</span>
-          </span>
-        </value>
+        <summary>获取一个 32 位整数，该整数指示已在其中创建 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 的应用程序。</summary>
+        <value>一个 32 位整数，该整数指示已在其中创建该控件的应用程序。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="12921-126">如果<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>在 Word 中，创建<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.Creator%2A>属性返回表示字符串的十六进制数 4d535744， `MSWD`。</span><span class="sxs-lookup"><span data-stu-id="12921-126">If the <xref:Microsoft.Office.Tools.Word.DatePickerContentControl> was created in Word, the <xref:Microsoft.Office.Tools.Word.DatePickerContentControl.Creator%2A> property returns the hexadecimal number 4D535744, which represents the string `MSWD`.</span></span> <span data-ttu-id="12921-127">此字符串是 Word 的四个字符创建者代码。</span><span class="sxs-lookup"><span data-stu-id="12921-127">This string is the four-character creator code for Word.</span></span>  
+ 如果<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>在 Word 中，创建<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.Creator%2A>属性返回表示字符串的十六进制数 4d535744， `MSWD`。 此字符串是 Word 的四个字符创建者代码。  
   
  ]]></format>
         </remarks>
@@ -191,17 +161,12 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>
-          <span data-ttu-id="12921-128">从文档中移除 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" />，然后将其添加到剪贴板中。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="12921-128">Removes the <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> from the document and adds it to the Clipboard.</span>
-          </span>
-        </summary>
+        <summary>从文档中移除 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" />，然后将其添加到剪贴板中。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="12921-129">当你使用<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.Cut%2A>方法时，原始<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>从文档中移除。</span><span class="sxs-lookup"><span data-stu-id="12921-129">When you use the <xref:Microsoft.Office.Tools.Word.DatePickerContentControl.Cut%2A> method, the original <xref:Microsoft.Office.Tools.Word.DatePickerContentControl> is removed from the document.</span></span> <span data-ttu-id="12921-130">一份<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>（包括所有文本和属性设置) 将添加到剪贴板。</span><span class="sxs-lookup"><span data-stu-id="12921-130">A copy of the <xref:Microsoft.Office.Tools.Word.DatePickerContentControl>, including all text and property settings, is added to the Clipboard.</span></span>  
+ 当你使用<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.Cut%2A>方法时，原始<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>从文档中移除。 一份<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>（包括所有文本和属性设置) 将添加到剪贴板。  
   
  ]]></format>
         </remarks>
@@ -220,28 +185,14 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdCalendarType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <span data-ttu-id="12921-131">获取或设置在 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 中显示的日历的类型。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="12921-131">Gets or sets the type of calendar that is displayed in the <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" />.</span>
-          </span>
-        </summary>
+        <summary>获取或设置在 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 中显示的日历的类型。</summary>
         <value>
-          <span data-ttu-id="12921-132">
-            <see cref="T:Microsoft.Office.Interop.Word.WdCalendarType" /> 值之一。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="12921-132">One of the <see cref="T:Microsoft.Office.Interop.Word.WdCalendarType" /> values.</span>
-          </span>
-          <span data-ttu-id="12921-133">默认值取决于操作系统的当前区域设置。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="12921-133">The default depends on the current locale setting of the operating system.</span>
-          </span>
-        </value>
+          <see cref="T:Microsoft.Office.Interop.Word.WdCalendarType" /> 值之一。 默认值取决于操作系统的当前区域设置。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="12921-134">默认日历类型取决于操作系统的区域设置。</span><span class="sxs-lookup"><span data-stu-id="12921-134">The default calendar type depends on the locale setting of the operating system.</span></span> <span data-ttu-id="12921-135">例如，英语 （美国） 的区域设置的默认日历类型是`wdCalendarWestern`。</span><span class="sxs-lookup"><span data-stu-id="12921-135">For example, the default calendar type for the locale English (United States) is `wdCalendarWestern`.</span></span>  
+ 默认日历类型取决于操作系统的区域设置。 例如，英语 （美国） 的区域设置的默认日历类型是`wdCalendarWestern`。  
   
  ]]></format>
         </remarks>
@@ -260,35 +211,25 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <span data-ttu-id="12921-136">获取或设置一个字符串，该字符串指定 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 显示日期所用的格式。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="12921-136">Gets or sets a string that specifies the format in which the <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> displays dates.</span>
-          </span>
-        </summary>
-        <value>
-          <span data-ttu-id="12921-137">一个字符串，该字符串指定 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 显示日期所用的格式。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="12921-137">A string that specifies the format in which the <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> displays dates.</span>
-          </span>
-        </value>
+        <summary>获取或设置一个字符串，该字符串指定 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 显示日期所用的格式。</summary>
+        <value>一个字符串，该字符串指定 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 显示日期所用的格式。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="12921-138">默认日期格式为 Microsoft Office Word 中，这通常取决于操作系统的区域设置中指定的格式设置。</span><span class="sxs-lookup"><span data-stu-id="12921-138">The default date format is the format setting specified in Microsoft Office Word, which usually depends on the locale setting of the operating system.</span></span> <span data-ttu-id="12921-139">例如，英语 （美国） 的区域设置的日期的默认格式是`M/dd/yyyy`。</span><span class="sxs-lookup"><span data-stu-id="12921-139">For example, the default format of dates for the locale English (United States) is `M/dd/yyyy`.</span></span>  
+ 默认日期格式为 Microsoft Office Word 中，这通常取决于操作系统的区域设置中指定的格式设置。 例如，英语 （美国） 的区域设置的日期的默认格式是`M/dd/yyyy`。  
   
    
   
 ## Examples  
- <span data-ttu-id="12921-140">下面的代码示例添加一个新<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>到文档的开头。</span><span class="sxs-lookup"><span data-stu-id="12921-140">The following code example adds a new <xref:Microsoft.Office.Tools.Word.DatePickerContentControl> to the beginning of the document.</span></span> <span data-ttu-id="12921-141">该示例使用<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.DateDisplayFormat%2A>属性以格式显示日期`MMMM d, yyyy`。</span><span class="sxs-lookup"><span data-stu-id="12921-141">The example uses the <xref:Microsoft.Office.Tools.Word.DatePickerContentControl.DateDisplayFormat%2A> property to display dates in the format `MMMM d, yyyy`.</span></span>  
+ 下面的代码示例添加一个新<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>到文档的开头。 该示例使用<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.DateDisplayFormat%2A>属性以格式显示日期`MMMM d, yyyy`。  
   
- <span data-ttu-id="12921-142">此版本用于文档级自定义。</span><span class="sxs-lookup"><span data-stu-id="12921-142">This version is for a document-level customization.</span></span> <span data-ttu-id="12921-143">若要使用此代码，将其粘贴到`ThisDocument`中你的项目，然后调用类`AddDatePickerControlAtSelection`方法从`ThisDocument_Startup`方法。</span><span class="sxs-lookup"><span data-stu-id="12921-143">To use this code, paste it into the `ThisDocument` class in your project, and call the `AddDatePickerControlAtSelection` method from the `ThisDocument_Startup` method.</span></span>  
+ 此版本用于文档级自定义。 若要使用此代码，将其粘贴到`ThisDocument`中你的项目，然后调用类`AddDatePickerControlAtSelection`方法从`ThisDocument_Startup`方法。  
   
  [!code-csharp[Trin_ContentControlReference#200](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference/CS/DatePicker.cs#200)]
  [!code-vb[Trin_ContentControlReference#200](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference/VB/DatePicker.vb#200)]  
   
- <span data-ttu-id="12921-144">此版本用于针对应用程序级外接程序。</span><span class="sxs-lookup"><span data-stu-id="12921-144">This version is for an application-level add-in.</span></span> <span data-ttu-id="12921-145">若要使用此代码，将其粘贴到`ThisAddIn`中你的项目，然后调用类`AddDatePickerControlAtSelection`方法从`ThisAddIn_Startup`方法。</span><span class="sxs-lookup"><span data-stu-id="12921-145">To use this code, paste it into the `ThisAddIn` class in your project, and call the `AddDatePickerControlAtSelection` method from the `ThisAddIn_Startup` method.</span></span>  
+ 此版本用于针对应用程序级外接程序。 若要使用此代码，将其粘贴到`ThisAddIn`中你的项目，然后调用类`AddDatePickerControlAtSelection`方法从`ThisAddIn_Startup`方法。  
   
  [!code-csharp[Trin_ContentControlReference_AppLevelAddIn#200](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/CS/DatePicker.cs#200)]
  [!code-vb[Trin_ContentControlReference_AppLevelAddIn#200](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/VB/DatePicker.vb#200)]  
@@ -310,24 +251,14 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdLanguageID</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <span data-ttu-id="12921-146">获取或设置 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 中显示的日期的语言格式。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="12921-146">Gets or sets the language format of the date that is displayed in the <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" />.</span>
-          </span>
-        </summary>
+        <summary>获取或设置 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 中显示的日期的语言格式。</summary>
         <value>
-          <span data-ttu-id="12921-147">
-            <see cref="T:Microsoft.Office.Interop.Word.WdLanguageID" /> 值之一。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="12921-147">One of the <see cref="T:Microsoft.Office.Interop.Word.WdLanguageID" /> values.</span>
-          </span>
-        </value>
+          <see cref="T:Microsoft.Office.Interop.Word.WdLanguageID" /> 值之一。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="12921-148">默认值<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.DateDisplayLocale%2A>属性依赖于 Microsoft Office Word 中指定的编辑语言。</span><span class="sxs-lookup"><span data-stu-id="12921-148">The default value of the <xref:Microsoft.Office.Tools.Word.DatePickerContentControl.DateDisplayLocale%2A> property depends on the editing language specified in Microsoft Office Word.</span></span> <span data-ttu-id="12921-149">例如，英语 （美国） 的默认语言格式是`wdEnglishUS`。</span><span class="sxs-lookup"><span data-stu-id="12921-149">For example, the default language format for English (United States) is `wdEnglishUS`.</span></span>  
+ 默认值<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.DateDisplayLocale%2A>属性依赖于 Microsoft Office Word 中指定的编辑语言。 例如，英语 （美国） 的默认语言格式是`wdEnglishUS`。  
   
  ]]></format>
         </remarks>
@@ -346,30 +277,16 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdContentControlDateStorageFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <span data-ttu-id="12921-150">获取或设置一种格式，<see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 会以此格式将数据保存到自定义 XML 部件。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="12921-150">Gets or sets the format in which the <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> saves dates in a custom XML part.</span>
-          </span>
-        </summary>
+        <summary>获取或设置一种格式，<see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 会以此格式将数据保存到自定义 XML 部件。</summary>
         <value>
-          <span data-ttu-id="12921-151">
-            <see cref="T:Microsoft.Office.Interop.Word.WdContentControlDateStorageFormat" /> 值之一。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="12921-151">One of the <see cref="T:Microsoft.Office.Interop.Word.WdContentControlDateStorageFormat" /> values.</span>
-          </span>
-          <span data-ttu-id="12921-152">默认值是<c>值</c>。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="12921-152">The default is <c>wdContentControlDateStorageDateTime</c>.</span>
-          </span>
-        </value>
+          <see cref="T:Microsoft.Office.Interop.Word.WdContentControlDateStorageFormat" /> 值之一。 默认值是<c>值</c>。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="12921-153">如果<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>绑定到*自定义 XML 部件*在文档中，<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.DateStorageFormat%2A>属性指定控件如何以 xml 格式保存日期。</span><span class="sxs-lookup"><span data-stu-id="12921-153">If the <xref:Microsoft.Office.Tools.Word.DatePickerContentControl> is bound to a *custom XML part* in the document, the <xref:Microsoft.Office.Tools.Word.DatePickerContentControl.DateStorageFormat%2A> property specifies how the control saves dates in XML.</span></span> <span data-ttu-id="12921-154">您可以保留为 XML 架构日期的日期 (`xsd:date`)，XML 架构日期/时间 (`xsd:dateTime`)，或为文本。</span><span class="sxs-lookup"><span data-stu-id="12921-154">You can persist dates as an XML schema date (`xsd:date`), an XML schema date/time (`xsd:dateTime`), or as text.</span></span>  
+ 如果<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>绑定到*自定义 XML 部件*在文档中，<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.DateStorageFormat%2A>属性指定控件如何以 xml 格式保存日期。 您可以保留为 XML 架构日期的日期 (`xsd:date`)，XML 架构日期/时间 (`xsd:dateTime`)，或为文本。  
   
- <span data-ttu-id="12921-155">有关内容控件绑定到自定义 XML 部件的详细信息，请参阅[内容控件](/visualstudio/vsto/content-controls.md)和[自定义 XML 部件概述](/visualstudio/vsto/custom-xml-parts-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="12921-155">For more information about binding content controls to custom XML parts, see [Content Controls](/visualstudio/vsto/content-controls.md) and [Custom XML Parts Overview](/visualstudio/vsto/custom-xml-parts-overview.md).</span></span>  
+ 有关内容控件绑定到自定义 XML 部件的详细信息，请参阅[内容控件](/visualstudio/vsto/content-controls.md)和[自定义 XML 部件概述](/visualstudio/vsto/custom-xml-parts-overview.md)。  
   
  ]]></format>
         </remarks>
@@ -388,22 +305,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <span data-ttu-id="12921-156">获取用于设置 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 中的文本格式的字符样式的名称。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="12921-156">Gets the name of the character style that is used to format text in the <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" />.</span>
-          </span>
-        </summary>
-        <value>
-          <span data-ttu-id="12921-157">用于设置 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 中的文本格式的字符样式的名称。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="12921-157">The name of the character style to use to format text in the <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" />.</span>
-          </span>
-          <span data-ttu-id="12921-158">默认值是**默认段落字体**。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="12921-158">The default is **Default Paragraph Font**.</span>
-          </span>
-        </value>
+        <summary>获取用于设置 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 中的文本格式的字符样式的名称。</summary>
+        <value>用于设置 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 中的文本格式的字符样式的名称。 默认值是**默认段落字体**。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -420,38 +323,19 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <span data-ttu-id="12921-159">获取或设置一个值，该值指示是否可从文档删除 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" />。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="12921-159">Gets or sets a value that specifies whether the <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> can be deleted from the document.</span>
-          </span>
-        </summary>
+        <summary>获取或设置一个值，该值指示是否可从文档删除 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" />。</summary>
         <value>
-          <span data-ttu-id="12921-160">如果可从文档删除 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" />，则为 <see langword="true" />；如果不能删除此控件，则为 <see langword="false" />。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="12921-160">
-              <see langword="true" /> if the <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> cannot be deleted from the document; <see langword="false" /> if the control can be deleted.</span>
-          </span>
-          <span data-ttu-id="12921-161">默认值为 <see langword="false" />。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="12921-161">The default is <see langword="false" />.</span>
-          </span>
-        </value>
+          如果可从文档删除 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" />，则为 <see langword="true" />；如果不能删除此控件，则为 <see langword="false" />。 默认值为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="12921-162">若要阻止用户编辑的内容<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>，使用<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.LockContents%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="12921-162">To prevent users from editing the contents of a <xref:Microsoft.Office.Tools.Word.DatePickerContentControl>, use the <xref:Microsoft.Office.Tools.Word.DatePickerContentControl.LockContents%2A> property.</span></span> <span data-ttu-id="12921-163">有关如何使用<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>若要保护的文档的一部分，请参阅[内容控件](/visualstudio/vsto/content-controls.md)和[如何： 使用内容控件保护文档的某些部分](/visualstudio/vsto/how-to-protect-parts-of-documents-by-using-content-controls.md)。</span><span class="sxs-lookup"><span data-stu-id="12921-163">For more information about how to use a <xref:Microsoft.Office.Tools.Word.DatePickerContentControl> to protect a part of a document, see [Content Controls](/visualstudio/vsto/content-controls.md) and [How to: Protect Parts of Documents by Using Content Controls](/visualstudio/vsto/how-to-protect-parts-of-documents-by-using-content-controls.md).</span></span>  
+ 若要阻止用户编辑的内容<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>，使用<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.LockContents%2A>属性。 有关如何使用<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>若要保护的文档的一部分，请参阅[内容控件](/visualstudio/vsto/content-controls.md)和[如何： 使用内容控件保护文档的某些部分](/visualstudio/vsto/how-to-protect-parts-of-documents-by-using-content-controls.md)。  
   
  ]]></format>
         </remarks>
         <exception cref="T:System.Runtime.InteropServices.COMException">
-          <span data-ttu-id="12921-164">
-            <see cref="P:Microsoft.Office.Tools.Word.DatePickerContentControl.Temporary" /> 属性为 <see langword="true" /> 时，设置此属性。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="12921-164">This property is set when the <see cref="P:Microsoft.Office.Tools.Word.DatePickerContentControl.Temporary" /> property is <see langword="true" />.</span>
-          </span>
-        </exception>
+          <see cref="P:Microsoft.Office.Tools.Word.DatePickerContentControl.Temporary" /> 属性为 <see langword="true" /> 时，设置此属性。</exception>
       </Docs>
     </Member>
     <Member MemberName="LockContents">
@@ -467,28 +351,14 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <span data-ttu-id="12921-165">获取或设置一个值，该值指示能否编辑 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 的内容。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="12921-165">Gets or sets a value that specifies whether the contents of the <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> can be edited.</span>
-          </span>
-        </summary>
+        <summary>获取或设置一个值，该值指示能否编辑 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 的内容。</summary>
         <value>
-          <span data-ttu-id="12921-166">如果不能编辑 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 的内容，则为 <see langword="true" />；如果可以编辑控件内容，则为 <see langword="false" />。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="12921-166">
-              <see langword="true" /> if the contents of the <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> cannot be edited; <see langword="false" /> if the contents of the control can be edited.</span>
-          </span>
-          <span data-ttu-id="12921-167">默认值为 <see langword="false" />。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="12921-167">The default is <see langword="false" />.</span>
-          </span>
-        </value>
+          如果不能编辑 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 的内容，则为 <see langword="true" />；如果可以编辑控件内容，则为 <see langword="false" />。 默认值为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="12921-168">若要阻止用户删除<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>从文档中，使用<xref:Microsoft.Office.Tools.Word.ComboBoxContentControl.LockContentControl%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="12921-168">To prevent users from deleting a <xref:Microsoft.Office.Tools.Word.DatePickerContentControl> from the document, use the <xref:Microsoft.Office.Tools.Word.ComboBoxContentControl.LockContentControl%2A> property.</span></span> <span data-ttu-id="12921-169">有关使用<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>若要保护的文档的一部分，请参阅[内容控件](/visualstudio/vsto/content-controls.md)和[如何： 使用内容控件保护文档的某些部分](/visualstudio/vsto/how-to-protect-parts-of-documents-by-using-content-controls.md)。</span><span class="sxs-lookup"><span data-stu-id="12921-169">For more information about using a <xref:Microsoft.Office.Tools.Word.DatePickerContentControl> to protect a part of a document, see [Content Controls](/visualstudio/vsto/content-controls.md) and [How to: Protect Parts of Documents by Using Content Controls](/visualstudio/vsto/how-to-protect-parts-of-documents-by-using-content-controls.md).</span></span>  
+ 若要阻止用户删除<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>从文档中，使用<xref:Microsoft.Office.Tools.Word.ComboBoxContentControl.LockContentControl%2A>属性。 有关使用<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>若要保护的文档的一部分，请参阅[内容控件](/visualstudio/vsto/content-controls.md)和[如何： 使用内容控件保护文档的某些部分](/visualstudio/vsto/how-to-protect-parts-of-documents-by-using-content-controls.md)。  
   
  ]]></format>
         </remarks>
@@ -507,23 +377,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <span data-ttu-id="12921-170">获取或设置一个值，该值指定 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 是否可以包含换行符。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="12921-170">Gets or sets a value that specifies whether the <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> can contain line breaks.</span>
-          </span>
-        </summary>
+        <summary>获取或设置一个值，该值指定 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 是否可以包含换行符。</summary>
         <value>
-          <span data-ttu-id="12921-171">如果 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 可以包含换行符，则为 <see langword="true" />；否则为 <see langword="false" />。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="12921-171">
-              <see langword="true" /> if the <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> can contain line breaks; otherwise, <see langword="false" />.</span>
-          </span>
-          <span data-ttu-id="12921-172">默认值为 <see langword="false" />。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="12921-172">The default is <see langword="false" />.</span>
-          </span>
-        </value>
+          如果 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 可以包含换行符，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -540,25 +396,15 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <span data-ttu-id="12921-173">获取 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 的父级。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="12921-173">Gets the parent of the <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" />.</span>
-          </span>
-        </summary>
-        <value>
-          <span data-ttu-id="12921-174">一个对象，表示 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 的父级。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="12921-174">An object that represents the parent of the <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" />.</span>
-          </span>
-        </value>
+        <summary>获取 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 的父级。</summary>
+        <value>一个对象，表示 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 的父级。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="12921-175">父级<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>是控件所在的对象。</span><span class="sxs-lookup"><span data-stu-id="12921-175">The parent of the <xref:Microsoft.Office.Tools.Word.DatePickerContentControl> is the object in which the control is contained.</span></span> <span data-ttu-id="12921-176">例如，如果控件在文档的正文，则此属性将返回<xref:Microsoft.Office.Interop.Word.Document?displayProperty=fullName>对象。</span><span class="sxs-lookup"><span data-stu-id="12921-176">For example, if the control is in the body of the document, this property will return a <xref:Microsoft.Office.Interop.Word.Document?displayProperty=fullName> object.</span></span>  
+ 父级<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>是控件所在的对象。 例如，如果控件在文档的正文，则此属性将返回<xref:Microsoft.Office.Interop.Word.Document?displayProperty=fullName>对象。  
   
- <span data-ttu-id="12921-177">若要获取的父控件<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>中包含<xref:Microsoft.Office.Tools.Word.RichTextContentControl>或<xref:Microsoft.Office.Tools.Word.GroupContentControl>，使用<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.ParentContentControl%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="12921-177">To get the parent control of a <xref:Microsoft.Office.Tools.Word.DatePickerContentControl> that is contained in a <xref:Microsoft.Office.Tools.Word.RichTextContentControl> or a <xref:Microsoft.Office.Tools.Word.GroupContentControl>, use the <xref:Microsoft.Office.Tools.Word.DatePickerContentControl.ParentContentControl%2A> property.</span></span>  
+ 若要获取的父控件<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>中包含<xref:Microsoft.Office.Tools.Word.RichTextContentControl>或<xref:Microsoft.Office.Tools.Word.GroupContentControl>，使用<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.ParentContentControl%2A>属性。  
   
  ]]></format>
         </remarks>
@@ -577,23 +423,13 @@
         <ReturnType>Microsoft.Office.Interop.Word.ContentControl</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <span data-ttu-id="12921-178">获取嵌套在另一个内容控件内的 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 的父内容控件。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="12921-178">Gets the parent content control of a <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> that is nested in another content control.</span>
-          </span>
-        </summary>
-        <value>
-          <span data-ttu-id="12921-179">A <c>Microsoft.Office.Interop.Word.ContentControl</c> ，表示在其中的内容控件<see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" />嵌套;<see langword="null" />如果<see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" />不嵌套在另一个内容控件。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="12921-179">A <c>Microsoft.Office.Interop.Word.ContentControl</c> that represents the content control in which the <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> is nested; <see langword="null" /> if the <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> is not nested in another content control.</span>
-          </span>
-        </value>
+        <summary>获取嵌套在另一个内容控件内的 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 的父内容控件。</summary>
+        <value>A <c>Microsoft.Office.Interop.Word.ContentControl</c> ，表示在其中的内容控件<see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" />嵌套;<see langword="null" />如果<see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" />不嵌套在另一个内容控件。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="12921-180"><xref:Microsoft.Office.Tools.Word.RichTextContentControl>和<xref:Microsoft.Office.Tools.Word.GroupContentControl>控件是可以包含嵌套的内容控件的内容控件的唯一类型。</span><span class="sxs-lookup"><span data-stu-id="12921-180">The <xref:Microsoft.Office.Tools.Word.RichTextContentControl> and <xref:Microsoft.Office.Tools.Word.GroupContentControl> controls are the only types of content controls that can contain nested content controls.</span></span>  
+ <xref:Microsoft.Office.Tools.Word.RichTextContentControl>和<xref:Microsoft.Office.Tools.Word.GroupContentControl>控件是可以包含嵌套的内容控件的内容控件的唯一类型。  
   
  ]]></format>
         </remarks>
@@ -612,37 +448,27 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <span data-ttu-id="12921-181">获取或设置在用户操作或某个其他操作更改文本之前在 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 中显示的文本。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="12921-181">Gets or sets the text that is displayed in the <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> until the text is changed by a user action or some other operation.</span>
-          </span>
-        </summary>
-        <value>
-          <span data-ttu-id="12921-182">在用户操作或某个其他操作更改文本之前，在控件中显示的文本。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="12921-182">The text that is displayed in the control until the text is changed by a user action or some other operation.</span>
-          </span>
-        </value>
+        <summary>获取或设置在用户操作或某个其他操作更改文本之前在 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 中显示的文本。</summary>
+        <value>在用户操作或某个其他操作更改文本之前，在控件中显示的文本。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="12921-183">占位符文本被显示，直到用户选择日期或使用数据源的数据填充该控件或该控件中的新值的类型。</span><span class="sxs-lookup"><span data-stu-id="12921-183">The placeholder text is displayed until a user selects a date or types a new value in the control, or the control is populated with data from a data source.</span></span>  
+ 占位符文本被显示，直到用户选择日期或使用数据源的数据填充该控件或该控件中的新值的类型。  
   
- <span data-ttu-id="12921-184">若要设置中的占位符文本<xref:Microsoft.Office.Interop.Word.BuildingBlock>或<xref:Microsoft.Office.Interop.Word.Range>，使用<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.SetPlaceholderText%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="12921-184">To set the placeholder text to text that is in a <xref:Microsoft.Office.Interop.Word.BuildingBlock> or a <xref:Microsoft.Office.Interop.Word.Range>, use the <xref:Microsoft.Office.Tools.Word.DatePickerContentControl.SetPlaceholderText%2A> method.</span></span>  
+ 若要设置中的占位符文本<xref:Microsoft.Office.Interop.Word.BuildingBlock>或<xref:Microsoft.Office.Interop.Word.Range>，使用<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.SetPlaceholderText%2A>方法。  
   
    
   
 ## Examples  
- <span data-ttu-id="12921-185">下面的代码示例添加一个新<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>到文档的开头。</span><span class="sxs-lookup"><span data-stu-id="12921-185">The following code example adds a new <xref:Microsoft.Office.Tools.Word.DatePickerContentControl> to the beginning of the document.</span></span> <span data-ttu-id="12921-186">该示例设置<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.PlaceholderText%2A>提示用户选择的日期的字符串属性。</span><span class="sxs-lookup"><span data-stu-id="12921-186">The example sets the <xref:Microsoft.Office.Tools.Word.DatePickerContentControl.PlaceholderText%2A> property to a string that prompts the user to choose a date.</span></span>  
+ 下面的代码示例添加一个新<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>到文档的开头。 该示例设置<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.PlaceholderText%2A>提示用户选择的日期的字符串属性。  
   
- <span data-ttu-id="12921-187">此版本用于文档级自定义。</span><span class="sxs-lookup"><span data-stu-id="12921-187">This version is for a document-level customization.</span></span> <span data-ttu-id="12921-188">若要使用此代码，将其粘贴到`ThisDocument`中你的项目，然后调用类`AddDatePickerControlAtSelection`方法从`ThisDocument_Startup`方法。</span><span class="sxs-lookup"><span data-stu-id="12921-188">To use this code, paste it into the `ThisDocument` class in your project, and call the `AddDatePickerControlAtSelection` method from the `ThisDocument_Startup` method.</span></span>  
+ 此版本用于文档级自定义。 若要使用此代码，将其粘贴到`ThisDocument`中你的项目，然后调用类`AddDatePickerControlAtSelection`方法从`ThisDocument_Startup`方法。  
   
  [!code-csharp[Trin_ContentControlReference#200](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference/CS/DatePicker.cs#200)]
  [!code-vb[Trin_ContentControlReference#200](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference/VB/DatePicker.vb#200)]  
   
- <span data-ttu-id="12921-189">此版本用于针对应用程序级外接程序。</span><span class="sxs-lookup"><span data-stu-id="12921-189">This version is for an application-level add-in.</span></span> <span data-ttu-id="12921-190">若要使用此代码，将其粘贴到`ThisAddIn`中你的项目，然后调用类`AddDatePickerControlAtSelection`方法从`ThisAddIn_Startup`方法。</span><span class="sxs-lookup"><span data-stu-id="12921-190">To use this code, paste it into the `ThisAddIn` class in your project, and call the `AddDatePickerControlAtSelection` method from the `ThisAddIn_Startup` method.</span></span>  
+ 此版本用于针对应用程序级外接程序。 若要使用此代码，将其粘贴到`ThisAddIn`中你的项目，然后调用类`AddDatePickerControlAtSelection`方法从`ThisAddIn_Startup`方法。  
   
  [!code-csharp[Trin_ContentControlReference_AppLevelAddIn#200](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/CS/DatePicker.cs#200)]
  [!code-vb[Trin_ContentControlReference_AppLevelAddIn#200](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/VB/DatePicker.vb#200)]  
@@ -664,25 +490,15 @@
         <ReturnType>Microsoft.Office.Interop.Word.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <span data-ttu-id="12921-191">获取一个 <see cref="T:Microsoft.Office.Interop.Word.Range" />，表示 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 的内容。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="12921-191">Gets a <see cref="T:Microsoft.Office.Interop.Word.Range" /> that represents the contents of the <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" />.</span>
-          </span>
-        </summary>
-        <value>
-          <span data-ttu-id="12921-192">一个 <see cref="T:Microsoft.Office.Interop.Word.Range" />，表示 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 的内容。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="12921-192">A <see cref="T:Microsoft.Office.Interop.Word.Range" /> that represents the contents of the <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" />.</span>
-          </span>
-        </value>
+        <summary>获取一个 <see cref="T:Microsoft.Office.Interop.Word.Range" />，表示 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 的内容。</summary>
+        <value>一个 <see cref="T:Microsoft.Office.Interop.Word.Range" />，表示 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 的内容。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="12921-193">使用<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.Range%2A>属性来访问控件和其他文本属性中的文本的格式。</span><span class="sxs-lookup"><span data-stu-id="12921-193">Use the <xref:Microsoft.Office.Tools.Word.DatePickerContentControl.Range%2A> property to access the formatting of the text in the control and other text properties.</span></span> <span data-ttu-id="12921-194">有关详细信息<xref:Microsoft.Office.Interop.Word.Range>对象，请参阅[Word 对象模型概述](/visualstudio/vsto/word-object-model-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="12921-194">For more information about <xref:Microsoft.Office.Interop.Word.Range> objects, see [Word Object Model Overview](/visualstudio/vsto/word-object-model-overview.md).</span></span>  
+ 使用<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.Range%2A>属性来访问控件和其他文本属性中的文本的格式。 有关详细信息<xref:Microsoft.Office.Interop.Word.Range>对象，请参阅[Word 对象模型概述](/visualstudio/vsto/word-object-model-overview.md)。  
   
- <span data-ttu-id="12921-195">若要访问文本中显示<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>，使用<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.Text%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="12921-195">To access only the text that is displayed in the <xref:Microsoft.Office.Tools.Word.DatePickerContentControl>, use the <xref:Microsoft.Office.Tools.Word.DatePickerContentControl.Text%2A> property.</span></span>  
+ 若要访问文本中显示<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>，使用<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.Text%2A>属性。  
   
  ]]></format>
         </remarks>
@@ -706,39 +522,19 @@
         <Parameter Name="Text" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="BuildingBlock">
-          <span data-ttu-id="12921-196">包含占位符文本的 <see cref="T:Microsoft.Office.Interop.Word.BuildingBlock" />。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="12921-196">A <see cref="T:Microsoft.Office.Interop.Word.BuildingBlock" /> that contains the placeholder text.</span>
-          </span>
-        </param>
-        <param name="Range">
-          <span data-ttu-id="12921-197">包含占位符文本的 <see cref="T:Microsoft.Office.Interop.Word.Range" />。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="12921-197">A <see cref="T:Microsoft.Office.Interop.Word.Range" /> that contains the placeholder text.</span>
-          </span>
-        </param>
-        <param name="Text">
-          <span data-ttu-id="12921-198">占位符文本。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="12921-198">The placeholder text.</span>
-          </span>
-        </param>
-        <summary>
-          <span data-ttu-id="12921-199">将 <see cref="T:Microsoft.Office.Interop.Word.BuildingBlock" />、<see cref="T:Microsoft.Office.Interop.Word.Range" /> 或字符串中的文本显示为 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 中的占位符文本。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="12921-199">Displays text that is in a <see cref="T:Microsoft.Office.Interop.Word.BuildingBlock" />, a <see cref="T:Microsoft.Office.Interop.Word.Range" />, or a string as the placeholder text in the <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" />.</span>
-          </span>
-        </summary>
+        <param name="BuildingBlock">包含占位符文本的 <see cref="T:Microsoft.Office.Interop.Word.BuildingBlock" />。</param>
+        <param name="Range">包含占位符文本的 <see cref="T:Microsoft.Office.Interop.Word.Range" />。</param>
+        <param name="Text">占位符文本。</param>
+        <summary>将 <see cref="T:Microsoft.Office.Interop.Word.BuildingBlock" />、<see cref="T:Microsoft.Office.Interop.Word.Range" /> 或字符串中的文本显示为 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 中的占位符文本。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="12921-200">用户编辑控件、 控件中填充数据的源的数据或者控件的内容被删除之前，会显示的占位符文本。</span><span class="sxs-lookup"><span data-stu-id="12921-200">The placeholder text is displayed until a user edits the control, the control is populated with data from a data source, or the control's contents are deleted.</span></span>  
+ 用户编辑控件、 控件中填充数据的源的数据或者控件的内容被删除之前，会显示的占位符文本。  
   
- <span data-ttu-id="12921-201">在调用时使用唯一的参数之一<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.SetPlaceholderText%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="12921-201">Only one of the parameters is used when you call the <xref:Microsoft.Office.Tools.Word.DatePickerContentControl.SetPlaceholderText%2A> method.</span></span> <span data-ttu-id="12921-202">如果指定多个参数，则 Microsoft Office Word 将使用第一个指定的参数。</span><span class="sxs-lookup"><span data-stu-id="12921-202">If more than one parameter is specified, Microsoft Office Word uses the first specified parameter.</span></span> <span data-ttu-id="12921-203">如果所有参数都被都省略，占位符文本是空字符串。</span><span class="sxs-lookup"><span data-stu-id="12921-203">If all parameters are omitted, the placeholder text is an empty string.</span></span>  
+ 在调用时使用唯一的参数之一<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.SetPlaceholderText%2A>方法。 如果指定多个参数，则 Microsoft Office Word 将使用第一个指定的参数。 如果所有参数都被都省略，占位符文本是空字符串。  
   
- <span data-ttu-id="12921-204">若要获取的占位符文本<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>，使用<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.PlaceholderText%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="12921-204">To get the placeholder text of a <xref:Microsoft.Office.Tools.Word.DatePickerContentControl>, use the <xref:Microsoft.Office.Tools.Word.DatePickerContentControl.PlaceholderText%2A> property.</span></span> <span data-ttu-id="12921-205">你还可以使用此属性将占位符文本设置为一个字符串。</span><span class="sxs-lookup"><span data-stu-id="12921-205">You can also use this property to set the placeholder text to a string.</span></span>  
+ 若要获取的占位符文本<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>，使用<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.PlaceholderText%2A>属性。 你还可以使用此属性将占位符文本设置为一个字符串。  
   
  ]]></format>
         </remarks>
@@ -757,24 +553,14 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <span data-ttu-id="12921-206">获取一个值，该值指示 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 当前是否显示占位符文本。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="12921-206">Gets a value that indicates whether the <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> is currently displaying placeholder text.</span>
-          </span>
-        </summary>
+        <summary>获取一个值，该值指示 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 当前是否显示占位符文本。</summary>
         <value>
-          <span data-ttu-id="12921-207">如果 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 当前显示占位符文本，则为 <see langword="true" />；否则为 <see langword="false" />。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="12921-207">
-              <see langword="true" /> if the <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> is currently displaying placeholder text; otherwise, <see langword="false" />.</span>
-          </span>
-        </value>
+          如果 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 当前显示占位符文本，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="12921-208">中的文本之前会显示的占位符文本<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>由用户操作或一些其他操作更改。</span><span class="sxs-lookup"><span data-stu-id="12921-208">The placeholder text is displayed until the text in the <xref:Microsoft.Office.Tools.Word.DatePickerContentControl> is changed by a user action or some other operation.</span></span> <span data-ttu-id="12921-209">若要获取或设置占位符文本，请使用<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.PlaceholderText%2A>属性或<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.SetPlaceholderText%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="12921-209">To get or set the placeholder text, use the <xref:Microsoft.Office.Tools.Word.DatePickerContentControl.PlaceholderText%2A> property or the <xref:Microsoft.Office.Tools.Word.DatePickerContentControl.SetPlaceholderText%2A> method.</span></span>  
+ 中的文本之前会显示的占位符文本<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>由用户操作或一些其他操作更改。 若要获取或设置占位符文本，请使用<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.PlaceholderText%2A>属性或<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.SetPlaceholderText%2A>方法。  
   
  ]]></format>
         </remarks>
@@ -793,25 +579,15 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <span data-ttu-id="12921-210">获取或设置要与 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 关联的字符串。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="12921-210">Gets or sets a string that you want to associate with the <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" />.</span>
-          </span>
-        </summary>
-        <value>
-          <span data-ttu-id="12921-211">一个要与 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 关联的字符串。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="12921-211">A string that you want to associate with the <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" />.</span>
-          </span>
-        </value>
+        <summary>获取或设置要与 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 关联的字符串。</summary>
+        <value>一个要与 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 关联的字符串。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="12921-212">你可以使用<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.Tag%2A>属性来存储与关联的字符串<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>文档处于打开状态时。</span><span class="sxs-lookup"><span data-stu-id="12921-212">You can use the <xref:Microsoft.Office.Tools.Word.DatePickerContentControl.Tag%2A> property to store a string that is associated with the <xref:Microsoft.Office.Tools.Word.DatePickerContentControl> while the document is open.</span></span>  
+ 你可以使用<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.Tag%2A>属性来存储与关联的字符串<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>文档处于打开状态时。  
   
- <span data-ttu-id="12921-213">若要查找由其标记的内容控件，使用<xref:Microsoft.Office.Tools.Word.Document.SelectContentControlsByTag%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="12921-213">To find a content control by its tag, use the <xref:Microsoft.Office.Tools.Word.Document.SelectContentControlsByTag%2A> method.</span></span>  
+ 若要查找由其标记的内容控件，使用<xref:Microsoft.Office.Tools.Word.Document.SelectContentControlsByTag%2A>方法。  
   
  ]]></format>
         </remarks>
@@ -830,38 +606,19 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <span data-ttu-id="12921-214">获取或设置一个值，该值指定在编辑 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 时是否自动将该控件从文档中删除。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="12921-214">Gets or sets a value that specifies whether the <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> is automatically deleted from the document when the control is edited.</span>
-          </span>
-        </summary>
+        <summary>获取或设置一个值，该值指定在编辑 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 时是否自动将该控件从文档中删除。</summary>
         <value>
-          <span data-ttu-id="12921-215">如果要在编辑 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 时自动将该控件删除，则为 <see langword="true" />；否则为 <see langword="false" />。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="12921-215">
-              <see langword="true" /> if the <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> is automatically deleted when the control is edited; otherwise, <see langword="false" />.</span>
-          </span>
-          <span data-ttu-id="12921-216">默认值为 <see langword="false" />。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="12921-216">The default is <see langword="false" />.</span>
-          </span>
-        </value>
+          如果要在编辑 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 时自动将该控件删除，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="12921-217">如果<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.Temporary%2A>属性是`true`、<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>当用户在控件中，键入或以编程方式更改控件中的文本自动删除。</span><span class="sxs-lookup"><span data-stu-id="12921-217">If the <xref:Microsoft.Office.Tools.Word.DatePickerContentControl.Temporary%2A> property is `true`, the <xref:Microsoft.Office.Tools.Word.DatePickerContentControl> is automatically deleted when the user types in the control, or when the text in the control is changed programmatically.</span></span> <span data-ttu-id="12921-218">当<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>自动从文档，该控件将保持在文档中的文本中删除。</span><span class="sxs-lookup"><span data-stu-id="12921-218">When the <xref:Microsoft.Office.Tools.Word.DatePickerContentControl> is automatically deleted from the document, the text in the control remains in the document.</span></span>  
+ 如果<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.Temporary%2A>属性是`true`、<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>当用户在控件中，键入或以编程方式更改控件中的文本自动删除。 当<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>自动从文档，该控件将保持在文档中的文本中删除。  
   
  ]]></format>
         </remarks>
         <exception cref="T:System.Runtime.InteropServices.COMException">
-          <span data-ttu-id="12921-219">
-            <see cref="P:Microsoft.Office.Tools.Word.DatePickerContentControl.LockContentControl" /> 属性为 <see langword="true" /> 时，设置此属性。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="12921-219">This property is set when the <see cref="P:Microsoft.Office.Tools.Word.DatePickerContentControl.LockContentControl" /> property is <see langword="true" />.</span>
-          </span>
-        </exception>
+          <see cref="P:Microsoft.Office.Tools.Word.DatePickerContentControl.LockContentControl" /> 属性为 <see langword="true" /> 时，设置此属性。</exception>
       </Docs>
     </Member>
     <Member MemberName="Text">
@@ -877,24 +634,14 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <span data-ttu-id="12921-220">获取或设置 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 中的文本。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="12921-220">Gets or sets the text in the <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" />.</span>
-          </span>
-        </summary>
+        <summary>获取或设置 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 中的文本。</summary>
         <value>
-          <span data-ttu-id="12921-221">
-            <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 中的文本。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="12921-221">The text in the <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" />.</span>
-          </span>
-        </value>
+          <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 中的文本。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="12921-222">若要访问控件和其他文本属性中的文本的格式，使用<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.Range%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="12921-222">To access the formatting of the text in the control and other text properties, use the <xref:Microsoft.Office.Tools.Word.DatePickerContentControl.Range%2A> property.</span></span>  
+ 若要访问控件和其他文本属性中的文本的格式，使用<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.Range%2A>属性。  
   
  ]]></format>
         </remarks>
@@ -913,24 +660,14 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <span data-ttu-id="12921-223">获取或设置 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 的标题。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="12921-223">Gets or sets the title of the <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" />.</span>
-          </span>
-        </summary>
+        <summary>获取或设置 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 的标题。</summary>
         <value>
-          <span data-ttu-id="12921-224">
-            <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 的标题。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="12921-224">The title of the <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" />.</span>
-          </span>
-        </value>
+          <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 的标题。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="12921-225">标题显示在边框<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>当用户单击它。</span><span class="sxs-lookup"><span data-stu-id="12921-225">The title is displayed in the border of the <xref:Microsoft.Office.Tools.Word.DatePickerContentControl> when the user clicks it.</span></span>  
+ 标题显示在边框<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>当用户单击它。  
   
  ]]></format>
         </remarks>
@@ -949,28 +686,18 @@
         <ReturnType>Microsoft.Office.Interop.Word.XMLMapping</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <span data-ttu-id="12921-226">获取一个 <see cref="T:Microsoft.Office.Interop.Word.XMLMapping" />，表示 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 与自定义 XML 部件中元素之间的绑定。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="12921-226">Gets an <see cref="T:Microsoft.Office.Interop.Word.XMLMapping" /> that represents the binding between the <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> and an element in a custom XML part.</span>
-          </span>
-        </summary>
-        <value>
-          <span data-ttu-id="12921-227">一个 <see cref="T:Microsoft.Office.Interop.Word.XMLMapping" />，表示 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 与自定义 XML 部件中元素之间的绑定。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="12921-227">An <see cref="T:Microsoft.Office.Interop.Word.XMLMapping" /> that represents the binding between the <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> and an element in a custom XML part.</span>
-          </span>
-        </value>
+        <summary>获取一个 <see cref="T:Microsoft.Office.Interop.Word.XMLMapping" />，表示 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 与自定义 XML 部件中元素之间的绑定。</summary>
+        <value>一个 <see cref="T:Microsoft.Office.Interop.Word.XMLMapping" />，表示 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 与自定义 XML 部件中元素之间的绑定。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="12921-228">使用<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.XMLMapping%2A>属性将绑定<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>到一种 XML 中的元素 (也名为*自定义 XML 部件*) 嵌入在文档中。</span><span class="sxs-lookup"><span data-stu-id="12921-228">Use the <xref:Microsoft.Office.Tools.Word.DatePickerContentControl.XMLMapping%2A> property to bind a <xref:Microsoft.Office.Tools.Word.DatePickerContentControl> to an element in a piece of XML (also named *custom XML part*) that is embedded in the document.</span></span> <span data-ttu-id="12921-229">有关详细信息，请参阅[内容控件](/visualstudio/vsto/content-controls.md)和[自定义 XML 部件概述](/visualstudio/vsto/custom-xml-parts-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="12921-229">For more information, see [Content Controls](/visualstudio/vsto/content-controls.md) and [Custom XML Parts Overview](/visualstudio/vsto/custom-xml-parts-overview.md).</span></span>  
+ 使用<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.XMLMapping%2A>属性将绑定<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>到一种 XML 中的元素 (也名为*自定义 XML 部件*) 嵌入在文档中。 有关详细信息，请参阅[内容控件](/visualstudio/vsto/content-controls.md)和[自定义 XML 部件概述](/visualstudio/vsto/custom-xml-parts-overview.md)。  
   
    
   
 ## Examples  
- <span data-ttu-id="12921-230">有关演示如何使用此属性的代码示例，请参阅[演练： 将内容控件绑定到自定义 XML 部件](/visualstudio/vsto/walkthrough-binding-content-controls-to-custom-xml-parts.md)。</span><span class="sxs-lookup"><span data-stu-id="12921-230">For a code example that demonstrates how to use this property, see [Walkthrough: Binding Content Controls to Custom XML Parts](/visualstudio/vsto/walkthrough-binding-content-controls-to-custom-xml-parts.md).</span></span>  
+ 有关演示如何使用此属性的代码示例，请参阅[演练： 将内容控件绑定到自定义 XML 部件](/visualstudio/vsto/walkthrough-binding-content-controls-to-custom-xml-parts.md)。  
   
  ]]></format>
         </remarks>

@@ -24,29 +24,24 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>
-      <span data-ttu-id="36219-101">表示一个 Word 文档中的智能标记操作，该文档通过使用 Visual Studio 中的 Office 开发工具进行自定义。</span>
-      <span class="sxs-lookup">
-        <span data-stu-id="36219-101">Represents a smart tag action in a Word document that is customized by using the Office development tools in Visual Studio.</span>
-      </span>
-    </summary>
+    <summary>表示一个 Word 文档中的智能标记操作，该文档通过使用 Visual Studio 中的 Office 开发工具进行自定义。</summary>
     <remarks>
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="36219-102">识别特定类型的智能标记时，操作是智能标记快捷菜单上的可用选项。</span><span class="sxs-lookup"><span data-stu-id="36219-102">Actions are the choices available on the smart tag shortcut menu when a smart tag of a certain type is recognized.</span></span> <span data-ttu-id="36219-103">若要创建操作，使用`Globals.Factory.CreateAction`方法来创建<xref:Microsoft.Office.Tools.Word.Action>对象。</span><span class="sxs-lookup"><span data-stu-id="36219-103">To create an action, use the `Globals.Factory.CreateAction` method to create an <xref:Microsoft.Office.Tools.Word.Action> object.</span></span>  
+ 识别特定类型的智能标记时，操作是智能标记快捷菜单上的可用选项。 若要创建操作，使用`Globals.Factory.CreateAction`方法来创建<xref:Microsoft.Office.Tools.Word.Action>对象。  
   
  [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
   
-## <a name="usage"></a><span data-ttu-id="36219-104">用法</span><span class="sxs-lookup"><span data-stu-id="36219-104">Usage</span></span>  
- <span data-ttu-id="36219-105">此类型旨在用于 Word 2007 仅在项目中。</span><span class="sxs-lookup"><span data-stu-id="36219-105">This type is intended to be used only in projects for Word 2007.</span></span> <span data-ttu-id="36219-106">Word 2010 中已弃用智能标记。</span><span class="sxs-lookup"><span data-stu-id="36219-106">Smart tags are deprecated in Word 2010..</span></span>  
+## <a name="usage"></a>用法  
+ 此类型旨在用于 Word 2007 仅在项目中。 Word 2010 中已弃用智能标记。  
   
  [!INCLUDE[vsto_net35mref](~/includes/vsto-net35mref-md.md)]  
   
    
   
 ## Examples  
- <span data-ttu-id="36219-107">下面的代码示例演示如何创建操作的智能标记。</span><span class="sxs-lookup"><span data-stu-id="36219-107">The following code example demonstrates how to create a smart tag with an action.</span></span> <span data-ttu-id="36219-108">智能标记操作修改在运行时的操作的菜单标题，并显示已识别出的文本的位置。</span><span class="sxs-lookup"><span data-stu-id="36219-108">The smart tag action modifies the menu caption of the action at run time and displays the location of the text that was recognized.</span></span>  
+ 下面的代码示例演示如何创建操作的智能标记。 智能标记操作修改在运行时的操作的菜单标题，并显示已识别出的文本的位置。  
   
  [!code-csharp[Trin_WordSmartTags#1](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordSmartTags/CS/thisdocument.cs#1)]
  [!code-vb[Trin_WordSmartTags#1](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordSmartTags/VB/thisdocument.vb#1)]  
@@ -68,21 +63,17 @@
         <ReturnType>Microsoft.Office.Tools.Word.BeforeCaptionShowEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <span data-ttu-id="36219-109">在用户单击智能标记图标之后、智能标记菜单显示之前发生。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="36219-109">Occurs after the user clicks the smart tags icon, and before the smart tag menu is displayed.</span>
-          </span> [!INCLUDE[vsto_smart_tags](~/includes/vsto-smart-tags-md.md)]<span data-ttu-id="36219-110">。</span><span class="sxs-lookup"><span data-stu-id="36219-110">.</span></span></summary>
+        <summary>在用户单击智能标记图标之后、智能标记菜单显示之前发生。 [!INCLUDE[vsto_smart_tags](~/includes/vsto-smart-tags-md.md)]。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="36219-111">此事件，能够更改基于上下文的智能标记标题。</span><span class="sxs-lookup"><span data-stu-id="36219-111">This event gives you an opportunity to change the smart tag caption based on context.</span></span>  
+ 此事件，能够更改基于上下文的智能标记标题。  
   
    
   
 ## Examples  
- <span data-ttu-id="36219-112">下面的代码示例演示的处理程序<xref:Microsoft.Office.Tools.Word.Action.BeforeCaptionShow>事件。</span><span class="sxs-lookup"><span data-stu-id="36219-112">The following code example demonstrates a handler for the <xref:Microsoft.Office.Tools.Word.Action.BeforeCaptionShow> event.</span></span> <span data-ttu-id="36219-113">事件处理程序修改操作的菜单标题。</span><span class="sxs-lookup"><span data-stu-id="36219-113">The event handler modifies the menu caption of the action.</span></span> <span data-ttu-id="36219-114">此代码示例摘自更大的示例为提供<xref:Microsoft.Office.Tools.Word.Action>。</span><span class="sxs-lookup"><span data-stu-id="36219-114">This code example is part of a larger example provided for <xref:Microsoft.Office.Tools.Word.Action>.</span></span>  
+ 下面的代码示例演示的处理程序<xref:Microsoft.Office.Tools.Word.Action.BeforeCaptionShow>事件。 事件处理程序修改操作的菜单标题。 此代码示例摘自更大的示例为提供<xref:Microsoft.Office.Tools.Word.Action>。  
   
  [!code-csharp[Trin_WordSmartTags#3](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordSmartTags/CS/thisdocument.cs#3)]
  [!code-vb[Trin_WordSmartTags#3](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordSmartTags/VB/thisdocument.vb#3)]  
@@ -104,16 +95,12 @@
         <ReturnType>Microsoft.Office.Tools.Word.ActionClickEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <span data-ttu-id="36219-115">在智能标记菜单中的操作被单击时发生。</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="36219-115">Occurs when the action in the smart tag menu is clicked.</span>
-          </span> [!INCLUDE[vsto_smart_tags](~/includes/vsto-smart-tags-md.md)]<span data-ttu-id="36219-116">。</span><span class="sxs-lookup"><span data-stu-id="36219-116">.</span></span></summary>
+        <summary>在智能标记菜单中的操作被单击时发生。 [!INCLUDE[vsto_smart_tags](~/includes/vsto-smart-tags-md.md)]。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- <span data-ttu-id="36219-117">下面的代码示例演示的处理程序<xref:Microsoft.Office.Tools.Word.Action.Click>事件。</span><span class="sxs-lookup"><span data-stu-id="36219-117">The following code example demonstrates a handler for the <xref:Microsoft.Office.Tools.Word.Action.Click> event.</span></span> <span data-ttu-id="36219-118">事件处理程序会显示识别的智能标记术语的开始和结束位置。</span><span class="sxs-lookup"><span data-stu-id="36219-118">The event handler displays the start and end position of the recognized smart tag term.</span></span> <span data-ttu-id="36219-119">此代码示例摘自更大的示例为提供<xref:Microsoft.Office.Tools.Word.Action>。</span><span class="sxs-lookup"><span data-stu-id="36219-119">This code example is part of a larger example provided for <xref:Microsoft.Office.Tools.Word.Action>.</span></span>  
+ 下面的代码示例演示的处理程序<xref:Microsoft.Office.Tools.Word.Action.Click>事件。 事件处理程序会显示识别的智能标记术语的开始和结束位置。 此代码示例摘自更大的示例为提供<xref:Microsoft.Office.Tools.Word.Action>。  
   
  [!code-csharp[Trin_WordSmartTags#4](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordSmartTags/CS/thisdocument.cs#4)]
  [!code-vb[Trin_WordSmartTags#4](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordSmartTags/VB/thisdocument.vb#4)]  
