@@ -1,45 +1,98 @@
-<?xml version="1.0" encoding="utf-8"?>
-<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
-  <file datatype="xml" original="ISharePointProjectCollection.xml" source-language="en-US" target-language="zh-CN">
-    <header>
-      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-38f25dd" tool-company="Microsoft" />
-      <xliffext:skl_file_name xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">b4690f9a-9e49-426d-9091-855b10fda4db3390108f842458ac26c5af16ffd60f2c0ef36b70.skl</xliffext:skl_file_name>
-      <xliffext:version xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">1.2</xliffext:version>
-      <xliffext:ms.openlocfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">3390108f842458ac26c5af16ffd60f2c0ef36b70</xliffext:ms.openlocfilehash>
-      <xliffext:ms.sourcegitcommit xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">bb8a3a96823cedeffbdbcc0c41a8118399de8074</xliffext:ms.sourcegitcommit>
-      <xliffext:ms.lasthandoff xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">02/21/2018</xliffext:ms.lasthandoff>
-      <xliffext:moniker_ids xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">sharepoint-projects-2017</xliffext:moniker_ids>
-    </header>
-    <body>
-      <group id="content" extype="content">
-        <trans-unit id="101" translate="yes" xml:space="preserve" uid="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectCollection">
-          <source>A collection of all SharePoint projects in the Visual Studio solution.</source>
-          <target state="translated">Visual Studio 解决方案中所有 SharePoint 项目的集合。</target>       </trans-unit>
-        <trans-unit id="102" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectCollection.Find(System.Guid)">
-          <source>The ID of a SharePoint project.</source>
-          <target state="translated">SharePoint 项目的 ID。</target>       </trans-unit>
-        <trans-unit id="103" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectCollection.Find(System.Guid)">
-          <source>Finds an instance of SharePoint project with the specified ID.</source>
-          <target state="translated">查找具有指定 ID 的 SharePoint 项目的实例。</target>       </trans-unit>
-        <trans-unit id="104" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectCollection.Find(System.Guid)">
-          <source>An instance of SharePoint project if it is found; <ph id="ph1">&lt;see langword="null" /&gt;</ph> otherwise.</source>
-          <target state="translated">如果找到，则为 SharePoint 项目的实例；否则为 <ph id="ph1">&lt;see langword="null" /&gt;</ph>。</target>       </trans-unit>
-        <trans-unit id="105" translate="yes" xml:space="preserve" uid="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectCollection.Item(System.String)">
-          <source>The full path for the requested project.</source>
-          <target state="translated">所请求项目的完整路径。</target>       </trans-unit>
-        <trans-unit id="106" translate="yes" xml:space="preserve" uid="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectCollection.Item(System.String)">
-          <source>Gets an instance of the SharePoint project using the specified project path.</source>
-          <target state="translated">获取使用指定项目路径的 SharePoint 项目的实例。</target>       </trans-unit>
-        <trans-unit id="107" translate="yes" xml:space="preserve" extradata="MT" uid="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectCollection.Item(System.String)">
-          <source>An instance of SharePoint project if it is found; <ph id="ph1">&lt;see langword="null" /&gt;</ph> otherwise.</source>
-          <target state="translated">SharePoint 项目中，如果它找到，则一个实例<ph id="ph1">&lt;see langword="null" /&gt;</ph>否则为。</target>       </trans-unit>
-        <trans-unit id="108" translate="yes" xml:space="preserve" uid="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectCollection.ProjectService">
-          <source>Gets an instance of the SharePoint project service.</source>
-          <target state="translated">获取 SharePoint 项目服务的实例。</target>       </trans-unit>
-        <trans-unit id="109" translate="yes" xml:space="preserve" extradata="MT" uid="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectCollection.ProjectService">
-          <source>An object representing the SharePoint project service.</source>
-          <target state="translated">表示该 SharePoint 项目服务的对象。</target>       </trans-unit>
-      </group>
-    </body>
-  </file>
-</xliff>
+<Type Name="ISharePointProjectCollection" FullName="Microsoft.VisualStudio.SharePoint.ISharePointProjectCollection">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="3390108f842458ac26c5af16ffd60f2c0ef36b70" />
+    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.translationtype" Value="HT" />
+    <Meta Name="ms.contentlocale" Value="zh-CN" />
+    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public interface ISharePointProjectCollection : Microsoft.VisualStudio.SharePoint.ISharePointCollection&lt;Microsoft.VisualStudio.SharePoint.ISharePointProject&gt;, System.Collections.Generic.IEnumerable&lt;Microsoft.VisualStudio.SharePoint.ISharePointProject&gt;, System.Collections.Specialized.INotifyCollectionChanged, System.ComponentModel.INotifyPropertyChanged" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISharePointProjectCollection implements class Microsoft.VisualStudio.SharePoint.ISharePointCollection`1&lt;class Microsoft.VisualStudio.SharePoint.ISharePointProject&gt;, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.VisualStudio.SharePoint.ISharePointProject&gt;, class System.Collections.IEnumerable, class System.Collections.Specialized.INotifyCollectionChanged, class System.ComponentModel.INotifyPropertyChanged" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectCollection" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.VisualStudio.SharePoint.ISharePointCollection&lt;Microsoft.VisualStudio.SharePoint.ISharePointProject&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;Microsoft.VisualStudio.SharePoint.ISharePointProject&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Specialized.INotifyCollectionChanged</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ComponentModel.INotifyPropertyChanged</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Visual Studio 解决方案中所有 SharePoint 项目的集合。</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Find">
+      <MemberSignature Language="C#" Value="public Microsoft.VisualStudio.SharePoint.ISharePointProject Find (Guid id);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.VisualStudio.SharePoint.ISharePointProject Find(valuetype System.Guid id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectCollection.Find(System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualStudio.SharePoint.ISharePointProject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="id">SharePoint 项目的 ID。</param>
+        <summary>查找具有指定 ID 的 SharePoint 项目的实例。</summary>
+        <returns>如果找到，则为 SharePoint 项目的实例；否则为 <see langword="null" />。</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public Microsoft.VisualStudio.SharePoint.ISharePointProject this[string fullPath] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.VisualStudio.SharePoint.ISharePointProject Item(string)" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualStudio.SharePoint.ISharePointProject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fullPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fullPath">所请求项目的完整路径。</param>
+        <summary>获取使用指定项目路径的 SharePoint 项目的实例。</summary>
+        <value>SharePoint 项目中，如果它找到，则一个实例<see langword="null" />否则为。</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProjectService">
+      <MemberSignature Language="C#" Value="public Microsoft.VisualStudio.SharePoint.ISharePointProjectService ProjectService { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.VisualStudio.SharePoint.ISharePointProjectService ProjectService" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectCollection.ProjectService" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualStudio.SharePoint.ISharePointProjectService</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>获取 SharePoint 项目服务的实例。</summary>
+        <value>表示该 SharePoint 项目服务的对象。</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
