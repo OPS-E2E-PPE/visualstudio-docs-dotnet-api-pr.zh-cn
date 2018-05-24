@@ -1,192 +1,612 @@
-<?xml version="1.0" encoding="utf-8"?>
-<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
-  <file datatype="xml" original="ISharePointProjectLogger.xml" source-language="en-US" target-language="zh-CN">
-    <header>
-      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-38f25dd" tool-company="Microsoft" />
-      <xliffext:skl_file_name xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">b4690f9a-9e49-426d-9091-855b10fda4db0ded1e220fd0b05165298d0528dfc81c54cc8b37.skl</xliffext:skl_file_name>
-      <xliffext:version xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">1.2</xliffext:version>
-      <xliffext:ms.openlocfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">0ded1e220fd0b05165298d0528dfc81c54cc8b37</xliffext:ms.openlocfilehash>
-      <xliffext:ms.sourcegitcommit xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">bb8a3a96823cedeffbdbcc0c41a8118399de8074</xliffext:ms.sourcegitcommit>
-      <xliffext:ms.lasthandoff xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">02/21/2018</xliffext:ms.lasthandoff>
-      <xliffext:moniker_ids xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">sharepoint-projects-2017</xliffext:moniker_ids>
-    </header>
-    <body>
-      <group id="content" extype="content">
-        <trans-unit id="101" translate="yes" xml:space="preserve" uid="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger">
-          <source>Represents the SharePoint logging service, which enables SharePoint project extensions to log messages into the <bpt id="p1">**</bpt>Output<ept id="p1">**</ept> window and <bpt id="p2">**</bpt>Error List<ept id="p2">**</ept>, depending on the specified <ph id="ph1">&lt;see cref="T:Microsoft.VisualStudio.SharePoint.LogCategory" /&gt;</ph>.</source>
-          <target state="translated">表示 SharePoint 日志记录服务，根据指定的 <ph id="ph1">&lt;see cref="T:Microsoft.VisualStudio.SharePoint.LogCategory" /&gt;</ph>，可以使 SharePoint 项目扩展将消息记录到“输出”窗口和“错误列表”。</target>       </trans-unit>
-        <trans-unit id="102" translate="yes" xml:space="preserve" extradata="MT" uid="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger">
-          <source>All logged messages go to a "SharePoint Tools" Output window pane, except when performing deployment, when messages are re-directed to the VS "Build" pane in the Output window.</source>
-          <target state="translated">所有记录的消息时，转到"SharePoint 工具"输出窗格中，除执行部署，当消息会被重定向到输出窗口中的 VS"生成"窗格。</target>       </trans-unit>
-        <trans-unit id="103" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.ActivateOutputWindow">
-          <source>Opens the <bpt id="p1">**</bpt>Output<ept id="p1">**</ept> window and activates the current <bpt id="p2">**</bpt>Output<ept id="p2">**</ept> window pane.</source>
-          <target state="translated">打开“输出”窗口，并激活当前的“输出”窗口窗格。</target>       </trans-unit>
-        <trans-unit id="104" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.ActivateOutputWindow">
-          <source>Returns <ph id="ph1">&lt;see langword="true" /&gt;</ph> if successful; <ph id="ph2">&lt;see langword="false" /&gt;</ph> otherwise.</source>
-          <target state="translated">如果成功，则返回 <ph id="ph1">&lt;see langword="true" /&gt;</ph>；否则返回 <ph id="ph2">&lt;see langword="false" /&gt;</ph>。</target>       </trans-unit>
-        <trans-unit id="105" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.ClearErrorList">
-          <source>Clears the <bpt id="p1">**</bpt>Error List<ept id="p1">**</ept> of all SharePoint Tool-related error messages.</source>
-          <target state="translated">清除所有与 SharePoint 工具相关的错误消息的“错误列表”。</target>       </trans-unit>
-        <trans-unit id="106" translate="yes" xml:space="preserve" extradata="MT" uid="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.ClearErrorList">
-          <source>Error messages related to other Visual Studio activities (such as building) will remain in the <bpt id="p1">**</bpt>Error List<ept id="p1">**</ept>.</source>
-          <target state="translated">与其他 Visual Studio 活动项目 （如建筑物） 相关的错误消息将保留在<bpt id="p1">**</bpt>错误列表<ept id="p1">**</ept>。</target>       </trans-unit>
-        <trans-unit id="107" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.GetNewSubcategoryId">
-          <source>Returns a subcategory identifier which can be used to log and remove messages from the error list.</source>
-          <target state="translated">返回一个可用于从错误列表中记录和移除消息的子类别标识符。</target>       </trans-unit>
-        <trans-unit id="108" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.GetNewSubcategoryId">
-          <source>The new subcategory identifier.</source>
-          <target state="translated">新子类别标识符。</target>       </trans-unit>
-        <trans-unit id="109" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.RemoveMessages(System.Int32)">
-          <source>Subcategory identifier for which messages are to be removed.</source>
-          <target state="translated">将要对其移除消息的子类别标识符。</target>       </trans-unit>
-        <trans-unit id="110" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.RemoveMessages(System.Int32)">
-          <source>Removes messages from the Error List based on the subcategory of the messages.</source>
-          <target state="translated">从基于消息子类别的错误列表中移除消息。</target>       </trans-unit>
-        <trans-unit id="111" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory)">
-          <source>The message text.</source>
-          <target state="translated">消息文本。</target>       </trans-unit>
-        <trans-unit id="112" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory)">
-          <source>The message log category, specified by <ph id="ph1">&lt;see cref="T:Microsoft.VisualStudio.SharePoint.LogCategory" /&gt;</ph>.</source>
-          <target state="translated">由 <ph id="ph1">&lt;see cref="T:Microsoft.VisualStudio.SharePoint.LogCategory" /&gt;</ph> 指定的消息日志类别。</target>       </trans-unit>
-        <trans-unit id="113" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory)">
-          <source>Logs a message to the SharePoint Tools <bpt id="p1">**</bpt>Output<ept id="p1">**</ept> window and <bpt id="p2">**</bpt>Error List<ept id="p2">**</ept> depending on the specified <ph id="ph1">&lt;see cref="T:Microsoft.VisualStudio.SharePoint.LogCategory" /&gt;</ph>.</source>
-          <target state="translated">根据指定的 <ph id="ph1">&lt;see cref="T:Microsoft.VisualStudio.SharePoint.LogCategory" /&gt;</ph>，将消息记录到 SharePoint 工具的“输出”窗口和“错误列表”。</target>       </trans-unit>
-        <trans-unit id="114" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory,System.Int32)">
-          <source>The message text.</source>
-          <target state="translated">消息文本。</target>       </trans-unit>
-        <trans-unit id="115" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory,System.Int32)">
-          <source>The message log category.</source>
-          <target state="translated">消息日志类别。</target>       </trans-unit>
-        <trans-unit id="116" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory,System.Int32)">
-          <source>The message subcategory identifier.</source>
-          <target state="translated">消息子类别标识符。</target>       </trans-unit>
-        <trans-unit id="117" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory,System.Int32)">
-          <source>Logs a message to SharePoint Tools output pane and Error List depending on the specified LogCategory</source>
-          <target state="translated">根据指定的 LogCategory，将消息记录到 SharePoint 工具的输出窗格和错误列表上</target>       </trans-unit>
-        <trans-unit id="118" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory,System.String)">
-          <source>The message text.</source>
-          <target state="translated">消息文本。</target>       </trans-unit>
-        <trans-unit id="119" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory,System.String)">
-          <source>The message log category, specified by <ph id="ph1">&lt;see cref="T:Microsoft.VisualStudio.SharePoint.LogCategory" /&gt;</ph>.</source>
-          <target state="translated">由 <ph id="ph1">&lt;see cref="T:Microsoft.VisualStudio.SharePoint.LogCategory" /&gt;</ph> 指定的消息日志类别。</target>       </trans-unit>
-        <trans-unit id="120" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory,System.String)">
-          <source>The Help keyword for the error.</source>
-          <target state="translated">此错误的“帮助”关键字。</target>       </trans-unit>
-        <trans-unit id="121" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory,System.String)">
-          <source>Logs a message to the SharePoint Tools <bpt id="p1">**</bpt>Output<ept id="p1">**</ept> window and <bpt id="p2">**</bpt>Error List<ept id="p2">**</ept> depending on the specified <ph id="ph1">&lt;see cref="T:Microsoft.VisualStudio.SharePoint.LogCategory" /&gt;</ph>.</source>
-          <target state="translated">根据指定的 <ph id="ph1">&lt;see cref="T:Microsoft.VisualStudio.SharePoint.LogCategory" /&gt;</ph>，将消息记录到 SharePoint 工具的“输出”窗口和“错误列表”。</target>       </trans-unit>
-        <trans-unit id="122" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory,System.String,System.Int32)">
-          <source>The message text.</source>
-          <target state="translated">消息文本。</target>       </trans-unit>
-        <trans-unit id="123" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory,System.String,System.Int32)">
-          <source>The message log category.</source>
-          <target state="translated">消息日志类别。</target>       </trans-unit>
-        <trans-unit id="124" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory,System.String,System.Int32)">
-          <source>The help keyword for error.</source>
-          <target state="translated">此错误的“帮助”关键字。</target>       </trans-unit>
-        <trans-unit id="125" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory,System.String,System.Int32)">
-          <source>The message subcategory identifier.</source>
-          <target state="translated">消息子类别标识符。</target>       </trans-unit>
-        <trans-unit id="126" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory,System.String,System.Int32)">
-          <source>Logs a message to SharePoint Tools output pane and Error List depending on the specified LogCategory.</source>
-          <target state="translated">根据指定的 LogCategory，将消息记录到 SharePoint 工具的输出窗格和错误列表上。</target>       </trans-unit>
-        <trans-unit id="127" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory,System.String,System.Int32,System.Int32)">
-          <source>The message text.</source>
-          <target state="translated">消息文本。</target>       </trans-unit>
-        <trans-unit id="128" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory,System.String,System.Int32,System.Int32)">
-          <source>The message log category, specified by <ph id="ph1">&lt;see cref="T:Microsoft.VisualStudio.SharePoint.LogCategory" /&gt;</ph>.</source>
-          <target state="translated">由 <ph id="ph1">&lt;see cref="T:Microsoft.VisualStudio.SharePoint.LogCategory" /&gt;</ph> 指定的消息日志类别。</target>       </trans-unit>
-        <trans-unit id="129" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory,System.String,System.Int32,System.Int32)">
-          <source>The full path to the file with the error.</source>
-          <target state="translated">带有错误的文件的完整路径。</target>       </trans-unit>
-        <trans-unit id="130" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory,System.String,System.Int32,System.Int32)">
-          <source>The line number where the error occurred.</source>
-          <target state="translated">发生错误的行号。</target>       </trans-unit>
-        <trans-unit id="131" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory,System.String,System.Int32,System.Int32)">
-          <source>The column number where the error occurred.</source>
-          <target state="translated">发生错误的列号。</target>       </trans-unit>
-        <trans-unit id="132" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory,System.String,System.Int32,System.Int32)">
-          <source>Logs a message to the SharePoint Tools <bpt id="p1">**</bpt>Output<ept id="p1">**</ept> window and <bpt id="p2">**</bpt>Error List<ept id="p2">**</ept> depending on the specified <ph id="ph1">&lt;see cref="T:Microsoft.VisualStudio.SharePoint.LogCategory" /&gt;</ph>.</source>
-          <target state="translated">根据指定的 <ph id="ph1">&lt;see cref="T:Microsoft.VisualStudio.SharePoint.LogCategory" /&gt;</ph>，将消息记录到 SharePoint 工具的“输出”窗口和“错误列表”。</target>       </trans-unit>
-        <trans-unit id="133" translate="yes" xml:space="preserve" extradata="MT" uid="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory,System.String,System.Int32,System.Int32)">
-          <source>When <ph id="ph1">[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]</ph> writes to the IDE, such as the <bpt id="p1">**</bpt>Error<ept id="p1">**</ept> window, then the <ph id="ph2">`lineNumber`</ph> and <ph id="ph3">`columnNumber`</ph> values are zero-based, but when user code writes to the IDE, then the values are one-based.</source>
-          <target state="translated">当<ph id="ph1">[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]</ph>写入 IDE，如<bpt id="p1">**</bpt>错误<ept id="p1">**</ept>窗口中，则<ph id="ph2">`lineNumber`</ph>和<ph id="ph3">`columnNumber`</ph>值是从零开始，但当用户代码写入 IDE，则值都基于 1。</target>       </trans-unit>
-        <trans-unit id="134" translate="yes" xml:space="preserve" extradata="MT" uid="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory,System.String,System.Int32,System.Int32)">
-          <source>This means that if, for example, you specify a <ph id="ph1">`lineNumber`</ph> of 10 and a <ph id="ph2">`columnNumber`</ph> of 20 in your code, <ph id="ph3">[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]</ph> reports it as line 11 and column 21.</source>
-          <target state="translated">这意味着，如果，例如，你指定<ph id="ph1">`lineNumber`</ph>的 10 和<ph id="ph2">`columnNumber`</ph>在代码中，20 的<ph id="ph3">[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]</ph>它所报告的第 11 行和列 21。</target>       </trans-unit>
-        <trans-unit id="135" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory,System.String,System.Int32,System.Int32,System.Int32)">
-          <source>The message text.</source>
-          <target state="translated">消息文本。</target>       </trans-unit>
-        <trans-unit id="136" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory,System.String,System.Int32,System.Int32,System.Int32)">
-          <source>The message log category.</source>
-          <target state="translated">消息日志类别。</target>       </trans-unit>
-        <trans-unit id="137" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory,System.String,System.Int32,System.Int32,System.Int32)">
-          <source>The full path to file with error.</source>
-          <target state="translated">带有错误的文件的完整路径。</target>       </trans-unit>
-        <trans-unit id="138" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory,System.String,System.Int32,System.Int32,System.Int32)">
-          <source>The line number of error.</source>
-          <target state="translated">错误的行号。</target>       </trans-unit>
-        <trans-unit id="139" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory,System.String,System.Int32,System.Int32,System.Int32)">
-          <source>The column number of error.</source>
-          <target state="translated">错误的列号。</target>       </trans-unit>
-        <trans-unit id="140" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory,System.String,System.Int32,System.Int32,System.Int32)">
-          <source>The message subcategory identifier.</source>
-          <target state="translated">消息子类别标识符。</target>       </trans-unit>
-        <trans-unit id="141" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory,System.String,System.Int32,System.Int32,System.Int32)">
-          <source>Logs a message to SharePoint Tools output pane and Error List depending on the specified LogCategory.</source>
-          <target state="translated">根据指定的 LogCategory，将消息记录到 SharePoint 工具的输出窗格和错误列表上。</target>       </trans-unit>
-        <trans-unit id="142" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory,System.String,System.Int32,System.Int32,System.String)">
-          <source>The message text.</source>
-          <target state="translated">消息文本。</target>       </trans-unit>
-        <trans-unit id="143" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory,System.String,System.Int32,System.Int32,System.String)">
-          <source>The message log category, specified by <ph id="ph1">&lt;see cref="T:Microsoft.VisualStudio.SharePoint.LogCategory" /&gt;</ph>.</source>
-          <target state="translated">由 <ph id="ph1">&lt;see cref="T:Microsoft.VisualStudio.SharePoint.LogCategory" /&gt;</ph> 指定的消息日志类别。</target>       </trans-unit>
-        <trans-unit id="144" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory,System.String,System.Int32,System.Int32,System.String)">
-          <source>The full path to the file with the error.</source>
-          <target state="translated">带有错误的文件的完整路径。</target>       </trans-unit>
-        <trans-unit id="145" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory,System.String,System.Int32,System.Int32,System.String)">
-          <source>The line number where the error occurred.</source>
-          <target state="translated">发生错误的行号。</target>       </trans-unit>
-        <trans-unit id="146" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory,System.String,System.Int32,System.Int32,System.String)">
-          <source>The column number where the error occurred.</source>
-          <target state="translated">发生错误的列号。</target>       </trans-unit>
-        <trans-unit id="147" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory,System.String,System.Int32,System.Int32,System.String)">
-          <source>The Help keyword for the error.</source>
-          <target state="translated">此错误的“帮助”关键字。</target>       </trans-unit>
-        <trans-unit id="148" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory,System.String,System.Int32,System.Int32,System.String)">
-          <source>Logs a message to the SharePoint Tools <bpt id="p1">**</bpt>Output<ept id="p1">**</ept> window and <bpt id="p2">**</bpt>Error List<ept id="p2">**</ept> depending on the specified <ph id="ph1">&lt;see cref="T:Microsoft.VisualStudio.SharePoint.LogCategory" /&gt;</ph>.</source>
-          <target state="translated">根据指定的 <ph id="ph1">&lt;see cref="T:Microsoft.VisualStudio.SharePoint.LogCategory" /&gt;</ph>，将消息记录到 SharePoint 工具的“输出”窗口和“错误列表”。</target>       </trans-unit>
-        <trans-unit id="149" translate="yes" xml:space="preserve" extradata="MT" uid="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory,System.String,System.Int32,System.Int32,System.String)">
-          <source>When <ph id="ph1">[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]</ph> writes to the IDE, such as the <bpt id="p1">**</bpt>Error<ept id="p1">**</ept> window, then the <ph id="ph2">`lineNumber`</ph> and <ph id="ph3">`columnNumber`</ph> values are zero-based, but when user code writes to the IDE, then the values are one-based.</source>
-          <target state="translated">当<ph id="ph1">[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]</ph>写入 IDE，如<bpt id="p1">**</bpt>错误<ept id="p1">**</ept>窗口中，则<ph id="ph2">`lineNumber`</ph>和<ph id="ph3">`columnNumber`</ph>值是从零开始，但当用户代码写入 IDE，则值都基于 1。</target>       </trans-unit>
-        <trans-unit id="150" translate="yes" xml:space="preserve" extradata="MT" uid="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory,System.String,System.Int32,System.Int32,System.String)">
-          <source>This means that if, for example, you specify a <ph id="ph1">`lineNumber`</ph> of 10 and a <ph id="ph2">`columnNumber`</ph> of 20 in your code, <ph id="ph3">[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]</ph> reports it as line 11 and column 21.</source>
-          <target state="translated">这意味着，如果，例如，你指定<ph id="ph1">`lineNumber`</ph>的 10 和<ph id="ph2">`columnNumber`</ph>在代码中，20 的<ph id="ph3">[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]</ph>它所报告的第 11 行和列 21。</target>       </trans-unit>
-        <trans-unit id="151" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory,System.String,System.Int32,System.Int32,System.String,System.Int32)">
-          <source>The message text.</source>
-          <target state="translated">消息文本。</target>       </trans-unit>
-        <trans-unit id="152" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory,System.String,System.Int32,System.Int32,System.String,System.Int32)">
-          <source>The message log category.</source>
-          <target state="translated">消息日志类别。</target>       </trans-unit>
-        <trans-unit id="153" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory,System.String,System.Int32,System.Int32,System.String,System.Int32)">
-          <source>The full path to file with error.</source>
-          <target state="translated">带有错误的文件的完整路径。</target>       </trans-unit>
-        <trans-unit id="154" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory,System.String,System.Int32,System.Int32,System.String,System.Int32)">
-          <source>The line number of error.</source>
-          <target state="translated">错误的行号。</target>       </trans-unit>
-        <trans-unit id="155" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory,System.String,System.Int32,System.Int32,System.String,System.Int32)">
-          <source>The column number of error.</source>
-          <target state="translated">错误的列号。</target>       </trans-unit>
-        <trans-unit id="156" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory,System.String,System.Int32,System.Int32,System.String,System.Int32)">
-          <source>The help keyword for error.</source>
-          <target state="translated">此错误的“帮助”关键字。</target>       </trans-unit>
-        <trans-unit id="157" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory,System.String,System.Int32,System.Int32,System.String,System.Int32)">
-          <source>The message subcategory identifier.</source>
-          <target state="translated">消息子类别标识符。</target>       </trans-unit>
-        <trans-unit id="158" translate="yes" xml:space="preserve" uid="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory,System.String,System.Int32,System.Int32,System.String,System.Int32)">
-          <source>Log a message to SharePoint Tools output pane and Error List depending on the specified LogCategory.</source>
-          <target state="translated">根据指定的 LogCategory，将消息记录到 SharePoint 工具的输出窗格和错误列表上。</target>       </trans-unit>
-      </group>
-    </body>
-  </file>
-</xliff>
+<Type Name="ISharePointProjectLogger" FullName="Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="0ded1e220fd0b05165298d0528dfc81c54cc8b37" />
+    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.translationtype" Value="HT" />
+    <Meta Name="ms.contentlocale" Value="zh-CN" />
+    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public interface ISharePointProjectLogger" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISharePointProjectLogger" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>
+      <span data-ttu-id="03c12-101">表示 SharePoint 日志记录服务，根据指定的 <see cref="T:Microsoft.VisualStudio.SharePoint.LogCategory" />，可以使 SharePoint 项目扩展将消息记录到“输出”窗口和“错误列表”。</span>
+      <span class="sxs-lookup">
+        <span data-stu-id="03c12-101">Represents the SharePoint logging service, which enables SharePoint project extensions to log messages into the **Output** window and **Error List**, depending on the specified <see cref="T:Microsoft.VisualStudio.SharePoint.LogCategory" />.</span>
+      </span>
+    </summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="03c12-102">所有记录的消息时，转到"SharePoint 工具"输出窗格中，除执行部署，当消息会被重定向到输出窗口中的 VS"生成"窗格。</span><span class="sxs-lookup"><span data-stu-id="03c12-102">All logged messages go to a "SharePoint Tools" Output window pane, except when performing deployment, when messages are re-directed to the VS "Build" pane in the Output window.</span></span>  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ActivateOutputWindow">
+      <MemberSignature Language="C#" Value="public bool ActivateOutputWindow ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ActivateOutputWindow() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.ActivateOutputWindow" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+          <span data-ttu-id="03c12-103">打开“输出”窗口，并激活当前的“输出”窗口窗格。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="03c12-103">Opens the **Output** window and activates the current **Output** window pane.</span>
+          </span>
+        </summary>
+        <returns>
+          <span data-ttu-id="03c12-104">如果成功，则返回 <see langword="true" />；否则返回 <see langword="false" />。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="03c12-104">Returns <see langword="true" /> if successful; <see langword="false" /> otherwise.</span>
+          </span>
+        </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearErrorList">
+      <MemberSignature Language="C#" Value="public void ClearErrorList ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ClearErrorList() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.ClearErrorList" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+          <span data-ttu-id="03c12-105">清除所有与 SharePoint 工具相关的错误消息的“错误列表”。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="03c12-105">Clears the **Error List** of all SharePoint Tool-related error messages.</span>
+          </span>
+        </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="03c12-106">与其他 Visual Studio 活动项目 （如建筑物） 相关的错误消息将保留在**错误列表**。</span><span class="sxs-lookup"><span data-stu-id="03c12-106">Error messages related to other Visual Studio activities (such as building) will remain in the **Error List**.</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNewSubcategoryId">
+      <MemberSignature Language="C#" Value="public int GetNewSubcategoryId ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 GetNewSubcategoryId() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.GetNewSubcategoryId" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+          <span data-ttu-id="03c12-107">返回一个可用于从错误列表中记录和移除消息的子类别标识符。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="03c12-107">Returns a subcategory identifier which can be used to log and remove messages from the error list.</span>
+          </span>
+        </summary>
+        <returns>
+          <span data-ttu-id="03c12-108">新子类别标识符。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="03c12-108">The new subcategory identifier.</span>
+          </span>
+        </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveMessages">
+      <MemberSignature Language="C#" Value="public void RemoveMessages (int subcategoryId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveMessages(int32 subcategoryId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.RemoveMessages(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="subcategoryId" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="subcategoryId">
+          <span data-ttu-id="03c12-109">将要对其移除消息的子类别标识符。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="03c12-109">Subcategory identifier for which messages are to be removed.</span>
+          </span>
+        </param>
+        <summary>
+          <span data-ttu-id="03c12-110">从基于消息子类别的错误列表中移除消息。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="03c12-110">Removes messages from the Error List based on the subcategory of the messages.</span>
+          </span>
+        </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public void WriteLine (string message, Microsoft.VisualStudio.SharePoint.LogCategory category);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteLine(string message, valuetype Microsoft.VisualStudio.SharePoint.LogCategory category) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="category" Type="Microsoft.VisualStudio.SharePoint.LogCategory" />
+      </Parameters>
+      <Docs>
+        <param name="message">
+          <span data-ttu-id="03c12-111">消息文本。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="03c12-111">The message text.</span>
+          </span>
+        </param>
+        <param name="category">
+          <span data-ttu-id="03c12-112">由 <see cref="T:Microsoft.VisualStudio.SharePoint.LogCategory" /> 指定的消息日志类别。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="03c12-112">The message log category, specified by <see cref="T:Microsoft.VisualStudio.SharePoint.LogCategory" />.</span>
+          </span>
+        </param>
+        <summary>
+          <span data-ttu-id="03c12-113">根据指定的 <see cref="T:Microsoft.VisualStudio.SharePoint.LogCategory" />，将消息记录到 SharePoint 工具的“输出”窗口和“错误列表”。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="03c12-113">Logs a message to the SharePoint Tools **Output** window and **Error List** depending on the specified <see cref="T:Microsoft.VisualStudio.SharePoint.LogCategory" />.</span>
+          </span>
+        </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public void WriteLine (string message, Microsoft.VisualStudio.SharePoint.LogCategory category, int subcategoryId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteLine(string message, valuetype Microsoft.VisualStudio.SharePoint.LogCategory category, int32 subcategoryId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="category" Type="Microsoft.VisualStudio.SharePoint.LogCategory" />
+        <Parameter Name="subcategoryId" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="message">
+          <span data-ttu-id="03c12-114">消息文本。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="03c12-114">The message text.</span>
+          </span>
+        </param>
+        <param name="category">
+          <span data-ttu-id="03c12-115">消息日志类别。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="03c12-115">The message log category.</span>
+          </span>
+        </param>
+        <param name="subcategoryId">
+          <span data-ttu-id="03c12-116">消息子类别标识符。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="03c12-116">The message subcategory identifier.</span>
+          </span>
+        </param>
+        <summary>
+          <span data-ttu-id="03c12-117">根据指定的 LogCategory，将消息记录到 SharePoint 工具的输出窗格和错误列表上</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="03c12-117">Logs a message to SharePoint Tools output pane and Error List depending on the specified LogCategory</span>
+          </span>
+        </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public void WriteLine (string message, Microsoft.VisualStudio.SharePoint.LogCategory category, string helpKeyword);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteLine(string message, valuetype Microsoft.VisualStudio.SharePoint.LogCategory category, string helpKeyword) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="category" Type="Microsoft.VisualStudio.SharePoint.LogCategory" />
+        <Parameter Name="helpKeyword" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">
+          <span data-ttu-id="03c12-118">消息文本。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="03c12-118">The message text.</span>
+          </span>
+        </param>
+        <param name="category">
+          <span data-ttu-id="03c12-119">由 <see cref="T:Microsoft.VisualStudio.SharePoint.LogCategory" /> 指定的消息日志类别。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="03c12-119">The message log category, specified by <see cref="T:Microsoft.VisualStudio.SharePoint.LogCategory" />.</span>
+          </span>
+        </param>
+        <param name="helpKeyword">
+          <span data-ttu-id="03c12-120">此错误的“帮助”关键字。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="03c12-120">The Help keyword for the error.</span>
+          </span>
+        </param>
+        <summary>
+          <span data-ttu-id="03c12-121">根据指定的 <see cref="T:Microsoft.VisualStudio.SharePoint.LogCategory" />，将消息记录到 SharePoint 工具的“输出”窗口和“错误列表”。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="03c12-121">Logs a message to the SharePoint Tools **Output** window and **Error List** depending on the specified <see cref="T:Microsoft.VisualStudio.SharePoint.LogCategory" />.</span>
+          </span>
+        </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public void WriteLine (string message, Microsoft.VisualStudio.SharePoint.LogCategory category, string helpKeyword, int subcategoryId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteLine(string message, valuetype Microsoft.VisualStudio.SharePoint.LogCategory category, string helpKeyword, int32 subcategoryId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory,System.String,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="category" Type="Microsoft.VisualStudio.SharePoint.LogCategory" />
+        <Parameter Name="helpKeyword" Type="System.String" />
+        <Parameter Name="subcategoryId" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="message">
+          <span data-ttu-id="03c12-122">消息文本。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="03c12-122">The message text.</span>
+          </span>
+        </param>
+        <param name="category">
+          <span data-ttu-id="03c12-123">消息日志类别。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="03c12-123">The message log category.</span>
+          </span>
+        </param>
+        <param name="helpKeyword">
+          <span data-ttu-id="03c12-124">此错误的“帮助”关键字。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="03c12-124">The help keyword for error.</span>
+          </span>
+        </param>
+        <param name="subcategoryId">
+          <span data-ttu-id="03c12-125">消息子类别标识符。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="03c12-125">The message subcategory identifier.</span>
+          </span>
+        </param>
+        <summary>
+          <span data-ttu-id="03c12-126">根据指定的 LogCategory，将消息记录到 SharePoint 工具的输出窗格和错误列表上。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="03c12-126">Logs a message to SharePoint Tools output pane and Error List depending on the specified LogCategory.</span>
+          </span>
+        </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public void WriteLine (string message, Microsoft.VisualStudio.SharePoint.LogCategory category, string filePath, int lineNumber, int columnNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteLine(string message, valuetype Microsoft.VisualStudio.SharePoint.LogCategory category, string filePath, int32 lineNumber, int32 columnNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory,System.String,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="category" Type="Microsoft.VisualStudio.SharePoint.LogCategory" />
+        <Parameter Name="filePath" Type="System.String" />
+        <Parameter Name="lineNumber" Type="System.Int32" />
+        <Parameter Name="columnNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="message">
+          <span data-ttu-id="03c12-127">消息文本。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="03c12-127">The message text.</span>
+          </span>
+        </param>
+        <param name="category">
+          <span data-ttu-id="03c12-128">由 <see cref="T:Microsoft.VisualStudio.SharePoint.LogCategory" /> 指定的消息日志类别。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="03c12-128">The message log category, specified by <see cref="T:Microsoft.VisualStudio.SharePoint.LogCategory" />.</span>
+          </span>
+        </param>
+        <param name="filePath">
+          <span data-ttu-id="03c12-129">带有错误的文件的完整路径。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="03c12-129">The full path to the file with the error.</span>
+          </span>
+        </param>
+        <param name="lineNumber">
+          <span data-ttu-id="03c12-130">发生错误的行号。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="03c12-130">The line number where the error occurred.</span>
+          </span>
+        </param>
+        <param name="columnNumber">
+          <span data-ttu-id="03c12-131">发生错误的列号。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="03c12-131">The column number where the error occurred.</span>
+          </span>
+        </param>
+        <summary>
+          <span data-ttu-id="03c12-132">根据指定的 <see cref="T:Microsoft.VisualStudio.SharePoint.LogCategory" />，将消息记录到 SharePoint 工具的“输出”窗口和“错误列表”。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="03c12-132">Logs a message to the SharePoint Tools **Output** window and **Error List** depending on the specified <see cref="T:Microsoft.VisualStudio.SharePoint.LogCategory" />.</span>
+          </span>
+        </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="03c12-133">当[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]写入 IDE，如**错误**窗口中，则`lineNumber`和`columnNumber`值是从零开始，但当用户代码写入 IDE，则值都基于 1。</span><span class="sxs-lookup"><span data-stu-id="03c12-133">When [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] writes to the IDE, such as the **Error** window, then the `lineNumber` and `columnNumber` values are zero-based, but when user code writes to the IDE, then the values are one-based.</span></span> <span data-ttu-id="03c12-134">这意味着，如果，例如，你指定`lineNumber`的 10 和`columnNumber`在代码中，20 的[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]它所报告的第 11 行和列 21。</span><span class="sxs-lookup"><span data-stu-id="03c12-134">This means that if, for example, you specify a `lineNumber` of 10 and a `columnNumber` of 20 in your code, [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] reports it as line 11 and column 21.</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public void WriteLine (string message, Microsoft.VisualStudio.SharePoint.LogCategory category, string filePath, int lineNumber, int columnNumber, int subcategoryId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteLine(string message, valuetype Microsoft.VisualStudio.SharePoint.LogCategory category, string filePath, int32 lineNumber, int32 columnNumber, int32 subcategoryId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory,System.String,System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="category" Type="Microsoft.VisualStudio.SharePoint.LogCategory" />
+        <Parameter Name="filePath" Type="System.String" />
+        <Parameter Name="lineNumber" Type="System.Int32" />
+        <Parameter Name="columnNumber" Type="System.Int32" />
+        <Parameter Name="subcategoryId" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="message">
+          <span data-ttu-id="03c12-135">消息文本。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="03c12-135">The message text.</span>
+          </span>
+        </param>
+        <param name="category">
+          <span data-ttu-id="03c12-136">消息日志类别。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="03c12-136">The message log category.</span>
+          </span>
+        </param>
+        <param name="filePath">
+          <span data-ttu-id="03c12-137">带有错误的文件的完整路径。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="03c12-137">The full path to file with error.</span>
+          </span>
+        </param>
+        <param name="lineNumber">
+          <span data-ttu-id="03c12-138">错误的行号。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="03c12-138">The line number of error.</span>
+          </span>
+        </param>
+        <param name="columnNumber">
+          <span data-ttu-id="03c12-139">错误的列号。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="03c12-139">The column number of error.</span>
+          </span>
+        </param>
+        <param name="subcategoryId">
+          <span data-ttu-id="03c12-140">消息子类别标识符。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="03c12-140">The message subcategory identifier.</span>
+          </span>
+        </param>
+        <summary>
+          <span data-ttu-id="03c12-141">根据指定的 LogCategory，将消息记录到 SharePoint 工具的输出窗格和错误列表上。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="03c12-141">Logs a message to SharePoint Tools output pane and Error List depending on the specified LogCategory.</span>
+          </span>
+        </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public void WriteLine (string message, Microsoft.VisualStudio.SharePoint.LogCategory category, string filePath, int lineNumber, int columnNumber, string helpKeyword);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteLine(string message, valuetype Microsoft.VisualStudio.SharePoint.LogCategory category, string filePath, int32 lineNumber, int32 columnNumber, string helpKeyword) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory,System.String,System.Int32,System.Int32,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="category" Type="Microsoft.VisualStudio.SharePoint.LogCategory" />
+        <Parameter Name="filePath" Type="System.String" />
+        <Parameter Name="lineNumber" Type="System.Int32" />
+        <Parameter Name="columnNumber" Type="System.Int32" />
+        <Parameter Name="helpKeyword" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">
+          <span data-ttu-id="03c12-142">消息文本。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="03c12-142">The message text.</span>
+          </span>
+        </param>
+        <param name="category">
+          <span data-ttu-id="03c12-143">由 <see cref="T:Microsoft.VisualStudio.SharePoint.LogCategory" /> 指定的消息日志类别。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="03c12-143">The message log category, specified by <see cref="T:Microsoft.VisualStudio.SharePoint.LogCategory" />.</span>
+          </span>
+        </param>
+        <param name="filePath">
+          <span data-ttu-id="03c12-144">带有错误的文件的完整路径。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="03c12-144">The full path to the file with the error.</span>
+          </span>
+        </param>
+        <param name="lineNumber">
+          <span data-ttu-id="03c12-145">发生错误的行号。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="03c12-145">The line number where the error occurred.</span>
+          </span>
+        </param>
+        <param name="columnNumber">
+          <span data-ttu-id="03c12-146">发生错误的列号。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="03c12-146">The column number where the error occurred.</span>
+          </span>
+        </param>
+        <param name="helpKeyword">
+          <span data-ttu-id="03c12-147">此错误的“帮助”关键字。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="03c12-147">The Help keyword for the error.</span>
+          </span>
+        </param>
+        <summary>
+          <span data-ttu-id="03c12-148">根据指定的 <see cref="T:Microsoft.VisualStudio.SharePoint.LogCategory" />，将消息记录到 SharePoint 工具的“输出”窗口和“错误列表”。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="03c12-148">Logs a message to the SharePoint Tools **Output** window and **Error List** depending on the specified <see cref="T:Microsoft.VisualStudio.SharePoint.LogCategory" />.</span>
+          </span>
+        </summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <span data-ttu-id="03c12-149">当[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]写入 IDE，如**错误**窗口中，则`lineNumber`和`columnNumber`值是从零开始，但当用户代码写入 IDE，则值都基于 1。</span><span class="sxs-lookup"><span data-stu-id="03c12-149">When [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] writes to the IDE, such as the **Error** window, then the `lineNumber` and `columnNumber` values are zero-based, but when user code writes to the IDE, then the values are one-based.</span></span> <span data-ttu-id="03c12-150">这意味着，如果，例如，你指定`lineNumber`的 10 和`columnNumber`在代码中，20 的[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]它所报告的第 11 行和列 21。</span><span class="sxs-lookup"><span data-stu-id="03c12-150">This means that if, for example, you specify a `lineNumber` of 10 and a `columnNumber` of 20 in your code, [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] reports it as line 11 and column 21.</span></span>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public void WriteLine (string message, Microsoft.VisualStudio.SharePoint.LogCategory category, string filePath, int lineNumber, int columnNumber, string helpKeyword, int subcategoryId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteLine(string message, valuetype Microsoft.VisualStudio.SharePoint.LogCategory category, string filePath, int32 lineNumber, int32 columnNumber, string helpKeyword, int32 subcategoryId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory,System.String,System.Int32,System.Int32,System.String,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualStudio.SharePoint</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="category" Type="Microsoft.VisualStudio.SharePoint.LogCategory" />
+        <Parameter Name="filePath" Type="System.String" />
+        <Parameter Name="lineNumber" Type="System.Int32" />
+        <Parameter Name="columnNumber" Type="System.Int32" />
+        <Parameter Name="helpKeyword" Type="System.String" />
+        <Parameter Name="subcategoryId" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="message">
+          <span data-ttu-id="03c12-151">消息文本。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="03c12-151">The message text.</span>
+          </span>
+        </param>
+        <param name="category">
+          <span data-ttu-id="03c12-152">消息日志类别。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="03c12-152">The message log category.</span>
+          </span>
+        </param>
+        <param name="filePath">
+          <span data-ttu-id="03c12-153">带有错误的文件的完整路径。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="03c12-153">The full path to file with error.</span>
+          </span>
+        </param>
+        <param name="lineNumber">
+          <span data-ttu-id="03c12-154">错误的行号。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="03c12-154">The line number of error.</span>
+          </span>
+        </param>
+        <param name="columnNumber">
+          <span data-ttu-id="03c12-155">错误的列号。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="03c12-155">The column number of error.</span>
+          </span>
+        </param>
+        <param name="helpKeyword">
+          <span data-ttu-id="03c12-156">此错误的“帮助”关键字。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="03c12-156">The help keyword for error.</span>
+          </span>
+        </param>
+        <param name="subcategoryId">
+          <span data-ttu-id="03c12-157">消息子类别标识符。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="03c12-157">The message subcategory identifier.</span>
+          </span>
+        </param>
+        <summary>
+          <span data-ttu-id="03c12-158">根据指定的 LogCategory，将消息记录到 SharePoint 工具的输出窗格和错误列表上。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="03c12-158">Log a message to SharePoint Tools output pane and Error List depending on the specified LogCategory.</span>
+          </span>
+        </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
