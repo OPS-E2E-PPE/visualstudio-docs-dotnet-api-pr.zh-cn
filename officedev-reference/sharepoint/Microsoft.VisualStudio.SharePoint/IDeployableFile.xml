@@ -5,6 +5,7 @@
     <Meta Name="ms.translationtype" Value="HT" />
     <Meta Name="ms.contentlocale" Value="zh-CN" />
     <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+    <Meta Name="ms.locfileid" Value="29410169" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface IDeployableFile" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDeployableFile" />
@@ -15,7 +16,16 @@
   </AssemblyInfo>
   <Interfaces />
   <Docs>
-    <summary>为所有可打包到 WSP 文件且可部署到 SharePoint 的文件提供基接口。 这些文件共享一组与部署相关的属性。</summary>
+    <summary>
+      <span data-ttu-id="d4466-101">为所有可打包到 WSP 文件且可部署到 SharePoint 的文件提供基接口。</span>
+      <span class="sxs-lookup">
+        <span data-stu-id="d4466-101">Provides the base interface for all files that can be packaged into the WSP file and deployed to SharePoint.</span>
+      </span>
+      <span data-ttu-id="d4466-102">这些文件共享一组与部署相关的属性。</span>
+      <span class="sxs-lookup">
+        <span data-stu-id="d4466-102">These files share a set of deployment-related properties.</span>
+      </span>
+    </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -32,8 +42,18 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>获取或设置将在 SharePoint 中部署文件的路径，该路径相对于由 <see cref="P:Microsoft.VisualStudio.SharePoint.IDeployableFile.DeploymentRoot" /> 表示的基路径。</summary>
-        <value>一个表示文件路径的字符串值。</value>
+        <summary>
+          <span data-ttu-id="d4466-103">获取或设置将在 SharePoint 中部署文件的路径，该路径相对于由 <see cref="P:Microsoft.VisualStudio.SharePoint.IDeployableFile.DeploymentRoot" /> 表示的基路径。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="d4466-103">Gets or sets the path of the file as it will be deployed in SharePoint relative to the base path represented by <see cref="P:Microsoft.VisualStudio.SharePoint.IDeployableFile.DeploymentRoot" />.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="d4466-104">一个表示文件路径的字符串值。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="d4466-104">A string value representing a file path.</span>
+          </span>
+        </value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -50,7 +70,12 @@
         <ReturnType>System.EventHandler&lt;Microsoft.VisualStudio.SharePoint.DeploymentPathChangedEventArgs&gt;</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>在更改 <see cref="P:Microsoft.VisualStudio.SharePoint.IDeployableFile.DeploymentPath" /> 时发生。</summary>
+        <summary>
+          <span data-ttu-id="d4466-105">在更改 <see cref="P:Microsoft.VisualStudio.SharePoint.IDeployableFile.DeploymentPath" /> 时发生。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="d4466-105">Occurs when <see cref="P:Microsoft.VisualStudio.SharePoint.IDeployableFile.DeploymentPath" /> is changed.</span>
+          </span>
+        </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -67,19 +92,29 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>获取 SharePoint 将存储文件的基路径。</summary>
-        <value>一个表示文件路径的字符串值。</value>
+        <summary>
+          <span data-ttu-id="d4466-106">获取 SharePoint 将存储文件的基路径。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="d4466-106">Gets the base path where SharePoint will store the file.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="d4466-107">一个表示文件路径的字符串值。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="d4466-107">A string value representing a file path.</span>
+          </span>
+        </value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此值使用以下令牌：  
+ <span data-ttu-id="d4466-108">此值使用以下令牌：</span><span class="sxs-lookup"><span data-stu-id="d4466-108">This value uses the following tokens:</span></span>  
   
-|标记名称|描述|  
+|<span data-ttu-id="d4466-109">标记名称</span><span class="sxs-lookup"><span data-stu-id="d4466-109">Token Name</span></span>|<span data-ttu-id="d4466-110">描述</span><span class="sxs-lookup"><span data-stu-id="d4466-110">Description</span></span>|  
 |----------------|-----------------|  
-|{SharePointRoot}|SharePoint hive 的根。|  
-|{FeatureName}|在其中功能的名称`ProjectItem`包含。|  
-|{ClassResourcePath}|SharePoint 上的类资源路径。 此值取决于程序集是否部署到全局程序集缓存 (GAC) 或 Web 应用程序。|  
+|<span data-ttu-id="d4466-111">{SharePointRoot}</span><span class="sxs-lookup"><span data-stu-id="d4466-111">{SharePointRoot}</span></span>|<span data-ttu-id="d4466-112">SharePoint hive 的根。</span><span class="sxs-lookup"><span data-stu-id="d4466-112">The root of the SharePoint hive.</span></span>|  
+|<span data-ttu-id="d4466-113">{FeatureName}</span><span class="sxs-lookup"><span data-stu-id="d4466-113">{FeatureName}</span></span>|<span data-ttu-id="d4466-114">在其中功能的名称`ProjectItem`包含。</span><span class="sxs-lookup"><span data-stu-id="d4466-114">The name of the feature in which the `ProjectItem` is included.</span></span>|  
+|<span data-ttu-id="d4466-115">{ClassResourcePath}</span><span class="sxs-lookup"><span data-stu-id="d4466-115">{ClassResourcePath}</span></span>|<span data-ttu-id="d4466-116">SharePoint 上的类资源路径。</span><span class="sxs-lookup"><span data-stu-id="d4466-116">The class resource path on SharePoint.</span></span> <span data-ttu-id="d4466-117">此值取决于程序集是否部署到全局程序集缓存 (GAC) 或 Web 应用程序。</span><span class="sxs-lookup"><span data-stu-id="d4466-117">This value depends on whether the assembly is deployed to the Global Assembly Cache (GAC) or to a Web application.</span></span>|  
   
  ]]></format>
         </remarks>
@@ -98,8 +133,18 @@
         <ReturnType>Microsoft.VisualStudio.SharePoint.DeploymentType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>获取要对文件执行的部署类型。</summary>
-        <value>一个表示部署类型的对象。</value>
+        <summary>
+          <span data-ttu-id="d4466-118">获取要对文件执行的部署类型。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="d4466-118">Gets the type of deployment to be performed to a file.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="d4466-119">一个表示部署类型的对象。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="d4466-119">An object that represents a deployment type.</span>
+          </span>
+        </value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -116,14 +161,19 @@
         <ReturnType>System.EventHandler&lt;Microsoft.VisualStudio.SharePoint.DeploymentTypeChangedEventArgs&gt;</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>在更改 <see cref="P:Microsoft.VisualStudio.SharePoint.IDeployableFile.DeploymentType" /> 时发生。</summary>
+        <summary>
+          <span data-ttu-id="d4466-120">在更改 <see cref="P:Microsoft.VisualStudio.SharePoint.IDeployableFile.DeploymentType" /> 时发生。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="d4466-120">Occurs when <see cref="P:Microsoft.VisualStudio.SharePoint.IDeployableFile.DeploymentType" /> is changed.</span>
+          </span>
+        </summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 中的更改<xref:Microsoft.VisualStudio.SharePoint.IDeployableFile.DeploymentType%2A>属性后面通常跟随<xref:Microsoft.VisualStudio.SharePoint.IDeployableFile.DeploymentPathChanged>事件。  
+ <span data-ttu-id="d4466-121">中的更改<xref:Microsoft.VisualStudio.SharePoint.IDeployableFile.DeploymentType%2A>属性后面通常跟随<xref:Microsoft.VisualStudio.SharePoint.IDeployableFile.DeploymentPathChanged>事件。</span><span class="sxs-lookup"><span data-stu-id="d4466-121">A change in the <xref:Microsoft.VisualStudio.SharePoint.IDeployableFile.DeploymentType%2A> property is usually followed by the <xref:Microsoft.VisualStudio.SharePoint.IDeployableFile.DeploymentPathChanged> event.</span></span>  
   
- 中时，在<xref:Microsoft.VisualStudio.SharePoint.IDeployableFile.DeploymentTypeChanged>事件处理程序，你可以访问的旧值仅<xref:Microsoft.VisualStudio.SharePoint.IDeployableFile.DeploymentPath%2A>属性。  
+ <span data-ttu-id="d4466-122">中时，在<xref:Microsoft.VisualStudio.SharePoint.IDeployableFile.DeploymentTypeChanged>事件处理程序，你可以访问的旧值仅<xref:Microsoft.VisualStudio.SharePoint.IDeployableFile.DeploymentPath%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="d4466-122">While in the <xref:Microsoft.VisualStudio.SharePoint.IDeployableFile.DeploymentTypeChanged> event handler, you can access only the old value of the <xref:Microsoft.VisualStudio.SharePoint.IDeployableFile.DeploymentPath%2A> property.</span></span>  
   
  ]]></format>
         </remarks>
@@ -142,8 +192,18 @@
         <ReturnType>System.Uri</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>获取文件将在其中部署的绝对 SharePoint URL。</summary>
-        <value>文件将在其中部署的绝对 SharePoint URL。</value>
+        <summary>
+          <span data-ttu-id="d4466-123">获取文件将在其中部署的绝对 SharePoint URL。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="d4466-123">Gets the absolute SharePoint url where this file is going to be deployed.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="d4466-124">文件将在其中部署的绝对 SharePoint URL。</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="d4466-124">The absolute SharePoint url where this file is going to be deployed.</span>
+          </span>
+        </value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
