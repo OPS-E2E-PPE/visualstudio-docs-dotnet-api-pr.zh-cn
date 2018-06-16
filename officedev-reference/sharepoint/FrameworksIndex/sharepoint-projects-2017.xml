@@ -1,0 +1,1614 @@
+<Framework Name="sharepoint-projects-2017">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="5b2525f4c241835993cbe0c08804ead96f0cf00a" />
+    <Meta Name="ms.sourcegitcommit" Value="294f52a90568162bf46369ca71ad83ca9c29f045" />
+    <Meta Name="ms.translationtype" Value="HT" />
+    <Meta Name="ms.contentlocale" Value="zh-CN" />
+    <Meta Name="ms.lasthandoff" Value="06/15/2018" />
+    <Meta Name="ms.locfileid" Value="35656433" />
+  </Metadata>
+  <Namespace Name="Microsoft.VisualStudio.SharePoint">
+    <Type Name="Microsoft.VisualStudio.SharePoint.AssemblyDeploymentTarget" Id="T:Microsoft.VisualStudio.SharePoint.AssemblyDeploymentTarget">
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.AssemblyDeploymentTarget.GlobalAssemblyCache" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.AssemblyDeploymentTarget.WebApplication" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.ClassNameChangedEventArgs" Id="T:Microsoft.VisualStudio.SharePoint.ClassNameChangedEventArgs">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.ClassNameChangedEventArgs.#ctor(System.String,System.String,System.Collections.Generic.IEnumerable{System.String})" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ClassNameChangedEventArgs.ClassName" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ClassNameChangedEventArgs.Files" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ClassNameChangedEventArgs.OldClassName" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.ClassNameChangingEventArgs" Id="T:Microsoft.VisualStudio.SharePoint.ClassNameChangingEventArgs">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.ClassNameChangingEventArgs.#ctor(System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IList{System.String})" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ClassNameChangingEventArgs.AdditionalFiles" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ClassNameChangingEventArgs.ClassName" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ClassNameChangingEventArgs.Files" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ClassNameChangingEventArgs.NewClassName" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.DeploymentEventArgs" Id="T:Microsoft.VisualStudio.SharePoint.DeploymentEventArgs">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.DeploymentEventArgs.#ctor(Microsoft.VisualStudio.SharePoint.ISharePointProject,Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext)" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.DeploymentEventArgs.DeploymentContext" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.DeploymentPathChangedEventArgs" Id="T:Microsoft.VisualStudio.SharePoint.DeploymentPathChangedEventArgs">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.DeploymentPathChangedEventArgs.#ctor(System.String)" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.DeploymentPathChangedEventArgs.OldDeploymentPath" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.DeploymentStepCanceledEventArgs" Id="T:Microsoft.VisualStudio.SharePoint.DeploymentStepCanceledEventArgs">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.DeploymentStepCanceledEventArgs.#ctor(Microsoft.VisualStudio.SharePoint.ISharePointProjectItem,Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStepInfo,Microsoft.VisualStudio.SharePoint.Deployment.ISharePointProjectItemDeploymentContext)" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.DeploymentStepCanceledEventArgs.DeploymentContext" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.DeploymentStepCanceledEventArgs.DeploymentStepInfo" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.DeploymentStepCompletedEventArgs" Id="T:Microsoft.VisualStudio.SharePoint.DeploymentStepCompletedEventArgs">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.DeploymentStepCompletedEventArgs.#ctor(Microsoft.VisualStudio.SharePoint.ISharePointProjectItem,Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStepInfo,Microsoft.VisualStudio.SharePoint.Deployment.ISharePointProjectItemDeploymentContext)" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.DeploymentStepCompletedEventArgs.DeploymentContext" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.DeploymentStepCompletedEventArgs.DeploymentStepInfo" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.DeploymentStepFailedEventArgs" Id="T:Microsoft.VisualStudio.SharePoint.DeploymentStepFailedEventArgs">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.DeploymentStepFailedEventArgs.#ctor(Microsoft.VisualStudio.SharePoint.ISharePointProjectItem,Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStepInfo,Microsoft.VisualStudio.SharePoint.Deployment.ISharePointProjectItemDeploymentContext)" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.DeploymentStepFailedEventArgs.DeploymentContext" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.DeploymentStepFailedEventArgs.DeploymentStepInfo" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.DeploymentStepStartedEventArgs" Id="T:Microsoft.VisualStudio.SharePoint.DeploymentStepStartedEventArgs">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.DeploymentStepStartedEventArgs.#ctor(Microsoft.VisualStudio.SharePoint.ISharePointProjectItem,Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStepInfo,Microsoft.VisualStudio.SharePoint.Deployment.ISharePointProjectItemDeploymentContext,Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflictCollection)" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.DeploymentStepStartedEventArgs.Conflicts" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.DeploymentStepStartedEventArgs.DeploymentContext" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.DeploymentStepStartedEventArgs.DeploymentStepInfo" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.DeploymentType" Id="T:Microsoft.VisualStudio.SharePoint.DeploymentType">
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.DeploymentType.AppGlobalResource" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.DeploymentType.ApplicationResource" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.DeploymentType.AppPackage" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.DeploymentType.ClassResource" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.DeploymentType.DwpFile" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.DeploymentType.ElementFile" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.DeploymentType.ElementManifest" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.DeploymentType.NoDeployment" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.DeploymentType.PackageOnly" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.DeploymentType.Resource" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.DeploymentType.RootFile" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.DeploymentType.TemplateFile" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.DeploymentTypeChangedEventArgs" Id="T:Microsoft.VisualStudio.SharePoint.DeploymentTypeChangedEventArgs">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.DeploymentTypeChangedEventArgs.#ctor(Microsoft.VisualStudio.SharePoint.DeploymentType)" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.DeploymentTypeChangedEventArgs.OldDeploymentType" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.HighTrustCreationInformation" Id="T:Microsoft.VisualStudio.SharePoint.HighTrustCreationInformation">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.HighTrustCreationInformation.#ctor" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.HighTrustCreationInformation.CertificateFile" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.HighTrustCreationInformation.IssuerId" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.HighTrustCreationInformation.Password" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.IAnnotatedObject" Id="T:Microsoft.VisualStudio.SharePoint.IAnnotatedObject">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.IAnnotatedObject.Annotations" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.IAnnotationDictionary" Id="T:Microsoft.VisualStudio.SharePoint.IAnnotationDictionary">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.IAnnotationDictionary.Add``1(``0)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.IAnnotationDictionary.GetValue``1" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.IAnnotationDictionary.GetValue``1(System.Object)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.IAnnotationDictionary.Remove``1" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.IAnnotationDictionary.TryGetValue``1(``0@)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.IAnnotationDictionary.TryGetValue``1(System.Object,``0@)" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.ICodeRefactoringEvents" Id="T:Microsoft.VisualStudio.SharePoint.ICodeRefactoringEvents">
+      <Member Id="E:Microsoft.VisualStudio.SharePoint.ICodeRefactoringEvents.ClassNameChanged" />
+      <Member Id="E:Microsoft.VisualStudio.SharePoint.ICodeRefactoringEvents.ClassNameChanging" />
+      <Member Id="E:Microsoft.VisualStudio.SharePoint.ICodeRefactoringEvents.NamespaceNameChanged" />
+      <Member Id="E:Microsoft.VisualStudio.SharePoint.ICodeRefactoringEvents.NamespaceNameChanging" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.IDeployableFile" Id="T:Microsoft.VisualStudio.SharePoint.IDeployableFile">
+      <Member Id="E:Microsoft.VisualStudio.SharePoint.IDeployableFile.DeploymentPathChanged" />
+      <Member Id="E:Microsoft.VisualStudio.SharePoint.IDeployableFile.DeploymentTypeChanged" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.IDeployableFile.DeploymentPath" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.IDeployableFile.DeploymentRoot" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.IDeployableFile.DeploymentType" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.IDeployableFile.DeploymentUrl" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.IFeatureReceiver" Id="T:Microsoft.VisualStudio.SharePoint.IFeatureReceiver">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.IFeatureReceiver.Assembly" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.IFeatureReceiver.ClassName" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.IFeatureReceiver.ProjectItem" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.IMappedFolder" Id="T:Microsoft.VisualStudio.SharePoint.IMappedFolder">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.IMappedFolder.DeploymentLocation" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.IMappedFolder.FolderType" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.IMappedFolderCollection" Id="T:Microsoft.VisualStudio.SharePoint.IMappedFolderCollection">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.IMappedFolderCollection.Add(Microsoft.VisualStudio.SharePoint.MappedFolderType)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.IMappedFolderCollection.Add(Microsoft.VisualStudio.SharePoint.MappedFolderType,System.Boolean)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.IMappedFolderCollection.Add(System.String)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.IMappedFolderCollection.Add(System.String,System.Boolean)" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.IMappedFolderCollection.Project" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.IMenuItem" Id="T:Microsoft.VisualStudio.SharePoint.IMenuItem">
+      <Member Id="E:Microsoft.VisualStudio.SharePoint.IMenuItem.Click" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.IMenuItem.IsEnabled" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.IMenuItem.SortOrder" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.IMenuItem.Text" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.IMenuItemCollection" Id="T:Microsoft.VisualStudio.SharePoint.IMenuItemCollection">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.IMenuItemCollection.Add(System.String)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.IMenuItemCollection.Add(System.String,System.Int32)" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.INotifyObjectDisposed" Id="T:Microsoft.VisualStudio.SharePoint.INotifyObjectDisposed">
+      <Member Id="E:Microsoft.VisualStudio.SharePoint.INotifyObjectDisposed.Disposed" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.INotifyObjectDisposed.IsDisposed" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.INotifyObjectDisposing" Id="T:Microsoft.VisualStudio.SharePoint.INotifyObjectDisposing">
+      <Member Id="E:Microsoft.VisualStudio.SharePoint.INotifyObjectDisposing.Disposing" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.INotifyObjectDisposing.IsDisposing" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.IObservableModelElement" Id="T:Microsoft.VisualStudio.SharePoint.IObservableModelElement">
+      <Member Id="E:Microsoft.VisualStudio.SharePoint.IObservableModelElement.PropertyChanged" />
+      <Member Id="E:Microsoft.VisualStudio.SharePoint.IObservableModelElement.PropertyChanging" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.IPropertySourceCollection" Id="T:Microsoft.VisualStudio.SharePoint.IPropertySourceCollection">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.IPropertySourceCollection.Add(System.Object)" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.ISafeControlEntry" Id="T:Microsoft.VisualStudio.SharePoint.ISafeControlEntry">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISafeControlEntry.AssemblyName" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISafeControlEntry.IsSafe" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISafeControlEntry.IsSafeAgainstScript" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISafeControlEntry.Name" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISafeControlEntry.NamespaceName" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISafeControlEntry.ProjectItem" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISafeControlEntry.TypeName" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.ISafeControlEntryCollection" Id="T:Microsoft.VisualStudio.SharePoint.ISafeControlEntryCollection">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.ISafeControlEntryCollection.Add(System.String,System.String,System.String,System.Boolean)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.ISafeControlEntryCollection.Clear" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.ISafeControlEntryCollection.Remove(Microsoft.VisualStudio.SharePoint.ISafeControlEntry)" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISafeControlEntryCollection.ProjectItem" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.ISharePointAppSettings" Id="T:Microsoft.VisualStudio.SharePoint.ISharePointAppSettings">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.ISharePointAppSettings.CreateWebProject(Microsoft.VisualStudio.SharePoint.HighTrustCreationInformation)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.ISharePointAppSettings.CreateWebProject(Microsoft.VisualStudio.SharePoint.WebProjectCreationInformation,Microsoft.VisualStudio.SharePoint.HighTrustCreationInformation)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.ISharePointAppSettings.LinkToWebProject(System.String,System.Boolean,System.Boolean)" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointAppSettings.AppManifest" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointAppSettings.AppPackageOutputPath" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointAppSettings.AppPackageOutputPathForPublishing" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointAppSettings.InstalledEventEndpoint" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointAppSettings.Project" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointAppSettings.UninstallingEventEndpoint" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointAppSettings.UpgradedEventEndpoint" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointAppSettings.WebProjectPath" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.ISharePointCollection`1" Id="T:Microsoft.VisualStudio.SharePoint.ISharePointCollection`1">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.ISharePointCollection`1.Contains(`0)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.ISharePointCollection`1.CopyTo(`0[],System.Int32)" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointCollection`1.Count" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.ISharePointConnection" Id="T:Microsoft.VisualStudio.SharePoint.ISharePointConnection">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.ISharePointConnection.ExecuteCommand(System.String)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.ISharePointConnection.ExecuteCommand``1(System.String)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.ISharePointConnection.ExecuteCommand``1(System.String,``0)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.ISharePointConnection.ExecuteCommand``2(System.String,``0)" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointConnection.AuthenticationMode" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointConnection.IsEnabled" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointConnection.SiteUrl" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.ISharePointProject" Id="T:Microsoft.VisualStudio.SharePoint.ISharePointProject">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.ISharePointProject.Synchronize" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProject.ActiveDeploymentConfiguration" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProject.AddItemTemplatesGuid" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProject.AppSettings" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProject.AssemblyDeploymentTarget" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProject.AutoRetract" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProject.DeploymentConfigurations" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProject.Features" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProject.Id" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProject.IncludeAssemblyInPackage" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProject.IsSandboxedSolution" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProject.IsSilverlightDebuggingEnabled" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProject.IsWorkflowDebuggingEnabled" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProject.MappedFolders" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProject.OutputFullPath" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProject.Package" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProject.PostDeploymentCommand" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProject.PreDeploymentCommand" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProject.ProjectItems" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProject.ProjectMode" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProject.ProjectService" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProject.ProjectUserFileData" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProject.SelectedProjectItems" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProject.SharePointConnection" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProject.SiteUrl" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProject.StartupItem" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProject.StartupUrl" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProject.TargetOfficeVersion" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.ISharePointProjectCollection" Id="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectCollection">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectCollection.Find(System.Guid)" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectCollection.Item(System.String)" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectCollection.ProjectService" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents" Id="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents">
+      <Member Id="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.DeploymentCompleted" />
+      <Member Id="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.DeploymentStarted" />
+      <Member Id="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.ProjectAdded" />
+      <Member Id="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.ProjectDisposing" />
+      <Member Id="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.ProjectInitialized" />
+      <Member Id="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.ProjectMenuItemsRequested" />
+      <Member Id="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.ProjectNameChanged" />
+      <Member Id="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.ProjectPropertiesRequested" />
+      <Member Id="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.ProjectPropertyChanged" />
+      <Member Id="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.ProjectRemoved" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.ISharePointProjectExtension" Id="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectExtension">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectExtension.Initialize(Microsoft.VisualStudio.SharePoint.ISharePointProjectService)" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature" Id="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature.Validate" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature.EventReceiverFile" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature.FeatureFile" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature.Id" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature.ManifestTemplateFile" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature.Model" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature.ProjectItems" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature.ResourceFiles" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.ISharePointProjectFeatureCollection" Id="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeatureCollection">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeatureCollection.Add" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeatureCollection.Add(System.Boolean)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeatureCollection.Add(System.String)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeatureCollection.Add(System.String,System.Boolean)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeatureCollection.Find(System.Guid)" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeatureCollection.Item(System.String)" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeatureCollection.Project" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.ISharePointProjectFeatureResourceFile" Id="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeatureResourceFile">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeatureResourceFile.CultureInfo" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeatureResourceFile.Feature" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.ISharePointProjectFeatureResourceFileCollection" Id="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeatureResourceFileCollection">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeatureResourceFileCollection.Add(System.Globalization.CultureInfo)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeatureResourceFileCollection.Find(System.Globalization.CultureInfo)" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeatureResourceFileCollection.Feature" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeatureResourceFileCollection.Item(System.String)" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.ISharePointProjectItem" Id="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem">
+      <Member Id="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem.Open" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem.DefaultFile" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem.ExtensionData" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem.FeatureActivationDependencies" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem.FeatureProperties" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem.FeatureReceiver" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem.Files" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem.Id" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem.ProjectItemType" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem.ProjectOutputReferences" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem.ProjectUserFileData" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem.SafeControlEntries" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem.VirtualFiles" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.ISharePointProjectItemCollection" Id="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemCollection">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemCollection.Add(System.String,System.String)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemCollection.Add(System.String,System.String,System.Boolean)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemCollection.Add(System.String,System.String,System.String)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemCollection.Add(System.String,System.String,System.String,System.Boolean)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemCollection.Find(System.Guid)" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemCollection.Item(System.String)" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemCollection.Project" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents" Id="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents">
+      <Member Id="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.DeploymentStepCanceled" />
+      <Member Id="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.DeploymentStepCompleted" />
+      <Member Id="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.DeploymentStepFailed" />
+      <Member Id="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.DeploymentStepStarted" />
+      <Member Id="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.ProjectItemAdded" />
+      <Member Id="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.ProjectItemDisposing" />
+      <Member Id="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.ProjectItemInitialized" />
+      <Member Id="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.ProjectItemMenuItemsRequested" />
+      <Member Id="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.ProjectItemNameChanged" />
+      <Member Id="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.ProjectItemOpen" />
+      <Member Id="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.ProjectItemPropertiesRequested" />
+      <Member Id="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.ProjectItemPropertyChanged" />
+      <Member Id="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.ProjectItemRemoved" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFile" Id="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFile">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFile.ProjectItem" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFile.Source" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFileCollection" Id="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFileCollection">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFileCollection.AddFromFile(System.String)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFileCollection.AddFromFileCopy(System.String)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFileCollection.AddFromFileCopy(System.String,System.String)" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFileCollection.Item(System.String)" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFileCollection.ProjectItem" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFileEvents" Id="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFileEvents">
+      <Member Id="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFileEvents.FileAdded" />
+      <Member Id="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFileEvents.FileDeploymentPathChanged" />
+      <Member Id="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFileEvents.FileDeploymentTypeChanged" />
+      <Member Id="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFileEvents.FileNameChanged" />
+      <Member Id="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFileEvents.FileOpening" />
+      <Member Id="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFileEvents.FilePropertyChanged" />
+      <Member Id="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFileEvents.FileRemoved" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.ISharePointProjectItemType" Id="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemType">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemType.Id" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemType.IsValid" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemType.Name" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemType.ProjectService" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemType.SupportedAssemblyDeploymentTargets" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemType.SupportedDeploymentScopes" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemType.SupportedTrustLevels" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition" Id="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition">
+      <Member Id="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition.ProjectItemStartupUrlRequested" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition.Name" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition.ProjectItemType" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition.ProjectService" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition.SupportedAssemblyDeploymentTargets" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition.SupportedDeploymentScopes" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition.SupportedTrustLevels" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeExtension" Id="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeExtension">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeExtension.Initialize(Microsoft.VisualStudio.SharePoint.ISharePointProjectItemType)" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider" Id="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider.InitializeType(Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition)" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.ISharePointProjectItemVirtualFile" Id="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemVirtualFile">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemVirtualFile.GroupId" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemVirtualFile.ProjectItem" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemVirtualFile.Source" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.ISharePointProjectItemVirtualFileCollection" Id="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemVirtualFileCollection">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemVirtualFileCollection.Add(System.String,Microsoft.VisualStudio.SharePoint.DeploymentType)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemVirtualFileCollection.Remove(Microsoft.VisualStudio.SharePoint.ISharePointProjectItemVirtualFile)" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemVirtualFileCollection.ProjectItem" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger" Id="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.ActivateOutputWindow" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.ClearErrorList" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.GetNewSubcategoryId" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.RemoveMessages(System.Int32)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory,System.Int32)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory,System.String)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory,System.String,System.Int32)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory,System.String,System.Int32,System.Int32)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory,System.String,System.Int32,System.Int32,System.Int32)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory,System.String,System.Int32,System.Int32,System.String)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.LogCategory,System.String,System.Int32,System.Int32,System.String,System.Int32)" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.ISharePointProjectMember" Id="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectMember">
+      <Member Id="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectMember.NameChanged" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectMember.CollapseChildItems" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectMember.FullPath" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectMember.Icon" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectMember.IsExpanded" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectMember.Name" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectMember.Project" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.ISharePointProjectMemberReference" Id="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectMemberReference">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectMemberReference.ItemId" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectMemberReference.ProjectPath" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.ISharePointProjectMemberReferenceCollection" Id="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectMemberReferenceCollection">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectMemberReferenceCollection.Add(System.String,System.Guid)" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.ISharePointProjectMemberReferenceResolver" Id="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectMemberReferenceResolver">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectMemberReferenceResolver.ResolveReference``1(Microsoft.VisualStudio.SharePoint.ISharePointProjectMemberReference)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectMemberReferenceResolver.ResolveReference``1(System.Guid)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectMemberReferenceResolver.ResolveReference``1(System.String)" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.ISharePointProjectOutputReference" Id="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectOutputReference">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectOutputReference.OutputFullPath" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectOutputReference.ProjectFullPath" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectOutputReference.ProjectId" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectOutputReference.ProjectItem" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.ISharePointProjectOutputReferenceCollection" Id="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectOutputReferenceCollection">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectOutputReferenceCollection.Add(Microsoft.VisualStudio.SharePoint.ISharePointProject,Microsoft.VisualStudio.SharePoint.DeploymentType)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectOutputReferenceCollection.Add(System.Guid,Microsoft.VisualStudio.SharePoint.DeploymentType)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectOutputReferenceCollection.Add(System.String,Microsoft.VisualStudio.SharePoint.DeploymentType)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectOutputReferenceCollection.Clear" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectOutputReferenceCollection.Remove(Microsoft.VisualStudio.SharePoint.ISharePointProjectOutputReference)" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectOutputReferenceCollection.ProjectItem" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.ISharePointProjectPackage" Id="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectPackage">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectPackage.BuildPackage" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectPackage.Validate" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectPackage.Features" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectPackage.Id" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectPackage.ManifestTemplateFile" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectPackage.Model" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectPackage.OutputPath" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectPackage.PackageFile" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectPackage.ProjectItems" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.ISharePointProjectService" Id="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectService">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.Convert``2(``0)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.CreateSharePointConnection(System.Uri,System.Boolean)" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.CodeRefactoringEvents" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.DeploymentSteps" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.IsSharePointInstalled" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.Logger" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.PackageValidationProvider" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.ProjectItemTypes" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.Projects" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.ServiceProvider" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.SharePointConnection" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.SharePointInstallPath" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.ISharePointProjectStartupItem" Id="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectStartupItem">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectStartupItem.RelativePath" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectStartupItem.StartupUrl" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.LogCategory" Id="T:Microsoft.VisualStudio.SharePoint.LogCategory">
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.LogCategory.Error" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.LogCategory.Message" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.LogCategory.Status" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.LogCategory.Verbose" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.LogCategory.Warning" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.MappedFolderType" Id="T:Microsoft.VisualStudio.SharePoint.MappedFolderType">
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.MappedFolderType.ControlTemplates" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.MappedFolderType.Images" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.MappedFolderType.Layouts" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.MappedFolderType.Other" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.MappedFolderType.SharePointRoot" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.MappedFolderType.Template" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.MenuItemEventArgs" Id="T:Microsoft.VisualStudio.SharePoint.MenuItemEventArgs">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.MenuItemEventArgs.#ctor(Microsoft.VisualStudio.SharePoint.IMenuItem,System.Object)" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.MenuItemEventArgs.MenuItem" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.MenuItemEventArgs.Owner" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.NameChangedEventArgs" Id="T:Microsoft.VisualStudio.SharePoint.NameChangedEventArgs">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.NameChangedEventArgs.#ctor(System.String)" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.NameChangedEventArgs.OldName" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.NamespaceNameChangedEventArgs" Id="T:Microsoft.VisualStudio.SharePoint.NamespaceNameChangedEventArgs">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.NamespaceNameChangedEventArgs.#ctor(System.String,System.String,System.Collections.Generic.IEnumerable{System.String})" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.NamespaceNameChangedEventArgs.Files" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.NamespaceNameChangedEventArgs.NamespaceName" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.NamespaceNameChangedEventArgs.OldNamespaceName" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.NamespaceNameChangingEventArgs" Id="T:Microsoft.VisualStudio.SharePoint.NamespaceNameChangingEventArgs">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.NamespaceNameChangingEventArgs.#ctor(System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IList{System.String})" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.NamespaceNameChangingEventArgs.AdditionalFiles" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.NamespaceNameChangingEventArgs.Files" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.NamespaceNameChangingEventArgs.NamespaceName" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.NamespaceNameChangingEventArgs.NewNamespaceName" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.SharePointAuthenticationMode" Id="T:Microsoft.VisualStudio.SharePoint.SharePointAuthenticationMode">
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.SharePointAuthenticationMode.Forms" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.SharePointAuthenticationMode.Unknown" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.SharePointAuthenticationMode.Windows" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.SharePointCommandCanceledException" Id="T:Microsoft.VisualStudio.SharePoint.SharePointCommandCanceledException">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.SharePointCommandCanceledException.#ctor" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.SharePointCommandCanceledException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.SharePointCommandCanceledException.#ctor(System.String)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.SharePointCommandCanceledException.#ctor(System.String,System.Exception)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.SharePointCommandCanceledException.#ctor(System.String,System.String,System.String,System.String)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.SharePointCommandCanceledException.#ctor(System.String,System.String,System.String,System.String,System.Exception)" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.SharePointCommandException" Id="T:Microsoft.VisualStudio.SharePoint.SharePointCommandException">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.SharePointCommandException.#ctor" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.SharePointCommandException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.SharePointCommandException.#ctor(System.String)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.SharePointCommandException.#ctor(System.String,System.Exception)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.SharePointCommandException.#ctor(System.String,System.String,System.String,System.String)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.SharePointCommandException.#ctor(System.String,System.String,System.String,System.String,System.Exception)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.SharePointCommandException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.SharePointCommandException.CommandId" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.SharePointCommandException.FullTypeName" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.SharePointCommandException.OriginalStackTrace" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.SharePointConnectionDisabledException" Id="T:Microsoft.VisualStudio.SharePoint.SharePointConnectionDisabledException">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.SharePointConnectionDisabledException.#ctor" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.SharePointConnectionDisabledException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.SharePointConnectionDisabledException.#ctor(System.String)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.SharePointConnectionDisabledException.#ctor(System.String,System.Exception)" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.SharePointConnectionException" Id="T:Microsoft.VisualStudio.SharePoint.SharePointConnectionException">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.SharePointConnectionException.#ctor" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.SharePointConnectionException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.SharePointConnectionException.#ctor(System.String)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.SharePointConnectionException.#ctor(System.String,System.Exception)" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.SharePointProjectEventArgs" Id="T:Microsoft.VisualStudio.SharePoint.SharePointProjectEventArgs">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.SharePointProjectEventArgs.#ctor(Microsoft.VisualStudio.SharePoint.ISharePointProject)" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.SharePointProjectEventArgs.Project" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.SharePointProjectItemEventArgs" Id="T:Microsoft.VisualStudio.SharePoint.SharePointProjectItemEventArgs">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.SharePointProjectItemEventArgs.#ctor(Microsoft.VisualStudio.SharePoint.ISharePointProjectItem)" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.SharePointProjectItemEventArgs.ProjectItem" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.SharePointProjectItemFileEventArgs" Id="T:Microsoft.VisualStudio.SharePoint.SharePointProjectItemFileEventArgs">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.SharePointProjectItemFileEventArgs.#ctor(Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFile)" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.SharePointProjectItemFileEventArgs.ProjectItemFile" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.SharePointProjectItemFileOpenEventArgs" Id="T:Microsoft.VisualStudio.SharePoint.SharePointProjectItemFileOpenEventArgs">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.SharePointProjectItemFileOpenEventArgs.#ctor(Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFile)" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.SharePointProjectItemFileOpenEventArgs.Cancel" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.SharePointProjectItemIconAttribute" Id="T:Microsoft.VisualStudio.SharePoint.SharePointProjectItemIconAttribute">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.SharePointProjectItemIconAttribute.#ctor(System.String)" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.SharePointProjectItemIconAttribute.IconResourceName" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.SharePointProjectItemMenuItemsRequestedEventArgs" Id="T:Microsoft.VisualStudio.SharePoint.SharePointProjectItemMenuItemsRequestedEventArgs">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.SharePointProjectItemMenuItemsRequestedEventArgs.#ctor(Microsoft.VisualStudio.SharePoint.ISharePointProjectItem,Microsoft.VisualStudio.SharePoint.IMenuItemCollection,Microsoft.VisualStudio.SharePoint.IMenuItemCollection)" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.SharePointProjectItemMenuItemsRequestedEventArgs.AddMenuItems" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.SharePointProjectItemMenuItemsRequestedEventArgs.ViewMenuItems" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.SharePointProjectItemOpenEventArgs" Id="T:Microsoft.VisualStudio.SharePoint.SharePointProjectItemOpenEventArgs">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.SharePointProjectItemOpenEventArgs.#ctor(Microsoft.VisualStudio.SharePoint.ISharePointProjectItem)" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.SharePointProjectItemOpenEventArgs.Handled" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.SharePointProjectItemPropertiesRequestedEventArgs" Id="T:Microsoft.VisualStudio.SharePoint.SharePointProjectItemPropertiesRequestedEventArgs">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.SharePointProjectItemPropertiesRequestedEventArgs.#ctor(Microsoft.VisualStudio.SharePoint.ISharePointProjectItem,Microsoft.VisualStudio.SharePoint.IPropertySourceCollection)" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.SharePointProjectItemPropertiesRequestedEventArgs.PropertySources" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.SharePointProjectItemStartupUrlRequestedEventArgs" Id="T:Microsoft.VisualStudio.SharePoint.SharePointProjectItemStartupUrlRequestedEventArgs">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.SharePointProjectItemStartupUrlRequestedEventArgs.#ctor(Microsoft.VisualStudio.SharePoint.ISharePointProjectItem,Microsoft.VisualStudio.SharePoint.Deployment.ISharePointProjectItemDeploymentContext)" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.SharePointProjectItemStartupUrlRequestedEventArgs.DeploymentContext" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.SharePointProjectItemStartupUrlRequestedEventArgs.StartupUrl" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.SharePointProjectItemTypeAttribute" Id="T:Microsoft.VisualStudio.SharePoint.SharePointProjectItemTypeAttribute">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.SharePointProjectItemTypeAttribute.#ctor(System.String)" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.SharePointProjectItemTypeAttribute.ProjectItemTypeId" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.SharePointProjectMenuItemsRequestedEventArgs" Id="T:Microsoft.VisualStudio.SharePoint.SharePointProjectMenuItemsRequestedEventArgs">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.SharePointProjectMenuItemsRequestedEventArgs.#ctor(Microsoft.VisualStudio.SharePoint.ISharePointProject,Microsoft.VisualStudio.SharePoint.IMenuItemCollection,Microsoft.VisualStudio.SharePoint.IMenuItemCollection)" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.SharePointProjectMenuItemsRequestedEventArgs.ActionMenuItems" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.SharePointProjectMenuItemsRequestedEventArgs.AddMenuItems" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.SharePointProjectMode" Id="T:Microsoft.VisualStudio.SharePoint.SharePointProjectMode">
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.SharePointProjectMode.MailApp" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.SharePointProjectMode.OfficeApp" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.SharePointProjectMode.SharePointApp" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.SharePointProjectMode.SharePointCustomization" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.SharePointProjectPropertiesRequestedEventArgs" Id="T:Microsoft.VisualStudio.SharePoint.SharePointProjectPropertiesRequestedEventArgs">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.SharePointProjectPropertiesRequestedEventArgs.#ctor(Microsoft.VisualStudio.SharePoint.ISharePointProject,Microsoft.VisualStudio.SharePoint.IPropertySourceCollection)" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.SharePointProjectPropertiesRequestedEventArgs.PropertySources" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.SupportedAssemblyDeploymentTargets" Id="T:Microsoft.VisualStudio.SharePoint.SupportedAssemblyDeploymentTargets">
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.SupportedAssemblyDeploymentTargets.All" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.SupportedAssemblyDeploymentTargets.GlobalAssemblyCache" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.SupportedAssemblyDeploymentTargets.WebApplication" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.SupportedDeploymentScopes" Id="T:Microsoft.VisualStudio.SharePoint.SupportedDeploymentScopes">
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.SupportedDeploymentScopes.AppPackage" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.SupportedDeploymentScopes.Farm" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.SupportedDeploymentScopes.Package" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.SupportedDeploymentScopes.Site" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.SupportedDeploymentScopes.Web" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.SupportedDeploymentScopes.WebApplication" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.SupportedTrustLevels" Id="T:Microsoft.VisualStudio.SharePoint.SupportedTrustLevels">
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.SupportedTrustLevels.All" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.SupportedTrustLevels.FullTrust" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.SupportedTrustLevels.Sandboxed" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.WebProjectCreationInformation" Id="T:Microsoft.VisualStudio.SharePoint.WebProjectCreationInformation">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.WebProjectCreationInformation.#ctor" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.WebProjectCreationInformation.AddStartPage" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.WebProjectCreationInformation.ProjectType" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.WebProjectType" Id="T:Microsoft.VisualStudio.SharePoint.WebProjectType">
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.WebProjectType.Empty" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.WebProjectType.Mvc" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.WebProjectType.WebApi" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.WebProjectType.WebForms" />
+    </Type>
+  </Namespace>
+  <Namespace Name="Microsoft.VisualStudio.SharePoint.Commands">
+    <Type Name="Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext" Id="T:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext.Refresh" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext.Logger" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext.Site" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext.Web" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandLogger" Id="T:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandLogger">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.Commands.LogCategory)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.Commands.LogCategory,System.String)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.Commands.LogCategory,System.String,System.Int32,System.Int32)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.Commands.LogCategory,System.String,System.Int32,System.Int32,System.String)" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Commands.LogCategory" Id="T:Microsoft.VisualStudio.SharePoint.Commands.LogCategory">
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Commands.LogCategory.Error" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Commands.LogCategory.Message" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Commands.LogCategory.Status" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Commands.LogCategory.Verbose" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Commands.LogCategory.Warning" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Commands.SharePointCommandAttribute" Id="T:Microsoft.VisualStudio.SharePoint.Commands.SharePointCommandAttribute">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Commands.SharePointCommandAttribute.#ctor" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Commands.SharePointCommandAttribute.#ctor(System.String)" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Commands.SharePointCommandAttribute.CommandId" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Commands.SharePointCommandServices" Id="T:Microsoft.VisualStudio.SharePoint.Commands.SharePointCommandServices">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Commands.SharePointCommandServices.GetProperties(System.Object)" />
+    </Type>
+  </Namespace>
+  <Namespace Name="Microsoft.VisualStudio.SharePoint.Deployment">
+    <Type Name="Microsoft.VisualStudio.SharePoint.Deployment.DeploymentStepAttribute" Id="T:Microsoft.VisualStudio.SharePoint.Deployment.DeploymentStepAttribute">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Deployment.DeploymentStepAttribute.#ctor(System.String)" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Deployment.DeploymentStepAttribute.Id" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Deployment.DeploymentStepIds" Id="T:Microsoft.VisualStudio.SharePoint.Deployment.DeploymentStepIds">
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Deployment.DeploymentStepIds.ActivateFeatures" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Deployment.DeploymentStepIds.AddSolution" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Deployment.DeploymentStepIds.InstallAppForSharePoint" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Deployment.DeploymentStepIds.PostDeploymentCommand" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Deployment.DeploymentStepIds.PreDeploymentCommand" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Deployment.DeploymentStepIds.RecycleApplicationPool" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Deployment.DeploymentStepIds.RetractSolution" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Deployment.DeploymentStepIds.UninstallAppForSharePoint" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConfiguration" Id="T:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConfiguration">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConfiguration.DeploymentSteps" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConfiguration.Description" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConfiguration.DisplayName" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConfiguration.Name" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConfiguration.RetractionSteps" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConfigurationDictionary" Id="T:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConfigurationDictionary">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConfigurationDictionary.Add(System.String)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConfigurationDictionary.Add(System.String,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String})" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflict" Id="T:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflict">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflict.Resolve" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflict.Description" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflict.ProjectItem" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflict.PromptBeforeResolve" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflictCollection" Id="T:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflictCollection">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflictCollection.Add(System.String,System.Func{Microsoft.VisualStudio.SharePoint.ISharePointProjectItem,System.Boolean},System.Boolean)" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext" Id="T:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext.SiteCollectionUrl" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext.SiteUrl" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext.WebApplicationUrl" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext.IsCanceled" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext.IsDeploying" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext.IsRetracting" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext.Logger" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext.Project" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext.StartMode" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep" Id="T:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep.CanExecute(Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep.Execute(Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep.Initialize(Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStepInfo)" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStepInfo" Id="T:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStepInfo">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStepInfo.Description" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStepInfo.Id" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStepInfo.IsReadOnly" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStepInfo.Name" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStepInfo.StatusBarMessage" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Deployment.ISharePointProjectItemDeploymentContext" Id="T:Microsoft.VisualStudio.SharePoint.Deployment.ISharePointProjectItemDeploymentContext">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Deployment.ISharePointProjectItemDeploymentContext.Feature" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Deployment.ISharePointProjectItemDeploymentContext.FeatureScope" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Deployment.ISharePointProjectItemDeploymentContext.ProjectItem" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Deployment.StartMode" Id="T:Microsoft.VisualStudio.SharePoint.Deployment.StartMode">
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Deployment.StartMode.Debug" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Deployment.StartMode.Deploy" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Deployment.StartMode.Run" />
+    </Type>
+  </Namespace>
+  <Namespace Name="Microsoft.VisualStudio.SharePoint.Explorer">
+    <Type Name="Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeEventArgs" Id="T:Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeEventArgs">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeEventArgs.#ctor(Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode)" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeEventArgs.Node" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeMenuItemsRequestedEventArgs" Id="T:Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeMenuItemsRequestedEventArgs">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeMenuItemsRequestedEventArgs.#ctor(Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode,Microsoft.VisualStudio.SharePoint.IMenuItemCollection)" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeMenuItemsRequestedEventArgs.MenuItems" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodePropertiesRequestedEventArgs" Id="T:Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodePropertiesRequestedEventArgs">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodePropertiesRequestedEventArgs.#ctor(Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode,Microsoft.VisualStudio.SharePoint.IPropertySourceCollection)" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodePropertiesRequestedEventArgs.PropertySources" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeTypeAttribute" Id="T:Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeTypeAttribute">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeTypeAttribute.#ctor(System.String)" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeTypeAttribute.NodeTypeId" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeTypes" Id="T:Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeTypes">
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeTypes.ConnectionNode" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeTypes.GenericFolderNode" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeTypes.SiteNode" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode" Id="T:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode">
+      <Member Id="E:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode.DoubleClick" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode.Refresh" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode.ChildNodes" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode.Context" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode.Icon" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode.IsDynamic" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode.NodeType" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode.ParentNode" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode.ServiceProvider" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode.SortOrder" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode.Text" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeCollection" Id="T:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeCollection">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeCollection.Add(System.String,System.String,System.Collections.Generic.IDictionary{System.Object,System.Object})" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeCollection.Add(System.String,System.String,System.Collections.Generic.IDictionary{System.Object,System.Object},System.Int32)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeCollection.AddFolder(System.String,System.Drawing.Image,System.Action{Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode})" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeContext" Id="T:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeContext">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeContext.CreatePropertySourceObject(System.Collections.Generic.IDictionary{System.String,System.String})" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeContext.ShowMessageBox(System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon)" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeContext.SharePointConnection" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeContext.SiteId" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeContext.SiteUrl" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeEvents" Id="T:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeEvents">
+      <Member Id="E:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeEvents.NodeChildrenRequested" />
+      <Member Id="E:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeEvents.NodeDisposing" />
+      <Member Id="E:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeEvents.NodeInitialized" />
+      <Member Id="E:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeEvents.NodeMenuItemsRequested" />
+      <Member Id="E:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeEvents.NodePropertiesRequested" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeType" Id="T:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeType">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeType.DefaultIcon" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeType.Id" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeType.IsAlwaysLeaf" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeType.Name" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeDefinition" Id="T:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeDefinition">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeDefinition.DefaultIcon" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeDefinition.IsAlwaysLeaf" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeDefinition.Name" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeDefinition.NodeType" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeExtension" Id="T:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeExtension">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeExtension.Initialize(Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeType)" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeProvider" Id="T:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeProvider">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeProvider.InitializeType(Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeDefinition)" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Explorer.IExplorerSiteNodeInfo" Id="T:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerSiteNodeInfo">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerSiteNodeInfo.Id" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerSiteNodeInfo.IsConnectionRoot" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerSiteNodeInfo.IsRootWeb" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerSiteNodeInfo.Title" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerSiteNodeInfo.Url" />
+    </Type>
+  </Namespace>
+  <Namespace Name="Microsoft.VisualStudio.SharePoint.Explorer.Extensions">
+    <Type Name="Microsoft.VisualStudio.SharePoint.Explorer.Extensions.ExtensionNodeTypes" Id="T:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.ExtensionNodeTypes">
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.ExtensionNodeTypes.ContentTypeNode" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.ExtensionNodeTypes.FeatureNode" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.ExtensionNodeTypes.FieldNode" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.ExtensionNodeTypes.ListNode" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.ExtensionNodeTypes.ListTemplateNode" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.ExtensionNodeTypes.ListViewNode" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.ExtensionNodeTypes.WorkflowAssociationNode" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.ExtensionNodeTypes.WorkflowTemplateNode" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Explorer.Extensions.FeatureScope" Id="T:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.FeatureScope">
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.FeatureScope.Farm" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.FeatureScope.Site" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.FeatureScope.Web" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.FeatureScope.WebApplication" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IContentTypeNodeInfo" Id="T:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IContentTypeNodeInfo">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IContentTypeNodeInfo.Name" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IFeatureNodeInfo" Id="T:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IFeatureNodeInfo">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IFeatureNodeInfo.Id" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IFeatureNodeInfo.Name" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IFeatureNodeInfo.Scope" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IFieldNodeInfo" Id="T:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IFieldNodeInfo">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IFieldNodeInfo.ContentTypeName" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IFieldNodeInfo.Id" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IFieldNodeInfo.IsHidden" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IFieldNodeInfo.ListId" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IFieldNodeInfo.Title" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IListNodeInfo" Id="T:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IListNodeInfo">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IListNodeInfo.Category" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IListNodeInfo.DefaultViewUrl" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IListNodeInfo.Id" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IListNodeInfo.IsHidden" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IListNodeInfo.Title" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IListTemplateNodeInfo" Id="T:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IListTemplateNodeInfo">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IListTemplateNodeInfo.Category" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IListTemplateNodeInfo.IsHidden" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IListTemplateNodeInfo.Name" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IListViewNodeInfo" Id="T:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IListViewNodeInfo">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IListViewNodeInfo.Id" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IListViewNodeInfo.ListId" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IListViewNodeInfo.Text" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IListViewNodeInfo.Url" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IWorkflowAssociationNodeInfo" Id="T:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IWorkflowAssociationNodeInfo">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IWorkflowAssociationNodeInfo.Id" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IWorkflowAssociationNodeInfo.ListId" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IWorkflowAssociationNodeInfo.Name" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IWorkflowTemplateNodeInfo" Id="T:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IWorkflowTemplateNodeInfo">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IWorkflowTemplateNodeInfo.Id" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Explorer.Extensions.ListCategory" Id="T:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.ListCategory">
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.ListCategory.DocumentLibrary" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.ListCategory.List" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Explorer.Extensions.ListTemplateCategory" Id="T:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.ListTemplateCategory">
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.ListTemplateCategory.Communications" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.ListTemplateCategory.CustomLists" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.ListTemplateCategory.Libraries" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.ListTemplateCategory.Other" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.ListTemplateCategory.Tracking" />
+    </Type>
+  </Namespace>
+  <Namespace Name="Microsoft.VisualStudio.SharePoint.Features">
+    <Type Name="Microsoft.VisualStudio.SharePoint.Features.DiscreteUpgradeActionType" Id="T:Microsoft.VisualStudio.SharePoint.Features.DiscreteUpgradeActionType">
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Features.DiscreteUpgradeActionType.AddContentTypeField" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Features.DiscreteUpgradeActionType.ApplyElementManifests" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Features.DiscreteUpgradeActionType.Custom" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Features.DiscreteUpgradeActionType.MapFile" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Features.FeatureElementType" Id="T:Microsoft.VisualStudio.SharePoint.Features.FeatureElementType">
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Features.FeatureElementType.ElementFile" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Features.FeatureElementType.ElementManifest" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Features.FeatureScope" Id="T:Microsoft.VisualStudio.SharePoint.Features.FeatureScope">
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Features.FeatureScope.Farm" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Features.FeatureScope.Site" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Features.FeatureScope.Web" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Features.FeatureScope.WebApplication" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Features.IAddContentTypeFieldUpgradeAction" Id="T:Microsoft.VisualStudio.SharePoint.Features.IAddContentTypeFieldUpgradeAction">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Features.IAddContentTypeFieldUpgradeAction.ContentTypeId" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Features.IAddContentTypeFieldUpgradeAction.FieldId" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Features.IAddContentTypeFieldUpgradeAction.IsPushedDown" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Features.IApplyElementManifestsUpgradeAction" Id="T:Microsoft.VisualStudio.SharePoint.Features.IApplyElementManifestsUpgradeAction">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Features.IApplyElementManifestsUpgradeAction.Elements" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Features.ICustomFeatureActivationDependency" Id="T:Microsoft.VisualStudio.SharePoint.Features.ICustomFeatureActivationDependency">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Features.ICustomFeatureActivationDependency.FeatureDescription" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Features.ICustomFeatureActivationDependency.FeatureId" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Features.ICustomFeatureActivationDependency.FeatureTitle" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Features.ICustomFeatureActivationDependency.SolutionId" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Features.ICustomFeatureActivationDependency.SolutionName" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Features.ICustomFeatureActivationDependency.SolutionTitle" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Features.ICustomFeatureActivationDependency.SolutionUrl" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Features.ICustomUpgradeAction" Id="T:Microsoft.VisualStudio.SharePoint.Features.ICustomUpgradeAction">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Features.ICustomUpgradeAction.Name" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Features.ICustomUpgradeAction.Parameters" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Features.ICustomUpgradeActionParameter" Id="T:Microsoft.VisualStudio.SharePoint.Features.ICustomUpgradeActionParameter">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Features.ICustomUpgradeActionParameter.Name" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Features.ICustomUpgradeActionParameter.Value" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Features.ICustomUpgradeActionParameterCollection" Id="T:Microsoft.VisualStudio.SharePoint.Features.ICustomUpgradeActionParameterCollection">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Features.ICustomUpgradeActionParameterCollection.Add" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Features.IDiscreteUpgradeAction" Id="T:Microsoft.VisualStudio.SharePoint.Features.IDiscreteUpgradeAction">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Features.IDiscreteUpgradeAction.ActionType" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Features.IDiscreteUpgradeActionCollection" Id="T:Microsoft.VisualStudio.SharePoint.Features.IDiscreteUpgradeActionCollection">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Features.IDiscreteUpgradeActionCollection.AddAddContentTypeFieldUpgradeAction" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Features.IDiscreteUpgradeActionCollection.AddApplyElementManifestsUpgradeAction" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Features.IDiscreteUpgradeActionCollection.AddCustomUpgradeAction" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Features.IDiscreteUpgradeActionCollection.AddMapFileUpgradeAction" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Features.IElement" Id="T:Microsoft.VisualStudio.SharePoint.Features.IElement">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Features.IElement.Location" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Features.IElement.Type" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Features.IElementCollection" Id="T:Microsoft.VisualStudio.SharePoint.Features.IElementCollection">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Features.IElementCollection.AddElementFile" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Features.IElementCollection.AddElementManifest" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Features.IFeature" Id="T:Microsoft.VisualStudio.SharePoint.Features.IFeature">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Features.IFeature.DeploymentPath" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Features.IFeature.IsDesignerEnabled" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Features.IFeature.ProjectItems" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Features.IFeatureActivationDependency" Id="T:Microsoft.VisualStudio.SharePoint.Features.IFeatureActivationDependency">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Features.IFeatureActivationDependency.Description" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Features.IFeatureActivationDependency.MinimumVersion" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Features.IFeatureActivationDependencyCollection" Id="T:Microsoft.VisualStudio.SharePoint.Features.IFeatureActivationDependencyCollection">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Features.IFeatureActivationDependencyCollection.AddCustomFeatureActivationDependency" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Features.IFeatureActivationDependencyCollection.AddReferencedFeatureActivationDependency(System.Guid)" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Features.IFeatureManifest" Id="T:Microsoft.VisualStudio.SharePoint.Features.IFeatureManifest">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Features.IFeatureManifest.ActivateOnDefault" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Features.IFeatureManifest.ActivationDependencies" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Features.IFeatureManifest.AlwaysForceInstall" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Features.IFeatureManifest.AutoActivateInCentralAdmin" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Features.IFeatureManifest.Creator" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Features.IFeatureManifest.DefaultResourceFile" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Features.IFeatureManifest.Description" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Features.IFeatureManifest.Elements" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Features.IFeatureManifest.FeatureId" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Features.IFeatureManifest.ImageAltText" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Features.IFeatureManifest.ImageUrl" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Features.IFeatureManifest.IsHidden" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Features.IFeatureManifest.Properties" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Features.IFeatureManifest.ReceiverAssembly" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Features.IFeatureManifest.ReceiverClass" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Features.IFeatureManifest.RequireResources" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Features.IFeatureManifest.Scope" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Features.IFeatureManifest.SolutionId" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Features.IFeatureManifest.Title" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Features.IFeatureManifest.UIVersion" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Features.IFeatureManifest.UpgradeActions" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Features.IFeatureManifest.UpgradeActionsReceiverAssembly" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Features.IFeatureManifest.UpgradeActionsReceiverClass" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Features.IFeatureManifest.Version" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Features.IMapFileUpgradeAction" Id="T:Microsoft.VisualStudio.SharePoint.Features.IMapFileUpgradeAction">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Features.IMapFileUpgradeAction.FromPath" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Features.IMapFileUpgradeAction.ToPath" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Features.IProperty" Id="T:Microsoft.VisualStudio.SharePoint.Features.IProperty">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Features.IProperty.Key" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Features.IProperty.Value" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Features.IPropertyCollection" Id="T:Microsoft.VisualStudio.SharePoint.Features.IPropertyCollection">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Features.IPropertyCollection.Add" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Features.IReferencedFeatureActivationDependency" Id="T:Microsoft.VisualStudio.SharePoint.Features.IReferencedFeatureActivationDependency">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Features.IReferencedFeatureActivationDependency.ItemId" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Features.IReferencedFeatureActivationDependency.ProjectPath" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Features.IUpgradeAction" Id="T:Microsoft.VisualStudio.SharePoint.Features.IUpgradeAction">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Features.IUpgradeAction.Description" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Features.IUpgradeActionCollection" Id="T:Microsoft.VisualStudio.SharePoint.Features.IUpgradeActionCollection">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Features.IUpgradeActionCollection.AddAddContentTypeFieldUpgradeAction" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Features.IUpgradeActionCollection.AddApplyElementManifestsUpgradeAction" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Features.IUpgradeActionCollection.AddCustomUpgradeAction" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Features.IUpgradeActionCollection.AddMapFileUpgradeAction" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Features.IUpgradeActionCollection.AddVersionRange" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Features.IVersionRange" Id="T:Microsoft.VisualStudio.SharePoint.Features.IVersionRange">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Features.IVersionRange.BeginVersion" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Features.IVersionRange.EndVersion" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Features.IVersionRange.UpgradeActions" />
+    </Type>
+  </Namespace>
+  <Namespace Name="Microsoft.VisualStudio.SharePoint.Packages">
+    <Type Name="Microsoft.VisualStudio.SharePoint.Packages.ApplicationResourceType" Id="T:Microsoft.VisualStudio.SharePoint.Packages.ApplicationResourceType">
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Packages.ApplicationResourceType.AppGlobalResourceFile" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Packages.ApplicationResourceType.ApplicationResourceFile" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Packages.DeploymentServerType" Id="T:Microsoft.VisualStudio.SharePoint.Packages.DeploymentServerType">
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Packages.DeploymentServerType.ApplicationServer" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Packages.DeploymentServerType.WebFrontEnd" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Packages.DeploymentTarget" Id="T:Microsoft.VisualStudio.SharePoint.Packages.DeploymentTarget">
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Packages.DeploymentTarget.GlobalAssemblyCache" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Packages.DeploymentTarget.WebApplication" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Packages.IApplicationResource" Id="T:Microsoft.VisualStudio.SharePoint.Packages.IApplicationResource">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Packages.IApplicationResource.Location" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Packages.IApplicationResource.Type" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Packages.IApplicationResourceCollection" Id="T:Microsoft.VisualStudio.SharePoint.Packages.IApplicationResourceCollection">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Packages.IApplicationResourceCollection.AddAppGlobalResourceFile" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Packages.IApplicationResourceCollection.AddApplicationResourceFile" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Packages.IAssembly" Id="T:Microsoft.VisualStudio.SharePoint.Packages.IAssembly">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Packages.IAssembly.BindingRedirects" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Packages.IAssembly.ClassResources" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Packages.IAssembly.DeploymentTarget" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Packages.IAssembly.Location" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Packages.IAssembly.SafeControls" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Packages.IAssemblyCollection" Id="T:Microsoft.VisualStudio.SharePoint.Packages.IAssemblyCollection">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Packages.IAssemblyCollection.AddAssembly" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Packages.IAssemblyCollection.AddCustomAssembly" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Packages.IAssemblyCollection.AddProjectOutputAssembly" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Packages.IBindingRedirect" Id="T:Microsoft.VisualStudio.SharePoint.Packages.IBindingRedirect">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Packages.IBindingRedirect.OldVersion" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Packages.IBindingRedirectCollection" Id="T:Microsoft.VisualStudio.SharePoint.Packages.IBindingRedirectCollection">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Packages.IBindingRedirectCollection.Add" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Packages.IClassResource" Id="T:Microsoft.VisualStudio.SharePoint.Packages.IClassResource">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Packages.IClassResource.Location" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Packages.IClassResource.SourcePath" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Packages.IClassResourceCollection" Id="T:Microsoft.VisualStudio.SharePoint.Packages.IClassResourceCollection">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Packages.IClassResourceCollection.Add" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Packages.ICodeAccessSecurityAssembly" Id="T:Microsoft.VisualStudio.SharePoint.Packages.ICodeAccessSecurityAssembly">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Packages.ICodeAccessSecurityAssembly.Name" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Packages.ICodeAccessSecurityAssembly.PublicKeyBlob" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Packages.ICodeAccessSecurityAssembly.Version" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Packages.ICodeAccessSecurityAssemblyCollection" Id="T:Microsoft.VisualStudio.SharePoint.Packages.ICodeAccessSecurityAssemblyCollection">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Packages.ICodeAccessSecurityAssemblyCollection.Add" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Packages.ICustomAssembly" Id="T:Microsoft.VisualStudio.SharePoint.Packages.ICustomAssembly">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Packages.ICustomAssembly.SourcePath" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Packages.ICustomSolutionActivationDependency" Id="T:Microsoft.VisualStudio.SharePoint.Packages.ICustomSolutionActivationDependency">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Packages.ICustomSolutionActivationDependency.SolutionId" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Packages.ICustomSolutionActivationDependency.SolutionName" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Packages.ICustomSolutionActivationDependency.SolutionTitle" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Packages.ICustomSolutionActivationDependency.SolutionUrl" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Packages.IDwpFile" Id="T:Microsoft.VisualStudio.SharePoint.Packages.IDwpFile">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Packages.IDwpFile.Location" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Packages.IDwpFileCollection" Id="T:Microsoft.VisualStudio.SharePoint.Packages.IDwpFileCollection">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Packages.IDwpFileCollection.Add" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Packages.IFeatureManifestReference" Id="T:Microsoft.VisualStudio.SharePoint.Packages.IFeatureManifestReference">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Packages.IFeatureManifestReference.Location" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Packages.IFeatureManifestReferenceCollection" Id="T:Microsoft.VisualStudio.SharePoint.Packages.IFeatureManifestReferenceCollection">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Packages.IFeatureManifestReferenceCollection.Add" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Packages.IPackage" Id="T:Microsoft.VisualStudio.SharePoint.Packages.IPackage">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Packages.IPackage.Features" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Packages.IPackage.IsDesignerEnabled" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Packages.IPackage.Name" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Packages.IPackage.ProjectItems" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Packages.IPackageManifest" Id="T:Microsoft.VisualStudio.SharePoint.Packages.IPackageManifest">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Packages.IPackageManifest.ActivationDependencies" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Packages.IPackageManifest.ApplicationResourceFiles" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Packages.IPackageManifest.Assemblies" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Packages.IPackageManifest.DeploymentServerType" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Packages.IPackageManifest.Description" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Packages.IPackageManifest.DwpFiles" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Packages.IPackageManifest.FeatureManifests" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Packages.IPackageManifest.PolicyItems" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Packages.IPackageManifest.ResetWebServer" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Packages.IPackageManifest.ResetWebServerModeOnUpgrade" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Packages.IPackageManifest.Resources" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Packages.IPackageManifest.RootFiles" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Packages.IPackageManifest.SharePointProductVersion" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Packages.IPackageManifest.SiteDefinitionManifests" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Packages.IPackageManifest.SolutionId" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Packages.IPackageManifest.TemplateFiles" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Packages.IPackageManifest.Title" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Packages.IPermissionElement" Id="T:Microsoft.VisualStudio.SharePoint.Packages.IPermissionElement">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Packages.IPermissionElement.Xml" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Packages.IPermissionElementCollection" Id="T:Microsoft.VisualStudio.SharePoint.Packages.IPermissionElementCollection">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Packages.IPermissionElementCollection.Add" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Packages.IPolicyItem" Id="T:Microsoft.VisualStudio.SharePoint.Packages.IPolicyItem">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Packages.IPolicyItem.Assemblies" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Packages.IPolicyItem.Description" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Packages.IPolicyItem.Name" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Packages.IPolicyItem.Permissions" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Packages.IPolicyItem.Version" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Packages.IPolicyItemCollection" Id="T:Microsoft.VisualStudio.SharePoint.Packages.IPolicyItemCollection">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Packages.IPolicyItemCollection.Add" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Packages.IProjectOutputAssembly" Id="T:Microsoft.VisualStudio.SharePoint.Packages.IProjectOutputAssembly">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Packages.IProjectOutputAssembly.ProjectPath" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Packages.IResource" Id="T:Microsoft.VisualStudio.SharePoint.Packages.IResource">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Packages.IResource.Location" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Packages.IResourceCollection" Id="T:Microsoft.VisualStudio.SharePoint.Packages.IResourceCollection">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Packages.IResourceCollection.Add" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Packages.IRootFile" Id="T:Microsoft.VisualStudio.SharePoint.Packages.IRootFile">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Packages.IRootFile.Location" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Packages.IRootFileCollection" Id="T:Microsoft.VisualStudio.SharePoint.Packages.IRootFileCollection">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Packages.IRootFileCollection.Add" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Packages.ISafeControl" Id="T:Microsoft.VisualStudio.SharePoint.Packages.ISafeControl">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Packages.ISafeControl.AssemblyName" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Packages.ISafeControl.IsSafe" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Packages.ISafeControl.IsSafeAgainstScript" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Packages.ISafeControl.NamespaceName" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Packages.ISafeControl.TypeName" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Packages.ISafeControlCollection" Id="T:Microsoft.VisualStudio.SharePoint.Packages.ISafeControlCollection">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Packages.ISafeControlCollection.Add" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Packages.ISiteDefinitionManifest" Id="T:Microsoft.VisualStudio.SharePoint.Packages.ISiteDefinitionManifest">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Packages.ISiteDefinitionManifest.Location" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Packages.ISiteDefinitionManifest.WebTempFiles" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Packages.ISiteDefinitionManifestCollection" Id="T:Microsoft.VisualStudio.SharePoint.Packages.ISiteDefinitionManifestCollection">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Packages.ISiteDefinitionManifestCollection.Add" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Packages.ISolutionActivationDependency" Id="T:Microsoft.VisualStudio.SharePoint.Packages.ISolutionActivationDependency">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Packages.ISolutionActivationDependency.Description" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Packages.ISolutionActivationDependencyCollection" Id="T:Microsoft.VisualStudio.SharePoint.Packages.ISolutionActivationDependencyCollection">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Packages.ISolutionActivationDependencyCollection.AddCustomSolutionActivationDependency" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Packages.ITemplateFile" Id="T:Microsoft.VisualStudio.SharePoint.Packages.ITemplateFile">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Packages.ITemplateFile.Location" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Packages.ITemplateFileCollection" Id="T:Microsoft.VisualStudio.SharePoint.Packages.ITemplateFileCollection">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Packages.ITemplateFileCollection.Add" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Packages.IWebTempFile" Id="T:Microsoft.VisualStudio.SharePoint.Packages.IWebTempFile">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Packages.IWebTempFile.Location" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Packages.IWebTempFileCollection" Id="T:Microsoft.VisualStudio.SharePoint.Packages.IWebTempFileCollection">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Packages.IWebTempFileCollection.Add" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Packages.ResetWebServerModeOnUpgrade" Id="T:Microsoft.VisualStudio.SharePoint.Packages.ResetWebServerModeOnUpgrade">
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Packages.ResetWebServerModeOnUpgrade.Recycle" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Packages.ResetWebServerModeOnUpgrade.StartStop" />
+    </Type>
+  </Namespace>
+  <Namespace Name="Microsoft.VisualStudio.SharePoint.Remote.Authentication">
+    <Type Name="Microsoft.VisualStudio.SharePoint.Remote.Authentication.CookieHeaderManager" Id="T:Microsoft.VisualStudio.SharePoint.Remote.Authentication.CookieHeaderManager">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Remote.Authentication.CookieHeaderManager.#ctor" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Remote.Authentication.CookieHeaderManager.GetCookieHeader(System.Uri)" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Remote.Authentication.CookieHeaderManager.Instance" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Remote.Authentication.CredentialManager" Id="T:Microsoft.VisualStudio.SharePoint.Remote.Authentication.CredentialManager">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Remote.Authentication.CredentialManager.#ctor" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Remote.Authentication.CredentialManager.GetCredentials(System.Uri,System.Boolean)" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Remote.Authentication.CredentialManager.Instance" />
+    </Type>
+  </Namespace>
+  <Namespace Name="Microsoft.VisualStudio.SharePoint.Remote.Commands">
+    <Type Name="Microsoft.VisualStudio.SharePoint.Remote.Commands.ISharePointRemoteCommandContext" Id="T:Microsoft.VisualStudio.SharePoint.Remote.Commands.ISharePointRemoteCommandContext">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Remote.Commands.ISharePointRemoteCommandContext.ClientContext" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Remote.Commands.ISharePointRemoteCommandContext.Logger" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Remote.Commands.SharePointRemoteCommand" Id="T:Microsoft.VisualStudio.SharePoint.Remote.Commands.SharePointRemoteCommand" />
+  </Namespace>
+  <Namespace Name="Microsoft.VisualStudio.SharePoint.Tasks">
+    <Type Name="Microsoft.VisualStudio.SharePoint.Tasks.AutohostedOfficeAppError" Id="T:Microsoft.VisualStudio.SharePoint.Tasks.AutohostedOfficeAppError">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.AutohostedOfficeAppError.#ctor" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.AutohostedOfficeAppError.OnExecute" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.AutohostedOfficeAppError.Project" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Tasks.BuildTask" Id="T:Microsoft.VisualStudio.SharePoint.Tasks.BuildTask">
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Tasks.BuildTask.FileExtensionMetadataName" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Tasks.BuildTask.FileNameMetadataName" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Tasks.BuildTask.FullPathMetadataName" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Tasks.BuildTask.RelativeDirMetadataName" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.BuildTask.#ctor" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.BuildTask.Execute" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.BuildTask.LogError(Microsoft.Build.Framework.ITaskItem,System.String,System.Object[])" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.BuildTask.LogErrorFromException(Microsoft.Build.Framework.ITaskItem,System.Exception)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.BuildTask.OnCheckParameters" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.BuildTask.OnExecute" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Tasks.ChangeAgaveStoreBase" Id="T:Microsoft.VisualStudio.SharePoint.Tasks.ChangeAgaveStoreBase">
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Tasks.ChangeAgaveStoreBase._officeAppIds" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.ChangeAgaveStoreBase.#ctor" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.ChangeAgaveStoreBase.ChangeStore(System.IO.Packaging.Package)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.ChangeAgaveStoreBase.ChangeToDeveloperStore(System.IO.Packaging.Package,System.Collections.Generic.HashSet{System.Guid})" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.ChangeAgaveStoreBase.ChangeToSPAppStore(System.IO.Packaging.Package,System.Collections.Generic.HashSet{System.Guid})" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.ChangeAgaveStoreBase.OnExecute(System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ITaskItem})" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.ChangeAgaveStoreBase.TryGetOfficeAppId(System.String)" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Tasks.ComputeUpdatableChangedFiles" Id="T:Microsoft.VisualStudio.SharePoint.Tasks.ComputeUpdatableChangedFiles">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.ComputeUpdatableChangedFiles.#ctor" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.ComputeUpdatableChangedFiles.OnCheckParameters" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.ComputeUpdatableChangedFiles.OnExecute" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.ComputeUpdatableChangedFiles.PackageFiles" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.ComputeUpdatableChangedFiles.PackagePath" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.ComputeUpdatableChangedFiles.ProjectId" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.ComputeUpdatableChangedFiles.ProjectService" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Tasks.CreateAppPackage" Id="T:Microsoft.VisualStudio.SharePoint.Tasks.CreateAppPackage">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.CreateAppPackage.#ctor" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.CreateAppPackage.OnCheckParameters" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.CreateAppPackage.OnExecute" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.CreateAppPackage.AppCloudPackage" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.CreateAppPackage.AppCloudPackagePartId" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.CreateAppPackage.AppElementManifests" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.CreateAppPackage.AppFeature" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.CreateAppPackage.AppFeaturePartId" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.CreateAppPackage.AppManifest" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.CreateAppPackage.AppPackageParts" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.CreateAppPackage.ClientId" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.CreateAppPackage.ClientSecret" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.CreateAppPackage.CreatedPackageFiles" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.CreateAppPackage.DebugRemoteAppServiceBaseUrl" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.CreateAppPackage.EnumeratedFiles" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.CreateAppPackage.HasPackagingWarnings" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.CreateAppPackage.IntermediatePath" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.CreateAppPackage.IsDebugging" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.CreateAppPackage.IsHighTrust" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.CreateAppPackage.IsIntegratedWorkflowApp" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.CreateAppPackage.MergedSearchConfigurationFilePath" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.CreateAppPackage.OfficeAppManifestOutputPath" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.CreateAppPackage.PackagePath" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.CreateAppPackage.ProjectId" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.CreateAppPackage.ProjectService" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.CreateAppPackage.PublishedFrom" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.CreateAppPackage.RemoteAppUrl" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.CreateAppPackage.SearchConfigurationPartId" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.CreateAppPackage.SqlPackage" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.CreateAppPackage.SqlPackagePartId" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.CreateAppPackage.SqlPostProvisioningScript" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.CreateAppPackage.TranslatedWorkflowsDestinationFolder" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.CreateAppPackage.WorkflowDebuggingClientSecret" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.CreateAppPackage.WorkflowPartId" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.CreateAppPackage.Wsp" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.CreateAppPackage.WspPartId" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Tasks.CreateSharePointProjectService" Id="T:Microsoft.VisualStudio.SharePoint.Tasks.CreateSharePointProjectService">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.CreateSharePointProjectService.#ctor" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.CreateSharePointProjectService.OnExecute" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.CreateSharePointProjectService.Configuration" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.CreateSharePointProjectService.ContentItems" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.CreateSharePointProjectService.NoneItems" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.CreateSharePointProjectService.OutDir" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.CreateSharePointProjectService.Platform" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.CreateSharePointProjectService.ProjectFile" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.CreateSharePointProjectService.ProjectReferences" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.CreateSharePointProjectService.ProjectService" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Tasks.CreateWorkflowDebuggingElementManifest" Id="T:Microsoft.VisualStudio.SharePoint.Tasks.CreateWorkflowDebuggingElementManifest">
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Tasks.CreateWorkflowDebuggingElementManifest.WorkflowDebuggingFeatureName" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.CreateWorkflowDebuggingElementManifest.#ctor" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.CreateWorkflowDebuggingElementManifest.OnExecute" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.CreateWorkflowDebuggingElementManifest.DebugRemoteAppServiceBaseUrl" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.CreateWorkflowDebuggingElementManifest.LayoutPath" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.CreateWorkflowDebuggingElementManifest.PackageManifest" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Tasks.EnumerateFeature" Id="T:Microsoft.VisualStudio.SharePoint.Tasks.EnumerateFeature">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.EnumerateFeature.#ctor" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.EnumerateFeature.OnExecute" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.EnumerateFeature.Feature" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.EnumerateFeature.ProjectFile" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.EnumerateFeature.ProjectItemReferences" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.EnumerateFeature.ReferencedFeatureActivationDependencies" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Tasks.EnumerateFiles" Id="T:Microsoft.VisualStudio.SharePoint.Tasks.EnumerateFiles">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.EnumerateFiles.#ctor" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.EnumerateFiles.OnCheckParameters" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.EnumerateFiles.OnExecute" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.EnumerateFiles.EnumeratedFiles" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.EnumerateFiles.ProjectId" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.EnumerateFiles.ProjectService" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Tasks.EnumeratePackage" Id="T:Microsoft.VisualStudio.SharePoint.Tasks.EnumeratePackage">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.EnumeratePackage.#ctor" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.EnumeratePackage.OnExecute" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.EnumeratePackage.FeatureReferences" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.EnumeratePackage.Package" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.EnumeratePackage.ProjectFile" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.EnumeratePackage.ProjectItemReferences" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.EnumeratePackage.ProjectOutputReferences" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Tasks.EnumerateProjectItem" Id="T:Microsoft.VisualStudio.SharePoint.Tasks.EnumerateProjectItem">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.EnumerateProjectItem.#ctor" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.EnumerateProjectItem.OnExecute" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.EnumerateProjectItem.ProjectFile" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.EnumerateProjectItem.ProjectItem" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.EnumerateProjectItem.ProjectOutputReferences" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Tasks.FixUpSqlPackageProperty" Id="T:Microsoft.VisualStudio.SharePoint.Tasks.FixUpSqlPackageProperty">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.FixUpSqlPackageProperty.#ctor" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.FixUpSqlPackageProperty.OnExecute" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.FixUpSqlPackageProperty.Configuration" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.FixUpSqlPackageProperty.DatabaseProjectReference" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.FixUpSqlPackageProperty.OutDir" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.FixUpSqlPackageProperty.Platform" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.FixUpSqlPackageProperty.SqlPackage" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Tasks.GenerateAppManifest" Id="T:Microsoft.VisualStudio.SharePoint.Tasks.GenerateAppManifest">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.GenerateAppManifest.#ctor" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.GenerateAppManifest.OnExecute" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.GenerateAppManifest.AppManifestPath" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.GenerateAppManifest.AppName" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.GenerateAppManifest.IsAutoDeployedWebApplication" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.GenerateAppManifest.OfficeAppManifestFilePaths" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.GenerateAppManifest.ProductId" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Tasks.GenerateBdcMetadataFile" Id="T:Microsoft.VisualStudio.SharePoint.Tasks.GenerateBdcMetadataFile">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.GenerateBdcMetadataFile.#ctor" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.GenerateBdcMetadataFile.OnExecute" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.GenerateBdcMetadataFile.BdcMetadataContent" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.GenerateBdcMetadataFile.LayoutPath" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Tasks.GenerateOwaFiles" Id="T:Microsoft.VisualStudio.SharePoint.Tasks.GenerateOwaFiles">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.GenerateOwaFiles.#ctor" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.GenerateOwaFiles.OnCheckParameters" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.GenerateOwaFiles.OnExecute" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.GenerateOwaFiles.AppName" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.GenerateOwaFiles.AppVersion" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.GenerateOwaFiles.DocumentName" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.GenerateOwaFiles.DocumentSource" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.GenerateOwaFiles.FeatureId" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.GenerateOwaFiles.IntermediatePath" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.GenerateOwaFiles.ListId" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.GenerateOwaFiles.ModuleId" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.GenerateOwaFiles.OwaGeneratedElements" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.GenerateOwaFiles.OwaGeneratedManifests" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.GenerateOwaFiles.OwaGeneratedSPDatas" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.GenerateOwaFiles.PackageId" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.GenerateOwaFiles.ProductId" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.GenerateOwaFiles.ProjectReference" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.GenerateOwaFiles.VersionedLayoutsPath" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Tasks.GenerateOwaItems" Id="T:Microsoft.VisualStudio.SharePoint.Tasks.GenerateOwaItems">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.GenerateOwaItems.#ctor" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.GenerateOwaItems.OnExecute" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.GenerateOwaItems.IntermediatePath" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.GenerateOwaItems.OfficeAppManifests" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.GenerateOwaItems.OwaGeneratedElements" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.GenerateOwaItems.OwaGeneratedManifests" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.GenerateOwaItems.OwaGeneratedSPDatas" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.GenerateOwaItems.SPDataFiles" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Tasks.GenerateSandboxedReferenceAssembly" Id="T:Microsoft.VisualStudio.SharePoint.Tasks.GenerateSandboxedReferenceAssembly">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.GenerateSandboxedReferenceAssembly.#ctor" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.GenerateSandboxedReferenceAssembly.Execute" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.GenerateSandboxedReferenceAssembly.MSBuildToolsPath" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.GenerateSandboxedReferenceAssembly.ReferenceAssemblyDirectory" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.GenerateSandboxedReferenceAssembly.ReferenceAssemblyFile" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.GenerateSandboxedReferenceAssembly.SdkToolsPath" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Tasks.GetAppManifestSettings" Id="T:Microsoft.VisualStudio.SharePoint.Tasks.GetAppManifestSettings">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.GetAppManifestSettings.#ctor" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.GetAppManifestSettings.OnCheckParameters" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.GetAppManifestSettings.OnExecute" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.GetAppManifestSettings.AppManifest" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.GetAppManifestSettings.AppVersion" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.GetAppManifestSettings.IsAutoDeployedWebApplication" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Tasks.GetSharePointProjectDependeciesToBuild" Id="T:Microsoft.VisualStudio.SharePoint.Tasks.GetSharePointProjectDependeciesToBuild">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.GetSharePointProjectDependeciesToBuild.#ctor" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.GetSharePointProjectDependeciesToBuild.OnExecute" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.GetSharePointProjectDependeciesToBuild.ProjectDependencies" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.GetSharePointProjectDependeciesToBuild.ProjectReferences" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.GetSharePointProjectDependeciesToBuild.ProjectsToBuild" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Tasks.GetWebProjectSettings" Id="T:Microsoft.VisualStudio.SharePoint.Tasks.GetWebProjectSettings">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.GetWebProjectSettings.#ctor" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.GetWebProjectSettings.OnCheckParameters" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.GetWebProjectSettings.OnExecute" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.GetWebProjectSettings.AzureProjectOutput" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.GetWebProjectSettings.IsDebugging" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.GetWebProjectSettings.IsWebProjectHighTrust" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.GetWebProjectSettings.ProjectReference" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.GetWebProjectSettings.PublishProfileName" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.GetWebProjectSettings.PublishProfilePath" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.GetWebProjectSettings.VisualStudioVersion" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.GetWebProjectSettings.VSToolsPath" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.GetWebProjectSettings.WebProjectClientId" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.GetWebProjectSettings.WebProjectClientSecret" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.GetWebProjectSettings.WebProjectStartupUrl" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Tasks.LayoutFiles" Id="T:Microsoft.VisualStudio.SharePoint.Tasks.LayoutFiles">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.LayoutFiles.#ctor" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.LayoutFiles.OnCheckParameters" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.LayoutFiles.OnExecute" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.LayoutFiles.Files" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.LayoutFiles.LayoutPath" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Tasks.MergeEctItemFiles" Id="T:Microsoft.VisualStudio.SharePoint.Tasks.MergeEctItemFiles">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.MergeEctItemFiles.#ctor" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.MergeEctItemFiles.OnExecute" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.MergeEctItemFiles.BdcMetadataContent" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.MergeEctItemFiles.NoneItems" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Tasks.MergeSearchConfigurationFiles" Id="T:Microsoft.VisualStudio.SharePoint.Tasks.MergeSearchConfigurationFiles">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.MergeSearchConfigurationFiles.#ctor" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.MergeSearchConfigurationFiles.OnCheckParameters" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.MergeSearchConfigurationFiles.OnExecute" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.MergeSearchConfigurationFiles.MergedSearchConfigurationFilePath" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.MergeSearchConfigurationFiles.SearchConfigurationFiles" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Tasks.PackageFiles" Id="T:Microsoft.VisualStudio.SharePoint.Tasks.PackageFiles">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.PackageFiles.#ctor" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.PackageFiles.OnCheckParameters" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.PackageFiles.OnExecute" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.PackageFiles.HasPackagingWarnings" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.PackageFiles.IsApp" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.PackageFiles.LayoutPath" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.PackageFiles.PackagePath" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Tasks.RemapSharePointAppPort" Id="T:Microsoft.VisualStudio.SharePoint.Tasks.RemapSharePointAppPort">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.RemapSharePointAppPort.#ctor" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.RemapSharePointAppPort.OnExecute" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.RemapSharePointAppPort.ServiceDefinition" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.RemapSharePointAppPort.WebRole" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Tasks.ResignAssemblies" Id="T:Microsoft.VisualStudio.SharePoint.Tasks.ResignAssemblies">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.ResignAssemblies.#ctor" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.ResignAssemblies.OnCheckParameters" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.ResignAssemblies.OnExecute" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.ResignAssemblies.Assemblies" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.ResignAssemblies.Key" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.ResignAssemblies.KeyType" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Tasks.ResolveProjectMember" Id="T:Microsoft.VisualStudio.SharePoint.Tasks.ResolveProjectMember">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.ResolveProjectMember.#ctor" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.ResolveProjectMember.OnExecute" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.ResolveProjectMember.AvailableProjectMembers" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.ResolveProjectMember.ProjectMemberId" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.ResolveProjectMember.ProjectMemberIdMetadataName" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.ResolveProjectMember.ResolvedProjectMember" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Tasks.SetOwaDebuggingProperties" Id="T:Microsoft.VisualStudio.SharePoint.Tasks.SetOwaDebuggingProperties">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.SetOwaDebuggingProperties.#ctor" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.SetOwaDebuggingProperties.OnExecute" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.SetOwaDebuggingProperties.GeneratedAppName" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.SetOwaDebuggingProperties.GeneratedAppVersion" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.SetOwaDebuggingProperties.GeneratedClientSecret" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.SetOwaDebuggingProperties.GeneratedDocumentName" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.SetOwaDebuggingProperties.GeneratedDocumentSource" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.SetOwaDebuggingProperties.GeneratedFeatureId" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.SetOwaDebuggingProperties.GeneratedListId" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.SetOwaDebuggingProperties.GeneratedModuleId" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.SetOwaDebuggingProperties.GeneratedPackageId" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.SetOwaDebuggingProperties.GeneratedProductId" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.SetOwaDebuggingProperties.IsOwaDebugging" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.SetOwaDebuggingProperties.ProjectFile" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.SetOwaDebuggingProperties.VersionedLayoutsPath" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Tasks.SetPackagingProperties" Id="T:Microsoft.VisualStudio.SharePoint.Tasks.SetPackagingProperties">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.SetPackagingProperties.#ctor" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.SetPackagingProperties.OnExecute" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.SetPackagingProperties.DebugRemoteAppServiceBaseUrl" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.SetPackagingProperties.IsDebugging" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.SetPackagingProperties.IsPackaging" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.SetPackagingProperties.IsWorkflowDebuggingEnabled" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.SetPackagingProperties.ProjectFile" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.SetPackagingProperties.PublishedFrom" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.SetPackagingProperties.SkipPackageWebProject" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.SetPackagingProperties.WorkflowDebuggingClientSecret" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Tasks.SetResigningProperties" Id="T:Microsoft.VisualStudio.SharePoint.Tasks.SetResigningProperties">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.SetResigningProperties.#ctor" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.SetResigningProperties.OnCheckParameters" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.SetResigningProperties.OnExecute" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.SetResigningProperties.NeedResigning" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.SetResigningProperties.ProjectFile" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Tasks.TransformFiles" Id="T:Microsoft.VisualStudio.SharePoint.Tasks.TransformFiles">
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Tasks.TransformFiles.ArtifactIdMetadataName" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Tasks.TransformFiles.ArtifactMetadataName" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Tasks.TransformFiles.AssemblyMetadataName" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Tasks.TransformFiles.CollectSharePointItemsTargetName" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Tasks.TransformFiles.DeploymentTargetMetadataName" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Tasks.TransformFiles.ErrorSourceFileMetadataName" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Tasks.TransformFiles.FeatureIdMetadataName" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Tasks.TransformFiles.FeatureMetadataName" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Tasks.TransformFiles.GroupIdMetadataName" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Tasks.TransformFiles.ItemTypeMetadataName" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Tasks.TransformFiles.MappedFolderFileName" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Tasks.TransformFiles.PackageIdMetadataName" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Tasks.TransformFiles.PackageMetadataName" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Tasks.TransformFiles.PackageRelativePathMetadataName" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Tasks.TransformFiles.ProjectIdMetadataName" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Tasks.TransformFiles.ProjectItemTypeMetadataName" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Tasks.TransformFiles.ProjectOutputPathMetadataName" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Tasks.TransformFiles.TemplateFileExtension" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Tasks.TransformFiles.TokenReplacementFileExtensionMetadataName" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Tasks.TransformFiles.VirtualMetadataName" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.TransformFiles.#ctor" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.TransformFiles.OnCheckParameters" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.TransformFiles.OnExecute" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.TransformFiles.AppManifest" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.TransformFiles.EnumeratedFiles" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.TransformFiles.IntermediatePath" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.TransformFiles.IsDebugging" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.TransformFiles.ProjectId" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.TransformFiles.ProjectService" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.TransformFiles.PublishedFrom" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.TransformFiles.TranslatedWorkflowsDestinationFolder" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Tasks.UseDeveloperStore" Id="T:Microsoft.VisualStudio.SharePoint.Tasks.UseDeveloperStore">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.UseDeveloperStore.#ctor" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.UseDeveloperStore.ChangeStore(System.IO.Packaging.Package)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.UseDeveloperStore.OnExecute" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.UseDeveloperStore.OfficeAppManifestFiles" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.UseDeveloperStore.OfficeFiles" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Tasks.UseSPAppStore" Id="T:Microsoft.VisualStudio.SharePoint.Tasks.UseSPAppStore">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.UseSPAppStore.#ctor" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.UseSPAppStore.ChangeStore(System.IO.Packaging.Package)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.UseSPAppStore.OnExecute" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.UseSPAppStore.EnumeratedFiles" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Tasks.ValidateOfficeAppManifest" Id="T:Microsoft.VisualStudio.SharePoint.Tasks.ValidateOfficeAppManifest">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.ValidateOfficeAppManifest.#ctor" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.ValidateOfficeAppManifest.OnCheckParameters" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.ValidateOfficeAppManifest.OnExecute" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.ValidateOfficeAppManifest.ManifestFilePaths" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.ValidateOfficeAppManifest.ProjectMode" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.ValidateOfficeAppManifest.WebProjectPaths" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Tasks.ValidateOfficeAppPage" Id="T:Microsoft.VisualStudio.SharePoint.Tasks.ValidateOfficeAppPage">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.ValidateOfficeAppPage.#ctor" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.ValidateOfficeAppPage.OnExecute" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.ValidateOfficeAppPage.HasWarnings" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.ValidateOfficeAppPage.ManifestFilePaths" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.ValidateOfficeAppPage.WebProjectPaths" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Tasks.ValidatePackage" Id="T:Microsoft.VisualStudio.SharePoint.Tasks.ValidatePackage">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.ValidatePackage.#ctor" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.ValidatePackage.OnCheckParameters" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.ValidatePackage.OnExecute" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.ValidatePackage.ProjectId" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.ValidatePackage.ProjectService" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Tasks.ValidateSharePointAppIcons" Id="T:Microsoft.VisualStudio.SharePoint.Tasks.ValidateSharePointAppIcons">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.ValidateSharePointAppIcons.#ctor" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.ValidateSharePointAppIcons.OnExecute" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.ValidateSharePointAppIcons.IconFilePaths" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Tasks.ValidateSharePointAppManifest" Id="T:Microsoft.VisualStudio.SharePoint.Tasks.ValidateSharePointAppManifest">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.ValidateSharePointAppManifest.#ctor" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.ValidateSharePointAppManifest.OnExecute" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.ValidateSharePointAppManifest.ManifestFilePaths" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.ValidateSharePointAppManifest.WebProjectPaths" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Tasks.ValidateWebProjectReference" Id="T:Microsoft.VisualStudio.SharePoint.Tasks.ValidateWebProjectReference">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.ValidateWebProjectReference.#ctor" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.ValidateWebProjectReference.OnCheckParameters" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Tasks.ValidateWebProjectReference.OnExecute" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.ValidateWebProjectReference.ProjectMode" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Tasks.ValidateWebProjectReference.WebProjectPaths" />
+    </Type>
+  </Namespace>
+  <Namespace Name="Microsoft.VisualStudio.SharePoint.Validation">
+    <Type Name="Microsoft.VisualStudio.SharePoint.Validation.IFeatureValidationContext" Id="T:Microsoft.VisualStudio.SharePoint.Validation.IFeatureValidationContext">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Validation.IFeatureValidationContext.Feature" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Validation.IFeatureValidationRule" Id="T:Microsoft.VisualStudio.SharePoint.Validation.IFeatureValidationRule">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Validation.IFeatureValidationRule.ValidateFeature(Microsoft.VisualStudio.SharePoint.Validation.IFeatureValidationContext)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Validation.IFeatureValidationRule.ValidateProjectItem(Microsoft.VisualStudio.SharePoint.Validation.IFeatureValidationContext,Microsoft.VisualStudio.SharePoint.ISharePointProjectItem)" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationContext" Id="T:Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationContext">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationContext.Package" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationProvider" Id="T:Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationProvider">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationProvider.ValidateFeature(Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationProvider.ValidateFeatureForProjectItem(Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature,Microsoft.VisualStudio.SharePoint.ISharePointProjectItem)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationProvider.ValidatePackage(Microsoft.VisualStudio.SharePoint.ISharePointProjectPackage)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationProvider.ValidatePackageForFeature(Microsoft.VisualStudio.SharePoint.ISharePointProjectPackage,Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationProvider.ValidatePackageForProjectItem(Microsoft.VisualStudio.SharePoint.ISharePointProjectPackage,Microsoft.VisualStudio.SharePoint.ISharePointProjectItem)" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationRule" Id="T:Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationRule">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationRule.ValidateFeature(Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationContext,Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationRule.ValidatePackage(Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationContext)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationRule.ValidateProjectItem(Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationContext,Microsoft.VisualStudio.SharePoint.ISharePointProjectItem)" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Validation.IValidationContext" Id="T:Microsoft.VisualStudio.SharePoint.Validation.IValidationContext">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Validation.IValidationContext.RuleViolations" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Validation.IValidationResult" Id="T:Microsoft.VisualStudio.SharePoint.Validation.IValidationResult">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Validation.IValidationResult.HasErrors" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Validation.IValidationResult.HasWarnings" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Validation.IValidationResult.RuleViolations" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Validation.IValidationRuleViolation" Id="T:Microsoft.VisualStudio.SharePoint.Validation.IValidationRuleViolation">
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Validation.IValidationRuleViolation.Code" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Validation.IValidationRuleViolation.Document" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Validation.IValidationRuleViolation.HelpKeyword" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Validation.IValidationRuleViolation.Message" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Validation.IValidationRuleViolation.Project" />
+      <Member Id="P:Microsoft.VisualStudio.SharePoint.Validation.IValidationRuleViolation.Severity" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Validation.IValidationRuleViolationCollection" Id="T:Microsoft.VisualStudio.SharePoint.Validation.IValidationRuleViolationCollection">
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Validation.IValidationRuleViolationCollection.Add(Microsoft.VisualStudio.SharePoint.Validation.IValidationRuleViolation)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Validation.IValidationRuleViolationCollection.Add(System.String,Microsoft.VisualStudio.SharePoint.Validation.ValidationRuleViolationSeverity,System.String)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Validation.IValidationRuleViolationCollection.Add(System.String,Microsoft.VisualStudio.SharePoint.Validation.ValidationRuleViolationSeverity,System.String,System.String,Microsoft.VisualStudio.SharePoint.ISharePointProject,System.String)" />
+      <Member Id="M:Microsoft.VisualStudio.SharePoint.Validation.IValidationRuleViolationCollection.AddRange(System.Collections.Generic.IEnumerable{Microsoft.VisualStudio.SharePoint.Validation.IValidationRuleViolation})" />
+    </Type>
+    <Type Name="Microsoft.VisualStudio.SharePoint.Validation.ValidationRuleViolationSeverity" Id="T:Microsoft.VisualStudio.SharePoint.Validation.ValidationRuleViolationSeverity">
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Validation.ValidationRuleViolationSeverity.Error" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Validation.ValidationRuleViolationSeverity.Information" />
+      <Member Id="F:Microsoft.VisualStudio.SharePoint.Validation.ValidationRuleViolationSeverity.Warning" />
+    </Type>
+  </Namespace>
+</Framework>
