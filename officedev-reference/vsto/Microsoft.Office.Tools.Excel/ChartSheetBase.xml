@@ -1,11 +1,11 @@
 <Type Name="ChartSheetBase" FullName="Microsoft.Office.Tools.Excel.ChartSheetBase">
   <Metadata>
     <Meta Name="ms.openlocfilehash" Value="0f7287b3b24e1e5aa40597d6341ebb8d79bb58ca" />
-    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.sourcegitcommit" Value="f55a8e6711d4c6ec93f4f206fe0c15fae5fc3bf7" />
     <Meta Name="ms.translationtype" Value="HT" />
     <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
-    <Meta Name="ms.locfileid" Value="29436377" />
+    <Meta Name="ms.lasthandoff" Value="06/13/2018" />
+    <Meta Name="ms.locfileid" Value="35656595" />
   </Metadata>
   <TypeSignature Language="C#" Value="public abstract class ChartSheetBase : IDisposable, Microsoft.Office.Tools.Excel.IChartSheetExtension, System.ComponentModel.IComponent, System.ComponentModel.ISupportInitialize, System.Windows.Forms.IBindableComponent" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ChartSheetBase extends System.Object implements class Microsoft.Office.Tools.EntryPoint, class Microsoft.Office.Tools.Excel.IChartSheetExtension, class Microsoft.Office.Tools.IExtension, class System.ComponentModel.IComponent, class System.ComponentModel.ISupportInitialize, class System.IDisposable, class System.Windows.Forms.IBindableComponent" />
@@ -253,10 +253,8 @@
       </Parameters>
       <Docs>
         <param name="type">要应用的数据标签的类型。</param>
-        <param name="legendKey">
-          为 <see langword="true" /> 时，在点旁边显示图例项标示。 默认值为 <see langword="false" />。</param>
-        <param name="autoText">
-          如果对象自动根据内容生成适当的文本，则为 <see langword="true" />。</param>
+        <param name="legendKey">为 <see langword="true" /> 时，在点旁边显示图例项标示。 默认值为 <see langword="false" />。</param>
+        <param name="autoText">如果对象自动根据内容生成适当的文本，则为 <see langword="true" />。</param>
         <param name="hasLeaderLines">对于 <see cref="T:Microsoft.Office.Interop.Excel.Chart" /> 和 <see cref="T:Microsoft.Office.Interop.Excel.Series" /> 对象而言，如果系列包含引导线，则为 <see langword="true" />。</param>
         <param name="showSeriesName">数据标签的系列名称。</param>
         <param name="showCategoryName">数据标签的类别名称。</param>
@@ -448,8 +446,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，该值指示 Microsoft Office Excel 是否缩放三维 <see cref="T:Microsoft.Office.Tools.Excel.ChartSheetBase" /> 以使其大小更接近于等效的二维图表的大小</summary>
-        <value>
-          如果 Microsoft Office Excel 缩放三维 <see cref="T:Microsoft.Office.Tools.Excel.ChartSheetBase" /> 以使其大小更接近于等效的二维图表的大小，则为 <see langword="true" />。</value>
+        <value>如果 Microsoft Office Excel 缩放三维 <see cref="T:Microsoft.Office.Tools.Excel.ChartSheetBase" /> 以使其大小更接近于等效的二维图表的大小，则为 <see langword="true" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1040,8 +1037,7 @@
         <param name="plotBy">指定每个系列的数据是按行绘制还是按列绘制。 可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlRowCol" /> 常数之一：<see cref="F:Microsoft.Office.Interop.Excel.XlRowCol.xlRows" /> 或 <see cref="F:Microsoft.Office.Interop.Excel.XlRowCol.xlColumns" />。</param>
         <param name="categoryLabels">一个整数，指定源范围中包含类别标签的行数或列数。 合法值是从 0（零）到相应类别或系列的最大数减一。</param>
         <param name="seriesLabels">源范围中包含系列标签的行数或列数。 合法值是从 0（零）到相应类别或系列的最大数减一。</param>
-        <param name="hasLegend">
-          为 <see langword="true" /> 时包含图例。</param>
+        <param name="hasLegend">为 <see langword="true" /> 时包含图例。</param>
         <param name="title">图表标题文本。</param>
         <param name="categoryTitle">分类轴标题文本。</param>
         <param name="valueTitle">数值轴标题文本</param>
@@ -1127,7 +1123,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- Microsoft Office Excel 显示**拼写**对话框  
+ Microsoft Office Excel 显示“拼写检查”对话框  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -1918,8 +1914,7 @@
       <Docs>
         <param name="filename">导出文件的文件名。</param>
         <param name="filterName">与语言无关的图形筛选器名称（如同其在注册表中所显示的那样）。</param>
-        <param name="interactive">
-          为 <see langword="true" /> 时，显示包含筛选器特定选项的对话框。 如果此参数为 <see langword="false" />，则 Microsoft Office Excel 使用筛选器的默认值。 默认值为 <see langword="false" />。</param>
+        <param name="interactive">为 <see langword="true" /> 时，显示包含筛选器特定选项的对话框。 如果此参数为 <see langword="false" />，则 Microsoft Office Excel 使用筛选器的默认值。 默认值为 <see langword="false" />。</param>
         <summary>以图形格式导出 <see cref="T:Microsoft.Office.Tools.Excel.ChartSheetBase" />。</summary>
         <returns>To be added.</returns>
         <remarks>
@@ -1970,14 +1965,11 @@
           <see langword="Microsoft.Office.Interop.Excel.XlFixedFormatType" /> 值之一，指定是以 PDF 还是 XPS 格式保存图表。</param>
         <param name="filename">新 PDF 或 XPS 文件的完整路径。 如果省略此参数，Excel 会将文件保存在当前文件夹中。</param>
         <param name="quality">其中一个 <see langword="Microsoft.Office.Interop.Excel.XlFixedFormatQuality" /> 值，该值指定导出文件的质量。</param>
-        <param name="includeDocProperties">
-          如果要在导出的文件中包含文档属性，则为 <see langword="true" />；否则为 <see langword="false" />。</param>
-        <param name="ignorePrintAreas">
-          若要在导出时忽略任何打印区域设置，请使用 <see langword="true" />；否则使用 <see langword="false" />。</param>
+        <param name="includeDocProperties">如果要在导出的文件中包含文档属性，则为 <see langword="true" />；否则为 <see langword="false" />。</param>
+        <param name="ignorePrintAreas">若要在导出时忽略任何打印区域设置，请使用 <see langword="true" />；否则使用 <see langword="false" />。</param>
         <param name="from">要从其处开始导出的页码。 如果省略此参数，则从第一页开始导出。</param>
         <param name="to">要发布的最后一页的页码。 如果省略此参数，则发布最后一页后停止发布。</param>
-        <param name="openAfterPublish">
-          如果立即在查看器中打开新文件，则为 <see langword="true" />；否则为 <see langword="false" />。</param>
+        <param name="openAfterPublish">如果立即在查看器中打开新文件，则为 <see langword="true" />；否则为 <see langword="false" />。</param>
         <param name="fixedFormatExtClassPtr">一个指针，指向使图表能够以其他固定格式保存的 <see langword="IMsoDocExporter" /> 接口的实现。 有关详细信息，请参阅“扩展 Office (2007) 固定格式导出功能”。</param>
         <summary>以 PDF 或 XPS 格式保存 <see cref="T:Microsoft.Office.Tools.Excel.ChartSheetBase" /> 中显示的图表。</summary>
         <remarks>
@@ -2258,8 +2250,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示特定轴是否存在于 <see cref="T:Microsoft.Office.Tools.Excel.ChartSheetBase" /> 上。</summary>
-        <value>
-          如果 <see cref="T:Microsoft.Office.Tools.Excel.ChartSheetBase" /> 上存在指定的轴，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果 <see cref="T:Microsoft.Office.Tools.Excel.ChartSheetBase" /> 上存在指定的轴，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -2304,8 +2295,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示 <see cref="T:Microsoft.Office.Tools.Excel.ChartSheetBase" /> 是否包含数据表。</summary>
-        <value>
-          如果 <see cref="T:Microsoft.Office.Tools.Excel.ChartSheetBase" /> 包含数据表，则为 <see langword="true" />。</value>
+        <value>如果 <see cref="T:Microsoft.Office.Tools.Excel.ChartSheetBase" /> 包含数据表，则为 <see langword="true" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -2333,8 +2323,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示 <see cref="T:Microsoft.Office.Tools.Excel.ChartSheetBase" /> 是否包含图例。</summary>
-        <value>
-          如果 <see cref="T:Microsoft.Office.Tools.Excel.ChartSheetBase" /> 包含图例，则为 <see langword="true" />。</value>
+        <value>如果 <see cref="T:Microsoft.Office.Tools.Excel.ChartSheetBase" /> 包含图例，则为 <see langword="true" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2375,8 +2364,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示 <see cref="T:Microsoft.Office.Tools.Excel.ChartSheetBase" /> 是否包含可见标题。</summary>
-        <value>
-          如果 <see cref="T:Microsoft.Office.Tools.Excel.ChartSheetBase" /> 包含可见标题，则为 <see langword="true" />。</value>
+        <value>如果 <see cref="T:Microsoft.Office.Tools.Excel.ChartSheetBase" /> 包含可见标题，则为 <see langword="true" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -3566,8 +3554,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示是否只绘制可见单元格。</summary>
-        <value>
-          如果只绘制可见单元格，则为 <see langword="true" />。 如果可见单元格和隐藏单元格都要绘制，则为 <see langword="false" />。</value>
+        <value>如果只绘制可见单元格，则为 <see langword="true" />。 如果可见单元格和隐藏单元格都要绘制，则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -3612,7 +3599,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>获取要为当前图表工作表打印的注释页的数目。 此属性只能用于 [!INCLUDE[Excel_14_short](~/includes/excel-14-short-md.md)] 对象。</summary>
+        <summary>获取要为当前图表工作表打印的注释页的数目。 此属性只能在 [!INCLUDE[Excel_14_short](~/includes/excel-14-short-md.md)] 项目中使用。</summary>
         <value>要为当前图表工作表打印的注释页的数目。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -3694,13 +3681,10 @@
         <param name="from">要从其处开始打印的页码。 如果省略此参数，则打印从第一页开始。</param>
         <param name="to">要打印的最后一页的页码。 若忽略此参数，则打印至最后一页。</param>
         <param name="copies">要打印的份数。 如果忽略此参数，则打印一份。</param>
-        <param name="preview">
-          若要在打印对象前让 Microsoft Office Excel 调用打印预览，请使用 <see langword="true" />。 为 <see langword="false" />（或省略）时，立即打印对象。</param>
+        <param name="preview">若要在打印对象前让 Microsoft Office Excel 调用打印预览，请使用 <see langword="true" />。 为 <see langword="false" />（或省略）时，立即打印对象。</param>
         <param name="activePrinter">设置活动打印机的名称。</param>
-        <param name="printToFile">
-          若要打印到文件，请使用 <see langword="true" />。 若未指定 <c>prToFileName</c>，则 Excel 会提示用户输入输出文件的名称。</param>
-        <param name="collate">
-          若逐份打印多个副本，请使用 <see langword="true" />。</param>
+        <param name="printToFile">若要打印到文件，请使用 <see langword="true" />。 若未指定 <c>prToFileName</c>，则 Excel 会提示用户输入输出文件的名称。</param>
+        <param name="collate">若逐份打印多个副本，请使用 <see langword="true" />。</param>
         <param name="prToFileName">要打印到的文件的名称。 只有在 <c>printToFile</c> 为 <see langword=" true" /> 时，才使用此参数。</param>
         <summary>打印 <see cref="T:Microsoft.Office.Tools.Excel.ChartSheetBase" /> 中显示的图表。</summary>
         <remarks>
@@ -3776,14 +3760,10 @@
       </Parameters>
       <Docs>
         <param name="password">一个字符串，指定工作表或工作簿的区分大小写的密码。 如果省略此参数，则不使用密码就可以取消对工作表或工作簿的保护。 否则，必须指定用来取消对工作表或工作簿的保护的密码。 如果忘记了密码，则无法取消对工作表或工作簿的保护。 最好将密码及其对应文档名的列表保存在安全的位置。</param>
-        <param name="drawingObjects">
-          为 <see langword="true" /> 时保护形状。 默认值为 <see langword="false" />。</param>
-        <param name="contents">
-          为 <see langword="true" /> 时保护内容。 对于图表而言，这将保护整个图表。 对于工作表而言，这将保护锁定的单元格。 默认值为 <see langword="true" />。</param>
-        <param name="scenarios">
-          为 <see langword="true" /> 时保护方案。 此参数仅对工作表有效。 默认值为 <see langword="true" />。</param>
-        <param name="userInterfaceOnly">
-          为 <see langword="true" /> 可保护用户界面，但不保护宏。 如果省略此参数，则同时对宏和用户界面应用保护。</param>
+        <param name="drawingObjects">为 <see langword="true" /> 时保护形状。 默认值为 <see langword="false" />。</param>
+        <param name="contents">为 <see langword="true" /> 时保护内容。 对于图表而言，这将保护整个图表。 对于工作表而言，这将保护锁定的单元格。 默认值为 <see langword="true" />。</param>
+        <param name="scenarios">为 <see langword="true" /> 时保护方案。 此参数仅对工作表有效。 默认值为 <see langword="true" />。</param>
+        <param name="userInterfaceOnly">为 <see langword="true" /> 可保护用户界面，但不保护宏。 如果省略此参数，则同时对宏和用户界面应用保护。</param>
         <summary>保护 <see cref="T:Microsoft.Office.Tools.Excel.ChartSheetBase" /> 以便不能对其进行修改。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -3820,8 +3800,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，该值指示 <see cref="T:Microsoft.Office.Tools.Excel.ChartSheetBase" /> 的内容是否受保护。</summary>
-        <value>
-          如果 <see cref="T:Microsoft.Office.Tools.Excel.ChartSheetBase" /> 的内容受保护，则为 <see langword="true" />。</value>
+        <value>如果 <see cref="T:Microsoft.Office.Tools.Excel.ChartSheetBase" /> 的内容受保护，则为 <see langword="true" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -3854,8 +3833,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示用户是否无法修改系列公式。</summary>
-        <value>
-          如果用户不能修改系列公式，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果用户不能修改系列公式，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -3873,8 +3851,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，该值指示 <see cref="T:Microsoft.Office.Tools.Excel.ChartSheetBase" /> 上的形状是否受保护。</summary>
-        <value>
-          如果形状受保护，则为 <see langword="true" />。</value>
+        <value>如果形状受保护，则为 <see langword="true" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -3892,8 +3869,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示用户是否无法修改 <see cref="T:Microsoft.Office.Tools.Excel.ChartSheetBase" /> 格式设置。</summary>
-        <value>
-          如果用户无法修改 <see cref="T:Microsoft.Office.Tools.Excel.ChartSheetBase" /> 格式设置，则为 <see langword="true" />。</value>
+        <value>如果用户无法修改 <see cref="T:Microsoft.Office.Tools.Excel.ChartSheetBase" /> 格式设置，则为 <see langword="true" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -3941,8 +3917,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示是否开启了只限用户界面的保护。</summary>
-        <value>
-          如果开启了只限用户界面的保护，则为 <see langword="true" />。</value>
+        <value>如果开启了只限用户界面的保护，则为 <see langword="true" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -3967,8 +3942,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示是否不能选择 <see cref="T:Microsoft.Office.Tools.Excel.ChartSheetBase" /> 元素。</summary>
-        <value>
-          如果不能选择 <see cref="T:Microsoft.Office.Tools.Excel.ChartSheetBase" /> 元素，则为 <see langword="true" />。</value>
+        <value>如果不能选择 <see cref="T:Microsoft.Office.Tools.Excel.ChartSheetBase" /> 元素，则为 <see langword="true" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -4082,8 +4056,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示 <see cref="T:Microsoft.Office.Tools.Excel.ChartSheetBase" /> 轴是否成直角（与图表旋转角或仰角无关）。</summary>
-        <value>
-          如果 <see cref="T:Microsoft.Office.Tools.Excel.ChartSheetBase" /> 轴成直角（与图表旋转角或仰角无关），则为 <see langword="true" />。</value>
+        <value>如果 <see cref="T:Microsoft.Office.Tools.Excel.ChartSheetBase" /> 轴成直角（与图表旋转角或仰角无关），则为 <see langword="true" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -4166,16 +4139,12 @@
         <param name="fileFormat">保存文件时要使用的文件格式。 有关有效选项的列表，请参见 <see cref="P:Microsoft.Office.Interop.Excel._Workbook.FileFormat" /> 属性。 对于现有文件，默认格式为最后一种指定文件格式；对于新文件，默认格式为所用 Excel 版本的格式。</param>
         <param name="password">一个区分大小写的字符串（不超过 15 个字符），指示为文件指定的保护密码。</param>
         <param name="writeResPassword">文件的写保护密码。 如果保存文件时指定了密码，但打开文件时没有提供密码，则该文件以只读方式打开。</param>
-        <param name="readOnlyRecommended">
-          如果为 <see langword="true" />，则在打开该文件时显示一条消息，建议以只读方式打开该文件。</param>
-        <param name="createBackup">
-          如果为 <see langword="true" />，则创建备份文件。</param>
-        <param name="addToMru">
-          如果为 <see langword="true" />，则将工作簿添加到最近使用的文件列表中。 默认值为 <see langword="false" />。</param>
+        <param name="readOnlyRecommended">如果为 <see langword="true" />，则在打开该文件时显示一条消息，建议以只读方式打开该文件。</param>
+        <param name="createBackup">如果为 <see langword="true" />，则创建备份文件。</param>
+        <param name="addToMru">如果为 <see langword="true" />，则将工作簿添加到最近使用的文件列表中。 默认值为 <see langword="false" />。</param>
         <param name="textCodepage">不在美国使用英语 Excel。</param>
         <param name="textVisualLayout">不在美国使用英语 Excel。</param>
-        <param name="local">
-          如果为 <see langword="true" />，则按照 Excel（包括控制面板设置）的语言保存文件。 为 <see langword="false" />（默认值）时，则用 Visual Basic for Applications 所使用的语言（通常为美国英语，除非从中运行 Workbooks.Open 的 VBA 项目是旧的国际化 XL5/95 VBA 项目）保存文件。</param>
+        <param name="local">如果为 <see langword="true" />，则按照 Excel（包括控制面板设置）的语言保存文件。 为 <see langword="false" />（默认值）时，则用 Visual Basic for Applications 所使用的语言（通常为美国英语，除非从中运行 Workbooks.Open 的 VBA 项目是旧的国际化 XL5/95 VBA 项目）保存文件。</param>
         <summary>将对 <see cref="T:Microsoft.Office.Tools.Excel.ChartSheetBase" /> 所做的更改保存到另一个文件中。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -4578,9 +4547,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>获取或设置是否在 <see cref="T:Microsoft.Office.Tools.Excel.ChartSheetBase" /> 中显示的数据透视图上显示所有字段按钮。 此属性只能用于 [!INCLUDE[Excel_14_short](~/includes/excel-14-short-md.md)] 对象。</summary>
-        <value>
-          如果要在指定的数据透视图上显示所有字段按钮，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <summary>获取或设置是否在 <see cref="T:Microsoft.Office.Tools.Excel.ChartSheetBase" /> 中显示的数据透视图上显示所有字段按钮。 此属性只能在 [!INCLUDE[Excel_14_short](~/includes/excel-14-short-md.md)] 项目中使用。</summary>
+        <value>如果要在指定的数据透视图上显示所有字段按钮，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -4610,9 +4578,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>获取或设置是否在显示在 <see cref="T:Microsoft.Office.Tools.Excel.ChartSheetBase" /> 上的数据透视图上显示轴字段按钮。 此属性只能用于 [!INCLUDE[Excel_14_short](~/includes/excel-14-short-md.md)] 对象。</summary>
-        <value>
-          若要在指定的数据透视图上显示轴字段按钮，请使用 <see langword="true" />；否则使用 <see langword="false" />。</value>
+        <summary>获取或设置是否在显示在 <see cref="T:Microsoft.Office.Tools.Excel.ChartSheetBase" /> 上的数据透视图上显示轴字段按钮。 此属性只能在 [!INCLUDE[Excel_14_short](~/includes/excel-14-short-md.md)] 项目中使用。</summary>
+        <value>若要在指定的数据透视图上显示轴字段按钮，请使用 <see langword="true" />；否则使用 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -4643,8 +4610,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示当值大于数值轴上的最大值时是否显示数据标签。</summary>
-        <value>
-          如果当值大于数值轴上的最大值时显示数据标签，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果当值大于数值轴上的最大值时显示数据标签，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -4668,9 +4634,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>获取或设置是否在 <see cref="T:Microsoft.Office.Tools.Excel.ChartSheetBase" /> 中显示的数据透视图上显示图例字段按钮。 此属性只能用于 [!INCLUDE[Excel_14_short](~/includes/excel-14-short-md.md)] 对象。</summary>
-        <value>
-          如果要在指定的数据透视图上显示所有图例字段按钮，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <summary>获取或设置是否在 <see cref="T:Microsoft.Office.Tools.Excel.ChartSheetBase" /> 中显示的数据透视图上显示图例字段按钮。 此属性只能在 [!INCLUDE[Excel_14_short](~/includes/excel-14-short-md.md)] 项目中使用。</summary>
+        <value>如果要在指定的数据透视图上显示所有图例字段按钮，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -4700,9 +4665,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>获取或设置是否在 <see cref="T:Microsoft.Office.Tools.Excel.ChartSheetBase" /> 中显示的数据透视图上显示报告筛选器字段按钮。 此属性只能用于 [!INCLUDE[Excel_14_short](~/includes/excel-14-short-md.md)] 对象。</summary>
-        <value>
-          如果要在指定的数据透视图上显示报告筛选器字段按钮，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <summary>获取或设置是否在 <see cref="T:Microsoft.Office.Tools.Excel.ChartSheetBase" /> 中显示的数据透视图上显示报告筛选器字段按钮。 此属性只能在 [!INCLUDE[Excel_14_short](~/includes/excel-14-short-md.md)] 项目中使用。</summary>
+        <value>如果要在指定的数据透视图上显示报告筛选器字段按钮，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -4732,9 +4696,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>获取或设置是否在 <see cref="T:Microsoft.Office.Tools.Excel.ChartSheetBase" /> 中显示的数据透视图上显示值字段按钮。 此属性只能用于 [!INCLUDE[Excel_14_short](~/includes/excel-14-short-md.md)] 对象。</summary>
-        <value>
-          如果要在指定的数据透视图上显示值字段按钮，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <summary>获取或设置是否在 <see cref="T:Microsoft.Office.Tools.Excel.ChartSheetBase" /> 中显示的数据透视图上显示值字段按钮。 此属性只能在 [!INCLUDE[Excel_14_short](~/includes/excel-14-short-md.md)] 项目中使用。</summary>
+        <value>如果要在指定的数据透视图上显示值字段按钮，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
