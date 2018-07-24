@@ -1,10 +1,10 @@
 <Type Name="Action" FullName="Microsoft.Office.Tools.Word.Action">
   <Metadata>
     <Meta Name="ms.openlocfilehash" Value="0f23446f7fc3611416f5197ae1420a2f5dcd7454" />
-    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.sourcegitcommit" Value="d85a83935f1d68ded616fcdfb8fd10d6bf4a4633" />
     <Meta Name="ms.translationtype" Value="HT" />
     <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+    <Meta Name="ms.lasthandoff" Value="07/24/2018" />
     <Meta Name="ms.locfileid" Value="29431346" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface Action : Microsoft.Office.Tools.ActionBase" />
@@ -30,7 +30,7 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 识别特定类型的智能标记时，操作是智能标记快捷菜单上的可用选项。 若要创建操作，使用`Globals.Factory.CreateAction`方法来创建<xref:Microsoft.Office.Tools.Word.Action>对象。  
+ 特定类型的智能标记识别时，操作是在智能标记快捷菜单上的可用选项。 若要创建操作，请使用`Globals.Factory.CreateAction`方法来创建<xref:Microsoft.Office.Tools.Word.Action>对象。  
   
  [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
   
@@ -42,7 +42,7 @@
    
   
 ## Examples  
- 下面的代码示例演示如何创建操作的智能标记。 智能标记操作修改在运行时的操作的菜单标题，并显示已识别出的文本的位置。  
+ 下面的代码示例演示如何创建操作的智能标记。 智能标记操作修改在运行时操作的菜单标题，并显示已识别的文本的位置。  
   
  [!code-csharp[Trin_WordSmartTags#1](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordSmartTags/CS/thisdocument.cs#1)]
  [!code-vb[Trin_WordSmartTags#1](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordSmartTags/VB/thisdocument.vb#1)]  
@@ -69,12 +69,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件，能够更改基于上下文的智能标记标题。  
+ 此事件可用于更改基于上下文的智能标记标题。  
   
    
   
 ## Examples  
- 下面的代码示例演示的处理程序<xref:Microsoft.Office.Tools.Word.Action.BeforeCaptionShow>事件。 事件处理程序修改操作的菜单标题。 此代码示例摘自更大的示例为提供<xref:Microsoft.Office.Tools.Word.Action>。  
+ 下面的代码示例演示了一个处理程序<xref:Microsoft.Office.Tools.Word.Action.BeforeCaptionShow>事件。 事件处理程序将修改操作的菜单标题。 此代码示例是为提供一个更大示例的一部分<xref:Microsoft.Office.Tools.Word.Action>。  
   
  [!code-csharp[Trin_WordSmartTags#3](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordSmartTags/CS/thisdocument.cs#3)]
  [!code-vb[Trin_WordSmartTags#3](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordSmartTags/VB/thisdocument.vb#3)]  
@@ -101,7 +101,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例演示的处理程序<xref:Microsoft.Office.Tools.Word.Action.Click>事件。 事件处理程序会显示识别的智能标记术语的开始和结束位置。 此代码示例摘自更大的示例为提供<xref:Microsoft.Office.Tools.Word.Action>。  
+ 下面的代码示例演示了一个处理程序<xref:Microsoft.Office.Tools.Word.Action.Click>事件。 事件处理程序会显示智能标记识别的术语的开始和结束位置。 此代码示例是为提供一个更大示例的一部分<xref:Microsoft.Office.Tools.Word.Action>。  
   
  [!code-csharp[Trin_WordSmartTags#4](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordSmartTags/CS/thisdocument.cs#4)]
  [!code-vb[Trin_WordSmartTags#4](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordSmartTags/VB/thisdocument.vb#4)]  

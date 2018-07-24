@@ -1,10 +1,10 @@
 <Type Name="PictureContentControl" FullName="Microsoft.Office.Tools.Word.PictureContentControl">
   <Metadata>
     <Meta Name="ms.openlocfilehash" Value="219e73a8dd98c919e359e0648a78beda260b05db" />
-    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.sourcegitcommit" Value="d85a83935f1d68ded616fcdfb8fd10d6bf4a4633" />
     <Meta Name="ms.translationtype" Value="HT" />
     <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+    <Meta Name="ms.lasthandoff" Value="07/24/2018" />
     <Meta Name="ms.locfileid" Value="29433530" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface PictureContentControl : IDisposable, Microsoft.Office.Tools.Word.ContentControlBase, System.ComponentModel.IComponent, System.ComponentModel.ISupportInitialize, System.Windows.Forms.IBindableComponent" />
@@ -42,14 +42,14 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- A<xref:Microsoft.Office.Tools.Word.PictureContentControl>显示图像。 可以在设计时或运行时指定图像，用户也可以单击此控件以选择要插入文档中的图像。  
+ 一个<xref:Microsoft.Office.Tools.Word.PictureContentControl>显示图像。 可以在设计时或运行时指定图像，用户也可以单击此控件以选择要插入文档中的图像。  
   
- 若要获取或设置图像，请使用<xref:Microsoft.Office.Tools.Word.PictureContentControl.Image%2A>属性。 默认情况下，用户无法更改中的图像<xref:Microsoft.Office.Tools.Word.PictureContentControl>在运行时。 如果你想要使用户能够选择要在控件中显示，请将映像<xref:Microsoft.Office.Tools.Word.PictureContentControl.ShowInsertPictureIcon%2A>属性`true`。  
+ 若要获取或设置图像，请使用<xref:Microsoft.Office.Tools.Word.PictureContentControl.Image%2A>属性。 默认情况下，用户不能更改中的图像<xref:Microsoft.Office.Tools.Word.PictureContentControl>在运行时。 如果你想要使用户能够选择要在控件中显示，请将图像<xref:Microsoft.Office.Tools.Word.PictureContentControl.ShowInsertPictureIcon%2A>属性设置为`true`。  
   
  [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
   
 ## <a name="content-controls"></a>内容控件  
- <xref:Microsoft.Office.Tools.Word.PictureContentControl>是八个类型的内容控件，可以使用设计文档和 Microsoft Office Word 中的模板之一。 内容控件具有用户界面 (UI)，具有控制类似于窗体的输入。 你可以使用内容控件来防止用户编辑受保护的部分的文档或模板，并还可以将内容控件绑定到数据源。 有关详细信息，请参阅[内容控件](/visualstudio/vsto/content-controls.md)。  
+ <xref:Microsoft.Office.Tools.Word.PictureContentControl>是八个类型的内容控件，您可以使用设计文档和 Microsoft Office Word 中的模板之一。 内容控件具有用户界面 (UI) 的有控制类似于窗体的输入。 可以使用内容控件来阻止用户编辑受保护的部分的文档或模板，并还可以将内容控件绑定到数据源。 有关详细信息，请参阅[内容控件](/visualstudio/vsto/content-controls.md)。  
   
 ## <a name="usage"></a>用法  
  [!INCLUDE[vsto_net35mref](~/includes/vsto-net35mref-md.md)]  
@@ -57,14 +57,14 @@
    
   
 ## Examples  
- 下面的代码示例添加一个新<xref:Microsoft.Office.Tools.Word.PictureContentControl>到文档的开头。 此示例假定文件命名为`picture.bmp`存在 %UserProfile%\My Documents 文件夹 （对于 Windows XP 及更早版本） 或 %UserProfile%\Documents 文件夹中 （对于 Windows Vista)。  
+ 下面的代码示例添加一个新<xref:Microsoft.Office.Tools.Word.PictureContentControl>到文档开头。 此示例假定文件命名为`picture.bmp`%UserProfile%\My Documents 文件夹 （对于 Windows XP 及更早版本） 或 %UserProfile%\Documents 文件夹中存在 （对于 Windows Vista)。  
   
- 此版本用于文档级自定义。 若要使用此代码，将其粘贴到`ThisDocument`中你的项目，然后调用类`AddPictureControlAtSelection`方法从`ThisDocument_Startup`方法。  
+ 此版本是文档级自定义项。 若要使用此代码，将其粘贴到`ThisDocument`类中，你的项目，并调用`AddPictureControlAtSelection`方法从`ThisDocument_Startup`方法。  
   
  [!code-csharp[Trin_ContentControlReference#500](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference/CS/Picture.cs#500)]
  [!code-vb[Trin_ContentControlReference#500](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference/VB/Picture.vb#500)]  
   
- 此版本用于针对应用程序级外接程序。 若要使用此代码，将其粘贴到`ThisAddIn`中你的项目，然后调用类`AddPictureControlAtSelection`方法从`ThisAddIn_Startup`方法。  
+ 此版本用于针对应用程序级外接程序。 若要使用此代码，将其粘贴到`ThisAddIn`类中，你的项目，并调用`AddPictureControlAtSelection`方法从`ThisAddIn_Startup`方法。  
   
  [!code-csharp[Trin_ContentControlReference_AppLevelAddIn#500](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/CS/Picture.cs#500)]
  [!code-vb[Trin_ContentControlReference_AppLevelAddIn#500](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/VB/Picture.vb#500)]  
@@ -92,7 +92,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Word.PictureContentControl.Application%2A>属性公开有关 Word，应用于该实例的选项的当前实例的信息以及在实例中打开当前文档。  
+ <xref:Microsoft.Office.Tools.Word.PictureContentControl.Application%2A>属性公开有关 Word 中，应用于该实例的选项的当前实例的信息，并在该实例中打开当前文档。  
   
  ]]></format>
         </remarks>
@@ -167,7 +167,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 当你使用<xref:Microsoft.Office.Tools.Word.PictureContentControl.Cut%2A>方法时，原始<xref:Microsoft.Office.Tools.Word.PictureContentControl>从文档中移除。 一份<xref:Microsoft.Office.Tools.Word.PictureContentControl>（包括图像和所有属性设置) 将添加到剪贴板。  
+ 当你使用<xref:Microsoft.Office.Tools.Word.PictureContentControl.Cut%2A>方法时，原始<xref:Microsoft.Office.Tools.Word.PictureContentControl>从文档中删除。 一份<xref:Microsoft.Office.Tools.Word.PictureContentControl>（包括图像和所有属性设置) 将添加到剪贴板。  
   
  ]]></format>
         </remarks>
@@ -192,14 +192,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例添加一个新<xref:Microsoft.Office.Tools.Word.PictureContentControl>到文档的开头。 此示例使用<xref:Microsoft.Office.Tools.Word.PictureContentControl.Image%2A>要分配由控件显示的图像属性。 此示例假定文件命名为`picture.bmp`存在 %UserProfile%\My Documents 文件夹 （对于 Windows XP 及更早版本） 或 %UserProfile%\Documents 文件夹中 （对于 Windows Vista)。  
+ 下面的代码示例添加一个新<xref:Microsoft.Office.Tools.Word.PictureContentControl>到文档开头。 此示例使用<xref:Microsoft.Office.Tools.Word.PictureContentControl.Image%2A>要分配由该控件显示的图像属性。 此示例假定文件命名为`picture.bmp`%UserProfile%\My Documents 文件夹 （对于 Windows XP 及更早版本） 或 %UserProfile%\Documents 文件夹中存在 （对于 Windows Vista)。  
   
- 此版本用于文档级自定义。 若要使用此代码，将其粘贴到`ThisDocument`中你的项目，然后调用类`AddPictureControlAtSelection`方法从`ThisDocument_Startup`方法。  
+ 此版本是文档级自定义项。 若要使用此代码，将其粘贴到`ThisDocument`类中，你的项目，并调用`AddPictureControlAtSelection`方法从`ThisDocument_Startup`方法。  
   
  [!code-csharp[Trin_ContentControlReference#500](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference/CS/Picture.cs#500)]
  [!code-vb[Trin_ContentControlReference#500](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference/VB/Picture.vb#500)]  
   
- 此版本用于针对应用程序级外接程序。 若要使用此代码，将其粘贴到`ThisAddIn`中你的项目，然后调用类`AddPictureControlAtSelection`方法从`ThisAddIn_Startup`方法。  
+ 此版本用于针对应用程序级外接程序。 若要使用此代码，将其粘贴到`ThisAddIn`类中，你的项目，并调用`AddPictureControlAtSelection`方法从`ThisAddIn_Startup`方法。  
   
  [!code-csharp[Trin_ContentControlReference_AppLevelAddIn#500](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/CS/Picture.cs#500)]
  [!code-vb[Trin_ContentControlReference_AppLevelAddIn#500](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/VB/Picture.vb#500)]  
@@ -222,13 +222,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示是否可从文档删除 <see cref="T:Microsoft.Office.Tools.Word.PictureContentControl" />。</summary>
-        <value>
-          如果可从文档删除 <see cref="T:Microsoft.Office.Tools.Word.PictureContentControl" />，则为 <see langword="true" />；如果不能删除此控件，则为 <see langword="false" />。 默认值为 <see langword="false" />。</value>
+        <value>如果可从文档删除 <see cref="T:Microsoft.Office.Tools.Word.PictureContentControl" />，则为 <see langword="true" />；如果不能删除此控件，则为 <see langword="false" />。 默认值为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要阻止用户编辑的内容<xref:Microsoft.Office.Tools.Word.PictureContentControl>，使用<xref:Microsoft.Office.Tools.Word.PictureContentControl.LockContents%2A>属性。 有关如何使用<xref:Microsoft.Office.Tools.Word.PictureContentControl>若要保护的文档的一部分，请参阅[内容控件](/visualstudio/vsto/content-controls.md)和[如何： 使用内容控件保护文档的某些部分](/visualstudio/vsto/how-to-protect-parts-of-documents-by-using-content-controls.md)。  
+ 若要阻止用户编辑的内容<xref:Microsoft.Office.Tools.Word.PictureContentControl>，使用<xref:Microsoft.Office.Tools.Word.PictureContentControl.LockContents%2A>属性。 有关如何使用详细信息<xref:Microsoft.Office.Tools.Word.PictureContentControl>若要保护的文档的一部分，请参阅[内容控件](/visualstudio/vsto/content-controls.md)并[如何： 使用内容控件保护文档的某些部分](/visualstudio/vsto/how-to-protect-parts-of-documents-by-using-content-controls.md)。  
   
  ]]></format>
         </remarks>
@@ -250,13 +249,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示能否编辑 <see cref="T:Microsoft.Office.Tools.Word.PictureContentControl" /> 的内容。</summary>
-        <value>
-          如果不能编辑 <see cref="T:Microsoft.Office.Tools.Word.PictureContentControl" /> 的内容，则为 <see langword="true" />；如果可以编辑内容，则为 <see langword="false" />。 默认值为 <see langword="false" />。</value>
+        <value>如果不能编辑 <see cref="T:Microsoft.Office.Tools.Word.PictureContentControl" /> 的内容，则为 <see langword="true" />；如果可以编辑内容，则为 <see langword="false" />。 默认值为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要阻止用户删除<xref:Microsoft.Office.Tools.Word.PictureContentControl>从文档中，使用<xref:Microsoft.Office.Tools.Word.PictureContentControl.LockContentControl%2A>属性。 有关使用<xref:Microsoft.Office.Tools.Word.PictureContentControl>若要保护的文档的一部分，请参阅[内容控件](/visualstudio/vsto/content-controls.md)和[如何： 使用内容控件保护文档的某些部分](/visualstudio/vsto/how-to-protect-parts-of-documents-by-using-content-controls.md)。  
+ 若要阻止用户删除<xref:Microsoft.Office.Tools.Word.PictureContentControl>从文档中，使用<xref:Microsoft.Office.Tools.Word.PictureContentControl.LockContentControl%2A>属性。 有关使用详细信息<xref:Microsoft.Office.Tools.Word.PictureContentControl>若要保护的文档的一部分，请参阅[内容控件](/visualstudio/vsto/content-controls.md)并[如何： 使用内容控件保护文档的某些部分](/visualstudio/vsto/how-to-protect-parts-of-documents-by-using-content-controls.md)。  
   
  ]]></format>
         </remarks>
@@ -281,9 +279,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 父级<xref:Microsoft.Office.Tools.Word.PictureContentControl>是控件所在的对象。 例如，如果控件在文档的正文，则此属性将返回<xref:Microsoft.Office.Interop.Word.Document?displayProperty=fullName>对象。  
+ 父<xref:Microsoft.Office.Tools.Word.PictureContentControl>是控件所在的对象。 例如，如果控件是文档的正文中，此属性将返回<xref:Microsoft.Office.Interop.Word.Document?displayProperty=fullName>对象。  
   
- 要获取其父类的<xref:Microsoft.Office.Tools.Word.PictureContentControl>中包含<xref:Microsoft.Office.Tools.Word.RichTextContentControl>或<xref:Microsoft.Office.Tools.Word.GroupContentControl>，使用<xref:Microsoft.Office.Tools.Word.PictureContentControl.ParentContentControl%2A>属性。  
+ 若要获取的父<xref:Microsoft.Office.Tools.Word.PictureContentControl>中包含<xref:Microsoft.Office.Tools.Word.RichTextContentControl>或<xref:Microsoft.Office.Tools.Word.GroupContentControl>，使用<xref:Microsoft.Office.Tools.Word.PictureContentControl.ParentContentControl%2A>属性。  
   
  ]]></format>
         </remarks>
@@ -303,7 +301,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取嵌套在另一个内容控件内的 <see cref="T:Microsoft.Office.Tools.Word.PictureContentControl" /> 的父内容控件。</summary>
-        <value>A <c>Microsoft.Office.Interop.Word.ContentControl</c> ，表示在其中的内容控件<see cref="T:Microsoft.Office.Tools.Word.PictureContentControl" />嵌套;<see langword="null" />如果<see cref="T:Microsoft.Office.Tools.Word.PictureContentControl" />不嵌套在另一个内容控件。</value>
+        <value>一个<c>Microsoft.Office.Interop.Word.ContentControl</c> ，表示在其中的内容控件<see cref="T:Microsoft.Office.Tools.Word.PictureContentControl" />嵌套;<see langword="null" />如果<see cref="T:Microsoft.Office.Tools.Word.PictureContentControl" />未嵌套在另一个内容控件中。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -333,7 +331,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要访问仅在显示的图像<xref:Microsoft.Office.Tools.Word.PictureContentControl>，使用<xref:Microsoft.Office.Tools.Word.PictureContentControl.Image%2A>属性。  
+ 若要访问中显示的图像<xref:Microsoft.Office.Tools.Word.PictureContentControl>，使用<xref:Microsoft.Office.Tools.Word.PictureContentControl.Image%2A>属性。  
   
  有关详细信息<xref:Microsoft.Office.Interop.Word.Range>对象，请参阅[Word 对象模型概述](/visualstudio/vsto/word-object-model-overview.md)。  
   
@@ -355,13 +353,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指定是否显示 UI，用户可以在运行时单击此 UI，以便选择要在控件中显示的图像。</summary>
-        <value>
-          如果 <see cref="T:Microsoft.Office.Tools.Word.PictureContentControl" /> 显示一个 UI，让用户可以在运行时单击它来选择控件中显示的图像，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="false" />。</value>
+        <value>如果 <see cref="T:Microsoft.Office.Tools.Word.PictureContentControl" /> 显示一个 UI，让用户可以在运行时单击它来选择控件中显示的图像，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果你想要使用户能够选择要在运行时在控件中显示的图像，则将此属性设置为`true`。 将此属性设置为`false`如果你想要在设计时，分配到控件的图像，并且你不希望用户在运行时更改的图像。  
+ 如果你想要使用户能够选择要在运行时在控件中显示的图像，将此属性设置为`true`。 将此属性设置为`false`如果你想要在设计时，将图像分配给该控件，并且您不希望用户在运行时更改映像。  
   
  ]]></format>
         </remarks>
@@ -386,9 +383,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 你可以使用<xref:Microsoft.Office.Tools.Word.PictureContentControl.Tag%2A>属性来存储与关联的字符串<xref:Microsoft.Office.Tools.Word.PictureContentControl>文档处于打开状态时。  
+ 可以使用<xref:Microsoft.Office.Tools.Word.PictureContentControl.Tag%2A>属性来存储与之关联的字符串<xref:Microsoft.Office.Tools.Word.PictureContentControl>文档处于打开状态时。  
   
- 若要查找由其标记的内容控件，使用<xref:Microsoft.Office.Tools.Word.Document.SelectContentControlsByTag%2A>方法。  
+ 若要按其标记查找内容控件，请使用<xref:Microsoft.Office.Tools.Word.Document.SelectContentControlsByTag%2A>方法。  
   
  ]]></format>
         </remarks>
@@ -408,13 +405,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指定在编辑 <see cref="T:Microsoft.Office.Tools.Word.PictureContentControl" /> 时是否自动将该控件从文档中删除。</summary>
-        <value>
-          如果要在编辑 <see cref="T:Microsoft.Office.Tools.Word.PictureContentControl" /> 时自动将该控件删除，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="false" />。</value>
+        <value>如果要在编辑 <see cref="T:Microsoft.Office.Tools.Word.PictureContentControl" /> 时自动将该控件删除，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果<xref:Microsoft.Office.Tools.Word.PictureContentControl.Temporary%2A>属性是`true`、<xref:Microsoft.Office.Tools.Word.PictureContentControl>当用户单击在控件中，或以编程方式更改控件中的映像时，会自动删除。 当<xref:Microsoft.Office.Tools.Word.PictureContentControl>自动从文档，该映像将保持在文档中删除。  
+ 如果<xref:Microsoft.Office.Tools.Word.PictureContentControl.Temporary%2A>属性是`true`，则<xref:Microsoft.Office.Tools.Word.PictureContentControl>或当用户单击的控件中，当以编程方式更改控件中的映像会自动删除。 当<xref:Microsoft.Office.Tools.Word.PictureContentControl>从文档中，图像将保留在文档中自动删除。  
   
  ]]></format>
         </remarks>
@@ -442,7 +438,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 标题显示在边框<xref:Microsoft.Office.Tools.Word.PictureContentControl>当用户单击它。  
+ 标题显示在边框的<xref:Microsoft.Office.Tools.Word.PictureContentControl>当用户单击它。  
   
  ]]></format>
         </remarks>
@@ -467,7 +463,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用<xref:Microsoft.Office.Tools.Word.PictureContentControl.XMLMapping%2A>属性将绑定<xref:Microsoft.Office.Tools.Word.PictureContentControl>到一种 XML 中的元素 (也名为*自定义 XML 部件*) 嵌入在文档中。 有关详细信息，请参阅[内容控件](/visualstudio/vsto/content-controls.md)和[自定义 XML 部件概述](/visualstudio/vsto/custom-xml-parts-overview.md)。  
+ 使用<xref:Microsoft.Office.Tools.Word.PictureContentControl.XMLMapping%2A>属性将绑定<xref:Microsoft.Office.Tools.Word.PictureContentControl>到一段 XML 中的元素 (也称为*自定义 XML 部件*) 的嵌入到文档中。 有关详细信息，请参阅[内容控件](/visualstudio/vsto/content-controls.md)并[自定义 XML 部件概述](/visualstudio/vsto/custom-xml-parts-overview.md)。  
   
  ]]></format>
         </remarks>

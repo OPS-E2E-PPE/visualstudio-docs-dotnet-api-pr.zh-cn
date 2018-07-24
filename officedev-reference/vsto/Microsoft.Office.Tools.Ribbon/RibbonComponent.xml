@@ -1,10 +1,10 @@
 <Type Name="RibbonComponent" FullName="Microsoft.Office.Tools.Ribbon.RibbonComponent">
   <Metadata>
     <Meta Name="ms.openlocfilehash" Value="3fdde57900e79e134fc1ce3312e3f10e507127e5" />
-    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.sourcegitcommit" Value="d85a83935f1d68ded616fcdfb8fd10d6bf4a4633" />
     <Meta Name="ms.translationtype" Value="HT" />
     <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+    <Meta Name="ms.lasthandoff" Value="07/24/2018" />
     <Meta Name="ms.locfileid" Value="29432711" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface RibbonComponent : IDisposable, System.ComponentModel.IComponent" />
@@ -48,7 +48,7 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 只能在功能区加载到 Office 应用程序之前，或者在运行时将控件添加到动态菜单之前，可以设置此接口的某些成员。 有关设置这些属性的信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。  
+ 可以设置此接口的某些成员，只能在功能区加载到 Office 应用程序之前，或者该控件添加到动态菜单之前。 有关如何设置这些属性的信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。  
   
  [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
   
@@ -82,9 +82,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 控件的名称显示在**属性**窗口。 它是 Microsoft Office 可以使用以确定该 ID <xref:Microsoft.Office.Tools.Ribbon.RibbonComponent>，它是此实例的名称和<xref:Microsoft.Office.Tools.Ribbon.RibbonComponent>在代码中。  
+ 控件的名称显示在**属性**窗口。 它是 Microsoft Office 用来标识此 ID <xref:Microsoft.Office.Tools.Ribbon.RibbonComponent>，它是此实例的名称和<xref:Microsoft.Office.Tools.Ribbon.RibbonComponent>在代码中。  
   
- 在运行时仅在某些情况下，可以设置此属性。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。  
+ 可以在运行时仅在某些情况下设置此属性。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。  
   
  ]]></format>
         </remarks>
@@ -113,9 +113,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用<xref:Microsoft.Office.Tools.Ribbon.RibbonComponent.Parent%2A>属性要导航到控件层次结构控制上当前的几个级别<xref:Microsoft.Office.Tools.Ribbon.RibbonComponent>对象。  
+ 使用<xref:Microsoft.Office.Tools.Ribbon.RibbonComponent.Parent%2A>属性来导航到的控件层次结构控制了几个级别上面当前<xref:Microsoft.Office.Tools.Ribbon.RibbonComponent>对象。  
   
- 如果你的控件深度嵌套的并且想要查找的控件为更接近于功能区，你可能需要考虑使用<xref:Microsoft.Office.Tools.Ribbon.RibbonComponent.Ribbon%2A>属性和属于派生自的容器控件的集合<xref:Microsoft.Office.Tools.Ribbon.RibbonComponent>以导航到控件。  
+ 如果您的控件深度嵌套的并且你想要查找的控件是更接近于功能区，您可能需要考虑使用<xref:Microsoft.Office.Tools.Ribbon.RibbonComponent.Ribbon%2A>属性和属于派生自的容器控件的集合<xref:Microsoft.Office.Tools.Ribbon.RibbonComponent>以导航到控件。  
   
  ]]></format>
         </remarks>
@@ -144,7 +144,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果父不是动态的此方法调用`Microsoft.Office.Core.IRibbonUI.InvalidateControl`如果布局则不会挂起当前控件的方法。  
+ 如果父级不是动态的此方法会调用`Microsoft.Office.Core.IRibbonUI.InvalidateControl`当前控件如果布局未挂起的方法。  
   
  ]]></format>
         </remarks>
@@ -214,8 +214,7 @@
         <Parameter Name="performLayout" Type="System.Boolean" />
       </Parameters>
       <Docs>
-        <param name="performLayout">
-          若要调用 <see cref="M:Microsoft.Office.Tools.Ribbon.RibbonComponent.PerformLayout" /> 方法，请使用 <see langword="true" />。 若要启用 UI 刷新，而不调用 <see cref="M:Microsoft.Office.Tools.Ribbon.RibbonComponent.PerformLayout" />，请使用 <see langword="false" />。</param>
+        <param name="performLayout">若要调用 <see cref="M:Microsoft.Office.Tools.Ribbon.RibbonComponent.PerformLayout" /> 方法，请使用 <see langword="true" />。 若要启用 UI 刷新，而不调用 <see cref="M:Microsoft.Office.Tools.Ribbon.RibbonComponent.PerformLayout" />，请使用 <see langword="false" />。</param>
         <summary>取消 <see cref="M:Microsoft.Office.Tools.Ribbon.RibbonComponent.SuspendLayout" /> 方法的效果。</summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -243,7 +242,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Ribbon.RibbonComponent.Ribbon%2A>属性在最适合用于导航到控件层次结构的顶部附近的控件。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonComponent.Ribbon%2A>属性是最适合用于导航到控件的控件层次结构的顶部附近。  
   
  ]]></format>
         </remarks>
@@ -268,7 +267,7 @@
       <Docs>
         <summary>获取 Microsoft Office 应用程序提供给功能区扩展性代码的 <c>IRibbonUI</c> 实例。</summary>
         <value>
-          <c>IRibbonUI</c>提供了功能区扩展性代码 Office 应用程序的实例。</value>
+          <c>IRibbonUI</c>提供给功能区扩展性代码的 Office 应用程序的实例。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -302,9 +301,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 调用<xref:Microsoft.Office.Tools.Ribbon.RibbonComponent.SuspendLayout%2A>可能会导致性能稍有增加，如果你的应用程序具有很多会频繁更新的控件。  
+ 调用<xref:Microsoft.Office.Tools.Ribbon.RibbonComponent.SuspendLayout%2A>可能会导致性能稍有增加，如果你的应用程序有很多经常更新的控件。  
   
- 更改每个控件的状态后，你可以调用<xref:Microsoft.Office.Tools.Ribbon.RibbonComponent.ResumeLayout%2A>以允许 UI 进行刷新。  
+ 更改每个控件的状态后，可以调用<xref:Microsoft.Office.Tools.Ribbon.RibbonComponent.ResumeLayout%2A>以允许 UI 以进行刷新。  
   
  ]]></format>
         </remarks>
@@ -329,23 +328,23 @@
       <Docs>
         <summary>获取或设置与此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonComponent" /> 关联的应用程序特定的数据。</summary>
         <value>
-          <c>System.Object</c>表示与此关联的应用程序特定数据<see cref="T:Microsoft.Office.Tools.Ribbon.RibbonComponent" />。</value>
+          <c>System.Object</c> ，表示与此相关联的特定于应用程序数据<see cref="T:Microsoft.Office.Tools.Ribbon.RibbonComponent" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 从派生的任何类型`System.Object`类可以分配给此属性。 但是，如果你设置<xref:Microsoft.Office.Tools.Ribbon.RibbonComponent.Tag%2A>Visual Studio 中的属性**属性**窗口中，你可以仅将文本分配。  
+ 从派生的任何类型`System.Object`类可以分配给此属性。 但是，如果您设置<xref:Microsoft.Office.Tools.Ribbon.RibbonComponent.Tag%2A>Visual Studio 中的属性**属性**窗口中，您可以仅将文本分配。  
   
- 一个常见用途<xref:Microsoft.Office.Tools.Ribbon.RibbonComponent.Tag%2A>属性是用于存储与控件密切相关联的数据。 例如，如果你有一个按钮，显示有关客户的信息，你可能会存储`System.Data.DataSet`，该字符串包含客户的订单历史记录中按钮的<xref:Microsoft.Office.Tools.Ribbon.RibbonComponent.Tag%2A>属性，以便可以快速访问这些数据。  
+ 一个常见用途<xref:Microsoft.Office.Tools.Ribbon.RibbonComponent.Tag%2A>属性是与该控件密切相关联的数据存储。 例如，如果您有一个按钮，显示有关客户的信息，你可能会存储`System.Data.DataSet`，其中包含客户的订单历史记录中按钮的<xref:Microsoft.Office.Tools.Ribbon.RibbonComponent.Tag%2A>属性，以便可以快速访问这些数据。  
   
    
   
 ## Examples  
- 下面的示例演示如何设置数组的`Employee`对象添加到<xref:Microsoft.Office.Tools.Ribbon.RibbonComponent.Tag%2A>组的属性以及如何检索的值<xref:Microsoft.Office.Tools.Ribbon.RibbonComponent.Tag%2A>属性。 此示例需要您已经定义了一个名为类`Employee`公开<xref:System.String>属性`ID`和已定义`GetEmployees`返回的数组的方法`Employee`对象。  
+ 下面的示例演示如何设置的数组`Employee`对象添加到<xref:Microsoft.Office.Tools.Ribbon.RibbonComponent.Tag%2A>组的属性以及如何检索的值<xref:Microsoft.Office.Tools.Ribbon.RibbonComponent.Tag%2A>属性。 此示例需要您定义了一个名为类`Employee`公开<xref:System.String>属性`ID`并且已定义`GetEmployees`返回的数组的方法`Employee`对象。  
   
  若要运行此代码示例，必须首先执行以下步骤：  
   
-1.  添加**功能区 （可视化设计器）** 到通过使用 Visual Studio 中的 Office 开发工具创建的项目的项。  
+1.  添加**功能区 （可视化设计器）** 项通过使用 Visual Studio 中的 Office 开发工具创建的项目。  
   
 2.  将按钮添加到默认组`Group1`。  
   

@@ -1,10 +1,10 @@
 <Type Name="OfficeRibbon" FullName="Microsoft.Office.Tools.Ribbon.OfficeRibbon">
   <Metadata>
     <Meta Name="ms.openlocfilehash" Value="649a6e000caed891c73a5aa9ffc21aeaba2ebe4c" />
-    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.sourcegitcommit" Value="d85a83935f1d68ded616fcdfb8fd10d6bf4a4633" />
     <Meta Name="ms.translationtype" Value="HT" />
     <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+    <Meta Name="ms.lasthandoff" Value="07/24/2018" />
     <Meta Name="ms.locfileid" Value="29432867" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface OfficeRibbon : IDisposable, Microsoft.Office.Tools.Ribbon.RibbonComponent, System.ComponentModel.IComponent" />
@@ -43,9 +43,9 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 通常不使用<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon>直接接口。 请改用 Visual Studio 将生成时添加新的功能区类**功能区 （可视化设计器）** 到你的项目的项。 你可以完成大多数向功能区通过使用生成的功能区类中的事件和属性相关联的任务。  
+ 通常不使用<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon>直接接口。 相反，使用 Visual Studio 生成时添加一个新的功能区类**功能区 （可视化设计器）** 到你的项目项。 可以完成与功能区在生成的功能区类中使用事件和属性相关的大多数任务。  
   
- 生成的功能区类继承自<xref:Microsoft.Office.Tools.Ribbon.RibbonBase>类。 此基类将对其成员的所有调用重都定向到的内部实现<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon>接口[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]。 如果你想要使用<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon>直接对象，请使用<xref:Microsoft.Office.Tools.Ribbon.RibbonBase.Base%2A>生成的功能区类的属性。  
+ 生成的功能区类继承自<xref:Microsoft.Office.Tools.Ribbon.RibbonBase>类。 此基类将对其成员的所有调用重都定向到的内部实现<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon>接口[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]。 如果你想要使用<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon>直接对象，请使用<xref:Microsoft.Office.Tools.Ribbon.RibbonBase.Base%2A>生成功能区类的属性。  
   
  [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
   
@@ -96,7 +96,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 你可以使用此事件来释放已分配更早版本，例如，在应用程序特定资源<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.Load>事件。  
+ 您可以使用此事件以释放特定于应用程序所分配的资源更早版本，例如，在<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.Load>事件。  
   
  ]]></format>
         </remarks>
@@ -152,7 +152,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 默认扩展名是<xref:Microsoft.Office.Tools.Ribbon.IRibbonExtension>对象由实现[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]。  
+ 默认扩展名<xref:Microsoft.Office.Tools.Ribbon.IRibbonExtension>对象，它由实现[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]。  
   
  ]]></format>
         </remarks>
@@ -177,7 +177,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 自定义扩展是一种实现的<xref:Microsoft.Office.Tools.Ribbon.IRibbonExtension>通过使用 Visual Studio 中的 Office 开发工具创建的解决方案中的接口。  
+ 自定义扩展插件是一种实现的<xref:Microsoft.Office.Tools.Ribbon.IRibbonExtension>接口在 Visual Studio 中使用的 Office 开发工具创建的解决方案中。  
   
  ]]></format>
         </remarks>
@@ -201,8 +201,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值确定此 <see cref="T:Microsoft.Office.Tools.Ribbon.OfficeRibbon" /> 是否可以同时在多个上下文中使用。</summary>
-        <value>
-          如果此 <see cref="T:Microsoft.Office.Tools.Ribbon.OfficeRibbon" /> 对象在多个上下文中共享，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="true" />。</value>
+        <value>如果此 <see cref="T:Microsoft.Office.Tools.Ribbon.OfficeRibbon" /> 对象在多个上下文中共享，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="true" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -237,7 +236,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.Load>事件处理程序将自动添加到功能区代码文件。 使用此事件处理程序功能区加载时运行自定义代码。  
+ <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.Load>事件处理程序会自动添加到功能区代码文件。 使用此事件处理程序运行时在功能区加载自定义代码。  
   
  ]]></format>
         </remarks>
@@ -265,13 +264,13 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>事件，可以缓存中功能区自定义项，这可以提高性能的映像。  
+ <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>事件，可以缓存中的映像功能区自定义，这可以提高性能。  
   
- 默认情况下，映像加载到功能区，每次用户显示包含图像的选项卡。 映像重新加载，以编程方式更改图像将显示的控件的属性的任何时间。  
+ 默认情况下，映像加载到功能区，每次用户显示的选项卡包含的图像。 映像重新加载，以编程方式更改图像将显示控件的属性的任何时间。  
   
- 使用<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>事件将分配给控件的图像。 当用户选择功能区上的选项卡时，Microsoft Office 应用程序将使用缓存的映像。 如果在运行时修改控件属性，Microsoft Office 应用程序将不重新加载该控件上的映像。 这可以为你提供可略微提高性能。  
+ 使用<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>事件以将图像分配到控件。 当用户选择功能区上的选项卡时，Microsoft Office 应用程序使用缓存的图像。 如果在运行时修改控件属性，Microsoft Office 应用程序将重新加载该控件上的映像。 这可以提供较小的性能提升。  
   
- 如果你想要缓存的控件图像，设置**ImageName**的控件属性。 <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>除非你设置，则不会引发事件**ImageName**至少一个控件的属性。  
+ 如果你想要缓存控件的图像，设置**ImageName**控件的属性。 <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>除非设置不会引发事件**ImageName**至少一个控件的属性。  
   
  ]]></format>
         </remarks>
@@ -300,9 +299,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- Microsoft Office 菜单是当单击打开的菜单**Microsoft Office 按钮**。 只能通过使用功能区设计器，可以将控件添加到 Microsoft Office 菜单。 有关详细信息，请参阅[如何： 将控件添加到 Backstage 视图](/visualstudio/vsto/how-to-add-controls-to-the-backstage-view.md)。  
+ Microsoft Office 菜单是单击时打开的菜单**Microsoft Office 按钮**。 只能通过使用功能区设计器，可以向 Microsoft Office 菜单添加控件。 有关详细信息，请参阅[如何： 将控件添加到 Backstage 视图](/visualstudio/vsto/how-to-add-controls-to-the-backstage-view.md)。  
   
- 可以在运行时的 Microsoft Office 菜单自定义项中的功能区控件的只读集合的访问通过使用<xref:Microsoft.Office.Tools.Ribbon.RibbonOfficeMenu.Items%2A>属性<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.OfficeMenu%2A>公开由的实例<xref:Microsoft.Office.Tools.Ribbon.RibbonOfficeMenu>属性。  
+ 可以使用访问 Microsoft Office 菜单自定义项在运行时中的功能区控件的只读集合<xref:Microsoft.Office.Tools.Ribbon.RibbonOfficeMenu.Items%2A>的属性<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.OfficeMenu%2A>由的实例<xref:Microsoft.Office.Tools.Ribbon.RibbonOfficeMenu>属性。  
   
  ]]></format>
         </remarks>
@@ -331,9 +330,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 不应尝试设置此属性。  
+ 不应尝试将此属性设置。  
   
- 你可以使用<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.RibbonType%2A>要获取与此相关联的功能区 Id 的所有属性<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon>实例。 <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.RibbonId%2A>属性返回仅用于创建此单个 ID<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon>实例。 例如，可以使用此属性来确定是否正在邮件组合项中显示的此功能区实例。  
+ 可以使用<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.RibbonType%2A>属性来获取与此相关联的功能区 Id 的所有<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon>实例。 <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.RibbonId%2A>属性将返回仅限单一 ID，用于创建此<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon>实例。 例如，可以使用此属性以确定是否正在邮件组合项中显示的此功能区实例。  
   
  ]]></format>
         </remarks>
@@ -362,9 +361,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- Excel、 Word 和 PowerPoint 通常在此属性中具有只有一个功能区 ID。 Outlook 可以拥有多个 Id，为其对应的各个消息类特定<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon>实例无效。  
+ Excel、 Word 和 PowerPoint 中此属性通常具有只有一个功能区 ID。 Outlook 可以有多个 Id，为其对应的各种消息类特定<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon>实例是否有效。  
   
- 设计器提供有效的功能区 Id 的下拉列表。  
+ 在设计器提供有效的功能区 Id 的下拉列表。  
   
  功能区 Id 用于将功能区类与特定的上下文窗口相关联。  
   
@@ -392,15 +391,14 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示是否隐藏功能区上的所有内置选项卡和 Microsoft Office 菜单上的大部分命令，并且是否仅显示在此功能区项中定义的自定义项。</summary>
-        <value>
-          如果功能区仅显示在此功能区项中定义的自定义项，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="false" />。</value>
+        <value>如果功能区仅显示在此功能区项中定义的自定义项，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
  只能在功能区加载到 Office 应用程序之前，可以设置此属性。 有关设置此属性的信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。  
   
- 你不能在运行时更改的自定义选项卡可见性，如果此属性设置为`true`。  
+ 您不能在运行时更改自定义选项卡的可见性，如果此属性设置为`true`。  
   
  ]]></format>
         </remarks>

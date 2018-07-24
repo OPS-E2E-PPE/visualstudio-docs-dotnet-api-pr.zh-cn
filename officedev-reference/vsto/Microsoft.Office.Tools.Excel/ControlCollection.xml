@@ -1,10 +1,10 @@
 <Type Name="ControlCollection" FullName="Microsoft.Office.Tools.Excel.ControlCollection">
   <Metadata>
     <Meta Name="ms.openlocfilehash" Value="53a5ce2e30a61a81dcd8428ee77c66caa4af08a1" />
-    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.sourcegitcommit" Value="d85a83935f1d68ded616fcdfb8fd10d6bf4a4633" />
     <Meta Name="ms.translationtype" Value="HT" />
     <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+    <Meta Name="ms.lasthandoff" Value="07/24/2018" />
     <Meta Name="ms.locfileid" Value="29434518" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface ControlCollection : System.Collections.IEnumerable" />
@@ -37,19 +37,19 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用的方法和属性<xref:Microsoft.Office.Tools.Excel.ControlCollection>界面来管理 Excel 工作表上的控件。 有关详细信息，请参阅[在运行时向 Office 文档添加控件](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time.md)。  
+ 使用的方法和属性的<xref:Microsoft.Office.Tools.Excel.ControlCollection>接口来管理 Excel 工作表上的控件。 有关详细信息，请参阅 [在运行时向 Office 文档添加控件](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time.md)。  
   
- 无法在代码中，创建此接口的实例，因为它没有任何公共构造函数。 若要获取在文档级项目中的此接口的实例，请使用<xref:Microsoft.Office.Tools.Excel.Worksheet.Controls%2A>属性之一的`Sheet` * n *你的项目中的类。 若要获取在文档级项目中的此接口的实例，请使用<xref:Microsoft.Office.Tools.Excel.Worksheet.Controls%2A>属性<xref:Microsoft.Office.Tools.Excel.Worksheet>，则在运行时以编程方式创建宿主项。 有关详细信息，请参阅[扩展 Word 文档和 Excel VSTO 外接程序在运行时中的工作簿](/visualstudio/vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)。  
+ 无法在代码中，创建此接口的实例，因为它不具有任何公共构造函数。 若要获取在文档级项目中的此接口的实例，请使用<xref:Microsoft.Office.Tools.Excel.Worksheet.Controls%2A>之一的属性`Sheet` *n*项目中的类。 若要获取在文档级项目中的此接口的实例，请使用<xref:Microsoft.Office.Tools.Excel.Worksheet.Controls%2A>属性的<xref:Microsoft.Office.Tools.Excel.Worksheet>在运行时以编程方式创建宿主项。 有关更多信息，请参见 [在运行时在 VSTO 外接程序中扩展 Word 文档和 Excel 工作簿](/visualstudio/vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)。  
   
- 下表显示如何使用<xref:Microsoft.Office.Tools.Excel.ControlCollection>成员来执行一些常见的任务相关的文档上的控件。  
+ 下表显示了如何使用<xref:Microsoft.Office.Tools.Excel.ControlCollection>成员来执行一些常见的任务与文档上的控件。  
   
 |任务|操作|  
 |----------|------------|  
-|向工作表添加控件。|使用添加之一*\<控件 >* 方法。 例如，若要添加<xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName>，使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.AddListObject%2A>方法。|  
+|将控件添加到工作表。|使用添加之一*\<控制 >* 方法。 例如，若要添加<xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName>，使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.AddListObject%2A>方法。|  
 |从工作表中移除的控件。|使用 <xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A> 方法。|  
 |确定控件是否在集合中。|将控件或其名称传递<xref:Microsoft.Office.Tools.Excel.ControlCollection.Contains%2A>方法。|  
-|集合中获取控件的索引。|将控件或其名称传递<xref:Microsoft.Office.Tools.Excel.ControlCollection.IndexOf%2A>方法。|  
-|从集合中获取一个控件。|将索引或该控件的名称传递<xref:Microsoft.Office.Tools.Excel.ControlCollection.Item%2A>属性。|  
+|获取集合中的控件的索引。|将控件或其名称传递<xref:Microsoft.Office.Tools.Excel.ControlCollection.IndexOf%2A>方法。|  
+|从集合中获取一个控件。|传递的索引或名称，该控件的<xref:Microsoft.Office.Tools.Excel.ControlCollection.Item%2A>属性。|  
   
  [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
   
@@ -103,12 +103,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.ControlCollection.AddChart%2A>方法使您能够添加<xref:Microsoft.Office.Tools.Excel.Chart>控件添加到末尾<xref:Microsoft.Office.Tools.Excel.ControlCollection>。 若要删除<xref:Microsoft.Office.Tools.Excel.Chart>之前以编程方式添加的控件，请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法。  
+ <xref:Microsoft.Office.Tools.Excel.ControlCollection.AddChart%2A>方法，可添加<xref:Microsoft.Office.Tools.Excel.Chart>控件添加到末尾<xref:Microsoft.Office.Tools.Excel.ControlCollection>。 若要删除<xref:Microsoft.Office.Tools.Excel.Chart>之前以编程方式添加的控件，请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法。  
   
    
   
 ## Examples  
- 下面的代码示例将插入到单元格的数字 16 **E1**通过**E3** ，到单元格将数字 24 **F1**通过**F3**。 该代码随后创建<xref:Microsoft.Office.Tools.Excel.Chart>控件添加到单元格**A1**通过**C8**并将传递单元格**E1**通过**F3**到<xref:Microsoft.Office.Tools.Excel.Chart.SetSourceData%2A>方法来填充图表的数据。  
+ 下面的代码示例将插入到的单元格的数字 16 **E1**通过**E3** ，向单元格将数字 24 **F1**通过**F3**。 该代码随后创建<xref:Microsoft.Office.Tools.Excel.Chart>控件的单元格**A1**通过**C8** ，并将传递的单元格**E1**通过**F3**到<xref:Microsoft.Office.Tools.Excel.Chart.SetSourceData%2A>方法来填充图表的数据。  
   
  [!code-csharp[Trin_ExcelControlCollection#58](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#58)]
  [!code-vb[Trin_ExcelControlCollection#58](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#58)]  
@@ -152,12 +152,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.ControlCollection.AddChart%2A>方法使您能够添加<xref:Microsoft.Office.Tools.Excel.Chart>控件添加到末尾<xref:Microsoft.Office.Tools.Excel.ControlCollection>。 若要删除<xref:Microsoft.Office.Tools.Excel.Chart>之前以编程方式添加的控件，请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法。  
+ <xref:Microsoft.Office.Tools.Excel.ControlCollection.AddChart%2A>方法，可添加<xref:Microsoft.Office.Tools.Excel.Chart>控件添加到末尾<xref:Microsoft.Office.Tools.Excel.ControlCollection>。 若要删除<xref:Microsoft.Office.Tools.Excel.Chart>之前以编程方式添加的控件，请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法。  
   
    
   
 ## Examples  
- 下面的代码示例将插入到单元格的数字 16 **E1**通过**E3** ，到单元格将数字 24 **F1**通过**F3**。 该代码随后创建<xref:Microsoft.Office.Tools.Excel.Chart>控件添加到工作表并将传递单元格顶部**E1**通过**F3**到<xref:Microsoft.Office.Tools.Excel.Chart.SetSourceData%2A>方法来填充图表的数据。  
+ 下面的代码示例将插入到的单元格的数字 16 **E1**通过**E3** ，向单元格将数字 24 **F1**通过**F3**。 该代码随后创建<xref:Microsoft.Office.Tools.Excel.Chart>控件的工作表和传递单元格的顶部**E1**通过**F3**到<xref:Microsoft.Office.Tools.Excel.Chart.SetSourceData%2A>方法来填充图表的数据。  
   
  [!code-csharp[Trin_ExcelControlCollection#59](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#59)]
  [!code-vb[Trin_ExcelControlCollection#59](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#59)]  
@@ -200,12 +200,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法可以用于任何将控件添加到<xref:Microsoft.Office.Tools.Excel.ControlCollection>在运行时。 有关详细信息，请参阅[在运行时向 Office 文档添加控件](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time.md)。  
+ 此方法可用于任何控件添加到<xref:Microsoft.Office.Tools.Excel.ControlCollection>在运行时。 有关详细信息，请参阅 [在运行时向 Office 文档添加控件](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time.md)。  
   
    
   
 ## Examples  
- 下面的代码示例将两个自定义用户控件添加到工作表使用`AddControl`方法。 第一个控件添加到单元格区域。 第二个控件添加到的特定位置。 代码更改<xref:System.Windows.Forms.Control.Top%2A>的第一个自定义用户控件，只会将移动控件的属性相对于<xref:Microsoft.Office.Tools.Excel.ControlSite>，其中包含工作表上的控件。 代码随后设置<xref:System.Windows.Forms.Control.Top%2A>属性<xref:Microsoft.Office.Tools.Excel.ControlSite>返回的第二个的用户控件，用于说明设置的正确方式<xref:System.Windows.Forms.Control.Top%2A>的控件属性。  
+ 下面的代码示例将两个自定义用户控件添加到工作表使用`AddControl`方法。 第一个控件添加到单元格区域。 第二个控件添加到特定位置。 代码更改<xref:System.Windows.Forms.Control.Top%2A>属性的第一个自定义用户控件，仅将控件移动相对于<xref:Microsoft.Office.Tools.Excel.ControlSite>，其中包含工作表上的控件。 代码随后设置<xref:System.Windows.Forms.Control.Top%2A>的属性<xref:Microsoft.Office.Tools.Excel.ControlSite>返回的第二个的用户控件，用于说明设置的正确方法<xref:System.Windows.Forms.Control.Top%2A>控件的属性。  
   
  [!code-csharp[Trin_ExcelControlCollection#10](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#10)]
  [!code-vb[Trin_ExcelControlCollection#10](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#10)]  
@@ -255,12 +255,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法可以用于任何将控件添加到<xref:Microsoft.Office.Tools.Excel.ControlCollection>在运行时。 有关详细信息，请参阅[在运行时向 Office 文档添加控件](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time.md)。  
+ 此方法可用于任何控件添加到<xref:Microsoft.Office.Tools.Excel.ControlCollection>在运行时。 有关详细信息，请参阅 [在运行时向 Office 文档添加控件](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time.md)。  
   
    
   
 ## Examples  
- 下面的代码示例将两个自定义用户控件添加到工作表使用`AddControl`方法。 第一个控件添加到单元格区域。 第二个控件添加到的特定位置。 代码更改<xref:System.Windows.Forms.Control.Top%2A>的第一个自定义用户控件，只会将移动控件的属性相对于<xref:Microsoft.Office.Tools.Excel.ControlSite>，其中包含工作表上的控件。 代码随后设置<xref:System.Windows.Forms.Control.Top%2A>属性<xref:Microsoft.Office.Tools.Excel.ControlSite>返回的第二个的用户控件，用于说明设置的正确方式<xref:System.Windows.Forms.Control.Top%2A>的控件属性。  
+ 下面的代码示例将两个自定义用户控件添加到工作表使用`AddControl`方法。 第一个控件添加到单元格区域。 第二个控件添加到特定位置。 代码更改<xref:System.Windows.Forms.Control.Top%2A>属性的第一个自定义用户控件，仅将控件移动相对于<xref:Microsoft.Office.Tools.Excel.ControlSite>，其中包含工作表上的控件。 代码随后设置<xref:System.Windows.Forms.Control.Top%2A>的属性<xref:Microsoft.Office.Tools.Excel.ControlSite>返回的第二个的用户控件，用于说明设置的正确方法<xref:System.Windows.Forms.Control.Top%2A>控件的属性。  
   
  [!code-csharp[Trin_ExcelControlCollection#10](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#10)]
  [!code-vb[Trin_ExcelControlCollection#10](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#10)]  
@@ -295,11 +295,11 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 不应在代码中直接调用此方法。 而应调用<xref:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.GetVstoObject%2A?displayProperty=fullName>扩展方法来获取 Visual Studio <xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName>。  
+ 不应在代码中直接调用此方法。 改为调用<xref:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.GetVstoObject%2A?displayProperty=fullName>扩展方法来获取 Visual Studio <xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName>。  
   
- <xref:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.GetVstoObject%2A?displayProperty=fullName>扩展方法使用此方法来生成 Visual Studio<xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName>对应于一个本机实例<xref:Microsoft.Office.Interop.Excel.ListObject?displayProperty=fullName>。  
+ <xref:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.GetVstoObject%2A?displayProperty=fullName>扩展方法使用此方法来生成 Visual Studio<xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName>对应的本机实例<xref:Microsoft.Office.Interop.Excel.ListObject?displayProperty=fullName>。  
   
- <xref:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.GetVstoObject%2A?displayProperty=fullName>扩展方法创建扩展<xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName>仅一次。 它将在后续调用中返回现有的扩展对象的同一个实例。 与此相反，<xref:Microsoft.Office.Tools.Excel.ControlCollection.AddListObject%2A>创建一个新扩展<xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName>每次。  
+ <xref:Microsoft.Office.Tools.Excel.Extensions.ListObjectExtensions.GetVstoObject%2A?displayProperty=fullName>扩展方法创建扩展<xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName>仅一次。 它在后续调用中返回同一实例的现有扩展的对象。 与此相反，<xref:Microsoft.Office.Tools.Excel.ControlCollection.AddListObject%2A>创建一个新扩展<xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName>每次。  
   
  ]]></format>
         </remarks>
@@ -333,12 +333,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.ControlCollection.AddListObject%2A>方法使您能够添加<xref:Microsoft.Office.Tools.Excel.ListObject>控件添加到末尾<xref:Microsoft.Office.Tools.Excel.ControlCollection>。 若要删除<xref:Microsoft.Office.Tools.Excel.ListObject>之前以编程方式添加的控件，请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法。  
+ <xref:Microsoft.Office.Tools.Excel.ControlCollection.AddListObject%2A>方法，可添加<xref:Microsoft.Office.Tools.Excel.ListObject>控件添加到末尾<xref:Microsoft.Office.Tools.Excel.ControlCollection>。 若要删除<xref:Microsoft.Office.Tools.Excel.ListObject>之前以编程方式添加的控件，请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.ListObject>控制转移到顶部的工作表，然后显示一个消息框显示中的行数<xref:Microsoft.Office.Tools.Excel.ListObject>。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.ListObject>控制对顶部的工作表，然后显示一个消息框，显示中的行数<xref:Microsoft.Office.Tools.Excel.ListObject>。  
   
  [!code-csharp[Trin_ExcelControlCollection#57](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#57)]
  [!code-vb[Trin_ExcelControlCollection#57](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#57)]  
@@ -376,12 +376,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.ControlCollection.AddNamedRange%2A>方法使您能够添加<xref:Microsoft.Office.Tools.Excel.NamedRange>控件添加到末尾<xref:Microsoft.Office.Tools.Excel.ControlCollection>。 若要删除<xref:Microsoft.Office.Tools.Excel.NamedRange>之前以编程方式添加的控件，请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法。  
+ <xref:Microsoft.Office.Tools.Excel.ControlCollection.AddNamedRange%2A>方法，可添加<xref:Microsoft.Office.Tools.Excel.NamedRange>控件添加到末尾<xref:Microsoft.Office.Tools.Excel.ControlCollection>。 若要删除<xref:Microsoft.Office.Tools.Excel.NamedRange>之前以编程方式添加的控件，请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.NamedRange>控件添加到单元格**A1**，然后将命名范围的值设置为 100%。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.NamedRange>控制对单元格**A1**，然后将命名范围的值设置为 100%。  
   
  [!code-csharp[Trin_ExcelControlCollection#1](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#1)]
  [!code-vb[Trin_ExcelControlCollection#1](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#1)]  
@@ -412,13 +412,12 @@
       <Docs>
         <param name="control">要在 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例中搜索的控件。</param>
         <summary>确定指定的控件是否为 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例的成员。</summary>
-        <returns>
-          如果在集合中找到了该控件，则为 <see langword="true" />；否则为 <see langword="false" />。</returns>
+        <returns>如果在集合中找到了该控件，则为 <see langword="true" />；否则为 <see langword="false" />。</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.Controls.Button>控制转移到顶部的工作表，然后显示一个消息框中的按钮的索引。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Excel.Controls.Button>控制转移到顶部的工作表，然后显示一个消息框中的按钮的索引。  
   
  [!code-csharp[Trin_ExcelControlCollection#54](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#54)]
  [!code-vb[Trin_ExcelControlCollection#54](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#54)]  
@@ -445,8 +444,7 @@
       <Docs>
         <param name="name">要在 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例中搜索的控件的名称。</param>
         <summary>确定具有指定名称的控件是否为 <see cref="T:Microsoft.Office.Tools.Excel.ControlCollection" /> 实例的成员。</summary>
-        <returns>
-          如果在集合中找到了该控件，则为 <see langword="true" />；否则为 <see langword="false" />。</returns>
+        <returns>如果在集合中找到了该控件，则为 <see langword="true" />；否则为 <see langword="false" />。</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -492,7 +490,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.Controls.Button>控制转移到顶部的工作表，然后显示一个消息框中的按钮的索引。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Excel.Controls.Button>控制转移到顶部的工作表，然后显示一个消息框中的按钮的索引。  
   
  [!code-csharp[Trin_ExcelControlCollection#54](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#54)]
  [!code-vb[Trin_ExcelControlCollection#54](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#54)]  
@@ -568,9 +566,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 以编程方式，添加的控件`name`参数应包含指定为添加的最后一个参数的名称*\<控件 >* 方法，不`Name`的控件属性。  
+ 有关以编程方式添加控件`name`参数应包含为添加的最后一个参数指定的名称*\<控制 >* 方法，不`Name`控件的属性。  
   
- 在设计时添加的控件`name`参数应包含的标识符。  
+ 在设计时添加的控件的`name`参数应包含标识符。  
   
  ]]></format>
         </remarks>
@@ -598,7 +596,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 在设计时添加的控件不能从删除<xref:Microsoft.Office.Tools.Excel.ControlCollection>实例。 你只能使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法来删除在运行时添加控件。  
+ 在设计时添加的控件不能删除从<xref:Microsoft.Office.Tools.Excel.ControlCollection>实例。 您只能使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法中删除在运行时添加的控件。  
   
  ]]></format>
         </remarks>
@@ -627,12 +625,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 在设计时添加的控件不能从删除<xref:Microsoft.Office.Tools.Excel.ControlCollection>实例。 你只能使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法来删除在运行时添加控件。  
+ 在设计时添加的控件不能删除从<xref:Microsoft.Office.Tools.Excel.ControlCollection>实例。 您只能使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法中删除在运行时添加的控件。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.Controls.Button>控件和<xref:Microsoft.Office.Tools.Excel.Controls.MonthCalendar>到工作表中的控件。 单击按钮时，代码用于删除<xref:Microsoft.Office.Tools.Excel.Controls.MonthCalendar>控件。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.Controls.Button>控件和一个<xref:Microsoft.Office.Tools.Excel.Controls.MonthCalendar>到工作表中的控件。 单击按钮时，代码将删除<xref:Microsoft.Office.Tools.Excel.Controls.MonthCalendar>控件。  
   
  [!code-csharp[Trin_ExcelControlCollection#55](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#55)]
  [!code-vb[Trin_ExcelControlCollection#55](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#55)]  
@@ -663,12 +661,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 在设计时添加的控件不能从删除<xref:Microsoft.Office.Tools.Excel.ControlCollection>实例。 你只能使用<xref:Microsoft.Office.Tools.Word.ControlCollection.RemoveAt%2A>方法来删除在运行时添加控件。  
+ 在设计时添加的控件不能删除从<xref:Microsoft.Office.Tools.Excel.ControlCollection>实例。 您只能使用<xref:Microsoft.Office.Tools.Word.ControlCollection.RemoveAt%2A>方法中删除在运行时添加的控件。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.Controls.Button>控件和<xref:Microsoft.Office.Tools.Excel.Controls.MonthCalendar>到工作表中的控件。 单击按钮时，代码用于删除<xref:Microsoft.Office.Tools.Excel.Controls.MonthCalendar>由索引指定的控件。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.Controls.Button>控件和一个<xref:Microsoft.Office.Tools.Excel.Controls.MonthCalendar>到工作表中的控件。 单击按钮时，代码将删除<xref:Microsoft.Office.Tools.Excel.Controls.MonthCalendar>由索引指定的控件。  
   
  [!code-csharp[Trin_ExcelControlCollection#56](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#56)]
  [!code-vb[Trin_ExcelControlCollection#56](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#56)]  
@@ -689,7 +687,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法可确定控件是否属于集合，然后再尝试对控件执行操作。 你可以使用此方法以确认的控件已添加到或仍是的成员<xref:Microsoft.Office.Tools.Excel.ControlCollection>实例。  
+ 此方法可以确定控件是否是集合，然后再尝试对控件执行操作的成员。 可以使用此方法以确认控件已添加到或仍是的成员<xref:Microsoft.Office.Tools.Excel.ControlCollection>实例。  
   
  ]]></format>
         </remarks>

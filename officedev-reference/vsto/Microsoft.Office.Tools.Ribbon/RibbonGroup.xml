@@ -1,10 +1,10 @@
 <Type Name="RibbonGroup" FullName="Microsoft.Office.Tools.Ribbon.RibbonGroup">
   <Metadata>
     <Meta Name="ms.openlocfilehash" Value="af67cadc87d6df8886c7599830eaa52b60db761c" />
-    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.sourcegitcommit" Value="d85a83935f1d68ded616fcdfb8fd10d6bf4a4633" />
     <Meta Name="ms.translationtype" Value="HT" />
     <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+    <Meta Name="ms.lasthandoff" Value="07/24/2018" />
     <Meta Name="ms.locfileid" Value="29432919" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface RibbonGroup : IDisposable, Microsoft.Office.Tools.Ribbon.RibbonComponent, System.ComponentModel.IComponent" />
@@ -36,18 +36,18 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- Visual Studio 将创建<xref:Microsoft.Office.Tools.Ribbon.RibbonGroup>对象拖动时**组**控件从**Office 功能区控件**选项卡**工具箱**拖动到功能区设计器。  
+ Visual Studio 将创建<xref:Microsoft.Office.Tools.Ribbon.RibbonGroup>对象在拖动时**组**控件从**Office 功能区控件**选项卡**工具箱**到功能区设计器上。  
   
 ## <a name="common-tasks"></a>常规任务  
- 下表列出可用于常见任务的成员。 可以在设计时执行所有这些任务。 可以在运行时加载功能区之前执行其中的一些任务。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。  
+ 下表列出了可用于常见任务的成员。 可以在设计时执行所有这些任务。 可以在运行时在功能区加载之前执行其中一些任务。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。  
   
 |任务|成员|  
 |----------|------------|  
 |访问组中的控件、 将控件添加到组，或从组中删除控件。|使用 <xref:Microsoft.Office.Tools.Ribbon.RibbonGroup.Items%2A> 属性。|  
 |将组添加到功能区选项卡。|添加<xref:Microsoft.Office.Tools.Ribbon.RibbonGroup>到<xref:Microsoft.Office.Tools.Ribbon.RibbonTab.Groups%2A>选项卡的集合。|  
-|在内置选项卡上，相对于内置组的位置指定组的位置。|使用 <xref:Microsoft.Office.Tools.Ribbon.RibbonGroup.Position%2A> 属性。|  
+|指定组的位置上内置选项卡，相对于内置组的位置。|使用 <xref:Microsoft.Office.Tools.Ribbon.RibbonGroup.Position%2A> 属性。|  
   
- 你可以创建<xref:Microsoft.Office.Tools.Ribbon.RibbonGroup>通过使用在运行时<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.CreateRibbonGroup%2A>方法<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory>对象。  
+ 您可以创建<xref:Microsoft.Office.Tools.Ribbon.RibbonGroup>在运行时通过使用<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.CreateRibbonGroup%2A>方法的<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory>对象。  
   
  可通过两种方法来访问 <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory> 对象：  
   
@@ -83,20 +83,20 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 功能区对话框启动器是组中将显示一个小图标。 当用户单击此图标时，你可以处理<xref:Microsoft.Office.Tools.Ribbon.RibbonGroup.DialogLauncherClick>事件以打开自定义对话框。 默认情况下，组不具有功能区对话框启动器。 有关详细信息，请参阅[如何： 向功能区组添加对话框启动器](/visualstudio/vsto/how-to-add-a-dialog-box-launcher-to-a-ribbon-group.md)。  
+ 功能区对话启动是组中将显示一个小图标。 当用户单击此图标时，可以处理<xref:Microsoft.Office.Tools.Ribbon.RibbonGroup.DialogLauncherClick>事件以打开自定义对话框。 默认情况下，组不具有功能区对话启动。 有关详细信息，请参阅[如何： 向功能区组添加对话框启动器](/visualstudio/vsto/how-to-add-a-dialog-box-launcher-to-a-ribbon-group.md)。  
   
- 你可以使用属性的自定义功能区对话框启动器的行为<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher>接口。 例如，若要设置当用户将指针移到对话框启动器图标上方时显示的屏幕提示，使用<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher.ScreenTip%2A>属性。  
+ 你可以使用属性的自定义功能区对话启动行为<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher>接口。 例如，若要设置用户将指针移对话框启动器图标上方时显示的屏幕提示，请使用<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher.ScreenTip%2A>属性。  
   
- 某些属性<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher>接口，如<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher.Image%2A>属性时，仅适用时最终用户将其添加到快速访问工具栏。  
+ 某些属性<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher>接口，如<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher.Image%2A>属性中，仅当最终用户将其添加到快速访问工具栏时适用。  
   
    
   
 ## Examples  
- 下面的示例演示如何设置<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher.KeyTip%2A>和<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher.ScreenTip%2A>属性<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher>，它将添加到默认组。  
+ 下面的示例演示如何设置<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher.KeyTip%2A>并<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher.ScreenTip%2A>上的属性<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher>添加到默认组。  
   
  若要运行此代码示例，必须首先执行以下步骤：  
   
-1.  添加**功能区 （可视化设计器）** 项到 Office 项目。  
+1.  添加**功能区 （可视化设计器）** 到 Office 项目的项。  
   
 2.  添加<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher>到默认组`Group1`中所述[如何： 向功能区组添加对话框启动器](/visualstudio/vsto/how-to-add-a-dialog-box-launcher-to-a-ribbon-group.md)。  
   
@@ -125,26 +125,26 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 功能区对话框启动器是组中将显示一个小图标。 当用户单击此图标时，你可以处理<xref:Microsoft.Office.Tools.Ribbon.RibbonGroup.DialogLauncherClick>事件以打开自定义对话框。 默认情况下，组不具有功能区对话框启动器。 有关详细信息，请参阅[如何： 向功能区组添加对话框启动器](/visualstudio/vsto/how-to-add-a-dialog-box-launcher-to-a-ribbon-group.md)。  
+ 功能区对话启动是组中将显示一个小图标。 当用户单击此图标时，可以处理<xref:Microsoft.Office.Tools.Ribbon.RibbonGroup.DialogLauncherClick>事件以打开自定义对话框。 默认情况下，组不具有功能区对话启动。 有关详细信息，请参阅[如何： 向功能区组添加对话框启动器](/visualstudio/vsto/how-to-add-a-dialog-box-launcher-to-a-ribbon-group.md)。  
   
    
   
 ## Examples  
- 下面的示例演示如何向功能区组添加对话框启动器以及如何启动使用户可以选择高级的设置，当他们单击在上一个自定义对话框<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher>的右下角中的图标<xref:Microsoft.Office.Tools.Ribbon.RibbonGroup>。  
+ 下面的示例演示如何将对话框启动器添加到功能区组以及如何启动使用户可以选择高级的设置，当他们单击在上一个自定义对话框<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher>中的右下角的图标<xref:Microsoft.Office.Tools.Ribbon.RibbonGroup>。  
   
  若要运行此代码示例，必须首先执行以下步骤：  
   
-1.  添加**功能区 （可视化设计器）** 项到 Office 项目。  
+1.  添加**功能区 （可视化设计器）** 到 Office 项目的项。  
   
 2.  添加<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher>到默认组中所述[如何： 向功能区组添加对话框启动器](/visualstudio/vsto/how-to-add-a-dialog-box-launcher-to-a-ribbon-group.md)。  
   
-3.  如果你使用的 Visual Basic，添加一个新的 Windows 窗体**对话框**到项目的项。 如果你使用的 C#，添加新**Windows 窗体**项，然后将其转换为一个对话框，通过添加**确定**和**取消**到窗体按钮和创建为按钮的单击事件处理程序事件。  
+3.  如果使用的 Visual Basic，添加新的 Windows 窗体**对话框**到项目的项。 如果使用的 C#，添加一个新**Windows 窗体**项，然后将其转换为一个对话框，通过添加**确定**并**取消**到窗体按钮，然后创建用于按钮的单击事件处理程序事件。  
   
-4.  设置 **（名称）** 属性到对话框`advancedSettingsDialog`。 通过添加控件并设置更多属性，可以自定义对话框。  
+4.  设置 **（名称）** 到对话框属性`advancedSettingsDialog`。 通过添加控件并设置更多属性，可以自定义对话框。  
   
 5.  添加<xref:Microsoft.Office.Tools.Ribbon.RibbonGroup.DialogLauncherClick>到你的代码的事件处理程序。  
   
-6.  将以下方法到的内容放<xref:Microsoft.Office.Tools.Ribbon.RibbonGroup.DialogLauncherClick>事件处理程序。  
+6.  将以下方法转换成的内容放<xref:Microsoft.Office.Tools.Ribbon.RibbonGroup.DialogLauncherClick>事件处理程序。  
   
  [!code-csharp[Trin_Ribbon_ControlProperties#10](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_Ribbon_ControlProperties/CS/Ribbon1.Designer.cs#10)]
  [!code-vb[Trin_Ribbon_ControlProperties#10](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_Ribbon_ControlProperties/VB/Ribbon1.Designer.vb#10)]  
@@ -172,7 +172,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 默认情况下，<xref:Microsoft.Office.Tools.Ribbon.RibbonGroup.Id%2A>属性具有相同的值<xref:Microsoft.Office.Tools.Ribbon.RibbonComponent.Name%2A>属性。 如果为不指定任何值<xref:Microsoft.Office.Tools.Ribbon.RibbonComponent.Name%2A>属性，则 Visual Studio 生成的值<xref:Microsoft.Office.Tools.Ribbon.RibbonGroup.Id%2A>属性。  
+ 默认情况下<xref:Microsoft.Office.Tools.Ribbon.RibbonGroup.Id%2A>属性具有相同的值<xref:Microsoft.Office.Tools.Ribbon.RibbonComponent.Name%2A>属性。 如果为不指定任何值<xref:Microsoft.Office.Tools.Ribbon.RibbonComponent.Name%2A>属性，则 Visual Studio 生成的值<xref:Microsoft.Office.Tools.Ribbon.RibbonGroup.Id%2A>属性。  
   
  中的所有组件<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon>对象必须具有唯一`Id`属性值。  
   
@@ -201,9 +201,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 在运行时，但只能在加载功能区之前，你可以将功能区控件添加到组。 创建该控件的实例，然后添加到新的控件<xref:Microsoft.Office.Tools.Ribbon.RibbonGroup.Items%2A>集合。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。  
+ 在运行时，但只能在功能区加载之前，可以将功能区控件添加到组中。 创建控件的实例，然后添加到新的控件<xref:Microsoft.Office.Tools.Ribbon.RibbonGroup.Items%2A>集合。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。  
   
- 通过使用功能区设计器可将控件添加到组中，在 Visual Studio 会自动添加到控件<xref:Microsoft.Office.Tools.Ribbon.RibbonGroup.Items%2A>组的属性。  
+ 使用功能区设计器将控件添加到组时 Visual Studio 会自动添加到控件<xref:Microsoft.Office.Tools.Ribbon.RibbonGroup.Items%2A>组的属性。  
   
  ]]></format>
         </remarks>
@@ -229,11 +229,11 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 快捷键提示必须包含 1 到 3 个字符，并且必须包含空格、 制表符或换行字符。  
+ Keytip 必须包含 1 到 3 个字符，不能包含空格、 制表符或换行字符。  
   
- 键提示有时也称为访问密钥或快捷键，可用作激活控件的快捷组合键。 当你按下 ALT 键时，键提示将显示在功能区上。 如果内置控件或从其他加载项，则与键提示中你快捷键提示相冲突，Microsoft Office 可能自动分配不冲突快捷键提示值。  
+ Keytip 有时也称为访问密钥或加速器和用作激活控件的快捷组合键。 按下 ALT 键时，键提示将显示在功能区上。 如果内置控件或从其他加载项，你的快捷键提示与键提示冲突，Microsoft Office 可能会自动分配非冲突快捷键提示值。  
   
- 有关详细信息，请参阅[使用键盘来使用功能区程序](http://go.microsoft.com/fwlink/?LinkId=93523)。  
+ 有关详细信息，请参阅[使用键盘处理功能区程序](http://go.microsoft.com/fwlink/?LinkId=93523)。  
   
  ]]></format>
         </remarks>
@@ -258,7 +258,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 组的底部将显示标签。 标签应简短说明组上的控件的共同功能。  
+ 标签出现在组的底部。 标签应描述组上的控件的共同功能的简要短语。  
   
  ]]></format>
         </remarks>
@@ -283,9 +283,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Ribbon.RibbonGroup.Position%2A>属性仅当组已在内置选项卡上才起作用。有关详细信息，请参阅[如何： 自定义内置选项卡](/visualstudio/vsto/how-to-customize-a-built-in-tab.md)。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonGroup.Position%2A>属性仅当组是内置选项卡上不起作用。有关详细信息，请参阅[如何： 自定义内置选项卡](/visualstudio/vsto/how-to-customize-a-built-in-tab.md)。  
   
- <xref:Microsoft.Office.Tools.Ribbon.RibbonGroup.Position%2A>只能在加载功能区之前，可以设置属性。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonGroup.Position%2A>只能在功能区加载之前，可以设置属性。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。  
   
  ]]></format>
         </remarks>
@@ -305,8 +305,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示组是否可见。</summary>
-        <value>
-          如果组可见，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="true" />。</value>
+        <value>如果组可见，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="true" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

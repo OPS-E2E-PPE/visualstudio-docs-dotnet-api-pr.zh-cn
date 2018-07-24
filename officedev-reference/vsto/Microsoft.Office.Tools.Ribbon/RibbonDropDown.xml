@@ -1,10 +1,10 @@
 <Type Name="RibbonDropDown" FullName="Microsoft.Office.Tools.Ribbon.RibbonDropDown">
   <Metadata>
     <Meta Name="ms.openlocfilehash" Value="c18515fa96427a280558c9723dd80ededc00de7a" />
-    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.sourcegitcommit" Value="d85a83935f1d68ded616fcdfb8fd10d6bf4a4633" />
     <Meta Name="ms.translationtype" Value="HT" />
     <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+    <Meta Name="ms.lasthandoff" Value="07/24/2018" />
     <Meta Name="ms.locfileid" Value="29433881" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface RibbonDropDown : IDisposable, Microsoft.Office.Tools.Ribbon.RibbonControl, System.ComponentModel.IComponent" />
@@ -36,9 +36,9 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- A<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>可以包含<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem>对象和<xref:Microsoft.Office.Tools.Ribbon.RibbonButton>控件。  
+ 一个<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>可以包含<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem>对象和<xref:Microsoft.Office.Tools.Ribbon.RibbonButton>控件。  
   
- 你可以创建<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>通过使用在运行时<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.CreateRibbonDropDown%2A>方法<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory>对象。  
+ 您可以创建<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>在运行时通过使用<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.CreateRibbonDropDown%2A>方法的<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory>对象。  
   
  可通过两种方法来访问 <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory> 对象：  
   
@@ -46,29 +46,29 @@
   
 -   通过使用 `Globals.Factory.GetRibbonFactory` 方法。 可从 Ribbon 类外的代码使用此方法。  
   
- 无法添加到按钮<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Buttons%2A>在运行时功能区加载到 Office 后的集合。  
+ 您不能添加到按钮<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Buttons%2A>在运行时在功能区加载到 Office 后的集合。  
   
  下面的过程介绍如何添加<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem>对象和<xref:Microsoft.Office.Tools.Ribbon.RibbonButton>控件添加到<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>。  
   
 ### <a name="to-add-ribbondropdownitem-objects-at-design-time"></a>若要在设计时添加 RibbonDropDownItem 对象  
   
-1.  单击**项**中的属性**属性**窗口。  
+1.  单击**项**属性中的**属性**窗口。  
   
 2.  单击省略号 (**...**).  
   
-3.  在**下拉列表中集合编辑器**、 添加、 排序和编辑新项。  
+3.  在中**下拉列表中集合编辑器**、 添加、 排序和编辑新项。  
   
- 你可以添加<xref:Microsoft.Office.Tools.Ribbon.RibbonButton>控件添加到<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>在设计时。  
+ 您可以添加<xref:Microsoft.Office.Tools.Ribbon.RibbonButton>控件添加到<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>在设计时。  
   
-### <a name="to-add-ribbonbutton-controls-at-design-time"></a>在设计时添加 RibbonButton 控件  
+### <a name="to-add-ribbonbutton-controls-at-design-time"></a>若要将 RibbonButton 控件添加设计时  
   
-1.  单击**按钮**中的属性**属性**窗口。  
+1.  单击**按钮**属性中的**属性**窗口。  
   
 2.  单击省略号 (**...**).  
   
-3.  在**按钮集合编辑器**、 添加、 排序和编辑新按钮控件。  
+3.  在中**按钮集合编辑器**、 添加、 排序和编辑新的按钮控件。  
   
- 只能在功能区加载到 Office 应用程序之前，可以设置此类型的某些成员。 有关设置这些属性的信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。  
+ 只能在功能区加载到 Office 应用程序之前，可以设置此类型的某些成员。 有关如何设置这些属性的信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。  
   
  [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
   
@@ -97,7 +97,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 用户单击时，将不会引发此事件`Item`上<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>。  
+ 在用户单击时不会引发此事件`Item`上<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>。  
   
  ]]></format>
         </remarks>
@@ -124,7 +124,7 @@
 ## Remarks  
  <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>控件可同时包含<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem>控件和<xref:Microsoft.Office.Tools.Ribbon.RibbonButton>控件。  
   
- 你可以将按钮添加到<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Buttons%2A>仅在功能区加载之前的属性。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。  
+ 您可以将按钮添加到<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Buttons%2A>只能在功能区加载之前的属性。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。  
   
  ]]></format>
         </remarks>
@@ -151,11 +151,11 @@
 ## Remarks  
  建议的图像格式是 PNG，因为 PNG 格式的图像支持通过其 alpha 通道的透明度。  
   
- <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Image%2A>属性标识由控件显示的图像。 在设计时或在运行时，可以设置此属性。 如果在运行时中更新此属性，将更新控件的外观，以反映更改。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Image%2A>属性标识控件显示的图像。 在设计时或在运行时，可以设置此属性。 如果在运行时中更新此属性，该控件的外观被更新以反映更改。  
   
- 如果<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Image%2A>设置属性，<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.OfficeImageId%2A>和<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ImageName%2A>属性会被忽略。 尽管<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Image%2A>属性提供更好地控制比其他两个属性，因为每次对控件进行更新时，图像对象被发送到 Office 应用程序会比较慢。  
+ 如果<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Image%2A>设置属性，则<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.OfficeImageId%2A>和<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ImageName%2A>属性将被忽略。 尽管<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Image%2A>属性可让您更好地控制比其他两个属性，这一点可以是速度较慢，因为每次更新控件时，图像对象发送到 Office 应用程序。  
   
- <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ShowImage%2A>属性必须为`true`要显示图像的控件。 当你将设置<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Image%2A>属性在设计时，Visual Studio 将自动设置<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ShowImage%2A>属性`true`。 如果你设置<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Image%2A>属性在运行时，你必须设置<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ShowImage%2A>属性`true`在代码中。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ShowImage%2A>属性必须为`true`控件来显示图像。 当您将设置<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Image%2A>属性在设计时，Visual Studio 将自动设置<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ShowImage%2A>属性设置为`true`。 如果您设置<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Image%2A>在运行时属性，则你必须设置<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ShowImage%2A>属性设置为`true`在代码中。  
   
  ]]></format>
         </remarks>
@@ -180,13 +180,13 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ImageName%2A>属性标识由控件显示的图像。 Office 应用程序检索此映像从你的解决方案一次，以提高性能。 此属性可以设置仅在设计时，因为它标识的图像加载期间<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>事件。 <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage> 时将引发一次每个映像名称将显示功能区。 之后，无法使用此属性更改控件图像。 有关设置此属性的详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ImageName%2A>属性标识控件显示的图像。 Office 应用程序此映像从你的解决方案只检索一次，以提高性能。 此属性可以设置只能在设计时，因为它标识的图像加载过程<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>事件。 <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage> 时将引发一次每个映像名称显示在功能区。 之后，不能使用此属性更改控件图像。 有关如何设置此属性的详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。  
   
- 若要加载的映像，将代码添加到<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>事件处理程序。 检查<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs.ImageName%2A>属性<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs>并设置<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs.Image%2A>属性<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs>到想要加载的映像的对象。  
+ 若要加载图像，将代码添加到<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>事件处理程序。 检查<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs.ImageName%2A>的属性<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs>并设置<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs.Image%2A>属性的<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs>到想要加载的图像的对象。  
   
- 如果忽略此属性<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Image%2A>属性或<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.OfficeImageId%2A>属性设置。 标识的图像<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ImageName%2A>属性可以由标识的图像以外会稍微快一些加载<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Image%2A>显示属性，因为 Office 应用程序将检索映像你解决方案仅在首次从功能区。  
+ 如果忽略此属性<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Image%2A>属性或<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.OfficeImageId%2A>属性设置。 标识的图像<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ImageName%2A>属性可以稍快于标识的图像加载<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Image%2A>显示属性，因为 Office 应用程序中检索映像解决方案仅在首次从功能区。  
   
- <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ShowImage%2A>属性必须为`true`要显示图像的控件。 当你将设置<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ImageName%2A>属性在设计时，Visual Studio 将自动设置<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ShowImage%2A>属性`true`。 如果你设置<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ImageName%2A>属性在运行时，你必须设置<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ShowImage%2A>属性`true`在代码中。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ShowImage%2A>属性必须为`true`控件来显示图像。 当您将设置<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ImageName%2A>属性在设计时，Visual Studio 将自动设置<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ShowImage%2A>属性设置为`true`。 如果您设置<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ImageName%2A>在运行时属性，则你必须设置<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ShowImage%2A>属性设置为`true`在代码中。  
   
  ]]></format>
         </remarks>
@@ -212,7 +212,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 你可以添加<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem>对象添加到<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>在设计时或在运行时。  
+ 您可以添加<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem>对象添加到<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>在设计时或在运行时。  
   
  ]]></format>
         </remarks>
@@ -236,9 +236,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 首次用户展开下拉列表菜单时，将引发此事件。  
+ 第一次在用户展开下拉列表菜单被引发此事件。  
   
- 如果在运行时修改菜单上的控件或更改任何属性此<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>，也是首次用户展开菜单后进行更改时将引发此事件。  
+ 如果在运行时修改菜单上的控件或更改任何属性的这<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>，也是首次在用户展开菜单后所做的更改将引发此事件。  
   
  ]]></format>
         </remarks>
@@ -263,11 +263,11 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 快捷键提示必须包含 1 到 3 个大写字符，并且必须包含空格、 制表符或换行字符。  
+ Keytip 必须包含 1 到 3 个大写字符，不能包含空格、 制表符或换行字符。  
   
- 键提示有时也称为访问密钥或快捷键，可用作激活控件的快捷组合键。 当你按下 ALT 键时，键提示将显示在功能区上。 如果内置控件或从其他加载项，则与键提示中你快捷键提示相冲突，Microsoft Office 可能自动分配不冲突快捷键提示值。  
+ Keytip 有时也称为访问密钥或加速器和用作激活控件的快捷组合键。 按下 ALT 键时，键提示将显示在功能区上。 如果内置控件或从其他加载项，你的快捷键提示与键提示冲突，Microsoft Office 可能会自动分配非冲突快捷键提示值。  
   
- 有关详细信息，请参阅[使用键盘来使用功能区程序](http://go.microsoft.com/fwlink/?LinkId=93523)。  
+ 有关详细信息，请参阅[使用键盘处理功能区程序](http://go.microsoft.com/fwlink/?LinkId=93523)。  
   
  ]]></format>
         </remarks>
@@ -310,26 +310,26 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.OfficeImageId%2A>属性标识由控件显示 Office 图标。 属性值是一个字符串，标识`imageMso`所选图标的值。 在设计时或在运行时，可以设置此属性。 如果在运行时中更新此属性，将更新控件的外观，以反映更改。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.OfficeImageId%2A>属性标识的控件显示 Office 图标。 属性值是一个字符串，标识`imageMso`所选图标的值。 在设计时或在运行时，可以设置此属性。 如果在运行时中更新此属性，该控件的外观被更新以反映更改。  
   
- 有关的列表`imageMso`值，请参阅 Microsoft 下载中心页面[Office 2010 外接程序： 图标库](http://go.microsoft.com/fwlink/?LinkID=220760)。  
+ 有关一系列`imageMso`值，请参阅 Microsoft 下载中心页[Office 2010 外接程序： 图标库](http://go.microsoft.com/fwlink/?LinkID=220760)。  
   
- 如果忽略此属性<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Image%2A>属性设置。 标识的图像<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.OfficeImageId%2A>属性可以由标识的图像以外会稍微快一些加载<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Image%2A>属性，因为这些图像缓存在 Office 应用程序。  
+ 如果忽略此属性<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Image%2A>属性设置。 标识的图像<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.OfficeImageId%2A>属性可以稍快于标识的图像加载<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Image%2A>属性，因为这些图像缓存在 Office 应用程序。  
   
- <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ShowImage%2A>属性必须为`true`要显示图像的控件。 当你将设置<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.OfficeImageId%2A>属性在设计时，Visual Studio 将自动设置<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ShowImage%2A>属性`true`。 如果你设置<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.OfficeImageId%2A>属性在运行时，你必须设置<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ShowImage%2A>属性`true`在代码中。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ShowImage%2A>属性必须为`true`控件来显示图像。 当您将设置<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.OfficeImageId%2A>属性在设计时，Visual Studio 将自动设置<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ShowImage%2A>属性设置为`true`。 如果您设置<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.OfficeImageId%2A>在运行时属性，则你必须设置<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ShowImage%2A>属性设置为`true`在代码中。  
   
    
   
 ## Examples  
- 下面的示例将分配给下拉列表框中的 Microsoft Office 图标。  
+ 下面的示例为下拉列表框中指定一个 Microsoft Office 图标。  
   
  若要运行此代码示例，必须首先执行以下步骤：  
   
-1.  添加**功能区 （可视化设计器）** 项到 Office 项目。  
+1.  添加**功能区 （可视化设计器）** 到 Office 项目的项。  
   
 2.  将组添加到自定义选项卡。  
   
-3.  添加到组下拉列表框。  
+3.  添加到组下拉框。  
   
  [!code-csharp[Trin_Ribbon_ControlProperties#3](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_Ribbon_ControlProperties/CS/Ribbon1.cs#3)]
  [!code-vb[Trin_Ribbon_ControlProperties#3](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_Ribbon_ControlProperties/VB/Ribbon1.vb#3)]  
@@ -357,9 +357,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 屏幕提示值必须少于 1024年个字符的长度。  
+ 屏幕提示值必须是长度小于 1024年个字符。  
   
- 当<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SuperTip%2A>设置属性，<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ScreenTip%2A>值将显示的标题为<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SuperTip%2A>。  
+ 当<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SuperTip%2A>设置属性，则<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ScreenTip%2A>值将显示的标题为<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SuperTip%2A>。  
   
  ]]></format>
         </remarks>
@@ -389,11 +389,11 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性设置为<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem>导致要出现在下拉列表的文本框部分的项。 <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem>引用，它将分配给<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectedItem%2A>属性必须存在于此<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>对象的<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Items%2A>集合。 否则为<xref:System.ArgumentException>将引发。  
+ 此属性设置为<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem>导致要显示在下拉列表的文本框部分中的项。 <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem>引用将分配给<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectedItem%2A>属性必须存在于这<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>对象的<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Items%2A>集合。 否则为<xref:System.ArgumentException>将引发。  
   
- 分配新值赋给<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectedItem%2A>属性不会导致<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectionChanged>引发事件。  
+ 分配到一个新值<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectedItem%2A>属性不会导致<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectionChanged>事件被引发。  
   
- 如果<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Items%2A>集合不为空，则此属性不是`null`。 默认情况下，此属性是指中的第一个项<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Items%2A>集合。  
+ 如果<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Items%2A>集合不为空，则此属性不是`null`。 默认情况下，此属性引用中的第一项<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Items%2A>集合。  
   
  ]]></format>
         </remarks>
@@ -423,11 +423,11 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 设置<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectedItemIndex%2A>索引号属性会导致<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem>中的此位置中<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Items%2A>才会显示在下拉列表的文本框部分的集合。  
+ 设置<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectedItemIndex%2A>属性设置为索引号将导致<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem>在该位置中<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Items%2A>集合才会出现在下拉列表的文本框部分。  
   
- 分配新值赋给<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectedItemIndex%2A>属性不会导致<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectionChanged>引发事件。  
+ 分配到一个新值<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectedItemIndex%2A>属性不会导致<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectionChanged>事件被引发。  
   
- 分配给值<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectedItemIndex%2A>必须介于 0 （零） 通过 (`Items.Count` -1)。  
+ 分配给值<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectedItemIndex%2A>必须为从 0 （零） 通过 (`Items.Count` -1)。  
   
  如果<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Items%2A>集合为空，则此属性返回-1。  
   
@@ -453,13 +453,13 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectionChanged>仅当在所选的项更改，并不处于以下情况下，将引发事件：  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectionChanged>仅当选定的项发生更改，并不处于以下情况下引发事件：  
   
--   当用户选择已选定的项的。  
+-   当用户选择已选中的项。  
   
 -   当用户单击一个按钮。  
   
--   当你将新值赋给<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectedItem%2A>或<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectedItemIndex%2A>在代码中的属性。  
+-   当将新值赋给<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectedItem%2A>或<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectedItemIndex%2A>在代码中的属性。  
   
  ]]></format>
         </remarks>
@@ -479,15 +479,14 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示与 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" /> 关联的图像是否可见。</summary>
-        <value>
-          如果与控件关联的图像可见，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="false" />。</value>
+        <value>如果与控件关联的图像可见，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性自动设置为`true`如果你设置<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Image%2A>， <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ImageName%2A>，或<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.OfficeImageId%2A>在功能区设计器中的属性。 你可以将其设置为`false`若要使此控制选项可隐藏与关联的图像。  
+ 此属性自动设置为`true`如果您设置<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Image%2A>， <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ImageName%2A>，或<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.OfficeImageId%2A>在功能区设计器中的属性。 可以将其设置为`false`以与要隐藏此控件关联的图像。  
   
- 设置<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Image%2A>， <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ImageName%2A>，或<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.OfficeImageId%2A>属性在运行时不会更改的值<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ShowImage%2A>属性。  
+ 设置<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Image%2A>， <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ImageName%2A>，或<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.OfficeImageId%2A>在运行时属性的值不更改<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ShowImage%2A>属性。  
   
  ]]></format>
         </remarks>
@@ -507,13 +506,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示是否为下拉菜单中的项显示图像。</summary>
-        <value>
-          如果显示图像，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="false" />。</value>
+        <value>如果显示图像，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 在运行时仅在某些情况下，可以设置此属性。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。  
+ 可以在运行时仅在某些情况下设置此属性。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。  
   
  ]]></format>
         </remarks>
@@ -533,8 +531,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示是否为下拉菜单中的项显示标签。</summary>
-        <value>
-          如果显示标签，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="false" />。</value>
+        <value>如果显示标签，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -559,8 +556,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" /> 的标签是否可见。</summary>
-        <value>
-          如果标签可见，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="true" />。</value>
+        <value>如果标签可见，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="true" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -583,9 +579,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 当你将设置<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SizeString%2A>中功能区设计器中，Visual Studio 尝试大小属性<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>以便将足以显示整个字符串。 尽管 Visual Studio 允许的长度最多为 1024年个字符的字符串，在实践中可用的字符串长度可能短得多。  
+ 当您将设置<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SizeString%2A>中功能区设计器中，Visual Studio 尝试大小属性<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>，以便将大小足以显示整个字符串。 尽管 Visual Studio 允许的长度最多为 1024年个字符的字符串，但在实践中可用的字符串长度可能要短得多。  
   
- 在运行时仅在某些情况下，可以设置此属性。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。  
+ 可以在运行时仅在某些情况下设置此属性。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。  
   
  ]]></format>
         </remarks>
@@ -612,7 +608,7 @@
 ## Remarks  
  字符串必须是长度小于 1024年个字符。  
   
- <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SuperTip%2A>下显示<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ScreenTip%2A>文本。 与不同<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ScreenTip%2A>、<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SuperTip%2A>字符串中的启用分行符。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SuperTip%2A>下显示<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ScreenTip%2A>文本。 与不同<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ScreenTip%2A>，则<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SuperTip%2A>启用换行符的字符串中。  
   
  ]]></format>
         </remarks>

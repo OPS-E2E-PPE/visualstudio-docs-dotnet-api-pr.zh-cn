@@ -1,10 +1,10 @@
 <Type Name="RibbonMenu" FullName="Microsoft.Office.Tools.Ribbon.RibbonMenu">
   <Metadata>
     <Meta Name="ms.openlocfilehash" Value="2f08d8612e060b40ab3c36010cd07fbfa27fbd77" />
-    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.sourcegitcommit" Value="d85a83935f1d68ded616fcdfb8fd10d6bf4a4633" />
     <Meta Name="ms.translationtype" Value="HT" />
     <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+    <Meta Name="ms.lasthandoff" Value="07/24/2018" />
     <Meta Name="ms.locfileid" Value="29433725" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface RibbonMenu : IDisposable, Microsoft.Office.Tools.Ribbon.RibbonControl, System.ComponentModel.IComponent" />
@@ -36,9 +36,9 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- Visual Studio 将创建<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu>对象拖动时**菜单**控件从**Office 功能区控件**选项卡**工具箱**拖动到功能区设计器。  
+ Visual Studio 将创建<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu>对象在拖动时**菜单**控件从**Office 功能区控件**选项卡**工具箱**到功能区设计器上。  
   
- 你可以创建<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu>通过使用在运行时<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.CreateRibbonMenu%2A>方法<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory>对象。  
+ 您可以创建<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu>在运行时通过使用<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.CreateRibbonMenu%2A>方法的<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory>对象。  
   
  可通过两种方法来访问 <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory> 对象：  
   
@@ -47,16 +47,16 @@
 -   通过使用 `Globals.Factory.GetRibbonFactory` 方法。 可从 Ribbon 类外的代码使用此方法。  
   
 ## <a name="common-tasks"></a>常规任务  
- 下表列出可用于常见任务的成员。 可以在设计时执行所有这些任务。 可以在运行时只能在功能区加载到 Office 应用程序之前，或者在运行时将控件添加到动态菜单之前执行其中的一些任务。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。  
+ 下表列出了可用于常见任务的成员。 可以在设计时执行所有这些任务。 可以在运行时只能在功能区加载到 Office 应用程序之前，或者该控件添加到动态菜单之前执行其中一些任务。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。  
   
 |任务|成员|  
 |----------|------------|  
-|在菜单上显示图像。|使用<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Image%2A>或<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ImageName%2A>属性。<br /><br /> 你也可以使用内置的功能区控件中显示的图像。 若要执行此操作，将设置<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.OfficeImageId%2A>为你想要显示为菜单的图标的内置 Microsoft Office 映像的 ID。|  
+|在菜单上显示的图像。|使用<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Image%2A>或<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ImageName%2A>属性。<br /><br /> 也可以重复使用内置功能区控件中显示的图像。 若要执行此操作，设置<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.OfficeImageId%2A>为你想要显示为菜单的图标的内置 Microsoft Office 映像的 ID。|  
 |更改菜单的大小。|设置<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ControlSize%2A>属性设置为所需的值。 例如，对于大型的菜单中，将其设置为`Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge`。|  
-|更改菜单中的项的大小。|设置<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ItemSize%2A>属性设置为所需的值。 例如，若要显示较大的项目，将其设置为`Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge`。|  
-|在运行时 （例如，若要使控件能够在运行时添加到菜单） 启用对菜单的更改。|将 <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Dynamic%2A> 属性设置为 `true`。|  
-|访问菜单中的控件、 将控件添加到菜单上，或从菜单中删除控件。|使用 <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Items%2A> 属性。|  
-|将菜单添加到 Microsoft Office 菜单上，一个组，或可以包含菜单的另一个控件。|添加<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu>到`Items`的 Microsoft Office 菜单、 组或控件的属性。|  
+|更改菜单中项的大小。|设置<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ItemSize%2A>属性设置为所需的值。 例如，若要显示较大的项，将其设置为`Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge`。|  
+|在运行时 （例如，若要使控件能够在运行时添加到菜单） 启用对菜单上的更改。|将 <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Dynamic%2A> 属性设置为 `true`。|  
+|访问的菜单中的控件、 将控件添加到菜单中，或从菜单中删除控件。|使用 <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Items%2A> 属性。|  
+|将菜单添加到 Microsoft Office 菜单、 组或另一个可以包含菜单的控件。|添加<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu>到`Items`的 Microsoft Office 菜单、 组或控件的属性。|  
   
  [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
   
@@ -68,21 +68,21 @@
 ## Examples  
  下面的示例演示如何添加和在运行时填充到现有菜单子菜单。  
   
- 有关的更丰富的示例，更新在运行时的控件，包括从使用语言集成查询 (LINQ) 的 AdventureWorks 示例数据库中获取数据，请参阅[演练： 更新在运行时功能区上的控件](/visualstudio/vsto/walkthrough-updating-the-controls-on-a-ribbon-at-run-time.md)。  
+ 更新在运行时的控件，并涉及到从使用语言集成查询 (LINQ) 的 AdventureWorks 示例数据库中获取数据的更丰富示例，请参阅[演练： 在运行时功能区上的控件](/visualstudio/vsto/walkthrough-updating-the-controls-on-a-ribbon-at-run-time.md)。  
   
  若要运行此代码示例，必须首先执行以下步骤：  
   
-1.  添加**功能区 （可视化设计器）** 项到 Office 项目。  
+1.  添加**功能区 （可视化设计器）** 到 Office 项目的项。  
   
 2.  将组添加到自定义选项卡。  
   
 3.  向组添加一个菜单。  
   
-4.  设置 **（名称）** 到的菜单属性`CustomerMenu`。  
+4.  设置 **（名称）** 属性的 menu 的`CustomerMenu`。  
   
-5.  设置**标签**到的菜单属性**客户**。  
+5.  设置**标签**属性的到菜单上**客户**。  
   
-6.  设置**动态**到的菜单属性`true`。  
+6.  设置**动态**属性的 menu 的`true`。  
   
      这样，在功能区加载到 Office 应用程序中之后，就可以在运行时添加和删除菜单上的控件。  
   
@@ -107,14 +107,14 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置菜单的大小。</summary>
-        <value>A <c>Microsoft.Office.Core.RibbonControlSize</c>表示菜单的大小。</value>
+        <value>一个<c>Microsoft.Office.Core.RibbonControlSize</c> ，表示菜单的大小。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果菜单嵌套在另一个菜单，则此属性无效。 <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ControlSize%2A>嵌套菜单的属性始终设置为`Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeRegular`。  
+ 如果菜单嵌套在另一个菜单中，则此属性无效。 <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ControlSize%2A>嵌套菜单的属性始终设置为`Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeRegular`。  
   
- 若要使嵌套的菜单，看起来更大，设置<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ItemSize%2A>到父菜单的属性`Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge`。  
+ 若要使嵌套的菜单显示得更大，设置<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ItemSize%2A>属性的父 menu 的`Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge`。  
   
  ]]></format>
         </remarks>
@@ -139,7 +139,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 在当前菜单嵌套在另一个菜单或拆分按钮，描述将显示与`ItemSize`父菜单或拆分按钮的属性设置为`Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge`。  
+ 如果当前菜单嵌套在另一个菜单或拆分按钮，显示的说明和`ItemSize`的父菜单或拆分按钮的属性设置为`Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge`。  
   
  ]]></format>
         </remarks>
@@ -159,17 +159,16 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示是否可在运行时修改菜单。</summary>
-        <value>
-          如果可在运行时修改菜单，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="false" />。</value>
+        <value>如果可在运行时修改菜单，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 设置<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Dynamic%2A>属性`true`如果想要在运行时，功能区加载由 Microsoft Office 应用程序后将控件添加到菜单。  
+ 设置<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Dynamic%2A>属性设置为`true`如果想要在运行时，由 Microsoft Office 应用程序加载功能区后，会将控件添加到菜单。  
   
- 对于在设计时添加到功能区菜单<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Dynamic%2A>只能在功能区加载之前，才可以设置属性。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。  
+ 用于在设计时添加到功能区菜单<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Dynamic%2A>只能在功能区加载之前，可以设置属性。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。  
   
- 在运行时仅在某些情况下，可以设置此属性。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。  
+ 可以在运行时仅在某些情况下设置此属性。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。  
   
  ]]></format>
         </remarks>
@@ -196,11 +195,11 @@
 ## Remarks  
  建议的图像格式是 PNG，因为 PNG 格式的图像支持通过其 alpha 通道的透明度。  
   
- <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Image%2A>属性标识由控件显示的图像。 在设计时或在运行时，可以设置此属性。 如果在运行时中更新此属性，将更新控件的外观，以反映更改。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Image%2A>属性标识控件显示的图像。 在设计时或在运行时，可以设置此属性。 如果在运行时中更新此属性，该控件的外观被更新以反映更改。  
   
- 如果<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Image%2A>设置属性，<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.OfficeImageId%2A>和<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ImageName%2A>属性会被忽略。 尽管<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Image%2A>属性提供更好地控制比其他两个属性，因为每次对控件进行更新时，图像对象被发送到 Office 应用程序会比较慢。  
+ 如果<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Image%2A>设置属性，则<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.OfficeImageId%2A>和<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ImageName%2A>属性将被忽略。 尽管<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Image%2A>属性可让您更好地控制比其他两个属性，这一点可以是速度较慢，因为每次更新控件时，图像对象发送到 Office 应用程序。  
   
- <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ShowImage%2A>属性必须为`true`要显示图像的控件。 当你将设置<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Image%2A>属性在设计时，Visual Studio 将自动设置<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ShowImage%2A>属性`true`。 如果你设置<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Image%2A>属性在运行时，你必须设置<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ShowImage%2A>属性`true`在代码中。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ShowImage%2A>属性必须为`true`控件来显示图像。 当您将设置<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Image%2A>属性在设计时，Visual Studio 将自动设置<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ShowImage%2A>属性设置为`true`。 如果您设置<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Image%2A>在运行时属性，则你必须设置<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ShowImage%2A>属性设置为`true`在代码中。  
   
  ]]></format>
         </remarks>
@@ -225,13 +224,13 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ImageName%2A>属性标识由控件显示的图像。 Office 应用程序检索此映像从你的解决方案一次，以提高性能。 此属性可以设置仅在设计时，因为它标识的图像加载期间<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>事件。 <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage> 时将引发一次每个映像名称将显示功能区。 之后，无法使用此属性更改控件图像。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ImageName%2A>属性标识控件显示的图像。 Office 应用程序此映像从你的解决方案只检索一次，以提高性能。 此属性可以设置只能在设计时，因为它标识的图像加载过程<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>事件。 <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage> 时将引发一次每个映像名称显示在功能区。 之后，不能使用此属性更改控件图像。  
   
- 若要加载的映像，将代码添加到<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>事件处理程序。 检查<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs.ImageName%2A>属性<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs>并设置<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs.Image%2A>属性<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs>到想要加载的映像的对象。  
+ 若要加载图像，将代码添加到<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>事件处理程序。 检查<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs.ImageName%2A>的属性<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs>并设置<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs.Image%2A>属性的<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs>到想要加载的图像的对象。  
   
- 如果忽略此属性<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Image%2A>属性或<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.OfficeImageId%2A>属性设置。 标识的图像<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ImageName%2A>属性可以由标识的图像以外会稍微快一些加载<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Image%2A>显示属性，因为 Office 应用程序将检索映像你解决方案仅在首次从功能区。  
+ 如果忽略此属性<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Image%2A>属性或<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.OfficeImageId%2A>属性设置。 标识的图像<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ImageName%2A>属性可以稍快于标识的图像加载<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Image%2A>显示属性，因为 Office 应用程序中检索映像解决方案仅在首次从功能区。  
   
- <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ShowImage%2A>属性必须为`true`要显示图像的控件。 当你将设置<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ImageName%2A>属性在设计时，Visual Studio 将自动设置<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ShowImage%2A>属性`true`。 如果你设置<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ImageName%2A>属性在运行时，你必须设置<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ShowImage%2A>属性`true`在代码中。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ShowImage%2A>属性必须为`true`控件来显示图像。 当您将设置<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ImageName%2A>属性在设计时，Visual Studio 将自动设置<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ShowImage%2A>属性设置为`true`。 如果您设置<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ImageName%2A>在运行时属性，则你必须设置<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ShowImage%2A>属性设置为`true`在代码中。  
   
  ]]></format>
         </remarks>
@@ -256,9 +255,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要在运行时，功能区控件添加到的菜单，创建该控件的实例，并添加到新控件<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Items%2A>集合。 如果你想要执行此操作后功能区加载到 Office 应用程序，则必须设置<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Dynamic%2A>属性`true`。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。  
+ 若要在运行时添加到菜单的功能区控件，创建控件的实例，然后将新控件添加到<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Items%2A>集合。 如果你想要执行此操作在功能区加载到 Office 应用程序之后，必须设置<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Dynamic%2A>属性设置为`true`。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。  
   
- 通过使用功能区设计器可将控件添加到菜单中，在 Visual Studio 会自动添加到控件<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Items%2A>菜单的属性。  
+ 使用功能区设计器将控件添加到菜单在 Visual Studio 会自动添加到控件<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Items%2A>菜单的属性。  
   
  ]]></format>
         </remarks>
@@ -279,14 +278,14 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置菜单上控件的大小。</summary>
-        <value>A <c>Microsoft.Office.Core.RibbonControlSize</c>表示菜单上的控件的大小。 默认值是<c>Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeRegular</c>。</value>
+        <value>一个<c>Microsoft.Office.Core.RibbonControlSize</c> ，表示菜单上控件的大小。 默认值是<c>Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeRegular</c>。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要放大菜单上的控件，设置<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ItemSize%2A>到父菜单的属性`Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge`。  
+ 若要放大菜单上的控件，设置<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ItemSize%2A>属性的父 menu 的`Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge`。  
   
- 在运行时仅在某些情况下，可以设置此属性。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。  
+ 可以在运行时仅在某些情况下设置此属性。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。  
   
  若要更改菜单的大小，请使用<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ControlSize%2A>属性。  
   
@@ -312,9 +311,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 首次用户展开菜单时，将引发此事件。 如果在运行时修改菜单中的控件，此事件也会引发用户展开菜单上，将控件添加或移除的控件之后的第一个时间。  
+ 引发此事件是第一次在用户展开菜单。 如果在运行时修改菜单中的控件，这也会引发事件第一次将控件添加或移除的控件后，在用户展开菜单。  
   
- 将引发此事件仅当<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Dynamic%2A>属性是`true`。  
+ 引发此事件时，才<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Dynamic%2A>属性是`true`。  
   
  ]]></format>
         </remarks>
@@ -339,11 +338,11 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 快捷键提示必须包含 1 到 3 个字符，并且必须包含空格、 制表符或换行字符。 所有字符应都为大写形式。  
+ Keytip 必须包含 1 到 3 个字符，不能包含空格、 制表符或换行字符。 所有字符应都为大写。  
   
- 键提示有时也称为访问密钥或快捷键，可用作激活控件的快捷组合键。 当你按下 ALT 键时，键提示将显示在功能区上。 如果内置控件或从其他加载项，则与键提示中你快捷键提示相冲突，Microsoft Office 可能自动分配不冲突快捷键提示值。  
+ Keytip 有时也称为访问密钥或加速器和用作激活控件的快捷组合键。 按下 ALT 键时，键提示将显示在功能区上。 如果内置控件或从其他加载项，你的快捷键提示与键提示冲突，Microsoft Office 可能会自动分配非冲突快捷键提示值。  
   
- 有关详细信息，请参阅[使用键盘来使用功能区程序](http://go.microsoft.com/fwlink/?LinkId=93523)。  
+ 有关详细信息，请参阅[使用键盘处理功能区程序](http://go.microsoft.com/fwlink/?LinkId=93523)。  
   
  ]]></format>
         </remarks>
@@ -368,7 +367,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要隐藏标签，设置<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ShowLabel%2A>属性`false`。  
+ 若要隐藏标签，设置<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ShowLabel%2A>属性设置为`false`。  
   
  ]]></format>
         </remarks>
@@ -393,28 +392,28 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.OfficeImageId%2A>属性标识由控件显示 Office 图标。 属性值是一个字符串，标识`imageMso`所选图标的值。 在设计时或在运行时，可以设置此属性。 如果在运行时中更新此属性，将更新控件的外观，以反映更改。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.OfficeImageId%2A>属性标识的控件显示 Office 图标。 属性值是一个字符串，标识`imageMso`所选图标的值。 在设计时或在运行时，可以设置此属性。 如果在运行时中更新此属性，该控件的外观被更新以反映更改。  
   
- 有关的列表`imageMso`值，请参阅 Microsoft 下载中心页面[Office 2010 外接程序： 图标库](http://go.microsoft.com/fwlink/?LinkID=220760)。  
+ 有关一系列`imageMso`值，请参阅 Microsoft 下载中心页[Office 2010 外接程序： 图标库](http://go.microsoft.com/fwlink/?LinkID=220760)。  
   
- 如果忽略此属性<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Image%2A>属性设置。 标识的图像<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.OfficeImageId%2A>属性可以由标识的图像以外会稍微快一些加载<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Image%2A>属性，因为这些图像缓存在 Office 应用程序。  
+ 如果忽略此属性<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Image%2A>属性设置。 标识的图像<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.OfficeImageId%2A>属性可以稍快于标识的图像加载<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Image%2A>属性，因为这些图像缓存在 Office 应用程序。  
   
- <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ShowImage%2A>属性必须为`true`要显示图像的控件。 当你将设置<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.OfficeImageId%2A>属性在设计时，Visual Studio 将自动设置<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ShowImage%2A>属性`true`。 如果你设置<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.OfficeImageId%2A>属性在运行时，你必须设置<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ShowImage%2A>属性`true`在代码中。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ShowImage%2A>属性必须为`true`控件来显示图像。 当您将设置<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.OfficeImageId%2A>属性在设计时，Visual Studio 将自动设置<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ShowImage%2A>属性设置为`true`。 如果您设置<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.OfficeImageId%2A>在运行时属性，则你必须设置<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ShowImage%2A>属性设置为`true`在代码中。  
   
    
   
 ## Examples  
- 下面的示例将 Microsoft Office 图标分配到的菜单。  
+ 下面的示例将 Microsoft Office 图标分配给一个菜单。  
   
  若要运行此代码示例，必须首先执行以下步骤：  
   
-1.  添加**功能区 （可视化设计器）** 项到 Office 项目。  
+1.  添加**功能区 （可视化设计器）** 到 Office 项目的项。  
   
 2.  将组添加到自定义选项卡。  
   
 3.  向组添加一个菜单。  
   
-4.  设置**动态**到的菜单属性`true`。  
+4.  设置**动态**属性的 menu 的`true`。  
   
  [!code-csharp[Trin_Ribbon_ControlProperties#7](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_Ribbon_ControlProperties/CS/Ribbon1.cs#7)]
  [!code-vb[Trin_Ribbon_ControlProperties#7](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_Ribbon_ControlProperties/VB/Ribbon1.vb#7)]  
@@ -442,9 +441,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 在运行时仅在某些情况下，可以设置此属性。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。  
+ 可以在运行时仅在某些情况下设置此属性。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。  
   
- <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Position%2A>属性时的菜单放置在功能区选项卡上没有任何作用。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Position%2A>属性时菜单放置在功能区选项卡上没有任何作用。  
   
  ]]></format>
         </remarks>
@@ -469,9 +468,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ScreenTip%2A>值必须少于 1024年个字符的长度。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ScreenTip%2A>值必须是长度小于 1024年个字符。  
   
- 当<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.SuperTip%2A>设置属性，<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ScreenTip%2A>值将显示的标题为<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.SuperTip%2A>。  
+ 当<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.SuperTip%2A>设置属性，则<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ScreenTip%2A>值将显示的标题为<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.SuperTip%2A>。  
   
  ]]></format>
         </remarks>
@@ -491,15 +490,14 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示与菜单关联的图像是否可见。</summary>
-        <value>
-          如果与该菜单关联的图像可见，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="false" />。</value>
+        <value>如果与该菜单关联的图像可见，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性自动设置为`true`如果你设置<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Image%2A>， <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ImageName%2A>，或<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.OfficeImageId%2A>在设计时属性。  
+ 此属性自动设置为`true`如果您设置<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Image%2A>， <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ImageName%2A>，或<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.OfficeImageId%2A>在设计时属性。  
   
- 此属性自动设置为`true`如果你设置<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ControlSize%2A>属性`Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge`在设计时或运行的时。  
+ 此属性自动设置为`true`如果您设置<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ControlSize%2A>属性设置为`Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge`在设计时或运行的时。  
   
  ]]></format>
         </remarks>
@@ -519,13 +517,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示菜单的标签是否可见。</summary>
-        <value>
-          如果菜单的标签可见，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="true" />。</value>
+        <value>如果菜单的标签可见，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="true" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性始终是`true`如果你设置<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ControlSize%2A>属性`Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge`。  
+ 此属性始终为`true`如果您设置<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ControlSize%2A>属性设置为`Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge`。  
   
  ]]></format>
         </remarks>
@@ -552,7 +549,7 @@
 ## Remarks  
  字符串必须是长度小于 1024年个字符。  
   
- <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.SuperTip%2A>下显示<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ScreenTip%2A>文本。 与不同<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ScreenTip%2A>、<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.SuperTip%2A>字符串中的启用分行符。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.SuperTip%2A>下显示<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ScreenTip%2A>文本。 与不同<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ScreenTip%2A>，则<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.SuperTip%2A>启用换行符的字符串中。  
   
  ]]></format>
         </remarks>
@@ -577,7 +574,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果菜单是功能区选项卡上，则此属性无效。  
+ 如果该菜单在功能区选项卡上，则此属性无效。  
   
  ]]></format>
         </remarks>

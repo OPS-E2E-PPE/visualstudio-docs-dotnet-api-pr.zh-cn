@@ -1,10 +1,10 @@
 <Type Name="ContentControl" FullName="Microsoft.Office.Tools.Word.ContentControl">
   <Metadata>
     <Meta Name="ms.openlocfilehash" Value="102e91cd5e0110be88bbfddd4e6393c66863bf7c" />
-    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.sourcegitcommit" Value="d85a83935f1d68ded616fcdfb8fd10d6bf4a4633" />
     <Meta Name="ms.translationtype" Value="HT" />
     <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+    <Meta Name="ms.lasthandoff" Value="07/24/2018" />
     <Meta Name="ms.locfileid" Value="29434596" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface ContentControl : IDisposable, Microsoft.Office.Tools.Word.ContentControlBase, System.ComponentModel.IComponent, System.ComponentModel.ISupportInitialize, System.Windows.Forms.IBindableComponent" />
@@ -42,13 +42,13 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- A<xref:Microsoft.Office.Tools.Word.ContentControl>对象是可变的控件，它可以表示任何可以使用 Microsoft Office Word 中的内容控件的八个类型。 例如，如果你创建<xref:Microsoft.Office.Tools.Word.ContentControl>最初具有纯文本控件的功能，你可以更改它在运行时，以便其行为类似于组合框。 其他内容控件不能在这种方式。 例如，<xref:Microsoft.Office.Tools.Word.RichTextContentControl>只能表示多信息文本控件。 有关内容控件的详细信息，请参阅[内容控件](/visualstudio/vsto/content-controls.md)。  
+ 一个<xref:Microsoft.Office.Tools.Word.ContentControl>对象是一个可变的控件，可以表示任何可以使用 Microsoft Office Word 中的内容控件的八个类型。 例如，如果您创建<xref:Microsoft.Office.Tools.Word.ContentControl>最初具有纯文本控件的功能，您可以将其更改在运行时，使其行为类似于组合框。 不能以这种方式使用其他内容控件。 例如，<xref:Microsoft.Office.Tools.Word.RichTextContentControl>只能表示多格式文本控件。 有关内容控件的详细信息，请参阅[内容控件](/visualstudio/vsto/content-controls.md)。  
   
- 若要创建<xref:Microsoft.Office.Tools.Word.ContentControl>，使用之一<xref:Microsoft.Office.Tools.Word.ControlCollection.AddContentControl%2A>方法。 无法添加<xref:Microsoft.Office.Tools.Word.ContentControl>在设计时向文档。  
+ 若要创建<xref:Microsoft.Office.Tools.Word.ContentControl>，使用一种<xref:Microsoft.Office.Tools.Word.ControlCollection.AddContentControl%2A>方法。 不能添加<xref:Microsoft.Office.Tools.Word.ContentControl>在设计时向文档。  
   
- 当你创建<xref:Microsoft.Office.Tools.Word.ContentControl>，你必须指定你想要创建的内容控件的类型，也可以基于现有的内容控件上的新控件。 在创建后<xref:Microsoft.Office.Tools.Word.ContentControl>，你可以更改它表示使用的内容控件的类型<xref:Microsoft.Office.Tools.Word.ContentControl.Type%2A>属性。  
+ 当你创建<xref:Microsoft.Office.Tools.Word.ContentControl>，必须指定你想要创建，内容控件的类型，也可以基于现有的内容控件上的新控件。 在创建后<xref:Microsoft.Office.Tools.Word.ContentControl>，可以更改的内容控件，它表示通过使用类型<xref:Microsoft.Office.Tools.Word.ContentControl.Type%2A>属性。  
   
- 某些<xref:Microsoft.Office.Tools.Word.ContentControl>成员将引发异常，如果该控件设置为一种不应使用这些成员的控件时，会使用它们。 例如，<xref:Microsoft.Office.Tools.Word.ContentControl.DateCalendarType%2A>属性将引发异常，如果你尝试使用在<xref:Microsoft.Office.Tools.Word.ContentControl>不表示日期选取器。  
+ 某些<xref:Microsoft.Office.Tools.Word.ContentControl>成员将引发异常，如果您使用它们时该控件设置为不应使用该成员的控件的类型。 例如，<xref:Microsoft.Office.Tools.Word.ContentControl.DateCalendarType%2A>属性将引发异常，如果您尝试使用在<xref:Microsoft.Office.Tools.Word.ContentControl>，不表示日期选取器。  
   
  [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
   
@@ -78,7 +78,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Word.ContentControl.Application%2A>属性公开有关 Word，应用于该实例的选项的当前实例的信息以及在实例中打开当前文档。  
+ <xref:Microsoft.Office.Tools.Word.ContentControl.Application%2A>属性公开有关 Word 中，应用于该实例的选项的当前实例的信息，并在该实例中打开当前文档。  
   
  ]]></format>
         </remarks>
@@ -103,11 +103,11 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性应仅当使用<xref:Microsoft.Office.Tools.Word.ContentControl.Type%2A>属性<xref:Microsoft.Office.Tools.Word.ContentControl>具有值`Microsoft.Office.Interop.Word.WdContentControlType.wdContentControlBuildingBlockGallery`。 否则，此属性没有任何影响。  
+ 此属性应仅当使用<xref:Microsoft.Office.Tools.Word.ContentControl.Type%2A>的属性<xref:Microsoft.Office.Tools.Word.ContentControl>具有值`Microsoft.Office.Interop.Word.WdContentControlType.wdContentControlBuildingBlockGallery`。 否则，此属性没有任何影响。  
   
- 所有构建基块都所属的类别和一个库。 使用<xref:Microsoft.Office.Tools.Word.ContentControl.BuildingBlockCategory%2A>属性指定的构建基块，显示的类别<xref:Microsoft.Office.Tools.Word.ContentControl>。 你可以设置到此属性的值`Built-In`或`General`类别定义的 Microsoft Office Word 中，也可以指定自定义的类别。  
+ 所有构建基块都属于一个类别和库。 使用<xref:Microsoft.Office.Tools.Word.ContentControl.BuildingBlockCategory%2A>属性指定的情况下会显示构建基块的类别<xref:Microsoft.Office.Tools.Word.ContentControl>。 可以设置此属性设置为值`Built-In`或`General`类别定义的 Microsoft Office word，也可以指定自定义类别。  
   
- 若要指定的库中显示的构建基块<xref:Microsoft.Office.Tools.Word.ContentControl>，使用<xref:Microsoft.Office.Tools.Word.ContentControl.BuildingBlockType%2A>属性。  
+ 若要指定哪些库的构建基块中显示<xref:Microsoft.Office.Tools.Word.ContentControl>，使用<xref:Microsoft.Office.Tools.Word.ContentControl.BuildingBlockType%2A>属性。  
   
  ]]></format>
         </remarks>
@@ -132,11 +132,11 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性应仅当使用<xref:Microsoft.Office.Tools.Word.ContentControl.Type%2A>属性<xref:Microsoft.Office.Tools.Word.ContentControl>具有值`Microsoft.Office.Interop.Word.WdContentControlType.wdContentControlBuildingBlockGallery`。 否则，此属性没有任何影响。  
+ 此属性应仅当使用<xref:Microsoft.Office.Tools.Word.ContentControl.Type%2A>的属性<xref:Microsoft.Office.Tools.Word.ContentControl>具有值`Microsoft.Office.Interop.Word.WdContentControlType.wdContentControlBuildingBlockGallery`。 否则，此属性没有任何影响。  
   
- 所有构建基块都属于库和一个类别。 使用<xref:Microsoft.Office.Tools.Word.ContentControl.BuildingBlockType%2A>属性来指定哪些库中显示的构建基块<xref:Microsoft.Office.Tools.Word.ContentControl>。  
+ 所有构建基块都属于库和一个类别。 使用<xref:Microsoft.Office.Tools.Word.ContentControl.BuildingBlockType%2A>属性指定的构建基块中显示哪些库<xref:Microsoft.Office.Tools.Word.ContentControl>。  
   
- A<xref:Microsoft.Office.Tools.Word.ContentControl>只能显示某些库的构建基块。 <xref:Microsoft.Office.Tools.Word.ContentControl.BuildingBlockType%2A>属性可以设置只为以下`Microsoft.Office.Interop.Word.WdBuildingBlockTypes`值：  
+ 一个<xref:Microsoft.Office.Tools.Word.ContentControl>只能显示某些库的构建基块。 <xref:Microsoft.Office.Tools.Word.ContentControl.BuildingBlockType%2A>属性可以设置只为以下`Microsoft.Office.Interop.Word.WdBuildingBlockTypes`值：  
   
 -   `wdTypeAutoText`  
   
@@ -164,7 +164,7 @@
   
 -   `wdTypeTables`  
   
- 指定的构建基块显示的类别<xref:Microsoft.Office.Tools.Word.ContentControl>，使用<xref:Microsoft.Office.Tools.Word.ContentControl.BuildingBlockCategory%2A>属性。  
+ 若要指定类别的情况下显示的构建基块<xref:Microsoft.Office.Tools.Word.ContentControl>，使用<xref:Microsoft.Office.Tools.Word.ContentControl.BuildingBlockCategory%2A>属性。  
   
  ]]></format>
         </remarks>
@@ -185,8 +185,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示 <see cref="T:Microsoft.Office.Tools.Word.ContentControl" />（代表复选框控件）已选中还是未选中。</summary>
-        <value>
-          如果已选中该内容控件，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果已选中该内容控件，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -194,7 +193,7 @@
  可以使用此属性，仅当<xref:Microsoft.Office.Tools.Word.ContentControl>表示复选框内容控件。  
   
 > [!NOTE]
->  此方法将显示在 IntelliSense Word 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，无法在 Word 2007 项目中使用此属性。  
+>  此方法将出现在 IntelliSense 中在 Word 2007 项目面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Word 2007 项目中使用此属性。  
   
  ]]></format>
         </remarks>
@@ -222,7 +221,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 当你使用<xref:Microsoft.Office.Tools.Word.ContentControl.Copy%2A>方法时，原始<xref:Microsoft.Office.Tools.Word.ContentControl>保留在文档。 一份<xref:Microsoft.Office.Tools.Word.ContentControl>（包括所有文本和属性设置) 将添加到剪贴板。  
+ 当你使用<xref:Microsoft.Office.Tools.Word.ContentControl.Copy%2A>方法时，原始<xref:Microsoft.Office.Tools.Word.ContentControl>保留在文档。 一份<xref:Microsoft.Office.Tools.Word.ContentControl>，其中包括所有文本和属性设置、 添加到剪贴板。  
   
  ]]></format>
         </remarks>
@@ -272,7 +271,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 当你使用<xref:Microsoft.Office.Tools.Word.ContentControl.Cut%2A>方法时，原始<xref:Microsoft.Office.Tools.Word.ContentControl>从文档中移除。 一份<xref:Microsoft.Office.Tools.Word.ContentControl>（包括所有文本和属性设置) 将添加到剪贴板。  
+ 当你使用<xref:Microsoft.Office.Tools.Word.ContentControl.Cut%2A>方法时，原始<xref:Microsoft.Office.Tools.Word.ContentControl>从文档中删除。 一份<xref:Microsoft.Office.Tools.Word.ContentControl>，其中包括所有文本和属性设置、 添加到剪贴板。  
   
  ]]></format>
         </remarks>
@@ -297,7 +296,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 可以使用此属性，仅当<xref:Microsoft.Office.Tools.Word.ContentControl>表示日期选取器。  
+ 可以使用此属性，仅当<xref:Microsoft.Office.Tools.Word.ContentControl>表示日期选择器。  
   
  默认日历类型取决于操作系统的区域设置。 例如，英语 （美国） 的区域设置的默认日历类型是`wdCalendarWestern`。  
   
@@ -326,9 +325,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 可以使用此属性，仅当<xref:Microsoft.Office.Tools.Word.ContentControl>表示日期选取器。  
+ 可以使用此属性，仅当<xref:Microsoft.Office.Tools.Word.ContentControl>表示日期选择器。  
   
- 默认日期格式为 Microsoft Office Word 中，这通常取决于操作系统的区域设置中指定的格式设置。 例如，英语 （美国） 的区域设置的日期的默认格式是`mm/dd/yyyy`。  
+ 默认日期格式是在 Microsoft Office Word 中，这通常取决于操作系统的区域设置中指定的格式设置。 例如，对于英语 （美国） 的区域设置日期的默认格式是`mm/dd/yyyy`。  
   
  ]]></format>
         </remarks>
@@ -355,7 +354,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 可以使用此属性，仅当<xref:Microsoft.Office.Tools.Word.ContentControl>表示日期选取器。  
+ 可以使用此属性，仅当<xref:Microsoft.Office.Tools.Word.ContentControl>表示日期选择器。  
   
  默认值<xref:Microsoft.Office.Tools.Word.ContentControl.DateDisplayLocale%2A>属性依赖于 Microsoft Office Word 中指定的编辑语言。 例如，英语 （美国） 的默认语言格式是`wdEnglishUS`。  
   
@@ -384,11 +383,11 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 可以使用此属性，仅当<xref:Microsoft.Office.Tools.Word.ContentControl>表示日期选取器。  
+ 可以使用此属性，仅当<xref:Microsoft.Office.Tools.Word.ContentControl>表示日期选择器。  
   
- 如果<xref:Microsoft.Office.Tools.Word.ContentControl>绑定到*自定义 XML 部件*在文档中，<xref:Microsoft.Office.Tools.Word.ContentControl.DateStorageFormat%2A>属性指定控件如何以 xml 格式保存日期。 您可以保留为 XML 架构日期的日期 (`xsd:date`)，XML 架构日期/时间 (`xsd:dateTime`)，或为文本。  
+ 如果<xref:Microsoft.Office.Tools.Word.ContentControl>绑定到*自定义 XML 部件*在文档中，<xref:Microsoft.Office.Tools.Word.ContentControl.DateStorageFormat%2A>属性指定控件在 XML 中保存日期的方式。 可以保存为 XML 架构日期的日期 (`xsd:date`)，XML 架构日期/时间 (`xsd:dateTime`)，或以文本形式。  
   
- 有关内容控件绑定到自定义 XML 部件的详细信息，请参阅[内容控件](/visualstudio/vsto/content-controls.md)和[自定义 XML 部件概述](/visualstudio/vsto/custom-xml-parts-overview.md)。  
+ 有关内容控件绑定到自定义 XML 部件的详细信息，请参阅[内容控件](/visualstudio/vsto/content-controls.md)并[自定义 XML 部件概述](/visualstudio/vsto/custom-xml-parts-overview.md)。  
   
  ]]></format>
         </remarks>
@@ -436,7 +435,7 @@
 ## Remarks  
  可以使用此属性，仅当<xref:Microsoft.Office.Tools.Word.ContentControl>表示下拉列表或组合框。  
   
- 当你创建<xref:Microsoft.Office.Tools.Word.ContentControl>表示下拉列表或组合框，默认情况下不包含任何项。 若要添加项，请使用`Add`方法<xref:Microsoft.Office.Tools.Word.ContentControl.DropDownListEntries%2A>属性。  
+ 当你创建<xref:Microsoft.Office.Tools.Word.ContentControl>表示下拉列表或组合框中，默认情况下不包含任何项。 若要添加项，请使用`Add`方法的<xref:Microsoft.Office.Tools.Word.ContentControl.DropDownListEntries%2A>属性。  
   
  ]]></format>
         </remarks>
@@ -458,13 +457,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示是否可从文档删除 <see cref="T:Microsoft.Office.Tools.Word.ContentControl" />。</summary>
-        <value>
-          如果可从文档删除 <see cref="T:Microsoft.Office.Tools.Word.ContentControl" />，则为 <see langword="true" />；如果不能删除此控件，则为 <see langword="false" />。 默认值为 <see langword="false" />。</value>
+        <value>如果可从文档删除 <see cref="T:Microsoft.Office.Tools.Word.ContentControl" />，则为 <see langword="true" />；如果不能删除此控件，则为 <see langword="false" />。 默认值为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要阻止用户编辑的内容<xref:Microsoft.Office.Tools.Word.ContentControl>，使用<xref:Microsoft.Office.Tools.Word.ContentControl.LockContents%2A>属性。 有关如何使用<xref:Microsoft.Office.Tools.Word.ContentControl>若要保护的文档的一部分，请参阅[内容控件](/visualstudio/vsto/content-controls.md)和[如何： 使用内容控件保护文档的某些部分](/visualstudio/vsto/how-to-protect-parts-of-documents-by-using-content-controls.md)。  
+ 若要阻止用户编辑的内容<xref:Microsoft.Office.Tools.Word.ContentControl>，使用<xref:Microsoft.Office.Tools.Word.ContentControl.LockContents%2A>属性。 有关如何使用详细信息<xref:Microsoft.Office.Tools.Word.ContentControl>若要保护的文档的一部分，请参阅[内容控件](/visualstudio/vsto/content-controls.md)并[如何： 使用内容控件保护文档的某些部分](/visualstudio/vsto/how-to-protect-parts-of-documents-by-using-content-controls.md)。  
   
  ]]></format>
         </remarks>
@@ -486,15 +484,14 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示能否编辑 <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> 的内容。</summary>
-        <value>
-          如果不能编辑 <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> 的内容，则为 <see langword="true" />；如果可以编辑控件内容，则为 <see langword="false" />。 默认值为 <see langword="false" />。</value>
+        <value>如果不能编辑 <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> 的内容，则为 <see langword="true" />；如果可以编辑控件内容，则为 <see langword="false" />。 默认值为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
  若要阻止用户删除<xref:Microsoft.Office.Tools.Word.ContentControl>从文档中，使用<xref:Microsoft.Office.Tools.Word.ContentControl.LockContentControl%2A>属性。  
   
- 有关使用<xref:Microsoft.Office.Tools.Word.ContentControl>若要保护的文档的一部分，请参阅[内容控件](/visualstudio/vsto/content-controls.md)和[如何： 使用内容控件保护文档的某些部分](/visualstudio/vsto/how-to-protect-parts-of-documents-by-using-content-controls.md)。  
+ 有关使用详细信息<xref:Microsoft.Office.Tools.Word.ContentControl>若要保护的文档的一部分，请参阅[内容控件](/visualstudio/vsto/content-controls.md)并[如何： 使用内容控件保护文档的某些部分](/visualstudio/vsto/how-to-protect-parts-of-documents-by-using-content-controls.md)。  
   
  ]]></format>
         </remarks>
@@ -514,8 +511,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指定 <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> 是否可以包含换行符。</summary>
-        <value>
-          如果 <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> 可以包含换行符，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="false" />。</value>
+        <value>如果 <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> 可以包含换行符，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -538,9 +534,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 父级<xref:Microsoft.Office.Tools.Word.ContentControl>是控件所在的对象。 例如，如果控件在文档的正文，则此属性将返回<xref:Microsoft.Office.Interop.Word.Document?displayProperty=fullName>对象。  
+ 父<xref:Microsoft.Office.Tools.Word.ContentControl>是控件所在的对象。 例如，如果控件是文档的正文中，此属性将返回<xref:Microsoft.Office.Interop.Word.Document?displayProperty=fullName>对象。  
   
- 要获取其父类的<xref:Microsoft.Office.Tools.Word.ContentControl>中包含<xref:Microsoft.Office.Tools.Word.RichTextContentControl>或<xref:Microsoft.Office.Tools.Word.GroupContentControl>，使用<xref:Microsoft.Office.Tools.Word.ContentControl.ParentContentControl%2A>属性。  
+ 若要获取的父<xref:Microsoft.Office.Tools.Word.ContentControl>中包含<xref:Microsoft.Office.Tools.Word.RichTextContentControl>或<xref:Microsoft.Office.Tools.Word.GroupContentControl>，使用<xref:Microsoft.Office.Tools.Word.ContentControl.ParentContentControl%2A>属性。  
   
  ]]></format>
         </remarks>
@@ -590,9 +586,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 用户编辑控件、 控件中填充数据的源的数据或者控件的内容被删除之前，会显示的占位符文本。  
+ 占位符文本会显示直到用户编辑控件、 数据源中的数据填充控件或控件的内容将被删除。  
   
- 若要设置占位符文本，请使用<xref:Microsoft.Office.Tools.Word.ContentControl.SetPlaceholderText%2A>方法。  
+ 若要设置的占位符文本，请使用<xref:Microsoft.Office.Tools.Word.ContentControl.SetPlaceholderText%2A>方法。  
   
  ]]></format>
         </remarks>
@@ -651,7 +647,7 @@
  可以使用此属性，仅当<xref:Microsoft.Office.Tools.Word.ContentControl>表示复选框内容控件。  
   
 > [!NOTE]
->  此方法将显示在 IntelliSense Word 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，无法在 Word 2007 项目中使用此属性。  
+>  此方法将出现在 IntelliSense 中在 Word 2007 项目面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Word 2007 项目中使用此属性。  
   
  ]]></format>
         </remarks>
@@ -686,11 +682,11 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 用户编辑控件、 控件中填充数据的源的数据或者控件的内容被删除之前，会显示的占位符文本。  
+ 占位符文本会显示直到用户编辑控件、 数据源中的数据填充控件或控件的内容将被删除。  
   
- 在调用时使用唯一的参数之一<xref:Microsoft.Office.Tools.Word.ContentControl.SetPlaceholderText%2A>方法。 如果指定多个参数，则 Microsoft Office Word 将使用第一个指定的参数。 如果所有参数都被都省略，占位符文本是空字符串。  
+ 在调用时使用参数的唯一一个<xref:Microsoft.Office.Tools.Word.ContentControl.SetPlaceholderText%2A>方法。 如果指定多个参数，则 Microsoft Office Word 使用的第一个指定的参数。 如果所有参数都被都省略，占位符文本是空字符串。  
   
- 若要获取的占位符文本<xref:Microsoft.Office.Tools.Word.ContentControl>，使用<xref:Microsoft.Office.Tools.Word.ContentControl.PlaceholderText%2A>属性。 你还可以使用此属性将占位符文本设置为一个字符串。  
+ 若要获取的占位符文本<xref:Microsoft.Office.Tools.Word.ContentControl>，使用<xref:Microsoft.Office.Tools.Word.ContentControl.PlaceholderText%2A>属性。 此外可以使用此属性设置为字符串的占位符文本。  
   
  ]]></format>
         </remarks>
@@ -723,7 +719,7 @@
  可以使用此属性，仅当<xref:Microsoft.Office.Tools.Word.ContentControl>表示复选框内容控件。  
   
 > [!NOTE]
->  此方法将显示在 IntelliSense Word 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，无法在 Word 2007 项目中使用此属性。  
+>  此方法将出现在 IntelliSense 中在 Word 2007 项目面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Word 2007 项目中使用此属性。  
   
  ]]></format>
         </remarks>
@@ -746,13 +742,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，该值指定 <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> 当前是否显示占位符文本。</summary>
-        <value>
-          如果 <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> 当前显示占位符文本，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果 <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> 当前显示占位符文本，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 中的文本之前会显示的占位符文本<xref:Microsoft.Office.Tools.Word.ContentControl>由用户操作或一些其他操作更改。 若要获取或设置占位符文本，请使用<xref:Microsoft.Office.Tools.Word.ContentControl.PlaceholderText%2A>属性或<xref:Microsoft.Office.Tools.Word.ContentControl.SetPlaceholderText%2A>方法。  
+ 占位符文本显示中的文本之前<xref:Microsoft.Office.Tools.Word.ContentControl>由用户操作或某个其他操作更改。 若要获取或设置占位符文本，请使用<xref:Microsoft.Office.Tools.Word.ContentControl.PlaceholderText%2A>属性或<xref:Microsoft.Office.Tools.Word.ContentControl.SetPlaceholderText%2A>方法。  
   
  ]]></format>
         </remarks>
@@ -777,9 +772,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 你可以使用<xref:Microsoft.Office.Tools.Word.ContentControl.Tag%2A>属性来存储与关联的字符串<xref:Microsoft.Office.Tools.Word.ContentControl>文档处于打开状态时。  
+ 可以使用<xref:Microsoft.Office.Tools.Word.ContentControl.Tag%2A>属性来存储与之关联的字符串<xref:Microsoft.Office.Tools.Word.ContentControl>文档处于打开状态时。  
   
- 若要查找由其标记的内容控件，使用<xref:Microsoft.Office.Tools.Word.Document.SelectContentControlsByTag%2A>方法。  
+ 若要按其标记查找内容控件，请使用<xref:Microsoft.Office.Tools.Word.Document.SelectContentControlsByTag%2A>方法。  
   
  ]]></format>
         </remarks>
@@ -799,13 +794,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指定在编辑 <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> 时是否自动将该控件从文档中删除。</summary>
-        <value>
-          如果要在编辑 <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> 时自动将该控件删除，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="false" />。</value>
+        <value>如果要在编辑 <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> 时自动将该控件删除，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果<xref:Microsoft.Office.Tools.Word.ContentControl.Temporary%2A>属性是`true`、<xref:Microsoft.Office.Tools.Word.ContentControl>当用户在控件中，键入或以编程方式更改控件中的文本自动删除。 当<xref:Microsoft.Office.Tools.Word.ContentControl>自动从文档，该控件将保持在文档中的文本中删除。  
+ 如果<xref:Microsoft.Office.Tools.Word.ContentControl.Temporary%2A>属性是`true`，则<xref:Microsoft.Office.Tools.Word.ContentControl>当用户在控件中，或以编程方式更改控件中的文本时，会自动删除。 当<xref:Microsoft.Office.Tools.Word.ContentControl>自动删除从文档，该控件将保持在文档中的文本。  
   
  ]]></format>
         </remarks>
@@ -833,7 +827,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 标题显示在边框<xref:Microsoft.Office.Tools.Word.ContentControl>当用户单击它。  
+ 标题显示在边框的<xref:Microsoft.Office.Tools.Word.ContentControl>当用户单击它。  
   
  ]]></format>
         </remarks>
@@ -859,9 +853,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 你可以使用<xref:Microsoft.Office.Tools.Word.ContentControl.Type%2A>属性可以更改的 UI 和功能<xref:Microsoft.Office.Tools.Word.ContentControl>在运行时。  
+ 可以使用<xref:Microsoft.Office.Tools.Word.ContentControl.Type%2A>属性来更改 UI 和功能<xref:Microsoft.Office.Tools.Word.ContentControl>在运行时。  
   
- 下表列出`Microsoft.Office.Interop.Word.WdContentControlType`值和控件的类型控制每个指定。 有关不同类型的内容控件的详细信息，请参阅[内容控件](/visualstudio/vsto/content-controls.md)。  
+ 下表列出了`Microsoft.Office.Interop.Word.WdContentControlType`值和控件的类型可控制每个指定。 有关不同类型的内容控件的详细信息，请参阅[内容控件](/visualstudio/vsto/content-controls.md)。  
   
 |“值”|控件|  
 |-----------|-------------|  
@@ -897,9 +891,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 你可以使用<xref:Microsoft.Office.Tools.Word.GroupContentControl>来防止用户编辑文档的一部分。 如果<xref:Microsoft.Office.Tools.Word.ContentControl>嵌套在<xref:Microsoft.Office.Tools.Word.GroupContentControl>，你可以使用<xref:Microsoft.Office.Tools.Word.ContentControl.Ungroup%2A>方法来删除父<xref:Microsoft.Office.Tools.Word.GroupContentControl>从文档。 如果你这样做，请的所有项中包含的<xref:Microsoft.Office.Tools.Word.GroupContentControl>不再受保护。  
+ 可以使用<xref:Microsoft.Office.Tools.Word.GroupContentControl>以阻止用户编辑文档的一部分。 如果<xref:Microsoft.Office.Tools.Word.ContentControl>嵌套在<xref:Microsoft.Office.Tools.Word.GroupContentControl>，可以使用<xref:Microsoft.Office.Tools.Word.ContentControl.Ungroup%2A>方法来删除父<xref:Microsoft.Office.Tools.Word.GroupContentControl>从文档。 如果您执行此操作中的项的所有<xref:Microsoft.Office.Tools.Word.GroupContentControl>不再受保护。  
   
- 有关如何使用<xref:Microsoft.Office.Tools.Word.GroupContentControl>若要保护的文档的某些部分，请参阅[内容控件](/visualstudio/vsto/content-controls.md)和[如何： 使用内容控件保护文档的某些部分](/visualstudio/vsto/how-to-protect-parts-of-documents-by-using-content-controls.md)。  
+ 有关如何使用详细信息<xref:Microsoft.Office.Tools.Word.GroupContentControl>来保护文档的各个部分，请参阅[内容控件](/visualstudio/vsto/content-controls.md)并[如何： 使用内容控件保护文档的某些部分](/visualstudio/vsto/how-to-protect-parts-of-documents-by-using-content-controls.md)。  
   
  ]]></format>
         </remarks>
@@ -926,9 +920,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用<xref:Microsoft.Office.Tools.Word.ContentControl.XMLMapping%2A>属性将绑定<xref:Microsoft.Office.Tools.Word.ContentControl>到一种 XML 中的元素 (也名为*自定义 XML 部件*) 嵌入在文档中。 有关详细信息，请参阅[内容控件](/visualstudio/vsto/content-controls.md)和[自定义 XML 部件概述](/visualstudio/vsto/custom-xml-parts-overview.md)。  
+ 使用<xref:Microsoft.Office.Tools.Word.ContentControl.XMLMapping%2A>属性将绑定<xref:Microsoft.Office.Tools.Word.ContentControl>到一段 XML 中的元素 (也称为*自定义 XML 部件*) 的嵌入到文档中。 有关详细信息，请参阅[内容控件](/visualstudio/vsto/content-controls.md)并[自定义 XML 部件概述](/visualstudio/vsto/custom-xml-parts-overview.md)。  
   
- 无法将构建基块库控件、 组控件和多格式文本控件绑定到自定义 XML 部件。  
+ 不能将构建基块库控件、 组控件和多格式文本控件绑定到自定义 XML 部件。  
   
  ]]></format>
         </remarks>

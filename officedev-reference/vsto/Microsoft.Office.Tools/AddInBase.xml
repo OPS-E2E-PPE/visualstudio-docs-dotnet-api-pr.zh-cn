@@ -1,10 +1,10 @@
 <Type Name="AddInBase" FullName="Microsoft.Office.Tools.AddInBase">
   <Metadata>
     <Meta Name="ms.openlocfilehash" Value="b945ef1b2b91729f436eda7b9fce5e8381d160a7" />
-    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.sourcegitcommit" Value="d85a83935f1d68ded616fcdfb8fd10d6bf4a4633" />
     <Meta Name="ms.translationtype" Value="HT" />
     <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+    <Meta Name="ms.lasthandoff" Value="07/24/2018" />
     <Meta Name="ms.locfileid" Value="29433673" />
   </Metadata>
   <TypeSignature Language="C#" Value="public abstract class AddInBase : IDisposable, Microsoft.Office.Tools.IAddInExtension, System.ComponentModel.IComponent, System.ComponentModel.ISupportInitialize, System.Windows.Forms.IBindableComponent" />
@@ -45,7 +45,7 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.AddInBase>类提供由所有外接程序通过使用 Visual Studio 中的 Office 开发工具创建共享的功能。 `ThisAddIn`在外接程序项目中的类派生其大多数成员从<xref:Microsoft.Office.Tools.AddInBase>类。 有关详细信息，请参阅[VSTO 外接程序编程](/visualstudio/vsto/programming-vsto-add-ins.md)。  
+ <xref:Microsoft.Office.Tools.AddInBase>类提供由所有加载项通过使用 Visual Studio 中的 Office 开发工具创建的共享的功能。 `ThisAddIn`外接程序项目中的类派生其大多数成员从<xref:Microsoft.Office.Tools.AddInBase>类。 有关详细信息，请参阅[Programming VSTO Add-ins](/visualstudio/vsto/programming-vsto-add-ins.md)。  
   
 ## <a name="usage"></a>用法  
  [!INCLUDE[vsto_net4utilities](~/includes/vsto-net4utilities-md.md)]  
@@ -79,7 +79,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 无法创建<xref:Microsoft.Office.Tools.AddInBase>以编程方式主机项。 请改用`ThisAddIn`外接程序项目中自动创建的类。 `ThisAddIn` 类派生自 <xref:Microsoft.Office.Tools.AddInBase>。 有关详细信息，请参阅[VSTO 外接程序编程](/visualstudio/vsto/programming-vsto-add-ins.md)。  
+ 无法创建<xref:Microsoft.Office.Tools.AddInBase>以编程方式主机项。 请改用`ThisAddIn`外接程序项目中自动创建的类。 `ThisAddIn` 类派生自 <xref:Microsoft.Office.Tools.AddInBase>。 有关详细信息，请参阅[Programming VSTO Add-ins](/visualstudio/vsto/programming-vsto-add-ins.md)。  
   
  ]]></format>
         </remarks>
@@ -104,7 +104,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.AddInBase>类扩展<xref:Microsoft.Office.Tools.AddIn>对象通过实现<xref:Microsoft.Office.Tools.IAddInExtension>接口。  
+ <xref:Microsoft.Office.Tools.AddInBase>类用于扩展<xref:Microsoft.Office.Tools.AddIn>通过实现对象<xref:Microsoft.Office.Tools.IAddInExtension>接口。  
   
  ]]></format>
         </remarks>
@@ -183,13 +183,13 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 重写此方法以提供的 Microsoft Office 应用程序的实现`Microsoft.Office.Core.IRibbonExtensibility`接口，或如果你有多个功能区中你的项目，并且你想要指定运行时在显示的功能区。  
+ 重写此方法以提供 Microsoft Office 应用程序的实现`Microsoft.Office.Core.IRibbonExtensibility`接口，或者如果你有多个功能区在项目中，并且你想要指定功能区显示在运行时。  
   
- 无需重写此方法以返回你使用添加到项目的功能区**功能区 （可视化设计器）** 项模板。 默认情况下，此方法返回<xref:Microsoft.Office.Tools.Ribbon.RibbonManager>对象，表示所有**功能区 （可视化设计器）** 项目中的项。 有关详细信息，请参阅[功能区概述](/visualstudio/vsto/ribbon-overview.md)。  
+ 无需重写此方法返回通过使用添加到项目的功能区**功能区 （可视化设计器）** 项模板。 默认情况下，此方法返回<xref:Microsoft.Office.Tools.Ribbon.RibbonManager>对象，表示所有**功能区 （可视化设计器）** 项目中的项。 有关详细信息，请参阅[功能区概述](/visualstudio/vsto/ribbon-overview.md)。  
   
- 必须重写<xref:Microsoft.Office.Tools.AddInBase.CreateRibbonExtensibilityObject%2A>或<xref:Microsoft.Office.Tools.AddInBase.RequestService%2A>方法以返回你使用添加的项目中的功能区**功能区 (XML)** 项模板。 有关如何重写<xref:Microsoft.Office.Tools.AddInBase.CreateRibbonExtensibilityObject%2A>方法，请参阅[功能区 XML](/visualstudio/vsto/ribbon-xml.md)。  
+ 必须重写<xref:Microsoft.Office.Tools.AddInBase.CreateRibbonExtensibilityObject%2A>或<xref:Microsoft.Office.Tools.AddInBase.RequestService%2A>方法来返回功能区中的项目中使用添加**功能区 (XML)** 项模板。 详细了解如何重写<xref:Microsoft.Office.Tools.AddInBase.CreateRibbonExtensibilityObject%2A>方法，请参阅[功能区 XML](/visualstudio/vsto/ribbon-xml.md)。  
   
- 有关如何重写<xref:Microsoft.Office.Tools.AddInBase.RequestService%2A>方法，请参阅[UI 功能通过使用扩展性接口自定义](/visualstudio/vsto/customizing-ui-features-by-using-extensibility-interfaces.md)。  
+ 详细了解如何重写<xref:Microsoft.Office.Tools.AddInBase.RequestService%2A>方法，请参阅[自定义 UI 功能 By Using Extensibility Interfaces](/visualstudio/vsto/customizing-ui-features-by-using-extensibility-interfaces.md)。  
   
  ]]></format>
         </remarks>
@@ -215,9 +215,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 默认实现调用此方法<xref:Microsoft.Office.Tools.AddInBase.CreateRibbonExtensibilityObject%2A>方法<xref:Microsoft.Office.Tools.AddInBase>类在该项目包含**功能区 （可视化设计器）** 项。  
+ 默认实现调用此方法<xref:Microsoft.Office.Tools.AddInBase.CreateRibbonExtensibilityObject%2A>方法<xref:Microsoft.Office.Tools.AddInBase>类时该项目包含**功能区 （可视化设计器）** 项。  
   
- 如果你想要指定功能区显示在运行时，重写此方法。 你也可以替代<xref:Microsoft.Office.Tools.AddInBase.CreateRibbonExtensibilityObject%2A>方法，以指定运行时在显示的功能区。 有关详细信息，请参阅[功能区概述](/visualstudio/vsto/ribbon-overview.md)。  
+ 如果你想要指定功能区显示在运行时，重写此方法。 此外可以重写<xref:Microsoft.Office.Tools.AddInBase.CreateRibbonExtensibilityObject%2A>方法，以指定运行时功能区上显示。 有关详细信息，请参阅[功能区概述](/visualstudio/vsto/ribbon-overview.md)。  
   
  ]]></format>
         </remarks>
@@ -280,7 +280,7 @@
 ## Remarks  
  不要调用<xref:Microsoft.Office.Tools.AddInBase.Dispose%2A>方法自己。 外接程序卸载时，[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]清理外接程序使用的所有资源。  
   
- 有关详细信息<xref:Microsoft.Office.Tools.AddInBase.Dispose%2A>方法，请参阅[清洗向上非托管资源](http://msdn.microsoft.com/library/a17b0066-71c2-4ba4-9822-8e19332fc213)。  
+ 有关详细信息<xref:Microsoft.Office.Tools.AddInBase.Dispose%2A>方法，请参阅[清理了非托管资源](http://msdn.microsoft.com/library/a17b0066-71c2-4ba4-9822-8e19332fc213)。  
   
  ]]></format>
         </remarks>
@@ -685,7 +685,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要运行代码，该外接程序卸载前，将代码添加到`ThisAddIn_Shutdown`中的方法`ThisAddIn`类。 此方法是默认事件处理程序<xref:Microsoft.Office.Tools.AddInBase.Shutdown>事件。 有关详细信息，请参阅[Office 项目中的事件](/visualstudio/vsto/events-in-office-projects.md)。 有关详细信息`ThisAddIn`类，请参阅[VSTO 外接程序编程](/visualstudio/vsto/programming-vsto-add-ins.md)。  
+ 若要运行代码，只需外接程序卸载之前，将代码添加到`ThisAddIn_Shutdown`中的方法`ThisAddIn`类。 此方法是默认事件处理程序<xref:Microsoft.Office.Tools.AddInBase.Shutdown>事件。 有关详细信息，请参阅[Events in Office Projects](/visualstudio/vsto/events-in-office-projects.md)。 有关详细信息`ThisAddIn`类，请参阅[VSTO 外接程序编程](/visualstudio/vsto/programming-vsto-add-ins.md)。  
   
  ]]></format>
         </remarks>
@@ -710,7 +710,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要在加载外接程序时运行代码，将代码添加到`ThisAddIn_Startup`中的方法`ThisAddIn`类。 此方法是默认事件处理程序<xref:Microsoft.Office.Tools.AddInBase.Startup>事件。 有关详细信息，请参阅[Office 项目中的事件](/visualstudio/vsto/events-in-office-projects.md)。 有关详细信息`ThisAddIn`类，请参阅[VSTO 外接程序编程](/visualstudio/vsto/programming-vsto-add-ins.md)。  
+ 若要运行的代码加载外接程序时，将代码添加到`ThisAddIn_Startup`中的方法`ThisAddIn`类。 此方法是默认事件处理程序<xref:Microsoft.Office.Tools.AddInBase.Startup>事件。 有关详细信息，请参阅[Events in Office Projects](/visualstudio/vsto/events-in-office-projects.md)。 有关详细信息`ThisAddIn`类，请参阅[VSTO 外接程序编程](/visualstudio/vsto/programming-vsto-add-ins.md)。  
   
  ]]></format>
         </remarks>
@@ -736,16 +736,16 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 重写此方法以公开外接程序向其他解决方案中的对象。 这包括其他外接程序和文档级自定义项中的相同应用程序进程，VBA 代码和外部的自动化代码运行。  
+ 重写此方法以公开外接程序向其他解决方案中的对象。 这包括其他外接程序和文档级自定义项中的相同应用程序进程、 VBA 代码和外部自动化代码运行。  
   
- 返回的对象必须是公共的它必须是对于 COM 可见，并且必须公开[IDispatch](http://msdn.microsoft.com/en-us/ebbff4bc-36b2-4861-9efa-ffa45e013eb5)接口。 如果返回的对象不满足这些要求，[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]将引发<xref:System.InvalidCastException>后调用您的实现。  
+ 返回的对象必须是公共的它必须是对于 COM 可见，并且必须公开[IDispatch](http://msdn.microsoft.com/en-us/ebbff4bc-36b2-4861-9efa-ffa45e013eb5)接口。 如果您返回的对象不满足这些要求[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]将引发<xref:System.InvalidCastException>后它会调用您的实现。  
   
- 有关详细信息，请参阅[调用 VSTO 外接程序从其他 Office 解决方案中的代码](/visualstudio/vsto/calling-code-in-vsto-add-ins-from-other-office-solutions.md)。  
+ 有关详细信息，请参阅 [从其他 Office 解决方案调用 VSTO 外接程序中的代码](/visualstudio/vsto/calling-code-in-vsto-add-ins-from-other-office-solutions.md)。  
   
    
   
 ## Examples  
- 有关代码示例演示如何重写<xref:Microsoft.Office.Tools.AddInBase.RequestComAddInAutomationService%2A>方法，请参阅[演练： 在 VSTO 外接程序中从 VBA 调用代码](/visualstudio/vsto/walkthrough-calling-code-in-a-vsto-add-in-from-vba.md)。  
+ 有关演示如何重写的代码示例<xref:Microsoft.Office.Tools.AddInBase.RequestComAddInAutomationService%2A>方法，请参阅[演练： VSTO 外接程序中从 VBA 调用代码](/visualstudio/vsto/walkthrough-calling-code-in-a-vsto-add-in-from-vba.md)。  
   
  ]]></format>
         </remarks>
@@ -774,17 +774,17 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 重写此方法在应用程序级外接程序来实现扩展性接口来扩展 Microsoft Office 应用程序中的功能。 有关详细信息，请参阅[UI 功能通过使用扩展性接口自定义](/visualstudio/vsto/customizing-ui-features-by-using-extensibility-interfaces.md)。  
+ 重写此方法在应用程序级外接程序来实现扩展性接口来扩展 Microsoft Office 应用程序中的功能。 有关详细信息，请参阅[自定义 UI 功能 By Using Extensibility Interfaces](/visualstudio/vsto/customizing-ui-features-by-using-extensibility-interfaces.md)。  
   
- 当你重写此方法时，检查的值`serviceGuid`参数，以确定正在请求的扩展性接口，，然后返回实现该接口的对象。 加载外接程序后，[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]调用<xref:Microsoft.Office.Tools.AddInBase.RequestService%2A>由应用程序、 支持的每个接口的一个或多个时间和它将返回的值发送到的 Microsoft Office 应用程序加载外接程序。 外接程序加载过程的详细信息，请参阅[体系结构的 VSTO 外接程序](/visualstudio/vsto/architecture-of-vsto-add-ins.md)。  
+ 当你重写此方法时，检查的值`serviceGuid`参数，以确定请求的可扩展性接口时，，然后返回实现该接口的对象。 加载外接程序时，[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]调用<xref:Microsoft.Office.Tools.AddInBase.RequestService%2A>的应用程序，支持的每个接口的一个或多个时间且它将返回值发送到加载外接程序的 Microsoft Office 应用程序。 有关外接程序的加载过程的详细信息，请参阅[Architecture of VSTO 外接程序](/visualstudio/vsto/architecture-of-vsto-add-ins.md)。  
   
 > [!NOTE]
->  如果你通过自定义功能区用户界面创建您自己的实现`Microsoft.Office.Core.IRibbonExtensibility`接口或通过添加**功能区 (XML)** 项到你的项目，或者可以替代<xref:Microsoft.Office.Tools.AddInBase.CreateRibbonExtensibilityObject%2A>而不是方法<xref:Microsoft.Office.Tools.AddInBase.RequestService%2A>方法。 有关详细信息，请参阅[功能区概述](/visualstudio/vsto/ribbon-overview.md)和[功能区 XML](/visualstudio/vsto/ribbon-xml.md)。  
+>  如果你通过自定义功能区用户界面创建自己的实现`Microsoft.Office.Core.IRibbonExtensibility`接口或通过添加**功能区 (XML)** 项到项目中，或者可以替代<xref:Microsoft.Office.Tools.AddInBase.CreateRibbonExtensibilityObject%2A>方法而不是<xref:Microsoft.Office.Tools.AddInBase.RequestService%2A>方法。 有关详细信息，请参阅[功能区概述](/visualstudio/vsto/ribbon-overview.md)并[功能区 XML](/visualstudio/vsto/ribbon-xml.md)。  
   
    
   
 ## Examples  
- 有关代码示例演示如何实现扩展性接口，并重写<xref:Microsoft.Office.Tools.AddInBase.RequestService%2A>方法，请参阅[UI 功能通过使用扩展性接口自定义](/visualstudio/vsto/customizing-ui-features-by-using-extensibility-interfaces.md)。  
+ 有关代码示例演示如何实现扩展性接口并重写<xref:Microsoft.Office.Tools.AddInBase.RequestService%2A>方法，请参阅[自定义 UI 功能 By Using Extensibility Interfaces](/visualstudio/vsto/customizing-ui-features-by-using-extensibility-interfaces.md)。  
   
  ]]></format>
         </remarks>
@@ -808,11 +808,11 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用默认<xref:Microsoft.Office.Tools.AddInBase.Shutdown>中的事件处理程序`ThisAddIn`类，而不是创建您自己的事件处理程序此事件。 默认值<xref:Microsoft.Office.Tools.AddInBase.Shutdown>事件处理程序命名为`ThisAddIn_Shutdown`。  
+ 使用默认<xref:Microsoft.Office.Tools.AddInBase.Shutdown>中的事件处理程序`ThisAddIn`类，而不是创建您自己为此事件的事件处理程序。 默认值<xref:Microsoft.Office.Tools.AddInBase.Shutdown>事件处理程序命名为`ThisAddIn_Shutdown`。  
   
- 在 Outlook 2010 中，<xref:Microsoft.Office.Tools.AddInBase.Shutdown>当 Outlook 退出时不引发事件。 但是，将引发此事件，当用户禁用外接程序使用**COM 外接**在 Outlook 中的对话框。  
+ 在 Outlook 2010 中， <xref:Microsoft.Office.Tools.AddInBase.Shutdown> Outlook 退出时不会引发事件。 但是，将引发此事件，当用户禁用外接程序通过使用**COM 加载项**在 Outlook 中的对话框。  
   
- 有关详细信息，请参阅[Office 项目中的事件](/visualstudio/vsto/events-in-office-projects.md)。 有关详细信息`ThisAddIn`类，请参阅[VSTO 外接程序编程](/visualstudio/vsto/programming-vsto-add-ins.md)。  
+ 有关详细信息，请参阅[Events in Office Projects](/visualstudio/vsto/events-in-office-projects.md)。 有关详细信息`ThisAddIn`类，请参阅[VSTO 外接程序编程](/visualstudio/vsto/programming-vsto-add-ins.md)。  
   
  ]]></format>
         </remarks>
@@ -854,9 +854,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用默认<xref:Microsoft.Office.Tools.AddInBase.Startup>中的事件处理程序`ThisAddIn`类，而不是创建您自己的事件处理程序此事件。 默认值<xref:Microsoft.Office.Tools.AddInBase.Startup>事件处理程序命名为`ThisAddIn_Startup`。  
+ 使用默认<xref:Microsoft.Office.Tools.AddInBase.Startup>中的事件处理程序`ThisAddIn`类，而不是创建您自己为此事件的事件处理程序。 默认值<xref:Microsoft.Office.Tools.AddInBase.Startup>事件处理程序命名为`ThisAddIn_Startup`。  
   
- 有关详细信息，请参阅[Office 项目中的事件](/visualstudio/vsto/events-in-office-projects.md)。 有关详细信息`ThisAddIn`类，请参阅[VSTO 外接程序编程](/visualstudio/vsto/programming-vsto-add-ins.md)。  
+ 有关详细信息，请参阅[Events in Office Projects](/visualstudio/vsto/events-in-office-projects.md)。 有关详细信息`ThisAddIn`类，请参阅[VSTO 外接程序编程](/visualstudio/vsto/programming-vsto-add-ins.md)。  
   
  ]]></format>
         </remarks>

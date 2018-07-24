@@ -1,10 +1,10 @@
 <Type Name="AddIn" FullName="Microsoft.Office.Tools.AddIn">
   <Metadata>
     <Meta Name="ms.openlocfilehash" Value="1e23643b6cc08155badb62dedb32f2b4069855c6" />
-    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.sourcegitcommit" Value="d85a83935f1d68ded616fcdfb8fd10d6bf4a4633" />
     <Meta Name="ms.translationtype" Value="HT" />
     <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+    <Meta Name="ms.lasthandoff" Value="07/24/2018" />
     <Meta Name="ms.locfileid" Value="29432412" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface AddIn : IDisposable, System.ComponentModel.IComponent, System.Windows.Forms.IBindableComponent" />
@@ -47,9 +47,9 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 当使用 Visual Studio 中的 Office 开发工具创建应用程序级外接程序时，通常不使用<xref:Microsoft.Office.Tools.AddIn>直接接口。 请改用生成`ThisAddIn`项目中的类。 `ThisAddIn`类派生其大多数成员从<xref:Microsoft.Office.Tools.AddInBase>类。 此基类会将对其成员的所有调用都重定向到 [!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)] 中 <xref:Microsoft.Office.Tools.AddIn> 接口的内部实现。  
+ 当使用 Visual Studio 中的 Office 开发工具创建应用程序级外接程序时，您通常不使用<xref:Microsoft.Office.Tools.AddIn>直接接口。 请改用生成`ThisAddIn`在项目中的类。 `ThisAddIn`类派生其大多数成员从<xref:Microsoft.Office.Tools.AddInBase>类。 此基类会将对其成员的所有调用都重定向到 [!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)] 中 <xref:Microsoft.Office.Tools.AddIn> 接口的内部实现。  
   
- 有关详细信息，请参阅[VSTO 外接程序编程](/visualstudio/vsto/programming-vsto-add-ins.md)。  
+ 有关详细信息，请参阅[Programming VSTO Add-ins](/visualstudio/vsto/programming-vsto-add-ins.md)。  
   
  [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
   
@@ -144,7 +144,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 默认扩展名是<xref:Microsoft.Office.Tools.IAddInExtension>对象由实现[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]。  
+ 默认扩展名<xref:Microsoft.Office.Tools.IAddInExtension>对象，它由实现[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]。  
   
  ]]></format>
         </remarks>
@@ -169,7 +169,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 自定义扩展是一种实现的<xref:Microsoft.Office.Tools.IAddInExtension>中通过使用 Visual Studio 中的 Office 开发工具创建的外接程序的接口。 默认情况下，此属性返回生成一个实例`ThisAddIn`类。 `ThisAddIn`类实现<xref:Microsoft.Office.Tools.IAddInExtension>接口通过<xref:Microsoft.Office.Tools.AddInBase>类。 有关详细信息，请参阅[VSTO 外接程序编程](/visualstudio/vsto/programming-vsto-add-ins.md)。  
+ 自定义扩展插件是一种实现的<xref:Microsoft.Office.Tools.IAddInExtension>中通过使用 Visual Studio 中的 Office 开发工具创建的外接程序的接口。 默认情况下，此属性返回所生成的实例`ThisAddIn`类。 `ThisAddIn`类实现<xref:Microsoft.Office.Tools.IAddInExtension>接口通过<xref:Microsoft.Office.Tools.AddInBase>类。 有关详细信息，请参阅[Programming VSTO Add-ins](/visualstudio/vsto/programming-vsto-add-ins.md)。  
   
  ]]></format>
         </remarks>
@@ -241,9 +241,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用默认<xref:Microsoft.Office.Tools.AddIn.Shutdown>中的事件处理程序`ThisAddIn`类，而不是创建您自己的事件处理程序此事件。 默认值<xref:Microsoft.Office.Tools.AddIn.Shutdown>事件处理程序命名为`ThisAddIn_Shutdown`。  
+ 使用默认<xref:Microsoft.Office.Tools.AddIn.Shutdown>中的事件处理程序`ThisAddIn`类，而不是创建您自己为此事件的事件处理程序。 默认值<xref:Microsoft.Office.Tools.AddIn.Shutdown>事件处理程序命名为`ThisAddIn_Shutdown`。  
   
- 有关详细信息，请参阅[Office 项目中的事件](/visualstudio/vsto/events-in-office-projects.md)。 有关详细信息`ThisAddIn`类，请参阅[VSTO 外接程序编程](/visualstudio/vsto/programming-vsto-add-ins.md)。  
+ 有关详细信息，请参阅[Events in Office Projects](/visualstudio/vsto/events-in-office-projects.md)。 有关详细信息`ThisAddIn`类，请参阅[VSTO 外接程序编程](/visualstudio/vsto/programming-vsto-add-ins.md)。  
   
  ]]></format>
         </remarks>
@@ -271,9 +271,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用默认<xref:Microsoft.Office.Tools.AddIn.Startup>中的事件处理程序`ThisAddIn`类，而不是创建您自己的事件处理程序此事件。 默认值<xref:Microsoft.Office.Tools.AddIn.Startup>事件处理程序命名为`ThisAddIn_Startup`。  
+ 使用默认<xref:Microsoft.Office.Tools.AddIn.Startup>中的事件处理程序`ThisAddIn`类，而不是创建您自己为此事件的事件处理程序。 默认值<xref:Microsoft.Office.Tools.AddIn.Startup>事件处理程序命名为`ThisAddIn_Startup`。  
   
- 有关详细信息，请参阅[Office 项目中的事件](/visualstudio/vsto/events-in-office-projects.md)。 有关详细信息`ThisAddIn`类，请参阅[VSTO 外接程序编程](/visualstudio/vsto/programming-vsto-add-ins.md)。  
+ 有关详细信息，请参阅[Events in Office Projects](/visualstudio/vsto/events-in-office-projects.md)。 有关详细信息`ThisAddIn`类，请参阅[VSTO 外接程序编程](/visualstudio/vsto/programming-vsto-add-ins.md)。  
   
  ]]></format>
         </remarks>

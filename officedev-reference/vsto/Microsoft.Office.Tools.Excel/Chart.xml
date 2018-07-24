@@ -1,10 +1,10 @@
 <Type Name="Chart" FullName="Microsoft.Office.Tools.Excel.Chart">
   <Metadata>
     <Meta Name="ms.openlocfilehash" Value="fa189dc5a1ccffecf003da5de8feb360aad1458c" />
-    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.sourcegitcommit" Value="d85a83935f1d68ded616fcdfb8fd10d6bf4a4633" />
     <Meta Name="ms.translationtype" Value="HT" />
     <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+    <Meta Name="ms.lasthandoff" Value="07/24/2018" />
     <Meta Name="ms.locfileid" Value="29435675" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface Chart : IDisposable, System.ComponentModel.IComponent, System.ComponentModel.ISupportInitialize, System.Windows.Forms.IBindableComponent" />
@@ -39,7 +39,7 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.Chart> 控件提供的本机的所有功能<xref:Microsoft.Office.Interop.Excel.Chart?displayProperty=fullName>Excel 对象模型中的对象。 但是，<xref:Microsoft.Office.Tools.Excel.Chart>控件还公开了事件。 有关详细信息，请参阅[图表控件](/visualstudio/vsto/chart-control.md)。  
+ <xref:Microsoft.Office.Tools.Excel.Chart> 控件提供的本机的所有功能<xref:Microsoft.Office.Interop.Excel.Chart?displayProperty=fullName>Excel 对象模型中的对象。 但是，<xref:Microsoft.Office.Tools.Excel.Chart>控件还公开事件。 有关详细信息，请参阅[图表控件](/visualstudio/vsto/chart-control.md)。  
   
  [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
   
@@ -305,7 +305,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.Chart>的处理程序与<xref:Microsoft.Office.Tools.Excel.Chart.ActivateEvent>激活图表时显示一个消息框的事件。  
+ 下面的代码示例将创建<xref:Microsoft.Office.Tools.Excel.Chart>使用的处理程序<xref:Microsoft.Office.Tools.Excel.Chart.ActivateEvent>事件时激活该图表显示一个消息框。  
   
  [!code-csharp[Trin_ExcelChart#200](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChart/CS/Sheet1.cs#200)]
  [!code-vb[Trin_ExcelChart#200](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChart/VB/Sheet1.vb#200)]  
@@ -333,7 +333,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.Chart>，然后使用<xref:Microsoft.Office.Tools.Excel.Chart.Application%2A>属性在消息框中显示的应用程序名称。  
+ 下面的代码示例将创建<xref:Microsoft.Office.Tools.Excel.Chart>，然后使用<xref:Microsoft.Office.Tools.Excel.Chart.Application%2A>属性在消息框中显示的应用程序名称。  
   
  [!code-csharp[Trin_ExcelChart#1](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChart/CS/Sheet1.cs#1)]
  [!code-vb[Trin_ExcelChart#1](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChart/VB/Sheet1.vb#1)]  
@@ -418,10 +418,8 @@
       <Docs>
         <param name="Type">
           <see cref="T:Microsoft.Office.Interop.Excel.XlDataLabelsType" />。 要应用的数据标签的类型。</param>
-        <param name="LegendKey">
-          为 <see langword="true" /> 时，在点旁边显示图例项标示。 默认值为 <see langword="false" />。</param>
-        <param name="AutoText">
-          如果对象自动根据内容生成适当的文本，则为 <see langword="true" />。</param>
+        <param name="LegendKey">为 <see langword="true" /> 时，在点旁边显示图例项标示。 默认值为 <see langword="false" />。</param>
+        <param name="AutoText">如果对象自动根据内容生成适当的文本，则为 <see langword="true" />。</param>
         <param name="HasLeaderLines">对于 <see cref="T:Microsoft.Office.Interop.Excel.Chart" /> 和 <see cref="T:Microsoft.Office.Interop.Excel.Series" /> 对象而言，如果系列包含引导线，则为 <see langword="true" />。</param>
         <param name="ShowSeriesName">数据标签的系列名称。</param>
         <param name="ShowCategoryName">数据标签的类别名称。</param>
@@ -441,7 +439,7 @@
    
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.Chart>，然后使用<xref:Microsoft.Office.Tools.Excel.Chart.ApplyDataLabels%2A>方法以在图表上显示数据标签与系列名称。  
+ 下面的代码示例将创建<xref:Microsoft.Office.Tools.Excel.Chart>，然后使用<xref:Microsoft.Office.Tools.Excel.Chart.ApplyDataLabels%2A>方法，以便在图表上显示数据标签与系列名称。  
   
  [!code-csharp[Trin_ExcelChart#101](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChart/CS/Sheet1.cs#101)]
  [!code-vb[Trin_ExcelChart#101](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChart/VB/Sheet1.vb#101)]  
@@ -474,9 +472,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 值`Layout`参数对应于可用的选项上**图表布局**组**设计**功能区上的选项卡。 **设计**选项卡选择图表后可用。  
+ 值`Layout`上的参数对应于可用的选项**图表布局**组**设计**功能区上的选项卡。 **设计**时您选择一个图表，选项卡才可用。  
   
- 每个类型的图表有自己的布局选项集。 例如，饼图的布局选项是柱形图的布局选项不同。 如果你想要从不同的图表类型应用布局，则可以使用`ChartType`参数来指定图表键入`Layout`参数将引用。 例如，如果你有一个柱形图和你想要从折线图应用布局、 传递<xref:Microsoft.Office.Interop.Excel.XlChartType.xlLine?displayProperty=fullName>值赋给`ChartType`参数。 布局将只添加可用于该特定的图表类型的图表元素。  
+ 图表的每个类型都有其自己的布局选项集。 例如，饼图的布局选项是不同于柱形图的布局选项。 如果你想要从不同的图表类型来应用布局，则可以使用`ChartType`参数来指定图表键入`Layout`参数引用。 例如，如果有一个柱形图和你想要从折线图应用布局，则传递<xref:Microsoft.Office.Interop.Excel.XlChartType.xlLine?displayProperty=fullName>值设为`ChartType`参数。 布局仅添加适用于该特定图表类型的图表元素。  
   
 ## <a name="optional-parameters"></a>可选参数  
  有关可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -484,7 +482,7 @@
    
   
 ## Examples  
- 下面的代码示例应用可用于的图表类型的第 10 个布局`Chart_1`图表。 此外，该示例使用<xref:Microsoft.Office.Tools.Excel.Chart.SetElement%2A>方法应用更多布局更改： 设置图表标题为居中且位于图表网格区域内的样式、 添加的水平轴的标题以及添加垂直轴的旋转的标题。 若要运行此代码示例，必须将添加名为簇状的柱形二维图表`Chart_1`默认表`Sheet1`。  
+ 下面的代码示例应用适用的图表类型的第十个布局`Chart_1`图表。 此外，该示例使用<xref:Microsoft.Office.Tools.Excel.Chart.SetElement%2A>方法应用更多布局更改： 将图表标题为居中且位于图表网格区域内的样式设置、 添加水平轴的标题以及添加垂直轴的旋转的标题。 若要运行此代码示例，必须将添加名为簇状的柱形二维图表`Chart_1`到默认工作表`Sheet1`。  
   
  [!code-csharp[Trin_ExcelWorkBook_Additional#17](~/snippets/csharp/VS_Snippets_OfficeSP/trin_excelworkbook_additional/cs/ThisWorkbook.cs#17)]
  [!code-vb[Trin_ExcelWorkBook_Additional#17](~/snippets/visualbasic/VS_Snippets_OfficeSP/trin_excelworkbook_additional/vb/ThisWorkbook.vb#17)]  
@@ -612,13 +610,12 @@
       </ReturnValue>
       <Docs>
         <summary>缩放三维图表，以使其在大小上更接近等效的二维图表。</summary>
-        <value>
-          如果 Microsoft Office Excel 缩放三维图表，以使其在大小上更接近等效的二维图表，则为 <see langword="true" />；否则为 <see langword="false" />。 <see cref="P:Microsoft.Office.Tools.Excel.Chart.RightAngleAxes" /> 属性必须为 <see langword="true" />。</value>
+        <value>如果 Microsoft Office Excel 缩放三维图表，以使其在大小上更接近等效的二维图表，则为 <see langword="true" />；否则为 <see langword="false" />。 <see cref="P:Microsoft.Office.Tools.Excel.Chart.RightAngleAxes" /> 属性必须为 <see langword="true" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例创建一个三维<xref:Microsoft.Office.Tools.Excel.Chart>，然后将设置<xref:Microsoft.Office.Tools.Excel.Chart.AutoScaling%2A>属性`true`自动缩放图表。 该示例设置<xref:Microsoft.Office.Tools.Excel.Chart.RightAngleAxes%2A>属性`true`之前<xref:Microsoft.Office.Tools.Excel.Chart.AutoScaling%2A>属性设置。  
+ 下面的代码示例创建一个三维<xref:Microsoft.Office.Tools.Excel.Chart>，然后设置<xref:Microsoft.Office.Tools.Excel.Chart.AutoScaling%2A>属性设置为`true`来自动缩放该图表。 该示例设置<xref:Microsoft.Office.Tools.Excel.Chart.RightAngleAxes%2A>属性设置为`true`之前<xref:Microsoft.Office.Tools.Excel.Chart.AutoScaling%2A>属性设置。  
   
  [!code-csharp[Trin_ExcelChart#4](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChart/CS/Sheet1.cs#4)]
  [!code-vb[Trin_ExcelChart#4](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChart/VB/Sheet1.vb#4)]  
@@ -659,7 +656,7 @@
    
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.Chart>，然后使用<xref:Microsoft.Office.Tools.Excel.Chart.Axes%2A>方法添加到主轴标题。  
+ 下面的代码示例将创建<xref:Microsoft.Office.Tools.Excel.Chart>，然后使用<xref:Microsoft.Office.Tools.Excel.Chart.Axes%2A>方法添加到主轴标题。  
   
  [!code-csharp[Trin_ExcelChart#103](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChart/CS/Sheet1.cs#103)]
  [!code-vb[Trin_ExcelChart#103](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChart/VB/Sheet1.vb#103)]  
@@ -687,12 +684,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用<xref:Microsoft.Office.Tools.Excel.Chart.BackWall%2A>后三维图表的墙进行格式设置的属性。  
+ 使用<xref:Microsoft.Office.Tools.Excel.Chart.BackWall%2A>属性来设置格式的三维图表的背面墙。  
   
    
   
 ## Examples  
- 下面的代码示例将添加到三维簇状的柱形图`Sheet1`并设置其样式为样式 4。 然后，示例创建的任意数据范围，并将其设置为图表源数据。 接下来，该代码指定图表背景墙和层的颜色。  
+ 下面的代码示例将添加到三维簇状的柱形图`Sheet1`并设置其样式为样式 4。 然后，示例将创建的任意数据范围，并将其设置为图表源数据。 接下来，代码将指定的图表墙面和 floor 的颜色。  
   
  [!code-csharp[Trin_Excelworkbook_Additional#37](~/snippets/csharp/VS_Snippets_OfficeSP/trin_excelworkbook_additional/cs/ThisWorkbook.cs#37)]
  [!code-vb[Trin_Excelworkbook_Additional#37](~/snippets/visualbasic/VS_Snippets_OfficeSP/trin_excelworkbook_additional/vb/ThisWorkbook.vb#37)]  
@@ -771,7 +768,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例创建一个三维<xref:Microsoft.Office.Tools.Excel.Chart>然后会提示用户进行更改条形图和棱锥图中使用的形状<xref:Microsoft.Office.Tools.Excel.Chart.BarShape%2A>属性。  
+ 下面的代码示例创建一个三维<xref:Microsoft.Office.Tools.Excel.Chart>然后会提示用户更改条形图和棱锥图使用的形状<xref:Microsoft.Office.Tools.Excel.Chart.BarShape%2A>属性。  
   
  [!code-csharp[Trin_ExcelChart#5](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChart/CS/Sheet1.cs#5)]
  [!code-vb[Trin_ExcelChart#5](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChart/VB/Sheet1.vb#5)]  
@@ -798,12 +795,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Interop.Excel._Application.DoubleClick%2A>方法不会导致此事件发生。  
+ <xref:Microsoft.Office.Interop.Excel._Application.DoubleClick%2A>方法不会导致发生此事件。  
   
    
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.Chart>的处理程序与<xref:Microsoft.Office.Tools.Excel.Chart.BeforeDoubleClick>时显示一个消息框轴的图表的事件是双击。 该示例还将`Cancel`的事件处理程序参数`true`，以便图表不会收到双击操作，当用户双击轴。  
+ 下面的代码示例将创建<xref:Microsoft.Office.Tools.Excel.Chart>使用的处理程序<xref:Microsoft.Office.Tools.Excel.Chart.BeforeDoubleClick>在双击时显示一个消息框轴的图表的事件之后。 该示例还设置`Cancel`参数的事件处理程序`true`，以便当用户双击轴时，图表不会接收的双击操作。  
   
  [!code-csharp[Trin_ExcelChart#201](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChart/CS/Sheet1.cs#201)]
  [!code-vb[Trin_ExcelChart#201](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChart/VB/Sheet1.vb#201)]  
@@ -830,7 +827,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.Chart>的处理程序与<xref:Microsoft.Office.Tools.Excel.Chart.BeforeRightClick>右击图表时显示一个消息框的事件。 该示例还将`Cancel`的事件处理程序参数`true`，因此图表不会收到右键单击操作。  
+ 下面的代码示例将创建<xref:Microsoft.Office.Tools.Excel.Chart>使用的处理程序<xref:Microsoft.Office.Tools.Excel.Chart.BeforeRightClick>右击图表时显示一个消息框的事件。 该示例还设置`Cancel`参数的事件处理程序`true`，以便在图表不会接收右键单击操作。  
   
  [!code-csharp[Trin_ExcelChart#202](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChart/CS/Sheet1.cs#202)]
  [!code-vb[Trin_ExcelChart#202](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChart/VB/Sheet1.vb#202)]  
@@ -901,7 +898,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.Chart>的处理程序与<xref:Microsoft.Office.Tools.Excel.Chart.Calculate>图表的源数据更改时显示一个消息框的事件。  
+ 下面的代码示例将创建<xref:Microsoft.Office.Tools.Excel.Chart>使用的处理程序<xref:Microsoft.Office.Tools.Excel.Chart.Calculate>图表在源数据更改时显示一个消息框的事件。  
   
  [!code-csharp[Trin_ExcelChart#203](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChart/CS/Sheet1.cs#203)]
  [!code-vb[Trin_ExcelChart#203](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChart/VB/Sheet1.vb#203)]  
@@ -929,7 +926,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.Chart>，然后使用<xref:Microsoft.Office.Tools.Excel.Chart.ChartArea%2A>属性修改的权重和图表区边框的颜色。  
+ 下面的代码示例将创建<xref:Microsoft.Office.Tools.Excel.Chart>，然后使用<xref:Microsoft.Office.Tools.Excel.Chart.ChartArea%2A>属性以修改权重和图表区域边框的颜色。  
   
  [!code-csharp[Trin_ExcelChart#6](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChart/CS/Sheet1.cs#6)]
  [!code-vb[Trin_ExcelChart#6](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChart/VB/Sheet1.vb#6)]  
@@ -1000,7 +997,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法不是等效于<xref:Microsoft.Office.Tools.Excel.Workbook.Charts%2A>属性。 此方法返回嵌入的图表;`Charts`属性返回图表工作表。 使用<xref:Microsoft.Office.Interop.Excel.ChartObject.Chart%2A>属性以返回`Chart`嵌入图表的对象。  
+ 此方法不是等效于<xref:Microsoft.Office.Tools.Excel.Workbook.Charts%2A>属性。 此方法返回嵌入式的图表;`Charts`属性返回图表工作表。 使用<xref:Microsoft.Office.Interop.Excel.ChartObject.Chart%2A>属性以返回`Chart`嵌入式图表的对象。  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -1008,7 +1005,7 @@
    
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.Chart>，然后使用<xref:Microsoft.Office.Tools.Excel.Chart.ChartObjects%2A>方法以显示是否由 Microsoft Office Excel 创建图表。  
+ 下面的代码示例将创建<xref:Microsoft.Office.Tools.Excel.Chart>，然后使用<xref:Microsoft.Office.Tools.Excel.Chart.ChartObjects%2A>方法来显示是否由 Microsoft Office Excel 创建图表。  
   
  [!code-csharp[Trin_ExcelChart#106](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChart/CS/Sheet1.cs#106)]
  [!code-vb[Trin_ExcelChart#106](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChart/VB/Sheet1.vb#106)]  
@@ -1036,12 +1033,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 值<xref:Microsoft.Office.Tools.Excel.Chart.ChartStyle%2A>上的属性对应于可用的选项**图表样式**组**设计**功能区上的选项卡。 **设计**选项卡选择图表后可用。  
+ 值<xref:Microsoft.Office.Tools.Excel.Chart.ChartStyle%2A>上的属性对应于可用的选项**图表样式**组**设计**功能区上的选项卡。 **设计**时您选择一个图表，选项卡才可用。  
   
    
   
 ## Examples  
- 下面的代码示例将添加到三维簇状的柱形图`Sheet1`并设置其样式为样式 4。 然后，示例创建的任意数据范围，并将其设置为图表源数据。 接下来，该代码指定图表背景墙和层的颜色。  
+ 下面的代码示例将添加到三维簇状的柱形图`Sheet1`并设置其样式为样式 4。 然后，示例将创建的任意数据范围，并将其设置为图表源数据。 接下来，代码将指定的图表墙面和 floor 的颜色。  
   
  [!code-csharp[Trin_Excelworkbook_Additional#37](~/snippets/csharp/VS_Snippets_OfficeSP/trin_excelworkbook_additional/cs/ThisWorkbook.cs#37)]
  [!code-vb[Trin_Excelworkbook_Additional#37](~/snippets/visualbasic/VS_Snippets_OfficeSP/trin_excelworkbook_additional/vb/ThisWorkbook.vb#37)]  
@@ -1069,7 +1066,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.Chart>，然后使用<xref:Microsoft.Office.Tools.Excel.Chart.ChartTitle%2A>属性修改标题的字体颜色。  
+ 下面的代码示例将创建<xref:Microsoft.Office.Tools.Excel.Chart>，然后使用<xref:Microsoft.Office.Tools.Excel.Chart.ChartTitle%2A>属性以修改标题的字体颜色。  
   
  [!code-csharp[Trin_ExcelChart#7](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChart/CS/Sheet1.cs#7)]
  [!code-vb[Trin_ExcelChart#7](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChart/VB/Sheet1.vb#7)]  
@@ -1098,12 +1095,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 某些图表类型将不可用的数据透视图报表。  
+ 某些图表类型不可用于数据透视图报表。  
   
    
   
 ## Examples  
- 下面的代码示例创建一个列<xref:Microsoft.Office.Tools.Excel.Chart>然后会提示用户使用该图表更改为三维饼图<xref:Microsoft.Office.Tools.Excel.Chart.ChartType%2A>属性。  
+ 下面的代码示例创建一个列<xref:Microsoft.Office.Tools.Excel.Chart>，然后提示用户使用该图表更改为三维饼图<xref:Microsoft.Office.Tools.Excel.Chart.ChartType%2A>属性。  
   
  [!code-csharp[Trin_ExcelChart#8](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChart/CS/Sheet1.cs#8)]
  [!code-vb[Trin_ExcelChart#8](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChart/VB/Sheet1.vb#8)]  
@@ -1145,8 +1142,7 @@
         <param name="PlotBy">指定每个系列的数据是按行绘制还是按列绘制。 可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlRowCol" /> 常数之一：<see cref="F:Microsoft.Office.Interop.Excel.XlRowCol.xlRows" /> 或 <see cref="F:Microsoft.Office.Interop.Excel.XlRowCol.xlColumns" />。</param>
         <param name="CategoryLabels">一个整数，指定源范围中包含类别标签的行数或列数。 合法值是从 0（零）到相应类别或系列的最大数减一。</param>
         <param name="SeriesLabels">一个整数，指定源范围中包含系列标签的行数或列数。 合法值是从 0（零）到相应类别或系列的最大数减一。</param>
-        <param name="HasLegend">
-          为 <see langword="true" /> 时包含图例。</param>
+        <param name="HasLegend">为 <see langword="true" /> 时包含图例。</param>
         <param name="Title">
           <see cref="T:Microsoft.Office.Tools.Excel.Chart" /> 控件标题文本。</param>
         <param name="CategoryTitle">分类轴标题文本。</param>
@@ -1157,7 +1153,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果`Source`省略和任何一种选择不是在活动工作表或在活动工作表上的嵌入的图表不是现有图表，此方法将失败，发生错误。  
+ 如果`Source`省略和所选内容不是嵌入的图表在活动工作表或活动工作表上不是现有图表，此方法将失败，出现错误。  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -1165,7 +1161,7 @@
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.Chart.ChartWizard%2A>方法来创建显示数据序列中的单元格 A1 B5 范围三维柱形图。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.Chart.ChartWizard%2A>方法来创建范围内的单元格 A1 到 B5 来显示数据序列的三维柱形图。  
   
  [!code-csharp[Trin_ExcelChart#107](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChart/CS/Sheet1.cs#107)]
  [!code-vb[Trin_ExcelChart#107](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChart/VB/Sheet1.vb#107)]  
@@ -1238,7 +1234,7 @@
    
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.Chart>有标题，然后使用中的拼写错误<xref:Microsoft.Office.Tools.Excel.Chart.CheckSpelling%2A>方法时忽略大写单词并给出建议替换拼写检查图表中的拼写。  
+ 下面的代码示例将创建<xref:Microsoft.Office.Tools.Excel.Chart>有标题，然后使用中的拼写错误<xref:Microsoft.Office.Tools.Excel.Chart.CheckSpelling%2A>方法，而忽略大写单词并给出建议的替换拼写检查图表中的拼写。  
   
  [!code-csharp[Trin_ExcelChart#108](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChart/CS/Sheet1.cs#108)]
  [!code-vb[Trin_ExcelChart#108](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChart/VB/Sheet1.vb#108)]  
@@ -1266,7 +1262,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用此方法重置为自动格式设置的图表元素。 如果使用此方法时，所有格式 （包括替代） 将重置。  
+ 此方法用于重置为自动格式设置的图表元素。 如果使用此方法时，所有格式设置 （包括重写） 将重置。  
   
  ]]></format>
         </remarks>
@@ -1445,7 +1441,7 @@
    
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.Chart>，然后使用<xref:Microsoft.Office.Tools.Excel.Chart.CopyPicture%2A>方法以将图表复制到剪贴板以位图格式。  
+ 下面的代码示例将创建<xref:Microsoft.Office.Tools.Excel.Chart>，然后使用<xref:Microsoft.Office.Tools.Excel.Chart.CopyPicture%2A>方法将图表复制到剪贴板作为位图。  
   
  [!code-csharp[Trin_ExcelChart#111](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChart/CS/Sheet1.cs#111)]
  [!code-vb[Trin_ExcelChart#111](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChart/VB/Sheet1.vb#111)]  
@@ -1535,12 +1531,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 因为<xref:Microsoft.Office.Tools.Excel.Chart>创建在 Microsoft Office Excel 中，此属性将返回字符串接，这等同于十六进制数字 5843454c。  
+ 因为<xref:Microsoft.Office.Tools.Excel.Chart>创建在 Microsoft Office Excel，此属性返回字符串 XCEL，这与十六进制数 5843454c。  
   
    
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.Chart>，然后使用<xref:Microsoft.Office.Tools.Excel.Chart.Creator%2A>属性以验证是否由 Microsoft Office Excel 创建图表。  
+ 下面的代码示例将创建<xref:Microsoft.Office.Tools.Excel.Chart>，然后使用<xref:Microsoft.Office.Tools.Excel.Chart.Creator%2A>属性以验证是否已由 Microsoft Office Excel 在创建图表。  
   
  [!code-csharp[Trin_ExcelChart#11](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChart/CS/Sheet1.cs#11)]
  [!code-vb[Trin_ExcelChart#11](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChart/VB/Sheet1.vb#11)]  
@@ -1568,7 +1564,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.Chart>，然后使用<xref:Microsoft.Office.Tools.Excel.Chart.HasDataTable%2A>和<xref:Microsoft.Office.Tools.Excel.Chart.DataTable%2A>属性要在图表中以边框大纲显示数据的表。  
+ 下面的代码示例将创建<xref:Microsoft.Office.Tools.Excel.Chart>，然后使用<xref:Microsoft.Office.Tools.Excel.Chart.HasDataTable%2A>和<xref:Microsoft.Office.Tools.Excel.Chart.DataTable%2A>属性，以具有边框轮廓在图表中显示数据的表。  
   
  [!code-csharp[Trin_ExcelChart#12](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChart/CS/Sheet1.cs#12)]
  [!code-vb[Trin_ExcelChart#12](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChart/VB/Sheet1.vb#12)]  
@@ -1595,7 +1591,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.Chart>的处理程序与<xref:Microsoft.Office.Tools.Excel.Chart.Deactivate>图表被停用时显示一个消息框的事件。  
+ 下面的代码示例将创建<xref:Microsoft.Office.Tools.Excel.Chart>使用的处理程序<xref:Microsoft.Office.Tools.Excel.Chart.Deactivate>停用图表时显示一个消息框的事件。  
   
  [!code-csharp[Trin_ExcelChart#204](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChart/CS/Sheet1.cs#204)]
  [!code-vb[Trin_ExcelChart#204](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChart/VB/Sheet1.vb#204)]  
@@ -1624,7 +1620,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 在情况下使用此属性其中<xref:System.Windows.Forms.Binding>而无需<xref:System.Windows.Forms.Binding.DataSourceUpdateMode%2A>指定值添加到<xref:System.Windows.Forms.IBindableComponent.DataBindings%2A>集合。  
+ 此属性可在情况下，<xref:System.Windows.Forms.Binding>而无需<xref:System.Windows.Forms.Binding.DataSourceUpdateMode%2A>指定值添加到<xref:System.Windows.Forms.IBindableComponent.DataBindings%2A>集合。  
   
  ]]></format>
         </remarks>
@@ -1649,7 +1645,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法仅应该用于<xref:Microsoft.Office.Interop.Excel.Chart>在运行时以编程方式创建的控件。 如果在调用此方法引发异常<xref:Microsoft.Office.Interop.Excel.Chart>在设计时添加到工作表的控件。  
+ 此方法只应该用于<xref:Microsoft.Office.Interop.Excel.Chart>在运行时以编程方式创建的控件。 如果在调用此方法引发异常<xref:Microsoft.Office.Interop.Excel.Chart>在设计时添加到表中的控件。  
   
  ]]></format>
         </remarks>
@@ -1674,7 +1670,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例创建一个三维<xref:Microsoft.Office.Tools.Excel.Chart>然后通过将更改为图表的宽度的 500%深度<xref:Microsoft.Office.Tools.Excel.Chart.DepthPercent%2A>属性。  
+ 下面的代码示例创建一个三维<xref:Microsoft.Office.Tools.Excel.Chart>然后通过将更改图表的宽度的 500%深度<xref:Microsoft.Office.Tools.Excel.Chart.DepthPercent%2A>属性。  
   
  [!code-csharp[Trin_ExcelChart#13](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChart/CS/Sheet1.cs#13)]
  [!code-vb[Trin_ExcelChart#13](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChart/VB/Sheet1.vb#13)]  
@@ -1725,7 +1721,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.Chart>，然后使用<xref:Microsoft.Office.Tools.Excel.Chart.DisplayBlanksAs%2A>属性指定空白单元格不会绘制图表数据区域中。  
+ 下面的代码示例将创建<xref:Microsoft.Office.Tools.Excel.Chart>，然后使用<xref:Microsoft.Office.Tools.Excel.Chart.DisplayBlanksAs%2A>属性来指定空白单元格不会绘制在图表数据区域中。  
   
  [!code-csharp[Trin_ExcelChart#14](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChart/CS/Sheet1.cs#14)]
  [!code-vb[Trin_ExcelChart#14](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChart/VB/Sheet1.vb#14)]  
@@ -1779,7 +1775,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.Chart>的处理程序与<xref:Microsoft.Office.Tools.Excel.Chart.DragOver>在图表上拖动时显示一个消息框范围的单元格的事件。  
+ 下面的代码示例将创建<xref:Microsoft.Office.Tools.Excel.Chart>使用的处理程序<xref:Microsoft.Office.Tools.Excel.Chart.DragOver>在图表上拖动时显示一个消息框范围的单元格的事件。  
   
  [!code-csharp[Trin_ExcelChart#205](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChart/CS/Sheet1.cs#205)]
  [!code-vb[Trin_ExcelChart#205](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChart/VB/Sheet1.vb#205)]  
@@ -1806,7 +1802,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.Chart>的处理程序与<xref:Microsoft.Office.Tools.Excel.Chart.DragPlot>拖动和删除在图表上时显示一个消息框范围的单元格的事件。  
+ 下面的代码示例将创建<xref:Microsoft.Office.Tools.Excel.Chart>使用的处理程序<xref:Microsoft.Office.Tools.Excel.Chart.DragPlot>事件用于显示消息框单元格的范围时被拖放在图表上。  
   
  [!code-csharp[Trin_ExcelChart#206](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChart/CS/Sheet1.cs#206)]
  [!code-vb[Trin_ExcelChart#206](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChart/VB/Sheet1.vb#206)]  
@@ -2012,8 +2008,7 @@
       <Docs>
         <param name="Filename">导出文件的文件名。</param>
         <param name="FilterName">出现在 HKEY_LOCAL_MACHINE\Software\Microsoft\Shared Tools\Graphics 筛选器根据注册表中时与语言无关的图形过滤器名称。</param>
-        <param name="Interactive">
-          为 <see langword="true" /> 时，显示包含筛选器特定选项的对话框。 如果此参数为 <see langword="false" />，则 Microsoft Office Excel 使用筛选器的默认值。 默认值为 <see langword="false" />。</param>
+        <param name="Interactive">为 <see langword="true" /> 时，显示包含筛选器特定选项的对话框。 如果此参数为 <see langword="false" />，则 Microsoft Office Excel 使用筛选器的默认值。 默认值为 <see langword="false" />。</param>
         <summary>以图形格式导出图表。</summary>
         <returns>To be added.</returns>
         <remarks>
@@ -2027,7 +2022,7 @@
    
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.Chart>，然后使用<xref:Microsoft.Office.Tools.Excel.Chart.Export%2A>方法将图表作为 C:\ 目录的根目录下名为 Chart1.gif 图形文件导出。  
+ 下面的代码示例将创建<xref:Microsoft.Office.Tools.Excel.Chart>，然后使用<xref:Microsoft.Office.Tools.Excel.Chart.Export%2A>方法将图表导出为 C:\ 目录的根目录下名为 Chart1.gif 的图形文件。  
   
  [!code-csharp[Trin_ExcelChart#114](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChart/CS/Sheet1.cs#114)]
  [!code-vb[Trin_ExcelChart#114](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChart/VB/Sheet1.vb#114)]  
@@ -2064,21 +2059,18 @@
           <see langword="T:Microsoft.Office.Interop.Excel.XlFixedFormatType" /> 值之一，指定是以 PDF 还是 XPS 格式保存图表。</param>
         <param name="Filename">新 PDF 或 XPS 文件的完整路径。 如果省略此参数，Excel 会将文件保存在当前文件夹中。</param>
         <param name="Quality">其中一个 <see langword="T:Microsoft.Office.Interop.Excel.XlFixedFormatQuality" /> 值，该值指定导出文件的质量。</param>
-        <param name="IncludeDocProperties">
-          如果要在导出的文件中包含文档属性，则为 <see langword="true" />；否则为 <see langword="false" />。</param>
-        <param name="IgnorePrintAreas">
-          若要在导出时忽略任何打印区域设置，请使用 <see langword="true" />；否则使用 <see langword="false" />。</param>
+        <param name="IncludeDocProperties">如果要在导出的文件中包含文档属性，则为 <see langword="true" />；否则为 <see langword="false" />。</param>
+        <param name="IgnorePrintAreas">若要在导出时忽略任何打印区域设置，请使用 <see langword="true" />；否则使用 <see langword="false" />。</param>
         <param name="From">要从其处开始导出的页码。 如果省略此参数，则从第一页开始导出。</param>
         <param name="To">要导出的最后一页的页码。 如果省略此参数，则导出完最后一页后停止导出。</param>
-        <param name="OpenAfterPublish">
-          如果要在导出图表后打开新文件，则为 <see langword="true" />；否则为 <see langword="false" />。</param>
+        <param name="OpenAfterPublish">如果要在导出图表后打开新文件，则为 <see langword="true" />；否则为 <see langword="false" />。</param>
         <param name="FixedFormatExtClassPtr">一个指针，指向使图表能够以其他固定格式保存的 <see langword="IMsoDocExporter" /> 接口的实现。 有关详细信息，请参阅“扩展 Office (2007) 固定格式导出功能”。</param>
         <summary>以 PDF 或 XPS 格式保存图表。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 你可以将保存为 PDF 或 XPS 文件从 Microsoft Office Excel 仅后提供此功能的外接程序安装。 有关详细信息，搜索"启用支持对其他文件格式，例如 PDF 和 XPS"Office online。  
+ 您可以将保存为 PDF 或 XPS 文件从 Microsoft Office Excel 才提供此功能的外接程序安装。 有关详细信息，搜索"启用支持其他文件格式，如 PDF 和 XPS"Office Online 上。  
   
 ## <a name="optional-parameters"></a>可选参数  
  有关可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -2086,7 +2078,7 @@
    
   
 ## Examples  
- 下面的代码示例将保存一页的图表`Chart_1`工作表的`Sheet1`以 PDF 格式保存到指定的文件路径和文件的名称，使用标准质量分辨率。 生成的 PDF 文件包括工作簿属性。 若要运行此代码示例，你的工作簿必须包含名为的表`Sheet1`名为图表`Chart_1`。  
+ 下面的代码示例将保存图表的一页`Chart_1`工作表的`Sheet1`以 PDF 格式保存到指定的文件路径和文件名使用标准质量解析。 生成的 PDF 文件包含工作簿属性。 若要运行此代码示例，您的工作簿必须包含名为的表`Sheet1`与名为图表`Chart_1`。  
   
  [!code-csharp[Trin_ExcelWorkbook_Additional#11](~/snippets/csharp/VS_Snippets_OfficeSP/trin_excelworkbook_additional/cs/ThisWorkbook.cs#11)]
  [!code-vb[Trin_ExcelWorkbook_Additional#11](~/snippets/visualbasic/VS_Snippets_OfficeSP/trin_excelworkbook_additional/vb/ThisWorkbook.vb#11)]  
@@ -2114,7 +2106,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例创建一个三维<xref:Microsoft.Office.Tools.Excel.Chart>，然后使用<xref:Microsoft.Office.Tools.Excel.Chart.Floor%2A>属性来更改图表基底的颜色为绿色。  
+ 下面的代码示例创建一个三维<xref:Microsoft.Office.Tools.Excel.Chart>，然后使用<xref:Microsoft.Office.Tools.Excel.Chart.Floor%2A>属性来更改图表地面颜色为绿色。  
   
  [!code-csharp[Trin_ExcelChart#15](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChart/CS/Sheet1.cs#15)]
  [!code-vb[Trin_ExcelChart#15](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChart/VB/Sheet1.vb#15)]  
@@ -2142,7 +2134,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例创建一个三维<xref:Microsoft.Office.Tools.Excel.Chart>然后将更改为使用标记宽度的 300%的数据序列之间的距离<xref:Microsoft.Office.Tools.Excel.Chart.GapDepth%2A>属性。  
+ 下面的代码示例创建一个三维<xref:Microsoft.Office.Tools.Excel.Chart>然后将更改为使用标记宽度的 300%的数据系列之间的距离<xref:Microsoft.Office.Tools.Excel.Chart.GapDepth%2A>属性。  
   
  [!code-csharp[Trin_ExcelChart#16](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChart/CS/Sheet1.cs#16)]
  [!code-vb[Trin_ExcelChart#16](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChart/VB/Sheet1.vb#16)]  
@@ -2181,11 +2173,11 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 中，您指定仅的前两个自变量的值，此方法是异常。 Microsoft Office Excel 填写其他参数，并在方法返回时，你的代码应检查这些值。  
+ 此方法比较特殊，，指定只有前两个参数的值。 Microsoft Office Excel 填写其他参数，并在方法返回时，你的代码应检查这些值。  
   
- 值`ElementID`返回此方法确定后是否`Arg1`和`Arg2`包含任何信息，如下表中所示。  
+ 值`ElementID`确定该方法返回后是否`Arg1`和`Arg2`包含任何信息下, 表中所示。  
   
-|ElementID|arg1|arg2|  
+|ElementID|arg1|Arg2|  
 |---------------|----------|----------|  
 |<xref:Microsoft.Office.Interop.Excel.XlChartItem.xlAxis>|AxisIndex|AxisType|  
 |<xref:Microsoft.Office.Interop.Excel.XlChartItem.xlAxisTitle>|AxisIndex|AxisType|  
@@ -2220,24 +2212,24 @@
 |<xref:Microsoft.Office.Interop.Excel.XlChartItem.xlXErrorBars>|SeriesIndex|无|  
 |<xref:Microsoft.Office.Interop.Excel.XlChartItem.xlYErrorBars>|SeriesIndex|无|  
   
- 下表介绍的含义`Arg1`和`Arg2`该方法返回后。  
+ 下表介绍的含义`Arg1`和`Arg2`方法返回之后。  
   
 |参数|描述|  
 |--------------|-----------------|  
-|AxisIndex|指定是否主或辅助轴。 可以是下列 <xref:Microsoft.Office.Interop.Excel.XlAxisGroup> 常数之一：<xref:Microsoft.Office.Interop.Excel.XlAxisGroup.xlPrimary> 或 <xref:Microsoft.Office.Interop.Excel.XlAxisGroup.xlSecondary>。|  
-|AxisType|指定的轴类型。 可以为以下 <xref:Microsoft.Office.Interop.Excel.XlAxisType> 常数之一：<xref:Microsoft.Office.Interop.Excel.XlAxisType.xlCategory>、<xref:Microsoft.Office.Interop.Excel.XlAxisType.xlSeriesAxis> 或 <xref:Microsoft.Office.Interop.Excel.XlAxisType.xlValue>。|  
-|DropZoneType|指定的拖放区域类型： 列、 数据、 页上，或行字段。 可以是以下之一<xref:Microsoft.Office.Interop.Excel.XlPivotFieldOrientation>常量： <xref:Microsoft.Office.Interop.Excel.XlPivotFieldOrientation.xlColumnField>， <xref:Microsoft.Office.Interop.Excel.XlPivotFieldOrientation.xlDataField>， <xref:Microsoft.Office.Interop.Excel.XlPivotFieldOrientation.xlPageField>，或<xref:Microsoft.Office.Interop.Excel.XlPivotFieldOrientation.xlRowField>。 列和行字段常量分别指定序列和类别字段。|  
-|GroupIndex|指定的偏移量<xref:Microsoft.Office.Interop.Excel.ChartGroups>特定图表组的集合。|  
-|PivotFieldIndex|指定的偏移量<xref:Microsoft.Office.Interop.Excel.PivotFields>的特定列 （系列）、 数据、 页上，或行 （类别） 字段的集合。 拖放区域类型是否为-1 <xref:Microsoft.Office.Interop.Excel.XlPivotFieldOrientation.xlDataField>。|  
-|PointIndex|指定的偏移量<xref:Microsoft.Office.Interop.Excel.Points>一系列中的特定点的集合。 值为 – 1 指示已选择所有数据点。|  
-|SeriesIndex|指定的偏移量<xref:Microsoft.Office.Interop.Excel.Series>一系列特定的集合。|  
-|ShapeIndex|指定的偏移量<xref:Microsoft.Office.Interop.Excel.Shapes>特定形状的集合。|  
-|TrendlineIndex|指定的偏移量<xref:Microsoft.Office.Interop.Excel.Trendlines>一系列中的特定趋势线的集合。|  
+|AxisIndex|指定轴是否为主要或辅助。 可以是下列 <xref:Microsoft.Office.Interop.Excel.XlAxisGroup> 常数之一：<xref:Microsoft.Office.Interop.Excel.XlAxisGroup.xlPrimary> 或 <xref:Microsoft.Office.Interop.Excel.XlAxisGroup.xlSecondary>。|  
+|AxisType|指定轴类型。 可以为以下 <xref:Microsoft.Office.Interop.Excel.XlAxisType> 常数之一：<xref:Microsoft.Office.Interop.Excel.XlAxisType.xlCategory>、<xref:Microsoft.Office.Interop.Excel.XlAxisType.xlSeriesAxis> 或 <xref:Microsoft.Office.Interop.Excel.XlAxisType.xlValue>。|  
+|DropZoneType|指定拖放区域类型： 列、 数据、 页或行字段。 可以是以下值之一<xref:Microsoft.Office.Interop.Excel.XlPivotFieldOrientation>常量： <xref:Microsoft.Office.Interop.Excel.XlPivotFieldOrientation.xlColumnField>， <xref:Microsoft.Office.Interop.Excel.XlPivotFieldOrientation.xlDataField>， <xref:Microsoft.Office.Interop.Excel.XlPivotFieldOrientation.xlPageField>，或<xref:Microsoft.Office.Interop.Excel.XlPivotFieldOrientation.xlRowField>。 列和行字段常量分别指定序列和类别字段。|  
+|GroupIndex|指定的偏移量中<xref:Microsoft.Office.Interop.Excel.ChartGroups>特定图表组的集合。|  
+|PivotFieldIndex|指定的偏移量中<xref:Microsoft.Office.Interop.Excel.PivotFields>特定列 （系列）、 数据、 页或行 （类别） 字段的集合。 拖放区域类型则为-1 <xref:Microsoft.Office.Interop.Excel.XlPivotFieldOrientation.xlDataField>。|  
+|PointIndex|指定的偏移量中<xref:Microsoft.Office.Interop.Excel.Points>内一系列的特定点的集合。 值为 – 1 指示已选择所有数据点。|  
+|SeriesIndex|指定的偏移量中<xref:Microsoft.Office.Interop.Excel.Series>特定系列的集合。|  
+|ShapeIndex|指定的偏移量中<xref:Microsoft.Office.Interop.Excel.Shapes>特定形状的集合。|  
+|TrendlineIndex|指定的偏移量中<xref:Microsoft.Office.Interop.Excel.Trendlines>一系列中的特定趋势线的集合。|  
   
    
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.Chart?displayProperty=fullName>，然后使用<xref:Microsoft.Office.Tools.Excel.Chart.GetChartElement%2A>方法在用户单击图表时显示的图表元素。  
+ 下面的代码示例将创建<xref:Microsoft.Office.Tools.Excel.Chart?displayProperty=fullName>，然后使用<xref:Microsoft.Office.Tools.Excel.Chart.GetChartElement%2A>方法，以便当用户单击该图表显示的图表元素。  
   
  [!code-csharp[Trin_ExcelChart#115](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChart/CS/Sheet1.cs#115)]
  [!code-vb[Trin_ExcelChart#115](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChart/VB/Sheet1.vb#115)]  
@@ -2314,22 +2306,21 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示在 <see cref="T:Microsoft.Office.Tools.Excel.Chart" /> 控件上是否存在特定的轴。</summary>
-        <value>
-          如果 <see cref="T:Microsoft.Office.Tools.Excel.Chart" /> 上存在指定的轴，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果 <see cref="T:Microsoft.Office.Tools.Excel.Chart" /> 上存在指定的轴，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用<xref:Microsoft.Office.Tools.Excel.Chart.HasAxis%2A>属性来隐藏或显示特定轴上<xref:Microsoft.Office.Tools.Excel.Chart>。 <xref:Microsoft.Office.Tools.Excel.Chart.HasAxis%2A>属性应与以下参数一起使用。  
+ 使用<xref:Microsoft.Office.Tools.Excel.Chart.HasAxis%2A>属性以隐藏或显示特定的轴上<xref:Microsoft.Office.Tools.Excel.Chart>。 <xref:Microsoft.Office.Tools.Excel.Chart.HasAxis%2A>属性应与以下参数一起使用。  
   
 |参数|描述|  
 |---------------|-----------------|  
-|`Index1`|之一<xref:Microsoft.Office.Interop.Excel.XlAxisType>指定轴类型的值。 序列轴仅应用于三维图表。|  
-|`Index2`|之一<xref:Microsoft.Office.Interop.Excel.XlAxisGroup>指定轴组的值。 三维图表有只有一组轴。|  
+|`Index1`|其中一个<xref:Microsoft.Office.Interop.Excel.XlAxisType>值，该值指定轴类型。 系列轴仅应用于三维图表。|  
+|`Index2`|其中一个<xref:Microsoft.Office.Interop.Excel.XlAxisGroup>值，该值指定轴组。 三维图表有只有一组轴。|  
   
- 如果你尝试使用<xref:Microsoft.Office.Tools.Excel.Chart.HasAxis%2A>无需指定参数，<xref:Microsoft.Office.Tools.Excel.Chart.HasAxis%2A>将获取<xref:Microsoft.Office.Tools.Excel.Chart._HasAxisType>对象属于的 Office 开发工具在 Visual Studio 基础结构和不应在代码中直接使用。  
+ 如果尝试使用<xref:Microsoft.Office.Tools.Excel.Chart.HasAxis%2A>无需指定参数，<xref:Microsoft.Office.Tools.Excel.Chart.HasAxis%2A>将获取<xref:Microsoft.Office.Tools.Excel.Chart._HasAxisType>对象属于的 Office 开发 Visual Studio 基础结构中的工具，但不可在代码中直接使用。  
   
- Microsoft Office Excel 可以创建或删除轴，如果更改图表类型或<xref:Microsoft.Office.Interop.Excel.Axis.AxisGroup%2A>属性。  
+ Microsoft Office Excel 可能会创建或删除轴，如果更改图表类型或<xref:Microsoft.Office.Interop.Excel.Axis.AxisGroup%2A>属性。  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -2337,7 +2328,7 @@
    
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.Chart>，然后使用<xref:Microsoft.Office.Tools.Excel.Chart.HasAxis%2A>属性来隐藏主类别轴的图表。  
+ 下面的代码示例将创建<xref:Microsoft.Office.Tools.Excel.Chart>，然后使用<xref:Microsoft.Office.Tools.Excel.Chart.HasAxis%2A>属性来隐藏主类别轴的图表。  
   
  [!code-csharp[Trin_ExcelChart#41](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChart/CS/Sheet1.cs#41)]
  [!code-vb[Trin_ExcelChart#41](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChart/VB/Sheet1.vb#41)]  
@@ -2360,13 +2351,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示 <see cref="T:Microsoft.Office.Tools.Excel.Chart" /> 控件是否包含数据表。</summary>
-        <value>
-          如果 <see cref="T:Microsoft.Office.Tools.Excel.Chart" /> 控件包含数据表，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果 <see cref="T:Microsoft.Office.Tools.Excel.Chart" /> 控件包含数据表，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.Chart>，然后使用<xref:Microsoft.Office.Tools.Excel.Chart.HasDataTable%2A>和<xref:Microsoft.Office.Tools.Excel.Chart.DataTable%2A>属性要在图表中以边框大纲显示数据的表。  
+ 下面的代码示例将创建<xref:Microsoft.Office.Tools.Excel.Chart>，然后使用<xref:Microsoft.Office.Tools.Excel.Chart.HasDataTable%2A>和<xref:Microsoft.Office.Tools.Excel.Chart.DataTable%2A>属性，以具有边框轮廓在图表中显示数据的表。  
   
  [!code-csharp[Trin_ExcelChart#12](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChart/CS/Sheet1.cs#12)]
  [!code-vb[Trin_ExcelChart#12](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChart/VB/Sheet1.vb#12)]  
@@ -2389,8 +2379,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示 <see cref="T:Microsoft.Office.Tools.Excel.Chart" /> 控件是否包含图例。</summary>
-        <value>
-          如果 <see cref="T:Microsoft.Office.Tools.Excel.Chart" /> 控件包含图例，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果 <see cref="T:Microsoft.Office.Tools.Excel.Chart" /> 控件包含图例，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2431,15 +2420,14 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示 <see cref="T:Microsoft.Office.Tools.Excel.Chart" /> 控件是否具有标题。</summary>
-        <value>
-          如果 <see cref="T:Microsoft.Office.Tools.Excel.Chart" /> 控件具有可见标题，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果 <see cref="T:Microsoft.Office.Tools.Excel.Chart" /> 控件具有可见标题，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 由表示轴标题<xref:Microsoft.Office.Interop.Excel.AxisTitle>对象。  
+ 表示轴标题<xref:Microsoft.Office.Interop.Excel.AxisTitle>对象。  
   
- 图表标题由<xref:Microsoft.Office.Interop.Excel.ChartTitle>对象。  
+ 表示图表标题<xref:Microsoft.Office.Interop.Excel.ChartTitle>对象。  
   
  ]]></format>
         </remarks>
@@ -2464,7 +2452,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例创建一个三维<xref:Microsoft.Office.Tools.Excel.Chart>然后通过将更改的图表宽度 250%图表高度<xref:Microsoft.Office.Tools.Excel.Chart.HeightPercent%2A>属性。  
+ 下面的代码示例创建一个三维<xref:Microsoft.Office.Tools.Excel.Chart>，然后更改图表的高度为图表宽度的 250%使用<xref:Microsoft.Office.Tools.Excel.Chart.HeightPercent%2A>属性。  
   
  [!code-csharp[Trin_ExcelChart#17](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChart/CS/Sheet1.cs#17)]
  [!code-vb[Trin_ExcelChart#17](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChart/VB/Sheet1.vb#17)]  
@@ -2580,7 +2568,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.Chart>，然后使用<xref:Microsoft.Office.Tools.Excel.Chart.Legend%2A>属性修改图例边框的颜色。  
+ 下面的代码示例将创建<xref:Microsoft.Office.Tools.Excel.Chart>，然后使用<xref:Microsoft.Office.Tools.Excel.Chart.Legend%2A>属性以修改图例边框的颜色。  
   
  [!code-csharp[Trin_ExcelChart#21](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChart/CS/Sheet1.cs#21)]
  [!code-vb[Trin_ExcelChart#21](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChart/VB/Sheet1.vb#21)]  
@@ -2719,7 +2707,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果你想要将图表移到另一个位置上一个表,，使用<xref:Microsoft.Office.Interop.Excel.ChartArea.Top%2A>属性和<xref:Microsoft.Office.Interop.Excel.ChartArea.Left%2A>属性<xref:Microsoft.Office.Interop.Excel.ChartArea>。 你可以获取<xref:Microsoft.Office.Interop.Excel.ChartArea>对象<xref:Microsoft.Office.Tools.Excel.Chart>使用<xref:Microsoft.Office.Tools.Excel.Chart.ChartArea%2A>属性。  
+ 如果你想要移动到另一个位置的图表工作表上，使用<xref:Microsoft.Office.Interop.Excel.ChartArea.Top%2A>属性和<xref:Microsoft.Office.Interop.Excel.ChartArea.Left%2A>属性的<xref:Microsoft.Office.Interop.Excel.ChartArea>。 可以获取<xref:Microsoft.Office.Interop.Excel.ChartArea>的对象<xref:Microsoft.Office.Tools.Excel.Chart>通过使用<xref:Microsoft.Office.Tools.Excel.Chart.ChartArea%2A>属性。  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -2727,7 +2715,7 @@
    
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.Chart>，然后使用<xref:Microsoft.Office.Tools.Excel.Chart.Location%2A>方法将图表移到名为"Sales"的新工作表。  
+ 下面的代码示例将创建<xref:Microsoft.Office.Tools.Excel.Chart>，然后使用<xref:Microsoft.Office.Tools.Excel.Chart.Location%2A>方法将图表移到名为"Sales"的新工作表。  
   
  [!code-csharp[Trin_ExcelChart#117](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChart/CS/Sheet1.cs#117)]
  [!code-vb[Trin_ExcelChart#117](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChart/VB/Sheet1.vb#117)]  
@@ -2756,7 +2744,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.Chart>，然后使用<xref:Microsoft.Office.Tools.Excel.Chart.MailEnvelope%2A>属性设置的电子邮件标头的简介。  
+ 下面的代码示例将创建<xref:Microsoft.Office.Tools.Excel.Chart>，然后使用<xref:Microsoft.Office.Tools.Excel.Chart.MailEnvelope%2A>属性来设置电子邮件标头的简介。  
   
  [!code-csharp[Trin_ExcelChart#23](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChart/CS/Sheet1.cs#23)]
  [!code-vb[Trin_ExcelChart#23](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChart/VB/Sheet1.vb#23)]  
@@ -2783,7 +2771,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.Chart>的处理程序与<xref:Microsoft.Office.Tools.Excel.Chart.MouseDown>D14 单元格中显示鼠标指针的坐标，当图表上按下鼠标按钮的事件。  
+ 下面的代码示例将创建<xref:Microsoft.Office.Tools.Excel.Chart>使用的处理程序<xref:Microsoft.Office.Tools.Excel.Chart.MouseDown>D14 单元格中显示鼠标指针的坐标的图表上按下鼠标按钮时的事件。  
   
  [!code-csharp[Trin_ExcelChart#207](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChart/CS/Sheet1.cs#207)]
  [!code-vb[Trin_ExcelChart#207](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChart/VB/Sheet1.vb#207)]  
@@ -2810,7 +2798,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.Chart>的处理程序与<xref:Microsoft.Office.Tools.Excel.Chart.MouseMove>D14 单元格中显示一条消息，当在移动鼠标指针位于图表上的事件。  
+ 下面的代码示例将创建<xref:Microsoft.Office.Tools.Excel.Chart>使用的处理程序<xref:Microsoft.Office.Tools.Excel.Chart.MouseMove>D14 单元格中显示一条消息时，移动鼠标指针位于图表上时的事件。  
   
  [!code-csharp[Trin_ExcelChart#208](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChart/CS/Sheet1.cs#208)]
  [!code-vb[Trin_ExcelChart#208](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChart/VB/Sheet1.vb#208)]  
@@ -2837,7 +2825,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.Chart>的处理程序与<xref:Microsoft.Office.Tools.Excel.Chart.MouseUp>D14 单元格中显示一条消息，当鼠标指针位于图表上并释放鼠标按钮的事件。 此示例还使用`x`和`y`显示鼠标指针的坐标的事件处理程序参数。  
+ 下面的代码示例将创建<xref:Microsoft.Office.Tools.Excel.Chart>使用的处理程序<xref:Microsoft.Office.Tools.Excel.Chart.MouseUp>D14 单元格中显示一条消息，当指针位于图表上并释放鼠标按钮时的事件。 此示例还使用`x`和`y`事件处理程序，以显示鼠标指针的坐标的参数。  
   
  [!code-csharp[Trin_ExcelChart#209](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChart/CS/Sheet1.cs#209)]
  [!code-vb[Trin_ExcelChart#209](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChart/VB/Sheet1.vb#209)]  
@@ -2870,7 +2858,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要将图表移到另一个工作表，使用<xref:Microsoft.Office.Tools.Excel.Chart.Location%2A>方法。  
+ 若要将图表移动到另一个工作表，请使用<xref:Microsoft.Office.Tools.Excel.Chart.Location%2A>方法。  
   
  ]]></format>
         </remarks>
@@ -2896,9 +2884,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 当你创建<xref:Microsoft.Office.Tools.Excel.Chart>控制，Excel 集<xref:Microsoft.Office.Tools.Excel.Chart.Name%2A>到字符串的属性"*sheetname*图表* n *"，其中* n *是工作表上嵌入图表的数。 例如，如果你添加<xref:Microsoft.Office.Tools.Excel.Chart>到`Sheet1`它并且在表上的第一个嵌入的图表<xref:Microsoft.Office.Tools.Excel.Chart.Name%2A>属性将具有值`Sheet1 Chart 1`。  
+ 在创建时<xref:Microsoft.Office.Tools.Excel.Chart>控件，Excel 集<xref:Microsoft.Office.Tools.Excel.Chart.Name%2A>属性设置为字符串"*sheetname*图表*n*"，其中*n*是嵌入式图表的数量在工作表中。 例如，如果您将添加<xref:Microsoft.Office.Tools.Excel.Chart>到`Sheet1`它是在工作表上的第一个嵌入的图表<xref:Microsoft.Office.Tools.Excel.Chart.Name%2A>属性将具有值`Sheet1 Chart 1`。  
   
- 尽管<xref:Microsoft.Office.Tools.Excel.Chart.Name%2A>属性是只读的你可以通过修改名称的一部分<xref:Microsoft.Office.Interop.Excel.ChartObject.Name%2A>的父属性<xref:Microsoft.Office.Interop.Excel.ChartObject?displayProperty=fullName>。 指定替换的新名称"图表* n *"返回的字符串中子字符串<xref:Microsoft.Office.Tools.Excel.Chart.Name%2A>属性。 例如，下面的代码更改<xref:Microsoft.Office.Tools.Excel.Chart.Name%2A>属性值<xref:Microsoft.Office.Tools.Excel.Chart>控件从`Sheet1 Chart 1`到`Sheet1 SalesChart`。  
+ 尽管<xref:Microsoft.Office.Tools.Excel.Chart.Name%2A>属性是只读的你可以通过使用修改的名称部分<xref:Microsoft.Office.Interop.Excel.ChartObject.Name%2A>的父对象<xref:Microsoft.Office.Interop.Excel.ChartObject?displayProperty=fullName>。 指定替换的新名称"图表*n*"中返回的字符串的子字符串<xref:Microsoft.Office.Tools.Excel.Chart.Name%2A>属性。 例如，下面的代码更改<xref:Microsoft.Office.Tools.Excel.Chart.Name%2A>属性值为<xref:Microsoft.Office.Tools.Excel.Chart>控件从`Sheet1 Chart 1`到`Sheet1 SalesChart`。  
   
  [!code-csharp[Trin_ExcelChart#42](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChart/CS/Sheet1.cs#42)]
  [!code-vb[Trin_ExcelChart#42](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChart/VB/Sheet1.vb#42)]  
@@ -3049,7 +3037,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.Chart>，然后使用<xref:Microsoft.Office.Tools.Excel.Chart.PageSetup%2A>属性修改方向。  
+ 下面的代码示例将创建<xref:Microsoft.Office.Tools.Excel.Chart>，然后使用<xref:Microsoft.Office.Tools.Excel.Chart.PageSetup%2A>属性以修改方向。  
   
  [!code-csharp[Trin_ExcelChart#26](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChart/CS/Sheet1.cs#26)]
  [!code-vb[Trin_ExcelChart#26](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChart/VB/Sheet1.vb#26)]  
@@ -3077,7 +3065,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.Chart>，然后使用<xref:Microsoft.Office.Tools.Excel.Chart.Parent%2A>选择父级的属性。  
+ 下面的代码示例将创建<xref:Microsoft.Office.Tools.Excel.Chart>，然后使用<xref:Microsoft.Office.Tools.Excel.Chart.Parent%2A>属性来选择父级。  
   
  [!code-csharp[Trin_ExcelChart#27](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChart/CS/Sheet1.cs#27)]
  [!code-vb[Trin_ExcelChart#27](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChart/VB/Sheet1.vb#27)]  
@@ -3116,7 +3104,7 @@
    
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.Chart>，然后使用<xref:Microsoft.Office.Tools.Excel.Chart.Paste%2A>方法以将其他范围数据从剪贴板粘贴到图表。  
+ 下面的代码示例将创建<xref:Microsoft.Office.Tools.Excel.Chart>，然后使用<xref:Microsoft.Office.Tools.Excel.Chart.Paste%2A>方法以将其他范围的数据，从剪贴板粘贴到图表。  
   
  [!code-csharp[Trin_ExcelChart#118](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChart/CS/Sheet1.cs#118)]
  [!code-vb[Trin_ExcelChart#118](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChart/VB/Sheet1.vb#118)]  
@@ -3149,7 +3137,7 @@
    
   
 ## Examples  
- 下面的代码示例创建一个三维<xref:Microsoft.Office.Tools.Excel.Chart>然后通过将更改为 50 角度<xref:Microsoft.Office.Tools.Excel.Chart.Perspective%2A>属性。 该示例设置<xref:Microsoft.Office.Tools.Excel.Chart.RightAngleAxes%2A>属性`false`之前设置<xref:Microsoft.Office.Tools.Excel.Chart.Perspective%2A>属性。  
+ 下面的代码示例创建一个三维<xref:Microsoft.Office.Tools.Excel.Chart>然后通过将更改为 50 的角度来看<xref:Microsoft.Office.Tools.Excel.Chart.Perspective%2A>属性。 该示例设置<xref:Microsoft.Office.Tools.Excel.Chart.RightAngleAxes%2A>属性设置为`false`之前设置<xref:Microsoft.Office.Tools.Excel.Chart.Perspective%2A>属性。  
   
  [!code-csharp[Trin_ExcelChart#28](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChart/CS/Sheet1.cs#28)]
  [!code-vb[Trin_ExcelChart#28](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChart/VB/Sheet1.vb#28)]  
@@ -3254,12 +3242,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果<xref:Microsoft.Office.Tools.Excel.Chart>你指定的控件不是数据透视图报表，此属性的值是`null`。  
+ 如果<xref:Microsoft.Office.Tools.Excel.Chart>指定的控件不是数据透视图报表，此属性的值是`null`。  
   
    
   
 ## Examples  
- 下面的代码示例现有数据透视图到名为"Canada。"的页设置的当前页 此示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.Chart>名为`pivotChart1`，它是数据透视图报表。  
+ 下面的代码示例设置到名为"加拿大。"页将现有的数据透视图的当前页 此示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.Chart>名为`pivotChart1`，它是数据透视图报表。  
   
  [!code-csharp[Trin_ExcelChart#30](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChart/CS/Sheet1.cs#30)]
  [!code-vb[Trin_ExcelChart#30](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChart/VB/Sheet1.vb#30)]  
@@ -3287,7 +3275,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.Chart>，然后使用<xref:Microsoft.Office.Tools.Excel.Chart.PlotArea%2A>属性可以更改图表绘图区的边框的颜色。  
+ 下面的代码示例将创建<xref:Microsoft.Office.Tools.Excel.Chart>，然后使用<xref:Microsoft.Office.Tools.Excel.Chart.PlotArea%2A>属性来更改图表的绘图区周围边框的颜色。  
   
  [!code-csharp[Trin_ExcelChart#31](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChart/CS/Sheet1.cs#31)]
  [!code-vb[Trin_ExcelChart#31](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChart/VB/Sheet1.vb#31)]  
@@ -3315,7 +3303,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.Chart>按列，绘制数据，然后提示用户按与行绘制数据<xref:Microsoft.Office.Tools.Excel.Chart.PlotBy%2A>属性。  
+ 下面的代码示例将创建<xref:Microsoft.Office.Tools.Excel.Chart>按列，绘制的数据，然后提示用户绘制的行数据<xref:Microsoft.Office.Tools.Excel.Chart.PlotBy%2A>属性。  
   
  [!code-csharp[Trin_ExcelChart#32](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChart/CS/Sheet1.cs#32)]
  [!code-vb[Trin_ExcelChart#32](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChart/VB/Sheet1.vb#32)]  
@@ -3338,8 +3326,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示是否只绘制可见单元格。</summary>
-        <value>
-          如果只绘制可见单元格，则为 <see langword="true" />。 如果可见单元格和隐藏单元格都要绘制，则为 <see langword="false" />。</value>
+        <value>如果只绘制可见单元格，则为 <see langword="true" />。 如果可见单元格和隐藏单元格都要绘制，则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -3362,10 +3349,10 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 由于图表和图表工作表不支持注释，<xref:Microsoft.Office.Tools.Excel.Chart.PrintedCommentPages%2A>属性<xref:Microsoft.Office.Tools.Excel.Chart>对象将始终返回零。  
+ 因为图表和图表工作表不支持注释<xref:Microsoft.Office.Tools.Excel.Chart.PrintedCommentPages%2A>属性的<xref:Microsoft.Office.Tools.Excel.Chart>对象将始终返回零。  
   
 > [!NOTE]
->  此属性将出现在 IntelliSense Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Excel 2007 项目中使用此属性。  
+>  此属性将出现在 IntelliSense 中 Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，此属性不能使用 Excel 2007 项目中。  
   
  ]]></format>
         </remarks>
@@ -3438,20 +3425,17 @@
         <param name="From">要从其处开始打印的页码。 如果省略此参数，则打印从第一页开始。</param>
         <param name="To">要打印的最后一页的页码。 若忽略此参数，则打印至最后一页。</param>
         <param name="Copies">要打印的份数。 如果忽略此参数，则打印一份。</param>
-        <param name="Preview">
-          若要在打印对象前让 Microsoft Office Excel 调用打印预览，请使用 <see langword="true" />。 为 <see langword="false" />（或省略）时，立即打印对象。</param>
+        <param name="Preview">若要在打印对象前让 Microsoft Office Excel 调用打印预览，请使用 <see langword="true" />。 为 <see langword="false" />（或省略）时，立即打印对象。</param>
         <param name="ActivePrinter">设置活动打印机的名称。</param>
-        <param name="PrintToFile">
-          若要打印到文件，请使用 <see langword="true" />。 若未指定 <c>PrToFileName</c>，则 Excel 会提示用户输入输出文件的名称。</param>
-        <param name="Collate">
-          若逐份打印多个副本，请使用 <see langword="true" />。</param>
+        <param name="PrintToFile">若要打印到文件，请使用 <see langword="true" />。 若未指定 <c>PrToFileName</c>，则 Excel 会提示用户输入输出文件的名称。</param>
+        <param name="Collate">若逐份打印多个副本，请使用 <see langword="true" />。</param>
         <param name="PrToFileName">要打印到的文件的名称。 只有在 <c>PrintToFile</c> 为 <see langword=" true" /> 时，才使用此参数。</param>
         <summary>打印图表。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- "页"中的说明`From`和`To`指打印页-不是所有页中的表或工作簿。  
+ "页"中的说明`From`和`To`打印页面是指 — 不是所有页中表或工作簿。  
   
 ## <a name="optional-parameters"></a>可选参数  
  有关可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -3459,7 +3443,7 @@
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.Chart.PrintOutEx%2A>方法要打印一份图表的前两页`Chart_1`到默认打印机。 若要运行此代码示例，你的工作簿必须包含名为工作表`Sheet1`名为图表`Chart_1`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.Chart.PrintOutEx%2A>方法以打印一份图表的前两页`Chart_1`到默认打印机。 若要运行此代码示例，您的工作簿必须包含名为的工作表`Sheet1`与名为图表`Chart_1`。  
   
  [!code-csharp[Trin_ExcelWorkBook_Additional#15](~/snippets/csharp/VS_Snippets_OfficeSP/trin_excelworkbook_additional/cs/ThisWorkbook.cs#15)]
  [!code-vb[Trin_ExcelWorkBook_Additional#15](~/snippets/visualbasic/VS_Snippets_OfficeSP/trin_excelworkbook_additional/vb/ThisWorkbook.vb#15)]  
@@ -3484,14 +3468,13 @@
         <Parameter Name="EnableChanges" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="EnableChanges">
-          如果可以更改打印预览窗口，则为 <see langword="true" />；否则为 <see langword="false" />。</param>
+        <param name="EnableChanges">如果可以更改打印预览窗口，则为 <see langword="true" />；否则为 <see langword="false" />。</param>
         <summary>显示 <see cref="T:Microsoft.Office.Tools.Excel.Chart" /> 控件的预览（显示打印时的外观）。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.Chart>，然后使用<xref:Microsoft.Office.Tools.Excel.Chart.PrintPreview%2A>方法来预览打印输出的图表。  
+ 下面的代码示例将创建<xref:Microsoft.Office.Tools.Excel.Chart>，然后使用<xref:Microsoft.Office.Tools.Excel.Chart.PrintPreview%2A>方法来预览图表的打印输出。  
   
  [!code-csharp[Trin_ExcelChart#121](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChart/CS/Sheet1.cs#121)]
  [!code-vb[Trin_ExcelChart#121](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChart/VB/Sheet1.vb#121)]  
@@ -3537,8 +3520,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示是否禁止修改系列公式。</summary>
-        <value>
-          如果用户不能修改系列公式，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果用户不能修改系列公式，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -3579,13 +3561,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示是否禁止修改 <see cref="T:Microsoft.Office.Tools.Excel.Chart" /> 控件格式设置。</summary>
-        <value>
-          如果用户不能修改 <see cref="T:Microsoft.Office.Tools.Excel.Chart" /> 控件格式设置，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果用户不能修改 <see cref="T:Microsoft.Office.Tools.Excel.Chart" /> 控件格式设置，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 当此属性是`true`、**对象**命令**格式**菜单将被禁用，无法添加图表类型下拉列表中的图表元素图表命令栏上，移动、 调整大小，或删除。  
+ 当此属性是`true`，则**对象**命令**格式**菜单被禁用，在命令栏中图表和图表元素的图表类型下拉列表不能进行添加、 移动、 调整大小，或删除。  
   
  ]]></format>
         </remarks>
@@ -3651,13 +3632,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示是否禁止 <see cref="T:Microsoft.Office.Tools.Excel.Chart" /> 控件元素。</summary>
-        <value>
-          如果不能选择 <see cref="T:Microsoft.Office.Tools.Excel.Chart" /> 控件元素，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果不能选择 <see cref="T:Microsoft.Office.Tools.Excel.Chart" /> 控件元素，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 当此属性是`true`，无法将形状添加到<xref:Microsoft.Office.Tools.Excel.Chart>控件，与`Click`和`DoubleClick`事件<xref:Microsoft.Office.Tools.Excel.Chart>控件元素不会发生。  
+ 当此属性是`true`，无法将形状添加到<xref:Microsoft.Office.Tools.Excel.Chart>控件，并`Click`和`DoubleClick`事件<xref:Microsoft.Office.Tools.Excel.Chart>控件元素不会发生。  
   
  ]]></format>
         </remarks>
@@ -3753,7 +3733,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.Chart>的处理程序与<xref:Microsoft.Office.Tools.Excel.Chart.Resize>显示一个消息框，在调整图表大小时的事件。  
+ 下面的代码示例将创建<xref:Microsoft.Office.Tools.Excel.Chart>使用的处理程序<xref:Microsoft.Office.Tools.Excel.Chart.Resize>重设大小时该图表显示一个消息框的事件。  
   
  [!code-csharp[Trin_ExcelChart#210](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChart/CS/Sheet1.cs#210)]
  [!code-vb[Trin_ExcelChart#210](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChart/VB/Sheet1.vb#210)]  
@@ -3776,18 +3756,17 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示 <see cref="T:Microsoft.Office.Tools.Excel.Chart" /> 控件轴是否成直角（与图表旋转角或仰角无关）。</summary>
-        <value>
-          如果 <see cref="T:Microsoft.Office.Tools.Excel.Chart" /> 控件轴成直角（与图表旋转角或仰角无关），则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果 <see cref="T:Microsoft.Office.Tools.Excel.Chart" /> 控件轴成直角（与图表旋转角或仰角无关），则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 适用于仅三维折线图、 柱形图和条形图。 如果此属性为`true`、<xref:Microsoft.Office.Tools.Excel.Chart.Perspective%2A>忽略属性。  
+ 应用仅为三维折线图、 柱形图和条形图。 如果此属性为`true`，则<xref:Microsoft.Office.Tools.Excel.Chart.Perspective%2A>属性将被忽略。  
   
    
   
 ## Examples  
- 下面的代码示例创建一个三维<xref:Microsoft.Office.Tools.Excel.Chart>然后通过将更改角度<xref:Microsoft.Office.Tools.Excel.Chart.Perspective%2A>属性。 该示例设置<xref:Microsoft.Office.Tools.Excel.Chart.RightAngleAxes%2A>属性`false`以便能够改动透视。  
+ 下面的代码示例创建一个三维<xref:Microsoft.Office.Tools.Excel.Chart>然后通过将更改角度来看<xref:Microsoft.Office.Tools.Excel.Chart.Perspective%2A>属性。 该示例设置<xref:Microsoft.Office.Tools.Excel.Chart.RightAngleAxes%2A>属性设置为`false`，以便可以更改角度来看。  
   
  [!code-csharp[Trin_ExcelChart#28](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChart/CS/Sheet1.cs#28)]
  [!code-vb[Trin_ExcelChart#28](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChart/VB/Sheet1.vb#28)]  
@@ -3851,7 +3830,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 默认情况下，此方法将当前的图表保存到用户的图表模板目录。 如果指定的 UNC 或 URL，则将保存图表到指定的位置。  
+ 默认情况下，此方法将当前图表保存到用户的图表模板目录。 如果指定的 UNC 或 URL，则将保存图表到指定位置。  
   
  ]]></format>
         </remarks>
@@ -3925,7 +3904,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.Chart>的处理程序与<xref:Microsoft.Office.Tools.Excel.Chart.SelectEvent>显示一个消息框，选择图表的主轴时的事件。  
+ 下面的代码示例将创建<xref:Microsoft.Office.Tools.Excel.Chart>使用的处理程序<xref:Microsoft.Office.Tools.Excel.Chart.SelectEvent>选择主图表的坐标轴时显示一个消息框的事件。  
   
  [!code-csharp[Trin_ExcelChart#211](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChart/CS/Sheet1.cs#211)]
  [!code-vb[Trin_ExcelChart#211](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChart/VB/Sheet1.vb#211)]  
@@ -3952,7 +3931,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.Chart>的处理程序与<xref:Microsoft.Office.Tools.Excel.Chart.SeriesChange>将点的边框颜色设置为绿色，更改图表的数据点时的事件。  
+ 下面的代码示例将创建<xref:Microsoft.Office.Tools.Excel.Chart>使用的处理程序<xref:Microsoft.Office.Tools.Excel.Chart.SeriesChange>设置点的边框颜色为绿色，更改图表的数据点时的事件。  
   
  [!code-csharp[Trin_ExcelChart#212](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChart/CS/Sheet1.cs#212)]
  [!code-vb[Trin_ExcelChart#212](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChart/VB/Sheet1.vb#212)]  
@@ -3991,7 +3970,7 @@
    
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.Chart>，然后使用<xref:Microsoft.Office.Tools.Excel.Chart.SeriesCollection%2A>方法将数据标签添加到图表中的第一个序列。  
+ 下面的代码示例将创建<xref:Microsoft.Office.Tools.Excel.Chart>，然后使用<xref:Microsoft.Office.Tools.Excel.Chart.SeriesCollection%2A>方法将数据标签添加到图表中的第一个序列。  
   
  [!code-csharp[Trin_ExcelChart#125](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChart/CS/Sheet1.cs#125)]
  [!code-vb[Trin_ExcelChart#125](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChart/VB/Sheet1.vb#125)]  
@@ -4022,7 +4001,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.Chart>，然后使用<xref:Microsoft.Office.Tools.Excel.Chart.SetBackgroundPicture%2A>方法以设置图表背景图像文件。  
+ 下面的代码示例将创建<xref:Microsoft.Office.Tools.Excel.Chart>，然后使用<xref:Microsoft.Office.Tools.Excel.Chart.SetBackgroundPicture%2A>方法将图表的背景设置为图像文件。  
   
  [!code-csharp[Trin_ExcelChart#126](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChart/CS/Sheet1.cs#126)]
  [!code-vb[Trin_ExcelChart#126](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChart/VB/Sheet1.vb#126)]  
@@ -4053,7 +4032,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例将默认图表模板设置为线图图表类型。 接下来的示例将新的图表添加到活动工作表，并填充工作表上指定范围中的其源数据。 若要运行此代码示例，你的工作簿必须包含名为工作表`Sheet1`名为图表`Chart_1`。  
+ 下面的代码示例将默认图表模板设置为行图表类型。 接下来的示例将一个新的图表添加到活动工作表并填充工作表上指定范围从其源数据。 若要运行此代码示例，您的工作簿必须包含名为的工作表`Sheet1`与名为图表`Chart_1`。  
   
  [!code-csharp[Trin_ExcelWorkBook_Additional#19](~/snippets/csharp/VS_Snippets_OfficeSP/trin_excelworkbook_additional/cs/ThisWorkbook.cs#19)]
  [!code-vb[Trin_ExcelWorkBook_Additional#19](~/snippets/visualbasic/VS_Snippets_OfficeSP/trin_excelworkbook_additional/vb/ThisWorkbook.vb#19)]  
@@ -4085,9 +4064,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用<xref:Microsoft.Office.Tools.Excel.Chart.SetElement%2A>方法来修改指定的选项根据图表元素`Microsoft.Office.Core.MsoChartElementType`值。 例如，若要隐藏表图例，将值传递`Microsoft.Office.Core.MsoChartElementType.msoElementLegendNone`到<xref:Microsoft.Office.Tools.Excel.Chart.SetElement%2A>方法。  
+ 使用<xref:Microsoft.Office.Tools.Excel.Chart.SetElement%2A>方法来修改指定的选项根据图表元素`Microsoft.Office.Core.MsoChartElementType`值。 例如，若要隐藏表格图例，请将传递值`Microsoft.Office.Core.MsoChartElementType.msoElementLegendNone`到<xref:Microsoft.Office.Tools.Excel.Chart.SetElement%2A>方法。  
   
- 你可以通过使用此方法执行的操作对应于以下按钮上**布局**选项卡的功能区时选择图表：  
+ 可以使用此方法执行的操作对应于以下按钮上**布局**选中图表后，功能区选项卡：  
   
 -   中的所有按钮**标签**组。  
   
@@ -4095,12 +4074,12 @@
   
 -   中的所有按钮**分析**组。  
   
--   **绘图区**，**图表背景墙**，和**图表基底**按钮**后台**组。  
+-   **绘图区**，**图表墙面**，并**图表地面**中的按钮**后台**组。  
   
    
   
 ## Examples  
- 下面的代码示例应用可用于的图表类型的第 10 个布局`Chart_1`图表。 此外，该示例使用<xref:Microsoft.Office.Tools.Excel.Chart.SetElement%2A>方法应用更多布局更改： 设置图表标题为居中且位于图表网格区域内的样式、 添加的水平轴的标题以及添加垂直轴的旋转的标题。 若要运行此代码示例，必须将添加名为簇状的柱形二维图表`Chart_1`默认表`Sheet1`。  
+ 下面的代码示例应用适用的图表类型的第十个布局`Chart_1`图表。 此外，该示例使用<xref:Microsoft.Office.Tools.Excel.Chart.SetElement%2A>方法应用更多布局更改： 将图表标题为居中且位于图表网格区域内的样式设置、 添加水平轴的标题以及添加垂直轴的旋转的标题。 若要运行此代码示例，必须将添加名为簇状的柱形二维图表`Chart_1`到默认工作表`Sheet1`。  
   
  [!code-csharp[Trin_ExcelWorkBook_Additional#17](~/snippets/csharp/VS_Snippets_OfficeSP/trin_excelworkbook_additional/cs/ThisWorkbook.cs#17)]
  [!code-vb[Trin_ExcelWorkBook_Additional#17](~/snippets/visualbasic/VS_Snippets_OfficeSP/trin_excelworkbook_additional/vb/ThisWorkbook.vb#17)]  
@@ -4141,7 +4120,7 @@
    
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.Chart>，然后使用<xref:Microsoft.Office.Tools.Excel.Chart.SetSourceData%2A>方法将图表的数据源设置为包含单元格 A1 到 B5 的范围。  
+ 下面的代码示例将创建<xref:Microsoft.Office.Tools.Excel.Chart>，然后使用<xref:Microsoft.Office.Tools.Excel.Chart.SetSourceData%2A>方法将图表的数据源设置为包含单元格 A1 到 B5 的范围。  
   
  [!code-csharp[Trin_ExcelChart#127](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChart/CS/Sheet1.cs#127)]
  [!code-vb[Trin_ExcelChart#127](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChart/VB/Sheet1.vb#127)]  
@@ -4169,7 +4148,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.Chart>，然后使用<xref:Microsoft.Office.Tools.Excel.Chart.Shapes%2A>属性以便在图表上绘制圆环图形状。  
+ 下面的代码示例将创建<xref:Microsoft.Office.Tools.Excel.Chart>，然后使用<xref:Microsoft.Office.Tools.Excel.Chart.Shapes%2A>属性以在图表上绘制一个圆环图的形状。  
   
  [!code-csharp[Trin_ExcelChart#36](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChart/CS/Sheet1.cs#36)]
  [!code-vb[Trin_ExcelChart#36](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChart/VB/Sheet1.vb#36)]  
@@ -4192,18 +4171,17 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置是否在数据透视图上显示所有字段按钮。</summary>
-        <value>
-          如果要在指定的数据透视图上显示所有字段按钮，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果要在指定的数据透视图上显示所有字段按钮，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 设置<xref:Microsoft.Office.Tools.Excel.Chart.ShowAllFieldButtons%2A>属性`true`无法在指定的数据透视图显示所有字段按钮。 将属性设置为`false`若要隐藏的所有字段按钮。  
+ 设置<xref:Microsoft.Office.Tools.Excel.Chart.ShowAllFieldButtons%2A>属性设置为`true`指定数据透视图上显示所有字段按钮。 将属性设置为`false`隐藏所有字段按钮。  
   
- <xref:Microsoft.Office.Tools.Excel.Chart.ShowAllFieldButtons%2A>属性对应于**全部隐藏**命令**字段按钮**的下拉列表**分析**在 Excel 中，这是可用的选项卡选定数据透视图。  
+ <xref:Microsoft.Office.Tools.Excel.Chart.ShowAllFieldButtons%2A>属性对应于**全部隐藏**命令**字段按钮**的下拉列表**分析**在 Excel 中，这是可用的选项卡选择数据透视图。  
   
 > [!NOTE]
->  此属性将出现在 IntelliSense Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Excel 2007 项目中使用此属性。  
+>  此属性将出现在 IntelliSense 中 Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，此属性不能使用 Excel 2007 项目中。  
   
  ]]></format>
         </remarks>
@@ -4224,18 +4202,17 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置是否在数据透视图上显示轴字段按钮。</summary>
-        <value>
-          若要在指定的数据透视图上显示轴字段按钮，请使用 <see langword="true" />；否则使用 <see langword="false" />。</value>
+        <value>若要在指定的数据透视图上显示轴字段按钮，请使用 <see langword="true" />；否则使用 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 设置<xref:Microsoft.Office.Tools.Excel.Chart.ShowAxisFieldButtons%2A>属性`true`无法在指定的数据透视图显示轴字段按钮。 将属性设置为`false`隐藏按钮。  
+ 设置<xref:Microsoft.Office.Tools.Excel.Chart.ShowAxisFieldButtons%2A>属性设置为`true`指定数据透视图上显示轴字段按钮。 将属性设置为`false`隐藏按钮。  
   
- <xref:Microsoft.Office.Tools.Excel.Chart.ShowAxisFieldButtons%2A>属性对应于**显示轴字段****按钮**命令**字段按钮**的下拉列表**分析**在 Excel 中，它在选定的数据透视图时才可用的选项卡。  
+ <xref:Microsoft.Office.Tools.Excel.Chart.ShowAxisFieldButtons%2A>属性对应于**显示轴字段****按钮**命令**字段按钮**的下拉列表**分析**在 Excel 中，选择一个数据透视图时，可以在选项卡。  
   
 > [!NOTE]
->  此属性将出现在 IntelliSense Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Excel 2007 项目中使用此属性。  
+>  此属性将出现在 IntelliSense 中 Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，此属性不能使用 Excel 2007 项目中。  
   
  ]]></format>
         </remarks>
@@ -4256,13 +4233,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示当值大于数值轴上的最大值时是否显示数据标签。</summary>
-        <value>
-          如果当值大于数值轴上的最大值时显示数据标签，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果当值大于数值轴上的最大值时显示数据标签，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果你更改中变得比的数据点的大小小数值轴，你可以使用此属性设置是否显示数据标签。 此属性适用于仅二维图表。  
+ 如果更改中变得比数据点的大小较小的值轴，你可以使用此属性设置是否显示数据标签。 此属性适用于仅的二维图表。  
   
  ]]></format>
         </remarks>
@@ -4282,18 +4258,17 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置是否在数据透视图上显示图例字段按钮。</summary>
-        <value>
-          如果要在指定的数据透视图上显示所有图例字段按钮，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果要在指定的数据透视图上显示所有图例字段按钮，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 设置<xref:Microsoft.Office.Tools.Excel.Chart.ShowLegendFieldButtons%2A>属性`true`无法在指定的数据透视图显示图例字段按钮。 将属性设置为`false`隐藏按钮。  
+ 设置<xref:Microsoft.Office.Tools.Excel.Chart.ShowLegendFieldButtons%2A>属性设置为`true`指定数据透视图上显示图例字段按钮。 将属性设置为`false`隐藏按钮。  
   
- <xref:Microsoft.Office.Tools.Excel.Chart.ShowLegendFieldButtons%2A>属性对应于**显示图例字段按钮**命令**字段按钮**的下拉列表**分析**在 Excel 中，这是选项卡在选中某个数据透视图才可用。  
+ <xref:Microsoft.Office.Tools.Excel.Chart.ShowLegendFieldButtons%2A>属性对应于**显示图例字段按钮**命令**字段按钮**的下拉列表**分析**在 Excel 中，这是选项卡选择一个数据透视图时可用。  
   
 > [!NOTE]
->  此属性将出现在 IntelliSense Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Excel 2007 项目中使用此属性。  
+>  此属性将出现在 IntelliSense 中 Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，此属性不能使用 Excel 2007 项目中。  
   
  ]]></format>
         </remarks>
@@ -4314,18 +4289,17 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置是否在数据透视图上显示报告筛选器字段按钮。</summary>
-        <value>
-          如果要在指定的数据透视图上显示报告筛选器字段按钮，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果要在指定的数据透视图上显示报告筛选器字段按钮，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 设置<xref:Microsoft.Office.Tools.Excel.Chart.ShowReportFilterFieldButtons%2A>属性`true`无法在指定的数据透视图显示报表筛选器字段按钮。 将属性设置为`false`隐藏按钮。  
+ 设置<xref:Microsoft.Office.Tools.Excel.Chart.ShowReportFilterFieldButtons%2A>属性设置为`true`指定数据透视图上显示的报表筛选器字段按钮。 将属性设置为`false`隐藏按钮。  
   
- <xref:Microsoft.Office.Tools.Excel.Chart.ShowReportFilterFieldButtons%2A>属性对应于**显示报表筛选器字段按钮**命令**字段按钮**的下拉列表**分析**在 Excel 中，选项卡的当选定数据透视图才可用。  
+ <xref:Microsoft.Office.Tools.Excel.Chart.ShowReportFilterFieldButtons%2A>属性对应于**显示报告筛选器字段按钮**命令**字段按钮**的下拉列表**分析**在 Excel 中，选项卡的当选择一个数据透视图才可用。  
   
 > [!NOTE]
->  此属性将出现在 IntelliSense Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Excel 2007 项目中使用此属性。  
+>  此属性将出现在 IntelliSense 中 Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，此属性不能使用 Excel 2007 项目中。  
   
  ]]></format>
         </remarks>
@@ -4346,18 +4320,17 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置是否在数据透视图上显示值字段按钮。</summary>
-        <value>
-          如果要在指定的数据透视图上显示值字段按钮，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果要在指定的数据透视图上显示值字段按钮，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 设置<xref:Microsoft.Office.Tools.Excel.Chart.ShowValueFieldButtons%2A>属性`true`来显示值`field`上指定的数据透视图按钮。 将属性设置为`false`隐藏按钮。  
+ 设置<xref:Microsoft.Office.Tools.Excel.Chart.ShowValueFieldButtons%2A>属性设置为`true`的值显示`field`上指定的数据透视图的按钮。 将属性设置为`false`隐藏该按钮。  
   
- <xref:Microsoft.Office.Tools.Excel.Chart.ShowValueFieldButtons%2A>属性对应于**显示值字段按钮**命令**字段按钮**的下拉列表**分析**在 Excel 中，这是选项卡在选中某个数据透视图才可用。  
+ <xref:Microsoft.Office.Tools.Excel.Chart.ShowValueFieldButtons%2A>属性对应于**显示值字段按钮**命令**字段按钮**的下拉列表**分析**在 Excel 中，这是选项卡选择一个数据透视图时可用。  
   
 > [!NOTE]
->  此属性将出现在 IntelliSense Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Excel 2007 项目中使用此属性。  
+>  此属性将出现在 IntelliSense 中 Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，此属性不能使用 Excel 2007 项目中。  
   
  ]]></format>
         </remarks>
@@ -4406,12 +4379,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用<xref:Microsoft.Office.Tools.Excel.Chart.SideWall%2A>端三维图表的墙进行格式设置的属性。  
+ 使用<xref:Microsoft.Office.Tools.Excel.Chart.SideWall%2A>属性来设置格式的三维图表的侧面墙。  
   
    
   
 ## Examples  
- 下面的代码示例将添加到三维簇状的柱形图`Sheet1`并设置其样式为样式 4。 然后，示例创建的任意数据范围，并将其设置为图表源数据。 接下来，该代码指定图表背景墙和层的颜色。  
+ 下面的代码示例将添加到三维簇状的柱形图`Sheet1`并设置其样式为样式 4。 然后，示例将创建的任意数据范围，并将其设置为图表源数据。 接下来，代码将指定的图表墙面和 floor 的颜色。  
   
  [!code-csharp[Trin_Excelworkbook_Additional#37](~/snippets/csharp/VS_Snippets_OfficeSP/trin_excelworkbook_additional/cs/ThisWorkbook.cs#37)]
  [!code-vb[Trin_Excelworkbook_Additional#37](~/snippets/visualbasic/VS_Snippets_OfficeSP/trin_excelworkbook_additional/vb/ThisWorkbook.vb#37)]  
@@ -4536,7 +4509,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.Chart>，然后使用<xref:Microsoft.Office.Tools.Excel.Chart.Tab%2A>属性来确定是否将选项卡的颜色索引设置为 none。  
+ 下面的代码示例将创建<xref:Microsoft.Office.Tools.Excel.Chart>，然后使用<xref:Microsoft.Office.Tools.Excel.Chart.Tab%2A>属性来确定是否将选项卡的颜色索引设置为 none。  
   
  [!code-csharp[Trin_ExcelChart#38](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChart/CS/Sheet1.cs#38)]
  [!code-vb[Trin_ExcelChart#38](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChart/VB/Sheet1.vb#38)]  
@@ -4564,7 +4537,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 一个常见用途<xref:Microsoft.Office.Tools.Excel.Chart.Tag%2A>属性是与紧密关联的数据存储<xref:Microsoft.Office.Tools.Excel.Chart>控件。  
+ 一个常见用途<xref:Microsoft.Office.Tools.Excel.Chart.Tag%2A>属性是与密切关联的数据存储<xref:Microsoft.Office.Tools.Excel.Chart>控件。  
   
  ]]></format>
         </remarks>
@@ -4640,7 +4613,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例创建一个三维<xref:Microsoft.Office.Tools.Excel.Chart>，然后使用<xref:Microsoft.Office.Tools.Excel.Chart.Walls%2A>属性设置权重和图表的墙的颜色。  
+ 下面的代码示例创建一个三维<xref:Microsoft.Office.Tools.Excel.Chart>，然后使用<xref:Microsoft.Office.Tools.Excel.Chart.Walls%2A>属性设置的粗细和颜色的图表的墙纸。  
   
  [!code-csharp[Trin_ExcelChart#39](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChart/CS/Sheet1.cs#39)]
  [!code-vb[Trin_ExcelChart#39](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChart/VB/Sheet1.vb#39)]  

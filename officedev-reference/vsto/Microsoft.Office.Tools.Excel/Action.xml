@@ -1,10 +1,10 @@
 <Type Name="Action" FullName="Microsoft.Office.Tools.Excel.Action">
   <Metadata>
     <Meta Name="ms.openlocfilehash" Value="1f8b186b3b2e3f0f69c04ec2101a9b5c720b660a" />
-    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.sourcegitcommit" Value="d85a83935f1d68ded616fcdfb8fd10d6bf4a4633" />
     <Meta Name="ms.translationtype" Value="HT" />
     <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+    <Meta Name="ms.lasthandoff" Value="07/24/2018" />
     <Meta Name="ms.locfileid" Value="29430514" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface Action : Microsoft.Office.Tools.ActionBase" />
@@ -30,7 +30,7 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 识别特定类型的智能标记时，操作是智能标记快捷菜单上的可用选项。 若要创建操作，使用`Globals.Factory.CreateAction`方法来创建<xref:Microsoft.Office.Tools.Excel.Action>对象...  
+ 特定类型的智能标记识别时，操作是在智能标记快捷菜单上的可用选项。 若要创建操作，请使用`Globals.Factory.CreateAction`方法来创建<xref:Microsoft.Office.Tools.Excel.Action>对象...  
   
  [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
   
@@ -42,7 +42,7 @@
    
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.SmartTag>与<xref:Microsoft.Office.Tools.Excel.Action>，识别术语"销售"和正则表达式"[我 &#124; 我] ssue\s\d {5，6}"。 该操作修改在运行时的操作的菜单标题，并显示已识别出的文本的地址。 若要测试示例，在一个单元格中键入单词"销售"和字符串在另一个单元格中的"颁发 12345"，然后重的智能标记操作。  
+ 下面的代码示例将创建<xref:Microsoft.Office.Tools.Excel.SmartTag>与<xref:Microsoft.Office.Tools.Excel.Action>评选，术语"销售"和正则表达式"[我&#124;我] ssue\s\d{5,6}"。 该操作修改在运行时操作的菜单标题，并显示已识别的文本的地址。 若要测试该示例，在一个单元格中键入单词"销售"和字符串"问题的 12345"在另一个单元格中，然后重试的智能标记操作。  
   
  [!code-csharp[Trin_ExcelSmartTags#1](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelSmartTags/CS/Trin_ExcelSmartTags.cs#1)]
  [!code-vb[Trin_ExcelSmartTags#1](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelSmartTags/VB/ThisWorkbook.vb#1)]  
@@ -69,12 +69,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件，能够更改基于上下文的智能标记标题。  
+ 此事件可用于更改基于上下文的智能标记标题。  
   
    
   
 ## Examples  
- 下面的代码示例演示的处理程序<xref:Microsoft.Office.Tools.Excel.Action.BeforeCaptionShow>事件。 事件处理程序修改操作的菜单标题。 此代码示例摘自更大的示例为提供<xref:Microsoft.Office.Tools.Excel.Action>接口。  
+ 下面的代码示例演示了一个处理程序<xref:Microsoft.Office.Tools.Excel.Action.BeforeCaptionShow>事件。 事件处理程序将修改操作的菜单标题。 此代码示例是为提供一个更大示例的一部分<xref:Microsoft.Office.Tools.Excel.Action>接口。  
   
  此示例适用于文档级自定义。  
   
@@ -103,7 +103,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例演示的处理程序<xref:Microsoft.Office.Tools.Excel.Action.Click>事件。 事件处理程序会显示包含识别的智能标记词或表达式的单元格的地址。 此代码示例摘自更大的示例为提供<xref:Microsoft.Office.Tools.Excel.Action>接口。  
+ 下面的代码示例演示了一个处理程序<xref:Microsoft.Office.Tools.Excel.Action.Click>事件。 事件处理程序会显示包含识别的智能标记术语或表达式的单元格的地址。 此代码示例是为提供一个更大示例的一部分<xref:Microsoft.Office.Tools.Excel.Action>接口。  
   
  此示例适用于文档级自定义。  
   

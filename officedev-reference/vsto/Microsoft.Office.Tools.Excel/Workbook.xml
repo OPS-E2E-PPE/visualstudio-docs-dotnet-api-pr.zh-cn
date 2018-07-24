@@ -1,10 +1,10 @@
 <Type Name="Workbook" FullName="Microsoft.Office.Tools.Excel.Workbook">
   <Metadata>
     <Meta Name="ms.openlocfilehash" Value="04f17efeae1cbdf8bdb25f98494ac17f1b386530" />
-    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.sourcegitcommit" Value="d85a83935f1d68ded616fcdfb8fd10d6bf4a4633" />
     <Meta Name="ms.translationtype" Value="HT" />
     <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+    <Meta Name="ms.lasthandoff" Value="07/24/2018" />
     <Meta Name="ms.locfileid" Value="29435688" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface Workbook : IDisposable, System.ComponentModel.IComponent, System.ComponentModel.ISupportInitialize, System.Windows.Forms.IBindableComponent" />
@@ -46,15 +46,15 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- A<xref:Microsoft.Office.Tools.Excel.Workbook?displayProperty=fullName>对象提供相同的成员<xref:Microsoft.Office.Interop.Excel.Workbook?displayProperty=fullName>从 Excel 主互操作程序集，但它的对象将添加以下功能：  
+ 一个<xref:Microsoft.Office.Tools.Excel.Workbook?displayProperty=fullName>对象提供相同的成员<xref:Microsoft.Office.Interop.Excel.Workbook?displayProperty=fullName>对象从 Excel 主互操作程序集，但它添加了以下功能：  
   
 -   <xref:Microsoft.Office.Tools.Excel.Workbook.VstoSmartTags%2A> 属性。 使用此属性添加到工作簿的智能标记。  
   
--   <xref:Microsoft.Office.Tools.Excel.Workbook.InnerObject%2A> 属性。 使用此属性来获取基础<xref:Microsoft.Office.Interop.Excel.Workbook?displayProperty=fullName>对象<xref:Microsoft.Office.Tools.Excel.Workbook?displayProperty=fullName>主机项。  
+-   <xref:Microsoft.Office.Tools.Excel.Workbook.InnerObject%2A> 属性。 使用此属性来获取基础<xref:Microsoft.Office.Interop.Excel.Workbook?displayProperty=fullName>对象<xref:Microsoft.Office.Tools.Excel.Workbook?displayProperty=fullName>宿主项。  
   
- 在应用程序级项目中，你可以创建<xref:Microsoft.Office.Tools.Excel.Workbook?displayProperty=fullName>以编程方式通过使用对象`GetVstoObject`方法。 有关详细信息，请参阅[扩展 Word 文档和 Excel VSTO 外接程序在运行时中的工作簿](/visualstudio/vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)。  
+ 在应用程序级项目中，可以创建<xref:Microsoft.Office.Tools.Excel.Workbook?displayProperty=fullName>以编程方式通过使用对象`GetVstoObject`方法。 有关更多信息，请参见 [在运行时在 VSTO 外接程序中扩展 Word 文档和 Excel 工作簿](/visualstudio/vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)。  
   
- 在文档级项目中，你通常不使用<xref:Microsoft.Office.Tools.Excel.Workbook?displayProperty=fullName>直接对象。 请改用`ThisWorkbook`类以编程方式访问你的项目中的工作簿。 `ThisWorkbook`类派生其大多数成员从<xref:Microsoft.Office.Tools.Excel.WorkbookBase?displayProperty=fullName>类。 此类将对其成员的所有调用重都定向到的内部实现<xref:Microsoft.Office.Tools.Excel.Workbook?displayProperty=fullName>接口中[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]。 有关详细信息，请参阅[文档级自定义项编程](/visualstudio/vsto/programming-document-level-customizations.md)。  
+ 在文档级项目中，您通常不使用<xref:Microsoft.Office.Tools.Excel.Workbook?displayProperty=fullName>直接对象。 请改用`ThisWorkbook`类以编程方式访问你的项目中的工作簿。 `ThisWorkbook`类派生其大多数成员从<xref:Microsoft.Office.Tools.Excel.WorkbookBase?displayProperty=fullName>类。 此类将对其成员的所有调用重都定向到的内部实现<xref:Microsoft.Office.Tools.Excel.Workbook?displayProperty=fullName>接口中[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]。 有关详细信息，请参阅[Programming Document-level Customizations](/visualstudio/vsto/programming-document-level-customizations.md)。  
   
  [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
   
@@ -433,100 +433,100 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 默认情况下，工作表函数，从 Excel 2007 及更早版本的 Excel 使用新的算法，可提高其准确性。 但是，在某些情况下，新的算法会降低这些函数相对于 Excel 2007 中其性能的性能和早期版本的 Excel。 若要指定这些工作表函数使用旧算法以提高其性能，设置<xref:Microsoft.Office.Tools.Excel.Workbook.AccuracyVersion%2A>属性设置为 1。  
+ 默认情况下的某些工作表函数，从 Excel 2007 和 Excel 的早期版本使用新的算法，可提高其准确性。 但是，在某些情况下，新算法会降低性能的相对于其性能在 Excel 2007 中的这些函数和 Excel 的早期版本。 若要指定这些工作表函数使用较旧的算法以提高其性能，请设置<xref:Microsoft.Office.Tools.Excel.Workbook.AccuracyVersion%2A>属性设置为 1。  
   
  下表描述的可能设置<xref:Microsoft.Office.Tools.Excel.Workbook.AccuracyVersion%2A>属性。  
   
 |设置|描述|  
 |-------------|-----------------|  
-|0|使用最新、 最准确地算法 （默认值）|  
+|0|使用最新、 最准确的算法 （默认值）|  
 |1|使用 Excel 2007 或更早版本算法|  
-|2|使用 Excel 2010 算法|  
+|2|使用 Excel 2010 的算法|  
   
 > [!NOTE]
->  设置<xref:Microsoft.Office.Tools.Excel.Workbook.AccuracyVersion%2A>为 0、 1 或 2 以外的值的属性将导致未定义的行为。  
+>  设置<xref:Microsoft.Office.Tools.Excel.Workbook.AccuracyVersion%2A>属性设置为 0、 1 或 2 以外的值将导致未定义的行为。  
   
- 下表总结了哪些功能受设置<xref:Microsoft.Office.Tools.Excel.Workbook.AccuracyVersion%2A>属性设置为 1。 "函数不影响"列中列出的函数将始终使用最新的准确性算法或 Excel 2010 中未更改。 有关在其名称中包含一个句点 （.） 的函数名称，以确定相应的函数的名称在中 VBA 作为实现的方法<xref:Microsoft.Office.Interop.Excel.WorksheetFunction>对象，请用下划线字符 (_) 代替时间段。 例如，对应于 BETA VBA 方法。DIST 函数是[Beta_Dist](http://msdn.microsoft.com/en-us/library/microsoft.office.interop.excel.worksheetfunction.beta_dist.aspx)方法。  
+ 下表总结了设置会影响哪些函数<xref:Microsoft.Office.Tools.Excel.Workbook.AccuracyVersion%2A>属性设置为 1。 "函数不会受到影响"列中列出的函数将始终使用最新精度算法或 Excel 2010 中未更改。 对于在其名称中包含句点 （.） 的函数名称，若要确定相应的函数名称在 VBA 中作为方法实现的<xref:Microsoft.Office.Interop.Excel.WorksheetFunction>对象，该期间将下划线字符 (_)。 例如，为 beta 版本相对应的 VBA 方法。DIST 技术支持部门[Beta_Dist](http://msdn.microsoft.com/en-us/library/microsoft.office.interop.excel.worksheetfunction.beta_dist.aspx)方法。  
   
 |受影响的函数|不受影响的函数|  
 |------------------------|----------------------------|  
 |忽略|聚合|  
-|BETAINV|BETA.DIST|  
-|BINOMDIST|试用版。清单|  
-|则 CHIDIST 将|BINOM.DIST|  
-|CHIINV|BINOM。清单|  
+|BETAINV|试用版。DIST|  
+|BINOMDIST|试用版。INV|  
+|则 CHIDIST 将|BINOM。DIST|  
+|CHIINV|BINOM。INV|  
 |CHITEST|上限|  
 |置信度|上限。精确|  
-|CRITBINOM|CHISQ.DIST|  
-|CUMIPMT|CHISQ.DIST.RT|  
-|CUMPRINC|CHISQ.INV|  
+|CRITBINOM|CHISQ。DIST|  
+|CUMIPMT|CHISQ。程序分发RT|  
+|CUMPRINC|CHISQ。INV|  
 |ERF|CHISQ.INV.RT|  
 |ERFC|CHISQ.TEST|  
-|EXPONDIST|CONFIDENCE.NORM|  
-|FDIST|CONFIDENCE.T|  
+|EXPONDIST|置信度。NORM|  
+|FDIST|置信度。T|  
 |FINV|COVAR|  
-|FTEST|协方差。P|  
-|GAMMADIST|协方差。S|  
-|GAMMALN|ERF.PRECISE|  
-|GAMMINV|ERFC.PRECISE|  
+|FTEST|协变。P|  
+|GAMMADIST|协变。S|  
+|GAMMALN|ERF。精确|  
+|GAMMINV|ERFC。精确|  
 |HYPGEOMDIST|EXPON。DIST|  
 |IPMT|F.DIST|  
 |IRR|F.DIST.RT|  
 |LOGINV|F.INV|  
-|LOGNORMDIST|F.INV.RT|  
+|LOGNORMDIST|F.INV。RT|  
 |NEGBINOMDIST|F.TEST|  
 |正态分布|FLOOR|  
-|NORMINV|FLOOR。精确|  
-|NORMSDIST|伽玛。DIST|  
-|NORMSINV|伽玛。清单|  
+|NORMINV|基底。精确|  
+|NORMSDIST|GAMMA。DIST|  
+|NORMSINV|GAMMA。INV|  
 |PMT|GAMMALN。精确|  
-|泊松|HYPGEOM.DIST|  
-|PPMT|ISO.CEILING|  
+|泊松|HYPGEOM。DIST|  
+|PPMT|ISO。上限|  
 |STDEV|LOGNORM。DIST|  
-|STDEVP|LOGNORM。清单|  
+|STDEVP|LOGNORM。INV|  
 |TDIST|MOD|  
 |TINV|模式|  
-|则|MODE.MULT|  
-|VAR|MODE.SNGL|  
-|VARA|NEGBINOM.DIST|  
-|VARP|NETWORKDAYS.INTL|  
-|VARPA|范数。DIST|  
-|韦伯|范数。清单|  
-|XIRR|NORM.S.DIST|  
-|ZTEST|NORM.S.INV|  
-||百分位|  
-||百分位。执行|  
-||百分位。INC|  
+|TTEST|模式。MULT|  
+|VAR|模式。SNGL|  
+|VARA|NEGBINOM。DIST|  
+|VARP|NETWORKDAYS。INTL|  
+|VARPA|NORM。DIST|  
+|韦伯|NORM。INV|  
+|XIRR|NORM。S.DIST|  
+|ZTEST|NORM。S.INV|  
+||百分位数|  
+||百分位数。独占|  
+||百分位数。INC|  
 ||位|  
-||位。执行|  
+||位。独占|  
 ||位。INC|  
 ||泊松。DIST|  
 ||四分位数|  
-||四分位数。执行|  
+||四分位数。独占|  
 ||四分位数。INC|  
-||级别|  
-||RANK.AVG|  
-||RANK.EQ|  
-||STDEV.P|  
-||STDEV.S|  
+||排名|  
+||等级。AVG|  
+||等级。EQ|  
+||STDEV。P|  
+||STDEV。S|  
 ||T.DIST|  
 ||T.DIST.2T|  
 ||T.DIST.RT|  
 ||T.DIST.RT|  
 ||T.INV|  
 ||T.INV.2T|  
-||T.INV.RT|  
+||T.INV。RT|  
 ||T.TEST|  
-||VAR.P|  
-||差异S|  
+||VAR。P|  
+||VAR。S|  
 ||工作日|  
 ||WEEKNUM|  
-||WEIBULL.DIST|  
-||WORKDAY.INTL|  
+||韦伯。DIST|  
+||WORKDAY。INTL|  
 ||Z.TEST|  
   
 > [!NOTE]
->  此属性将出现在 IntelliSense Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Excel 2007 项目中使用此属性。  
+>  此属性将出现在 IntelliSense 中 Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，此属性不能使用 Excel 2007 项目中。  
   
  ]]></format>
         </remarks>
@@ -556,7 +556,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 这不会运行可能会附加到工作簿任何 Auto_Activate 或 Auto_Deactivate 宏 (使用<xref:Microsoft.Office.Tools.Excel.Workbook.RunAutoMacros%2A>方法来运行这些宏)。  
+ 这不会运行可能附加到工作簿任何 Auto_Activate 或 Auto_Deactivate 宏 (使用<xref:Microsoft.Office.Tools.Excel.Workbook.RunAutoMacros%2A>方法来运行这些宏)。  
   
  ]]></format>
         </remarks>
@@ -584,9 +584,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 当你显示相同的工作簿的两个窗口之间切换<xref:Microsoft.Office.Tools.Excel.Workbook.WindowActivate>事件发生，但<xref:Microsoft.Office.Tools.Excel.Workbook.ActivateEvent>工作簿的事件不会发生。  
+ 当显示同一工作簿的两个窗口之间切换<xref:Microsoft.Office.Tools.Excel.Workbook.WindowActivate>发生事件时，但<xref:Microsoft.Office.Tools.Excel.Workbook.ActivateEvent>工作簿的事件不会发生。  
   
- 创建一个新窗口时，此事件不会发生。  
+ 创建一个新的窗口时，不会不会发生此事件。  
   
  ]]></format>
         </remarks>
@@ -638,7 +638,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果工作簿将显示在多个窗口中，此属性可能在不同的窗口中不同。  
+ 如果工作簿将显示在多个窗口中，此属性可能在不同的 windows 中不同。  
   
  ]]></format>
         </remarks>
@@ -667,10 +667,10 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果不指定工作簿对象，此属性将返回 active 切片器中活动工作簿。  
+ 如果不指定工作簿对象，此属性将返回在活动工作簿中的活动切片器。  
   
 > [!NOTE]
->  此属性将出现在 IntelliSense Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Excel 2007 项目中使用此属性。  
+>  此属性将出现在 IntelliSense 中 Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，此属性不能使用 Excel 2007 项目中。  
   
  ]]></format>
         </remarks>
@@ -720,7 +720,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 外接程序不会自动关闭时卸载。  
+ 外接程序不会自动关闭时将其卸载。  
   
  ]]></format>
         </remarks>
@@ -770,7 +770,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件出现在 IntelliSense Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Excel 2007 项目中使用此事件。  
+ 此事件将显示在 IntelliSense 中 Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Excel 2007 项目中使用此事件。  
   
  ]]></format>
         </remarks>
@@ -911,7 +911,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 5 到此属性才会生效的 1440年之间，此属性必须设置为一个值。  
+ 此属性必须设置为一个值，从 5 到 1440 此属性才会生效。  
   
  ]]></format>
         </remarks>
@@ -935,13 +935,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示每当工作簿自动更新时，是否将对共享工作簿所做的当前更改发送到其他用户。</summary>
-        <value>
-          如果每当工作簿自动更新时，都将对共享工作簿所做的当前更改发送到其他用户，则为 <see langword="true" />。 如果不发送更改（此工作簿仍与其他用户所做更改保持同步），则为 <see langword="false" />。 默认值为 <see langword="true" />。</value>
+        <value>如果每当工作簿自动更新时，都将对共享工作簿所做的当前更改发送到其他用户，则为 <see langword="true" />。 如果不发送更改（此工作簿仍与其他用户所做更改保持同步），则为 <see langword="false" />。 默认值为 <see langword="true" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.Workbook.AutoUpdateFrequency%2A>从 5 到此属性才会生效 1440年情况下，属性必须设置为一个值。  
+ <xref:Microsoft.Office.Tools.Excel.Workbook.AutoUpdateFrequency%2A>属性必须设置为值从 5 到 1440 此属性才会生效。  
   
  ]]></format>
         </remarks>
@@ -1032,7 +1031,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 保存为 XML 电子表格文件格式时，将不会发生此事件。  
+ 在将保存到 XML 电子表格文件格式，则不会发生此事件。  
   
  ]]></format>
         </remarks>
@@ -1126,14 +1125,14 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个 <c>Microsoft.Office.Core.DocumentProperties</c> 集合，该集合表示工作簿的所有内置文档属性。</summary>
-        <value>A<c>形式</c>表示工作簿的所有内置文档属性的集合。</value>
+        <value>一个<c>Microsoft.Office.Core.DocumentProperties</c>集合，表示工作簿的所有内置文档属性。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性返回整个集合的内置文档属性。 使用`Microsoft.Office.Core.DocumentProperties.Item(System.Object)`属性以返回集合的单个成员 (`Microsoft.Office.Core.DocumentProperties`对象) 通过指定名称的属性或集合索引 （以数字）。  
+ 此属性返回内置文档属性的整个的集合。 使用`Microsoft.Office.Core.DocumentProperties.Item(System.Object)`属性以返回单个成员的集合 (`Microsoft.Office.Core.DocumentProperties`对象) 只需指定属性的名称或 （作为一个数字） 的集合索引。  
   
- 您可以参考文档属性，按索引值或名称。 以下列表显示可用的内置文档属性名称：  
+ 按索引值或名称，可以引用文档属性。 以下列表显示了可用的内置文档属性名称：  
   
 -   标题  
   
@@ -1147,13 +1146,13 @@
   
 -   模板  
   
--   最后一个作者  
+-   最后的作者  
   
 -   修订号  
   
 -   Application Name  
   
--   上一次打印日期  
+-   上次打印日期  
   
 -   创建日期  
   
@@ -1163,7 +1162,7 @@
   
 -   页面数  
   
--   字的数目  
+-   单词的数量  
   
 -   字符数  
   
@@ -1181,13 +1180,13 @@
   
 -   行数  
   
--   段落数  
+-   一些段落  
   
--   幻灯片数  
+-   幻灯片的数量  
   
--   说明的数  
+-   说明的数量  
   
--   隐藏幻灯片数  
+-   隐藏幻灯片的数量  
   
 -   多媒体剪辑数  
   
@@ -1195,7 +1194,7 @@
   
 -   （带空格） 的字符数  
   
- 容器应用程序不需要定义每个内置文档属性的值。 如果 Microsoft Office Excel 未定义的一个内置文档属性的值，读取`Microsoft.Office.Core.DocumentProperties.Value`该文档属性的属性将引发异常。  
+ 容器应用程序不需要定义每个内置文档属性的值。 如果 Microsoft Office Excel 未定义的一个内置文档属性的值，读取`Microsoft.Office.Core.DocumentProperties.Value`该文档属性的属性引发异常。  
   
  使用<xref:Microsoft.Office.Tools.Excel.Workbook.CustomDocumentProperties%2A>属性返回的自定义文档属性的集合。  
   
@@ -1226,7 +1225,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果工作簿已保存的 Excel 和如果工作簿具有尚未完全重新计算的早期版本中，此属性将返回 0。  
+ 如果工作簿保存在早期版本的 Excel 和如果工作簿具有尚未完全重新计算，此属性将返回 0。  
   
  ]]></format>
         </remarks>
@@ -1251,8 +1250,7 @@
       <Parameters />
       <Docs>
         <summary>获取一个值，该值指示 Microsoft Office Excel 是否可以将工作簿签入到服务器。</summary>
-        <returns>
-          如果 Microsoft Office Excel 可以将工作簿签入到服务器，则为 <see langword="true" />；否则为 <see langword="false" />。</returns>
+        <returns>如果 Microsoft Office Excel 可以将工作簿签入到服务器，则为 <see langword="true" />；否则为 <see langword="false" />。</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1281,14 +1279,13 @@
         <param name="Mode">
           <see cref="T:Microsoft.Office.Interop.Excel.XlFileAccess" /> 值之一。 指定新的访问模式。</param>
         <param name="WritePassword">如果文件受写保护且 <c>Mode</c> 为 <see cref="F:Microsoft.Office.Interop.Excel.XlFileAccess.xlReadWrite" />，则指定写保护密码。 如果没有文件密码或 <c>Mode</c> 为 <see cref="F:Microsoft.Office.Interop.Excel.XlFileAccess.xlReadOnly" />，则忽略。</param>
-        <param name="Notify">
-          如果为 <see langword="true" />，则在无法直接访问文件时通知用户。</param>
+        <param name="Notify">如果为 <see langword="true" />，则在无法直接访问文件时通知用户。</param>
         <summary>更改工作簿的访问权限。 这可能需要从磁盘加载更新版本。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果你有在只读模式下打开的文件，你不具有对该文件的独占访问权。 如果在将文件从只读的为读/写，Microsoft Office Excel 必须加载以确保该文件的新副本更改当你具有以只读方式打开的文件时未不进行任何更改。  
+ 如果必须在只读模式下打开的文件，是否不到文件具有独占访问权限。 如果您将一个文件只读的为读/写，必须将 Microsoft Office Excel 加载的文件，确保新副本时您必须以只读方式打开该文件未不进行任何更改。  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -1320,7 +1317,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 关闭工作簿时，将删除早于设置此属性的更改历史记录中的任何更改。  
+ 关闭工作簿时，会删除早于设置此属性的更改历史记录中的任何更改。  
   
  ]]></format>
         </remarks>
@@ -1405,8 +1402,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示在保存工作簿时是否自动运行兼容性检查器。</summary>
-        <value>
-          如果在保存工作簿时应该自动运行兼容性检查器，则为 <see langword="true" />；否则为 <see langword="false" />。 对于 Excel 97-2003 Binary (BIFF8) 工作簿，默认值为 <see langword="true" />；对于所有其他工作簿，默认值为 <see langword="false" />。</value>
+        <value>如果在保存工作簿时应该自动运行兼容性检查器，则为 <see langword="true" />；否则为 <see langword="false" />。 对于 Excel 97-2003 Binary (BIFF8) 工作簿，默认值为 <see langword="true" />；对于所有其他工作簿，默认值为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1432,11 +1428,9 @@
         <Parameter Name="MakePublic" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="SaveChanges">
-          如果为 <see langword="true" />，则保存更改并签入文档；如果为 <see langword="false" />，则将文档返回到签入状态而不保存修订。</param>
+        <param name="SaveChanges">如果为 <see langword="true" />，则保存更改并签入文档；如果为 <see langword="false" />，则将文档返回到签入状态而不保存修订。</param>
         <param name="Comments">允许用户为签入的工作簿的修订输入签入批注（仅当 <c>SaveChanges</c> 等于 <see langword="true" /> 时应用）。</param>
-        <param name="MakePublic">
-          如果为 <see langword="true" />，则允许用户在工作簿签入后发布该工作簿。 这会提交工作簿供审批，审批过程最终会生成将发布给具有工作簿只读权限的用户的工作簿版本（仅当 <c>SaveChanges</c> 为 <see langword="true" /> 时才会如此）。</param>
+        <param name="MakePublic">如果为 <see langword="true" />，则允许用户在工作簿签入后发布该工作簿。 这会提交工作簿供审批，审批过程最终会生成将发布给具有工作簿只读权限的用户的工作簿版本（仅当 <c>SaveChanges</c> 为 <see langword="true" /> 时才会如此）。</param>
         <summary>将本地计算机的工作簿返回到服务器，并将本地工作簿设置为只读，以使它不能进行本地编辑。 调用此方法会关闭工作簿。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -1473,12 +1467,9 @@
         <Parameter Name="VersionType" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="SaveChanges">
-          如果为 <see langword="true" />，则保存更改并签入文档；如果为 <see langword="false" />，则使文档恢复签入状态而不保存修订。</param>
-        <param name="Comments">
-          如果为 <see langword="true" />，则启用签入注释；如果为 false，则在签入工作簿时丢弃注释。 此参数仅当 <c>SaveChanges</c> 为 <see langword="true" /> 时才应用。</param>
-        <param name="MakePublic">
-          如果为 <see langword="true" />，则允许用户在工作簿签入后发布该工作簿。 这会提交工作簿供审批，审批过程最终会生成将发布给具有工作簿只读权限的用户的工作簿版本（仅当 <c>SaveChanges</c> 为 <see langword="true" /> 时才会如此）。</param>
+        <param name="SaveChanges">如果为 <see langword="true" />，则保存更改并签入文档；如果为 <see langword="false" />，则使文档恢复签入状态而不保存修订。</param>
+        <param name="Comments">如果为 <see langword="true" />，则启用签入注释；如果为 false，则在签入工作簿时丢弃注释。 此参数仅当 <c>SaveChanges</c> 为 <see langword="true" /> 时才应用。</param>
+        <param name="MakePublic">如果为 <see langword="true" />，则允许用户在工作簿签入后发布该工作簿。 这会提交工作簿供审批，审批过程最终会生成将发布给具有工作簿只读权限的用户的工作簿版本（仅当 <c>SaveChanges</c> 为 <see langword="true" /> 时才会如此）。</param>
         <param name="VersionType">To be added.</param>
         <summary>将本地计算机中的工作簿发送到服务器，并将本地工作簿设置为只读，以使它不能进行本地编辑。 调用此方法会关闭工作簿。</summary>
         <remarks>
@@ -1519,23 +1510,19 @@
   
  <see langword="true" />。 保存对工作簿所做的更改。 如果工作簿还没有关联文件名，则使用 <c>FileName</c>。 如果省略了 <c>FileName</c>，则要求用户提供文件名。  
   
- <see langword="false" />。 不保存对工作簿所做的更改。  
-  
- 省略。 显示一个对话框，询问用户是否保存更改。</param>
+ <see langword="false" />。 不保存对工作簿所做的更改。  省略。 显示一个对话框，询问用户是否保存更改。</param>
         <param name="Filename">使用此文件名保存更改。</param>
         <param name="RouteWorkbook">如果工作簿不需要传送给下一个收件人（如果该工作簿没有传送名单或已传送），则忽略此参数。 否则，Microsoft Office Excel 传送工作簿，如下面的列表所示。  
   
  <see langword="true" />。 将工作簿发送给下一个收件人。  
   
- <see langword="false" />。 不发送工作簿。  
-  
- 省略。 显示一个对话框，询问用户是否应发送工作簿。</param>
+ <see langword="false" />。 不发送工作簿。  省略。 显示一个对话框，询问用户是否应发送工作簿。</param>
         <summary>关闭工作簿。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 关闭的工作簿，使用此方法不在工作簿中运行任何 Auto_Close 宏。 使用<xref:Microsoft.Office.Tools.Excel.Workbook.RunAutoMacros%2A>方法要运行这些宏。  
+ 关闭工作簿使用此方法不在工作簿中运行任何 Auto_Close 宏。 使用<xref:Microsoft.Office.Tools.Excel.Workbook.RunAutoMacros%2A>方法来运行宏。  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -1589,15 +1576,15 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.Workbook.Colors%2A>属性可使用以下参数。  
+ <xref:Microsoft.Office.Tools.Excel.Workbook.Colors%2A>属性可用于以下参数。  
   
 |参数|描述|  
 |---------------|-----------------|  
-|`Index`|索引数 （从 1 至 56) 工作簿调色板中的颜色。 如果未指定此参数，此属性将返回包含所有 56 种颜色调色板中的数组。|  
+|`Index`|索引数 （从 1 到 56) 工作簿调色板中的颜色。 如果未指定此参数，此属性将返回包含所有 56 种颜色调色板中的数组。|  
   
- 如果你尝试使用<xref:Microsoft.Office.Tools.Excel.Workbook.Colors%2A>而不指定任何参数，<xref:Microsoft.Office.Tools.Excel.Workbook.Colors%2A>将获取<xref:Microsoft.Office.Tools.Excel.Workbook._ColorsType>对象属于的 Office 开发工具在 Visual Studio 基础结构和不应在代码中直接使用。  
+ 如果尝试使用<xref:Microsoft.Office.Tools.Excel.Workbook.Colors%2A>而无需指定任何参数，<xref:Microsoft.Office.Tools.Excel.Workbook.Colors%2A>将获取<xref:Microsoft.Office.Tools.Excel.Workbook._ColorsType>对象属于的 Office 开发 Visual Studio 基础结构中的工具，但不可在代码中直接使用。  
   
- 工作簿调色板中的 56 条目，每个表示 RGB 值。  
+ 工作簿调色板有 56 条目，每个所表示的 RGB 值。  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -1605,7 +1592,7 @@
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.Workbook.Colors%2A>属性可以在工作簿的调色板为蓝色，请设置的第一个颜色，然后以编程方式显示 Microsoft Office Excel**调色板**对话框来验证是否此进行更改。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.Workbook.Colors%2A>属性设置在工作簿的调色板中为蓝色，第一种颜色，然后以编程方式显示 Microsoft Office Excel**调色板**对话框以验证此已更改。  
   
  此版本用于针对应用程序级外接程序。  
   
@@ -1634,12 +1621,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个 <c>Microsoft.Office.Core.CommandBars</c> 对象，该对象表示 Microsoft Office Excel 命令栏。</summary>
-        <value>A <c>Microsoft.Office.Core.CommandBars</c>表示 Microsoft Office Excel 命令栏的对象。</value>
+        <value>一个<c>Microsoft.Office.Core.CommandBars</c>对象，表示 Microsoft Office Excel 命令栏。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 当工作簿是嵌入其他应用程序中并由用户激活通过双击该工作簿时，使用通过工作簿对象的属性返回的一套 Excel 命令栏中其他应用程序可用。 在所有其他情况下，使用此属性的工作簿对象返回`null`。 没有返回附加到工作簿的命令栏组无法通过编程方式。 命令条是与应用程序和不是工作簿相关联。 此属性存在于工作簿上，因此 Excel 不为应用程序时，你可以访问 Excel 应用程序命令栏。  
+ 当一个工作簿是嵌入到另一个应用程序和由用户激活通过双击该工作簿时，使用与工作簿对象的属性返回 Excel 命令栏中其他应用程序可用的集。 在所有其他情况下，使用此属性的工作簿对象返回`null`。 没有返回附加到工作簿的命令栏组无法通过编程方式。 命令栏是与应用程序并不是工作簿相关联。 此属性存在针对该工作簿，以便 Excel 不是应用程序时，可以访问 Excel 应用程序命令栏。  
   
  ]]></format>
         </remarks>
@@ -1708,7 +1695,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取工作簿和数据源之间的连接的集合。</summary>
-        <value>A <c>Microsoft.Office.Interop.Excel.Connections</c>集合，其中包含工作簿和数据源之间的连接。</value>
+        <value>一个<c>Microsoft.Office.Interop.Excel.Connections</c>集合，其中包含工作簿和数据源之间的连接。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1758,7 +1745,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性使您能够访问容器应用程序的对象模型，如果在宿主应用程序，如 Microsoft Internet Explorer 内打开的 Excel 工作簿。  
+ 此属性提供了一种方法访问容器应用程序的对象模型，如果主机应用程序如 Microsoft Internet Explorer 中打开的 Excel 工作簿。  
   
  ]]></format>
         </remarks>
@@ -1782,7 +1769,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取描述工作簿中存储的元数据的属性的集合。</summary>
-        <value>A <c>Microsoft.Office.Core.MetaProperties</c>包含描述存储在工作簿的元数据属性的集合。</value>
+        <value>一个<c>Microsoft.Office.Core.MetaProperties</c>集合，其中包含描述存储在工作簿的元数据的属性。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1804,8 +1791,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，该值指示保存此文件时是否创建备份文件。</summary>
-        <value>
-          如果保存此文件时创建备份文件，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果保存此文件时创建备份文件，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1833,9 +1819,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果在 Microsoft Office Excel 中创建对象时，此属性返回的字符串接，这等同于十六进制数字 5843454c。  
+ 如果在 Microsoft Office Excel 中创建对象时，此属性返回字符串 XCEL，这与十六进制数 5843454c。  
   
- 此属性用于在 Excel 中用于的 Macintosh，其中每个应用程序具有四个字符创建者代码。 例如，Excel 具有接的创建者代码。  
+ 此属性用于在 Excel 中使用的 Macintosh 上，其中每个应用程序具有四个字符创建者代码。 例如，Excel 具有 XCEL 的创建者代码。  
   
  ]]></format>
         </remarks>
@@ -1859,12 +1845,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个 <c>Microsoft.Office.Core.DocumentProperties</c> 集合，该集合表示工作簿的所有自定义文档属性。</summary>
-        <value>A<c>形式</c>表示工作簿的所有自定义文档属性的集合。</value>
+        <value>一个<c>Microsoft.Office.Core.DocumentProperties</c>集合，表示工作簿的所有自定义文档属性。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性返回整个集合的自定义文档属性。 使用`Microsoft.Office.Core.DocumentProperties.Item(System.Object)`属性以返回集合的单个成员 (`Microsoft.Office.Core.DocumentProperties`对象) 通过指定名称的属性或集合索引 （以数字）。  
+ 此属性返回自定义文档属性的整个的集合。 使用`Microsoft.Office.Core.DocumentProperties.Item(System.Object)`属性以返回单个成员的集合 (`Microsoft.Office.Core.DocumentProperties`对象) 只需指定属性的名称或 （作为一个数字） 的集合索引。  
   
  使用<xref:Microsoft.Office.Tools.Excel.Workbook.BuiltinDocumentProperties%2A>属性返回的内置文档属性的集合。  
   
@@ -1913,7 +1899,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取工作簿中的自定义 XML 部件的集合。</summary>
-        <value>A <c>Microsoft.Office.Core.CustomXMLParts</c>工作簿中的集合，包含自定义 XML 部件。</value>
+        <value>一个<c>Microsoft.Office.Core.CustomXMLParts</c>集合，包含自定义 XML 部件在工作簿中。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1964,8 +1950,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示工作簿是否使用 1904 日期系统。</summary>
-        <value>
-          如果工作簿使用 1904 日期系统，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果工作簿使用 1904 日期系统，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2013,7 +1998,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 默认扩展名是<xref:Microsoft.Office.Tools.Excel.IWorkbookExtension>对象由实现[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]。  
+ 默认扩展名<xref:Microsoft.Office.Tools.Excel.IWorkbookExtension>对象，它由实现[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]。  
   
  ]]></format>
         </remarks>
@@ -2065,7 +2050,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性将出现在 IntelliSense Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Excel 2007 项目中使用此属性。  
+ 此属性将出现在 IntelliSense 中 Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，此属性不能使用 Excel 2007 项目中。  
   
  ]]></format>
         </remarks>
@@ -2182,8 +2167,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示工作簿中是否显示墨迹注释。</summary>
-        <value>
-          如果工作簿中显示墨迹批注，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果工作簿中显示墨迹批注，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2205,7 +2189,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取工作簿的文档检查器模块的集合。</summary>
-        <value>A <c>Microsoft.Office.Core.DocumentInspectors</c>集合，其中包含工作簿的文档检查器模块。</value>
+        <value>一个<c>Microsoft.Office.Core.DocumentInspectors</c>集合，其中包含工作簿的文档检查器模块。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2227,7 +2211,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个 <c>Microsoft.Office.Core.DocumentLibraryVersions</c> 集合，该集合表示共享工作簿（启用了版本控制并存储在服务器上的文档库中）的版本集合。</summary>
-        <value>A <c>Microsoft.Office.Core.DocumentLibraryVersions</c>表示共享工作簿，其启用版本控制和存储在文档库中的服务器上的版本的集合的集合。</value>
+        <value>一个<c>Microsoft.Office.Core.DocumentLibraryVersions</c>集合，表示共享工作簿的启用了版本控制并存储在文档库中的服务器上的版本集合。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2367,13 +2351,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示 Microsoft Office Excel 是否按时间间隔保存更改后的文件（所有格式）。</summary>
-        <value>
-          如果 Excel 按时间间隔保存更改后的文件，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果 Excel 按时间间隔保存更改后的文件，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果 Excel 失败，系统会出现故障，或如果系统不正确关闭的情况下 （不允许 Excel 不能保存更改的文件），打开备份的文件，并且用户有机会保存更改，否则可能已丢失。 当用户重启 Excel 时，将打开文档恢复窗口，向用户提供恢复他们正在处理的文件的选项。  
+ 如果 Excel 失败，系统出现故障，或如果系统未正确关闭 （不允许 Excel 保存已更改的文件），打开的备份的文件和用户有机会保存更改，否则可能已丢失。 当用户重新启动 Excel 时，将打开文档恢复窗口，为用户提供一个选项来恢复他们的文件。  
   
  ]]></format>
         </remarks>
@@ -2463,8 +2446,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示电子邮件撰写标题和信封工具栏是否都可见。</summary>
-        <value>
-          如果电子邮件撰写标题和信封工具栏都可见，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果电子邮件撰写标题和信封工具栏都可见，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2532,13 +2514,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，该值指示工作簿是否处于兼容模式。</summary>
-        <value>
-          如果工作簿处于兼容模式，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果工作簿处于兼容模式，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 在兼容性模式下，某些功能被禁用或函数以不同的方式。 例如，在兼容模式下的 Excel 2007 工作簿被限制为相同数量的行和列的早期版本的 Excel 中可用。  
+ 在兼容性模式下，某些功能被禁用或函数以不同的方式。 例如，在兼容模式下的 Excel 2007 工作簿仅限于相同数量的行和 Excel 的早期版本中可用的列。  
   
  ]]></format>
         </remarks>
@@ -2568,9 +2549,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法将保存到的工作簿所做的任何更改，并要求该工作簿的其他用户打开以将其更改保存到不同的文件。  
+ 此方法将保存到工作簿所做的任何更改，并要求具有该工作簿的其他用户打开以将其更改保存到一个不同的文件。  
   
- 如果工作簿未打开作为共享列表，此方法将失败。 若要确定是否已为共享的列表打开工作簿，使用<xref:Microsoft.Office.Tools.Excel.Workbook.MultiUserEditing%2A>属性。  
+ 如果工作簿作为共享列表打开，此方法将失败。 若要确定是否已作为共享列表打开工作簿，请使用<xref:Microsoft.Office.Tools.Excel.Workbook.MultiUserEditing%2A>属性。  
   
  ]]></format>
         </remarks>
@@ -2607,21 +2588,18 @@
         <param name="Type">其中一个 <see langword="Microsoft.Office.Interop.Excel.XlFixedFormatType" /> 值，该值指定是否要将工作簿保存为 PDF 或 XPS 格式。</param>
         <param name="Filename">新 PDF 或 XPS 文件的完整路径。 如果省略此参数，Excel 会将文件保存在当前文件夹中。</param>
         <param name="Quality">其中一个 <see langword="Microsoft.Office.Interop.Excel.XlFixedFormatQuality" /> 值，该值指定导出文件的质量。</param>
-        <param name="IncludeDocProperties">
-          如果要在导出的文件中包含文档属性，则为 <see langword="true" />；否则为 <see langword="false" />。</param>
-        <param name="IgnorePrintAreas">
-          若要在导出时忽略任何打印区域设置，请使用 <see langword="true" />；否则使用 <see langword="false" />。</param>
+        <param name="IncludeDocProperties">如果要在导出的文件中包含文档属性，则为 <see langword="true" />；否则为 <see langword="false" />。</param>
+        <param name="IgnorePrintAreas">若要在导出时忽略任何打印区域设置，请使用 <see langword="true" />；否则使用 <see langword="false" />。</param>
         <param name="From">要从其处开始导出的页码。 如果省略此参数，则从第一页开始导出。</param>
         <param name="To">要导出的最后一页的页码。 如果省略此参数，则导出完最后一页后停止导出。</param>
-        <param name="OpenAfterPublish">
-          如果要在导出工作簿后打开新文件，则为 <see langword="true" />；否则为 <see langword="false" />。</param>
+        <param name="OpenAfterPublish">如果要在导出工作簿后打开新文件，则为 <see langword="true" />；否则为 <see langword="false" />。</param>
         <param name="FixedFormatExtClassPtr">一个指向 <see langword="IMsoDocExporter" /> 接口的实现的指针，可使工作簿保存为另一种固定格式。 有关详细信息，请参阅“扩展 Office (2007) 固定格式导出功能”。</param>
         <summary>以 PDF 或 XPS 格式保存工作簿。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 你可以将保存为 PDF 或 XPS 文件从 Microsoft Office Excel 仅后提供此功能的外接程序安装。 有关详细信息，搜索"启用支持对其他文件格式，例如 PDF 和 XPS"Office online。  
+ 您可以将保存为 PDF 或 XPS 文件从 Microsoft Office Excel 才提供此功能的外接程序安装。 有关详细信息，搜索"启用支持其他文件格式，如 PDF 和 XPS"Office Online 上。  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -2649,7 +2627,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 自定义扩展是一种实现的<xref:Microsoft.Office.Tools.Excel.IWorkbookExtension>程序通过使用 Visual Studio 中的 Office 开发工具创建 Excel 解决方案中的接口。 在文档级项目中，此属性返回生成一个实例`ThisWorkbook`默认情况下的类。 `ThisWorkbook`类实现<xref:Microsoft.Office.Tools.Excel.IWorkbookExtension>接口通过<xref:Microsoft.Office.Tools.Excel.WorkbookBase>类。 有关详细信息，请参阅[文档级自定义项编程](/visualstudio/vsto/programming-document-level-customizations.md)。  
+ 自定义扩展插件是一种实现的<xref:Microsoft.Office.Tools.Excel.IWorkbookExtension>通过使用 Visual Studio 中的 Office 开发工具创建的 Excel 解决方案中的接口。 在文档级项目中，此属性返回所生成的实例`ThisWorkbook`默认情况下的类。 `ThisWorkbook`类实现<xref:Microsoft.Office.Tools.Excel.IWorkbookExtension>接口通过<xref:Microsoft.Office.Tools.Excel.WorkbookBase>类。 有关详细信息，请参阅[Programming Document-level Customizations](/visualstudio/vsto/programming-document-level-customizations.md)。  
   
  ]]></format>
         </remarks>
@@ -2696,13 +2674,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示工作簿是否处于最终状态。</summary>
-        <value>
-          如果工作簿处于最终状态，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果工作簿处于最终状态，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 当设置此属性为`true`，通知收件人的工作簿处于最终状态，并且该工作簿将设置为只读。  
+ 此属性设置为`true`、 通知收件人的工作簿处于最终状态，和工作簿设置为只读。  
   
  ]]></format>
         </remarks>
@@ -2736,8 +2713,7 @@
       <Docs>
         <param name="Address">目标文档的地址。</param>
         <param name="SubAddress">目标文档中的位置。 默认值为空字符串。</param>
-        <param name="NewWindow">
-          如果为 <see langword="true" />，则在新窗口中显示目标应用程序。 默认值为 <see langword="false" />。</param>
+        <param name="NewWindow">如果为 <see langword="true" />，则在新窗口中显示目标应用程序。 默认值为 <see langword="false" />。</param>
         <param name="AddHistory">未使用。 留待将来使用。</param>
         <param name="ExtraInfo">一个字符串或字节数组，指定用于解析超链接的有关 HTTP 的其他信息。 例如，可以使用 <c>ExtraInfo</c> 指定图像映射的坐标、窗体的内容或 FAT 文件名。</param>
         <param name="Method">指定附加 <c>ExtraInfo</c> 的方式。 可以是下列 <see langword="Microsoft.Office.Core.MsoExtraInfoMethod" /> 常数之一：<see langword="Microsoft.Office.Core.MsoExtraInfoMethod.msoMethodGet" /> 或 <see langword="Microsoft.Office.Core.MsoExtraInfoMethod.msoMethodPost" />。</param>
@@ -2773,8 +2749,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示是否强制对工作簿进行完全计算。</summary>
-        <value>
-          如果强制对工作簿进行完全计算，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果强制对工作簿进行完全计算，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2823,7 +2798,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性等效于<xref:Microsoft.Office.Tools.Excel.Workbook.Path%2A>属性，当前文件系统的分隔符后, 跟跟<xref:Microsoft.Office.Tools.Excel.Workbook.Name%2A>属性。  
+ 此属性等效于<xref:Microsoft.Office.Tools.Excel.Workbook.Path%2A>属性后, 跟当前文件系统的分隔符后, 跟<xref:Microsoft.Office.Tools.Excel.Workbook.Name%2A>属性。  
   
  ]]></format>
         </remarks>
@@ -2937,8 +2912,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，该值指示工作簿是否具有保护密码。</summary>
-        <value>
-          如果工作簿具有保护密码，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果工作簿具有保护密码，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2982,8 +2956,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，该值指示工作簿是否具有附加的 Microsoft Visual Basic for Applications (VBA) 项目。</summary>
-        <value>
-          如果工作簿具有附加的 VBA 项目，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果工作簿具有附加的 VBA 项目，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -3005,8 +2978,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示是否在屏幕上突出显示对共享工作簿所做的更改。</summary>
-        <value>
-          如果在屏幕上突出显示对共享工作簿所做的更改，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果在屏幕上突出显示对共享工作簿所做的更改，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -3110,14 +3082,14 @@
       </ReturnValue>
       <Docs>
         <summary>获取内置图标集的集合，这些图标集可用于对工作簿中的范围应用条件格式规则。</summary>
-        <value>A <c>Microsoft.Office.Interop.Excel.IconSets</c>包含内置的图标的收集组可应用到的区域的条件格式设置规则的对象。</value>
+        <value>一个<c>Microsoft.Office.Interop.Excel.IconSets</c>集合，其中包含的内置图标集可用于将条件格式设置规则应用于一定范围的对象。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 你可以使用图标集以将范围数据划分到隔开阈值的三到五个类别。 每个图标表示一系列的值。 例如，在`Microsoft.Office.Interop.Excel.XlIconSet.xl3Arrows`图标集，红色向上箭头代表较高值、 黄色侧向箭头代表中间值，和绿色向下箭头表示较低的值。  
+ 可以使用设置为范围的数据分成阈值由分隔的三到五个类别的图标。 每个图标表示一系列值。 例如，在`Microsoft.Office.Interop.Excel.XlIconSet.xl3Arrows`图标集，红色向上箭头表示较高的值、 黄色横向箭头表示中间值和绿色向下箭头表示较低的值。  
   
- 若要应用基于图标集条件格式设置规则，创建一个新`Microsoft.Office.Interop.Excel.IconSetCondition`使用`Microsoft.Office.Interop.Excel.FormatConditions.AddIconSetCondition`方法<xref:Microsoft.Office.Interop.Excel.Range.FormatConditions%2A>属性的范围，或<xref:Microsoft.Office.Tools.Excel.NamedRange.FormatConditions%2A>的命名范围的属性。 然后，设置`Microsoft.Office.Interop.Excel.IconSetCondition.IconSet`属性`Microsoft.Office.Interop.Excel.IconSet`从检索的对象<xref:Microsoft.Office.Tools.Excel.Workbook.IconSets%2A>属性。 若要指定`Microsoft.Office.Interop.Excel.IconSet`你想要检索，则之一传递的对象`Microsoft.Office.Interop.Excel.XlIconSet`枚举值的索引<xref:Microsoft.Office.Tools.Excel.Workbook.IconSets%2A>属性。  
+ 若要应用基于图标集条件格式设置规则，请创建一个新`Microsoft.Office.Interop.Excel.IconSetCondition`通过使用`Microsoft.Office.Interop.Excel.FormatConditions.AddIconSetCondition`方法<xref:Microsoft.Office.Interop.Excel.Range.FormatConditions%2A>属性的范围，或<xref:Microsoft.Office.Tools.Excel.NamedRange.FormatConditions%2A>命名范围的属性。 然后，设置`Microsoft.Office.Interop.Excel.IconSetCondition.IconSet`属性设置为`Microsoft.Office.Interop.Excel.IconSet`从检索的对象<xref:Microsoft.Office.Tools.Excel.Workbook.IconSets%2A>属性。 若要指定`Microsoft.Office.Interop.Excel.IconSet`对象，你想要检索，则传递之一`Microsoft.Office.Interop.Excel.XlIconSet`枚举值的索引<xref:Microsoft.Office.Tools.Excel.Workbook.IconSets%2A>属性。  
   
  ]]></format>
         </remarks>
@@ -3141,8 +3113,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示列表不活动时列表边框是否可见。</summary>
-        <value>
-          如果边框可见，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果边框可见，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -3186,23 +3157,22 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示工作簿是否作为外接程序运行。</summary>
-        <value>
-          如果工作簿作为外接程序运行，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果工作簿作为外接程序运行，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 当设置此属性为`true`，该工作簿具有以下特征：  
+ 此属性设置为`true`，工作簿具有以下特征：  
   
--   你不会提示保存工作簿，如果工作簿处于打开状态时进行更改。  
+-   不会提示保存该工作簿，如果工作簿处于打开状态时进行更改。  
   
 -   工作簿窗口不可见。  
   
--   工作簿中的所有宏都都不显示在**宏**对话框 (通过指向显示**宏**上**工具**菜单，然后单击**宏**).  
+-   该工作簿中的任何宏中不可见**宏**对话框 (通过指向显示**宏**上**工具**菜单并单击**宏**).  
   
--   工作簿中的宏仍可运行从**宏**对话框中，即使它们是不可见。 此外，宏名称不必是与工作薄名称限定的。  
+-   仍可以从运行该工作簿中的宏**宏**对话框，即使它们是不可见。 此外，宏名称不需要使用工作簿名称限定。  
   
--   按住 SHIFT 键，当您打开工作簿时无任何影响。  
+-   打开工作簿时按住 SHIFT 键不起作用。  
   
  ]]></format>
         </remarks>
@@ -3226,8 +3196,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，该值指示指定的工作簿是否正在就地编辑。</summary>
-        <value>
-          如果指定的工作簿正在就地编辑，则为 <see langword="true" />；如果工作簿已在 Microsoft Office Excel 中打开进行编辑，则为 <see langword="false" />。</value>
+        <value>如果指定的工作簿正在就地编辑，则为 <see langword="true" />；如果工作簿已在 Microsoft Office Excel 中打开进行编辑，则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -3271,8 +3240,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示共享工作簿是否启用了更改跟踪。</summary>
-        <value>
-          如果共享工作簿启用了更改跟踪，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果共享工作簿启用了更改跟踪，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -3369,9 +3337,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 在返回的名称<xref:System.Array>是链接的文档、 版本，或 DDE 或 OLE 服务器的名称。 该数组的格式是一维数组的所有类型，但发布服务器和订阅服务器。 返回的字符串包含的链接类型的相应表示法中的链接源的名称。 例如，DDE 链接使用"服务器 &#124; 文档 ！项"语法。  
+ 在返回名称<xref:System.Array>是链接的文档、 版本或 DDE 或 OLE 服务器的名称。 数组的格式是一维数组的所有类型，但发布服务器和订阅服务器。 返回的字符串包含中的链接类型的相应表示法的链接源的名称。 例如，DDE 链接使用"服务器&#124;文档 ！项"语法。  
   
- 有关发布服务器和订阅服务器的链接，则返回的数组是二维。 数组的第一列包含的版本，名称和第二列包含的各个版本的引用为文本。  
+ 有关发布服务器和订阅服务器上的链接，则返回的数组为二维图表。 数组的第一列包含的某一版本的名称，第二个列作为文本包含的各个版本的引用。  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -3398,8 +3366,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示对共享工作簿所做的更改是否显示在单独的工作表上。</summary>
-        <value>
-          如果对共享工作簿所做的更改显示在单独的工作表上，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果对共享工作簿所做的更改显示在单独的工作表上，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -3512,8 +3479,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，该值指示工作簿是否作为共享列表打开。</summary>
-        <value>
-          如果工作簿作为共享列表打开，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果工作簿作为共享列表打开，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -3765,8 +3731,7 @@
       </Parameters>
       <Docs>
         <param name="Name">Microsoft Office Excel 或 DDE/OLE 链接的名称（和从 <see cref="M:Microsoft.Office.Tools.Excel.Workbook.LinkSources(System.Object)" /> 方法返回的一样）。</param>
-        <param name="ReadOnly">
-          如果为 <see langword="true" />，则以只读方式打开文档。 默认值为 <see langword="false" />。</param>
+        <param name="ReadOnly">如果为 <see langword="true" />，则以只读方式打开文档。 默认值为 <see langword="false" />。</param>
         <param name="Type">
           <see cref="T:Microsoft.Office.Interop.Excel.XlLink" /> 值之一。 链接类型。</param>
         <summary>打开一个或多个链接的支持文档。</summary>
@@ -3827,7 +3792,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用强密码合并大写和小写字母、 数字和符号。 弱密码不同时包含这些元素。 强密码： Y6dh ！ et5。 弱密码： House27。 使用你自己可以记住，以便无需将其记下的强密码。  
+ 使用强密码的组合大写和小写字母、 数字和符号。 弱密码不混合使用这些元素。 强密码： Y6dh ！ et5。 弱密码： House27。 使用，以便无需将其记下可以记住的强密码。  
   
  ]]></format>
         </remarks>
@@ -3856,7 +3821,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用<xref:Microsoft.Office.Tools.Excel.Workbook.SetPasswordEncryptionOptions%2A>方法，以指定 Excel 是否对文件属性受密码保护的工作簿进行加密。  
+ 使用<xref:Microsoft.Office.Tools.Excel.Workbook.SetPasswordEncryptionOptions%2A>方法，以指定 Excel 是否对受密码保护工作簿的文件属性进行加密。  
   
  ]]></format>
         </remarks>
@@ -3880,13 +3845,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，该值指示 Microsoft Office Excel 是否对受密码保护的指定工作簿的文件属性进行加密。</summary>
-        <value>
-          如果 Excel 对受密码保护的指定工作簿的文件属性进行加密，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果 Excel 对受密码保护的指定工作簿的文件属性进行加密，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用<xref:Microsoft.Office.Tools.Excel.Workbook.SetPasswordEncryptionOptions%2A>方法，以指定 Excel 是否对文件属性中指定的受密码保护的工作簿进行加密。  
+ 使用<xref:Microsoft.Office.Tools.Excel.Workbook.SetPasswordEncryptionOptions%2A>方法，以指定 Excel 是否对指定的受密码保护的工作簿的文件属性进行加密。  
   
  ]]></format>
         </remarks>
@@ -3915,7 +3879,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用<xref:Microsoft.Office.Tools.Excel.Workbook.SetPasswordEncryptionOptions%2A>方法，以指定 Excel 是否对文件属性中指定的受密码保护的工作簿进行加密。  
+ 使用<xref:Microsoft.Office.Tools.Excel.Workbook.SetPasswordEncryptionOptions%2A>方法，以指定 Excel 是否对指定的受密码保护的工作簿的文件属性进行加密。  
   
  ]]></format>
         </remarks>
@@ -3983,7 +3947,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个 <c>Microsoft.Office.Core.Permission</c> 对象，该对象表示工作簿中的权限设置。</summary>
-        <value>A <c>Microsoft.Office.Core.Permission</c>表示工作簿中的权限设置的对象。</value>
+        <value>一个<c>Microsoft.Office.Core.Permission</c>表示工作簿中的权限设置的对象。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -4005,8 +3969,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示列表的筛选器设置和排序设置是否包括在共享工作簿的用户个人视图中。</summary>
-        <value>
-          如果列表的筛选器设置和排序设置包括在共享工作簿的用户个人视图中，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果列表的筛选器设置和排序设置包括在共享工作簿的用户个人视图中，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -4028,8 +3991,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示打印设置是否包括在共享工作簿的用户个人视图中。</summary>
-        <value>
-          如果打印设置包括在共享工作簿的用户个人视图中，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果打印设置包括在共享工作簿的用户个人视图中，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -4206,8 +4168,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示是否仅使用数字所显示的精度来完成工作簿中的计算。</summary>
-        <value>
-          如果仅使用数字所显示的精度来完成工作簿中的计算，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果仅使用数字所显示的精度来完成工作簿中的计算，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -4281,22 +4242,18 @@
         <param name="From">要从其处开始打印的页码。 如果省略此参数，则打印从第一页开始。</param>
         <param name="To">要打印的最后一页的页码。 若忽略此参数，则打印至最后一页。</param>
         <param name="Copies">要打印的份数。 如果忽略此参数，则打印一份。</param>
-        <param name="Preview">
-          若要在打印对象前让 Microsoft Office Excel 调用打印预览，请使用 <see langword="true" />。 若要立即打印对象，请使用 <see langword="false" />。</param>
+        <param name="Preview">若要在打印对象前让 Microsoft Office Excel 调用打印预览，请使用 <see langword="true" />。 若要立即打印对象，请使用 <see langword="false" />。</param>
         <param name="ActivePrinter">设置活动打印机的名称。</param>
-        <param name="PrintToFile">
-          若要打印到文件，请使用 <see langword="true" />。 若未指定 <c>PrToFileName</c>，则 Excel 会提示用户输入输出文件的名称。</param>
-        <param name="Collate">
-          若逐份打印多个副本，请使用 <see langword="true" />。</param>
+        <param name="PrintToFile">若要打印到文件，请使用 <see langword="true" />。 若未指定 <c>PrToFileName</c>，则 Excel 会提示用户输入输出文件的名称。</param>
+        <param name="Collate">若逐份打印多个副本，请使用 <see langword="true" />。</param>
         <param name="PrToFileName">如果 <c>PrintToFile</c> 设为 <see langword="true" />，则此参数指定要打印到的文件的名称。</param>
-        <param name="IgnorePrintAreas">
-          如果要忽略打印区域并打印整个工作簿，则为 <see langword="true" />；否则为 <see langword="false" />。</param>
+        <param name="IgnorePrintAreas">如果要忽略打印区域并打印整个工作簿，则为 <see langword="true" />；否则为 <see langword="false" />。</param>
         <summary>打印工作簿。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- "页"中的说明`From`和`To`指打印的页面，不适用于表或工作簿中的全部页。  
+ "页"中的说明`From`和`To`指打印的页面，不适用于表或工作簿中的所有页。  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -4325,8 +4282,7 @@
         <Parameter Name="EnableChanges" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="EnableChanges">
-          如果为 <see langword="true" />，则允许在显示打印预览时更改边距和页面设置；否则为 <see langword="false" />。</param>
+        <param name="EnableChanges">如果为 <see langword="true" />，则允许在显示打印预览时更改边距和页面设置；否则为 <see langword="false" />。</param>
         <summary>显示与打印效果相同的对象的预览。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -4363,16 +4319,14 @@
       </Parameters>
       <Docs>
         <param name="Password">工作簿的密码，区分大小写。 如果省略此参数，则无需使用密码即可取消保护工作簿。 否则，必须指定密码才能取消保护工作簿。</param>
-        <param name="Structure">
-          如果为 <see langword="true" />，则保护工作簿的结构（工作表的相对位置）。 默认值为 <see langword="false" />。</param>
-        <param name="Windows">
-          如果为 <see langword="true" />，则保护工作簿窗口。 如果省略此参数，则窗口不受保护。</param>
+        <param name="Structure">如果为 <see langword="true" />，则保护工作簿的结构（工作表的相对位置）。 默认值为 <see langword="false" />。</param>
+        <param name="Windows">如果为 <see langword="true" />，则保护工作簿窗口。 如果省略此参数，则窗口不受保护。</param>
         <summary>保护工作簿使其无法修改。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用强密码合并大写和小写字母、 数字和符号。 弱密码不同时包含这些元素。 例如，"Y6dh ！ et5"是一个强密码，但"House27"是弱密码。 使用你自己可以记住，以便无需将其记下的强密码。  
+ 使用强密码的组合大写和小写字母、 数字和符号。 弱密码不混合使用这些元素。 例如，"Y6dh ！ et5"强密码，但"House27"是弱密码。 使用，以便无需将其记下可以记住的强密码。  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -4445,10 +4399,8 @@
         <param name="Filename">保存的文件的名称。 可以包含完整路径；否则，Microsoft Office Excel 将文件保存在当前文件夹中。</param>
         <param name="Password">工作簿的密码，区分大小写。 如果省略此参数，则无需使用密码即可取消保护工作簿。 否则，必须指定密码才能取消保护工作簿。</param>
         <param name="WriteResPassword">文件的写保护密码。 如果保存文件时指定了密码，但打开文件时没有提供密码，则该文件以只读方式打开。</param>
-        <param name="ReadOnlyRecommended">
-          如果为 <see langword="true" />，则在打开该文件时显示一条消息，建议以只读方式打开该文件。</param>
-        <param name="CreateBackup">
-          如果为 <see langword="true" />，则创建备份文件。</param>
+        <param name="ReadOnlyRecommended">如果为 <see langword="true" />，则在打开该文件时显示一条消息，建议以只读方式打开该文件。</param>
+        <param name="CreateBackup">如果为 <see langword="true" />，则创建备份文件。</param>
         <param name="SharingPassword">要用来保护文件共享的密码。</param>
         <param name="FileFormat">一个指示文件格式的字符串。</param>
         <summary>保存工作簿，并进行共享保护。</summary>
@@ -4456,7 +4408,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用强密码合并大写和小写字母、 数字和符号。 弱密码不同时包含这些元素。 例如，"Y6dh ！ et5"是一个强密码，但"House27"是弱密码。 使用你自己可以记住，以便无需将其记下的强密码。  
+ 使用强密码的组合大写和小写字母、 数字和符号。 弱密码不混合使用这些元素。 例如，"Y6dh ！ et5"强密码，但"House27"是弱密码。 使用，以便无需将其记下可以记住的强密码。  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -4483,8 +4435,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，该值指示工作簿中的表的顺序是否受保护。</summary>
-        <value>
-          如果工作簿中的表的顺序受保护，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果工作簿中的表的顺序受保护，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -4506,8 +4457,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，该值指示工作簿窗口是否受保护。</summary>
-        <value>
-          如果工作簿窗口受保护，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果工作簿窗口受保护，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -4588,8 +4538,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，该值指示是否已用只读方式打开工作簿。</summary>
-        <value>
-          如果已用只读方式打开工作簿，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果已用只读方式打开工作簿，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -4618,15 +4567,14 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示工作簿是否保存为建议的只读方式。</summary>
-        <value>
-          如果工作簿保存为建议的只读方式，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果工作簿保存为建议的只读方式，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 打开以只读方式已保存建议的工作簿时，Microsoft Office Excel 会显示条消息，建议你打开工作簿为只读。  
+ 为只读的已保存建议的工作簿打开时，Microsoft Office Excel 将显示一条消息，建议您打开工作簿作为只读的。  
   
- 使用<xref:Microsoft.Office.Tools.Excel.Workbook.SaveAs%2A>方法可以更改此属性。  
+ 使用<xref:Microsoft.Office.Tools.Excel.Workbook.SaveAs%2A>方法来更改此属性。  
   
  ]]></format>
         </remarks>
@@ -4677,7 +4625,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 对象具有<xref:Microsoft.Office.Interop.Excel.PivotCache.BackgroundQuery%2A>属性设置为`true`在后台刷新。  
+ 对象具有<xref:Microsoft.Office.Interop.Excel.PivotCache.BackgroundQuery%2A>属性设置为`true`在后台刷新一次。  
   
  ]]></format>
         </remarks>
@@ -4771,13 +4719,13 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法可以通过执行以下任务来删除自定义项：  
+ 此方法通过执行以下任务来删除自定义项：  
   
--   它将删除`_AssemblyName`和`_AssemblyLocation`从工作簿的自定义属性。 有关详细信息，请参阅[自定义文档属性概述](/visualstudio/vsto/custom-document-properties-overview.md)。  
+-   它将删除`_AssemblyName`和`_AssemblyLocation`工作簿中的自定义属性。 有关详细信息，请参阅[自定义文档属性概述](/visualstudio/vsto/custom-document-properties-overview.md)。  
   
 -   它从工作簿中删除缓存的数据。 有关缓存数据的详细信息，请参阅[缓存数据](/visualstudio/vsto/caching-data.md)。  
   
- 此方法可能引发<xref:System.UnauthorizedAccessException>如果工作簿受到保护。 调用此方法之前，应从工作簿删除任何保护。  
+ 此方法可能会引发<xref:System.UnauthorizedAccessException>如果受保护工作簿。 调用此方法之前，应从工作簿删除任何保护。  
   
  ]]></format>
         </remarks>
@@ -4829,8 +4777,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示个人信息是否可从工作簿中移除。</summary>
-        <value>
-          如果个人信息可从工作簿中移除，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="false" />。</value>
+        <value>如果个人信息可从工作簿中移除，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -4923,14 +4870,13 @@
         <Parameter Name="ShowMessage" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="ShowMessage">
-          如果为 <see langword="true" />，则显示该邮件；如果为 <see langword="false" />，则不显示该邮件。</param>
+        <param name="ShowMessage">如果为 <see langword="true" />，则显示该邮件；如果为 <see langword="false" />，则不显示该邮件。</param>
         <summary>向已发送审阅的工作簿的作者发送电子邮件，通知他或她审阅者已完成对该工作簿的审阅。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用<xref:Microsoft.Office.Tools.Excel.Workbook.SendForReview%2A>方法以启动工作簿的协作审阅。 如果<xref:Microsoft.Office.Tools.Excel.Workbook.ReplyWithChanges%2A>方法执行不协作审阅循环的一部分的工作簿，将引发异常。  
+ 使用<xref:Microsoft.Office.Tools.Excel.Workbook.SendForReview%2A>方法以启动工作簿的协作审阅。 如果<xref:Microsoft.Office.Tools.Excel.Workbook.ReplyWithChanges%2A>方法上的工作簿的不是联合审阅周期的一部分执行，则会引发异常。  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -4957,7 +4903,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个表示工作簿的信息检索服务的对象。</summary>
-        <value>A <c>Microsoft.Office.Interop.Excel.Research</c>表示工作簿的信息检索服务对象。</value>
+        <value>一个<c>Microsoft.Office.Interop.Excel.Research</c>对象，表示工作簿的信息检索服务。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -5190,30 +5136,26 @@
           <see cref="T:Microsoft.Office.Interop.Excel.XlFileFormat" /> 值之一，指定保存文件时要使用的文件格式。 对于现有文件，默认格式为最后一种指定文件格式；对于新文件，默认格式为所用 Excel 版本的格式。</param>
         <param name="Password">一个区分大小写的字符串（不超过 15 个字符），指示为文件指定的保护密码。</param>
         <param name="WriteResPassword">文件的写保护密码。 如果保存文件时指定了密码，但打开文件时没有提供密码，则该文件以只读方式打开。</param>
-        <param name="ReadOnlyRecommended">
-          如果为 <see langword="true" />，则在打开该文件时显示一条消息，建议以只读方式打开该文件。</param>
-        <param name="CreateBackup">
-          如果为 <see langword="true" />，则创建备份文件。</param>
+        <param name="ReadOnlyRecommended">如果为 <see langword="true" />，则在打开该文件时显示一条消息，建议以只读方式打开该文件。</param>
+        <param name="CreateBackup">如果为 <see langword="true" />，则创建备份文件。</param>
         <param name="AccessMode">
           <see cref="T:Microsoft.Office.Interop.Excel.XlSaveAsAccessMode" /> 值之一。</param>
         <param name="ConflictResolution">
           <see cref="T:Microsoft.Office.Interop.Excel.XlSaveConflictResolution" /> 值之一。</param>
-        <param name="AddToMru">
-          如果为 <see langword="true" />，则将工作簿添加到最近使用的文件列表中。 默认值为 <see langword="false" />。</param>
+        <param name="AddToMru">如果为 <see langword="true" />，则将工作簿添加到最近使用的文件列表中。 默认值为 <see langword="false" />。</param>
         <param name="TextCodepage">对于 Microsoft Excel 中的所有语言均忽略。  
   
  **注意**：当 Excel 将工作簿保存为 CSV 或文本格式之一（使用 <c>FileFormat</c> 参数指定）时，它使用与当前计算机上使用的系统区域设置语言相对应的代码页。</param>
         <param name="TextVisualLayout">对于 Microsoft Excel 中的所有语言均忽略。  
   
  **注意**：当 Excel 将工作簿保存为 CSV 或文本格式之一（使用 <c>FileFormat</c> 参数指定）时，它会以逻辑布局保存这些格式。 如果在文件中从右到左的文本内嵌入从左到右的文本，逻辑布局会按照文件中所有语言的正确读取顺序保存文件内容，而不管方向如何，反之亦然。 当使用应用程序打开文件时，系统会根据代码页中的字符值范围按照正确方向呈现每一连串字符中的字符。 （在用于显示文件的精确内存布局的应用程序（如调试器或编辑器）中打开该文件时例外。）</param>
-        <param name="Local">
-          如果为 <see langword="true" />，则按照 Excel（包括控制面板设置）的语言保存文件。 如果为 <see langword="false" />（默认值），则按照 Visual Basic for Applications (VBA) 的语言保存文件。</param>
+        <param name="Local">如果为 <see langword="true" />，则按照 Excel（包括控制面板设置）的语言保存文件。 如果为 <see langword="false" />（默认值），则按照 Visual Basic for Applications (VBA) 的语言保存文件。</param>
         <summary>在另一个文件中保存对工作簿所做的更改。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- Visual Studio 不支持将工作簿另存为共享的工作簿。  
+ Visual Studio 不支持将工作簿保存为共享工作簿。  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -5250,7 +5192,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果 Excel 无法导出与指定的架构映射的数据，此方法将导致运行时错误。 若要检查是否 Excel 可以使用指定的架构映射将数据导出，请使用<xref:Microsoft.Office.Interop.Excel.XmlMap.IsExportable%2A>属性。  
+ 如果 Excel 无法导出与指定的架构映射的数据，此方法将导致运行时错误。 若要检查 Excel 是否可以使用指定的架构映射将数据导出，请使用<xref:Microsoft.Office.Interop.Excel.XmlMap.IsExportable%2A>属性。  
   
  ]]></format>
         </remarks>
@@ -5308,15 +5250,14 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示工作簿自上次保存以来是否进行了更改。</summary>
-        <value>
-          如果工作簿自上次保存以来进行了更改，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果工作簿自上次保存以来进行了更改，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果从未保存过工作簿，其<xref:Microsoft.Office.Tools.Excel.Workbook.Path%2A>属性返回一个空字符串 ("")。  
+ 如果从未保存过工作簿，其<xref:Microsoft.Office.Tools.Excel.Workbook.Path%2A>属性将返回空字符串 ("")。  
   
- 你可以将此属性设置为`true`如果你想要关闭而不保存或不被提示将其保存已修改的工作簿。  
+ 可以将此属性设置为`true`如果你想要关闭修改后的工作簿而不保存或不被提示将其保存。  
   
  ]]></format>
         </remarks>
@@ -5340,8 +5281,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示 Microsoft Office Excel 是否将外部链接值与工作簿一起保存。</summary>
-        <value>
-          如果 Excel 将外部链接值与工作簿一起保存，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果 Excel 将外部链接值与工作簿一起保存，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -5394,20 +5334,19 @@
       <Docs>
         <param name="Recipients">要向其发送传真的收件人的传真号码和电子邮件地址。 用分号分隔多个收件人。</param>
         <param name="Subject">传真文档的主题行。</param>
-        <param name="ShowMessage">
-          如果为 <see langword="true" />，则在发送传真邮件前显示该邮件；如果为 <see langword="false" />，则发送传真但不显示传真邮件。</param>
+        <param name="ShowMessage">如果为 <see langword="true" />，则在发送传真邮件前显示该邮件；如果为 <see langword="false" />，则发送传真但不显示传真邮件。</param>
         <summary>将工作簿中的活动工作表作为传真发送给指定收件人。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用此方法需要用户的计算机上启用了传真服务。  
+ 使用此方法要求用户的计算机上启用了传真服务。  
   
  用于指定中的传真号码的格式`Recipients`参数可以是`recipientsfaxnumber@usersfaxprovider`或`recipientsname@recipientsfaxnumber`。 您可以访问用户的传真提供程序信息使用以下注册表路径：  
   
  `HKEY_CURRENT_USER\Software\Microsoft\Office\11.0\Common\Services\Fax`  
   
- 在此注册表路径中使用 FaxAddress 键的值来确定要使用的收件人的格式。  
+ 在此注册表路径中使用 FaxAddress 键的值来确定要使用接收方的格式。  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -5448,7 +5387,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法会启动协作审阅周期。 使用<xref:Microsoft.Office.Tools.Excel.Workbook.EndReview%2A>方法来结束审阅循环。  
+ 此方法启动协作审核周期。 使用<xref:Microsoft.Office.Tools.Excel.Workbook.EndReview%2A>方法来结束审核周期。  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -5481,8 +5420,7 @@
       <Docs>
         <param name="Recipients">以文本格式指定收件人姓名，或以文本字符串数组的格式指定收件人（如果有多个）。 必须至少指定一个收件人，所有收件人都以“To recipient”的格式添加。</param>
         <param name="Subject">指定邮件的主题。 如果省略此参数，则使用文档名称。</param>
-        <param name="ReturnReceipt">
-          如果为 <see langword="true" />，则请求回执。 如果为 <see langword="false" />，则不请求回执。 默认值为 <see langword="false" />。</param>
+        <param name="ReturnReceipt">如果为 <see langword="true" />，则请求回执。 如果为 <see langword="false" />，则不请求回执。 默认值为 <see langword="false" />。</param>
         <summary>使用安装的邮件系统发送工作簿。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -5541,7 +5479,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个对象，该对象表示为运行 Microsoft Office SharePoint Server 的服务器上存储的工作簿指定的策略。</summary>
-        <value>A <c>Microsoft.Office.Core.ServerPolicy</c>表示策略存储在运行 SharePoint Server 的服务器的工作簿为指定的对象。</value>
+        <value>一个<c>Microsoft.Office.Core.ServerPolicy</c>表示策略存储在运行 SharePoint Server 的服务器的工作簿指定的对象。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -5563,16 +5501,16 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个对象，该对象可用于与 Microsoft Office SharePoint Server 服务器上显示的工作簿中的已发布对象列表进行交互。</summary>
-        <value>A <c>Microsoft.Office.Interop.Excel.ServerViewableItems</c>可以使用与的列表进行交互的对象在服务器显示的工作簿中发布对象。</value>
+        <value>一个<c>Microsoft.Office.Interop.Excel.ServerViewableItems</c>可用来与列表进行交互的对象发布服务器显示的工作簿中的对象。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 你可以将其发布到 Excel Services 工作簿中，此属性返回的项的集合。 在服务器上，将显示仅在此集合中的对象。 默认情况下，显示整个工作簿 （包括所有工作表）。  
+ 你可以发布到 Excel Services 在工作簿中，此属性返回的项的集合。 仅在此集合中的对象将在服务器上所示。 默认情况下，显示整个工作簿 （包括所有工作表）。  
   
- 只有一个<xref:Microsoft.Office.Interop.Excel.ServerViewableItems?displayProperty=fullName>对象可以存在每个工作簿。 此集合不能按名称，索引，因为没有被标记为可查看服务器上的对象的名称是唯一不能保证。  
+ 只有一个<xref:Microsoft.Office.Interop.Excel.ServerViewableItems?displayProperty=fullName>对象可以存在每个工作簿。 因为对象被标记为可查看在服务器上的名称都是唯一不能保证，名称，不能将此集合编制索引。  
   
- 在 Excel 用户界面中，你可以查看的对象被标记为可在服务器上查看的集合**Excel Services 选项**对话框。  
+ 在 Excel 用户界面中，可以查看标记为可查看在服务器上的对象的集合**Excel Services 选项**对话框。  
   
  ]]></format>
         </remarks>
@@ -5640,8 +5578,7 @@
         <param name="PasswordEncryptionProvider">加密提供程序的字符串，区分大小写。</param>
         <param name="PasswordEncryptionAlgorithm">算法短名称的区分大小写的字符串（例如“RC4”）。</param>
         <param name="PasswordEncryptionKeyLength">加密密钥长度，为 8 的倍数（40 或更大）。</param>
-        <param name="PasswordEncryptionFileProperties">
-          如果为 <see langword="true" />（默认值），则加密文件属性。</param>
+        <param name="PasswordEncryptionFileProperties">如果为 <see langword="true" />（默认值），则加密文件属性。</param>
         <summary>设置使用密码加密工作簿的选项。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -5649,7 +5586,7 @@
 ## Remarks  
  `PasswordEncryptionProvider`， `PasswordEncryptionAlgorithm`，和`PasswordEncryptionKeyLength`参数不是相互独立。 所选的加密提供程序限制算法和密钥长度，可以选择的组。  
   
- 有关`PasswordEncryptionKeyLength`有参数是没有固有的密钥长度范围上限。 它还确定加密算法加密服务提供程序由确定范围。  
+ 有关`PasswordEncryptionKeyLength`有参数是密钥长度的范围没有固有限制。 此外可以确定的加密算法的加密服务提供程序确定范围。  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -5676,7 +5613,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个 <c>Microsoft.Office.Core.SharedWorkspace</c>，它表示工作簿所在的文档工作区。</summary>
-        <value>A <c>Microsoft.Office.Core.SharedWorkspace</c>表示工作簿所在的文档工作区。</value>
+        <value>一个<c>Microsoft.Office.Core.SharedWorkspace</c> ，表示工作簿所在的文档工作区。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -5723,7 +5660,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 图表工作表时，此事件不会发生。  
+ 图表工作表上不会发生此事件。  
   
  ]]></format>
         </remarks>
@@ -5751,7 +5688,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 图表工作表时，此事件不会发生。  
+ 图表工作表上不会发生此事件。  
   
  ]]></format>
         </remarks>
@@ -5800,7 +5737,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 图表工作表时，此事件不会发生。  
+ 图表工作表上不会发生此事件。  
   
  ]]></format>
         </remarks>
@@ -5870,10 +5807,10 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.Workbook.SheetPivotTableAfterValueChange>事件不会在编辑或重新计算单元格以外的任何情况下发生。 例如，它时不会出现数据透视表是刷新、 排序、 筛选，或向下钻取，即使这些操作移动单元格，并可能从 OLAP 数据源中检索新值。  
+ <xref:Microsoft.Office.Tools.Excel.Workbook.SheetPivotTableAfterValueChange>事件编辑或重新计算的单元格以外的任何条件下不会出现。 例如，它不会在数据透视表进行刷新、 排序、 筛选，或向下钻取，即使这些操作移动单元格，并可能从 OLAP 数据源中检索新值。  
   
 > [!NOTE]
->  此事件出现在 IntelliSense Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Excel 2007 项目中使用此事件。  
+>  此事件将显示在 IntelliSense 中 Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Excel 2007 项目中使用此事件。  
   
  ]]></format>
         </remarks>
@@ -5902,10 +5839,10 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.Workbook.SheetPivotTableBeforeAllocateChanges> Excel 立即执行 UPDATE CUBE 语句以将所有更改都应用到数据透视表的 OLAP 数据源之前, 和用户已选择的用户界面以都应用更改后立即时发生事件。  
+ <xref:Microsoft.Office.Tools.Excel.Workbook.SheetPivotTableBeforeAllocateChanges> Excel 立即执行 UPDATE CUBE 语句以应用到数据透视表的 OLAP 数据源，所有更改之前，用户已选择要都应用的用户界面中的更改后立即发生的事件。  
   
 > [!NOTE]
->  此事件出现在 IntelliSense Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Excel 2007 项目中使用此事件。  
+>  此事件将显示在 IntelliSense 中 Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Excel 2007 项目中使用此事件。  
   
  ]]></format>
         </remarks>
@@ -5934,10 +5871,10 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.Workbook.SheetPivotTableBeforeCommitChanges> Excel 立即执行针对数据透视表的 OLAP 数据源，提交事务之前，用户已选择为整个数据透视表中保存更改后立即发生的事件。  
+ <xref:Microsoft.Office.Tools.Excel.Workbook.SheetPivotTableBeforeCommitChanges> Excel 立即执行 COMMIT TRANSACTION 对数据透视表的 OLAP 数据源之前，用户已选择为整个数据透视表中保存更改后立即发生的事件。  
   
 > [!NOTE]
->  此事件出现在 IntelliSense Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Excel 2007 项目中使用此事件。  
+>  此事件将显示在 IntelliSense 中 Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Excel 2007 项目中使用此事件。  
   
  ]]></format>
         </remarks>
@@ -5966,10 +5903,10 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- Excel 执行针对 OLAP 数据源，ROLLBACK TRANSACTION 语句，如果在事务仍处于活动状态，且然后用户已选择放弃所做的更改之后将丢弃所有数据透视表中, 编辑过的值之前，将发生此事件。  
+ Excel 执行 ROLLBACK TRANSACTION 语句，在针对 OLAP 数据源，如果事务仍处于活动状态，并且后用户已选择放弃更改，然后放弃该数据透视表中的所有已编辑的值之前立即发生此事件。  
   
 > [!NOTE]
->  此事件出现在 IntelliSense Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Excel 2007 项目中使用此事件。  
+>  此事件将显示在 IntelliSense 中 Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Excel 2007 项目中使用此事件。  
   
  ]]></format>
         </remarks>
@@ -5998,10 +5935,10 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.Workbook.SheetPivotTableChangeSync>过程中发生的大多数更改在数据透视表，以便你可以编写代码以响应用户操作，例如清除、 分组或刷新数据透视表中的项。  
+ <xref:Microsoft.Office.Tools.Excel.Workbook.SheetPivotTableChangeSync>过程中发生的大多数更改在数据透视表，以便您可以编写代码来响应用户操作，例如清除、 分组或刷新数据透视表中的项。  
   
 > [!NOTE]
->  此事件出现在 IntelliSense Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Excel 2007 项目中使用此事件。  
+>  此事件将显示在 IntelliSense 中 Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Excel 2007 项目中使用此事件。  
   
  ]]></format>
         </remarks>
@@ -6053,7 +5990,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 集合包含工作簿中工作表、 图表、 对话框表和宏工作表。  
+ 该集合包括工作簿中工作表、 图表、 对话框工作表和宏工作表。  
   
  ]]></format>
         </remarks>
@@ -6098,13 +6035,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示冲突历史记录工作表在作为共享列表打开的工作簿中是否可见。</summary>
-        <value>
-          如果冲突历史记录工作表在作为共享列表打开的工作簿中可见，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果冲突历史记录工作表在作为共享列表打开的工作簿中可见，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果工作簿未打开作为共享列表，该属性无效。 若要确定是否已为共享的列表打开工作簿，使用<xref:Microsoft.Office.Tools.Excel.Workbook.MultiUserEditing%2A>属性。  
+ 如果工作簿作为共享列表打开，该属性无效。 若要确定是否已作为共享列表打开工作簿，请使用<xref:Microsoft.Office.Tools.Excel.Workbook.MultiUserEditing%2A>属性。  
   
  ]]></format>
         </remarks>
@@ -6128,13 +6064,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示数据透视图筛选窗格是否可见。</summary>
-        <value>
-          如果数据透视图筛选窗格可见，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果数据透视图筛选窗格可见，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要显示数据透视图筛选器窗格中，选择一个数据透视图对象。  
+ 若要显示数据透视图筛选窗格，请选择一个数据透视图对象。  
   
  ]]></format>
         </remarks>
@@ -6158,8 +6093,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示数据透视表字段列表是否能够显示。</summary>
-        <value>
-          如果数据透视表字段列表能够显示，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="true" />。</value>
+        <value>如果数据透视表字段列表能够显示，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="true" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -6185,11 +6119,11 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 这是要在中调用的最后一个事件<xref:Microsoft.Office.Tools.Excel.Workbook>对象作为<xref:Microsoft.Office.Tools.Excel.Workbook>对象卸载。 此事件用于任何其他清理过程。  
+ 这是要在中调用的最后一个事件<xref:Microsoft.Office.Tools.Excel.Workbook>对象作为<xref:Microsoft.Office.Tools.Excel.Workbook>对象卸载。 使用此事件的任何其他清理过程。  
   
- 文档级自定义项，当工作簿主机项关闭时，将卸载程序集的应用程序域。  
+ 文档级自定义项，该程序集的应用程序域卸载时工作簿宿主项关闭。  
   
- 在应用程序级外接程序，工作簿主机项关闭时，不会不卸载应用程序域。 此外，基础的工作簿对象将不再可用。 若要访问工作簿，关闭使用之前<xref:Microsoft.Office.Tools.Excel.Workbook.BeforeClose>相反。  
+ 在应用程序级外接程序，应用程序域不会卸载的工作簿宿主项关闭时。 此外，基础工作簿对象将不再可用。 若要关闭使用之前访问的工作簿<xref:Microsoft.Office.Tools.Excel.Workbook.BeforeClose>相反。  
   
  ]]></format>
         </remarks>
@@ -6213,12 +6147,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取工作簿的数字签名的集合。</summary>
-        <value>A <c>Microsoft.Office.Core.SignatureSet</c>集合，其中包含工作簿的数字签名。</value>
+        <value>一个<c>Microsoft.Office.Core.SignatureSet</c>集合，其中包含工作簿的数字签名。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要进行数字签名 Excel 工作簿和验证其他中它们的签名，你需要 Microsoft CryptoAPI 和唯一的数字签名证书。 CryptoAPI 被安装 Microsoft Internet 资源管理器 4.01 或更高版本。 你可以从证书颁发机构获取数字签名证书。  
+ 若要进行数字签名的 Excel 工作簿和验证其他中它们的签名，需要 Microsoft CryptoAPI 和唯一的数字签名证书。 CryptoAPI 被安装 Microsoft Internet Explorer 4.01 或更高版本。 您可以从证书颁发机构获取数字签名证书。  
   
  ]]></format>
         </remarks>
@@ -6247,7 +6181,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性将出现在 IntelliSense Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Excel 2007 项目中使用此属性。  
+ 此属性将出现在 IntelliSense 中 Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，此属性不能使用 Excel 2007 项目中。  
   
  ]]></format>
         </remarks>
@@ -6272,7 +6206,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个表示智能文档解决方案的设置的 <c>Microsoft.Office.Core.SmartDocument</c>。</summary>
-        <value>A <c>Microsoft.Office.Core.SmartDocument</c>表示智能文档解决方案的设置。</value>
+        <value>一个<c>Microsoft.Office.Core.SmartDocument</c>表示智能文档解决方案的设置。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -6320,7 +6254,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 要运行的用户代码运行中的类的构造函数中的最后一步。 用于任何其他初始化中使用此事件。  
+ 若要运行用户代码中运行的类的构造函数中最后一件事。 使用此事件的任何其他初始化。  
   
  ]]></format>
         </remarks>
@@ -6389,7 +6323,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个 <c>Microsoft.Office.Core.Sync</c> 对象，该对象提供对属于文档工作区的文档的方法和属性的访问。</summary>
-        <value>A <c>Microsoft.Office.Core.Sync</c>提供对的方法和属性的文档工作区的一部分的文档的访问的对象。</value>
+        <value>一个<c>Microsoft.Office.Core.Sync</c>对象，它提供对方法和属性属于文档工作区的文档的访问。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -6432,7 +6366,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取工作簿中使用的表样式的集合。</summary>
-        <value>A <c>Microsoft.Office.Interop.Excel.TableStyles</c>集合，其中包含工作簿中使用的表样式。</value>
+        <value>一个<c>Microsoft.Office.Interop.Excel.TableStyles</c>集合，其中包含工作簿中使用的表样式。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -6459,7 +6393,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 一个常见用途<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Tag%2A>属性是用于存储与工作簿紧密关联的数据。  
+ 一个常见用途<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Tag%2A>属性是用于存储与工作簿密切关联的数据。  
   
  ]]></format>
         </remarks>
@@ -6483,8 +6417,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示在将工作簿保存为模板时是否移除外部数据引用。</summary>
-        <value>
-          如果在将工作簿保存为模板时移除外部数据引用，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果在将工作簿保存为模板时移除外部数据引用，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -6506,7 +6439,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取应用于工作簿的主题。</summary>
-        <value>A <c>Microsoft.Office.Core.OfficeTheme</c>表示应用于工作簿的主题。</value>
+        <value>一个<c>Microsoft.Office.Core.OfficeTheme</c> ，表示应用于工作簿的主题。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -6580,7 +6513,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果你忘记了密码，则无法取消该工作簿。 最好将密码及其对应文档名的列表保存在安全的位置。  
+ 如果你忘记了密码，则不能取消保护工作簿。 最好将密码及其对应文档名的列表保存在安全的位置。  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -6615,7 +6548,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用强密码合并大写和小写字母、 数字和符号。 弱密码不同时包含这些元素。 强密码： Y6dh ！ et5。 弱密码： House27。 使用你自己可以记住，以便无需将其记下的强密码。  
+ 使用强密码的组合大写和小写字母、 数字和符号。 弱密码不混合使用这些元素。 强密码： Y6dh ！ et5。 弱密码： House27。 使用，以便无需将其记下可以记住的强密码。  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -6647,7 +6580,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 工作簿是以只读方式打开由用户 A 和由用户 B.打开作为读/写时，此方法很有用如果用户 A 仍然具有工作簿打开，用户将无法获取更新的副本，而无需关闭和重新打开工作簿和丢失视图设置时，用户 B 将较新版本的工作簿保存到磁盘中。 <xref:Microsoft.Office.Tools.Excel.Workbook.UpdateFromFile%2A>方法更新内存中副本的磁盘文件中的工作簿。  
+ 以只读方式打开由用户 A 和用户 b。 为读/写打开工作簿时，此方法很有用如果用户 B 将工作簿的较新版本保存到磁盘，而用户 A 仍工作簿打开，用户将无法获取的已更新的副本，而无需关闭并重新打开该工作簿和丢失视图设置。 <xref:Microsoft.Office.Tools.Excel.Workbook.UpdateFromFile%2A>方法更新内存中副本的磁盘文件中的工作簿。  
   
  ]]></format>
         </remarks>
@@ -6682,7 +6615,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果不带任何参数调用此方法时，Excel 将默认为更新工作表的所有链接。  
+ 不带任何参数调用此方法时，Excel 将默认为更新工作表的所有链接。  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -6690,7 +6623,7 @@
    
   
 ## Examples  
- 下面的代码示例创建 Excel 工作簿的外部链接，然后使用<xref:Microsoft.Office.Tools.Excel.Workbook.UpdateLink%2A>方法来更新链接。 此示例假定该工作簿 Book2.xlsx 位于 C 目录的根目录。  
+ 下面的代码示例创建 Excel 工作簿的外部链接，然后使用<xref:Microsoft.Office.Tools.Excel.Workbook.UpdateLink%2A>方法来更新该链接。 此示例假定 Book2.xlsx C 目录的根目录上存在该工作簿。  
   
  [!code-csharp[Trin_ExcelWorkBook#134](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkBook/CS/ThisWorkbook.cs#134)]
  [!code-vb[Trin_ExcelWorkBook#134](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkBook/VB/ThisWorkbook.vb#134)]  
@@ -6740,8 +6673,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示 Microsoft Office Excel 是否更新工作簿中的远程引用。</summary>
-        <value>
-          如果 Excel 更新工作簿中的远程引用，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果 Excel 更新工作簿中的远程引用，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -6790,9 +6722,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 第二个维度的第一个元素是用户的名称，则第二个元素将日期和时间用户上一次打开工作簿，第三个元素是一个数字，指示列表的类型 （1 表示独占的而 2 表示共享）。  
+ 第二个维度的第一个元素是用户的名称，第二个元素是日期和时间时用户上一次打开工作簿和第三个元素是一个数字，指示列表的类型 （1 表示独占的而 2 表示共享）。  
   
- 此属性不返回有关了指定的工作簿以只读方式打开用户的信息。  
+ 此属性不返回具有指定的工作簿打开为只读的用户有关的信息。  
   
  ]]></format>
         </remarks>
@@ -6816,8 +6748,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，该值指示工作簿的 Visual Basic for Applications 项目是否已进行了数字签名。</summary>
-        <value>
-          如果工作簿的 Visual Basic for Applications 项目已进行了数字签名，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果工作簿的 Visual Basic for Applications 项目已进行了数字签名，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -6844,7 +6775,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性是指 Visual Basic for Applications 项目，不是 Visual Basic 项目。  
+ 此属性是指 Visual Basic for Applications 项目，而不是 Visual Basic 项目。  
   
  ]]></format>
         </remarks>
@@ -6873,7 +6804,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例创建设置字体的颜色为蓝色"blue"术语识别时单元格的智能标记。 该示例通过向工作簿添加智能标记<xref:Microsoft.Office.Tools.Excel.Workbook.VstoSmartTags%2A>属性。  
+ 下面的代码示例创建一个智能标记，设置为蓝色时识别"蓝色"一词的单元格的前景色。 该示例通过使用向工作簿添加智能标记<xref:Microsoft.Office.Tools.Excel.Workbook.VstoSmartTags%2A>属性。  
   
  此版本用于针对应用程序级外接程序。  
   
@@ -7046,7 +6977,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性不返回宏工作表、 图表或对话框编辑表。 使用<xref:Microsoft.Office.Tools.Excel.Workbook.Sheets%2A>属性以返回这些表，以及工作表。 你还可以使用的专用的属性<xref:Microsoft.Office.Tools.Excel.Workbook.Excel4MacroSheets%2A>和<xref:Microsoft.Office.Tools.Excel.Workbook.Excel4IntlMacroSheets%2A>返回宏工作表和<xref:Microsoft.Office.Tools.Excel.Workbook.Charts%2A>属性以返回图表。  
+ 此属性不返回宏工作表、 图表、 或对话框工作表。 使用<xref:Microsoft.Office.Tools.Excel.Workbook.Sheets%2A>属性以返回这些表以及工作表。 您还可以使用专用的属性<xref:Microsoft.Office.Tools.Excel.Workbook.Excel4MacroSheets%2A>并<xref:Microsoft.Office.Tools.Excel.Workbook.Excel4IntlMacroSheets%2A>返回宏工作表和<xref:Microsoft.Office.Tools.Excel.Workbook.Charts%2A>属性以返回图表。  
   
  ]]></format>
         </remarks>
@@ -7075,7 +7006,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.Workbook.WritePassword%2A>属性是可读且返回">> * *"。  
+ <xref:Microsoft.Office.Tools.Excel.Workbook.WritePassword%2A>属性是否可读，并且返回">> * *"。  
   
  ]]></format>
         </remarks>
@@ -7099,8 +7030,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，该值指示工作簿是否受写保护。</summary>
-        <value>
-          如果工作簿受写保护，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果工作簿受写保护，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -7173,9 +7103,9 @@
   
 -   指定的 XML 数据包含语法错误。  
   
--   导入过程已取消，因为指定的数据无法容纳到工作表。  
+-   导入过程已取消，因为指定的数据不适合放在工作表。  
   
- 使用<xref:Microsoft.Office.Tools.Excel.Workbook.XmlImportXml%2A>方法导入以前加载到内存的 XML 数据。  
+ 使用<xref:Microsoft.Office.Tools.Excel.Workbook.XmlImportXml%2A>方法导入先前加载到内存的 XML 数据。  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -7224,9 +7154,9 @@
   
 -   指定的 XML 数据包含语法错误。  
   
--   导入过程已取消，因为指定的数据无法容纳到工作表。  
+-   导入过程已取消，因为指定的数据不适合放在工作表。  
   
- 使用<xref:Microsoft.Office.Tools.Excel.Workbook.XmlImport%2A>方法以将 XML 数据文件导入到当前工作簿。  
+ 使用<xref:Microsoft.Office.Tools.Excel.Workbook.XmlImport%2A>方法将 XML 数据文件导入当前工作簿。  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  

@@ -1,10 +1,10 @@
 <Type Name="SmartTagCollection" FullName="Microsoft.Office.Tools.SmartTagCollection">
   <Metadata>
     <Meta Name="ms.openlocfilehash" Value="669167dd5190b39f40188d67c90346bbb97357b7" />
-    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.sourcegitcommit" Value="d85a83935f1d68ded616fcdfb8fd10d6bf4a4633" />
     <Meta Name="ms.translationtype" Value="HT" />
     <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+    <Meta Name="ms.lasthandoff" Value="07/24/2018" />
     <Meta Name="ms.locfileid" Value="29433023" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface SmartTagCollection : IDisposable, System.Collections.IEnumerable" />
@@ -44,19 +44,19 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 当你创建的智能标记时，你将添加<xref:Microsoft.Office.Tools.SmartTagBase>对象传递给<xref:Microsoft.Office.Tools.Excel.Workbook.VstoSmartTags%2A?displayProperty=fullName>或<xref:Microsoft.Office.Tools.Word.Document.VstoSmartTags%2A?displayProperty=fullName>属性。 这些属性具有类型<xref:Microsoft.Office.Tools.SmartTagCollection>。  
+ 当创建智能标记时，您将添加<xref:Microsoft.Office.Tools.SmartTagBase>对象传递给<xref:Microsoft.Office.Tools.Excel.Workbook.VstoSmartTags%2A?displayProperty=fullName>或<xref:Microsoft.Office.Tools.Word.Document.VstoSmartTags%2A?displayProperty=fullName>属性。 这些属性具有类型<xref:Microsoft.Office.Tools.SmartTagCollection>。  
   
  [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
   
 ## <a name="usage"></a>用法  
- 此类型旨在使用仅在项目中，适用于 Excel 2007 和 Word 2007。 Word 2010 和 Excel 2010 中已弃用智能标记。  
+ 此类型旨在仅在项目中使用 Excel 2007 和 Word 2007。 Word 2010 和 Excel 2010 中已弃用智能标记。  
   
  [!INCLUDE[vsto_net35mref](~/includes/vsto-net35mref-md.md)]  
   
    
   
 ## Examples  
- 下面的代码使用<xref:Microsoft.Office.Tools.SmartTagCollection.Add%2A>方法将添加<xref:Microsoft.Office.Tools.Excel.SmartTag?displayProperty=fullName>到公开的智能标记的集合<xref:Microsoft.Office.Tools.Excel.Workbook.VstoSmartTags%2A?displayProperty=fullName>属性。 此代码示例摘自更大的示例为提供<xref:Microsoft.Office.Tools.Excel.Action?displayProperty=fullName>。  
+ 下面的代码使用<xref:Microsoft.Office.Tools.SmartTagCollection.Add%2A>方法中添加<xref:Microsoft.Office.Tools.Excel.SmartTag?displayProperty=fullName>的智能标记公开的系列<xref:Microsoft.Office.Tools.Excel.Workbook.VstoSmartTags%2A?displayProperty=fullName>属性。 此代码示例是为提供一个更大示例的一部分<xref:Microsoft.Office.Tools.Excel.Action?displayProperty=fullName>。  
   
  此示例适用于文档级自定义。  
   
@@ -90,7 +90,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码使用<xref:Microsoft.Office.Tools.SmartTagCollection.Add%2A>方法将添加<xref:Microsoft.Office.Tools.Excel.SmartTag?displayProperty=fullName>到公开的智能标记的集合<xref:Microsoft.Office.Tools.Excel.Workbook.VstoSmartTags%2A?displayProperty=fullName>属性。 此代码示例摘自更大的示例为提供<xref:Microsoft.Office.Tools.Excel.Action?displayProperty=fullName>。  
+ 下面的代码使用<xref:Microsoft.Office.Tools.SmartTagCollection.Add%2A>方法中添加<xref:Microsoft.Office.Tools.Excel.SmartTag?displayProperty=fullName>的智能标记公开的系列<xref:Microsoft.Office.Tools.Excel.Workbook.VstoSmartTags%2A?displayProperty=fullName>属性。 此代码示例是为提供一个更大示例的一部分<xref:Microsoft.Office.Tools.Excel.Action?displayProperty=fullName>。  
   
  此示例适用于文档级自定义。  
   
@@ -163,8 +163,7 @@
       <Docs>
         <param name="smartTag">要检查的智能标记实例。</param>
         <summary>确定 <see cref="T:Microsoft.Office.Tools.SmartTagCollection" /> 是否包含特定的智能标记。 [!INCLUDE[vsto_smart_tags](~/includes/vsto-smart-tags-md.md)]。</summary>
-        <returns>
-          如果 <see cref="T:Microsoft.Office.Tools.SmartTagCollection" /> 包含指定的智能标记，则为 <see langword="true" />；否则为 <see langword="false" />。</returns>
+        <returns>如果 <see cref="T:Microsoft.Office.Tools.SmartTagCollection" /> 包含指定的智能标记，则为 <see langword="true" />；否则为 <see langword="false" />。</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -308,7 +307,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果集合包含相同的智能标记的多个匹配项，则只有第一个被删除。  
+ 如果集合包含相同的智能标记的多个匹配项，仅第一个被删除。  
   
  ]]></format>
         </remarks>

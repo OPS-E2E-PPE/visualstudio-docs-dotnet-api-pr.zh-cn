@@ -1,10 +1,10 @@
 <Type Name="RibbonSplitButton" FullName="Microsoft.Office.Tools.Ribbon.RibbonSplitButton">
   <Metadata>
     <Meta Name="ms.openlocfilehash" Value="955dff479f7f6b256a4642616cf468d82c6efd53" />
-    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.sourcegitcommit" Value="d85a83935f1d68ded616fcdfb8fd10d6bf4a4633" />
     <Meta Name="ms.translationtype" Value="HT" />
     <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+    <Meta Name="ms.lasthandoff" Value="07/24/2018" />
     <Meta Name="ms.locfileid" Value="29433972" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface RibbonSplitButton : IDisposable, Microsoft.Office.Tools.Ribbon.RibbonControl, System.ComponentModel.IComponent" />
@@ -36,11 +36,11 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- A<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton>一个按钮或切换按钮和下拉菜单中，控件将合并。 若要选择之间的按钮和切换按钮，使用<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.ButtonType%2A>属性。  
+ 一个<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton>控件结合了一个按钮或切换按钮和下拉列表菜单。 若要选择按钮或切换按钮，使用<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.ButtonType%2A>属性。  
   
- 与不同<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu>控件，<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton>控件不具有<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Dynamic%2A>属性，因此内容<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.Items%2A>在运行时，不能更改集合。  
+ 与不同<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu>控件，<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton>控件不具有<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Dynamic%2A>属性，因此内容的<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.Items%2A>集合不能在运行时更改。  
   
- 你可以创建<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton>通过使用在运行时<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.CreateRibbonSplitButton%2A>方法<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory>对象。  
+ 您可以创建<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton>在运行时通过使用<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.CreateRibbonSplitButton%2A>方法的<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory>对象。  
   
  可通过两种方法来访问 <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory> 对象：  
   
@@ -71,13 +71,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示是否启用 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonSplitButton" /> 上的按钮。</summary>
-        <value>
-          如果已启用 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonSplitButton" /> 的按钮，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="false" />。</value>
+        <value>如果已启用 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonSplitButton" /> 的按钮，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性是特定于按钮属于<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton>。 如果只将禁用的按钮，用户仍可以打开下拉列表菜单和单击其中的控件。 与此相反，<xref:Microsoft.Office.Tools.Ribbon.RibbonControl.Enabled%2A>属性指示是否整个<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton>启用控制。 如果完全禁用了控件，则整个控件没有反应任何用户操作。  
+ 此属性是特定于的按钮部分<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton>。 如果只有按钮处于禁用状态，用户仍可以打开下拉列表菜单并单击其中的控件。 与此相反，<xref:Microsoft.Office.Tools.Ribbon.RibbonControl.Enabled%2A>属性指示是否整个<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton>启用控件。 如果完全禁用该控件，则整个控件不响应任何用户操作。  
   
  可以在运行时更改此属性。  
   
@@ -104,9 +103,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 有两个选项<xref:Microsoft.Office.Tools.Ribbon.RibbonButtonType.Button>和<xref:Microsoft.Office.Tools.Ribbon.RibbonButtonType.ToggleButton>。  
+ 两个选项是<xref:Microsoft.Office.Tools.Ribbon.RibbonButtonType.Button>和<xref:Microsoft.Office.Tools.Ribbon.RibbonButtonType.ToggleButton>。  
   
- 不能在运行时更改属性。  
+ 不能在运行时更改该属性。  
   
  ]]></format>
         </remarks>
@@ -126,8 +125,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示是否按下了 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonSplitButton" />。</summary>
-        <value>
-          如果按下了 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonSplitButton" />，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="false" />。</value>
+        <value>如果按下了 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonSplitButton" />，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -158,7 +156,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 当<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton>具有<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.ButtonType%2A>属性设置为<xref:Microsoft.Office.Tools.Ribbon.RibbonButtonType.ToggleButton>、<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.Checked%2A>属性将更新之前将引发此事件。  
+ 当<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton>已<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.ButtonType%2A>属性设置为<xref:Microsoft.Office.Tools.Ribbon.RibbonButtonType.ToggleButton>，则<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.Checked%2A>引发此事件之前更新属性。  
   
  ]]></format>
         </remarks>
@@ -178,14 +176,14 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonSplitButton" /> 控件的大小。</summary>
-        <value>A <c>Microsoft.Office.Core.RibbonControlSize</c>表示大小的<see cref="T:Microsoft.Office.Tools.Ribbon.RibbonSplitButton" />控件。</value>
+        <value>一个<c>Microsoft.Office.Core.RibbonControlSize</c>表示大小的<see cref="T:Microsoft.Office.Tools.Ribbon.RibbonSplitButton" />控件。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性如果不起作用<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton>是菜单的一部分。 <xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.ControlSize%2A>的<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton>上显示一个菜单始终设置为`Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeRegular`除非父控件的`ItemSize`设置为`Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge`。  
+ 此属性不起如果<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton>是菜单的一部分。 <xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.ControlSize%2A>的<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton>上出现一个菜单始终设置为`Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeRegular`除非父控件`ItemSize`设置为`Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge`。  
   
- 若要使<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton>下拉列表菜单控件出现更大，设置<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.ItemSize%2A>属性<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton>到`Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge`。  
+ 若要使<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton>下拉列表菜单控件显示得更大，设置<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.ItemSize%2A>的属性<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton>到`Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge`。  
   
  可以在运行时设置此属性。  
   
@@ -212,7 +210,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 该说明将显示当<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton>嵌套在另一个菜单或拆分按钮，和<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ItemSize%2A>父菜单的属性设置为`Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge`。 如果<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ItemSize%2A>设置为`Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeRegular`，说明未显示。  
+ 该说明将显示何时<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton>嵌套在另一个菜单或拆分按钮，并<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ItemSize%2A>父菜单的属性设置为`Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge`。 如果<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ItemSize%2A>设置为`Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeRegular`，说明未显示。  
   
  可以在运行时更改此属性。  
   
@@ -241,9 +239,9 @@
 ## Remarks  
  建议的图像格式是 PNG，因为 PNG 格式的图像支持通过其 alpha 通道的透明度。  
   
- <xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.Image%2A>属性标识由控件显示的图像。 在设计时或在运行时，可以设置此属性。 如果在运行时中更新此属性，将更新控件的外观，以反映更改。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.Image%2A>属性标识控件显示的图像。 在设计时或在运行时，可以设置此属性。 如果在运行时中更新此属性，该控件的外观被更新以反映更改。  
   
- 如果<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.Image%2A>设置属性，<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.OfficeImageId%2A>和<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.ImageName%2A>属性会被忽略。 尽管<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.Image%2A>属性提供更好地控制比其他两个属性，因为每次对控件进行更新时，图像对象被发送到 Office 应用程序会比较慢。  
+ 如果<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.Image%2A>设置属性，则<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.OfficeImageId%2A>和<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.ImageName%2A>属性将被忽略。 尽管<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.Image%2A>属性可让您更好地控制比其他两个属性，这一点可以是速度较慢，因为每次更新控件时，图像对象发送到 Office 应用程序。  
   
  ]]></format>
         </remarks>
@@ -263,16 +261,16 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个名称，该名称可用于在 <c>E:Microsoft.Office.Tools.Ribbon.LoadImage</c> 事件处理程序中标识控件图像。</summary>
-        <value>一个字符串，你可以在使用<c>E:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage</c>事件处理程序来标识该控件的图像。</value>
+        <value>一个字符串，可用于在<c>E:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage</c>事件处理程序中标识控件图像。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.ImageName%2A>属性标识由控件显示的图像。 Office 应用程序检索此映像从你的解决方案一次，以提高性能。 此属性可以设置仅在设计时，因为它标识的图像加载期间<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>事件。 <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage> 时将引发一次每个映像名称将显示功能区。 之后，无法使用此属性更改控件图像。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.ImageName%2A>属性标识控件显示的图像。 Office 应用程序此映像从你的解决方案只检索一次，以提高性能。 此属性可以设置只能在设计时，因为它标识的图像加载过程<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>事件。 <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage> 时将引发一次每个映像名称显示在功能区。 之后，不能使用此属性更改控件图像。  
   
- 若要加载的映像，将代码添加到<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>事件处理程序。 检查<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs.ImageName%2A>属性<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs>并设置<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs.Image%2A>属性<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs>到想要加载的映像的对象。  
+ 若要加载图像，将代码添加到<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>事件处理程序。 检查<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs.ImageName%2A>的属性<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs>并设置<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs.Image%2A>属性的<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs>到想要加载的图像的对象。  
   
- 如果忽略此属性<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.Image%2A>属性或<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.OfficeImageId%2A>属性设置。 标识的图像<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.ImageName%2A>属性可以由标识的图像以外会稍微快一些加载<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.Image%2A>显示属性，因为 Office 应用程序将检索映像你解决方案仅在首次从功能区。  
+ 如果忽略此属性<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.Image%2A>属性或<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.OfficeImageId%2A>属性设置。 标识的图像<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.ImageName%2A>属性可以稍快于标识的图像加载<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.Image%2A>显示属性，因为 Office 应用程序中检索映像解决方案仅在首次从功能区。  
   
  ]]></format>
         </remarks>
@@ -298,7 +296,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 在运行时仅在某些情况下，可以设置此属性。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。  
+ 可以在运行时仅在某些情况下设置此属性。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。  
   
  ]]></format>
         </remarks>
@@ -318,16 +316,16 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonSplitButton" /> 下拉菜单上控件的大小。</summary>
-        <value>A <c>Microsoft.Office.Core.RibbonControlSize</c>上表示控件的大小<see cref="T:Microsoft.Office.Tools.Ribbon.RibbonSplitButton" />下拉菜单。</value>
+        <value>一个<c>Microsoft.Office.Core.RibbonControlSize</c> ，表示控件的大小在<see cref="T:Microsoft.Office.Tools.Ribbon.RibbonSplitButton" />下拉列表菜单。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要放大上的控件<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton>下拉菜单中，将<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.ItemSize%2A>属性`Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge`。  
+ 若要放大上的控件<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton>下拉列表菜单中，将<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.ItemSize%2A>属性设置为`Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge`。  
   
- 在运行时仅在某些情况下，可以设置此属性。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。  
+ 可以在运行时仅在某些情况下设置此属性。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。  
   
- 若要更改的大小<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton>控制，请参阅<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ControlSize%2A>属性。  
+ 若要更改的大小<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton>控件，请参阅<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ControlSize%2A>属性。  
   
  ]]></format>
         </remarks>
@@ -352,13 +350,13 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 快捷键提示必须包含 1 到 3 个大写字符，并且必须包含空格、 制表符或换行字符。  
+ Keytip 必须包含 1 到 3 个大写字符，不能包含空格、 制表符或换行字符。  
   
- 键提示有时也称为访问密钥或快捷键，可用作激活控件的快捷组合键。 当你按下 ALT 键时，键提示将显示在功能区上。 如果内置控件或从其他加载项，则与键提示中你快捷键提示相冲突，Microsoft Office 可能自动分配不冲突快捷键提示值。  
+ Keytip 有时也称为访问密钥或加速器和用作激活控件的快捷组合键。 按下 ALT 键时，键提示将显示在功能区上。 如果内置控件或从其他加载项，你的快捷键提示与键提示冲突，Microsoft Office 可能会自动分配非冲突快捷键提示值。  
   
- 有关详细信息，请参阅[使用键盘来使用功能区程序](http://go.microsoft.com/fwlink/?LinkId=93523)。  
+ 有关详细信息，请参阅[使用键盘处理功能区程序](http://go.microsoft.com/fwlink/?LinkId=93523)。  
   
- 你可以更改<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.KeyTip%2A>在设计时或运行的时。  
+ 您可以更改<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.KeyTip%2A>在设计时或运行的时。  
   
  ]]></format>
         </remarks>
@@ -385,7 +383,7 @@
 ## Remarks  
  若要隐藏标签，设置<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.ShowLabel%2A>到`false`。  
   
- <xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.Label%2A>属性可设置在设计时和运行时间。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.Label%2A>属性可以设置在设计时和运行时。  
   
  ]]></format>
         </remarks>
@@ -410,24 +408,24 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.OfficeImageId%2A>属性标识由控件显示 Office 图标。 属性值是一个字符串，标识`imageMso`所选图标的值。 在设计时或在运行时，可以设置此属性。 如果在运行时中更新此属性，将更新控件的外观，以反映更改。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.OfficeImageId%2A>属性标识的控件显示 Office 图标。 属性值是一个字符串，标识`imageMso`所选图标的值。 在设计时或在运行时，可以设置此属性。 如果在运行时中更新此属性，该控件的外观被更新以反映更改。  
   
- 有关的列表`imageMso`值，请参阅 Microsoft 下载中心页面[Office 2010 外接程序： 图标库](http://go.microsoft.com/fwlink/?LinkID=220760)。  
+ 有关一系列`imageMso`值，请参阅 Microsoft 下载中心页[Office 2010 外接程序： 图标库](http://go.microsoft.com/fwlink/?LinkID=220760)。  
   
- 如果忽略此属性<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.Image%2A>属性设置。 标识的图像<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.OfficeImageId%2A>属性可以由标识的图像以外会稍微快一些加载<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.Image%2A>属性，因为这些图像缓存在 Office 应用程序。  
+ 如果忽略此属性<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.Image%2A>属性设置。 标识的图像<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.OfficeImageId%2A>属性可以稍快于标识的图像加载<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.Image%2A>属性，因为这些图像缓存在 Office 应用程序。  
   
    
   
 ## Examples  
- 下面的示例将 Microsoft Office 图标分配给拆分按钮。  
+ 下面的示例将 Microsoft Office 图标分配给的拆分按钮。  
   
  若要运行此代码示例，必须首先执行以下步骤：  
   
-1.  添加**功能区 （可视化设计器）** 到通过使用 Visual Studio 中的 Office 开发工具创建的项目的项。  
+1.  添加**功能区 （可视化设计器）** 项通过使用 Visual Studio 中的 Office 开发工具创建的项目。  
   
 2.  将组添加到自定义选项卡。  
   
-3.  将拆分按钮添加到组。  
+3.  添加到组的拆分按钮。  
   
  [!code-csharp[Trin_Ribbon_ControlProperties#9](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_Ribbon_ControlProperties/CS/Ribbon1.cs#9)]
  [!code-vb[Trin_Ribbon_ControlProperties#9](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_Ribbon_ControlProperties/VB/Ribbon1.vb#9)]  
@@ -455,9 +453,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 你无法使用此属性将设置的位置<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton>组中的控件。 排列<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton>控件拖动到正确的位置或使用 CTRL + 箭头键可在功能区设计器中移动控件。  
+ 不能使用此属性设置的位置<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton>组中的控件。 若要排列<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton>控件拖动到正确的位置或使用 CTRL + 箭头键在功能区设计器中移动控件。  
   
- 在运行时仅在某些情况下，可以设置此属性。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。  
+ 可以在运行时仅在某些情况下设置此属性。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。  
   
  ]]></format>
         </remarks>
@@ -482,11 +480,11 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.ScreenTip%2A>值必须少于 1024年个字符的长度。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.ScreenTip%2A>值必须是长度小于 1024年个字符。  
   
- 当<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.SuperTip%2A>设置属性，<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.ScreenTip%2A>值将显示的标题为<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.SuperTip%2A>。  
+ 当<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.SuperTip%2A>设置属性，则<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.ScreenTip%2A>值将显示的标题为<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.SuperTip%2A>。  
   
- 此属性可以在设计时更改和运行时。  
+ 此属性可以更改在设计时和运行时。  
   
  ]]></format>
         </remarks>
@@ -506,15 +504,14 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonSplitButton" /> 控件的标签是否可见。</summary>
-        <value>
-          如果 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonSplitButton" /> 控件的标签可见，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="true" />。</value>
+        <value>如果 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonSplitButton" /> 控件的标签可见，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="true" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性始终是`true`如果你设置<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.ControlSize%2A>属性`Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge`。  
+ 此属性始终为`true`如果您设置<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.ControlSize%2A>属性设置为`Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge`。  
   
- 此属性可以在设计时更改和运行时。  
+ 此属性可以更改在设计时和运行时。  
   
  ]]></format>
         </remarks>
@@ -541,9 +538,9 @@
 ## Remarks  
  字符串必须是长度小于 1024年个字符。  
   
- <xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.SuperTip%2A>下显示<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.ScreenTip%2A>文本。 与不同<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.ScreenTip%2A>、<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.SuperTip%2A>字符串中的启用分行符。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.SuperTip%2A>下显示<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.ScreenTip%2A>文本。 与不同<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.ScreenTip%2A>，则<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.SuperTip%2A>启用换行符的字符串中。  
   
- 你可以更改<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.SuperTip%2A>在设计时和在运行时。  
+ 您可以更改<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.SuperTip%2A>在设计时和运行时。  
   
  ]]></format>
         </remarks>
@@ -569,9 +566,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性适用于<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton>只有为 Microsoft Office 菜单上。  
+ 此属性适用于<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton>仅当它位于 Microsoft Office 菜单上。  
   
- 在设计时和在运行时，可以更改此属性。  
+ 在设计时和运行时，可以更改此属性。  
   
  ]]></format>
         </remarks>

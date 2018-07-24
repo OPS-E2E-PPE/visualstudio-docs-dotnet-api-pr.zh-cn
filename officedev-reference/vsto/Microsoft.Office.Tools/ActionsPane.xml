@@ -1,10 +1,10 @@
 <Type Name="ActionsPane" FullName="Microsoft.Office.Tools.ActionsPane">
   <Metadata>
     <Meta Name="ms.openlocfilehash" Value="c50b0042a0d022905b66b2a91f87ec22ed77c1c5" />
-    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.sourcegitcommit" Value="d85a83935f1d68ded616fcdfb8fd10d6bf4a4633" />
     <Meta Name="ms.translationtype" Value="HT" />
     <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+    <Meta Name="ms.lasthandoff" Value="07/24/2018" />
     <Meta Name="ms.locfileid" Value="29438964" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface ActionsPane : IDisposable" />
@@ -30,19 +30,19 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 每个 Excel 或 Word 的文档级自定义公开<xref:Microsoft.Office.Tools.ActionsPane>对象。 你可以使用此对象自定义用户界面的**文档操作**的文档级项目中的任务窗格。 若要获取<xref:Microsoft.Office.Tools.ActionsPane>对象，请使用`ActionsPane`字段`ThisDocument`（对于 Word) 类或`ThisWorkbook`（针对 Excel) 项目中的类。 有关详细信息，请参阅[操作窗格概述](/visualstudio/vsto/actions-pane-overview.md)。  
+ 每个 Excel 或 Word 的文档级自定义公开<xref:Microsoft.Office.Tools.ActionsPane>对象。 可以使用此对象以自定义的用户界面**文档操作**在文档级项目中的任务窗格。 若要获取<xref:Microsoft.Office.Tools.ActionsPane>对象，请使用`ActionsPane`字段`ThisDocument`（针对 Word) 类或`ThisWorkbook`（针对 Excel) 项目中的类。 有关详细信息，请参阅[操作窗格概述](/visualstudio/vsto/actions-pane-overview.md)。  
   
- 每个<xref:Microsoft.Office.Tools.ActionsPane>对象扩展基础的 Windows 窗体<xref:System.Windows.Forms.UserControl>，它提供一个用户界面，你可以自定义。 大部分<xref:Microsoft.Office.Tools.ActionsPane>成员对应的基础成员<xref:System.Windows.Forms.UserControl>。 使用以下<xref:Microsoft.Office.Tools.ActionsPane>成员才能访问操作窗格中特定功能：  
+ 每个<xref:Microsoft.Office.Tools.ActionsPane>对象扩展基础的 Windows 窗体<xref:System.Windows.Forms.UserControl>，它提供一个用户界面，可以自定义。 大部分<xref:Microsoft.Office.Tools.ActionsPane>成员对应于的基础成员<xref:System.Windows.Forms.UserControl>。 使用以下<xref:Microsoft.Office.Tools.ActionsPane>成员访问操作窗格特有的功能：  
   
--   <xref:Microsoft.Office.Tools.ActionsPane.Clear%2A> 方法。 使用此方法来分离操作窗格与文档或工作簿。  
+-   <xref:Microsoft.Office.Tools.ActionsPane.Clear%2A> 方法。 使用此方法以分离操作窗格中的文档或工作簿。  
   
--   <xref:Microsoft.Office.Tools.ActionsPane.AutoRecover%2A> 属性。 使用此属性以防止或允许最终用户分离操作窗格与文档或工作簿。  
+-   <xref:Microsoft.Office.Tools.ActionsPane.AutoRecover%2A> 属性。 此属性用于阻止或允许最终用户从文档或工作簿操作窗格中分离。  
   
--   <xref:Microsoft.Office.Tools.ActionsPane.Orientation%2A> 属性。 此属性用于确定是否操作窗格停靠到顶部或底部的文档或工作簿，或左侧或右侧的文档或工作簿。  
+-   <xref:Microsoft.Office.Tools.ActionsPane.Orientation%2A> 属性。 使用此属性以确定操作窗格是否停靠到顶部或底部的文档或工作簿，或从左到右的文档或工作簿。  
   
--   <xref:Microsoft.Office.Tools.ActionsPane.StackOrder%2A> 属性。 使用此属性指定控件的方向在操作窗格堆叠。  
+-   <xref:Microsoft.Office.Tools.ActionsPane.StackOrder%2A> 属性。 使用操作窗格堆叠此属性指定控件的方向。  
   
--   <xref:Microsoft.Office.Tools.ActionsPane.OrientationChanged> 事件。 此属性用于确定当将操作窗格停靠到不同的位置。  
+-   <xref:Microsoft.Office.Tools.ActionsPane.OrientationChanged> 事件。 使用此属性以确定当将操作窗格停靠到另一个位置。  
   
  [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
   
@@ -52,7 +52,7 @@
    
   
 ## Examples  
- 下面的代码示例演示如何创建一个简单的操作窗格，它自动调整其内容的对齐方式。 当用户通过将操作窗格移动到不同的应用程序窗口中，一部分更改的操作窗格方向或用户单击<xref:System.Windows.Forms.Button>中的操作窗格中，控件<xref:Microsoft.Office.Tools.ActionsPane.Orientation%2A>属性用于确定的新值<xref:Microsoft.Office.Tools.ActionsPane.StackOrder%2A>属性。 若要运行此代码，调用`InitActionsPane`方法从`ThisWorkbook_Startup`的 Excel 的文档级项目的事件处理程序。  
+ 下面的代码示例演示如何创建一个简单的操作窗格，它会自动调整其内容的对齐方式。 当用户通过移动到应用程序窗口的不同部分的操作窗格来更改操作窗格的方向，或在用户单击<xref:System.Windows.Forms.Button>操作窗格中的控制<xref:Microsoft.Office.Tools.ActionsPane.Orientation%2A>使用属性来确定的新值<xref:Microsoft.Office.Tools.ActionsPane.StackOrder%2A>属性。 若要运行此代码，调用`InitActionsPane`方法从`ThisWorkbook_Startup`事件处理程序的 Excel 的文档级项目。  
   
  [!code-csharp[Trin_ActionsPane#1](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ActionsPane/CS/thisworkbook.cs#1)]
  [!code-vb[Trin_ActionsPane#1](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ActionsPane/VB/thisworkbook.vb#1)]  
@@ -256,8 +256,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示操作窗格是否可以接受用户拖放到它上面的数据。</summary>
-        <value>
-          如果操作窗格允许拖放操作，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="false" />。</value>
+        <value>如果操作窗格允许拖放操作，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -313,13 +312,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示当操作窗格解决方案处于与文档分离的状态时，是否自动重新附加到文档。</summary>
-        <value>
-          如果操作窗格解决方案自动重新附加到文档，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="true" />。</value>
+        <value>如果操作窗格解决方案自动重新附加到文档，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="true" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果此属性设置为`true`，不允许用户分离操作窗格解决方案。 这也是一种缓解方法的操作窗格解决方案的意外删除。 若要强制分离从文档的操作窗格中解决方案，请使用<xref:Microsoft.Office.Tools.ActionsPane.Clear%2A>方法。  
+ 如果此属性设置为`true`，用户不能分离操作窗格解决方案。 这也是一种缓解方法的操作窗格解决方案意外删除。 若要强制分离操作窗格解决方案从文档，请使用<xref:Microsoft.Office.Tools.ActionsPane.Clear%2A>方法。  
   
  ]]></format>
         </remarks>
@@ -413,8 +411,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示操作窗格是否允许用户滚动到任何在其可视边界之外的控件。</summary>
-        <value>
-          如果操作窗格允许自动滚动，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="false" />。</value>
+        <value>如果操作窗格允许自动滚动，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -697,7 +694,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.ContainerControl.AutoValidateChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.ContainerControl.AutoValidateChanged?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.ContainerControl.AutoValidateChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.ContainerControl.AutoValidateChanged?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -746,7 +743,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.Control.BackColorChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.BackColorChanged?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.Control.BackColorChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.BackColorChanged?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -800,7 +797,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.Control.BackgroundImageChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.BackgroundImageChanged?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.Control.BackgroundImageChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.BackgroundImageChanged?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -854,7 +851,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.Control.BackgroundImageLayoutChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.BackgroundImageLayoutChanged?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.Control.BackgroundImageLayoutChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.BackgroundImageLayoutChanged?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -907,7 +904,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供的相同功能<xref:System.Windows.Forms.Control.BeginInvoke%28System.Delegate%29?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.BeginInvoke%28System.Delegate%29?displayProperty=fullName>。  
+ 此方法提供相同的功能<xref:System.Windows.Forms.Control.BeginInvoke%28System.Delegate%29?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.BeginInvoke%28System.Delegate%29?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -944,7 +941,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供的相同功能<xref:System.Windows.Forms.Control.BeginInvoke%28System.Delegate%2CSystem.Object%5B%5D%29?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.BeginInvoke%28System.Delegate%2CSystem.Object%5B%5D%29?displayProperty=fullName>。  
+ 此方法提供相同的功能<xref:System.Windows.Forms.Control.BeginInvoke%28System.Delegate%2CSystem.Object%5B%5D%29?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.BeginInvoke%28System.Delegate%2CSystem.Object%5B%5D%29?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -1001,7 +998,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.Control.BindingContextChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.BindingContextChanged?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.Control.BindingContextChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.BindingContextChanged?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -1100,7 +1097,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 通过设置此属性，不能更改大小和位置的操作窗格。 有关如何以编程方式调整大小和更改信息的位置的操作窗格中，请参阅[操作窗格概述](/visualstudio/vsto/actions-pane-overview.md)。  
+ 通过设置此属性，不能更改的大小和位置的操作窗格。 有关如何以编程方式调整大小和更改信息的位置的操作窗格中，请参阅[操作窗格概述](/visualstudio/vsto/actions-pane-overview.md)。  
   
  ]]></format>
         </remarks>
@@ -1125,7 +1122,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供的相同功能<xref:System.Windows.Forms.Control.BringToFront%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.BringToFront%2A?displayProperty=fullName>。  
+ 此方法提供相同的功能<xref:System.Windows.Forms.Control.BringToFront%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.BringToFront%2A?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -1153,8 +1150,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，该值指示操作窗格是否可接收焦点。</summary>
-        <value>
-          如果操作窗格可接收焦点，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果操作窗格可接收焦点，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1187,8 +1183,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，该值指示操作窗格是否可选。</summary>
-        <value>
-          如果可选中操作窗格，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果可选中操作窗格，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1221,8 +1216,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示操作窗格是否已捕获鼠标。</summary>
-        <value>
-          如果操作窗格已捕获鼠标，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果操作窗格已捕获鼠标，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1247,8 +1241,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示在接收焦点时，操作窗格是否会引起在任何需要验证的控件上执行验证。</summary>
-        <value>
-          如果在接收焦点时，操作窗格引起在任何需要验证的控件上执行验证，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="true" />。</value>
+        <value>如果在接收焦点时，操作窗格引起在任何需要验证的控件上执行验证，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="true" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1277,7 +1270,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.Control.CausesValidationChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.CausesValidationChanged?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.Control.CausesValidationChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.CausesValidationChanged?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -1301,7 +1294,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.Control.ChangeUICues?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.ChangeUICues?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.Control.ChangeUICues?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.ChangeUICues?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -1350,7 +1343,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.Control.Click?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.Click?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.Control.Click?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.Click?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -1440,7 +1433,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.Control.ClientSizeChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.ClientSizeChanged?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.Control.ClientSizeChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.ClientSizeChanged?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -1520,7 +1513,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供的相同功能<xref:System.Windows.Forms.Control.Contains%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.Contains%2A?displayProperty=fullName>。  
+ 此方法提供相同的功能<xref:System.Windows.Forms.Control.Contains%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.Contains%2A?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -1548,8 +1541,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，该值指示操作窗格或其中一个子控件当前是否有输入焦点。</summary>
-        <value>
-          如果操作窗格或其中一个子控件当前已有输入焦点，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果操作窗格或其中一个子控件当前已有输入焦点，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1613,7 +1605,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.Control.ContextMenuChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.ContextMenuChanged?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.Control.ContextMenuChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.ContextMenuChanged?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -1662,7 +1654,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.Control.ContextMenuStripChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.ContextMenuStripChanged?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.Control.ContextMenuStripChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.ContextMenuStripChanged?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -1694,7 +1686,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.Control.ControlAdded?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.ControlAdded?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.Control.ControlAdded?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.ControlAdded?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -1726,7 +1718,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.Control.ControlRemoved?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.ControlRemoved?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.Control.ControlRemoved?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.ControlRemoved?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -1781,7 +1773,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供的相同功能<xref:System.Windows.Forms.Control.CreateControl%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.CreateControl%2A?displayProperty=fullName>。  
+ 此方法提供相同的功能<xref:System.Windows.Forms.Control.CreateControl%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.CreateControl%2A?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -1809,8 +1801,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取指示操作窗格是否已经创建的值。</summary>
-        <value>
-          如果已创建操作窗格，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果已创建操作窗格，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1841,7 +1832,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供的相同功能<xref:System.Windows.Forms.Control.CreateGraphics%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.CreateGraphics%2A?displayProperty=fullName>。  
+ 此方法提供相同的功能<xref:System.Windows.Forms.Control.CreateGraphics%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.CreateGraphics%2A?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -1923,7 +1914,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.Control.CursorChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.CursorChanged?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.Control.CursorChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.CursorChanged?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -2018,8 +2009,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取指示操作是否在释放进程中的值。</summary>
-        <value>
-          如果操作窗格在释放进程中，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果操作窗格在释放进程中，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -2078,7 +2068,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.Control.DockChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.DockChanged?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.Control.DockChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.DockChanged?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -2136,7 +2126,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供的相同功能<xref:System.Windows.Forms.Control.DoDragDrop%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.DoDragDrop%2A?displayProperty=fullName>。  
+ 此方法提供相同的功能<xref:System.Windows.Forms.Control.DoDragDrop%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.DoDragDrop%2A?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -2160,7 +2150,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.Control.DoubleClick?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.DoubleClick?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.Control.DoubleClick?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.DoubleClick?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -2184,7 +2174,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.Control.DragDrop?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.DragDrop?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.Control.DragDrop?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.DragDrop?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -2208,7 +2198,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.Control.DragEnter?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.DragEnter?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.Control.DragEnter?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.DragEnter?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -2232,7 +2222,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.Control.DragLeave?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.DragLeave?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.Control.DragLeave?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.DragLeave?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -2256,7 +2246,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.Control.DragOver?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.DragOver?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.Control.DragOver?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.DragOver?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -2286,7 +2276,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供的相同功能<xref:System.Windows.Forms.Control.DrawToBitmap%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.DrawToBitmap%2A?displayProperty=fullName>。  
+ 此方法提供相同的功能<xref:System.Windows.Forms.Control.DrawToBitmap%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.DrawToBitmap%2A?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -2311,8 +2301,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示操作窗格是否可对用户交互作出响应。</summary>
-        <value>
-          如果操作窗格可对用户交互作出响应，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="true" />。</value>
+        <value>如果操作窗格可对用户交互作出响应，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="true" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -2341,7 +2330,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.Control.EnabledChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.EnabledChanged?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.Control.EnabledChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.EnabledChanged?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -2393,7 +2382,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供的相同功能<xref:System.Windows.Forms.Control.EndInvoke%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.EndInvoke%2A?displayProperty=fullName>。  
+ 此方法提供相同的功能<xref:System.Windows.Forms.Control.EndInvoke%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.EndInvoke%2A?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -2417,7 +2406,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.Control.Enter?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.Enter?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.Control.Enter?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.Enter?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -2438,13 +2427,12 @@
       <Parameters />
       <Docs>
         <summary>检索操作窗格控件所在的窗体。</summary>
-        <returns>
-          在所有情况下均为 <see langword="null" />。</returns>
+        <returns>在所有情况下均为 <see langword="null" />。</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法返回`null`因为操作窗格没有父窗体。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.FindForm%2A?displayProperty=fullName>。  
+ 此方法返回`null`因为操作窗格不具有父窗体。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.FindForm%2A?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -2470,13 +2458,12 @@
       <Parameters />
       <Docs>
         <summary>为操作窗格设置输入焦点。</summary>
-        <returns>
-          在所有情况下都使用 <see langword="false" />，即使 <see cref="T:Microsoft.Office.Tools.ActionsPane" /> 成功接收了焦点。</returns>
+        <returns>在所有情况下都使用 <see langword="false" />，即使 <see cref="T:Microsoft.Office.Tools.ActionsPane" /> 成功接收了焦点。</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供的相同功能<xref:System.Windows.Forms.Control.Focus%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.Focus%2A?displayProperty=fullName>。  
+ 此方法提供相同的功能<xref:System.Windows.Forms.Control.Focus%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.Focus%2A?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -2504,8 +2491,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取指示操作窗格是否有输入焦点的值。</summary>
-        <value>
-          如果操作窗格有焦点，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果操作窗格有焦点，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -2564,7 +2550,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.Control.FontChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.FontChanged?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.Control.FontChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.FontChanged?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -2613,7 +2599,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.Control.ForeColorChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.ForeColorChanged?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.Control.ForeColorChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.ForeColorChanged?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -2643,7 +2629,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供的相同功能<xref:System.Windows.Forms.Control.GetChildAtPoint%28System.Drawing.Point%29?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.GetChildAtPoint%28System.Drawing.Point%29?displayProperty=fullName>。  
+ 此方法提供相同的功能<xref:System.Windows.Forms.Control.GetChildAtPoint%28System.Drawing.Point%29?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.GetChildAtPoint%28System.Drawing.Point%29?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -2675,7 +2661,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供的相同功能<xref:System.Windows.Forms.Control.GetChildAtPoint%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.GetChildAtPoint%2A?displayProperty=fullName>。  
+ 此方法提供相同的功能<xref:System.Windows.Forms.Control.GetChildAtPoint%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.GetChildAtPoint%2A?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -2701,7 +2687,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供的相同功能<xref:System.Windows.Forms.Control.GetContainerControl%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.GetContainerControl%2A?displayProperty=fullName>。  
+ 此方法提供相同的功能<xref:System.Windows.Forms.Control.GetContainerControl%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.GetContainerControl%2A?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -2725,15 +2711,14 @@
       </Parameters>
       <Docs>
         <param name="ctl">要从其上开始搜索的控件。</param>
-        <param name="forward">
-          如果是 <see langword="true" />，则按 Tab 键顺序向前搜索；如果是 <see langword="false" /> 则向后搜索。</param>
+        <param name="forward">如果是 <see langword="true" />，则按 Tab 键顺序向前搜索；如果是 <see langword="false" /> 则向后搜索。</param>
         <summary>按照子控件的 Tab 键顺序向前或向后检索下一个控件。</summary>
         <returns>Tab 键顺序指定的下一个控件。</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供的相同功能<xref:System.Windows.Forms.Control.GetNextControl%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.GetNextControl%2A?displayProperty=fullName>。  
+ 此方法提供相同的功能<xref:System.Windows.Forms.Control.GetNextControl%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.GetNextControl%2A?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -2767,7 +2752,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供的相同功能<xref:System.Windows.Forms.Control.GetPreferredSize%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.GetPreferredSize%2A?displayProperty=fullName>。  
+ 此方法提供相同的功能<xref:System.Windows.Forms.Control.GetPreferredSize%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.GetPreferredSize%2A?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -2791,7 +2776,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.Control.GiveFeedback?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.GiveFeedback?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.Control.GiveFeedback?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.GiveFeedback?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -2823,7 +2808,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.Control.GotFocus?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.GotFocus?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.Control.GotFocus?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.GotFocus?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -2885,7 +2870,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.Control.HandleCreated?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.HandleCreated?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.Control.HandleCreated?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.HandleCreated?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -2917,7 +2902,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.Control.HandleDestroyed?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.HandleDestroyed?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.Control.HandleDestroyed?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.HandleDestroyed?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -2945,8 +2930,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，该值指示控件是否包含一个或多个子控件。</summary>
-        <value>
-          如果操作窗格包含一个或多个子控件，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果操作窗格包含一个或多个子控件，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -2984,7 +2968,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 操作窗格的高度不能更改此属性设置。 有关如何以编程方式调整大小操作窗格中的信息，请参阅[操作窗格概述](/visualstudio/vsto/actions-pane-overview.md)。  
+ 设置此属性不能更改操作窗格的高度。 有关如何以编程方式调整大小操作窗格的信息，请参阅[操作窗格概述](/visualstudio/vsto/actions-pane-overview.md)。  
   
  ]]></format>
         </remarks>
@@ -3008,7 +2992,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.Control.HelpRequested?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.HelpRequested?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.Control.HelpRequested?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.HelpRequested?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -3033,13 +3017,13 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 调用<xref:Microsoft.Office.Tools.ActionsPane.Hide%2A>方法只会隐藏任务窗格用户界面，包括<xref:Microsoft.Office.Tools.ActionsPane>控件和任何已添加到其中的控件。 此方法不会隐藏任务窗格本身。  
+ 调用<xref:Microsoft.Office.Tools.ActionsPane.Hide%2A>方法只会隐藏任务窗格用户界面，包括<xref:Microsoft.Office.Tools.ActionsPane>控件和任何已添加到它的控件。 此方法不会隐藏任务窗格自身。  
   
- 如果你想要隐藏任务窗格或确定任务窗格是否可见，则使用以下属性：  
+ 如果你想要隐藏任务窗格或确定任务窗格是否可见，请使用以下属性：  
   
--   对于 Word，请使用<xref:Microsoft.Office.Interop.Word.TaskPane.Visible%2A?displayProperty=fullName>属性<xref:Microsoft.Office.Interop.Word.TaskPane?displayProperty=fullName>对象，表示**文档操作**任务窗格。  
+-   对于 Word，请使用<xref:Microsoft.Office.Interop.Word.TaskPane.Visible%2A?displayProperty=fullName>的属性<xref:Microsoft.Office.Interop.Word.TaskPane?displayProperty=fullName>对象，表示**文档操作**任务窗格。  
   
--   对于 Excel，使用<xref:Microsoft.Office.Interop.Excel._Application.DisplayDocumentActionTaskPane%2A?displayProperty=fullName>属性<xref:Microsoft.Office.Tools.Excel.Workbook.Application%2A?displayProperty=fullName>对象。  
+-   对于 Excel，请使用<xref:Microsoft.Office.Interop.Excel._Application.DisplayDocumentActionTaskPane%2A?displayProperty=fullName>属性的<xref:Microsoft.Office.Tools.Excel.Workbook.Application%2A?displayProperty=fullName>对象。  
   
  有关详细信息和代码示例，请参阅[操作窗格概述](/visualstudio/vsto/actions-pane-overview.md)。  
   
@@ -3128,7 +3112,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.Control.ImeModeChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.ImeModeChanged?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.Control.ImeModeChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.ImeModeChanged?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -3153,7 +3137,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供的相同功能<xref:System.Windows.Forms.Control.Invalidate?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.Invalidate?displayProperty=fullName>。  
+ 此方法提供相同的功能<xref:System.Windows.Forms.Control.Invalidate?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.Invalidate?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -3175,14 +3159,13 @@
         <Parameter Name="invalidateChildren" Type="System.Boolean" />
       </Parameters>
       <Docs>
-        <param name="invalidateChildren">
-          若要使操作窗格的子控件无效，请使用 <see langword="true" />；否则使用 <see langword="false" />。</param>
+        <param name="invalidateChildren">若要使操作窗格的子控件无效，请使用 <see langword="true" />；否则使用 <see langword="false" />。</param>
         <summary>使操作窗格的整个图面无效，并导致向操作窗格发送绘制消息。 还可使分配给该操作窗格的子控件无效。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供的相同功能<xref:System.Windows.Forms.Control.Invalidate%28System.Boolean%29?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.Invalidate%28System.Boolean%29?displayProperty=fullName>。  
+ 此方法提供相同的功能<xref:System.Windows.Forms.Control.Invalidate%28System.Boolean%29?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.Invalidate%28System.Boolean%29?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -3210,7 +3193,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供的相同功能<xref:System.Windows.Forms.Control.Invalidate%28System.Drawing.Rectangle%29?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.Invalidate%28System.Drawing.Rectangle%29?displayProperty=fullName>。  
+ 此方法提供相同的功能<xref:System.Windows.Forms.Control.Invalidate%28System.Drawing.Rectangle%29?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.Invalidate%28System.Drawing.Rectangle%29?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -3238,7 +3221,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供的相同功能<xref:System.Windows.Forms.Control.Invalidate%28System.Drawing.Region%29?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.Invalidate%28System.Drawing.Region%29?displayProperty=fullName>。  
+ 此方法提供相同的功能<xref:System.Windows.Forms.Control.Invalidate%28System.Drawing.Region%29?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.Invalidate%28System.Drawing.Region%29?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -3262,14 +3245,13 @@
       </Parameters>
       <Docs>
         <param name="rc">一个 <see cref="T:System.Drawing.Rectangle" />，表示要使之无效的区域。</param>
-        <param name="invalidateChildren">
-          若要使操作窗格的子控件无效，请使用 <see langword="true" />；否则使用 <see langword="false" />。</param>
+        <param name="invalidateChildren">若要使操作窗格的子控件无效，请使用 <see langword="true" />；否则使用 <see langword="false" />。</param>
         <summary>使操作窗格的指定区域无效（将其添加到操作窗格的更新区域，下次绘制操作时将重新绘制更新区域），并向操作窗格发送绘制消息。 还可使分配给该操作窗格的子控件无效。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供的相同功能<xref:System.Windows.Forms.Control.Invalidate%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.Invalidate%2A?displayProperty=fullName>。  
+ 此方法提供相同的功能<xref:System.Windows.Forms.Control.Invalidate%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.Invalidate%2A?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -3293,14 +3275,13 @@
       </Parameters>
       <Docs>
         <param name="region">要使之无效的 <see cref="T:System.Drawing.Region" />。</param>
-        <param name="invalidateChildren">
-          若要使操作窗格的子控件无效，请使用 <see langword="true" />；否则使用 <see langword="false" />。</param>
+        <param name="invalidateChildren">若要使操作窗格的子控件无效，请使用 <see langword="true" />；否则使用 <see langword="false" />。</param>
         <summary>使操作窗格的指定区域无效（将其添加到操作窗格的更新区域，下次绘制操作时将重新绘制更新区域），并向操作窗格发送绘制消息。 还可使分配给该操作窗格的子控件无效。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供的相同功能<xref:System.Windows.Forms.Control.Invalidate%28System.Drawing.Region%2CSystem.Boolean%29?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.Invalidate%28System.Drawing.Region%2CSystem.Boolean%29?displayProperty=fullName>。  
+ 此方法提供相同的功能<xref:System.Windows.Forms.Control.Invalidate%28System.Drawing.Region%2CSystem.Boolean%29?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.Invalidate%28System.Drawing.Region%2CSystem.Boolean%29?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -3332,7 +3313,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.Control.Invalidated?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.Invalidated?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.Control.Invalidated?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.Invalidated?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -3361,7 +3342,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供的相同功能<xref:System.Windows.Forms.Control.Invoke%28System.Delegate%29?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.Invoke%28System.Delegate%29?displayProperty=fullName>。  
+ 此方法提供相同的功能<xref:System.Windows.Forms.Control.Invoke%28System.Delegate%29?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.Invoke%28System.Delegate%29?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -3393,7 +3374,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供的相同功能<xref:System.Windows.Forms.Control.Invoke%28System.Delegate%2CSystem.Object%5B%5D%29?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.Invoke%28System.Delegate%2CSystem.Object%5B%5D%29?displayProperty=fullName>。  
+ 此方法提供相同的功能<xref:System.Windows.Forms.Control.Invoke%28System.Delegate%2CSystem.Object%5B%5D%29?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.Invoke%28System.Delegate%2CSystem.Object%5B%5D%29?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -3421,8 +3402,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，该值指示调用方在对操作窗格控件进行方法调用时是否必须调用 Invoke 方法，因为调用方位于创建操作窗格控件所在的线程以外的线程中。</summary>
-        <value>
-          如果操作窗格控件的 <see cref="P:System.Windows.Forms.Control.Handle" /> 是在与调用线程不同的线程上创建的（说明您必须通过 Invoke 方法对控件进行调用），则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果操作窗格控件的 <see cref="P:System.Windows.Forms.Control.Handle" /> 是在与调用线程不同的线程上创建的（说明您必须通过 Invoke 方法对控件进行调用），则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -3455,8 +3435,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示操作窗格对辅助功能应用程序是否可见。</summary>
-        <value>
-          如果操作窗格对辅助功能应用程序可见，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果操作窗格对辅助功能应用程序可见，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -3489,8 +3468,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取指示操作窗口控件是否已被释放的值。</summary>
-        <value>
-          如果操作窗格已经被释放，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果操作窗格已经被释放，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -3523,8 +3501,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，该值指示操作窗格控件是否有与其关联的句柄。</summary>
-        <value>
-          如果已为操作窗格控件分配句柄，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果已为操作窗格控件分配句柄，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -3557,8 +3534,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，该值指示操作窗格是否已镜像。</summary>
-        <value>
-          如果操作窗格已镜像，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果操作窗格已镜像，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -3587,7 +3563,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.Control.KeyDown?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.KeyDown?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.Control.KeyDown?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.KeyDown?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -3611,7 +3587,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.Control.KeyPress?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.KeyPress?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.Control.KeyPress?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.KeyPress?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -3635,7 +3611,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.Control.KeyUp?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.KeyUp?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.Control.KeyUp?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.KeyUp?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -3659,7 +3635,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.Control.Layout?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.Layout?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.Control.Layout?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.Layout?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -3716,7 +3692,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.Control.Leave?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.Leave?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.Control.Leave?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.Leave?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -3749,7 +3725,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 操作窗格的位置不能更改此属性设置。 有关如何以编程方式更改操作窗格的位置的信息，请参阅[操作窗格概述](/visualstudio/vsto/actions-pane-overview.md)。  
+ 通过设置此属性不能更改操作窗格的位置。 有关如何以编程方式更改操作窗格的位置的信息，请参阅[操作窗格概述](/visualstudio/vsto/actions-pane-overview.md)。  
   
  ]]></format>
         </remarks>
@@ -3773,7 +3749,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.UserControl.Load?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.UserControl.Load?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.UserControl.Load?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.UserControl.Load?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -3830,7 +3806,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.Control.LocationChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.LocationChanged?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.Control.LocationChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.LocationChanged?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -3862,7 +3838,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.Control.LostFocus?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.LostFocus?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.Control.LostFocus?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.LostFocus?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -3919,7 +3895,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.Control.MarginChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.MarginChanged?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.Control.MarginChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.MarginChanged?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -4003,7 +3979,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.Control.MouseCaptureChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.MouseCaptureChanged?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.Control.MouseCaptureChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.MouseCaptureChanged?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -4027,7 +4003,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.Control.MouseClick?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.MouseClick?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.Control.MouseClick?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.MouseClick?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -4051,7 +4027,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.Control.MouseDoubleClick?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.MouseDoubleClick?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.Control.MouseDoubleClick?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.MouseDoubleClick?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -4075,7 +4051,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.Control.MouseDown?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.MouseDown?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.Control.MouseDown?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.MouseDown?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -4099,7 +4075,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.Control.MouseEnter?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.MouseEnter?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.Control.MouseEnter?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.MouseEnter?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -4123,7 +4099,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.Control.MouseHover?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.MouseHover?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.Control.MouseHover?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.MouseHover?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -4147,7 +4123,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.Control.MouseLeave?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.MouseLeave?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.Control.MouseLeave?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.MouseLeave?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -4171,7 +4147,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.Control.MouseMove?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.MouseMove?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.Control.MouseMove?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.MouseMove?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -4195,7 +4171,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.Control.MouseUp?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.MouseUp?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.Control.MouseUp?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.MouseUp?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -4227,7 +4203,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.Control.MouseWheel?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.MouseWheel?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.Control.MouseWheel?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.MouseWheel?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -4251,7 +4227,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.Control.Move?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.Move?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.Control.Move?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.Move?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -4306,12 +4282,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果操作窗格浮动或停靠在左侧或右侧，<xref:Microsoft.Office.Tools.ActionsPane.Orientation%2A>为垂直。 如果操作窗格停靠在底部或之上，<xref:Microsoft.Office.Tools.ActionsPane.Orientation%2A>为水平方向。  
+ 如果操作窗格浮动的或向左或向右，停靠<xref:Microsoft.Office.Tools.ActionsPane.Orientation%2A>是垂直的。 如果操作窗格停靠在底部或顶部，<xref:Microsoft.Office.Tools.ActionsPane.Orientation%2A>是水平的。  
   
    
   
 ## Examples  
- 下面的代码示例演示一个操作窗格，自动调整其内容的对齐方式。 当用户通过将操作窗格移动到不同的应用程序窗口中，一部分更改的操作窗格方向或用户单击<xref:System.Windows.Forms.Button>中的操作窗格中，控件<xref:Microsoft.Office.Tools.ActionsPane.Orientation%2A>属性用于确定的新值<xref:Microsoft.Office.Tools.ActionsPane.StackOrder%2A>属性。 若要运行此代码，调用`InitActionsPane`方法从`ThisWorkbook_Startup`的 Microsoft Office Excel 项目的事件处理程序。  
+ 下面的代码示例演示了操作窗格的自动调整其内容的对齐方式。 当用户通过移动到应用程序窗口的不同部分的操作窗格来更改操作窗格的方向，或在用户单击<xref:System.Windows.Forms.Button>操作窗格中的控制<xref:Microsoft.Office.Tools.ActionsPane.Orientation%2A>使用属性来确定的新值<xref:Microsoft.Office.Tools.ActionsPane.StackOrder%2A>属性。 若要运行此代码，调用`InitActionsPane`方法从`ThisWorkbook_Startup`Microsoft Office Excel 项目的事件处理程序。  
   
  [!code-csharp[Trin_ActionsPane#1](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ActionsPane/CS/thisworkbook.cs#1)]
  [!code-vb[Trin_ActionsPane#1](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ActionsPane/VB/thisworkbook.vb#1)]  
@@ -4343,7 +4319,7 @@
    
   
 ## Examples  
- 下面的代码示例演示如何创建一个简单的操作窗格，它自动调整其内容的对齐方式。 用户将操作窗格中移到应用程序窗口中，事件处理程序的不同部分<xref:Microsoft.Office.Tools.ActionsPane.OrientationChanged>事件使用<xref:Microsoft.Office.Tools.ActionsPane.Orientation%2A>属性来确定操作窗格中的控件的新堆叠顺序。 若要运行此代码，调用`InitActionsPane`方法从`ThisWorkbook_Startup`的 Microsoft Office Excel 项目的事件处理程序。  
+ 下面的代码示例演示如何创建一个简单的操作窗格，它会自动调整其内容的对齐方式。 用户将操作窗格中移到应用程序窗口中，事件处理程序的不同部分<xref:Microsoft.Office.Tools.ActionsPane.OrientationChanged>事件使用<xref:Microsoft.Office.Tools.ActionsPane.Orientation%2A>属性来确定在操作窗格中的控件的新堆栈顺序。 若要运行此代码，调用`InitActionsPane`方法从`ThisWorkbook_Startup`Microsoft Office Excel 项目的事件处理程序。  
   
  [!code-csharp[Trin_ActionsPane#1](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ActionsPane/CS/thisworkbook.cs#1)]
  [!code-vb[Trin_ActionsPane#1](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ActionsPane/VB/thisworkbook.vb#1)]  
@@ -4400,7 +4376,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.Control.PaddingChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.PaddingChanged?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.Control.PaddingChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.PaddingChanged?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -4424,7 +4400,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.Control.Paint?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.Paint?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.Control.Paint?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.Paint?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -4478,7 +4454,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.Control.ParentChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.ParentChanged?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.Control.ParentChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.ParentChanged?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -4503,8 +4479,7 @@
       </ReturnValue>
       <Docs>
         <summary>操作窗格不支持此属性。</summary>
-        <value>
-          在所有情况下均为 <see langword="null" />。</value>
+        <value>在所有情况下均为 <see langword="null" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -4527,7 +4502,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供的相同功能<xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A?displayProperty=fullName>。  
+ 此方法提供相同的功能<xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -4557,7 +4532,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供的相同功能<xref:System.Windows.Forms.Control.PerformLayout?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.PerformLayout?displayProperty=fullName>。  
+ 此方法提供相同的功能<xref:System.Windows.Forms.Control.PerformLayout?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.PerformLayout?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -4593,7 +4568,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供的相同功能<xref:System.Windows.Forms.Control.PerformLayout%28System.Windows.Forms.Control%2CSystem.String%29?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.PerformLayout%28System.Windows.Forms.Control%2CSystem.String%29?displayProperty=fullName>。  
+ 此方法提供相同的功能<xref:System.Windows.Forms.Control.PerformLayout%28System.Windows.Forms.Control%2CSystem.String%29?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.PerformLayout%28System.Windows.Forms.Control%2CSystem.String%29?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -4622,7 +4597,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供的相同功能<xref:System.Windows.Forms.Control.PointToClient%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.PointToClient%2A?displayProperty=fullName>。  
+ 此方法提供相同的功能<xref:System.Windows.Forms.Control.PointToClient%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.PointToClient%2A?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -4651,7 +4626,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供的相同功能<xref:System.Windows.Forms.Control.PointToScreen%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.PointToScreen%2A?displayProperty=fullName>。  
+ 此方法提供相同的功能<xref:System.Windows.Forms.Control.PointToScreen%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.PointToScreen%2A?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -4716,7 +4691,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供的相同功能<xref:System.Windows.Forms.Control.PreProcessControlMessage%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.PreProcessControlMessage%2A?displayProperty=fullName>。  
+ 此方法提供相同的功能<xref:System.Windows.Forms.Control.PreProcessControlMessage%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.PreProcessControlMessage%2A?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -4740,13 +4715,12 @@
       <Docs>
         <param name="msg">通过引用传递的 <see cref="T:System.Windows.Forms.Message" />，表示要处理的消息。 可能的值有 WM_KEYDOWN、WM_SYSKEYDOWN、WM_CHAR 和 WM_SYSCHAR。</param>
         <summary>在调度键盘或输入消息之前，在消息循环内对它们进行预处理。</summary>
-        <returns>
-          如果消息已由操作窗格处理，则为 <see langword="true" />；否则为 <see langword="false" />。</returns>
+        <returns>如果消息已由操作窗格处理，则为 <see langword="true" />；否则为 <see langword="false" />。</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供的相同功能<xref:System.Windows.Forms.Control.PreProcessMessage%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.PreProcessMessage%2A?displayProperty=fullName>。  
+ 此方法提供相同的功能<xref:System.Windows.Forms.Control.PreProcessMessage%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.PreProcessMessage%2A?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -4770,7 +4744,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.Control.PreviewKeyDown?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.PreviewKeyDown?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.Control.PreviewKeyDown?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.PreviewKeyDown?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -4861,7 +4835,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.Control.QueryAccessibilityHelp?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.QueryAccessibilityHelp?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.Control.QueryAccessibilityHelp?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.QueryAccessibilityHelp?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -4885,7 +4859,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.Control.QueryContinueDrag?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.QueryContinueDrag?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.Control.QueryContinueDrag?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.QueryContinueDrag?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -4913,8 +4887,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，该值指示操作窗格控件当前是否在重新创建其句柄。</summary>
-        <value>
-          如果操作窗格控件当前在重新创建其句柄，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果操作窗格控件当前在重新创建其句柄，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -4948,7 +4921,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供的相同功能<xref:System.Windows.Forms.Control.RectangleToClient%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.RectangleToClient%2A?displayProperty=fullName>。  
+ 此方法提供相同的功能<xref:System.Windows.Forms.Control.RectangleToClient%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.RectangleToClient%2A?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -4977,7 +4950,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供的相同功能<xref:System.Windows.Forms.Control.RectangleToScreen%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.RectangleToScreen%2A?displayProperty=fullName>。  
+ 此方法提供相同的功能<xref:System.Windows.Forms.Control.RectangleToScreen%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.RectangleToScreen%2A?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -5002,7 +4975,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供的相同功能<xref:System.Windows.Forms.Control.Refresh%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.Refresh%2A?displayProperty=fullName>。  
+ 此方法提供相同的功能<xref:System.Windows.Forms.Control.Refresh%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.Refresh%2A?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -5059,7 +5032,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.Control.RegionChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.RegionChanged?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.Control.RegionChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.RegionChanged?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -5267,7 +5240,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.Control.Resize?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.Resize?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.Control.Resize?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.Resize?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -5292,7 +5265,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供的相同功能<xref:System.Windows.Forms.Control.ResumeLayout?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.ResumeLayout?displayProperty=fullName>。  
+ 此方法提供相同的功能<xref:System.Windows.Forms.Control.ResumeLayout?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.ResumeLayout?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -5314,14 +5287,13 @@
         <Parameter Name="performLayout" Type="System.Boolean" />
       </Parameters>
       <Docs>
-        <param name="performLayout">
-          若要执行挂起的布局请求，则为 <see langword="true" />；否则为 <see langword="false" />。</param>
+        <param name="performLayout">若要执行挂起的布局请求，则为 <see langword="true" />；否则为 <see langword="false" />。</param>
         <summary>恢复正常的布局逻辑，可以选择强制对挂起的布局请求立即进行布局。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供的相同功能<xref:System.Windows.Forms.Control.ResumeLayout%28System.Boolean%29?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.ResumeLayout%28System.Boolean%29?displayProperty=fullName>。  
+ 此方法提供相同的功能<xref:System.Windows.Forms.Control.ResumeLayout%28System.Boolean%29?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.ResumeLayout%28System.Boolean%29?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -5408,7 +5380,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.Control.RightToLeftChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.RightToLeftChanged?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.Control.RightToLeftChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.RightToLeftChanged?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -5441,7 +5413,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供的相同功能<xref:System.Windows.Forms.Control.Scale%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.Scale%2A?displayProperty=fullName>。  
+ 此方法提供相同的功能<xref:System.Windows.Forms.Control.Scale%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.Scale%2A?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -5465,7 +5437,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.ScrollableControl.Scroll?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.ScrollableControl.Scroll?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.ScrollableControl.Scroll?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.ScrollableControl.Scroll?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -5493,7 +5465,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供的相同功能<xref:System.Windows.Forms.ScrollableControl.ScrollControlIntoView%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.ScrollableControl.ScrollControlIntoView%2A?displayProperty=fullName>。  
+ 此方法提供相同的功能<xref:System.Windows.Forms.ScrollableControl.ScrollControlIntoView%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.ScrollableControl.ScrollControlIntoView%2A?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -5518,7 +5490,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供的相同功能<xref:System.Windows.Forms.Control.Select%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.Select%2A?displayProperty=fullName>。  
+ 此方法提供相同的功能<xref:System.Windows.Forms.Control.Select%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.Select%2A?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -5545,8 +5517,7 @@
       </Parameters>
       <Docs>
         <param name="ctl">从其上开始搜索的 <see cref="T:System.Windows.Forms.Control" />。</param>
-        <param name="forward">
-          如果为 <see langword="true" /> 则在 Tab 键顺序中前移；如果为 <see langword="false" /> 则在 Tab 键顺序中后移。</param>
+        <param name="forward">如果为 <see langword="true" /> 则在 Tab 键顺序中前移；如果为 <see langword="false" /> 则在 Tab 键顺序中后移。</param>
         <param name="tabStopOnly">
           <see langword="true" /> 表示忽略 <see cref="P:System.Windows.Forms.Control.TabStop" /> 属性设置为 <see langword="false" /> 的控件；<see langword="false" /> 表示不忽略。</param>
         <param name="nested">
@@ -5554,13 +5525,12 @@
         <param name="wrap">
           <see langword="true" /> 表示在到达最后一个控件之后从 Tab 键顺序中第一个控件开始继续搜索；<see langword="false" /> 表示不继续搜索。</param>
         <summary>激活下一个控件。</summary>
-        <returns>
-          如果控件已激活，则为 <see langword="true" />；否则为 <see langword="false" />。</returns>
+        <returns>如果控件已激活，则为 <see langword="true" />；否则为 <see langword="false" />。</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供的相同功能<xref:System.Windows.Forms.Control.SelectNextControl%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.SelectNextControl%2A?displayProperty=fullName>。  
+ 此方法提供相同的功能<xref:System.Windows.Forms.Control.SelectNextControl%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.SelectNextControl%2A?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -5585,7 +5555,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供的相同功能<xref:System.Windows.Forms.Control.SendToBack%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.SendToBack%2A?displayProperty=fullName>。  
+ 此方法提供相同的功能<xref:System.Windows.Forms.Control.SendToBack%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.SendToBack%2A?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -5617,7 +5587,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供的相同功能<xref:System.Windows.Forms.ScrollableControl.SetAutoScrollMargin%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.ScrollableControl.SetAutoScrollMargin%2A?displayProperty=fullName>。  
+ 此方法提供相同的功能<xref:System.Windows.Forms.ScrollableControl.SetAutoScrollMargin%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.ScrollableControl.SetAutoScrollMargin%2A?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -5651,7 +5621,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供的相同功能<xref:System.Windows.Forms.Control.SetBounds%28System.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%29?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.SetBounds%28System.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%29?displayProperty=fullName>。  
+ 此方法提供相同的功能<xref:System.Windows.Forms.Control.SetBounds%28System.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%29?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.SetBounds%28System.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%29?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -5688,7 +5658,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供的相同功能<xref:System.Windows.Forms.Control.SetBounds%28System.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Windows.Forms.BoundsSpecified%29?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.SetBounds%28System.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Windows.Forms.BoundsSpecified%29?displayProperty=fullName>。  
+ 此方法提供相同的功能<xref:System.Windows.Forms.Control.SetBounds%28System.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Windows.Forms.BoundsSpecified%29?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.SetBounds%28System.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Windows.Forms.BoundsSpecified%29?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -5713,13 +5683,13 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 调用<xref:Microsoft.Office.Tools.ActionsPane.Show%2A>方法<xref:Microsoft.Office.Tools.ActionsPane>仅显示操作窗格中，并且控制任务窗格是可见; 它不会显示任务窗格。  
+ 调用<xref:Microsoft.Office.Tools.ActionsPane.Show%2A>方法的<xref:Microsoft.Office.Tools.ActionsPane>仅显示操作窗格，并控制是否在任务窗格可见; 它不显示任务窗格。  
   
  如果你想要显示任务窗格中，使用以下属性：  
   
--   对于 Word，请使用<xref:Microsoft.Office.Interop.Word.TaskPane.Visible%2A?displayProperty=fullName>属性<xref:Microsoft.Office.Interop.Word.TaskPane?displayProperty=fullName>对象，表示**文档操作**任务窗格。  
+-   对于 Word，请使用<xref:Microsoft.Office.Interop.Word.TaskPane.Visible%2A?displayProperty=fullName>的属性<xref:Microsoft.Office.Interop.Word.TaskPane?displayProperty=fullName>对象，表示**文档操作**任务窗格。  
   
--   对于 Excel，使用<xref:Microsoft.Office.Interop.Excel._Application.DisplayDocumentActionTaskPane%2A?displayProperty=fullName>属性<xref:Microsoft.Office.Tools.Excel.Workbook.Application%2A?displayProperty=fullName>对象。  
+-   对于 Excel，请使用<xref:Microsoft.Office.Interop.Excel._Application.DisplayDocumentActionTaskPane%2A?displayProperty=fullName>属性的<xref:Microsoft.Office.Tools.Excel.Workbook.Application%2A?displayProperty=fullName>对象。  
   
  有关详细信息和代码示例，请参阅[操作窗格概述](/visualstudio/vsto/actions-pane-overview.md)。  
   
@@ -5784,7 +5754,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 通过设置此属性，无法调整大小操作窗格。 有关如何以编程方式调整大小操作窗格中的信息，请参阅[操作窗格概述](/visualstudio/vsto/actions-pane-overview.md)。  
+ 通过设置此属性，不能调整大小操作窗格。 有关如何以编程方式调整大小操作窗格的信息，请参阅[操作窗格概述](/visualstudio/vsto/actions-pane-overview.md)。  
   
  ]]></format>
         </remarks>
@@ -5808,7 +5778,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.Control.SizeChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.SizeChanged?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.Control.SizeChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.SizeChanged?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -5833,14 +5803,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 堆叠顺序取决于操作窗格的方向。 如果操作窗格的方向设置为水平，你可能想要的堆栈顺序设置为`FromLeft`或`FromRight`值<xref:Microsoft.Office.Tools.StackStyle>枚举。 如果操作窗格的方向为垂直设置，你可能想要的堆栈顺序设置为`FromTop`或`FromBottom`值<xref:Microsoft.Office.Tools.StackStyle>枚举。  
+ 堆栈顺序取决于操作窗格的方向。 如果操作窗格的方向将设置为水平，你可能想要的堆栈顺序设置为`FromLeft`或`FromRight`的值<xref:Microsoft.Office.Tools.StackStyle>枚举。 如果操作窗格的方向将设置为垂直的您可能想要的堆栈顺序设置为`FromTop`或`FromBottom`的值<xref:Microsoft.Office.Tools.StackStyle>枚举。  
   
- 通过对操作窗格方向的更改来传递<xref:Microsoft.Office.Tools.ActionsPane.OrientationChanged>事件。  
+ 更改为操作窗格的方向传达通过<xref:Microsoft.Office.Tools.ActionsPane.OrientationChanged>事件。  
   
    
   
 ## Examples  
- 下面的代码示例演示一个操作窗格，自动调整其内容的对齐方式。 当用户通过将操作窗格移动到不同的应用程序窗口中，一部分更改的操作窗格方向或用户单击<xref:System.Windows.Forms.Button>中的操作窗格中，控件<xref:Microsoft.Office.Tools.ActionsPane.Orientation%2A>属性用于确定的新值<xref:Microsoft.Office.Tools.ActionsPane.StackOrder%2A>属性。 若要运行此代码，调用`InitActionsPane`方法从`ThisWorkbook_Startup`的 Microsoft Office Excel 项目的事件处理程序。  
+ 下面的代码示例演示了操作窗格的自动调整其内容的对齐方式。 当用户通过移动到应用程序窗口的不同部分的操作窗格来更改操作窗格的方向，或在用户单击<xref:System.Windows.Forms.Button>操作窗格中的控制<xref:Microsoft.Office.Tools.ActionsPane.Orientation%2A>使用属性来确定的新值<xref:Microsoft.Office.Tools.ActionsPane.StackOrder%2A>属性。 若要运行此代码，调用`InitActionsPane`方法从`ThisWorkbook_Startup`Microsoft Office Excel 项目的事件处理程序。  
   
  [!code-csharp[Trin_ActionsPane#1](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ActionsPane/CS/thisworkbook.cs#1)]
  [!code-vb[Trin_ActionsPane#1](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ActionsPane/VB/thisworkbook.vb#1)]  
@@ -5867,7 +5837,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.Control.StyleChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.StyleChanged?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.Control.StyleChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.StyleChanged?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -5892,7 +5862,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供的相同功能<xref:System.Windows.Forms.Control.SuspendLayout%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.SuspendLayout%2A?displayProperty=fullName>。  
+ 此方法提供相同的功能<xref:System.Windows.Forms.Control.SuspendLayout%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.SuspendLayout%2A?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -5916,7 +5886,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.Control.SystemColorsChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.SystemColorsChanged?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.Control.SystemColorsChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.SystemColorsChanged?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -5973,7 +5943,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.Control.TabIndexChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.TabIndexChanged?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.Control.TabIndexChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.TabIndexChanged?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -5993,8 +5963,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值指示是否用户能使用 Tab 键将焦点置于该操作窗格上。</summary>
-        <value>
-          如果用户可以用 Tab 键将焦点放到该操作窗格上，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="true" />。</value>
+        <value>如果用户可以用 Tab 键将焦点放到该操作窗格上，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="true" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -6023,7 +5992,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.Control.TabStopChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.TabStopChanged?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.Control.TabStopChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.TabStopChanged?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -6183,7 +6152,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供的相同功能<xref:System.Windows.Forms.Control.Update%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.Update%2A?displayProperty=fullName>。  
+ 此方法提供相同的功能<xref:System.Windows.Forms.Control.Update%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.Update%2A?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -6211,8 +6180,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示是否将等待光标用于操作窗格以及所有子控件。</summary>
-        <value>
-          若要将等待光标用于操作窗格以及所有子控件，请使用 <see langword="true" />；否则使用 <see langword="false" />。 默认值为 <see langword="false" />。</value>
+        <value>若要将等待光标用于操作窗格以及所有子控件，请使用 <see langword="true" />；否则使用 <see langword="false" />。 默认值为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -6238,13 +6206,12 @@
       <Parameters />
       <Docs>
         <summary>通过以该顺序引发 <see cref="E:Microsoft.Office.Tools.ActionsPane.Validating" /> 和 <see cref="E:Microsoft.Office.Tools.ActionsPane.Validated" /> 事件，验证操作窗格的内容。</summary>
-        <returns>
-          如果验证成功，则为 <see langword="true" />；否则为 <see langword="false" />。 如果从 <see cref="E:Microsoft.Office.Tools.ActionsPane.Validating" /> 和 <see cref="E:Microsoft.Office.Tools.ActionsPane.Validated" /> 事件处理程序进行调用，则该方法将始终返回 <see langword="false" />。</returns>
+        <returns>如果验证成功，则为 <see langword="true" />；否则为 <see langword="false" />。 如果从 <see cref="E:Microsoft.Office.Tools.ActionsPane.Validating" /> 和 <see cref="E:Microsoft.Office.Tools.ActionsPane.Validated" /> 事件处理程序进行调用，则该方法将始终返回 <see langword="false" />。</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供的相同功能<xref:System.Windows.Forms.ContainerControl.Validate?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.ContainerControl.Validate?displayProperty=fullName>。  
+ 此方法提供相同的功能<xref:System.Windows.Forms.ContainerControl.Validate?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.ContainerControl.Validate?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -6273,7 +6240,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供的相同功能<xref:System.Windows.Forms.ContainerControl.Validate%28System.Boolean%29?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.ContainerControl.Validate%28System.Boolean%29?displayProperty=fullName>。  
+ 此方法提供相同的功能<xref:System.Windows.Forms.ContainerControl.Validate%28System.Boolean%29?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.ContainerControl.Validate%28System.Boolean%29?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -6302,13 +6269,12 @@
       <Parameters />
       <Docs>
         <summary>使支持验证的所有子控件都对其数据进行验证。</summary>
-        <returns>
-          如果成功验证所有子级，则为 <see langword="true" />；否则为 <see langword="false" />。 如果是从 <see cref="E:Microsoft.Office.Tools.ActionsPane.Validating" /> 或 <see cref="E:Microsoft.Office.Tools.ActionsPane.Validated" /> 事件处理程序调用的，则该方法将始终返回 <see langword="false" />。</returns>
+        <returns>如果成功验证所有子级，则为 <see langword="true" />；否则为 <see langword="false" />。 如果是从 <see cref="E:Microsoft.Office.Tools.ActionsPane.Validating" /> 或 <see cref="E:Microsoft.Office.Tools.ActionsPane.Validated" /> 事件处理程序调用的，则该方法将始终返回 <see langword="false" />。</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供的相同功能<xref:System.Windows.Forms.ContainerControl.ValidateChildren?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.ContainerControl.ValidateChildren?displayProperty=fullName>。  
+ 此方法提供相同的功能<xref:System.Windows.Forms.ContainerControl.ValidateChildren?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.ContainerControl.ValidateChildren?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -6340,13 +6306,12 @@
       <Docs>
         <param name="validationConstraints">添加对哪些控件可以引发其 <see cref="E:System.Windows.Forms.Control.Validating" /> 事件的限制。</param>
         <summary>使支持验证的所有子控件都对其数据进行验证。</summary>
-        <returns>
-          如果成功验证所有子级，则为 <see langword="true" />；否则为 <see langword="false" />。 如果是从 <see cref="E:Microsoft.Office.Tools.ActionsPane.Validating" /> 或 <see cref="E:Microsoft.Office.Tools.ActionsPane.Validated" /> 事件处理程序调用的，则该方法将始终返回 <see langword="false" />。</returns>
+        <returns>如果成功验证所有子级，则为 <see langword="true" />；否则为 <see langword="false" />。 如果是从 <see cref="E:Microsoft.Office.Tools.ActionsPane.Validating" /> 或 <see cref="E:Microsoft.Office.Tools.ActionsPane.Validated" /> 事件处理程序调用的，则该方法将始终返回 <see langword="false" />。</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供的相同功能<xref:System.Windows.Forms.ContainerControl.ValidateChildren%28System.Windows.Forms.ValidationConstraints%29?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.ContainerControl.ValidateChildren%28System.Windows.Forms.ValidationConstraints%29?displayProperty=fullName>。  
+ 此方法提供相同的功能<xref:System.Windows.Forms.ContainerControl.ValidateChildren%28System.Windows.Forms.ValidationConstraints%29?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.ContainerControl.ValidateChildren%28System.Windows.Forms.ValidationConstraints%29?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -6370,7 +6335,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.Control.Validated?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.Validated?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.Control.Validated?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.Validated?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -6394,7 +6359,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.Control.Validating?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.Validating?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.Control.Validating?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.Validating?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -6452,19 +6417,18 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示 <see cref="T:Microsoft.Office.Tools.ActionsPane" /> 是否可见。</summary>
-        <value>
-          如果操作窗格在任务窗格上可见，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果操作窗格在任务窗格上可见，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 设置<xref:Microsoft.Office.Tools.ActionsPane.Visible%2A>属性`false`只会隐藏任务窗格用户界面，包括<xref:Microsoft.Office.Tools.ActionsPane>控件和任何已添加到其中的控件。 此方法不会隐藏任务窗格本身。  
+ 设置<xref:Microsoft.Office.Tools.ActionsPane.Visible%2A>属性设置为`false`只会隐藏任务窗格用户界面，包括<xref:Microsoft.Office.Tools.ActionsPane>控件和任何已添加到它的控件。 此方法不会隐藏任务窗格自身。  
   
- 如果你想要隐藏任务窗格或确定任务窗格是否可见，则使用以下属性：  
+ 如果你想要隐藏任务窗格或确定任务窗格是否可见，请使用以下属性：  
   
--   对于 Word，请使用<xref:Microsoft.Office.Interop.Word.TaskPane.Visible%2A?displayProperty=fullName>属性<xref:Microsoft.Office.Interop.Word.TaskPane?displayProperty=fullName>对象，表示**文档操作**任务窗格。  
+-   对于 Word，请使用<xref:Microsoft.Office.Interop.Word.TaskPane.Visible%2A?displayProperty=fullName>的属性<xref:Microsoft.Office.Interop.Word.TaskPane?displayProperty=fullName>对象，表示**文档操作**任务窗格。  
   
--   对于 Excel，使用<xref:Microsoft.Office.Interop.Excel._Application.DisplayDocumentActionTaskPane%2A?displayProperty=fullName>属性<xref:Microsoft.Office.Tools.Excel.Workbook.Application%2A?displayProperty=fullName>对象。  
+-   对于 Excel，请使用<xref:Microsoft.Office.Interop.Excel._Application.DisplayDocumentActionTaskPane%2A?displayProperty=fullName>属性的<xref:Microsoft.Office.Tools.Excel.Workbook.Application%2A?displayProperty=fullName>对象。  
   
  有关详细信息和代码示例，请参阅[操作窗格概述](/visualstudio/vsto/actions-pane-overview.md)。  
   
@@ -6490,7 +6454,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供与相同的功能<xref:System.Windows.Forms.Control.VisibleChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.VisibleChanged?displayProperty=fullName>。  
+ 此事件提供相同的功能<xref:System.Windows.Forms.Control.VisibleChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.VisibleChanged?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -6523,7 +6487,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 操作窗格的宽度不能更改此属性设置。 有关如何以编程方式调整大小操作窗格中的信息，请参阅[操作窗格概述](/visualstudio/vsto/actions-pane-overview.md)。  
+ 设置此属性不能更改操作窗格的宽度。 有关如何以编程方式调整大小操作窗格的信息，请参阅[操作窗格概述](/visualstudio/vsto/actions-pane-overview.md)。  
   
  ]]></format>
         </remarks>
@@ -6566,7 +6530,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供的相同功能<xref:System.Windows.Forms.Control.BeginInvoke%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.BeginInvoke%2A?displayProperty=fullName>。  
+ 此方法提供相同的功能<xref:System.Windows.Forms.Control.BeginInvoke%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.BeginInvoke%2A?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -6583,7 +6547,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供的相同功能<xref:System.Windows.Forms.Control.PerfromLayout%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.PerfromLayout%2A?displayProperty=fullName>。  
+ 此方法提供相同的功能<xref:System.Windows.Forms.Control.PerfromLayout%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.PerfromLayout%2A?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -6600,7 +6564,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供的相同功能<xref:System.Windows.Forms.Control.Invoke%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.Invoke%2A?displayProperty=fullName>。  
+ 此方法提供相同的功能<xref:System.Windows.Forms.Control.Invoke%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.Invoke%2A?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -6617,7 +6581,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供的相同功能<xref:System.Windows.Forms.ContainerControl.ValidateChildren%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.ContainerControl.ValidateChildren%2A?displayProperty=fullName>。  
+ 此方法提供相同的功能<xref:System.Windows.Forms.ContainerControl.ValidateChildren%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.ContainerControl.ValidateChildren%2A?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -6634,7 +6598,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供的相同功能<xref:System.Windows.Forms.Control.SetBounds%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.SetBounds%2A?displayProperty=fullName>。  
+ 此方法提供相同的功能<xref:System.Windows.Forms.Control.SetBounds%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.SetBounds%2A?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -6651,7 +6615,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供的相同功能<xref:System.Windows.Forms.ContainerControl.Validate%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.ContainerControl.Validate%2A?displayProperty=fullName>。  
+ 此方法提供相同的功能<xref:System.Windows.Forms.ContainerControl.Validate%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.ContainerControl.Validate%2A?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -6668,7 +6632,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供的相同功能<xref:System.Windows.Forms.Control.GetChildAtPoint%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.GetChildAtPoint%2A?displayProperty=fullName>。  
+ 此方法提供相同的功能<xref:System.Windows.Forms.Control.GetChildAtPoint%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.GetChildAtPoint%2A?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -6685,7 +6649,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供的相同功能<xref:System.Windows.Forms.Control.ResumeLayout%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.ResumeLayout%2A?displayProperty=fullName>。  
+ 此方法提供相同的功能<xref:System.Windows.Forms.Control.ResumeLayout%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.ResumeLayout%2A?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -6702,7 +6666,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供的相同功能<xref:System.Windows.Forms.Control.Invalidate%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.Invalidate%2A?displayProperty=fullName>。  
+ 此方法提供相同的功能<xref:System.Windows.Forms.Control.Invalidate%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.Invalidate%2A?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>

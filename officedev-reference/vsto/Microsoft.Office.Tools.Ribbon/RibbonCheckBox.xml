@@ -1,10 +1,10 @@
 <Type Name="RibbonCheckBox" FullName="Microsoft.Office.Tools.Ribbon.RibbonCheckBox">
   <Metadata>
     <Meta Name="ms.openlocfilehash" Value="f6f4024ebc0c1085b3a15b7a8454f65cb4f537a0" />
-    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.sourcegitcommit" Value="d85a83935f1d68ded616fcdfb8fd10d6bf4a4633" />
     <Meta Name="ms.translationtype" Value="HT" />
     <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+    <Meta Name="ms.lasthandoff" Value="07/24/2018" />
     <Meta Name="ms.locfileid" Value="29432659" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface RibbonCheckBox : IDisposable, Microsoft.Office.Tools.Ribbon.RibbonControl, System.ComponentModel.IComponent" />
@@ -36,11 +36,11 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 你可以在运行时创建此控件的实例，并将其添加到动态菜单。 如果你设置动态菜单是其<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Dynamic%2A>属性`true`。  
+ 可以在运行时创建此控件的实例，并将其添加到动态菜单。 菜单是动态的如果您设置其<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Dynamic%2A>属性设置为`true`。  
   
- 只能在功能区加载到 Office 应用程序之前，或者在运行时将控件添加到动态菜单之前，可以设置此控件的某些属性。 有关设置这些属性的信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。  
+ 可以设置此控件的某些属性，只能在功能区加载到 Office 应用程序之前，或者该控件添加到动态菜单之前。 有关如何设置这些属性的信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。  
   
- 你可以创建<xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox>通过使用在运行时<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.CreateRibbonCheckBox%2A>方法<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory>对象。  
+ 您可以创建<xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox>在运行时通过使用<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.CreateRibbonCheckBox%2A>方法的<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory>对象。  
   
  可通过两种方法来访问 <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory> 对象：  
   
@@ -71,8 +71,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示是否选中此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonCheckBox" />。</summary>
-        <value>
-          如果选中此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonCheckBox" />，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="false" />。</value>
+        <value>如果选中此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonCheckBox" />，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -94,7 +93,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.Click>用户单击复选框时，将引发事件。 后引发<xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.Checked%2A>已更新以反映用户的操作。 在用户通过添加测试的最新的值的代码签复选框时，例如，可以更新的功能区接口<xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.Checked%2A>到<xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.Click>事件处理程序。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.Click>在用户单击复选框时引发事件。 后引发<xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.Checked%2A>已更新以反映用户操作。 当用户通过添加代码，用于测试的最新的值来检查复选框时，例如，可以更新功能区界面<xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.Checked%2A>到<xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.Click>事件处理程序。  
   
  ]]></format>
         </remarks>
@@ -119,7 +118,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 当这<xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox>位于<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu>或<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton>具有其`ItemSize`属性设置为`Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge`的值<xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.Description%2A>属性显示在标签下。 否则，设置<xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.Description%2A>属性不起作用。  
+ 当这<xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox>上放置<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu>或<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton>具有其`ItemSize`属性设置为`Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge`的值<xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.Description%2A>属性显示在标签下方。 否则，设置<xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.Description%2A>属性不起作用。  
   
  ]]></format>
         </remarks>
@@ -144,11 +143,11 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 快捷键提示必须包含 1 到 3 个大写字符，并且必须包含空格、 制表符或换行字符。  
+ Keytip 必须包含 1 到 3 个大写字符，不能包含空格、 制表符或换行字符。  
   
- 键提示有时也称为访问密钥或快捷键，可用作激活控件的快捷组合键。 当你按下 ALT 键时，键提示将显示在功能区上。 如果内置控件或从其他加载项，则与键提示中你快捷键提示相冲突，Microsoft Office 可能自动分配不冲突快捷键提示值。  
+ Keytip 有时也称为访问密钥或加速器和用作激活控件的快捷组合键。 按下 ALT 键时，键提示将显示在功能区上。 如果内置控件或从其他加载项，你的快捷键提示与键提示冲突，Microsoft Office 可能会自动分配非冲突快捷键提示值。  
   
- 有关详细信息，请参阅[使用键盘来使用功能区程序](http://go.microsoft.com/fwlink/?LinkId=93523)。  
+ 有关详细信息，请参阅[使用键盘处理功能区程序](http://go.microsoft.com/fwlink/?LinkId=93523)。  
   
  ]]></format>
         </remarks>
@@ -191,9 +190,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 在运行时仅在某些情况下，可以设置此属性。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。  
+ 可以在运行时仅在某些情况下设置此属性。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。  
   
- <xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.Position%2A>属性时复选框放置在功能区选项卡上没有任何作用。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.Position%2A>属性不起作用时复选框置于功能区选项卡。  
   
  ]]></format>
         </remarks>
@@ -218,7 +217,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 当<xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.SuperTip%2A>设置属性，<xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.ScreenTip%2A>值将显示的标题为<xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.SuperTip%2A>。  
+ 当<xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.SuperTip%2A>设置属性，则<xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.ScreenTip%2A>值将显示的标题为<xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.SuperTip%2A>。  
   
  ]]></format>
         </remarks>
@@ -245,7 +244,7 @@
 ## Remarks  
  字符串必须是长度小于 1024年个字符。  
   
- <xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.SuperTip%2A>下显示<xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.ScreenTip%2A>文本。 与不同<xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.ScreenTip%2A>、<xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.SuperTip%2A>字符串中的启用分行符。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.SuperTip%2A>下显示<xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.ScreenTip%2A>文本。 与不同<xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.ScreenTip%2A>，则<xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.SuperTip%2A>启用换行符的字符串中。  
   
  ]]></format>
         </remarks>

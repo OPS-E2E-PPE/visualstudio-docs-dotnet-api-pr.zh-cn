@@ -1,10 +1,10 @@
 <Type Name="XMLNodes" FullName="Microsoft.Office.Tools.Word.XMLNodes">
   <Metadata>
     <Meta Name="ms.openlocfilehash" Value="6849ccb01d8d8107184c3af50e6f0563f6ba074e" />
-    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.sourcegitcommit" Value="d85a83935f1d68ded616fcdfb8fd10d6bf4a4633" />
     <Meta Name="ms.translationtype" Value="HT" />
     <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+    <Meta Name="ms.lasthandoff" Value="07/24/2018" />
     <Meta Name="ms.locfileid" Value="29434414" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface XMLNodes : IDisposable, System.ComponentModel.ISupportInitialize" />
@@ -33,11 +33,11 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Word.XMLNodes>控件表示具有相同名称的 XML 元素的集合。 当你映射架构允许显示不止一次到 Microsoft Office Word 文档在设计时，Visual Studio 创建的元素<xref:Microsoft.Office.Tools.Word.XMLNodes>的元素。 架构可以允许元素时出现一次以上`maxOccurs`元素或元素的上级特性设置为 > 1。  
+ <xref:Microsoft.Office.Tools.Word.XMLNodes>控件表示具有相同名称的 XML 元素的集合。 当您将映射元素的架构允许出现不止一次到 Microsoft Office Word 文档在设计时，Visual Studio 将创建<xref:Microsoft.Office.Tools.Word.XMLNodes>的元素。 架构可以允许的元素时出现一次以上`maxOccurs`元素或元素的上级的特性设置为 > 1。  
   
- 如果架构集`maxOccurs`元素及其上级为 1，Visual Studio 的属性创建<xref:Microsoft.Office.Tools.Word.XMLNode>改为控制。  
+ 如果架构集`maxOccurs`属性，该元素并且其的上级为 1，Visual Studio 创建<xref:Microsoft.Office.Tools.Word.XMLNode>改为控制。  
   
- <xref:Microsoft.Office.Tools.Word.XMLNodes> 在设计时，可以仅在 Word 文档级项目中创建控件。 也不能在运行时或在应用程序级项目中创建。 有关详细信息，请参阅[XMLNodes 控件](/visualstudio/vsto/xmlnodes-control.md)和[如何： 向 Word 文档添加 XMLNodes 控件](/visualstudio/vsto/how-to-add-xmlnodes-controls-to-word-documents.md)。  
+ <xref:Microsoft.Office.Tools.Word.XMLNodes> 在设计时，可以仅在 Word 文档级项目中创建控件。 也不能在运行时或在应用程序级项目中创建。 有关详细信息，请参阅[XMLNodes 控件](/visualstudio/vsto/xmlnodes-control.md)并[如何： 向 Word 文档添加 XMLNodes 控件](/visualstudio/vsto/how-to-add-xmlnodes-controls-to-word-documents.md)。  
   
  [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
   
@@ -82,7 +82,7 @@
    
   
 ## Examples  
- 下面的代码示例演示了事件处理程序<xref:Microsoft.Office.Tools.Word.XMLNodes.AfterInsert>和<xref:Microsoft.Office.Tools.Word.XMLNodes.BeforeDelete>事件。 代码将显示消息框，然后<xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName>从文档和之后删除<xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName>添加到文档。 此示例还使用<xref:Microsoft.Office.Tools.Word.XMLNodes.Add%2A>方法添加到新的元素<xref:Microsoft.Office.Tools.Word.XMLNodes>集合在指定范围内并以编程方式引发<xref:Microsoft.Office.Tools.Word.XMLNodes.AfterInsert>事件。 此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNodes>集合名为`SampleInsertNodes`，其中具有父<xref:Microsoft.Office.Tools.Word.XMLNode>名为`SampleNode`。  
+ 下面的代码示例演示了事件处理程序<xref:Microsoft.Office.Tools.Word.XMLNodes.AfterInsert>和<xref:Microsoft.Office.Tools.Word.XMLNodes.BeforeDelete>事件。 代码将显示消息框，然后<xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName>从文档和之后删除<xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName>添加到文档。 此示例还使用<xref:Microsoft.Office.Tools.Word.XMLNodes.Add%2A>方法将添加到新的元素<xref:Microsoft.Office.Tools.Word.XMLNodes>集合的指定范围和以编程方式引发<xref:Microsoft.Office.Tools.Word.XMLNodes.AfterInsert>事件。 此示例假定当前文档，包含<xref:Microsoft.Office.Tools.Word.XMLNodes>名为的集合`SampleInsertNodes`，其中具有一个父级<xref:Microsoft.Office.Tools.Word.XMLNode>名为`SampleNode`。  
   
  [!code-csharp[Trin_WordXMLNodes#200](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNodes/CS/ThisDocument.cs#200)]
  [!code-vb[Trin_WordXMLNodes#200](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNodes/VB/ThisDocument.vb#200)]  
@@ -109,7 +109,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例演示了事件处理程序<xref:Microsoft.Office.Tools.Word.XMLNodes.AfterInsert>和<xref:Microsoft.Office.Tools.Word.XMLNodes.BeforeDelete>事件。 代码将显示消息框，然后<xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName>从文档和之后删除<xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName>添加到文档。 此示例还使用<xref:Microsoft.Office.Tools.Word.XMLNodes.Add%2A>方法添加到新的元素<xref:Microsoft.Office.Tools.Word.XMLNodes>集合在指定范围内并以编程方式引发<xref:Microsoft.Office.Tools.Word.XMLNodes.AfterInsert>事件。 此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNodes>集合名为`SampleInsertNodes`，其中具有父<xref:Microsoft.Office.Tools.Word.XMLNode>名为`SampleNode`。  
+ 下面的代码示例演示了事件处理程序<xref:Microsoft.Office.Tools.Word.XMLNodes.AfterInsert>和<xref:Microsoft.Office.Tools.Word.XMLNodes.BeforeDelete>事件。 代码将显示消息框，然后<xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName>从文档和之后删除<xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName>添加到文档。 此示例还使用<xref:Microsoft.Office.Tools.Word.XMLNodes.Add%2A>方法将添加到新的元素<xref:Microsoft.Office.Tools.Word.XMLNodes>集合的指定范围和以编程方式引发<xref:Microsoft.Office.Tools.Word.XMLNodes.AfterInsert>事件。 此示例假定当前文档，包含<xref:Microsoft.Office.Tools.Word.XMLNodes>名为的集合`SampleInsertNodes`，其中具有一个父级<xref:Microsoft.Office.Tools.Word.XMLNode>名为`SampleNode`。  
   
  [!code-csharp[Trin_WordXMLNodes#200](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNodes/CS/ThisDocument.cs#200)]
  [!code-vb[Trin_WordXMLNodes#200](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNodes/VB/ThisDocument.vb#200)]  
@@ -137,7 +137,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNodes.Application%2A>属性以最小化活动应用程序窗口。 此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNodes>控件名为`InsertMemoToNodes`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNodes.Application%2A>属性以最小化活动应用程序窗口。 此示例假定当前文档，包含<xref:Microsoft.Office.Tools.Word.XMLNodes>名为控件`InsertMemoToNodes`。  
   
  [!code-csharp[Trin_WordXMLNodes#1](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNodes/CS/ThisDocument.cs#1)]
  [!code-vb[Trin_WordXMLNodes#1](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNodes/VB/ThisDocument.vb#1)]  
@@ -169,7 +169,7 @@
    
   
 ## Examples  
- 下面的代码示例演示了事件处理程序<xref:Microsoft.Office.Tools.Word.XMLNodes.AfterInsert>和<xref:Microsoft.Office.Tools.Word.XMLNodes.BeforeDelete>事件。 代码将显示消息框，然后<xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName>从文档和之后删除<xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName>添加到文档。 此示例还使用<xref:Microsoft.Office.Tools.Word.XMLNodes.Add%2A>方法添加到新的元素<xref:Microsoft.Office.Tools.Word.XMLNodes>集合在指定范围内并以编程方式引发<xref:Microsoft.Office.Tools.Word.XMLNodes.AfterInsert>事件。 此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNodes>集合名为`SampleInsertNodes`，其中具有父<xref:Microsoft.Office.Tools.Word.XMLNode>名为`SampleNode`。  
+ 下面的代码示例演示了事件处理程序<xref:Microsoft.Office.Tools.Word.XMLNodes.AfterInsert>和<xref:Microsoft.Office.Tools.Word.XMLNodes.BeforeDelete>事件。 代码将显示消息框，然后<xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName>从文档和之后删除<xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName>添加到文档。 此示例还使用<xref:Microsoft.Office.Tools.Word.XMLNodes.Add%2A>方法将添加到新的元素<xref:Microsoft.Office.Tools.Word.XMLNodes>集合的指定范围和以编程方式引发<xref:Microsoft.Office.Tools.Word.XMLNodes.AfterInsert>事件。 此示例假定当前文档，包含<xref:Microsoft.Office.Tools.Word.XMLNodes>名为的集合`SampleInsertNodes`，其中具有一个父级<xref:Microsoft.Office.Tools.Word.XMLNode>名为`SampleNode`。  
   
  [!code-csharp[Trin_WordXMLNodes#200](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNodes/CS/ThisDocument.cs#200)]
  [!code-vb[Trin_WordXMLNodes#200](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNodes/VB/ThisDocument.vb#200)]  
@@ -214,12 +214,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter>事件区别<xref:Microsoft.Office.Tools.Word.XMLNodes.Select>事件。 <xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter>仅上下文更改时引发事件并会引发多个<xref:Microsoft.Office.Tools.Word.XMLNodes>控件嵌套处于相同层次结构级别。 有关详细信息，请参阅[XMLNodes 控件](/visualstudio/vsto/xmlnodes-control.md)。  
+ <xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter>事件不同于<xref:Microsoft.Office.Tools.Word.XMLNodes.Select>事件。 <xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter>仅当上下文更改时引发事件，会引发多个<xref:Microsoft.Office.Tools.Word.XMLNodes>控件嵌套在同一层次结构级别。 有关详细信息，请参阅[XMLNodes 控件](/visualstudio/vsto/xmlnodes-control.md)。  
   
    
   
 ## Examples  
- 下面的代码示例演示了事件处理程序<xref:Microsoft.Office.Tools.Word.XMLNodes.Select>， <xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect>， <xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter>，和<xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave>事件。 当<xref:Microsoft.Office.Tools.Word.XMLNodes.Select>和<xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect>将引发事件，事件处理程序添加到所选内容的边框的双线或删除双线，具体取决于事件。 当<xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter>和<xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave>将引发事件，事件处理程序显示消息，指出新选择的节点和先前选择的节点的名称。 此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNodes>集合名为`SampleInsertNodes`。  
+ 下面的代码示例演示了事件处理程序<xref:Microsoft.Office.Tools.Word.XMLNodes.Select>， <xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect>， <xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter>，和<xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave>事件。 当<xref:Microsoft.Office.Tools.Word.XMLNodes.Select>和<xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect>将引发事件，事件处理程序添加到所选内容的边框的双线或删除双线，具体取决于该事件。 当<xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter>和<xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave>将引发事件，事件处理程序显示消息，指出新选择的节点和先前选定的节点的名称。 此示例假定当前文档，包含<xref:Microsoft.Office.Tools.Word.XMLNodes>名为集合`SampleInsertNodes`。  
   
  [!code-csharp[Trin_WordXMLNodes#201](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNodes/CS/ThisDocument.cs#201)]
  [!code-vb[Trin_WordXMLNodes#201](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNodes/VB/ThisDocument.vb#201)]  
@@ -246,12 +246,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave>事件区别<xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect>事件。 <xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave>仅上下文更改时引发事件并会引发多个<xref:Microsoft.Office.Tools.Word.XMLNodes>控件嵌套处于相同层次结构级别。 有关详细信息，请参阅[XMLNodes 控件](/visualstudio/vsto/xmlnodes-control.md)。  
+ <xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave>事件不同于<xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect>事件。 <xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave>仅当上下文更改时引发事件，会引发多个<xref:Microsoft.Office.Tools.Word.XMLNodes>控件嵌套在同一层次结构级别。 有关详细信息，请参阅[XMLNodes 控件](/visualstudio/vsto/xmlnodes-control.md)。  
   
    
   
 ## Examples  
- 下面的代码示例演示了事件处理程序<xref:Microsoft.Office.Tools.Word.XMLNodes.Select>， <xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect>， <xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter>，和<xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave>事件。 当<xref:Microsoft.Office.Tools.Word.XMLNodes.Select>和<xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect>将引发事件，事件处理程序添加到所选内容的边框的双线或删除双线，具体取决于事件。 当<xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter>和<xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave>将引发事件，事件处理程序显示消息，指出新选择的节点和先前选择的节点的名称。 此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNodes>集合名为`SampleInsertNodes`。  
+ 下面的代码示例演示了事件处理程序<xref:Microsoft.Office.Tools.Word.XMLNodes.Select>， <xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect>， <xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter>，和<xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave>事件。 当<xref:Microsoft.Office.Tools.Word.XMLNodes.Select>和<xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect>将引发事件，事件处理程序添加到所选内容的边框的双线或删除双线，具体取决于该事件。 当<xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter>和<xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave>将引发事件，事件处理程序显示消息，指出新选择的节点和先前选定的节点的名称。 此示例假定当前文档，包含<xref:Microsoft.Office.Tools.Word.XMLNodes>名为集合`SampleInsertNodes`。  
   
  [!code-csharp[Trin_WordXMLNodes#201](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNodes/CS/ThisDocument.cs#201)]
  [!code-vb[Trin_WordXMLNodes#201](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNodes/VB/ThisDocument.vb#201)]  
@@ -280,7 +280,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNodes.Count%2A>属性来显示中的项的数目<xref:Microsoft.Office.Tools.Word.XMLNodes>集合。 此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNodes>控件名为`SampleInsertNodes`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNodes.Count%2A>属性来显示中的项数<xref:Microsoft.Office.Tools.Word.XMLNodes>集合。 此示例假定当前文档，包含<xref:Microsoft.Office.Tools.Word.XMLNodes>名为控件`SampleInsertNodes`。  
   
  [!code-csharp[Trin_WordXMLNodes#2](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNodes/CS/ThisDocument.cs#2)]
  [!code-vb[Trin_WordXMLNodes#2](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNodes/VB/ThisDocument.vb#2)]  
@@ -308,12 +308,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 因为<xref:Microsoft.Office.Tools.Word.XMLNodes>在 Microsoft Office Word 中创建集合，则此属性返回的十六进制数 4d535744，它表示字符串"MSWD。" 此值也可以表示由常数<xref:Microsoft.Office.Interop.Word.WdConstants.wdCreatorCode>。  
+ 因为<xref:Microsoft.Office.Tools.Word.XMLNodes>已在 Microsoft Office Word 中创建集合，则此属性返回十六进制数字 4d535744，它表示字符串"MSWD。" 此值还可表示由常数<xref:Microsoft.Office.Interop.Word.WdConstants.wdCreatorCode>。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNodes.Count%2A>属性来显示是否<xref:Microsoft.Office.Tools.Word.XMLNodes>在 Microsoft Office Word 中创建控件。 此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNodes>控件名为`InsertMemoToNodes`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNodes.Count%2A>属性来显示是否<xref:Microsoft.Office.Tools.Word.XMLNodes>控件在 Microsoft Office Word 中创建。 此示例假定当前文档，包含<xref:Microsoft.Office.Tools.Word.XMLNodes>名为控件`InsertMemoToNodes`。  
   
  [!code-csharp[Trin_WordXMLNodes#3](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNodes/CS/ThisDocument.cs#3)]
  [!code-vb[Trin_WordXMLNodes#3](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNodes/VB/ThisDocument.vb#3)]  
@@ -340,12 +340,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect>事件区别<xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave>事件。 有关详细信息，请参阅[XMLNodes 控件](/visualstudio/vsto/xmlnodes-control.md)。  
+ <xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect>事件不同于<xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave>事件。 有关详细信息，请参阅[XMLNodes 控件](/visualstudio/vsto/xmlnodes-control.md)。  
   
    
   
 ## Examples  
- 下面的代码示例演示了事件处理程序<xref:Microsoft.Office.Tools.Word.XMLNodes.Select>， <xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect>， <xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter>，和<xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave>事件。 当<xref:Microsoft.Office.Tools.Word.XMLNodes.Select>和<xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect>将引发事件，事件处理程序添加到所选内容的边框的双线或删除双线，具体取决于事件。 当<xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter>和<xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave>将引发事件，事件处理程序显示消息，指出新选择的节点和先前选择的节点的名称。 此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNodes>集合名为`SampleInsertNodes`。  
+ 下面的代码示例演示了事件处理程序<xref:Microsoft.Office.Tools.Word.XMLNodes.Select>， <xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect>， <xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter>，和<xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave>事件。 当<xref:Microsoft.Office.Tools.Word.XMLNodes.Select>和<xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect>将引发事件，事件处理程序添加到所选内容的边框的双线或删除双线，具体取决于该事件。 当<xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter>和<xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave>将引发事件，事件处理程序显示消息，指出新选择的节点和先前选定的节点的名称。 此示例假定当前文档，包含<xref:Microsoft.Office.Tools.Word.XMLNodes>名为集合`SampleInsertNodes`。  
   
  [!code-csharp[Trin_WordXMLNodes#201](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNodes/CS/ThisDocument.cs#201)]
  [!code-vb[Trin_WordXMLNodes#201](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNodes/VB/ThisDocument.vb#201)]  
@@ -375,7 +375,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNodes.GetEnumerator%2A>方法以获取的枚举数<xref:Microsoft.Office.Tools.Word.XMLNodes>集合，然后循环访问集合。 此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNodes>控件名为`SampleInsertNodes`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNodes.GetEnumerator%2A>方法以获取一个枚举数<xref:Microsoft.Office.Tools.Word.XMLNodes>集合，然后循环访问集合。 此示例假定当前文档，包含<xref:Microsoft.Office.Tools.Word.XMLNodes>名为控件`SampleInsertNodes`。  
   
  [!code-csharp[Trin_WordXMLNodes#100](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNodes/CS/ThisDocument.cs#100)]
  [!code-vb[Trin_WordXMLNodes#100](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNodes/VB/ThisDocument.vb#100)]  
@@ -403,7 +403,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 不能将传递<xref:Microsoft.Office.Tools.Word.XMLNodes?displayProperty=fullName>控件添加到方法或属性需要基础对象 ( <xref:Microsoft.Office.Interop.Word.XMLNodes?displayProperty=fullName>)。 必须使用<xref:Microsoft.Office.Tools.Word.XMLNodes.InnerObject%2A>属性<xref:Microsoft.Office.Tools.Word.XMLNodes?displayProperty=fullName>控件，用于访问基础<xref:Microsoft.Office.Interop.Word.XMLNodes?displayProperty=fullName>。 然后将该对象传递给方法或属性需要<xref:Microsoft.Office.Interop.Word.XMLNodes?displayProperty=fullName>。 有关详细信息，请参阅[限制的主机项和主机控件编程](/visualstudio/vsto/programmatic-limitations-of-host-items-and-host-controls.md)。  
+ 不能将传递<xref:Microsoft.Office.Tools.Word.XMLNodes?displayProperty=fullName>控制对方法或要求的基础对象的属性 ( <xref:Microsoft.Office.Interop.Word.XMLNodes?displayProperty=fullName>)。 必须使用<xref:Microsoft.Office.Tools.Word.XMLNodes.InnerObject%2A>的属性<xref:Microsoft.Office.Tools.Word.XMLNodes?displayProperty=fullName>控件，用于访问基础<xref:Microsoft.Office.Interop.Word.XMLNodes?displayProperty=fullName>。 然后将此对象传递给方法或属性需要<xref:Microsoft.Office.Interop.Word.XMLNodes?displayProperty=fullName>。 有关更多信息，请参见 [宿主项和宿主控件的编程限制](/visualstudio/vsto/programmatic-limitations-of-host-items-and-host-controls.md)。  
   
  ]]></format>
         </remarks>
@@ -432,12 +432,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Word.XMLNodes.Item%2A>属性返回<xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName>对象而不是<xref:Microsoft.Office.Tools.Word.XMLNode?displayProperty=fullName>控件。 有关详细信息，请参阅[限制的主机项和主机控件编程](/visualstudio/vsto/programmatic-limitations-of-host-items-and-host-controls.md)。  
+ <xref:Microsoft.Office.Tools.Word.XMLNodes.Item%2A>属性返回<xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName>对象而非<xref:Microsoft.Office.Tools.Word.XMLNode?displayProperty=fullName>控件。 有关更多信息，请参见 [宿主项和宿主控件的编程限制](/visualstudio/vsto/programmatic-limitations-of-host-items-and-host-controls.md)。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNodes.Item%2A>属性来获取第一个<xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName>中<xref:Microsoft.Office.Tools.Word.XMLNodes>集合。 该示例使用<xref:Microsoft.Office.Tools.Word.XMLNodes.Item%2A>指定集合中的特定索引时隐式的属性。 此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNodes>控件名为`SampleInsertNodes`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNodes.Item%2A>属性来获取第一个<xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName>中<xref:Microsoft.Office.Tools.Word.XMLNodes>集合。 该示例使用<xref:Microsoft.Office.Tools.Word.XMLNodes.Item%2A>指定特定集合的索引时隐式的属性。 此示例假定当前文档，包含<xref:Microsoft.Office.Tools.Word.XMLNodes>名为控件`SampleInsertNodes`。  
   
  [!code-csharp[Trin_WordXMLNodes#4](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNodes/CS/ThisDocument.cs#4)]
  [!code-vb[Trin_WordXMLNodes#4](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNodes/VB/ThisDocument.vb#4)]  
@@ -465,7 +465,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNodes.Parent%2A>属性来显示的名称的父文档<xref:Microsoft.Office.Tools.Word.XMLNodes>集合。 此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNodes>控件名为`SampleInsertNodes`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNodes.Parent%2A>属性显示名称的父文档<xref:Microsoft.Office.Tools.Word.XMLNodes>集合。 此示例假定当前文档，包含<xref:Microsoft.Office.Tools.Word.XMLNodes>名为控件`SampleInsertNodes`。  
   
  [!code-csharp[Trin_WordXMLNodes#5](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNodes/CS/ThisDocument.cs#5)]
  [!code-vb[Trin_WordXMLNodes#5](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNodes/VB/ThisDocument.vb#5)]  
@@ -492,12 +492,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Word.XMLNodes.Select>事件区别<xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter>事件。 有关详细信息，请参阅[XMLNodes 控件](/visualstudio/vsto/xmlnodes-control.md)。  
+ <xref:Microsoft.Office.Tools.Word.XMLNodes.Select>事件不同于<xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter>事件。 有关详细信息，请参阅[XMLNodes 控件](/visualstudio/vsto/xmlnodes-control.md)。  
   
    
   
 ## Examples  
- 下面的代码示例演示了事件处理程序<xref:Microsoft.Office.Tools.Word.XMLNodes.Select>， <xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect>， <xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter>，和<xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave>事件。 当<xref:Microsoft.Office.Tools.Word.XMLNodes.Select>和<xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect>将引发事件，事件处理程序添加到所选内容的边框的双线或删除双线，具体取决于事件。 当<xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter>和<xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave>将引发事件，事件处理程序显示消息，指出新选择的节点和先前选择的节点的名称。 此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNodes>集合名为`SampleInsertNodes`。  
+ 下面的代码示例演示了事件处理程序<xref:Microsoft.Office.Tools.Word.XMLNodes.Select>， <xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect>， <xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter>，和<xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave>事件。 当<xref:Microsoft.Office.Tools.Word.XMLNodes.Select>和<xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect>将引发事件，事件处理程序添加到所选内容的边框的双线或删除双线，具体取决于该事件。 当<xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter>和<xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave>将引发事件，事件处理程序显示消息，指出新选择的节点和先前选定的节点的名称。 此示例假定当前文档，包含<xref:Microsoft.Office.Tools.Word.XMLNodes>名为集合`SampleInsertNodes`。  
   
  [!code-csharp[Trin_WordXMLNodes#201](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNodes/CS/ThisDocument.cs#201)]
  [!code-vb[Trin_WordXMLNodes#201](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNodes/VB/ThisDocument.vb#201)]  
@@ -542,7 +542,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果**附加架构验证文档**设置选项，则为集合中每个无效元素，将引发此事件。  
+ 如果**附加的架构验证文档**设置选项，则为集合中每个无效元素，将引发此事件。  
   
  ]]></format>
         </remarks>
