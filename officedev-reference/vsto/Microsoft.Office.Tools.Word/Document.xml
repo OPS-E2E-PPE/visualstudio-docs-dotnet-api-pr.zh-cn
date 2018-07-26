@@ -1,10 +1,10 @@
 <Type Name="Document" FullName="Microsoft.Office.Tools.Word.Document">
   <Metadata>
     <Meta Name="ms.openlocfilehash" Value="75426188f74d87a7161acfe0173d9a0eccc1b5c6" />
-    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.sourcegitcommit" Value="d85a83935f1d68ded616fcdfb8fd10d6bf4a4633" />
     <Meta Name="ms.translationtype" Value="HT" />
     <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+    <Meta Name="ms.lasthandoff" Value="07/24/2018" />
     <Meta Name="ms.locfileid" Value="29439497" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface Document : IDisposable, System.ComponentModel.IComponent, System.ComponentModel.ISupportInitialize, System.Windows.Forms.IBindableComponent" />
@@ -46,19 +46,19 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- A<xref:Microsoft.Office.Tools.Word.Document?displayProperty=fullName>对象提供相同的成员<xref:Microsoft.Office.Interop.Word.Document?displayProperty=fullName>从 Word 主互操作程序集，但它的对象将添加以下功能：  
+ 一个<xref:Microsoft.Office.Tools.Word.Document?displayProperty=fullName>对象提供相同的成员<xref:Microsoft.Office.Interop.Word.Document?displayProperty=fullName>对象从 Word 主互操作程序集，但它添加了以下功能：  
   
--   <xref:Microsoft.Office.Tools.Word.Document.Controls%2A> 属性。 使用此属性将托管的控件添加到 Word 文档，或删除控件，在运行时。  
+-   <xref:Microsoft.Office.Tools.Word.Document.Controls%2A> 属性。 此属性用于将托管的控件添加到 Word 文档，或删除控件，在运行时。  
   
 -   <xref:Microsoft.Office.Tools.Word.Document.VstoSmartTags%2A> 属性。 此属性用于向文档添加智能标记。  
   
 -   <xref:Microsoft.Office.Tools.Word.Document.InnerObject%2A> 属性。 使用此属性来获取基础<xref:Microsoft.Office.Interop.Word.Document?displayProperty=fullName>对象<xref:Microsoft.Office.Tools.Word.Document?displayProperty=fullName>。  
   
--   文档级事件，如<xref:Microsoft.Office.Tools.Word.Document.BeforeClose>和<xref:Microsoft.Office.Tools.Word.Document.BeforeSave>，仅在 Word 对象模型中的应用程序级别提供。 也就是说，在 Word 对象模型中，这些事件都位于<xref:Microsoft.Office.Interop.Word.Application?displayProperty=fullName>对象而不是<xref:Microsoft.Office.Interop.Word.Document?displayProperty=fullName>对象。  
+-   文档级事件，如<xref:Microsoft.Office.Tools.Word.Document.BeforeClose>和<xref:Microsoft.Office.Tools.Word.Document.BeforeSave>，只能在 Word 对象模型中的应用程序级别提供。 即在 Word 对象模型中，这些事件是可在上找到<xref:Microsoft.Office.Interop.Word.Application?displayProperty=fullName>对象而非<xref:Microsoft.Office.Interop.Word.Document?displayProperty=fullName>对象。  
   
- 在应用程序级项目中，你可以创建<xref:Microsoft.Office.Tools.Word.Document?displayProperty=fullName>对象使用`GetVstoObject`方法。 有关详细信息，请参阅[扩展 Word 文档和 Excel VSTO 外接程序在运行时中的工作簿](/visualstudio/vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)。  
+ 在应用程序级项目中，可以创建<xref:Microsoft.Office.Tools.Word.Document?displayProperty=fullName>对象使用`GetVstoObject`方法。 有关更多信息，请参见 [在运行时在 VSTO 外接程序中扩展 Word 文档和 Excel 工作簿](/visualstudio/vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)。  
   
- 在文档级项目中，通常不使用<xref:Microsoft.Office.Tools.Word.Document?displayProperty=fullName>直接对象。 请改用`ThisDocument`类以编程方式访问你的项目中的文档。 `ThisDocument`类派生其大多数成员从<xref:Microsoft.Office.Tools.Word.DocumentBase?displayProperty=fullName>类。 此类将对其成员的所有调用重都定向到的内部实现<xref:Microsoft.Office.Tools.Word.Document?displayProperty=fullName>接口中[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]。 有关详细信息，请参阅[文档级自定义项编程](/visualstudio/vsto/programming-document-level-customizations.md)。  
+ 在文档级项目中，您通常不使用<xref:Microsoft.Office.Tools.Word.Document?displayProperty=fullName>直接对象。 请改用`ThisDocument`类以编程方式访问你的项目中的文档。 `ThisDocument`类派生其大多数成员从<xref:Microsoft.Office.Tools.Word.DocumentBase?displayProperty=fullName>类。 此类将对其成员的所有调用重都定向到的内部实现<xref:Microsoft.Office.Tools.Word.Document?displayProperty=fullName>接口中[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]。 有关详细信息，请参阅[Programming Document-level Customizations](/visualstudio/vsto/programming-document-level-customizations.md)。  
   
  [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
   
@@ -208,7 +208,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用<xref:Microsoft.Office.Tools.Word.Document.RejectAllRevisionsShown%2A>方法以拒绝文档中所有屏幕显示的修订。  
+ 使用<xref:Microsoft.Office.Tools.Word.Document.RejectAllRevisionsShown%2A>方法拒绝文档中的屏幕显示的所有修订。  
   
  ]]></format>
         </remarks>
@@ -258,12 +258,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Word.Document.ActivateEvent>仅当你将焦点移动应用程序中发生的事件。 将焦点移到或从另一个应用程序中的对象不会触发该事件。  
+ <xref:Microsoft.Office.Tools.Word.Document.ActivateEvent>仅当您将焦点移动应用程序中发生的事件。 将焦点移动到或从另一个应用程序中的对象不会触发该事件。  
   
    
   
 ## Examples  
- 激活该文档时，下面的代码段将显示一条消息。 此示例适用于应用程序级外接程序。  
+ 激活文档时，下面的代码段将显示一条消息。 此示例适用于应用程序级外接程序。  
   
  [!code-csharp[Trin_WordDocument_AppLevelAddIn#48](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordDocument_AppLevelAddIn/CS/ThisAddIn.cs#48)]
  [!code-vb[Trin_WordDocument_AppLevelAddIn#48](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordDocument_AppLevelAddIn/VB/ThisAddIn.vb#48)]  
@@ -297,7 +297,7 @@
 ## Remarks  
  如果文档没有活动的主题，此属性将返回"none"。  
   
- 返回此属性的值的说明，请参阅`Name`参数<xref:Microsoft.Office.Tools.Word.Document.ApplyTheme%2A>方法。 返回此属性的值可能与主题的显示名称不对应。 若要返回主题的显示名称，使用<xref:Microsoft.Office.Tools.Word.Document.ActiveThemeDisplayName%2A>属性。  
+ 返回此属性的值的说明，请参阅`Name`自变量的<xref:Microsoft.Office.Tools.Word.Document.ApplyTheme%2A>方法。 返回此属性的值可能不对应主题的显示名称。 若要返回主题的显示名称，请使用<xref:Microsoft.Office.Tools.Word.Document.ActiveThemeDisplayName%2A>属性。  
   
  ]]></format>
         </remarks>
@@ -328,7 +328,7 @@
 ## Remarks  
  如果文档没有活动的主题，此属性将返回"none"。  
   
- 主题的显示名称是出现在名称**主题**对话框。 此名称可能不对应于你用来设置默认主题，或将主题应用于文档的字符串。  
+ 主题的显示名称是在显示的名称**主题**对话框。 此名称可能不对应于您用来设置默认主题，或将主题应用到文档的字符串。  
   
  ]]></format>
         </remarks>
@@ -392,16 +392,16 @@
   
 |参数|描述|  
 |---------------|-----------------|  
-|`LanguageID`|之一<xref:Microsoft.Office.Interop.Word.WdLanguageID>指定要在指定的文档中设置的书写样式的语言的值。|  
+|`LanguageID`|其中一个<xref:Microsoft.Office.Interop.Word.WdLanguageID>值，该值指定要编写样式的设置中指定的文档的语言。|  
   
- 如果你使用<xref:Microsoft.Office.Tools.Word.Document.ActiveWritingStyle%2A>未指定参数的属性，它返回<xref:Microsoft.Office.Tools.Word.Document_ActiveWritingStyleType>对象，它不应在代码中直接使用。  
+ 如果您使用<xref:Microsoft.Office.Tools.Word.Document.ActiveWritingStyle%2A>而无需指定参数的属性，它返回<xref:Microsoft.Office.Tools.Word.Document_ActiveWritingStyleType>对象，它不应在代码中直接使用。  
   
- 若要获取可用的书写样式的列表，请使用<xref:Microsoft.Office.Interop.Word.Language.WritingStyleList%2A>属性。  
+ 若要获取可用的编写方式的列表，请使用<xref:Microsoft.Office.Interop.Word.Language.WritingStyleList%2A>属性。  
   
    
   
 ## Examples  
- 下面的代码示例显示文本的书写样式中当前选择。 此示例适用于应用程序级外接程序。  
+ 下面的代码示例显示当前选定内容中的文本的写作风格。 此示例适用于应用程序级外接程序。  
   
  [!code-csharp[Trin_WordDocument_AppLevelAddIn#51](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordDocument_AppLevelAddIn/CS/ThisAddIn.cs#51)]
  [!code-vb[Trin_WordDocument_AppLevelAddIn#51](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordDocument_AppLevelAddIn/VB/ThisAddIn.vb#51)]  
@@ -596,7 +596,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法将显示在 IntelliSense Word 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，无法在 Word 2007 项目中使用此属性。  
+ 此方法将出现在 IntelliSense 中在 Word 2007 项目面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Word 2007 项目中使用此属性。  
   
  ]]></format>
         </remarks>
@@ -629,11 +629,11 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 格式`Name`字符串是"主题 nnn"其中主题和 nnn 定义的如下所示：  
+ 格式`Name`字符串是"主题 nnn"主题和 nnn 定义位置，如下所示：  
   
- 主题 – 包含请求的主题的数据的文件夹的名称。 （主题数据文件夹的默认位置是 C:\Program Files\Common Files\Microsoft Shared\Themes11。）你必须使用为该主题的文件夹名称而不是显示中的显示名称**主题**对话框。  
+ 主题 – 包含所需主题的数据的文件夹的名称。 （主题数据文件夹的默认位置是 C:\Program Files\Common Files\Microsoft Shared\Themes11。）必须使用主题的文件夹名称，而不是在显示的显示名称**主题**对话框。  
   
- nnn – 指示格式设置选项以激活 (若要激活，0，若要停用的 1) 的主题的三个数字字符串。 每个数字对应于**鲜艳****颜色**， **Active** **图形**，和**后台** **映像**中的复选框**主题**对话框。 如果省略此字符串，nnn 的默认值是"011"（活动图形和背景图像都被激活）。  
+ nnn – 指示的主题格式选项以激活 (若要激活，0，若要停用的 1) 的三个数字字符串。 个数字分别对应**鲜艳****颜色**， **Active** **图形**，并**背景** **图像**中的复选框**主题**对话框。 如果省略此字符串，则 nnn 的默认值是"011"（活动图形和背景图像都被激活）。  
   
  ]]></format>
         </remarks>
@@ -708,8 +708,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，用于指示自动格式设置选项是否重写具有格式设置限制的文档中的格式设置限制。</summary>
-        <value>
-          如果自动格式设置选项重写格式设置限制，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果自动格式设置选项重写格式设置限制，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -731,8 +730,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，用于指示是否为指定的文档打开了自动断字功能。</summary>
-        <value>
-          如果为指定的文档打开了自动断字功能，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果为指定的文档打开了自动断字功能，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -817,12 +815,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 关闭文档之前发生该事件时。 若要使文档无法关闭，设置`Cancel`所提供的自变量<xref:System.ComponentModel.CancelEventArgs>对象传递给`true`。  
+ 在文档关闭之前发生。 若要使文档无法关闭，将设置`Cancel`所提供的参数<xref:System.ComponentModel.CancelEventArgs>对象传递给`true`。  
   
    
   
 ## Examples  
- 关闭文档之前，下面的代码示例显示一个消息框。 此示例适用于应用程序级外接程序。  
+ 在文档关闭之前，下面的代码示例显示一个消息框。 此示例适用于应用程序级外接程序。  
   
  [!code-csharp[Trin_WordDocument_AppLevelAddIn#56](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordDocument_AppLevelAddIn/CS/ThisAddIn.cs#56)]
  [!code-vb[Trin_WordDocument_AppLevelAddIn#56](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordDocument_AppLevelAddIn/VB/ThisAddIn.vb#56)]  
@@ -853,12 +851,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要防止默认值双击操作的发生，请将设置`Cancel`所提供的自变量<xref:System.ComponentModel.CancelEventArgs>对象传递给`true`。  
+ 若要防止默认的双击操作的发生，设置`Cancel`所提供的参数<xref:System.ComponentModel.CancelEventArgs>对象传递给`true`。  
   
    
   
 ## Examples  
- 下面的代码示例显示一条消息，当你双击文档。 此示例适用于应用程序级外接程序。  
+ 双击该文档时，下面的代码示例将显示一条消息。 此示例适用于应用程序级外接程序。  
   
  [!code-csharp[Trin_WordDocument_AppLevelAddIn#57](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordDocument_AppLevelAddIn/CS/ThisAddIn.cs#57)]
  [!code-vb[Trin_WordDocument_AppLevelAddIn#57](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordDocument_AppLevelAddIn/VB/ThisAddIn.vb#57)]  
@@ -889,12 +887,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要防止打印该文档，将设置`Cancel`所提供的自变量<xref:System.ComponentModel.CancelEventArgs>对象传递给`true`。  
+ 若要阻止打印文档，将`Cancel`所提供的参数<xref:System.ComponentModel.CancelEventArgs>对象传递给`true`。  
   
    
   
 ## Examples  
- 下面的代码示例显示一条消息，询问你是否想要打印文档打印文档前。 此示例适用于应用程序级外接程序。  
+ 下面的代码示例显示一条消息，询问您是否要打印文档打印文档前。 此示例适用于应用程序级外接程序。  
   
  [!code-csharp[Trin_WordDocument_AppLevelAddIn#58](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordDocument_AppLevelAddIn/CS/ThisAddIn.cs#58)]
  [!code-vb[Trin_WordDocument_AppLevelAddIn#58](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordDocument_AppLevelAddIn/VB/ThisAddIn.vb#58)]  
@@ -925,12 +923,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要防止发生默认右键单击操作，将设置`Cancel`所提供的自变量<xref:System.ComponentModel.CancelEventArgs>对象传递给`true`。  
+ 若要防止发生默认右击操作，设置`Cancel`所提供的参数<xref:System.ComponentModel.CancelEventArgs>对象传递给`true`。  
   
    
   
 ## Examples  
- 右键单击文档时，下面的代码示例将显示一条消息。 此示例适用于应用程序级外接程序。  
+ 右键单击该文档时，下面的代码示例将显示一条消息。 此示例适用于应用程序级外接程序。  
   
  [!code-csharp[Trin_WordDocument_AppLevelAddIn#59](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordDocument_AppLevelAddIn/CS/ThisAddIn.cs#59)]
  [!code-vb[Trin_WordDocument_AppLevelAddIn#59](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordDocument_AppLevelAddIn/VB/ThisAddIn.vb#59)]  
@@ -961,12 +959,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要防止保存该文档，将设置`Cancel`所提供的自变量<xref:System.ComponentModel.CancelEventArgs>对象传递给`true`。  
+ 若要防止保存该文档，请设置`Cancel`所提供的参数<xref:System.ComponentModel.CancelEventArgs>对象传递给`true`。  
   
    
   
 ## Examples  
- 下面的代码示例显示一条消息之前，询问是否要将文档保存到保存文档。 此示例适用于应用程序级外接程序。  
+ 下面的代码示例显示一条消息之前保存文档时，询问您是否要保存文档。 此示例适用于应用程序级外接程序。  
   
  [!code-csharp[Trin_WordDocument_AppLevelAddIn#60](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordDocument_AppLevelAddIn/CS/ThisAddIn.cs#60)]
  [!code-vb[Trin_WordDocument_AppLevelAddIn#60](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordDocument_AppLevelAddIn/VB/ThisAddIn.vb#60)]  
@@ -1084,9 +1082,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 要返回单个<xref:Microsoft.Office.Core.DocumentProperty>表示特定的内置文档属性，请使用<xref:Microsoft.Office.Tools.Word.Document.BuiltInDocumentProperties%2A>(`index`) 在 Visual Basic 中或<xref:Microsoft.Office.Tools.Word.Document.BuiltInDocumentProperties%2A>[`index`] 在 C# 中，其中`index`是之一<xref:Microsoft.Office.Interop.Word.WdBuiltInProperty>值。  
+ 若要返回单个<xref:Microsoft.Office.Core.DocumentProperty>表示特定的内置文档属性，请使用<xref:Microsoft.Office.Tools.Word.Document.BuiltInDocumentProperties%2A>(`index`) 在 Visual Basic 中或<xref:Microsoft.Office.Tools.Word.Document.BuiltInDocumentProperties%2A>[`index`] 在 C# 中，其中`index`是之一<xref:Microsoft.Office.Interop.Word.WdBuiltInProperty>值。  
   
- 如果 Microsoft Office Word 不会定义一个内置文档属性的值，读取`Value`该文档属性的属性将引发异常。  
+ 如果 Microsoft Office Word 不会定义一个内置文档属性的值，读取`Value`该文档属性的属性引发异常。  
   
  使用<xref:Microsoft.Office.Tools.Word.Document.CustomDocumentProperties%2A>属性返回的自定义文档属性的集合。  
   
@@ -1113,13 +1111,12 @@
       <Parameters />
       <Docs>
         <summary>确定 Microsoft Office Word 能否将文档签入服务器。</summary>
-        <returns>
-          如果 Microsoft Office 能够将文档签入服务器，则为 <see langword="true" />；否则为 <see langword="false" />。</returns>
+        <returns>如果 Microsoft Office 能够将文档签入服务器，则为 <see langword="true" />；否则为 <see langword="false" />。</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要利用内置于 Word 的协作功能，必须在 Microsoft SharePoint Portal Server 存储文档。  
+ 若要充分利用 Word 内置的协作功能，文档必须存储在 Microsoft SharePoint Portal Server 上。  
   
  ]]></format>
         </remarks>
@@ -1192,9 +1189,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果文档包含错误，此方法会显示**拼写和语法**对话框中，与**检查语法**复选框处于选中状态。  
+ 如果文档包含错误，此方法显示**拼写和语法**对话框中，使用**检查语法**复选框处于选中状态。  
   
- 此方法检查 （如页眉、 页脚和文本框） 的所有可用的情景。  
+ 此方法检查所有可用的内容 （如页眉、 页脚和文本框）。  
   
  ]]></format>
         </remarks>
@@ -1222,19 +1219,17 @@
         <Parameter Name="MakePublic" Type="System.Boolean" />
       </Parameters>
       <Docs>
-        <param name="SaveChanges">
-          如果为 <see langword="true" />，则会将文档保存到服务器位置。 默认值为 <see langword="true" />。</param>
+        <param name="SaveChanges">如果为 <see langword="true" />，则会将文档保存到服务器位置。 默认值为 <see langword="true" />。</param>
         <param name="Comments">要签入的文档中修订的注释（仅在 <c>SaveChanges</c> 设置为 <see langword="true" /> 时适用）。</param>
-        <param name="MakePublic">
-          如果为 <see langword="true" />，则允许用户在文档签入后发布该文档。</param>
+        <param name="MakePublic">如果为 <see langword="true" />，则允许用户在文档签入后发布该文档。</param>
         <summary>将本地计算机上的文档放在服务器上，并将本地文档设置为只读，以便它不能在本地编辑。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 设置`MakePublic`参数`true`提交文档以供审批过程，并最终会导致具有对文档执行只读权限的用户发布的文档的版本 (仅适用于时`SaveChanges`设置为`true`).  
+ 设置`MakePublic`参数`true`提交的文档审批过程，并最终会导致将发布给用户具有对文档的只读权限的文档的版本 (仅适用于`SaveChanges`设置为`true`).  
   
- 若要利用内置于 Word 的协作功能，必须在 Microsoft SharePoint Portal Server 存储文档。  
+ 若要充分利用 Word 内置的协作功能，文档必须存储在 Microsoft SharePoint Portal Server 上。  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -1266,20 +1261,18 @@
         <Parameter Name="VersionType" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="SaveChanges">
-          如果为 <see langword="true" />，则会将文档保存到服务器位置。 默认值为 <see langword="true" />。</param>
+        <param name="SaveChanges">如果为 <see langword="true" />，则会将文档保存到服务器位置。 默认值为 <see langword="true" />。</param>
         <param name="Comments">要签入的文档中修订的注释（仅在 <c>SaveChanges</c> 设置为 <see langword="true" /> 时适用）。</param>
-        <param name="MakePublic">
-          如果为 <see langword="true" />，则允许用户在文档签入后发布该文档。</param>
+        <param name="MakePublic">如果为 <see langword="true" />，则允许用户在文档签入后发布该文档。</param>
         <param name="VersionType">指定文档的版本信息。</param>
         <summary>将本地计算机上的文档放在服务器上，并将本地文档设置为只读，以便它不能在本地编辑。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 设置`MakePublic`参数`true`提交文档以供审批过程，并最终会导致具有对文档执行只读权限的用户发布的文档的版本 (仅适用于时`SaveChanges`设置为`true`).  
+ 设置`MakePublic`参数`true`提交的文档审批过程，并最终会导致将发布给用户具有对文档的只读权限的文档的版本 (仅适用于`SaveChanges`设置为`true`).  
   
- 若要利用内置于 Word 的协作功能，必须在 Microsoft SharePoint Portal Server 存储文档。  
+ 若要充分利用 Word 内置的协作功能，文档必须存储在 Microsoft SharePoint Portal Server 上。  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -1342,10 +1335,8 @@
       </Parameters>
       <Docs>
         <param name="CustomDictionary">或者是一个返回 <see cref="T:Microsoft.Office.Interop.Word.Dictionary" /> 的表达式，或者是自定义字典的文件名。</param>
-        <param name="IgnoreUppercase">
-          如果忽略大小写，则为 <see langword="true" />。 如果省略此参数，则使用 <see cref="P:Microsoft.Office.Interop.Word.Options.IgnoreUppercase" /> 属性的当前值。</param>
-        <param name="AlwaysSuggest">
-          如果要让 Microsoft Office Word 始终建议替代拼写，则为 <see langword="true" />。 如果省略此参数，则使用 <see cref="P:Microsoft.Office.Interop.Word.Options.SuggestSpellingCorrections" /> 属性的当前值。</param>
+        <param name="IgnoreUppercase">如果忽略大小写，则为 <see langword="true" />。 如果省略此参数，则使用 <see cref="P:Microsoft.Office.Interop.Word.Options.IgnoreUppercase" /> 属性的当前值。</param>
+        <param name="AlwaysSuggest">如果要让 Microsoft Office Word 始终建议替代拼写，则为 <see langword="true" />。 如果省略此参数，则使用 <see cref="P:Microsoft.Office.Interop.Word.Options.SuggestSpellingCorrections" /> 属性的当前值。</param>
         <param name="CustomDictionary2">或者是一个返回 <see cref="T:Microsoft.Office.Interop.Word.Dictionary" /> 的表达式，或者是附加的自定义字典的文件名。 您最多可以指定九个附加字典。</param>
         <param name="CustomDictionary3">或者是一个返回 <see cref="T:Microsoft.Office.Interop.Word.Dictionary" /> 的表达式，或者是附加的自定义字典的文件名。 您最多可以指定九个附加字典。</param>
         <param name="CustomDictionary4">或者是一个返回 <see cref="T:Microsoft.Office.Interop.Word.Dictionary" /> 的表达式，或者是附加的自定义字典的文件名。 您最多可以指定九个附加字典。</param>
@@ -1360,9 +1351,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果文档包含错误，此方法会显示**拼写和语法**对话框中，与**检查语法**清除复选框。  
+ 如果文档包含错误，此方法显示**拼写和语法**对话框中，使用**检查语法**清除复选框。  
   
- 此方法检查 （如页眉、 页脚和文本框） 的所有可用的情景。  
+ 此方法检查所有可用的内容 （如页眉、 页脚和文本框）。  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -1395,7 +1386,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 每个<xref:Microsoft.Office.Interop.Word.XMLChildNodeSuggestion>中<xref:Microsoft.Office.Interop.Word.XMLChildNodeSuggestions>集合是在列表中的项允许在底部的 XML 的可能元素**XML 结构**任务窗格。  
+ 每个<xref:Microsoft.Office.Interop.Word.XMLChildNodeSuggestion>中<xref:Microsoft.Office.Interop.Word.XMLChildNodeSuggestions>集合是的列表中的项可能 XML 元素允许在底部**XML 结构**任务窗格。  
   
  ]]></format>
         </remarks>
@@ -1424,7 +1415,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要设置此属性，指定的样式，一个整数的本地名称<xref:Microsoft.Office.Interop.Word.WdBuiltinStyle>常量或表示样式的对象。  
+ 若要将此属性设置，请指定一个整数，样式的本地名称<xref:Microsoft.Office.Interop.Word.WdBuiltinStyle>常量或该对象表示样式的对象。  
   
  如果<xref:Microsoft.Office.Interop.Word.Style.InUse%2A>属性指定的样式设置为`false`，将引发异常。  
   
@@ -1456,8 +1447,7 @@
       <Docs>
         <param name="SaveChanges">指定文档的保存操作。 可以是下列 <see cref="T:Microsoft.Office.Interop.Word.WdSaveOptions" /> 值之一：<see cref="F:Microsoft.Office.Interop.Word.WdSaveOptions.wdDoNotSaveChanges" />、<see cref="F:Microsoft.Office.Interop.Word.WdSaveOptions.wdPromptToSaveChanges" /> 或 <see cref="F:Microsoft.Office.Interop.Word.WdSaveOptions.wdSaveChanges" />。</param>
         <param name="OriginalFormat">指定文档的保存格式。 可以是下列 <see cref="T:Microsoft.Office.Interop.Word.WdOriginalFormat" /> 值之一：<see cref="F:Microsoft.Office.Interop.Word.WdOriginalFormat.wdOriginalDocumentFormat" />、<see cref="F:Microsoft.Office.Interop.Word.WdOriginalFormat.wdPromptUser" /> 或 <see cref="F:Microsoft.Office.Interop.Word.WdOriginalFormat.wdWordDocument" />。</param>
-        <param name="RouteDocument">
-          如果为 <see langword="true" />，则将文档传送给下一个收件人。 如果没有为文档附加传送名单，则忽略此参数。</param>
+        <param name="RouteDocument">如果为 <see langword="true" />，则将文档传送给下一个收件人。 如果没有为文档附加传送名单，则忽略此参数。</param>
         <summary>关闭文档。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -1537,10 +1527,10 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性可以提供有关信息是否存在任何锁在文档中，哪些用户对文档具有当前锁定，或者是否或不文档内容的更新可从服务器获得。  
+ 此属性可以提供有关信息是在文档中，哪些用户对文档具有当前锁，没有任何锁定，还是或文档内容的更新不是可从服务器访问。  
   
 > [!NOTE]
->  此方法将显示在 IntelliSense Word 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，无法在 Word 2007 项目中使用此属性。  
+>  此方法将出现在 IntelliSense 中在 Word 2007 项目面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Word 2007 项目中使用此属性。  
   
  ]]></format>
         </remarks>
@@ -1592,7 +1582,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用<xref:Microsoft.Office.Interop.Word._Application.CustomizationContext%2A>属性来设置之前访问的模板或文档上下文<xref:Microsoft.Office.Tools.Word.Document.CommandBars%2A>集合。  
+ 使用<xref:Microsoft.Office.Interop.Word._Application.CustomizationContext%2A>属性设置的模板或文档的上下文，在访问之前<xref:Microsoft.Office.Tools.Word.Document.CommandBars%2A>集合。  
   
  ]]></format>
         </remarks>
@@ -1650,16 +1640,11 @@
         <param name="Name">要与该文档进行比较的文档的名称。</param>
         <param name="AuthorName">与比较操作生成的区别关联的审阅者姓名。 如果未指定的话，则该值默认为已修订文档的作者姓名，如果没有作者信息的话，则为字符串“Comparison”。</param>
         <param name="CompareTarget">要进行比较的目标文档。 可以是任何 <see cref="T:Microsoft.Office.Interop.Word.WdCompareTarget" /> 值。</param>
-        <param name="DetectFormatChanges">
-          如果为 <see langword="true" />（默认值），则在比较结果中包括检测到的格式更改。</param>
-        <param name="IgnoreAllComparisonWarnings">
-          如果为 <see langword="true" />，则对文档进行比较，而不通知用户有问题存在。 默认值为 <see langword="false" />。</param>
-        <param name="AddToRecentFiles">
-          如果为 <see langword="true" />，则将该文档添加到“文件”菜单上最近使用的文件的列表中。</param>
-        <param name="RemovePersonalInformation">
-          如果应当从指定的文件中移除个人信息，则为 <see langword="true" />。 默认值为 <see langword="false" />。</param>
-        <param name="RemoveDateAndTime">
-          如果为 <see langword="true" />，则从修订中移除日期和时间戳信息；如果为 <see langword="false" />，则不从修订中移除日期和时间戳信息。</param>
+        <param name="DetectFormatChanges">如果为 <see langword="true" />（默认值），则在比较结果中包括检测到的格式更改。</param>
+        <param name="IgnoreAllComparisonWarnings">如果为 <see langword="true" />，则对文档进行比较，而不通知用户有问题存在。 默认值为 <see langword="false" />。</param>
+        <param name="AddToRecentFiles">如果为 <see langword="true" />，则将该文档添加到“文件”菜单上最近使用的文件的列表中。</param>
+        <param name="RemovePersonalInformation">如果应当从指定的文件中移除个人信息，则为 <see langword="true" />。 默认值为 <see langword="false" />。</param>
+        <param name="RemoveDateAndTime">如果为 <see langword="true" />，则从修订中移除日期和时间戳信息；如果为 <see langword="false" />，则不从修订中移除日期和时间戳信息。</param>
         <summary>显示修订标记以指出该文档与其他文档的不同之处。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -1751,8 +1736,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，用于指示指定的兼容性选项是否已启用。</summary>
-        <value>
-          如果指定的兼容性选项已启用，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果指定的兼容性选项已启用，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1761,16 +1745,16 @@
   
 |参数|描述|  
 |---------------|-----------------|  
-|`Type`|之一<xref:Microsoft.Office.Interop.Word.WdCompatibility>指定要检查的兼容性选项的值。|  
+|`Type`|其中一个<xref:Microsoft.Office.Interop.Word.WdCompatibility>值，该值指定检查兼容性选项。|  
   
- 如果你使用<xref:Microsoft.Office.Tools.Word.Document.Compatibility%2A>未指定参数的属性，它返回<xref:Microsoft.Office.Tools.Word.Document_CompatibilityType>不应在代码中直接使用的对象。  
+ 如果您使用<xref:Microsoft.Office.Tools.Word.Document.Compatibility%2A>而无需指定参数的属性，它返回<xref:Microsoft.Office.Tools.Word.Document_CompatibilityType>不应在代码中直接使用的对象。  
   
- 兼容性选项会影响 Microsoft Office Word 文档的显示方式。 某些<xref:Microsoft.Office.Interop.Word.WdCompatibility>值可能不是提供给你，具体取决于的语言支持 （美国美式英语）。  
+ 兼容性选项会影响 Microsoft Office Word 文档的显示方式。 某些<xref:Microsoft.Office.Interop.Word.WdCompatibility>值可能不可用，具体取决于语言支持 （例如美式英语）。  
   
    
   
 ## Examples  
- 下面的代码示例中，如果段落位于之后硬分页符会取消段前的空间。 此示例适用于应用程序级外接程序。  
+ 下面的代码示例，如果该段落是位于硬分页符后取消段前的间距。 此示例适用于应用程序级外接程序。  
   
  [!code-csharp[Trin_WordDocument_AppLevelAddIn#70](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordDocument_AppLevelAddIn/CS/ThisAddIn.cs#70)]
  [!code-vb[Trin_WordDocument_AppLevelAddIn#70](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordDocument_AppLevelAddIn/VB/ThisAddIn.vb#70)]  
@@ -1802,10 +1786,10 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 打开在早期版本的 Word 中创建的文档时，兼容性模式将打开。 兼容性模式可确保在处理文档时，[!INCLUDE[Word_15_short](~/includes/word-15-short-md.md)] 或 [!INCLUDE[Word_14_short](~/includes/word-14-short-md.md)] 中没有新增或增强功能可用，以便使用早期版本的 Word 编辑文档的用户获得完全编辑功能。  
+ 当您打开在早期版本的 Word 中创建的文档时，兼容性模式为 on。 兼容性模式可确保在处理文档时，[!INCLUDE[Word_15_short](~/includes/word-15-short-md.md)] 或 [!INCLUDE[Word_14_short](~/includes/word-14-short-md.md)] 中没有新增或增强功能可用，以便使用早期版本的 Word 编辑文档的用户获得完全编辑功能。  
   
 > [!NOTE]
->  此方法将显示在 IntelliSense Word 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，无法在 Word 2007 项目中使用此属性。  
+>  此方法将出现在 IntelliSense 中在 Word 2007 项目面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Word 2007 项目中使用此属性。  
   
  ]]></format>
         </remarks>
@@ -1835,8 +1819,7 @@
       <Docs>
         <param name="Statistic">
           <see cref="T:Microsoft.Office.Interop.Word.WdStatistic" />。</param>
-        <param name="IncludeFootnotesAndEndnotes">
-          如果为 <see langword="true" />，则在计算统计信息时包括脚注和尾注。 默认值为 <see langword="false" />。</param>
+        <param name="IncludeFootnotesAndEndnotes">如果为 <see langword="true" />，则在计算统计信息时包括脚注和尾注。 默认值为 <see langword="false" />。</param>
         <summary>基于文档的内容获取统计信息。</summary>
         <returns>文档中由 <paramref name="Statistic" /> 参数指定的该类型项的数目。</returns>
         <remarks>
@@ -1903,7 +1886,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果为 OLE 对象的其他应用程序中嵌入了文档，则此属性提供对指定的文档容器应用程序的访问。  
+ 如果在作为 OLE 对象的另一个应用程序中嵌入了文档，此属性提供对指定的文档容器应用程序的访问。  
   
  ]]></format>
         </remarks>
@@ -2082,7 +2065,7 @@
 ## Remarks  
  此属性返回文档中的本机内容控件的集合 (即，<xref:Microsoft.Office.Interop.Word.ContentControl?displayProperty=fullName>文档中的对象)。  
   
- 若要访问扩展的内容控件在文档中，使用<xref:Microsoft.Office.Tools.Word.Document.Controls%2A>属性。  
+ 若要访问文档中的扩展内容控件，请使用<xref:Microsoft.Office.Tools.Word.Document.Controls%2A>属性。  
   
  有关扩展的内容控件的详细信息，请参阅[内容控件](/visualstudio/vsto/content-controls.md)。  
   
@@ -2135,14 +2118,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- Office 解决方案中的文档可以包含 Windows 窗体控件和主机控件。 有关详细信息，请参阅[Office 文档上的控件](/visualstudio/vsto/controls-on-office-documents.md)。  
+ Office 解决方案中的文档包含 Windows 窗体控件和宿主控件。 有关详细信息，请参阅[Office 文档上的控件](/visualstudio/vsto/controls-on-office-documents.md)。  
   
- 若要在运行时管理文档上的控件，请使用方法和属性<xref:Microsoft.Office.Tools.Word.ControlCollection>返回对象<xref:Microsoft.Office.Tools.Word.Document.Controls%2A>属性。 有关详细信息，请参阅[在运行时向 Office 文档添加控件](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time.md)。  
+ 若要在运行时管理文档上的控件，使用的方法和属性<xref:Microsoft.Office.Tools.Word.ControlCollection>返回对象<xref:Microsoft.Office.Tools.Word.Document.Controls%2A>属性。 有关详细信息，请参阅 [在运行时向 Office 文档添加控件](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time.md)。  
   
    
   
 ## Examples  
- 下面的代码示例将文本添加到第一个段落，并创建<xref:Microsoft.Office.Tools.Word.Bookmark>包含该段落的控件。 然后，代码将显示一个消息框，显示文档上的控件的总数。 此示例适用于应用程序级外接程序。  
+ 下面的代码示例将文本添加到第一个段落，并创建<xref:Microsoft.Office.Tools.Word.Bookmark>包含该段落的控件。 然后，代码显示一个消息框，显示的文档上的控件总数。 此示例适用于应用程序级外接程序。  
   
  [!code-csharp[Trin_WordDocument_AppLevelAddIn#74](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordDocument_AppLevelAddIn/CS/ThisAddIn.cs#74)]
  [!code-vb[Trin_WordDocument_AppLevelAddIn#74](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordDocument_AppLevelAddIn/VB/ThisAddIn.vb#74)]  
@@ -2196,7 +2179,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法将显示在 IntelliSense Word 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，无法在 Word 2007 项目中使用此属性。  
+ 此方法将出现在 IntelliSense 中在 Word 2007 项目面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Word 2007 项目中使用此属性。  
   
  ]]></format>
         </remarks>
@@ -2229,11 +2212,11 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 有两种类型的数字： 预设数字 (<xref:Microsoft.Office.Interop.Word.WdNumberType.wdNumberParagraph>)，这可以通过选择中的模板添加到段落**项目符号和编号**对话框; 和 LISTNUM 字段 (<xref:Microsoft.Office.Interop.Word.WdNumberType.wdNumberListNum>)，使您能够添加多个每个段落的一个数字。  
+ 有两种类型的数字： 预设数字 (<xref:Microsoft.Office.Interop.Word.WdNumberType.wdNumberParagraph>)，这可以通过选择中的模板添加到段落**项目符号和编号**对话框; 以及 LISTNUM 字段 (<xref:Microsoft.Office.Interop.Word.WdNumberType.wdNumberListNum>)，使你能够添加多个每个段落的一个数。  
   
  <xref:Microsoft.Office.Tools.Word.Document.ConvertNumbersToText%2A>方法很有用，如果你想要使用另一个应用程序中的文档和列表格式或 LISTNUM 字段，该应用程序无法识别。  
   
- 将列表数字转换为文本后，你无法再在列表中处理它们。  
+ 将列表编号转换为文本后，你无法再在列表中处理它们。  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -2268,7 +2251,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用<xref:Microsoft.Office.Tools.Word.Document.ConvertVietDoc%2A>方法如果你想要在另一台计算机或平台上查看文档。  
+ 使用<xref:Microsoft.Office.Tools.Word.Document.ConvertVietDoc%2A>方法如果你想要在另一计算机或平台上可查看文档。  
   
  ]]></format>
         </remarks>
@@ -2300,7 +2283,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 当样式模板复制到文档时，文档中的名称类似的样式将重新定义为匹配的模板中描述的样式。 模板中的唯一样式将复制到文档。 在文档中的唯一样式保持不变。  
+ 当样式模板复制到文档时，文档中的名称类似的样式将重新定义为匹配模板中描述的样式。 模板中的唯一样式复制到文档。 在文档中的唯一样式保持不变。  
   
  ]]></format>
         </remarks>
@@ -2335,9 +2318,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 项目符号的项进行计数时请<xref:Microsoft.Office.Interop.Word.WdNumberType.wdNumberParagraph>或<xref:Microsoft.Office.Interop.Word.WdNumberType.wdNumberAllNumbers>（默认） 指定为`NumberType`。  
+ 项目符号项进行计数时既<xref:Microsoft.Office.Interop.Word.WdNumberType.wdNumberParagraph>或<xref:Microsoft.Office.Interop.Word.WdNumberType.wdNumberAllNumbers>（默认值） 指定为`NumberType`。  
   
- 有两种类型的数字： 预设数字 (<xref:Microsoft.Office.Interop.Word.WdNumberType.wdNumberParagraph>)，这可以通过选择中的模板添加到段落**项目符号和编号**对话框; 和 LISTNUM 字段 (<xref:Microsoft.Office.Interop.Word.WdNumberType.wdNumberListNum>)，使您能够添加多个每个段落的一个数字。  
+ 有两种类型的数字： 预设数字 (<xref:Microsoft.Office.Interop.Word.WdNumberType.wdNumberParagraph>)，这可以通过选择中的模板添加到段落**项目符号和编号**对话框; 以及 LISTNUM 字段 (<xref:Microsoft.Office.Interop.Word.WdNumberType.wdNumberListNum>)，使你能够添加多个每个段落的一个数。  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -2397,13 +2380,11 @@
       </Parameters>
       <Docs>
         <param name="DateFormat">信函的日期。</param>
-        <param name="IncludeHeaderFooter">
-          如果为 <see langword="true" />，则包括页面设计模板中的页眉和页脚。</param>
+        <param name="IncludeHeaderFooter">如果为 <see langword="true" />，则包括页面设计模板中的页眉和页脚。</param>
         <param name="PageDesign">附加到文档的模板的名称。</param>
         <param name="LetterStyle">
           <see cref="T:Microsoft.Office.Interop.Word.WdLetterStyle" />。 文档的布局。</param>
-        <param name="Letterhead">
-          如果为 <see langword="true" />，则为预先打印好的信头保留空间。</param>
+        <param name="Letterhead">如果为 <see langword="true" />，则为预先打印好的信头保留空间。</param>
         <param name="LetterheadLocation">
           <see cref="T:Microsoft.Office.Interop.Word.WdLetterheadLocation" />。 预先打印好的信头所在的位置。</param>
         <param name="LetterheadSize">要为预先打印好的信头保留的空间量（以磅计）。</param>
@@ -2469,7 +2450,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果指定的对象已在 Microsoft Office Word 中创建的此属性返回的十六进制数 4d535744，它表示字符串"MSWD。" 此值也可以表示由常数<xref:Microsoft.Office.Interop.Word.WdConstants.wdCreatorCode>。  
+ 如果指定的对象已在 Microsoft Office Word 中创建的此属性返回十六进制数字 4d535744，它表示字符串"MSWD。" 此值还可表示由常数<xref:Microsoft.Office.Interop.Word.WdConstants.wdCreatorCode>。  
   
  ]]></format>
         </remarks>
@@ -2498,7 +2479,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果<xref:Microsoft.Office.Interop.Word.Options.StoreRSIDOnSave%2A>属性<xref:Microsoft.Office.Interop.Word._Application.Options%2A>属性是`true`，每次保存文档时，Word 将生成一个随机数字，该应用程序使用以方便进行比较和合并文档。 Word 表中存储的随机数，并在每次保存后更新表。 <xref:Microsoft.Office.Tools.Word.Document.CurrentRsid%2A>属性返回的最后一个号分配给该文档该单词。  
+ 如果<xref:Microsoft.Office.Interop.Word.Options.StoreRSIDOnSave%2A>的属性<xref:Microsoft.Office.Interop.Word._Application.Options%2A>属性是`true`，每次保存文档时，Word 会生成一个随机数字，该应用程序使用，以便于比较和合并的文档。 Word 将随机数字存储在一个表，并在每次保存后更新表。 <xref:Microsoft.Office.Tools.Word.Document.CurrentRsid%2A>属性返回的最后一个号分配给该文档该单词。  
   
  ]]></format>
         </remarks>
@@ -2553,7 +2534,7 @@
       </ReturnValue>
       <Docs>
         <summary>返回文档中的自定义 XML 部件。</summary>
-        <value>A <c>Microsoft.Office.Core.CustomXMLParts</c>文档中的集合，包含自定义 XML 部件。</value>
+        <value>一个<c>Microsoft.Office.Core.CustomXMLParts</c>集合，包含自定义 XML 部件的文档中。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -2587,7 +2568,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用邮件合并主文档、 邮件合并数据源或任何包含数据以表格单元格或分隔符字符分隔的文档，可以使用此方法。  
+ 使用邮件合并主文档、 邮件合并数据源或任何文档，其中包含以表格单元格或分隔符分隔的数据，可以使用此方法。  
   
  ]]></format>
         </remarks>
@@ -2637,7 +2618,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Word.Document.Deactivate>事件不会在发生卸载文档。  
+ <xref:Microsoft.Office.Tools.Word.Document.Deactivate>卸载文档，事件不会发生。  
   
    
   
@@ -2674,7 +2655,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 默认扩展名是<xref:Microsoft.Office.Tools.Word.IDocumentExtension>对象由实现[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]。  
+ 默认扩展名<xref:Microsoft.Office.Tools.Word.IDocumentExtension>对象，它由实现[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]。  
   
  ]]></format>
         </remarks>
@@ -2747,7 +2728,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Word.Document.DefaultTargetFrame%2A>属性具有以下预定义的字符串:"_top"，"_blank""_p"和"_self"。 它还可以使用任何用户定义的字符串。  
+ <xref:Microsoft.Office.Tools.Word.Document.DefaultTargetFrame%2A>属性具有以下预定义的字符串:"_top"，"_blank"，"_parent"和"_self"。 它还可以使用任何用户定义的字符串。  
   
  ]]></format>
         </remarks>
@@ -2776,7 +2757,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用<xref:Microsoft.Office.Interop.Word.Comments.Add%2A>方法<xref:Microsoft.Office.Interop.Word.Comments>对象将注释添加到文档。  
+ 使用<xref:Microsoft.Office.Interop.Word.Comments.Add%2A>方法的<xref:Microsoft.Office.Interop.Word.Comments>对象将注释添加到文档。  
   
  ]]></format>
         </remarks>
@@ -2831,7 +2812,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 你还可以使用<xref:Microsoft.Office.Interop.Word.Editor.DeleteAll%2A?displayProperty=fullName>方法<xref:Microsoft.Office.Interop.Word.Editor?displayProperty=fullName>对象删除指定的用户组有权修改的所有范围中的权限。  
+ 此外可以使用<xref:Microsoft.Office.Interop.Word.Editor.DeleteAll%2A?displayProperty=fullName>方法的<xref:Microsoft.Office.Interop.Word.Editor?displayProperty=fullName>要删除指定的用户或组的用户有权修改的所有范围中的权限对象。  
   
  ]]></format>
         </remarks>
@@ -2860,7 +2841,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要使用墨迹批注，您必须运行 Microsoft Office Word 的 tablet 计算机上。 向文档添加手写的墨迹注释的详细信息，请参阅"标记具有墨迹批注的文档"Microsoft Office Word 帮助中。  
+ 若要使用墨迹批注，您必须运行 Microsoft Office Word 在平板电脑上。 向文档添加手写的墨迹批注的详细信息，请参阅"标记具有墨迹注释的文档"Microsoft Office Word 帮助中。  
   
  ]]></format>
         </remarks>
@@ -2889,11 +2870,11 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 结果<xref:Microsoft.Office.Tools.Word.Document.DetectLanguage%2A>方法存储在<xref:Microsoft.Office.Interop.Word.Range.LanguageID%2A>基于字符的字符的属性。  
+ 结果<xref:Microsoft.Office.Tools.Word.Document.DetectLanguage%2A>方法将存储在<xref:Microsoft.Office.Interop.Word.Range.LanguageID%2A>基于字符的字符的属性。  
   
- <xref:Microsoft.Office.Tools.Word.Document.DetectLanguage%2A>方法检查文档 （标头、 页脚、 文本框中，和等） 中的所有可用的文本。  
+ <xref:Microsoft.Office.Tools.Word.Document.DetectLanguage%2A>方法检查 （标头、 页脚、 文本框、 文本框等） 在文档中所有可用的文本。  
   
- 如果<xref:Microsoft.Office.Tools.Word.Document.DetectLanguage%2A>方法已应用到指定的文本，<xref:Microsoft.Office.Tools.Word.Document.LanguageDetected%2A>属性设置为`true`。 若要重新评估指定的文本的语言，必须首先设置<xref:Microsoft.Office.Tools.Word.Document.LanguageDetected%2A>属性`false`。  
+ 如果<xref:Microsoft.Office.Tools.Word.Document.DetectLanguage%2A>方法已应用到指定文本<xref:Microsoft.Office.Tools.Word.Document.LanguageDetected%2A>属性设置为`true`。 若要重新评估的指定文本的语言，必须首先设置<xref:Microsoft.Office.Tools.Word.Document.LanguageDetected%2A>属性设置为`false`。  
   
  ]]></format>
         </remarks>
@@ -2917,15 +2898,14 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示是否禁用在 <see cref="P:Microsoft.Office.Tools.Word.Document.DisableFeaturesIntroducedAfter" /> 属性中指定的版本之后引入的所有功能。</summary>
-        <value>
-          如果在 <see cref="P:Microsoft.Office.Tools.Word.Document.DisableFeaturesIntroducedAfter" /> 属性中指定的版本之后引入的所有功能已禁用，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果在 <see cref="P:Microsoft.Office.Tools.Word.Document.DisableFeaturesIntroducedAfter" /> 属性中指定的版本之后引入的所有功能已禁用，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性只影响为其设置属性的文档。 如果你打算共享与早期版本的 Microsoft Office Word 中，因此不引入其版本的 Word 中均不提供的功能的用户之间的文档，请使用此属性。  
+ 此属性只影响为其设置属性的文档。 如果打算共享与早期版本的 Microsoft Office Word 中，因此不会引入在他们的 Word 版本中不可用的功能的用户之间的文档，请使用此属性。  
   
- 使用<xref:Microsoft.Office.Interop.Word.Options.DisableFeaturesbyDefault%2A>属性禁用在所有文档后，将指定的版本推出的功能。  
+ 使用<xref:Microsoft.Office.Interop.Word.Options.DisableFeaturesbyDefault%2A>属性可用于在所有禁用文档指定版本后引入的功能。  
   
  ]]></format>
         </remarks>
@@ -2955,9 +2935,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Word.Document.DisableFeatures%2A>属性必须设置为`true`之前设置<xref:Microsoft.Office.Tools.Word.Document.DisableFeaturesIntroducedAfter%2A>属性。 否则为设置才会生效，并且将保持为其的 Word 97 适用于 Windows 的默认设置。  
+ <xref:Microsoft.Office.Tools.Word.Document.DisableFeatures%2A>属性必须设置为`true`之前设置<xref:Microsoft.Office.Tools.Word.Document.DisableFeaturesIntroducedAfter%2A>属性。 否则为设置将不会生效，并且将始终保持 Windows Word 97 其默认设置。  
   
- <xref:Microsoft.Office.Tools.Word.Document.DisableFeaturesIntroducedAfter%2A>属性只影响该属性设置的文档。 如果你想要设置要禁用的所有文档的功能，请使用的应用程序的全局选项<xref:Microsoft.Office.Interop.Word.Options.DisableFeaturesIntroducedAfterbyDefault%2A>属性。  
+ <xref:Microsoft.Office.Tools.Word.Document.DisableFeaturesIntroducedAfter%2A>属性只影响该属性设置的文档。 如果你想要设置应用程序要禁用的所有文档的功能，请使用一个全局选项<xref:Microsoft.Office.Interop.Word.Options.DisableFeaturesIntroducedAfterbyDefault%2A>属性。  
   
  ]]></format>
         </remarks>
@@ -3076,13 +3056,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，用于指示 Microsoft Office Word 是否嵌入常见的系统字体。</summary>
-        <value>
-          如果 Microsoft Office Word 不嵌入常见的系统字体，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果 Microsoft Office Word 不嵌入常见的系统字体，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性设置为`false`如果用户位于东亚语言系统，并且想要创建的其他用户不具有针对其系统上的该语言的字体可读的文档非常有用。 例如，日语系统上的用户可以选择要在文档中嵌入字体，以便日语文档可在所有系统上可读。  
+ 此属性设置为`false`非常有用，如果用户在东亚系统并且想要创建的其他用户不具有在其系统上的该语言的字体可读的文档。 例如，日语的系统上的用户无法选择，以便日语文档可在所有系统上可读文档中嵌入字体。  
   
  ]]></format>
         </remarks>
@@ -3273,13 +3252,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，用于指示 Microsoft Office Word 是否嵌入语音和手写功能，以及是否控制通过 Windows Text Service Framework 应用程序编程接口从连接到 Microsoft Office 的设备接收的文本服务数据。</summary>
-        <value>
-          如果 Microsoft Office Word 嵌入语音和手写功能并控制文本服务数据，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果 Microsoft Office Word 嵌入语音和手写功能并控制文本服务数据，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- Microsoft Office Word 将嵌入到语音转换和手写，以便可以将数据转换回语音或手写以及存储的东亚 IME 击键以提高更正。  
+ Microsoft Office Word 嵌入语音和手写功能，以便可将数据转换回语音或手写并存储东亚输入法键击，以提高校正。  
   
  ]]></format>
         </remarks>
@@ -3325,13 +3303,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，用于指示 Microsoft Office Word 在保存文档时是否在文档中嵌入 TrueType 字体。</summary>
-        <value>
-          如果 Microsoft Office Word 在保存文档时在文档中嵌入 TrueType 字体，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果 Microsoft Office Word 在保存文档时在文档中嵌入 TrueType 字体，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 嵌入 TrueType 字体，其他人查看该文档可与用于创建它的相同字体。  
+ 通过嵌入 TrueType 字体，其他人查看该文档与创建它所用的相同字体。  
   
  ]]></format>
         </remarks>
@@ -3404,7 +3381,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 在执行时，<xref:Microsoft.Office.Tools.Word.Document.EndReview%2A>方法会显示一条消息询问用户是否结束审阅。  
+ 执行时，<xref:Microsoft.Office.Tools.Word.Document.EndReview%2A>方法显示一条消息，询问用户是否结束评审。  
   
  ]]></format>
         </remarks>
@@ -3428,8 +3405,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，用于指示是否在受保护的文档中实施格式设置限制。</summary>
-        <value>
-          如果在受保护文档中实施格式设置限制，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果在受保护文档中实施格式设置限制，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -3492,8 +3468,7 @@
         <param name="OutputFileName">新 PDF 或 XPS 文件的路径和文件名。</param>
         <param name="ExportFormat">
           <see cref="T:Microsoft.Office.Interop.Word.WdExportFormat" /> 值之一，指定是以 PDF 还是 XPS 格式保存文档。</param>
-        <param name="OpenAfterExport">
-          如果要自动打开新文件，则为 <see langword="true" />；否则为 <see langword="false" />。</param>
+        <param name="OpenAfterExport">如果要自动打开新文件，则为 <see langword="true" />；否则为 <see langword="false" />。</param>
         <param name="OptimizeFor">
           <see cref="T:Microsoft.Office.Interop.Word.WdExportOptimizeFor" /> 值之一，指定进行屏幕优化还是打印优化。</param>
         <param name="Range">
@@ -3502,25 +3477,20 @@
         <param name="To">指定结束页码（如果 <c>Range</c> 参数设置为 <see cref="F:Microsoft.Office.Interop.Word.WdExportRange.wdExportFromTo" />）。</param>
         <param name="Item">
           <see cref="T:Microsoft.Office.Interop.Word.WdExportItem" /> 值之一，指定导出过程是仅包括文本，还是同时包括文本和标记。</param>
-        <param name="IncludeDocProps">
-          如果要在新文件中包含文档属性，则为 <see langword="true" />；否则为 <see langword="false" />。</param>
-        <param name="KeepIRM">
-          如果要在源文档具有信息权限管理 (IRM) 保护时将 IRM 权限复制到 XPS 文档，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="true" />。</param>
+        <param name="IncludeDocProps">如果要在新文件中包含文档属性，则为 <see langword="true" />；否则为 <see langword="false" />。</param>
+        <param name="KeepIRM">如果要在源文档具有信息权限管理 (IRM) 保护时将 IRM 权限复制到 XPS 文档，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="true" />。</param>
         <param name="CreateBookmarks">
           <see cref="T:Microsoft.Office.Interop.Word.WdExportCreateBookmarks" /> 值之一，指定是否导出书签以及要导出的书签类型。</param>
-        <param name="DocStructureTags">
-          如果要包含额外数据（如有关内容的流和逻辑组织的信息）来协助使用屏幕读取器，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="true" />。</param>
-        <param name="BitmapMissingFonts">
-          如果要包含文本的位图，则为 <see langword="true" />；如果要引用文本字体，则为 <see langword="false" />。 如果字体许可证不允许在 PDF 文件中嵌入某种字体，则将此参数设置为 <see langword="true" />。 如果将此参数设置为 <see langword="false" />，则当指定字体不可用时，查看者的计算机会替换合适的字体。 默认值为 <see langword="true" />。</param>
-        <param name="UseISO19005_1">
-          如果要将 PDF 使用范围限制为按照 ISO 19005-1 进行标准化的 PDF 子集，则为 <see langword="true" />；否则为 <see langword="false" />。 如果将此参数设置为 <see langword="true" />，则生成的文件会是更加可靠的独立文件，但这些文件可能会更大，或者由于格式限制而显示更多的视觉瑕疵。 默认值为 <see langword="false" />。</param>
+        <param name="DocStructureTags">如果要包含额外数据（如有关内容的流和逻辑组织的信息）来协助使用屏幕读取器，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="true" />。</param>
+        <param name="BitmapMissingFonts">如果要包含文本的位图，则为 <see langword="true" />；如果要引用文本字体，则为 <see langword="false" />。 如果字体许可证不允许在 PDF 文件中嵌入某种字体，则将此参数设置为 <see langword="true" />。 如果将此参数设置为 <see langword="false" />，则当指定字体不可用时，查看者的计算机会替换合适的字体。 默认值为 <see langword="true" />。</param>
+        <param name="UseISO19005_1">如果要将 PDF 使用范围限制为按照 ISO 19005-1 进行标准化的 PDF 子集，则为 <see langword="true" />；否则为 <see langword="false" />。 如果将此参数设置为 <see langword="true" />，则生成的文件会是更加可靠的独立文件，但这些文件可能会更大，或者由于格式限制而显示更多的视觉瑕疵。 默认值为 <see langword="false" />。</param>
         <param name="FixedFormatExtClassPtr">一个指针，指向使文档能够以其他固定格式保存的 <see langword="IMsoDocExporter" /> 接口的实现。 有关详细信息，请参阅“扩展 Office (2007) 固定格式导出功能”。</param>
         <summary>以 PDF 或 XPS 格式保存文档。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 你可以将保存为 PDF 或 XPS 文件从 Microsoft Office Word 仅后提供此功能的外接程序安装。 有关详细信息，搜索"启用支持对其他文件格式，例如 PDF 和 XPS"Office online。  
+ 您可以将保存为 PDF 或 XPS 文件从 Microsoft Office Word 仅后提供此功能的外接程序安装。 有关详细信息，搜索"启用支持其他文件格式，如 PDF 和 XPS"Office Online 上。  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -3548,7 +3518,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 自定义扩展是一种实现的<xref:Microsoft.Office.Tools.Word.IDocumentExtension>通过使用 Visual Studio 中的 Office 开发工具创建的 Word 解决方案中的接口。 在文档级项目中，此属性返回生成一个实例`ThisDocument`默认情况下的类。 `ThisDocument`类实现<xref:Microsoft.Office.Tools.Word.IDocumentExtension>接口通过<xref:Microsoft.Office.Tools.Word.DocumentBase>类。 有关详细信息，请参阅[文档级自定义项编程](/visualstudio/vsto/programming-document-level-customizations.md)。  
+ 自定义扩展插件是一种实现的<xref:Microsoft.Office.Tools.Word.IDocumentExtension>接口在 Visual Studio 中使用的 Office 开发工具创建的 Word 解决方案中。 在文档级项目中，此属性返回所生成的实例`ThisDocument`默认情况下的类。 `ThisDocument`类实现<xref:Microsoft.Office.Tools.Word.IDocumentExtension>接口通过<xref:Microsoft.Office.Tools.Word.DocumentBase>类。 有关详细信息，请参阅[Programming Document-level Customizations](/visualstudio/vsto/programming-document-level-customizations.md)。  
   
  ]]></format>
         </remarks>
@@ -3647,13 +3617,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示文档是否处于最终状态。</summary>
-        <value>
-          如果文档处于最终状态，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果文档处于最终状态，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果将此属性设置为`true`，Microsoft Office Word 将标记为最终状态的文档，通知收件人，（如果有），该文档处于最终状态，并将文档设置为只读的。  
+ 如果此属性设置为`true`，Microsoft Office Word 将标记为 final 文档，以通知收件人 （如果有） 在文档处于最终状态，并将文档设置为只读的。  
   
  ]]></format>
         </remarks>
@@ -3682,7 +3651,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 异常是由一个引发如果 Microsoft Office Word 无法减少页计数。  
+ 异常是由一个引发 Microsoft Office Word 是否无法减少页计数。  
   
  ]]></format>
         </remarks>
@@ -3716,10 +3685,8 @@
       <Docs>
         <param name="Address">目标文档的地址。</param>
         <param name="SubAddress">目标文档中的位置。 默认值为一个空字符串。</param>
-        <param name="NewWindow">
-          如果为 <see langword="true" />，则在新窗口中显示目标位置。 默认值为 <see langword="false" />。</param>
-        <param name="AddHistory">
-          如果为 <see langword="true" />，则添加指向当前日期的历史记录文件夹的链接。</param>
+        <param name="NewWindow">如果为 <see langword="true" />，则在新窗口中显示目标位置。 默认值为 <see langword="false" />。</param>
+        <param name="AddHistory">如果为 <see langword="true" />，则添加指向当前日期的历史记录文件夹的链接。</param>
         <param name="ExtraInfo">一个字符串或字节数组，为 HTTP 指定要用来解析超链接的其他信息。 例如，可以使用 <c>ExtraInfo</c> 指定图像映射的坐标、窗体的内容或 FAT 文件名。 字符串可以发送，也可以追加，具体情况取决于 <c>Method</c> 的值。 使用 <see cref="P:Microsoft.Office.Interop.Word.Hyperlink.ExtraInfoRequired" /> 属性确定是否需要额外的信息。</param>
         <param name="Method">指定其他 HTTP 信息的处理方式。 <see cref="T:Microsoft.Office.Core.MsoExtraInfoMethod" />。</param>
         <param name="HeaderInfo">一个字符串，指定 HTTP 请求的标头信息。 默认值为一个空字符串。 在 Visual Basic 中，可以通过使用如下语法将几个标题行合并到一个字符串中：“string1   <see langword="&quot; &amp; vbCr &amp; &quot;" />string2   ”。 指定的字符串自动转换为 ANSI 字符。 请注意，HeaderInfo 参数可以覆盖默认的 HTTP 标头字段<c></c>。</param>
@@ -3728,7 +3695,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法会显示对缓存的文档位于`Address`参数，如果已下载。 否则，此方法解析超链接，下载目标文档并在适当的应用程序中显示此文档。 如果超链接使用文件协议，此方法将打开的文档而不是下载它。  
+ 此方法会显示缓存的文档位于`Address`参数，如果已下载。 否则，此方法解析超链接，下载目标文档并在适当的应用程序中显示此文档。 如果超链接使用的文件协议，此方法将打开文档而不是下载它。  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -3778,7 +3745,7 @@
       <Docs>
         <summary>获取或设置一个值，用于指示 Microsoft Office Word 是否在“样式和格式”任务窗格中显示“清除格式”。</summary>
         <value>
-          <see langword="true" /> 如果 Microsoft Office Word 显示**清除格式**中**样式和格式**任务窗格中; 否则为<see langword="false" />。</value>
+          <see langword="true" /> 如果 Microsoft Office Word 中显示**清除格式**中**样式和格式**任务窗格; 否则为<see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -3824,7 +3791,7 @@
       <Docs>
         <summary>获取或设置一个值，用于指示 Microsoft Office Word 是否在“样式和格式”任务窗格中显示字体格式。</summary>
         <value>
-          <see langword="true" /> 如果 Microsoft Office Word 显示字体中的格式设置**样式和格式**任务窗格中; 否则为<see langword="false" />。</value>
+          <see langword="true" /> 如果 Microsoft Office Word 中显示字体格式**样式和格式**任务窗格; 否则为<see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -3846,13 +3813,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示 Microsoft Office Word 是否在使用上一个标题级别时显示下一个标题级别。</summary>
-        <value>
-          如果 Word 在使用上一个标题级别时显示下一个标题级别，则为 <see langword="true " />；否则为 <see langword="false" />。</value>
+        <value>如果 Word 在使用上一个标题级别时显示下一个标题级别，则为 <see langword="true " />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性对应于**之前级别使用时显示下一个标题**中的复选框**样式窗格选项**对话框。  
+ 此属性对应于**显示下一个标题时使用上一级别**中的复选框**样式窗格选项**对话框。  
   
  ]]></format>
         </remarks>
@@ -3877,7 +3843,7 @@
       <Docs>
         <summary>获取或设置一个值，用于指示 Microsoft Office Word 是否在“样式和格式”任务窗格中显示数字格式。</summary>
         <value>
-          <see langword="true" /> 如果 Microsoft Office Word 显示中的数字格式设置**样式和格式**任务窗格中; 否则为<see langword="false" />。</value>
+          <see langword="true" /> 如果 Microsoft Office Word 中显示数字格式**样式和格式**任务窗格; 否则为<see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -3900,7 +3866,7 @@
       <Docs>
         <summary>获取或设置一个值，用于指示 Microsoft Office Word 是否在“样式和格式”任务窗格中显示段落格式。</summary>
         <value>
-          <see langword="true" /> 如果 Microsoft Office Word 显示中的段落格式设置**样式和格式**任务窗格中; 否则为<see langword="false" />。</value>
+          <see langword="true" /> 如果 Microsoft Office Word 中显示段落格式**样式和格式**任务窗格; 否则为<see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -3922,15 +3888,14 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示是否显示用户定义的样式。</summary>
-        <value>
-          如果显示用户定义的样式，则为 <see langword="true " />；否则为 <see langword="false" />。</value>
+        <value>如果显示用户定义的样式，则为 <see langword="true " />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
  此属性对应于**隐藏内置名称存在替换名称时**中的复选框**样式窗格选项**对话框。  
   
- 设置<xref:Microsoft.Office.Tools.Word.Document.FormattingShowUserStyleName%2A>属性`true`时备用用户定义的样式存在隐藏内置样式。 例如，如果用户具有相同名称作为内置样式创建标题样式，则用户定义的样式优先，内置的样式的样式名称的列表中不会显示。  
+ 设置<xref:Microsoft.Office.Tools.Word.Document.FormattingShowUserStyleName%2A>属性设置为`true`时存在备用用户定义的样式，隐藏内置样式。 例如，如果用户具有相同名称为内置样式创建标题样式，则用户定义的样式将优先于并且内置样式不会显示样式名称的列表中。  
   
  ]]></format>
         </remarks>
@@ -3976,13 +3941,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，用于指示文档是否处于窗体设计模式。</summary>
-        <value>
-          如果文档处于窗体设计模式，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果文档处于窗体设计模式，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性始终返回`false`如果它用于从 Microsoft Office Word 中，运行的代码中，但如果它通过自动化运行，它会返回正确的值。 例如，如果从 Microsoft Office Excel 中运行该示例，它返回`true`如果你在设计模式。  
+ 此属性始终返回`false`如果 Microsoft Office Word 中，从运行的代码中使用，但如果运行此命令通过自动化，它会返回正确的值。 例如，如果从 Microsoft Office Excel 运行示例，它返回`true`你是否在设计模式下。  
   
  ]]></format>
         </remarks>
@@ -4133,9 +4097,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 该数组对应于中列出的项**为其**框中**交叉引用**对话框。  
+ 该数组与中列出的项**为其**框中**交叉引用**对话框。  
   
- 此方法返回的项可用作`ReferenceWhich`参数<xref:Microsoft.Office.Tools.Word.Bookmark.InsertCrossReference%2A>方法。  
+ 此方法返回的项可以用作`ReferenceWhich`自变量<xref:Microsoft.Office.Tools.Word.Bookmark.InsertCrossReference%2A>方法。  
   
  ]]></format>
         </remarks>
@@ -4236,9 +4200,7 @@
       <Docs>
         <param name="What">要将范围或选定内容移到其中的项的种类。 可以是 <see cref="T:Microsoft.Office.Interop.Word.WdGoToItem" /> 值之一。</param>
         <param name="Which">要将范围或选定内容移到其中的项。 可以是 <see cref="T:Microsoft.Office.Interop.Word.WdGoToDirection" /> 值之一。</param>
-        <param name="Count">文档中项的编号。 默认值为 1。  
-  
- 只有正数值才有效。 要指定位于范围或选定内容前面的项，请将 <see cref="F:Microsoft.Office.Interop.Word.WdGoToDirection.wdGoToPrevious" /> 用作 <c>Which</c> 参数并指定 <c>Count</c> 值。</param>
+        <param name="Count">文档中项的编号。 默认值为 1。  只有正数值才有效。 要指定位于范围或选定内容前面的项，请将 <see cref="F:Microsoft.Office.Interop.Word.WdGoToDirection.wdGoToPrevious" /> 用作 <c>Which</c> 参数并指定 <c>Count</c> 值。</param>
         <param name="Name">如果 <c>What</c> 参数是 <see cref="F:Microsoft.Office.Interop.Word.WdGoToItem.wdGoToBookmark" />、<see cref="F:Microsoft.Office.Interop.Word.WdGoToItem.wdGoToComment" />、<see cref="F:Microsoft.Office.Interop.Word.WdGoToItem.wdGoToField" /> 或 <see cref="F:Microsoft.Office.Interop.Word.WdGoToItem.wdGoToObject" />，则此参数指定一个名称。</param>
         <summary>返回一个表示指定项（如页、书签或字段）的起始位置的 <see cref="T:Microsoft.Office.Interop.Word.Range" />。</summary>
         <returns>一个表示指定项（如页、书签或字段）的起始位置的 <see cref="T:Microsoft.Office.Interop.Word.Range" />。</returns>
@@ -4246,7 +4208,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 当你使用此方法与<xref:Microsoft.Office.Interop.Word.WdGoToItem.wdGoToGrammaticalError>， <xref:Microsoft.Office.Interop.Word.WdGoToItem.wdGoToProofreadingError>，或<xref:Microsoft.Office.Interop.Word.WdGoToItem.wdGoToSpellingError>常量，<xref:Microsoft.Office.Interop.Word.Range>返回包括任何语法错误的文本或拼写错误的文本。  
+ 当使用此方法替换<xref:Microsoft.Office.Interop.Word.WdGoToItem.wdGoToGrammaticalError>， <xref:Microsoft.Office.Interop.Word.WdGoToItem.wdGoToProofreadingError>，或<xref:Microsoft.Office.Interop.Word.WdGoToItem.wdGoToSpellingError>常量，<xref:Microsoft.Office.Interop.Word.Range>返回包括任何语法错误的文本或拼写错误的文本。  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -4273,13 +4235,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，用于指示是否已针对文档运行语法检查。</summary>
-        <value>
-          如果已针对文档运行语法检查，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果已针对文档运行语法检查，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要重新检查文档中的语法，将设置<xref:Microsoft.Office.Tools.Word.Document.GrammarChecked%2A>属性`false`。  
+ 若要重新检查文档中的语法，将设置<xref:Microsoft.Office.Tools.Word.Document.GrammarChecked%2A>属性设置为`false`。  
   
  ]]></format>
         </remarks>
@@ -4308,9 +4269,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 可以有多个错误，每个句子。  
+ 可以有多个错误每个句子。  
   
- 如果没有任何语法错误，<xref:Microsoft.Office.Interop.Word.ProofreadingErrors.Count%2A>属性<xref:Microsoft.Office.Interop.Word.ProofreadingErrors>返回对象<xref:Microsoft.Office.Tools.Word.Document.GrammaticalErrors%2A>属性都返回 0 （零）。  
+ 如果没有任何语法错误<xref:Microsoft.Office.Interop.Word.ProofreadingErrors.Count%2A>属性<xref:Microsoft.Office.Interop.Word.ProofreadingErrors>对象返回的<xref:Microsoft.Office.Tools.Word.Document.GrammaticalErrors%2A>属性将返回 0 （零）。  
   
  ]]></format>
         </remarks>
@@ -4378,8 +4339,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，用于指示 Microsoft Office Word 是否从页的左上角启动字符网格。</summary>
-        <value>
-          如果 Microsoft Office Word 从页的左上角启动字符网格，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果 Microsoft Office Word 从页的左上角启动字符网格，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -4413,7 +4373,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Word.Document.GridOriginFromMargin%2A> 必须是要使用此属性为 false。  
+ <xref:Microsoft.Office.Tools.Word.Document.GridOriginFromMargin%2A> 必须为要在使用此属性为 false。  
   
  ]]></format>
         </remarks>
@@ -4442,7 +4402,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Word.Document.GridOriginFromMargin%2A> 必须是要使用此属性为 false。  
+ <xref:Microsoft.Office.Tools.Word.Document.GridOriginFromMargin%2A> 必须为要在使用此属性为 false。  
   
  ]]></format>
         </remarks>
@@ -4532,8 +4492,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，该值指示打开文档是否需要密码。</summary>
-        <value>
-          如果打开文档需要密码，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果打开文档需要密码，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -4577,13 +4536,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，该值指示文档是否具有附加的 Microsoft Visual Basic for Applications (VBA) 项目。</summary>
-        <value>
-          如果文档具有附加 VBA 项目，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果文档具有附加 VBA 项目，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性是在以编程方式确定是否需要为启用宏的文件格式保存文档中最有用。 如果保存在另一种格式中，宏和包含在文档内的代码项目可能会丢失。  
+ 此属性是在以编程方式确定是否需要为启用宏的文件格式保存一个文档最有用。 如果保存在另一种格式中，宏和文档中包含的代码项目可能会丢失。  
   
  ]]></format>
         </remarks>
@@ -4695,8 +4653,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，用于指示是否可以对全部是大写字母的单词断字。</summary>
-        <value>
-          如果可以对全部是大写字母的单词断字，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果可以对全部是大写字母的单词断字，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -4723,7 +4680,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 连字区域是空间的最大的 Microsoft Office Word 离开的行中最后一个单词末尾和右边距之间量。  
+ 断字区域是空间的最大的 Microsoft Office Word 离开右边距的行中最后一个单词末尾之间量。  
   
  ]]></format>
         </remarks>
@@ -4796,7 +4753,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 不能将传递<xref:Microsoft.Office.Tools.Word.Document?displayProperty=fullName>到方法或要求 Word 对象模型中的属性的对象<xref:Microsoft.Office.Interop.Word.Document?displayProperty=fullName>对象。 你可以使用<xref:Microsoft.Office.Tools.Word.Document.InnerObject%2A>属性来访问基础<xref:Microsoft.Office.Interop.Word.Document?displayProperty=fullName>，然后将此对象传递给方法或属性需要<xref:Microsoft.Office.Interop.Word.Document?displayProperty=fullName>。 有关详细信息，请参阅[限制的主机项和主机控件编程](/visualstudio/vsto/programmatic-limitations-of-host-items-and-host-controls.md)。  
+ 不能将传递<xref:Microsoft.Office.Tools.Word.Document?displayProperty=fullName>于方法或属性需要 Word 对象模型中的对象<xref:Microsoft.Office.Interop.Word.Document?displayProperty=fullName>对象。 可以使用<xref:Microsoft.Office.Tools.Word.Document.InnerObject%2A>属性来访问基础<xref:Microsoft.Office.Interop.Word.Document?displayProperty=fullName>，然后将此对象传递到方法或属性需要<xref:Microsoft.Office.Interop.Word.Document?displayProperty=fullName>。 有关更多信息，请参见 [宿主项和宿主控件的编程限制](/visualstudio/vsto/programmatic-limitations-of-host-items-and-host-controls.md)。  
   
  ]]></format>
         </remarks>
@@ -4820,13 +4777,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，用于指示文档是否为主控文档。</summary>
-        <value>
-          如果该文档是主控文档，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果该文档是主控文档，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 主文档包括一个或多个子文档。  
+ 主文档包含一个或多个子文档。  
   
  ]]></format>
         </remarks>
@@ -4850,8 +4806,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，用于指示是否在一个单独的文档窗口中以主控文档的子文档形式打开文档。</summary>
-        <value>
-          如果在一个单独的文档窗口中以主控文档的子文档形式打开文档，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果在一个单独的文档窗口中以主控文档的子文档形式打开文档，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -4918,8 +4873,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，用于指示 Microsoft Office Word 是否自动缩紧文档中的半宽拉丁字符和标点符号。</summary>
-        <value>
-          如果 Microsoft Office Word 自动缩紧文档中的半宽拉丁字符和标点符号，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果 Microsoft Office Word 自动缩紧文档中的半宽拉丁字符和标点符号，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -4964,15 +4918,14 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，用于指示 Microsoft Office Word 是否检测到文档中文本的语言。</summary>
-        <value>
-          如果 Word 检测到文档的语言，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果 Word 检测到文档的语言，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 检查<xref:Microsoft.Office.Interop.Word.Range.LanguageID%2A>的结果的任何以前的语言检测的属性。  
+ 检查<xref:Microsoft.Office.Interop.Word.Range.LanguageID%2A>属性的结果的任何以前的语言检测。  
   
- <xref:Microsoft.Office.Tools.Word.Document.LanguageDetected%2A>属性设置为`true`时<xref:Microsoft.Office.Tools.Word.Document.DetectLanguage%2A>调用方法。 若要重新计算指定的文本的语言，必须首先设置<xref:Microsoft.Office.Tools.Word.Document.LanguageDetected%2A>属性`false`。  
+ <xref:Microsoft.Office.Tools.Word.Document.LanguageDetected%2A>属性设置为`true`时<xref:Microsoft.Office.Tools.Word.Document.DetectLanguage%2A>调用方法。 若要重新评估的指定文本的语言，必须首先设置<xref:Microsoft.Office.Tools.Word.Document.LanguageDetected%2A>属性设置为`false`。  
   
  ]]></format>
         </remarks>
@@ -5062,8 +5015,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示用户是否可以更改正在使用的快速样式集。</summary>
-        <value>
-          如果用户可以更改正在使用的快速样式集，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果用户可以更改正在使用的快速样式集，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -5114,13 +5066,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示用户是否可以更改文档主题。</summary>
-        <value>
-          如果用户可以更改文档主题，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果用户可以更改文档主题，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用<xref:Microsoft.Office.Tools.Word.Document.ApplyDocumentTheme%2A>方法以将 Microsoft Office 主题应用。 使用<xref:Microsoft.Office.Tools.Word.Document.DocumentTheme%2A>要获取应用于文档的 Microsoft Office 主题属性。  
+ 使用<xref:Microsoft.Office.Tools.Word.Document.ApplyDocumentTheme%2A>方法以将 Microsoft Office 主题应用。 使用<xref:Microsoft.Office.Tools.Word.Document.DocumentTheme%2A>属性来获取应用于文档的 Microsoft Office 主题。  
   
  ]]></format>
         </remarks>
@@ -5193,7 +5144,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Interop.Word.MailMerge>对象都不可用，无论指定的文档是否邮件合并主文档。 使用<xref:Microsoft.Office.Interop.Word.MailMerge.State%2A>属性来确定邮件合并操作的当前状态。  
+ <xref:Microsoft.Office.Interop.Word.MailMerge>对象而不考虑指定的文档是否是邮件合并主文档不可用。 使用<xref:Microsoft.Office.Interop.Word.MailMerge.State%2A>属性来确定邮件合并操作的当前状态。  
   
  ]]></format>
         </remarks>
@@ -5283,12 +5234,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要停止邮件合并进程，设置`Cancel`所提供的自变量<xref:System.ComponentModel.CancelEventArgs>到`true`。  
+ 若要停止邮件合并过程，请设置`Cancel`所提供的参数<xref:System.ComponentModel.CancelEventArgs>到`true`。  
   
    
   
 ## Examples  
- 运行任何手动邮件合并之前，下面的代码示例将显示一条消息。 此示例适用于应用程序级外接程序。  
+ 下面的代码示例显示一条消息之前运行任何手动邮件合并。 此示例适用于应用程序级外接程序。  
   
  [!code-csharp[Trin_WordDocument_AppLevelAddIn#112](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordDocument_AppLevelAddIn/CS/ThisAddIn.cs#112)]
  [!code-vb[Trin_WordDocument_AppLevelAddIn#112](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordDocument_AppLevelAddIn/VB/ThisAddIn.vb#112)]  
@@ -5319,12 +5270,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要停止当前记录的邮件合并进程，设置`Cancel`所提供的自变量<xref:System.ComponentModel.CancelEventArgs>到`true`。  
+ 若要停止当前记录的邮件合并过程，请设置`Cancel`所提供的参数<xref:System.ComponentModel.CancelEventArgs>到`true`。  
   
    
   
 ## Examples  
- 合并的第一个记录之前，下面的代码示例将显示一条消息。 此示例适用于应用程序级外接程序。  
+ 下面的代码示例显示一条消息，然后才能合并的第一个记录。 此示例适用于应用程序级外接程序。  
   
  [!code-csharp[Trin_WordDocument_AppLevelAddIn#113](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordDocument_AppLevelAddIn/CS/ThisAddIn.cs#113)]
  [!code-vb[Trin_WordDocument_AppLevelAddIn#113](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordDocument_AppLevelAddIn/VB/ThisAddIn.vb#113)]  
@@ -5355,7 +5306,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 加载邮件合并的数据源时，下面的示例将显示一条消息。 此示例适用于应用程序级外接程序。  
+ 邮件合并的数据源加载时，下面的示例将显示一条消息。 此示例适用于应用程序级外接程序。  
   
  [!code-csharp[Trin_WordDocument_AppLevelAddIn#114](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordDocument_AppLevelAddIn/CS/ThisAddIn.cs#114)]
  [!code-vb[Trin_WordDocument_AppLevelAddIn#114](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordDocument_AppLevelAddIn/VB/ThisAddIn.vb#114)]  
@@ -5391,7 +5342,7 @@
    
   
 ## Examples  
- 在单击自定义的目标按钮时，下面的代码示例将执行合并。 此示例假定你有权访问自定义目标按钮。 此示例适用于应用程序级外接程序。  
+ 单击自定义目标按钮时，下面的代码示例将执行合并。 此示例假定你有权访问自定义目标按钮。 此示例适用于应用程序级外接程序。  
   
  [!code-csharp[Trin_WordDocument_AppLevelAddIn#115](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordDocument_AppLevelAddIn/CS/ThisAddIn.cs#115)]
  [!code-vb[Trin_WordDocument_AppLevelAddIn#115](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordDocument_AppLevelAddIn/VB/ThisAddIn.vb#115)]  
@@ -5422,12 +5373,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 设置<xref:Microsoft.Office.Tools.Word.MailMergeWizardStateChangeEventArgs.Handled%2A>属性所提供的<xref:Microsoft.Office.Tools.Word.MailMergeWizardStateChangeEventArgs>到`false`具有会保留在当前步骤的用户。  
+ 设置<xref:Microsoft.Office.Tools.Word.MailMergeWizardStateChangeEventArgs.Handled%2A>所提供的属性<xref:Microsoft.Office.Tools.Word.MailMergeWizardStateChangeEventArgs>到`false`以使用户保持在当前步骤。  
   
    
   
 ## Examples  
- 下面的代码示例显示了每次时，一条消息在前进到下一个步骤**邮件合并向导**。 此示例适用于应用程序级外接程序。  
+ 下面的代码示例显示一条消息，每次转到下一个步骤中的步骤**邮件合并向导**。 此示例适用于应用程序级外接程序。  
   
  [!code-csharp[Trin_WordDocument_AppLevelAddIn#116](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordDocument_AppLevelAddIn/CS/ThisAddIn.cs#116)]
  [!code-vb[Trin_WordDocument_AppLevelAddIn#116](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordDocument_AppLevelAddIn/VB/ThisAddIn.vb#116)]  
@@ -5507,12 +5458,10 @@
         <param name="FileName">包括合并内容的新文件的名称。</param>
         <param name="MergeTarget">
           <see cref="T:Microsoft.Office.Interop.Word.WdMergeTarget" /> 值之一。</param>
-        <param name="DetectFormatChanges">
-          如果检测文档中的格式更改，则为 <see langword="true" />；否则为 <see langword="false" />。</param>
+        <param name="DetectFormatChanges">如果检测文档中的格式更改，则为 <see langword="true" />；否则为 <see langword="false" />。</param>
         <param name="UseFormattingFrom">
           <see cref="T:Microsoft.Office.Interop.Word.WdUseFormattingFrom" /> 值之一。</param>
-        <param name="AddToRecentFiles">
-          如果添加到最近的文件列表，则为 <see langword="true" />；否则为 <see langword="false" />。</param>
+        <param name="AddToRecentFiles">如果添加到最近的文件列表，则为 <see langword="true" />；否则为 <see langword="false" />。</param>
         <summary>将标有修订标记的更改从一个文档合并到另一个文档。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -5595,7 +5544,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 当从模板创建新的文档时，仅将引发此事件。  
+ 从模板创建新的文档时，只被引发此事件。  
   
  ]]></format>
         </remarks>
@@ -5669,9 +5618,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 公式时将在一个二元运算符处中断 — 例如，加法、 减法或乘法运算符 — 有三个不同的运算符的放置方式： 换行符之前、 之后、 在换行，并且重复之前和之后中断。  
+ 等式在二元运算符的中断时 — 例如，加法、 减法或乘法运算符 — 有三个不同的运算符的放置方式： 换行符之前、 之后、 在换行，并且重复之前和之后中断。  
   
- 当此属性设置为<xref:Microsoft.Office.Interop.Word.WdOMathBreakBin.wdOMathBreakBinRepeat>，使用<xref:Microsoft.Office.Tools.Word.Document.OMathBreakSub%2A>属性来指定如何 Word 将出现在行中断之前的减法运算符。  
+ 当此属性设置为<xref:Microsoft.Office.Interop.Word.WdOMathBreakBin.wdOMathBreakBinRepeat>，使用<xref:Microsoft.Office.Tools.Word.Document.OMathBreakSub%2A>属性来指定 Word 如何处理出现换行符之前的减法运算符。  
   
  ]]></format>
         </remarks>
@@ -5701,7 +5650,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用此属性仅当<xref:Microsoft.Office.Tools.Word.Document.OMathBreakBin%2A>属性设置为<xref:Microsoft.Office.Interop.Word.WdOMathBreakBin.wdOMathBreakBinRepeat>。 换行符落在减法运算符上和文档设置为重复减法运算符上的以下行，因为两个减号得正时，有时减法接收特殊处理。 某些编写器选择一个减号转换加号，而某些选择保留两个减号。  
+ 使用此属性时，才<xref:Microsoft.Office.Tools.Word.Document.OMathBreakBin%2A>属性设置为<xref:Microsoft.Office.Interop.Word.WdOMathBreakBin.wdOMathBreakBinRepeat>。 减法有时会特殊对待时一个分行符落在减法运算符上，并且文档设置为重复减法运算符上的以下行，因为两个负得正。 某些编写器选择一个减号转换为正号，而某些选择保留两个减号。  
   
  ]]></format>
         </remarks>
@@ -5813,8 +5762,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>获取或设置一个值，该值指定除整型之外的 n 元对象的默认限制位置。</summary>
-        <value>一个布尔值，指定的限制的默认位置* n *-整型之外。</value>
+        <summary>获取或设置一个值，该值指定除整型以外的 n 元对象的默认限制位置。</summary>
+        <value>一个布尔值，指定的限制的默认位置*n*-除整型之外的元对象。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -5880,8 +5829,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示是否在文档中包含的公式中使用小分数。</summary>
-        <value>
-          如果要在文档中包含的公式中使用小分数，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果要在文档中包含的公式中使用小分数，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -5908,7 +5856,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 值-1 指定的等式延续是右对齐。 所有正值都指示左边距中的缩进。  
+ 值为-1 指定公式的继续符是右对齐。 所有正值都指示从左边距缩进。  
   
  ]]></format>
         </remarks>
@@ -5976,13 +5924,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，用于指示 Microsoft Office Word 是否通过禁用任何不兼容的格式来优化要在 Word 97 中查看的文档。</summary>
-        <value>
-          如果 Microsoft Office Word 通过禁用任何不兼容的格式来优化要在 Word 97 中查看的文档，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果 Microsoft Office Word 通过禁用任何不兼容的格式来优化要在 Word 97 中查看的文档，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要优化针对 Word 97 默认情况下的所有新的文档，请使用<xref:Microsoft.Office.Interop.Word.Options.OptimizeForWord97byDefault%2A>属性。  
+ 若要优化的 Word 97 默认情况下的所有新的文档，请使用<xref:Microsoft.Office.Interop.Word.Options.OptimizeForWord97byDefault%2A>属性。  
   
  ]]></format>
         </remarks>
@@ -6011,7 +5958,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要执行精确比较文档的比较操作，使用`CompareDocuments`方法<xref:Microsoft.Office.Tools.Word.Document.Application%2A>属性。  
+ 若要执行显示更改的文档比较操作，请使用`CompareDocuments`方法的<xref:Microsoft.Office.Tools.Word.Document.Application%2A>属性。  
   
  ]]></format>
         </remarks>
@@ -6106,7 +6053,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 避免在你的应用程序中使用硬编码的密码。 如果在过程中需要使用密码，从用户请求密码、 将其存储在变量中，然后在代码中使用该变量。  
+ 避免在您的应用程序中使用硬编码的密码。 如果在过程中需要使用密码，请求用户密码、 将其存储在变量中，然后在代码中使用该变量。  
   
  ]]></format>
         </remarks>
@@ -6135,7 +6082,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用<xref:Microsoft.Office.Tools.Word.Document.SetPasswordEncryptionOptions%2A>方法，以指定用于加密密码与文档使用 Word 的算法。  
+ 使用<xref:Microsoft.Office.Tools.Word.Document.SetPasswordEncryptionOptions%2A>方法，以指定 Word 在用密码对文档加密的算法。  
   
  ]]></format>
         </remarks>
@@ -6159,13 +6106,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，用于指示 Microsoft Office Word 是否对受密码保护的文档的文件属性进行加密。</summary>
-        <value>
-          如果 Microsoft Office Word 对受密码保护的文档的文件属性进行加密，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果 Microsoft Office Word 对受密码保护的文档的文件属性进行加密，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用<xref:Microsoft.Office.Tools.Word.Document.SetPasswordEncryptionOptions%2A>方法，以指定 Word 是否对文件属性受密码保护的文档进行加密。  
+ 使用<xref:Microsoft.Office.Tools.Word.Document.SetPasswordEncryptionOptions%2A>方法，以指定 Word 是否对受密码保护的文档的文件属性进行加密。  
   
  ]]></format>
         </remarks>
@@ -6194,7 +6140,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用<xref:Microsoft.Office.Tools.Word.Document.SetPasswordEncryptionOptions%2A>用密码对文档方法，以指定 Word 加密时使用的密钥长度。  
+ 使用<xref:Microsoft.Office.Tools.Word.Document.SetPasswordEncryptionOptions%2A>用密码对文档方法，以指定 Word 在加密时使用的密钥长度。  
   
  ]]></format>
         </remarks>
@@ -6223,7 +6169,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用<xref:Microsoft.Office.Tools.Word.Document.SetPasswordEncryptionOptions%2A>方法，以指定 Word 用密码对文档加密时使用的算法加密提供程序的名称。  
+ 使用<xref:Microsoft.Office.Tools.Word.Document.SetPasswordEncryptionOptions%2A>方法，以指定 Word 在用密码对文档加密时使用的算法加密提供程序的名称。  
   
  ]]></format>
         </remarks>
@@ -6252,10 +6198,10 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 路径不包括尾随字符-例如，"C:\MSOffice"或"http://MyServer"。 使用<xref:Microsoft.Office.Interop.Word._Application.PathSeparator%2A>属性来添加分隔文件夹和驱动器号的字符。 使用<xref:Microsoft.Office.Tools.Word.Document.Name%2A>属性以返回无的路径和使用的文件名<xref:Microsoft.Office.Tools.Word.Document.FullName%2A>属性一起返回的文件名和路径。  
+ 路径不包括尾随字符 — 例如，"C:\MSOffice"或"http://MyServer"。 使用<xref:Microsoft.Office.Interop.Word._Application.PathSeparator%2A>属性来添加字符来分隔文件夹和驱动器号。 使用<xref:Microsoft.Office.Tools.Word.Document.Name%2A>属性返回不带路径和使用的文件名称<xref:Microsoft.Office.Tools.Word.Document.FullName%2A>属性一起返回的文件的名称和路径。  
   
 > [!NOTE]
->  你可以使用<xref:Microsoft.Office.Interop.Word._Application.PathSeparator%2A>属性来生成 Web 地址，即使它们包含正斜杠 （/） 和<xref:Microsoft.Office.Interop.Word._Application.PathSeparator%2A>属性默认为反斜杠 (\\)。  
+>  可以使用<xref:Microsoft.Office.Interop.Word._Application.PathSeparator%2A>属性来构建 Web 地址，即使它们包含正斜杠 （/） 和<xref:Microsoft.Office.Interop.Word._Application.PathSeparator%2A>属性默认为反斜杠 (\\)。  
   
  ]]></format>
         </remarks>
@@ -6345,8 +6291,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，用于指示 Microsoft Office Word 是否仅将在相应的联机窗体中输入的数据打印到预打印的窗体上。</summary>
-        <value>
-          如果 Microsoft Office Word 仅将在相应的联机窗体中输入的数据打印到预打印的窗体上，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果 Microsoft Office Word 仅将在相应的联机窗体中输入的数据打印到预打印的窗体上，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -6368,8 +6313,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示文档的格式是否被设置为使用小数点间距来显示和打印字符。</summary>
-        <value>
-          如果文档的格式被设置为使用小数点间距来显示和打印字符，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果文档的格式被设置为使用小数点间距来显示和打印字符，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -6410,10 +6354,8 @@
         <Parameter Name="PrintZoomPaperHeight" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Background">
-          如果为 <see langword="true" />，则可以让自定义代码在 Microsoft Office Word 打印文档时继续工作。</param>
-        <param name="Append">
-          如果为 <see langword="true" />，则会将文档追加到 <c>OutputFileName</c> 参数指定的文件；如果为 <see langword="false" />，则会覆盖 <c>OutputFileName</c> 的内容。</param>
+        <param name="Background">如果为 <see langword="true" />，则可以让自定义代码在 Microsoft Office Word 打印文档时继续工作。</param>
+        <param name="Append">如果为 <see langword="true" />，则会将文档追加到 <c>OutputFileName</c> 参数指定的文件；如果为 <see langword="false" />，则会覆盖 <c>OutputFileName</c> 的内容。</param>
         <param name="Range">页面范围。 可以是任何 <see cref="T:Microsoft.Office.Interop.Word.WdPrintOutRange" /> 值。</param>
         <param name="OutputFileName">如果 <c>PrintToFile</c> 为 <see langword="true" />，则此参数指定输出文件的路径和文件名。</param>
         <param name="From">当 <c>Range</c> 设置为 <see cref="F:Microsoft.Office.Interop.Word.WdPrintOutRange.wdPrintFromTo" /> 时的起始页码。</param>
@@ -6422,12 +6364,10 @@
         <param name="Copies">要打印的份数。</param>
         <param name="Pages">要打印的页码和页码范围，由逗号分隔。 例如，“2, 6-10”将打印第 2 页以及从第 6 页到第 10 页之间的内容。</param>
         <param name="PageType">要打印的页面的类型。 可以是任何 <see cref="T:Microsoft.Office.Interop.Word.WdPrintOutPages" /> 值。</param>
-        <param name="PrintToFile">
-          如果为 <see langword="true" />，则将打印机指令发送到文件。 请确保使用 <c>OutputFileName</c> 指定一个文件名。</param>
+        <param name="PrintToFile">如果为 <see langword="true" />，则将打印机指令发送到文件。 请确保使用 <c>OutputFileName</c> 指定一个文件名。</param>
         <param name="Collate">在打印多份文档时，如果为 <see langword="true" />，则先打印该文档的所有页，然后再打印下一份。</param>
         <param name="ActivePrinterMacGX">此参数只在 Microsoft Office Macintosh 版本中可用。 有关此参数的其他信息，请参阅 Microsoft Office Macintosh 版本附带的语言参考帮助。</param>
-        <param name="ManualDuplexPrint">
-          如果为 <see langword="true" />，则在没有双面打印装置的打印机上打印双面文档。 如果此参数为 <see langword="true" />，则忽略 <see cref="P:Microsoft.Office.Interop.Word.Options.PrintBackground" /> 和 <see cref="P:Microsoft.Office.Interop.Word.Options.PrintReverse" /> 属性。 使用 <see cref="P:Microsoft.Office.Interop.Word.Options.PrintOddPagesInAscendingOrder" /> 和 <see cref="P:Microsoft.Office.Interop.Word.Options.PrintEvenPagesInAscendingOrder" /> 属性在手动进行双面打印时控制输出。 此参数可能不能用，这取决于所选或安装的语言支持（例如，英语）。</param>
+        <param name="ManualDuplexPrint">如果为 <see langword="true" />，则在没有双面打印装置的打印机上打印双面文档。 如果此参数为 <see langword="true" />，则忽略 <see cref="P:Microsoft.Office.Interop.Word.Options.PrintBackground" /> 和 <see cref="P:Microsoft.Office.Interop.Word.Options.PrintReverse" /> 属性。 使用 <see cref="P:Microsoft.Office.Interop.Word.Options.PrintOddPagesInAscendingOrder" /> 和 <see cref="P:Microsoft.Office.Interop.Word.Options.PrintEvenPagesInAscendingOrder" /> 属性在手动进行双面打印时控制输出。 此参数可能不能用，这取决于所选或安装的语言支持（例如，英语）。</param>
         <param name="PrintZoomColumn">希望 Word 在一页上水平布置的页数。 可以是 1、2、3 或 4。 与 <c>PrintZoomRow</c> 参数结合使用，用于在单张纸上打印多页。</param>
         <param name="PrintZoomRow">希望 Word 在一页上垂直布置的页数。 可以是 1、2 或 4。 与 <c>PrintZoomColumn</c> 参数结合使用，用于在单张纸上打印多页。</param>
         <param name="PrintZoomPaperWidth">希望 Word 将打印页缩放到的宽度（以缇表示，20 缇 = 1 磅，72 磅 = 1 英寸）。</param>
@@ -6573,13 +6513,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示在使用 PostScript 打印机时，文档中的 PRINT 字段说明（如 PostScript 命令）是否打印到文本和图形的顶部。</summary>
-        <value>
-          如果在使用 PostScript 打印机时，文档中的 PRINT 字段说明（如 PostScript 命令）将打印到文本和图形的顶部，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果在使用 PostScript 打印机时，文档中的 PRINT 字段说明（如 PostScript 命令）将打印到文本和图形的顶部，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性控制是否在转换后的 Microsoft Office Word Macintosh 文档打印 postscript 代码。 如果文档包含未打印字段，则此属性无效。  
+ 此属性控制是否适用于 Macintosh 文档转换后的 Microsoft Office Word 中进行打印的 postscript 代码。 如果文档包含没有打印字段，则此属性无效。  
   
  ]]></format>
         </remarks>
@@ -6608,7 +6547,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 除了使用此方法，你可以设置<xref:Microsoft.Office.Interop.Word._Application.PrintPreview%2A>属性`true`或`false`可以切换到或打印预览中，从分别。 此外可以更改视图，通过设置<xref:Microsoft.Office.Interop.Word.View.Type%2A>属性<xref:Microsoft.Office.Interop.Word.View>到<xref:Microsoft.Office.Interop.Word.WdViewType.wdPrintPreview>。  
+ 除了使用此方法，还可设置<xref:Microsoft.Office.Interop.Word._Application.PrintPreview%2A>属性设置为`true`或`false`可以切换到或在打印预览中，分别。 此外可以通过设置更改视图<xref:Microsoft.Office.Interop.Word.View.Type%2A>属性<xref:Microsoft.Office.Interop.Word.View>到<xref:Microsoft.Office.Interop.Word.WdViewType.wdPrintPreview>。  
   
  ]]></format>
         </remarks>
@@ -6632,8 +6571,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示修订标记是否随文档一起打印。</summary>
-        <value>
-          如果修订标记随文档一起打印，则为 <see langword="true" />；否则为 <see langword="false" />（修订会打印出来，就好像它们已被接受一样）。</value>
+        <value>如果修订标记随文档一起打印，则为 <see langword="true" />；否则为 <see langword="false" />（修订会打印出来，就好像它们已被接受一样）。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -6662,8 +6600,7 @@
       </Parameters>
       <Docs>
         <param name="Type">指定的文档的保护类型。 <see cref="T:Microsoft.Office.Interop.Word.WdProtectionType" />。</param>
-        <param name="NoReset">
-          如果为 <see langword="false" />，则将窗体字段重置为默认值。 如果为 <see langword="true" />，则在文档处于保护状态时，保留当前窗体字段值。 如果 <c>Type</c> 不为 <see cref="F:Microsoft.Office.Interop.Word.WdProtectionType.wdAllowOnlyFormFields" />，则忽略 <c>NoReset</c> 参数。</param>
+        <param name="NoReset">如果为 <see langword="false" />，则将窗体字段重置为默认值。 如果为 <see langword="true" />，则在文档处于保护状态时，保留当前窗体字段值。 如果 <c>Type</c> 不为 <see cref="F:Microsoft.Office.Interop.Word.WdProtectionType.wdAllowOnlyFormFields" />，则忽略 <c>NoReset</c> 参数。</param>
         <param name="Password">从文档中移除保护时所需的密码。 （请参见下面的备注。）</param>
         <param name="UseIRM">指定在防止文档被更改时是否使用信息权限管理 (IRM)。</param>
         <param name="EnforceStyleLock">指定是否在受保护文档中强制格式设置限制。</param>
@@ -6672,9 +6609,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果保护文档，则用户可以进行有限的更改，如添加批注、 进行修订，或者完成窗体。 如果已受保护文档，在使用此方法时，将引发异常。  
+ 保护文档，则用户可以进行有限的更改，例如添加注释、 修订版本，或者完成一个窗体。 如果已受保护文档，使用此方法时，将引发异常。  
   
- 避免在你的应用程序中使用硬编码的密码。 如果在过程中需要使用密码，从用户请求密码、 将其存储在变量中，然后在代码中使用该变量。  
+ 避免在您的应用程序中使用硬编码的密码。 如果在过程中需要使用密码，请求用户密码、 将其存储在变量中，然后在代码中使用该变量。  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -6816,7 +6753,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 设置后<xref:Microsoft.Office.Tools.Word.Document.ReadingLayoutSizeX%2A>和<xref:Microsoft.Office.Tools.Word.Document.ReadingLayoutSizeY%2A>属性，使用<xref:Microsoft.Office.Tools.Word.Document.ReadingModeLayoutFrozen%2A>属性显示页面使用的指定的高度和宽度。 使用<xref:Microsoft.Office.Interop.Word.View.ReadingLayout%2A>阅读版式视图中显示文档的属性。  
+ 设置后<xref:Microsoft.Office.Tools.Word.Document.ReadingLayoutSizeX%2A>并<xref:Microsoft.Office.Tools.Word.Document.ReadingLayoutSizeY%2A>属性，使用<xref:Microsoft.Office.Tools.Word.Document.ReadingModeLayoutFrozen%2A>属性来显示使用指定的高度和宽度的页面。 使用<xref:Microsoft.Office.Interop.Word.View.ReadingLayout%2A>阅读版式视图中显示文档的属性。  
   
  ]]></format>
         </remarks>
@@ -6845,7 +6782,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 设置后<xref:Microsoft.Office.Tools.Word.Document.ReadingLayoutSizeX%2A>和<xref:Microsoft.Office.Tools.Word.Document.ReadingLayoutSizeY%2A>属性，使用<xref:Microsoft.Office.Tools.Word.Document.ReadingModeLayoutFrozen%2A>属性显示页面使用的指定的高度和宽度。 使用<xref:Microsoft.Office.Interop.Word.View.ReadingLayout%2A>阅读版式视图中显示文档的属性。  
+ 设置后<xref:Microsoft.Office.Tools.Word.Document.ReadingLayoutSizeX%2A>并<xref:Microsoft.Office.Tools.Word.Document.ReadingLayoutSizeY%2A>属性，使用<xref:Microsoft.Office.Tools.Word.Document.ReadingModeLayoutFrozen%2A>属性来显示使用指定的高度和宽度的页面。 使用<xref:Microsoft.Office.Interop.Word.View.ReadingLayout%2A>阅读版式视图中显示文档的属性。  
   
  ]]></format>
         </remarks>
@@ -6869,13 +6806,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，用于指示在阅读版式视图中显示的页面是否被冻结到指定的大小以便向文档中插入手写标记。</summary>
-        <value>
-          如果在阅读版式视图中显示的页面被冻结，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果在阅读版式视图中显示的页面被冻结，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用<xref:Microsoft.Office.Tools.Word.Document.ReadingLayoutSizeX%2A>和<xref:Microsoft.Office.Tools.Word.Document.ReadingLayoutSizeY%2A>属性以指定的页大小显示当正在读取的布局大小被冻结以将手写的标记插入到文档。  
+ 使用<xref:Microsoft.Office.Tools.Word.Document.ReadingLayoutSizeX%2A>和<xref:Microsoft.Office.Tools.Word.Document.ReadingLayoutSizeY%2A>属性以指定的页的大小后显示读取操作的布局大小被冻结以向文档中插入手写的标记。  
   
  ]]></format>
         </remarks>
@@ -6899,8 +6835,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，用于指示对文档进行的更改是否不能保存到原始文档中。</summary>
-        <value>
-          如果对文档进行的更改不能保存到原始文档中，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果对文档进行的更改不能保存到原始文档中，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -6922,8 +6857,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，用于指示在用户打开文档时 Microsoft Office Word 是否显示一条消息，指出文档只能以只读方式打开。</summary>
-        <value>
-          如果在用户打开文档时 Word 显示一个消息框，指出文档只能以只读方式打开，则为 <see langword="true" />，否则为 <see langword="false" />。</value>
+        <value>如果在用户打开文档时 Word 显示一个消息框，指出文档只能以只读方式打开，则为 <see langword="true" />，否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -6971,8 +6905,7 @@
       <Docs>
         <param name="Times">要重复的操作的数目。</param>
         <summary>执行已撤消的上一个操作（与 <see cref="M:Microsoft.Office.Tools.Word.Document.Undo(System.Object@)" /> 方法相反）。</summary>
-        <returns>
-          如果操作已成功重复，则为 <see langword="true" />。</returns>
+        <returns>如果操作已成功重复，则为 <see langword="true" />。</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -7052,7 +6985,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法以异步方式重新加载文档。 语句以下<xref:Microsoft.Office.Tools.Word.Document.Reload%2A>文档实际重新加载之前可能执行了在过程中的方法。 因此，你可能从使用此方法获取意外的结果。  
+ 此方法以异步方式重新加载文档。 语句之后<xref:Microsoft.Office.Tools.Word.Document.Reload%2A>方法过程中的可能会执行文档实际重新加载之前。 因此，可能会因使用此方法收到意外的结果。  
   
  ]]></format>
         </remarks>
@@ -7107,13 +7040,13 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法可以通过执行以下任务来删除自定义项：  
+ 此方法通过执行以下任务来删除自定义项：  
   
 -   它将删除`_AssemblyName`和`_AssemblyLocation`从文档的自定义属性。 有关详细信息，请参阅[自定义文档属性概述](/visualstudio/vsto/custom-document-properties-overview.md)。  
   
 -   它从文档中删除缓存的数据。 有关缓存数据的详细信息，请参阅[缓存数据](/visualstudio/vsto/caching-data.md)。  
   
- 此方法可能引发<xref:System.UnauthorizedAccessException>如果受保护文档。 应调用此方法之前从文档中删除任何保护。  
+ 此方法可能会引发<xref:System.UnauthorizedAccessException>如果受保护文档。 调用此方法之前，应删除该文档的任何保护。  
   
  ]]></format>
         </remarks>
@@ -7139,13 +7072,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，用于指示文档是否存储修订的日期和时间元数据。</summary>
-        <value>
-          如果文档从修订中移除日期和时间戳信息，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果文档从修订中移除日期和时间戳信息，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 结合使用<xref:Microsoft.Office.Tools.Word.Document.RemovePersonalInformation%2A>属性，以帮助从文档属性中删除个人信息。  
+ 结合使用<xref:Microsoft.Office.Tools.Word.Document.RemovePersonalInformation%2A>属性来帮助从文档属性中删除个人信息。  
   
  ]]></format>
         </remarks>
@@ -7278,7 +7210,7 @@
       <Docs>
         <summary>获取或设置一个值，用于指示在用户保存文档时，Microsoft Office Word 是否从注释、修订和“属性”对话框中移除所有用户信息。</summary>
         <value>
-          <see langword="true" /> 如果注释，修订，从 Microsoft Office Word 中删除的所有用户信息和**属性**对话框中的文档时保存; 否则为<see langword="false" />。</value>
+          <see langword="true" /> 如果 Microsoft Office Word 从注释、 修订中移除所有用户信息并**属性**对话框中，当文档已保存; 否则为<see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -7412,14 +7344,13 @@
         <Parameter Name="ShowMessage" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="ShowMessage">
-          如果在发送之前显示消息，则为 <see langword="true" />。 如果为 <see langword="false" />，则自动发送消息，而不首先显示消息。 默认值为 <see langword="true" />。</param>
+        <param name="ShowMessage">如果在发送之前显示消息，则为 <see langword="true" />。 如果为 <see langword="false" />，则自动发送消息，而不首先显示消息。 默认值为 <see langword="true" />。</param>
         <summary>将电子邮件发送给已发出进行审阅的文档的作者，向作者通知审阅者已完成对该文档的审阅。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用<xref:Microsoft.Office.Tools.Word.Document.SendForReview%2A>方法以启动文档协作审阅。 如果<xref:Microsoft.Office.Tools.Word.Document.ReplyWithChanges%2A>方法执行不协作审阅循环的一部分的文档，将引发异常。  
+ 使用<xref:Microsoft.Office.Tools.Word.Document.SendForReview%2A>方法来启动文档协作审阅。 如果<xref:Microsoft.Office.Tools.Word.Document.ReplyWithChanges%2A>不是联合审阅周期的一部分的文档上执行方法，引发异常。  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -7473,7 +7404,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用此方法以在文档的字段不处于锁定状态时清除字段。 若要在文档字段处于锁定状态时，请清除字段，请使用<xref:Microsoft.Office.Tools.Word.Document.Protect%2A>方法。  
+ 使用此方法以清除字段时，将不锁定文档的字段。 若要在文档的字段处于锁定状态时，请清除字段，请使用<xref:Microsoft.Office.Tools.Word.Document.Protect%2A>方法。  
   
  ]]></format>
         </remarks>
@@ -7502,7 +7433,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要执行精确比较文档的比较操作，使用`CompareDocuments`方法<xref:Microsoft.Office.Tools.Word.Document.Application%2A>属性。  
+ 若要执行显示更改的文档比较操作，请使用`CompareDocuments`方法的<xref:Microsoft.Office.Tools.Word.Document.Application%2A>属性。  
   
  ]]></format>
         </remarks>
@@ -7623,7 +7554,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果指定的自动宏不存在，不执行任何操作。  
+ 如果指定的自动宏不存在，没有任何反应。  
   
  ]]></format>
         </remarks>
@@ -7652,14 +7583,13 @@
       <Docs>
         <param name="LetterContent">
           <see cref="T:Microsoft.Office.Interop.Word.LetterContent" />。 <see cref="T:Microsoft.Office.Interop.Word.LetterContent" /> 中所有已填充的属性都显示为“英文信函向导”对话框中的已填充元素。 如果省略此参数，则自动使用 <see cref="M:Microsoft.Office.Tools.Word.Document.GetLetterContent" /> 方法从文档获取 <see cref="T:Microsoft.Office.Interop.Word.LetterContent" />。</param>
-        <param name="WizardMode">
-          如果为 <see langword="true" />，则将“英文信函向导”对话框显示为带有“下一步”、“上一步”和“完成”按钮的一系列步骤。 如果为 <see langword="false" />，则按照“英文信函向导”对话框从“工具”菜单中打开的方式来显示该对话框，即显示为一个带有“确定”和“取消”按钮的属性对话框。 默认值为 <see langword="true" />。</param>
+        <param name="WizardMode">如果为 <see langword="true" />，则将“英文信函向导”对话框显示为带有“下一步”、“上一步”和“完成”按钮的一系列步骤。 如果为 <see langword="false" />，则按照“英文信函向导”对话框从“工具”菜单中打开的方式来显示该对话框，即显示为一个带有“确定”和“取消”按钮的属性对话框。 默认值为 <see langword="true" />。</param>
         <summary>在文档中运行“英文信函向导”。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用<xref:Microsoft.Office.Tools.Word.Document.CreateLetterContent%2A>方法以返回<xref:Microsoft.Office.Interop.Word.LetterContent>的各种字母元素属性指定。 使用<xref:Microsoft.Office.Tools.Word.Document.GetLetterContent%2A>方法以返回<xref:Microsoft.Office.Interop.Word.LetterContent>基于文档的内容。 你可以使用生成<xref:Microsoft.Office.Interop.Word.LetterContent>与<xref:Microsoft.Office.Tools.Word.Document.RunLetterWizard%2A>方法以设置的元素**字母向导**对话框。  
+ 使用<xref:Microsoft.Office.Tools.Word.Document.CreateLetterContent%2A>方法以返回<xref:Microsoft.Office.Interop.Word.LetterContent>与指定的各种信函元素属性。 使用<xref:Microsoft.Office.Tools.Word.Document.GetLetterContent%2A>方法以返回<xref:Microsoft.Office.Interop.Word.LetterContent>基于文档的内容。 可以使用生成<xref:Microsoft.Office.Interop.Word.LetterContent>与<xref:Microsoft.Office.Tools.Word.Document.RunLetterWizard%2A>方法设置元素**英文信函向导**对话框。  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -7783,37 +7713,31 @@
       <Docs>
         <param name="FileName">文档的名称。 默认值是当前文件夹名和文件名。 如果文档在以前没有保存过，则使用默认名称（例如，Doc1.doc）。 如果已经存在具有指定文件名的文档，则会在不先提示用户的情况下覆盖文档。</param>
         <param name="FileFormat">文档的保存格式。 可以是任何 <see cref="T:Microsoft.Office.Interop.Word.WdSaveFormat" /> 值。 要以另一种格式保存文档，请为 <see cref="P:Microsoft.Office.Tools.Word.Document.SaveFormat" /> 属性指定适当的值。</param>
-        <param name="LockComments">
-          如果为 <see langword="true" />，则锁定文档以进行注释。 默认值为 <see langword="false" />。</param>
+        <param name="LockComments">如果为 <see langword="true" />，则锁定文档以进行注释。 默认值为 <see langword="false" />。</param>
         <param name="Password">用来打开文档的密码字符串。 （请参见下面的备注。）</param>
-        <param name="AddToRecentFiles">
-          如果为 <see langword="true" />，则将该文档添加到“文件”菜单上最近使用的文件列表中。 默认值为 <see langword="true" />。</param>
+        <param name="AddToRecentFiles">如果为 <see langword="true" />，则将该文档添加到“文件”菜单上最近使用的文件列表中。 默认值为 <see langword="true" />。</param>
         <param name="WritePassword">用来保存对文件所做更改的密码字符串。 （请参见下面的备注。）</param>
-        <param name="ReadOnlyRecommended">
-          如果为 <see langword="true" />，则让 Microsoft Office Word 在打开文档时建议只读状态。 默认值为 <see langword="false" />。</param>
-        <param name="EmbedTrueTypeFonts">
-          如果为 <see langword="true" />，则将 TrueType 字体随文档一起保存。 如果省略，则 <c>EmbedTrueTypeFonts</c> 参数假定 <see cref="P:Microsoft.Office.Tools.Word.Document.EmbedTrueTypeFonts" /> 属性的值。</param>
+        <param name="ReadOnlyRecommended">如果为 <see langword="true" />，则让 Microsoft Office Word 在打开文档时建议只读状态。 默认值为 <see langword="false" />。</param>
+        <param name="EmbedTrueTypeFonts">如果为 <see langword="true" />，则将 TrueType 字体随文档一起保存。 如果省略，则 <c>EmbedTrueTypeFonts</c> 参数假定 <see cref="P:Microsoft.Office.Tools.Word.Document.EmbedTrueTypeFonts" /> 属性的值。</param>
         <param name="SaveNativePictureFormat">如果图形是从另一个平台（例如，Macintosh）导入的，则 <see langword="true" /> 表示仅保存导入图形的 Windows 版本。</param>
-        <param name="SaveFormsData">
-          如果为 <see langword="true" />，则将用户在窗体中输入的数据另存为数据记录。</param>
+        <param name="SaveFormsData">如果为 <see langword="true" />，则将用户在窗体中输入的数据另存为数据记录。</param>
         <param name="SaveAsAOCELetter">如果文档附加了邮件程序，则 <see langword="true" /> 表示会将文档另存为 AOCE 信函（邮件程序会进行保存）。</param>
         <param name="Encoding">
           <see cref="T:Microsoft.Office.Core.MsoEncoding" />。 要用于另存为编码文本文件的文档的代码页或字符集。 默认值是系统代码页。</param>
         <param name="InsertLineBreaks">如果文档另存为文本文件，则 <see langword="true" /> 表示在每行文本末尾插入分行符。</param>
         <param name="AllowSubstitutions">如果文档另存为文本文件，则 <see langword="true" /> 允许 Word 将某些符号替换为外观与之类似的文本。 例如，将版权符号显示为 (c)。 默认值为 <see langword="false" />。</param>
         <param name="LineEnding">Word 在另存为文本文件的文档中标记分行符和换段符。 可以是任何 <see cref="T:Microsoft.Office.Interop.Word.WdLineEndingType" /> 值。</param>
-        <param name="AddBiDiMarks">
-          如果为 <see langword="true" />，则向输出文件添加控制字符，以便保留原始文档中文本的双向布局。</param>
+        <param name="AddBiDiMarks">如果为 <see langword="true" />，则向输出文件添加控制字符，以便保留原始文档中文本的双向布局。</param>
         <param name="CompatibilityMode">一个 <see langword="Microsoft.Office.Interop.Word.WdCompatibilityMode" /> 值，指定在打开文档时 [!INCLUDE[Word_15_short](~/includes/word-15-short-md.md)] 和 [!INCLUDE[Word_14_short](~/includes/word-14-short-md.md)] 使用的兼容性模式。</param>
         <summary>用新名称或新格式保存文档。 此方法的某些参数与“另存为”对话框中的选项相对应。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 避免在你的应用程序中使用硬编码的密码。 如果在过程中需要使用密码，从用户请求密码、 将其存储在变量中，然后在代码中使用该变量。  
+ 避免在您的应用程序中使用硬编码的密码。 如果在过程中需要使用密码，请求用户密码、 将其存储在变量中，然后在代码中使用该变量。  
   
 > [!NOTE]
->  此方法将显示在 IntelliSense Word 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，无法在 Word 2007 项目中使用此属性。  
+>  此方法将出现在 IntelliSense 中在 Word 2007 项目面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Word 2007 项目中使用此属性。  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -7911,8 +7835,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，用于指示文档自上次保存以来是否未进行过更改。</summary>
-        <value>
-          如果文档自上次保存以来未进行过更改，则为 <see langword="true" />；否则为 <see langword="false" />。 （如果为 <see langword="false" />，Microsoft Office Word 将在文档关闭时显示一个保存更改的提示。）</value>
+        <value>如果文档自上次保存以来未进行过更改，则为 <see langword="true" />；否则为 <see langword="false" />。 （如果为 <see langword="false" />，Microsoft Office Word 将在文档关闭时显示一个保存更改的提示。）</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -7962,9 +7885,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 值是唯一的编号，指定外部文件转换器或<xref:Microsoft.Office.Interop.Word.WdSaveFormat>常量。  
+ 值是指定外部文件转换器的唯一编号或<xref:Microsoft.Office.Interop.Word.WdSaveFormat>常量。  
   
- 使用此属性的值`FileFormat`参数<xref:Microsoft.Office.Tools.Word.Document.SaveAs%2A>方法以将文档保存为其存在是不对应的文件格式<xref:Microsoft.Office.Interop.Word.WdSaveFormat>常量。  
+ 使用此属性的值`FileFormat`的参数<xref:Microsoft.Office.Tools.Word.Document.SaveAs%2A>方法可为其没有不对应的文件格式保存文档<xref:Microsoft.Office.Interop.Word.WdSaveFormat>常量。  
   
  ]]></format>
         </remarks>
@@ -7988,8 +7911,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，用于指示 Microsoft Office Word 是否将在窗体中输入的数据保存为 tab 分隔的记录以在数据库中使用。</summary>
-        <value>
-          如果 Microsoft Office Word 将在窗体中输入的数据保存为 tab 分隔的记录以在数据库中使用，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果 Microsoft Office Word 将在窗体中输入的数据保存为 tab 分隔的记录以在数据库中使用，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -8011,13 +7933,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，用于指示 Microsoft Office Word 是否将嵌入的 TrueType 字体的子集随文档一起保存。</summary>
-        <value>
-          如果 Microsoft Office Word 将嵌入的 TrueType 字体的子集随文档一起保存，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果 Microsoft Office Word 将嵌入的 TrueType 字体的子集随文档一起保存，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果在文档中使用的 TrueType 字体少于 32 个字符，Word 将文档中嵌入的子集 （仅使用的字符）。 如果使用了 32 个以上字符，Word 会嵌入整个字体。  
+ 如果在文档中使用 TrueType 字体少于 32 个字符，Word 文档中嵌入的子集 （仅使用的字符）。 如果使用了 32 个以上字符，Word 将嵌入整个字体。  
   
  ]]></format>
         </remarks>
@@ -8115,7 +8036,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用此方法后，使用<xref:Microsoft.Office.Interop.Word._Application.Selection%2A>属性以使用该文档。  
+ 使用此方法后，使用<xref:Microsoft.Office.Interop.Word._Application.Selection%2A>属性随文档一起工作。  
   
  ]]></format>
         </remarks>
@@ -8229,7 +8150,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例显示一条消息，指示所选内容已更改，每当你更改所选内容的文档中。 此示例适用于应用程序级外接程序。  
+ 下面的代码示例显示此消息，指明所选内容已更改，只要您更改的文档中所选内容。 此示例适用于应用程序级外接程序。  
   
  [!code-csharp[Trin_WordDocument_AppLevelAddIn#146](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordDocument_AppLevelAddIn/CS/ThisAddIn.cs#146)]
  [!code-vb[Trin_WordDocument_AppLevelAddIn#146](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordDocument_AppLevelAddIn/VB/ThisAddIn.vb#146)]  
@@ -8288,15 +8209,14 @@
       <Docs>
         <param name="XPath">有效的 XPath 字符串。 关于 XPath 的更多信息，请参见 XPath 参考。</param>
         <param name="PrefixMapping">提供架构中用作搜索依据的前缀。 如果 <c>XPath</c> 参数使用名称搜索元素，请使用 <c>PrefixMapping</c> 参数。</param>
-        <param name="FastSearchSkippingTextNodes">
-          如果为 <see langword="true" />，则在搜索指定的节点时忽略所有文本节点。 如果为 <see langword="false" />，则在搜索中包含文本节点。 默认值是 <see langword="false" />。</param>
+        <param name="FastSearchSkippingTextNodes">如果为 <see langword="true" />，则在搜索指定的节点时忽略所有文本节点。 如果为 <see langword="false" />，则在搜索中包含文本节点。 默认值是 <see langword="false" />。</param>
         <summary>获取一个 <see cref="T:Microsoft.Office.Interop.Word.XMLNodes" /> 集合，该集合表示按照节点在文档中出现的顺序与 <paramref name="XPath" /> 参数匹配的所有节点。</summary>
         <returns>一个 <see cref="T:Microsoft.Office.Interop.Word.XMLNodes" /> 集合，该集合表示按照节点在文档中出现的顺序与 <paramref name="XPath" /> 参数匹配的所有节点；如果未找到与 <paramref name="XPath" /> 参数匹配的节点，则为 <see langword="null" />。</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 设置`FastSearchSkippingTextNodes`参数`true`会降低性能，因为 Microsoft Office Word 搜索对节点中包含的文本文档中的所有节点。  
+ 设置`FastSearchSkippingTextNodes`参数`true`降低性能，因为 Microsoft Office Word 搜索针对该节点中包含的文本文档中的所有节点。  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -8329,15 +8249,14 @@
       <Docs>
         <param name="XPath">有效的 XPath 字符串。 关于 XPath 的更多信息，请参见 XPath 参考。</param>
         <param name="PrefixMapping">提供架构中用作搜索依据的前缀。 如果 <c>XPath</c> 参数使用名称搜索元素，请使用 <c>PrefixMapping</c> 参数。</param>
-        <param name="FastSearchSkippingTextNodes">
-          如果为 <see langword="true" />，则在搜索指定的节点时忽略所有文本节点。 如果为 <see langword="false" />，则在搜索中包含文本节点。 默认值是 <see langword="false" />。</param>
+        <param name="FastSearchSkippingTextNodes">如果为 <see langword="true" />，则在搜索指定的节点时忽略所有文本节点。 如果为 <see langword="false" />，则在搜索中包含文本节点。 默认值是 <see langword="false" />。</param>
         <summary>返回一个 <see cref="T:Microsoft.Office.Interop.Word.XMLNode" /> 对象，该对象表示文档中与 <paramref name="XPath" /> 参数匹配的第一个节点。</summary>
         <returns>一个 <see cref="T:Microsoft.Office.Interop.Word.XMLNode" /> 对象，该对象表示文档中与 <paramref name="XPath" /> 参数匹配的第一个节点；如果未找到与 <paramref name="XPath" /> 参数匹配的节点，则为 <see langword="null" />。</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 设置`FastSearchSkippingTextNodes`参数`true`会降低性能，因为 Microsoft Office Word 搜索对节点中包含的文本文档中的所有节点。  
+ 设置`FastSearchSkippingTextNodes`参数`true`降低性能，因为 Microsoft Office Word 搜索针对该节点中包含的文本文档中的所有节点。  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -8440,20 +8359,19 @@
       <Docs>
         <param name="Recipients">传真接收人员的传真号和电子邮件地址。 用分号分隔多个收件人。</param>
         <param name="Subject">传真文档的主题行。</param>
-        <param name="ShowMessage">
-          如果在发送之前显示传真邮件，则为 <see langword="true" />。 如果为 <see langword="false" />，则发送传真邮件时不显示该邮件。</param>
+        <param name="ShowMessage">如果在发送之前显示传真邮件，则为 <see langword="true" />。 如果为 <see langword="false" />，则发送传真邮件时不显示该邮件。</param>
         <summary>将文档发送给传真服务提供程序，该提供程序会将文档传真给指定的一个或多个收件人。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用此方法需要用户的计算机上启用了传真服务。 如果传真服务未启用，<xref:Microsoft.Office.Tools.Word.Document.SendFaxOverInternet%2A>方法引发异常。  
+ 使用此方法要求用户的计算机上启用了传真服务。 如果传真服务未启用，<xref:Microsoft.Office.Tools.Word.Document.SendFaxOverInternet%2A>方法将引发异常。  
   
  用于指定中的传真号码的格式`Recipients`参数可以是* recipientsfaxnumber@usersfaxprovider *或* recipientsname@recipientsfaxnumber *。 您可以访问用户的传真提供程序信息使用以下注册表路径：  
   
  `HKEY_CURRENT_USER\Software\Microsoft\Office\11.0\Common\Services\Fax`  
   
- 使用`FaxAddress`键值在此注册表位置来确定要使用用户的格式。 如果此注册表项不存在，则传真服务不可用。  
+ 使用`FaxAddress`项在此注册表位置来确定要对用户使用的格式的值。 如果此注册表项不存在，则传真服务不可用。  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -8487,16 +8405,14 @@
       <Docs>
         <param name="Recipients">邮件收件人。 这些收件人可以是电子邮件电话簿中未解析的名称和别名，或完整的电子邮件地址。 用分号 (;) 分隔多个收件人。 如果留为空白，而且 <c>ShowMessage</c> 为 <see langword="false" />，则引发异常，因而不发送消息。</param>
         <param name="Subject">邮件的主题。 如果留为空白，则主题将为：请查看“<c>filename</c>”。</param>
-        <param name="ShowMessage">
-          如果在发送之前显示消息，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="true" />。 如果设置为 <see langword="false" />，则邮件会自动发送给收件人，而不首先向发件人显示邮件。</param>
-        <param name="IncludeAttachment">
-          如果为 <see langword="true" />，则将文档包括为附件；如果为 <see langword="false" />，则发送指向服务器位置上的文档的链接。 如果设置为 <see langword="false" />，则必须将文档存储在共享位置。</param>
+        <param name="ShowMessage">如果在发送之前显示消息，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="true" />。 如果设置为 <see langword="false" />，则邮件会自动发送给收件人，而不首先向发件人显示邮件。</param>
+        <param name="IncludeAttachment">如果为 <see langword="true" />，则将文档包括为附件；如果为 <see langword="false" />，则发送指向服务器位置上的文档的链接。 如果设置为 <see langword="false" />，则必须将文档存储在共享位置。</param>
         <summary>以电子邮件形式发送文档，以便供指定的收件人审阅。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法会启动协作审阅周期。 使用<xref:Microsoft.Office.Tools.Word.Document.EndReview%2A>方法来结束审阅循环。  
+ 此方法启动协作审核周期。 使用<xref:Microsoft.Office.Tools.Word.Document.EndReview%2A>方法来结束审核周期。  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -8528,7 +8444,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用<xref:Microsoft.Office.Interop.Word.Options.SendMailAttach%2A>属性控制是否将为电子邮件窗口中的文本或作为附件发送文档。  
+ 使用<xref:Microsoft.Office.Interop.Word.Options.SendMailAttach%2A>属性控制是否将在消息窗口中以文本或以附件形式发送文档。  
   
  ]]></format>
         </remarks>
@@ -8634,7 +8550,7 @@
  在 [!INCLUDE[Word_15_short](~/includes/word-15-short-md.md)] 或 [!INCLUDE[Word_14_short](~/includes/word-14-short-md.md)] 中打开使用早期版本的 Word 创建的文档时，兼容性模式将打开。 兼容性模式可确保在处理文档时，[!INCLUDE[Word_15_short](~/includes/word-15-short-md.md)] 和 [!INCLUDE[Word_14_short](~/includes/word-14-short-md.md)] 中没有新增或增强功能可用，以便使用早期版本的 Word 编辑文档的用户获得完全编辑功能。  
   
 > [!NOTE]
->  此方法将显示在 IntelliSense Word 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，无法在 Word 2007 项目中使用此属性。  
+>  此方法将出现在 IntelliSense 中在 Word 2007 项目面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Word 2007 项目中使用此属性。  
   
  ]]></format>
         </remarks>
@@ -8663,8 +8579,7 @@
       </Parameters>
       <Docs>
         <param name="Style">样式的名称。</param>
-        <param name="SetInTemplate">
-          如果为 <see langword="true" />，则在附加到文档的模板中保存表样式。</param>
+        <param name="SetInTemplate">如果为 <see langword="true" />，则在附加到文档的模板中保存表样式。</param>
         <summary>指定要用于文档中新创建的表的表样式。</summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -8695,7 +8610,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法类似于是<xref:Microsoft.Office.Tools.Word.Document.RunLetterWizard%2A>方法，但它不会显示**字母向导**对话框。 该方法添加、 删除信函元素或改变基于内容的文档中<xref:Microsoft.Office.Interop.Word.LetterContent>对象。  
+ 此方法是类似于<xref:Microsoft.Office.Tools.Word.Document.RunLetterWizard%2A>方法，但它不会显示**英文信函向导**对话框。 该方法将添加、 删除、 信函元素或改变基于内容的文档中<xref:Microsoft.Office.Interop.Word.LetterContent>对象。  
   
  ]]></format>
         </remarks>
@@ -8727,8 +8642,7 @@
         <param name="PasswordEncryptionProvider">加密提供程序的名称。</param>
         <param name="PasswordEncryptionAlgorithm">加密算法的名称。 Word 支持流加密算法。</param>
         <param name="PasswordEncryptionKeyLength">加密密钥的长度。 必须是 8 的倍数，从 40 开始。</param>
-        <param name="PasswordEncryptionFileProperties">
-          如果为 <see langword="true" />，Word 将加密文件属性。 默认值为 <see langword="true" />。</param>
+        <param name="PasswordEncryptionFileProperties">如果为 <see langword="true" />，Word 将加密文件属性。 默认值为 <see langword="true" />。</param>
         <summary>设置 Microsoft Office Word 在用密码对文档加密时使用的选项。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -8765,7 +8679,7 @@
 ## Remarks  
  此集合可以包含绘图、 形状、 图片、 OLE 对象、 ActiveX 控件、 文本对象和标注。  
   
- <xref:Microsoft.Office.Tools.Word.Document.Shapes%2A>属性，当应用于一个文档，返回所有<xref:Microsoft.Office.Interop.Word.Shape>文档，不包括页眉和页脚的正文中的对象。 当应用于<xref:Microsoft.Office.Interop.Word.HeaderFooter>对象，<xref:Microsoft.Office.Tools.Word.Document.Shapes%2A>属性返回所有<xref:Microsoft.Office.Interop.Word.Shape>所有标头和文档的页脚中找到对象。  
+ <xref:Microsoft.Office.Tools.Word.Document.Shapes%2A>属性，当应用于文档，将返回所有<xref:Microsoft.Office.Interop.Word.Shape>主要内容的文档，不包括页眉和页脚中的对象。 当应用于<xref:Microsoft.Office.Interop.Word.HeaderFooter>对象，<xref:Microsoft.Office.Tools.Word.Document.Shapes%2A>属性将返回所有<xref:Microsoft.Office.Interop.Word.Shape>中所有标头和表尾在文档中的找到的对象。  
   
  ]]></format>
         </remarks>
@@ -8811,13 +8725,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，用于指示是否在文档中用绿色波浪线标记语法错误。</summary>
-        <value>
-          如果在文档中用绿色波浪线标记语法错误，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果在文档中用绿色波浪线标记语法错误，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要查看你的文档中的语法错误，必须设置<xref:Microsoft.Office.Interop.Word.Options.CheckGrammarAsYouType%2A>属性`true`。  
+ 若要在文档中查看语法错误，必须设置<xref:Microsoft.Office.Interop.Word.Options.CheckGrammarAsYouType%2A>属性设置为`true`。  
   
  ]]></format>
         </remarks>
@@ -8841,8 +8754,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，用于指示是否在屏幕上显示文档中的修订。</summary>
-        <value>
-          如果在屏幕上显示文档中的修订，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果在屏幕上显示文档中的修订，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -8864,13 +8776,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，用于指示 Microsoft Office Word 是否用下划线标出文档中的拼写错误。</summary>
-        <value>
-          如果 Microsoft Office Word 用下划线标出文档中的拼写错误，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果 Microsoft Office Word 用下划线标出文档中的拼写错误，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要查看在文档中的拼写错误，必须设置<xref:Microsoft.Office.Interop.Word.Options.CheckSpellingAsYouType%2A>属性`true`。  
+ 若要查看在文档中的拼写错误，必须设置<xref:Microsoft.Office.Interop.Word.Options.CheckSpellingAsYouType%2A>属性设置为`true`。  
   
  ]]></format>
         </remarks>
@@ -8920,11 +8831,11 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 这是要在中调用的最后一个事件<xref:Microsoft.Office.Tools.Word.Document>万不得已。 此事件用于任何其他清理过程。  
+ 这是要在中调用的最后一个事件<xref:Microsoft.Office.Tools.Word.Document>当其卸载。 使用此事件的任何其他清理过程。  
   
- 文档级自定义项，文档主机项关闭时，将卸载程序集的应用程序域。  
+ 文档级自定义项，该程序集的应用程序域卸载时文档宿主项关闭。  
   
- 在应用程序级外接程序，文档主机项关闭时，不会不卸载应用程序域。 此外，基础文档对象将不再可用。 若要关闭使用之前访问文档<xref:Microsoft.Office.Tools.Word.Document.CloseEvent>相反。  
+ 在应用程序级外接程序，应用程序域不会卸载的文档宿主项关闭时。 此外，基础文档对象将不再可用。 若要关闭使用之前访问文档<xref:Microsoft.Office.Tools.Word.Document.CloseEvent>相反。  
   
  ]]></format>
         </remarks>
@@ -8953,7 +8864,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要进行数字签名 Microsoft Office Word 文档和验证其他中它们的签名，你需要 Microsoft CryptoAPI 和唯一的数字签名证书。 CryptoAPI 是使用 Microsoft Internet 资源管理器 4.01 安装和更高版本。 你可以从证书颁发机构获取数字签名证书。  
+ 若要进行数字签名 Microsoft Office Word 文档和验证其他中它们的签名，需要 Microsoft CryptoAPI 和唯一的数字签名证书。 CryptoAPI 是安装了 Microsoft Internet Explorer 4.01 和更高版本。 您可以从证书颁发机构获取数字签名证书。  
   
  ]]></format>
         </remarks>
@@ -9051,13 +8962,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，用于指示在对文档中的自选图形或东亚字符进行绘制、移动或大小调整时，是否让它们与不可见网格自动对齐。</summary>
-        <value>
-          如果在对文档中的自选图形或东亚字符进行绘制、移动或大小调整时，让它们与不可见网格自动对齐，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果在对文档中的自选图形或东亚字符进行绘制、移动或大小调整时，让它们与不可见网格自动对齐，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 你可以绘制、 移动或重设大小自选，按下 ALT 暂时重写此设置。  
+ 暂时可以通过按住 ALT 的同时绘制、 移动或调整大小自选图形来覆盖此设置。  
   
  ]]></format>
         </remarks>
@@ -9081,13 +8991,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，用于指示 Microsoft Office Word 是否将自选图形或东亚字符自动与通过文档中其他自选图形或东亚字符的垂直和水平边缘的不可见网格线对齐。</summary>
-        <value>
-          如果 Microsoft Office Word 自动对齐自选图形或东亚字符，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果 Microsoft Office Word 自动对齐自选图形或东亚字符，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性为每个自选图形创建其他不可见的网格线。 <xref:Microsoft.Office.Tools.Word.Document.SnapToShapes%2A> 独立于适用<xref:Microsoft.Office.Tools.Word.Document.SnapToGrid%2A>属性。  
+ 此属性为每个自选图形创建额外的不可见网格线。 <xref:Microsoft.Office.Tools.Word.Document.SnapToShapes%2A> 独立于工作<xref:Microsoft.Office.Tools.Word.Document.SnapToGrid%2A>属性。  
   
  ]]></format>
         </remarks>
@@ -9111,15 +9020,14 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，用于指示是否已通查文档中的拼写。</summary>
-        <value>
-          如果已通查文档中的拼写，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果已通查文档中的拼写，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要重新检查文档中的拼写，设置<xref:Microsoft.Office.Tools.Word.Document.SpellingChecked%2A>属性`false`。  
+ 若要重新检查文档中的拼写，设置<xref:Microsoft.Office.Tools.Word.Document.SpellingChecked%2A>属性设置为`false`。  
   
- 若要查看该文档是否包含拼写错误，使用<xref:Microsoft.Office.Tools.Word.Document.SpellingErrors%2A>属性。  
+ 若要查看该文档是否包含拼写错误，请使用<xref:Microsoft.Office.Tools.Word.Document.SpellingErrors%2A>属性。  
   
  ]]></format>
         </remarks>
@@ -9169,7 +9077,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 在文档级项目中，你应使用现有<xref:Microsoft.Office.Tools.Word.Document.Startup>在你的项目，而不是创建一个新的事件处理程序。  
+ 在文档级项目中，应使用现有<xref:Microsoft.Office.Tools.Word.Document.Startup>中你的项目，而不是创建一个新事件处理程序。  
   
  ]]></format>
         </remarks>
@@ -9507,7 +9415,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 你可以使用<xref:Microsoft.Office.Tools.Word.Document.Tag%2A>属性来存储密切与文档相关联的数据。  
+ 可以使用<xref:Microsoft.Office.Tools.Word.Document.Tag%2A>属性来存储紧密地与文档相关联的数据。  
   
  ]]></format>
         </remarks>
@@ -9537,7 +9445,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性设置文本编码单独从 HTML 编码，可以使用设置此<xref:Microsoft.Office.Interop.Word.WebOptions.Encoding%2A>属性<xref:Microsoft.Office.Interop.Word.WebOptions>对象。 你可以获取<xref:Microsoft.Office.Interop.Word.WebOptions>对象<xref:Microsoft.Office.Tools.Word.Document.WebOptions%2A>属性。 若要设置文本编码的所有文档另存为文本文件，请使用<xref:Microsoft.Office.Interop.Word.Options.DefaultTextEncoding%2A>属性。  
+ 此属性设置文本编码单独从 HTML 编码，可以使用设置此<xref:Microsoft.Office.Interop.Word.WebOptions.Encoding%2A>属性的<xref:Microsoft.Office.Interop.Word.WebOptions>对象。 可以获取<xref:Microsoft.Office.Interop.Word.WebOptions>对象从<xref:Microsoft.Office.Tools.Word.Document.WebOptions%2A>属性。 若要设置的所有文档另存为文本文件的文本编码，请使用<xref:Microsoft.Office.Interop.Word.Options.DefaultTextEncoding%2A>属性。  
   
  ]]></format>
         </remarks>
@@ -9606,8 +9514,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示在更改跟踪打开时是否跟踪格式设置更改。</summary>
-        <value>
-          如果在更改跟踪打开时要跟踪格式设置更改，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果在更改跟踪打开时要跟踪格式设置更改，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -9629,13 +9536,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示在更改跟踪打开时是否标记移动的文本。</summary>
-        <value>
-          如果在更改跟踪打开时要标记移动的文本，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果在更改跟踪打开时要标记移动的文本，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 默认情况下，启用更改跟踪后，移动的文本标记为已删除和插入。 当<xref:Microsoft.Office.Tools.Word.Document.TrackMoves%2A>属性是`true`、 移动的文本标记为已移动，并且在原始位置的文本是带有删除线格式。 此属性对应于**跟踪移动**中的复选框**跟踪更改选项**对话框。  
+ 默认情况下打开更改跟踪时移动的文本标记为已删除和插入。 当<xref:Microsoft.Office.Tools.Word.Document.TrackMoves%2A>属性是`true`、 移动的文本标记为已移动，而原始位置中的文本标记带有删除线格式。 此属性对应于**跟踪移动**中的复选框**跟踪更改选项**对话框。  
   
  ]]></format>
         </remarks>
@@ -9659,8 +9565,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，用于指示是否跟踪文档中的更改。</summary>
-        <value>
-          如果跟踪文档中的更改，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果跟踪文档中的更改，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -9686,8 +9591,7 @@
       </Parameters>
       <Docs>
         <param name="Path">XSLT 文件的路径。</param>
-        <param name="DataOnly">
-          如果为 <see langword="true" />，则仅向文档中的数据（不包括 Microsoft Office Word XML）应用转换。 如果为 <see langword="false" />，则向整个文档（包括 Word XML）应用转换。 默认值是 <see langword="true" />。</param>
+        <param name="DataOnly">如果为 <see langword="true" />，则仅向文档中的数据（不包括 Microsoft Office Word XML）应用转换。 如果为 <see langword="false" />，则向整个文档（包括 Word XML）应用转换。 默认值是 <see langword="true" />。</param>
         <summary>向文档应用指定的可扩展样式表语言转换 (XSLT) 文件，并用结果替换文档。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -9746,8 +9650,7 @@
       <Docs>
         <param name="Times">要撤消的操作的数目。 默认设置是撤消上一个操作。</param>
         <summary>撤消上一个操作或者一系列操作，这些操作显示在“撤消”列表中。 如果操作已成功撤消，则返回 <see langword="true" />。</summary>
-        <returns>
-          如果操作已成功撤消，则为 <see langword="true" />。</returns>
+        <returns>如果操作已成功撤消，则为 <see langword="true" />。</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -9783,7 +9686,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 将此方法包含在你的代码，以防出现在中的 Word 对象模型操作中的方法后**撤消**框。  
+ 将此方法包含在你的代码来跟 Word 对象模型操作出现在方法后面**撤消**框。  
   
  ]]></format>
         </remarks>
@@ -9837,7 +9740,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 避免在你的应用程序中使用硬编码的密码。 如果在过程中需要使用密码，从用户请求密码、 将其存储在变量中，然后在代码中使用该变量。  
+ 避免在您的应用程序中使用硬编码的密码。 如果在过程中需要使用密码，请求用户密码、 将其存储在变量中，然后在代码中使用该变量。  
   
  如果未受保护文档，将引发异常。  
   
@@ -9888,8 +9791,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，用于指示是否更新文档样式，以便在每次打开文档时都与所附加的模板中的样式相匹配。</summary>
-        <value>
-          如果对文档样式进行更新，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果对文档样式进行更新，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -9933,8 +9835,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示是否在创建新公式时使用默认数学设置。</summary>
-        <value>
-          如果要在创建新公式时使用默认数学设置，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果要在创建新公式时使用默认数学设置，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -9957,12 +9858,12 @@
       <Docs>
         <summary>获取或设置一个值，用于指示文档或应用程序是否该用户创建或打开。</summary>
         <value>
-          <see langword="true" /> 如果创建或由用户; 打开文档或应用程序<see langword="false" />如果文档或应用程序创建或从具有的其他 Microsoft Office 应用程序以编程方式打开<see cref="M:Microsoft.Office.Interop.Word.Documents.Open(System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@)" />方法或<c>VBA。Interaction.CreateObject</c>或<c>VBA。Interaction.GetObject</c>方法。</value>
+          <see langword="true" /> 如果文档或应用程序是创建或打开用户;<see langword="false" />如果文档或应用程序是创建或打开以编程方式从另一个 Microsoft Office 应用程序与<see cref="M:Microsoft.Office.Interop.Word.Documents.Open(System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@)" />方法或<c>VBA。Interaction.CreateObject</c>或<c>VBA。Interaction.GetObject</c>方法。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果 Microsoft Office Word 可见给用户，或如果调用`UserControl`词的属性<xref:Microsoft.Office.Interop.Word.Application>或<xref:Microsoft.Office.Tools.Word.Document>对象中的 Word 代码自定义项，此属性将始终返回`true`。  
+ Microsoft Office Word 是否对用户可见，或者如果调用`UserControl`词的属性<xref:Microsoft.Office.Interop.Word.Application>或<xref:Microsoft.Office.Tools.Word.Document>对象中的 Word 代码自定义项，此属性将始终返回`true`。  
   
  ]]></format>
         </remarks>
@@ -10008,8 +9909,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，用于指示文档的 Visual Basic for Applications (VBA) 项目是否已经过数字签名。</summary>
-        <value>
-          如果文档的 Visual Basic for Applications (VBA) 项目已经过数字签名，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果文档的 Visual Basic for Applications (VBA) 项目已经过数字签名，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -10037,7 +9937,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用此属性来访问代码模块和用户窗体。  
+ 此属性用于获取代码模块和用户窗体的访问权限。  
   
  ]]></format>
         </remarks>
@@ -10088,7 +9988,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法是仅可从 Microsoft Office Word 之外。  
+ 此方法是仅从 Microsoft Office Word 外可用。  
   
  ]]></format>
         </remarks>
@@ -10117,7 +10017,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法是仅可从 Microsoft Office Word 之外。  
+ 此方法是仅从 Microsoft Office Word 外可用。  
   
  ]]></format>
         </remarks>
@@ -10233,7 +10133,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例创建的处理程序<xref:Microsoft.Office.Tools.Word.Document.WindowSize>事件。 事件处理程序的窗口标题中显示的已调整窗口大小时的次数。 此示例适用于应用程序级外接程序。  
+ 下面的代码示例创建一个处理程序<xref:Microsoft.Office.Tools.Word.Document.WindowSize>事件。 事件处理程序显示在窗口标题中的调整窗口大小的次数。 此示例适用于应用程序级外接程序。  
   
  [!code-csharp[Trin_WordDocument_AppLevelAddIn#197](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordDocument_AppLevelAddIn/CS/ThisAddIn.cs#197)]
  [!code-vb[Trin_WordDocument_AppLevelAddIn#197](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordDocument_AppLevelAddIn/VB/ThisAddIn.vb#197)]  
@@ -10287,7 +10187,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 在文档中的标点和段落标记都将纳入<xref:Microsoft.Office.Interop.Word.Words?displayProperty=fullName>集合。  
+ 在文档中的标点符号和段落标记也包括在<xref:Microsoft.Office.Interop.Word.Words?displayProperty=fullName>集合。  
   
  ]]></format>
         </remarks>
@@ -10316,7 +10216,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 避免在你的应用程序中使用硬编码的密码。 如果在过程中需要使用密码，从用户请求密码、 将其存储在变量中，然后在代码中使用该变量。  
+ 避免在您的应用程序中使用硬编码的密码。 如果在过程中需要使用密码，请求用户密码、 将其存储在变量中，然后在代码中使用该变量。  
   
  ]]></format>
         </remarks>
@@ -10340,8 +10240,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，用于指示文档是否用写密码保护。</summary>
-        <value>
-          如果文档用写密码保护，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果文档用写密码保护，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -10405,13 +10304,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，用于指示是否在“XML 结构”任务窗格中的元素列表中隐藏 XML 命名空间。</summary>
-        <value>
-          如果元素的 XML 架构命名空间未显示在元素名的右侧，则为 <see langword="true" />；如果显示 XML 架构命名空间，则为 <see langword="false" />。</value>
+        <value>如果元素的 XML 架构命名空间未显示在元素名的右侧，则为 <see langword="true" />；如果显示 XML 架构命名空间，则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性设置为`false`时包含类似或相同的元素名称的多个架构附加到同一文档可能很有帮助。  
+ 此属性设置为`false`包含类似或相同的元素名称的多个架构附加到同一文档时可能会有所帮助。  
   
  ]]></format>
         </remarks>
@@ -10457,8 +10355,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，用于指示 Microsoft Office Word 是仅保存 XML 数据还是保存整个文档。</summary>
-        <value>
-          如果在将文档另存为 XML 时 Word 应当仅保存 XML 数据，则为 <see langword="true" />；如果应当保存整个文档，则为 <see langword="false" />。</value>
+        <value>如果在将文档另存为 XML 时 Word 应当仅保存 XML 数据，则为 <see langword="true" />；如果应当保存整个文档，则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -10553,15 +10450,14 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，用于指示错误消息文本是从内置的 Microsoft Office Word 错误消息生成，还是从包含在 Office 中的 Microsoft XML Core Services (MSXML) 5.0 组件生成。</summary>
-        <value>
-          如果错误信息文本是从 MSXML 5.0 组件生成的，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果错误信息文本是从 MSXML 5.0 组件生成的，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用从 MSXML 5.0 组件的高级的错误消息提供更具体的错误消息。 有大约 500 错误消息都可以访问 XML Core Services 通过提供<xref:Microsoft.Office.Tools.Word.Document.XMLShowAdvancedErrors%2A>属性是`true`。  
+ 使用从 MSXML 5.0 组件的高级的错误消息提供了更具体的错误消息。 有大约 500 错误消息都可以访问 XML 核心服务通过提供<xref:Microsoft.Office.Tools.Word.Document.XMLShowAdvancedErrors%2A>属性是`true`。  
   
- Word 有大约 50 个内置的常规架构错误。 当<xref:Microsoft.Office.Tools.Word.Document.XMLShowAdvancedErrors%2A>属性是`false`，Word 将内置的错误消息用于在 XML 文档中生成的错误。  
+ Word 有大约 50 个内置的通用架构错误。 当<xref:Microsoft.Office.Tools.Word.Document.XMLShowAdvancedErrors%2A>属性是`false`，Word 使用内置的错误消息的 XML 文档中生成的错误。  
   
  ]]></format>
         </remarks>
@@ -10585,13 +10481,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，用于指示是否通过可扩展样式表语言转换 (XSLT) 来保存文档。</summary>
-        <value>
-          如果文档是通过 XSLT 保存的，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果文档是通过 XSLT 保存的，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 设置时<xref:Microsoft.Office.Tools.Word.Document.XMLUseXSLTWhenSaving%2A>属性`true`，使用<xref:Microsoft.Office.Tools.Word.Document.XMLSaveThroughXSLT%2A>属性来指定要使用的 XSLT 路径和文件名。  
+ 设置时<xref:Microsoft.Office.Tools.Word.Document.XMLUseXSLTWhenSaving%2A>属性设置为`true`，使用<xref:Microsoft.Office.Tools.Word.Document.XMLSaveThroughXSLT%2A>属性来指定要使用的 XSLT 路径和文件名。  
   
  ]]></format>
         </remarks>
