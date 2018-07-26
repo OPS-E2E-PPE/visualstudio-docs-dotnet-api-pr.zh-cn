@@ -1,10 +1,10 @@
 <Type Name="XmlMappedRange" FullName="Microsoft.Office.Tools.Excel.XmlMappedRange">
   <Metadata>
     <Meta Name="ms.openlocfilehash" Value="b8fd8a9fa0be9726188de7b282ca386156a057f6" />
-    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.sourcegitcommit" Value="d85a83935f1d68ded616fcdfb8fd10d6bf4a4633" />
     <Meta Name="ms.translationtype" Value="HT" />
     <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+    <Meta Name="ms.lasthandoff" Value="07/24/2018" />
     <Meta Name="ms.locfileid" Value="29436442" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface XmlMappedRange : IDisposable, System.ComponentModel.IComponent, System.ComponentModel.ISupportInitialize, System.Windows.Forms.IBindableComponent" />
@@ -42,7 +42,7 @@
 ## Remarks  
  <xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件仅支持绑定到单个数据字段 （简单数据绑定）。  
   
- 非重复架构元素是一个在其中`maxOccurs`属性等于一。  
+ 非重复架构元素是在`maxOccurs`属性等于一。  
   
  [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
   
@@ -145,7 +145,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要选择的一个单元范围，使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Select%2A>方法。  
+ 若要选择单元格的范围，请使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Select%2A>方法。  
   
  ]]></format>
         </remarks>
@@ -181,7 +181,7 @@
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.AddComment%2A>方法添加到注释<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`，然后使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Comment%2A>属性更改注释文本。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.AddComment%2A>方法添加到注释<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`，然后使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Comment%2A>属性更改的注释文本。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#9](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#9)]
  [!code-vb[Trin_ExcelXmlMappedRange#9](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#9)]  
@@ -204,13 +204,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示当 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件中的文本对齐方式设置为水平或垂直平均分布时，文本是否自动缩进。</summary>
-        <value>
-          如果在将 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件中的文本对齐方式设置为在水平或垂直方向均匀分布时文本会自动缩进，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果在将 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件中的文本对齐方式设置为在水平或垂直方向均匀分布时文本会自动缩进，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要设置文本对齐方式为均匀分布，可以设置<xref:Microsoft.Office.Interop.Excel.Range.VerticalAlignment%2A>属性<xref:Microsoft.Office.Interop.Excel.XlVAlign.xlVAlignDistributed>时的值<xref:Microsoft.Office.Interop.Excel.Range.Orientation%2A>属性是<xref:Microsoft.Office.Interop.Excel.XlOrientation.xlVertical>，还可以设置<xref:Microsoft.Office.Interop.Excel.Range.HorizontalAlignment%2A>属性<xref:Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignDistributed>时的值<xref:Microsoft.Office.Interop.Excel.Range.Orientation%2A>属性是<xref:Microsoft.Office.Interop.Excel.XlOrientation.xlHorizontal>。  
+ 若要设置文本对齐方式为均匀分布，可以设置<xref:Microsoft.Office.Interop.Excel.Range.VerticalAlignment%2A>属性设置为<xref:Microsoft.Office.Interop.Excel.XlVAlign.xlVAlignDistributed>时的值<xref:Microsoft.Office.Interop.Excel.Range.Orientation%2A>属性是<xref:Microsoft.Office.Interop.Excel.XlOrientation.xlVertical>，并可以设置<xref:Microsoft.Office.Interop.Excel.Range.HorizontalAlignment%2A>属性设置为<xref:Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignDistributed>时的值<xref:Microsoft.Office.Interop.Excel.Range.Orientation%2A>属性是<xref:Microsoft.Office.Interop.Excel.XlOrientation.xlHorizontal>。  
   
  ]]></format>
         </remarks>
@@ -239,13 +238,13 @@
   
 |参数|描述|  
 |---------------|-----------------|  
-|`RowAbsolute`|`true` 为的绝对引用; 返回行否则为`false`。 默认值为 `true`。|  
-|`ColumnAbsolute`|`true` 若要为的绝对引用; 返回的列否则为`false`。 默认值为 `true`。|  
+|`RowAbsolute`|`true` 若要将行返回以绝对引用;否则为`false`。 默认值为 `true`。|  
+|`ColumnAbsolute`|`true` 若要以绝对引用; 返回列否则为`false`。 默认值为 `true`。|  
 |`ReferenceStyle`|<xref:Microsoft.Office.Interop.Excel.XlReferenceStyle> 值之一。|  
 |`External`|`true` 若要返回的外部引用;`false`返回的本地引用。 默认值为 `false`。|  
-|`RelativeTo`|A <xref:Microsoft.Office.Interop.Excel.Range> ，它定义的起始点。 如果`RowAbsolute`和`ColumnAbsolute`是`false`，和`ReferenceStyle`是<xref:Microsoft.Office.Interop.Excel.XlReferenceStyle.xlR1C1>，必须包含一个起始点，相对的引用。|  
+|`RelativeTo`|一个<xref:Microsoft.Office.Interop.Excel.Range>，它定义的起始点。 如果`RowAbsolute`并`ColumnAbsolute`都`false`，和`ReferenceStyle`是<xref:Microsoft.Office.Interop.Excel.XlReferenceStyle.xlR1C1>，必须包括一个起始点，相对引用。|  
   
- 如果你尝试使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Address%2A>而不指定任何参数，<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Address%2A>将获取<xref:Microsoft.Office.Tools.Excel.XmlMappedRange_AddressType>对象属于的 Office 开发工具在 Visual Studio 基础结构和不应在代码中直接使用。  
+ 如果尝试使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Address%2A>而无需指定任何参数，<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Address%2A>将获取<xref:Microsoft.Office.Tools.Excel.XmlMappedRange_AddressType>对象属于的 Office 开发 Visual Studio 基础结构中的工具，但不可在代码中直接使用。  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -253,7 +252,7 @@
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Address%2A>属性显示的范围位置<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 该示例使用的不同组合`ReferenceStyle`， `RowAbsolute`，`ColumnAbsolute`和`RelativeTo`参数以四种不同格式显示范围位置。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。 如果`CustomerLastNameCell`是单元格 A2，该示例将显示的地址字符串"$A$ 2"，"$A2"、"R2C2"和"R [-1] C [-1]"。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Address%2A>属性来显示的范围位置<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 该示例使用不同的组合`ReferenceStyle`， `RowAbsolute`，`ColumnAbsolute`和`RelativeTo`参数，以在四个不同的格式显示区域位置。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。 如果`CustomerLastNameCell`是单元格 A2，该示例将显示地址字符串"$A$ 2"，"$A2"、"R2C2"和"R [-1] C [-1]"。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#1](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#1)]
  [!code-vb[Trin_ExcelXmlMappedRange#1](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#1)]  
@@ -285,13 +284,13 @@
   
 |参数|描述|  
 |---------------|-----------------|  
-|`RowAbsolute`|`true` 为的绝对引用; 返回行否则为`false`。 默认值为 `true`。|  
-|`ColumnAbsolute`|`true` 若要为的绝对引用; 返回的列否则为`false`。 默认值为 `true`。|  
+|`RowAbsolute`|`true` 若要将行返回以绝对引用;否则为`false`。 默认值为 `true`。|  
+|`ColumnAbsolute`|`true` 若要以绝对引用; 返回列否则为`false`。 默认值为 `true`。|  
 |`ReferenceStyle`|<xref:Microsoft.Office.Interop.Excel.XlReferenceStyle> 值之一。|  
 |`External`|`true` 若要返回的外部引用;`false`返回的本地引用。 默认值为 `false`。|  
-|`RelativeTo`|A <xref:Microsoft.Office.Interop.Excel.Range> ，它定义的起始点。 如果`RowAbsolute`和`ColumnAbsolute`是`false`，和`ReferenceStyle`是<xref:Microsoft.Office.Interop.Excel.XlReferenceStyle.xlR1C1>，必须包含一个起始点，相对的引用。|  
+|`RelativeTo`|一个<xref:Microsoft.Office.Interop.Excel.Range>，它定义的起始点。 如果`RowAbsolute`并`ColumnAbsolute`都`false`，和`ReferenceStyle`是<xref:Microsoft.Office.Interop.Excel.XlReferenceStyle.xlR1C1>，必须包括一个起始点，相对引用。|  
   
- 如果你尝试使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.AddressLocal%2A>而不指定任何参数，<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.AddressLocal%2A>将获取<xref:Microsoft.Office.Tools.Excel.XmlMappedRange_AddressLocalType>对象属于的 Office 开发工具在 Visual Studio 基础结构和不应在代码中直接使用。  
+ 如果尝试使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.AddressLocal%2A>而无需指定任何参数，<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.AddressLocal%2A>将获取<xref:Microsoft.Office.Tools.Excel.XmlMappedRange_AddressLocalType>对象属于的 Office 开发 Visual Studio 基础结构中的工具，但不可在代码中直接使用。  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -299,7 +298,7 @@
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.AddressLocal%2A>属性显示的范围位置<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 该示例使用的不同组合`ReferenceStyle`， `RowAbsolute`，`ColumnAbsolute`和`RelativeTo`参数以四种不同格式显示范围位置。 位置字符串将根据系统运行的语言进行本地化。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。 如果使用德语语言支持的系统上运行该示例和`CustomerLastNameCell`是单元格 A2，该示例将显示的地址字符串"$A$ 2"，"$A2"、"Z2S2"和"Z-[1] S [-1]"。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.AddressLocal%2A>属性来显示的范围位置<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 该示例使用不同的组合`ReferenceStyle`， `RowAbsolute`，`ColumnAbsolute`和`RelativeTo`参数，以在四个不同的格式显示区域位置。 位置字符串将根据系统运行的语言进行本地化。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。 如果使用德语语言支持的系统上运行该示例和`CustomerLastNameCell`是单元格 A2，该示例将显示地址字符串"$A$ 2"，"$A2"、"Z2S2"和"Z [-1] S [-1]"。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#2](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#2)]
  [!code-vb[Trin_ExcelXmlMappedRange#2](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#2)]  
@@ -327,10 +326,10 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.XmlMappedRange.AllocateChanges%2A>方法将执行 UPDATE CUBE 语句，在 XML 中进行的所有更改映射范围，因为最后一个应用的更改操作已提交。 如果范围基于非 OLAP 数据源上执行，则此方法会生成运行时错误。  
+ <xref:Microsoft.Office.Tools.Excel.XmlMappedRange.AllocateChanges%2A>方法将执行的 UPDATE CUBE 语句在 XML 中所做的所有更改映射范围，因为最后一个应用的更改操作已提交。 如果在执行基于非 OLAP 数据源的范围，此方法会生成运行时错误。  
   
 > [!NOTE]
->  此方法将显示在 IntelliSense Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Excel 2007 项目中使用此方法。  
+>  此方法将出现在 IntelliSense 中在 Excel 2007 项目面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，此方法不能使用 Excel 2007 项目中。  
   
  ]]></format>
         </remarks>
@@ -351,8 +350,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，该值指示是否可以在受保护的工作表上编辑 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件。</summary>
-        <value>
-          如果可以在受保护的工作表上编辑 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果可以在受保护的工作表上编辑 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -407,14 +405,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果没有自动完成匹配项，或者在列表中的多个条目与匹配要完成的字符串，此方法将返回空字符串。  
+ 如果没有记忆式键入功能的匹配项或多个列表中的条目匹配字符串来完成，此方法将返回空字符串。  
   
- 此方法适用即使记忆式键入功能被禁用。  
+ 此方法有效，即使禁用了自动完成功能。  
   
    
   
 ## Examples  
- 下面的代码示例 B1，单元格中输入字符串"Smith"，然后使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.AutoComplete%2A>方法来查找字符串"Smi"的自动完成匹配项。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。 如果将找到记忆式键入匹配`CustomerLastNameCell`位于单元格 B2。  
+ 下面的代码示例向单元格 B1，输入字符串"Smith"，然后使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.AutoComplete%2A>方法来查找字符串"Smi"的 AutoComplete 匹配项。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。 如果将找到 AutoComplete 匹配`CustomerLastNameCell`是单元格 B2 中。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#100](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#100)]
  [!code-vb[Trin_ExcelXmlMappedRange#100](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#100)]  
@@ -445,21 +443,16 @@
       <Docs>
         <param name="Field">要使筛选器基于的字段的偏移量（从列表的左边算起；最左边的字段为字段 1（一））。</param>
         <param name="Criteria1">条件（一个字符串；例如“101”）。 使用“=”查找空白字段，或使用“&lt;&gt;”查找非空白字段。 如果省略此参数，则条件为 <see langword="All" />。 如果 <c>Operator</c> 为 <see cref="F:Microsoft.Office.Interop.Excel.XlAutoFilterOperator.xlTop10Items" />，则 <c>Criteria1</c> 指定项数（如“10”）。</param>
-        <param name="Operator">可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlAutoFilterOperator" /> 常量之一：  
-  
- <see cref="F:Microsoft.Office.Interop.Excel.XlAutoFilterOperator.xlAnd" /><see cref="F:Microsoft.Office.Interop.Excel.XlAutoFilterOperator.xlBottom10Items" /><see cref="F:Microsoft.Office.Interop.Excel.XlAutoFilterOperator.xlBottom10Percent" /><see cref="F:Microsoft.Office.Interop.Excel.XlAutoFilterOperator.xlOr" /><see cref="F:Microsoft.Office.Interop.Excel.XlAutoFilterOperator.xlTop10Items" /><see cref="F:Microsoft.Office.Interop.Excel.XlAutoFilterOperator.xlTop10Percent" />  
-  
- 在 <c>Criteria1</c> 和 <c>Criteria2</c> 中使用 <see cref="F:Microsoft.Office.Interop.Excel.XlAutoFilterOperator.xlAnd" /> 和 <see cref="F:Microsoft.Office.Interop.Excel.XlAutoFilterOperator.xlOr" /> 来构造复合条件。</param>
+        <param name="Operator">可为下列 <see cref="T:Microsoft.Office.Interop.Excel.XlAutoFilterOperator" /> 常数之一：<see cref="F:Microsoft.Office.Interop.Excel.XlAutoFilterOperator.xlAnd" /><see cref="F:Microsoft.Office.Interop.Excel.XlAutoFilterOperator.xlBottom10Items" /><see cref="F:Microsoft.Office.Interop.Excel.XlAutoFilterOperator.xlBottom10Percent" /><see cref="F:Microsoft.Office.Interop.Excel.XlAutoFilterOperator.xlOr" /><see cref="F:Microsoft.Office.Interop.Excel.XlAutoFilterOperator.xlTop10Items" /><see cref="F:Microsoft.Office.Interop.Excel.XlAutoFilterOperator.xlTop10Percent" />  在 <c>Criteria1</c> 和 <c>Criteria2</c> 中使用 <see cref="F:Microsoft.Office.Interop.Excel.XlAutoFilterOperator.xlAnd" /> 和 <see cref="F:Microsoft.Office.Interop.Excel.XlAutoFilterOperator.xlOr" /> 来构造复合条件。</param>
         <param name="Criteria2">第二个条件（字符串）。 与 <c>Criteria1</c> 和 <c>Operator</c> 一起用于构造复合条件。</param>
-        <param name="VisibleDropDown">
-          如果对所筛选字段显示自动筛选下拉箭头，则为 <see langword="true" />；如果对所筛选字段隐藏自动筛选下拉箭头，则为 <see langword="false" />。 默认值为 <see langword="true" />。</param>
+        <param name="VisibleDropDown">如果对所筛选字段显示自动筛选下拉箭头，则为 <see langword="true" />；如果对所筛选字段隐藏自动筛选下拉箭头，则为 <see langword="false" />。 默认值为 <see langword="true" />。</param>
         <summary>使用“自动筛选”筛选列表。</summary>
         <returns>To be added.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果省略的自变量，则此方法只需切换的中的自动筛选下拉箭头显示<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件。  
+ 如果省略了所有参数，此方法只需切换中的自动筛选下拉箭头显示<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件。  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -488,7 +481,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 因为<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件为单个单元格，则 Microsoft Office Excel 创建概述整张工作表。 新的大纲替换任何现有的大纲。  
+ 因为<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件为单个单元格，则 Microsoft Office Excel 创建整个工作表大纲。 新轮廓将替换任何现有的大纲。  
   
  ]]></format>
         </remarks>
@@ -512,7 +505,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码演示的处理程序<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.BeforeDoubleClick>取消双击操作中的事件<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 事件处理程序会通知用户，双击不允许这些<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>，然后将设置`Cancel`参数<xref:Microsoft.Office.Interop.Excel.DocEvents_BeforeDoubleClickEventHandler>事件处理程序`true`，以便 Microsoft Office Excel 取消双击操作。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
+ 下面的代码演示的处理程序<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.BeforeDoubleClick>中的双击操作将取消的事件<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 事件处理程序将通知用户，不允许双击<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>，，然后设置`Cancel`的参数<xref:Microsoft.Office.Interop.Excel.DocEvents_BeforeDoubleClickEventHandler>事件处理程序`true`，以便 Microsoft Office Excel 取消双击操作。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#200](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#200)]
  [!code-vb[Trin_ExcelXmlMappedRange#200](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#200)]  
@@ -539,7 +532,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码演示的处理程序<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.BeforeRightClick>取消右键单击操作中的事件<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 事件处理程序会通知用户，右键单击不允许这些<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>，然后将设置`Cancel`参数<xref:Microsoft.Office.Interop.Excel.DocEvents_BeforeRightClickEventHandler>事件处理程序`true`，以便 Microsoft Office Excel 取消右键单击操作。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
+ 下面的代码演示的处理程序<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.BeforeRightClick>取消中的右键单击操作的事件<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 事件处理程序将通知用户，不允许右键单击<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>，然后设置`Cancel`的参数<xref:Microsoft.Office.Interop.Excel.DocEvents_BeforeRightClickEventHandler>事件处理程序`true`，以便 Microsoft Office Excel 取消右键单击操作。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#201](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#201)]
  [!code-vb[Trin_ExcelXmlMappedRange#201](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#201)]  
@@ -618,15 +611,9 @@
         <Parameter Name="ThemeColor" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="LineStyle">边框的线型。 可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlLineStyle" /> 值之一：  
-  
- <see cref="F:Microsoft.Office.Interop.Excel.XlLineStyle.xlContinuous" /><see cref="F:Microsoft.Office.Interop.Excel.XlLineStyle.xlDash" /><see cref="F:Microsoft.Office.Interop.Excel.XlLineStyle.xlDashDot" /><see cref="F:Microsoft.Office.Interop.Excel.XlLineStyle.xlDashDotDot" /><see cref="F:Microsoft.Office.Interop.Excel.XlLineStyle.xlDot" /><see cref="F:Microsoft.Office.Interop.Excel.XlLineStyle.xlDouble" /><see cref="F:Microsoft.Office.Interop.Excel.XlLineStyle.xlSlantDashDot" /><see cref="F:Microsoft.Office.Interop.Excel.XlLineStyle.xlLineStyleNone" /></param>
-        <param name="Weight">边框的粗细。 可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlBorderWeight" /> 常量之一：  
-  
- <see cref="F:Microsoft.Office.Interop.Excel.XlBorderWeight.xlHairline" /><see cref="F:Microsoft.Office.Interop.Excel.XlBorderWeight.xlMedium" /><see cref="F:Microsoft.Office.Interop.Excel.XlBorderWeight.xlThick" /><see cref="F:Microsoft.Office.Interop.Excel.XlBorderWeight.xlThin" /></param>
-        <param name="ColorIndex">边框颜色（作为访问当前调色板的索引或作为 <see cref="T:Microsoft.Office.Interop.Excel.XlColorIndex" /> 常数）。 可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlColorIndex" /> 常量之一：  
-  
- <see cref="F:Microsoft.Office.Interop.Excel.XlColorIndex.xlColorIndexAutomatic" /><see cref="F:Microsoft.Office.Interop.Excel.XlColorIndex.xlColorIndexNone" /></param>
+        <param name="LineStyle">边框的线型。 可为下列 <see cref="T:Microsoft.Office.Interop.Excel.XlLineStyle" /> 值之一：<see cref="F:Microsoft.Office.Interop.Excel.XlLineStyle.xlContinuous" /><see cref="F:Microsoft.Office.Interop.Excel.XlLineStyle.xlDash" /><see cref="F:Microsoft.Office.Interop.Excel.XlLineStyle.xlDashDot" /><see cref="F:Microsoft.Office.Interop.Excel.XlLineStyle.xlDashDotDot" /><see cref="F:Microsoft.Office.Interop.Excel.XlLineStyle.xlDot" /><see cref="F:Microsoft.Office.Interop.Excel.XlLineStyle.xlDouble" /><see cref="F:Microsoft.Office.Interop.Excel.XlLineStyle.xlSlantDashDot" /><see cref="F:Microsoft.Office.Interop.Excel.XlLineStyle.xlLineStyleNone" /></param>
+        <param name="Weight">边框的粗细。 可为下列 <see cref="T:Microsoft.Office.Interop.Excel.XlBorderWeight" /> 常数之一：<see cref="F:Microsoft.Office.Interop.Excel.XlBorderWeight.xlHairline" /><see cref="F:Microsoft.Office.Interop.Excel.XlBorderWeight.xlMedium" /><see cref="F:Microsoft.Office.Interop.Excel.XlBorderWeight.xlThick" /><see cref="F:Microsoft.Office.Interop.Excel.XlBorderWeight.xlThin" /></param>
+        <param name="ColorIndex">边框颜色（作为访问当前调色板的索引或作为 <see cref="T:Microsoft.Office.Interop.Excel.XlColorIndex" /> 常数）。 可为下列 <see cref="T:Microsoft.Office.Interop.Excel.XlColorIndex" /> 常数之一：<see cref="F:Microsoft.Office.Interop.Excel.XlColorIndex.xlColorIndexAutomatic" /><see cref="F:Microsoft.Office.Interop.Excel.XlColorIndex.xlColorIndexNone" /></param>
         <param name="Color">边框颜色，采用 RGB 值的形式。</param>
         <param name="ThemeColor">主题颜色（作为访问当前颜色主题的索引或作为 <see cref="T:Microsoft.Office.Interop.Excel.XlThemeColor" /> 值）。</param>
         <summary>向 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件添加一个边框，并设置新边框的 <see cref="P:Microsoft.Office.Interop.Excel.Border.Color" />、<see cref="P:Microsoft.Office.Interop.Excel.Border.LineStyle" /> 和 <see cref="P:Microsoft.Office.Interop.Excel.Border.Weight" /> 属性。</summary>
@@ -635,11 +622,11 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 你必须指定`ColorIndex`或`Color`，但不是两者。  
+ 您必须指定这两`ColorIndex`或`Color`，但不可同时使用两者。  
   
- 你可以指定`LineStyle`或`Weight`，但不是两者。 如果未指定两个参数，Microsoft Office Excel 将使用默认线条样式和权重。  
+ 您可以指定`LineStyle`或`Weight`，但不可同时使用两者。 如果不指定其中一个参数，Microsoft Office Excel 将使用默认线条样式和粗细。  
   
- 此方法而不填充概述的整个范围。 若要设置的所有单元格的边框，必须设置<xref:Microsoft.Office.Interop.Excel.Borders.Color%2A>， <xref:Microsoft.Office.Interop.Excel.Borders.LineStyle%2A>，和<xref:Microsoft.Office.Interop.Excel.Borders.Weight%2A>属性<xref:Microsoft.Office.Interop.Excel.Borders>集合。 若要清除边框，必须设置<xref:Microsoft.Office.Interop.Excel.Borders.LineStyle%2A>属性<xref:Microsoft.Office.Interop.Excel.XlLineStyle.xlLineStyleNone>区域中的所有单元格。  
+ 此方法而不填充概述的整个范围。 若要设置的所有单元格的边框，必须设置<xref:Microsoft.Office.Interop.Excel.Borders.Color%2A>， <xref:Microsoft.Office.Interop.Excel.Borders.LineStyle%2A>，并<xref:Microsoft.Office.Interop.Excel.Borders.Weight%2A>属性<xref:Microsoft.Office.Interop.Excel.Borders>集合。 若要清除边框，则必须设置<xref:Microsoft.Office.Interop.Excel.Borders.LineStyle%2A>属性设置为<xref:Microsoft.Office.Interop.Excel.XlLineStyle.xlLineStyleNone>的范围内的所有单元格。  
   
  ]]></format>
         </remarks>
@@ -664,7 +651,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Borders%2A>属性绘制的边框的双线<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>，并使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Interior%2A>属性进行着色的内部<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>绿色。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Borders%2A>属性来绘制双线的边框<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>，并使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Interior%2A>属性进行着色的内部<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>绿色。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#4](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#4)]
  [!code-vb[Trin_ExcelXmlMappedRange#4](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#4)]  
@@ -693,10 +680,10 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Calculate%2A>方法计算的值中的公式`EmployeeSeniorityCell`<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控制上`Sheet1`。 若要运行此代码示例，必须将 XML 映射添加到你的工作簿基于员工 XML 架构，并将映射从此 XML 映射到工作表上的单元格的架构元素。 例如，你可以使用从架构[演练： 将内容控件绑定到自定义 XML 部件](/visualstudio/vsto/walkthrough-binding-content-controls-to-custom-xml-parts.md)和修改通过将整数类型的高低元素添加到员工元素。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Calculate%2A>方法以计算的值中的公式`EmployeeSeniorityCell`<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>上控制`Sheet1`。 若要运行此代码示例，必须将 XML 映射添加到您基于员工 XML 架构的工作簿并将映射从该 XML 映射到工作表上的单元格的架构元素。 例如，可以使用从架构[演练： 将内容控件绑定到自定义 XML 部件](/visualstudio/vsto/walkthrough-binding-content-controls-to-custom-xml-parts.md)和修改通过将整数类型的资历元素添加到员工元素。  
   
 > [!NOTE]
->  通常情况下，填充<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>从 XML 文件的控件。 此示例硬编码为简单起见控件的值。  
+>  通常情况下，填充<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控制从 XML 文件。 此示例中硬编码为简单起见控件的值。  
   
  [!code-csharp[Trin_ExcelWorkbook_Additional#21](~/snippets/csharp/VS_Snippets_OfficeSP/trin_excelworkbook_additional/cs/ThisWorkbook.cs#21)]
  [!code-vb[Trin_ExcelWorkbook_Additional#21](~/snippets/visualbasic/VS_Snippets_OfficeSP/trin_excelworkbook_additional/vb/ThisWorkbook.vb#21)]  
@@ -725,7 +712,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.XmlMappedRange.CalculateRowMajorOrder%2A>方法计算指定的范围逐单元格，从其左上角到按行优先顺序其右下角。 这是通过 Excel 2000 和更早版本中用于计算一系列的相同过程。  
+ <xref:Microsoft.Office.Tools.Excel.XmlMappedRange.CalculateRowMajorOrder%2A>方法计算指定的范围的单元格，从其右下角，按行优先顺序其左上角。 这是通过 Excel 2000 及更早版本中用于计算范围的同一个进程。  
   
  ]]></format>
         </remarks>
@@ -750,7 +737,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Cells%2A>属性显示的单元格位置<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Cells%2A>属性来显示的单元格位置<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#5](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#5)]
  [!code-vb[Trin_ExcelXmlMappedRange#5](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#5)]  
@@ -777,7 +764,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果将引发此事件<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>通过以编程方式修改或用户交互更改控制。 此事件不会发生时<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控制重新计算引起的更改。  
+ 如果引发此事件<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>通过以编程方式修改或用户交互更改控制。 此事件不会发生时<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控制重新计算过程中的更改。  
   
    
   
@@ -817,9 +804,9 @@
 |`Start`|要返回的第一个字符。 如果此参数为 1 或被省略，则此属性将返回一系列字符开头的第一个字符。|  
 |`Length`|要返回的字符数。 如果省略此参数，则此属性返回字符串的其余部分 (之后的所有内容`Start`字符)。|  
   
- 如果你尝试使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Characters%2A>而不指定任何参数，<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Characters%2A>将获取<xref:Microsoft.Office.Tools.Excel.XmlMappedRange_CharactersType>对象属于的 Office 开发工具在 Visual Studio 基础结构和不应在代码中直接使用。  
+ 如果尝试使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Characters%2A>而无需指定任何参数，<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Characters%2A>将获取<xref:Microsoft.Office.Tools.Excel.XmlMappedRange_CharactersType>对象属于的 Office 开发 Visual Studio 基础结构中的工具，但不可在代码中直接使用。  
   
- 你可以使用<xref:Microsoft.Office.Interop.Excel.Characters?displayProperty=fullName>到内的文本字符串的格式字符的对象。  
+ 可以使用<xref:Microsoft.Office.Interop.Excel.Characters?displayProperty=fullName>为格式字符在文本字符串中的对象。  
   
  <xref:Microsoft.Office.Interop.Excel.Characters?displayProperty=fullName>对象不是一个集合。  
   
@@ -829,7 +816,7 @@
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Characters%2A>属性，将应用粗体格式的文本中的第一个字符<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Characters%2A>属性应用粗体格式的文本中的第一个字符<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#6](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#6)]
  [!code-vb[Trin_ExcelXmlMappedRange#6](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#6)]  
@@ -858,10 +845,8 @@
       </Parameters>
       <Docs>
         <param name="CustomDictionary">指示在主字典中找不到该单词时要检查的自定义字典的文件名。 如果省略此参数，则使用当前指定的字典。</param>
-        <param name="IgnoreUppercase">
-          如果让 Microsoft Office Excel 忽略全大写的单词，则为 <see langword="true" />；如果让 Excel 检查全大写的单词，则为 <see langword="false" />。 如果省略此参数，则使用当前设置。</param>
-        <param name="AlwaysSuggest">
-          如果让 Excel 在找到错误拼写时显示建议的替换拼写的列表，则为 <see langword="true" />；如果让 Excel 在您输入正确的拼写时暂停，则为 <see langword="false" />。 如果省略此参数，则使用当前设置。</param>
+        <param name="IgnoreUppercase">如果让 Microsoft Office Excel 忽略全大写的单词，则为 <see langword="true" />；如果让 Excel 检查全大写的单词，则为 <see langword="false" />。 如果省略此参数，则使用当前设置。</param>
+        <param name="AlwaysSuggest">如果让 Excel 在找到错误拼写时显示建议的替换拼写的列表，则为 <see langword="true" />；如果让 Excel 在您输入正确的拼写时暂停，则为 <see langword="false" />。 如果省略此参数，则使用当前设置。</param>
         <param name="SpellLang">所使用的字典的语言。 可以为 <see cref="T:Microsoft.Office.Core.MsoLanguageID" /> 属性使用的 <see cref="P:Microsoft.Office.Core.LanguageSettings.LanguageID(Microsoft.Office.Core.MsoAppLanguageID)" /> 值之一。</param>
         <summary>检查 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件中文本的拼写。</summary>
         <returns>To be added.</returns>
@@ -962,7 +947,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.BorderAround%2A>方法以应用粗边框<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 然后，该示例提示用户通过清除边框<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.ClearFormats%2A>方法。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.BorderAround%2A>方法以应用粗边框<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 该示例然后会提示用户使用清除边框<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.ClearFormats%2A>方法。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#102](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#102)]
  [!code-vb[Trin_ExcelXmlMappedRange#102](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#102)]  
@@ -990,10 +975,10 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 调用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.ClearHyperlinks%2A>上指定的范围的方法相当于使用**清除超链接**命令**清除**下拉列表中的**编辑**组**主页**在 Excel 中的选项卡。 将删除仅超链接;所有其他单元格内容，例如文本和格式设置不会影响。  
+ 调用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.ClearHyperlinks%2A>上指定的范围内的方法相当于使用**清除超链接**命令**清除**下拉列表中的**编辑**组**主页**在 Excel 中的选项卡。 将删除仅超链接;所有其他单元格内容，如文本和格式设置会受到影响。  
   
 > [!NOTE]
->  此属性将出现在 IntelliSense Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Excel 2007 项目中使用此属性。  
+>  此属性将出现在 IntelliSense 中 Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，此属性不能使用 Excel 2007 项目中。  
   
  ]]></format>
         </remarks>
@@ -1019,7 +1004,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.NoteText%2A>方法添加到注释<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>，然后会提示用户通过移除注意<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.ClearNotes%2A>方法。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.NoteText%2A>方法将添加到注意<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>，然后会提示用户使用删除便笺<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.ClearNotes%2A>方法。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#119](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#119)]
  [!code-vb[Trin_ExcelXmlMappedRange#119](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#119)]  
@@ -1072,7 +1057,7 @@
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Column%2A>和<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Row%2A>属性显示的列和行号<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Column%2A>并<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Row%2A>要显示的列和行号属性<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#7](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#7)]
  [!code-vb[Trin_ExcelXmlMappedRange#7](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#7)]  
@@ -1141,14 +1126,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 一个单元的列宽度等于正文样式中的一个字符的宽度。 对于非等宽字体使用的字符 0 （零） 的宽度。  
+ 正文样式中的一个字符的宽度相等列宽度的一个单元。 对于非等宽字体，使用 0 （零） 的字符的宽度。  
   
  使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Width%2A>属性以磅为单位返回列的宽度。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.ColumnWidth%2A>和<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.RowHeight%2A>要显示的宽度和高度属性<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.ColumnWidth%2A>并<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.RowHeight%2A>要显示的宽度和高度属性<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#8](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#8)]
  [!code-vb[Trin_ExcelXmlMappedRange#8](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#8)]  
@@ -1176,7 +1161,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.AddComment%2A>方法添加到注释<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>，然后使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Comment%2A>属性更改注释文本。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.AddComment%2A>方法添加到注释<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>，然后使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Comment%2A>属性更改的注释文本。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#9](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#9)]
  [!code-vb[Trin_ExcelXmlMappedRange#9](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#9)]  
@@ -1206,15 +1191,10 @@
       </Parameters>
       <Docs>
         <param name="Sources">合并源（作为以 R1C1 样式表示法表示的文本引用字符串的数组）。 引用必须包含要合并的工作表的完整路径。</param>
-        <param name="Function">可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlConsolidationFunction" /> 常量之一：  
-  
- <see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlAverage" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlCount" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlCountNums" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlMax" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlMin" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlProduct" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlStDev" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlStDevP" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlSum" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlVar" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlVarP" /></param>
-        <param name="TopRow">
-          如果基于合并范围内首行中的列标题合并数据，则为 <see langword="true" />；如果按位置合并数据，则为 <see langword="false" />。 默认值为 <see langword="false" />。</param>
-        <param name="LeftColumn">
-          如果基于合并范围内左列中的行标题合并数据，则为 <see langword="true" />；如果按位置合并数据，则为 <see langword="false" />。 默认值为 <see langword="false" />。</param>
-        <param name="CreateLinks">
-          如果让合并功能使用工作表链接，则为 <see langword="true" />；如果让合并功能复制数据，则为 <see langword="false" />。 默认值为 <see langword="false" />。</param>
+        <param name="Function">可为下列 <see cref="T:Microsoft.Office.Interop.Excel.XlConsolidationFunction" /> 常数之一：<see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlAverage" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlCount" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlCountNums" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlMax" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlMin" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlProduct" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlStDev" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlStDevP" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlSum" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlVar" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlVarP" /></param>
+        <param name="TopRow">如果基于合并范围内首行中的列标题合并数据，则为 <see langword="true" />；如果按位置合并数据，则为 <see langword="false" />。 默认值为 <see langword="false" />。</param>
+        <param name="LeftColumn">如果基于合并范围内左列中的行标题合并数据，则为 <see langword="true" />；如果按位置合并数据，则为 <see langword="false" />。 默认值为 <see langword="false" />。</param>
+        <param name="CreateLinks">如果让合并功能使用工作表链接，则为 <see langword="true" />；如果让合并功能复制数据，则为 <see langword="false" />。 默认值为 <see langword="false" />。</param>
         <summary>将多个工作表中的多个范围的数据合并到 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件中。</summary>
         <returns>To be added.</returns>
         <remarks>
@@ -1228,7 +1208,7 @@
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Consolidate%2A>方法上整合 A1 单元格的值`Sheet2`和上的单元格 A1`Sheet3`到<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>上`Sheet1`。 该示例通过同时添加值合并这些值。 此代码示例假定`Sheet1`包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Consolidate%2A>方法来合并单元格 A1 的值上`Sheet2`且上的单元格 A1`Sheet3`到<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>上`Sheet1`。 该示例通过同时添加值合并这些值。 此代码示例假定`Sheet1`包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#105](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#105)]
  [!code-vb[Trin_ExcelXmlMappedRange#105](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#105)]  
@@ -1285,7 +1265,7 @@
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Copy%2A>方法以复制<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>到剪贴板，然后使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.PasteSpecial%2A>方法将该范围复制为另一种<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 此代码示例假定当前工作表包含两个<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件名为`CustomerFirstNameCell`和`CustomerLastNameCell`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Copy%2A>方法复制<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>到剪贴板，然后使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.PasteSpecial%2A>方法将该范围复制到不同<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 此代码示例假定当前工作表包含两个<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件分别命名为`CustomerFirstNameCell`和`CustomerLastNameCell`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#106](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#106)]
  [!code-vb[Trin_ExcelXmlMappedRange#106](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#106)]  
@@ -1323,7 +1303,7 @@
 ## Remarks  
  如果记录集包含与在其中的 OLE 对象的字段，此方法将失败。  
   
- 复制开始记录集的当前行。 复制完成后，记录集对象的 EOF 属性是`true`。  
+ 记录集的当前行开始复制。 复制完成后，记录集对象的 EOF 属性是`true`。  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -1349,16 +1329,8 @@
         <Parameter Name="Format" Type="Microsoft.Office.Interop.Excel.XlCopyPictureFormat" />
       </Parameters>
       <Docs>
-        <param name="Appearance">指定复制图片的方法。  
-  
- 可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlPictureAppearance" /> 常量之一：  
-  
- <see cref="F:Microsoft.Office.Interop.Excel.XlPictureAppearance.xlPrinter" /><see cref="F:Microsoft.Office.Interop.Excel.XlPictureAppearance.xlScreen" /></param>
-        <param name="Format">该图片的格式。  
-  
- 可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlCopyPictureFormat" /> 常量之一：  
-  
- <see cref="F:Microsoft.Office.Interop.Excel.XlCopyPictureFormat.xlBitmap" /><see cref="F:Microsoft.Office.Interop.Excel.XlCopyPictureFormat.xlPicture" /></param>
+        <param name="Appearance">指定复制图片的方法。  可为下列 <see cref="T:Microsoft.Office.Interop.Excel.XlPictureAppearance" /> 常数之一：<see cref="F:Microsoft.Office.Interop.Excel.XlPictureAppearance.xlPrinter" /><see cref="F:Microsoft.Office.Interop.Excel.XlPictureAppearance.xlScreen" /></param>
+        <param name="Format">该图片的格式。  可为下列 <see cref="T:Microsoft.Office.Interop.Excel.XlCopyPictureFormat" /> 常数之一：<see cref="F:Microsoft.Office.Interop.Excel.XlCopyPictureFormat.xlBitmap" /><see cref="F:Microsoft.Office.Interop.Excel.XlCopyPictureFormat.xlPicture" /></param>
         <summary>将 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件作为图片复制到剪贴板。</summary>
         <returns>To be added.</returns>
         <remarks>
@@ -1372,7 +1344,7 @@
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.CopyPicture%2A>方法以复制<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>到剪贴板以位图格式。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.CopyPicture%2A>方法复制<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>到剪贴板作为位图。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#108](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#108)]
  [!code-vb[Trin_ExcelXmlMappedRange#108](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#108)]  
@@ -1447,21 +1419,17 @@
         <Parameter Name="Right" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Top">
-          如果通过使用首行中的标签来创建名称，则为 <see langword="true" />。 默认值为 <see langword="false" />。</param>
-        <param name="Left">
-          如果通过使用左列中的标签来创建名称，则为 <see langword="true" />。 默认值为 <see langword="false" />。</param>
-        <param name="Bottom">
-          如果通过使用底端行中的标签来创建名称，则为 <see langword="true" />。 默认值为 <see langword="false" />。</param>
-        <param name="Right">
-          如果通过使用右列中的标签来创建名称，则为 <see langword="true" />。 默认值为 <see langword="false" />。</param>
+        <param name="Top">如果通过使用首行中的标签来创建名称，则为 <see langword="true" />。 默认值为 <see langword="false" />。</param>
+        <param name="Left">如果通过使用左列中的标签来创建名称，则为 <see langword="true" />。 默认值为 <see langword="false" />。</param>
+        <param name="Bottom">如果通过使用底端行中的标签来创建名称，则为 <see langword="true" />。 默认值为 <see langword="false" />。</param>
+        <param name="Right">如果通过使用右列中的标签来创建名称，则为 <see langword="true" />。 默认值为 <see langword="false" />。</param>
         <summary>根据工作表中的文本标签在 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件中创建名称。</summary>
         <returns>To be added.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果您不指定其中一个`Top`， `Left`， `Bottom`，或`Right`，Microsoft Office Excel 猜出文本标签的位置。  
+ 如果未指定任一`Top`， `Left`， `Bottom`，或`Right`，Microsoft Office Excel 猜测文本标签的位置。  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -1527,7 +1495,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 因为<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>在 Microsoft Office Excel 中创建控件，则此属性返回字符串接，这等同于十六进制数字 5843454c。  
+ 因为<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件在 Microsoft Office Excel 中创建的此属性返回字符串 XCEL，这与十六进制数 5843454c。  
   
    
   
@@ -1578,9 +1546,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 当前的区域是受空白的行和空白的列的任意组合的范围。  
+ 当前的区域是空白的行和空白列的任意组合所包围的范围。  
   
- 此属性不能在受保护工作表。  
+ 此属性不能使用受保护工作表上。  
   
    
   
@@ -1624,7 +1592,7 @@
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Cut%2A>方法剪切<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>到剪贴板。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Cut%2A>方法来剪切<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>到剪贴板。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#110](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#110)]
  [!code-vb[Trin_ExcelXmlMappedRange#110](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#110)]  
@@ -1655,18 +1623,11 @@
       </Parameters>
       <Docs>
         <param name="Rowcol">可以为 <see cref="F:Microsoft.Office.Interop.Excel.XlRowCol.xlRows" /> 或 <see cref="F:Microsoft.Office.Interop.Excel.XlRowCol.xlColumns" /> 常数以将数据系列分别输入行或列中。 如果省略此参数，则使用该范围的大小和形状。</param>
-        <param name="Type">可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlDataSeriesType" /> 常量之一：  
-  
- <see cref="F:Microsoft.Office.Interop.Excel.XlDataSeriesType.xlAutoFill" /><see cref="F:Microsoft.Office.Interop.Excel.XlDataSeriesType.xlDataSeriesLinear" /><see cref="F:Microsoft.Office.Interop.Excel.XlDataSeriesType.xlChronological" /><see cref="F:Microsoft.Office.Interop.Excel.XlDataSeriesType.xlGrowth" /></param>
-        <param name="Date">如果 <c>Type</c> 参数为 <see cref="F:Microsoft.Office.Interop.Excel.XlDataSeriesType.xlChronological" />，则 <c>Date</c> 参数指示步长日期单位。  
-  
- 可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlDataSeriesDate" /> 常量之一：  
-  
- <see cref="F:Microsoft.Office.Interop.Excel.XlDataSeriesDate.xlDay" /><see cref="F:Microsoft.Office.Interop.Excel.XlDataSeriesDate.xlWeekday" /><see cref="F:Microsoft.Office.Interop.Excel.XlDataSeriesDate.xlMonth" /><see cref="F:Microsoft.Office.Interop.Excel.XlDataSeriesDate.xlYear" /></param>
+        <param name="Type">可为下列 <see cref="T:Microsoft.Office.Interop.Excel.XlDataSeriesType" /> 常数之一：<see cref="F:Microsoft.Office.Interop.Excel.XlDataSeriesType.xlAutoFill" /><see cref="F:Microsoft.Office.Interop.Excel.XlDataSeriesType.xlDataSeriesLinear" /><see cref="F:Microsoft.Office.Interop.Excel.XlDataSeriesType.xlChronological" /><see cref="F:Microsoft.Office.Interop.Excel.XlDataSeriesType.xlGrowth" /></param>
+        <param name="Date">如果 <c>Type</c> 参数为 <see cref="F:Microsoft.Office.Interop.Excel.XlDataSeriesType.xlChronological" />，则 <c>Date</c> 参数指示步长日期单位。  可为下列 <see cref="T:Microsoft.Office.Interop.Excel.XlDataSeriesDate" /> 常数之一：<see cref="F:Microsoft.Office.Interop.Excel.XlDataSeriesDate.xlDay" /><see cref="F:Microsoft.Office.Interop.Excel.XlDataSeriesDate.xlWeekday" /><see cref="F:Microsoft.Office.Interop.Excel.XlDataSeriesDate.xlMonth" /><see cref="F:Microsoft.Office.Interop.Excel.XlDataSeriesDate.xlYear" /></param>
         <param name="Step">该系列的步长值。 默认值为 1（一）。</param>
         <param name="Stop">该系列的终止值。 如果省略此参数，则 Microsoft Office Excel 会填充到该范围的末尾。</param>
-        <param name="Trend">
-          如果创建等差序列或等比序列，则为 <see langword="true" />；如果创建标准数据系列，则为 <see langword="false" />。 默认值为 <see langword="false" />。</param>
+        <param name="Trend">如果创建等差序列或等比序列，则为 <see langword="true" />；如果创建标准数据系列，则为 <see langword="false" />。 默认值为 <see langword="false" />。</param>
         <summary>在 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件中创建一个数据系列。</summary>
         <returns>To be added.</returns>
         <remarks>
@@ -1700,14 +1661,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 这可以是多重选择 (的并集<xref:Microsoft.Office.Interop.Excel.Range>对象) 如果存在多个依赖。  
+ 这可以是多个所选内容 (的并集<xref:Microsoft.Office.Interop.Excel.Range>对象) 如果有多个依赖。  
   
- <xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Dependents%2A>属性仅适用于活动工作表，不能跟踪远程引用。  
+ <xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Dependents%2A>属性仅适用于活动工作表并不能跟踪的远程引用。  
   
    
   
 ## Examples  
- 下面的代码示例设置的引用单元格 A1 来指代中<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>，然后将引用设置单元格 A2 A1 单元格引用中。 然后，该代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Dependents%2A>属性选择的依赖项`CustomerLastNameCell`，这是单元格 A1 和 A2。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
+ 下面的代码示例设置的引用单元格 A1 来指代中<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>，然后设置一个引用单元格 A2 来引用单元格 A1 中。 然后，代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Dependents%2A>属性来选择的从属单元格`CustomerLastNameCell`，这是单元格 A1 和 A2。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#14](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#14)]
  [!code-vb[Trin_ExcelXmlMappedRange#14](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#14)]  
@@ -1734,12 +1695,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 将引发此事件仅当<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件具有焦点，并且然后将焦点移远离<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件。  
+ 引发此事件时，才<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件具有焦点，然后焦点传输离开<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件。  
   
    
   
 ## Examples  
- 下面的代码演示的处理程序<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Deselected>选择范围显示新的地址的事件时<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>取消选择。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
+ 下面的代码演示的处理程序<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Deselected>事件的新地址将显示所选范围时<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>已取消选择。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#203](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#203)]
  [!code-vb[Trin_ExcelXmlMappedRange#203](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#203)]  
@@ -1768,7 +1729,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 返回`Range`对象必须引用 Excel 4.0 宏表上对话框定义表。  
+ 返回`Range`Excel 4.0 宏工作表上的对话框框中定义表必须引用对象。  
   
  ]]></format>
         </remarks>
@@ -1793,14 +1754,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 这可以是多重选择 (的并集<xref:Microsoft.Office.Interop.Excel.Range>对象) 如果存在多个依赖。  
+ 这可以是多个所选内容 (的并集<xref:Microsoft.Office.Interop.Excel.Range>对象) 如果有多个依赖。  
   
- <xref:Microsoft.Office.Tools.Excel.XmlMappedRange.DirectDependents%2A>属性仅适用于活动工作表，不能跟踪远程引用。  
+ <xref:Microsoft.Office.Tools.Excel.XmlMappedRange.DirectDependents%2A>属性仅适用于活动工作表并不能跟踪的远程引用。  
   
    
   
 ## Examples  
- 下面的代码示例设置的引用单元格 A1 来指代中<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>，然后将引用设置单元格 A2 A1 单元格引用中。 然后，该代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.DirectDependents%2A>属性选择的直接依赖<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>，即单元格 A1。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
+ 下面的代码示例设置的引用单元格 A1 来指代中<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>，然后设置一个引用单元格 A2 来引用单元格 A1 中。 然后，代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.DirectDependents%2A>属性来选择的直接依赖<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>，即单元格 A1。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#15](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#15)]
  [!code-vb[Trin_ExcelXmlMappedRange#15](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#15)]  
@@ -1828,12 +1789,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性仅适用于活动工作表，不能跟踪远程引用。  
+ 此属性仅适用于活动工作表并不能跟踪的远程引用。  
   
    
   
 ## Examples  
- 下面的代码示例设置单元格 A2 来引用单元格 A1 中的引用，然后设置的引用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>来引用单元格 A2。 然后，该代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.DirectPrecedents%2A>属性选择的直接引用单元格<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>，即单元格 A2。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerAddress1Cell`类型的相应架构元素使用`int`。  
+ 下面的代码示例设置单元格 A2，若要向单元格 A1，请参阅中的引用，然后设置中的引用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>来引用单元格 A2。 然后，代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.DirectPrecedents%2A>属性来选择的直接引用单元格<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>，即单元格 A2。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerAddress1Cell`与相应的架构元素类型的`int`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#16](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#16)]
  [!code-vb[Trin_ExcelXmlMappedRange#16](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#16)]  
@@ -1861,9 +1822,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Interop.Excel.Range.Calculate%2A>方法强制<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件重新计算。  
+ <xref:Microsoft.Office.Interop.Excel.Range.Calculate%2A>方法强制<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控制重新计算。  
   
- 如果应用程序用于手动计算模式中，使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Dirty%2A>方法指示 Excel 标识指定的单元格重新计算。 如果应用程序是在自动计算模式下，使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Dirty%2A>方法指示 Excel 执行重新计算。  
+ 如果应用程序中手动计算模式中，使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Dirty%2A>方法指示 Excel 来标识要重新计算的指定单元格。 如果应用程序中自动计算模式中，使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Dirty%2A>方法指示 Excel 执行重新计算。  
   
  ]]></format>
         </remarks>
@@ -1888,10 +1849,10 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 对于基于 OLAP 数据源的范围，此方法中删除所有值和公式的单元中输入，然后运行更新操作来从数据源检索的最新值。 它将所有值单元格的编辑，并还执行 ROLLBACK TRANSACTION 语句针对的 OLAP 服务器的数据源值都设置为 NULL。 对于基于非 OLAP 数据源的范围，此方法只是清除所有编辑过的单元格。  
+ 对于基于 OLAP 数据源的范围，此方法会删除所有值和输入的单元中的公式，然后运行更新操作以从数据源检索的最新值。 它将所有值单元格的编辑，并还执行 ROLLBACK TRANSACTION 语句对 OLAP 服务器的数据源值都设置为 NULL。 对于基于非 OLAP 数据源的范围，此方法只是清除所有已编辑单元格。  
   
 > [!NOTE]
->  此方法将显示在 IntelliSense Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Excel 2007 项目中使用此方法。  
+>  此方法将出现在 IntelliSense 中在 Excel 2007 项目面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，此方法不能使用 Excel 2007 项目中。  
   
  ]]></format>
         </remarks>
@@ -1919,7 +1880,7 @@
 ## Remarks  
   
 > [!NOTE]
->  此属性将出现在 IntelliSense Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Excel 2007 项目中使用此属性。  
+>  此属性将出现在 IntelliSense 中 Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，此属性不能使用 Excel 2007 项目中。  
   
  ]]></format>
         </remarks>
@@ -1982,16 +1943,16 @@
   
 |参数|描述|  
 |---------------|-----------------|  
-|`Direction`|之一<xref:Microsoft.Office.Interop.Excel.XlDirection>值，该值指示在其中查找最后一个单元格的方向。|  
+|`Direction`|其中一个<xref:Microsoft.Office.Interop.Excel.XlDirection>值，该值指示在其中查找最后一个单元格的方向。|  
   
- 如果你尝试使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.End%2A>而不指定任何参数，<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.End%2A>将获取<xref:Microsoft.Office.Tools.Excel.XmlMappedRange_EndType>对象属于的 Office 开发工具在 Visual Studio 基础结构和不应在代码中直接使用。  
+ 如果尝试使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.End%2A>而无需指定任何参数，<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.End%2A>将获取<xref:Microsoft.Office.Tools.Excel.XmlMappedRange_EndType>对象属于的 Office 开发 Visual Studio 基础结构中的工具，但不可在代码中直接使用。  
   
- 此属性等效于按结束 + 向上键、 结束 + 向下箭头、 结束 + 向左键或结束 + 向右键。  
+ 此属性等效于按结束 + 向上键、 最终 + 向下键、 最终 + 向左键或结束 + 向右键。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.End%2A>属性以选择包含的区域的末尾处的单元格<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.End%2A>属性来选择包含的区域末尾的单元格<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#17](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#17)]
  [!code-vb[Trin_ExcelXmlMappedRange#17](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#17)]  
@@ -2019,7 +1980,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.EntireColumn%2A>和<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.EntireRow%2A>属性设置的边框颜色的列和行，包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>为绿色。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.EntireColumn%2A>并<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.EntireRow%2A>属性设置的边框颜色的列和行，包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>为绿色。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#18](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#18)]
  [!code-vb[Trin_ExcelXmlMappedRange#18](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#18)]  
@@ -2047,7 +2008,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.EntireColumn%2A>和<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.EntireRow%2A>属性设置的边框颜色的列和行，包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>为绿色。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.EntireColumn%2A>并<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.EntireRow%2A>属性设置的边框颜色的列和行，包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>为绿色。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#18](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#18)]
  [!code-vb[Trin_ExcelXmlMappedRange#18](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#18)]  
@@ -2075,7 +2036,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 引用<xref:Microsoft.Office.Interop.Excel.Errors>错误检查选项与关联的对象以查看索引值的列表。  
+ 引用<xref:Microsoft.Office.Interop.Excel.Errors>错误检查选项与关联的对象，若要查看的索引值的列表。  
   
    
   
@@ -2116,29 +2077,26 @@
         <param name="Type">其中一个 <see langword="Microsoft.Office.Interop.Excel.XlFixedFormatType" /> 值，该值指定是否要将工作簿保存为 PDF 或 XPS 格式。</param>
         <param name="Filename">一个字符串，包含要保存的文件的文件名。 可包括完整路径，或者 Excel 会将文件保存到当前文件夹中。</param>
         <param name="Quality">其中一个 <see langword="Microsoft.Office.Interop.Excel.XlFixedFormatQuality" /> 值，该值指定导出文件的质量。</param>
-        <param name="IncludeDocProperties">
-          若要包括文档属性，请使用 <see langword="true" />；否则使用 <see langword="false" />。</param>
-        <param name="IgnorePrintAreas">
-          若要在导出时忽略任何打印区域设置，请使用 <see langword="true" />；否则使用 <see langword="false" />。</param>
+        <param name="IncludeDocProperties">若要包括文档属性，请使用 <see langword="true" />；否则使用 <see langword="false" />。</param>
+        <param name="IgnorePrintAreas">若要在导出时忽略任何打印区域设置，请使用 <see langword="true" />；否则使用 <see langword="false" />。</param>
         <param name="From">要从其处开始导出的页码。 若忽略此参数，则从第一页开始导出。</param>
         <param name="To">要导出的最后一页的页码。 若忽略此参数，则导出至最后一页。</param>
-        <param name="OpenAfterPublish">
-          若要在发布文件后在查看器中显示该文件，则使用 <see langword="true" />；否则使用 <see langword="false" />。</param>
+        <param name="OpenAfterPublish">若要在发布文件后在查看器中显示该文件，则使用 <see langword="true" />；否则使用 <see langword="false" />。</param>
         <param name="FixedFormatExtClassPtr">一个指向 <see langword="IMsoDocExporter" /> 接口的实现的指针，可使工作簿保存为另一种固定格式。 有关详细信息，请参阅“扩展 Office (2007) 固定格式导出功能”。</param>
         <summary>导出到指定格式的文件。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法还支持初始化外接程序将文件导出到固定格式文件。 例如，如果存在转换器，则 Excel 将执行文件的格式转换。 通常由用户启动转换。  
+ 此方法还支持外接程序以固定格式文件导出的文件初始化。 例如，如果存在转换器，则 Excel 将执行文件格式转换。 通常由用户启动转换。  
   
    
   
 ## Examples  
- 下面的代码示例设置的值`EmployeeNameCell`<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控制上`Sheet1`。 接下来，该示例将导出的内容`EmployeeSeniorityCell`为指定的文件夹和文件名称的 PDF 文档。  
+ 下面的代码示例设置的值`EmployeeNameCell`<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控制上`Sheet1`。 接下来，示例将导出的内容`EmployeeSeniorityCell`到指定的文件夹和文件名称中的 PDF 文档。  
   
 > [!NOTE]
->  通常情况下，填充<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>从 XML 文件的控件。 此示例硬编码为简单起见控件的值。  
+>  通常情况下，填充<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控制从 XML 文件。 此示例中硬编码为简单起见控件的值。  
   
  [!code-csharp[Trin_ExcelWorkbook_Additional#22](~/snippets/csharp/VS_Snippets_OfficeSP/trin_excelworkbook_additional/cs/ThisWorkbook.cs#22)]
  [!code-vb[Trin_ExcelWorkbook_Additional#22](~/snippets/visualbasic/VS_Snippets_OfficeSP/trin_excelworkbook_additional/vb/ThisWorkbook.vb#22)]  
@@ -2280,13 +2238,8 @@
         <param name="LookIn">信息的类型。</param>
         <param name="LookAt">可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlLookAt" /> 值之一：<see cref="F:Microsoft.Office.Interop.Excel.XlLookAt.xlWhole" /> 或 <see cref="F:Microsoft.Office.Interop.Excel.XlLookAt.xlPart" />。</param>
         <param name="SearchOrder">可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlSearchOrder" /> 值之一：<see cref="F:Microsoft.Office.Interop.Excel.XlSearchOrder.xlByRows" /> 或 <see cref="F:Microsoft.Office.Interop.Excel.XlSearchOrder.xlByColumns" />。</param>
-        <param name="SearchDirection">搜索方向。  
-  
- 可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlSearchDirection" /> 值之一：  
-  
- <see cref="F:Microsoft.Office.Interop.Excel.XlSearchDirection.xlNext" /> 或 <see cref="F:Microsoft.Office.Interop.Excel.XlSearchDirection.xlPrevious" />。</param>
-        <param name="MatchCase">
-          如果在搜索时区分大小写，则为 <see langword="true" />。 默认值为 <see langword="false" />。</param>
+        <param name="SearchDirection">搜索方向。  可为下列 <see cref="T:Microsoft.Office.Interop.Excel.XlSearchDirection" /> 值之一：<see cref="F:Microsoft.Office.Interop.Excel.XlSearchDirection.xlNext" /> 或 <see cref="F:Microsoft.Office.Interop.Excel.XlSearchDirection.xlPrevious" />。</param>
+        <param name="MatchCase">如果在搜索时区分大小写，则为 <see langword="true" />。 默认值为 <see langword="false" />。</param>
         <param name="MatchByte">仅当已选择或安装双字节语言支持时，才会用到此参数。 如果让双字节字符仅与双字节字符相匹配，则为 <see langword="true" />；如果让双字节字符与其单字节等效字符相匹配，则为 <see langword="false" />。</param>
         <param name="SearchFormat">搜索格式。</param>
         <summary>在 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件中查找指定信息，并返回表示在其中找到该信息的第一个单元格的 <see cref="T:Microsoft.Office.Interop.Excel.Range" />。</summary>
@@ -2295,18 +2248,18 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法返回`null`如果未找到匹配。  
+ 此方法返回`null`如果不找到任何匹配项。  
   
- 选定内容或活动的单元格，则此方法不会影响。  
+ 此方法不会影响所选内容或活动单元格。  
   
- 有关设置`LookIn`， `LookAt`， `SearchOrder`，和`MatchByte`保存每次使用此方法。 如果未指定这些参数的值，的下次调用该方法使用保存的值。 设置这些参数将更改查找对话框中中的设置并更改查找对话框中的设置更改保存如果省略这些参数，则使用的值。 若要避免出现问题，这些自变量显式设置每次使用此方法。  
+ 设置`LookIn`， `LookAt`， `SearchOrder`，和`MatchByte`保存每次使用此方法。 如果不指定这些参数的值下, 一次调用的方法使用保存的值。 设置这些参数将更改查找对话框中的设置和更改查找对话框中的设置更改保存的值，如果省略自变量，则使用。 若要避免出现问题，这些参数显式设置每次使用此方法。  
   
- 你可以使用<xref:Microsoft.Office.Interop.Excel.Range.FindNext%2A>和<xref:Microsoft.Office.Interop.Excel.Range.FindPrevious%2A>方法重复搜索。  
+ 可以使用<xref:Microsoft.Office.Interop.Excel.Range.FindNext%2A>和<xref:Microsoft.Office.Interop.Excel.Range.FindPrevious%2A>方法重复搜索。  
   
    
   
 ## Examples  
- 下面的代码示例设置的值<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>到字符串"Smith"，然后使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Find%2A>， <xref:Microsoft.Office.Tools.Excel.XmlMappedRange.FindNext%2A>，和<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.FindPrevious%2A>查找具有"Smith"的字符串的第一个单元格的方法。 因为<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>始终包含恰好有一个单元格，相同单元文件位于每个用例。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
+ 下面的代码示例设置的值<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>为字符串"Smith"，然后使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Find%2A>， <xref:Microsoft.Office.Tools.Excel.XmlMappedRange.FindNext%2A>，和<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.FindPrevious%2A>方法来查找具有"Smith"的字符串的第一个单元格。 因为<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>始终包含一个单元格，同一个单元格中找到每种情况下。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#112](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#112)]
  [!code-vb[Trin_ExcelXmlMappedRange#112](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#112)]  
@@ -2338,11 +2291,11 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 查找为指定的条件相匹配的下一步单元格<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Find%2A>方法并返回<xref:Microsoft.Office.Interop.Excel.Range>表示该单元格。  
+ 查找为指定的条件相匹配的下一个单元格<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Find%2A>方法并返回<xref:Microsoft.Office.Interop.Excel.Range>表示该单元格。  
   
- 选定内容或活动的单元格，则此方法不会影响。  
+ 此方法不会影响所选内容或活动单元格。  
   
- 如果搜索到达搜索指定的搜索范围的末尾，它会绕到范围的开始处。 若要停止搜索此头尾回绕发生时，保存的第一个找到的单元格的地址并随后测试此保存地址针对每个连续找到单元格地址。  
+ 如果搜索到达搜索指定的搜索范围的结束，它会绕到范围的开头。 若要停止搜索此头尾回绕发生时，保存该地址的第一个找到的单元格，然后测试对此已保存的地址的每个后续找到单元格地址。  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -2350,7 +2303,7 @@
    
   
 ## Examples  
- 下面的代码示例设置的值<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>到字符串"Smith"，然后使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Find%2A>， <xref:Microsoft.Office.Tools.Excel.XmlMappedRange.FindNext%2A>，和<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.FindPrevious%2A>查找具有"Smith"的字符串的第一个单元格的方法。 因为<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>始终包含恰好有一个单元格，相同单元文件位于每个用例。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
+ 下面的代码示例设置的值<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>为字符串"Smith"，然后使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Find%2A>， <xref:Microsoft.Office.Tools.Excel.XmlMappedRange.FindNext%2A>，和<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.FindPrevious%2A>方法来查找具有"Smith"的字符串的第一个单元格。 因为<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>始终包含一个单元格，同一个单元格中找到每种情况下。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#112](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#112)]
  [!code-vb[Trin_ExcelXmlMappedRange#112](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#112)]  
@@ -2382,9 +2335,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 为指定的条件相匹配的前一个单元的查找<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Find%2A>方法并返回<xref:Microsoft.Office.Interop.Excel.Range>表示该单元格的对象。  
+ 查找上一个单元格，为指定的条件相匹配<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Find%2A>方法并返回<xref:Microsoft.Office.Interop.Excel.Range>对象，表示该单元格。  
   
- 选定内容或活动的单元格，则此方法不会影响。  
+ 此方法不会影响所选内容或活动单元格。  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -2392,7 +2345,7 @@
    
   
 ## Examples  
- 下面的代码示例设置的值<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>到字符串"Smith"，然后使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Find%2A>， <xref:Microsoft.Office.Tools.Excel.XmlMappedRange.FindNext%2A>，和<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.FindPrevious%2A>查找具有"Smith"的字符串的第一个单元格的方法。 因为<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>始终包含恰好有一个单元格，相同单元文件位于每个用例。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
+ 下面的代码示例设置的值<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>为字符串"Smith"，然后使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Find%2A>， <xref:Microsoft.Office.Tools.Excel.XmlMappedRange.FindNext%2A>，和<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.FindPrevious%2A>方法来查找具有"Smith"的字符串的第一个单元格。 因为<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>始终包含一个单元格，同一个单元格中找到每种情况下。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#112](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#112)]
  [!code-vb[Trin_ExcelXmlMappedRange#112](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#112)]  
@@ -2420,7 +2373,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Font%2A>属性显示的当前字体<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Font%2A>属性来显示的当前字体<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#20](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#20)]
  [!code-vb[Trin_ExcelXmlMappedRange#20](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#20)]  
@@ -2448,7 +2401,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.FormatConditions%2A>属性更改的字体<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>如果的值<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>小于 A1 单元格的值。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerZipCell`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.FormatConditions%2A>属性更改的字体<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>如果的值<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>小于单元格 A1 的值。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerZipCell`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#21](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#21)]
  [!code-vb[Trin_ExcelXmlMappedRange#21](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#21)]  
@@ -2477,18 +2430,18 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件包含一个常数，则此属性返回的常量。  
+ 如果<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件包含一个常量，则此属性返回的常量。  
   
- 如果<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件为空，则此属性返回一个空字符串。  
+ 如果<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件为空，则此属性返回空字符串。  
   
- 如果<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件包含一个公式，则此属性与在其中它将显示在公式栏 （包括等号） 相同的格式以字符串形式返回该公式。  
+ 如果<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件包含一个公式，则此属性将该公式返回以在其中它将显示在编辑栏 （包括等号） 中的相同格式的字符串。  
   
- 如果你设置的值或公式<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控制为日期，Microsoft Office Excel 将检查以查看是否使用日期或时间的数字格式之一已格式化该单元格。 如果没有，Excel 更改为默认的短日期数字格式的数字格式。  
+ 如果设置了值或公式的<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控制为日期，Microsoft Office Excel 将检查以查看是否已将该单元格格式化为日期或时间的数字格式之一。 如果没有，Excel 将数字的格式设为默认短日期的数字格式。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Formula%2A>属性设置的值<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>为相等的单元格 A1 和 A2 的值的总和。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerAddress1Cell`类型的相应架构元素使用`int`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Formula%2A>属性的值设置<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>等于的单元格 A1 和 A2 值的总和。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerAddress1Cell`与相应的架构元素类型的`int`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#22](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#22)]
  [!code-vb[Trin_ExcelXmlMappedRange#22](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#22)]  
@@ -2519,14 +2472,14 @@
 ## Remarks  
  此属性获取 （或可以将设置为） 的单个公式或数组。  
   
- 如果<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件不包含公式的数组，此属性返回`null`。  
+ 如果<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件不包含数组公式，则此属性返回`null`。  
   
- 如果此属性用于输入数组公式，该公式必须使用 R1C1 引用样式，不将 A1 引用样式。  
+ 如果此属性用于输入数组公式，公式必须使用 R1C1 引用样式，不 A1 的引用样式。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.FormulaArray%2A>属性设置的值<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>为相等的单元格 A1 A3 到数组的总和。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerAddress1Cell`类型的相应架构元素使用`int`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.FormulaArray%2A>属性的值设置<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>等于的单元格 A1 到 A3 数组的总和。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerAddress1Cell`与相应的架构元素类型的`int`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#23](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#23)]
  [!code-vb[Trin_ExcelXmlMappedRange#23](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#23)]  
@@ -2549,13 +2502,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示在工作表受保护时是否隐藏 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件中的公式。</summary>
-        <value>
-          如果在工作表受保护时隐藏公式，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果在工作表受保护时隐藏公式，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 将此属性与不混淆<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Hidden%2A>属性。 如果工作簿受到保护并且不是工作表中未隐藏的公式。  
+ 不将此属性与<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Hidden%2A>属性。 如果受保护工作簿和工作表不是，该公式并不隐藏。  
   
  ]]></format>
         </remarks>
@@ -2604,18 +2556,18 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件包含一个常数，则此属性返回该常量。  
+ 如果<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件包含一个常量，则此属性返回该常量。  
   
- 如果<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件为空，则该属性返回一个空字符串。  
+ 如果<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件为空，该属性返回空字符串。  
   
- 如果<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件包含一个公式，则该属性返回为字符串，其中它将显示在公式栏 （包括等号） 的格式相同的公式。  
+ 如果<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件包含一个公式，该属性将该公式返回为字符串，在其中它将显示在编辑栏 （包括等号） 中的格式相同。  
   
- 如果你设置的值或公式<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控制为日期，Microsoft Office Excel 将检查以查看是否使用日期或时间的数字格式之一已格式化该单元格。 否则，数字格式更改为默认的短日期数字格式。  
+ 如果设置了值或公式的<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控制为日期，Microsoft Office Excel 将检查以查看是否已将该单元格格式化为日期或时间的数字格式之一。 否则，数字格式更改为默认短日期的数字格式。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.FormulaLocal%2A>属性设置的值<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>为相等的单元格 A1 和 A2 的值的总和。 该公式根据系统运行的语言进行了本地化。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerAddress1Cell`类型的相应架构元素使用`int`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.FormulaLocal%2A>属性的值设置<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>等于的单元格 A1 和 A2 值的总和。 该公式的本地化语言的系统运行。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerAddress1Cell`与相应的架构元素类型的`int`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#25](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#25)]
  [!code-vb[Trin_ExcelXmlMappedRange#25](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#25)]  
@@ -2644,18 +2596,18 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件包含一个常数，则此属性返回的常量。  
+ 如果<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件包含一个常量，则此属性返回的常量。  
   
- 如果<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件为空，则该属性返回一个空字符串。  
+ 如果<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件为空，该属性返回空字符串。  
   
- 如果<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件包含一个公式，则该属性返回为字符串，其中它将显示在公式栏 （包括等号） 的格式相同的公式。  
+ 如果<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件包含一个公式，该属性将该公式返回为字符串，在其中它将显示在编辑栏 （包括等号） 中的格式相同。  
   
- 如果你设置的值或公式<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控制为日期，Microsoft Office Excel 将检查以查看是否使用日期或时间的数字格式之一已格式化该单元格。 否则，数字格式更改为默认的短日期数字格式。  
+ 如果设置了值或公式的<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控制为日期，Microsoft Office Excel 将检查以查看是否已将该单元格格式化为日期或时间的数字格式之一。 否则，数字格式更改为默认短日期的数字格式。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.FormulaR1C1%2A>属性设置的值<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>为 A1 单元格，平方根等于作为使用 R1C1 表示法指定。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerAddress1Cell`类型的相应架构元素使用`int`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.FormulaR1C1%2A>属性的值设置<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>为单元格 A1 的平方根等于作为使用 R1C1 表示法指定。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerAddress1Cell`与相应的架构元素类型的`int`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#26](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#26)]
  [!code-vb[Trin_ExcelXmlMappedRange#26](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#26)]  
@@ -2684,18 +2636,18 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件包含一个常数，则此属性返回该常量。  
+ 如果<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件包含一个常量，则此属性返回该常量。  
   
- 如果<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件为空，则此属性返回一个空字符串。  
+ 如果<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件为空，则此属性返回空字符串。  
   
- 如果<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件包含一个公式，则此属性将该公式返回为字符串，其中它将显示在公式栏 （包括等号） 的格式相同。  
+ 如果<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件包含一个公式，则此属性将该公式返回为字符串，在其中它将显示在编辑栏 （包括等号） 中的格式相同。  
   
- 如果你设置的值或公式<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控制为日期，Microsoft Office Excel 将检查以查看是否使用日期或时间的数字格式之一已格式化该单元格。 否则，数字格式更改为默认的短日期数字格式。  
+ 如果设置了值或公式的<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控制为日期，Microsoft Office Excel 将检查以查看是否已将该单元格格式化为日期或时间的数字格式之一。 否则，数字格式更改为默认短日期的数字格式。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.FormulaR1C1Local%2A>属性设置的值<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>为 A1 单元格，平方根等于作为使用 R1C1 表示法指定。 该公式根据系统运行的语言进行了本地化。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerAddress1Cell`类型的相应架构元素使用`int`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.FormulaR1C1Local%2A>属性的值设置<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>为单元格 A1 的平方根等于作为使用 R1C1 表示法指定。 该公式的本地化语言的系统运行。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerAddress1Cell`与相应的架构元素类型的`int`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#27](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#27)]
  [!code-vb[Trin_ExcelXmlMappedRange#27](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#27)]  
@@ -2743,7 +2695,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 因为<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>仅对应于一个单元格，此方法返回的枚举数可以仅循环通过在一个单元格。  
+ 因为<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>仅对应于一个单元格，此方法返回仅遍历一个单元格的枚举器。  
   
  ]]></format>
         </remarks>
@@ -2800,23 +2752,7 @@
         <param name="Start">要进行分组的第一个值。 如果省略此参数或者它为 <see langword="true" />，则使用该字段中的第一个值。</param>
         <param name="End">要进行分组的最后一个值。 如果省略此参数或者它为 <see langword="true" />，则使用该字段中的最后一个值。</param>
         <param name="By">如果该字段为数值字段，则此参数指定每组的大小。 如果该字段是日期字段，则此参数指定当 <c>Periods</c> 数组中的元素 4 为 <see langword="true" /> 而所有其他元素为 <see langword="false" /> 时每一组中的天数。 否则，将忽略此参数。 如果省略此参数，则 Microsoft Office Excel 会自动选择一个默认的组大小。</param>
-        <param name="Periods">一个数组，包含七个为该组指定时间段的布尔值，如下所示：  
-  
- 1 — 秒  
-  
- 2 — 分钟  
-  
- 3 —   
-  
- 4 — 日期  
-  
- 5 — 月份  
-  
- 6 — 季度  
-  
- 7 — 年份  
-  
- 如果数组中的某个元素为 <see langword="true" />，则针对相应的时间创建一个组；如果该元素为 <see langword="false" />，则不创建组。 如果字段不是日期字段，则省略此参数。</param>
+        <param name="Periods">一个由 7 个布尔值构成的数组，它指示组的时段，如下所示：1 - 秒  2 - 分钟  3 - 小时  4 - 天  5 - 月  6 - 季度  7 - 年  如果数组中的元素为 <see langword="true" />，则为相应时间创建组；如果元素为 <see langword="false" />，则不创建任何组。 如果字段不是日期字段，则省略此参数。</param>
         <summary>当 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件表示数据透视表字段的数据范围中的单个单元格时，<see cref="M:Microsoft.Office.Tools.Excel.XmlMappedRange.Group(System.Object,System.Object,System.Object,System.Object)" /> 方法在该字段中执行基于数值或日期的分组。</summary>
         <returns>To be added.</returns>
         <remarks>
@@ -2845,8 +2781,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，该值指示 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件是否属于数组公式。</summary>
-        <value>
-          如果 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件属于数组公式，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件属于数组公式，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2864,8 +2799,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，该值指示 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件是否包含公式。</summary>
-        <value>
-          如果 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件包含公式，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件包含公式，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2889,7 +2823,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Width%2A>和<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Height%2A>要显示的宽度和高度属性<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Width%2A>并<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Height%2A>要显示的宽度和高度属性<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#28](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#28)]
  [!code-vb[Trin_ExcelXmlMappedRange#28](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#28)]  
@@ -2941,12 +2875,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 某些<xref:Microsoft.Office.Interop.Excel.XlHAlign>常量可能不可用，这取决于的语言支持 （美国美式英语）。  
+ 某些<xref:Microsoft.Office.Interop.Excel.XlHAlign>常量可能不可用，这取决于语言支持 （例如美式英语）。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.HorizontalAlignment%2A>和<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.VerticalAlignment%2A>属性若要对齐的内容<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>到右下角。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.HorizontalAlignment%2A>并<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.VerticalAlignment%2A>属性，以保持一致的内容<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>到靠下右对齐。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#29](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#29)]
  [!code-vb[Trin_ExcelXmlMappedRange#29](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#29)]  
@@ -3002,12 +2936,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 你可以使用作为其他 HTML 文档中或在相同的网页上的超链接引用的 ID 标签。  
+ 您可以使用 ID 标签作为其他 HTML 文档中或在同一网页上的超链接引用。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.ID%2A>属性设置为 Web 页保存工作簿的情况下使用的 ID。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.ID%2A>属性设置将在工作簿保存为网页的 ID。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#31](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#31)]
  [!code-vb[Trin_ExcelXmlMappedRange#31](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#31)]  
@@ -3038,7 +2972,7 @@
 ## Remarks  
  缩进级别可以是从 0 到 15 的整数。  
   
- 使用此属性将缩进级别设置为小于 0 （零） 的数或大于 15 会导致错误。  
+ 使用此属性将缩进级别设置为一个小于 0 （零） 或大于 15 将导致错误。  
   
    
   
@@ -3102,7 +3036,7 @@
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Insert%2A>方法插入上面的单元格<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Insert%2A>方法插入上述的单元格<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#115](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#115)]
  [!code-vb[Trin_ExcelXmlMappedRange#115](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#115)]  
@@ -3133,9 +3067,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用此方法将缩进级别设置为小于 0 （零） 的数或大于 15 会导致错误。  
+ 使用此方法将缩进级别设置为一个小于 0 （零） 或大于 15 将导致错误。  
   
- 使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.IndentLevel%2A>属性以返回一系列的缩进级别。  
+ 使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.IndentLevel%2A>属性以返回一个范围的缩进级别。  
   
    
   
@@ -3168,7 +3102,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Borders%2A>属性绘制的边框的双线<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>，并使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Interior%2A>属性进行着色的内部<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>绿色。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Borders%2A>属性来绘制双线的边框<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>，并使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Interior%2A>属性进行着色的内部<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>绿色。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#4](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#4)]
  [!code-vb[Trin_ExcelXmlMappedRange#4](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#4)]  
@@ -3200,12 +3134,12 @@
   
 |参数|描述|  
 |---------------|-----------------|  
-|`RowIndex`|单元格的索引号你想要访问，请按从左到右的顺序。|  
-|`ColumnIndex`|数字或字符串，指示你想要访问，该单元格的列号开头 1 或"A"的范围中的第一列。|  
+|`RowIndex`|你想要访问，请从左到右的顺序的单元格的索引号。|  
+|`ColumnIndex`|数字或字符串，指示你想要访问，单元格的列号 1 或"A"的范围中的第一列开始。|  
   
- 如果你尝试使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Item%2A>而不指定任何参数，<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Item%2A>将获取<xref:Microsoft.Office.Tools.Excel.XmlMappedRange_ItemType>对象属于的 Office 开发工具在 Visual Studio 基础结构和不应在代码中直接使用。  
+ 如果尝试使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Item%2A>而无需指定任何参数，<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Item%2A>将获取<xref:Microsoft.Office.Tools.Excel.XmlMappedRange_ItemType>对象属于的 Office 开发 Visual Studio 基础结构中的工具，但不可在代码中直接使用。  
   
- `RowIndex`和`ColumnIndex`自变量是相对偏移量。 换而言之，指定`RowIndex`1 的范围不工作表中的第一行的第一行中返回的单元格。  
+ `RowIndex`和`ColumnIndex`参数都是相对偏移量。 换而言之，指定`RowIndex`1 的范围不在工作表的第一行的第一行中返回的单元格。  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -3213,7 +3147,7 @@
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Item%2A>属性以选择从偏移量的单元格<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>由三个列和三个行。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Item%2A>属性来选择从偏移量的单元格<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>由三个列和三行。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#34](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#34)]
  [!code-vb[Trin_ExcelXmlMappedRange#34](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#34)]  
@@ -3242,7 +3176,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果范围不足够大，Microsoft Office Excel 会显示一消息，告知你文本范围的扩展。 如果你单击**确定**按钮，对齐的文本替换中扩展到所选范围之外的单元格的内容。 若要防止出现此消息，将设置<xref:Microsoft.Office.Interop.Excel._Application.DisplayAlerts%2A>属性`false`。 设置此属性后，文本始终替换下面的单元中的内容<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件。  
+ 如果范围是不足够大，Microsoft Office Excel 将显示一个消息，指示文本范围的扩展。 如果单击**确定**按钮，将替换对齐的文本中超出所选范围内的单元格的内容。 若要防止出现此消息，设置<xref:Microsoft.Office.Interop.Excel._Application.DisplayAlerts%2A>属性设置为`false`。 设置此属性后，文本始终会替换在下面的单元格内容<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件。  
   
  ]]></format>
         </remarks>
@@ -3267,7 +3201,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Left%2A>和<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Top%2A>属性，以显示从列 A 到左边缘的左边缘的距离<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>，以及按自上而下的行 1 到上边缘的距离<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Left%2A>并<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Top%2A>属性，以显示从列 A 的左边缘到左边缘的距离<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>，以及从行 1 的上边缘到顶部的距离<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#35](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#35)]
  [!code-vb[Trin_ExcelXmlMappedRange#35](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#35)]  
@@ -3402,8 +3336,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件是否处于锁定状态。</summary>
-        <value>
-          如果 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件处于锁定状态，则为 <see langword="true" />；如果 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件可以在该表处于保护状态时进行修改，则为 <see langword="false" />；如果 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件中既包含处于锁定状态的单元格又包含处于未锁定状态的单元格，则为 <see langword="null" />。</value>
+        <value>如果 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件处于锁定状态，则为 <see langword="true" />；如果 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件可以在该表处于保护状态时进行修改，则为 <see langword="false" />；如果 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件中既包含处于锁定状态的单元格又包含处于未锁定状态的单元格，则为 <see langword="null" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -3441,14 +3374,13 @@
         <Parameter Name="Across" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Across">
-          如果将指定范围中每一行中的单元格作为单独的合并单元格来合并，则为 <see langword="true" />。 默认值为 <see langword="false" />。</param>
+        <param name="Across">如果将指定范围中每一行中的单元格作为单独的合并单元格来合并，则为 <see langword="true" />。 默认值为 <see langword="false" />。</param>
         <summary>从 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件创建一个合并单元格。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 合并范围的值指定在左上角单元格中<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件。  
+ 在左上角的单元格中指定的合并范围内的值<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件。  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -3476,12 +3408,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.NamedRange.MergeArea%2A>属性仅适用于单单元格范围。  
+ <xref:Microsoft.Office.Tools.Excel.NamedRange.MergeArea%2A>属性仅适用于单个单元格范围。  
   
    
   
 ## Examples  
- 下面的代码示例显示的值<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.MergeArea%2A>和<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.MergeCells%2A>属性之前和之后合并包含的范围<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`，它是在某个单元格 B2 至 B5 单元格。  
+ 下面的代码示例显示的值<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.MergeArea%2A>并<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.MergeCells%2A>属性之前和之后合并范围包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`，它是在某个单元格 B2 B5 至单元格。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#38](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#38)]
  [!code-vb[Trin_ExcelXmlMappedRange#38](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#38)]  
@@ -3504,13 +3436,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件是否包含合并单元格。</summary>
-        <value>
-          如果 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件包含合并单元格，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件包含合并单元格，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例显示的值<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.MergeArea%2A>和<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.MergeCells%2A>属性之前和之后合并包含的范围<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`，它是在某个单元格 B2 至 B5 单元格。  
+ 下面的代码示例显示的值<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.MergeArea%2A>并<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.MergeCells%2A>属性之前和之后合并范围包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`，它是在某个单元格 B2 B5 至单元格。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#38](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#38)]
  [!code-vb[Trin_ExcelXmlMappedRange#38](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#38)]  
@@ -3538,7 +3469,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Interop.Excel.Name?displayProperty=fullName>的引用所占用的单元格<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>到当前工作表。 然后该示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Name%2A>属性来显示的名称现在是指<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Interop.Excel.Name?displayProperty=fullName>的引用所占用的单元格<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>到当前工作表。 该示例然后使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Name%2A>属性显示的名称现在是指<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#39](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#39)]
  [!code-vb[Trin_ExcelXmlMappedRange#39](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#39)]  
@@ -3574,7 +3505,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 选择引用单元格、 相关或错误的单元格。 如果应用于没有可见追踪箭头的单元格，则此方法会导致错误。  
+ 选择引用单元格、 依赖方或错误的单元格。 如果将应用于没有可见的跟踪标志箭头的单元格，则此方法将导致错误。  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -3582,7 +3513,7 @@
    
   
 ## Examples  
- 下面的代码示例使 A1 单元格的从属<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 然后该示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.ShowDependents%2A>方法之间绘制一个箭头<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>从属单元格，并调用和<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.NavigateArrow%2A>方法来选择依赖的单元格。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
+ 下面的代码示例使单元格 A1 的依赖项<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 该示例然后使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.ShowDependents%2A>方法之间绘制一个箭头<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>从属单元格，并调用和<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.NavigateArrow%2A>方法来选择依赖单元格。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#118](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#118)]
  [!code-vb[Trin_ExcelXmlMappedRange#118](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#118)]  
@@ -3610,9 +3541,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性模拟 TAB 键，但该属性返回的下一个单元而不选择它。  
+ 此属性模拟 TAB 键，但该属性返回下一个单元格，而不选择它。  
   
- 对于受保护的表，此属性返回的下一步解锁单元格。 在未受保护的工作表，此属性始终返回该单元格立即指定的单元格右侧。  
+ 对于受保护的表，此属性返回的下一步的未锁定单元格。 未受保护的表，此属性始终单元格是立即返回到指定的单元格的右侧。  
   
    
   
@@ -3653,9 +3584,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 单元格说明已替换为范围注释。 有关详细信息，请参阅<xref:Microsoft.Office.Interop.Excel.Comment>对象。  
+ 范围注释已替换为单元格注释。 有关详细信息，请参阅<xref:Microsoft.Office.Interop.Excel.Comment>对象。  
   
- 若要添加包含超过 255 个字符的注释，使用此方法一次并将检索指定的前 255 个字符，然后再次使用它要追加的说明 （一次不超过 255 个字符） 的其余部分。  
+ 若要添加包含超过 255 个字符的注释，使用此方法一次指定的前 255 个字符，然后再次使用它来追加 （不超过 255 个字符一次） 的说明的其余部分。  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -3663,7 +3594,7 @@
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.NoteText%2A>方法添加到注释<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>，然后会提示用户通过移除注意<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.ClearNotes%2A>方法。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.NoteText%2A>方法将添加到注意<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>，然后会提示用户使用删除便笺<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.ClearNotes%2A>方法。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#119](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#119)]
  [!code-vb[Trin_ExcelXmlMappedRange#119](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#119)]  
@@ -3694,12 +3625,12 @@
 ## Remarks  
  此属性返回`null`如果中的所有单元格<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件不具有相同的数字格式。  
   
- 格式代码是相同的字符串**格式代码**选项**设置单元格格式**对话框。 `Format`函数使用不同的格式代码字符串比<xref:Microsoft.Office.Tools.Excel.NamedRange.NumberFormat%2A>和<xref:Microsoft.Office.Tools.Excel.NamedRange.NumberFormatLocal%2A>属性。  
+ 格式代码是相同的字符串**格式代码**选项**单元格格式**对话框。 `Format`函数使用不同的格式代码字符串比<xref:Microsoft.Office.Tools.Excel.NamedRange.NumberFormat%2A>和<xref:Microsoft.Office.Tools.Excel.NamedRange.NumberFormatLocal%2A>属性。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.NumberFormat%2A>日期字符串的格式中的属性<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 此示例还使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.NumberFormatLocal%2A>属性中的用户的语言显示的日期格式。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerDateCell`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.NumberFormat%2A>属性设置为格式的日期字符串<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 此示例还使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.NumberFormatLocal%2A>属性中的用户的语言显示的日期格式。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerDateCell`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#41](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#41)]
  [!code-vb[Trin_ExcelXmlMappedRange#41](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#41)]  
@@ -3733,7 +3664,7 @@
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.NumberFormat%2A>日期字符串的格式中的属性<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 此示例还使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.NumberFormatLocal%2A>属性中的用户的语言显示的日期格式。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerDateCell`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.NumberFormat%2A>属性设置为格式的日期字符串<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 此示例还使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.NumberFormatLocal%2A>属性中的用户的语言显示的日期格式。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerDateCell`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#41](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#41)]
  [!code-vb[Trin_ExcelXmlMappedRange#41](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#41)]  
@@ -3765,10 +3696,10 @@
   
 |参数|描述|  
 |---------------|-----------------|  
-|`RowOffset`|行 （正数、 负数还是 0 （零）） 数的范围是偏移。 表示向下偏移正值和负值表示向上偏移。 默认值为 0。|  
-|`ColumnOffset`|列 （正数、 负数还是 0 （零）） 数的范围是偏移。 在右侧偏移正值和负值表示向左侧偏移。 默认值为 0。|  
+|`RowOffset`|（正数、 负数或 0 （零）） 的行数的范围即偏移。 表示向下偏移正值和负值表示向上偏移。 默认值为 0。|  
+|`ColumnOffset`|（正数、 负数或 0 （零）） 的列数由其中的范围是有偏移。 正向右，表示偏移值和负值表示向左侧偏移。 默认值为 0。|  
   
- 如果你尝试使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Offset%2A>而不指定任何参数，<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Offset%2A>将获取<xref:Microsoft.Office.Tools.Excel.XmlMappedRange_OffsetType>对象属于的 Office 开发工具在 Visual Studio 基础结构和不应在代码中直接使用。  
+ 如果尝试使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Offset%2A>而无需指定任何参数，<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Offset%2A>将获取<xref:Microsoft.Office.Tools.Excel.XmlMappedRange_OffsetType>对象属于的 Office 开发 Visual Studio 基础结构中的工具，但不可在代码中直接使用。  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -3776,7 +3707,7 @@
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Offset%2A>属性选择的范围的偏移量位置<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>由三个单元格右侧和三个单元格下移。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Offset%2A>属性来选择范围的偏移量位置<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>由三个单元格右和向下的三个单元格。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#42](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#42)]
  [!code-vb[Trin_ExcelXmlMappedRange#42](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#42)]  
@@ -3804,7 +3735,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Orientation%2A>属性显示在垂直文本<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Orientation%2A>属性来显示竖直文本中的<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#43](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#43)]
  [!code-vb[Trin_ExcelXmlMappedRange#43](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#43)]  
@@ -3833,7 +3764,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 级别 1 是最外层的摘要级别。  
+ 级别 1 是最外面的摘要级别。  
   
  ]]></format>
         </remarks>
@@ -3858,7 +3789,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 你可以设置此属性使用以下项之一<xref:Microsoft.Office.Interop.Excel.XlPageBreak>值：  
+ 您可以设置此属性使用以下项之一<xref:Microsoft.Office.Interop.Excel.XlPageBreak>值：  
   
 -   <xref:Microsoft.Office.Interop.Excel.XlPageBreak.xlPageBreakAutomatic>  
   
@@ -3866,12 +3797,12 @@
   
 -   <xref:Microsoft.Office.Interop.Excel.XlPageBreak.xlPageBreakNone>  
   
- 此属性可以返回的位置是自动还是手动上的分页符，但它仅可以将手动换页符的位置进行设置 (它只能设置为<xref:Microsoft.Office.Interop.Excel.XlPageBreak.xlPageBreakManual>或<xref:Microsoft.Office.Interop.Excel.XlPageBreak.xlPageBreakNone>)。  
+ 此属性可返回的位置是自动或手动上的分页符，但可仅将设置手动中断的位置 (它只能设置为<xref:Microsoft.Office.Interop.Excel.XlPageBreak.xlPageBreakManual>或<xref:Microsoft.Office.Interop.Excel.XlPageBreak.xlPageBreakNone>)。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.PageBreak%2A>属性设置在分页符<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.PageBreak%2A>属性来设置分页符在<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#45](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#45)]
  [!code-vb[Trin_ExcelXmlMappedRange#45](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#45)]  
@@ -3899,7 +3830,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Parent%2A>属性显示的父级名称<xref:Microsoft.Office.Interop.Excel.Worksheet?displayProperty=fullName>的<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Parent%2A>属性来显示父级的名称<xref:Microsoft.Office.Interop.Excel.Worksheet?displayProperty=fullName>的<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#46](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#46)]
  [!code-vb[Trin_ExcelXmlMappedRange#46](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#46)]  
@@ -3925,11 +3856,7 @@
         <Parameter Name="Destination" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="ParseLine">一个字符串，包含指示应在何处拆分单元格的左中括号和右中括号。  
-  
- 例如，“<c>[xxx][xxx]</c>”会在目标范围的第一列中插入前三个字符，并在第二列中插入随后的三个字符。  
-  
- 如果省略此参数，则 Microsoft Office Excel 基于该范围中左上角单元格的间距猜测在何处拆分列。 如果要使用另一个范围来猜测分析行，请将 <see cref="T:Microsoft.Office.Interop.Excel.Range" /> 用作 <c>ParseLine</c> 参数。 该范围必须是正被分析的那些单元格之一。 <c>ParseLine</c> 参数不能超过 255 个字符，包括括号和空格。</param>
+        <param name="ParseLine">一个字符串，包含指示应在何处拆分单元格的左中括号和右中括号。  例如，“<c>[xxx][xxx]</c>”会在目标范围的第一列中插入前三个字符，并在第二列中插入随后的三个字符。  如果省略此参数，则 Microsoft Office Excel 基于该范围中左上角单元格的间距猜测在何处拆分列。 如果要使用另一个范围来猜测分析行，请将 <see cref="T:Microsoft.Office.Interop.Excel.Range" /> 用作 <c>ParseLine</c> 参数。 该范围必须是正被分析的那些单元格之一。 <c>ParseLine</c> 参数不能超过 255 个字符，包括括号和空格。</param>
         <param name="Destination">一个 <see cref="T:Microsoft.Office.Interop.Excel.Range" />，表示分析数据的目标范围的左上角。 如果省略此参数，则 Excel 就地分析。</param>
         <summary>分析数据的范围并将其分成多个单元格</summary>
         <returns>To be added.</returns>
@@ -3937,7 +3864,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Parse%2A>方法，以便分析的值<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>到三个不同的单元格在单元格 A5 开头的位置。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerAddress1Cell`类型的相应架构元素使用`int`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Parse%2A>方法，以便分析的值<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>分成三个不同的单元格在单元格 A5 开头的位置。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerAddress1Cell`与相应的架构元素类型的`int`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#120](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#120)]
  [!code-vb[Trin_ExcelXmlMappedRange#120](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#120)]  
@@ -3965,20 +3892,10 @@
         <Parameter Name="Transpose" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Paste">该范围中要粘贴的部分。  
-  
- 可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlPasteType" /> 值之一：  
-  
- <see cref="F:Microsoft.Office.Interop.Excel.XlPasteType.xlPasteAll" /><see cref="F:Microsoft.Office.Interop.Excel.XlPasteType.xlPasteAllExceptBorders" /><see cref="F:Microsoft.Office.Interop.Excel.XlPasteType.xlPasteColumnWidths" /><see cref="F:Microsoft.Office.Interop.Excel.XlPasteType.xlPasteComments" /><see cref="F:Microsoft.Office.Interop.Excel.XlPasteType.xlPasteFormats" /><see cref="F:Microsoft.Office.Interop.Excel.XlPasteType.xlPasteFormulas" /><see cref="F:Microsoft.Office.Interop.Excel.XlPasteType.xlPasteFormulasAndNumberFormats" /><see cref="F:Microsoft.Office.Interop.Excel.XlPasteType.xlPasteValidation" /><see cref="F:Microsoft.Office.Interop.Excel.XlPasteType.xlPasteValues" /><see cref="F:Microsoft.Office.Interop.Excel.XlPasteType.xlPasteValuesAndNumberFormats" /></param>
-        <param name="Operation">粘贴操作。  
-  
- 可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlPasteSpecialOperation" /> 值之一：  
-  
- <see cref="F:Microsoft.Office.Interop.Excel.XlPasteSpecialOperation.xlPasteSpecialOperationAdd" /><see cref="F:Microsoft.Office.Interop.Excel.XlPasteSpecialOperation.xlPasteSpecialOperationDivide" /><see cref="F:Microsoft.Office.Interop.Excel.XlPasteSpecialOperation.xlPasteSpecialOperationMultiply" /><see cref="F:Microsoft.Office.Interop.Excel.XlPasteSpecialOperation.xlPasteSpecialOperationNone" /><see cref="F:Microsoft.Office.Interop.Excel.XlPasteSpecialOperation.xlPasteSpecialOperationSubtract" /></param>
-        <param name="SkipBlanks">
-          如果不将剪贴板上该范围中的空单元格粘贴到目标范围，则为 <see langword="true" />。 默认值为 <see langword="false" />。</param>
-        <param name="Transpose">
-          如果在粘贴该范围时对行和列进行转置，则为 <see langword="true" />。 默认值为 <see langword="false" />。</param>
+        <param name="Paste">该范围中要粘贴的部分。  可为下列 <see cref="T:Microsoft.Office.Interop.Excel.XlPasteType" /> 值之一：<see cref="F:Microsoft.Office.Interop.Excel.XlPasteType.xlPasteAll" /><see cref="F:Microsoft.Office.Interop.Excel.XlPasteType.xlPasteAllExceptBorders" /><see cref="F:Microsoft.Office.Interop.Excel.XlPasteType.xlPasteColumnWidths" /><see cref="F:Microsoft.Office.Interop.Excel.XlPasteType.xlPasteComments" /><see cref="F:Microsoft.Office.Interop.Excel.XlPasteType.xlPasteFormats" /><see cref="F:Microsoft.Office.Interop.Excel.XlPasteType.xlPasteFormulas" /><see cref="F:Microsoft.Office.Interop.Excel.XlPasteType.xlPasteFormulasAndNumberFormats" /><see cref="F:Microsoft.Office.Interop.Excel.XlPasteType.xlPasteValidation" /><see cref="F:Microsoft.Office.Interop.Excel.XlPasteType.xlPasteValues" /><see cref="F:Microsoft.Office.Interop.Excel.XlPasteType.xlPasteValuesAndNumberFormats" /></param>
+        <param name="Operation">粘贴操作。  可为下列 <see cref="T:Microsoft.Office.Interop.Excel.XlPasteSpecialOperation" /> 值之一：<see cref="F:Microsoft.Office.Interop.Excel.XlPasteSpecialOperation.xlPasteSpecialOperationAdd" /><see cref="F:Microsoft.Office.Interop.Excel.XlPasteSpecialOperation.xlPasteSpecialOperationDivide" /><see cref="F:Microsoft.Office.Interop.Excel.XlPasteSpecialOperation.xlPasteSpecialOperationMultiply" /><see cref="F:Microsoft.Office.Interop.Excel.XlPasteSpecialOperation.xlPasteSpecialOperationNone" /><see cref="F:Microsoft.Office.Interop.Excel.XlPasteSpecialOperation.xlPasteSpecialOperationSubtract" /></param>
+        <param name="SkipBlanks">如果不将剪贴板上该范围中的空单元格粘贴到目标范围，则为 <see langword="true" />。 默认值为 <see langword="false" />。</param>
+        <param name="Transpose">如果在粘贴该范围时对行和列进行转置，则为 <see langword="true" />。 默认值为 <see langword="false" />。</param>
         <summary>将 <see cref="T:Microsoft.Office.Interop.Excel.Range" /> 的内容从剪贴板粘贴到 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件中。</summary>
         <returns>To be added.</returns>
         <remarks>
@@ -3992,7 +3909,7 @@
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Copy%2A>方法以复制<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>到剪贴板，然后使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.PasteSpecial%2A>方法将该范围复制为另一种<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 此代码示例假定当前工作表包含两个<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件名为`CustomerFirstNameCell`和`CustomerLastNameCell`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Copy%2A>方法复制<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>到剪贴板，然后使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.PasteSpecial%2A>方法将该范围复制到不同<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 此代码示例假定当前工作表包含两个<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件分别命名为`CustomerFirstNameCell`和`CustomerLastNameCell`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#106](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#106)]
  [!code-vb[Trin_ExcelXmlMappedRange#106](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#106)]  
@@ -4021,7 +3938,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供与早期版本的 Microsoft Office Excel 的兼容性。 应使用<xref:Microsoft.Office.Tools.Excel.NamedRange.Phonetics%2A>(`index`)，其中索引是要返回单个拼音文本的索引号<xref:Microsoft.Office.Interop.Excel.Phonetic>对象。  
+ 此属性提供与 Microsoft Office Excel 的早期版本的兼容性。 应使用<xref:Microsoft.Office.Tools.Excel.NamedRange.Phonetics%2A>(`index`)，其中索引是要返回单个拼音文本的索引号<xref:Microsoft.Office.Interop.Excel.Phonetic>对象。  
   
  ]]></format>
         </remarks>
@@ -4137,12 +4054,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 这可以是多重选择 (的并集<xref:Microsoft.Office.Interop.Excel.Range>对象) 如果存在多个引用单元格。  
+ 这可以是多个所选内容 (的并集<xref:Microsoft.Office.Interop.Excel.Range>对象) 如果有多个引用单元格。  
   
    
   
 ## Examples  
- 下面的代码示例设置单元格 A2 来引用单元格 A1 中的引用，然后设置的引用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>来引用单元格 A2。 然后，该代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Precedents%2A>属性选择的引用单元格<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>，这是单元格 A1 和 A2。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerAddress1Cell`类型的相应架构元素使用`int`。  
+ 下面的代码示例设置单元格 A2，若要向单元格 A1，请参阅中的引用，然后设置中的引用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>来引用单元格 A2。 然后，代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Precedents%2A>属性来选择引用单元格的<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>，这是单元格 A1 和 A2。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerAddress1Cell`与相应的架构元素类型的`int`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#52](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#52)]
  [!code-vb[Trin_ExcelXmlMappedRange#52](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#52)]  
@@ -4171,14 +4088,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 前缀是作为字符串返回。 尝试将对象强制转换返回到字符会导致无效的强制转换异常。  
+ 前缀是作为字符串返回。 尝试将对象强制转换返回到字符会导致无效强制转换异常。  
   
- 如果<xref:Microsoft.Office.Interop.Excel._Application.TransitionNavigKeys%2A>属性是`false`，此前缀字符是对于文本标签，或为空。 如果<xref:Microsoft.Office.Interop.Excel._Application.TransitionNavigKeys%2A>属性是`true`，该字符是左对齐的标签，"右对齐的标签，^ 的居中添加 \ 重复的标签，标签或留空。  
+ 如果<xref:Microsoft.Office.Interop.Excel._Application.TransitionNavigKeys%2A>属性是`false`，此前缀字符是文本标签，或保留为空。 如果<xref:Microsoft.Office.Interop.Excel._Application.TransitionNavigKeys%2A>属性是`true`，该字符是左对齐的标签，"为右对齐的标签，^ 的居中标签 \ 重复的标签，或者为空。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.PrefixCharacter%2A>属性显示的前缀字符<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.PrefixCharacter%2A>属性来显示的前缀字符<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#53](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#53)]
  [!code-vb[Trin_ExcelXmlMappedRange#53](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#53)]  
@@ -4206,14 +4123,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性会模拟按下 SHIFT + TAB;与不同的键的组合，但是，该属性返回上一个单元格而不选择它。  
+ 此属性来模拟按下 SHIFT + TAB;与不同的键的组合，但是，该属性返回上一个单元格而不选择它。  
   
- 对于受保护的表，此属性返回上一个解锁单元格。 在未受保护的工作表，此属性始终返回该单元格立即指定的单元格左侧。  
+ 对于受保护的表，此属性返回上一个未锁定单元格。 未受保护的表，此属性始终返回该单元格立即指定单元格的左侧。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Previous%2A>属性选择该单元格左侧<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Previous%2A>属性来选择左侧的单元格<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#54](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#54)]
  [!code-vb[Trin_ExcelXmlMappedRange#54](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#54)]  
@@ -4289,13 +4206,10 @@
         <param name="From">要从其处开始打印的页码。 若忽略此参数，则从第一页开始打印。</param>
         <param name="To">要打印的最后一页的页码。 若忽略此参数，则打印至最后一页。</param>
         <param name="Copies">要打印的份数。 如果忽略此参数，则打印一份。</param>
-        <param name="Preview">
-          若要在打印对象前让 Microsoft Office Excel 调用打印预览，请使用 <see langword="true" />。 若要立即打印对象，请使用 <see langword="false" />。</param>
+        <param name="Preview">若要在打印对象前让 Microsoft Office Excel 调用打印预览，请使用 <see langword="true" />。 若要立即打印对象，请使用 <see langword="false" />。</param>
         <param name="ActivePrinter">设置活动打印机的名称。</param>
-        <param name="PrintToFile">
-          若要打印到文件，请使用 <see langword="true" />。 若未指定 <c>PrToFileName</c>，则 Excel 会提示用户输入输出文件的名称。</param>
-        <param name="Collate">
-          若逐份打印多个副本，请使用 <see langword="true" />。</param>
+        <param name="PrintToFile">若要打印到文件，请使用 <see langword="true" />。 若未指定 <c>PrToFileName</c>，则 Excel 会提示用户输入输出文件的名称。</param>
+        <param name="Collate">若逐份打印多个副本，请使用 <see langword="true" />。</param>
         <param name="PrToFileName">如果 <c>PrintToFile</c> 设为 <see langword="true" />，则此参数指定要打印到的文件的名称。</param>
         <summary>打印输出 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" />。</summary>
         <returns>To be added.</returns>
@@ -4303,15 +4217,15 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- "页"中的说明`From`和`To`打印页，而不是的范围中的页引用。  
+ "页"中的说明`From`和`To`指打印的页面，不在范围中的页。  
   
    
   
 ## Examples  
- 下面的代码示例设置的值`EmployeeNameCell`<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控制上`Sheet1`。 接下来，该示例打印一份的内容的前两页`EmployeeNameCell`到默认打印机。  
+ 下面的代码示例设置的值`EmployeeNameCell`<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控制上`Sheet1`。 接下来，该示例将打印一份的内容的前两页`EmployeeNameCell`到默认打印机。  
   
 > [!NOTE]
->  通常情况下，填充<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>从 XML 文件的控件。 此示例硬编码为简单起见控件的值。  
+>  通常情况下，填充<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控制从 XML 文件。 此示例中硬编码为简单起见控件的值。  
   
  [!code-csharp[Trin_ExcelWorkbook_Additional#23](~/snippets/csharp/VS_Snippets_OfficeSP/trin_excelworkbook_additional/cs/ThisWorkbook.cs#23)]
  [!code-vb[Trin_ExcelWorkbook_Additional#23](~/snippets/visualbasic/VS_Snippets_OfficeSP/trin_excelworkbook_additional/vb/ThisWorkbook.vb#23)]  
@@ -4336,8 +4250,7 @@
         <Parameter Name="EnableChanges" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="EnableChanges">
-          如果为 <see langword="true" />，则允许在显示打印预览时更改边距和页面设置；否则为 <see langword="false" />。</param>
+        <param name="EnableChanges">如果为 <see langword="true" />，则允许在显示打印预览时更改边距和页面设置；否则为 <see langword="false" />。</param>
         <summary>显示 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件的预览（显示打印时的外观）。</summary>
         <returns>To be added.</returns>
         <remarks>
@@ -4351,7 +4264,7 @@
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.PrintPreview%2A>方法以显示打印预览<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.PrintPreview%2A>方法来显示打印预览的<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#122](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#122)]
  [!code-vb[Trin_ExcelXmlMappedRange#122](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#122)]  
@@ -4379,7 +4292,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.QueryTable%2A>属性刷新相交的查询表<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`，相交的查询表。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.QueryTable%2A>属性来刷新相交的查询表<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`查询表与相交。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#55](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#55)]
  [!code-vb[Trin_ExcelXmlMappedRange#55](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#55)]  
@@ -4407,12 +4320,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 这些常量中的某些可能不可用，具体取决于的语言支持 （美国美式英语）。  
+ 其中某些常数可能不可用，具体取决于语言支持 （例如美式英语）。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.ReadingOrder%2A>属性要反转的阅读顺序<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>，如果选择或安装的当前语言支持它。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.ReadingOrder%2A>要反转的读取顺序属性<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>，如果在选择或安装的当前语言支持它。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#56](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#56)]
  [!code-vb[Trin_ExcelXmlMappedRange#56](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#56)]  
@@ -4490,21 +4403,19 @@
         <param name="Replacement">替换字符串。</param>
         <param name="LookAt">可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlLookAt" /> 常数之一：<see cref="F:Microsoft.Office.Interop.Excel.XlLookAt.xlWhole" /> 或 <see cref="F:Microsoft.Office.Interop.Excel.XlLookAt.xlPart" />。</param>
         <param name="SearchOrder">可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlSearchOrder" /> 常数之一：<see cref="F:Microsoft.Office.Interop.Excel.XlSearchOrder.xlByRows" /> 或 <see cref="F:Microsoft.Office.Interop.Excel.XlSearchOrder.xlByColumns" />。</param>
-        <param name="MatchCase">
-          如果在搜索时区分大小写，则为 <see langword="true" />。</param>
+        <param name="MatchCase">如果在搜索时区分大小写，则为 <see langword="true" />。</param>
         <param name="MatchByte">仅当已在 Excel 中选择或安装双字节语言支持时，才会用到此参数。 如果让双字节字符仅与双字节字符相匹配，则为 <see langword="true" />；如果让双字节字符与其单字节等效字符相匹配，则为 <see langword="false" />。</param>
         <param name="SearchFormat">该方法的搜索格式。</param>
         <param name="ReplaceFormat">该方法的替换格式。</param>
         <summary>将 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件中指定的字符替换为新字符串。</summary>
-        <returns>
-          如果指定字符在 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件中，则为 <see langword="true" />；否则为 <see langword="false" />。</returns>
+        <returns>如果指定字符在 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件中，则为 <see langword="true" />；否则为 <see langword="false" />。</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用此方法不会更改选定内容或活动的单元格。  
+ 使用此方法不更改选定内容或活动单元格。  
   
- 有关设置`LookAt`， `SearchOrder`， `MatchCase`，和`MatchByte`保存每次使用此方法。 如果您不指定这些参数的值在调用该方法的下一步时，将使用保存的值。 设置这些参数将更改中的设置**查找**对话框中，并更改中的设置**查找**对话框中更改如果省略这些参数，则使用的已保存的值。 若要避免出现问题，这些自变量显式设置每次使用此方法。  
+ 设置`LookAt`， `SearchOrder`， `MatchCase`，和`MatchByte`保存每次使用此方法。 如果下次调用该方法时未指定这些参数的值，将使用保存的值。 设置这些参数将更改中的设置**查找**对话框中，并更改中的设置**查找**对话框更改保存的值，如果省略自变量，则使用。 若要避免出现问题，这些参数显式设置每次使用此方法。  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -4512,7 +4423,7 @@
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Replace%2A>方法中将字符串"Jones"的字符串"Smith" <xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Replace%2A>方法以将字符串"Smith"替换"Jones"的字符串为内<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#123](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#123)]
  [!code-vb[Trin_ExcelXmlMappedRange#123](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#123)]  
@@ -4544,10 +4455,10 @@
   
 |参数|描述|  
 |---------------|-----------------|  
-|`RowSize`|新的范围中的行数。 如果省略此参数，该范围中的行数保持不变。|  
-|`ColumnSize`|新的范围中的列数。 如果省略此参数，该范围中的列数保持不变。|  
+|`RowSize`|新范围中的行数。 如果省略此参数，该范围中的行数保持不变。|  
+|`ColumnSize`|新范围中的列数。 如果省略此参数，该范围中的列数保持不变。|  
   
- 如果你尝试使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Resize%2A>而不指定任何参数，<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Resize%2A>将获取<xref:Microsoft.Office.Tools.Excel.XmlMappedRange_ResizeType>对象属于的 Office 开发工具在 Visual Studio 基础结构和不应在代码中直接使用。  
+ 如果尝试使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Resize%2A>而无需指定任何参数，<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Resize%2A>将获取<xref:Microsoft.Office.Tools.Excel.XmlMappedRange_ResizeType>对象属于的 Office 开发 Visual Studio 基础结构中的工具，但不可在代码中直接使用。  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -4555,7 +4466,7 @@
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Resize%2A>属性以获得更大范围基于<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>，然后选择新的范围。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Resize%2A>属性以获取更大范围基于<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>，然后选择新的范围。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#57](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#57)]
  [!code-vb[Trin_ExcelXmlMappedRange#57](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#57)]  
@@ -4583,7 +4494,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Column%2A>和<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Row%2A>属性显示的列和行号<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Column%2A>并<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Row%2A>属性显示的列和行号<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#7](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#7)]
  [!code-vb[Trin_ExcelXmlMappedRange#7](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#7)]  
@@ -4633,7 +4544,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.ColumnWidth%2A>和<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.RowHeight%2A>要显示的宽度和高度属性<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.ColumnWidth%2A>并<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.RowHeight%2A>要显示的宽度和高度属性<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#8](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#8)]
  [!code-vb[Trin_ExcelXmlMappedRange#8](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#8)]  
@@ -4792,12 +4703,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 所选内容更改为时会引发此事件<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件。  
+ 为所选内容更改时引发此事件<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件。  
   
    
   
 ## Examples  
- 下面的代码演示的处理程序<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Selected>显示的地址的事件<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>选择。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
+ 下面的代码演示的处理程序<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Selected>显示的地址的事件<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>选。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#204](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#204)]
  [!code-vb[Trin_ExcelXmlMappedRange#204](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#204)]  
@@ -4824,12 +4735,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 所选内容更改到或在内时引发此事件<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件。  
+ 所选内容更改到或在其中时引发此事件<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件。  
   
    
   
 ## Examples  
- 下面的代码演示的处理程序<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.SelectionChange>显示的地址的事件<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>选择。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
+ 下面的代码演示的处理程序<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.SelectionChange>显示的地址的事件<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>选。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#205](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#205)]
  [!code-vb[Trin_ExcelXmlMappedRange#205](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#205)]  
@@ -4875,7 +4786,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 任何现有<xref:Microsoft.Office.Interop.Excel.Phonetic>中的对象<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件都会自动覆盖 （删除） 通过使用此方法添加的新对象。  
+ 任何现有<xref:Microsoft.Office.Interop.Excel.Phonetic>中的对象<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件都会自动将其覆盖 （删除） 使用此方法添加的新对象。  
   
  ]]></format>
         </remarks>
@@ -4916,8 +4827,7 @@
         <Parameter Name="Remove" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Remove">
-          如果移除指向直接依赖单元格的某一级别的跟踪标志箭头，则为 <see langword="true" />；如果展开某一级别的跟踪标志箭头，则为 <see langword="false" />。 默认值为 <see langword="false" />。</param>
+        <param name="Remove">如果移除指向直接依赖单元格的某一级别的跟踪标志箭头，则为 <see langword="true" />；如果展开某一级别的跟踪标志箭头，则为 <see langword="false" />。 默认值为 <see langword="false" />。</param>
         <summary>绘制指向 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件的直接依赖单元格的跟踪标志箭头。</summary>
         <returns>To be added.</returns>
         <remarks>
@@ -4931,7 +4841,7 @@
    
   
 ## Examples  
- 下面的代码示例使 A1 单元格的从属<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 然后该示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.ShowDependents%2A>方法之间绘制一个箭头<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>从属单元格，并调用和<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.NavigateArrow%2A>方法来选择依赖的单元格。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
+ 下面的代码示例使单元格 A1 的依赖项<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 该示例然后使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.ShowDependents%2A>方法之间绘制一个箭头<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>从属单元格，并调用和<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.NavigateArrow%2A>方法来选择依赖单元格。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#118](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#118)]
  [!code-vb[Trin_ExcelXmlMappedRange#118](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#118)]  
@@ -4954,15 +4864,14 @@
       </ReturnValue>
       <Docs>
         <summary>获取和设置一个对象，该对象指示是否展开了 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件的大纲（以便列或行的详细信息可见）。</summary>
-        <value>
-          如果为 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件展开大纲（以使列或行的详细信息可见），则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果为 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件展开大纲（以使列或行的详细信息可见），则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件位于数据透视表中，此属性设置为`true`如果项显示详细信息。  
+ 如果<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件处于数据透视表报表，此属性设置为`true`如果显示该项的详细信息。  
   
- 如果<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件不在数据透视表，以下语句为 true:  
+ 如果<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件不在数据透视表报表中，以下语句为 true:  
   
 -   <xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件必须为单个摘要行或列中。  
   
@@ -4970,7 +4879,7 @@
   
 -   此属性设置为`true`等效于显示的摘要行或列的所有子级。  
   
--   此属性设置为`false`等效于隐藏摘要行或列的所有子级。  
+-   此属性设置为`false`等效于隐藏的摘要行或列的所有子级。  
   
  ]]></format>
         </remarks>
@@ -5011,8 +4920,7 @@
         <Parameter Name="Remove" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Remove">
-          如果移除指向直接引用单元格的某一级别的跟踪标志箭头，则为 <see langword="true" />；如果展开某一级别的跟踪标志箭头，则为 <see langword="false" />。 默认值为 <see langword="false" />。</param>
+        <param name="Remove">如果移除指向直接引用单元格的某一级别的跟踪标志箭头，则为 <see langword="true" />；如果展开某一级别的跟踪标志箭头，则为 <see langword="false" />。 默认值为 <see langword="false" />。</param>
         <summary>绘制指向 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件的直接引用单元格的跟踪标志箭头。</summary>
         <returns>To be added.</returns>
         <remarks>
@@ -5026,7 +4934,7 @@
    
   
 ## Examples  
- 下面的代码示例使 A1 单元格的引用单元格<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 然后该示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.ShowPrecedents%2A>方法之间绘制一个箭头<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>和引用单元格。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerAddress1Cell`类型的相应架构元素使用`int`。  
+ 下面的代码示例使单元格 A1 的引用单元格<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 该示例然后使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.ShowPrecedents%2A>方法之间绘制一个箭头<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>和引用单元格。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerAddress1Cell`与相应的架构元素类型的`int`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#125](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#125)]
  [!code-vb[Trin_ExcelXmlMappedRange#125](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#125)]  
@@ -5049,8 +4957,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示文本是否自动缩小以适合可用的列宽。</summary>
-        <value>
-          如果文本自动缩小以适合可用的列宽，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果文本自动缩小以适合可用的列宽，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -5096,7 +5003,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 不应使用此属性。 已从 Microsoft Office Excel 中删除的语音批注。  
+ 不应使用此属性。 已从 Microsoft Office Excel 中删除声音说明。  
   
  ]]></format>
         </remarks>
@@ -5123,7 +5030,7 @@
 ## Remarks  
   
 > [!NOTE]
->  此属性将出现在 IntelliSense Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Excel 2007 项目中使用此属性。  
+>  此属性将出现在 IntelliSense 中 Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，此属性不能使用 Excel 2007 项目中。  
   
  ]]></format>
         </remarks>
@@ -5147,8 +5054,7 @@
       </Parameters>
       <Docs>
         <param name="SpeakDirection">朗读方向（按行或列）。</param>
-        <param name="SpeakFormulas">
-          为 <see langword="true" /> 时，使公式被发送到具有公式的单元格的文字语音转换 (TTS) 引擎。 如果单元格没有公式则发送值；为 <see langword="false" />（默认）时，使值始终发送到 TTS 引擎。</param>
+        <param name="SpeakFormulas">为 <see langword="true" /> 时，使公式被发送到具有公式的单元格的文字语音转换 (TTS) 引擎。 如果单元格没有公式则发送值；为 <see langword="false" />（默认）时，使值始终发送到 TTS 引擎。</param>
         <summary>导致按行顺序或列顺序朗读 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件的单元格。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -5179,11 +5085,7 @@
         <Parameter Name="Value" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Type">要包括的单元格。  
-  
- 可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlCellType" /> 值之一：  
-  
- <see cref="F:Microsoft.Office.Interop.Excel.XlCellType.xlCellTypeAllFormatConditions" />。 任何格式的单元格。  
+        <param name="Type">要包括的单元格。  可为下列 <see cref="T:Microsoft.Office.Interop.Excel.XlCellType" /> 值之一：<see cref="F:Microsoft.Office.Interop.Excel.XlCellType.xlCellTypeAllFormatConditions" />。 任何格式的单元格。  
   
  <see cref="F:Microsoft.Office.Interop.Excel.XlCellType.xlCellTypeAllValidation" />。 具有验证条件的单元格。  
   
@@ -5202,9 +5104,7 @@
  <see cref="F:Microsoft.Office.Interop.Excel.XlCellType.xlCellTypeSameValidation" />。 具有相同验证条件的单元格。  
   
  <see cref="F:Microsoft.Office.Interop.Excel.XlCellType.xlCellTypeVisible" />。 所有可见的单元格。</param>
-        <param name="Value">如果 <c>Type</c> 为 <see cref="F:Microsoft.Office.Interop.Excel.XlCellType.xlCellTypeConstants" /> 或 <see cref="F:Microsoft.Office.Interop.Excel.XlCellType.xlCellTypeFormulas" />，则此参数用于确定要在结果中包含哪些类型的单元格。 这些值可以一起添加以返回多种类型。 默认情况下，无论是何种类型，都选择所有的常数或公式。 可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlSpecialCellsValue" /> 值之一：  
-  
- <see cref="F:Microsoft.Office.Interop.Excel.XlSpecialCellsValue.xlErrors" /><see cref="F:Microsoft.Office.Interop.Excel.XlSpecialCellsValue.xlLogical" /><see cref="F:Microsoft.Office.Interop.Excel.XlSpecialCellsValue.xlNumbers" /><see cref="F:Microsoft.Office.Interop.Excel.XlSpecialCellsValue.xlTextValues" /></param>
+        <param name="Value">如果 <c>Type</c> 为 <see cref="F:Microsoft.Office.Interop.Excel.XlCellType.xlCellTypeConstants" /> 或 <see cref="F:Microsoft.Office.Interop.Excel.XlCellType.xlCellTypeFormulas" />，则此参数用于确定要在结果中包含哪些类型的单元格。 这些值可以一起添加以返回多种类型。 默认情况下，无论是何种类型，都选择所有的常数或公式。 可为下列 <see cref="T:Microsoft.Office.Interop.Excel.XlSpecialCellsValue" /> 值之一：<see cref="F:Microsoft.Office.Interop.Excel.XlSpecialCellsValue.xlErrors" /><see cref="F:Microsoft.Office.Interop.Excel.XlSpecialCellsValue.xlLogical" /><see cref="F:Microsoft.Office.Interop.Excel.XlSpecialCellsValue.xlNumbers" /><see cref="F:Microsoft.Office.Interop.Excel.XlSpecialCellsValue.xlTextValues" /></param>
         <summary>获取一个 <see cref="T:Microsoft.Office.Interop.Excel.Range" />，它表示匹配指定类型和值的所有单元格。</summary>
         <returns>一个 <see cref="T:Microsoft.Office.Interop.Excel.Range" />，表示匹配指定类型和值的所有单元格。</returns>
         <remarks>
@@ -5218,7 +5118,7 @@
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.SpecialCells%2A>方法以获取并选择的单元格包含中的注释，这些区域<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.SpecialCells%2A>方法以获取并选择包含注释内的单元格的范围<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#127](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#127)]
  [!code-vb[Trin_ExcelXmlMappedRange#127](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#127)]  
@@ -5246,7 +5146,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Style%2A>属性显示的当前样式名称<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Style%2A>属性来显示的当前样式的名称<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#60](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#60)]
  [!code-vb[Trin_ExcelXmlMappedRange#60](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#60)]  
@@ -5301,21 +5201,11 @@
       </Parameters>
       <Docs>
         <param name="GroupBy">要作为分组依据的字段，是从 1 开始的整数偏移量。</param>
-        <param name="Function">小计函数。  
-  
- 可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlConsolidationFunction" /> 值之一：  
-  
- <see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlAverage" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlCount" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlCountNums" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlMax" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlMin" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlProduct" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlStDev" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlStDevP" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlSum" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlUnknown" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlVar" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlVarP" /></param>
+        <param name="Function">小计函数。  可为下列 <see cref="T:Microsoft.Office.Interop.Excel.XlConsolidationFunction" /> 值之一：<see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlAverage" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlCount" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlCountNums" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlMax" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlMin" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlProduct" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlStDev" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlStDevP" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlSum" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlUnknown" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlVar" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlVarP" /></param>
         <param name="TotalList">一个从 1 开始的字段偏移量数组，指示要将小计添加到的字段。</param>
-        <param name="Replace">
-          如果替换现有的小计，则为 <see langword="true" />。 默认值为 <see langword="false" />。</param>
-        <param name="PageBreaks">
-          如果在每组后面添加分页符，则为 <see langword="true" />。 默认值为 <see langword="false" />。</param>
-        <param name="SummaryBelowData">放置与小计相关的摘要数据。  
-  
- 可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlSummaryRow" /> 值之一：  
-  
- <see cref="F:Microsoft.Office.Interop.Excel.XlSummaryRow.xlSummaryAbove" /><see cref="F:Microsoft.Office.Interop.Excel.XlSummaryRow.xlSummaryBelow" />（默认值）</param>
+        <param name="Replace">如果替换现有的小计，则为 <see langword="true" />。 默认值为 <see langword="false" />。</param>
+        <param name="PageBreaks">如果在每组后面添加分页符，则为 <see langword="true" />。 默认值为 <see langword="false" />。</param>
+        <param name="SummaryBelowData">放置与小计相关的摘要数据。  可为下列 <see cref="T:Microsoft.Office.Interop.Excel.XlSummaryRow" /> 值之一：<see cref="F:Microsoft.Office.Interop.Excel.XlSummaryRow.xlSummaryAbove" /><see cref="F:Microsoft.Office.Interop.Excel.XlSummaryRow.xlSummaryBelow" />（默认）</param>
         <summary>为 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件创建小计。</summary>
         <returns>To be added.</returns>
         <remarks>
@@ -5344,8 +5234,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，该值指示 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 是否为大纲摘要行或列。</summary>
-        <value>
-          如果 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 为大纲摘要行或列，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 为大纲摘要行或列，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -5374,7 +5263,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用数据表通过更改某些常量值在工作表中，若要查看如何影响其他单元格中的值执行假设分析。  
+ 使用数据的表执行假设分析通过更改在工作表中，若要查看如何影响其他单元中的值的某些常量值。  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -5402,7 +5291,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 一个常见用途<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Tag%2A>属性是与紧密关联的数据存储<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件。  
+ 一个常见用途<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Tag%2A>属性是与密切关联的数据存储<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件。  
   
  ]]></format>
         </remarks>
@@ -5428,7 +5317,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例比较了<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Text%2A>和<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Value2%2A>属性不同的单元格包含格式化数字。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
+ 下面的代码示例进行比较如何<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Text%2A>和<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Value2%2A>属性不同的包含的单元格格式的数字。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#62](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#62)]
  [!code-vb[Trin_ExcelXmlMappedRange#62](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#62)]  
@@ -5467,42 +5356,16 @@
       </Parameters>
       <Docs>
         <param name="Destination">一个 <see cref="T:Microsoft.Office.Interop.Excel.Range" />，指定 Microsoft Office Excel 在何处放置结果。 如果范围大于单个单元格，则使用左上角的单元格。</param>
-        <param name="DataType">要拆分成多列的文本的格式。  
-  
- 可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlTextParsingType" /> 常量之一：  
-  
- <see cref="F:Microsoft.Office.Interop.Excel.XlTextParsingType.xlDelimited" />（默认值）  
-  
- <see cref="F:Microsoft.Office.Interop.Excel.XlTextParsingType.xlFixedWidth" /></param>
-        <param name="TextQualifier">可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlTextQualifier" /> 值之一：  
-  
- <see cref="F:Microsoft.Office.Interop.Excel.XlTextQualifier.xlTextQualifierDoubleQuote" />（默认值）  
-  
- <see cref="F:Microsoft.Office.Interop.Excel.XlTextQualifier.xlTextQualifierNone" /><see cref="F:Microsoft.Office.Interop.Excel.XlTextQualifier.xlTextQualifierSingleQuote" /></param>
-        <param name="ConsecutiveDelimiter">
-          如果让 Excel 将连续分隔符视为一个分隔符，则为 <see langword="true" />。 默认值为 <see langword="false" />。</param>
-        <param name="Tab">
-          如果让 <c>DataType</c> 为 <see cref="F:Microsoft.Office.Interop.Excel.XlTextParsingType.xlDelimited" />，并将制表符用作分隔符，则为 <see langword="true" />。 默认值为 <see langword="false" />。</param>
-        <param name="Semicolon">
-          如果让 <c>DataType</c> 为 <see cref="F:Microsoft.Office.Interop.Excel.XlTextParsingType.xlDelimited" />，并将分号用作分隔符，则为 <see langword="true" />。 默认值为 <see langword="false" />。</param>
-        <param name="Comma">
-          如果让 <c>DataType</c> 为 <see cref="F:Microsoft.Office.Interop.Excel.XlTextParsingType.xlDelimited" />，并将逗号用作分隔符，则为 <see langword="true" />。 默认值为 <see langword="false" />。</param>
-        <param name="Space">
-          如果让 <c>DataType</c> 为 <see cref="F:Microsoft.Office.Interop.Excel.XlTextParsingType.xlDelimited" />，并将空格字符用作分隔符，则为 <see langword="true" />。 默认值为 <see langword="false" />。</param>
-        <param name="Other">
-          如果让 <c>DataType</c> 为 <see cref="F:Microsoft.Office.Interop.Excel.XlTextParsingType.xlDelimited" />，并且将 <c>OtherChar</c> 参数指定的字符用作分隔符，则为 <see langword="true" />。 默认值为 <see langword="false" />。</param>
+        <param name="DataType">要拆分成多列的文本的格式。  可为下列 <see cref="T:Microsoft.Office.Interop.Excel.XlTextParsingType" /> 常数之一：<see cref="F:Microsoft.Office.Interop.Excel.XlTextParsingType.xlDelimited" />（默认）  <see cref="F:Microsoft.Office.Interop.Excel.XlTextParsingType.xlFixedWidth" /></param>
+        <param name="TextQualifier">可为下列 <see cref="T:Microsoft.Office.Interop.Excel.XlTextQualifier" /> 值之一：<see cref="F:Microsoft.Office.Interop.Excel.XlTextQualifier.xlTextQualifierDoubleQuote" />（默认）  <see cref="F:Microsoft.Office.Interop.Excel.XlTextQualifier.xlTextQualifierNone" /><see cref="F:Microsoft.Office.Interop.Excel.XlTextQualifier.xlTextQualifierSingleQuote" /></param>
+        <param name="ConsecutiveDelimiter">如果让 Excel 将连续分隔符视为一个分隔符，则为 <see langword="true" />。 默认值为 <see langword="false" />。</param>
+        <param name="Tab">如果让 <c>DataType</c> 为 <see cref="F:Microsoft.Office.Interop.Excel.XlTextParsingType.xlDelimited" />，并将制表符用作分隔符，则为 <see langword="true" />。 默认值为 <see langword="false" />。</param>
+        <param name="Semicolon">如果让 <c>DataType</c> 为 <see cref="F:Microsoft.Office.Interop.Excel.XlTextParsingType.xlDelimited" />，并将分号用作分隔符，则为 <see langword="true" />。 默认值为 <see langword="false" />。</param>
+        <param name="Comma">如果让 <c>DataType</c> 为 <see cref="F:Microsoft.Office.Interop.Excel.XlTextParsingType.xlDelimited" />，并将逗号用作分隔符，则为 <see langword="true" />。 默认值为 <see langword="false" />。</param>
+        <param name="Space">如果让 <c>DataType</c> 为 <see cref="F:Microsoft.Office.Interop.Excel.XlTextParsingType.xlDelimited" />，并将空格字符用作分隔符，则为 <see langword="true" />。 默认值为 <see langword="false" />。</param>
+        <param name="Other">如果让 <c>DataType</c> 为 <see cref="F:Microsoft.Office.Interop.Excel.XlTextParsingType.xlDelimited" />，并且将 <c>OtherChar</c> 参数指定的字符用作分隔符，则为 <see langword="true" />。 默认值为 <see langword="false" />。</param>
         <param name="OtherChar">当 <c>Other</c> 为 <see langword="true" /> 时的分隔符字符。 如果指定了多个字符，则只使用该字符串的第一个字符；忽略其余字符。</param>
-        <param name="FieldInfo">一个数组，包含各个数据列的分析信息。 解释取决于 <c>DataType</c> 的值。 当对数据进行分隔时，此参数是一个由两元素数组组成的数组，每个两元素数组都指定特定列的转换选项。 第一个元素是列号（从 1 开始），第二个元素是指定如何分析列的 <see cref="T:Microsoft.Office.Interop.Excel.XlColumnDataType" /> 常量之一。  
-  
- 可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlColumnDataType" /> 值之一：  
-  
- <see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlGeneralFormat" /><see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlTextFormat" /><see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlMDYFormat" /><see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlDMYFormat" /><see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlYMDFormat" /><see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlMYDFormat" /><see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlDYMFormat" /><see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlYDMFormat" /><see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlEMDFormat" /><see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlSkipColumn" />  
-  
- 仅当已安装和选择繁体中文支持时，才会用到 <see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlEMDFormat" />。 <see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlEMDFormat" /> 指定要使用的繁体中文纪元日期。  
-  
- 列说明符可以采用任何顺序。 如果对于输入数据中的特定列，给定的列说明符不存在，则用 <see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlGeneralFormat" /> 设置对列进行分析。  
-  
- 如果源数据具有固定宽度的列，则每个两元素数组中的第一个元素都指定该列中的起始字符位置（以整数形式指定；0（零）是第一个字符）。 两元素数组的第二个元素将该列的分析选项指定为从 1 至 9 的数字，如上面列出的那样。</param>
+        <param name="FieldInfo">一个数组，包含各个数据列的分析信息。 解释取决于 <c>DataType</c> 的值。 当对数据进行分隔时，此参数是一个由两元素数组组成的数组，每个两元素数组都指定特定列的转换选项。 第一个元素是列号（从 1 开始），第二个元素是指定如何分析列的 <see cref="T:Microsoft.Office.Interop.Excel.XlColumnDataType" /> 常量之一。  可为下列 <see cref="T:Microsoft.Office.Interop.Excel.XlColumnDataType" /> 值之一：<see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlGeneralFormat" /><see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlTextFormat" /><see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlMDYFormat" /><see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlDMYFormat" /><see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlYMDFormat" /><see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlMYDFormat" /><see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlDYMFormat" /><see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlYDMFormat" /><see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlEMDFormat" /><see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlSkipColumn" />  仅在已安装和选择繁体中文支持时，才可使用 <see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlEMDFormat" />。 <see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlEMDFormat" /> 指定要使用的繁体中文纪元日期。  列说明符可以采用任何顺序。 如果对于输入数据中的特定列，给定的列说明符不存在，则用 <see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlGeneralFormat" /> 设置对列进行分析。  如果源数据具有固定宽度的列，则每个两元素数组中的第一个元素都指定该列中的起始字符位置（以整数形式指定；0（零）是第一个字符）。 两元素数组的第二个元素将该列的分析选项指定为从 1 至 9 的数字，如上面列出的那样。</param>
         <param name="DecimalSeparator">Excel 用于识别数字的小数点分隔符。 默认设置是系统设置。</param>
         <param name="ThousandsSeparator">Excel 用于识别数字的千位分隔符。 默认设置是系统设置。</param>
         <param name="TrailingMinusNumbers">以负号开头的数字。</param>
@@ -5512,9 +5375,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 下表显示的文本的各种导入设置导入 Excel 的结果。 数值结果将显示在最右侧的列。  
+ 下表显示的文本导入 Excel，导入的各种设置的结果。 数值的结果将显示在最右侧的列。  
   
-|系统小数分隔符|系统千位分隔符|小数分隔符的值|千位分隔符的值|原始文本|单元格值 （数据类型）|  
+|系统小数分隔符|系统千位分隔符|小数分隔符值|千位分隔符值|原始文本|单元格值 （数据类型）|  
 |------------------------------|--------------------------------|-----------------------------|-------------------------------|-------------------|------------------------------|  
 |段|逗号|逗号|段|123.123,45|123,123.45 （数值）|  
 |段|逗号|逗号|逗号|123.123,45|123.123,45 （文本）|  
@@ -5528,7 +5391,7 @@
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.TextToColumns%2A>方法将用空格分隔日期字符串中的转换<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>为三列。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.TextToColumns%2A>方法将转换内的空格分隔日期字符串<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>以下三个列。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#130](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#130)]
  [!code-vb[Trin_ExcelXmlMappedRange#130](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#130)]  
@@ -5556,12 +5419,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 作为双精度返回的值。  
+ 作为一个双精度值返回的值。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Left%2A>和<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Top%2A>属性，以显示从列 A 到左边缘的左边缘的距离<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>，以及按自上而下的行 1 到上边缘的距离<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Left%2A>并<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Top%2A>属性，以显示从列 A 的左边缘到左边缘的距离<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>，以及从行 1 的上边缘到顶部的距离<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#35](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#35)]
  [!code-vb[Trin_ExcelXmlMappedRange#35](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#35)]  
@@ -5590,7 +5453,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法的范围是数据透视表中，如果取消中包含的项<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件。  
+ 如果该范围是在数据透视表报表中，此方法取消分组中包含的项<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件。  
   
  ]]></format>
         </remarks>
@@ -5628,8 +5491,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件的行高是否等于此表的标准高度。</summary>
-        <value>
-          如果 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件的行高等于工作表的标准高度，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件的行高等于工作表的标准高度，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -5647,8 +5509,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件的列宽是否等于此表的标准宽度。</summary>
-        <value>
-          如果 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件的列宽等于工作表的标准宽度，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件的列宽等于工作表的标准宽度，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -5672,7 +5533,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Validation%2A>属性显示验证错误，如果少于三个字符输入到<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Validation%2A>属性来显示验证错误，如果少于三个字符输入到<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#63](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#63)]
  [!code-vb[Trin_ExcelXmlMappedRange#63](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#63)]  
@@ -5701,12 +5562,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Value%2A>属性可以用于以下可选参数。 如果指定可选的参数，则必须使用`set_Value`和`get_Value`Visual Basic 和 C# 中的访问器。  
+ <xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Value%2A>属性可用于以下可选参数。 如果指定可选参数，则必须使用`set_Value`和`get_Value`Visual Basic 和 C# 中的访问器。  
   
 |参数|描述|  
 |---------------|-----------------|  
 |`RangeValueDataType`|用于指定范围值数据类型的 <xref:Microsoft.Office.Interop.Excel.XlRangeValueDataType> 值之一。 默认值为 <xref:Microsoft.Office.Interop.Excel.XlRangeValueDataType.xlRangeValueDefault>。|  
-|`_arg1`|<xref:Microsoft.Office.Tools.Excel.XmlMappedRange> 控件的值。 此参数仅用于`set_Value`set 访问器。|  
+|`_arg1`|<xref:Microsoft.Office.Tools.Excel.XmlMappedRange> 控件的值。 此参数只用于`set_Value`set 访问器。|  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -5714,7 +5575,7 @@
    
   
 ## Examples  
- 下面的代码示例演示如何设置<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Value%2A>属性具有和没有可选的参数。 此代码示例假定当前工作表包含两个<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件名为`CustomerLastNameCell`和`CustomerFirstNameCell`。  
+ 下面的代码示例演示如何设置<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Value%2A>使用和不带可选参数。 此代码示例假定当前工作表包含两个<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件分别命名为`CustomerLastNameCell`和`CustomerFirstNameCell`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#64](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#64)]
  [!code-vb[Trin_ExcelXmlMappedRange#64](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#64)]  
@@ -5743,12 +5604,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性之间的差异和<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Value%2A>属性是<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Value2%2A>不是参数化的属性。  
+ 此属性之间的差异并<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Value%2A>属性是<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Value2%2A>不是参数化的属性。  
   
    
   
 ## Examples  
- 下面的代码示例比较了<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Text%2A>和<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Value%2A>属性不同的单元格包含格式化数字。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
+ 下面的代码示例进行比较如何<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Text%2A>和<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Value%2A>属性不同的包含的单元格格式的数字。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#62](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#62)]
  [!code-vb[Trin_ExcelXmlMappedRange#62](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#62)]  
@@ -5777,7 +5638,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 返回的垂直对齐方式可以是以下值之一：  
+ 返回的垂直对齐方式可以是下列值之一：  
   
 -   <xref:Microsoft.Office.Interop.Excel.Constants.xlBottom>  
   
@@ -5792,7 +5653,7 @@
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.HorizontalAlignment%2A>和<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.VerticalAlignment%2A>属性若要对齐的内容<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>到右下角。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.HorizontalAlignment%2A>并<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.VerticalAlignment%2A>属性，以保持一致的内容<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>到靠下右对齐。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#29](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#29)]
  [!code-vb[Trin_ExcelXmlMappedRange#29](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#29)]  
@@ -5821,7 +5682,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Width%2A>和<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Height%2A>要显示的宽度和高度属性<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Width%2A>并<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Height%2A>要显示的宽度和高度属性<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#28](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#28)]
  [!code-vb[Trin_ExcelXmlMappedRange#28](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#28)]  
@@ -5849,12 +5710,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 工作表是本机 Excel <xref:Microsoft.Office.Interop.Excel.Worksheet?displayProperty=fullName>，而不<xref:Microsoft.Office.Tools.Excel.Worksheet?displayProperty=fullName>主机项。  
+ 工作表之后的本机 Excel <xref:Microsoft.Office.Interop.Excel.Worksheet?displayProperty=fullName>，而不<xref:Microsoft.Office.Tools.Excel.Worksheet?displayProperty=fullName>宿主项。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Worksheet%2A>属性来显示的名称的工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Worksheet%2A>属性来显示一个包含工作表的名称<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#65](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#65)]
  [!code-vb[Trin_ExcelXmlMappedRange#65](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#65)]  
@@ -5877,13 +5738,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示 Microsoft Office Excel 是否对 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件中的文本进行换行。</summary>
-        <value>
-          如果 Excel 对 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件中的文本进行换行，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果 Excel 对 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件中的文本进行换行，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- Excel 更改的行高度<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控制，如有必要，以容纳文本。  
+ Excel 会更改的行的高度<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控制，如有必要，以容纳文本。  
   
  ]]></format>
         </remarks>
@@ -5908,7 +5768,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.XPath%2A>要移除的 XPath 属性<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>如果 XPath 为"/ ns1:Customer / ns1:LastName"。 该示例然后显示当前的 XPath <xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.XPath%2A>要删除的 XPath 属性<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>如果 XPath 为"/ ns1:Customer / ns1:LastName"。 该示例然后显示当前的 XPath <xref:Microsoft.Office.Tools.Excel.XmlMappedRange>。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>名为`CustomerLastNameCell`。  
   
  [!code-csharp[Trin_ExcelXmlMappedRange#66](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/CS/Sheet1.cs#66)]
  [!code-vb[Trin_ExcelXmlMappedRange#66](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelXMLMappedRange/VB/Sheet1.vb#66)]  

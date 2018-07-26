@@ -1,10 +1,10 @@
 <Type Name="ListObject" FullName="Microsoft.Office.Tools.Excel.ListObject">
   <Metadata>
     <Meta Name="ms.openlocfilehash" Value="c71db2da15ff3ebd2549cf6df901af94c69c3141" />
-    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.sourcegitcommit" Value="d85a83935f1d68ded616fcdfb8fd10d6bf4a4633" />
     <Meta Name="ms.translationtype" Value="HT" />
     <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+    <Meta Name="ms.lasthandoff" Value="07/24/2018" />
     <Meta Name="ms.locfileid" Value="29435571" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface ListObject : IDisposable, System.ComponentModel.IComponent, System.ComponentModel.ISupportInitialize, System.Windows.Forms.IBindableComponent" />
@@ -95,13 +95,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，该值指示工作表上的 <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 控件是否处于活动状态；即，活动单元格是否位于 <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 控件的范围内。</summary>
-        <value>
-          如果活动单元格位于 <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 控件的范围内，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果活动单元格位于 <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 控件的范围内，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 因为没有任何`Activate`方法<xref:Microsoft.Office.Tools.Excel.ListObject>控件，则可以激活<xref:Microsoft.Office.Tools.Excel.ListObject>仅通过激活单元格区域列表中的控件。  
+ 因为没有任何`Activate`方法<xref:Microsoft.Office.Tools.Excel.ListObject>控件，可以激活<xref:Microsoft.Office.Tools.Excel.ListObject>仅通过激活单元格范围列表中的控件。  
   
  ]]></format>
         </remarks>
@@ -126,10 +125,10 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 值<xref:Microsoft.Office.Tools.Excel.ListObject.AlternativeText%2A>属性对应的设置**标题**框中**可选文字**对话框中，通过右键单击一个表，指向显示**表**，然后单击**可选文字**。  
+ 值<xref:Microsoft.Office.Tools.Excel.ListObject.AlternativeText%2A>的设置的属性相对应**标题**框中**可选文字**对话框中，右键单击某个表，指向显示**表**，然后单击**可选文字**。  
   
 > [!NOTE]
->  此属性将出现在 IntelliSense Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Excel 2007 项目中使用此属性。  
+>  此属性将出现在 IntelliSense 中 Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，此属性不能使用 Excel 2007 项目中。  
   
  ]]></format>
         </remarks>
@@ -185,7 +184,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.ListObject>到工作表，它对应于 Excel 中的表。 然后，示例填充表，其中的任意数据的两个行，并指定其第一个列值筛选出所有行的表上的筛选器不等于"bb"的字符串值。 接下来，此示例显示活动筛选器表中找到的数量。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Excel.ListObject>到工作表，它对应于 Excel 中的表。 然后，示例使用两个行的任意数据填充表，并指定上筛选出所有行的第一列的值的表的筛选器不等于"bb"的字符串值。 接下来，此示例显示表中找到的活动筛选器的数。  
   
  此示例适用于文档级自定义。  
   
@@ -210,20 +209,19 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示在 <see cref="P:Microsoft.Office.Tools.Excel.ListObject.SelectedIndex" /> 发生更改时是否选择整行。</summary>
-        <value>
-          如果选择整行，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="false" />。</value>
+        <value>如果选择整行，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 中的整个行<xref:Microsoft.Office.Tools.Excel.ListObject>控件对应的用户界面<xref:Microsoft.Office.Tools.Excel.ListObject.SelectedIndex%2A>时此属性设置为选择`true`。  
+ 中的整个行<xref:Microsoft.Office.Tools.Excel.ListObject>对应的控件用户界面<xref:Microsoft.Office.Tools.Excel.ListObject.SelectedIndex%2A>时此属性设置为选择`true`。  
   
    
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.ListObject>上当前工作表。 它使用<xref:Microsoft.Office.Tools.Excel.ListObject.SelectedIndex%2A>和<xref:Microsoft.Office.Tools.Excel.ListObject.AutoSelectRows%2A>属性来选择第二行并指定当用户单击某一行，选择整行。 此代码示例还创建的事件处理程序<xref:Microsoft.Office.Tools.Excel.ListObject.SelectedIndexChanged>显示一个消息框，每当选择新行时的事件。  
+ 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.ListObject>当前工作表上。 它使用<xref:Microsoft.Office.Tools.Excel.ListObject.SelectedIndex%2A>和<xref:Microsoft.Office.Tools.Excel.ListObject.AutoSelectRows%2A>属性来选择第二行并指定当用户单击行选择整行。 此代码示例还创建的事件处理程序<xref:Microsoft.Office.Tools.Excel.ListObject.SelectedIndexChanged>显示一个消息框，选择一个新行时的事件。  
   
- 此版本用于文档级自定义。  
+ 此版本是文档级自定义项。  
   
  [!code-csharp[Trin_ExcelListObject#2](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelListObject/CS/Trin_ExcelListObject.cs#2)]
  [!code-vb[Trin_ExcelListObject#2](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelListObject/VB/Sheet1.vb#2)]  
@@ -251,15 +249,14 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值确定是否自动将列标题设置为与数据源相匹配。</summary>
-        <value>
-          如果自动设置列名，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="false" />。</value>
+        <value>如果自动设置列名，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 当设置为`true`，此属性会导致每个列中的列标题<xref:Microsoft.Office.Tools.Excel.ListObject>控件以匹配数据源的相应列标题。  
+ 如果设置为`true`，此属性会导致在每个列的列标题<xref:Microsoft.Office.Tools.Excel.ListObject>控件以匹配数据源的相应列标题。  
   
- 使用工作表的人员无法更改列标题，当此属性设置为`true`。 如果更改列标题，它将恢复回来，以便匹配数据源，当用户将焦点移标头单元格即可。  
+ 此属性设置为使用工作表的人员不能更改列标题`true`。 如果更改列标题，它将还原回以匹配数据源，用户切换焦点从标头单元格上时。  
   
  ]]></format>
         </remarks>
@@ -285,21 +282,21 @@
 ## Remarks  
  仅当引发此事件<xref:Microsoft.Office.Tools.Excel.ListObject>控件绑定到数据。  
   
- 仅在新行添加通过 Microsoft Office Excel 用户界面时，引发此事件。 它不被引发时以编程方式添加新行。  
+ 仅当通过 Microsoft Office Excel 用户界面添加一个新行时，引发此事件。 以编程方式添加一个新行时，它将不引发。  
   
- 处理此事件以执行其他验证，或若要取消添加的行。  
+ 处理此事件来执行其他验证，或若要取消添加一行。  
   
    
   
 ## Examples  
- 下面的代码示例创建<xref:System.Data.DataTable>和<xref:Microsoft.Office.Tools.Excel.ListObject>，并将绑定<xref:Microsoft.Office.Tools.Excel.ListObject>到<xref:System.Data.DataTable>。 然后，它创建<xref:Microsoft.Office.Tools.Excel.ListObject.BeforeAddDataBoundRow>事件处理程序。 若要测试事件，手动向其中添加新行<xref:Microsoft.Office.Tools.Excel.ListObject>表 1 上。 该事件处理程序中删除的行，并显示一条消息。  
+ 下面的代码示例将创建<xref:System.Data.DataTable>和一个<xref:Microsoft.Office.Tools.Excel.ListObject>，并将绑定<xref:Microsoft.Office.Tools.Excel.ListObject>到<xref:System.Data.DataTable>。 然后，它创建<xref:Microsoft.Office.Tools.Excel.ListObject.BeforeAddDataBoundRow>事件处理程序。 若要测试事件，请手动添加到一个新行<xref:Microsoft.Office.Tools.Excel.ListObject>表 1 上。 事件处理程序中删除相应行，并显示一条消息。  
   
- 此版本用于文档级自定义。  
+ 此版本是文档级自定义项。  
   
  [!code-csharp[Trin_ExcelListObject#9](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelListObject/CS/Trin_ExcelListObject.cs#9)]
  [!code-vb[Trin_ExcelListObject#9](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelListObject/VB/Sheet1.vb#9)]  
   
- 此版本用于针对应用程序级外接程序。 若要使用此代码示例，请添加`using System.Data;`指令，如果你使用的 C# 或`Imports System.Data`语句，如果你使用的 Visual Basic。  
+ 此版本用于针对应用程序级外接程序。 若要使用此代码示例，请添加`using System.Data;`指令，如果使用的 C# 或`Imports System.Data`语句，如果使用的 Visual Basic。  
   
  [!code-csharp[Trin_ExcelListObject_AppLevelAddIn#9](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelListObject_AppLevelAddIn/CS/ThisAddIn.cs#9)]
  [!code-vb[Trin_ExcelListObject_AppLevelAddIn#9](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelListObject_AppLevelAddIn/VB/ThisAddIn.vb#9)]  
@@ -326,9 +323,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.ListObject>和<xref:Microsoft.Office.Tools.Excel.ListObject.BeforeDoubleClick>事件处理程序。 当<xref:Microsoft.Office.Tools.Excel.ListObject>双击之后，显示一条消息，该值指示是否<xref:Microsoft.Office.Tools.Excel.ListObject>绑定到数据。  
+ 下面的代码示例将创建<xref:Microsoft.Office.Tools.Excel.ListObject>和一个<xref:Microsoft.Office.Tools.Excel.ListObject.BeforeDoubleClick>事件处理程序。 当<xref:Microsoft.Office.Tools.Excel.ListObject>双击之后，显示一条消息，指示是否<xref:Microsoft.Office.Tools.Excel.ListObject>绑定到数据。  
   
- 此版本用于文档级自定义。  
+ 此版本是文档级自定义项。  
   
  [!code-csharp[Trin_ExcelListObject#10](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelListObject/CS/Trin_ExcelListObject.cs#10)]
  [!code-vb[Trin_ExcelListObject#10](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelListObject/VB/Sheet1.vb#10)]  
@@ -360,9 +357,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.ListObject>和<xref:Microsoft.Office.Tools.Excel.ListObject.BeforeRightClick>事件处理程序。 右键单击列表对象时，将会显示一条消息，该值指示是否将列表对象绑定到数据。  
+ 下面的代码示例将创建<xref:Microsoft.Office.Tools.Excel.ListObject>和一个<xref:Microsoft.Office.Tools.Excel.ListObject.BeforeRightClick>事件处理程序。 右击列表对象时，将显示一条消息，指示是否将列表对象绑定到数据。  
   
- 此版本用于文档级自定义。  
+ 此版本是文档级自定义项。  
   
  [!code-csharp[Trin_ExcelListObject#11](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelListObject/CS/Trin_ExcelListObject.cs#11)]
  [!code-vb[Trin_ExcelListObject#11](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelListObject/VB/Sheet1.vb#11)]  
@@ -411,16 +408,16 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果将引发此事件<xref:Microsoft.Office.Tools.Excel.ListObject>通过以编程方式修改或用户交互更改控制。  
+ 如果引发此事件<xref:Microsoft.Office.Tools.Excel.ListObject>通过以编程方式修改或用户交互更改控制。  
   
- 在重新计算期间更改单元格时，此事件不会发生。  
+ 不会触发重新计算的单元格更改此事件。  
   
    
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.ListObject>和<xref:Microsoft.Office.Tools.Excel.ListObject.Change>事件处理程序。 若要引发<xref:Microsoft.Office.Tools.Excel.ListObject.Change>事件，将文本添加到中的单元格之一<xref:Microsoft.Office.Tools.Excel.ListObject>然后按 ENTER。  
+ 下面的代码示例将创建<xref:Microsoft.Office.Tools.Excel.ListObject>和一个<xref:Microsoft.Office.Tools.Excel.ListObject.Change>事件处理程序。 若要引发<xref:Microsoft.Office.Tools.Excel.ListObject.Change>事件，将文本添加到中的单元格之一<xref:Microsoft.Office.Tools.Excel.ListObject>，然后按 ENTER。  
   
- 此版本用于文档级自定义。  
+ 此版本是文档级自定义项。  
   
  [!code-csharp[Trin_ExcelListObject#12](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelListObject/CS/Trin_ExcelListObject.cs#12)]
  [!code-vb[Trin_ExcelListObject#12](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelListObject/VB/Sheet1.vb#12)]  
@@ -489,7 +486,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果在 Microsoft Office Excel 中创建对象时，此属性返回的字符串接，这等同于十六进制数字 5843454c。  
+ 如果在 Microsoft Office Excel 中创建对象时，此属性返回字符串 XCEL，这与十六进制数 5843454c。  
   
    
   
@@ -523,14 +520,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 导致故障的条件的一个示例是如果用户将<xref:Microsoft.Office.Tools.Excel.ListObject>控件拖到另一个<xref:Microsoft.Office.Tools.Excel.ListObject>中的放置位置已存在的控件。 新控件的数据绑定将失败，并且该控件将引发此事件。  
+ 导致失败的条件的一个示例是如果用户将<xref:Microsoft.Office.Tools.Excel.ListObject>控件拖到另一个<xref:Microsoft.Office.Tools.Excel.ListObject>控件中的放置位置。 新控件的数据绑定失败，并且该控件会引发此事件。  
   
    
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.ListObject>和添加事件处理程序<xref:Microsoft.Office.Tools.Excel.ListObject.DataBindingFailure>事件。 如果列表 1 绑定到数据源，然后绑定失败，将捕获该事件，并显示一条消息，显示的绑定的状态。  
+ 下面的代码示例将创建<xref:Microsoft.Office.Tools.Excel.ListObject>，并将添加的事件处理程序<xref:Microsoft.Office.Tools.Excel.ListObject.DataBindingFailure>事件。 如果列表 1 绑定到数据源，然后绑定失败，该事件将捕获并显示绑定的状态显示一条消息。  
   
- 此版本用于文档级自定义。  
+ 此版本是文档级自定义项。  
   
  [!code-csharp[Trin_ExcelListObject#14](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelListObject/CS/Trin_ExcelListObject.cs#14)]
  [!code-vb[Trin_ExcelListObject#14](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelListObject/VB/Sheet1.vb#14)]  
@@ -601,16 +598,16 @@
 ## Remarks  
  <xref:Microsoft.Office.Tools.Excel.ListObject>控件必须绑定到数据，然后才能使用此属性。  
   
- 指定的格式被应用于整个列表对象，包括之后添加的行中。  
+ 指定的格式应用于整个列表对象，包括更高版本添加的行。  
   
  若要删除格式设置，请设置<xref:Microsoft.Office.Tools.Excel.ListObject.DataBoundFormat%2A>到<xref:Microsoft.Office.Interop.Excel.XlRangeAutoFormat.xlRangeAutoFormatNone>。  
   
- 使用<xref:Microsoft.Office.Tools.Excel.ListObject.DataBoundFormatSettings%2A>排除特定类型的格式，如模式、 字体或样式中的宽度。  
+ 使用<xref:Microsoft.Office.Tools.Excel.ListObject.DataBoundFormatSettings%2A>来排除特定类型的格式如模式、 字体或样式中的宽度。  
   
    
   
 ## Examples  
- 下面的代码示例创建<xref:System.Data.DataTable>和<xref:Microsoft.Office.Tools.Excel.ListObject>，并将绑定<xref:Microsoft.Office.Tools.Excel.ListObject>到<xref:System.Data.DataTable>。 然后，它使用<xref:Microsoft.Office.Interop.Excel.XlRangeAutoFormat>要格式化值<xref:Microsoft.Office.Tools.Excel.ListObject>。  
+ 下面的代码示例将创建<xref:System.Data.DataTable>和一个<xref:Microsoft.Office.Tools.Excel.ListObject>，并将绑定<xref:Microsoft.Office.Tools.Excel.ListObject>到<xref:System.Data.DataTable>。 然后，它使用<xref:Microsoft.Office.Interop.Excel.XlRangeAutoFormat>要设置格式值<xref:Microsoft.Office.Tools.Excel.ListObject>。  
   
  此示例适用于文档级自定义。  
   
@@ -641,7 +638,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 默认情况下，所有中的信息<xref:Microsoft.Office.Interop.Excel.XlRangeAutoFormat>应用样式。 但是，以便此样式不应用于这些项，则可以删除特定项。 这些项是：  
+ 默认情况下中的信息的所有<xref:Microsoft.Office.Interop.Excel.XlRangeAutoFormat>应用样式。 但是，以便此样式不应用于这些项，则可以删除特定项。 这些项是：  
   
 -   数字  
   
@@ -655,12 +652,12 @@
   
 -   宽度  
   
- 若要只应用选定的样式，将设置<xref:Microsoft.Office.Tools.Excel.ListObject.DataBoundFormatSettings%2A>之前<xref:Microsoft.Office.Tools.Excel.ListObject.DataBoundFormat%2A>属性设置。 <xref:Microsoft.Office.Tools.Excel.ListObject.DataBoundFormatSettings%2A> 如果将无法工作<xref:Microsoft.Office.Tools.Excel.ListObject.DataBoundFormat%2A>已设置。  
+ 若要将应用仅选择样式，请设置<xref:Microsoft.Office.Tools.Excel.ListObject.DataBoundFormatSettings%2A>之前<xref:Microsoft.Office.Tools.Excel.ListObject.DataBoundFormat%2A>属性设置。 <xref:Microsoft.Office.Tools.Excel.ListObject.DataBoundFormatSettings%2A> 如果将无法工作<xref:Microsoft.Office.Tools.Excel.ListObject.DataBoundFormat%2A>已设置。  
   
    
   
 ## Examples  
- 下面的代码示例创建<xref:System.Data.DataTable>和<xref:Microsoft.Office.Tools.Excel.ListObject>，并将绑定<xref:Microsoft.Office.Tools.Excel.ListObject>到<xref:System.Data.DataTable>。 然后，它设置<xref:Microsoft.Office.Tools.Excel.FormatSettings>要应用于<xref:Microsoft.Office.Tools.Excel.ListObject>并使用<xref:Microsoft.Office.Interop.Excel.XlRangeAutoFormat>提供该格式的值。  
+ 下面的代码示例将创建<xref:System.Data.DataTable>和一个<xref:Microsoft.Office.Tools.Excel.ListObject>，并将绑定<xref:Microsoft.Office.Tools.Excel.ListObject>到<xref:System.Data.DataTable>。 然后，它设置<xref:Microsoft.Office.Tools.Excel.FormatSettings>要应用于<xref:Microsoft.Office.Tools.Excel.ListObject>，并使用<xref:Microsoft.Office.Interop.Excel.XlRangeAutoFormat>提供该格式的值。  
   
  此示例适用于文档级自定义。  
   
@@ -692,12 +689,12 @@
 ## Remarks  
  如果数据源具有只有一个成员，不需要。  
   
- 使用<xref:Microsoft.Office.Tools.Excel.ListObject.DataMember%2A>属性来指定要绑定到多成员数据源的成员<xref:Microsoft.Office.Tools.Excel.ListObject>控件。 例如，如果您具有包含多个表中指定的数据源<xref:Microsoft.Office.Tools.Excel.ListObject.DataSource%2A>属性，请使用<xref:Microsoft.Office.Tools.Excel.ListObject.DataMember%2A>属性来指定要绑定到的表<xref:Microsoft.Office.Tools.Excel.ListObject>控件。  
+ 使用<xref:Microsoft.Office.Tools.Excel.ListObject.DataMember%2A>属性来指定要绑定到从多成员数据源成员<xref:Microsoft.Office.Tools.Excel.ListObject>控件。 例如，如果有多个表中指定的数据源<xref:Microsoft.Office.Tools.Excel.ListObject.DataSource%2A>属性，请使用<xref:Microsoft.Office.Tools.Excel.ListObject.DataMember%2A>属性来指定要绑定到的表<xref:Microsoft.Office.Tools.Excel.ListObject>控件。  
   
    
   
 ## Examples  
- 下面的代码示例创建具有两个 <xref:System.Data.DataSet> 对象的 <xref:System.Data.DataTable> ，并使用数据填充其中一个表。 代码随后设置<xref:Microsoft.Office.Tools.Excel.ListObject.DataSource%2A>和<xref:Microsoft.Office.Tools.Excel.ListObject.DataMember%2A>属性<xref:Microsoft.Office.Tools.Excel.ListObject>要绑定到包含数据的表。  
+ 下面的代码示例创建具有两个 <xref:System.Data.DataSet> 对象的 <xref:System.Data.DataTable> ，并使用数据填充其中一个表。 代码随后设置<xref:Microsoft.Office.Tools.Excel.ListObject.DataSource%2A>并<xref:Microsoft.Office.Tools.Excel.ListObject.DataMember%2A>的属性<xref:Microsoft.Office.Tools.Excel.ListObject>要绑定到包含数据的表。  
   
  此示例适用于文档级自定义。  
   
@@ -726,7 +723,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果将引发此事件<xref:Microsoft.Office.Tools.Excel.ListObject.DataMember%2A>通过以编程方式修改或用户交互更改属性。  
+ 如果引发此事件<xref:Microsoft.Office.Tools.Excel.ListObject.DataMember%2A>属性更改通过以编程方式修改或用户交互。  
   
  ]]></format>
         </remarks>
@@ -767,16 +764,16 @@
   
 -   实现 <xref:System.Collections.IList> 接口的任意组件。  
   
- 请参阅<xref:System.Windows.Forms.Binding>数据源的详细信息的类概述。  
+ 请参阅<xref:System.Windows.Forms.Binding>类概述的数据源的详细信息。  
   
- 如果<xref:Microsoft.Office.Tools.Excel.ListObject.DataSource%2A>引用包含多个表或属性，则必须设置<xref:Microsoft.Office.Tools.Excel.ListObject.DataMember%2A>属性设置为一个字符串，指定要绑定到的表。 例如，如果<xref:Microsoft.Office.Tools.Excel.ListObject.DataSource%2A>是<xref:System.Data.DataSet>或<xref:System.Data.DataViewManager>包含名为客户、 订单和 OrderDetails 的三个表，则必须指定要绑定到的表。  
+ 如果<xref:Microsoft.Office.Tools.Excel.ListObject.DataSource%2A>引用包含多个表或属性，则必须设置<xref:Microsoft.Office.Tools.Excel.ListObject.DataMember%2A>属性设置为一个字符串，指定要绑定到的表。 例如，如果<xref:Microsoft.Office.Tools.Excel.ListObject.DataSource%2A>是<xref:System.Data.DataSet>或<xref:System.Data.DataViewManager>，其中包含名为客户、 订单和订单明细的三个表，必须指定要绑定到的表。  
   
- 设置<xref:Microsoft.Office.Tools.Excel.ListObject.DataSource%2A>到未实现的对象<xref:System.Collections.IList>接口或<xref:System.ComponentModel.IListSource>将导致异常引发。  
+ 设置<xref:Microsoft.Office.Tools.Excel.ListObject.DataSource%2A>未实现的对象<xref:System.Collections.IList>接口或<xref:System.ComponentModel.IListSource>将导致引发异常。  
   
    
   
 ## Examples  
- 下面的代码示例创建具有两个 <xref:System.Data.DataSet> 对象的 <xref:System.Data.DataTable> ，并使用数据填充其中一个表。 代码随后设置<xref:Microsoft.Office.Tools.Excel.ListObject.DataSource%2A>和<xref:Microsoft.Office.Tools.Excel.ListObject.DataMember%2A>属性<xref:Microsoft.Office.Tools.Excel.ListObject>要绑定到包含数据的表。  
+ 下面的代码示例创建具有两个 <xref:System.Data.DataSet> 对象的 <xref:System.Data.DataTable> ，并使用数据填充其中一个表。 代码随后设置<xref:Microsoft.Office.Tools.Excel.ListObject.DataSource%2A>并<xref:Microsoft.Office.Tools.Excel.ListObject.DataMember%2A>的属性<xref:Microsoft.Office.Tools.Excel.ListObject>要绑定到包含数据的表。  
   
  此示例适用于文档级自定义。  
   
@@ -805,7 +802,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果将引发此事件<xref:Microsoft.Office.Tools.Excel.ListObject.DataSource%2A>通过以编程方式修改或用户交互更改属性。  
+ 如果引发此事件<xref:Microsoft.Office.Tools.Excel.ListObject.DataSource%2A>属性更改通过以编程方式修改或用户交互。  
   
  ]]></format>
         </remarks>
@@ -831,7 +828,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 在情况下使用此属性其中<xref:System.Windows.Forms.Binding>而无需<xref:System.Windows.Forms.Binding.DataSourceUpdateMode%2A>指定值添加到<xref:System.Windows.Forms.IBindableComponent.DataBindings%2A>集合。  
+ 此属性可在情况下，<xref:System.Windows.Forms.Binding>而无需<xref:System.Windows.Forms.Binding.DataSourceUpdateMode%2A>指定值添加到<xref:System.Windows.Forms.IBindableComponent.DataBindings%2A>集合。  
   
  ]]></format>
         </remarks>
@@ -856,14 +853,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法仅应该用于<xref:Microsoft.Office.Tools.Excel.ListObject>在运行时以编程方式创建的控件。 如果在调用此方法引发异常<xref:Microsoft.Office.Tools.Excel.ListObject>，它在设计时添加到文档。  
+ 此方法只应该用于<xref:Microsoft.Office.Tools.Excel.ListObject>在运行时以编程方式创建的控件。 如果在调用此方法引发异常<xref:Microsoft.Office.Tools.Excel.ListObject>，在设计时添加到文档。  
   
- 如果到 SharePoint 站点链接的列表对象，则删除它不影响正在运行 Windows SharePoint Services 服务器上的数据。 对本地列表对象所做的任何未提交的更改不会发送到 SharePoint 列表中。 （没有这些未提交的更改会丢失任何警告。）  
+ 如果列表对象链接到 SharePoint 站点中，删除它不会影响运行 Windows SharePoint Services 服务器上的数据。 对本地列表对象所做的任何未提交的更改不会发送到 SharePoint 列表。 （没有任何警告，这些未提交的更改将丢失。）  
   
    
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.ListObject>上当前工作表，然后显示一个消息框，询问用户是否删除<xref:Microsoft.Office.Tools.Excel.ListObject>。 如果用户接受，则<xref:Microsoft.Office.Tools.Excel.ListObject.Delete%2A>调用方法来删除<xref:Microsoft.Office.Tools.Excel.ListObject>。  
+ 下面的代码示例将创建<xref:Microsoft.Office.Tools.Excel.ListObject>在当前工作表，然后显示一个消息框，询问用户是否删除<xref:Microsoft.Office.Tools.Excel.ListObject>。 如果用户接受，则<xref:Microsoft.Office.Tools.Excel.ListObject.Delete%2A>调用方法来删除<xref:Microsoft.Office.Tools.Excel.ListObject>。  
   
  此示例适用于文档级自定义。  
   
@@ -892,14 +889,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 将引发此事件仅当<xref:Microsoft.Office.Tools.Excel.ListObject>控件具有焦点，并且然后将焦点移远离<xref:Microsoft.Office.Tools.Excel.ListObject>控件。  
+ 引发此事件时，才<xref:Microsoft.Office.Tools.Excel.ListObject>控件具有焦点，然后焦点传输离开<xref:Microsoft.Office.Tools.Excel.ListObject>控件。  
   
    
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.ListObject>和<xref:Microsoft.Office.Tools.Excel.ListObject.Deselected>事件处理程序。 当<xref:Microsoft.Office.Tools.Excel.ListObject>选择和外部的对象<xref:Microsoft.Office.Tools.Excel.ListObject>是选择，一条消息会显示，指示所选内容已更改。  
+ 下面的代码示例将创建<xref:Microsoft.Office.Tools.Excel.ListObject>和一个<xref:Microsoft.Office.Tools.Excel.ListObject.Deselected>事件处理程序。 当<xref:Microsoft.Office.Tools.Excel.ListObject>处于选中状态和外部的对象<xref:Microsoft.Office.Tools.Excel.ListObject>是选择，显示一条消息是，该值指示所选内容已更改。  
   
- 此版本用于文档级自定义。  
+ 此版本是文档级自定义项。  
   
  [!code-csharp[Trin_ExcelListObject#19](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelListObject/CS/Trin_ExcelListObject.cs#19)]
  [!code-vb[Trin_ExcelListObject#19](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelListObject/VB/Sheet1.vb#19)]  
@@ -932,7 +929,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法则断开<xref:Microsoft.Office.Tools.Excel.ListObject>控件从数据源，集<xref:Microsoft.Office.Tools.Excel.ListObject.IsBinding%2A>属性设置为 false，并将重置<xref:Microsoft.Office.Tools.Excel.ListObject.DataSource%2A>和<xref:Microsoft.Office.Tools.Excel.ListObject.DataMember%2A>属性。 现有的数据将保留在<xref:Microsoft.Office.Tools.Excel.ListObject>控件。  
+ 此方法则断开<xref:Microsoft.Office.Tools.Excel.ListObject>控件从数据源，集<xref:Microsoft.Office.Tools.Excel.ListObject.IsBinding%2A>属性设置为 false，并重置<xref:Microsoft.Office.Tools.Excel.ListObject.DataSource%2A>和<xref:Microsoft.Office.Tools.Excel.ListObject.DataMember%2A>属性。 现有数据将保留在<xref:Microsoft.Office.Tools.Excel.ListObject>控件。  
   
  ]]></format>
         </remarks>
@@ -970,8 +967,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，该值指示 <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 是否从右向左（而非从左向右）显示。</summary>
-        <value>
-          如果 <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 从右向左（而非从左向右）显示，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果 <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 从右向左（而非从左向右）显示，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -995,19 +991,19 @@
 ## Remarks  
  仅当引发此事件<xref:Microsoft.Office.Tools.Excel.ListObject>控件绑定到数据。  
   
- 处理此事件，以尝试纠正可能出现的错误。  
+ 处理此事件以尝试纠正可能出现的错误。  
   
    
   
 ## Examples  
- 下面的代码示例创建<xref:System.Data.DataTable>和<xref:Microsoft.Office.Tools.Excel.ListObject>，并将绑定<xref:Microsoft.Office.Tools.Excel.ListObject>到<xref:System.Data.DataTable>。 然后，它创建<xref:Microsoft.Office.Tools.Excel.ListObject.ErrorAddDataBoundRow>事件处理程序。 若要测试事件，手动向其中添加新行<xref:Microsoft.Office.Tools.Excel.ListObject>输入姓氏"通道"和第一个名称。 事件处理程序会显示一条消息。  
+ 下面的代码示例将创建<xref:System.Data.DataTable>和一个<xref:Microsoft.Office.Tools.Excel.ListObject>，并将绑定<xref:Microsoft.Office.Tools.Excel.ListObject>到<xref:System.Data.DataTable>。 然后，它创建<xref:Microsoft.Office.Tools.Excel.ListObject.ErrorAddDataBoundRow>事件处理程序。 若要测试事件，请手动添加到一个新行<xref:Microsoft.Office.Tools.Excel.ListObject>并输入"更改"的姓氏和名字。 事件处理程序会显示一条消息。  
   
- 此版本用于文档级自定义。  
+ 此版本是文档级自定义项。  
   
  [!code-csharp[Trin_ExcelListObject#20](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelListObject/CS/Trin_ExcelListObject.cs#20)]
  [!code-vb[Trin_ExcelListObject#20](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelListObject/VB/Sheet1.vb#20)]  
   
- 此版本用于针对应用程序级外接程序。 若要使用此代码示例，请添加`using System.Data;`指令，如果你使用的 C# 或`Imports System.Data`语句，如果你使用的 Visual Basic。  
+ 此版本用于针对应用程序级外接程序。 若要使用此代码示例，请添加`using System.Data;`指令，如果使用的 C# 或`Imports System.Data`语句，如果使用的 Visual Basic。  
   
  [!code-csharp[Trin_ExcelListObject_AppLevelAddIn#20](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelListObject_AppLevelAddIn/CS/ThisAddIn.cs#20)]
  [!code-vb[Trin_ExcelListObject_AppLevelAddIn#20](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelListObject_AppLevelAddIn/VB/ThisAddIn.vb#20)]  
@@ -1058,7 +1054,7 @@
    
   
 ## Examples  
- 下面的代码示例创建<xref:System.Data.DataTable>和<xref:Microsoft.Office.Tools.Excel.ListObject>，并将绑定<xref:Microsoft.Office.Tools.Excel.ListObject>到<xref:System.Data.DataTable>。 然后获取包含标头行，并且更改标头行字体为加粗的范围。  
+ 下面的代码示例将创建<xref:System.Data.DataTable>和一个<xref:Microsoft.Office.Tools.Excel.ListObject>，并将绑定<xref:Microsoft.Office.Tools.Excel.ListObject>到<xref:System.Data.DataTable>。 然后获取包含标头行，并且更改将标头行的字体为粗体的范围。  
   
  此示例适用于文档级自定义。  
   
@@ -1111,7 +1107,7 @@
    
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.ListObject>，获取包含插入行，然后将显示一条消息，显示多少单元格的插入行的范围包含。  
+ 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.ListObject>，获取包含插入行，然后显示一条消息，显示多少的单元格插入行的范围包含。  
   
  此示例适用于文档级自定义。  
   
@@ -1136,13 +1132,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，该值指示数据绑定功能是否处于活动状态。</summary>
-        <value>
-          如果数据绑定功能处于活动状态，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果数据绑定功能处于活动状态，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 满足这些条件时，绑定处于活动状态： 所有属性均都设置、 用户未调用<xref:System.Windows.Forms.BindingManagerBase.ResumeBinding%2A>或<xref:System.Windows.Forms.BindingManagerBase.SuspendBinding%2A>上<xref:System.Windows.Forms.BindingManagerBase>，<xref:System.Windows.Forms.Binding>所属，以及控制<xref:System.Windows.Forms.Binding>所属已创建。  
+ 满足这些条件时，绑定处于活动状态： 所有属性均都设置、 用户未调用<xref:System.Windows.Forms.BindingManagerBase.ResumeBinding%2A>或<xref:System.Windows.Forms.BindingManagerBase.SuspendBinding%2A>上<xref:System.Windows.Forms.BindingManagerBase>的<xref:System.Windows.Forms.Binding>所属，以及对其控制<xref:System.Windows.Forms.Binding>所属已创建。  
   
  ]]></format>
         </remarks>
@@ -1162,8 +1157,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，该值指示 <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 是否处于选定状态。</summary>
-        <value>
-          如果 <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 处于选定状态，或者包括 <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 一部分的任何范围处于选定状态，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果 <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 处于选定状态，或者包括 <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 一部分的任何范围处于选定状态，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1186,12 +1180,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 要从此集合中删除任何项，请不要使用`Delete`的项的方法。 使用`Delete`方法删除项; 的项的一系列例如`ListColumns.Item(1).Range.Delete()`。 请注意，不能删除的列<xref:Microsoft.Office.Tools.Excel.ListObject>绑定到数据源的控件。  
+ 要从此集合中删除任何项，请勿使用`Delete`项的方法。 使用`Delete`要删除的项; 的项范围的方法为例`ListColumns.Item(1).Range.Delete()`。 请注意，不能删除的列<xref:Microsoft.Office.Tools.Excel.ListObject>绑定到数据源的控件。  
   
    
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.ListObject>、 获取列的集合，然后显示一条消息，显示的列数<xref:Microsoft.Office.Tools.Excel.ListObject>包含。  
+ 下面的代码示例将创建<xref:Microsoft.Office.Tools.Excel.ListObject>，获取列的集合，然后显示一条消息，显示列数<xref:Microsoft.Office.Tools.Excel.ListObject>包含。  
   
  此示例适用于文档级自定义。  
   
@@ -1223,12 +1217,12 @@
 ## Remarks  
  <xref:Microsoft.Office.Interop.Excel.ListRows>返回的对象不包含标头，总计行或插入行。  
   
- 要从此集合中删除任何项，请不要使用`Delete`的项的方法。 使用`Delete`方法删除项; 的项的一系列例如`ListRows.Item(1).Range.Delete()`。  
+ 要从此集合中删除任何项，请勿使用`Delete`项的方法。 使用`Delete`要删除的项; 的项范围的方法为例`ListRows.Item(1).Range.Delete()`。  
   
    
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.ListObject>、 获取行的集合，然后显示一条消息，显示多少行<xref:Microsoft.Office.Tools.Excel.ListObject>包含。  
+ 下面的代码示例将创建<xref:Microsoft.Office.Tools.Excel.ListObject>，获取行的集合，然后显示一条消息，显示行数<xref:Microsoft.Office.Tools.Excel.ListObject>包含。  
   
  此示例适用于文档级自定义。  
   
@@ -1277,14 +1271,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此名称仅用作的唯一标识符<xref:Microsoft.Office.Interop.Excel.ListObjects.Item%2A?displayProperty=fullName>属性<xref:Microsoft.Office.Interop.Excel.ListObjects?displayProperty=fullName>集合。 此属性只能通过对象模型进行设置。  
+ 此名称仅用作的唯一标识符<xref:Microsoft.Office.Interop.Excel.ListObjects.Item%2A?displayProperty=fullName>属性的<xref:Microsoft.Office.Interop.Excel.ListObjects?displayProperty=fullName>集合。 此属性只能通过对象模型进行设置。  
   
- 默认情况下，每个<xref:Microsoft.Office.Tools.Excel.ListObject>控件的名称以单词"列表"中后, 跟一个数字 （无空格） 开始。 如果尝试设置<xref:Microsoft.Office.Tools.Excel.ListObject.Name%2A>为已由另一名称的属性<xref:Microsoft.Office.Tools.Excel.ListObject>控件，将引发异常。  
+ 默认情况下，每个<xref:Microsoft.Office.Tools.Excel.ListObject>控件的名称以单词"列表"中后, 接一个数字 （无空格） 开始。 如果尝试设置<xref:Microsoft.Office.Tools.Excel.ListObject.Name%2A>属性设置为已由另一名称<xref:Microsoft.Office.Tools.Excel.ListObject>控件，将引发异常。  
   
    
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.ListObject>中当前工作表，然后使用<xref:Microsoft.Office.Tools.Excel.ListObject.Name%2A>属性设置的名称<xref:Microsoft.Office.Tools.Excel.ListObject>"员工"。  
+ 下面的代码示例将创建<xref:Microsoft.Office.Tools.Excel.ListObject>在当前工作表，然后使用<xref:Microsoft.Office.Tools.Excel.ListObject.Name%2A>属性的名称设置<xref:Microsoft.Office.Tools.Excel.ListObject>到的"Employees"。  
   
  此示例适用于文档级自定义。  
   
@@ -1313,21 +1307,21 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 操作将导致引发此事件的一个示例是如果用户可以是只读的数据更改。 <xref:Microsoft.Office.Tools.Excel.ListObject>控件撤消所做的更改，并替换的原始值。  
+ 将导致引发此事件的一个示例是操作的如果用户对更改数据是操作的只读的。 <xref:Microsoft.Office.Tools.Excel.ListObject>控件撤消所做的更改，并替换原始值。  
   
- 此事件提供中枚举，其中包含内容已还原的信息以及原因。  
+ 此事件提供了一个包含内容已还原的枚举中的信息和原因。  
   
    
   
 ## Examples  
- 下面的代码示例创建<xref:System.Data.DataTable>和<xref:Microsoft.Office.Tools.Excel.ListObject>，并将绑定<xref:Microsoft.Office.Tools.Excel.ListObject>到<xref:System.Data.DataTable>。 然后，它创建<xref:Microsoft.Office.Tools.Excel.ListObject.OriginalDataRestored>事件处理程序。 要测试此事件，请右键单击上方的列字母<xref:Microsoft.Office.Tools.Excel.ListObject>在工作表 1，然后单击**删除**的快捷菜单中。 事件处理程序替换列和列标题数据，并显示每个操作的消息。  
+ 下面的代码示例将创建<xref:System.Data.DataTable>和一个<xref:Microsoft.Office.Tools.Excel.ListObject>，并将绑定<xref:Microsoft.Office.Tools.Excel.ListObject>到<xref:System.Data.DataTable>。 然后，它创建<xref:Microsoft.Office.Tools.Excel.ListObject.OriginalDataRestored>事件处理程序。 若要测试事件，请右键单击上方的列字母<xref:Microsoft.Office.Tools.Excel.ListObject>在工作表 1，然后单击**删除**的快捷菜单中。 事件处理程序替换的列和列标题数据，并显示每个操作的消息。  
   
- 此版本用于文档级自定义。  
+ 此版本是文档级自定义项。  
   
  [!code-csharp[Trin_ExcelListObject#25](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelListObject/CS/Trin_ExcelListObject.cs#25)]
  [!code-vb[Trin_ExcelListObject#25](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelListObject/VB/Sheet1.vb#25)]  
   
- 此版本用于针对应用程序级外接程序。 若要使用此代码示例，请添加`using System.Data;`指令，如果你使用的 C# 或`Imports System.Data`语句，如果你使用的 Visual Basic。  
+ 此版本用于针对应用程序级外接程序。 若要使用此代码示例，请添加`using System.Data;`指令，如果使用的 C# 或`Imports System.Data`语句，如果使用的 Visual Basic。  
   
  [!code-csharp[Trin_ExcelListObject_AppLevelAddIn#25](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelListObject_AppLevelAddIn/CS/ThisAddIn.cs#25)]
  [!code-vb[Trin_ExcelListObject_AppLevelAddIn#25](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelListObject_AppLevelAddIn/VB/ThisAddIn.vb#25)]  
@@ -1384,23 +1378,7 @@
         <Parameter Name="LinkSource" Type="System.Boolean" />
       </Parameters>
       <Docs>
-        <param name="Target">包含字符串数组。 下表描述了此数组的元素。  
-  
- [1|1] 元素 #  
-  
- [1|2] 内容  
-  
- [2|1] 0  
-  
- [2|2] SharePoint 服务器的 URL。  
-  
- [3|1] 1  
-  
- [3|2] ListName（显示名称）。  
-  
- [4|1] 2  
-  
- [4|2] 列表的说明。</param>
+        <param name="Target">包含字符串数组。 下表描述了此数组的元素。  [1|1] 元素编号  [1|2] 内容  [2|1] 0  [2|2] SharePoint 服务器的 URL。  [3|1] 1  [3|2] ListName（显示名称）。  [4|1] 2  [4|2] 列表的说明。</param>
         <param name="LinkSource">布尔值。 （请参见“备注”部分。）</param>
         <summary>将 <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 控件发布到运行 Microsoft Windows SharePoint Services 的服务器。</summary>
         <returns>SharePoint 站点上已发布列表的 URL。</returns>
@@ -1408,12 +1386,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果<xref:Microsoft.Office.Tools.Excel.ListObject>控件当前未链接到 SharePoint 站点上，设置列表`LinkSource`到`true`将在指定 SharePoint 站点上创建一个新列表。 如果<xref:Microsoft.Office.Tools.Excel.ListObject>控件当前链接到 SharePoint 站点，设置`LinkSource`参数`true`将替换现有的链接 （你只能链接列表到一个 SharePoint 站点）。 如果<xref:Microsoft.Office.Tools.Excel.ListObject>控件当前未链接，设置`LinkSource`到`false`将保留<xref:Microsoft.Office.Tools.Excel.ListObject>取消链接的控件。 如果<xref:Microsoft.Office.Tools.Excel.ListObject>控件当前链接到 SharePoint 站点，设置`LinkSource`到`false`将保留<xref:Microsoft.Office.Tools.Excel.ListObject>控件链接到当前的 SharePoint 站点。  
+ 如果<xref:Microsoft.Office.Tools.Excel.ListObject>控制当前未链接到 SharePoint 站点上，设置列表`LinkSource`到`true`将指定的 SharePoint 站点上创建一个新列表。 如果<xref:Microsoft.Office.Tools.Excel.ListObject>控件当前已链接到 SharePoint 站点，则设置`LinkSource`参数`true`将替换现有的链接 （只能将链接列表到一个 SharePoint 站点）。 如果<xref:Microsoft.Office.Tools.Excel.ListObject>控制当前未链接，设置`LinkSource`到`false`将保留<xref:Microsoft.Office.Tools.Excel.ListObject>已取消链接控件。 如果<xref:Microsoft.Office.Tools.Excel.ListObject>控件当前已链接到 SharePoint 站点，则设置`LinkSource`到`false`将保留<xref:Microsoft.Office.Tools.Excel.ListObject>控件链接到当前的 SharePoint 站点。  
   
    
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.ListObject>上当前工作表，然后调用<xref:Microsoft.Office.Tools.Excel.ListObject.Publish%2A>方法可以发布<xref:Microsoft.Office.Tools.Excel.ListObject>到正在运行 Microsoft Windows SharePoint Services 网站。 此示例假定`SharePointURL`参数标识一个运行 Microsoft Windows SharePoint Services 网站的有效 URL。  
+ 下面的代码示例将创建<xref:Microsoft.Office.Tools.Excel.ListObject>在当前工作表，然后调用<xref:Microsoft.Office.Tools.Excel.ListObject.Publish%2A>方法来发布<xref:Microsoft.Office.Tools.Excel.ListObject>到运行 Microsoft Windows SharePoint Services 的网站。 此示例假定`SharePointURL`参数标识一个运行 Microsoft Windows SharePoint Services 网站的有效 URL。  
   
  此示例适用于文档级自定义。  
   
@@ -1444,7 +1422,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ListObject.QueryTable%2A>属性刷新相交的查询表<xref:Microsoft.Office.Tools.Excel.ListObject>。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.ListObject>名为`customerListObject`，相交的查询表。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ListObject.QueryTable%2A>属性来刷新相交的查询表<xref:Microsoft.Office.Tools.Excel.ListObject>。 此代码示例假定当前工作表包含<xref:Microsoft.Office.Tools.Excel.ListObject>名为`customerListObject`查询表与相交。  
   
  此示例适用于文档级自定义。  
   
@@ -1479,7 +1457,7 @@
    
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.ListObject>，然后显示一条消息，显示其范围内有多少个单元格<xref:Microsoft.Office.Tools.Excel.ListObject>适用。  
+ 下面的代码示例将创建<xref:Microsoft.Office.Tools.Excel.ListObject>，然后显示一条消息显示到其中的范围中有多少个单元格<xref:Microsoft.Office.Tools.Excel.ListObject>适用。  
   
  此示例适用于文档级自定义。  
   
@@ -1539,9 +1517,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法将对中的数据所做的更改不发送<xref:Microsoft.Office.Tools.Excel.ListObject>返回到数据源; 它仅获取信息。  
+ 此方法不会发送到中的数据所做的更改<xref:Microsoft.Office.Tools.Excel.ListObject>返回到数据源中; 它仅获取信息。  
   
- 如果数据对象不会引发通知事件的数据更改时，例如，如果你创建一个类以保留数据，但不是包括一个用于通知的更改侦听器事件，请使用此方法。 如果数据对象不会引发事件，<xref:Microsoft.Office.Tools.Excel.ListObject>不会自动更新。  
+ 如果此数据对象不会引发通知事件数据发生更改时，例如，如果创建一个类来保存数据，但不是包括事件以通知的更改的侦听器，请使用此方法。 如果此数据对象不会引发一个事件，<xref:Microsoft.Office.Tools.Excel.ListObject>不会自动更新。  
   
  ]]></format>
         </remarks>
@@ -1566,9 +1544,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法将对中的数据所做的更改不发送<xref:Microsoft.Office.Tools.Excel.ListObject>返回到数据源; 它仅获取信息。  
+ 此方法不会发送到中的数据所做的更改<xref:Microsoft.Office.Tools.Excel.ListObject>返回到数据源中; 它仅获取信息。  
   
- 如果数据对象不会引发通知事件的数据更改时，例如，如果你创建一个类以保留数据，但不是包括一个用于通知的更改侦听器事件，请使用此方法。 如果数据对象不会引发事件，<xref:Microsoft.Office.Tools.Excel.ListObject>不会自动更新。  
+ 如果此数据对象不会引发通知事件数据发生更改时，例如，如果创建一个类来保存数据，但不是包括事件以通知的更改的侦听器，请使用此方法。 如果此数据对象不会引发一个事件，<xref:Microsoft.Office.Tools.Excel.ListObject>不会自动更新。  
   
  ]]></format>
         </remarks>
@@ -1593,7 +1571,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果用户更改的列或行的顺序，工作表中存储有关所做的更改的信息，以便<xref:Microsoft.Office.Tools.Excel.ListObject>控件是自定义配置在下次打开工作表中。 <xref:Microsoft.Office.Tools.Excel.ListObject.ResetPersistedBindingInformation%2A> 清除存储的信息，以便<xref:Microsoft.Office.Tools.Excel.ListObject>控件会出现在默认配置。  
+ 如果用户更改的列或行的顺序，在工作表中存储有关所做的更改的信息，以便<xref:Microsoft.Office.Tools.Excel.ListObject>控件是自定义配置在下次打开该工作表中。 <xref:Microsoft.Office.Tools.Excel.ListObject.ResetPersistedBindingInformation%2A> 清除存储的信息，以便<xref:Microsoft.Office.Tools.Excel.ListObject>控件会出现在默认配置。  
   
  ]]></format>
         </remarks>
@@ -1623,14 +1601,14 @@
 ## Remarks  
  插入或移动此属性没有单元格。  
   
- 标头必须保留在同一行中，并且生成的列表必须重叠原始列表。 此列表必须包含一个标题行和至少一个数据行。  
+ 标头必须保留在同一行中，并且生成的列表必须重叠的原始列表。 列表必须包含一个标题行和至少一个数据行。  
   
- 有关链接到正在运行 Microsoft Windows SharePoint Services 的服务器的列表，可以调整大小，通过提供使用此方法的列表`Range`不同于当前范围的自变量<xref:Microsoft.Office.Tools.Excel.ListObject>仅中的行数它包含。 尝试重设列表大小链接到 Windows SharePoint Services 的添加或删除列 (在`Range`自变量) 会导致运行时错误。  
+ 有关链接到正在运行 Microsoft Windows SharePoint Services 的服务器的列表，您可以调整大小，从而使用此方法的列表`Range`参数不同于当前范围的<xref:Microsoft.Office.Tools.Excel.ListObject>仅在的行数中它包含。 尝试重设列表大小链接到 Windows SharePoint Services 通过添加或删除列 (在`Range`参数) 会导致运行时错误。  
   
    
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.ListObject>上当前工作表，然后调用<xref:Microsoft.Office.Tools.Excel.ListObject.Resize%2A>方法增加大小<xref:Microsoft.Office.Tools.Excel.ListObject>。  
+ 下面的代码示例将创建<xref:Microsoft.Office.Tools.Excel.ListObject>在当前工作表，然后调用<xref:Microsoft.Office.Tools.Excel.ListObject.Resize%2A>方法来增加的大小<xref:Microsoft.Office.Tools.Excel.ListObject>。  
   
  此示例适用于文档级自定义。  
   
@@ -1655,15 +1633,14 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示 <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 控件的行顺序是否已保存到工作表中。</summary>
-        <value>
-          若要将行顺序保存到工作表中，请使用 <see langword="true" />；否则使用 <see langword="false" />。 默认值为 <see langword="false" />。</value>
+        <value>若要将行顺序保存到工作表中，请使用 <see langword="true" />；否则使用 <see langword="false" />。 默认值为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
  此属性仅适用于<xref:Microsoft.Office.Tools.Excel.ListObject>绑定到数据的控件。  
   
- 如果你未设置此属性，行顺序<xref:Microsoft.Office.Tools.Excel.ListObject>将匹配数据源的行顺序的下次打开该工作簿时，即使用户对象的排序进行更改并保存该工作簿。  
+ 如果你未设置此属性的行顺序<xref:Microsoft.Office.Tools.Excel.ListObject>将匹配数据源的行顺序的下次打开该工作簿时，即使用户对排序进行了更改并保存该工作簿。  
   
  ]]></format>
         </remarks>
@@ -1687,14 +1664,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 所选内容更改为时会引发此事件<xref:Microsoft.Office.Tools.Excel.ListObject>控件。  
+ 为所选内容更改时引发此事件<xref:Microsoft.Office.Tools.Excel.ListObject>控件。  
   
    
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.ListObject>，然后创建一个事件处理程序<xref:Microsoft.Office.Tools.Excel.ListObject.Selected>事件。 若要测试事件处理程序，请确保<xref:Microsoft.Office.Tools.Excel.ListObject>未选中，然后选择它。  
+ 下面的代码示例将创建<xref:Microsoft.Office.Tools.Excel.ListObject>，然后创建的事件处理程序<xref:Microsoft.Office.Tools.Excel.ListObject.Selected>事件。 若要测试的事件处理程序，请确保<xref:Microsoft.Office.Tools.Excel.ListObject>未选择，并选择它。  
   
- 此版本用于文档级自定义。  
+ 此版本是文档级自定义项。  
   
  [!code-csharp[Trin_ExcelListObject#29](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelListObject/CS/Trin_ExcelListObject.cs#29)]
  [!code-vb[Trin_ExcelListObject#29](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelListObject/VB/Sheet1.vb#29)]  
@@ -1727,14 +1704,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性是 1 开始，而不是从 0 开始。 中的第一个数据行<xref:Microsoft.Office.Tools.Excel.ListObject>控件具有索引号为 1。  
+ 此属性是从 1 开始，不是从 0 开始。 中的第一个数据行<xref:Microsoft.Office.Tools.Excel.ListObject>控件具有索引号为 1。  
   
    
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.ListObject>上当前工作表。 它使用<xref:Microsoft.Office.Tools.Excel.ListObject.SelectedIndex%2A>和<xref:Microsoft.Office.Tools.Excel.ListObject.AutoSelectRows%2A>属性来选择第二行并指定当用户单击某一行，选择整行。 此代码示例还创建的事件处理程序<xref:Microsoft.Office.Tools.Excel.ListObject.SelectedIndexChanged>显示一个消息框，每当选择新行时的事件。  
+ 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.ListObject>当前工作表上。 它使用<xref:Microsoft.Office.Tools.Excel.ListObject.SelectedIndex%2A>和<xref:Microsoft.Office.Tools.Excel.ListObject.AutoSelectRows%2A>属性来选择第二行并指定当用户单击行选择整行。 此代码示例还创建的事件处理程序<xref:Microsoft.Office.Tools.Excel.ListObject.SelectedIndexChanged>显示一个消息框，选择一个新行时的事件。  
   
- 此版本用于文档级自定义。  
+ 此版本是文档级自定义项。  
   
  [!code-csharp[Trin_ExcelListObject#2](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelListObject/CS/Trin_ExcelListObject.cs#2)]
  [!code-vb[Trin_ExcelListObject#2](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelListObject/VB/Sheet1.vb#2)]  
@@ -1766,16 +1743,16 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果已选中标头、 插入行或总计行不被引发此事件。  
+ 如果选择标头、 插入行或总计行，不引发此事件。  
   
- 如果将引发此事件<xref:Microsoft.Office.Tools.Excel.ListObject.SelectedIndex%2A>通过以编程方式修改或用户交互更改属性。  
+ 如果引发此事件<xref:Microsoft.Office.Tools.Excel.ListObject.SelectedIndex%2A>属性更改通过以编程方式修改或用户交互。  
   
    
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.ListObject>上当前工作表。 它使用<xref:Microsoft.Office.Tools.Excel.ListObject.SelectedIndex%2A>和<xref:Microsoft.Office.Tools.Excel.ListObject.AutoSelectRows%2A>属性来选择第二行并指定当用户单击某一行，选择整行。 此代码示例还创建的事件处理程序<xref:Microsoft.Office.Tools.Excel.ListObject.SelectedIndexChanged>显示一个消息框，每当选择新行时的事件。  
+ 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.ListObject>当前工作表上。 它使用<xref:Microsoft.Office.Tools.Excel.ListObject.SelectedIndex%2A>和<xref:Microsoft.Office.Tools.Excel.ListObject.AutoSelectRows%2A>属性来选择第二行并指定当用户单击行选择整行。 此代码示例还创建的事件处理程序<xref:Microsoft.Office.Tools.Excel.ListObject.SelectedIndexChanged>显示一个消息框，选择一个新行时的事件。  
   
- 此版本用于文档级自定义。  
+ 此版本是文档级自定义项。  
   
  [!code-csharp[Trin_ExcelListObject#2](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelListObject/CS/Trin_ExcelListObject.cs#2)]
  [!code-vb[Trin_ExcelListObject#2](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelListObject/VB/Sheet1.vb#2)]  
@@ -1807,16 +1784,16 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 任何选择范围内的时，将引发此事件<xref:Microsoft.Office.Tools.Excel.ListObject>更改。  
+ 当任何所选范围内的时，将引发此事件<xref:Microsoft.Office.Tools.Excel.ListObject>更改。  
   
- 从移动焦点时，将不会引发此事件在<xref:Microsoft.Office.Tools.Excel.ListObject>控制转移到外部<xref:Microsoft.Office.Tools.Excel.ListObject>控件。 从移动焦点时引发该事件之外<xref:Microsoft.Office.Tools.Excel.ListObject>控制转移到<xref:Microsoft.Office.Tools.Excel.ListObject>控件。  
+ 从移动焦点时不会引发此事件内<xref:Microsoft.Office.Tools.Excel.ListObject>外部的控制转移到<xref:Microsoft.Office.Tools.Excel.ListObject>控件。 引发时焦点从外部<xref:Microsoft.Office.Tools.Excel.ListObject>控制对<xref:Microsoft.Office.Tools.Excel.ListObject>控件。  
   
    
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.ListObject>，然后创建一个事件处理程序<xref:Microsoft.Office.Tools.Excel.ListObject.SelectionChange>事件。 若要测试事件处理程序，选择中的单元格<xref:Microsoft.Office.Tools.Excel.ListObject>，然后选择在不同的单元格<xref:Microsoft.Office.Tools.Excel.ListObject>。  
+ 下面的代码示例将创建<xref:Microsoft.Office.Tools.Excel.ListObject>，然后创建的事件处理程序<xref:Microsoft.Office.Tools.Excel.ListObject.SelectionChange>事件。 若要测试的事件处理程序，请选择中的单元格<xref:Microsoft.Office.Tools.Excel.ListObject>，然后选择在不同的单元格<xref:Microsoft.Office.Tools.Excel.ListObject>。  
   
- 此版本用于文档级自定义。  
+ 此版本是文档级自定义项。  
   
  [!code-csharp[Trin_ExcelListObject#30](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelListObject/CS/Trin_ExcelListObject.cs#30)]
  [!code-vb[Trin_ExcelListObject#30](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelListObject/VB/Sheet1.vb#30)]  
@@ -1857,7 +1834,7 @@
    
   
 ## Examples  
- 下面的代码示例演示如何使用<xref:Microsoft.Office.Tools.Excel.ListObject.SetDataBinding%2A>方法将绑定<xref:Microsoft.Office.Tools.Excel.ListObject>到<xref:System.Data.DataTable>。 <xref:System.Data.DataTable>包含两个列，其中包含的名称和员工的年龄和表示员工条目的四个行。  
+ 下面的代码示例演示如何使用<xref:Microsoft.Office.Tools.Excel.ListObject.SetDataBinding%2A>方法将绑定<xref:Microsoft.Office.Tools.Excel.ListObject>到<xref:System.Data.DataTable>。 <xref:System.Data.DataTable>包含两个列，其中包含名称和员工的年龄和表示员工条目的四个行。  
   
  此示例适用于文档级自定义。  
   
@@ -1898,12 +1875,12 @@
 ## Remarks  
  数据源可以是任何对象，它实现<xref:System.Collections.IList>， <xref:System.ComponentModel.IListSource>， <xref:System.ComponentModel.IBindingList>，或<xref:System.Collections.IEnumerable>。  
   
- 数据成员必须是返回可绑定的集合的数据源的属性。 例如，<xref:System.Data.DataSet>源具有表用作数据成员。  
+ 数据成员必须是返回可绑定集合的数据源的属性。 例如，<xref:System.Data.DataSet>源具有表作为数据成员。  
   
    
   
 ## Examples  
- 下面的代码示例创建<xref:System.Data.DataSet>、 <xref:System.Data.DataTable>，和一个<xref:Microsoft.Office.Tools.Excel.ListObject>。 然后将绑定到的列表对象<xref:System.Data.DataSet>和<xref:System.Data.DataTable>。  
+ 下面的代码示例将创建<xref:System.Data.DataSet>、 一个<xref:System.Data.DataTable>，和一个<xref:Microsoft.Office.Tools.Excel.ListObject>。 然后将绑定到列表对象<xref:System.Data.DataSet>和<xref:System.Data.DataTable>。  
   
  此示例适用于文档级自定义。  
   
@@ -1952,12 +1929,12 @@
 ## Remarks  
  `dataSource`参数可以是任何对象，它实现<xref:System.Collections.IList>， <xref:System.ComponentModel.IListSource>， <xref:System.ComponentModel.IBindingList>，或<xref:System.Collections.IEnumerable>。  
   
- `dataMember`参数必须是返回可绑定的集合的数据源的属性。 例如，<xref:System.Data.DataSet>源具有表用作数据成员。  
+ `dataMember`参数必须是返回可绑定集合的数据源的属性。 例如，<xref:System.Data.DataSet>源具有表作为数据成员。  
   
    
   
 ## Examples  
- 下面的代码示例创建<xref:System.Data.DataSet>、 <xref:System.Data.DataTable>，和一个<xref:Microsoft.Office.Tools.Excel.ListObject>。 它然后绑定<xref:Microsoft.Office.Tools.Excel.ListObject>到<xref:System.Data.DataSet>和<xref:System.Data.DataTable>，但仅包括两个可能的表的列中的一个<xref:Microsoft.Office.Tools.Excel.ListObject>。  
+ 下面的代码示例将创建<xref:System.Data.DataSet>、 一个<xref:System.Data.DataTable>，和一个<xref:Microsoft.Office.Tools.Excel.ListObject>。 然后将绑定<xref:Microsoft.Office.Tools.Excel.ListObject>到<xref:System.Data.DataSet>并<xref:System.Data.DataTable>，但仅包括两个可能的表的列中的一个<xref:Microsoft.Office.Tools.Excel.ListObject>。  
   
  此示例适用于文档级自定义。  
   
@@ -1991,12 +1968,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 访问此属性会导致如果列表未链接到 SharePoint 站点引发异常。  
+ 访问此属性会导致如果列表未链接到 SharePoint 站点，则引发异常。  
   
    
   
 ## Examples  
- 下面的代码示例发布<xref:Microsoft.Office.Tools.Excel.ListObject>到正在运行 Microsoft Windows SharePoint Services 网站。 此示例假定有<xref:Microsoft.Office.Tools.Excel.ListObject>名为`customerListObject`上当前工作表，且<xref:Microsoft.Office.Tools.Excel.ListObject>链接到 SharePoint 站点。  
+ 下面的代码示例发布<xref:Microsoft.Office.Tools.Excel.ListObject>到运行 Microsoft Windows SharePoint Services 的网站。 此示例假定有<xref:Microsoft.Office.Tools.Excel.ListObject>名为`customerListObject`当前的工作表上<xref:Microsoft.Office.Tools.Excel.ListObject>链接到 SharePoint 站点。  
   
  此示例适用于文档级自定义。  
   
@@ -2021,13 +1998,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示是否显示自动筛选。</summary>
-        <value>
-          如果显示自动筛选，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果显示自动筛选，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.ListObject.ShowAutoFilter%2A>属性默认为`true`新<xref:Microsoft.Office.Tools.Excel.ListObject>控件。  
+ <xref:Microsoft.Office.Tools.Excel.ListObject.ShowAutoFilter%2A>属性的默认值为`true`新<xref:Microsoft.Office.Tools.Excel.ListObject>控件。  
   
  ]]></format>
         </remarks>
@@ -2047,8 +2023,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示是否应显示标题信息。</summary>
-        <value>
-          如果应显示标题信息，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="false" />。</value>
+        <value>如果应显示标题信息，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2066,8 +2041,7 @@
       </ReturnValue>
       <Docs>
         <summary>设置或获取一个值，该值指示是否使用列条纹表样式。</summary>
-        <value>
-          如果使用列条纹表样式，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="false" />。</value>
+        <value>如果使用列条纹表样式，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2085,8 +2059,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示是否对第一列设置格式。</summary>
-        <value>
-          如果对第一列设置格式，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="false" />。</value>
+        <value>如果对第一列设置格式，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2104,8 +2077,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示是否对最后一列设置格式。</summary>
-        <value>
-          如果对最后一列设置格式，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="false" />。</value>
+        <value>如果对最后一列设置格式，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2123,8 +2095,7 @@
       </ReturnValue>
       <Docs>
         <summary>设置或获取一个值，该值指示是否使用行条纹表样式。</summary>
-        <value>
-          如果使用行条纹表样式，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="false" />。</value>
+        <value>如果使用行条纹表样式，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2142,8 +2113,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值表示总计行是否可见。</summary>
-        <value>
-          如果总计行可见，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果总计行可见，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2161,12 +2131,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取 <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 集合的一个或多个排序列以及排序顺序。</summary>
-        <value>A <c>Microsoft.Office.Interop.Excel.Sort</c>表示排序列或列和排序顺序<see cref="T:Microsoft.Office.Tools.Excel.ListObject" />集合。</value>
+        <value>一个<c>Microsoft.Office.Interop.Excel.Sort</c> ，表示列排序或列和的排序顺序<see cref="T:Microsoft.Office.Tools.Excel.ListObject" />集合。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.ListObject>到当前工作表。 该示例然后填充<xref:Microsoft.Office.Tools.Excel.ListObject>，这对应于一个 Excel 表，使用的任意数据的两个行并指定排序是按升序基于列范围 a1: a3 按顺序执行。 接下来，该示例调用`Microsoft.Office.Interop.Excel.Sort.Apply`方法对表进行排序。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Excel.ListObject>到当前工作表。 然后，示例填充<xref:Microsoft.Office.Tools.Excel.ListObject>，这对应于 Excel 表、 使用的任意数据的两个行，并指定排序是升序顺序对列范围 a1: a3 执行。 接下来，该示例调用`Microsoft.Office.Interop.Excel.Sort.Apply`方法对表进行排序。  
   
  此示例适用于文档级自定义。  
   
@@ -2197,7 +2167,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例创建<xref:System.Data.DataTable>和<xref:Microsoft.Office.Tools.Excel.ListObject>，然后将绑定<xref:Microsoft.Office.Tools.Excel.ListObject>到<xref:System.Data.DataTable>。 然后，在消息中显示列表的源。  
+ 下面的代码示例将创建<xref:System.Data.DataTable>和一个<xref:Microsoft.Office.Tools.Excel.ListObject>，，然后将绑定<xref:Microsoft.Office.Tools.Excel.ListObject>到<xref:System.Data.DataTable>。 然后，在消息中显示的列表的源。  
   
  此示例适用于文档级自定义。  
   
@@ -2227,10 +2197,10 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 值<xref:Microsoft.Office.Tools.Excel.ListObject.Summary%2A>属性对应的设置**说明**框中**可选文字**对话框中，通过右键单击一个表，指向显示**表**，然后单击**可选文字**。  
+ 值<xref:Microsoft.Office.Tools.Excel.ListObject.Summary%2A>的设置的属性相对应**描述**框中**可选文字**对话框中，右键单击某个表，指向显示**表**，然后单击**可选文字**。  
   
 > [!NOTE]
->  此属性将出现在 IntelliSense Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Excel 2007 项目中使用此属性。  
+>  此属性将出现在 IntelliSense 中 Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，此属性不能使用 Excel 2007 项目中。  
   
  ]]></format>
         </remarks>
@@ -2256,7 +2226,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.ListObject>到`Sheet1`表。 该示例然后设置的表样式<xref:Microsoft.Office.Tools.Excel.ListObject>，为对应于一个 Excel 表、**表样式深色 10**样式。 你可以为此属性设置的表样式对应于选定了一个表时，将显示设计选项卡上的 Excel 用户界面中可用的表样式。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.ListObject>到`Sheet1`工作表。 该示例然后设置的表样式<xref:Microsoft.Office.Tools.Excel.ListObject>，它为对应于 Excel 表，**表样式深色 10**样式。 为此属性可以设置表样式对应的表样式时选择某个表时，将显示设计选项卡上的 Excel 用户界面中提供的。  
   
  此示例适用于文档级自定义。  
   
@@ -2286,7 +2256,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 一个常见用途<xref:Microsoft.Office.Tools.Excel.ListObject.Tag%2A>属性是与紧密关联的数据存储<xref:Microsoft.Office.Tools.Excel.ListObject>控件。  
+ 一个常见用途<xref:Microsoft.Office.Tools.Excel.ListObject.Tag%2A>属性是与密切关联的数据存储<xref:Microsoft.Office.Tools.Excel.ListObject>控件。  
   
  ]]></format>
         </remarks>
@@ -2311,12 +2281,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性返回<xref:Microsoft.Office.Interop.Excel.Range>仅当在显示总计行<xref:Microsoft.Office.Tools.Excel.ListObject>控件。 如果未显示总的行，它将返回`null`。  
+ 此属性返回<xref:Microsoft.Office.Interop.Excel.Range>仅当中显示总计行<xref:Microsoft.Office.Tools.Excel.ListObject>控件。 如果未显示总计行，它将返回`null`。  
   
    
   
 ## Examples  
- 下面的代码示例创建<xref:System.Data.DataTable>和<xref:Microsoft.Office.Tools.Excel.ListObject>，并将绑定<xref:Microsoft.Office.Tools.Excel.ListObject>到<xref:System.Data.DataTable>。 然后获取包含总计行和总计行字体更改为斜体的范围。  
+ 下面的代码示例将创建<xref:System.Data.DataTable>和一个<xref:Microsoft.Office.Tools.Excel.ListObject>，并将绑定<xref:Microsoft.Office.Tools.Excel.ListObject>到<xref:System.Data.DataTable>。 然后获取包含总计行和总计行字体变为斜体的范围。  
   
  此示例适用于文档级自定义。  
   
@@ -2346,7 +2316,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 调用此方法之后和<xref:Microsoft.Office.Tools.Excel.ListObject>为取消链接，取消链接无法撤消。  
+ 调用此方法后，<xref:Microsoft.Office.Tools.Excel.ListObject>是取消链接，取消链接的操作无法撤消。  
   
  ]]></format>
         </remarks>
@@ -2371,11 +2341,11 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法从本机 Excel 移除列表功能<xref:Microsoft.Office.Interop.Excel.ListObject?displayProperty=fullName>对象但不会影响<xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName>宿主控件; 控件会保留在项目的生成的代码。  
+ 此方法从本机 Excel 中移除列表功能<xref:Microsoft.Office.Interop.Excel.ListObject?displayProperty=fullName>对象，但不会影响<xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName>宿主控件; 该控件将保持在项目生成的代码。  
   
- 使用此方法后，组成该列表的单元格的范围将是常规的数据区域。  
+ 使用此方法后，由列表组成的单元格的范围将是常规的数据区域。  
   
- 运行此方法在工作表中保留单元数据、 格式和公式。 总的行也将保持不变。 此方法中删除任何链接到 Microsoft Windows SharePoint Services 站点。 从列表中，还删除了自动筛选和插入行。  
+ 运行此方法保留在工作表中单元格数据、 格式和公式。 总计行也将保持不变。 此方法删除任何链接到 Microsoft Windows SharePoint Services 站点。 从列表中，还删除了自动筛选和插入行。  
   
  ]]></format>
         </remarks>
@@ -2426,7 +2396,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例显示的名称<xref:Microsoft.Office.Interop.Excel.XmlMap>映射到<xref:Microsoft.Office.Tools.Excel.ListObject>。 此示例假定有<xref:Microsoft.Office.Tools.Excel.ListObject>名为`customerListObject`上当前工作表，且<xref:Microsoft.Office.Tools.Excel.ListObject>使用架构映射。  
+ 下面的代码示例显示的名称<xref:Microsoft.Office.Interop.Excel.XmlMap>映射到<xref:Microsoft.Office.Tools.Excel.ListObject>。 此示例假定有<xref:Microsoft.Office.Tools.Excel.ListObject>名为`customerListObject`当前的工作表上<xref:Microsoft.Office.Tools.Excel.ListObject>使用架构映射。  
   
  此示例适用于文档级自定义。  
   

@@ -1,10 +1,10 @@
 <Type Name="Bookmark" FullName="Microsoft.Office.Tools.Word.Bookmark">
   <Metadata>
     <Meta Name="ms.openlocfilehash" Value="8a1736dd235aa783a5e61a134111023533332a47" />
-    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.sourcegitcommit" Value="d85a83935f1d68ded616fcdfb8fd10d6bf4a4633" />
     <Meta Name="ms.translationtype" Value="HT" />
     <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
+    <Meta Name="ms.lasthandoff" Value="07/24/2018" />
     <Meta Name="ms.locfileid" Value="29440043" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface Bookmark : IDisposable, System.ComponentModel.IComponent, System.ComponentModel.ISupportInitialize, System.Windows.Forms.IBindableComponent" />
@@ -40,7 +40,7 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用<xref:Microsoft.Office.Tools.Word.ControlCollection.AddBookmark%2A>方法将添加到文档范围的书签。  
+ 使用<xref:Microsoft.Office.Tools.Word.ControlCollection.AddBookmark%2A>方法添加到文档范围的书签。  
   
  [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
   
@@ -70,7 +70,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 以下代码示例获取和显示在一个消息框中，名称和版本的应用程序，该书签会显示。  
+ 以下代码示例获取和显示一个消息框、 名称和版本显示书签的应用程序中。  
   
  此示例适用于文档级自定义。  
   
@@ -122,7 +122,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>到文档的文本与控件，然后创建<xref:Microsoft.Office.Tools.Word.Bookmark.BeforeDoubleClick>事件处理程序。 选择书签中的文本时<xref:Microsoft.Office.Tools.Word.Bookmark>双击控件时。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件，其对文档的文本，然后创建<xref:Microsoft.Office.Tools.Word.Bookmark.BeforeDoubleClick>事件处理程序。 在书签内的文本选择时<xref:Microsoft.Office.Tools.Word.Bookmark>双击控件时。  
   
  此示例适用于文档级自定义。  
   
@@ -156,7 +156,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>到文档控件，然后创建<xref:Microsoft.Office.Tools.Word.Bookmark.BeforeRightClick>事件处理程序。 当<xref:Microsoft.Office.Tools.Word.Bookmark>控件处于右键单击时，该书签中的文本复制到剪贴板。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控制对该文档，然后创建<xref:Microsoft.Office.Tools.Word.Bookmark.BeforeRightClick>事件处理程序。 当<xref:Microsoft.Office.Tools.Word.Bookmark>右击控件之后，书签中的文本复制到剪贴板。  
   
  此示例适用于文档级自定义。  
   
@@ -185,7 +185,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果将引发此事件<xref:System.Windows.Forms.IBindableComponent.BindingContext%2A>属性更改通过以编程方式修改或用户交互更改。 有关详细信息有关的用途<xref:System.Windows.Forms.IBindableComponent.BindingContext%2A>属性，请参阅<xref:System.Windows.Forms.BindingContext>类。  
+ 如果引发此事件<xref:System.Windows.Forms.IBindableComponent.BindingContext%2A>更改属性以编程方式修改或用户交互更改。 有关详细信息的用途有关<xref:System.Windows.Forms.IBindableComponent.BindingContext%2A>属性，请参阅<xref:System.Windows.Forms.BindingContext>类。  
   
  ]]></format>
         </remarks>
@@ -210,12 +210,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性可以设置为的值是 0，-1，和<xref:Microsoft.Office.Interop.Word.WdConstants.wdToggle>。  
+ 此属性可以设置为的值为 0，-1，和<xref:Microsoft.Office.Interop.Word.WdConstants.wdToggle>。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控制对该文档，然后将应用格式设置为基于书签<xref:Microsoft.Office.Tools.Word.Bookmark.LanguageID%2A>在书签内的文本。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控制对该文档，然后应用格式设置为基于书签<xref:Microsoft.Office.Tools.Word.Bookmark.LanguageID%2A>内书签的文本。  
   
  此示例适用于文档级自定义。  
   
@@ -240,19 +240,19 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示 <see cref="T:Microsoft.Office.Tools.Word.Bookmark" /> 控件中的文本的格式是否设置为粗体。</summary>
-        <value>如果无中的文本 0<see cref="T:Microsoft.Office.Tools.Word.Bookmark" />控件是粗体; 1 如果中的文本的所有<see cref="T:Microsoft.Office.Tools.Word.Bookmark" />控件为粗体;<see cref="F:Microsoft.Office.Interop.Word.WdConstants.wdUndefined" /> (999999) 中的文本的一部分<see cref="T:Microsoft.Office.Tools.Word.Bookmark" />控件为粗体。</value>
+        <value>如果没有中的文本，则 0<see cref="T:Microsoft.Office.Tools.Word.Bookmark" />控件是粗体; 1 如果中的文本的所有<see cref="T:Microsoft.Office.Tools.Word.Bookmark" />控件为粗体;<see cref="F:Microsoft.Office.Interop.Word.WdConstants.wdUndefined" /> (999999) 中的文本的部分<see cref="T:Microsoft.Office.Tools.Word.Bookmark" />控件为粗体。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性可以设置为值为 0、 1、 和<xref:Microsoft.Office.Interop.Word.WdConstants.wdToggle>。  
+ 此属性可以设置为的值是 0、 1、 和<xref:Microsoft.Office.Interop.Word.WdConstants.wdToggle>。  
   
  <xref:Microsoft.Office.Tools.Word.Bookmark.BoldBi%2A>属性适用于从右到左语言中的文本。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控制对该文档，然后将应用格式设置为基于书签<xref:Microsoft.Office.Tools.Word.Bookmark.LanguageID%2A>在书签内的文本。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控制对该文档，然后应用格式设置为基于书签<xref:Microsoft.Office.Tools.Word.Bookmark.LanguageID%2A>内书签的文本。  
   
  此示例适用于文档级自定义。  
   
@@ -283,12 +283,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 该数字对应的顺序到<xref:Microsoft.Office.Tools.Word.Bookmark>文档中的控件： 第一个书签的 1，2 代表第二个中，依次类推。 如果其中一个书签被删除，则<xref:Microsoft.Office.Tools.Word.Bookmark.BookmarkID%2A>的其他书签将相应地重新编号。  
+ 该数字对应的顺序为<xref:Microsoft.Office.Tools.Word.Bookmark>文档中的控件： 第一个书签的 1，2 代表第二个，依次类推。 如果删除其中一个书签，则<xref:Microsoft.Office.Tools.Word.Bookmark.BookmarkID%2A>的其他书签将相应地重新编号。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件添加到文档，然后通过显示文档中显示的位置的书签<xref:Microsoft.Office.Tools.Word.Bookmark.BookmarkID%2A>消息框中。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>到文档，然后在文档中显示的书签的位置，通过显示<xref:Microsoft.Office.Tools.Word.Bookmark.BookmarkID%2A>消息框中。  
   
  此示例适用于文档级自定义。  
   
@@ -318,12 +318,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 不能枚举每个<xref:Microsoft.Office.Tools.Word.Bookmark>在文档中使用的控件<xref:Microsoft.Office.Interop.Word.Bookmarks?displayProperty=fullName>集合。 使用<xref:Microsoft.Office.Tools.Word.ControlCollection>，然后查找类型的项<xref:Microsoft.Office.Tools.Word.Bookmark>。  
+ 不能枚举每个<xref:Microsoft.Office.Tools.Word.Bookmark>控件在文档中使用<xref:Microsoft.Office.Interop.Word.Bookmarks?displayProperty=fullName>集合。 使用<xref:Microsoft.Office.Tools.Word.ControlCollection>，然后查找类型的项<xref:Microsoft.Office.Tools.Word.Bookmark>。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件替换为到文档的文本，然后将另一个书签添加书签的第六个字符。 然后在消息框中显示该书签中找到的书签的总数。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件，其对文档的文本，然后将另一个书签添加到该书签的第六个字符。 在消息框中则显示该书签中找到的书签的总数。  
   
  此示例适用于文档级自定义。  
   
@@ -353,7 +353,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件替换为文本，然后将边框添加到该书签。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件，其文本，然后将边框添加到该书签。  
   
  此示例适用于文档级自定义。  
   
@@ -385,7 +385,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果<xref:Microsoft.Office.Tools.Word.Bookmark>控件包含错误，则此方法会显示**拼写和语法**对话框中，与**检查语法**复选框处于选中状态。  
+ 如果<xref:Microsoft.Office.Tools.Word.Bookmark>控件包含错误，则此方法会显示**拼写和语法**对话框中，使用**检查语法**复选框处于选中状态。  
   
  ]]></format>
         </remarks>
@@ -457,7 +457,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>具有文本控件并将文本然后更改为大写形式。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Bookmark>带有文本的控件，然后更改为大写的文本。  
   
  此示例适用于文档级自定义。  
   
@@ -487,7 +487,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例将三个列中，三行的表添加到文档中，然后添加<xref:Microsoft.Office.Tools.Word.Bookmark>到表的控件。 最后，代码将更改该书签中的表单元格的宽度。  
+ 下面的代码示例将一个包含三列三行的表添加到文档中，然后添加<xref:Microsoft.Office.Tools.Word.Bookmark>控制到表。 最后，代码将更改该书签中的表单元格的宽度。  
   
  此示例适用于文档级自定义。  
   
@@ -517,7 +517,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件带到文档的文本，然后添加另一个<xref:Microsoft.Office.Tools.Word.Bookmark>控件添加到第一个书签的第六个字符。 在消息框中将显示该书签中找到的书签的总数。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件具有对文档的文本，然后添加另一个<xref:Microsoft.Office.Tools.Word.Bookmark>控件的第一个书签的第六个字符。 然后在消息框中显示该书签中找到的书签的总数。  
   
  此示例适用于文档级自定义。  
   
@@ -566,7 +566,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>具有文本控件然后更改文本的字符宽度的半角字符。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Bookmark>带有文本的控件，然后改为半角字符的文本的字符宽度。  
   
  此示例适用于文档级自定义。  
   
@@ -623,10 +623,8 @@
       </Parameters>
       <Docs>
         <param name="CustomDictionary">或者是一个返回 <see cref="T:Microsoft.Office.Interop.Word.Dictionary" /> 的表达式，或者是自定义字典的文件名。</param>
-        <param name="IgnoreUppercase">
-          如果忽略大小写，则为 <see langword="true" />。 如果省略此参数，则使用 <see cref="P:Microsoft.Office.Interop.Word.Options.IgnoreUppercase" /> 属性的当前值。</param>
-        <param name="AlwaysSuggest">
-          如果要让 Microsoft Office Word 始终建议替代拼写，则为 <see langword="true" />。 如果省略此参数，则使用 <see cref="P:Microsoft.Office.Interop.Word.Options.SuggestSpellingCorrections" /> 属性的当前值。</param>
+        <param name="IgnoreUppercase">如果忽略大小写，则为 <see langword="true" />。 如果省略此参数，则使用 <see cref="P:Microsoft.Office.Interop.Word.Options.IgnoreUppercase" /> 属性的当前值。</param>
+        <param name="AlwaysSuggest">如果要让 Microsoft Office Word 始终建议替代拼写，则为 <see langword="true" />。 如果省略此参数，则使用 <see cref="P:Microsoft.Office.Interop.Word.Options.SuggestSpellingCorrections" /> 属性的当前值。</param>
         <param name="CustomDictionary2">或者是一个返回 <see cref="T:Microsoft.Office.Interop.Word.Dictionary" /> 的表达式，或者是附加的自定义字典的文件名。 您最多可以指定九个附加字典。</param>
         <param name="CustomDictionary3">或者是一个返回 <see cref="T:Microsoft.Office.Interop.Word.Dictionary" /> 的表达式，或者是附加的自定义字典的文件名。 您最多可以指定九个附加字典。</param>
         <param name="CustomDictionary4">或者是一个返回 <see cref="T:Microsoft.Office.Interop.Word.Dictionary" /> 的表达式，或者是附加的自定义字典的文件名。 您最多可以指定九个附加字典。</param>
@@ -641,7 +639,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果<xref:Microsoft.Office.Tools.Word.Bookmark>控件包含错误，则此方法会显示**拼写和语法**对话框中，与**检查语法**清除复选框。  
+ 如果<xref:Microsoft.Office.Tools.Word.Bookmark>控件包含错误，则此方法会显示**拼写和语法**对话框中，使用**检查语法**清除复选框。  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -649,7 +647,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件替换为文本与文档，然后检查在文档中，从书签的起始位置到文档末尾的文本的拼写。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件，其文本与文档，然后检查在文档中，从开始到文档末尾的书签的文本的拼写。  
   
  此示例适用于文档级自定义。  
   
@@ -700,9 +698,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 后<xref:Microsoft.Office.Tools.Word.Bookmark>控件处于折叠状态、 开始和结束点是否相等。  
+ 之后<xref:Microsoft.Office.Tools.Word.Bookmark>控件处于折叠状态、 开始和结束点是否相等。  
   
- 如果你使用<xref:Microsoft.Office.Interop.Word.WdCollapseDirection.wdCollapseEnd>折叠<xref:Microsoft.Office.Tools.Word.Bookmark>指整个段落，范围的控件位于之后结束段落标记 （下一段的开头）。 但是，您可以移动范围使用备份一个字符<xref:Microsoft.Office.Interop.Word.Range.MoveEnd%2A>方法之后的范围<xref:Microsoft.Office.Tools.Word.Bookmark>控件处于折叠状态。  
+ 如果您使用<xref:Microsoft.Office.Interop.Word.WdCollapseDirection.wdCollapseEnd>折叠<xref:Microsoft.Office.Tools.Word.Bookmark>控制整个段落，范围是指位于之后结束的段落标记 （下一段落开头）。 但是，您可以移动范围使用备份一个字符<xref:Microsoft.Office.Interop.Word.Range.MoveEnd%2A>方法的系列之后<xref:Microsoft.Office.Tools.Word.Bookmark>控件处于折叠状态。  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -710,7 +708,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>具有文本，然后显示的开始和结束位置的书签之前和之后折叠书签控件。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Bookmark>文本，然后显示该书签的前后放置的开始和结束折叠书签后，使用的控件。  
   
  此示例适用于文档级自定义。  
   
@@ -735,8 +733,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，该值指示 <see cref="T:Microsoft.Office.Tools.Word.Bookmark" /> 控件是否为表列。</summary>
-        <value>
-          如果 <see cref="T:Microsoft.Office.Tools.Word.Bookmark" /> 控件为表列，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果 <see cref="T:Microsoft.Office.Tools.Word.Bookmark" /> 控件为表列，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -759,7 +756,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例向文档添加一个三列三行的表，添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件到表中，然后将更改该书签中的第一列的宽度。  
+ 下面的代码示例向文档添加一个包含三列三行的表、 添加<xref:Microsoft.Office.Tools.Word.Bookmark>控制到表中，然后将更改该书签中的第一列的宽度。  
   
  此示例适用于文档级自定义。  
   
@@ -784,8 +781,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示 <see cref="T:Microsoft.Office.Tools.Word.Bookmark" /> 控件是否包含组合字符。</summary>
-        <value>
-          如果 <see cref="T:Microsoft.Office.Tools.Word.Bookmark" /> 控件包含组合字符，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果 <see cref="T:Microsoft.Office.Tools.Word.Bookmark" /> 控件包含组合字符，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -808,7 +804,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>使用来控制向该文档，然后插入文本注释插入书签。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Bookmark>使用来控制向该文档，然后插入文本注释插入该书签。  
   
  此示例适用于文档级自定义。  
   
@@ -843,7 +839,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>具有文本控件，然后在书签中使用显示的字符总数<xref:Microsoft.Office.Tools.Word.Bookmark.ComputeStatistics%2A>方法。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>一个带有文本，然后使用在书签中显示的字符总数<xref:Microsoft.Office.Tools.Word.Bookmark.ComputeStatistics%2A>方法。  
   
  此示例适用于文档级自定义。  
   
@@ -874,10 +870,10 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 可以仅在共同创作启用的文档中使用此属性。 如果你尝试访问此属性的文档中未启用共同创作，你将收到<xref:System.Runtime.InteropServices.COMException>。  
+ 仅在共同创作启用了的文档中，可以使用此属性。 如果您尝试访问未启用共同创作文档上的此属性，则会收到<xref:System.Runtime.InteropServices.COMException>。  
   
 > [!NOTE]
->  此方法将显示在 IntelliSense Word 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，无法在 Word 2007 项目中使用此属性。  
+>  此方法将出现在 IntelliSense 中在 Word 2007 项目面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Word 2007 项目中使用此属性。  
   
  ]]></format>
         </remarks>
@@ -942,12 +938,9 @@
       </Parameters>
       <Docs>
         <param name="ConversionsMode">设置朝鲜文字与朝鲜文汉字之间的转换方向。 可以为以下 <see cref="T:Microsoft.Office.Interop.Word.WdMultipleWordConversionsMode" /> 常数之一：<see cref="F:Microsoft.Office.Interop.Word.WdMultipleWordConversionsMode.wdHangulToHanja" /> 或 <see cref="F:Microsoft.Office.Interop.Word.WdMultipleWordConversionsMode.wdHanjaToHangul" />。 默认值为 <see cref="P:Microsoft.Office.Interop.Word.Options.MultipleWordConversionsMode" /> 属性的当前值。</param>
-        <param name="FastConversion">
-          如果 Microsoft Office Word 仅用一种转换建议来进行自动转换，则为 <see langword="true" />。 默认值为 <see cref="P:Microsoft.Office.Interop.Word.Options.HangulHanjaFastConversion" /> 属性的当前值。</param>
-        <param name="CheckHangulEnding">
-          如果 Word 自动检测朝鲜文字结尾并忽略它们，则为 <see langword="true" />。 默认值为 <see cref="P:Microsoft.Office.Interop.Word.Options.CheckHangulEndings" /> 属性的当前值。 如果 <c>ConversionsMode</c> 参数设置为 <see cref="F:Microsoft.Office.Interop.Word.WdMultipleWordConversionsMode.wdHanjaToHangul" />，则忽略此参数。</param>
-        <param name="EnableRecentOrdering">
-          如果 Word 在建议列表顶部显示最近使用过的单词，则为 <see langword="true" />。 默认值为 <see cref="P:Microsoft.Office.Interop.Word.Options.EnableHangulHanjaRecentOrdering" /> 属性的当前值。</param>
+        <param name="FastConversion">如果 Microsoft Office Word 仅用一种转换建议来进行自动转换，则为 <see langword="true" />。 默认值为 <see cref="P:Microsoft.Office.Interop.Word.Options.HangulHanjaFastConversion" /> 属性的当前值。</param>
+        <param name="CheckHangulEnding">如果 Word 自动检测朝鲜文字结尾并忽略它们，则为 <see langword="true" />。 默认值为 <see cref="P:Microsoft.Office.Interop.Word.Options.CheckHangulEndings" /> 属性的当前值。 如果 <c>ConversionsMode</c> 参数设置为 <see cref="F:Microsoft.Office.Interop.Word.WdMultipleWordConversionsMode.wdHanjaToHangul" />，则忽略此参数。</param>
+        <param name="EnableRecentOrdering">如果 Word 在建议列表顶部显示最近使用过的单词，则为 <see langword="true" />。 默认值为 <see cref="P:Microsoft.Office.Interop.Word.Options.EnableHangulHanjaRecentOrdering" /> 属性的当前值。</param>
         <param name="CustomDictionary">自定义朝鲜文字-朝鲜文汉字转换字典的名称。 使用此参数以便对主字典中所不包含的朝鲜文字-朝鲜文汉字转换使用自定义字典。</param>
         <summary>将 <see cref="T:Microsoft.Office.Tools.Word.Bookmark" /> 控件文本从朝鲜文字转换为朝鲜文汉字，或从朝鲜文汉字转换为朝鲜文字。</summary>
         <remarks>
@@ -961,7 +954,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件在文档中的第一个段落，然后检查是否<xref:Microsoft.Office.Tools.Word.Bookmark.LanguageID%2A>的书签是<xref:Microsoft.Office.Interop.Word.WdLanguageID.wdKorean>。 如果是这样，它将书签转换从朝鲜文字转换为 Hanja，反之亦然。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件在文档中的第一个段落，然后检查是否<xref:Microsoft.Office.Tools.Word.Bookmark.LanguageID%2A>书签的是<xref:Microsoft.Office.Interop.Word.WdLanguageID.wdKorean>。 如果是这样，它将书签转换从朝鲜文字转换为朝鲜文汉字，反之亦然。  
   
  此示例适用于文档级自定义。  
   
@@ -1003,31 +996,20 @@
         <Parameter Name="DefaultTableBehavior" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Separator">指定用于将文本分隔成单元格的字符。 可以是一个字符或以下 <see cref="T:Microsoft.Office.Interop.Word.WdTableFieldSeparator" /> 常数之一：<see cref="F:Microsoft.Office.Interop.Word.WdTableFieldSeparator.wdSeparateByCommas" />、<see cref="F:Microsoft.Office.Interop.Word.WdTableFieldSeparator.wdSeparateByDefaultListSeparator" />、<see cref="F:Microsoft.Office.Interop.Word.WdTableFieldSeparator.wdSeparateByParagraphs" /> 或 <see cref="F:Microsoft.Office.Interop.Word.WdTableFieldSeparator.wdSeparateByTabs" />。  
-  
- 如果省略此参数，则使用 <see cref="P:Microsoft.Office.Interop.Word._Application.DefaultTableSeparator" /> 属性的值。</param>
+        <param name="Separator">指定用于将文本分隔成单元格的字符。 可以是一个字符或以下 <see cref="T:Microsoft.Office.Interop.Word.WdTableFieldSeparator" /> 常数之一：<see cref="F:Microsoft.Office.Interop.Word.WdTableFieldSeparator.wdSeparateByCommas" />、<see cref="F:Microsoft.Office.Interop.Word.WdTableFieldSeparator.wdSeparateByDefaultListSeparator" />、<see cref="F:Microsoft.Office.Interop.Word.WdTableFieldSeparator.wdSeparateByParagraphs" /> 或 <see cref="F:Microsoft.Office.Interop.Word.WdTableFieldSeparator.wdSeparateByTabs" />。  如果省略此参数，则使用 <see cref="P:Microsoft.Office.Interop.Word._Application.DefaultTableSeparator" /> 属性的值。</param>
         <param name="NumRows">表中的行数。 如果省略此参数，则 Microsoft Office Word 根据 <see cref="T:Microsoft.Office.Tools.Word.Bookmark" /> 控件的内容设置行数。</param>
         <param name="NumColumns">表中的列数。 如果省略此参数，则 Word 根据 <see cref="T:Microsoft.Office.Tools.Word.Bookmark" /> 控件的内容设置列数。</param>
         <param name="InitialColumnWidth">每一列的初始宽度（以磅为单位）。 如果省略此参数，则 Word 计算并调整列宽度，以便表在边距间拉伸。</param>
         <param name="Format">指定“表格自动套用格式”对话框中列出的预定义格式之一。 可以是 <see cref="T:Microsoft.Office.Interop.Word.WdTableFormat" /> 常量之一。</param>
-        <param name="ApplyBorders">
-          为 <see langword="true" />，则应用指定格式的边框属性。</param>
-        <param name="ApplyShading">
-          为 <see langword="true" />，则应用指定格式的底纹属性。</param>
-        <param name="ApplyFont">
-          为 <see langword="true" />，则应用指定格式的字体属性。</param>
-        <param name="ApplyColor">
-          为 <see langword="true" />，则应用指定格式的颜色属性。</param>
-        <param name="ApplyHeadingRows">
-          为 <see langword="true" />，则应用指定格式的标题行属性。</param>
-        <param name="ApplyLastRow">
-          为 <see langword="true" />，则应用指定格式的最后一行属性。</param>
-        <param name="ApplyFirstColumn">
-          为 <see langword="true" />，则应用指定格式的第一列属性。</param>
-        <param name="ApplyLastColumn">
-          为 <see langword="true" />，则应用指定格式的最后一列属性。</param>
-        <param name="AutoFit">
-          为 <see langword="true" />，则在不更改单元格中的文本换行方式的情况下尽可能地缩小表列的宽度。</param>
+        <param name="ApplyBorders">为 <see langword="true" />，则应用指定格式的边框属性。</param>
+        <param name="ApplyShading">为 <see langword="true" />，则应用指定格式的底纹属性。</param>
+        <param name="ApplyFont">为 <see langword="true" />，则应用指定格式的字体属性。</param>
+        <param name="ApplyColor">为 <see langword="true" />，则应用指定格式的颜色属性。</param>
+        <param name="ApplyHeadingRows">为 <see langword="true" />，则应用指定格式的标题行属性。</param>
+        <param name="ApplyLastRow">为 <see langword="true" />，则应用指定格式的最后一行属性。</param>
+        <param name="ApplyFirstColumn">为 <see langword="true" />，则应用指定格式的第一列属性。</param>
+        <param name="ApplyLastColumn">为 <see langword="true" />，则应用指定格式的最后一列属性。</param>
+        <param name="AutoFit">为 <see langword="true" />，则在不更改单元格中的文本换行方式的情况下尽可能地缩小表列的宽度。</param>
         <param name="AutoFitBehavior">设置规定 Word 如何调整表大小的自动调整规则。 可以是下列 <see cref="T:Microsoft.Office.Interop.Word.WdAutoFitBehavior" /> 常数之一：<see cref="F:Microsoft.Office.Interop.Word.WdAutoFitBehavior.wdAutoFitContent" />、<see cref="F:Microsoft.Office.Interop.Word.WdAutoFitBehavior.wdAutoFitFixed" /> 或 <see cref="F:Microsoft.Office.Interop.Word.WdAutoFitBehavior.wdAutoFitWindow" />。 如果 <c>DefaultTableBehavior</c> 为 <see cref="F:Microsoft.Office.Interop.Word.WdDefaultTableBehavior.wdWord8TableBehavior" />，则忽略此参数。</param>
         <param name="DefaultTableBehavior">设置一个值，该值指定 Word 是否自动调整表中单元格的大小以适合内容（自动调整）。 可以是下列 <see cref="T:Microsoft.Office.Interop.Word.WdDefaultTableBehavior" /> 常数之一：<see cref="F:Microsoft.Office.Interop.Word.WdDefaultTableBehavior.wdWord8TableBehavior" /> 或 <see cref="F:Microsoft.Office.Interop.Word.WdDefaultTableBehavior.wdWord9TableBehavior" />。</param>
         <summary>将 <see cref="T:Microsoft.Office.Tools.Word.Bookmark" /> 控件中的文本转换为表。</summary>
@@ -1044,7 +1026,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件替换为文本与文档，然后将书签到表中的文本。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件，其文本与文档，然后将书签到表中的文本。  
   
  此示例适用于文档级自定义。  
   
@@ -1127,12 +1109,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 新书签将变为<xref:Microsoft.Office.Interop.Word.Bookmark?displayProperty=fullName>对象而不是<xref:Microsoft.Office.Tools.Word.Bookmark?displayProperty=fullName>控件。  
+ 新书签将变为<xref:Microsoft.Office.Interop.Word.Bookmark?displayProperty=fullName>对象而非<xref:Microsoft.Office.Tools.Word.Bookmark?displayProperty=fullName>控件。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>到文档控件，然后创建<xref:Microsoft.Office.Tools.Word.Bookmark.BeforeRightClick>事件处理程序。 当<xref:Microsoft.Office.Tools.Word.Bookmark>控件处于右键单击时，该书签中的文本复制到剪贴板。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控制对该文档，然后创建<xref:Microsoft.Office.Tools.Word.Bookmark.BeforeRightClick>事件处理程序。 当<xref:Microsoft.Office.Tools.Word.Bookmark>右击控件之后，书签中的文本复制到剪贴板。  
   
  此示例适用于文档级自定义。  
   
@@ -1167,12 +1149,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 新书签将变为<xref:Microsoft.Office.Interop.Word.Bookmark?displayProperty=fullName>对象而不是<xref:Microsoft.Office.Tools.Word.Bookmark?displayProperty=fullName>控件。  
+ 新书签将变为<xref:Microsoft.Office.Interop.Word.Bookmark?displayProperty=fullName>对象而非<xref:Microsoft.Office.Tools.Word.Bookmark?displayProperty=fullName>控件。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件与文本发送到第一个段落，然后将该书签复制到与原始书签相同的位置。 一个消息框显示类型和每个书签的位置。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件使用的第一个段落的文本，然后将复制该书签到与原始书签相同的位置。 一个消息框显示的类型和每个书签的位置。  
   
  此示例适用于文档级自定义。  
   
@@ -1253,12 +1235,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 因为<xref:Microsoft.Office.Tools.Word.Bookmark>在 Microsoft Office Word 中创建控件，则此属性返回的十六进制数 4d535744，它表示字符串"MSWD。" 此值也可以表示由常数<xref:Microsoft.Office.Interop.Word.WdConstants.wdCreatorCode>。  
+ 因为<xref:Microsoft.Office.Tools.Word.Bookmark>在 Microsoft Office Word 中创建控件，则此属性返回十六进制数字 4d535744，它表示字符串"MSWD。" 此值还可表示由常数<xref:Microsoft.Office.Interop.Word.WdConstants.wdCreatorCode>。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件替换的文档和显示的第一个段落的文本消息框中的创建者应用程序。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件，其文档，然后显示的第一个段落的文本中的消息框的创建者应用程序。  
   
  此示例适用于文档级自定义。  
   
@@ -1288,7 +1270,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 内容<xref:Microsoft.Office.Tools.Word.Bookmark>控件剪切到剪贴板，但折叠<xref:Microsoft.Office.Tools.Word.Bookmark>控件保留在文档。  
+ 内容<xref:Microsoft.Office.Tools.Word.Bookmark>控制剪切到剪贴板，但折叠<xref:Microsoft.Office.Tools.Word.Bookmark>控件保留在文档。  
   
  ]]></format>
         </remarks>
@@ -1314,7 +1296,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 在情况下使用此属性其中<xref:System.Windows.Forms.Binding>而无需<xref:System.Windows.Forms.Binding.DataSourceUpdateMode%2A>指定值添加到<xref:System.Windows.Forms.IBindableComponent.DataBindings%2A>集合。  
+ 此属性可在情况下，<xref:System.Windows.Forms.Binding>而无需<xref:System.Windows.Forms.Binding.DataSourceUpdateMode%2A>指定值添加到<xref:System.Windows.Forms.IBindableComponent.DataBindings%2A>集合。  
   
  ]]></format>
         </remarks>
@@ -1339,14 +1321,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法仅应该用于<xref:Microsoft.Office.Tools.Word.Bookmark>在运行时以编程方式创建的控件。 如果在调用此方法引发异常<xref:Microsoft.Office.Tools.Word.Bookmark>在设计时添加到文档的控制。  
+ 此方法只应该用于<xref:Microsoft.Office.Tools.Word.Bookmark>在运行时以编程方式创建的控件。 如果在调用此方法引发异常<xref:Microsoft.Office.Tools.Word.Bookmark>在设计时添加到文档的控件。  
   
  内容<xref:Microsoft.Office.Tools.Word.Bookmark>不会从文档中删除。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件以在文档中的文本将样式更改为`Heading 1`，然后删除该书签。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件与文档中的文本，将样式更改为`Heading 1`，然后删除该书签。  
   
  此示例适用于文档级自定义。  
   
@@ -1375,12 +1357,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 将引发此事件仅当<xref:Microsoft.Office.Tools.Word.Bookmark>控件具有焦点，并且然后将焦点移远离<xref:Microsoft.Office.Tools.Word.Bookmark>控件。  
+ 引发此事件时，才<xref:Microsoft.Office.Tools.Word.Bookmark>控件具有焦点，然后焦点传输离开<xref:Microsoft.Office.Tools.Word.Bookmark>控件。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件替换为文档的第一个段落的文本，并创建<xref:Microsoft.Office.Tools.Word.Bookmark.Deselected>事件处理程序。 当用户将光标从内部书签到书签以外的区域，显示一个消息框。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件，其文档的第一个段落的文本，并创建<xref:Microsoft.Office.Tools.Word.Bookmark.Deselected>事件处理程序。 当用户移动光标从书签到书签以外区域被显示一个消息框。  
   
  此示例适用于文档级自定义。  
   
@@ -1410,9 +1392,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 结果<xref:Microsoft.Office.Tools.Word.Bookmark.DetectLanguage%2A>方法存储在<xref:Microsoft.Office.Interop.Word.Range.LanguageID%2A>基于字符的字符的属性。  
+ 结果<xref:Microsoft.Office.Tools.Word.Bookmark.DetectLanguage%2A>方法将存储在<xref:Microsoft.Office.Interop.Word.Range.LanguageID%2A>基于字符的字符的属性。  
   
- 如果<xref:Microsoft.Office.Tools.Word.Bookmark.DetectLanguage%2A>方法已应用于<xref:Microsoft.Office.Tools.Word.Bookmark>控件，<xref:Microsoft.Office.Tools.Word.Bookmark.LanguageDetected%2A>属性设置为`true`。 重新计算的文本的语言<xref:Microsoft.Office.Tools.Word.Bookmark>控件，则必须首先设置<xref:Microsoft.Office.Tools.Word.Bookmark.LanguageDetected%2A>属性`false`。  
+ 如果<xref:Microsoft.Office.Tools.Word.Bookmark.DetectLanguage%2A>方法已应用于<xref:Microsoft.Office.Tools.Word.Bookmark>控件，<xref:Microsoft.Office.Tools.Word.Bookmark.LanguageDetected%2A>属性设置为`true`。 若要重新计算的文本的语言<xref:Microsoft.Office.Tools.Word.Bookmark>控件，必须先设置<xref:Microsoft.Office.Tools.Word.Bookmark.LanguageDetected%2A>属性设置为`false`。  
   
  ]]></format>
         </remarks>
@@ -1432,8 +1414,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示 Microsoft Office Word 是否忽略相应的 <see cref="T:Microsoft.Office.Tools.Word.Bookmark" /> 控件的每行字符数。</summary>
-        <value>
-          如果 Microsoft Office Word 忽略相应 <see cref="T:Microsoft.Office.Tools.Word.Bookmark" /> 控件每行的字符数，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果 Microsoft Office Word 忽略相应 <see cref="T:Microsoft.Office.Tools.Word.Bookmark" /> 控件每行的字符数，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1456,7 +1437,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控制显示和文档中的第一个段落包含书签的文档的名称。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Bookmark>控制并显示在文档的第一个段落包含书签的文档的名称。  
   
  此示例适用于文档级自定义。  
   
@@ -1486,14 +1467,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 你可以将返回的对象分配<xref:Microsoft.Office.Tools.Word.Bookmark.Duplicate%2A>到另一个属性<xref:Microsoft.Office.Interop.Word.Range>若要在一次应用这些设置。 然后再将重复的对象分配到另一个<xref:Microsoft.Office.Interop.Word.Range>，可以更改任何重复的对象的属性而不影响原始。  
+ 您可以将返回的对象分配<xref:Microsoft.Office.Tools.Word.Bookmark.Duplicate%2A>到另一个属性<xref:Microsoft.Office.Interop.Word.Range>一次性应用这些设置。 然后再将重复的对象分配到另一个<xref:Microsoft.Office.Interop.Word.Range>，可以更改任何重复的对象的属性而不会影响原始。  
   
- 通过复制<xref:Microsoft.Office.Interop.Word.Range>对象，你可以更改开始点或而无需更改的原始范围结束的重复的范围的字符位置。  
+ 通过复制<xref:Microsoft.Office.Interop.Word.Range>对象，可以更改起始或结束字符位置的重复的范围而不更改原始的范围。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>具有到第一个段落的文本控件并设置要用粗体显示的文本。 然后，它返回介于<xref:Microsoft.Office.Tools.Word.Bookmark.Duplicate%2A>属性书签并显示消息框，指示的范围包含与书签相同的属性。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件使用的第一个段落的文本，并设置为粗体的文本。 然后，它返回从范围<xref:Microsoft.Office.Tools.Word.Bookmark.Duplicate%2A>该书签并显示消息框，指示该范围包含与书签相同的属性的属性。  
   
  此示例适用于文档级自定义。  
   
@@ -1523,7 +1504,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控制与在文档中的第一个段落的文本，并添加作为在书签中的第四个单词的编辑器的所有用户。 示例然后保护该文档不被修订，并在消息框中显示的书签的可编辑范围。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件，其文档中的第一个段落的文本并将所有用户都添加为书签中的第四个单词的编辑器。 该示例然后保护文档不被修订，并在消息框中显示该书签的可编辑范围。  
   
  此示例适用于文档级自定义。  
   
@@ -1554,7 +1535,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>具有到第一个段落，然后设置的文本控件<xref:Microsoft.Office.Tools.Word.Bookmark.EmphasisMark%2A>到书签上<xref:Microsoft.Office.Interop.Word.WdEmphasisMark.wdEmphasisMarkOverComma>。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>一个带有文本到第一个段落，然后设置<xref:Microsoft.Office.Tools.Word.Bookmark.EmphasisMark%2A>上为书签<xref:Microsoft.Office.Interop.Word.WdEmphasisMark.wdEmphasisMarkOverComma>。  
   
  此示例适用于文档级自定义。  
   
@@ -1579,15 +1560,14 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，该值指示 <see cref="T:Microsoft.Office.Tools.Word.Bookmark" /> 控件是否为空。</summary>
-        <value>
-          如果 <see cref="T:Microsoft.Office.Tools.Word.Bookmark" /> 控件为空，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果 <see cref="T:Microsoft.Office.Tools.Word.Bookmark" /> 控件为空，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 一个空<xref:Microsoft.Office.Tools.Word.Bookmark>控件标记的位置 （折叠选定内容）; 它不会将标记任何文本。  
+ 一个空<xref:Microsoft.Office.Tools.Word.Bookmark>控件标记的位置 （折叠选定内容）; 它不会将标记的任何文本。  
   
- 如果引发异常<xref:Microsoft.Office.Tools.Word.Bookmark>控件不存在。 使用<xref:Microsoft.Office.Interop.Word.Bookmarks.Exists%2A>方法来确定是否<xref:Microsoft.Office.Tools.Word.Bookmark>控件存在。  
+ 如果引发异常<xref:Microsoft.Office.Tools.Word.Bookmark>控件不存在。 使用<xref:Microsoft.Office.Interop.Word.Bookmarks.Exists%2A>方法，以确定是否<xref:Microsoft.Office.Tools.Word.Bookmark>存在控件。  
   
  ]]></format>
         </remarks>
@@ -1613,14 +1593,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Word.Bookmark>控件具有的起始位置和结束位置。 结束的位置是远的开始点<xref:Microsoft.Office.Tools.Word.Bookmark>控件。 使用<xref:Microsoft.Office.Tools.Word.Bookmark.End%2A>属性可以更改的大小<xref:Microsoft.Office.Tools.Word.Bookmark>控件。  
+ <xref:Microsoft.Office.Tools.Word.Bookmark>控件具有的起始位置和结束位置。 结束位置是从开头距离最远的点<xref:Microsoft.Office.Tools.Word.Bookmark>控件。 使用<xref:Microsoft.Office.Tools.Word.Bookmark.End%2A>要更改的大小属性<xref:Microsoft.Office.Tools.Word.Bookmark>控件。  
   
- 如果此属性设置为一个值小于<xref:Microsoft.Office.Tools.Word.Bookmark.Start%2A>属性，<xref:Microsoft.Office.Tools.Word.Bookmark.Start%2A>属性设置为相同的值 (即，<xref:Microsoft.Office.Tools.Word.Bookmark.Start%2A>和<xref:Microsoft.Office.Tools.Word.Bookmark.End%2A>属性相等)。  
+ 如果此属性设置为一个值小于<xref:Microsoft.Office.Tools.Word.Bookmark.Start%2A>属性，<xref:Microsoft.Office.Tools.Word.Bookmark.Start%2A>属性设置为相同的值 (即<xref:Microsoft.Office.Tools.Word.Bookmark.Start%2A>和<xref:Microsoft.Office.Tools.Word.Bookmark.End%2A>属性相等)。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件带到第一个段落的文本，然后添加另一个<xref:Microsoft.Office.Tools.Word.Bookmark>控件添加到第一个书签中的第三个单词。 该代码然后移动第二个的书签的范围，直到它找到的字符 k。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件使用的第一个段落的文本，然后添加另一个<xref:Microsoft.Office.Tools.Word.Bookmark>到第一个书签中的第三个单词的控件。 该代码然后移动第二个的书签的范围，直到它找到的字符 k。  
   
  此示例适用于文档级自定义。  
   
@@ -1650,7 +1630,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>5 到该书签中尾注的起始编号和样式的数字的控件替换为文本的第一个段落，然后集<xref:Microsoft.Office.Interop.Word.WdNoteNumberStyle.wdNoteNumberStyleArabic>。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控制文本的第一个段落和设置到尾注 5 到书签中的起始数字和到数的样式<xref:Microsoft.Office.Interop.Word.WdNoteNumberStyle.wdNoteNumberStyleArabic>。  
   
  此示例适用于文档级自定义。  
   
@@ -1680,7 +1660,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>5 到该书签中尾注的起始编号和样式的数字的控件替换为文本的第一个段落，然后集<xref:Microsoft.Office.Interop.Word.WdNoteNumberStyle.wdNoteNumberStyleArabic>。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控制文本的第一个段落和设置到尾注 5 到书签中的起始数字和到数的样式<xref:Microsoft.Office.Interop.Word.WdNoteNumberStyle.wdNoteNumberStyleArabic>。  
   
  此示例适用于文档级自定义。  
   
@@ -1718,7 +1698,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果同时起始和结束位置<xref:Microsoft.Office.Tools.Word.Bookmark>控件已位于单位的末尾，则此方法不移动或扩展<xref:Microsoft.Office.Tools.Word.Bookmark>控件。  
+ 如果同时起始和结束位置<xref:Microsoft.Office.Tools.Word.Bookmark>控件的已在单位的末尾，则此方法不移动或扩展<xref:Microsoft.Office.Tools.Word.Bookmark>控件。  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -1726,7 +1706,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件带到文档的文本，然后该书签之后添加的附加文本。 然后，它会通过一个字扩展书签。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件具有对文档的文本，然后该书签之后添加其他文本。 它然后扩展一个单词的书签。  
   
  此示例适用于文档级自定义。  
   
@@ -1757,12 +1737,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Word.Bookmark.EnhMetaFileBits%2A>属性返回的可与 Microsoft Windows Api 使用的字节数组。  
+ <xref:Microsoft.Office.Tools.Word.Bookmark.EnhMetaFileBits%2A>属性返回的字节数，可以在 Microsoft Windows Api 数组。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件替换为文本的第一个段落，然后存储在变量中的书签的文本的图表示。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件，其文本的第一个段落和存储到变量中的书签的文本的图片表示形式。  
   
  此示例适用于文档级自定义。  
   
@@ -1803,7 +1783,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件与文本发送到第一个段落，然后将插入该书签之后一个句子，并扩展包括新的句子的书签。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件使用的第一个段落的文本，然后将插入该书签之后一个句子和扩展该书签以包括新的句子。  
   
  此示例适用于文档级自定义。  
   
@@ -1845,33 +1825,26 @@
         <param name="OutputFileName">新 PDF 或 XPS 文件的完整路径。</param>
         <param name="ExportFormat">
           <see cref="T:Microsoft.Office.Interop.Word.WdExportFormat" /> 值之一，指定是以 PDF 还是 XPS 格式保存 <see cref="T:Microsoft.Office.Tools.Word.Bookmark" />。</param>
-        <param name="OpenAfterExport">
-          如果要在导出 <see cref="T:Microsoft.Office.Tools.Word.Bookmark" /> 后打开新文件，则为 <see langword="true" />；否则为 <see langword="false" />。</param>
+        <param name="OpenAfterExport">如果要在导出 <see cref="T:Microsoft.Office.Tools.Word.Bookmark" /> 后打开新文件，则为 <see langword="true" />；否则为 <see langword="false" />。</param>
         <param name="OptimizeFor">
           <see cref="T:Microsoft.Office.Interop.Word.WdExportOptimizeFor" /> 值之一，指定进行屏幕优化还是打印优化。</param>
-        <param name="ExportCurrentPage">
-          如果导出整个页面，则为 <see langword="true" />；如果仅导出当前选定内容，则为 <see langword="false" />。</param>
+        <param name="ExportCurrentPage">如果导出整个页面，则为 <see langword="true" />；如果仅导出当前选定内容，则为 <see langword="false" />。</param>
         <param name="Item">
           <see cref="T:Microsoft.Office.Interop.Word.WdExportItem" /> 值之一，指定导出过程是仅包括文本，还是同时包括文本和标记。</param>
-        <param name="IncludeDocProps">
-          如果要在新导出的文件中包含文档属性，则为 <see langword="true" />；否则为 <see langword="false" />。</param>
-        <param name="KeepIRM">
-          如果要在源文档具有信息权限管理 (IRM) 保护时将 IRM 权限复制到 XPS 文档，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="true" />。</param>
+        <param name="IncludeDocProps">如果要在新导出的文件中包含文档属性，则为 <see langword="true" />；否则为 <see langword="false" />。</param>
+        <param name="KeepIRM">如果要在源文档具有信息权限管理 (IRM) 保护时将 IRM 权限复制到 XPS 文档，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="true" />。</param>
         <param name="CreateBookmarks">
           <see cref="T:Microsoft.Office.Interop.Word.WdExportCreateBookmarks" /> 值之一，指定是否导出书签以及要导出的书签类型。</param>
-        <param name="DocStructureTags">
-          如果要包含额外数据（如有关内容的流和逻辑组织的信息）来协助使用屏幕读取器，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="true" />。</param>
-        <param name="BitmapMissingFonts">
-          如果要包含文本的位图，则为 <see langword="true" />；如果要引用文本字体，则为 <see langword="false" />。 如果字体许可证不允许在 PDF 文件中嵌入某种字体，则将此参数设置为 <see langword="true" />。 如果将此参数设置为 <see langword="false" />，则当指定字体不可用时，查看者的计算机会替换合适的字体。 默认值为 <see langword="true" />。</param>
-        <param name="UseISO19005_1">
-          如果要将 PDF 使用范围限制为按照 ISO 19005-1 进行标准化的 PDF 子集，则为 <see langword="true" />；否则为 <see langword="false" />。 如果将此参数设置为 <see langword="true" />，则生成的文件会是更加可靠的独立文件，但这些文件可能会更大，或者由于格式限制而显示更多的视觉瑕疵。 默认值为 <see langword="false" />。</param>
+        <param name="DocStructureTags">如果要包含额外数据（如有关内容的流和逻辑组织的信息）来协助使用屏幕读取器，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="true" />。</param>
+        <param name="BitmapMissingFonts">如果要包含文本的位图，则为 <see langword="true" />；如果要引用文本字体，则为 <see langword="false" />。 如果字体许可证不允许在 PDF 文件中嵌入某种字体，则将此参数设置为 <see langword="true" />。 如果将此参数设置为 <see langword="false" />，则当指定字体不可用时，查看者的计算机会替换合适的字体。 默认值为 <see langword="true" />。</param>
+        <param name="UseISO19005_1">如果要将 PDF 使用范围限制为按照 ISO 19005-1 进行标准化的 PDF 子集，则为 <see langword="true" />；否则为 <see langword="false" />。 如果将此参数设置为 <see langword="true" />，则生成的文件会是更加可靠的独立文件，但这些文件可能会更大，或者由于格式限制而显示更多的视觉瑕疵。 默认值为 <see langword="false" />。</param>
         <param name="FixedFormatExtClassPtr">一个指针，指向使书签能够以其他固定格式保存的 <see langword="IMsoDocExporter" /> 接口的实现。 有关详细信息，请参阅“扩展 Office (2007) 固定格式导出功能”。</param>
         <summary>以 PDF 或 XPS 格式保存 <see cref="T:Microsoft.Office.Tools.Word.Bookmark" />。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 你可以将保存为 PDF 或 XPS 文件从 Word 外接程序计算机上安装。 有关详细信息，搜索"启用支持对其他文件格式，例如 PDF 和 XPS"Office online。  
+ 您可以将保存为 PDF 或 XPS 文件 Word 中的计算机上安装外接程序。 有关详细信息，搜索"启用支持其他文件格式，如 PDF 和 XPS"Office Online 上。  
   
  ]]></format>
         </remarks>
@@ -1920,7 +1893,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件替换为文本的第一个段落，然后在书签的末尾添加日期字段。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件，其文本的第一个段落，然后该书签的结尾处添加日期字段。  
   
  此示例适用于文档级自定义。  
   
@@ -1950,7 +1923,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件与文本发送到第一个段落，然后使用词语`sample`以单词`replacement`在书签内。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件使用的第一个段落的文本，然后将替换词`sample`词`replacement`在书签内。  
   
  此示例适用于文档级自定义。  
   
@@ -1980,7 +1953,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件与文本发送到第一个段落，然后将更改<xref:Microsoft.Office.Tools.Word.Bookmark.FitTextWidth%2A>为一英寸的属性。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件使用的第一个段落的文本，然后将更改<xref:Microsoft.Office.Tools.Word.Bookmark.FitTextWidth%2A>属性设置为一英寸。  
   
  此示例适用于文档级自定义。  
   
@@ -2010,7 +1983,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件与文本发送到第一个段落，然后将更改为蓝色的书签的字体颜色。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件使用的第一个段落的文本，然后将更改为蓝色的书签的字体颜色。  
   
  此示例适用于文档级自定义。  
   
@@ -2040,7 +2013,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>脚注 1 到书签中的起始数目和样式的数字的控件替换为文本的第一个段落，然后集<xref:Microsoft.Office.Interop.Word.WdNoteNumberStyle.wdNoteNumberStyleArabic>。 然后，它将插入脚注书签文本的下方。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控制用到的第一个段落和设置文本的脚注中为 1 的书签的起始数字和到数的样式<xref:Microsoft.Office.Interop.Word.WdNoteNumberStyle.wdNoteNumberStyleArabic>。 然后，它将插入的书签文本下的脚注。  
   
  此示例适用于文档级自定义。  
   
@@ -2070,7 +2043,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>脚注 1 到书签中的起始数目和样式的数字的控件替换为文本的第一个段落，然后集<xref:Microsoft.Office.Interop.Word.WdNoteNumberStyle.wdNoteNumberStyleArabic>。 然后，它将插入脚注书签文本的下方。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控制用到的第一个段落和设置文本的脚注中为 1 的书签的起始数字和到数的样式<xref:Microsoft.Office.Interop.Word.WdNoteNumberStyle.wdNoteNumberStyleArabic>。 然后，它将插入的书签文本下的脚注。  
   
  此示例适用于文档级自定义。  
   
@@ -2100,12 +2073,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 当设置此属性中的文本<xref:Microsoft.Office.Tools.Word.Bookmark>控件被替换为带格式文本。  
+ 当设置此属性中的文本<xref:Microsoft.Office.Tools.Word.Bookmark>控件被替换为带格式的文本。  
   
    
   
 ## Examples  
- 下面的代码示例将文本插入的第一个段落，然后格式化为加粗第三个单词。 然后将第三个单词 （带格式设置） 复制到<xref:Microsoft.Office.Tools.Word.Bookmark>控件。  
+ 下面的代码示例将文本插入到第一个段落，然后设置为加粗的第三个单词的格式。 然后第三个单词 （带格式） 复制到<xref:Microsoft.Office.Tools.Word.Bookmark>控件。  
   
  此示例适用于文档级自定义。  
   
@@ -2135,7 +2108,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 当你使用<xref:Microsoft.Office.Interop.Word.FormFields.Add%2A>方法<xref:Microsoft.Office.Tools.Word.Bookmark.FormFields%2A>，你可以仅传递以下枚举之一：  
+ 当你使用<xref:Microsoft.Office.Interop.Word.FormFields.Add%2A>方法的<xref:Microsoft.Office.Tools.Word.Bookmark.FormFields%2A>，可以仅传递下列枚举之一：  
   
  <xref:Microsoft.Office.Interop.Word.WdFieldType.wdFieldFormCheckBox>  
   
@@ -2176,7 +2149,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件替换为到文档的文本，然后将帧添加到书签。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件，其对文档的文本，然后将帧添加到该书签。  
   
  此示例适用于文档级自定义。  
   
@@ -2216,8 +2189,7 @@
       </Parameters>
       <Docs>
         <param name="CustomDictionary">或者是一个返回 <see cref="T:Microsoft.Office.Interop.Word.Dictionary" /> 的表达式，或者是自定义字典的文件名。</param>
-        <param name="IgnoreUppercase">
-          为 <see langword="true" />，则忽略全部是大写字母的单词。 如果省略此参数，则使用 <see cref="P:Microsoft.Office.Interop.Word.Options.IgnoreUppercase" /> 属性的当前值。</param>
+        <param name="IgnoreUppercase">为 <see langword="true" />，则忽略全部是大写字母的单词。 如果省略此参数，则使用 <see cref="P:Microsoft.Office.Interop.Word.Options.IgnoreUppercase" /> 属性的当前值。</param>
         <param name="MainDictionary">或者是一个返回 <see cref="T:Microsoft.Office.Interop.Word.Dictionary" /> 的表达式，或者是主字典的文件名。 如果不指定主字典，则 Microsoft Office Word 使用对应于 <see cref="T:Microsoft.Office.Tools.Word.Bookmark" /> 控件中的第一个单词的语言格式设置的主字典。</param>
         <param name="SuggestionMode">指定 Word 提供拼写建议的方式。 可以为以下 <see cref="T:Microsoft.Office.Interop.Word.WdSpellingWordType" /> 常数之一：<see cref="F:Microsoft.Office.Interop.Word.WdSpellingWordType.wdAnagram" />、<see cref="F:Microsoft.Office.Interop.Word.WdSpellingWordType.wdSpellword" /> 或 <see cref="F:Microsoft.Office.Interop.Word.WdSpellingWordType.wdWildcard" />。 默认值为 <see cref="F:Microsoft.Office.Interop.Word.WdSpellingWordType.wdSpellword" />。</param>
         <param name="CustomDictionary2">或者是一个返回 <see cref="T:Microsoft.Office.Interop.Word.Dictionary" /> 的表达式，或者是附加的自定义字典的文件名。 您最多可以指定九个附加字典。</param>
@@ -2242,7 +2214,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>拼写错误的文本，然后显示在第一个段落与使用来控制在消息框中的第一个拼写建议。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件替换为第一个段落，并再显示拼写错误的文本消息框中的第一个拼写建议。  
   
  此示例适用于文档级自定义。  
   
@@ -2274,9 +2246,7 @@
       <Docs>
         <param name="What">在 <see cref="T:Microsoft.Office.Interop.Word.Range" /> 中检索的项的类型。 可以是 <see cref="T:Microsoft.Office.Interop.Word.WdGoToItem" /> 常量之一。</param>
         <param name="Which">在 <see cref="T:Microsoft.Office.Interop.Word.Range" /> 中检索的项可以是 <see cref="T:Microsoft.Office.Interop.Word.WdGoToDirection" /> 常数之一。</param>
-        <param name="Count">文档中项的编号。 默认值为 1。  
-  
- 只有正数值才有效。 要指定位于 <see cref="T:Microsoft.Office.Tools.Word.Bookmark" /> 控件之前的项，请使用 <see cref="F:Microsoft.Office.Interop.Word.WdGoToDirection.wdGoToPrevious" /> 作为 <c>Which</c> 参数，并指定一个 <c>Count</c> 值。</param>
+        <param name="Count">文档中项的编号。 默认值为 1。  只有正数值才有效。 要指定位于 <see cref="T:Microsoft.Office.Tools.Word.Bookmark" /> 控件之前的项，请使用 <see cref="F:Microsoft.Office.Interop.Word.WdGoToDirection.wdGoToPrevious" /> 作为 <c>Which</c> 参数，并指定一个 <c>Count</c> 值。</param>
         <param name="Name">如果 <c>What</c> 参数是 <see cref="F:Microsoft.Office.Interop.Word.WdGoToItem.wdGoToBookmark" />、<see cref="F:Microsoft.Office.Interop.Word.WdGoToItem.wdGoToComment" />、<see cref="F:Microsoft.Office.Interop.Word.WdGoToItem.wdGoToField" /> 或 <see cref="F:Microsoft.Office.Interop.Word.WdGoToItem.wdGoToObject" />，则此参数指定一个名称。</param>
         <summary>获取一个 <see cref="T:Microsoft.Office.Interop.Word.Range" /> 对象，该对象表示 <see cref="T:Microsoft.Office.Tools.Word.Bookmark" /> 控件中某个项的起始位置。</summary>
         <returns>
@@ -2293,7 +2263,7 @@
    
   
 ## Examples  
- 下面的代码示例中插入<xref:Microsoft.Office.Tools.Word.Bookmark>具有拼写错误的第一个段落的文本控件然后将转到在书签中的第一个拼写错误，并显示在一个消息框中的位置。  
+ 下面的代码示例中插入<xref:Microsoft.Office.Tools.Word.Bookmark>拼写错误的第一个段落的文本与控件然后将转到书签中的第一个拼写错误，并显示一个消息框中的位置。  
   
  此示例适用于文档级自定义。  
   
@@ -2334,7 +2304,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控制与在文档中的第一个段落的文本，并添加作为在书签中的第四个单词的编辑器的所有用户。 然后，该示例将保护该文档不被修订版本。 最后，该代码可显示消息框中的书签的可编辑范围。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件，其文档中的第一个段落的文本并将所有用户都添加为书签中的第四个单词的编辑器。 然后，该示例将保护该文档不被修订。 最后，该代码在消息框中显示该书签的可编辑的范围。  
   
  此示例适用于文档级自定义。  
   
@@ -2369,12 +2339,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 当你使用此方法与<xref:Microsoft.Office.Interop.Word.WdGoToItem.wdGoToGrammaticalError>， <xref:Microsoft.Office.Interop.Word.WdGoToItem.wdGoToProofreadingError>，或<xref:Microsoft.Office.Interop.Word.WdGoToItem.wdGoToSpellingError>常量，<xref:Microsoft.Office.Interop.Excel.Range>返回的对象包括任何语法错误的文本或拼写错误的文本。  
+ 当使用此方法替换<xref:Microsoft.Office.Interop.Word.WdGoToItem.wdGoToGrammaticalError>， <xref:Microsoft.Office.Interop.Word.WdGoToItem.wdGoToProofreadingError>，或<xref:Microsoft.Office.Interop.Word.WdGoToItem.wdGoToSpellingError>常量，<xref:Microsoft.Office.Interop.Excel.Range>返回的对象包含的任何语法错误的文本或拼写错误的文本。  
   
    
   
 ## Examples  
- 下面的代码示例将文本添加和<xref:Microsoft.Office.Tools.Word.Bookmark>控件替换为到该文档中的文本，然后将注释添加到文本。 使用<xref:Microsoft.Office.Tools.Word.Bookmark.GoToNext%2A>和<xref:Microsoft.Office.Tools.Word.Bookmark.GoToPrevious%2A>，它在消息框中显示注释的位置。  
+ 下面的代码示例将文本添加和<xref:Microsoft.Office.Tools.Word.Bookmark>控件，其文本到文档中，，然后向文本添加注释。 使用<xref:Microsoft.Office.Tools.Word.Bookmark.GoToNext%2A>和<xref:Microsoft.Office.Tools.Word.Bookmark.GoToPrevious%2A>，它在消息框中显示注释的位置。  
   
  此示例适用于文档级自定义。  
   
@@ -2409,7 +2379,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例将文本添加和<xref:Microsoft.Office.Tools.Word.Bookmark>控件替换为到该文档中的文本，然后将注释添加到文本。 使用<xref:Microsoft.Office.Tools.Word.Bookmark.GoToNext%2A>和<xref:Microsoft.Office.Tools.Word.Bookmark.GoToPrevious%2A>，此代码示例在一个消息框显示注释的位置。  
+ 下面的代码示例将文本添加和<xref:Microsoft.Office.Tools.Word.Bookmark>控件，其文本到文档中，，然后向文本添加注释。 使用<xref:Microsoft.Office.Tools.Word.Bookmark.GoToNext%2A>和<xref:Microsoft.Office.Tools.Word.Bookmark.GoToPrevious%2A>，此代码示例在一个消息框中显示注释的位置。  
   
  此示例适用于文档级自定义。  
   
@@ -2434,13 +2404,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示是否对 <see cref="T:Microsoft.Office.Tools.Word.Bookmark" /> 控件执行了语法检查。</summary>
-        <value>
-          如果对 <see cref="T:Microsoft.Office.Tools.Word.Bookmark" /> 控件运行了语法检查，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果对 <see cref="T:Microsoft.Office.Tools.Word.Bookmark" /> 控件运行了语法检查，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 以重新检查中的语法<xref:Microsoft.Office.Tools.Word.Bookmark>控制、 设置<xref:Microsoft.Office.Tools.Word.Bookmark.GrammarChecked%2A>属性`false`。  
+ 若要重新检查中的语法<xref:Microsoft.Office.Tools.Word.Bookmark>控件，将<xref:Microsoft.Office.Tools.Word.Bookmark.GrammarChecked%2A>属性设置为`false`。  
   
  ]]></format>
         </remarks>
@@ -2465,14 +2434,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 可以有多个错误，每个句子。  
+ 可以有多个错误每个句子。  
   
- 如果没有任何语法错误，<xref:Microsoft.Office.Interop.Word.ProofreadingErrors.Count%2A>属性<xref:Microsoft.Office.Interop.Word.ProofreadingErrors>返回对象<xref:Microsoft.Office.Tools.Word.Bookmark.GrammaticalErrors%2A>属性都返回 0 （零）。  
+ 如果没有任何语法错误<xref:Microsoft.Office.Interop.Word.ProofreadingErrors.Count%2A>属性<xref:Microsoft.Office.Interop.Word.ProofreadingErrors>对象返回的<xref:Microsoft.Office.Tools.Word.Bookmark.GrammaticalErrors%2A>属性将返回 0 （零）。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>带到第一个段落，然后运行文本控制语法检查程序，如果在书签中有语法错误。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Bookmark>文本到第一个段落，然后运行使用控制语法检查器，如果在书签中有语法错误。  
   
  此示例适用于文档级自定义。  
   
@@ -2503,12 +2472,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性设置为<xref:Microsoft.Office.Interop.Word.WdColorIndex.wdNoHighlight>从 （如果有） 中的突出显示颜色移除<xref:Microsoft.Office.Tools.Word.Bookmark>控件。  
+ 此属性设置为<xref:Microsoft.Office.Interop.Word.WdColorIndex.wdNoHighlight>从删除突出显示颜色 （如果有）<xref:Microsoft.Office.Tools.Word.Bookmark>控件。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>具有到第一个段落，然后设置的文本控件<xref:Microsoft.Office.Tools.Word.Bookmark.HighlightColorIndex%2A>为黄色书签中的第三个单词。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>一个带有文本到第一个段落，然后设置<xref:Microsoft.Office.Tools.Word.Bookmark.HighlightColorIndex%2A>为黄色书签中的第三个单词。  
   
  此示例适用于文档级自定义。  
   
@@ -2539,7 +2508,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件替换为到第一个段落，然后更改文本垂直显示在书签中的第三个单词。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件，其文本的第一个段落，然后更改到要在书签中垂直显示的第三个单词。  
   
  此示例适用于文档级自定义。  
   
@@ -2569,7 +2538,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件带到第一个段落的文本，然后添加<xref:Microsoft.Office.Tools.Word.Bookmark.HTMLDivisions%2A>给书签的对象并在消息框中的书签中显示的 HTML 片段的总数。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件使用的第一个段落的文本，然后添加<xref:Microsoft.Office.Tools.Word.Bookmark.HTMLDivisions%2A>对象向该书签并在消息框中的书签中显示的 HTML 分段总数。  
   
  此示例适用于文档级自定义。  
   
@@ -2599,7 +2568,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件替换为到文档的文本，然后将超链接添加到书签。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件，其对文档的文本，然后向书签添加超链接。  
   
  此示例适用于文档级自定义。  
   
@@ -2629,12 +2598,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 这是不同于<xref:Microsoft.Office.Tools.Word.Bookmark.BookmarkID%2A>属性，并不表示订单书签显示文档中。  
+ 这是不同于<xref:Microsoft.Office.Tools.Word.Bookmark.BookmarkID%2A>属性，并不意味着该书签的顺序出现在文档中。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件替换为文本的文档，然后集的 ID 属性`Sample`。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件，其文本的文档和设置到的 ID 属性`Sample`。  
   
  此示例适用于文档级自定义。  
   
@@ -2663,14 +2632,13 @@
       </Parameters>
       <Docs>
         <param name="FileName">指定要导入的文档片段的完整路径。</param>
-        <param name="MatchDestination">
-          如果要与目标格式设置相匹配，则为 <see langword="true" />；否则为 <see langword="false" />。 如果指定为 <see langword="false" />，则导入的文档片段会保留原始文档中的格式设置。 默认值为 <see langword="false" />。</param>
+        <param name="MatchDestination">如果要与目标格式设置相匹配，则为 <see langword="true" />；否则为 <see langword="false" />。 如果指定为 <see langword="false" />，则导入的文档片段会保留原始文档中的格式设置。 默认值为 <see langword="false" />。</param>
         <summary>将文档片段导入到 <see cref="T:Microsoft.Office.Tools.Word.Bookmark" /> 中。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法的内容替换<xref:Microsoft.Office.Tools.Word.Bookmark>。 若要阻止这发生，请使用<xref:Microsoft.Office.Tools.Word.Bookmark.Collapse%2A>方法，然后才能使用此方法。  
+ 此方法将替换的内容<xref:Microsoft.Office.Tools.Word.Bookmark>。 若要停止此发生，请使用<xref:Microsoft.Office.Tools.Word.Bookmark.Collapse%2A>方法，然后再使用此方法。  
   
  ]]></format>
         </remarks>
@@ -2699,14 +2667,14 @@
   
 |参数|描述|  
 |---------------|-----------------|  
-|`Type`|之一<xref:Microsoft.Office.Interop.Word.WdInformation>为该书签返回指定的信息类型的值。|  
+|`Type`|其中一个<xref:Microsoft.Office.Interop.Word.WdInformation>的书签返回指定的信息类型的值。|  
   
- 如果你使用<xref:Microsoft.Office.Tools.Word.Bookmark.Information%2A>未指定参数的属性，它返回<xref:Microsoft.Office.Tools.Word.Bookmark_InformationType>不应在代码中直接使用的对象。  
+ 如果您使用<xref:Microsoft.Office.Tools.Word.Bookmark.Information%2A>而无需指定参数的属性，它返回<xref:Microsoft.Office.Tools.Word.Bookmark_InformationType>不适于在代码中直接使用的对象。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>具有为文档，然后使用的文本控件<xref:Microsoft.Office.Tools.Word.Bookmark.Information%2A>属性在消息框中显示页码。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>一个带有文本为文档，然后使用<xref:Microsoft.Office.Tools.Word.Bookmark.Information%2A>属性在消息框中显示的页码。  
   
  此示例适用于文档级自定义。  
   
@@ -2736,7 +2704,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控制对文档，然后将水平行添加到该书签。 然后，代码将显示书签包含在消息框中的内联形状的总数。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Bookmark>控制对该文档，然后向书签添加一条水平线。 代码然后显示该书签将包含在消息框中的内联形状的总数。  
   
  此示例适用于文档级自定义。  
   
@@ -2767,7 +2735,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 不能将传递<xref:Microsoft.Office.Tools.Word.Bookmark?displayProperty=fullName>主机到方法或属性需要基础对象的控件 ( <xref:Microsoft.Office.Interop.Word.Bookmark?displayProperty=fullName>)。 必须使用<xref:Microsoft.Office.Tools.Word.Bookmark.InnerObject%2A>属性<xref:Microsoft.Office.Tools.Word.Bookmark?displayProperty=fullName>主机控件来访问基础<xref:Microsoft.Office.Interop.Word.Bookmark?displayProperty=fullName>。 然后将该对象传递给方法或属性需要<xref:Microsoft.Office.Interop.Word.Bookmark?displayProperty=fullName>。 有关详细信息，请参阅[限制的主机项和主机控件编程](/visualstudio/vsto/programmatic-limitations-of-host-items-and-host-controls.md)。  
+ 不能将传递<xref:Microsoft.Office.Tools.Word.Bookmark?displayProperty=fullName>承载于方法或要求的基础对象的属性的控件 ( <xref:Microsoft.Office.Interop.Word.Bookmark?displayProperty=fullName>)。 必须使用<xref:Microsoft.Office.Tools.Word.Bookmark.InnerObject%2A>的属性<xref:Microsoft.Office.Tools.Word.Bookmark?displayProperty=fullName>承载控件来访问基础<xref:Microsoft.Office.Interop.Word.Bookmark?displayProperty=fullName>。 然后将此对象传递给方法或属性需要<xref:Microsoft.Office.Interop.Word.Bookmark?displayProperty=fullName>。 有关更多信息，请参见 [宿主项和宿主控件的编程限制](/visualstudio/vsto/programmatic-limitations-of-host-items-and-host-controls.md)。  
   
  ]]></format>
         </remarks>
@@ -2792,18 +2760,17 @@
         <param name="Range">
           <see cref="T:Microsoft.Office.Interop.Word.Range" /> 对象。</param>
         <summary>确定 <see cref="T:Microsoft.Office.Interop.Word.Range" /> 控件中是否包含应用该方法的 <see cref="T:Microsoft.Office.Tools.Word.Bookmark" />。</summary>
-        <returns>
-          如果应用该方法的 <see cref="T:Microsoft.Office.Interop.Word.Range" /> 控件中包含指定的 <see cref="T:Microsoft.Office.Tools.Word.Bookmark" />，则为 <see langword="true" />；否则为 <see langword="false" />。</returns>
+        <returns>如果应用该方法的 <see cref="T:Microsoft.Office.Interop.Word.Range" /> 控件中包含指定的 <see cref="T:Microsoft.Office.Tools.Word.Bookmark" />，则为 <see langword="true" />；否则为 <see langword="false" />。</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法可确定是否<xref:Microsoft.Office.Interop.Word.Range>中包含<xref:Microsoft.Office.Tools.Word.Bookmark>通过比较的起始和结束字符的位置，以及情景类型的控件。  
+ 此方法可确定是否<xref:Microsoft.Office.Interop.Word.Range>中包含<xref:Microsoft.Office.Tools.Word.Bookmark>通过比较的起始和结束字符位置，以及的文章类型的控件。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>具有到文档，然后检查以确定是否的书签将变为在相同的范围为 1 个段落的文本控件。 此代码随后将一个消息框中显示结果。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Bookmark>用到文档，然后检查以确定是否书签中相同的范围为 1 个段落的文本的控件。 此代码中一个消息框，然后显示结果。  
   
  此示例适用于文档级自定义。  
   
@@ -2836,7 +2803,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例将文本添加和<xref:Microsoft.Office.Tools.Word.Bookmark>控件替换为到该文档中的文本，然后将注释添加到文本。 使用<xref:Microsoft.Office.Tools.Word.Bookmark.GoToNext%2A>和<xref:Microsoft.Office.Tools.Word.Bookmark.GoToPrevious%2A>，它在消息框中显示注释的位置。  
+ 下面的代码示例将文本添加和<xref:Microsoft.Office.Tools.Word.Bookmark>控件，其文本到文档中，，然后向文本添加注释。 使用<xref:Microsoft.Office.Tools.Word.Bookmark.GoToNext%2A>和<xref:Microsoft.Office.Tools.Word.Bookmark.GoToPrevious%2A>，它在消息框中显示注释的位置。  
   
  此示例适用于文档级自定义。  
   
@@ -2891,11 +2858,11 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果找到任何此类匹配，则<xref:Microsoft.Office.Tools.Word.Bookmark.InsertAutoText%2A>插入图文来替换该文本。 如果找不到匹配项，则引发异常。  
+ 如果找到任何此类匹配，则<xref:Microsoft.Office.Tools.Word.Bookmark.InsertAutoText%2A>插入自动图文集词条来替换该文本。 如果找不到匹配项，将引发异常。  
   
  调用此方法可能会删除<xref:Microsoft.Office.Tools.Word.Bookmark>控件。  
   
- 你可以使用<xref:Microsoft.Office.Interop.Word.AutoTextEntry.Insert%2A>方法替换<xref:Microsoft.Office.Interop.Word.AutoTextEntry>要插入特定图文条目对象。  
+ 可以使用<xref:Microsoft.Office.Interop.Word.AutoTextEntry.Insert%2A>方法替换<xref:Microsoft.Office.Interop.Word.AutoTextEntry>要插入特定的自动图文集词条对象。  
   
  ]]></format>
         </remarks>
@@ -2923,7 +2890,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例将文本添加和<xref:Microsoft.Office.Tools.Word.Bookmark>控件替换为到该文档中的文本，然后将注释添加到文本。 使用<xref:Microsoft.Office.Tools.Word.Bookmark.GoToNext%2A>和<xref:Microsoft.Office.Tools.Word.Bookmark.GoToPrevious%2A>，此代码在消息框中将显示注释的位置。  
+ 下面的代码示例将文本添加和<xref:Microsoft.Office.Tools.Word.Bookmark>控件，其文本到文档中，，然后向文本添加注释。 使用<xref:Microsoft.Office.Tools.Word.Bookmark.GoToNext%2A>和<xref:Microsoft.Office.Tools.Word.Bookmark.GoToPrevious%2A>，此代码将在消息框中显示注释的位置。  
   
  此示例适用于文档级自定义。  
   
@@ -2964,7 +2931,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>具有到文档，然后插入的文本控件**下一页**第四个单词在书签中之前的部分中断。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>到文档，然后插入的文本与控件**下一页**第四个单词在书签中之前的分节符。  
   
  此示例适用于文档级自定义。  
   
@@ -3013,7 +2980,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>使用来控制文档，然后再插入的文本标题插入书签。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件，其文档，然后再插入的文本标题插入该书签。  
   
  此示例适用于文档级自定义。  
   
@@ -3081,19 +3048,16 @@
         <param name="ReferenceType">要插入交叉引用的项的类型。 可以是任何 <see cref="T:Microsoft.Office.Interop.Word.WdReferenceType" /> 或 <see cref="T:Microsoft.Office.Interop.Word.WdCaptionLabelID" /> 常数或一个用户定义的标题标签。</param>
         <param name="ReferenceKind">要包含在交叉引用中的信息。</param>
         <param name="ReferenceItem">如果 <c>ReferenceType</c> 为 <see cref="F:Microsoft.Office.Interop.Word.WdReferenceType.wdRefTypeBookmark" />，则此参数指定一个书签名。 对于所有其他 <c>ReferenceType</c> 值，此参数指定位于“交叉引用”对话框的“引用类型”框中的项数或名称。 使用 <see cref="M:Microsoft.Office.Interop.Word._Document.GetCrossReferenceItems(System.Object@)" /> 方法可返回可与此参数一起使用的项名称列表。</param>
-        <param name="InsertAsHyperlink">
-          为 <see langword="true" />，则将交叉引用作为超链接插入被引用项中；否则为 <see langword="false" />。</param>
-        <param name="IncludePosition">
-          为 <see langword="true" />，则根据引用项相对于交叉引用的位置，在之上或之下插入。</param>
-        <param name="SeparateNumbers">
-          为 <see langword="true" />，则使用分隔符将编号与关联文本分隔开来。 （仅当 <c>ReferenceType</c> 参数设置为 <see cref="F:Microsoft.Office.Interop.Word.WdReferenceType.wdRefTypeNumberedItem" /> 且 <c>ReferenceKind</c> 参数设置为 <see cref="F:Microsoft.Office.Interop.Word.WdReferenceKind.wdNumberFullContext" /> 时使用。）</param>
+        <param name="InsertAsHyperlink">为 <see langword="true" />，则将交叉引用作为超链接插入被引用项中；否则为 <see langword="false" />。</param>
+        <param name="IncludePosition">为 <see langword="true" />，则根据引用项相对于交叉引用的位置，在之上或之下插入。</param>
+        <param name="SeparateNumbers">为 <see langword="true" />，则使用分隔符将编号与关联文本分隔开来。 （仅当 <c>ReferenceType</c> 参数设置为 <see cref="F:Microsoft.Office.Interop.Word.WdReferenceType.wdRefTypeNumberedItem" /> 且 <c>ReferenceKind</c> 参数设置为 <see cref="F:Microsoft.Office.Interop.Word.WdReferenceKind.wdNumberFullContext" /> 时使用。）</param>
         <param name="SeparatorString">如果 <c>SeparateNumbers</c> 参数设置为 <see langword="true" />，则指定一个字符串来用作分隔符。</param>
         <summary>将对标题、书签、脚注或尾注、或对定义有标题标签的项（例如，公式、图形或表）的交叉引用插入 <see cref="T:Microsoft.Office.Tools.Word.Bookmark" /> 控件。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果指定<xref:Microsoft.Office.Interop.Word.WdReferenceKind.wdPageNumber>的值的`ReferenceKind`，你可能需要重新文档分页才能看到正确的交叉引用信息。  
+ 如果指定<xref:Microsoft.Office.Interop.Word.WdReferenceKind.wdPageNumber>的值的`ReferenceKind`，可能需要进行重新分页若要查看正确的交叉引用信息的文档。  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -3101,7 +3065,7 @@
    
   
 ## Examples  
- 下面的代码示例将标题和文本添加到文档使用<xref:Microsoft.Office.Tools.Word.Bookmark>控制，然后插入对标题文本的交叉引用。  
+ 下面的代码示例将标题和文本添加到文档使用<xref:Microsoft.Office.Tools.Word.Bookmark>控制，然后将插入到的标题文本的交叉引用。  
   
  此示例适用于文档级自定义。  
   
@@ -3176,62 +3140,11 @@
       </Parameters>
       <Docs>
         <param name="Format">在“表格自动套用格式”对话框中的“格式”框中列出的格式。 可以是 <see cref="T:Microsoft.Office.Interop.Word.WdTableFormat" /> 常数中的任何一个。 默认情况下，会对表中的单元格应用边框。</param>
-        <param name="Style">由应用于表的 <c>Format</c> 指定的“自动套用格式”的属性。 使用以下值的任意组合之和：  
+        <param name="Style">由应用于表的 <c>Format</c> 指定的“自动套用格式”的属性。 使用以下值的任何组合之和：[1|1] 值  [1|2] 含义  [2|1] 0 (零)  [2|2] 无  [3|1] 1  [3|2] 边框  [4|1] 2  [4|2] 阴影  [5|1] 4  [5|2] 字体  [6|1] 8  [6|2] 颜色  [7|1] 16  [7|2] 自动调整  [8|1] 32  [8|2] 标题行  [9|1] 64  [9|2] 最后一行  [10|1] 128  [10|2] 第一列  [11|1] 256  [11|2] 最后一列</param>
+        <param name="LinkToSource">如果为 <see langword="true" />，则创建新表与数据源之间的链接。</param>
+        <param name="Connection">限制执行由 <c>SQLStatement</c> 指定的查询的范围。 指定范围的方式取决于数据的检索方式。 例如：如果通过开放式数据库连接 (ODBC) 检索，则指定一个连接字符串。  如果通过使用动态数据交换 (DDE) 从 Microsoft Office Excel 检索，则指定一个指定范围或“整个电子表格”。  
   
- [1|1] 值  
-  
- [1|2] 意义  
-  
- [2|1] 0 （零）  
-  
- [2|2] 无  
-  
- [3|1] 1  
-  
- [3|2] 边框  
-  
- [4|1] 2  
-  
- [4|2] 底纹  
-  
- [5|1] 4  
-  
- [5|2] 字体  
-  
- [6|1] 8  
-  
- [6|2] 颜色  
-  
- [7|1] 16  
-  
- [7|2] 自动调整  
-  
- [8|1] 32  
-  
- [8|2] 标题行  
-  
- [9|1] 64  
-  
- [9|2] 最后一行  
-  
- [10|1] 128  
-  
- [10|2] 第一列  
-  
- [11|1] 256  
-  
- [11|2] 最后一列</param>
-        <param name="LinkToSource">
-          如果为 <see langword="true" />，则创建新表与数据源之间的链接。</param>
-        <param name="Connection">限制执行由 <c>SQLStatement</c> 指定的查询的范围。 指定范围的方式取决于数据的检索方式。 例如:  
-  
- 如果通过开放式数据库连接 (ODBC) 检索，则指定一个连接字符串。  
-  
- 如果通过使用动态数据交换 (DDE) 从 Microsoft Office Excel 检索，则指定一个指定范围或“整个电子表格”。  
-  
- **注意**<see langword="   " />动态数据交换 (DDE) 是比较老的技术，它不是很安全。 如果可能，请使用更安全的 DDE 的替代技术，如对象链接和嵌入 (OLE)。  
-  
- 如果从 Microsoft Access 检索数据，则指定单词“Table”或“Query”，其后跟表名或查询名称。</param>
+ **注意**<see langword="   " />动态数据交换 (DDE) 是比较老的技术，它不是很安全。 如果可能，请使用更安全的 DDE 的替代技术，如对象链接和嵌入 (OLE)。  如果从 Microsoft Access 检索数据，则指定单词“Table”或“Query”，其后跟表名或查询名称。</param>
         <param name="SQLStatement">一个可选查询字符串，它检索要插入文档中的、主数据源中的数据的子集。</param>
         <param name="SQLStatement1">如果查询字符串的长度超过 255 个字符，则 <c>SQLStatement</c> 表示该字符串的第一部分，而 <c>SQLStatement1</c> 表示第二部分。</param>
         <param name="PasswordDocument">打开数据源所需的密码（如果有）。 （请参见下面的备注。）</param>
@@ -3241,18 +3154,17 @@
         <param name="DataSource">数据源的路径和文件名。</param>
         <param name="From">要插入的记录的范围中第一个数据记录的编号。</param>
         <param name="To">要插入的记录的范围中最后一个数据记录的编号。</param>
-        <param name="IncludeFields">
-          为 <see langword="true" />，则在新表的第一行中包含来自数据源的字段名。</param>
+        <param name="IncludeFields">为 <see langword="true" />，则在新表的第一行中包含来自数据源的字段名。</param>
         <summary>从数据源（例如，一个单独的 Microsoft Office Word 文档、一个 Microsoft Office Excel 工作表或一个 Microsoft Access 数据库）检索数据，并以表的形式插入该数据来代替 <see cref="T:Microsoft.Office.Tools.Word.Bookmark" /> 控件。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 避免在你的应用程序中使用硬编码的密码。 如果在过程中需要使用密码，从用户请求密码、 将其存储在变量中，然后在代码中使用该变量。  
+ 避免在您的应用程序中使用硬编码的密码。 如果在过程中需要使用密码，请求用户密码、 将其存储在变量中，然后在代码中使用该变量。  
   
- 避免使用内置的系统管理员 (sa) 登录帐户。 相反，使系统管理员成员的 sysadmin 固定的服务器角色，并将它们使用其自己的帐户登录。 仅当没有其他方法登录，请使用 sa。 若要防止未经授权的访问通过 sa 登录帐户，应该为该帐户分配唯一的强密码。  
+ 避免使用内置的系统管理员 (sa) 登录帐户。 相反，让系统管理员 sysadmin 固定的服务器角色的成员，让他们使用其自己的帐户登录。 只有在没有其他方式登录时，请使用 sa。 若要防止未经授权的访问通过 sa 登录帐户，应将该帐户分配唯一的强密码。  
   
- 如果可能，请使用 Windows 身份验证 （也称为可信连接） 的 Windows 用户帐户用于连接到 SQL Server。 当用户连接通过 Windows 用户帐户时，SQL Server 使用信息在 Windows 操作系统中来验证帐户名和密码。 你可以使用 Windows 身份验证之前，服务器管理员必须配置 SQL Server 以使用这种模式的身份验证。 如果 Windows 身份验证不可用，避免保存用户的登录信息。 它是更安全的用户输入他们的登录信息每次登录的时。  
+ 如果可能，请使用 Windows 身份验证 （也称为可信连接），可使用 Windows 用户帐户来连接到 SQL Server。 当用户通过 Windows 用户帐户，SQL Server 使用的信息在 Windows 操作系统中以验证帐户名和密码。 可以使用 Windows 身份验证之前，服务器管理员必须配置 SQL Server 以使用这种模式的身份验证。 如果 Windows 身份验证不可用，避免保存用户的登录信息。 它是更安全的用户输入他们每次登录的时的登录信息。  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -3260,7 +3172,7 @@
    
   
 ## Examples  
- 此示例将插入到 Microsoft Excel 电子表格<xref:Microsoft.Office.Tools.Word.Bookmark>控件。 样式值 (191) 为数字 1、 2、 4、 8、 16、 32 和 128 的组合。 此示例假定您具有名为工作簿`Data.xlsx`工作表上保存到使用的数据的至少两个行 C 目录的根目录。  
+ 此示例将插入到 Microsoft Excel 电子表格<xref:Microsoft.Office.Tools.Word.Bookmark>控件。 样式值 (191) 为数字 1、 2、 4、 8、 16、 32 和 128 的组合。 此示例假定您的名为工作簿`Data.xlsx`工作表上保存到具有至少两个数据行的 C 目录的根目录。  
   
  此示例适用于文档级自定义。  
   
@@ -3292,10 +3204,8 @@
       </Parameters>
       <Docs>
         <param name="DateTimeFormat">要用于显示日期或时间，或同时显示日期和时间的格式。 如果省略此参数，则 Microsoft Office Word 使用来自 Windows 控制面板（“区域设置”图标）的短日期样式。</param>
-        <param name="InsertAsField">
-          为 <see langword="true" />，则以 TIME 字段的形式插入指定信息；否则为 <see langword="false" />。 默认值为 <see langword="true" />。</param>
-        <param name="InsertAsFullWidth">
-          为 <see langword="true" />，则以双字节数字的形式插入指定信息；否则为 <see langword="false" />。 此参数可能不能用，这取决于所选或安装的语言支持（例如，美式英语）。</param>
+        <param name="InsertAsField">为 <see langword="true" />，则以 TIME 字段的形式插入指定信息；否则为 <see langword="false" />。 默认值为 <see langword="true" />。</param>
+        <param name="InsertAsFullWidth">为 <see langword="true" />，则以双字节数字的形式插入指定信息；否则为 <see langword="false" />。 此参数可能不能用，这取决于所选或安装的语言支持（例如，美式英语）。</param>
         <param name="DateLanguage">设置显示日期和时间的语言。 可以为以下 <see cref="T:Microsoft.Office.Interop.Word.WdDateLanguage" /> 常数之一：<see cref="F:Microsoft.Office.Interop.Word.WdDateLanguage.wdDateLanguageBidi" /> 或 <see cref="F:Microsoft.Office.Interop.Word.WdDateLanguage.wdDateLanguageLatin" />。 此参数可能不能用，这取决于所选或安装的语言支持（例如，美式英语）。</param>
         <param name="CalendarType">设置显示日期或时间时要使用的日历类型。 可以为以下 <see cref="T:Microsoft.Office.Interop.Word.WdCalendarTypeBi" /> 常数之一：<see cref="F:Microsoft.Office.Interop.Word.WdCalendarTypeBi.wdCalendarTypeBidi" /> 或 <see cref="F:Microsoft.Office.Interop.Word.WdCalendarTypeBi.wdCalendarTypeGregorian" />。 此参数可能不能用，这取决于所选或安装的语言支持（例如，美式英语）。</param>
         <summary>以文本或以 TIME 字段的形式将当前日期或时间，或同时将日期和时间插入 <see cref="T:Microsoft.Office.Tools.Word.Bookmark" /> 控件中。</summary>
@@ -3311,7 +3221,7 @@
    
   
 ## Examples  
- 下面的代码示例中插入<xref:Microsoft.Office.Tools.Word.Bookmark>控件替换为文本，然后插入和文档中的日期和时间字段到书签。  
+ 下面的代码示例中插入<xref:Microsoft.Office.Tools.Word.Bookmark>控件中的文档，然后插入的文本的日期和时间字段到书签。  
   
  此示例适用于文档级自定义。  
   
@@ -3374,12 +3284,9 @@
       <Docs>
         <param name="FileName">要插入的文件的路径和文件名。 如果不指定路径，则 Microsoft Office Word 假定该文件在当前文件夹中。</param>
         <param name="Range">如果指定的文件是一个 Word 文档，则此参数表示一个书签。 如果该文件是另一种类型（例如，一个 Microsoft Office Excel 工作簿），则此参数表示指定范围或单元格范围（例如，R1C1:R3C4）。</param>
-        <param name="ConfirmConversions">
-          为 <see langword="true" />，则插入非 Word 文档格式的文件时，让 Word 提示确认转换。</param>
-        <param name="Link">
-          为 <see langword="true" />，则通过使用 <see cref="F:Microsoft.Office.Interop.Word.WdFieldType.wdFieldIncludeText" /> 字段插入文件。</param>
-        <param name="Attachment">
-          为 <see langword="true" />，则以附件的形式将该文件插入电子邮件。</param>
+        <param name="ConfirmConversions">为 <see langword="true" />，则插入非 Word 文档格式的文件时，让 Word 提示确认转换。</param>
+        <param name="Link">为 <see langword="true" />，则通过使用 <see cref="F:Microsoft.Office.Interop.Word.WdFieldType.wdFieldIncludeText" /> 字段插入文件。</param>
+        <param name="Attachment">为 <see langword="true" />，则以附件的形式将该文件插入电子邮件。</param>
         <summary>将所有或部分指定文件插入 <see cref="T:Microsoft.Office.Tools.Word.Bookmark" /> 控件中。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -3393,7 +3300,7 @@
    
   
 ## Examples  
- 下面的代码示例向文档添加书签控件，然后将一个文件插入到书签。 此示例要求你拥有名为的文档`Sales.docx`在 C 目录的根目录。  
+ 下面的代码示例向文档添加书签控件，然后将一个文件插入到书签。 此示例要求您具有名为的文档`Sales.docx`C 目录的根目录。  
   
  此示例适用于文档级自定义。  
   
@@ -3423,7 +3330,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果你不想要替换<xref:Microsoft.Office.Tools.Word.Bookmark>控制，请使用<xref:Microsoft.Office.Tools.Word.Bookmark.Collapse%2A>方法，然后才能使用此方法。 <xref:Microsoft.Office.Tools.Word.Bookmark.InsertParagraphAfter%2A>方法插入段落后的新<xref:Microsoft.Office.Tools.Word.Bookmark>控件。  
+ 如果不希望替换<xref:Microsoft.Office.Tools.Word.Bookmark>控制，请使用<xref:Microsoft.Office.Tools.Word.Bookmark.Collapse%2A>方法，然后再使用此方法。 <xref:Microsoft.Office.Tools.Word.Bookmark.InsertParagraphAfter%2A>方法插入新段落以下<xref:Microsoft.Office.Tools.Word.Bookmark>控件。  
   
  ]]></format>
         </remarks>
@@ -3493,8 +3400,7 @@
       <Docs>
         <param name="CharacterNumber">指定符号的字符数。 此值始终为 31 与对应于该符号在符号表中的位置的数字（从左向右数）之和。 例如，要指定在 Symbol 字体中位于符号表中位置 37 处的增量字符，请将 <c>CharacterNumber</c> 设置为 68。</param>
         <param name="Font">包含符号的字体的名称。</param>
-        <param name="Unicode">
-          为 <see langword="true" />，则插入由 <c>CharacterNumber</c> 指定的 Unicode 字符；为 <see langword="false" />，则插入由 <c>CharacterNumber</c> 指定的 ANSI 字符。 默认值为 <see langword="false" />。</param>
+        <param name="Unicode">为 <see langword="true" />，则插入由 <c>CharacterNumber</c> 指定的 Unicode 字符；为 <see langword="false" />，则插入由 <c>CharacterNumber</c> 指定的 ANSI 字符。 默认值为 <see langword="false" />。</param>
         <param name="Bias">设置符号的字体偏量。 此参数在设置东亚字符的正确字体偏量时很有用。 可以为以下 <see cref="T:Microsoft.Office.Interop.Word.WdFontBias" /> 常数之一：<see cref="F:Microsoft.Office.Interop.Word.WdFontBias.wdFontBiasDefault" />、<see cref="F:Microsoft.Office.Interop.Word.WdFontBias.wdFontBiasDontCare" /> 或 <see cref="F:Microsoft.Office.Interop.Word.WdFontBias.wdFontBiasFareast" />。 此参数可能不能用，这取决于所选或安装的语言支持（例如，美式英语）。</param>
         <summary>插入一个符号来代替 <see cref="T:Microsoft.Office.Tools.Word.Bookmark" /> 控件。</summary>
         <remarks>
@@ -3509,7 +3415,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件添加到文档，然后插入双向双箭头插入该书签。 当你使用时从文档中删除该书签<xref:Microsoft.Office.Tools.Word.Bookmark.InsertSymbol%2A>方法。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Bookmark>到文档，然后插入双头箭头插入该书签控件。 当你使用从文档中删除该书签<xref:Microsoft.Office.Tools.Word.Bookmark.InsertSymbol%2A>方法。  
   
  此示例适用于文档级自定义。  
   
@@ -3544,13 +3450,13 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果<xref:Microsoft.Office.Tools.Word.Bookmark>控件包含文本，<xref:Microsoft.Office.Tools.Word.Bookmark.InsertXML%2A>方法替换现有文本。  
+ 如果<xref:Microsoft.Office.Tools.Word.Bookmark>控件包含文本，<xref:Microsoft.Office.Tools.Word.Bookmark.InsertXML%2A>方法将替换现有文本。  
   
  调用此方法可能会删除<xref:Microsoft.Office.Tools.Word.Bookmark>控件。  
   
- 使用<xref:Microsoft.Office.Tools.Word.Bookmark.InsertXML%2A>方法将文本插入任意 XML 或 Word XML 标记。 此 XML 必须格式正确。 如果它使用 Word XML，然后它还必须是符合 Word XML 架构。  
+ 使用<xref:Microsoft.Office.Tools.Word.Bookmark.InsertXML%2A>方法插入文本使用任意 XML 或 Word XML 标记。 必须格式正确的 XML。 如果发布使用 Word XML，然后它还必须符合 Word XML 架构。  
   
- 如果指定的 XML 文本不能插入<xref:Microsoft.Office.Tools.Word.Bookmark>显示控件，一条错误消息。  
+ 如果指定的 XML 文本不能插入到<xref:Microsoft.Office.Tools.Word.Bookmark>显示控件，一条错误消息。  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -3558,7 +3464,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件添加到文档，然后将 XML 文本插入书签。 然后显示一个消息框以显示总数目<xref:Microsoft.Office.Interop.Word.XMLNodes>和书签的 XML 内容。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Bookmark>到文档，然后将 XML 文本插入书签控件。 然后显示一个消息框显示的总数量<xref:Microsoft.Office.Interop.Word.XMLNodes>和书签的 XML 内容。  
   
  此示例适用于文档级自定义。  
   
@@ -3588,13 +3494,12 @@
         <param name="Range">
           <see cref="T:Microsoft.Office.Interop.Word.Range" /> 对象，其文章与包含 <see cref="T:Microsoft.Office.Tools.Word.Bookmark" /> 控件的文章进行比较。</param>
         <summary>确定应用此方法的 <see cref="T:Microsoft.Office.Tools.Word.Bookmark" /> 控件与 <paramref name="Range" /> 参数指定的范围是否位于同一文章中。</summary>
-        <returns>
-          如果应用此方法的 <see cref="T:Microsoft.Office.Tools.Word.Bookmark" /> 控件与 <paramref name="Range" /> 参数指定的范围位于同一文章中，则为 <see langword="true" />；否则为 <see langword="false" />。</returns>
+        <returns>如果应用此方法的 <see cref="T:Microsoft.Office.Tools.Word.Bookmark" /> 控件与 <paramref name="Range" /> 参数指定的范围位于同一文章中，则为 <see langword="true" />；否则为 <see langword="false" />。</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>具有到文档，然后检查以找出是否它为作为第一个段落的同一篇文章中的文本控件。 结果将显示消息框中。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Bookmark>用到文档，然后检查，以了解它是否位于同一文章的第一个段落中的文本的控件。 然后在消息框中显示结果。  
   
  此示例适用于文档级自定义。  
   
@@ -3619,8 +3524,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，该值指示 <see cref="T:Microsoft.Office.Tools.Word.Bookmark" /> 控件是否已折叠且位于表中的行末标记处。</summary>
-        <value>
-          如果 <see cref="T:Microsoft.Office.Tools.Word.Bookmark" /> 控件已折叠且位于表中的行末标记处，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果 <see cref="T:Microsoft.Office.Tools.Word.Bookmark" /> 控件已折叠且位于表中的行末标记处，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -3642,13 +3546,12 @@
       <Docs>
         <param name="Range">与 <see cref="T:Microsoft.Office.Interop.Word.Range" /> 控件进行比较的 <see cref="T:Microsoft.Office.Tools.Word.Bookmark" /> 对象。</param>
         <summary>确定应用此方法的 <see cref="T:Microsoft.Office.Tools.Word.Bookmark" /> 控件是否与 <paramref name="Range" /> 参数指定的范围相等。</summary>
-        <returns>
-          如果应用此方法的 <see cref="T:Microsoft.Office.Tools.Word.Bookmark" /> 控件与 <paramref name="Range" /> 参数指定的范围相等，则为 <see langword="true" />；否则为 <see langword="false" />。</returns>
+        <returns>如果应用此方法的 <see cref="T:Microsoft.Office.Tools.Word.Bookmark" /> 控件与 <paramref name="Range" /> 参数指定的范围相等，则为 <see langword="true" />；否则为 <see langword="false" />。</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 起始和结束字符的位置，以及情景类型，此方法将进行比较。 如果这些项中的所有三个对于两个对象相同，则对象相等。  
+ 起始和结束字符位置，以及的文章类型，此方法将进行比较。 如果这些项的所有三个是相同的两个对象，则对象不相等。  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -3656,7 +3559,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>具有文档，然后检查以查明书签的范围是否相等的范围的第一个段落的文本控件。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Bookmark>用到的文档和检查，以找出该书签的范围是否相等的第一个段落的范围的文本的控件。  
   
  此示例适用于文档级自定义。  
   
@@ -3686,12 +3589,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性可以设置为的值是 0，-1，或<xref:Microsoft.Office.Interop.Word.WdConstants.wdToggle>。  
+ 此属性可以设置为的值为 0，-1，或<xref:Microsoft.Office.Interop.Word.WdConstants.wdToggle>。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控制对该文档，然后将应用格式设置为基于书签<xref:Microsoft.Office.Tools.Word.Bookmark.LanguageID%2A>在书签内的文本。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控制对该文档，然后应用格式设置为基于书签<xref:Microsoft.Office.Tools.Word.Bookmark.LanguageID%2A>内书签的文本。  
   
  此示例适用于文档级自定义。  
   
@@ -3721,14 +3624,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性可以设置为值为 0、 1、 或<xref:Microsoft.Office.Interop.Word.WdConstants.wdToggle>。  
+ 此属性可以设置为的值均为 0，1，或<xref:Microsoft.Office.Interop.Word.WdConstants.wdToggle>。  
   
  <xref:Microsoft.Office.Tools.Word.Bookmark.ItalicBi%2A>属性适用于从右到左语言的文本。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控制对该文档，然后将应用格式设置为基于书签<xref:Microsoft.Office.Tools.Word.Bookmark.LanguageID%2A>在书签内的文本。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控制对该文档，然后应用格式设置为基于书签<xref:Microsoft.Office.Tools.Word.Bookmark.LanguageID%2A>内书签的文本。  
   
  此示例适用于文档级自定义。  
   
@@ -3759,12 +3662,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性返回<xref:Microsoft.Office.Interop.Word.WdConstants.wdUndefined>如果的范围<xref:Microsoft.Office.Tools.Word.Bookmark>控件包含平假名和片假名或包含一些非日语文本范围的组合。 如果你设置<xref:Microsoft.Office.Tools.Word.Bookmark.Kana%2A>属性<xref:Microsoft.Office.Interop.Word.WdConstants.wdUndefined>，将引发异常。  
+ 此属性返回<xref:Microsoft.Office.Interop.Word.WdConstants.wdUndefined>如果系列<xref:Microsoft.Office.Tools.Word.Bookmark>控件包含混合平假名和片假名或如果该范围包含一些非日语文本。 如果您设置<xref:Microsoft.Office.Tools.Word.Bookmark.Kana%2A>属性设置为<xref:Microsoft.Office.Interop.Word.WdConstants.wdUndefined>，将引发异常。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件添加到第一个段落，并显示一条消息，如果文本包含平假名字符。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Bookmark>的第一个段落，并显示一条消息，如果文本包含平假名字符。  
   
  此示例适用于文档级自定义。  
   
@@ -3789,15 +3692,14 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示 Microsoft Office Word 是否已检测到 <see cref="T:Microsoft.Office.Tools.Word.Bookmark" /> 控件中的文本的语言。</summary>
-        <value>
-          如果 Microsoft Office Word 已检测到 <see cref="T:Microsoft.Office.Tools.Word.Bookmark" /> 控件中的文本的语言，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果 Microsoft Office Word 已检测到 <see cref="T:Microsoft.Office.Tools.Word.Bookmark" /> 控件中的文本的语言，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 检查<xref:Microsoft.Office.Tools.Word.Bookmark.LanguageID%2A>的结果的任何以前的语言检测的属性。  
+ 检查<xref:Microsoft.Office.Tools.Word.Bookmark.LanguageID%2A>属性的结果的任何以前的语言检测。  
   
- <xref:Microsoft.Office.Tools.Word.Bookmark.LanguageDetected%2A>属性设置为`true`时<xref:Microsoft.Office.Interop.Word.Range.DetectLanguage%2A>调用方法。 若要重新计算的文本的语言，必须首先设置<xref:Microsoft.Office.Tools.Word.Bookmark.LanguageDetected%2A>属性`false`。  
+ <xref:Microsoft.Office.Tools.Word.Bookmark.LanguageDetected%2A>属性设置为`true`时<xref:Microsoft.Office.Interop.Word.Range.DetectLanguage%2A>调用方法。 若要重新计算的文本的语言，必须首先设置<xref:Microsoft.Office.Tools.Word.Bookmark.LanguageDetected%2A>属性设置为`false`。  
   
  ]]></format>
         </remarks>
@@ -3823,12 +3725,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 对于自定义词典，你必须首先设置<xref:Microsoft.Office.Interop.Word.Dictionary.LanguageSpecific%2A>属性`true`之前指定<xref:Microsoft.Office.Tools.Word.Bookmark.LanguageID%2A>属性。 特定于语言的自定义词典仅查看针对该语言的格式的文本。  
+ 对于自定义字典，则必须首先设置<xref:Microsoft.Office.Interop.Word.Dictionary.LanguageSpecific%2A>属性设置为`true`之前指定<xref:Microsoft.Office.Tools.Word.Bookmark.LanguageID%2A>属性。 特定于语言的自定义词典只查询该语言的格式的文本。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控制对该文档，然后将应用格式设置为基于书签<xref:Microsoft.Office.Tools.Word.Bookmark.LanguageID%2A>在书签内的文本。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控制对该文档，然后应用格式设置为基于书签<xref:Microsoft.Office.Tools.Word.Bookmark.LanguageID%2A>内书签的文本。  
   
  此示例适用于文档级自定义。  
   
@@ -3859,12 +3761,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 这是建议的方法要返回或设置在东亚语言版本的 Microsoft Office Word 中创建的文档中的东亚文本的语言。  
+ 这是建议的方法可返回或设置在东亚语言版本的 Microsoft Office Word 中创建的文档中的东亚语言文本的语言。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件添加到的第一个段落和集<xref:Microsoft.Office.Tools.Word.Bookmark.LanguageIDFarEast%2A>为朝鲜语的属性。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件的第一个段落和集<xref:Microsoft.Office.Tools.Word.Bookmark.LanguageIDFarEast%2A>韩语的属性。  
   
  此示例适用于文档级自定义。  
   
@@ -3895,12 +3797,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 这是建议的方法可以返回或设置拉丁文本的语言从右向左的语言版本的 Microsoft Office Word 中创建的文档中。  
+ 这是建议的方法可返回或设置右到左的语言版本的 Microsoft Office Word 中创建的文档中的拉丁文字的语言。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件添加到的第一个段落和集<xref:Microsoft.Office.Tools.Word.Bookmark.LanguageIDOther%2A>为法语的属性。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件的第一个段落和集<xref:Microsoft.Office.Tools.Word.Bookmark.LanguageIDOther%2A>属性设置为法语。  
   
  此示例适用于文档级自定义。  
   
@@ -3930,7 +3832,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控制转移到第一个段落，并将默认项目符号列表格式应用到的书签。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Bookmark>控制对第一个段落并将默认的项目符号列表格式应用到的书签。  
   
  此示例适用于文档级自定义。  
   
@@ -3960,7 +3862,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控制转移到第一个段落，并将默认项目符号列表格式应用到的书签。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Bookmark>控制对第一个段落并将默认的项目符号列表格式应用到的书签。  
   
  此示例适用于文档级自定义。  
   
@@ -4009,10 +3911,10 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 可以仅在共同创作启用的文档中使用此属性。 如果你尝试访问此属性的文档中未启用共同创作，你将收到<xref:System.Runtime.InteropServices.COMException>。  
+ 仅在共同创作启用了的文档中，可以使用此属性。 如果您尝试访问未启用共同创作文档上的此属性，则会收到<xref:System.Runtime.InteropServices.COMException>。  
   
 > [!NOTE]
->  此方法将显示在 IntelliSense Word 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，无法在 Word 2007 项目中使用此属性。  
+>  此方法将出现在 IntelliSense 中在 Word 2007 项目面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Word 2007 项目中使用此属性。  
   
  ]]></format>
         </remarks>
@@ -4078,7 +3980,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控制转移到第一个段落，操作数包含在一个圆周中的第三个字符。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件的第一个段落，并在一个圆周中包含的第三个字符。  
   
  此示例适用于文档级自定义。  
   
@@ -4146,7 +4048,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>具有到第一个段落的文本控件，并显示消息框中的书签的最后一个单词。 然后，代码调用<xref:Microsoft.Office.Tools.Word.Bookmark.MoveEnd%2A>方法并在新的消息框中显示书签的最后一个单词。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件使用的第一个段落的文本，并在消息框中显示的书签的最后一个单词。 然后，代码调用<xref:Microsoft.Office.Tools.Word.Bookmark.MoveEnd%2A>方法，并在新的消息框中显示的书签的最后一个单词。  
   
  此示例适用于文档级自定义。  
   
@@ -4183,7 +4085,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果是向前移动在文档中，<xref:Microsoft.Office.Tools.Word.Bookmark>控件已展开。  
+ 如果是向前移动在文档中，<xref:Microsoft.Office.Tools.Word.Bookmark>是否展开控件。  
   
  如果结束位置向后移动到原始开始位置之前的点，起始位置设置为新的结束位置。  
   
@@ -4193,7 +4095,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件带到第一个段落的文本，然后添加另一个<xref:Microsoft.Office.Tools.Word.Bookmark>控件添加到第一个书签中的第三个单词。 然后，该代码移动第二个的书签的范围，直至找到字符 k。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件使用的第一个段落的文本，然后添加另一个<xref:Microsoft.Office.Tools.Word.Bookmark>到第一个书签中的第三个单词的控件。 然后，该代码移动第二个的书签的范围，直到它找到字符 k。  
   
  此示例适用于文档级自定义。  
   
@@ -4232,7 +4134,7 @@
 ## Remarks  
  中的任意字符`Cset`找到的结束位置<xref:Microsoft.Office.Tools.Word.Bookmark>移动控件。  
   
- 如果结束位置向后移动到原始开始位置之前的点，起始位置设置为新的结束位置。  
+ 如果结束位置向后移动到原始开始位置之前的点，起始位置设置为的新结束位置。  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -4240,7 +4142,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件带到第一个段落的文本，然后添加另一个<xref:Microsoft.Office.Tools.Word.Bookmark>控件添加到第一个书签中的第三个单词。 该代码时它可以查找字符 b、 o、 o、 k、 m，然后移动第二个的书签的范围，r 或 k。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件使用的第一个段落的文本，然后添加另一个<xref:Microsoft.Office.Tools.Word.Bookmark>到第一个书签中的第三个单词的控件。 该代码然后移动第二个的书签的范围，尽管它可以找到字符 b、 o、 o、 k、 m、 a、 r、 或 k。  
   
  此示例适用于文档级自定义。  
   
@@ -4285,7 +4187,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>与第一个段落，然后移动到文本中控制书签的起始位置。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件，其第一个段落，然后移动到的文本的起始位置的书签。  
   
  此示例适用于文档级自定义。  
   
@@ -4322,9 +4224,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果是整个文档中，向后移动<xref:Microsoft.Office.Tools.Word.Bookmark>控件已展开。  
+ 如果是整个文档中，向后移动<xref:Microsoft.Office.Tools.Word.Bookmark>是否展开控件。  
   
- 如果起始位置向前移动到的结束位置，超出的某个点<xref:Microsoft.Office.Tools.Word.Bookmark>控件处于折叠状态并开始和结束位置一起移动。  
+ 如果起始位置向前移动到超出结束位置的点<xref:Microsoft.Office.Tools.Word.Bookmark>控件处于折叠状态以及开始和结束位置一起移动。  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -4332,7 +4234,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>与第一个段落，然后移动到文本控制的书签的范围，直到它找到一个空格。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Bookmark>文本第一个段落，然后移动到与控制该书签的范围，直到它找到一个空格。  
   
  此示例适用于文档级自定义。  
   
@@ -4369,9 +4271,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 中的任意字符`Cset`找到的开始位置<xref:Microsoft.Office.Tools.Word.Bookmark>移动控件。  
+ 中的任意字符`Cset`找到的起始位置<xref:Microsoft.Office.Tools.Word.Bookmark>移动控件。  
   
- 如果的开始位置向前移动到原来的结束位置超出某个位置，则会将的结束位置设置为新的起始位置。  
+ 如果起始位置向前移动到原始的结束位置之外的位置，结束位置设置为的新起始位置。  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -4379,7 +4281,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>与第一个段落，然后移动到的文本控件的书签范围，而它可以查找字符 T、 h、 i 或 s。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Bookmark>与第一个段落，然后移动到文本控制的书签的范围，尽管它可以找到字符 T、 h、 i 或 s。  
   
  此示例适用于文档级自定义。  
   
@@ -4416,7 +4318,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Word.Bookmark>折叠为零长度书签。  
+ <xref:Microsoft.Office.Tools.Word.Bookmark>折叠为一个长度为零的书签。  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -4424,7 +4326,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件带到第一个段落的文本，然后添加另一个<xref:Microsoft.Office.Tools.Word.Bookmark>控件添加到第一个书签中的第三个单词。 然后，该代码将移动第二个的书签的范围时它可以找到的空白区域。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件使用的第一个段落的文本，然后添加另一个<xref:Microsoft.Office.Tools.Word.Bookmark>到第一个书签中的第三个单词的控件。 然后，该代码移动第二个的书签的范围，尽管它可以找到空白区域。  
   
  此示例适用于文档级自定义。  
   
@@ -4461,7 +4363,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 中的任意字符`Cset`找到，则<xref:Microsoft.Office.Tools.Word.Bookmark>移动控件。 <xref:Microsoft.Office.Tools.Word.Bookmark>折叠为零长度书签。  
+ 中的任意字符`Cset`找到，则<xref:Microsoft.Office.Tools.Word.Bookmark>移动控件。 <xref:Microsoft.Office.Tools.Word.Bookmark>折叠为一个长度为零的书签。  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -4469,7 +4371,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件带到第一个段落的文本，然后添加另一个<xref:Microsoft.Office.Tools.Word.Bookmark>控件添加到第一个书签中的第三个单词。 然后，代码会将折叠，并移动第二个的书签，而它可以查找字符 b、 o、 o 或 k。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件使用的第一个段落的文本，然后添加另一个<xref:Microsoft.Office.Tools.Word.Bookmark>到第一个书签中的第三个单词的控件。 然后，该代码折叠，然后移动第二个书签，尽管它可以找到字符 b、 o、 o 或 k。  
   
  此示例适用于文档级自定义。  
   
@@ -4500,7 +4402,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件替换为文本的第一个段落，然后显示一个消息框中的书签的名称。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件，其文本为第一个段落，然后显示消息框中的书签的名称。  
   
  此示例适用于文档级自定义。  
   
@@ -4543,7 +4445,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件替换的第一个段落之后该书签的地方，然后显示, 插入其他文本的文本的下一个单词后一个消息框中的书签。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件，其文本的第一个段落，将其他文本插入书签，并显示后的下一个单词后一个消息框中的书签。  
   
  此示例适用于文档级自定义。  
   
@@ -4574,7 +4476,7 @@
   
 ## Remarks  
   
-|情景类型|所返回项<xref:Microsoft.Office.Tools.Word.Bookmark.NextStoryRange%2A>方法|  
+|文章类型|返回项<xref:Microsoft.Office.Tools.Word.Bookmark.NextStoryRange%2A>方法|  
 |----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:Microsoft.Office.Interop.Word.WdStoryType.wdMainTextStory>、<xref:Microsoft.Office.Interop.Word.WdStoryType.wdFootnotesStory>、<xref:Microsoft.Office.Interop.Word.WdStoryType.wdEndnotesStory> 和 <xref:Microsoft.Office.Interop.Word.WdStoryType.wdCommentsStory>|始终返回 `null`。|  
 |<xref:Microsoft.Office.Interop.Word.WdStoryType.wdTextFrameStory>|下一组链接的文本框中的文章。|  
@@ -4583,7 +4485,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加**下一页**部分中断添加到文档，然后添加<xref:Microsoft.Office.Tools.Word.Bookmark>具有部分 1 的偶数页标题的文本控件。 该代码将使用<xref:Microsoft.Office.Tools.Word.Bookmark.NextStoryRange%2A>将文本添加到第 2 节的标头。  
+ 下面的代码示例将添加**下一页**分节符到文档，然后添加<xref:Microsoft.Office.Tools.Word.Bookmark>到第 1 节的偶数页标头的文本的控件。 然后，代码使用<xref:Microsoft.Office.Tools.Word.Bookmark.NextStoryRange%2A>将文本添加到第 2 节的标头。  
   
  此示例适用于文档级自定义。  
   
@@ -4613,7 +4515,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>具有拼写错误文本的第一个段落和集到控件<xref:Microsoft.Office.Tools.Word.Bookmark.NoProofing%2A>到书签属性`true`。 当检查文档存在拼写错误时，将忽略该书签中拼写错误的文本。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>具有与第一个段落和集拼写错误的文本控件<xref:Microsoft.Office.Tools.Word.Bookmark.NoProofing%2A>属性为书签`true`。 当检查文档拼写错误时，将忽略在书签内拼写错误的文本。  
   
  此示例适用于文档级自定义。  
   
@@ -4662,12 +4564,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 上面列出的常量的一些可能不可用，这取决于的语言支持 （美国美式英语）。  
+ 某些上面列出的常量可能不可用，这取决于语言支持 （例如美式英语）。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>具有的第一个段落的文本控件，并将设置到的书签文本的方向<xref:Microsoft.Office.Interop.Word.WdTextOrientation.wdTextOrientationVerticalFarEast>。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>的第一个段落的文本的控件和设置到的书签文本的方向<xref:Microsoft.Office.Interop.Word.WdTextOrientation.wdTextOrientationVerticalFarEast>。  
   
  此示例适用于文档级自定义。  
   
@@ -4697,7 +4599,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>具有到第一个段落，然后设置三英寸的上边距书签出现的位置的部分中的文本控件。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Bookmark>到第一个段落和集三英寸的上边距中显示该书签的部分文本。  
   
  此示例适用于文档级自定义。  
   
@@ -4727,7 +4629,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>具有到第一个段落的文本控件和设置书签，使其具有一英寸的段落格式<xref:Microsoft.Office.Interop.Word._ParagraphFormat.SpaceBefore%2A>。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>的第一个段落的文本的控件和设置书签，使其具有一英寸的段落格式<xref:Microsoft.Office.Interop.Word._ParagraphFormat.SpaceBefore%2A>。  
   
  此示例适用于文档级自定义。  
   
@@ -4757,7 +4659,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>具有到第一个段落的文本控件，并为双倍行距的文本更改段落。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件使用的第一个段落的文本并将更改为双倍行距的文本的段落。  
   
  此示例适用于文档级自定义。  
   
@@ -4806,7 +4708,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>具有到第一个段落的文本控件，并在消息框中显示的父级的书签。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件使用的第一个段落的文本，并在消息框中显示的书签的父级。  
   
  此示例适用于文档级自定义。  
   
@@ -4943,14 +4845,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 你可以使用<xref:Microsoft.Office.Tools.Word.Bookmark.PasteAsNestedTable%2A>剪贴板包含的单元格或组的单元格时才与<xref:Microsoft.Office.Tools.Word.Bookmark>控件包含的单元格或组的当前文档中的单元格。  
+ 可以使用<xref:Microsoft.Office.Tools.Word.Bookmark.PasteAsNestedTable%2A>只有剪贴板中包含的单元组和<xref:Microsoft.Office.Tools.Word.Bookmark>控件包含一个或一组当前文档中的单元格。  
   
  调用此方法可能会删除<xref:Microsoft.Office.Tools.Word.Bookmark>控件。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件到文档中的表，然后将该表粘贴到第三个单元格为嵌套表。 然后，该代码在书签中选择下一个表。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件到文档中的表，然后粘贴到第三个单元格作为嵌套表的表。 然后，该代码在书签中选择下一个表。  
   
  此示例适用于文档级自定义。  
   
@@ -4979,12 +4881,9 @@
         <Parameter Name="RTF" Type="System.Boolean" />
       </Parameters>
       <Docs>
-        <param name="LinkedToExcel">
-          为 <see langword="true" />，则将粘贴的表链接到原始 Excel 文件，以便在 Microsoft Office Word 中反映对 Excel 文件所做的更改。</param>
-        <param name="WordFormatting">
-          如果为 <see langword="true" />，则使用 Word 文档中的格式设置来设置表的格式。 如果为 <see langword="false" />，则根据原始 Excel 文件设置表的格式。</param>
-        <param name="RTF">
-          如果为 <see langword="true" />，则以 RTF 格式粘贴 Excel 表。 如果为 <see langword="false" />，则以 HTML 格式粘贴 Excel 表。</param>
+        <param name="LinkedToExcel">为 <see langword="true" />，则将粘贴的表链接到原始 Excel 文件，以便在 Microsoft Office Word 中反映对 Excel 文件所做的更改。</param>
+        <param name="WordFormatting">如果为 <see langword="true" />，则使用 Word 文档中的格式设置来设置表的格式。 如果为 <see langword="false" />，则根据原始 Excel 文件设置表的格式。</param>
+        <param name="RTF">如果为 <see langword="true" />，则以 RTF 格式粘贴 Excel 表。 如果为 <see langword="false" />，则以 HTML 格式粘贴 Excel 表。</param>
         <summary>将一个 Microsoft Office Excel 表粘贴到 <see cref="T:Microsoft.Office.Tools.Word.Bookmark" /> 控件中，并对其进行格式设置。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -4998,7 +4897,7 @@
    
   
 ## Examples  
- 下面的代码示例粘贴到的 Excel 表<xref:Microsoft.Office.Tools.Word.Bookmark>控件。 参数指定粘贴的表链接到 Excel 文件，将保留原始 Excel 格式、 上，并粘贴为 rtf 格式。 此示例需要剪贴板包含的 Excel 表。  
+ 下面的代码示例粘贴到 Excel 表<xref:Microsoft.Office.Tools.Word.Bookmark>控件。 参数指定粘贴的表链接到 Excel 文件，将保留原始 Excel 格式，以及为 rtf 格式粘贴。 此示例需要剪贴板包含 Excel 表。  
   
  此示例适用于文档级自定义。  
   
@@ -5032,11 +4931,9 @@
       </Parameters>
       <Docs>
         <param name="IconIndex">如果 <c>DisplayAsIcon</c> 为 <see langword="true" />，则此参数为一个数字，该数字对应于你希望在程序文件中使用的由 <c>IconFilename</c> 指定的图标。 图标显示在“更改图标”对话框中：0（零）对应于第一个图标，1 对应于第二个图标，依此类推。 如果省略此参数，则使用第一个（默认）图标。</param>
-        <param name="Link">
-          为 <see langword="true" />，则创建一个到剪贴板内容的源文件的链接。 默认值为 <see langword="false" />。</param>
+        <param name="Link">为 <see langword="true" />，则创建一个到剪贴板内容的源文件的链接。 默认值为 <see langword="false" />。</param>
         <param name="Placement">可以为以下 <see cref="T:Microsoft.Office.Interop.Word.WdOLEPlacement" /> 常数之一：<see cref="F:Microsoft.Office.Interop.Word.WdOLEPlacement.wdFloatOverText" /> 或 <see cref="F:Microsoft.Office.Interop.Word.WdOLEPlacement.wdInLine" />。 默认值为 <see cref="F:Microsoft.Office.Interop.Word.WdOLEPlacement.wdInLine" />。</param>
-        <param name="DisplayAsIcon">
-          为 <see langword="true" />，则以图标形式显示链接。 默认值为 <see langword="false" />。</param>
+        <param name="DisplayAsIcon">为 <see langword="true" />，则以图标形式显示链接。 默认值为 <see langword="false" />。</param>
         <param name="DataType">在将剪贴板内容插入文档时，剪贴板内容的格式。 <see cref="T:Microsoft.Office.Interop.Word.WdPasteDataType" />。</param>
         <param name="IconFileName">如果 <c>DisplayAsIcon</c> 为 <see langword="true" />，则此参数为在其中存储要显示的图标的文件的路径和文件名。</param>
         <param name="IconLabel">如果 <c>DisplayAsIcon</c> 为 <see langword="true" />，则此参数为显示在图标下面的文本。</param>
@@ -5045,7 +4942,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 与不同与<xref:Microsoft.Office.Tools.Word.Bookmark.Paste%2A>方法，与<xref:Microsoft.Office.Tools.Word.Bookmark.PasteSpecial%2A>可以控制所粘贴信息的格式并 （可选） 建立到源代码文件 （例如，为 Microsoft Office Excel 工作表） 的链接。  
+ 与不同的是与<xref:Microsoft.Office.Tools.Word.Bookmark.Paste%2A>方法，与<xref:Microsoft.Office.Tools.Word.Bookmark.PasteSpecial%2A>可以控制所粘贴信息的格式和 （可选） 建立到源文件 （例如，Microsoft Office Excel 工作表） 的链接。  
   
  调用此方法可能会删除<xref:Microsoft.Office.Tools.Word.Bookmark>控件。  
   
@@ -5055,7 +4952,7 @@
    
   
 ## Examples  
- 下面的代码示例将中的剪贴板内容<xref:Microsoft.Office.Tools.Word.Bookmark>为无格式文本控件。 此示例假定剪贴板包含一些文本。  
+ 下面的代码示例将插入剪贴板内容中的<xref:Microsoft.Office.Tools.Word.Bookmark>为无格式文本控件。 此示例假定剪贴板包含一些文本。  
   
  此示例适用于文档级自定义。  
   
@@ -5104,7 +5001,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加书签文本"tres 别致。"的拼音指南  
+ 下面的代码示例将添加的拼音指南书签文本"tres 别致。"  
   
  此示例适用于文档级自定义。  
   
@@ -5148,7 +5045,7 @@
    
   
 ## Examples  
- 下面的代码示例将文本添加到第一个段落，然后添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件添加到第二个字。 然后，该代码选择书签之前的单词。  
+ 下面的代码示例将文本添加到第一个段落，然后添加<xref:Microsoft.Office.Tools.Word.Bookmark>到第二个字的控件。 然后，该代码选择上一步书签的单词。  
   
  此示例适用于文档级自定义。  
   
@@ -5183,7 +5080,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>具有给该文档并显示一条消息中的书签的名称框中使用的文本控件<xref:Microsoft.Office.Tools.Word.Bookmark.PreviousBookmarkID%2A>属性。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>使用为文档，并显示一条消息中的书签的名称框中使用的文本控件<xref:Microsoft.Office.Tools.Word.Bookmark.PreviousBookmarkID%2A>属性。  
   
  此示例适用于文档级自定义。  
   
@@ -5213,7 +5110,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件替换为文本的第一个段落，然后设置中为加粗的书签的文本。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Bookmark>控制用到的第一个段落和设置的文本为粗体的书签中的文本。  
   
  此示例适用于文档级自定义。  
   
@@ -5243,7 +5140,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>具有为第一个段落，然后使用的文本控件<xref:Microsoft.Office.Tools.Word.Bookmark.ReadabilityStatistics%2A>显示单词数的书签的属性在消息框中包含的书签。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>一个带有文本为第一个段落，然后使用<xref:Microsoft.Office.Tools.Word.Bookmark.ReadabilityStatistics%2A>属性显示的单词数的书签的书签将包含在消息框中。  
   
  此示例适用于文档级自定义。  
   
@@ -5277,12 +5174,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 仅当在大纲视图中折叠的正文文本或如果它是的一部分，则正文包含标题将移动<xref:Microsoft.Office.Tools.Word.Bookmark>控件。  
+ 仅当在大纲视图中折叠的正文文本，或如果它是的一部分，则正文文本标题将移动<xref:Microsoft.Office.Tools.Word.Bookmark>控件。  
   
    
   
 ## Examples  
- 下面的代码示例将文本添加到第一个段落，然后<xref:Microsoft.Office.Tools.Word.Bookmark>具有到第二个段落的文本控件。 代码到第一个段落然后将第二个的书签。  
+ 下面的代码示例将文本添加到第一个段落，然后<xref:Microsoft.Office.Tools.Word.Bookmark>具有第二个段落的文本控件。 代码然后重新定位到第二个的书签到第一个段落。  
   
  此示例适用于文档级自定义。  
   
@@ -5312,7 +5209,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件带到第一个段落的文本，打开修订跟踪，然后修订该文本。 然后在消息框中显示修订的号。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件使用的第一个段落的文本，打开修订跟踪，然后修订该文本。 然后在消息框中显示修订的号。  
   
  此示例适用于文档级自定义。  
   
@@ -5342,7 +5239,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例向文档添加一个三列三行的表，添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件到表中，然后将更改在书签内第一个行的高度。  
+ 下面的代码示例向文档添加一个包含三列三行的表、 添加<xref:Microsoft.Office.Tools.Word.Bookmark>控制到表中，然后将更改该书签中的第一行的高度。  
   
  此示例适用于文档级自定义。  
   
@@ -5372,7 +5269,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例的第一个段落，添加一个脚本，然后添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件添加到第一个段落。 然后，代码将显示的该书签在消息框中所包含的脚本的数量。  
+ 下面的代码示例的第一个段落，添加一个脚本，然后添加<xref:Microsoft.Office.Tools.Word.Bookmark>的第一个段落。 然后，该代码显示的该书签将包含在消息框中的脚本的数量。  
   
  此示例适用于文档级自定义。  
   
@@ -5402,7 +5299,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>具有到文档，然后插入的文本控件**下一页**第四个单词在书签中之前的部分中断。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>到文档，然后插入的文本与控件**下一页**第四个单词在书签中之前的分节符。  
   
  此示例适用于文档级自定义。  
   
@@ -5432,12 +5329,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用此方法后，使用<xref:Microsoft.Office.Interop.Word._Application.Selection%2A>属性才能正常使用所选<xref:Microsoft.Office.Tools.Word.Bookmark>控件。  
+ 使用此方法后，使用<xref:Microsoft.Office.Interop.Word._Application.Selection%2A>属性与所选工作<xref:Microsoft.Office.Tools.Word.Bookmark>控件。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>到文档的文本与控件，然后创建<xref:Microsoft.Office.Tools.Word.Bookmark.BeforeDoubleClick>事件处理程序。 选择书签中的文本时<xref:Microsoft.Office.Tools.Word.Bookmark>双击控件时。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件，其对文档的文本，然后创建<xref:Microsoft.Office.Tools.Word.Bookmark.BeforeDoubleClick>事件处理程序。 在书签内的文本选择时<xref:Microsoft.Office.Tools.Word.Bookmark>双击控件时。  
   
  此示例适用于文档级自定义。  
   
@@ -5466,12 +5363,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 所选内容更改为时会引发此事件<xref:Microsoft.Office.Tools.Word.Bookmark>控件。  
+ 为所选内容更改时引发此事件<xref:Microsoft.Office.Tools.Word.Bookmark>控件。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件带到文档的文本，然后创建<xref:Microsoft.Office.Tools.Word.Bookmark.Selected>事件处理程序。 当光标移入该书签时，显示一个消息框。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件具有对文档的文本，然后创建<xref:Microsoft.Office.Tools.Word.Bookmark.Selected>事件处理程序。 将光标移入该书签时，显示一个消息框。  
   
  此示例适用于文档级自定义。  
   
@@ -5500,12 +5397,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 所选内容更改到或在内时引发此事件<xref:Microsoft.Office.Tools.Word.Bookmark>控件。  
+ 所选内容更改到或在其中时引发此事件<xref:Microsoft.Office.Tools.Word.Bookmark>控件。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件带到文档的文本，然后创建<xref:Microsoft.Office.Tools.Word.Bookmark.SelectionChange>事件处理程序。 在书签中移动光标时，显示一个消息框。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件具有对文档的文本，然后创建<xref:Microsoft.Office.Tools.Word.Bookmark.SelectionChange>事件处理程序。 在书签中移动光标时，显示一个消息框。  
   
  此示例适用于文档级自定义。  
   
@@ -5535,7 +5432,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件替换为文本与文档，然后选择在书签中的第一个句子。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件，其文本与文档，然后选择在书签中的第一个句子。  
   
  此示例适用于文档级自定义。  
   
@@ -5593,14 +5490,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 字符位置值从该情景，开头起始值为 0 （零）。 计算所有字符，包括非打印字符。 隐藏的字符也计算在内，即使它们不会显示。  
+ 字符位置的值的情景，开头开始第一个值为 0 （零）。 计数的所有字符，包括非打印字符。 隐藏的字符也计算在内，即使它们不会显示。  
   
- <xref:Microsoft.Office.Tools.Word.Bookmark.SetRange%2A>方法重新定义的起始和结束位置的现有<xref:Microsoft.Office.Tools.Word.Bookmark>控件。  
+ <xref:Microsoft.Office.Tools.Word.Bookmark.SetRange%2A>方法以重新定义的起始和结束位置的现有<xref:Microsoft.Office.Tools.Word.Bookmark>控件。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控制与文档，然后设置文本的文档中的第一个字符的书签的范围。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Bookmark>控制用到的文档和设置文本的文档中的第一个字符为书签的范围。  
   
  [!code-csharp[Trin_WordBookmark#98](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordBookMark/CS/Trin_WordBookMark.cs#98)]
  [!code-vb[Trin_WordBookmark#98](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordBookMark/VB/ThisDocument.vb#98)]  
@@ -5628,7 +5525,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>具有到文档，然后设置的文本控件<xref:Microsoft.Office.Interop.Word.Shading.BackgroundPatternColor%2A>为浅绿色的书签。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>一个带有文本文档，然后设置到<xref:Microsoft.Office.Interop.Word.Shading.BackgroundPatternColor%2A>为浅绿色的书签。  
   
  此示例适用于文档级自定义。  
   
@@ -5658,12 +5555,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 形状范围只能包含绘图、 形状、 图片，OLE 对象、 ActiveX 控件、 文本对象和标注。  
+ 图形区域可以包含绘图、 形状、 图片，OLE 对象、 ActiveX 控件、 文本对象和标注。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>与文本的文档，然后使用垂直和水平位置的书签在创建时控制文本框。 然后，它显示的名称<xref:Microsoft.Office.Tools.Word.Bookmark.ShapeRange%2A>内一个消息框中的书签。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Bookmark>使用为文档，然后使用文本控制该书签的垂直和水平位置，创建一个文本框时。 然后，它显示的名称<xref:Microsoft.Office.Tools.Word.Bookmark.ShapeRange%2A>中一个消息框中的书签。  
   
  此示例适用于文档级自定义。  
   
@@ -5688,8 +5585,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示是否显示 <see cref="T:Microsoft.Office.Tools.Word.Bookmark" /> 控件中的所有非打印字符（如隐藏文本、制表符标记、空格标记和段落标记）。</summary>
-        <value>
-          如果显示 <see cref="T:Microsoft.Office.Tools.Word.Bookmark" /> 控件中的非打印字符，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果显示 <see cref="T:Microsoft.Office.Tools.Word.Bookmark" /> 控件中的非打印字符，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -5750,8 +5646,7 @@
         <Parameter Name="LanguageID" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="ExcludeHeader">
-          若要从排序操作中排除第一行或段落标头，请使用 <see langword="true" />。 默认值为 <see langword="false" />。</param>
+        <param name="ExcludeHeader">若要从排序操作中排除第一行或段落标头，请使用 <see langword="true" />。 默认值为 <see langword="false" />。</param>
         <param name="FieldNumber">要作为排序依据的字段。 Microsoft Office Word 的排序方式为 <c>FieldNumber</c>，然后为 <c>FieldNumber2</c>，最后为 <c>FieldNumber3</c>。</param>
         <param name="SortFieldType">
           <c>FieldNumber</c>、<c>FieldNumber2</c> 和 <c>FieldNumber3</c> 各自的排序类型。 可以是 <see cref="T:Microsoft.Office.Interop.Word.WdSortFieldType" /> 常量之一。</param>
@@ -5764,22 +5659,15 @@
         <param name="SortFieldType3">
           <c>FieldNumber</c>、<c>FieldNumber2</c> 和 <c>FieldNumber3</c> 各自的排序类型。 可以是 <see cref="T:Microsoft.Office.Interop.Word.WdSortFieldType" /> 常量之一</param>
         <param name="SortOrder3">对 <c>FieldNumber</c>、<c>FieldNumber2</c> 和 <c>FieldNumber3</c> 进行排序时使用的排序顺序。 可以是 <see cref="T:Microsoft.Office.Interop.Word.WdSortOrder" /> 常量之一。</param>
-        <param name="SortColumn">
-          使用 <see langword="true" /> 对仅由 <see cref="T:Microsoft.Office.Tools.Word.Bookmark" /> 控件指定的列进行排序。</param>
+        <param name="SortColumn">使用 <see langword="true" /> 对仅由 <see cref="T:Microsoft.Office.Tools.Word.Bookmark" /> 控件指定的列进行排序。</param>
         <param name="Separator">
           <see cref="T:System.Object" />。 字段分隔符的类型。 可以是 <see cref="T:Microsoft.Office.Interop.Word.WdSortSeparator" /> 常量之一。</param>
-        <param name="CaseSensitive">
-          排序时若要区分大小写，请使用 <see langword="true" />。 默认值为 <see langword="false" />。</param>
-        <param name="BidiSort">
-          若要根据从右到左的语言规则进行排序，请使用 <see langword="true" />。 此参数可能不能用，这取决于所选或安装的语言支持（例如，美式英语）。</param>
-        <param name="IgnoreThe">
-          为 <see langword="true" />，则在对从右向左的语言文本进行排序时忽略阿拉伯字符 <c>alef</c><c>lam</c>。 此参数可能不能用，这取决于所选或安装的语言支持（例如，美式英语）。</param>
-        <param name="IgnoreKashida">
-          如果对从右到左的语言的文本进行排序时，需要忽略 kashidas，请使用 <see langword="true" />。 此参数可能不能用，这取决于所选或安装的语言支持（例如，美式英语）。</param>
-        <param name="IgnoreDiacritics">
-          如果对从右到左的语言的文本进行排序时，需要忽略双向控制字符，请使用 <see langword="true" />。 此参数可能不能用，这取决于所选或安装的语言支持（例如，美式英语）。</param>
-        <param name="IgnoreHe">
-          为 <see langword="true" />，则在对从右向左的语言文本进行排序时忽略希伯来字符 <c>he</c>。 此参数可能不能用，这取决于所选或安装的语言支持（例如，美式英语）。</param>
+        <param name="CaseSensitive">排序时若要区分大小写，请使用 <see langword="true" />。 默认值为 <see langword="false" />。</param>
+        <param name="BidiSort">若要根据从右到左的语言规则进行排序，请使用 <see langword="true" />。 此参数可能不能用，这取决于所选或安装的语言支持（例如，美式英语）。</param>
+        <param name="IgnoreThe">为 <see langword="true" />，则在对从右向左的语言文本进行排序时忽略阿拉伯字符 <c>alef</c><c>lam</c>。 此参数可能不能用，这取决于所选或安装的语言支持（例如，美式英语）。</param>
+        <param name="IgnoreKashida">如果对从右到左的语言的文本进行排序时，需要忽略 kashidas，请使用 <see langword="true" />。 此参数可能不能用，这取决于所选或安装的语言支持（例如，美式英语）。</param>
+        <param name="IgnoreDiacritics">如果对从右到左的语言的文本进行排序时，需要忽略双向控制字符，请使用 <see langword="true" />。 此参数可能不能用，这取决于所选或安装的语言支持（例如，美式英语）。</param>
+        <param name="IgnoreHe">为 <see langword="true" />，则在对从右向左的语言文本进行排序时忽略希伯来字符 <c>he</c>。 此参数可能不能用，这取决于所选或安装的语言支持（例如，美式英语）。</param>
         <param name="LanguageID">指定排序语言。 可以是 <see cref="T:Microsoft.Office.Interop.Word.WdLanguageID" /> 常量之一。</param>
         <summary>对 <see cref="T:Microsoft.Office.Tools.Word.Bookmark" /> 控件中的段落进行排序。</summary>
         <remarks>
@@ -5793,7 +5681,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控制水果，然后排序的列表中升序排序的列表。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Bookmark>控制的水果，然后排序列表按升序排序的列表。  
   
  此示例适用于文档级自定义。  
   
@@ -5823,16 +5711,16 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 第一个段落或表格行被视为标头记录和未包含在排序。 使用<xref:Microsoft.Office.Interop.Word.Range.Sort%2A>方法将标头记录包含在排序中。  
+ 第一个段落或表行被视为标头记录并不包括在排序中。 使用<xref:Microsoft.Office.Interop.Word.Range.Sort%2A>方法以包括在排序中的标头记录。  
   
  此方法提供了针对邮件合并数据源包含的数据列进行排序一种简化的的形式。 对于大多数排序任务，请使用<xref:Microsoft.Office.Interop.Word.Range.Sort%2A>方法。  
   
- 此方法会显示**标头记录分隔符**对话框中，用户必须从中选择字段分隔符。  
+ 此方法显示**标头记录分隔符**对话框，用户必须选择字段分隔符。  
   
    
   
 ## Examples  
- 下面的代码示例将添加一个到水果列表<xref:Microsoft.Office.Tools.Word.Bookmark>控制然后列表进行排序以升序。  
+ 下面的代码示例将添加到水果的列表<xref:Microsoft.Office.Tools.Word.Bookmark>控制，然后对按升序排序列表进行排序。  
   
  此示例适用于文档级自定义。  
   
@@ -5862,16 +5750,16 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 第一个段落或表格行被视为标头记录和未包含在排序。 使用<xref:Microsoft.Office.Interop.Word.Range.Sort%2A>方法将标头记录包含在排序中。  
+ 第一个段落或表行被视为标头记录并不包括在排序中。 使用<xref:Microsoft.Office.Interop.Word.Range.Sort%2A>方法以包括在排序中的标头记录。  
   
  此方法提供了针对邮件合并数据源包含的数据列进行排序一种简化的的形式。 对于大多数排序任务，请使用<xref:Microsoft.Office.Interop.Word.Range.Sort%2A>方法。  
   
- 此方法会显示**标头记录分隔符**对话框中，用户必须从中选择字段分隔符。  
+ 此方法显示**标头记录分隔符**对话框，用户必须选择字段分隔符。  
   
    
   
 ## Examples  
- 下面的代码示例将添加一个到水果列表<xref:Microsoft.Office.Tools.Word.Bookmark>控制然后列表进行排序以降序顺序。  
+ 下面的代码示例将添加到水果的列表<xref:Microsoft.Office.Tools.Word.Bookmark>控制，然后对列表按降序进行排序。  
   
  此示例适用于文档级自定义。  
   
@@ -5948,15 +5836,14 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示是否已对整个 <see cref="T:Microsoft.Office.Tools.Word.Bookmark" /> 控件进行了拼写检查。</summary>
-        <value>
-          如果已对整个 <see cref="T:Microsoft.Office.Tools.Word.Bookmark" /> 控件进行了拼写检查，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果已对整个 <see cref="T:Microsoft.Office.Tools.Word.Bookmark" /> 控件进行了拼写检查，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 以重新检查在拼写<xref:Microsoft.Office.Tools.Word.Bookmark>控制、 设置<xref:Microsoft.Office.Tools.Word.Bookmark.SpellingChecked%2A>属性`false`。  
+ 若要重新检查中的拼写<xref:Microsoft.Office.Tools.Word.Bookmark>控件，将<xref:Microsoft.Office.Tools.Word.Bookmark.SpellingChecked%2A>属性设置为`false`。  
   
- 若要检查是否<xref:Microsoft.Office.Tools.Word.Bookmark>控件包含拼写错误，则使用<xref:Microsoft.Office.Tools.Word.Bookmark.SpellingErrors%2A>属性。  
+ 若要检查是否<xref:Microsoft.Office.Tools.Word.Bookmark>控件包含拼写错误，请使用<xref:Microsoft.Office.Tools.Word.Bookmark.SpellingErrors%2A>属性。  
   
  ]]></format>
         </remarks>
@@ -5981,7 +5868,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>带到第一个段落，然后运行文本控制拼写检查器，如果在书签中存在拼写错误。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Bookmark>文本到第一个段落，然后运行使用控制拼写检查器，如果在书签中有拼写错误。  
   
  此示例适用于文档级自定义。  
   
@@ -6012,16 +5899,16 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Word.Bookmark>控件具有的起始位置和结束位置。 结束的位置是远的开始点<xref:Microsoft.Office.Tools.Word.Bookmark>控件。  
+ <xref:Microsoft.Office.Tools.Word.Bookmark>控件具有的起始位置和结束位置。 结束位置是从开头距离最远的点<xref:Microsoft.Office.Tools.Word.Bookmark>控件。  
   
  使用此属性来更改的大小<xref:Microsoft.Office.Tools.Word.Bookmark>控件。  
   
- 如果此属性设置为一个值大于该值的<xref:Microsoft.Office.Tools.Word.Bookmark.End%2A>属性，<xref:Microsoft.Office.Tools.Word.Bookmark.End%2A>属性设置为相同的值的<xref:Microsoft.Office.Tools.Word.Bookmark.Start%2A>属性。  
+ 如果此属性设置为值大于该值的<xref:Microsoft.Office.Tools.Word.Bookmark.End%2A>属性，<xref:Microsoft.Office.Tools.Word.Bookmark.End%2A>属性设置为相同的值的<xref:Microsoft.Office.Tools.Word.Bookmark.Start%2A>属性。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件带到第一个段落的文本，然后添加第二个<xref:Microsoft.Office.Tools.Word.Bookmark>控件添加到第一个书签中的第三个单词。 该代码然后移动第一个书签的范围，直到它找到空格，并将该书签的大小重新定义通过更改<xref:Microsoft.Office.Tools.Word.Bookmark.Start%2A>属性。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件使用的第一个段落的文本，然后添加第二个<xref:Microsoft.Office.Tools.Word.Bookmark>到第一个书签中的第三个单词的控件。 直到找到一个空格，并将该书签的大小重新定义的更改，然后移动第一个书签的范围<xref:Microsoft.Office.Tools.Word.Bookmark.Start%2A>属性。  
   
  此示例适用于文档级自定义。  
   
@@ -6060,7 +5947,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果开始<xref:Microsoft.Office.Tools.Word.Bookmark>控件是否已指定的单位开头，则此方法不移动或扩展<xref:Microsoft.Office.Tools.Word.Bookmark>控件。  
+ 如果开头<xref:Microsoft.Office.Tools.Word.Bookmark>指定单元的开始处已存在控件，则此方法不移动或扩展<xref:Microsoft.Office.Tools.Word.Bookmark>控件。  
   
 ## <a name="optional-parameters"></a>可选参数  
  可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
@@ -6068,7 +5955,7 @@
    
   
 ## Examples  
- 下面的代码示例将文本添加到第一个段落，然后添加<xref:Microsoft.Office.Tools.Word.Bookmark>具有到第二个段落的文本控件。 然后，该代码将移动一个字中的书签返回首页。  
+ 下面的代码示例将文本添加到第一个段落，然后添加<xref:Microsoft.Office.Tools.Word.Bookmark>具有第二个段落的文本控件。 然后，该代码将移动一个单词的书签的开始。  
   
  此示例适用于文档级自定义。  
   
@@ -6098,7 +5985,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>文档，然后显示的文本与控制一个消息框中的书签的文本，如果情景长度大于 0。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Bookmark>用到的文档和显示的文本控制消息框中的书签的文本，如果文章长度大于 0。  
   
  此示例适用于文档级自定义。  
   
@@ -6129,7 +6016,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>具有给该文档并显示一个消息框中的书签的文章类型的文本控件。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Bookmark>为文档，并显示一个消息框中的书签的文章类型的文本的控件。  
   
  此示例适用于文档级自定义。  
   
@@ -6160,14 +6047,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要设置此属性，指定的样式，一个整数的本地名称<xref:Microsoft.Office.Interop.Word.WdBuiltinStyle>常量或表示样式的对象。 有关有效的常量的列表，请参阅 Microsoft Visual Basic 对象浏览器。  
+ 若要将此属性设置，请指定一个整数，样式的本地名称<xref:Microsoft.Office.Interop.Word.WdBuiltinStyle>常量或该对象表示样式的对象。 有关有效的常量的列表，请参阅 Microsoft Visual Basic 对象浏览器。  
   
  当您返回的样式<xref:Microsoft.Office.Tools.Word.Bookmark>返回包括多个样式，只有第一个字符或段落样式的控件。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件以在文档中的文本将样式更改为`Heading 1`，然后删除该书签。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件与文档中的文本，将样式更改为`Heading 1`，然后删除该书签。  
   
  此示例适用于文档级自定义。  
   
@@ -6225,7 +6112,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>文档，然后显示的文本与控制一个消息框，如果同义词找到在书签中的第三个单词。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Bookmark>用到的文档和显示的文本控制消息框中，如果找到书签中的第三个单词的同义词。  
   
  此示例适用于文档级自定义。  
   
@@ -6255,7 +6142,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例到文档中，添加一个三列三行的表，然后添加<xref:Microsoft.Office.Tools.Word.Bookmark>到表的控件。 然后，该代码将更改该书签中的表单元格的宽度。  
+ 下面的代码示例到文档中，添加一个包含三列三行的表，然后添加<xref:Microsoft.Office.Tools.Word.Bookmark>控制到表。 然后，该代码更改在书签内表格单元格的宽度。  
   
  此示例适用于文档级自定义。  
   
@@ -6322,10 +6209,8 @@
       <Docs>
         <param name="WdTCSCConverterDirection">
           <see cref="T:Microsoft.Office.Interop.Word.WdTCSCConverterDirection" />。</param>
-        <param name="CommonTerms">
-          如果 Microsoft Office Word 是完整地转换常用表达式，而不是逐字符进行转换，则为 <see langword="true" />。</param>
-        <param name="UseVariants">
-          如果 Word 使用台湾、香港特别行政区和澳门特别行政区字符变量，则为 <see langword="true" />。 仅当从简体中文转换为繁体中文时才可使用。</param>
+        <param name="CommonTerms">如果 Microsoft Office Word 是完整地转换常用表达式，而不是逐字符进行转换，则为 <see langword="true" />。</param>
+        <param name="UseVariants">如果 Word 使用台湾、香港特别行政区和澳门特别行政区字符变量，则为 <see langword="true" />。 仅当从简体中文转换为繁体中文时才可使用。</param>
         <summary>将 <see cref="T:Microsoft.Office.Tools.Word.Bookmark" /> 控件的指定范围从繁体中文转换为简体中文，或从简体中文转换为繁体中文。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -6338,7 +6223,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控制文档，然后将第一个段落的文本在书签中从繁体中文为简体中文，反之亦然。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Bookmark>控制文档，然后将第一个段落的文本在书签中从繁体中文转换为简体中文，反之亦然。  
   
  此示例适用于文档级自定义。  
   
@@ -6369,18 +6254,18 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Word.Bookmark.Text%2A>属性返回的书签未格式化文本。 当设置此属性的文本<xref:Microsoft.Office.Tools.Word.Bookmark>控件被替换。  
+ <xref:Microsoft.Office.Tools.Word.Bookmark.Text%2A>属性将返回该书签的普通的未格式化的文本。 当设置此属性的文本<xref:Microsoft.Office.Tools.Word.Bookmark>控件被替换。  
   
  设置<xref:Microsoft.Office.Tools.Word.Bookmark.Text%2A?displayProperty=fullName>属性不会删除书签。  
   
- 设置<xref:Microsoft.Office.Tools.Word.Bookmark.Text%2A?displayProperty=fullName>跨越多个表格单元格的书签的属性将在第一个单元格内设置的文本。 如果该书签所包含的整个表和周围文本，将删除整个表。  
+ 设置<xref:Microsoft.Office.Tools.Word.Bookmark.Text%2A?displayProperty=fullName>一个书签，用于跨多个表格单元格的属性将在第一个单元格内设置的文本。 如果该书签将包含整个表和周围的文本，将删除整个表。  
   
- 有关设置信息<xref:Microsoft.Office.Tools.Word.Bookmark.Text%2A?displayProperty=fullName>重叠另一个书签的书签属性请参阅[书签控件](/visualstudio/vsto/bookmark-control.md)。  
+ 有关设置信息<xref:Microsoft.Office.Tools.Word.Bookmark.Text%2A?displayProperty=fullName>属性的一个书签，用于重叠另一个书签，请参阅[书签控件](/visualstudio/vsto/bookmark-control.md)。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>具有文本控件，然后在书签中使用显示的字符总数<xref:Microsoft.Office.Tools.Word.Bookmark.ComputeStatistics%2A>方法。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>一个带有文本，然后使用在书签中显示的字符总数<xref:Microsoft.Office.Tools.Word.Bookmark.ComputeStatistics%2A>方法。  
   
  此示例适用于文档级自定义。  
   
@@ -6410,7 +6295,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>具有到文档中，第三个单词中的书签的地方和集的隐藏的文本控件<xref:Microsoft.Office.Tools.Word.Bookmark.TextRetrievalMode%2A>以便不包括隐藏的文本。 它然后会显示在消息框中的书签的文本。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>到文档中的书签和集的第三个词的隐藏的文本与控件<xref:Microsoft.Office.Tools.Word.Bookmark.TextRetrievalMode%2A>，以便隐藏的文本，则不包含。 然后在消息框中显示该书签的文本。  
   
  此示例适用于文档级自定义。  
   
@@ -6440,12 +6325,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法返回的集合包含仅最外层的上下文的范围内嵌套这些表格<xref:Microsoft.Office.Tools.Word.Bookmark>控件。 这些表不能在整个外面的嵌套级别设置的嵌套表。  
+ 此方法返回的集合仅包含表格的上下文的范围中最外层嵌套级别<xref:Microsoft.Office.Tools.Word.Bookmark>控件。 这些表不能在最外层嵌套级别在整个设置的嵌套表。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件到文档中的表，然后将该表粘贴，为嵌套表，到第三个单元格。 然后，该代码在书签中选择下一个表。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件到文档中的表，然后将该表粘贴，作为嵌套表，对第三个单元格。 然后，该代码在书签中选择下一个表。  
   
  此示例适用于文档级自定义。  
   
@@ -6476,12 +6361,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 设置<xref:Microsoft.Office.Interop.Word.Range.TwoLinesInOne%2A>属性<xref:Microsoft.Office.Interop.Word.WdTwoLinesInOneType.wdTwoLinesInOneNoBrackets>设置两个行文本中另一个未括在文本中的任何字符。 设置<xref:Microsoft.Office.Tools.Word.Bookmark.TwoLinesInOne%2A>属性<xref:Microsoft.Office.Interop.Word.WdTwoLinesInOneType.wdTwoLinesInOneNone>还原到两个单独的行组合文本行。  
+ 设置<xref:Microsoft.Office.Interop.Word.Range.TwoLinesInOne%2A>属性设置为<xref:Microsoft.Office.Interop.Word.WdTwoLinesInOneType.wdTwoLinesInOneNoBrackets>在另一个不包含任何字符括在文本中设置两行文本。 设置<xref:Microsoft.Office.Tools.Word.Bookmark.TwoLinesInOne%2A>属性设置为<xref:Microsoft.Office.Interop.Word.WdTwoLinesInOneType.wdTwoLinesInOneNone>组合文本行可将还原到两个单独的行。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>具有到文档，然后设置的文本控件<xref:Microsoft.Office.Tools.Word.Bookmark.TwoLinesInOne%2A>属性<xref:Microsoft.Office.Interop.Word.WdTwoLinesInOneType.wdTwoLinesInOneCurlyBrackets>。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件与文本文档，然后设置<xref:Microsoft.Office.Tools.Word.Bookmark.TwoLinesInOne%2A>属性设置为<xref:Microsoft.Office.Interop.Word.WdTwoLinesInOneType.wdTwoLinesInOneCurlyBrackets>。  
   
  此示例适用于文档级自定义。  
   
@@ -6512,7 +6397,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>使用文档，然后下划线的文本中控制书签中的第三个单词。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件对文档，然后下划线的文本替换书签中的第三个单词。  
   
  此示例适用于文档级自定义。  
   
@@ -6543,10 +6428,10 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 可以仅在共同创作启用的文档中使用此属性。 如果你尝试访问此属性的文档中未启用共同创作，你将收到<xref:System.Runtime.InteropServices.COMException>。  
+ 仅在共同创作启用了的文档中，可以使用此属性。 如果您尝试访问未启用共同创作文档上的此属性，则会收到<xref:System.Runtime.InteropServices.COMException>。  
   
 > [!NOTE]
->  此方法将显示在 IntelliSense Word 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，无法在 Word 2007 项目中使用此属性。  
+>  此方法将出现在 IntelliSense 中在 Word 2007 项目面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Word 2007 项目中使用此属性。  
   
  ]]></format>
         </remarks>
@@ -6573,7 +6458,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例将文本添加到文档并将<xref:Microsoft.Office.Tools.Word.Bookmark>与文本。 使用<xref:Microsoft.Office.Tools.Word.Bookmark.WholeStory%2A>方法，它会扩展书签，使其包括整个文档。  
+ 下面的代码示例向文档添加文本，然后添加<xref:Microsoft.Office.Tools.Word.Bookmark>文本。 使用<xref:Microsoft.Office.Tools.Word.Bookmark.WholeStory%2A>方法，它会扩展书签以包含整个文档。  
   
  此示例适用于文档级自定义。  
   
@@ -6626,7 +6511,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件与文本发送到第一个段落，然后将更改为蓝色的书签的字体颜色。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件使用的第一个段落的文本，然后将更改为蓝色的书签的字体颜色。  
   
  此示例适用于文档级自定义。  
   
@@ -6663,12 +6548,12 @@
 |---------------|-----------------|  
 |`DataOnly`|`true` 若要返回的而不使用 Word XML 标记中; XML 文本否则为`false`。|  
   
- 如果你使用<xref:Microsoft.Office.Tools.Word.Bookmark.XML%2A>未指定参数的属性，它返回<xref:Microsoft.Office.Tools.Word.Bookmark_XMLType>不应在代码中直接使用的对象。  
+ 如果您使用<xref:Microsoft.Office.Tools.Word.Bookmark.XML%2A>而无需指定参数的属性，它返回<xref:Microsoft.Office.Tools.Word.Bookmark_XMLType>不应在代码中直接使用的对象。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件添加到文档，然后将 XML 文本插入书签。 一个消息框，然后显示总数<xref:Microsoft.Office.Interop.Word.XMLNodes>和书签的 XML 内容。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Bookmark>到文档，然后将 XML 文本插入书签控件。 一个消息框，然后显示总数<xref:Microsoft.Office.Interop.Word.XMLNodes>和书签的 XML 内容。  
   
  此示例适用于文档级自定义。  
   
@@ -6699,7 +6584,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件添加到文档，然后将 XML 文本插入书签。 一个消息框，然后显示总数<xref:Microsoft.Office.Interop.Word.XMLNodes>和书签的 XML 内容。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Bookmark>到文档，然后将 XML 文本插入书签控件。 一个消息框，然后显示总数<xref:Microsoft.Office.Interop.Word.XMLNodes>和书签的 XML 内容。  
   
  此示例适用于文档级自定义。  
   
@@ -6729,7 +6614,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例插入到文档中的 XML，并创建<xref:Microsoft.Office.Tools.Word.Bookmark>上第二个字的控件。 然后将其他 XML 插入到书签，并显示的文本<xref:Microsoft.Office.Tools.Word.Bookmark.XMLParentNode%2A>消息框中。  
+ 下面的代码示例将 XML 插入到文档并创建<xref:Microsoft.Office.Tools.Word.Bookmark>上第二个 word 控件。 然后将其他 XML 插入到书签，并显示的文本<xref:Microsoft.Office.Tools.Word.Bookmark.XMLParentNode%2A>消息框中。  
   
  此示例适用于文档级自定义。  
   
@@ -6751,7 +6636,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 新书签将变为<xref:Microsoft.Office.Interop.Word.Bookmark?displayProperty=fullName>对象而不是<xref:Microsoft.Office.Tools.Word.Bookmark?displayProperty=fullName>控件。  
+ 新书签将变为<xref:Microsoft.Office.Interop.Word.Bookmark?displayProperty=fullName>对象而非<xref:Microsoft.Office.Tools.Word.Bookmark?displayProperty=fullName>控件。  
   
  ]]></format>
         </remarks>
