@@ -1,11 +1,11 @@
 <Type Name="CannotRemoveControlException" FullName="Microsoft.Office.Tools.CannotRemoveControlException">
   <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="4a4834487c84f8c6d309cc5bef51f41bed515c68" />
-    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.openlocfilehash" Value="ac65fa910e8084314fcb3044a37ed1090bcd31bb" />
+    <Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" />
     <Meta Name="ms.translationtype" Value="HT" />
     <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
-    <Meta Name="ms.locfileid" Value="29431996" />
+    <Meta Name="ms.lasthandoff" Value="09/19/2018" />
+    <Meta Name="ms.locfileid" Value="46457620" />
   </Metadata>
   <TypeSignature Language="C#" Value="public sealed class CannotRemoveControlException : Microsoft.VisualStudio.Tools.Applications.Runtime.RuntimeException" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit CannotRemoveControlException extends Microsoft.VisualStudio.Tools.Applications.Runtime.RuntimeException" />
@@ -25,24 +25,24 @@
   </Attributes>
   <Docs>
     <summary>
-      <span data-ttu-id="98e43-101">当代码尝试删除在设计时添加到文档的主机控件或 Windows 窗体控件时引发的异常。</span>
+      <span data-ttu-id="aafbf-101">当代码尝试删除在设计时添加到文档的主机控件或 Windows 窗体控件时引发的异常。</span>
       <span class="sxs-lookup">
-        <span data-stu-id="98e43-101">The exception that is thrown when code tries to remove a host control or Windows Forms control that was added to a document at design time.</span>
+        <span data-stu-id="aafbf-101">The exception that is thrown when code tries to remove a host control or Windows Forms control that was added to a document at design time.</span>
       </span>
     </summary>
     <remarks>
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="98e43-102">如果你将主机控件和 Windows 窗体控件添加到属于文档级自定义在设计时的文档中，你不能在运行时删除这些控件。</span><span class="sxs-lookup"><span data-stu-id="98e43-102">If you add host controls and Windows Forms controls to documents that are part of document-level customizations at design time, you cannot delete these controls at run time.</span></span> <span data-ttu-id="98e43-103">有关详细信息，请参阅[在运行时向 Office 文档添加控件](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time.md)。</span><span class="sxs-lookup"><span data-stu-id="98e43-103">For more information, see [Adding Controls to Office Documents at Run Time](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time.md).</span></span>  
+ <span data-ttu-id="aafbf-102">如果在设计时文档中添加宿主控件和 Windows 窗体控件的文档级自定义的一部分，则无法在运行时删除这些控件。</span><span class="sxs-lookup"><span data-stu-id="aafbf-102">If you add host controls and Windows Forms controls to documents that are part of document-level customizations at design time, you cannot delete these controls at run time.</span></span> <span data-ttu-id="aafbf-103">有关详细信息，请参阅 [在运行时向 Office 文档添加控件](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。</span><span class="sxs-lookup"><span data-stu-id="aafbf-103">For more information, see [Adding Controls to Office Documents at Run Time](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time).</span></span>  
   
- <span data-ttu-id="98e43-104">可以引发此异常[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]如果调用以下方法之一来删除已在设计时添加的控件：</span><span class="sxs-lookup"><span data-stu-id="98e43-104">This exception can be thrown by the [!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)] if you call one of the following methods to delete a control that was added at design time:</span></span>  
+ <span data-ttu-id="aafbf-104">可以通过引发此异常[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]如果调用以下方法来删除已在设计时添加的控件之一：</span><span class="sxs-lookup"><span data-stu-id="aafbf-104">This exception can be thrown by the [!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)] if you call one of the following methods to delete a control that was added at design time:</span></span>  
   
--   <span data-ttu-id="98e43-105"><xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法<xref:Microsoft.Office.Tools.Excel.ControlCollection?displayProperty=fullName>Microsoft Office Excel 的文档级自定义项中的对象。</span><span class="sxs-lookup"><span data-stu-id="98e43-105">The <xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A> method of a <xref:Microsoft.Office.Tools.Excel.ControlCollection?displayProperty=fullName> object in a document-level customization for Microsoft Office Excel.</span></span>  
+-   <span data-ttu-id="aafbf-105"><xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法的<xref:Microsoft.Office.Tools.Excel.ControlCollection?displayProperty=fullName>Microsoft Office Excel 的文档级自定义项中的对象。</span><span class="sxs-lookup"><span data-stu-id="aafbf-105">The <xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A> method of a <xref:Microsoft.Office.Tools.Excel.ControlCollection?displayProperty=fullName> object in a document-level customization for Microsoft Office Excel.</span></span>  
   
--   <span data-ttu-id="98e43-106"><xref:Microsoft.Office.Tools.Word.ControlCollection.Remove%2A>方法<xref:Microsoft.Office.Tools.Word.ControlCollection?displayProperty=fullName>Microsoft Office Word 的文档级自定义项中的对象。</span><span class="sxs-lookup"><span data-stu-id="98e43-106">The <xref:Microsoft.Office.Tools.Word.ControlCollection.Remove%2A> method of a <xref:Microsoft.Office.Tools.Word.ControlCollection?displayProperty=fullName> object in a document-level customization for Microsoft Office Word.</span></span>  
+-   <span data-ttu-id="aafbf-106"><xref:Microsoft.Office.Tools.Word.ControlCollection.Remove%2A>方法的<xref:Microsoft.Office.Tools.Word.ControlCollection?displayProperty=fullName>Microsoft Office Word 的文档级自定义项中的对象。</span><span class="sxs-lookup"><span data-stu-id="aafbf-106">The <xref:Microsoft.Office.Tools.Word.ControlCollection.Remove%2A> method of a <xref:Microsoft.Office.Tools.Word.ControlCollection?displayProperty=fullName> object in a document-level customization for Microsoft Office Word.</span></span>  
   
--   <span data-ttu-id="98e43-107">`Delete`的主机控件或 Windows 窗体控件上的 Word 文档或 Excel 工作簿的方法。</span><span class="sxs-lookup"><span data-stu-id="98e43-107">The `Delete` method of a host control or Windows Forms control on a Word document or Excel workbook.</span></span>  
+-   <span data-ttu-id="aafbf-107">`Delete`宿主控件或 Word 文档或 Excel 工作簿上的 Windows 窗体控件的方法。</span><span class="sxs-lookup"><span data-stu-id="aafbf-107">The `Delete` method of a host control or Windows Forms control on a Word document or Excel workbook.</span></span>  
   
  ]]></format>
     </remarks>
