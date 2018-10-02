@@ -1,11 +1,11 @@
 <Type Name="RibbonButton" FullName="Microsoft.Office.Tools.Ribbon.RibbonButton">
   <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="1ed337d99e7f04d30734d8725ced4f044a9845aa" />
-    <Meta Name="ms.sourcegitcommit" Value="5a5a038b6c783bec52842c940b22504bfc62a810" />
+    <Meta Name="ms.openlocfilehash" Value="1657d00126a12da80565de4455d8de8fb90e1347" />
+    <Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" />
     <Meta Name="ms.translationtype" Value="HT" />
     <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="08/03/2018" />
-    <Meta Name="ms.locfileid" Value="29434232" />
+    <Meta Name="ms.lasthandoff" Value="09/19/2018" />
+    <Meta Name="ms.locfileid" Value="46455631" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface RibbonButton : IDisposable, Microsoft.Office.Tools.Ribbon.RibbonControl, System.ComponentModel.IComponent" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract RibbonButton implements class Microsoft.Office.Tools.Ribbon.RibbonComponent, class Microsoft.Office.Tools.Ribbon.RibbonControl, class System.ComponentModel.IComponent, class System.IDisposable" />
@@ -40,7 +40,7 @@
   
  此外可以在运行时创建此控件的实例，并将其添加到动态菜单。 菜单是动态的如果您设置其<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Dynamic%2A>属性设置为`true`。  
   
- 可以设置此控件的某些属性，只能在功能区加载到 Office 应用程序之前，或者该控件添加到动态菜单之前。 有关如何设置这些属性的信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。  
+ 可以设置此控件的某些属性，只能在功能区加载到 Office 应用程序之前，或者该控件添加到动态菜单之前。 有关如何设置这些属性的信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
   
  您可以创建<xref:Microsoft.Office.Tools.Ribbon.RibbonButton>在运行时通过使用<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.CreateRibbonButton%2A>方法的<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory>对象。  
   
@@ -55,7 +55,7 @@
   
 |任务|成员|  
 |----------|------------|  
-|在运行时，将按钮添加到一个菜单，其中具有其<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Dynamic%2A>属性设置为 true。|创建实现的类的实例<xref:Microsoft.Office.Tools.Ribbon.RibbonButton>使用接口 <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.CreateRibbonButton%2A><br /><br /> 方法的<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory>类。 有关详细信息，请参阅[对 Office 项目中的对象的全局访问](/visualstudio/vsto/global-access-to-objects-in-office-projects.md)。<br /><br /> 将实例添加到菜单的`Items`集合。|  
+|在运行时，将按钮添加到一个菜单，其中具有其<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Dynamic%2A>属性设置为 true。|创建实现的类的实例<xref:Microsoft.Office.Tools.Ribbon.RibbonButton>使用接口 <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.CreateRibbonButton%2A><br /><br /> 方法的<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory>类。 有关详细信息，请参阅[对 Office 项目中的对象的全局访问](/visualstudio/vsto/global-access-to-objects-in-office-projects)。<br /><br /> 将实例添加到菜单的`Items`集合。|  
 |更改按钮的大小。|设置<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.ControlSize%2A>到所需的值。 例如，对于大型的按钮，将其设置为`Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge`。|  
 |在按钮上显示图像。|有三种方法可显示图像：<br /><br /> -使用<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.Image%2A>属性。 此属性提供的最大控制。<br />-设置<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.OfficeImageId%2A>为你想要显示为按钮的图标的内置 Microsoft Office 映像的 ID。<br />-使用<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.ImageName%2A>属性连同<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>事件。 此属性提供了一些性能优势。|  
 |禁用或隐藏按钮。|若要禁用按钮，设置<xref:Microsoft.Office.Tools.Ribbon.RibbonControl.Enabled%2A>到`false`。<br /><br /> 若要隐藏按钮，设置<xref:Microsoft.Office.Tools.Ribbon.RibbonControl.Visible%2A>到`false`。|  
@@ -158,7 +158,9 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置在将菜单的 <see cref="P:Microsoft.Office.Tools.Ribbon.RibbonMenu.ItemSize" /> 属性设置为 <c>Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge</c> 时菜单中此按钮上显示的文本。</summary>
-        <value>如果此控件嵌套在另一个菜单或拆分按钮，显示的说明和<see cref="P:Microsoft.Office.Tools.Ribbon.RibbonMenu.ItemSize" />属性的父菜单或<see cref="P:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.ItemSize" />拆分按钮的属性设置为<c>Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge</c>。  可以在运行时更改此属性。</value>
+        <value>如果此控件嵌套在另一个菜单或拆分按钮，显示的说明和<see cref="P:Microsoft.Office.Tools.Ribbon.RibbonMenu.ItemSize" />属性的父菜单或<see cref="P:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.ItemSize" />拆分按钮的属性设置为<c>Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge</c>。  
+  
+可以在运行时更改此属性。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -228,9 +230,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 可以在运行时仅在某些情况下设置此属性。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。  
+ 可以在运行时仅在某些情况下设置此属性。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
   
- 有关设置此属性的信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。  
+ 有关设置此属性的信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
   
  <xref:Microsoft.Office.Tools.Ribbon.RibbonButton.ImageName%2A>属性标识控件显示的图像。 Office 应用程序此映像从你的解决方案只检索一次，以提高性能。 此属性可以设置只能在设计时，因为它标识的图像加载过程<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>事件。 <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage> 时将引发一次每个映像名称显示在功能区。 之后，不能使用此属性更改控件图像。  
   
@@ -402,9 +404,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 可以在运行时仅在某些情况下设置此属性。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。  
+ 可以在运行时仅在某些情况下设置此属性。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
   
- <xref:Microsoft.Office.Tools.Ribbon.RibbonButton.Position%2A>属性时该按钮放置在功能区组中没有任何作用。 有关详细信息，请参阅[如何： 将控件添加到 Backstage 视图](/visualstudio/vsto/how-to-add-controls-to-the-backstage-view.md)。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonButton.Position%2A>属性时该按钮放置在功能区组中没有任何作用。 有关详细信息，请参阅[如何： 将控件添加到 Backstage 视图](/visualstudio/vsto/how-to-add-controls-to-the-backstage-view)。  
   
  ]]></format>
         </remarks>

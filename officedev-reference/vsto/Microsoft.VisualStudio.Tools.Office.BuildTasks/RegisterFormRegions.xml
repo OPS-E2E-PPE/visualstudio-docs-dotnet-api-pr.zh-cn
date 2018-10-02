@@ -1,11 +1,11 @@
 <Type Name="RegisterFormRegions" FullName="Microsoft.VisualStudio.Tools.Office.BuildTasks.RegisterFormRegions">
   <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="387eca97a32c3b38e68260ebedd374cc289585c5" />
-    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.openlocfilehash" Value="a168e28268646a7d574e501f57112d739f073de2" />
+    <Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" />
     <Meta Name="ms.translationtype" Value="HT" />
     <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
-    <Meta Name="ms.locfileid" Value="29439250" />
+    <Meta Name="ms.lasthandoff" Value="09/19/2018" />
+    <Meta Name="ms.locfileid" Value="46456775" />
   </Metadata>
   <TypeSignature Language="C#" Value="public sealed class RegisterFormRegions : Microsoft.VisualStudio.Tools.Office.BuildTasks.BuildTask" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit RegisterFormRegions extends Microsoft.VisualStudio.Tools.Office.BuildTasks.BuildTask" />
@@ -29,9 +29,9 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 设置所有<xref:Microsoft.VisualStudio.Tools.Office.BuildTasks.RegisterFormRegions>属性，，然后调用<xref:Microsoft.VisualStudio.Tools.Office.BuildTasks.RegisterFormRegions.Execute%2A>运行此生成任务。  
+ 将所有设置<xref:Microsoft.VisualStudio.Tools.Office.BuildTasks.RegisterFormRegions>属性，，然后调用<xref:Microsoft.VisualStudio.Tools.Office.BuildTasks.RegisterFormRegions.Execute%2A>运行此生成任务。  
   
- Microsoft Build Engine 使用<xref:Microsoft.VisualStudio.Tools.Office.BuildTasks>生成和部署 Office 解决方案。 但是，可以使用这些类并基于 MSBuild XML 项目文件来创建你自己生成系统。 有关详细信息，请参阅[MSBuild 参考](~/msbuild/msbuild-reference.md)。  
+ Microsoft 生成引擎使用 <xref:Microsoft.VisualStudio.Tools.Office.BuildTasks> 生成和部署 Office 解决方案。 但是，可以使用这些类和基于 MSBuild XML 的项目文件来创建自己的生成系统。 有关详细信息，请参阅[MSBuild 引用](~/msbuild/msbuild-reference)。  
   
  ]]></format>
     </remarks>
@@ -71,7 +71,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置加载项的名称。</summary>
-        <value>A<see cref="T:System.String" />表示外接程序的名称。</value>
+        <value>一个<see cref="T:System.String" />，表示外接程序的名称。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -94,12 +94,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置程序集的名称。</summary>
-        <value>A<see cref="T:System.String" />表示程序集的名称。</value>
+        <value>一个<see cref="T:System.String" />，表示程序集的名称。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 程序集的名称必须包括扩展名。  
+ 程序集的名称必须包含该扩展。  
   
  ]]></format>
         </remarks>
@@ -120,8 +120,7 @@
       <Parameters />
       <Docs>
         <summary>收集表单区域信息，以注册应用程序加载的表单区域，或注销这些信息以卸载表单区域。</summary>
-        <returns>
-          如果成功注册或注销表单区域，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="false" />。</returns>
+        <returns>如果成功注册或注销表单区域，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="false" />。</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
           <see cref="P:Microsoft.VisualStudio.Tools.Office.BuildTasks.RegisterFormRegions.AssemblyName" /> 为 <see langword="null" /> 或空。</exception>
@@ -146,16 +145,16 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置表示表单区域名称和消息类的 <see cref="T:Microsoft.Build.Framework.ITaskItem" /> 对象的数组。</summary>
-        <value>数组<see cref="T:Microsoft.Build.Framework.ITaskItem" />表示窗体区域名称和邮件类的对象。</value>
+        <value>一个数组<see cref="T:Microsoft.Build.Framework.ITaskItem" />对象，表示窗体区域名称和邮件类。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Build.Framework.ITaskItem>包含将按名称引用的数据的两个部分：  
+ <xref:Microsoft.Build.Framework.ITaskItem>包含两个部分将按名称引用的数据：  
   
 1.  `FormRegionName`其中将窗体区域名称作为字符串。  
   
-2.  `MessageClasses`这是一个字符串数组，包含每个消息类作为一个单独的元素。  
+2.  `MessageClasses`它是一个字符串数组，包含每个消息类作为一个单独的元素。  
   
  ]]></format>
         </remarks>
@@ -180,12 +179,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置要为其注册表单区域的 Microsoft Office 应用程序的名称。</summary>
-        <value>A <see cref="T:System.String" /> ，它表示要为其注册窗体区域的 Microsoft Office 应用程序名称。</value>
+        <value>一个<see cref="T:System.String" />，表示要为其注册窗体区域的 Microsoft Office 应用程序的名称。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 对于 Visual Studio 中的 Office 解决方案，唯一有效的应用程序是 Outlook。  
+ 在 Visual Studio 中的 Office 解决方案，唯一有效的应用程序是 Outlook。  
   
  ]]></format>
         </remarks>
@@ -206,7 +205,7 @@
       <Docs>
         <summary>获取或设置一个值，该值指示 <see cref="M:Microsoft.VisualStudio.Tools.Office.BuildTasks.RegisterFormRegions.Execute" /> 是否将卸载表单区域。</summary>
         <value>
-          <see langword="true" /> 如果窗体区域将注销;否则为<see langword="false" />。 默认值为 <see langword="false" />。</value>
+          <see langword="true" /> 如果窗体区域将为未注册;否则为<see langword="false" />。 默认值为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

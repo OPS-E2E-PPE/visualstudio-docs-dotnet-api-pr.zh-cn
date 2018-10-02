@@ -1,11 +1,11 @@
 <Type Name="SharePointCommandException" FullName="Microsoft.VisualStudio.SharePoint.SharePointCommandException">
   <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="e6120b207c8afe753af2f37ae756c00d10fb80a4" />
-    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.openlocfilehash" Value="55e7cad17fde105fe5ee9ce5b50490117a83eb58" />
+    <Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" />
     <Meta Name="ms.translationtype" Value="HT" />
     <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
-    <Meta Name="ms.locfileid" Value="29410429" />
+    <Meta Name="ms.lasthandoff" Value="09/19/2018" />
+    <Meta Name="ms.locfileid" Value="46454916" />
   </Metadata>
   <TypeSignature Language="C#" Value="public class SharePointCommandException : Exception" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit SharePointCommandException extends System.Exception" />
@@ -24,9 +24,9 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- *SharePoint 命令*是可以用于在 SharePoint 工具扩展中调入 SharePoint 服务器对象模型的方法。 SharePoint 命令都由名为 vssphost4.exe 的 64 位进程执行。 在 vssphost4.exe 中引发任何异常返回到 SharePoint 命令的访问权限<xref:Microsoft.VisualStudio.SharePoint.SharePointCommandException>。  
+ *SharePoint 命令*是可用于在 SharePoint 工具扩展中调入 SharePoint 服务器对象模型的方法。 通过名为 vssphost4.exe 的 64 位进程执行 SharePoint 命令。 Vssphost4.exe 中引发的任何异常返回到 SharePoint 命令的访问权限<xref:Microsoft.VisualStudio.SharePoint.SharePointCommandException>。  
   
- 有关 SharePoint 命令的详细信息，请参阅[调入 SharePoint 对象模型](/visualstudio/sharepoint/calling-into-the-sharepoint-object-models.md)。  
+ 有关 SharePoint 命令的详细信息，请参阅[调入 SharePoint 对象模型](/visualstudio/sharepoint/calling-into-the-sharepoint-object-models)。  
   
  ]]></format>
     </remarks>
@@ -102,7 +102,7 @@
         <param name="message">解释异常原因的错误消息。</param>
         <param name="innerException">导致当前异常的异常。  
   
- 如果 innerException 参数不为空引用（在 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中为 <see langword="Nothing" />），则在处理内部异常的 <see langword="catch" /> 块中引发当前异常<c></c>。</param>
+如果 innerException 参数不为空引用（在 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中为 <see langword="Nothing" />），则在处理内部异常的 <see langword="catch" /> 块中引发当前异常<c></c>。</param>
         <summary>使用指定的错误信息和对导致此异常的内部异常的引用来初始化 <see cref="T:Microsoft.VisualStudio.SharePoint.SharePointCommandException" /> 类的新实例。</summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -154,7 +154,7 @@
         <param name="originalStackTrace">vssphost4.exe 进程中异常的原始堆栈跟踪。</param>
         <param name="innerException">导致当前异常的异常。  
   
- 如果 innerException 参数不为是空引用（在 Visual Basic 中为 <see langword="Nothing" />），则在处理内部异常的 <see langword="catch" /> 块中引发当前异常<c></c>。</param>
+如果 innerException 参数不为是空引用（在 Visual Basic 中为 <see langword="Nothing" />），则在处理内部异常的 <see langword="catch" /> 块中引发当前异常<c></c>。</param>
         <summary>使用指定的错误消息、完整类型名称、原始堆栈跟踪和对导致该异常的内部异常的引用来初始化 <see cref="T:Microsoft.VisualStudio.SharePoint.SharePointCommandException" /> 类的新实例。</summary>
         <remarks>To be added.</remarks>
       </Docs>

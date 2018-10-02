@@ -1,11 +1,11 @@
 <Type Name="IExplorerNodeTypeExtension" FullName="Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeExtension">
   <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="520ec456f6912a902f9e6ce51311dea9e0118a34" />
-    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.openlocfilehash" Value="8fbbc8f53c489c8dbfe25dddde30823a40344733" />
+    <Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" />
     <Meta Name="ms.translationtype" Value="HT" />
     <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
-    <Meta Name="ms.locfileid" Value="29408765" />
+    <Meta Name="ms.lasthandoff" Value="09/19/2018" />
+    <Meta Name="ms.locfileid" Value="46457901" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface IExplorerNodeTypeExtension" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IExplorerNodeTypeExtension" />
@@ -21,9 +21,9 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 实现此接口来扩展现有类型的节点。 有关详细信息，请参阅[如何： 扩展服务器资源管理器中的 SharePoint 节点](/visualstudio/sharepoint/how-to-extend-a-sharepoint-node-in-server-explorer.md)。  
+ 实现此接口来扩展现有类型的节点。 有关详细信息，请参阅[如何： 扩展服务器资源管理器中的 SharePoint 节点](/visualstudio/sharepoint/how-to-extend-a-sharepoint-node-in-server-explorer)。  
   
- 实现此接口的类必须包括<xref:System.ComponentModel.Composition.ExportAttribute?displayProperty=fullName>和<xref:Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeTypeAttribute>发现由 Visual Studio。  
+ 实现此接口的类必须包括<xref:System.ComponentModel.Composition.ExportAttribute?displayProperty=fullName>和<xref:Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeTypeAttribute>通过 Visual Studio 来发现。  
   
    
   
@@ -31,7 +31,7 @@
   
 |日期|历史记录|原因|  
 |----------|-------------|------------|  
-|[!INCLUDE[dev10_cpub1](~/includes/dev10-cpub1-md.md)]|添加了新注释以链接到演示如何实现此接口的主题|[!INCLUDE[enhancement](~/includes/enhancement-md.md)]|  
+|[!INCLUDE[dev10_cpub1](~/includes/dev10-cpub1-md.md)]|其中包含指向演示如何实现此接口的主题添加了新注释|[!INCLUDE[enhancement](~/includes/enhancement-md.md)]|  
   
  ]]></format>
     </remarks>
@@ -59,15 +59,15 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 你可以处理的事件`nodeType`参数将功能添加到节点。 例如，你可以处理以下事件：  
+ 你可以处理的事件`nodeType`参数，将功能添加到节点。 例如，你可以处理以下事件：  
   
--   <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeEvents.NodeChildrenRequested>： 处理此事件以将新的子节点添加到节点。 有关详细信息，请参阅[如何： 向服务器资源管理器中添加自定义 SharePoint 节点](/visualstudio/sharepoint/how-to-add-a-custom-sharepoint-node-to-server-explorer.md)。  
+-   <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeEvents.NodeChildrenRequested>： 处理此事件，以便将新的子节点添加到节点。 有关详细信息，请参阅[如何： 将自定义 SharePoint 节点添加到服务器资源管理器](/visualstudio/sharepoint/how-to-add-a-custom-sharepoint-node-to-server-explorer)。  
   
--   <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeEvents.NodeMenuItemsRequested>： 处理此事件以将自定义的快捷菜单项添加到节点。  
+-   <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeEvents.NodeMenuItemsRequested>： 处理此事件，以便将自定义的快捷菜单项添加到节点。  
   
--   <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeEvents.NodePropertiesRequested>： 处理此事件以将自定义属性添加到节点。 属性将显示在**属性**窗口时选择的节点。  
+-   <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeEvents.NodePropertiesRequested>： 处理此事件，以便将自定义属性添加到节点。 属性将显示在**属性**窗口时选择的节点。  
   
- 为每一次调用此方法<xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeExtension>实现。  
+ 此方法为每个调用一次<xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeExtension>实现。  
   
  ]]></format>
         </remarks>

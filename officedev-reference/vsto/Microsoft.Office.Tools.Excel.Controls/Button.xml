@@ -1,11 +1,11 @@
 <Type Name="Button" FullName="Microsoft.Office.Tools.Excel.Controls.Button">
   <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="070732d3a47fc5fbed6428b83d877921acb130bb" />
-    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.openlocfilehash" Value="07b75fddcc327d124f669c24a3b6f856174ecdc1" />
+    <Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" />
     <Meta Name="ms.translationtype" Value="HT" />
     <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
-    <Meta Name="ms.locfileid" Value="29434687" />
+    <Meta Name="ms.lasthandoff" Value="09/19/2018" />
+    <Meta Name="ms.locfileid" Value="46456112" />
   </Metadata>
   <TypeSignature Language="C#" Value="public class Button : System.Windows.Forms.Button" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Button extends System.Windows.Forms.Button" />
@@ -38,9 +38,9 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.Controls.Button?displayProperty=fullName>不同于<xref:System.Windows.Forms.Button?displayProperty=fullName>。 <xref:Microsoft.Office.Tools.Excel.Controls.Button?displayProperty=fullName>具有支持可将其添加到 Excel 工作表并，使其具有更多的方法和属性的其他成员。  
+ <xref:Microsoft.Office.Tools.Excel.Controls.Button?displayProperty=fullName>不同于<xref:System.Windows.Forms.Button?displayProperty=fullName>。 <xref:Microsoft.Office.Tools.Excel.Controls.Button?displayProperty=fullName>具有其他成员，使其能够添加到 Excel 工作表并，为其提供的其他方法和属性。  
   
- 不要使用`New`构造函数来创建一个新<xref:Microsoft.Office.Tools.Excel.Controls.Button>。 使用<xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddButton%2A>方法添加新<xref:Microsoft.Office.Tools.Excel.Controls.Button>向工作表中。  
+ 不要使用`New`构造函数创建一个新<xref:Microsoft.Office.Tools.Excel.Controls.Button>。 使用<xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddButton%2A>方法将添加一个新<xref:Microsoft.Office.Tools.Excel.Controls.Button>到工作表。  
   
  ]]></format>
     </remarks>
@@ -116,13 +116,12 @@
       <Parameters />
       <Docs>
         <summary>激活 <see cref="T:Microsoft.Office.Tools.Excel.Controls.Button" />。</summary>
-        <returns>
-          如果 <see cref="T:Microsoft.Office.Tools.Excel.Controls.Button" /> 已激活，则为 <see langword="true" />；否则为 <see langword="false" />。</returns>
+        <returns>如果 <see cref="T:Microsoft.Office.Tools.Excel.Controls.Button" /> 已激活，则为 <see langword="true" />；否则为 <see langword="false" />。</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例添加两个<xref:Microsoft.Office.Tools.Excel.Controls.Button>控件添加到工作表，然后通过使用以编程方式激活第二个按钮<xref:Microsoft.Office.Tools.Excel.Controls.Button.Activate%2A>方法。  
+ 下面的代码示例添加两个<xref:Microsoft.Office.Tools.Excel.Controls.Button>控件添加到工作表，然后以编程方式激活第二个按钮通过使用<xref:Microsoft.Office.Tools.Excel.Controls.Button.Activate%2A>方法。  
   
  此示例适用于文档级自定义。  
   
@@ -206,7 +205,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.Controls.Button>控件添加到当前工作表。 <xref:System.Windows.Forms.Control.Click>此按钮的事件处理程序显示的值<xref:Microsoft.Office.Tools.Excel.Controls.Button.Creator%2A>和<xref:Microsoft.Office.Tools.Excel.Controls.Button.Application%2A>属性。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Excel.Controls.Button>到当前工作表的控件。 <xref:System.Windows.Forms.Control.Click>事件处理程序，此按钮显示的值<xref:Microsoft.Office.Tools.Excel.Controls.Button.Creator%2A>和<xref:Microsoft.Office.Tools.Excel.Controls.Button.Application%2A>属性。  
   
  此示例适用于文档级自定义。  
   
@@ -241,7 +240,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.Controls.Button>控件添加到工作表，并使用<xref:Microsoft.Office.Tools.Excel.Controls.Button.Border%2A>属性进行着色的单元格的边框绿色。 <xref:System.Windows.Forms.Control.Click>的按钮的事件处理程序使用<xref:Microsoft.Office.Tools.Excel.Controls.Button.Visible%2A>属性来隐藏按钮，然后会提示用户选择取消隐藏按钮，或允许其保持为隐藏。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.Controls.Button>控件与工作表，并使用<xref:Microsoft.Office.Tools.Excel.Controls.Button.Border%2A>属性以绿色的颜色单元格的边框。 <xref:System.Windows.Forms.Control.Click>按钮的事件处理程序使用<xref:Microsoft.Office.Tools.Excel.Controls.Button.Visible%2A>属性来隐藏按钮，然后会提示用户选择要显示该按钮，或允许其保持隐藏状态。  
   
  此示例适用于文档级自定义。  
   
@@ -284,7 +283,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.Controls.Button>单元格 B2 的当前工作表上的控件。 <xref:System.Windows.Forms.Control.Click>按钮事件处理程序显示的当前值<xref:Microsoft.Office.Tools.Excel.Controls.Button.Right%2A>和<xref:Microsoft.Office.Tools.Excel.Controls.Button.Bottom%2A>该按钮的属性。 在运行时调整的列 B 或第 2 行，这些值都会发生变化根据列或行的新大小。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Excel.Controls.Button>单元格 B2 的当前工作表上的控件。 <xref:System.Windows.Forms.Control.Click>按钮的事件处理程序显示的当前值<xref:Microsoft.Office.Tools.Excel.Controls.Button.Right%2A>和<xref:Microsoft.Office.Tools.Excel.Controls.Button.Bottom%2A>按钮的属性。 当列 B 或第 2 行的大小调整在运行时，这些值将更改根据列或行的新大小。  
   
  此示例适用于文档级自定义。  
   
@@ -319,12 +318,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 返回的单元格依赖于单元格的数目，该控件重叠以及的设置<xref:Microsoft.Office.Tools.Excel.Controls.Button.Placement%2A>属性。  
+ 返回的单元格依赖于单元格的数目，该控件重叠和的设置<xref:Microsoft.Office.Tools.Excel.Controls.Button.Placement%2A>属性。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.Controls.Button.TopLeftCell%2A>和<xref:Microsoft.Office.Tools.Excel.Controls.Button.BottomRightCell%2A>属性，以获取左上角边缘和右右角的单元格<xref:Microsoft.Office.Tools.Excel.Controls.Button>控件。 <xref:System.Windows.Forms.Control.Click>按钮事件处理程序进行着色的右上角和左下角单元格边框红色。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.Controls.Button.TopLeftCell%2A>并<xref:Microsoft.Office.Tools.Excel.Controls.Button.BottomRightCell%2A>属性来获取在左上角和右下右角的单元格<xref:Microsoft.Office.Tools.Excel.Controls.Button>控件。 <xref:System.Windows.Forms.Control.Click>事件处理程序按钮的颜色的右上角和右下角单元格边框红色。  
   
  此示例适用于文档级自定义。  
   
@@ -355,12 +354,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法设置的 z 顺序<xref:Microsoft.Office.Tools.Excel.Controls.Button>到中的最后一个索引<xref:Microsoft.Office.Interop.Excel.OLEObjects>集合; 编号的 z 顺序截然相反中的索引编号<xref:Microsoft.Office.Interop.Excel.OLEObjects>集合。 中的更高的索引<xref:Microsoft.Office.Interop.Excel.OLEObjects>集合、 z 顺序的较低<xref:Microsoft.Office.Tools.Excel.Controls.Button>。  
+ 此方法设置的 z 顺序<xref:Microsoft.Office.Tools.Excel.Controls.Button>到中的最后一个索引<xref:Microsoft.Office.Interop.Excel.OLEObjects>集合; 编号的 z 顺序是相反的中的索引编号<xref:Microsoft.Office.Interop.Excel.OLEObjects>集合。 更高版本中的索引<xref:Microsoft.Office.Interop.Excel.OLEObjects>集合、 z 顺序的较小<xref:Microsoft.Office.Tools.Excel.Controls.Button>。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.Controls.Button.BringToFront%2A>和<xref:Microsoft.Office.Tools.Excel.Controls.Button.SendToBack%2A>方法设置为 3 的 z 顺序<xref:Microsoft.Office.Tools.Excel.Controls.Button>工作表上的控件。 如果单击当前在 z 顺序的前面按钮时，则按钮通过调用移动到集合的底层<xref:Microsoft.Office.Tools.Excel.Controls.Button.SendToBack%2A>。 否则，按钮将移至集合的顶层通过调用<xref:Microsoft.Office.Tools.Excel.Controls.Button.BringToFront%2A>。 请注意三个的 z 顺序最初按钮从 2 到 4 的范围。 工作表上的运行时存储控件最初具有 1 的 z 顺序位置。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.Controls.Button.BringToFront%2A>并<xref:Microsoft.Office.Tools.Excel.Controls.Button.SendToBack%2A>方法设置为 3 的 z 顺序<xref:Microsoft.Office.Tools.Excel.Controls.Button>工作表上的控件。 如果单击的按钮当前在 z 顺序的前面，则按钮通过调用移动到集合的底层<xref:Microsoft.Office.Tools.Excel.Controls.Button.SendToBack%2A>。 否则，该按钮移动到集合的顶层通过调用<xref:Microsoft.Office.Tools.Excel.Controls.Button.BringToFront%2A>。 请注意，z 顺序的三个按钮的初始范围从 2 到 4。 工作表上的运行时存储控件最初具有 1 的 z 顺序位置。  
   
  此示例适用于文档级自定义。  
   
@@ -391,20 +390,19 @@
         <param name="Appearance">指定复制图片的方法。</param>
         <param name="Format">该图片的格式。 接受值 <see cref="F:Microsoft.Office.Interop.Excel.XlCopyPictureFormat.xlPicture" />。</param>
         <summary>将 <see cref="T:Microsoft.Office.Tools.Excel.Controls.Button" /> 作为图片复制到剪贴板。</summary>
-        <returns>
-          如果复制成功，则为 <see langword="true" />；否则为 <see langword="false" />。</returns>
+        <returns>如果复制成功，则为 <see langword="true" />；否则为 <see langword="false" />。</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例演示<xref:Microsoft.Office.Tools.Excel.Controls.Button>将自身复制到剪贴板中，当用户单击它时的控件。 <xref:System.Windows.Forms.Control.Click>按钮调用事件处理程序<xref:Microsoft.Office.Tools.Excel.Controls.Button.CopyPicture%2A>方法复制到剪贴板以位图格式的按钮。  
+ 下面的代码示例演示了<xref:Microsoft.Office.Tools.Excel.Controls.Button>将自身复制到剪贴板中，当用户单击它时的控件。 <xref:System.Windows.Forms.Control.Click>事件处理程序按钮调用<xref:Microsoft.Office.Tools.Excel.Controls.Button.CopyPicture%2A>方法复制到剪贴板作为位图按钮。  
   
  此示例适用于文档级自定义。  
   
@@ -440,12 +438,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 因为<xref:Microsoft.Office.Tools.Excel.Controls.Button>创建在 Microsoft Office Excel 中，此属性将返回字符串接，这等同于十六进制数字 5843454c。  
+ 因为<xref:Microsoft.Office.Tools.Excel.Controls.Button>创建在 Microsoft Office Excel，此属性返回字符串 XCEL，这与十六进制数 5843454c。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.Controls.Button>控件添加到当前工作表。 <xref:System.Windows.Forms.Control.Click>此按钮的事件处理程序显示的值<xref:Microsoft.Office.Tools.Excel.Controls.Button.Creator%2A>和<xref:Microsoft.Office.Tools.Excel.Controls.Button.Application%2A>属性。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Excel.Controls.Button>到当前工作表的控件。 <xref:System.Windows.Forms.Control.Click>事件处理程序，此按钮显示的值<xref:Microsoft.Office.Tools.Excel.Controls.Button.Creator%2A>和<xref:Microsoft.Office.Tools.Excel.Controls.Button.Application%2A>属性。  
   
  此示例适用于文档级自定义。  
   
@@ -476,12 +474,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法仅应该用于<xref:Microsoft.Office.Tools.Excel.Controls.Button>，在运行时以编程方式创建。 如果在调用此方法引发异常<xref:Microsoft.Office.Tools.Excel.Controls.Button>，它在设计时添加到工作表。  
+ 此方法只应该用于<xref:Microsoft.Office.Tools.Excel.Controls.Button>，在运行时以编程方式创建。 如果在调用此方法引发异常<xref:Microsoft.Office.Tools.Excel.Controls.Button>在设计时添加到工作表。  
   
    
   
 ## Examples  
- 下面的代码示例演示<xref:Microsoft.Office.Tools.Excel.Controls.Button>删除本身时在用户单击的控件。 <xref:System.Windows.Forms.Control.Click>按钮调用事件处理程序<xref:Microsoft.Office.Tools.Excel.Controls.Button.Delete%2A>方法来删除的按钮。  
+ 下面的代码示例演示了<xref:Microsoft.Office.Tools.Excel.Controls.Button>将自身删除，当用户单击它时的控件。 <xref:System.Windows.Forms.Control.Click>事件处理程序按钮调用<xref:Microsoft.Office.Tools.Excel.Controls.Button.Delete%2A>方法来删除的按钮。  
   
  此示例适用于文档级自定义。  
   
@@ -575,14 +573,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 对所做更改<xref:Microsoft.Office.Tools.Excel.Controls.Button.Height%2A>和<xref:Microsoft.Office.Tools.Excel.Controls.Button.Top%2A>属性值将导致<xref:Microsoft.Office.Tools.Excel.Controls.Button.Bottom%2A>属性值<xref:Microsoft.Office.Tools.Excel.Controls.Button>更改。  
+ 对所做更改<xref:Microsoft.Office.Tools.Excel.Controls.Button.Height%2A>并<xref:Microsoft.Office.Tools.Excel.Controls.Button.Top%2A>属性值将导致<xref:Microsoft.Office.Tools.Excel.Controls.Button.Bottom%2A>属性值为<xref:Microsoft.Office.Tools.Excel.Controls.Button>更改。  
   
  <xref:Microsoft.Office.Tools.Excel.Controls.Button.Height%2A?displayProperty=fullName>属性使用点，而<xref:System.Windows.Forms.Control.Height%2A?displayProperty=fullName>属性使用像素值。  
   
    
   
 ## Examples  
- 下面的代码示例比较的大小调整和重新指定两个行为<xref:Microsoft.Office.Tools.Excel.Controls.Button>向工作表中的控件。 <xref:System.Windows.Forms.Control.Click>的第一个按钮的事件处理程序调整<xref:Microsoft.Office.Tools.Excel.Controls.Button.Height%2A>和<xref:Microsoft.Office.Tools.Excel.Controls.Button.Width%2A>该按钮的属性，以便按钮更改大小，但仍保留在工作表上的相同位置。 <xref:System.Windows.Forms.Control.Click>的第二个按钮的事件处理程序调整<xref:Microsoft.Office.Tools.Excel.Controls.Button.Top%2A>和<xref:Microsoft.Office.Tools.Excel.Controls.Button.Left%2A>该按钮的属性，以便按钮更改在表上的位置，但仍保持相同的大小。  
+ 下面的代码示例进行比较的大小调整和重新定位的两个行为<xref:Microsoft.Office.Tools.Excel.Controls.Button>向工作表中的控件。 <xref:System.Windows.Forms.Control.Click>的第一个按钮的事件处理程序调整<xref:Microsoft.Office.Tools.Excel.Controls.Button.Height%2A>和<xref:Microsoft.Office.Tools.Excel.Controls.Button.Width%2A>按钮的属性，以便按钮更改大小，但仍保留在工作表上的同一位置。 <xref:System.Windows.Forms.Control.Click>的第二个按钮的事件处理程序调整<xref:Microsoft.Office.Tools.Excel.Controls.Button.Top%2A>和<xref:Microsoft.Office.Tools.Excel.Controls.Button.Left%2A>按钮的属性，以便按钮更改在工作表上的位置，但保留在相同的大小。  
   
  此示例适用于文档级自定义。  
   
@@ -618,12 +616,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 控件添加到 Microsoft Office Excel 工作表的索引值开始在 2，因为它是索引<xref:Microsoft.Office.Interop.Excel.OLEObjects>表的集合。  
+ 控件添加到 Microsoft Office Excel 工作表的索引值的索引，因为它开始 2<xref:Microsoft.Office.Interop.Excel.OLEObjects>工作表的集合。  
   
    
   
 ## Examples  
- 下面的代码示例添加三个<xref:Microsoft.Office.Tools.Excel.Controls.Button>向工作表中的控件。 这些按钮共享<xref:System.Windows.Forms.Control.Click>事件处理程序使用<xref:Microsoft.Office.Tools.Excel.Controls.Button.Index%2A>属性显示的被单击的按钮的索引。  
+ 下面的代码示例添加三个<xref:Microsoft.Office.Tools.Excel.Controls.Button>向工作表中的控件。 这些按钮共享<xref:System.Windows.Forms.Control.Click>事件处理程序使用<xref:Microsoft.Office.Tools.Excel.Controls.Button.Index%2A>属性来显示被单击的按钮的索引。  
   
  此示例适用于文档级自定义。  
   
@@ -684,12 +682,12 @@
 ## Remarks  
  <xref:Microsoft.Office.Tools.Excel.Controls.Button.Left%2A?displayProperty=fullName>属性使用点，而<xref:System.Windows.Forms.Control.Left%2A?displayProperty=fullName>属性使用像素值。  
   
- 将该值设置为负数或大于 12288 的数的数字不会引发异常，但会导致控件设置为介于 0 和 12288 之间。  
+ 将值设置为负数或大于 12288 数字不会引发异常，但会导致控件设置为介于 0 和 12288 之间。  
   
    
   
 ## Examples  
- 下面的代码示例比较的大小调整和重新指定两个行为<xref:Microsoft.Office.Tools.Excel.Controls.Button>向工作表中的控件。 <xref:System.Windows.Forms.Control.Click>的第一个按钮的事件处理程序调整<xref:Microsoft.Office.Tools.Excel.Controls.Button.Height%2A>和<xref:Microsoft.Office.Tools.Excel.Controls.Button.Width%2A>该按钮的属性，以便按钮更改大小，但仍保留在工作表上的相同位置。 <xref:System.Windows.Forms.Control.Click>的第二个按钮的事件处理程序调整<xref:Microsoft.Office.Tools.Excel.Controls.Button.Top%2A>和<xref:Microsoft.Office.Tools.Excel.Controls.Button.Left%2A>该按钮的属性，以便按钮更改在表上的位置，但仍保持相同的大小。  
+ 下面的代码示例进行比较的大小调整和重新定位的两个行为<xref:Microsoft.Office.Tools.Excel.Controls.Button>向工作表中的控件。 <xref:System.Windows.Forms.Control.Click>的第一个按钮的事件处理程序调整<xref:Microsoft.Office.Tools.Excel.Controls.Button.Height%2A>和<xref:Microsoft.Office.Tools.Excel.Controls.Button.Width%2A>按钮的属性，以便按钮更改大小，但仍保留在工作表上的同一位置。 <xref:System.Windows.Forms.Control.Click>的第二个按钮的事件处理程序调整<xref:Microsoft.Office.Tools.Excel.Controls.Button.Top%2A>和<xref:Microsoft.Office.Tools.Excel.Controls.Button.Left%2A>按钮的属性，以便按钮更改在工作表上的位置，但保留在相同的大小。  
   
  此示例适用于文档级自定义。  
   
@@ -748,18 +746,17 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示当工作表受保护时，在设计时能否修改 <see cref="T:Microsoft.Office.Tools.Excel.Controls.Button" />。</summary>
-        <value>
-          如果当工作表受保护时不能在设计时修改 <see cref="T:Microsoft.Office.Tools.Excel.Controls.Button" />，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果当工作表受保护时不能在设计时修改 <see cref="T:Microsoft.Office.Tools.Excel.Controls.Button" />，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- A<xref:Microsoft.Office.Tools.Excel.Controls.Button>仅会在工作表保护时锁定。 锁定<xref:Microsoft.Office.Tools.Excel.Controls.Button>无法转移或在设计时调整大小。  
+ 一个<xref:Microsoft.Office.Tools.Excel.Controls.Button>仅可以在工作表受保护时锁定。 锁定<xref:Microsoft.Office.Tools.Excel.Controls.Button>不能移动或调整其大小在设计时。  
   
    
   
 ## Examples  
- 下面的代码示例添加两个<xref:Microsoft.Office.Tools.Excel.Controls.Button>控件添加到当前工作表，并设置<xref:Microsoft.Office.Tools.Excel.Controls.Button.Locked%2A>属性之一的按钮添加到`true`。 此示例然后保护工作表，并使用<xref:Microsoft.Office.Tools.Excel.Workbook.ToggleFormsDesign%2A>方法可将放置在设计模式下的 Microsoft Office Excel。 此时，未锁定的按钮可以移动和调整大小，但不能移动或调整大小的锁定按钮。  
+ 下面的代码示例添加两个<xref:Microsoft.Office.Tools.Excel.Controls.Button>控件添加到当前工作表，并设置<xref:Microsoft.Office.Tools.Excel.Controls.Button.Locked%2A>的其中一个为按钮的属性`true`。 该示例然后保护工作表，并使用<xref:Microsoft.Office.Tools.Excel.Workbook.ToggleFormsDesign%2A>方法放到设计模式下的 Microsoft Office Excel。 此时，未锁定按钮可以移动并调整大小时，但不能移动或调整大小的锁定按钮。  
   
  此示例适用于文档级自定义。  
   
@@ -794,7 +791,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.Controls.Button>控制并将按钮文本分配给所确定的那样描述此按钮时，OLE 对象类型的字符串<xref:Microsoft.Office.Tools.Excel.Controls.Button.OLEType%2A>属性值。  
+ 下面的代码示例将创建<xref:Microsoft.Office.Tools.Excel.Controls.Button>控制并将按钮文本分配给一个字符串，描述由 OLE 对象类型的按钮，<xref:Microsoft.Office.Tools.Excel.Controls.Button.OLEType%2A>属性值。  
   
  此示例适用于文档级自定义。  
   
@@ -853,14 +850,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 父级<xref:Microsoft.Office.Tools.Excel.Controls.Button>是一个连接的容器控件<xref:Microsoft.Office.Tools.Excel.Controls.Button>与该文档不<xref:Microsoft.Office.Interop.Excel.Range>包含<xref:Microsoft.Office.Tools.Excel.Controls.Button>。  
+ 父<xref:Microsoft.Office.Tools.Excel.Controls.Button>是连接的容器控件<xref:Microsoft.Office.Tools.Excel.Controls.Button>与该文档不<xref:Microsoft.Office.Interop.Excel.Range>，其中包含<xref:Microsoft.Office.Tools.Excel.Controls.Button>。  
   
- 父级<xref:Microsoft.Office.Tools.Excel.Controls.Button>仅可作为访问<xref:System.Object>。  
+ 父<xref:Microsoft.Office.Tools.Excel.Controls.Button>仅可作为访问<xref:System.Object>。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.Controls.Button>控件添加到当前工作表。 <xref:System.Windows.Forms.Control.Click>此按钮的事件处理程序显示的值<xref:Microsoft.Office.Tools.Excel.Controls.Button.Parent%2A>属性。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Excel.Controls.Button>到当前工作表的控件。 <xref:System.Windows.Forms.Control.Click>此按钮事件处理程序中显示的值<xref:Microsoft.Office.Tools.Excel.Controls.Button.Parent%2A>属性。  
   
  此示例适用于文档级自定义。  
   
@@ -890,18 +887,17 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个对象，该对象指示 <see cref="T:Microsoft.Office.Tools.Excel.Controls.Button" /> 附加到其下面的单元格的方式。</summary>
-        <value>以下 <see cref="T:Microsoft.Office.Interop.Excel.XlPlacement" /> 值之一：  
+        <value>以下 <see cref="T:Microsoft.Office.Interop.Excel.XlPlacement" /> 值之一： 
+-   <see cref="F:Microsoft.Office.Interop.Excel.XlPlacement.xlFreeFloating" />.  
   
--   <see cref="F:Microsoft.Office.Interop.Excel.XlPlacement.xlFreeFloating" />。  
+-   <see cref="F:Microsoft.Office.Interop.Excel.XlPlacement.xlMove" />.  
   
--   <see cref="F:Microsoft.Office.Interop.Excel.XlPlacement.xlMove" />。  
-  
--   <see cref="F:Microsoft.Office.Interop.Excel.XlPlacement.xlMoveAndSize" />。</value>
+-   <see cref="F:Microsoft.Office.Interop.Excel.XlPlacement.xlMoveAndSize" />.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例添加两个<xref:Microsoft.Office.Tools.Excel.Controls.Button>具有不同的运行时行为，向工作表中的控件。 第一个按钮覆盖单元格 B2 C3 到的范围。 当用户在运行时调整大小的列或在此范围内的行时，第一个按钮将调整大小以适应所做的更改。 第二个按钮涵盖的单元格 B5 到 C6，范围和<xref:Microsoft.Office.Tools.Excel.Controls.Button.Placement%2A>此按钮的属性设置为<xref:Microsoft.Office.Interop.Excel.XlPlacement.xlFreeFloating>。 当用户在运行时调整大小的列或在此范围内的行时，第二个按钮不会更改大小。  
+ 下面的代码示例添加两个<xref:Microsoft.Office.Tools.Excel.Controls.Button>具有不同的运行时行为向工作表中的控件。 第一个按钮涵盖范围的单元格 B2 到 C3。 在运行时在用户调整列或在此范围内的行，第一个按钮将调整大小以适应所做的更改。 第二个按钮涵盖范围的单元格 B5 到 C6，并<xref:Microsoft.Office.Tools.Excel.Controls.Button.Placement%2A>此按钮的属性设置为<xref:Microsoft.Office.Interop.Excel.XlPlacement.xlFreeFloating>。 在运行时在用户调整列或在此范围内的行，第二个按钮不会更改大小。  
   
  此示例适用于文档级自定义。  
   
@@ -934,13 +930,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示打印工作表时，是否打印 <see cref="T:Microsoft.Office.Tools.Excel.Controls.Button" />。</summary>
-        <value>
-          如果在打印工作表时打印 <see cref="T:Microsoft.Office.Tools.Excel.Controls.Button" />，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果在打印工作表时打印 <see cref="T:Microsoft.Office.Tools.Excel.Controls.Button" />，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例演示<xref:Microsoft.Office.Tools.Excel.Controls.Button>控件替换为<xref:System.Windows.Forms.Control.Click>生成工作表的打印预览的事件处理程序。 事件处理程序会提示用户指定按钮应在打印预览中通过设置显示<xref:Microsoft.Office.Tools.Excel.Controls.Button.PrintObject%2A>属性。  
+ 下面的代码示例演示<xref:Microsoft.Office.Tools.Excel.Controls.Button>控件，其<xref:System.Windows.Forms.Control.Click>事件处理程序生成的工作表打印预览。 事件处理程序会提示用户指定按钮应在打印预览中通过设置显示<xref:Microsoft.Office.Tools.Excel.Controls.Button.PrintObject%2A>属性。  
   
  此示例适用于文档级自定义。  
   
@@ -980,12 +975,12 @@
   
  <xref:Microsoft.Office.Tools.Excel.Controls.Button.Right%2A?displayProperty=fullName>属性使用点，而<xref:System.Windows.Forms.Control.Right%2A?displayProperty=fullName>属性使用像素值。  
   
- 将该值设置为负数或大于 12288 的数的数字不会引发异常，但会导致控件设置为介于 0 和 12288 之间。  
+ 将值设置为负数或大于 12288 数字不会引发异常，但会导致控件设置为介于 0 和 12288 之间。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.Controls.Button>单元格 B2 上的控件。 <xref:System.Windows.Forms.Control.Click>按钮事件处理程序显示的当前值<xref:Microsoft.Office.Tools.Excel.Controls.Button.Right%2A>和<xref:Microsoft.Office.Tools.Excel.Controls.Button.Bottom%2A>该按钮的属性。 在运行时调整的列 B 或第 2 行，这些值都会发生变化根据列或行的新大小。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Excel.Controls.Button>单元格 B2 上的控件。 <xref:System.Windows.Forms.Control.Click>按钮的事件处理程序显示的当前值<xref:Microsoft.Office.Tools.Excel.Controls.Button.Right%2A>和<xref:Microsoft.Office.Tools.Excel.Controls.Button.Bottom%2A>按钮的属性。 当列 B 或第 2 行的大小调整在运行时，这些值将更改根据列或行的新大小。  
   
  此示例适用于文档级自定义。  
   
@@ -1012,8 +1007,7 @@
         <Parameter Name="Replace" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Replace">
-          如果设置为 <see langword="true" />，则用 <see cref="T:Microsoft.Office.Tools.Excel.Controls.Button" /> 替换当前选中的内容；如果设置为 <see langword="false" />，则扩展当前选择范围，使之包含以前选择的所有对象和 <see cref="T:Microsoft.Office.Tools.Excel.Controls.Button" />。</param>
+        <param name="Replace">如果设置为 <see langword="true" />，则用 <see cref="T:Microsoft.Office.Tools.Excel.Controls.Button" /> 替换当前选中的内容；如果设置为 <see langword="false" />，则扩展当前选择范围，使之包含以前选择的所有对象和 <see cref="T:Microsoft.Office.Tools.Excel.Controls.Button" />。</param>
         <summary>选择 <see cref="T:Microsoft.Office.Tools.Excel.Controls.Button" />。</summary>
         <returns>此方法将返回一个空引用（在 Visual Basic 中为 <see langword="Nothing" />）；否则，此方法将返回 <see langword="true" />。</returns>
         <remarks>
@@ -1022,12 +1016,12 @@
 ## Remarks  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例添加两个<xref:Microsoft.Office.Tools.Excel.Controls.Button>控件添加到工作表，然后通过使用以编程方式选择这两个按钮<xref:Microsoft.Office.Tools.Excel.Controls.Button.Select%2A>方法。 首次调用<xref:Microsoft.Office.Tools.Excel.Controls.Button.Select%2A>通过中`true`的值的`Replace`参数以确保第一个按钮在工作表中的唯一选择。 第二次调用<xref:Microsoft.Office.Tools.Excel.Controls.Button.Select%2A>通过中`false`以便第二个按钮都被选中第一个按钮。  
+ 下面的代码示例添加两个<xref:Microsoft.Office.Tools.Excel.Controls.Button>控件添加到工作表，然后通过以编程方式选择这两个按钮<xref:Microsoft.Office.Tools.Excel.Controls.Button.Select%2A>方法。 首次调用<xref:Microsoft.Office.Tools.Excel.Controls.Button.Select%2A>传入`true`的值的`Replace`参数以确保第一个按钮在工作表上的唯一选择。 第二次调用<xref:Microsoft.Office.Tools.Excel.Controls.Button.Select%2A>传入`false`，以便在第二个按钮选择除第一个按钮。  
   
  此示例适用于文档级自定义。  
   
@@ -1058,12 +1052,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法设置的 z 顺序<xref:Microsoft.Office.Tools.Excel.Controls.Button>到中的第一个索引<xref:Microsoft.Office.Interop.Excel.OLEObjects>集合; 编号的 z 顺序截然相反中的索引编号<xref:Microsoft.Office.Interop.Excel.OLEObjects>集合。 中的更高的索引<xref:Microsoft.Office.Interop.Excel.OLEObjects>集合、 z 顺序的较低<xref:Microsoft.Office.Tools.Excel.Controls.Button>。  
+ 此方法设置的 z 顺序<xref:Microsoft.Office.Tools.Excel.Controls.Button>到中的第一个索引<xref:Microsoft.Office.Interop.Excel.OLEObjects>集合; 编号的 z 顺序是相反的中的索引编号<xref:Microsoft.Office.Interop.Excel.OLEObjects>集合。 更高版本中的索引<xref:Microsoft.Office.Interop.Excel.OLEObjects>集合、 z 顺序的较小<xref:Microsoft.Office.Tools.Excel.Controls.Button>。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.Controls.Button.BringToFront%2A>和<xref:Microsoft.Office.Tools.Excel.Controls.Button.SendToBack%2A>方法设置为 3 的 z 顺序<xref:Microsoft.Office.Tools.Excel.Controls.Button>工作表上的控件。 如果单击当前在 z 顺序的前面按钮时，则按钮通过调用移动到集合的底层<xref:Microsoft.Office.Tools.Excel.Controls.Button.SendToBack%2A>。 否则，按钮将移至集合的顶层通过调用<xref:Microsoft.Office.Tools.Excel.Controls.Button.BringToFront%2A>。 请注意三个的 z 顺序最初按钮从 2 到 4 的范围。 工作表上的运行时存储控件最初具有 1 的 z 顺序位置。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.Controls.Button.BringToFront%2A>并<xref:Microsoft.Office.Tools.Excel.Controls.Button.SendToBack%2A>方法设置为 3 的 z 顺序<xref:Microsoft.Office.Tools.Excel.Controls.Button>工作表上的控件。 如果单击的按钮当前在 z 顺序的前面，则按钮通过调用移动到集合的底层<xref:Microsoft.Office.Tools.Excel.Controls.Button.SendToBack%2A>。 否则，该按钮移动到集合的顶层通过调用<xref:Microsoft.Office.Tools.Excel.Controls.Button.BringToFront%2A>。 请注意，z 顺序的三个按钮的初始范围从 2 到 4。 工作表上的运行时存储控件最初具有 1 的 z 顺序位置。  
   
  此示例适用于文档级自定义。  
   
@@ -1163,12 +1157,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 通常将重写此方法可以更改控件的可见性行为。  
+ 通常，将会替代此方法可以更改该控件的可见性行为。  
   
  ]]></format>
         </remarks>
         <block subset="none" type="overrides">
-          <para>在重写<see cref="M:Microsoft.Office.Tools.Excel.Controls.Button.SetVisibleCore(System.Boolean)" />在派生类中，一定要调用基类的<c>SetVisibleCore</c>方法，以强制要更改的控件的可见性。</para>
+          <para>重写时<see cref="M:Microsoft.Office.Tools.Excel.Controls.Button.SetVisibleCore(System.Boolean)" />在派生类中，请务必调用基类的<c>SetVisibleCore</c>方法来强制执行要更改的控件的可见性。</para>
         </block>
       </Docs>
     </Member>
@@ -1196,7 +1190,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.Controls.Button>控件添加到当前工作表。 <xref:System.Windows.Forms.Control.Click>此按钮的事件处理程序使用<xref:Microsoft.Office.Tools.Excel.Controls.Button.ShapeRange%2A>属性来获取<xref:Microsoft.Office.Interop.Excel.ShapeRange?displayProperty=fullName>按钮，然后增加此宽度和<xref:Microsoft.Office.Interop.Excel.ShapeRange?displayProperty=fullName>10 点。 事件处理程序仅调整按钮的宽度，尽管高度还更改自动使该控件将保留原始的比例。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Excel.Controls.Button>到当前工作表的控件。 <xref:System.Windows.Forms.Control.Click>此按钮的事件处理程序使用<xref:Microsoft.Office.Tools.Excel.Controls.Button.ShapeRange%2A>属性来获取<xref:Microsoft.Office.Interop.Excel.ShapeRange?displayProperty=fullName>按钮，然后会增加此宽度<xref:Microsoft.Office.Interop.Excel.ShapeRange?displayProperty=fullName>10 点。 虽然事件处理程序仅调整按钮的宽度，高度还自动更改，以便该控件将保留原始比例。  
   
  此示例适用于文档级自定义。  
   
@@ -1313,7 +1307,7 @@
    
   
 ## Examples  
- 下面的代码示例比较的大小调整和重新指定两个行为<xref:Microsoft.Office.Tools.Excel.Controls.Button>向工作表中的控件。 <xref:System.Windows.Forms.Control.Click>的第一个按钮的事件处理程序调整<xref:Microsoft.Office.Tools.Excel.Controls.Button.Height%2A>和<xref:Microsoft.Office.Tools.Excel.Controls.Button.Width%2A>该按钮的属性，以便按钮更改大小，但仍保留在工作表上的相同位置。 <xref:System.Windows.Forms.Control.Click>的第二个按钮的事件处理程序调整<xref:Microsoft.Office.Tools.Excel.Controls.Button.Top%2A>和<xref:Microsoft.Office.Tools.Excel.Controls.Button.Left%2A>该按钮的属性，以便按钮更改在表上的位置，但仍保持相同的大小。  
+ 下面的代码示例进行比较的大小调整和重新定位的两个行为<xref:Microsoft.Office.Tools.Excel.Controls.Button>向工作表中的控件。 <xref:System.Windows.Forms.Control.Click>的第一个按钮的事件处理程序调整<xref:Microsoft.Office.Tools.Excel.Controls.Button.Height%2A>和<xref:Microsoft.Office.Tools.Excel.Controls.Button.Width%2A>按钮的属性，以便按钮更改大小，但仍保留在工作表上的同一位置。 <xref:System.Windows.Forms.Control.Click>的第二个按钮的事件处理程序调整<xref:Microsoft.Office.Tools.Excel.Controls.Button.Top%2A>和<xref:Microsoft.Office.Tools.Excel.Controls.Button.Left%2A>按钮的属性，以便按钮更改在工作表上的位置，但仍保持相同的大小。  
   
  此示例适用于文档级自定义。  
   
@@ -1348,7 +1342,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.Controls.Button.TopLeftCell%2A>和<xref:Microsoft.Office.Tools.Excel.Controls.Button.BottomRightCell%2A>属性，以获取左上角边缘和右右角的单元格<xref:Microsoft.Office.Tools.Excel.Controls.Button>控件。 <xref:System.Windows.Forms.Control.Click>按钮事件处理程序进行着色的右上角和左下角单元格边框红色。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.Controls.Button.TopLeftCell%2A>并<xref:Microsoft.Office.Tools.Excel.Controls.Button.BottomRightCell%2A>属性来获取在左上角和右下右角的单元格<xref:Microsoft.Office.Tools.Excel.Controls.Button>控件。 <xref:System.Windows.Forms.Control.Click>事件处理程序按钮的颜色的右上角和右下角单元格边框红色。  
   
  此示例适用于文档级自定义。  
   
@@ -1423,13 +1417,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值表示 <see cref="T:Microsoft.Office.Tools.Excel.Controls.Button" /> 是否可见。</summary>
-        <value>
-          如果 <see cref="T:Microsoft.Office.Tools.Excel.Controls.Button" /> 可见，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果 <see cref="T:Microsoft.Office.Tools.Excel.Controls.Button" /> 可见，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.Controls.Button>控件添加到工作表，并使用<xref:Microsoft.Office.Tools.Excel.Controls.Button.Border%2A>属性进行着色的单元格的边框绿色。 <xref:System.Windows.Forms.Control.Click>的按钮的事件处理程序使用<xref:Microsoft.Office.Tools.Excel.Controls.Button.Visible%2A>属性来隐藏按钮，然后会提示用户选择取消隐藏按钮，或允许其保持为隐藏。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.Controls.Button>控件与工作表，并使用<xref:Microsoft.Office.Tools.Excel.Controls.Button.Border%2A>属性以绿色的颜色单元格的边框。 <xref:System.Windows.Forms.Control.Click>按钮的事件处理程序使用<xref:Microsoft.Office.Tools.Excel.Controls.Button.Visible%2A>属性来隐藏按钮，然后会提示用户选择要显示该按钮，或允许其保持隐藏状态。  
   
  此示例适用于文档级自定义。  
   
@@ -1465,16 +1458,16 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 对所做更改<xref:Microsoft.Office.Tools.Excel.Controls.Button.Width%2A>和 left 的属性值将导致<xref:Microsoft.Office.Tools.Excel.Controls.Button.Right%2A>属性值<xref:Microsoft.Office.Tools.Excel.Controls.Button>更改。  
+ 对所做更改<xref:Microsoft.Office.Tools.Excel.Controls.Button.Width%2A>和 left 的属性值将导致<xref:Microsoft.Office.Tools.Excel.Controls.Button.Right%2A>属性值为<xref:Microsoft.Office.Tools.Excel.Controls.Button>更改。  
   
  <xref:Microsoft.Office.Tools.Excel.Controls.Button.Width%2A?displayProperty=fullName>属性使用点，而<xref:System.Windows.Forms.Control.Width%2A?displayProperty=fullName>属性使用像素值。  
   
- 将该值设置为负数或大于 12288 的数的数字不会引发异常，但会导致控件设置为介于 1 和 12288 之间。  
+ 将值设置为负数或大于 12288 数字不会引发异常，但会导致控件设置为介于 1 和 12288 之间。  
   
    
   
 ## Examples  
- 下面的代码示例比较的大小调整和重新指定两个行为<xref:Microsoft.Office.Tools.Excel.Controls.Button>向工作表中的控件。 <xref:System.Windows.Forms.Control.Click>的第一个按钮的事件处理程序调整<xref:Microsoft.Office.Tools.Excel.Controls.Button.Height%2A>和<xref:Microsoft.Office.Tools.Excel.Controls.Button.Width%2A>该按钮的属性，以便按钮更改大小，但仍保留在工作表上的相同位置。 <xref:System.Windows.Forms.Control.Click>的第二个按钮的事件处理程序调整<xref:Microsoft.Office.Tools.Excel.Controls.Button.Top%2A>和<xref:Microsoft.Office.Tools.Excel.Controls.Button.Left%2A>该按钮的属性，以便按钮更改在表上的位置，但仍保持相同的大小。  
+ 下面的代码示例进行比较的大小调整和重新定位的两个行为<xref:Microsoft.Office.Tools.Excel.Controls.Button>向工作表中的控件。 <xref:System.Windows.Forms.Control.Click>的第一个按钮的事件处理程序调整<xref:Microsoft.Office.Tools.Excel.Controls.Button.Height%2A>和<xref:Microsoft.Office.Tools.Excel.Controls.Button.Width%2A>按钮的属性，以便按钮更改大小，但仍保留在工作表上的同一位置。 <xref:System.Windows.Forms.Control.Click>的第二个按钮的事件处理程序调整<xref:Microsoft.Office.Tools.Excel.Controls.Button.Top%2A>和<xref:Microsoft.Office.Tools.Excel.Controls.Button.Left%2A>按钮的属性，以便按钮更改在工作表上的位置，但仍保持相同的大小。  
   
  此示例适用于文档级自定义。  
   
@@ -1512,12 +1505,12 @@
 ## Remarks  
  Z 顺序由<xref:Microsoft.Office.Interop.Excel.OLEObjects>集合。  
   
- 在所有对象集合，该对象在 z 顺序的底层在*集合*(1)，并在 z 顺序的前面该对象是*集合*(*集合*。`Count`)。  
+ 对象的任何集合，在 z 顺序的底层对象是*集合*(1)，并在 z 顺序的顶层对象是*集合*(*集合*。`Count`)。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.Controls.Button.ZOrder%2A>属性设置为 3 的 z 顺序<xref:Microsoft.Office.Tools.Excel.Controls.Button>工作表上的控件。 如果单击当前在 z 顺序的前面按钮时，按钮将移动到集合的底层。 否则，按钮将移至集合的顶层。 请注意三个的 z 顺序最初按钮从 2 到 4 的范围。 工作表上的运行时存储控件最初具有 1 的 z 顺序位置。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.Controls.Button.ZOrder%2A>属性设置为 3 的 z 顺序<xref:Microsoft.Office.Tools.Excel.Controls.Button>工作表上的控件。 如果单击按钮当前在 z 顺序的前面时，按钮将移动到集合的底层。 否则，该按钮移到集合的顶层。 请注意，z 顺序的三个按钮的初始范围从 2 到 4。 工作表上的运行时存储控件最初具有 1 的 z 顺序位置。  
   
  此示例适用于文档级自定义。  
   

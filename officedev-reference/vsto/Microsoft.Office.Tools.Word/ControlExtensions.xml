@@ -1,11 +1,11 @@
 <Type Name="ControlExtensions" FullName="Microsoft.Office.Tools.Word.ControlExtensions">
   <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="58816b04b6be5a405cb320dc55a4a19e6f0d7046" />
-    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.openlocfilehash" Value="189654a7c6ecafe32bc369c52b86b8fa7a44142d" />
+    <Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" />
     <Meta Name="ms.translationtype" Value="HT" />
     <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
-    <Meta Name="ms.locfileid" Value="29439354" />
+    <Meta Name="ms.lasthandoff" Value="09/19/2018" />
+    <Meta Name="ms.locfileid" Value="46455776" />
   </Metadata>
   <TypeSignature Language="C#" Value="public static class ControlExtensions" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit ControlExtensions extends System.Object" />
@@ -29,17 +29,17 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Word.ControlExtensions>方法是可用的扩展方法<xref:Microsoft.Office.Tools.Word.ControlCollection>返回对象<xref:Microsoft.Office.Tools.Word.Document.Controls%2A?displayProperty=fullName>（在应用程序级项目中） 的属性或<xref:Microsoft.Office.Tools.Word.DocumentBase.Controls%2A?displayProperty=fullName>在运行时 （在文档级项目中） 的属性。 若要将特定控件添加到文档中，使用在方法名称中包含的控件名称的方法。 例如，若要添加<xref:System.Windows.Forms.Button>，使用<xref:Microsoft.Office.Tools.Word.ControlExtensions.AddButton%2A>方法。  
+ <xref:Microsoft.Office.Tools.Word.ControlExtensions>方法是可用的扩展方法<xref:Microsoft.Office.Tools.Word.ControlCollection>返回的对象<xref:Microsoft.Office.Tools.Word.Document.Controls%2A?displayProperty=fullName>属性 （在应用程序级项目中） 或<xref:Microsoft.Office.Tools.Word.DocumentBase.Controls%2A?displayProperty=fullName>属性 （在文档级项目中） 在运行时。 若要将特定控件添加到文档中，使用方法名称中包含的控件名称的方法。 例如，若要添加<xref:System.Windows.Forms.Button>，使用<xref:Microsoft.Office.Tools.Word.ControlExtensions.AddButton%2A>方法。  
   
- 有关将控件添加到文档的详细信息，请参阅[在运行时向 Office 文档添加控件](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time.md)。 有关扩展方法的详细信息，请参阅[扩展方法](http://msdn.microsoft.com/library/175ce3ff-9bbf-4e64-8421-faeb81a0bb51)和[扩展方法](http://msdn.microsoft.com/library/b8020aae-374d-46a9-bcb7-8cc2390b93b6)。  
+ 有关向文档添加控件的详细信息，请参阅[Adding Controls to Office Documents at Run Time](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。 有关扩展方法的详细信息，请参阅[扩展方法](http://msdn.microsoft.com/library/175ce3ff-9bbf-4e64-8421-faeb81a0bb51)和[扩展方法](http://msdn.microsoft.com/library/b8020aae-374d-46a9-bcb7-8cc2390b93b6)。  
   
 > [!NOTE]
->  在 Word 外接程序项目面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]，可以访问之前，必须添加对 Microsoft.Office.Tools.Word.v4.0.Utilities.dll 程序集的引用<xref:Microsoft.Office.Tools.Word.ControlExtensions>方法。  
+>  Word 外接程序项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]，必须添加对 Microsoft.Office.Tools.Word.v4.0.Utilities.dll 程序集的引用，然后才能访问<xref:Microsoft.Office.Tools.Word.ControlExtensions>方法。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.ControlExtensions.AddButton%2A>方法将添加<xref:Microsoft.Office.Tools.Word.Controls.Button>控制转移到在文档中，第一个段落，然后将文本添加到按钮。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.ControlExtensions.AddButton%2A>方法将添加<xref:Microsoft.Office.Tools.Word.Controls.Button>控制在文档中的第一个段落，然后将文本添加到按钮。 若要使用此示例中，运行从`ThisDocument`在文档级项目中的类。  
   
  [!code-csharp[Trin_WordControlCollection#2](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#2)]
  [!code-vb[Trin_WordControlCollection#2](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#2)]  
@@ -86,7 +86,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.Button>控制转移到在文档中，第一个段落，然后将文本添加到按钮。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Controls.Button>控制在文档中的第一个段落，然后将文本添加到按钮。 若要使用此示例中，运行从`ThisDocument`在文档级项目中的类。  
   
  [!code-csharp[Trin_WordControlCollection#2](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#2)]
  [!code-vb[Trin_WordControlCollection#2](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#2)]  
@@ -140,7 +140,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.Button>控件拖到该文档的开始，然后将文本添加到按钮。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Controls.Button>控制到文档开头，然后将文本添加到按钮。 若要使用此示例中，运行从`ThisDocument`在文档级项目中的类。  
   
  [!code-csharp[Trin_WordControlCollection#3](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#3)]
  [!code-vb[Trin_WordControlCollection#3](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#3)]  
@@ -191,7 +191,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.CheckBox>控制转移到在文档中，第一个段落，然后将文本添加到复选框。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Controls.CheckBox>控制在文档中的第一个段落，然后将文本添加到该复选框。 若要使用此示例中，运行从`ThisDocument`在文档级项目中的类。  
   
  [!code-csharp[Trin_WordControlCollection#4](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#4)]
  [!code-vb[Trin_WordControlCollection#4](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#4)]  
@@ -238,7 +238,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.CheckBox>控件拖到该文档的开始，然后将文本添加到复选框。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Controls.CheckBox>控制到文档开头，然后将文本添加到该复选框。 若要使用此示例中，运行从`ThisDocument`在文档级项目中的类。  
   
  [!code-csharp[Trin_WordControlCollection#5](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#5)]
  [!code-vb[Trin_WordControlCollection#5](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#5)]  
@@ -289,7 +289,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.CheckedListBox>控件在文档中的第一个段落，请向选中的列表框中，添加两个项，然后选择`First Item`复选框。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.CheckedListBox>控制对文档中的第一个段落，向复选的列表框中，添加两个项，然后选择`First Item`复选框。 若要使用此示例中，运行从`ThisDocument`在文档级项目中的类。  
   
  [!code-csharp[Trin_WordControlCollection#6](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#6)]
  [!code-vb[Trin_WordControlCollection#6](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#6)]  
@@ -343,7 +343,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.CheckedListBox>控件拖到文档的开头、 向选中的列表框中，添加两个项，然后选择`First Item`复选框。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.CheckedListBox>控制到文档开头，向复选的列表框中，添加两个项，然后选择`First Item`复选框。 若要使用此示例中，运行从`ThisDocument`在文档级项目中的类。  
   
  [!code-csharp[Trin_WordControlCollection#7](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#7)]
  [!code-vb[Trin_WordControlCollection#7](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#7)]  
@@ -394,7 +394,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.ComboBox>控件在文档中的第一个段落，请将两个项添加到组合框中，，然后选择第一个项。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Controls.ComboBox>控制文档中的第一个段落，将两个项添加到组合框，然后选择第一项。 若要使用此示例中，运行从`ThisDocument`在文档级项目中的类。  
   
  [!code-csharp[Trin_WordControlCollection#8](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#8)]
  [!code-vb[Trin_WordControlCollection#8](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#8)]  
@@ -448,7 +448,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.ComboBox>控件拖到文档的开头到组合框中，添加两个项，然后选择第一个项。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Controls.ComboBox>控制到文档开头，添加到组合框中，两个项，然后选择第一项。 若要使用此示例中，运行从`ThisDocument`在文档级项目中的类。  
   
  [!code-csharp[Trin_WordControlCollection#9](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#9)]
  [!code-vb[Trin_WordControlCollection#9](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#9)]  
@@ -499,7 +499,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.DataGridView>控制转移到在文档中，第一个段落，然后将两个列添加到控件。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Controls.DataGridView>控制在文档中的第一个段落，然后将两列添加到控件。 若要使用此示例中，运行从`ThisDocument`在文档级项目中的类。  
   
  [!code-csharp[Trin_WordControlCollection#11](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#11)]
  [!code-vb[Trin_WordControlCollection#11](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#11)]  
@@ -553,7 +553,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.DataGridView>控件拖到该文档的开始，然后将两个列添加到控件。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Controls.DataGridView>控制到文档开头，然后将两个列添加到该控件。 若要使用此示例中，运行从`ThisDocument`在文档级项目中的类。  
   
  [!code-csharp[Trin_WordControlCollection#12](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#12)]
  [!code-vb[Trin_WordControlCollection#12](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#12)]  
@@ -604,7 +604,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.DateTimePicker>然后设置和文档中的第一个段落中控制为浅蓝色日历的背景。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Controls.DateTimePicker>控制对文档和设置的第一个段落的日历为浅蓝色背景。 若要使用此示例中，运行从`ThisDocument`在文档级项目中的类。  
   
  [!code-csharp[Trin_WordControlCollection#13](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#13)]
  [!code-vb[Trin_WordControlCollection#13](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#13)]  
@@ -658,7 +658,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.DateTimePicker>控件拖到个文档，然后设置开始为浅蓝色日历的背景。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Controls.DateTimePicker>控制到起始位置的文档和设置为浅蓝色日历的背景。 若要使用此示例中，运行从`ThisDocument`在文档级项目中的类。  
   
  [!code-csharp[Trin_WordControlCollection#14](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#14)]
  [!code-vb[Trin_WordControlCollection#14](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#14)]  
@@ -709,7 +709,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.DomainUpDown>控制设置和文档中的第一个段落黄色该控件的背景。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Controls.DomainUpDown>控制对文档和设置的第一个段落为黄色控件的背景。 若要使用此示例中，运行从`ThisDocument`在文档级项目中的类。  
   
  [!code-csharp[Trin_WordControlCollection#15](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#15)]
  [!code-vb[Trin_WordControlCollection#15](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#15)]  
@@ -763,7 +763,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.DomainUpDown>控件拖到个文档，然后设置开始为黄色控件的背景。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Controls.DomainUpDown>控制到起始位置的文档和设置为黄色控件的背景。 若要使用此示例中，运行从`ThisDocument`在文档级项目中的类。  
   
  [!code-csharp[Trin_WordControlCollection#16](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#16)]
  [!code-vb[Trin_WordControlCollection#16](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#16)]  
@@ -814,7 +814,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.HScrollBar>控制文档，，然后移动第一个段落的滚动条的滚动框到中心。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Controls.HScrollBar>控制对第一个段落中文档，然后移动到中心的滚动框的滚动条。 若要使用此示例中，运行从`ThisDocument`在文档级项目中的类。  
   
  [!code-csharp[Trin_WordControlCollection#17](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#17)]
  [!code-vb[Trin_WordControlCollection#17](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#17)]  
@@ -868,7 +868,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.HScrollBar>控制到起始位置的文档，，然后移动到中心滚动条的滚动框。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Controls.HScrollBar>控制到起始位置的文档，然后移动到中心的滚动框的滚动条。 若要使用此示例中，运行从`ThisDocument`在文档级项目中的类。  
   
  [!code-csharp[Trin_WordControlCollection#18](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#18)]
  [!code-vb[Trin_WordControlCollection#18](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#18)]  
@@ -919,7 +919,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.Label>控制然后更改和文档中的第一个段落的文本到`First Name`。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.Label>控制的第一个段落中的文档，然后更改到的文本`First Name`。 若要使用此示例中，运行从`ThisDocument`在文档级项目中的类。  
   
  [!code-csharp[Trin_WordControlCollection#19](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#19)]
  [!code-vb[Trin_WordControlCollection#19](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#19)]  
@@ -973,7 +973,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.Label>控制到个文档，然后更改开始到文本`First Name`。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.Label>控制到起始位置的文档，然后更改到的文本`First Name`。 若要使用此示例中，运行从`ThisDocument`在文档级项目中的类。  
   
  [!code-csharp[Trin_WordControlCollection#20](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#20)]
  [!code-vb[Trin_WordControlCollection#20](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#20)]  
@@ -1024,7 +1024,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.LinkLabel>控制然后更改和文档中的第一个段落的文本到`First Name`。 然后，代码更改为蓝色的链接的颜色并设置<xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A>属性`HoverUnderline`值<xref:System.Windows.Forms.LinkBehavior>枚举。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.LinkLabel>控制的第一个段落中的文档，然后更改到的文本`First Name`。 然后，代码更改为蓝色的链接的颜色并设置<xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A>属性设置为`HoverUnderline`的值<xref:System.Windows.Forms.LinkBehavior>枚举。 若要使用此示例中，运行从`ThisDocument`在文档级项目中的类。  
   
  [!code-csharp[Trin_WordControlCollection#21](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#21)]
  [!code-vb[Trin_WordControlCollection#21](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#21)]  
@@ -1078,7 +1078,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.LinkLabel>控制到个文档，然后更改开始到文本`First Name`。 然后，代码更改为蓝色的链接的颜色并设置<xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A>属性`HoverUnderline`值<xref:System.Windows.Forms.LinkBehavior>枚举。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.LinkLabel>控制到起始位置的文档，然后更改到的文本`First Name`。 然后，代码更改为蓝色的链接的颜色并设置<xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A>属性设置为`HoverUnderline`的值<xref:System.Windows.Forms.LinkBehavior>枚举。 若要使用此示例中，运行从`ThisDocument`在文档级项目中的类。  
   
  [!code-csharp[Trin_WordControlCollection#22](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#22)]
  [!code-vb[Trin_WordControlCollection#22](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#22)]  
@@ -1129,7 +1129,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.ListBox>控件在文档中的第一个段落，请将两个项添加到列表框中，，然后选择第一个项。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Controls.ListBox>控制文档中的第一个段落中，将两个项添加到列表框中，，然后选择第一项。 若要使用此示例中，运行从`ThisDocument`在文档级项目中的类。  
   
  [!code-csharp[Trin_WordControlCollection#23](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#23)]
  [!code-vb[Trin_WordControlCollection#23](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#23)]  
@@ -1183,7 +1183,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.ListBox>控件拖到文档的开头，将两个项添加到列表框中，然后选择第一个项。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Controls.ListBox>控制到文档开头，添加到列表框中，两个项，然后选择第一项。 若要使用此示例中，运行从`ThisDocument`在文档级项目中的类。  
   
  [!code-csharp[Trin_WordControlCollection#24](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#24)]
  [!code-vb[Trin_WordControlCollection#24](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#24)]  
@@ -1234,7 +1234,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.ListView>控件在文档中的第一个段落，将视图更改为`List`，然后将添加到两个项<xref:Microsoft.Office.Tools.Word.Controls.ListView>。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.ListView>控件在文档中的第一个段落，将视图更改为`List`，然后将添加到两个项<xref:Microsoft.Office.Tools.Word.Controls.ListView>。 若要使用此示例中，运行从`ThisDocument`在文档级项目中的类。  
   
  [!code-csharp[Trin_WordControlCollection#25](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#25)]
  [!code-vb[Trin_WordControlCollection#25](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#25)]  
@@ -1288,7 +1288,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.ListView>控制到文档的开头，将视图更改为`List`，然后将添加到两个项<xref:Microsoft.Office.Tools.Word.Controls.ListView>。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.ListView>控件文档的开头，将视图更改为`List`，然后将添加到两个项<xref:Microsoft.Office.Tools.Word.Controls.ListView>。 若要使用此示例中，运行从`ThisDocument`在文档级项目中的类。  
   
  [!code-csharp[Trin_WordControlCollection#26](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#26)]
  [!code-vb[Trin_WordControlCollection#26](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#26)]  
@@ -1339,7 +1339,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.MaskedTextBox>控件添加到文档中，然后设置中的第一个段落`Mask`为 00/00/0000 的属性。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.MaskedTextBox>文档中，然后设置中的第一个段落`Mask`为 00 00/0000 属性。 若要使用此示例中，运行从`ThisDocument`在文档级项目中的类。  
   
  [!code-csharp[Trin_WordControlCollection#27](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#27)]
  [!code-vb[Trin_WordControlCollection#27](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#27)]  
@@ -1388,7 +1388,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.MaskedTextBox>控件添加到的文档，然后设置开始`Mask`为 00/00/0000 的属性。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.MaskedTextBox>到起始位置的文档，然后设置控制`Mask`为 00 00/0000 属性。 若要使用此示例中，运行从`ThisDocument`在文档级项目中的类。  
   
  [!code-csharp[Trin_WordControlCollection#28](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#28)]
  [!code-vb[Trin_WordControlCollection#28](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#28)]  
@@ -1435,7 +1435,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.MonthCalendar>控件添加到文档中，然后设置中的第一个段落<xref:System.Windows.Forms.MonthCalendar.FirstDayOfWeek%2A>到星期一的属性。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.MonthCalendar>文档中，然后设置中的第一个段落<xref:System.Windows.Forms.MonthCalendar.FirstDayOfWeek%2A>属性设置为星期一。 若要使用此示例中，运行从`ThisDocument`在文档级项目中的类。  
   
  [!code-csharp[Trin_WordControlCollection#29](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#29)]
  [!code-vb[Trin_WordControlCollection#29](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#29)]  
@@ -1489,7 +1489,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.MonthCalendar>控件添加到的文档，然后设置开始<xref:System.Windows.Forms.MonthCalendar.FirstDayOfWeek%2A>到星期一的属性。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.MonthCalendar>到起始位置的文档，然后设置控制<xref:System.Windows.Forms.MonthCalendar.FirstDayOfWeek%2A>属性设置为星期一。 若要使用此示例中，运行从`ThisDocument`在文档级项目中的类。  
   
  [!code-csharp[Trin_WordControlCollection#30](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#30)]
  [!code-vb[Trin_WordControlCollection#30](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#30)]  
@@ -1540,7 +1540,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.NumericUpDown>控制设置和文档中的第一个段落的值为 10。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Controls.NumericUpDown>控制对文档和设置的第一段的值为 10。 若要使用此示例中，运行从`ThisDocument`在文档级项目中的类。  
   
  [!code-csharp[Trin_WordControlCollection#31](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#31)]
  [!code-vb[Trin_WordControlCollection#31](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#31)]  
@@ -1594,7 +1594,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.NumericUpDown>控件拖到个文档，然后设置开始的值为 10。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Controls.NumericUpDown>控制到起始位置的文档和设置的值为 10。 若要使用此示例中，运行从`ThisDocument`在文档级项目中的类。  
   
  [!code-csharp[Trin_WordControlCollection#32](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#32)]
  [!code-vb[Trin_WordControlCollection#32](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#32)]  
@@ -1645,7 +1645,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.PictureBox>控件在文档中的第一个段落，然后添加图像。 该示例假定名为的文件`Image.jpg`C 目录的根目录上存在。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Controls.PictureBox>控件在文档中的第一个段落，然后添加图像。 该示例假定名为的文件`Image.jpg`C 目录的根目录上存在。 若要使用此示例中，运行从`ThisDocument`在文档级项目中的类。  
   
  [!code-csharp[Trin_WordControlCollection#33](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#33)]
  [!code-vb[Trin_WordControlCollection#33](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#33)]  
@@ -1699,7 +1699,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.PictureBox>控件拖到该文档的开始，然后添加图像。 该示例假定名为的文件`Image.jpg`C 目录的根目录上存在。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Controls.PictureBox>控件到文档开头，然后添加图像。 该示例假定名为的文件`Image.jpg`C 目录的根目录上存在。 若要使用此示例中，运行从`ThisDocument`在文档级项目中的类。  
   
  [!code-csharp[Trin_WordControlCollection#34](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#34)]
  [!code-vb[Trin_WordControlCollection#34](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#34)]  
@@ -1750,7 +1750,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.ProgressBar>控制然后会增加和文档中的第一个段落的当前位置<xref:Microsoft.Office.Tools.Word.Controls.ProgressBar>为 50。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.ProgressBar>控制对文档，然后增加的第一个段落的当前位置<xref:Microsoft.Office.Tools.Word.Controls.ProgressBar>为 50。 若要使用此示例中，运行从`ThisDocument`在文档级项目中的类。  
   
  [!code-csharp[Trin_WordControlCollection#35](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#35)]
  [!code-vb[Trin_WordControlCollection#35](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#35)]  
@@ -1804,7 +1804,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.ProgressBar>控件拖到文档中，然后增加开头的当前位置<xref:Microsoft.Office.Tools.Word.Controls.ProgressBar>为 50。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.ProgressBar>的当前位置到文档，，然后增加开始控制<xref:Microsoft.Office.Tools.Word.Controls.ProgressBar>为 50。 若要使用此示例中，运行从`ThisDocument`在文档级项目中的类。  
   
  [!code-csharp[Trin_WordControlCollection#36](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#36)]
  [!code-vb[Trin_WordControlCollection#36](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#36)]  
@@ -1855,7 +1855,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.PropertyGrid>控件添加到第一个段落和<xref:Microsoft.Office.Tools.Word.Controls.Button>到第三个段落的控件。 然后在属性网格中显示该按钮的属性。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.PropertyGrid>的第一个段落的控件和一个<xref:Microsoft.Office.Tools.Word.Controls.Button>的第三个段落。 然后，它会在属性网格中显示的按钮的属性。 若要使用此示例中，运行从`ThisDocument`在文档级项目中的类。  
   
  [!code-csharp[Trin_WordControlCollection#37](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#37)]
  [!code-vb[Trin_WordControlCollection#37](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#37)]  
@@ -1909,7 +1909,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.PropertyGrid>控件添加到文档的开头和<xref:Microsoft.Office.Tools.Word.Controls.Button>控制下<xref:Microsoft.Office.Tools.Word.Controls.PropertyGrid>控件。 然后在属性网格中显示该按钮的属性。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.PropertyGrid>到文档开头的控件和一个<xref:Microsoft.Office.Tools.Word.Controls.Button>控制下<xref:Microsoft.Office.Tools.Word.Controls.PropertyGrid>控件。 然后，它会在属性网格中显示的按钮的属性。 若要使用此示例中，运行从`ThisDocument`在文档级项目中的类。  
   
  [!code-csharp[Trin_WordControlCollection#38](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#38)]
  [!code-vb[Trin_WordControlCollection#38](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#38)]  
@@ -1957,12 +1957,12 @@
   
  若要删除<xref:Microsoft.Office.Tools.Word.Controls.RadioButton>以编程方式添加，请使用<xref:Microsoft.Office.Tools.Word.ControlCollection.Remove%2A>方法。  
   
- 当您直接向文档添加多个单选按钮时，单选按钮不互相排斥。 你可以编写代码以使单选按钮互斥;但是，首选的方法是向用户控件添加单选按钮，然后将用户控件添加到文档。  
+ 直接向文档添加多个单选按钮的单选按钮是不互相排斥。 可以编写代码以使单选按钮相互排斥;但是，首选的方法是向用户控件添加单选按钮，然后将用户控件添加到文档。  
   
    
   
 ## Examples  
- 下面的代码示例添加两个<xref:Microsoft.Office.Tools.Word.Controls.RadioButton>控件添加到第一个和第二个段落中的文档，然后将文本分配给每个控件。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+ 下面的代码示例添加两个<xref:Microsoft.Office.Tools.Word.Controls.RadioButton>控件添加到第一个和第二个段落中的文档，然后将文本分配到每个控件。 若要使用此示例中，运行从`ThisDocument`在文档级项目中的类。  
   
  [!code-csharp[Trin_WordControlCollection#39](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#39)]
  [!code-vb[Trin_WordControlCollection#39](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#39)]  
@@ -2013,12 +2013,12 @@
   
  若要删除<xref:Microsoft.Office.Tools.Word.Controls.RadioButton>以编程方式添加，请使用<xref:Microsoft.Office.Tools.Word.ControlCollection.Remove%2A>方法。  
   
- 当您直接向文档添加多个单选按钮时，单选按钮不互相排斥。 你可以编写代码以使单选按钮互斥;但是，首选的方法是向用户控件添加单选按钮，然后将用户控件添加到文档。  
+ 直接向文档添加多个单选按钮的单选按钮是不互相排斥。 可以编写代码以使单选按钮相互排斥;但是，首选的方法是向用户控件添加单选按钮，然后将用户控件添加到文档。  
   
    
   
 ## Examples  
- 下面的代码示例添加两个<xref:Microsoft.Office.Tools.Word.Controls.RadioButton>控件添加到文档中，然后将文本分配给每个控件。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+ 下面的代码示例添加两个<xref:Microsoft.Office.Tools.Word.Controls.RadioButton>控件添加到该文档，然后将文本分配到每个控件。 若要使用此示例中，运行从`ThisDocument`在文档级项目中的类。  
   
  [!code-csharp[Trin_WordControlCollection#40](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#40)]
  [!code-vb[Trin_WordControlCollection#40](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#40)]  
@@ -2069,7 +2069,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.RichTextBox>控制在文档中，将分配到控件，并且然后格式的文本的第一个段落的文本。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Controls.RichTextBox>控制在文档中，为控制，然后格式指定文本的第一个段落的文本。 若要使用此示例中，运行从`ThisDocument`在文档级项目中的类。  
   
  [!code-csharp[Trin_WordControlCollection#41](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#41)]
  [!code-vb[Trin_WordControlCollection#41](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#41)]  
@@ -2123,7 +2123,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.RichTextBox>控制到的文档，将分配到控件，并且然后格式的文本开头的文本。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Controls.RichTextBox>控制到文档中，为控制，然后格式指定文本开头的文本。 若要使用此示例中，运行从`ThisDocument`在文档级项目中的类。  
   
  [!code-csharp[Trin_WordControlCollection#42](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#42)]
  [!code-vb[Trin_WordControlCollection#42](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#42)]  
@@ -2174,7 +2174,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.TextBox>控件添加到文档中，然后为该控件指定文本的第一个段落。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Controls.TextBox>文档，然后为该控件指定文本的第一个段落。 若要使用此示例中，运行从`ThisDocument`在文档级项目中的类。  
   
  [!code-csharp[Trin_WordControlCollection#43](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#43)]
  [!code-vb[Trin_WordControlCollection#43](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#43)]  
@@ -2228,7 +2228,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.TextBox>到文档中，然后为该控件指定文本的起始位置的控件。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Controls.TextBox>到文档中，然后为该控件指定文本的起始位置的控件。 若要使用此示例中，运行从`ThisDocument`在文档级项目中的类。  
   
  [!code-csharp[Trin_WordControlCollection#44](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#44)]
  [!code-vb[Trin_WordControlCollection#44](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#44)]  
@@ -2279,7 +2279,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.TrackBar>控制设置和文档中的第一个段落的之间的位置数<xref:System.TimeSpan.Ticks%2A>上<xref:Microsoft.Office.Tools.Word.Controls.TrackBar>。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.TrackBar>控制对文档和设置的第一段之间的位置数<xref:System.TimeSpan.Ticks%2A>上<xref:Microsoft.Office.Tools.Word.Controls.TrackBar>。 若要使用此示例中，运行从`ThisDocument`在文档级项目中的类。  
   
  [!code-csharp[Trin_WordControlCollection#45](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#45)]
  [!code-vb[Trin_WordControlCollection#45](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#45)]  
@@ -2333,7 +2333,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.TrackBar>控件拖到个文档，然后设置开始的位置之间数<xref:System.TimeSpan.Ticks%2A>上<xref:Microsoft.Office.Tools.Word.Controls.TrackBar>。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.TrackBar>控制到起始位置的文档和设置之间的位置编号<xref:System.TimeSpan.Ticks%2A>上<xref:Microsoft.Office.Tools.Word.Controls.TrackBar>。 若要使用此示例中，运行从`ThisDocument`在文档级项目中的类。  
   
  [!code-csharp[Trin_WordControlCollection#46](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#46)]
  [!code-vb[Trin_WordControlCollection#46](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#46)]  
@@ -2384,7 +2384,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.TreeView>控件在文档中的第一个段落，然后添加到控件的父节点和两个子节点。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Controls.TreeView>控制在文档中的第一个段落，然后向控件中添加父节点和两个子节点。 若要使用此示例中，运行从`ThisDocument`在文档级项目中的类。  
   
  [!code-csharp[Trin_WordControlCollection#47](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#47)]
  [!code-vb[Trin_WordControlCollection#47](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#47)]  
@@ -2438,7 +2438,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.TreeView>控制到文档中，并将父节点和两个子节点然后添加到控件。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Controls.TreeView>控制对该文档，并将父节点和两个子节点然后添加到控件。 若要使用此示例中，运行从`ThisDocument`在文档级项目中的类。  
   
  [!code-csharp[Trin_WordControlCollection#48](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#48)]
  [!code-vb[Trin_WordControlCollection#48](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#48)]  
@@ -2489,7 +2489,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.VScrollBar>控制文档，，然后移动第一个段落的滚动条的滚动框到中心。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Controls.VScrollBar>控制对第一个段落中文档，然后移动到中心的滚动框的滚动条。 若要使用此示例中，运行从`ThisDocument`在文档级项目中的类。  
   
  [!code-csharp[Trin_WordControlCollection#49](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#49)]
  [!code-vb[Trin_WordControlCollection#49](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#49)]  
@@ -2543,7 +2543,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.VScrollBar>控制到起始位置的文档，，然后移动到中心滚动条的滚动框。 若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Controls.VScrollBar>控制到起始位置的文档，然后移动到中心的滚动框的滚动条。 若要使用此示例中，运行从`ThisDocument`在文档级项目中的类。  
   
  [!code-csharp[Trin_WordControlCollection#50](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#50)]
  [!code-vb[Trin_WordControlCollection#50](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#50)]  
@@ -2594,7 +2594,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.WebBrowser>控制转移到在文档中，第一个段落，然后导航到 www.microsoft.com。若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Controls.WebBrowser>控制在文档中的第一个段落，然后转到 www.microsoft.com。 若要使用此示例中，运行从`ThisDocument`在文档级项目中的类。  
   
  [!code-csharp[Trin_WordControlCollection#51](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#51)]
  [!code-vb[Trin_WordControlCollection#51](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#51)]  
@@ -2648,7 +2648,7 @@
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.WebBrowser>控件拖到该文档的开始，然后导航到 www.microsoft.com。若要使用此示例中，运行从`ThisDocument`文档级项目中的类。  
+ 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Controls.WebBrowser>控制到文档开头，然后转到 www.microsoft.com。 若要使用此示例中，运行从`ThisDocument`在文档级项目中的类。  
   
  [!code-csharp[Trin_WordControlCollection#52](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#52)]
  [!code-vb[Trin_WordControlCollection#52](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#52)]  

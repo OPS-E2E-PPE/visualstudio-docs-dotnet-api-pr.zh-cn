@@ -1,11 +1,11 @@
 <Type Name="WorkbookBase" FullName="Microsoft.Office.Tools.Excel.WorkbookBase">
   <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="f2659d2ce094de90e5e74619de714b56973b555b" />
-    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.openlocfilehash" Value="e36f4c2b05b223dd332d67393740cb46cde68ba9" />
+    <Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" />
     <Meta Name="ms.translationtype" Value="HT" />
     <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
-    <Meta Name="ms.locfileid" Value="29436104" />
+    <Meta Name="ms.lasthandoff" Value="09/19/2018" />
+    <Meta Name="ms.locfileid" Value="46456606" />
   </Metadata>
   <TypeSignature Language="C#" Value="public abstract class WorkbookBase : IDisposable, Microsoft.Office.Tools.Excel.IWorkbookExtension, Microsoft.Office.Tools.ICachedDataPersistanceCallback, System.ComponentModel.IComponent, System.ComponentModel.ISupportInitialize, System.Windows.Forms.IBindableComponent" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit WorkbookBase extends System.Object implements class Microsoft.Office.Tools.EntryPoint, class Microsoft.Office.Tools.Excel.IWorkbookExtension, class Microsoft.Office.Tools.ICachedDataPersistanceCallback, class Microsoft.Office.Tools.IExtension, class System.ComponentModel.IComponent, class System.ComponentModel.ISupportInitialize, class System.IDisposable, class System.Windows.Forms.IBindableComponent" />
@@ -48,26 +48,26 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.WorkbookBase>类是适用于基`ThisWorkbook`通过使用 Visual Studio 创建的文档级 Excel 项目中的类。 使用`ThisWorkbook`类以编程方式访问你的项目中的工作簿。 有关详细信息，请参阅[文档级自定义项编程](/visualstudio/vsto/programming-document-level-customizations.md)。  
+ <xref:Microsoft.Office.Tools.Excel.WorkbookBase>类是基类`ThisWorkbook`使用 Visual Studio 创建的文档级 Excel 项目中的类。 使用`ThisWorkbook`类以编程方式访问你的项目中的工作簿。 有关详细信息，请参阅[Programming Document-level Customizations](/visualstudio/vsto/programming-document-level-customizations)。  
   
- <xref:Microsoft.Office.Tools.Excel.WorkbookBase>类提供相同的成员<xref:Microsoft.Office.Interop.Excel.Workbook?displayProperty=fullName>Excel 主互操作程序集，但前者的对象将添加以下功能：  
+ <xref:Microsoft.Office.Tools.Excel.WorkbookBase>类提供了相同的成员<xref:Microsoft.Office.Interop.Excel.Workbook?displayProperty=fullName>对象在 Excel 主互操作程序集，但添加了以下功能：  
   
 -   <xref:Microsoft.Office.Tools.Excel.WorkbookBase.VstoSmartTags%2A> 属性。 使用此属性添加到工作簿的智能标记。  
   
 -   <xref:Microsoft.Office.Tools.Excel.WorkbookBase.InnerObject%2A> 属性。 使用此属性来获取基础<xref:Microsoft.Office.Interop.Excel.Workbook?displayProperty=fullName>工作簿主机项的对象。  
   
--   <xref:Microsoft.Office.Tools.Excel.WorkbookBase.RemoveCustomization%2A> 方法。 使用此方法从文档级自定义项中的工作簿中删除 Office 自定义程序集。  
+-   <xref:Microsoft.Office.Tools.Excel.WorkbookBase.RemoveCustomization%2A> 方法。 使用此方法从文档级自定义中的工作簿中删除 Office 自定义程序集。  
   
--   <xref:Microsoft.Office.Tools.Excel.WorkbookBase.CreateRibbonObjects%2A> 方法。 重写此方法，如果你添加到你的项目通过使用多个自定义功能区**功能区 （可视化设计器）** 项模板，并且想要指定运行时在显示的功能区。  
+-   <xref:Microsoft.Office.Tools.Excel.WorkbookBase.CreateRibbonObjects%2A> 方法。 重写此方法，如果使用的多个自定义功能区添加到你的项目**功能区 （可视化设计器）** 项模板，并且想要指定功能区显示在运行时。  
   
--   <xref:Microsoft.Office.Tools.Excel.WorkbookBase.GetAutomationObject%2A> 方法。 重写此方法，以公开您的项目与工作簿中的 VBA 代码中的类。  
+-   <xref:Microsoft.Office.Tools.Excel.WorkbookBase.GetAutomationObject%2A> 方法。 重写此方法以将向工作簿中的 VBA 代码项目中的类公开。  
   
 ## <a name="creating-workbook-host-items"></a>创建工作簿主机项  
  无法创建<xref:Microsoft.Office.Tools.Excel.WorkbookBase>以编程方式在 Office 项目中的对象。  
   
- 在文档级项目中，`ThisWorkbook`类 (它派生自<xref:Microsoft.Office.Tools.Excel.WorkbookBase>) 自动实例化[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]当最终用户打开工作簿。 有关详细信息，请参阅[文档级自定义项编程](/visualstudio/vsto/programming-document-level-customizations.md)。  
+ 在文档级项目中，`ThisWorkbook`类 (派生自<xref:Microsoft.Office.Tools.Excel.WorkbookBase>) 来自动实例化[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]当最终用户打开工作簿。 有关详细信息，请参阅[Programming Document-level Customizations](/visualstudio/vsto/programming-document-level-customizations)。  
   
- 在应用程序级项目中，你可以创建工作簿主机项以编程方式使用`GetVstoObject`方法。 有关详细信息，请参阅[扩展 Word 文档和 Excel VSTO 外接程序在运行时中的工作簿](/visualstudio/vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)。  
+ 在应用程序级项目中，您可以创建工作簿主机项以编程方式使用`GetVstoObject`方法。 有关更多信息，请参见 [在运行时在 VSTO 外接程序中扩展 Word 文档和 Excel 工作簿](/visualstudio/vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time)。  
   
 ## <a name="usage"></a>用法  
  [!INCLUDE[vsto_net4utilities](~/includes/vsto-net4utilities-md.md)]  
@@ -75,9 +75,9 @@
    
   
 ## Examples  
- [主机项和主机控件概述](/visualstudio/vsto/host-items-and-host-controls-overview.md)  
+ [主机项和主机控件概述](/visualstudio/vsto/host-items-and-host-controls-overview)  
   
- [工作簿主机项](/visualstudio/vsto/workbook-host-item.md)  
+ [工作簿主机项](/visualstudio/vsto/workbook-host-item)  
   
  ]]></format>
     </remarks>
@@ -182,7 +182,7 @@
 ## Remarks  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
  ]]></format>
         </remarks>
@@ -230,100 +230,100 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 默认情况下，工作表函数，从 Excel 2007 及更早版本的 Excel 使用新的算法，可提高其准确性。 但是，在某些情况下，新的算法会降低这些函数相对于 Excel 2007 中其性能的性能和早期版本的 Excel。 若要指定这些工作表函数使用旧算法以提高其性能，设置<xref:Microsoft.Office.Tools.Excel.WorkbookBase.AccuracyVersion%2A>属性设置为 1。  
+ 默认情况下的某些工作表函数，从 Excel 2007 和 Excel 的早期版本使用新的算法，可提高其准确性。 但是，在某些情况下，新算法会降低性能的相对于其性能在 Excel 2007 中的这些函数和 Excel 的早期版本。 若要指定这些工作表函数使用较旧的算法以提高其性能，请设置<xref:Microsoft.Office.Tools.Excel.WorkbookBase.AccuracyVersion%2A>属性设置为 1。  
   
  下表描述的可能设置<xref:Microsoft.Office.Tools.Excel.WorkbookBase.AccuracyVersion%2A>属性。  
   
 |设置|描述|  
 |-------------|-----------------|  
-|0|使用最新、 最准确地算法 （默认值）|  
+|0|使用最新、 最准确的算法 （默认值）|  
 |1|使用 Excel 2007 或更早版本算法|  
-|2|使用 Excel 2010 算法|  
+|2|使用 Excel 2010 的算法|  
   
 > [!NOTE]
->  设置<xref:Microsoft.Office.Tools.Excel.WorkbookBase.AccuracyVersion%2A>为 0、 1 或 2 以外的值的属性将导致未定义的行为。  
+>  设置<xref:Microsoft.Office.Tools.Excel.WorkbookBase.AccuracyVersion%2A>属性设置为 0、 1 或 2 以外的值将导致未定义的行为。  
   
- 下表总结了哪些功能受设置<xref:Microsoft.Office.Tools.Excel.WorkbookBase.AccuracyVersion%2A>属性设置为 1。 "函数不影响"列中列出的函数将始终使用最新的准确性算法或 Excel 2010 中未更改。 有关在其名称中包含一个句点 （.） 的函数名称，以确定相应的函数的名称在中 VBA 作为实现的方法<xref:Microsoft.Office.Interop.Excel.WorksheetFunction>对象，请用下划线字符 (_) 代替时间段。 例如，对应于 BETA VBA 方法。DIST 函数是<xref:Microsoft.Office.Interop.Excel.WorksheetFunction.BetaDist%2A>方法。  
+ 下表总结了设置会影响哪些函数<xref:Microsoft.Office.Tools.Excel.WorkbookBase.AccuracyVersion%2A>属性设置为 1。 "函数不会受到影响"列中列出的函数将始终使用最新精度算法或 Excel 2010 中未更改。 对于在其名称中包含句点 （.） 的函数名称，若要确定相应的函数名称在 VBA 中作为方法实现的<xref:Microsoft.Office.Interop.Excel.WorksheetFunction>对象，该期间将下划线字符 (_)。 例如，为 beta 版本相对应的 VBA 方法。DIST 函数是<xref:Microsoft.Office.Interop.Excel.WorksheetFunction.BetaDist%2A>方法。  
   
 |受影响的函数|不受影响的函数|  
 |------------------------|----------------------------|  
 |忽略|聚合|  
-|BETAINV|BETA.DIST|  
-|BINOMDIST|试用版。清单|  
-|则 CHIDIST 将|BINOM.DIST|  
-|CHIINV|BINOM。清单|  
+|BETAINV|试用版。DIST|  
+|BINOMDIST|试用版。INV|  
+|则 CHIDIST 将|BINOM。DIST|  
+|CHIINV|BINOM。INV|  
 |CHITEST|上限|  
 |置信度|上限。精确|  
-|CRITBINOM|CHISQ.DIST|  
-|CUMIPMT|CHISQ.DIST.RT|  
-|CUMPRINC|CHISQ.INV|  
+|CRITBINOM|CHISQ。DIST|  
+|CUMIPMT|CHISQ。程序分发RT|  
+|CUMPRINC|CHISQ。INV|  
 |ERF|CHISQ.INV.RT|  
 |ERFC|CHISQ.TEST|  
-|EXPONDIST|CONFIDENCE.NORM|  
-|FDIST|CONFIDENCE.T|  
+|EXPONDIST|置信度。NORM|  
+|FDIST|置信度。T|  
 |FINV|COVAR|  
-|FTEST|协方差。P|  
-|GAMMADIST|协方差。S|  
-|GAMMALN|ERF.PRECISE|  
-|GAMMINV|ERFC.PRECISE|  
+|FTEST|协变。P|  
+|GAMMADIST|协变。S|  
+|GAMMALN|ERF。精确|  
+|GAMMINV|ERFC。精确|  
 |HYPGEOMDIST|EXPON。DIST|  
 |IPMT|F.DIST|  
 |IRR|F.DIST.RT|  
 |LOGINV|F.INV|  
-|LOGNORMDIST|F.INV.RT|  
+|LOGNORMDIST|F.INV。RT|  
 |NEGBINOMDIST|F.TEST|  
 |正态分布|FLOOR|  
-|NORMINV|FLOOR。精确|  
-|NORMSDIST|伽玛。DIST|  
-|NORMSINV|伽玛。清单|  
+|NORMINV|基底。精确|  
+|NORMSDIST|GAMMA。DIST|  
+|NORMSINV|GAMMA。INV|  
 |PMT|GAMMALN。精确|  
-|泊松|HYPGEOM.DIST|  
-|PPMT|ISO.CEILING|  
+|泊松|HYPGEOM。DIST|  
+|PPMT|ISO。上限|  
 |STDEV|LOGNORM。DIST|  
-|STDEVP|LOGNORM。清单|  
+|STDEVP|LOGNORM。INV|  
 |TDIST|MOD|  
 |TINV|模式|  
-|则|MODE.MULT|  
-|VAR|MODE.SNGL|  
-|VARA|NEGBINOM.DIST|  
-|VARP|NETWORKDAYS.INTL|  
-|VARPA|范数。DIST|  
-|韦伯|范数。清单|  
-|XIRR|NORM.S.DIST|  
-|ZTEST|NORM.S.INV|  
-||百分位|  
-||百分位。执行|  
-||百分位。INC|  
+|TTEST|模式。MULT|  
+|VAR|模式。SNGL|  
+|VARA|NEGBINOM。DIST|  
+|VARP|NETWORKDAYS。INTL|  
+|VARPA|NORM。DIST|  
+|韦伯|NORM。INV|  
+|XIRR|NORM。S.DIST|  
+|ZTEST|NORM。S.INV|  
+||百分位数|  
+||百分位数。独占|  
+||百分位数。INC|  
 ||位|  
-||位。执行|  
+||位。独占|  
 ||位。INC|  
 ||泊松。DIST|  
 ||四分位数|  
-||四分位数。执行|  
+||四分位数。独占|  
 ||四分位数。INC|  
-||级别|  
-||RANK.AVG|  
-||RANK.EQ|  
-||STDEV.P|  
-||STDEV.S|  
+||排名|  
+||等级。AVG|  
+||等级。EQ|  
+||STDEV。P|  
+||STDEV。S|  
 ||T.DIST|  
 ||T.DIST.2T|  
 ||T.DIST.RT|  
 ||T.DIST.RT|  
 ||T.INV|  
 ||T.INV.2T|  
-||T.INV.RT|  
+||T.INV。RT|  
 ||T.TEST|  
-||VAR.P|  
-||差异S|  
+||VAR。P|  
+||VAR。S|  
 ||工作日|  
 ||WEEKNUM|  
-||WEIBULL.DIST|  
-||WORKDAY.INTL|  
+||韦伯。DIST|  
+||WORKDAY。INTL|  
 ||Z.TEST|  
   
 > [!NOTE]
->  此属性将出现在 IntelliSense Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Excel 2007 项目中使用此属性。  
+>  此属性将出现在 IntelliSense 中 Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，此属性不能使用 Excel 2007 项目中。  
   
  ]]></format>
         </remarks>
@@ -349,7 +349,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 这不会运行可能会附加到工作簿任何 Auto_Activate 或 Auto_Deactivate 宏 (使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.RunAutoMacros%2A>方法来运行这些宏)。  
+ 这不会运行可能附加到工作簿任何 Auto_Activate 或 Auto_Deactivate 宏 (使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.RunAutoMacros%2A>方法来运行这些宏)。  
   
  ]]></format>
         </remarks>
@@ -373,14 +373,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 当你显示相同的工作簿的两个窗口之间切换<xref:Microsoft.Office.Tools.Excel.WorkbookBase.WindowActivate>事件发生，但<xref:Microsoft.Office.Tools.Excel.WorkbookBase.ActivateEvent>工作簿的事件不会发生。  
+ 当显示同一工作簿的两个窗口之间切换<xref:Microsoft.Office.Tools.Excel.WorkbookBase.WindowActivate>发生事件时，但<xref:Microsoft.Office.Tools.Excel.WorkbookBase.ActivateEvent>工作簿的事件不会发生。  
   
- 创建一个新窗口时，此事件不会发生。  
+ 创建一个新的窗口时，不会不会发生此事件。  
   
    
   
 ## Examples  
- 下面的代码示例演示的处理程序<xref:Microsoft.Office.Tools.Excel.WorkbookBase.ActivateEvent>事件。 事件处理程序会显示工作表`Sheet1`时激活该工作簿。  
+ 下面的代码示例演示了一个处理程序<xref:Microsoft.Office.Tools.Excel.WorkbookBase.ActivateEvent>事件。 事件处理程序会显示工作表`Sheet1`时激活该工作簿。  
   
  此示例适用于文档级自定义。  
   
@@ -411,7 +411,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.ActiveChart%2A>属性来获取当前工作簿活动的图表，并将不可见的图表的标题。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.ActiveChart%2A>属性来获取当前工作簿活动图表，并将图表的标题不可见。  
   
  此示例适用于文档级自定义。  
   
@@ -441,7 +441,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果工作簿将显示在多个窗口中，此属性可能在不同的窗口中不同。  
+ 如果工作簿将显示在多个窗口中，此属性可能在不同的 windows 中不同。  
   
    
   
@@ -476,10 +476,10 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果不指定工作簿对象，此属性将返回 active 切片器中活动工作簿。  
+ 如果不指定工作簿对象，此属性将返回在活动工作簿中的活动切片器。  
   
 > [!NOTE]
->  此属性将出现在 IntelliSense Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Excel 2007 项目中使用此属性。  
+>  此属性将出现在 IntelliSense 中 Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，此属性不能使用 Excel 2007 项目中。  
   
  ]]></format>
         </remarks>
@@ -504,7 +504,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例演示的处理程序<xref:Microsoft.Office.Tools.Excel.WorkbookBase.AddinInstall>事件。 工作簿作为外接程序安装时，事件处理程序最大化 Microsoft Office Excel。  
+ 下面的代码示例演示了一个处理程序<xref:Microsoft.Office.Tools.Excel.WorkbookBase.AddinInstall>事件。 该工作簿作为外接程序安装时，事件处理程序最大化 Microsoft Office Excel。  
   
  此示例适用于文档级自定义。  
   
@@ -533,12 +533,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 外接程序不会自动关闭时卸载。  
+ 外接程序不会自动关闭时将其卸载。  
   
    
   
 ## Examples  
- 下面的代码示例演示的处理程序<xref:Microsoft.Office.Tools.Excel.WorkbookBase.AddinUninstall>事件。 当作为外接程序中卸载该工作簿时，事件处理程序将 Microsoft Office Excel 降至最低。  
+ 下面的代码示例演示了一个处理程序<xref:Microsoft.Office.Tools.Excel.WorkbookBase.AddinUninstall>事件。 事件处理程序时工作簿作为外接程序卸载时，最小化 Microsoft Office Excel。  
   
  此示例适用于文档级自定义。  
   
@@ -585,7 +585,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件出现在 IntelliSense Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Excel 2007 项目中使用此事件。  
+ 此事件将显示在 IntelliSense 中 Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Excel 2007 项目中使用此事件。  
   
  ]]></format>
         </remarks>
@@ -610,7 +610,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例演示如何从工作簿中导出 XML 数据。 此示例导入 XML 数据从<xref:System.Data.DataSet>到<xref:Microsoft.Office.Interop.Excel.XmlMap>当前工作簿中。 该示例然后调用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SaveAsXMLData%2A>方法将数据从导出<xref:Microsoft.Office.Interop.Excel.XmlMap>到 XML 文件。 当<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SaveAsXMLData%2A>调用方法时，<xref:Microsoft.Office.Tools.Excel.WorkbookBase.BeforeXmlExport>事件处理程序会报告，正在导出的 XML，和<xref:Microsoft.Office.Tools.Excel.WorkbookBase.AfterXmlExport>事件处理程序会报告是否已成功导出 XML。  
+ 下面的代码示例演示如何从工作簿导出 XML 数据。 此示例导入的 XML 数据<xref:System.Data.DataSet>到<xref:Microsoft.Office.Interop.Excel.XmlMap>当前工作簿中。 该示例然后调用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SaveAsXMLData%2A>方法将数据从导出<xref:Microsoft.Office.Interop.Excel.XmlMap>到一个 XML 文件。 当<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SaveAsXMLData%2A>调用方法时，<xref:Microsoft.Office.Tools.Excel.WorkbookBase.BeforeXmlExport>事件处理程序会报告 XML 所导出和<xref:Microsoft.Office.Tools.Excel.WorkbookBase.AfterXmlExport>事件处理程序会报告是否已成功导出 XML。  
   
  此示例适用于文档级自定义。  
   
@@ -639,7 +639,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例演示如何将 XML 数据导入工作簿。 该示例创建<xref:System.Data.DataSet>客户的名称，并将添加<xref:Microsoft.Office.Interop.Excel.XmlMap>基于的 XML 架构<xref:System.Data.DataSet>到<xref:Microsoft.Office.Tools.Excel.WorkbookBase.XmlMaps%2A>当前工作簿的集合。 该示例然后调用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.XmlImportXml%2A>方法将数据导入到工作表`Sheet1`。 当<xref:Microsoft.Office.Tools.Excel.WorkbookBase.XmlImportXml%2A>调用方法时，<xref:Microsoft.Office.Tools.Excel.WorkbookBase.BeforeXmlImport>事件处理程序会提示用户继续还是取消导入 XML 中，与<xref:Microsoft.Office.Tools.Excel.WorkbookBase.AfterXmlImport>事件处理程序会报告是否已成功导入了 XML。  
+ 下面的代码示例演示如何将 XML 数据导入工作簿。 该示例将创建<xref:System.Data.DataSet>的客户名称，并添加<xref:Microsoft.Office.Interop.Excel.XmlMap>基于的 XML 架构<xref:System.Data.DataSet>到<xref:Microsoft.Office.Tools.Excel.WorkbookBase.XmlMaps%2A>当前工作簿的集合。 该示例然后调用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.XmlImportXml%2A>方法将数据导入到工作表`Sheet1`。 当<xref:Microsoft.Office.Tools.Excel.WorkbookBase.XmlImportXml%2A>调用方法时，<xref:Microsoft.Office.Tools.Excel.WorkbookBase.BeforeXmlImport>事件处理程序会提示用户继续或取消导入 XML 和<xref:Microsoft.Office.Tools.Excel.WorkbookBase.AfterXmlImport>事件处理程序报告是否已成功导入 XML。  
   
  此示例适用于文档级自定义。  
   
@@ -755,7 +755,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 5 到此属性才会生效的 1440年之间，此属性必须设置为一个值。  
+ 此属性必须设置为一个值，从 5 到 1440 此属性才会生效。  
   
  ]]></format>
         </remarks>
@@ -775,13 +775,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示每当工作簿自动更新时，是否将对共享工作簿所做的当前更改发送到其他用户。</summary>
-        <value>
-          如果每当工作簿自动更新时，都将对共享工作簿所做的当前更改发送到其他用户，则为 <see langword="true" />。 如果不发送更改（此工作簿仍与其他用户所做更改保持同步），则为 <see langword="false" />。 默认值为 <see langword="true" />。</value>
+        <value>如果每当工作簿自动更新时，都将对共享工作簿所做的当前更改发送到其他用户，则为 <see langword="true" />。 如果不发送更改（此工作簿仍与其他用户所做更改保持同步），则为 <see langword="false" />。 默认值为 <see langword="true" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.WorkbookBase.AutoUpdateFrequency%2A>从 5 到此属性才会生效 1440年情况下，属性必须设置为一个值。  
+ <xref:Microsoft.Office.Tools.Excel.WorkbookBase.AutoUpdateFrequency%2A>属性必须设置为值从 5 到 1440 此属性才会生效。  
   
  ]]></format>
         </remarks>
@@ -806,7 +805,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.WorkbookBase>类扩展<xref:Microsoft.Office.Tools.Excel.Workbook>对象通过实现<xref:Microsoft.Office.Tools.Excel.IWorkbookExtension>接口。  
+ <xref:Microsoft.Office.Tools.Excel.WorkbookBase>类用于扩展<xref:Microsoft.Office.Tools.Excel.Workbook>通过实现对象<xref:Microsoft.Office.Tools.Excel.IWorkbookExtension>接口。  
   
  ]]></format>
         </remarks>
@@ -830,7 +829,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例演示的处理程序<xref:Microsoft.Office.Tools.Excel.WorkbookBase.BeforeClose>事件。 事件处理程序会提示用户进行保存更改，不保存更改，或取消关闭操作，如果自上次保存后对工作簿进行更改。 如果用户不保存更改，则<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Saved%2A>工作簿的属性设置为`true`，以便 Microsoft Office Excel 不会提示用户保存工作簿时，继续执行关闭操作。 如果用户取消关闭操作，则`Cancel`参数<xref:Microsoft.Office.Interop.Excel.WorkbookEvents_BeforeCloseEventHandler>事件处理程序设置为`true`，以便 Microsoft Office Excel 不会关闭工作簿。  
+ 下面的代码示例演示了一个处理程序<xref:Microsoft.Office.Tools.Excel.WorkbookBase.BeforeClose>事件。 事件处理程序会提示用户要保存更改，不保存更改，还是取消关闭操作如果工作簿自上次保存以来进行了更改。 如果用户不会保存更改，则<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Saved%2A>工作簿的属性设置为`true`，以便 Microsoft Office Excel 不会提示用户保存工作簿时继续执行关闭操作。 如果用户取消关闭操作，则`Cancel`的参数<xref:Microsoft.Office.Interop.Excel.WorkbookEvents_BeforeCloseEventHandler>事件处理程序设置为`true`，以便 Microsoft Office Excel 不会关闭该工作簿。  
   
  此示例适用于文档级自定义。  
   
@@ -859,7 +858,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例演示的处理程序<xref:Microsoft.Office.Tools.Excel.WorkbookBase.BeforePrint>事件。 事件处理程序将提示用户继续打印操作或取消它。 如果用户取消打印操作，则`Cancel`参数<xref:Microsoft.Office.Interop.Excel.WorkbookEvents_BeforePrintEventHandler>事件处理程序设置为`true`，以便 Microsoft Office Excel 不打印工作簿。  
+ 下面的代码示例演示了一个处理程序<xref:Microsoft.Office.Tools.Excel.WorkbookBase.BeforePrint>事件。 事件处理程序会提示用户继续打印操作或取消它。 如果用户取消打印操作，则`Cancel`的参数<xref:Microsoft.Office.Interop.Excel.WorkbookEvents_BeforePrintEventHandler>事件处理程序设置为`true`，以便 Microsoft Office Excel 无法打印该工作簿。  
   
  此示例适用于文档级自定义。  
   
@@ -888,7 +887,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例演示的处理程序<xref:Microsoft.Office.Tools.Excel.WorkbookBase.BeforeSave>事件。 事件处理程序将提示用户继续使用该存储操作或取消它。 如果用户取消保存操作，则`Cancel`参数<xref:Microsoft.Office.Interop.Excel.WorkbookEvents_BeforeSaveEventHandler>事件处理程序设置为`true`，以便 Microsoft Office Excel 不保存该工作簿。  
+ 下面的代码示例演示了一个处理程序<xref:Microsoft.Office.Tools.Excel.WorkbookBase.BeforeSave>事件。 事件处理程序会提示用户继续使用该存储操作或取消它。 如果用户取消保存操作，则`Cancel`的参数<xref:Microsoft.Office.Interop.Excel.WorkbookEvents_BeforeSaveEventHandler>事件处理程序设置为`true`，以便 Microsoft Office Excel 不会保存该工作簿。  
   
  此示例适用于文档级自定义。  
   
@@ -917,12 +916,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 保存为 XML 电子表格文件格式时，将不会发生此事件。  
+ 在将保存到 XML 电子表格文件格式，则不会发生此事件。  
   
    
   
 ## Examples  
- 下面的代码示例演示如何从工作簿中导出 XML 数据。 此示例导入 XML 数据从<xref:System.Data.DataSet>到<xref:Microsoft.Office.Interop.Excel.XmlMap>当前工作簿中。 该示例然后调用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SaveAsXMLData%2A>方法将数据从导出<xref:Microsoft.Office.Interop.Excel.XmlMap>到 XML 文件。 当<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SaveAsXMLData%2A>调用方法时，<xref:Microsoft.Office.Tools.Excel.WorkbookBase.BeforeXmlExport>事件处理程序会报告，正在导出的 XML，和<xref:Microsoft.Office.Tools.Excel.WorkbookBase.AfterXmlExport>事件处理程序会报告是否已成功导出 XML。  
+ 下面的代码示例演示如何从工作簿导出 XML 数据。 此示例导入的 XML 数据<xref:System.Data.DataSet>到<xref:Microsoft.Office.Interop.Excel.XmlMap>当前工作簿中。 该示例然后调用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SaveAsXMLData%2A>方法将数据从导出<xref:Microsoft.Office.Interop.Excel.XmlMap>到一个 XML 文件。 当<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SaveAsXMLData%2A>调用方法时，<xref:Microsoft.Office.Tools.Excel.WorkbookBase.BeforeXmlExport>事件处理程序会报告 XML 所导出和<xref:Microsoft.Office.Tools.Excel.WorkbookBase.AfterXmlExport>事件处理程序会报告是否已成功导出 XML。  
   
  此示例适用于文档级自定义。  
   
@@ -951,7 +950,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例演示如何将 XML 数据导入工作簿。 该示例创建<xref:System.Data.DataSet>客户的名称，并将添加<xref:Microsoft.Office.Interop.Excel.XmlMap>基于的 XML 架构<xref:System.Data.DataSet>到<xref:Microsoft.Office.Tools.Excel.WorkbookBase.XmlMaps%2A>当前工作簿的集合。 该示例然后调用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.XmlImportXml%2A>方法将数据导入到工作表`Sheet1`。 当<xref:Microsoft.Office.Tools.Excel.WorkbookBase.XmlImportXml%2A>调用方法时，<xref:Microsoft.Office.Tools.Excel.WorkbookBase.BeforeXmlImport>事件处理程序会提示用户继续还是取消导入 XML 中，与<xref:Microsoft.Office.Tools.Excel.WorkbookBase.AfterXmlImport>事件处理程序会报告是否已成功导入了 XML。  
+ 下面的代码示例演示如何将 XML 数据导入工作簿。 该示例将创建<xref:System.Data.DataSet>的客户名称，并添加<xref:Microsoft.Office.Interop.Excel.XmlMap>基于的 XML 架构<xref:System.Data.DataSet>到<xref:Microsoft.Office.Tools.Excel.WorkbookBase.XmlMaps%2A>当前工作簿的集合。 该示例然后调用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.XmlImportXml%2A>方法将数据导入到工作表`Sheet1`。 当<xref:Microsoft.Office.Tools.Excel.WorkbookBase.XmlImportXml%2A>调用方法时，<xref:Microsoft.Office.Tools.Excel.WorkbookBase.BeforeXmlImport>事件处理程序会提示用户继续或取消导入 XML 和<xref:Microsoft.Office.Tools.Excel.WorkbookBase.AfterXmlImport>事件处理程序报告是否已成功导入 XML。  
   
  此示例适用于文档级自定义。  
   
@@ -1040,7 +1039,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例创建与另一个 Excel 工作簿的链接，然后提示用户使用该链接将链接目标的值替换<xref:Microsoft.Office.Tools.Excel.WorkbookBase.BreakLink%2A>方法。 此示例假定该工作簿 Book2.xlsx 位于 C 目录的根目录。  
+ 下面的代码示例创建一个链接到另一个 Excel 工作簿，然后会提示用户将该链接的链接目标的值替换为通过使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.BreakLink%2A>方法。 此示例假定 Book2.xlsx C 目录的根目录上存在该工作簿。  
   
  此示例适用于文档级自定义。  
   
@@ -1065,14 +1064,14 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个 <c>Microsoft.Office.Core.DocumentProperties</c> 集合，该集合表示工作簿的所有内置文档属性。</summary>
-        <value>A<c>形式</c>表示工作簿的所有内置文档属性的集合。</value>
+        <value>一个<c>Microsoft.Office.Core.DocumentProperties</c>集合，表示工作簿的所有内置文档属性。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性返回整个集合的内置文档属性。 使用`Microsoft.Office.Core.DocumentProperties.Item(System.Object)`属性以返回集合的单个成员 (`Microsoft.Office.Core.DocumentProperties`对象) 通过指定名称的属性或集合索引 （以数字）。  
+ 此属性返回内置文档属性的整个的集合。 使用`Microsoft.Office.Core.DocumentProperties.Item(System.Object)`属性以返回单个成员的集合 (`Microsoft.Office.Core.DocumentProperties`对象) 只需指定属性的名称或 （作为一个数字） 的集合索引。  
   
- 您可以参考文档属性，按索引值或名称。 以下列表显示可用的内置文档属性名称：  
+ 按索引值或名称，可以引用文档属性。 以下列表显示了可用的内置文档属性名称：  
   
 -   标题  
   
@@ -1086,13 +1085,13 @@
   
 -   模板  
   
--   最后一个作者  
+-   最后的作者  
   
 -   修订号  
   
 -   Application Name  
   
--   上一次打印日期  
+-   上次打印日期  
   
 -   创建日期  
   
@@ -1102,7 +1101,7 @@
   
 -   页面数  
   
--   字的数目  
+-   单词的数量  
   
 -   字符数  
   
@@ -1120,13 +1119,13 @@
   
 -   行数  
   
--   段落数  
+-   一些段落  
   
--   幻灯片数  
+-   幻灯片的数量  
   
--   说明的数  
+-   说明的数量  
   
--   隐藏幻灯片数  
+-   隐藏幻灯片的数量  
   
 -   多媒体剪辑数  
   
@@ -1134,14 +1133,14 @@
   
 -   （带空格） 的字符数  
   
- 容器应用程序不需要定义每个内置文档属性的值。 如果 Microsoft Office Excel 未定义的一个内置文档属性的值，读取`Microsoft.Office.Core.DocumentProperties.Value`该文档属性的属性将引发异常。  
+ 容器应用程序不需要定义每个内置文档属性的值。 如果 Microsoft Office Excel 未定义的一个内置文档属性的值，读取`Microsoft.Office.Core.DocumentProperties.Value`该文档属性的属性引发异常。  
   
  使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.CustomDocumentProperties%2A>属性返回的自定义文档属性的集合。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.BuiltinDocumentProperties%2A>属性列 A 中工作表中显示的所有内置文档属性的当前工作簿`Sheet1`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.BuiltinDocumentProperties%2A>属性可以在工作表的 A 列中显示的所有内置文档属性的当前工作簿`Sheet1`。  
   
  此示例适用于文档级自定义。  
   
@@ -1171,7 +1170,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果工作簿已保存的 Excel 和如果工作簿具有尚未完全重新计算的早期版本中，此属性将返回 0。  
+ 如果工作簿保存在早期版本的 Excel 和如果工作簿具有尚未完全重新计算，此属性将返回 0。  
   
    
   
@@ -1202,13 +1201,12 @@
       <Parameters />
       <Docs>
         <summary>获取一个值，该值指示 Microsoft Office Excel 是否可以将工作簿签入到服务器。</summary>
-        <returns>
-          如果 Microsoft Office Excel 可以将工作簿签入到服务器，则为 <see langword="true" />；否则为 <see langword="false" />。</returns>
+        <returns>如果 Microsoft Office Excel 可以将工作簿签入到服务器，则为 <see langword="true" />；否则为 <see langword="false" />。</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.CanCheckIn%2A>方法来确定是否 Microsoft Office Excel 可以签入到服务器的当前工作簿。 如果工作簿可以签入，则该示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.CheckIn%2A>方法可保存修订版本并签入当前工作簿。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.CanCheckIn%2A>方法来确定 Microsoft Office Excel 可以签入到服务器的当前工作簿。 如果可以签入工作簿，则该示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.CheckIn%2A>方法来保存修订并签入当前工作簿。  
   
  此示例适用于文档级自定义。  
   
@@ -1240,22 +1238,21 @@
         <param name="mode">
           <see cref="T:Microsoft.Office.Interop.Excel.XlFileAccess" /> 值之一。 指定新的访问模式。</param>
         <param name="writePassword">如果文件受写保护且 <c>Mode</c> 为 <see cref="F:Microsoft.Office.Interop.Excel.XlFileAccess.xlReadWrite" />，则指定写保护密码。 如果没有文件密码或 <c>Mode</c> 为 <see cref="F:Microsoft.Office.Interop.Excel.XlFileAccess.xlReadOnly" />，则忽略。</param>
-        <param name="notify">
-          如果为 <see langword="true" />，则在无法直接访问文件时通知用户。</param>
+        <param name="notify">如果为 <see langword="true" />，则在无法直接访问文件时通知用户。</param>
         <summary>更改工作簿的访问权限。 这可能需要从磁盘加载更新版本。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果你有在只读模式下打开的文件，你不具有对该文件的独占访问权。 如果在将文件从只读的为读/写，Microsoft Office Excel 必须加载以确保该文件的新副本更改当你具有以只读方式打开的文件时未不进行任何更改。  
+ 如果必须在只读模式下打开的文件，是否不到文件具有独占访问权限。 如果您将一个文件只读的为读/写，必须将 Microsoft Office Excel 加载的文件，确保新副本时您必须以只读方式打开该文件未不进行任何更改。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例显示一条消息，如果<xref:Microsoft.Office.Tools.Excel.WorkbookBase.ReadOnlyRecommended%2A>属性是`true`和<xref:Microsoft.Office.Tools.Excel.WorkbookBase.ReadOnly%2A>属性是`false`，然后会提示用户设置的文件访问权限为只读的通过调用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.ChangeFileAccess%2A>方法。  
+ 下面的代码示例显示一条消息，如果<xref:Microsoft.Office.Tools.Excel.WorkbookBase.ReadOnlyRecommended%2A>属性是`true`并<xref:Microsoft.Office.Tools.Excel.WorkbookBase.ReadOnly%2A>属性是`false`，然后会提示用户设置的文件访问权限为只读、 只通过调用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.ChangeFileAccess%2A>方法。  
   
  此示例适用于文档级自定义。  
   
@@ -1285,7 +1282,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 关闭工作簿时，将删除早于设置此属性的更改历史记录中的任何更改。  
+ 关闭工作簿时，会删除早于设置此属性的更改历史记录中的任何更改。  
   
  ]]></format>
         </remarks>
@@ -1319,12 +1316,12 @@
 ## Remarks  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例创建 Excel 工作簿的外部链接，然后使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.ChangeLink%2A>方法可以更改链接目标。 此示例假定工作簿 Book2.xlsx 和 Book3.xls 存在在 C 目录的根目录。  
+ 下面的代码示例创建 Excel 工作簿的外部链接，然后使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.ChangeLink%2A>更改链接目标的方法。 此示例假定 Book2.xlsx 和 Book3.xls 的工作簿位于 C 目录的根目录。  
   
  此示例适用于文档级自定义。  
   
@@ -1380,8 +1377,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示在保存工作簿时是否自动运行兼容性检查器。</summary>
-        <value>
-          如果在保存工作簿时应该自动运行兼容性检查器，则为 <see langword="true" />；否则为 <see langword="false" />。 对于 Excel 97-2003 Binary (BIFF8) 工作簿，默认值为 <see langword="true" />；对于所有其他工作簿，默认值为 <see langword="false" />。</value>
+        <value>如果在保存工作簿时应该自动运行兼容性检查器，则为 <see langword="true" />；否则为 <see langword="false" />。 对于 Excel 97-2003 Binary (BIFF8) 工作簿，默认值为 <see langword="true" />；对于所有其他工作簿，默认值为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1403,11 +1399,9 @@
         <Parameter Name="makePublic" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="saveChanges">
-          如果为 <see langword="true" />，则保存更改并签入文档；如果为 <see langword="false" />，则将文档返回到签入状态而不保存修订。</param>
+        <param name="saveChanges">如果为 <see langword="true" />，则保存更改并签入文档；如果为 <see langword="false" />，则将文档返回到签入状态而不保存修订。</param>
         <param name="comments">允许用户为签入的工作簿的修订输入签入批注（仅当 <c>SaveChanges</c> 等于 <see langword="true" /> 时应用）。</param>
-        <param name="makePublic">
-          如果为 <see langword="true" />，则允许用户在工作簿签入后发布该工作簿。 这会提交工作簿供审批，审批过程最终会生成将发布给具有工作簿只读权限的用户的工作簿版本（仅当 <c>SaveChanges</c> 为 <see langword="true" /> 时才会如此）。</param>
+        <param name="makePublic">如果为 <see langword="true" />，则允许用户在工作簿签入后发布该工作簿。 这会提交工作簿供审批，审批过程最终会生成将发布给具有工作簿只读权限的用户的工作簿版本（仅当 <c>SaveChanges</c> 为 <see langword="true" /> 时才会如此）。</param>
         <summary>将本地计算机的工作簿返回到服务器，并将本地工作簿设置为只读，以使它不能进行本地编辑。 调用此方法会关闭工作簿。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -1415,12 +1409,12 @@
 ## Remarks  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.CanCheckIn%2A>方法来确定是否 Microsoft Office Excel 可以签入到服务器的当前工作簿。 如果工作簿可以签入，则该示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.CheckIn%2A>方法可保存修订版本并签入当前工作簿。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.CanCheckIn%2A>方法来确定 Microsoft Office Excel 可以签入到服务器的当前工作簿。 如果可以签入工作簿，则该示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.CheckIn%2A>方法来保存修订并签入当前工作簿。  
   
  此示例适用于文档级自定义。  
   
@@ -1450,12 +1444,9 @@
         <Parameter Name="versionType" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="saveChanges">
-          如果为 <see langword="true" />，则保存更改并签入文档；如果为 <see langword="false" />，则使文档恢复签入状态而不保存修订。</param>
-        <param name="comments">
-          如果为 <see langword="true" />，则启用签入注释；如果为 false，则在签入工作簿时丢弃注释。 此参数仅当 <c>SaveChanges</c> 为 <see langword="true" /> 时才应用。</param>
-        <param name="makePublic">
-          如果为 <see langword="true" />，则允许用户在工作簿签入后发布该工作簿。 这会提交工作簿供审批，审批过程最终会生成将发布给具有工作簿只读权限的用户的工作簿版本（仅当 <c>SaveChanges</c> 为 <see langword="true" /> 时才会如此）。</param>
+        <param name="saveChanges">如果为 <see langword="true" />，则保存更改并签入文档；如果为 <see langword="false" />，则使文档恢复签入状态而不保存修订。</param>
+        <param name="comments">如果为 <see langword="true" />，则启用签入注释；如果为 false，则在签入工作簿时丢弃注释。 此参数仅当 <c>SaveChanges</c> 为 <see langword="true" /> 时才应用。</param>
+        <param name="makePublic">如果为 <see langword="true" />，则允许用户在工作簿签入后发布该工作簿。 这会提交工作簿供审批，审批过程最终会生成将发布给具有工作簿只读权限的用户的工作簿版本（仅当 <c>SaveChanges</c> 为 <see langword="true" /> 时才会如此）。</param>
         <param name="versionType">指定文档的版本信息。</param>
         <summary>将本地计算机中的工作簿发送到服务器，并将本地工作簿设置为只读，以使它不能进行本地编辑。 调用此方法会关闭工作簿。</summary>
         <remarks>
@@ -1464,12 +1455,12 @@
 ## Remarks  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.CanCheckIn%2A>方法来确定该文档是否已存储在 Microsoft Office SharePoint Portal Server。 如果已在服务器上存储的文档，该示例将调用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.CheckInWithVersion%2A>方法来签入以及指定的注释和版本号，该文档将更改保存到的服务器位置，然后提交审批过程的文档。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.CanCheckIn%2A>方法，以确定是否已在 Microsoft Office SharePoint Portal Server 上存储的文档。 如果已在服务器上存储的文档，该示例将调用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.CheckInWithVersion%2A>方法来检查指定的注释和版本号，以及文档中将更改保存到的服务器位置，并提交审批过程的文档。  
   
  此示例适用于文档级自定义。  
   
@@ -1504,7 +1495,7 @@
   
  <see langword="false" />。 不保存对工作簿所做的更改。  
   
- 省略。 显示一个对话框，询问用户是否保存更改。</param>
+省略。 显示一个对话框，询问用户是否保存更改。</param>
         <param name="filename">使用此文件名保存更改。</param>
         <param name="routeWorkbook">如果工作簿不需要传送给下一个收件人（如果该工作簿没有传送名单或已传送），则忽略此参数。 否则，Microsoft Office Excel 传送工作簿，如下面的列表所示。  
   
@@ -1512,21 +1503,21 @@
   
  <see langword="false" />。 不发送工作簿。  
   
- 省略。 显示一个对话框，询问用户是否应发送工作簿。</param>
+省略。 显示一个对话框，询问用户是否应发送工作簿。</param>
         <summary>关闭工作簿。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 关闭的工作簿，使用此方法不在工作簿中运行任何 Auto_Close 宏。 使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.RunAutoMacros%2A>方法要运行这些宏。  
+ 关闭工作簿使用此方法不在工作簿中运行任何 Auto_Close 宏。 使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.RunAutoMacros%2A>方法来运行宏。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Close%2A>方法来关闭当前的工作簿而不保存任何更改。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Close%2A>方法关闭当前工作簿而不保存任何更改。  
   
  此示例适用于文档级自定义。  
   
@@ -1579,23 +1570,23 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.WorkbookBase.Colors%2A>属性可使用以下参数。  
+ <xref:Microsoft.Office.Tools.Excel.WorkbookBase.Colors%2A>属性可用于以下参数。  
   
 |参数|描述|  
 |---------------|-----------------|  
-|`Index`|索引数 （从 1 至 56) 工作簿调色板中的颜色。 如果未指定此参数，此属性将返回包含所有 56 种颜色调色板中的数组。|  
+|`Index`|索引数 （从 1 到 56) 工作簿调色板中的颜色。 如果未指定此参数，此属性将返回包含所有 56 种颜色调色板中的数组。|  
   
- 如果你尝试使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Colors%2A>而不指定任何参数，<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Colors%2A>将获取<xref:Microsoft.Office.Tools.Excel.Workbook_ColorsType>对象属于的 Office 开发工具在 Visual Studio 基础结构和不应在代码中直接使用。  
+ 如果尝试使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Colors%2A>而无需指定任何参数，<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Colors%2A>将获取<xref:Microsoft.Office.Tools.Excel.Workbook_ColorsType>对象属于的 Office 开发 Visual Studio 基础结构中的工具，但不可在代码中直接使用。  
   
- 工作簿调色板中的 56 条目，每个表示 RGB 值。  
+ 工作簿调色板有 56 条目，每个所表示的 RGB 值。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Colors%2A>属性可以在工作簿的调色板为蓝色，请设置的第一个颜色，然后以编程方式显示 Microsoft Office Excel**调色板**对话框来验证是否此进行更改。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Colors%2A>属性设置在工作簿的调色板中为蓝色，第一种颜色，然后以编程方式显示 Microsoft Office Excel**调色板**对话框以验证此已更改。  
   
  此示例适用于文档级自定义。  
   
@@ -1620,17 +1611,17 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个 <c>Microsoft.Office.Core.CommandBars</c> 对象，该对象表示 Microsoft Office Excel 命令栏。</summary>
-        <value>A <c>Microsoft.Office.Core.CommandBars</c>表示 Microsoft Office Excel 命令栏的对象。</value>
+        <value>一个<c>Microsoft.Office.Core.CommandBars</c>对象，表示 Microsoft Office Excel 命令栏。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 当工作簿是嵌入其他应用程序中并由用户激活通过双击该工作簿时，使用通过工作簿对象的属性返回的一套 Excel 命令栏中其他应用程序可用。 在所有其他情况下，使用此属性的工作簿对象返回`null`。 没有返回附加到工作簿的命令栏组无法通过编程方式。 命令条是与应用程序和不是工作簿相关联。 此属性存在于工作簿上，因此 Excel 不为应用程序时，你可以访问 Excel 应用程序命令栏。  
+ 当一个工作簿是嵌入到另一个应用程序和由用户激活通过双击该工作簿时，使用与工作簿对象的属性返回 Excel 命令栏中其他应用程序可用的集。 在所有其他情况下，使用此属性的工作簿对象返回`null`。 没有返回附加到工作簿的命令栏组无法通过编程方式。 命令栏是与应用程序并不是工作簿相关联。 此属性存在针对该工作簿，以便 Excel 不是应用程序时，可以访问 Excel 应用程序命令栏。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.CommandBars%2A>属性以删除所有不可见的自定义命令栏。 此示例假定，当前工作簿嵌入在另一个应用程序。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.CommandBars%2A>要删除所有自定义命令栏不可见的属性。 此示例假定当前工作簿嵌入到另一个应用程序。  
   
  此示例适用于文档级自定义。  
   
@@ -1697,12 +1688,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取工作簿和数据源之间的连接的集合。</summary>
-        <value>A <c>Microsoft.Office.Interop.Excel.Connections</c>集合，其中包含工作簿和数据源之间的连接。</value>
+        <value>一个<c>Microsoft.Office.Interop.Excel.Connections</c>集合，其中包含工作簿和数据源之间的连接。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例将新的数据连接添加到指定的 CSV 文件。 接下来，该示例循环访问工作簿中存在的所有连接，并显示名称、 类型和每个连接的说明。 此示例需要名 SalesData.csv 为驱动器 c。 根处的 CSV 文件CSV 文件应包含以逗号分隔的数据。 运行此示例时，Excel 启动**文本导入向导**; 按照此向导创建数据连接到 CSV 文件中的步骤。  
+ 下面的代码示例将新的数据连接添加到指定的 CSV 文件。 接下来，示例循环访问工作簿中存在的所有连接，并显示名称、 类型和每个连接的说明。 此示例需要名 SalesData.csv 为驱动器 c。 根处的 CSV 文件CSV 文件应包含逗号分隔的数据。 当您运行此示例中时，启动 Excel**文本导入向导**; 按照此向导创建数据连接到 CSV 文件中的步骤。  
   
  此示例适用于文档级自定义。  
   
@@ -1751,7 +1742,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性使您能够访问容器应用程序的对象模型，如果在宿主应用程序，如 Microsoft Internet Explorer 内打开的 Excel 工作簿。  
+ 此属性提供了一种方法访问容器应用程序的对象模型，如果主机应用程序如 Microsoft Internet Explorer 中打开的 Excel 工作簿。  
   
  ]]></format>
         </remarks>
@@ -1771,12 +1762,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取描述工作簿中存储的元数据的属性的集合。</summary>
-        <value>A <c>Microsoft.Office.Core.MetaProperties</c>包含描述存储在工作簿的元数据属性的集合。</value>
+        <value>一个<c>Microsoft.Office.Core.MetaProperties</c>集合，其中包含描述存储在工作簿的元数据的属性。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例检索与当前工作簿关联的元数据。 在示例跟的名称和每个属性的值找到的元数据属性的总数。 若要运行此示例，必须将工作簿发布到 Microsoft Office SharePoint Server 文档库，并提供一个自定义元数据属性，此工作簿。 例如，你可以在其中发布该工作簿的文档库中添加列。 有关内容的类型属性的详细信息，请参阅 Microsoft Office SharePoint Server 文档。  
+ 下面的代码示例检索与当前工作簿关联的元数据。 该示例显示了跟的名称和每个属性的值找到的元数据属性的总数。 若要运行此示例中，必须将该工作簿发布到 Microsoft Office SharePoint Server 文档库，并为此工作簿提供自定义元数据属性。 例如，您可以在其中发布工作簿的文档库中添加列。 有关内容类型属性的详细信息，请参阅 Microsoft Office SharePoint Server 文档。  
   
  此示例适用于文档级自定义。  
   
@@ -1801,8 +1792,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，该值指示保存此文件时是否创建备份文件。</summary>
-        <value>
-          如果保存此文件时创建备份文件，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果保存此文件时创建备份文件，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1826,11 +1816,11 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 重写此方法以返回的实现`Microsoft.Office.Core.IRibbonExtensibility`接口。 如果你的项目中有多个功能区，你可以指定运行时在显示的功能区。  
+ 重写此方法返回的实现`Microsoft.Office.Core.IRibbonExtensibility`接口。 如果你的项目中有多个功能区，可以指定运行时功能区上显示。  
   
- 无需重写此方法以返回你使用添加到项目的功能区**功能区 （可视化设计器）** 项模板。 默认情况下，此方法返回<xref:Microsoft.Office.Tools.Ribbon.RibbonManager>对象，表示所有**功能区 （可视化设计器）** 项目中的项。 有关详细信息，请参阅[功能区概述](/visualstudio/vsto/ribbon-overview.md)。  
+ 无需重写此方法返回通过使用添加到项目的功能区**功能区 （可视化设计器）** 项模板。 默认情况下，此方法返回<xref:Microsoft.Office.Tools.Ribbon.RibbonManager>对象，表示所有**功能区 （可视化设计器）** 项目中的项。 有关详细信息，请参阅[功能区概述](/visualstudio/vsto/ribbon-overview)。  
   
- 必须重写<xref:Microsoft.Office.Tools.Excel.WorkbookBase.CreateRibbonExtensibilityObject%2A>或<xref:Microsoft.Office.Tools.Excel.WorkbookBase.RequestService%2A>方法以返回你使用添加的项目中的功能区**功能区 (XML)** 项模板。 有关如何重写<xref:Microsoft.Office.Tools.Excel.WorkbookBase.CreateRibbonExtensibilityObject%2A>方法，请参阅[功能区 XML](/visualstudio/vsto/ribbon-xml.md)。  
+ 必须重写<xref:Microsoft.Office.Tools.Excel.WorkbookBase.CreateRibbonExtensibilityObject%2A>或<xref:Microsoft.Office.Tools.Excel.WorkbookBase.RequestService%2A>方法来返回功能区中的项目中使用添加**功能区 (XML)** 项模板。 详细了解如何重写<xref:Microsoft.Office.Tools.Excel.WorkbookBase.CreateRibbonExtensibilityObject%2A>方法，请参阅[功能区 XML](/visualstudio/vsto/ribbon-xml)。  
   
  ]]></format>
         </remarks>
@@ -1856,11 +1846,11 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 默认实现调用此方法<xref:Microsoft.Office.Tools.Excel.WorkbookBase.CreateRibbonExtensibilityObject%2A>方法<xref:Microsoft.Office.Tools.Excel.WorkbookBase>类在该项目包含**功能区 （可视化设计器）** 项。  
+ 默认实现调用此方法<xref:Microsoft.Office.Tools.Excel.WorkbookBase.CreateRibbonExtensibilityObject%2A>方法<xref:Microsoft.Office.Tools.Excel.WorkbookBase>类时该项目包含**功能区 （可视化设计器）** 项。  
   
  如果你想要指定功能区显示在运行时，重写此方法。  
   
- 你也可以替代<xref:Microsoft.Office.Tools.Excel.WorkbookBase.CreateRibbonExtensibilityObject%2A>方法，以指定运行时在显示的功能区。 有关详细信息，请参阅[功能区概述](/visualstudio/vsto/ribbon-overview.md)。  
+ 此外可以重写<xref:Microsoft.Office.Tools.Excel.WorkbookBase.CreateRibbonExtensibilityObject%2A>方法，以指定运行时功能区上显示。 有关详细信息，请参阅[功能区概述](/visualstudio/vsto/ribbon-overview)。  
   
  ]]></format>
         </remarks>
@@ -1886,14 +1876,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果在 Microsoft Office Excel 中创建对象时，此属性返回的字符串接，这等同于十六进制数字 5843454c。  
+ 如果在 Microsoft Office Excel 中创建对象时，此属性返回字符串 XCEL，这与十六进制数 5843454c。  
   
- 此属性用于在 Excel 中用于的 Macintosh，其中每个应用程序具有四个字符创建者代码。 例如，Excel 具有接的创建者代码。  
+ 此属性用于在 Excel 中使用的 Macintosh 上，其中每个应用程序具有四个字符创建者代码。 例如，Excel 具有 XCEL 的创建者代码。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Creator%2A>属性来显示是否在 Microsoft Office Excel 中创建当前工作簿。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Creator%2A>属性来显示是否在 Microsoft Office Excel 中创建的当前工作簿。  
   
  此示例适用于文档级自定义。  
   
@@ -1918,19 +1908,19 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个 <c>Microsoft.Office.Core.DocumentProperties</c> 集合，该集合表示工作簿的所有自定义文档属性。</summary>
-        <value>A<c>形式</c>表示工作簿的所有自定义文档属性的集合。</value>
+        <value>一个<c>Microsoft.Office.Core.DocumentProperties</c>集合，表示工作簿的所有自定义文档属性。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性返回整个集合的自定义文档属性。 使用`Microsoft.Office.Core.DocumentProperties.Item(System.Object)`属性以返回集合的单个成员 (`Microsoft.Office.Core.DocumentProperties`对象) 通过指定名称的属性或集合索引 （以数字）。  
+ 此属性返回自定义文档属性的整个的集合。 使用`Microsoft.Office.Core.DocumentProperties.Item(System.Object)`属性以返回单个成员的集合 (`Microsoft.Office.Core.DocumentProperties`对象) 只需指定属性的名称或 （作为一个数字） 的集合索引。  
   
  使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.BuiltinDocumentProperties%2A>属性返回的内置文档属性的集合。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.CustomDocumentProperties%2A>属性，以显示当前工作簿的自定义文档属性的所有列 A 中工作表`Sheet1`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.CustomDocumentProperties%2A>属性来显示所有当前工作簿的自定义文档属性中的 A 列`Sheet1`。  
   
  此示例适用于文档级自定义。  
   
@@ -1961,7 +1951,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.CustomViews%2A>要添加的自定义视图属性与当前的工作簿，名为"摘要"中，然后以编程方式显示**自定义视图**对话框，以说明新的自定义视图的创建.  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.CustomViews%2A>若要添加自定义视图的属性名称当前工作簿的"摘要"，然后以编程方式显示**自定义视图**对话框，以说明新的自定义视图的创建.  
   
  此示例适用于文档级自定义。  
   
@@ -1986,17 +1976,17 @@
       </ReturnValue>
       <Docs>
         <summary>获取工作簿中的自定义 XML 部件的集合。</summary>
-        <value>A <c>Microsoft.Office.Core.CustomXMLParts</c>工作簿中的集合，包含自定义 XML 部件。</value>
+        <value>一个<c>Microsoft.Office.Core.CustomXMLParts</c>集合，包含自定义 XML 部件在工作簿中。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 有关自定义 XML 部件的详细信息，请参阅[自定义 XML 部件概述](/visualstudio/vsto/custom-xml-parts-overview.md)。  
+ 有关自定义 XML 部件的详细信息，请参阅[自定义 XML 部件概述](/visualstudio/vsto/custom-xml-parts-overview)。  
   
    
   
 ## Examples  
- 下面的代码示例中将员工数据添加到文档的方法是插入一个新`Microsoft.Office.Core.CustomXMLPart`中`Microsoft.Office.Core.CustomXMLParts`集合。 示例然后从 XML 部件中检索员工数据，并显示雇员姓名和雇佣日期上`Sheet1`。  
+ 下面的代码示例中将员工数据添加到文档的方法是插入一个新`Microsoft.Office.Core.CustomXMLPart`在`Microsoft.Office.Core.CustomXMLParts`集合。 该示例然后 XML 部件中检索员工数据，并显示员工姓名和雇用日期`Sheet1`。  
   
  此示例适用于文档级自定义。  
   
@@ -2057,8 +2047,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示工作簿是否使用 1904 日期系统。</summary>
-        <value>
-          如果工作簿使用 1904 日期系统，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果工作簿使用 1904 日期系统，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2080,7 +2069,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例演示的处理程序<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Deactivate>事件。 事件处理程序磁贴停用该工作簿的所有打开的 Microsoft Office Excel 窗口。  
+ 下面的代码示例演示了一个处理程序<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Deactivate>事件。 停用该工作簿后，事件处理程序平铺所有打开的 Microsoft Office Excel 窗口。  
   
  此示例适用于文档级自定义。  
   
@@ -2111,7 +2100,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例设置到的数据透视表的默认样式**数据透视表样式中等 3**，即会出现在 Excel 上样式**设计**选项卡中**数据透视表样式**组选中数据透视表。  
+ 下面的代码示例设置到的数据透视表的默认样式**数据透视表样式中等 3**，这是一个在 Excel 中的样式**设计**选项卡中**数据透视表样式**组时选择的数据透视表。  
   
  此示例适用于文档级自定义。  
   
@@ -2160,7 +2149,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例设置到的表的默认样式**表样式深色 11**，即会出现在 Excel 上样式**设计**选项卡中**表样式**当选择某个表的组。 然后，该示例添加一个表以验证新的表格样式。  
+ 下面的代码示例设置到的表的默认样式**表样式深色 11**，这是一个在 Excel 中的样式**设计**选项卡中**表样式**当选择某个表组。 然后，该示例添加一个表以验证新的表样式。  
   
  此示例适用于文档级自定义。  
   
@@ -2246,7 +2235,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例将圆环图形状添加到工作表`Sheet1`当前工作簿，然后提示用户隐藏绘制对象使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.DisplayDrawingObjects%2A>属性。 如果用户将会隐藏绘制对象，则圆环图形状将不可见;否则，圆环图形状将可见。  
+ 下面的代码示例将圆环图形状添加到工作表`Sheet1`当前工作簿，然后提示用户隐藏绘图对象使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.DisplayDrawingObjects%2A>属性。 如果用户隐藏绘图对象，则圆环图形状将不可见;否则，圆环图形状将可见。  
   
  此示例适用于文档级自定义。  
   
@@ -2271,8 +2260,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示工作簿中是否显示墨迹注释。</summary>
-        <value>
-          如果工作簿中显示墨迹批注，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果工作簿中显示墨迹批注，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2295,9 +2283,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 不要调用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Dispose%2A>方法自己。 当关闭的文档级自定义项中的文档时，[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]清理使用自定义项的所有资源。  
+ 不要调用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Dispose%2A>方法自己。 关闭文档级自定义项中的文档时，[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]清理使用自定义项的所有资源。  
   
- 有关详细信息<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Dispose%2A>方法，请参阅[清洗向上非托管资源](http://msdn.microsoft.com/library/a17b0066-71c2-4ba4-9822-8e19332fc213)。  
+ 有关详细信息<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Dispose%2A>方法，请参阅[清理了非托管资源](http://msdn.microsoft.com/library/a17b0066-71c2-4ba4-9822-8e19332fc213)。  
   
  ]]></format>
         </remarks>
@@ -2334,12 +2322,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取工作簿的文档检查器模块的集合。</summary>
-        <value>A <c>Microsoft.Office.Core.DocumentInspectors</c>集合，其中包含工作簿的文档检查器模块。</value>
+        <value>一个<c>Microsoft.Office.Core.DocumentInspectors</c>集合，其中包含工作簿的文档检查器模块。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例循环访问工作簿中的检查器。 该代码将检查每个，并显示一个消息框，其中显示该检查器的状态和检查结果的名称。  
+ 下面的代码示例循环访问该工作簿中的检查器。 该代码会检查每个，然后显示一个消息框，显示该检查器的状态和检查结果的名称。  
   
  此示例适用于文档级自定义。  
   
@@ -2364,7 +2352,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个 <c>Microsoft.Office.Core.DocumentLibraryVersions</c> 集合，该集合表示共享工作簿（启用了版本控制并存储在服务器上的文档库中）的版本集合。</summary>
-        <value>A <c>Microsoft.Office.Core.DocumentLibraryVersions</c>表示共享工作簿，其启用版本控制和存储在文档库中的服务器上的版本的集合的集合。</value>
+        <value>一个<c>Microsoft.Office.Core.DocumentLibraryVersions</c>集合，表示共享工作簿的启用了版本控制并存储在文档库中的服务器上的版本集合。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2401,13 +2389,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示 Microsoft Office Excel 是否按时间间隔保存更改后的文件（所有格式）。</summary>
-        <value>
-          如果 Excel 按时间间隔保存更改后的文件，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果 Excel 按时间间隔保存更改后的文件，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果 Excel 失败，系统会出现故障，或如果系统不正确关闭的情况下 （不允许 Excel 不能保存更改的文件），打开备份的文件，并且用户有机会保存更改，否则可能已丢失。 当用户重启 Excel 时，将打开文档恢复窗口，向用户提供恢复他们正在处理的文件的选项。  
+ 如果 Excel 失败，系统出现故障，或如果系统未正确关闭 （不允许 Excel 保存已更改的文件），打开的备份的文件和用户有机会保存更改，否则可能已丢失。 当用户重新启动 Excel 时，将打开文档恢复窗口，为用户提供一个选项来恢复他们的文件。  
   
  ]]></format>
         </remarks>
@@ -2432,7 +2419,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例调用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.EnableConnections%2A>方法启用工作簿中的数据连接，并禁止显示现有的数据连接的任何安全警告。  
+ 下面的代码示例调用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.EnableConnections%2A>方法以启用工作簿中的数据连接并取消显示现有数据连接的任何安全警告。  
   
  此示例适用于文档级自定义。  
   
@@ -2462,7 +2449,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例检查的值<xref:Microsoft.Office.Tools.Excel.WorkbookBase.HasPassword%2A>属性来确定工作簿是否受密码保护。 如果工作簿不受密码保护，然后该示例设置<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Password%2A>的密码的属性获取用户输入，然后调用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SetPasswordEncryptionOptions%2A>方法来设置加密算法、 设置的密钥长度、 设定的加密提供程序的名称并启用文件属性加密。 然后，该示例显示的值<xref:Microsoft.Office.Tools.Excel.WorkbookBase.PasswordEncryptionProvider%2A>， <xref:Microsoft.Office.Tools.Excel.WorkbookBase.PasswordEncryptionAlgorithm%2A>， <xref:Microsoft.Office.Tools.Excel.WorkbookBase.PasswordEncryptionKeyLength%2A>，和<xref:Microsoft.Office.Tools.Excel.WorkbookBase.PasswordEncryptionFileProperties%2A>工作表中的属性`Sheet1`。 此示例假定方法`GetPasswordFromUserInput`其他位置定义。  
+ 下面的代码示例检查的值<xref:Microsoft.Office.Tools.Excel.WorkbookBase.HasPassword%2A>属性来确定工作簿是否受密码保护。 如果工作簿不受密码保护，然后该示例设置<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Password%2A>属性设置为密码获取用户输入，然后调用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SetPasswordEncryptionOptions%2A>方法设置的加密算法、 密钥长度设置、 设置的加密提供程序名称并启用加密文件属性。 然后，该示例显示的值<xref:Microsoft.Office.Tools.Excel.WorkbookBase.PasswordEncryptionProvider%2A>， <xref:Microsoft.Office.Tools.Excel.WorkbookBase.PasswordEncryptionAlgorithm%2A>， <xref:Microsoft.Office.Tools.Excel.WorkbookBase.PasswordEncryptionKeyLength%2A>，和<xref:Microsoft.Office.Tools.Excel.WorkbookBase.PasswordEncryptionFileProperties%2A>工作表中的属性`Sheet1`。 此示例假定方法`GetPasswordFromUserInput`其他位置定义。  
   
  此示例适用于文档级自定义。  
   
@@ -2523,8 +2510,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示电子邮件撰写标题和信封工具栏是否都可见。</summary>
-        <value>
-          如果电子邮件撰写标题和信封工具栏都可见，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果电子邮件撰写标题和信封工具栏都可见，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2548,7 +2534,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 下面的代码示例循环访问每个<xref:Microsoft.Office.Interop.Excel.Worksheet?displayProperty=fullName>返回<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Excel4IntlMacroSheets%2A>属性，并写入输出发送到调试每个工作表的代码名称。  
+ 下面的代码示例循环访问每个<xref:Microsoft.Office.Interop.Excel.Worksheet?displayProperty=fullName>返回的<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Excel4IntlMacroSheets%2A>属性和写入输出到调试每个工作表的代码名称。  
   
  此示例适用于文档级自定义。  
   
@@ -2579,7 +2565,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 下面的代码示例循环访问每个<xref:Microsoft.Office.Interop.Excel.Worksheet?displayProperty=fullName>返回<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Excel4MacroSheets%2A>属性，并写入输出发送到调试每个工作表的代码名称。  
+ 下面的代码示例循环访问每个<xref:Microsoft.Office.Interop.Excel.Worksheet?displayProperty=fullName>返回的<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Excel4MacroSheets%2A>属性和写入输出到调试每个工作表的代码名称。  
   
  此示例适用于文档级自定义。  
   
@@ -2604,13 +2590,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，该值指示工作簿是否处于兼容模式。</summary>
-        <value>
-          如果工作簿处于兼容模式，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果工作簿处于兼容模式，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 在兼容性模式下，某些功能被禁用或函数以不同的方式。 例如，在兼容模式下的 Excel 2007 工作簿被限制为相同数量的行和列的早期版本的 Excel 中可用。  
+ 在兼容性模式下，某些功能被禁用或函数以不同的方式。 例如，在兼容模式下的 Excel 2007 工作簿仅限于相同数量的行和 Excel 的早期版本中可用的列。  
   
  ]]></format>
         </remarks>
@@ -2636,9 +2621,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法将保存到的工作簿所做的任何更改，并要求该工作簿的其他用户打开以将其更改保存到不同的文件。  
+ 此方法将保存到工作簿所做的任何更改，并要求具有该工作簿的其他用户打开以将其更改保存到一个不同的文件。  
   
- 如果工作簿未打开作为共享列表，此方法将失败。 若要确定是否已为共享的列表打开工作簿，使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.MultiUserEditing%2A>属性。  
+ 如果工作簿作为共享列表打开，此方法将失败。 若要确定是否已作为共享列表打开工作簿，请使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.MultiUserEditing%2A>属性。  
   
  ]]></format>
         </remarks>
@@ -2671,29 +2656,26 @@
         <param name="type">其中一个 <see langword="Microsoft.Office.Interop.Excel.XlFixedFormatType" /> 值，该值指定是否要将工作簿保存为 PDF 或 XPS 格式。</param>
         <param name="filename">新 PDF 或 XPS 文件的完整路径。 如果省略此参数，Excel 会将文件保存在当前文件夹中。</param>
         <param name="quality">其中一个 <see langword="Microsoft.Office.Interop.Excel.XlFixedFormatQuality" /> 值，该值指定导出文件的质量。</param>
-        <param name="includeDocProperties">
-          如果要在导出的文件中包含文档属性，则为 <see langword="true" />；否则为 <see langword="false" />。</param>
-        <param name="ignorePrintAreas">
-          若要在导出时忽略任何打印区域设置，请使用 <see langword="true" />；否则使用 <see langword="false" />。</param>
+        <param name="includeDocProperties">如果要在导出的文件中包含文档属性，则为 <see langword="true" />；否则为 <see langword="false" />。</param>
+        <param name="ignorePrintAreas">若要在导出时忽略任何打印区域设置，请使用 <see langword="true" />；否则使用 <see langword="false" />。</param>
         <param name="from">要从其处开始导出的页码。 如果省略此参数，则从第一页开始导出。</param>
         <param name="to">要导出的最后一页的页码。 如果省略此参数，则导出完最后一页后停止导出。</param>
-        <param name="openAfterPublish">
-          如果要在导出工作簿后打开新文件，则为 <see langword="true" />；否则为 <see langword="false" />。</param>
+        <param name="openAfterPublish">如果要在导出工作簿后打开新文件，则为 <see langword="true" />；否则为 <see langword="false" />。</param>
         <param name="fixedFormatExtClassPtr">一个指向 <see langword="IMsoDocExporter" /> 接口的实现的指针，可使工作簿保存为另一种固定格式。 有关详细信息，请参阅“扩展 Office (2007) 固定格式导出功能”。</param>
         <summary>以 PDF 或 XPS 格式保存工作簿。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 你可以将保存为 PDF 或 XPS 文件从 Microsoft Office Excel 仅后提供此功能的外接程序安装。 有关详细信息，搜索"启用支持对其他文件格式，例如 PDF 和 XPS"Office online。  
+ 您可以将保存为 PDF 或 XPS 文件从 Microsoft Office Excel 才提供此功能的外接程序安装。 有关详细信息，搜索"启用支持其他文件格式，如 PDF 和 XPS"Office Online 上。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例将保存在指定的文件路径使用高质量解析到的 PDF 格式的工作簿的第一页。  
+ 下面的代码示例将在指定的文件路径中使用高品质的分辨率为 PDF 格式保存工作簿的第一页。  
   
  此示例适用于文档级自定义。  
   
@@ -2724,7 +2706,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例检查的值<xref:Microsoft.Office.Tools.Excel.WorkbookBase.FileFormat%2A>属性来确定工作簿是否正常工作簿。 工作簿是否正常工作簿，然后该示例调用<xref:Microsoft.Office.Tools.Excel.Worksheet.SaveAs%2A>方法来重新工作簿保存为 XML 电子表格同名`XMLCopy.xlsx`中指定的路径<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Path%2A>属性。  
+ 下面的代码示例检查的值<xref:Microsoft.Office.Tools.Excel.WorkbookBase.FileFormat%2A>属性来确定工作簿是否正常工作簿。 该工作簿是否正常工作簿，然后该示例调用<xref:Microsoft.Office.Tools.Excel.Worksheet.SaveAs%2A>方法以将该工作簿重新保存为具有名称的 XML 电子表格`XMLCopy.xlsx`中指定的路径<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Path%2A>属性。  
   
  此示例适用于文档级自定义。  
   
@@ -2749,13 +2731,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示工作簿是否处于最终状态。</summary>
-        <value>
-          如果工作簿处于最终状态，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果工作簿处于最终状态，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 当设置此属性为`true`，通知收件人的工作簿处于最终状态，并且该工作簿将设置为只读。  
+ 此属性设置为`true`、 通知收件人的工作簿处于最终状态，和工作簿设置为只读。  
   
  ]]></format>
         </remarks>
@@ -2803,8 +2784,7 @@
       <Docs>
         <param name="address">目标文档的地址。</param>
         <param name="subAddress">目标文档中的位置。 默认值为空字符串。</param>
-        <param name="newWindow">
-          如果为 <see langword="true" />，则在新窗口中显示目标应用程序。 默认值为 <see langword="false" />。</param>
+        <param name="newWindow">如果为 <see langword="true" />，则在新窗口中显示目标应用程序。 默认值为 <see langword="false" />。</param>
         <param name="addHistory">未使用。 留待将来使用。</param>
         <param name="extraInfo">一个字符串或字节数组，指定用于解析超链接的有关 HTTP 的其他信息。 例如，可以使用 <c>ExtraInfo</c> 指定图像映射的坐标、窗体的内容或 FAT 文件名。</param>
         <param name="method">指定附加 <c>ExtraInfo</c> 的方式。 可以是下列 <see langword="Microsoft.Office.Core.MsoExtraInfoMethod" /> 常数之一：<see langword="Microsoft.Office.Core.MsoExtraInfoMethod.msoMethodGet" /> 或 <see langword="Microsoft.Office.Core.MsoExtraInfoMethod.msoMethodPost" />。</param>
@@ -2816,12 +2796,12 @@
 ## Remarks  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.FollowHyperlink%2A>方法以在指定的地址，在新窗口中显示文档。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.FollowHyperlink%2A>方法来显示在新窗口中的指定地址处的文档。  
   
  此示例适用于文档级自定义。  
   
@@ -2846,8 +2826,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示是否强制对工作簿进行完全计算。</summary>
-        <value>
-          如果强制对工作簿进行完全计算，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果强制对工作簿进行完全计算，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2888,12 +2867,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性等效于<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Path%2A>属性，当前文件系统的分隔符后, 跟跟<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Name%2A>属性。  
+ 此属性等效于<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Path%2A>属性后, 跟当前文件系统的分隔符后, 跟<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Name%2A>属性。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.FullName%2A>属性来显示该工作簿，包括其路径的完整名称。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.FullName%2A>属性来显示工作簿，包括其路径的完整名称。  
   
  此示例适用于文档级自定义。  
   
@@ -2923,7 +2902,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.FullNameURLEncoded%2A>属性来显示该工作簿，包括其路径、 作为 URL 编码的完整名称。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.FullNameURLEncoded%2A>属性来显示工作簿，包括其路径，编码为 URL 的完整名称。  
   
  此示例适用于文档级自定义。  
   
@@ -2954,7 +2933,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 重写此方法以返回向工作簿中的 VBA 代码公开的类的实例。 有关详细信息，请参阅[文档级自定义项从 VBA 中调用代码](http://msdn.microsoft.com/en-us/aa99527b-eb50-4ac9-9855-92b913e75906)。  
+ 重写此方法以返回到工作簿中的 VBA 代码的已公开的类的实例。 有关详细信息，请参阅[调用中从 VBA 的文档级自定义的代码](http://msdn.microsoft.com/en-us/aa99527b-eb50-4ac9-9855-92b913e75906)。  
   
  ]]></format>
         </remarks>
@@ -3012,9 +2991,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例显示当前与该工作簿关联的工作流任务数。 该示例然后循环访问每个工作流任务，如果有的话，并在消息框中显示所选的任务的一些属性。  
+ 下面的代码示例显示当前与该工作簿关联的工作流任务数。 该示例然后循环访问每个工作流任务，如果有，并在消息框中显示所选的任务的一些属性。  
   
- 若要将工作流任务添加到你的工作簿，必须将工作簿发布到 Office Sharepoint Server 站点。  
+ 若要将工作流任务添加到您的工作簿，必须将该工作簿发布到 Office Sharepoint Server 站点。  
   
  此示例适用于文档级自定义。  
   
@@ -3045,9 +3024,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例显示可用于工作簿的工作流模板的数目。 如果存在一个或多个工作流模板，此示例将显示的名称和每个模板的说明。  
+ 下面的代码示例显示的工作流模板可供工作簿的数量。 如果存在一个或多个工作流模板，该示例显示的名称和每个模板的说明。  
   
- 若要运行此代码示例，必须将工作簿发布到 Office SharePoint Server 站点。  
+ 若要运行此代码示例，必须将该工作簿发布到 Office SharePoint Server 站点。  
   
  此示例适用于文档级自定义。  
   
@@ -3095,13 +3074,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，该值指示工作簿是否具有保护密码。</summary>
-        <value>
-          如果工作簿具有保护密码，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果工作簿具有保护密码，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例检查的值<xref:Microsoft.Office.Tools.Excel.WorkbookBase.HasPassword%2A>属性来确定工作簿是否受密码保护。 如果工作簿不受密码保护，然后该示例设置<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Password%2A>的密码的属性获取用户输入，然后调用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SetPasswordEncryptionOptions%2A>方法来设置加密算法、 设置的密钥长度、 设定的加密提供程序的名称并启用文件属性加密。 然后，该示例显示的值<xref:Microsoft.Office.Tools.Excel.WorkbookBase.PasswordEncryptionProvider%2A>， <xref:Microsoft.Office.Tools.Excel.WorkbookBase.PasswordEncryptionAlgorithm%2A>， <xref:Microsoft.Office.Tools.Excel.WorkbookBase.PasswordEncryptionKeyLength%2A>，和<xref:Microsoft.Office.Tools.Excel.WorkbookBase.PasswordEncryptionFileProperties%2A>工作表中的属性`Sheet1`。 此示例假定一个名为方法是否存在`GetPasswordFromUserInput`，从用户输入获取强密码。  
+ 下面的代码示例检查的值<xref:Microsoft.Office.Tools.Excel.WorkbookBase.HasPassword%2A>属性来确定工作簿是否受密码保护。 如果工作簿不受密码保护，然后该示例设置<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Password%2A>属性设置为密码获取用户输入，然后调用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SetPasswordEncryptionOptions%2A>方法设置的加密算法、 密钥长度设置、 设置的加密提供程序名称并启用加密文件属性。 然后，该示例显示的值<xref:Microsoft.Office.Tools.Excel.WorkbookBase.PasswordEncryptionProvider%2A>， <xref:Microsoft.Office.Tools.Excel.WorkbookBase.PasswordEncryptionAlgorithm%2A>， <xref:Microsoft.Office.Tools.Excel.WorkbookBase.PasswordEncryptionKeyLength%2A>，和<xref:Microsoft.Office.Tools.Excel.WorkbookBase.PasswordEncryptionFileProperties%2A>工作表中的属性`Sheet1`。 此示例假定名为方法的存在使得`GetPasswordFromUserInput`，获取用户输入一个强密码。  
   
  此示例适用于文档级自定义。  
   
@@ -3149,8 +3127,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，该值指示工作簿是否具有附加的 Microsoft Visual Basic for Applications (VBA) 项目。</summary>
-        <value>
-          如果工作簿具有附加的 VBA 项目，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果工作簿具有附加的 VBA 项目，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -3168,8 +3145,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示是否在屏幕上突出显示对共享工作簿所做的更改。</summary>
-        <value>
-          如果在屏幕上突出显示对共享工作簿所做的更改，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果在屏幕上突出显示对共享工作簿所做的更改，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -3201,7 +3177,7 @@
 ## Remarks  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
  ]]></format>
         </remarks>
@@ -3262,19 +3238,19 @@
       </ReturnValue>
       <Docs>
         <summary>获取内置图标集的集合，这些图标集可用于对工作簿中的范围应用条件格式规则。</summary>
-        <value>A <c>Microsoft.Office.Interop.Excel.IconSets</c>包含内置的图标的收集组可应用到的区域的条件格式设置规则的对象。</value>
+        <value>一个<c>Microsoft.Office.Interop.Excel.IconSets</c>集合，其中包含的内置图标集可用于将条件格式设置规则应用于一定范围的对象。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 你可以使用图标集以将范围数据划分到隔开阈值的三到五个类别。 每个图标表示一系列的值。 例如，在`Microsoft.Office.Interop.Excel.XlIconSet.xl3Arrows`图标集，红色向上箭头代表较高值、 黄色侧向箭头代表中间值，和绿色向下箭头表示较低的值。  
+ 可以使用设置为范围的数据分成阈值由分隔的三到五个类别的图标。 每个图标表示一系列值。 例如，在`Microsoft.Office.Interop.Excel.XlIconSet.xl3Arrows`图标集，红色向上箭头表示较高的值、 黄色横向箭头表示中间值和绿色向下箭头表示较低的值。  
   
- 若要应用基于图标集条件格式设置规则，创建一个新`Microsoft.Office.Interop.Excel.IconSetCondition`使用`Microsoft.Office.Interop.Excel.FormatConditions.AddIconSetCondition`方法<xref:Microsoft.Office.Interop.Excel.Range.FormatConditions%2A>属性的范围，或<xref:Microsoft.Office.Tools.Excel.NamedRange.FormatConditions%2A>的命名范围的属性。 然后，设置`Microsoft.Office.Interop.Excel.IconSetCondition.IconSet`属性`Microsoft.Office.Interop.Excel.IconSet`从检索的对象<xref:Microsoft.Office.Tools.Excel.WorkbookBase.IconSets%2A>属性。 若要指定`Microsoft.Office.Interop.Excel.IconSet`你想要检索，则之一传递的对象`Microsoft.Office.Interop.Excel.XlIconSet`枚举值的索引<xref:Microsoft.Office.Tools.Excel.WorkbookBase.IconSets%2A>属性。  
+ 若要应用基于图标集条件格式设置规则，请创建一个新`Microsoft.Office.Interop.Excel.IconSetCondition`通过使用`Microsoft.Office.Interop.Excel.FormatConditions.AddIconSetCondition`方法<xref:Microsoft.Office.Interop.Excel.Range.FormatConditions%2A>属性的范围，或<xref:Microsoft.Office.Tools.Excel.NamedRange.FormatConditions%2A>命名范围的属性。 然后，设置`Microsoft.Office.Interop.Excel.IconSetCondition.IconSet`属性设置为`Microsoft.Office.Interop.Excel.IconSet`从检索的对象<xref:Microsoft.Office.Tools.Excel.WorkbookBase.IconSets%2A>属性。 若要指定`Microsoft.Office.Interop.Excel.IconSet`对象，你想要检索，则传递之一`Microsoft.Office.Interop.Excel.XlIconSet`枚举值的索引<xref:Microsoft.Office.Tools.Excel.WorkbookBase.IconSets%2A>属性。  
   
    
   
 ## Examples  
- 下面的代码示例在填充范围`Sheet1`的值为从 1 到 6。 然后该示例添加一个图标将条件设置为范围 a1: a6 与`Microsoft.Office.Interop.Excel.XlIconSet.xl3Arrows`图标集。  
+ 下面的代码示例上填充的一个范围`Sheet1`值从 1 到 6。 然后该示例添加一个图标将条件设置为范围 a1: a6 与`Microsoft.Office.Interop.Excel.XlIconSet.xl3Arrows`图标集。  
   
  此示例适用于文档级自定义。  
   
@@ -3299,8 +3275,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示列表不活动时列表边框是否可见。</summary>
-        <value>
-          如果边框可见，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果边框可见，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -3372,23 +3347,22 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示工作簿是否作为外接程序运行。</summary>
-        <value>
-          如果工作簿作为外接程序运行，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果工作簿作为外接程序运行，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 当设置此属性为`true`，该工作簿具有以下特征：  
+ 此属性设置为`true`，工作簿具有以下特征：  
   
--   你不会提示保存工作簿，如果工作簿处于打开状态时进行更改。  
+-   不会提示保存该工作簿，如果工作簿处于打开状态时进行更改。  
   
 -   工作簿窗口不可见。  
   
--   工作簿中的所有宏都都不显示在**宏**对话框 (通过指向显示**宏**上**工具**菜单，然后单击**宏**).  
+-   该工作簿中的任何宏中不可见**宏**对话框 (通过指向显示**宏**上**工具**菜单并单击**宏**).  
   
--   工作簿中的宏仍可运行从**宏**对话框中，即使它们是不可见。 此外，宏名称不必是与工作薄名称限定的。  
+-   仍可以从运行该工作簿中的宏**宏**对话框，即使它们是不可见。 此外，宏名称不需要使用工作簿名称限定。  
   
--   按住 SHIFT 键，当您打开工作簿时无任何影响。  
+-   打开工作簿时按住 SHIFT 键不起作用。  
   
  ]]></format>
         </remarks>
@@ -3408,8 +3382,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，该值指示指定的工作簿是否正在就地编辑</summary>
-        <value>
-          如果指定的工作簿正在就地编辑，则为 <see langword="true" />；如果工作簿已在 Microsoft Office Excel 中打开进行编辑，则为 <see langword="false" />。</value>
+        <value>如果指定的工作簿正在就地编辑，则为 <see langword="true" />；如果工作簿已在 Microsoft Office Excel 中打开进行编辑，则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -3445,8 +3418,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示共享工作簿是否启用了更改跟踪。</summary>
-        <value>
-          如果共享工作簿启用了更改跟踪，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果共享工作簿启用了更改跟踪，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -3506,12 +3478,12 @@
 ## Remarks  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例使用的获取 DDE/OLE 的集合中当前工作簿的链接，然后使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.LinkInfo%2A>方法以确定每个 DDE/OLE 链接是否更新自动或手动。  
+ 下面的代码示例使用的获取的 DDE/OLE 集合中当前工作簿的链接，然后使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.LinkInfo%2A>方法，以确定是否每个 DDE/OLE 链接更新自动或手动。  
   
  此示例适用于文档级自定义。  
   
@@ -3546,17 +3518,17 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 在返回的名称<xref:System.Array>是链接的文档、 版本，或 DDE 或 OLE 服务器的名称。 该数组的格式是一维数组的所有类型，但发布服务器和订阅服务器。 返回的字符串包含的链接类型的相应表示法中的链接源的名称。 例如，DDE 链接使用"服务器 &#124; 文档 ！项"语法。  
+ 在返回名称<xref:System.Array>是链接的文档、 版本或 DDE 或 OLE 服务器的名称。 数组的格式是一维数组的所有类型，但发布服务器和订阅服务器。 返回的字符串包含中的链接类型的相应表示法的链接源的名称。 例如，DDE 链接使用"服务器&#124;文档 ！项"语法。  
   
- 有关发布服务器和订阅服务器的链接，则返回的数组是二维。 数组的第一列包含的版本，名称和第二列包含的各个版本的引用为文本。  
+ 有关发布服务器和订阅服务器上的链接，则返回的数组为二维图表。 数组的第一列包含的某一版本的名称，第二个列作为文本包含的各个版本的引用。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例将外部 Excel 链接添加到当前工作簿和工作簿中获取的 Excel 的所有链接的名称的数组，通过使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.LinkSources%2A>方法。 然后该示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.OpenLinks%2A>方法打开每个链接的工作簿为只读。  
+ 下面的代码示例将外部 Excel 链接添加到当前工作簿，并使用工作簿中获取所有 Excel 链接的名称的数组<xref:Microsoft.Office.Tools.Excel.WorkbookBase.LinkSources%2A>方法。 该示例然后使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.OpenLinks%2A>方法打开每个链接的工作簿为只读的。  
   
  此示例适用于文档级自定义。  
   
@@ -3581,8 +3553,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示对共享工作簿所做的更改是否显示在单独的工作表上。</summary>
-        <value>
-          如果对共享工作簿所做的更改显示在单独的工作表上，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果对共享工作簿所做的更改显示在单独的工作表上，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -3975,8 +3946,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，该值指示工作簿是否作为共享列表打开。</summary>
-        <value>
-          如果工作簿作为共享列表打开，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果工作簿作为共享列表打开，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -4037,7 +4007,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Names%2A>属性创建三个<xref:Microsoft.Office.Interop.Excel.Name?displayProperty=fullName>引用工作表上的不同范围的对象`Sheet1`。 然后，该示例循环访问每个<xref:Microsoft.Office.Interop.Excel.Name?displayProperty=fullName>中的工作簿和显示列 A 中工作表的名称`Sheet1`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Names%2A>属性创建了三个<xref:Microsoft.Office.Interop.Excel.Name?displayProperty=fullName>引用工作表上的不同范围的对象`Sheet1`。 该示例然后循环访问每个<xref:Microsoft.Office.Interop.Excel.Name?displayProperty=fullName>中的工作簿和工作表的 A 列中的名称显示`Sheet1`。  
   
  此示例适用于文档级自定义。  
   
@@ -4066,7 +4036,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例演示的处理程序<xref:Microsoft.Office.Tools.Excel.WorkbookBase.New>事件。 事件处理程序创建新的工作簿时 Microsoft Office Excel 应用程序窗口最大化。  
+ 下面的代码示例演示了一个处理程序<xref:Microsoft.Office.Tools.Excel.WorkbookBase.New>事件。 事件处理程序创建新的工作簿时 Microsoft Office Excel 应用程序窗口最大化。  
   
  此示例适用于文档级自定义。  
   
@@ -4112,7 +4082,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例演示的处理程序<xref:Microsoft.Office.Tools.Excel.WorkbookBase.NewSheet>事件。 创建新工作表时，事件处理程序将新工作表移动到工作簿中的最后一个位置。  
+ 下面的代码示例演示了一个处理程序<xref:Microsoft.Office.Tools.Excel.WorkbookBase.NewSheet>事件。 创建一个新工作表时，事件处理程序将新工作表移动到工作簿中的最后一个位置。  
   
  此示例适用于文档级自定义。  
   
@@ -4143,7 +4113,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.NewWindow%2A>方法来创建一个新的 Excel 应用程序窗口具有标题"这是一个新窗口"，但没有网格线。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.NewWindow%2A>方法来创建新的 Excel 应用程序窗口具有标题"这是一个新窗口"，但没有网格线。  
   
  此示例适用于文档级自定义。  
   
@@ -4277,7 +4247,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例演示的处理程序<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Open>事件。 事件处理程序打开当前工作簿时 Microsoft Office Excel 应用程序窗口最大化。  
+ 下面的代码示例演示了一个处理程序<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Open>事件。 当前工作簿打开时，事件处理程序会使 Microsoft Office Excel 应用程序窗口最大化。  
   
  此示例适用于文档级自定义。  
   
@@ -4307,8 +4277,7 @@
       </Parameters>
       <Docs>
         <param name="name">Microsoft Office Excel 或 DDE/OLE 链接的名称（和从 <see cref="M:Microsoft.Office.Tools.Excel.WorkbookBase.LinkSources(System.Object)" /> 方法返回的一样）。</param>
-        <param name="readOnly">
-          如果为 <see langword="true" />，则以只读方式打开文档。 默认值为 <see langword="false" />。</param>
+        <param name="readOnly">如果为 <see langword="true" />，则以只读方式打开文档。 默认值为 <see langword="false" />。</param>
         <param name="type">
           <see cref="T:Microsoft.Office.Interop.Excel.XlLink" /> 值之一。 链接类型。</param>
         <summary>打开一个或多个链接的支持文档。</summary>
@@ -4318,12 +4287,12 @@
 ## Remarks  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.LinkSources%2A>方法在当前工作簿中获取所有 Excel 链接的名称的数组。 然后该示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.OpenLinks%2A>方法打开每个文档为只读。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.LinkSources%2A>方法在当前工作簿中获取所有 Excel 链接的名称的数组。 该示例然后使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.OpenLinks%2A>方法打开每个文档为只读的。  
   
  此示例适用于文档级自定义。  
   
@@ -4353,7 +4322,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Parent%2A>属性来显示的父级的当前工作簿的名称。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Parent%2A>属性来显示当前工作簿的父项的名称。  
   
  此示例适用于文档级自定义。  
   
@@ -4383,12 +4352,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用强密码合并大写和小写字母、 数字和符号。 弱密码不同时包含这些元素。 强密码： Y6dh ！ et5。 弱密码： House27。 使用你自己可以记住，以便无需将其记下的强密码。  
+ 使用强密码的组合大写和小写字母、 数字和符号。 弱密码不混合使用这些元素。 强密码： Y6dh ！ et5。 弱密码： House27。 使用，以便无需将其记下可以记住的强密码。  
   
    
   
 ## Examples  
- 下面的代码示例检查的值<xref:Microsoft.Office.Tools.Excel.WorkbookBase.HasPassword%2A>属性来确定工作簿是否受密码保护。 如果工作簿不受密码保护，然后该示例设置<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Password%2A>的密码的属性获取用户输入，然后调用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SetPasswordEncryptionOptions%2A>方法来设置加密算法、 设置的密钥长度、 设定的加密提供程序的名称并启用文件属性加密。 然后，该示例显示的值<xref:Microsoft.Office.Tools.Excel.WorkbookBase.PasswordEncryptionProvider%2A>， <xref:Microsoft.Office.Tools.Excel.WorkbookBase.PasswordEncryptionAlgorithm%2A>， <xref:Microsoft.Office.Tools.Excel.WorkbookBase.PasswordEncryptionKeyLength%2A>，和<xref:Microsoft.Office.Tools.Excel.WorkbookBase.PasswordEncryptionFileProperties%2A>工作表中的属性`Sheet1`。 此示例假定方法`GetPasswordFromUserInput`其他位置定义。  
+ 下面的代码示例检查的值<xref:Microsoft.Office.Tools.Excel.WorkbookBase.HasPassword%2A>属性来确定工作簿是否受密码保护。 如果工作簿不受密码保护，然后该示例设置<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Password%2A>属性设置为密码获取用户输入，然后调用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SetPasswordEncryptionOptions%2A>方法设置的加密算法、 密钥长度设置、 设置的加密提供程序名称并启用加密文件属性。 然后，该示例显示的值<xref:Microsoft.Office.Tools.Excel.WorkbookBase.PasswordEncryptionProvider%2A>， <xref:Microsoft.Office.Tools.Excel.WorkbookBase.PasswordEncryptionAlgorithm%2A>， <xref:Microsoft.Office.Tools.Excel.WorkbookBase.PasswordEncryptionKeyLength%2A>，和<xref:Microsoft.Office.Tools.Excel.WorkbookBase.PasswordEncryptionFileProperties%2A>工作表中的属性`Sheet1`。 此示例假定方法`GetPasswordFromUserInput`其他位置定义。  
   
  此示例适用于文档级自定义。  
   
@@ -4418,12 +4387,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SetPasswordEncryptionOptions%2A>方法，以指定 Excel 是否对文件属性受密码保护的工作簿进行加密。  
+ 使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SetPasswordEncryptionOptions%2A>方法，以指定 Excel 是否对受密码保护工作簿的文件属性进行加密。  
   
    
   
 ## Examples  
- 下面的代码示例检查的值<xref:Microsoft.Office.Tools.Excel.WorkbookBase.HasPassword%2A>属性来确定工作簿是否受密码保护。 如果工作簿不受密码保护，然后该示例设置<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Password%2A>的密码的属性获取用户输入，然后调用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SetPasswordEncryptionOptions%2A>方法来设置加密算法、 设置的密钥长度、 设定的加密提供程序的名称并启用文件属性加密。 然后，该示例显示的值<xref:Microsoft.Office.Tools.Excel.WorkbookBase.PasswordEncryptionProvider%2A>， <xref:Microsoft.Office.Tools.Excel.WorkbookBase.PasswordEncryptionAlgorithm%2A>， <xref:Microsoft.Office.Tools.Excel.WorkbookBase.PasswordEncryptionKeyLength%2A>，和<xref:Microsoft.Office.Tools.Excel.WorkbookBase.PasswordEncryptionFileProperties%2A>工作表中的属性`Sheet1`。 此示例假定方法`GetPasswordFromUserInput`其他位置定义。  
+ 下面的代码示例检查的值<xref:Microsoft.Office.Tools.Excel.WorkbookBase.HasPassword%2A>属性来确定工作簿是否受密码保护。 如果工作簿不受密码保护，然后该示例设置<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Password%2A>属性设置为密码获取用户输入，然后调用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SetPasswordEncryptionOptions%2A>方法设置的加密算法、 密钥长度设置、 设置的加密提供程序名称并启用加密文件属性。 然后，该示例显示的值<xref:Microsoft.Office.Tools.Excel.WorkbookBase.PasswordEncryptionProvider%2A>， <xref:Microsoft.Office.Tools.Excel.WorkbookBase.PasswordEncryptionAlgorithm%2A>， <xref:Microsoft.Office.Tools.Excel.WorkbookBase.PasswordEncryptionKeyLength%2A>，和<xref:Microsoft.Office.Tools.Excel.WorkbookBase.PasswordEncryptionFileProperties%2A>工作表中的属性`Sheet1`。 此示例假定方法`GetPasswordFromUserInput`其他位置定义。  
   
  此示例适用于文档级自定义。  
   
@@ -4448,18 +4417,17 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，该值指示 Microsoft Office Excel 是否对受密码保护的指定工作簿的文件属性进行加密。</summary>
-        <value>
-          如果 Excel 对受密码保护的指定工作簿的文件属性进行加密，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果 Excel 对受密码保护的指定工作簿的文件属性进行加密，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SetPasswordEncryptionOptions%2A>方法，以指定 Excel 是否对文件属性中指定的受密码保护的工作簿进行加密。  
+ 使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SetPasswordEncryptionOptions%2A>方法，以指定 Excel 是否对指定的受密码保护的工作簿的文件属性进行加密。  
   
    
   
 ## Examples  
- 下面的代码示例检查的值<xref:Microsoft.Office.Tools.Excel.WorkbookBase.HasPassword%2A>属性来确定工作簿是否受密码保护。 如果工作簿不受密码保护，然后该示例设置<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Password%2A>的密码的属性获取用户输入，然后调用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SetPasswordEncryptionOptions%2A>方法来设置加密算法、 设置的密钥长度、 设定的加密提供程序的名称并启用文件属性加密。 然后，该示例显示的值<xref:Microsoft.Office.Tools.Excel.WorkbookBase.PasswordEncryptionProvider%2A>， <xref:Microsoft.Office.Tools.Excel.WorkbookBase.PasswordEncryptionAlgorithm%2A>， <xref:Microsoft.Office.Tools.Excel.WorkbookBase.PasswordEncryptionKeyLength%2A>，和<xref:Microsoft.Office.Tools.Excel.WorkbookBase.PasswordEncryptionFileProperties%2A>工作表中的属性`Sheet1`。 此示例假定方法`GetPasswordFromUserInput`其他位置定义。  
+ 下面的代码示例检查的值<xref:Microsoft.Office.Tools.Excel.WorkbookBase.HasPassword%2A>属性来确定工作簿是否受密码保护。 如果工作簿不受密码保护，然后该示例设置<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Password%2A>属性设置为密码获取用户输入，然后调用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SetPasswordEncryptionOptions%2A>方法设置的加密算法、 密钥长度设置、 设置的加密提供程序名称并启用加密文件属性。 然后，该示例显示的值<xref:Microsoft.Office.Tools.Excel.WorkbookBase.PasswordEncryptionProvider%2A>， <xref:Microsoft.Office.Tools.Excel.WorkbookBase.PasswordEncryptionAlgorithm%2A>， <xref:Microsoft.Office.Tools.Excel.WorkbookBase.PasswordEncryptionKeyLength%2A>，和<xref:Microsoft.Office.Tools.Excel.WorkbookBase.PasswordEncryptionFileProperties%2A>工作表中的属性`Sheet1`。 此示例假定方法`GetPasswordFromUserInput`其他位置定义。  
   
  此示例适用于文档级自定义。  
   
@@ -4489,12 +4457,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SetPasswordEncryptionOptions%2A>方法，以指定 Excel 是否对文件属性中指定的受密码保护的工作簿进行加密。  
+ 使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SetPasswordEncryptionOptions%2A>方法，以指定 Excel 是否对指定的受密码保护的工作簿的文件属性进行加密。  
   
    
   
 ## Examples  
- 下面的代码示例检查的值<xref:Microsoft.Office.Tools.Excel.WorkbookBase.HasPassword%2A>属性来确定工作簿是否受密码保护。 如果工作簿不受密码保护，然后该示例设置<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Password%2A>的密码的属性获取用户输入，然后调用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SetPasswordEncryptionOptions%2A>方法来设置加密算法、 设置的密钥长度、 设定的加密提供程序的名称并启用文件属性加密。 然后，该示例显示的值<xref:Microsoft.Office.Tools.Excel.WorkbookBase.PasswordEncryptionProvider%2A>， <xref:Microsoft.Office.Tools.Excel.WorkbookBase.PasswordEncryptionAlgorithm%2A>， <xref:Microsoft.Office.Tools.Excel.WorkbookBase.PasswordEncryptionKeyLength%2A>，和<xref:Microsoft.Office.Tools.Excel.WorkbookBase.PasswordEncryptionFileProperties%2A>工作表中的属性`Sheet1`。 此示例假定方法`GetPasswordFromUserInput`其他位置定义。  
+ 下面的代码示例检查的值<xref:Microsoft.Office.Tools.Excel.WorkbookBase.HasPassword%2A>属性来确定工作簿是否受密码保护。 如果工作簿不受密码保护，然后该示例设置<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Password%2A>属性设置为密码获取用户输入，然后调用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SetPasswordEncryptionOptions%2A>方法设置的加密算法、 密钥长度设置、 设置的加密提供程序名称并启用加密文件属性。 然后，该示例显示的值<xref:Microsoft.Office.Tools.Excel.WorkbookBase.PasswordEncryptionProvider%2A>， <xref:Microsoft.Office.Tools.Excel.WorkbookBase.PasswordEncryptionAlgorithm%2A>， <xref:Microsoft.Office.Tools.Excel.WorkbookBase.PasswordEncryptionKeyLength%2A>，和<xref:Microsoft.Office.Tools.Excel.WorkbookBase.PasswordEncryptionFileProperties%2A>工作表中的属性`Sheet1`。 此示例假定方法`GetPasswordFromUserInput`其他位置定义。  
   
  此示例适用于文档级自定义。  
   
@@ -4524,7 +4492,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例检查的值<xref:Microsoft.Office.Tools.Excel.WorkbookBase.HasPassword%2A>属性来确定工作簿是否受密码保护。 如果工作簿不受密码保护，然后该示例设置<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Password%2A>的密码的属性获取用户输入，然后调用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SetPasswordEncryptionOptions%2A>方法来设置加密算法、 设置的密钥长度、 设定的加密提供程序的名称并启用文件属性加密。 然后，该示例显示的值<xref:Microsoft.Office.Tools.Excel.WorkbookBase.PasswordEncryptionProvider%2A>， <xref:Microsoft.Office.Tools.Excel.WorkbookBase.PasswordEncryptionAlgorithm%2A>， <xref:Microsoft.Office.Tools.Excel.WorkbookBase.PasswordEncryptionKeyLength%2A>，和<xref:Microsoft.Office.Tools.Excel.WorkbookBase.PasswordEncryptionFileProperties%2A>工作表中的属性`Sheet1`。 此示例假定方法`GetPasswordFromUserInput`其他位置定义。  
+ 下面的代码示例检查的值<xref:Microsoft.Office.Tools.Excel.WorkbookBase.HasPassword%2A>属性来确定工作簿是否受密码保护。 如果工作簿不受密码保护，然后该示例设置<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Password%2A>属性设置为密码获取用户输入，然后调用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SetPasswordEncryptionOptions%2A>方法设置的加密算法、 密钥长度设置、 设置的加密提供程序名称并启用加密文件属性。 然后，该示例显示的值<xref:Microsoft.Office.Tools.Excel.WorkbookBase.PasswordEncryptionProvider%2A>， <xref:Microsoft.Office.Tools.Excel.WorkbookBase.PasswordEncryptionAlgorithm%2A>， <xref:Microsoft.Office.Tools.Excel.WorkbookBase.PasswordEncryptionKeyLength%2A>，和<xref:Microsoft.Office.Tools.Excel.WorkbookBase.PasswordEncryptionFileProperties%2A>工作表中的属性`Sheet1`。 此示例假定方法`GetPasswordFromUserInput`其他位置定义。  
   
  此示例适用于文档级自定义。  
   
@@ -4554,7 +4522,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例检查的值<xref:Microsoft.Office.Tools.Excel.WorkbookBase.FileFormat%2A>属性来确定工作簿是否正常工作簿。 工作簿是否正常工作簿，然后该示例调用<xref:Microsoft.Office.Tools.Excel.Worksheet.SaveAs%2A>方法来重新工作簿保存为 XML 电子表格同名`XMLCopy.xlsx`中指定的路径<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Path%2A>属性。  
+ 下面的代码示例检查的值<xref:Microsoft.Office.Tools.Excel.WorkbookBase.FileFormat%2A>属性来确定工作簿是否正常工作簿。 该工作簿是否正常工作簿，然后该示例调用<xref:Microsoft.Office.Tools.Excel.Worksheet.SaveAs%2A>方法以将该工作簿重新保存为具有名称的 XML 电子表格`XMLCopy.xlsx`中指定的路径<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Path%2A>属性。  
   
  此示例适用于文档级自定义。  
   
@@ -4579,12 +4547,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个 <c>Microsoft.Office.Core.Permission</c> 对象，该对象表示工作簿中的权限设置。</summary>
-        <value>A <c>Microsoft.Office.Core.Permission</c>表示工作簿中的权限设置的对象。</value>
+        <value>一个<c>Microsoft.Office.Core.Permission</c>表示工作簿中的权限设置的对象。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Permission%2A>显示一条消息，如果不在当前工作簿中启用权限的属性。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Permission%2A>属性来显示一条消息，如果不在当前工作簿中启用权限。  
   
  此示例适用于文档级自定义。  
   
@@ -4609,8 +4577,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示列表的筛选器设置和排序设置是否包括在共享工作簿的用户个人视图中。</summary>
-        <value>
-          如果列表的筛选器设置和排序设置包括在共享工作簿的用户个人视图中，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果列表的筛选器设置和排序设置包括在共享工作簿的用户个人视图中，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -4628,8 +4595,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示打印设置是否包括在共享工作簿的用户个人视图中。</summary>
-        <value>
-          如果打印设置包括在共享工作簿的用户个人视图中，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果打印设置包括在共享工作簿的用户个人视图中，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -4654,7 +4620,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.PivotCaches%2A>方法以设置每个<xref:Microsoft.Office.Interop.Excel.PivotCache?displayProperty=fullName>要自动在每次更新当前工作簿中打开工作簿。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.PivotCaches%2A>方法以设置每个<xref:Microsoft.Office.Interop.Excel.PivotCache?displayProperty=fullName>当前工作簿自动更新每个时间中打开工作簿。  
   
  此示例适用于文档级自定义。  
   
@@ -4683,7 +4649,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例演示的处理程序<xref:Microsoft.Office.Tools.Excel.WorkbookBase.PivotTableCloseConnection>事件。 数据透视表关闭到其数据源的连接时，事件处理程序将显示一条消息。  
+ 下面的代码示例演示了一个处理程序<xref:Microsoft.Office.Tools.Excel.WorkbookBase.PivotTableCloseConnection>事件。 数据透视表关闭到其数据源连接时，事件处理程序将显示一条消息。  
   
  此示例适用于文档级自定义。  
   
@@ -4712,7 +4678,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例演示的处理程序<xref:Microsoft.Office.Tools.Excel.WorkbookBase.PivotTableOpenConnection>事件。 数据透视表打开到其数据源的连接时，事件处理程序将显示一条消息。  
+ 下面的代码示例演示了一个处理程序<xref:Microsoft.Office.Tools.Excel.WorkbookBase.PivotTableOpenConnection>事件。 数据透视表打开到其数据源连接时，事件处理程序将显示一条消息。  
   
  此示例适用于文档级自定义。  
   
@@ -4803,7 +4769,7 @@
 ## Remarks  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
  ]]></format>
         </remarks>
@@ -4823,8 +4789,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示是否仅使用数字所显示的精度来完成工作簿中的计算。</summary>
-        <value>
-          如果仅使用数字所显示的精度来完成工作簿中的计算，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果仅使用数字所显示的精度来完成工作簿中的计算，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -4895,30 +4860,26 @@
         <param name="from">要从其处开始打印的页码。 如果省略此参数，则打印从第一页开始。</param>
         <param name="to">要打印的最后一页的页码。 若忽略此参数，则打印至最后一页。</param>
         <param name="copies">要打印的份数。 如果忽略此参数，则打印一份。</param>
-        <param name="preview">
-          若要在打印对象前让 Microsoft Office Excel 调用打印预览，请使用 <see langword="true" />。 若要立即打印对象，请使用 <see langword="false" />。</param>
+        <param name="preview">若要在打印对象前让 Microsoft Office Excel 调用打印预览，请使用 <see langword="true" />。 若要立即打印对象，请使用 <see langword="false" />。</param>
         <param name="activePrinter">设置活动打印机的名称。</param>
-        <param name="printToFile">
-          若要打印到文件，请使用 <see langword="true" />。 若未指定 <c>PrToFileName</c>，则 Excel 会提示用户输入输出文件的名称。</param>
-        <param name="collate">
-          若逐份打印多个副本，请使用 <see langword="true" />。</param>
+        <param name="printToFile">若要打印到文件，请使用 <see langword="true" />。 若未指定 <c>PrToFileName</c>，则 Excel 会提示用户输入输出文件的名称。</param>
+        <param name="collate">若逐份打印多个副本，请使用 <see langword="true" />。</param>
         <param name="prToFileName">如果 <c>PrintToFile</c> 设为 <see langword="true" />，则此参数指定要打印到的文件的名称。</param>
-        <param name="ignorePrintAreas">
-          如果要忽略打印区域并打印整个工作簿，则为 <see langword="true" />；否则为 <see langword="false" />。</param>
+        <param name="ignorePrintAreas">如果要忽略打印区域并打印整个工作簿，则为 <see langword="true" />；否则为 <see langword="false" />。</param>
         <summary>打印工作簿。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- "页"中的说明`From`和`To`指打印的页面，不适用于表或工作簿中的全部页。  
+ "页"中的说明`From`和`To`指打印的页面，不适用于表或工作簿中的所有页。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.PrintOutEx%2A>方法打印到默认打印机工作簿的前两个打印页的两个已设置排序规则的副本。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.PrintOutEx%2A>方法打印到默认打印机工作簿的前两个打印页面的两个已设置排序规则的副本。  
   
  此示例适用于文档级自定义。  
   
@@ -4945,8 +4906,7 @@
         <Parameter Name="enableChanges" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="enableChanges">
-          如果为 <see langword="true" />，则允许在显示打印预览时更改边距和页面设置；否则为 <see langword="false" />。</param>
+        <param name="enableChanges">如果为 <see langword="true" />，则允许在显示打印预览时更改边距和页面设置；否则为 <see langword="false" />。</param>
         <summary>显示与打印效果相同的对象的预览。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -4954,7 +4914,7 @@
 ## Remarks  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
@@ -4989,24 +4949,22 @@
       </Parameters>
       <Docs>
         <param name="password">工作簿的密码，区分大小写。 如果省略此参数，则无需使用密码即可取消保护工作簿。 否则，必须指定密码才能取消保护工作簿。</param>
-        <param name="structure">
-          如果为 <see langword="true" />，则保护工作簿的结构（工作表的相对位置）。 默认值为 <see langword="false" />。</param>
-        <param name="windows">
-          如果为 <see langword="true" />，则保护工作簿窗口。 如果省略此参数，则窗口不受保护。</param>
+        <param name="structure">如果为 <see langword="true" />，则保护工作簿的结构（工作表的相对位置）。 默认值为 <see langword="false" />。</param>
+        <param name="windows">如果为 <see langword="true" />，则保护工作簿窗口。 如果省略此参数，则窗口不受保护。</param>
         <summary>保护工作簿使其无法修改。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用强密码合并大写和小写字母、 数字和符号。 弱密码不同时包含这些元素。 例如，"Y6dh ！ et5"是一个强密码，但"House27"是弱密码。 使用你自己可以记住，以便无需将其记下的强密码。  
+ 使用强密码的组合大写和小写字母、 数字和符号。 弱密码不混合使用这些元素。 例如，"Y6dh ！ et5"强密码，但"House27"是弱密码。 使用，以便无需将其记下可以记住的强密码。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Protect%2A>方法来保护工作簿和工作簿 windows，但不会指定密码保护的结构。 该示例然后检查的值<xref:Microsoft.Office.Tools.Excel.WorkbookBase.ProtectStructure%2A>和<xref:Microsoft.Office.Tools.Excel.WorkbookBase.ProtectWindows%2A>属性，以验证设置此保护。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Protect%2A>方法来保护工作簿和工作簿窗口，而无需指定密码保护的结构。 该示例然后检查的值<xref:Microsoft.Office.Tools.Excel.WorkbookBase.ProtectStructure%2A>和<xref:Microsoft.Office.Tools.Excel.WorkbookBase.ProtectWindows%2A>属性，以验证是否设置了此保护。  
   
  此示例适用于文档级自定义。  
   
@@ -5036,22 +4994,22 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果你的工作簿受密码保护，而且它包含的缓存的数据，可能在运行时更改 Excel 重写此方法在文档级项目中。 在你实现此方法中，使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Protect%2A>方法来保护工作簿。  
+ 如果您的工作簿受密码保护，并且它包含的缓存的数据，可能会在运行时更改 Excel 重写此方法在文档级项目中。 在此方法的实现中，使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Protect%2A>方法来保护工作簿。  
   
- 默认情况下，对受密码保护的工作簿中的缓存数据的更改不会保留在保存工作簿时。 若要将更改保存到缓存的数据，必须在你的项目中重写以下方法：  
+ 默认情况下，对受密码保护的工作簿中的缓存数据的更改不会保留时保存工作簿。 若要将更改保存到缓存的数据，必须在你的项目中重写以下方法：  
   
--   <xref:Microsoft.Office.Tools.Excel.WorkbookBase.UnprotectDocument%2A>。 保存工作簿后，[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]调用此方法。 将代码添加到此方法的暂时取消保护该工作簿。 这使对缓存的数据要保存更改。  
+-   <xref:Microsoft.Office.Tools.Excel.WorkbookBase.UnprotectDocument%2A>。 保存该工作簿后，[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]调用此方法。 将代码添加到此方法可暂时取消保护工作簿。 这允许缓存的数据要保存更改。  
   
--   <xref:Microsoft.Office.Tools.Excel.WorkbookBase.ProtectDocument%2A>。 保存工作簿后，[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]调用此方法。 将代码添加到此方法的重新应用到的工作簿的保护。  
+-   <xref:Microsoft.Office.Tools.Excel.WorkbookBase.ProtectDocument%2A>。 保存工作簿后，[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]调用此方法。 将代码添加到此方法的重新应用到工作簿的保护。  
   
- 有关详细信息，请参阅[如何： 在 Password-Protected 文档中缓存数据](/visualstudio/vsto/how-to-cache-data-in-a-password-protected-document.md)。  
+ 有关详细信息，请参阅[如何： Password-Protected 文档中的缓存数据](/visualstudio/vsto/how-to-cache-data-in-a-password-protected-document)。  
   
- [!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]调用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.ProtectDocument%2A>方法，即使由于无关密码保护某些错误，无法保存缓存的数据。 例如，如果你实现<xref:Microsoft.VisualStudio.Tools.Applications.Runtime.ICachedType>接口可自定义缓存的数据的方式存储在文档中，<xref:Microsoft.Office.Tools.Excel.WorkbookBase.ProtectDocument%2A>调用方法即使你<xref:Microsoft.VisualStudio.Tools.Applications.Runtime.ICachedType>实现引发了异常，防止保存缓存的数据。  
+ [!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]调用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.ProtectDocument%2A>方法，即使由于某种错误与密码保护，无法保存缓存的数据。 例如，如果您实现<xref:Microsoft.VisualStudio.Tools.Applications.Runtime.ICachedType>接口可自定义缓存的数据的方式存储在文档中，<xref:Microsoft.Office.Tools.Excel.WorkbookBase.ProtectDocument%2A>调用方法即使你<xref:Microsoft.VisualStudio.Tools.Applications.Runtime.ICachedType>实现将引发异常，以防止保存缓存的数据。  
   
    
   
 ## Examples  
- 下面的代码示例演示如何重写<xref:Microsoft.Office.Tools.Excel.WorkbookBase.ProtectDocument%2A>方法以重新应用已通过重写中删除的保护<xref:Microsoft.Office.Tools.Excel.WorkbookBase.UnprotectDocument%2A>方法。 若要使用此代码，可以从运行`ThisWorkbook`Excel 的文档级项目中的类。 该代码假定该密码存储在名为的字段中`securelyStoredPassword`。  
+ 下面的代码示例演示如何重写<xref:Microsoft.Office.Tools.Excel.WorkbookBase.ProtectDocument%2A>方法重新应用已删除通过重写保护<xref:Microsoft.Office.Tools.Excel.WorkbookBase.UnprotectDocument%2A>方法。 若要使用此代码，运行从`ThisWorkbook`Excel 的文档级项目中的类。 该密码存储在名为的字段中的代码假定`securelyStoredPassword`。  
   
  [!code-csharp[Trin_CachedDataProtectedWorkbook#1](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_CachedDataProtectedWorkbook/CS/ThisWorkbook.cs#1)]
  [!code-vb[Trin_CachedDataProtectedWorkbook#1](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_CachedDataProtectedWorkbook/VB/ThisWorkbook.vb#1)]  
@@ -5121,10 +5079,8 @@
         <param name="filename">保存的文件的名称。 可以包含完整路径；否则，Microsoft Office Excel 将文件保存在当前文件夹中。</param>
         <param name="password">工作簿的密码，区分大小写。 如果省略此参数，则无需使用密码即可取消保护工作簿。 否则，必须指定密码才能取消保护工作簿。</param>
         <param name="writeResPassword">文件的写保护密码。 如果保存文件时指定了密码，但打开文件时没有提供密码，则该文件以只读方式打开。</param>
-        <param name="readOnlyRecommended">
-          如果为 <see langword="true" />，则在打开该文件时显示一条消息，建议以只读方式打开该文件。</param>
-        <param name="createBackup">
-          如果为 <see langword="true" />，则创建备份文件。</param>
+        <param name="readOnlyRecommended">如果为 <see langword="true" />，则在打开该文件时显示一条消息，建议以只读方式打开该文件。</param>
+        <param name="createBackup">如果为 <see langword="true" />，则创建备份文件。</param>
         <param name="sharingPassword">要用来保护文件共享的密码。</param>
         <param name="fileFormat">一个指示文件格式的字符串。</param>
         <summary>保存工作簿，并进行共享保护。</summary>
@@ -5132,10 +5088,10 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用强密码合并大写和小写字母、 数字和符号。 弱密码不同时包含这些元素。 例如，"Y6dh ！ et5"是一个强密码，但"House27"是弱密码。 使用你自己可以记住，以便无需将其记下的强密码。  
+ 使用强密码的组合大写和小写字母、 数字和符号。 弱密码不混合使用这些元素。 例如，"Y6dh ！ et5"强密码，但"House27"是弱密码。 使用，以便无需将其记下可以记住的强密码。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
  ]]></format>
         </remarks>
@@ -5155,13 +5111,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，该值指示工作簿中的表的顺序是否受保护。</summary>
-        <value>
-          如果工作簿中的表的顺序受保护，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果工作簿中的表的顺序受保护，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Protect%2A>方法来保护工作簿和工作簿 windows，但不会指定密码保护的结构。 该示例然后检查的值<xref:Microsoft.Office.Tools.Excel.WorkbookBase.ProtectStructure%2A>和<xref:Microsoft.Office.Tools.Excel.WorkbookBase.ProtectWindows%2A>属性，以验证设置此保护。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Protect%2A>方法来保护工作簿和工作簿窗口，而无需指定密码保护的结构。 该示例然后检查的值<xref:Microsoft.Office.Tools.Excel.WorkbookBase.ProtectStructure%2A>和<xref:Microsoft.Office.Tools.Excel.WorkbookBase.ProtectWindows%2A>属性，以验证是否设置了此保护。  
   
  此示例适用于文档级自定义。  
   
@@ -5186,13 +5141,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，该值指示工作簿窗口是否受保护。</summary>
-        <value>
-          如果工作簿窗口受保护，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果工作簿窗口受保护，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Protect%2A>方法来保护工作簿和工作簿 windows，但不会指定密码保护的结构。 该示例然后检查的值<xref:Microsoft.Office.Tools.Excel.WorkbookBase.ProtectStructure%2A>和<xref:Microsoft.Office.Tools.Excel.WorkbookBase.ProtectWindows%2A>属性，以验证设置此保护。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Protect%2A>方法来保护工作簿和工作簿窗口，而无需指定密码保护的结构。 该示例然后检查的值<xref:Microsoft.Office.Tools.Excel.WorkbookBase.ProtectStructure%2A>和<xref:Microsoft.Office.Tools.Excel.WorkbookBase.ProtectWindows%2A>属性，以验证是否设置了此保护。  
   
  此示例适用于文档级自定义。  
   
@@ -5223,7 +5177,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.PublishObjects%2A>发布所有静态属性<xref:Microsoft.Office.Interop.Excel.PublishObject?displayProperty=fullName>到 Web 页的活动工作簿中的项。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.PublishObjects%2A>属性将发布所有静态<xref:Microsoft.Office.Interop.Excel.PublishObject?displayProperty=fullName>到网页的活动工作簿中的项。  
   
  此示例适用于文档级自定义。  
   
@@ -5260,7 +5214,7 @@
 ## Remarks  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
  ]]></format>
         </remarks>
@@ -5280,8 +5234,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，该值指示是否已用只读方式打开工作簿。</summary>
-        <value>
-          如果已用只读方式打开工作簿，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果已用只读方式打开工作簿，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -5291,7 +5244,7 @@
    
   
 ## Examples  
- 下面的代码示例显示一条消息，如果<xref:Microsoft.Office.Tools.Excel.WorkbookBase.ReadOnlyRecommended%2A>属性是`true`和<xref:Microsoft.Office.Tools.Excel.WorkbookBase.ReadOnly%2A>属性是`false`，然后会提示用户设置的文件访问权限为只读的通过调用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.ChangeFileAccess%2A>方法。  
+ 下面的代码示例显示一条消息，如果<xref:Microsoft.Office.Tools.Excel.WorkbookBase.ReadOnlyRecommended%2A>属性是`true`并<xref:Microsoft.Office.Tools.Excel.WorkbookBase.ReadOnly%2A>属性是`false`，然后会提示用户设置的文件访问权限为只读、 只通过调用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.ChangeFileAccess%2A>方法。  
   
  此示例适用于文档级自定义。  
   
@@ -5316,20 +5269,19 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示工作簿是否保存为建议的只读方式。</summary>
-        <value>
-          如果工作簿保存为建议的只读方式，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果工作簿保存为建议的只读方式，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 打开以只读方式已保存建议的工作簿时，Microsoft Office Excel 会显示条消息，建议你打开工作簿为只读。  
+ 为只读的已保存建议的工作簿打开时，Microsoft Office Excel 将显示一条消息，建议您打开工作簿作为只读的。  
   
- 使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SaveAs%2A>方法可以更改此属性。  
+ 使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SaveAs%2A>方法来更改此属性。  
   
    
   
 ## Examples  
- 下面的代码示例显示一个消息框，如果<xref:Microsoft.Office.Tools.Excel.WorkbookBase.ReadOnlyRecommended%2A>属性是`true`和<xref:Microsoft.Office.Tools.Excel.WorkbookBase.ReadOnly%2A>属性是`false`，然后会提示用户设置的文件访问权限为只读的通过调用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.ChangeFileAccess%2A>方法。  
+ 下面的代码示例显示一个消息框，如果<xref:Microsoft.Office.Tools.Excel.WorkbookBase.ReadOnlyRecommended%2A>属性是`true`并<xref:Microsoft.Office.Tools.Excel.WorkbookBase.ReadOnly%2A>属性是`false`，然后会提示用户设置的文件访问权限为只读、 只通过调用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.ChangeFileAccess%2A>方法。  
   
  此示例适用于文档级自定义。  
   
@@ -5382,7 +5334,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 对象具有<xref:Microsoft.Office.Interop.Excel.PivotCache.BackgroundQuery%2A>属性设置为`true`在后台刷新。  
+ 对象具有<xref:Microsoft.Office.Interop.Excel.PivotCache.BackgroundQuery%2A>属性设置为`true`在后台刷新一次。  
   
  ]]></format>
         </remarks>
@@ -5417,7 +5369,7 @@
 ## Remarks  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
  ]]></format>
         </remarks>
@@ -5446,7 +5398,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.ReloadAs%2A>方法重新加载工作簿使用西方文档的编码。 此示例假定到当前工作簿基于 HTML 文档。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.ReloadAs%2A>方法来重新加载工作簿使用西方文档的编码。 此示例假定当前工作簿基于 HTML 文档。  
   
  此示例适用于文档级自定义。  
   
@@ -5476,13 +5428,13 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法可以通过执行以下任务来删除自定义项：  
+ 此方法通过执行以下任务来删除自定义项：  
   
--   它将删除`_AssemblyName`和`_AssemblyLocation`从工作簿的自定义属性。 有关详细信息，请参阅[自定义文档属性概述](/visualstudio/vsto/custom-document-properties-overview.md)。  
+-   它将删除`_AssemblyName`和`_AssemblyLocation`工作簿中的自定义属性。 有关详细信息，请参阅[自定义文档属性概述](/visualstudio/vsto/custom-document-properties-overview)。  
   
--   它从工作簿中删除缓存的数据。 有关缓存数据的详细信息，请参阅[缓存数据](/visualstudio/vsto/caching-data.md)。  
+-   它从工作簿中删除缓存的数据。 有关缓存数据的详细信息，请参阅[缓存数据](/visualstudio/vsto/caching-data)。  
   
- 此方法可能引发<xref:System.UnauthorizedAccessException>如果工作簿受到保护。 调用此方法之前，应从工作簿删除任何保护。  
+ 此方法可能会引发<xref:System.UnauthorizedAccessException>如果受保护工作簿。 调用此方法之前，应从工作簿删除任何保护。  
   
  ]]></format>
         </remarks>
@@ -5513,7 +5465,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例会取消当前的工作簿的所有工作簿属性。  
+ 下面的代码示例将删除当前工作簿的所有工作簿属性。  
   
  此示例适用于文档级自定义。  
   
@@ -5538,8 +5490,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示个人信息是否可从工作簿中移除。</summary>
-        <value>
-          如果个人信息可从工作簿中移除，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="false" />。</value>
+        <value>如果个人信息可从工作簿中移除，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -5616,22 +5567,21 @@
         <Parameter Name="showMessage" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="showMessage">
-          如果为 <see langword="true" />，则显示该邮件；如果为 <see langword="false" />，则不显示该邮件。</param>
+        <param name="showMessage">如果为 <see langword="true" />，则显示该邮件；如果为 <see langword="false" />，则不显示该邮件。</param>
         <summary>向已发送审阅的工作簿的作者发送电子邮件，通知他或她审阅者已完成对该工作簿的审阅。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SendForReview%2A>方法以启动工作簿的协作审阅。 如果<xref:Microsoft.Office.Tools.Excel.WorkbookBase.ReplyWithChanges%2A>方法执行不协作审阅循环的一部分的工作簿，将引发异常。  
+ 使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SendForReview%2A>方法以启动工作簿的协作审阅。 如果<xref:Microsoft.Office.Tools.Excel.WorkbookBase.ReplyWithChanges%2A>方法上的工作簿的不是联合审阅周期的一部分执行，则会引发异常。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.ReplyWithChanges%2A>方法将通知发送给作者审阅的工作簿的审阅者已完成审阅之后显示了电子邮件消息。 此示例假定活动工作簿是协作审阅循环的一部分。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.ReplyWithChanges%2A>方法将通知发送给作者查看工作簿的审阅者已完成的评审后显示的电子邮件消息。 此示例假定活动工作簿是协作审阅周期的一部分。  
   
  此示例适用于文档级自定义。  
   
@@ -5665,16 +5615,16 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果你通过自定义功能区中的工作簿创建您自己的实现重写此方法`Microsoft.Office.Core.IRibbonExtensibility`接口或通过添加**功能区 (XML)** 到你的项目的项。  
+ 重写此方法，如果通过创建您自己的实现的自定义功能区的工作簿`Microsoft.Office.Core.IRibbonExtensibility`接口或通过添加**功能区 (XML)** 到你的项目项。  
   
- 如果通过添加自定义功能区**功能区 （可视化设计器）** 项到你的项目，Visual Studio 重写此方法为你。 有关详细信息，请参阅[功能区概述](/visualstudio/vsto/ribbon-overview.md)和[功能区设计器](/visualstudio/vsto/ribbon-designer.md)。  
+ 如果通过添加自定义功能区**功能区 （可视化设计器）** 项到项目中，Visual Studio 将为您替代此方法。 有关详细信息，请参阅[功能区概述](/visualstudio/vsto/ribbon-overview)并[功能区设计器](/visualstudio/vsto/ribbon-designer)。  
   
- 如果你重写此方法，请检查的值`serviceGuid`参数，以确定是否`Microsoft.Office.Core.IRibbonExtensibility`接口正在请求、，然后返回实现该接口的对象。 当打开你的工作簿时，[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]调用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.RequestService%2A>，然后它将返回的值发送到 Microsoft Office Excel。 有关详细信息`Microsoft.Office.Core.IRibbonExtensibility`接口，请参阅[IRibbonExtensibility 对象](HV10096517)Microsoft Office 文档中。  
+ 如果重写此方法，检查的值`serviceGuid`参数，以确定是否`Microsoft.Office.Core.IRibbonExtensibility`接口，请求，然后返回实现该接口的对象。 打开您的工作簿时，[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]调用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.RequestService%2A>，并返回值发送到 Microsoft Office Excel。 有关详细信息`Microsoft.Office.Core.IRibbonExtensibility`接口，请参阅[IRibbonExtensibility 对象](HV10096517)Microsoft Office 文档中。  
   
- 或者可以重写<xref:Microsoft.Office.Tools.Excel.WorkbookBase.CreateRibbonExtensibilityObject%2A>方法而非重写<xref:Microsoft.Office.Tools.Excel.WorkbookBase.RequestService%2A>方法。 有关详细信息，请参阅[功能区 XML](/visualstudio/vsto/ribbon-xml.md)。  
+ 或者可以重写<xref:Microsoft.Office.Tools.Excel.WorkbookBase.CreateRibbonExtensibilityObject%2A>方法而不是替代<xref:Microsoft.Office.Tools.Excel.WorkbookBase.RequestService%2A>方法。 有关详细信息，请参阅[功能区 XML](/visualstudio/vsto/ribbon-xml)。  
   
 > [!NOTE]
->  `Microsoft.Office.Core.IRibbonExtensibility` 是多个接口 (也名为*扩展性接口*) 提供的 Microsoft Office。 但是，这是可以在 Excel 的文档级自定义项中实现的唯一接口。 在应用程序级外接程序，可以实现其他扩展性接口。有关详细信息，请参阅[UI 功能通过使用扩展性接口自定义](/visualstudio/vsto/customizing-ui-features-by-using-extensibility-interfaces.md)。  
+>  `Microsoft.Office.Core.IRibbonExtensibility` 是的多个界面之一 (也称为*扩展性接口*) 提供的 Microsoft Office。 但是，这是可以在 Excel 文档级自定义项中实现的唯一接口。 在应用程序级外接程序，可以实现其他一些扩展性接口。有关详细信息，请参阅[自定义 UI 功能 By Using Extensibility Interfaces](/visualstudio/vsto/customizing-ui-features-by-using-extensibility-interfaces)。  
   
  ]]></format>
         </remarks>
@@ -5694,12 +5644,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个表示工作簿的信息检索服务的对象。</summary>
-        <value>A <c>Microsoft.Office.Interop.Excel.Research</c>表示工作簿的信息检索服务对象。</value>
+        <value>一个<c>Microsoft.Office.Interop.Excel.Research</c>对象，表示工作簿的信息检索服务。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例访问`Microsoft.Office.Interop.Word.Research`文档设置为使用的默认语言对翻译服务中的对象。 它将英语 （美国） 设置为要将转换的源文本和为语言的日语转换到的文本的语言。 默认的翻译语言显示在**研究**下的 Excel 中窗格**转换**部分。  
+ 下面的代码示例访问`Microsoft.Office.Interop.Word.Research`要使用的默认语言对在服务中设置翻译的文档的对象。 它会设置日语作为语言，将转换为文本的源文本，用于将翻译的语言为英语 （美国）。 默认的翻译语言显示在**研究**在 Excel 中的窗格**翻译**部分。  
   
  此示例适用于文档级自定义。  
   
@@ -5930,34 +5880,30 @@
           <see cref="T:Microsoft.Office.Interop.Excel.XlFileFormat" /> 值之一，指定保存文件时要使用的文件格式。 对于现有文件，默认格式为最后一种指定文件格式；对于新文件，默认格式为所用 Excel 版本的格式。</param>
         <param name="password">一个区分大小写的字符串（不超过 15 个字符），指示为文件指定的保护密码。</param>
         <param name="writeResPassword">文件的写保护密码。 如果保存文件时指定了密码，但打开文件时没有提供密码，则该文件以只读方式打开。</param>
-        <param name="readOnlyRecommended">
-          如果为 <see langword="true" />，则在打开该文件时显示一条消息，建议以只读方式打开该文件。</param>
-        <param name="createBackup">
-          如果为 <see langword="true" />，则创建备份文件。</param>
+        <param name="readOnlyRecommended">如果为 <see langword="true" />，则在打开该文件时显示一条消息，建议以只读方式打开该文件。</param>
+        <param name="createBackup">如果为 <see langword="true" />，则创建备份文件。</param>
         <param name="accessMode">
           <see cref="T:Microsoft.Office.Interop.Excel.XlSaveAsAccessMode" /> 值之一。</param>
         <param name="conflictResolution">
           <see cref="T:Microsoft.Office.Interop.Excel.XlSaveConflictResolution" /> 值之一。</param>
-        <param name="addToMru">
-          如果为 <see langword="true" />，则将工作簿添加到最近使用的文件列表中。 默认值为 <see langword="false" />。</param>
+        <param name="addToMru">如果为 <see langword="true" />，则将工作簿添加到最近使用的文件列表中。 默认值为 <see langword="false" />。</param>
         <param name="textCodepage">不在美国使用英语 Excel。</param>
         <param name="textVisualLayout">不在美国使用英语 Excel。</param>
-        <param name="local">
-          如果为 <see langword="true" />，则按照 Excel（包括控制面板设置）的语言保存文件。 如果为 <see langword="false" />（默认值），则按照 Visual Basic for Applications (VBA) 的语言保存文件。</param>
+        <param name="local">如果为 <see langword="true" />，则按照 Excel（包括控制面板设置）的语言保存文件。 如果为 <see langword="false" />（默认值），则按照 Visual Basic for Applications (VBA) 的语言保存文件。</param>
         <summary>在另一个文件中保存对工作簿所做的更改。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- Visual Studio 不支持将工作簿另存为共享的工作簿。  
+ Visual Studio 不支持将工作簿保存为共享工作簿。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例检查的值<xref:Microsoft.Office.Tools.Excel.WorkbookBase.FileFormat%2A>属性来确定工作簿是否正常工作簿。 工作簿是否正常工作簿，然后该示例调用<xref:Microsoft.Office.Tools.Excel.Worksheet.SaveAs%2A>方法来重新工作簿保存为 XML 电子表格同名`XMLCopy.xlsx`中指定的路径<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Path%2A>属性。  
+ 下面的代码示例检查的值<xref:Microsoft.Office.Tools.Excel.WorkbookBase.FileFormat%2A>属性来确定工作簿是否正常工作簿。 该工作簿是否正常工作簿，然后该示例调用<xref:Microsoft.Office.Tools.Excel.Worksheet.SaveAs%2A>方法以将该工作簿重新保存为具有名称的 XML 电子表格`XMLCopy.xlsx`中指定的路径<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Path%2A>属性。  
   
  此示例适用于文档级自定义。  
   
@@ -5993,12 +5939,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果 Excel 无法导出与指定的架构映射的数据，此方法将导致运行时错误。 若要检查是否 Excel 可以使用指定的架构映射将数据导出，请使用<xref:Microsoft.Office.Interop.Excel.XmlMap.IsExportable%2A>属性。  
+ 如果 Excel 无法导出与指定的架构映射的数据，此方法将导致运行时错误。 若要检查 Excel 是否可以使用指定的架构映射将数据导出，请使用<xref:Microsoft.Office.Interop.Excel.XmlMap.IsExportable%2A>属性。  
   
    
   
 ## Examples  
- 下面的代码示例演示如何从工作簿中导出 XML 数据。 此示例导入 XML 数据从<xref:System.Data.DataSet>到<xref:Microsoft.Office.Interop.Excel.XmlMap>当前工作簿中。 该示例然后调用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SaveAsXMLData%2A>方法将数据从导出<xref:Microsoft.Office.Interop.Excel.XmlMap>到 XML 文件。 当<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SaveAsXMLData%2A>调用方法时，<xref:Microsoft.Office.Tools.Excel.WorkbookBase.BeforeXmlExport>事件处理程序会报告，正在导出的 XML，和<xref:Microsoft.Office.Tools.Excel.WorkbookBase.AfterXmlExport>事件处理程序会报告是否已成功导出 XML。  
+ 下面的代码示例演示如何从工作簿导出 XML 数据。 此示例导入的 XML 数据<xref:System.Data.DataSet>到<xref:Microsoft.Office.Interop.Excel.XmlMap>当前工作簿中。 该示例然后调用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SaveAsXMLData%2A>方法将数据从导出<xref:Microsoft.Office.Interop.Excel.XmlMap>到一个 XML 文件。 当<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SaveAsXMLData%2A>调用方法时，<xref:Microsoft.Office.Tools.Excel.WorkbookBase.BeforeXmlExport>事件处理程序会报告 XML 所导出和<xref:Microsoft.Office.Tools.Excel.WorkbookBase.AfterXmlExport>事件处理程序会报告是否已成功导出 XML。  
   
  此示例适用于文档级自定义。  
   
@@ -6033,12 +5979,12 @@
 ## Remarks  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SaveCopyAs%2A>方法以将保存当前的工作簿的副本。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SaveCopyAs%2A>方法来保存当前工作簿的副本。  
   
  此示例适用于文档级自定义。  
   
@@ -6063,20 +6009,19 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示工作簿自上次保存以来是否进行了更改。</summary>
-        <value>
-          如果工作簿自上次保存以来进行了更改，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果工作簿自上次保存以来进行了更改，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果从未保存过工作簿，其<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Path%2A>属性返回一个空字符串 ("")。  
+ 如果从未保存过工作簿，其<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Path%2A>属性将返回空字符串 ("")。  
   
- 你可以将此属性设置为`true`如果你想要关闭而不保存或不被提示将其保存已修改的工作簿。  
+ 可以将此属性设置为`true`如果你想要关闭修改后的工作簿而不保存或不被提示将其保存。  
   
    
   
 ## Examples  
- 下面的代码示例演示的处理程序<xref:Microsoft.Office.Tools.Excel.WorkbookBase.BeforeClose>会提示用户进行保存更改，不保存更改，或如果该工作簿自上次保存后进行了更改，则取消关闭操作的事件。 如果用户不保存更改，则<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Saved%2A>工作簿的属性设置为`true`，以便 Microsoft Office Excel 不会提示用户保存工作簿时，继续执行关闭操作。 如果用户取消关闭操作，则`Cancel`参数<xref:Microsoft.Office.Interop.Excel.WorkbookEvents_BeforeCloseEventHandler>事件处理程序设置为`true`，以便 Microsoft Office Excel 不会关闭工作簿。  
+ 下面的代码示例演示了一个处理程序<xref:Microsoft.Office.Tools.Excel.WorkbookBase.BeforeClose>会提示用户要保存更改，不保存更改，还是取消关闭操作如果工作簿自上次保存以来进行了更改的事件。 如果用户不会保存更改，则<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Saved%2A>工作簿的属性设置为`true`，以便 Microsoft Office Excel 不会提示用户保存工作簿时继续执行关闭操作。 如果用户取消关闭操作，则`Cancel`的参数<xref:Microsoft.Office.Interop.Excel.WorkbookEvents_BeforeCloseEventHandler>事件处理程序设置为`true`，以便 Microsoft Office Excel 不会关闭该工作簿。  
   
  此示例适用于文档级自定义。  
   
@@ -6101,8 +6046,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示 Microsoft Office Excel 是否将外部链接值与工作簿一起保存。</summary>
-        <value>
-          如果 Excel 将外部链接值与工作簿一起保存，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果 Excel 将外部链接值与工作簿一起保存，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -6152,28 +6096,27 @@
       <Docs>
         <param name="recipients">要向其发送传真的收件人的传真号码和电子邮件地址。 用分号分隔多个收件人。</param>
         <param name="subject">传真文档的主题行。</param>
-        <param name="showMessage">
-          如果为 <see langword="true" />，则在发送传真邮件前显示该邮件；如果为 <see langword="false" />，则发送传真但不显示传真邮件。</param>
+        <param name="showMessage">如果为 <see langword="true" />，则在发送传真邮件前显示该邮件；如果为 <see langword="false" />，则发送传真但不显示传真邮件。</param>
         <summary>将工作簿中的活动工作表作为传真发送给指定收件人。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用此方法需要用户的计算机上启用了传真服务。  
+ 使用此方法要求用户的计算机上启用了传真服务。  
   
  用于指定中的传真号码的格式`Recipients`参数可以是`recipientsfaxnumber@usersfaxprovider`或`recipientsname@recipientsfaxnumber`。 您可以访问用户的传真提供程序信息使用以下注册表路径：  
   
  `HKEY_CURRENT_USER\Software\Microsoft\Office\11.0\Common\Services\Fax`  
   
- 在此注册表路径中使用 FaxAddress 键的值来确定要使用的收件人的格式。  
+ 在此注册表路径中使用 FaxAddress 键的值来确定要使用接收方的格式。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SendFaxOverInternet%2A>方法作为传真发送当前工作簿并发送之前显示传真邮件。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SendFaxOverInternet%2A>方法来作为传真发送当前工作簿并将其发送之前显示传真邮件。  
   
  此示例适用于文档级自定义。  
   
@@ -6212,15 +6155,15 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法会启动协作审阅周期。 使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.EndReview%2A>方法来结束审阅循环。  
+ 此方法启动协作审核周期。 使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.EndReview%2A>方法来结束审核周期。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SendForReview%2A>方法向两个收件人发送一封电子邮件中的工作簿。 电子邮件将具有默认的主题行，并且将包含作为附件的工作簿。 此示例假定收件人的名称解析为有效的电子邮件地址。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SendForReview%2A>方法以将该工作簿中一封电子邮件发送到两个收件人。 电子邮件将具有默认主题行，并且将包含工作簿作为附件。 此示例假定收件人的名称解析为有效的电子邮件地址。  
   
  此示例适用于文档级自定义。  
   
@@ -6251,8 +6194,7 @@
       <Docs>
         <param name="recipients">以文本格式指定收件人姓名，或以文本字符串数组的格式指定收件人（如果有多个）。 必须至少指定一个收件人，所有收件人都以“To recipient”的格式添加。</param>
         <param name="subject">指定邮件的主题。 如果省略此参数，则使用文档名称。</param>
-        <param name="returnReceipt">
-          如果为 <see langword="true" />，则请求回执。 如果为 <see langword="false" />，则不请求回执。 默认值为 <see langword="false" />。</param>
+        <param name="returnReceipt">如果为 <see langword="true" />，则请求回执。 如果为 <see langword="false" />，则不请求回执。 默认值为 <see langword="false" />。</param>
         <summary>使用安装的邮件系统发送工作簿。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -6260,12 +6202,12 @@
 ## Remarks  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SendMail%2A>方法将工作簿中一封电子邮件发送给一个收件人。 电子邮件将使用者"请查看"，然后将不会请求返回回执。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SendMail%2A>方法以向单个收件人发送一封电子邮件中的工作簿。 电子邮件将具有使用者"请查看"，并且不会请求回执。  
   
  此示例适用于文档级自定义。  
   
@@ -6313,12 +6255,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个对象，该对象表示为运行 Microsoft Office SharePoint Server 的服务器上存储的工作簿指定的策略。</summary>
-        <value>A <c>Microsoft.Office.Core.ServerPolicy</c>表示策略存储在运行 SharePoint Server 的服务器的工作簿为指定的对象。</value>
+        <value>一个<c>Microsoft.Office.Core.ServerPolicy</c>表示策略存储在运行 SharePoint Server 的服务器的工作簿指定的对象。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 下面的代码示例检索与当前工作簿关联的信息管理策略，并显示策略名称、 说明和语句。 若要运行此示例，必须将工作簿发布到 Microsoft Office Sharepoint Server 站点，并在站点定义信息管理策略。  
+ 下面的代码示例检索与当前工作簿关联的信息管理策略，并显示策略名称、 说明和语句。 若要运行此示例中，必须将该工作簿发布到 Microsoft Office Sharepoint Server 站点，并在站点定义信息管理策略。  
   
  此示例适用于文档级自定义。  
   
@@ -6343,16 +6285,16 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个对象，该对象可用于与 Microsoft Office SharePoint Server 服务器上显示的工作簿中的已发布对象列表进行交互。</summary>
-        <value>A <c>Microsoft.Office.Interop.Excel.ServerViewableItems</c>可以使用与的列表进行交互的对象在服务器显示的工作簿中发布对象。</value>
+        <value>一个<c>Microsoft.Office.Interop.Excel.ServerViewableItems</c>可用来与列表进行交互的对象发布服务器显示的工作簿中的对象。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 你可以将其发布到 Excel Services 工作簿中，此属性返回的项的集合。 在服务器上，将显示仅在此集合中的对象。 默认情况下，显示整个工作簿 （包括所有工作表）。  
+ 你可以发布到 Excel Services 在工作簿中，此属性返回的项的集合。 仅在此集合中的对象将在服务器上所示。 默认情况下，显示整个工作簿 （包括所有工作表）。  
   
- 只有一个<xref:Microsoft.Office.Interop.Excel.ServerViewableItems?displayProperty=fullName>对象可以存在每个工作簿。 此集合不能按名称，索引，因为没有被标记为可查看服务器上的对象的名称是唯一不能保证。  
+ 只有一个<xref:Microsoft.Office.Interop.Excel.ServerViewableItems?displayProperty=fullName>对象可以存在每个工作簿。 因为对象被标记为可查看在服务器上的名称都是唯一不能保证，名称，不能将此集合编制索引。  
   
- 在 Excel 用户界面中，你可以查看的对象被标记为可在服务器上查看的集合**Excel Services 选项**对话框。  
+ 在 Excel 用户界面中，可以查看标记为可查看在服务器上的对象的集合**Excel Services 选项**对话框。  
   
  ]]></format>
         </remarks>
@@ -6384,12 +6326,12 @@
 ## Remarks  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例获取当前工作簿中的所有 DDE 链接的集合，然后使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SetLinkOnData%2A>方法来运行一个名为宏`UPDATE_MACRO`每当更新链接之一。  
+ 下面的代码示例获取当前工作簿中所有 DDE 链接的集合，然后使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SetLinkOnData%2A>方法来运行一个名为宏`UPDATE_MACRO`每当更新其中一个链接。  
   
  此示例适用于文档级自定义。  
   
@@ -6422,8 +6364,7 @@
         <param name="passwordEncryptionProvider">加密提供程序的字符串，区分大小写。</param>
         <param name="passwordEncryptionAlgorithm">算法短名称的区分大小写的字符串（例如“RC4”）。</param>
         <param name="passwordEncryptionKeyLength">加密密钥长度，为 8 的倍数（40 或更大）。</param>
-        <param name="passwordEncryptionFileProperties">
-          如果为 <see langword="true" />（默认值），则加密文件属性。</param>
+        <param name="passwordEncryptionFileProperties">如果为 <see langword="true" />（默认值），则加密文件属性。</param>
         <summary>设置使用密码加密工作簿的选项。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -6431,15 +6372,15 @@
 ## Remarks  
  `PasswordEncryptionProvider`， `PasswordEncryptionAlgorithm`，和`PasswordEncryptionKeyLength`参数不是相互独立。 所选的加密提供程序限制算法和密钥长度，可以选择的组。  
   
- 有关`PasswordEncryptionKeyLength`有参数是没有固有的密钥长度范围上限。 它还确定加密算法加密服务提供程序由确定范围。  
+ 有关`PasswordEncryptionKeyLength`有参数是密钥长度的范围没有固有限制。 此外可以确定的加密算法的加密服务提供程序确定范围。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例检查的值<xref:Microsoft.Office.Tools.Excel.WorkbookBase.HasPassword%2A>属性来确定工作簿是否受密码保护。 如果工作簿不受密码保护，然后该示例设置<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Password%2A>的密码的属性获取用户输入，然后调用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SetPasswordEncryptionOptions%2A>方法来设置加密算法、 设置的密钥长度、 设定的加密提供程序的名称并启用文件属性加密。 然后，该示例显示的值<xref:Microsoft.Office.Tools.Excel.WorkbookBase.PasswordEncryptionProvider%2A>， <xref:Microsoft.Office.Tools.Excel.WorkbookBase.PasswordEncryptionAlgorithm%2A>， <xref:Microsoft.Office.Tools.Excel.WorkbookBase.PasswordEncryptionKeyLength%2A>，和<xref:Microsoft.Office.Tools.Excel.WorkbookBase.PasswordEncryptionFileProperties%2A>工作表中的属性`Sheet1`。 此示例假定方法`GetPasswordFromUserInput`其他位置定义。  
+ 下面的代码示例检查的值<xref:Microsoft.Office.Tools.Excel.WorkbookBase.HasPassword%2A>属性来确定工作簿是否受密码保护。 如果工作簿不受密码保护，然后该示例设置<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Password%2A>属性设置为密码获取用户输入，然后调用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SetPasswordEncryptionOptions%2A>方法设置的加密算法、 密钥长度设置、 设置的加密提供程序名称并启用加密文件属性。 然后，该示例显示的值<xref:Microsoft.Office.Tools.Excel.WorkbookBase.PasswordEncryptionProvider%2A>， <xref:Microsoft.Office.Tools.Excel.WorkbookBase.PasswordEncryptionAlgorithm%2A>， <xref:Microsoft.Office.Tools.Excel.WorkbookBase.PasswordEncryptionKeyLength%2A>，和<xref:Microsoft.Office.Tools.Excel.WorkbookBase.PasswordEncryptionFileProperties%2A>工作表中的属性`Sheet1`。 此示例假定方法`GetPasswordFromUserInput`其他位置定义。  
   
  此示例适用于文档级自定义。  
   
@@ -6464,12 +6405,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个 <c>Microsoft.Office.Core.SharedWorkspace</c>，它表示工作簿所在的文档工作区。</summary>
-        <value>A <c>Microsoft.Office.Core.SharedWorkspace</c>表示工作簿所在的文档工作区。</value>
+        <value>一个<c>Microsoft.Office.Core.SharedWorkspace</c> ，表示工作簿所在的文档工作区。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SharedWorkspace%2A>属性来确定当前的工作簿是否为文档工作区的一部分。 如果工作簿是一部分的文档工作区中，则该示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Sync%2A>属性来显示用户上次更改文档。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SharedWorkspace%2A>属性来确定当前的工作簿是否属于文档工作区。 如果工作簿属于文档工作区，则该示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Sync%2A>属性来显示用户上次更改该文档。  
   
  此示例适用于文档级自定义。  
   
@@ -6515,12 +6456,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 图表工作表时，此事件不会发生。  
+ 图表工作表上不会发生此事件。  
   
    
   
 ## Examples  
- 下面的代码示例演示的处理程序<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SheetBeforeDoubleClick>事件。 事件处理程序告知用户双击不允许进行的工作表，然后设置`Cancel`参数<xref:Microsoft.Office.Interop.Excel.WorkbookEvents_SheetBeforeDoubleClickEventHandler>事件处理程序`true`，以便 Microsoft Office Excel 取消双击操作。  
+ 下面的代码示例演示了一个处理程序<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SheetBeforeDoubleClick>事件。 事件处理程序会通知用户双击不允许对工作表，然后设置`Cancel`的参数<xref:Microsoft.Office.Interop.Excel.WorkbookEvents_SheetBeforeDoubleClickEventHandler>事件处理程序`true`，以便 Microsoft Office Excel 取消双击操作。  
   
  此示例适用于文档级自定义。  
   
@@ -6549,12 +6490,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 图表工作表时，此事件不会发生。  
+ 图表工作表上不会发生此事件。  
   
    
   
 ## Examples  
- 下面的代码示例演示的处理程序<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SheetBeforeRightClick>事件。 事件处理程序通知的用户，右键单击不允许的工作表，然后设置`Cancel`参数<xref:Microsoft.Office.Interop.Excel.WorkbookEvents_SheetBeforeRightClickEventHandler>事件处理程序`true`，以便 Microsoft Office Excel 取消右键单击操作。  
+ 下面的代码示例演示了一个处理程序<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SheetBeforeRightClick>事件。 事件处理程序将通知用户，右键单击不允许对工作表，然后设置`Cancel`的参数<xref:Microsoft.Office.Interop.Excel.WorkbookEvents_SheetBeforeRightClickEventHandler>事件处理程序`true`，以便 Microsoft Office Excel 取消右键单击操作。  
   
  此示例适用于文档级自定义。  
   
@@ -6583,7 +6524,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例演示的处理程序<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SheetCalculate>事件。 事件处理程序会显示正在计算的工作表的名称。  
+ 下面的代码示例演示了一个处理程序<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SheetCalculate>事件。 事件处理程序会显示正在计算的工作表的名称。  
   
  此示例适用于文档级自定义。  
   
@@ -6612,12 +6553,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 图表工作表时，此事件不会发生。  
+ 图表工作表上不会发生此事件。  
   
    
   
 ## Examples  
- 下面的代码示例演示的处理程序<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SheetChange>事件。 事件处理程序显示的工作表的名称和已更改的单元格范围。  
+ 下面的代码示例演示了一个处理程序<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SheetChange>事件。 事件处理程序会显示工作表的名称已更改的单元格的范围。  
   
  此示例适用于文档级自定义。  
   
@@ -6663,7 +6604,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例演示的处理程序<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SheetFollowHyperlink>事件。 事件处理程序已单击当前工作簿加上的名称中包含这些超链接，工作表中保留所有超链接的列表<xref:System.Windows.Forms.ListBox>控件。  
+ 下面的代码示例演示了一个处理程序<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SheetFollowHyperlink>事件。 事件处理程序，则保留已单击当前工作簿以及工作表中包含这些超链接的名称中的所有超链接列表<xref:System.Windows.Forms.ListBox>控件。  
   
  此示例适用于文档级自定义。  
   
@@ -6692,10 +6633,10 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.Workbook.SheetPivotTableAfterValueChange>事件不会在编辑或重新计算单元格以外的任何情况下发生。 例如，它时不会出现数据透视表是刷新、 排序、 筛选，或向下钻取，即使这些操作移动单元格，并可能从 OLAP 数据源中检索新值。  
+ <xref:Microsoft.Office.Tools.Excel.Workbook.SheetPivotTableAfterValueChange>事件编辑或重新计算的单元格以外的任何条件下不会出现。 例如，它不会在数据透视表进行刷新、 排序、 筛选，或向下钻取，即使这些操作移动单元格，并可能从 OLAP 数据源中检索新值。  
   
 > [!NOTE]
->  此事件出现在 IntelliSense Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Excel 2007 项目中使用此事件。  
+>  此事件将显示在 IntelliSense 中 Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Excel 2007 项目中使用此事件。  
   
  ]]></format>
         </remarks>
@@ -6720,10 +6661,10 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.WorkbookBase.SheetPivotTableBeforeAllocateChanges> Excel 立即执行 UPDATE CUBE 语句以将所有更改都应用到数据透视表的 OLAP 数据源之前, 和用户已选择的用户界面以都应用更改后立即时发生事件。  
+ <xref:Microsoft.Office.Tools.Excel.WorkbookBase.SheetPivotTableBeforeAllocateChanges> Excel 立即执行 UPDATE CUBE 语句以应用到数据透视表的 OLAP 数据源，所有更改之前，用户已选择要都应用的用户界面中的更改后立即发生的事件。  
   
 > [!NOTE]
->  此事件出现在 IntelliSense Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Excel 2007 项目中使用此事件。  
+>  此事件将显示在 IntelliSense 中 Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Excel 2007 项目中使用此事件。  
   
  ]]></format>
         </remarks>
@@ -6748,10 +6689,10 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.WorkbookBase.SheetPivotTableBeforeCommitChanges> Excel 立即执行针对数据透视表的 OLAP 数据源，提交事务之前，用户已选择为整个数据透视表中保存更改后立即发生的事件。  
+ <xref:Microsoft.Office.Tools.Excel.WorkbookBase.SheetPivotTableBeforeCommitChanges> Excel 立即执行 COMMIT TRANSACTION 对数据透视表的 OLAP 数据源之前，用户已选择为整个数据透视表中保存更改后立即发生的事件。  
   
 > [!NOTE]
->  此事件出现在 IntelliSense Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Excel 2007 项目中使用此事件。  
+>  此事件将显示在 IntelliSense 中 Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Excel 2007 项目中使用此事件。  
   
  ]]></format>
         </remarks>
@@ -6776,10 +6717,10 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- Excel 执行针对 OLAP 数据源，ROLLBACK TRANSACTION 语句，如果在事务仍处于活动状态，且然后用户已选择放弃所做的更改之后将丢弃所有数据透视表中, 编辑过的值之前，将发生此事件。  
+ Excel 执行 ROLLBACK TRANSACTION 语句，在针对 OLAP 数据源，如果事务仍处于活动状态，并且后用户已选择放弃更改，然后放弃该数据透视表中的所有已编辑的值之前立即发生此事件。  
   
 > [!NOTE]
->  此事件出现在 IntelliSense Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Excel 2007 项目中使用此事件。  
+>  此事件将显示在 IntelliSense 中 Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Excel 2007 项目中使用此事件。  
   
  ]]></format>
         </remarks>
@@ -6804,10 +6745,10 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.WorkbookBase.SheetPivotTableChangeSync>过程中发生的大多数更改在数据透视表，以便你可以编写代码以响应用户操作，例如清除、 分组或刷新数据透视表中的项。  
+ <xref:Microsoft.Office.Tools.Excel.WorkbookBase.SheetPivotTableChangeSync>过程中发生的大多数更改在数据透视表，以便您可以编写代码来响应用户操作，例如清除、 分组或刷新数据透视表中的项。  
   
 > [!NOTE]
->  此事件出现在 IntelliSense Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Excel 2007 项目中使用此事件。  
+>  此事件将显示在 IntelliSense 中 Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Excel 2007 项目中使用此事件。  
   
  ]]></format>
         </remarks>
@@ -6832,7 +6773,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例演示的处理程序<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SheetPivotTableUpdate>事件。 已更新数据透视表的表时，事件处理程序将显示一条消息。  
+ 下面的代码示例演示了一个处理程序<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SheetPivotTableUpdate>事件。 已更新的数据透视表时，事件处理程序将显示一条消息。  
   
  此示例适用于文档级自定义。  
   
@@ -6863,7 +6804,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 集合包含工作簿中工作表、 图表、 对话框表和宏工作表。  
+ 该集合包括工作簿中工作表、 图表、 对话框工作表和宏工作表。  
   
    
   
@@ -6897,7 +6838,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例演示的处理程序<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SheetSelectionChange>事件。 事件处理程序在状态栏中显示的表名称和所选范围的地址。  
+ 下面的代码示例演示了一个处理程序<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SheetSelectionChange>事件。 事件处理程序在状态栏中显示的工作表名称和所选范围的地址。  
   
  此示例适用于文档级自定义。  
   
@@ -6922,13 +6863,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示冲突历史记录工作表在作为共享列表打开的工作簿中是否可见。</summary>
-        <value>
-          如果冲突历史记录工作表在作为共享列表打开的工作簿中可见，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果冲突历史记录工作表在作为共享列表打开的工作簿中可见，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果工作簿未打开作为共享列表，该属性无效。 若要确定是否已为共享的列表打开工作簿，使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.MultiUserEditing%2A>属性。  
+ 如果工作簿作为共享列表打开，该属性无效。 若要确定是否已作为共享列表打开工作簿，请使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.MultiUserEditing%2A>属性。  
   
  ]]></format>
         </remarks>
@@ -6948,13 +6888,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示数据透视图筛选窗格是否可见。</summary>
-        <value>
-          如果数据透视图筛选窗格可见，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果数据透视图筛选窗格可见，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要显示数据透视图筛选器窗格中，选择一个数据透视图对象。  
+ 若要显示数据透视图筛选窗格，请选择一个数据透视图对象。  
   
  ]]></format>
         </remarks>
@@ -6974,8 +6913,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示数据透视表字段列表是否能够显示。</summary>
-        <value>
-          如果数据透视表字段列表能够显示，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="true" />。</value>
+        <value>如果数据透视表字段列表能够显示，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="true" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -6997,16 +6935,16 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 这是要在中调用的最后一个事件<xref:Microsoft.Office.Tools.Excel.WorkbookBase>类作为<xref:Microsoft.Office.Tools.Excel.WorkbookBase>类卸载。 此事件用于任何其他清理过程。  
+ 这是要在中调用的最后一个事件<xref:Microsoft.Office.Tools.Excel.WorkbookBase>声明为类<xref:Microsoft.Office.Tools.Excel.WorkbookBase>类卸载。 使用此事件的任何其他清理过程。  
   
- 文档级自定义项，当工作簿主机项关闭时，将卸载程序集的应用程序域。  
+ 文档级自定义项，该程序集的应用程序域卸载时工作簿宿主项关闭。  
   
- 在应用程序级外接程序，工作簿主机项关闭时，不会不卸载应用程序域。 此外，基础的工作簿对象将不再可用。 若要访问工作簿，关闭使用之前<xref:Microsoft.Office.Tools.Excel.WorkbookBase.BeforeClose>相反。  
+ 在应用程序级外接程序，应用程序域不会卸载的工作簿宿主项关闭时。 此外，基础工作簿对象将不再可用。 若要关闭使用之前访问的工作簿<xref:Microsoft.Office.Tools.Excel.WorkbookBase.BeforeClose>相反。  
   
    
   
 ## Examples  
- 下面的代码示例演示的处理程序<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Shutdown>事件。 事件处理程序会显示一条消息时<xref:Microsoft.Office.Tools.Excel.WorkbookBase>类卸载。  
+ 下面的代码示例演示了一个处理程序<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Shutdown>事件。 事件处理程序会显示一条消息时<xref:Microsoft.Office.Tools.Excel.WorkbookBase>类卸载。  
   
  此示例适用于文档级自定义。  
   
@@ -7031,17 +6969,17 @@
       </ReturnValue>
       <Docs>
         <summary>获取工作簿的数字签名的集合。</summary>
-        <value>A <c>Microsoft.Office.Core.SignatureSet</c>集合，其中包含工作簿的数字签名。</value>
+        <value>一个<c>Microsoft.Office.Core.SignatureSet</c>集合，其中包含工作簿的数字签名。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要进行数字签名 Excel 工作簿和验证其他中它们的签名，你需要 Microsoft CryptoAPI 和唯一的数字签名证书。 CryptoAPI 被安装 Microsoft Internet 资源管理器 4.01 或更高版本。 你可以从证书颁发机构获取数字签名证书。  
+ 若要进行数字签名的 Excel 工作簿和验证其他中它们的签名，需要 Microsoft CryptoAPI 和唯一的数字签名证书。 CryptoAPI 被安装 Microsoft Internet Explorer 4.01 或更高版本。 您可以从证书颁发机构获取数字签名证书。  
   
    
   
 ## Examples  
- 下面的代码示例获取签名附加到当前工作簿并向用户显示相应的消息数。  
+ 下面的代码示例获取签名，附加到当前工作簿并为用户显示相应的消息的数量。  
   
  此示例适用于文档级自定义。  
   
@@ -7089,7 +7027,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性将出现在 IntelliSense Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Excel 2007 项目中使用此属性。  
+ 此属性将出现在 IntelliSense 中 Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，此属性不能使用 Excel 2007 项目中。  
   
  ]]></format>
         </remarks>
@@ -7110,7 +7048,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个表示智能文档解决方案的设置的 <c>Microsoft.Office.Core.SmartDocument</c>。</summary>
-        <value>A <c>Microsoft.Office.Core.SmartDocument</c>表示智能文档解决方案的设置。</value>
+        <value>一个<c>Microsoft.Office.Core.SmartDocument</c>表示智能文档解决方案的设置。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -7186,7 +7124,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Styles%2A>属性来调整每个属性中的一些<xref:Microsoft.Office.Interop.Excel.Style?displayProperty=fullName>工作薄中包括的文本换行、 垂直和水平对齐方式，以及隐藏公式。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Styles%2A>属性来调整每个属性的一些<xref:Microsoft.Office.Interop.Excel.Style?displayProperty=fullName>中工作簿，其中包括文本换行、 垂直和水平对齐方式和隐藏公式。  
   
  此示例适用于文档级自定义。  
   
@@ -7234,12 +7172,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个 <c>Microsoft.Office.Core.Sync</c> 对象，该对象提供对属于文档工作区的文档的方法和属性的访问。</summary>
-        <value>A <c>Microsoft.Office.Core.Sync</c>提供对的方法和属性的文档工作区的一部分的文档的访问的对象。</value>
+        <value>一个<c>Microsoft.Office.Core.Sync</c>对象，它提供对方法和属性属于文档工作区的文档的访问。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SharedWorkspace%2A>属性来确定当前的工作簿是否为文档工作区的一部分。 如果工作簿是一部分的文档工作区中，则该示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Sync%2A>属性来显示用户上次更改文档。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SharedWorkspace%2A>属性来确定当前的工作簿是否属于文档工作区。 如果工作簿属于文档工作区，则该示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Sync%2A>属性来显示用户上次更改该文档。  
   
  此示例适用于文档级自定义。  
   
@@ -7268,7 +7206,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例演示的处理程序<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SyncEvent>事件。 如果文档工作区中的工作表的同步失败，事件处理程序将显示一条消息。  
+ 下面的代码示例演示了一个处理程序<xref:Microsoft.Office.Tools.Excel.WorkbookBase.SyncEvent>事件。 如果文档工作区中的工作表同步失败，事件处理程序将显示一条消息。  
   
  此示例适用于文档级自定义。  
   
@@ -7293,12 +7231,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取工作簿中使用的表样式的集合。</summary>
-        <value>A <c>Microsoft.Office.Interop.Excel.TableStyles</c>集合，其中包含工作簿中使用的表样式。</value>
+        <value>一个<c>Microsoft.Office.Interop.Excel.TableStyles</c>集合，其中包含工作簿中使用的表样式。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例设置到的表的默认样式`TableStyleDark11`，这是一种样式中可用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.TableStyles%2A>集合。 然后，该示例添加一个表以验证新的表格样式。  
+ 下面的代码示例设置到的表的默认样式`TableStyleDark11`，这是一种样式中提供<xref:Microsoft.Office.Tools.Excel.WorkbookBase.TableStyles%2A>集合。 然后，该示例添加一个表以验证新的表样式。  
   
  此示例适用于文档级自定义。  
   
@@ -7328,7 +7266,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 一个常见用途<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Tag%2A>属性是用于存储与工作簿紧密关联的数据。  
+ 一个常见用途<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Tag%2A>属性是用于存储与工作簿密切关联的数据。  
   
  ]]></format>
         </remarks>
@@ -7348,8 +7286,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示在将工作簿保存为模板时是否移除外部数据引用。</summary>
-        <value>
-          如果在将工作簿保存为模板时移除外部数据引用，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果在将工作簿保存为模板时移除外部数据引用，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -7367,12 +7304,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取应用于工作簿的主题。</summary>
-        <value>A <c>Microsoft.Office.Core.OfficeTheme</c>表示应用于工作簿的主题。</value>
+        <value>一个<c>Microsoft.Office.Core.OfficeTheme</c> ，表示应用于工作簿的主题。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例检索当前工作簿的主题。 然后，此示例显示主要字体和在工作簿主题的字体方案中找到的次要字体的名称。  
+ 下面的代码示例检索当前工作簿的主题。 此示例然后显示主要字体和字体方案的工作簿主题中找到的次要字体的名称。  
   
  此示例适用于文档级自定义。  
   
@@ -7446,15 +7383,15 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果你忘记了密码，则无法取消该工作簿。 最好将密码及其对应文档名的列表保存在安全的位置。  
+ 如果你忘记了密码，则不能取消保护工作簿。 最好将密码及其对应文档名的列表保存在安全的位置。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Protect%2A>方法来保护工作簿和工作簿 windows，但不会指定密码保护的结构。 然后，该示例提示用户通过使用取消保护工作簿<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Unprotect%2A>方法。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Protect%2A>方法来保护工作簿和工作簿窗口，而无需指定密码保护的结构。 该示例然后会提示用户通过使用取消保护工作簿<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Unprotect%2A>方法。  
   
  此示例适用于文档级自定义。  
   
@@ -7484,20 +7421,20 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果你的工作簿受密码保护，而且它包含的缓存的数据，可能在运行时更改 Excel 重写此方法在文档级项目中。 在你实现此方法中，使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Unprotect%2A>暂时取消保护工作簿的方法。  
+ 如果您的工作簿受密码保护，并且它包含的缓存的数据，可能会在运行时更改 Excel 重写此方法在文档级项目中。 在此方法的实现中，使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Unprotect%2A>方法暂时取消保护工作簿。  
   
- 默认情况下，对受密码保护的工作簿中的缓存数据的更改不会保留在保存工作簿时。 若要将更改保存到缓存的数据，必须在你的项目中重写以下方法：  
+ 默认情况下，对受密码保护的工作簿中的缓存数据的更改不会保留时保存工作簿。 若要将更改保存到缓存的数据，必须在你的项目中重写以下方法：  
   
--   <xref:Microsoft.Office.Tools.Excel.WorkbookBase.UnprotectDocument%2A>。 保存工作簿后，[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]调用此方法。 将代码添加到此方法的暂时取消保护该工作簿。 这使对缓存的数据要保存更改。  
+-   <xref:Microsoft.Office.Tools.Excel.WorkbookBase.UnprotectDocument%2A>。 保存该工作簿后，[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]调用此方法。 将代码添加到此方法可暂时取消保护工作簿。 这允许缓存的数据要保存更改。  
   
--   <xref:Microsoft.Office.Tools.Excel.WorkbookBase.ProtectDocument%2A>。 保存工作簿后，[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]调用此方法。 将代码添加到此方法的重新应用到的工作簿的保护。  
+-   <xref:Microsoft.Office.Tools.Excel.WorkbookBase.ProtectDocument%2A>。 保存工作簿后，[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]调用此方法。 将代码添加到此方法的重新应用到工作簿的保护。  
   
- 有关详细信息，请参阅[如何： 在 Password-Protected 文档中缓存数据](/visualstudio/vsto/how-to-cache-data-in-a-password-protected-document.md)。  
+ 有关详细信息，请参阅[如何： Password-Protected 文档中的缓存数据](/visualstudio/vsto/how-to-cache-data-in-a-password-protected-document)。  
   
    
   
 ## Examples  
- 下面的代码示例演示如何重写<xref:Microsoft.Office.Tools.Excel.WorkbookBase.UnprotectDocument%2A>方法暂时取消的工作簿保护，以便可以保存到缓存的数据的更改。 该示例首先将保存当前<xref:Microsoft.Office.Tools.Excel.WorkbookBase.ProtectStructure%2A>和<xref:Microsoft.Office.Tools.Excel.WorkbookBase.ProtectWindows%2A>值，以便可以更高版本中重新应用相同类型的保护<xref:Microsoft.Office.Tools.Excel.WorkbookBase.ProtectDocument%2A>方法。 若要使用此代码，可以从运行`ThisWorkbook`Excel 的文档级项目中的类。 该代码假定该密码存储在名为的字段中`securelyStoredPassword`。  
+ 下面的代码示例演示如何重写<xref:Microsoft.Office.Tools.Excel.WorkbookBase.UnprotectDocument%2A>方法暂时取消保护工作簿，以便可以保存对缓存数据的更改。 该示例首先将保存当前<xref:Microsoft.Office.Tools.Excel.WorkbookBase.ProtectStructure%2A>并<xref:Microsoft.Office.Tools.Excel.WorkbookBase.ProtectWindows%2A>值，以便可以更高版本中重新应用相同的保护类型<xref:Microsoft.Office.Tools.Excel.WorkbookBase.ProtectDocument%2A>方法。 若要使用此代码，运行从`ThisWorkbook`Excel 的文档级项目中的类。 该密码存储在名为的字段中的代码假定`securelyStoredPassword`。  
   
  [!code-csharp[Trin_CachedDataProtectedWorkbook#1](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_CachedDataProtectedWorkbook/CS/ThisWorkbook.cs#1)]
  [!code-vb[Trin_CachedDataProtectedWorkbook#1](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_CachedDataProtectedWorkbook/VB/ThisWorkbook.vb#1)]  
@@ -7528,10 +7465,10 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用强密码合并大写和小写字母、 数字和符号。 弱密码不同时包含这些元素。 强密码： Y6dh ！ et5。 弱密码： House27。 使用你自己可以记住，以便无需将其记下的强密码。  
+ 使用强密码的组合大写和小写字母、 数字和符号。 弱密码不混合使用这些元素。 强密码： Y6dh ！ et5。 弱密码： House27。 使用，以便无需将其记下可以记住的强密码。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
  ]]></format>
         </remarks>
@@ -7556,7 +7493,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 工作簿是以只读方式打开由用户 A 和由用户 B.打开作为读/写时，此方法很有用如果用户 A 仍然具有工作簿打开，用户将无法获取更新的副本，而无需关闭和重新打开工作簿和丢失视图设置时，用户 B 将较新版本的工作簿保存到磁盘中。 <xref:Microsoft.Office.Tools.Excel.WorkbookBase.UpdateFromFile%2A>方法更新内存中副本的磁盘文件中的工作簿。  
+ 以只读方式打开由用户 A 和用户 b。 为读/写打开工作簿时，此方法很有用如果用户 B 将工作簿的较新版本保存到磁盘，而用户 A 仍工作簿打开，用户将无法获取的已更新的副本，而无需关闭并重新打开该工作簿和丢失视图设置。 <xref:Microsoft.Office.Tools.Excel.WorkbookBase.UpdateFromFile%2A>方法更新内存中副本的磁盘文件中的工作簿。  
   
  ]]></format>
         </remarks>
@@ -7587,15 +7524,15 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果不带任何参数调用此方法时，Excel 将默认为更新工作表的所有链接。  
+ 不带任何参数调用此方法时，Excel 将默认为更新工作表的所有链接。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例创建 Excel 工作簿的外部链接，然后使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.UpdateLink%2A>方法来更新链接。 此示例假定该工作簿 Book2.xlsx 位于 C 目录的根目录。  
+ 下面的代码示例创建 Excel 工作簿的外部链接，然后使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.UpdateLink%2A>方法来更新该链接。 此示例假定 Book2.xlsx C 目录的根目录上存在该工作簿。  
   
  [!code-csharp[Trin_ExcelWorkBook#134](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkBook/CS/ThisWorkbook.cs#134)]
  [!code-vb[Trin_ExcelWorkBook#134](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkBook/VB/ThisWorkbook.vb#134)]  
@@ -7624,7 +7561,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.UpdateLinks%2A>属性显示方式嵌入的 OLE 链接更新工作簿中。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.UpdateLinks%2A>属性来显示如何嵌入的 OLE 链接更新工作簿中。  
   
  此示例适用于文档级自定义。  
   
@@ -7649,8 +7586,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示 Microsoft Office Excel 是否更新工作簿中的远程引用。</summary>
-        <value>
-          如果 Excel 更新工作簿中的远程引用，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果 Excel 更新工作簿中的远程引用，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -7696,9 +7632,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 第二个维度的第一个元素是用户的名称，则第二个元素将日期和时间用户上一次打开工作簿，第三个元素是一个数字，指示列表的类型 （1 表示独占的而 2 表示共享）。  
+ 第二个维度的第一个元素是用户的名称，第二个元素是日期和时间时用户上一次打开工作簿和第三个元素是一个数字，指示列表的类型 （1 表示独占的而 2 表示共享）。  
   
- 此属性不返回有关了指定的工作簿以只读方式打开用户的信息。  
+ 此属性不返回具有指定的工作簿打开为只读的用户有关的信息。  
   
  ]]></format>
         </remarks>
@@ -7718,13 +7654,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，该值指示工作簿的 Visual Basic for Applications 项目是否已进行了数字签名。</summary>
-        <value>
-          如果工作簿的 Visual Basic for Applications 项目已进行了数字签名，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果工作簿的 Visual Basic for Applications 项目已进行了数字签名，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.VBASigned%2A>属性显示一条消息，如果 Visual Basic for Applications 项目的工作簿未进行数字签名。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.VBASigned%2A>属性来显示一条消息，如果 Visual Basic for Applications 项目的工作簿未进行数字签名。  
   
  此示例适用于文档级自定义。  
   
@@ -7754,12 +7689,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性是指 Visual Basic for Applications 项目，不是 Visual Basic 项目。  
+ 此属性是指 Visual Basic for Applications 项目，而不是 Visual Basic 项目。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.VBProject%2A>属性显示为工作簿的应用程序项目的 Visual Basic 名称。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.VBProject%2A>属性显示为工作簿的应用程序项目的 Visual basic 名称。  
   
  此示例适用于文档级自定义。  
   
@@ -7789,7 +7724,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例创建设置字体的颜色为蓝色"blue"术语识别时单元格的智能标记。 该示例通过向工作簿添加智能标记<xref:Microsoft.Office.Tools.Excel.WorkbookBase.VstoSmartTags%2A>属性。  
+ 下面的代码示例创建一个智能标记，设置为蓝色时识别"蓝色"一词的单元格的前景色。 该示例通过使用向工作簿添加智能标记<xref:Microsoft.Office.Tools.Excel.WorkbookBase.VstoSmartTags%2A>属性。  
   
  此示例适用于文档级自定义。  
   
@@ -7820,7 +7755,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.WebOptions%2A>属性使可移植网络图形 (PNG) 作为输出格式，如果尚未安装，并将其以允许长文件名命名时下载 Office Web 组件与指定的 Web 页文档保存为网页。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.WebOptions%2A>属性以支持可移植网络图形 (PNG) 作为输出格式，如果尚未安装，并将其以允许长文件命名时下载带有指定的网页的 Office Web 组件文档另存为网页。  
   
  此示例适用于文档级自定义。  
   
@@ -7867,7 +7802,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例演示的处理程序<xref:Microsoft.Office.Tools.Excel.WorkbookBase.WindowActivate>事件。 事件处理程序，从而已激活的工作簿窗口最大化。  
+ 下面的代码示例演示了一个处理程序<xref:Microsoft.Office.Tools.Excel.WorkbookBase.WindowActivate>事件。 事件处理程序可激活的工作簿窗口最大化。  
   
  此示例适用于文档级自定义。  
   
@@ -7896,7 +7831,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例演示的处理程序<xref:Microsoft.Office.Tools.Excel.WorkbookBase.WindowDeactivate>事件。 事件处理程序将被停用的工作簿窗口降至最低。  
+ 下面的代码示例演示了一个处理程序<xref:Microsoft.Office.Tools.Excel.WorkbookBase.WindowDeactivate>事件。 事件处理程序最小化已停用的工作簿窗口。  
   
  此示例适用于文档级自定义。  
   
@@ -7925,7 +7860,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例演示的处理程序<xref:Microsoft.Office.Tools.Excel.WorkbookBase.WindowResize>事件。 事件处理程序显示在已调整大小的工作簿窗口的标题栏中显示的名称。  
+ 下面的代码示例演示了一个处理程序<xref:Microsoft.Office.Tools.Excel.WorkbookBase.WindowResize>事件。 事件处理程序已调整大小的工作簿窗口的标题栏中显示所显示的名称。  
   
  此示例适用于文档级自定义。  
   
@@ -7961,7 +7896,7 @@
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Windows%2A>属性显示公式、 网格线和当前工作簿的轮廓。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Windows%2A>属性来显示公式、 网格线和当前工作簿的轮廓。  
   
  此示例适用于文档级自定义。  
   
@@ -7992,7 +7927,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性不返回宏工作表、 图表或对话框编辑表。 使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Sheets%2A>属性以返回这些表，以及工作表。 你还可以使用的专用的属性<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Excel4MacroSheets%2A>和<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Excel4IntlMacroSheets%2A>返回宏工作表和<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Charts%2A>属性以返回图表。  
+ 此属性不返回宏工作表、 图表、 或对话框工作表。 使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Sheets%2A>属性以返回这些表以及工作表。 您还可以使用专用的属性<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Excel4MacroSheets%2A>并<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Excel4IntlMacroSheets%2A>返回宏工作表和<xref:Microsoft.Office.Tools.Excel.WorkbookBase.Charts%2A>属性以返回图表。  
   
    
   
@@ -8027,12 +7962,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.WorkbookBase.WritePassword%2A>属性是可读且返回">> * *"。  
+ <xref:Microsoft.Office.Tools.Excel.WorkbookBase.WritePassword%2A>属性是否可读，并且返回">> * *"。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.WriteReserved%2A>属性来确定当前的工作簿是否受写保护。 如果工作簿不受写保护，则此方法将<xref:Microsoft.Office.Tools.Excel.WorkbookBase.WritePassword%2A>获取通过用户输入的密码的属性。 否则，该示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.WriteReservedBy%2A>属性来显示该工作簿保存为写保留的用户的名称。 此示例假定一个名为方法是否存在`GetPasswordFromUserInput`，从用户输入获取强密码。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.WriteReserved%2A>属性来确定当前的工作簿是否受写保护。 如果工作簿不受写保护，则此方法将<xref:Microsoft.Office.Tools.Excel.WorkbookBase.WritePassword%2A>获取通过用户输入的密码的属性。 否则，该示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.WriteReservedBy%2A>属性来显示该工作簿保存为写保护的用户的名称。 此示例假定名为方法的存在使得`GetPasswordFromUserInput`，获取用户输入一个强密码。  
   
  此示例适用于文档级自定义。  
   
@@ -8057,8 +7992,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，该值指示工作簿是否受写保护。</summary>
-        <value>
-          如果工作簿受写保护，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果工作簿受写保护，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -8068,7 +8002,7 @@
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.WriteReserved%2A>属性来确定当前的工作簿是否受写保护。 如果工作簿不受写保护，则此方法将<xref:Microsoft.Office.Tools.Excel.WorkbookBase.WritePassword%2A>获取通过用户输入的密码的属性。 否则，该示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.WriteReservedBy%2A>属性来显示该工作簿保存为写保留的用户的名称。 此示例假定一个名为方法是否存在`GetPasswordFromUserInput`，从用户输入获取强密码。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.WriteReserved%2A>属性来确定当前的工作簿是否受写保护。 如果工作簿不受写保护，则此方法将<xref:Microsoft.Office.Tools.Excel.WorkbookBase.WritePassword%2A>获取通过用户输入的密码的属性。 否则，该示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.WriteReservedBy%2A>属性来显示该工作簿保存为写保护的用户的名称。 此示例假定名为方法的存在使得`GetPasswordFromUserInput`，获取用户输入一个强密码。  
   
  此示例适用于文档级自定义。  
   
@@ -8098,7 +8032,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.WriteReserved%2A>属性来确定当前的工作簿是否受写保护。 如果工作簿不受写保护，则此方法将<xref:Microsoft.Office.Tools.Excel.WorkbookBase.WritePassword%2A>获取通过用户输入的密码的属性。 否则，该示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.WriteReservedBy%2A>属性来显示该工作簿保存为写保留的用户的名称。 此示例假定一个名为方法是否存在`GetPasswordFromUserInput`，从用户输入获取强密码。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.WriteReserved%2A>属性来确定当前的工作簿是否受写保护。 如果工作簿不受写保护，则此方法将<xref:Microsoft.Office.Tools.Excel.WorkbookBase.WritePassword%2A>获取通过用户输入的密码的属性。 否则，该示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.WriteReservedBy%2A>属性来显示该工作簿保存为写保护的用户的名称。 此示例假定名为方法的存在使得`GetPasswordFromUserInput`，获取用户输入一个强密码。  
   
  此示例适用于文档级自定义。  
   
@@ -8145,17 +8079,17 @@
   
 -   指定的 XML 数据包含语法错误。  
   
--   导入过程已取消，因为指定的数据无法容纳到工作表。  
+-   导入过程已取消，因为指定的数据不适合放在工作表。  
   
- 使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.XmlImportXml%2A>方法导入以前加载到内存的 XML 数据。  
+ 使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.XmlImportXml%2A>方法导入先前加载到内存的 XML 数据。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Interop.Excel.XmlMap>基于从生成的架构<xref:System.Data.DataSet>，写入<xref:System.Data.DataSet>到 XML 文件，然后使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.XmlImport%2A>方法将 XML 文件中的数据写入工作表中的范围`Sheet1`。  
+ 下面的代码示例将创建<xref:Microsoft.Office.Interop.Excel.XmlMap>基于从生成的架构<xref:System.Data.DataSet>，将写入<xref:System.Data.DataSet>为 XML 文件，然后使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.XmlImport%2A>方法将 XML 文件中的数据写入工作表中的范围`Sheet1`。  
   
  此示例适用于文档级自定义。  
   
@@ -8202,17 +8136,17 @@
   
 -   指定的 XML 数据包含语法错误。  
   
--   导入过程已取消，因为指定的数据无法容纳到工作表。  
+-   导入过程已取消，因为指定的数据不适合放在工作表。  
   
- 使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.XmlImport%2A>方法以将 XML 数据文件导入到当前工作簿。  
+ 使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.XmlImport%2A>方法将 XML 数据文件导入当前工作簿。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例演示如何将 XML 数据导入工作簿。 该示例创建<xref:System.Data.DataSet>客户的名称，并将添加<xref:Microsoft.Office.Interop.Excel.XmlMap>基于的 XML 架构<xref:System.Data.DataSet>到<xref:Microsoft.Office.Tools.Excel.WorkbookBase.XmlMaps%2A>当前工作簿的集合。 该示例然后调用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.XmlImportXml%2A>方法将数据导入到工作表`Sheet1`。 当<xref:Microsoft.Office.Tools.Excel.WorkbookBase.XmlImportXml%2A>调用方法时，<xref:Microsoft.Office.Tools.Excel.WorkbookBase.BeforeXmlImport>事件处理程序会提示用户继续还是取消导入 XML 中，与<xref:Microsoft.Office.Tools.Excel.WorkbookBase.AfterXmlImport>事件处理程序会报告是否已成功导入了 XML。  
+ 下面的代码示例演示如何将 XML 数据导入工作簿。 该示例将创建<xref:System.Data.DataSet>的客户名称，并添加<xref:Microsoft.Office.Interop.Excel.XmlMap>基于的 XML 架构<xref:System.Data.DataSet>到<xref:Microsoft.Office.Tools.Excel.WorkbookBase.XmlMaps%2A>当前工作簿的集合。 该示例然后调用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.XmlImportXml%2A>方法将数据导入到工作表`Sheet1`。 当<xref:Microsoft.Office.Tools.Excel.WorkbookBase.XmlImportXml%2A>调用方法时，<xref:Microsoft.Office.Tools.Excel.WorkbookBase.BeforeXmlImport>事件处理程序会提示用户继续或取消导入 XML 和<xref:Microsoft.Office.Tools.Excel.WorkbookBase.AfterXmlImport>事件处理程序报告是否已成功导入 XML。  
   
  此示例适用于文档级自定义。  
   
@@ -8243,7 +8177,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例演示如何将 XML 数据导入工作簿。 该示例创建<xref:System.Data.DataSet>客户的名称，并将添加<xref:Microsoft.Office.Interop.Excel.XmlMap>基于的 XML 架构<xref:System.Data.DataSet>到<xref:Microsoft.Office.Tools.Excel.WorkbookBase.XmlMaps%2A>当前工作簿的集合。 该示例然后调用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.XmlImportXml%2A>方法将数据导入到工作表`Sheet1`。 当<xref:Microsoft.Office.Tools.Excel.WorkbookBase.XmlImportXml%2A>调用方法时，<xref:Microsoft.Office.Tools.Excel.WorkbookBase.BeforeXmlImport>事件处理程序会提示用户继续还是取消导入 XML 中，与<xref:Microsoft.Office.Tools.Excel.WorkbookBase.AfterXmlImport>事件处理程序会报告是否已成功导入了 XML。  
+ 下面的代码示例演示如何将 XML 数据导入工作簿。 该示例将创建<xref:System.Data.DataSet>的客户名称，并添加<xref:Microsoft.Office.Interop.Excel.XmlMap>基于的 XML 架构<xref:System.Data.DataSet>到<xref:Microsoft.Office.Tools.Excel.WorkbookBase.XmlMaps%2A>当前工作簿的集合。 该示例然后调用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.XmlImportXml%2A>方法将数据导入到工作表`Sheet1`。 当<xref:Microsoft.Office.Tools.Excel.WorkbookBase.XmlImportXml%2A>调用方法时，<xref:Microsoft.Office.Tools.Excel.WorkbookBase.BeforeXmlImport>事件处理程序会提示用户继续或取消导入 XML 和<xref:Microsoft.Office.Tools.Excel.WorkbookBase.AfterXmlImport>事件处理程序会报告是否已成功导入 XML。  
   
  此示例适用于文档级自定义。  
   
@@ -8274,7 +8208,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.XmlNamespaces%2A>属性用于每个写入统一资源标识符 (URI)<xref:Microsoft.Office.Interop.Excel.XmlNamespace>到工作表的列的工作簿中`Sheet1`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorkbookBase.XmlNamespaces%2A>属性来编写统一资源标识符 (URI) 为每个<xref:Microsoft.Office.Interop.Excel.XmlNamespace>到工作表的列的工作簿中`Sheet1`。  
   
  此示例适用于文档级自定义。  
   

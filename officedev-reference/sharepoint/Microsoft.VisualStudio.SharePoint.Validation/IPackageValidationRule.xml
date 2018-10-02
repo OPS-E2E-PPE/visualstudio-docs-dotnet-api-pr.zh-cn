@@ -1,11 +1,11 @@
 <Type Name="IPackageValidationRule" FullName="Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationRule">
   <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="e3587687f1f0ec4224a67f439743aacd81c02e80" />
-    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.openlocfilehash" Value="60e81cd52802bd2d37734540af75ae0e7683bde2" />
+    <Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" />
     <Meta Name="ms.translationtype" Value="HT" />
     <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
-    <Meta Name="ms.locfileid" Value="29410078" />
+    <Meta Name="ms.lasthandoff" Value="09/19/2018" />
+    <Meta Name="ms.locfileid" Value="46453850" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface IPackageValidationRule" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IPackageValidationRule" />
@@ -21,9 +21,9 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 实现<xref:Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationRule>接口可定义自定义验证规则来帮助验证 SharePoint 项目中的包是否有效。 有关详细信息，请参阅[如何： 创建自定义功能和包验证规则，为 SharePoint 解决方案](/visualstudio/sharepoint/how-to-create-custom-feature-and-package-validation-rules-for-sharepoint-solutions.md)。  
+ 实现<xref:Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationRule>接口可定义自定义验证规则，以帮助验证 SharePoint 项目中的包是否有效。 有关详细信息，请参阅[如何： 创建自定义功能和为 SharePoint 解决方案包验证规则](/visualstudio/sharepoint/how-to-create-custom-feature-and-package-validation-rules-for-sharepoint-solutions)。  
   
- 实现此接口的类必须包括<xref:System.ComponentModel.Composition.ExportAttribute?displayProperty=fullName>项目系统发现。  
+ 实现此接口的类必须包含<xref:System.ComponentModel.Composition.ExportAttribute?displayProperty=fullName>由项目系统发现。  
   
    
   
@@ -31,7 +31,7 @@
   
 |日期|历史记录|原因|  
 |----------|-------------|------------|  
-|[!INCLUDE[dev10_cpub1](~/includes/dev10-cpub1-md.md)]|添加了新注释以链接到演示如何实现此接口的主题|[!INCLUDE[enhancement](~/includes/enhancement-md.md)]|  
+|[!INCLUDE[dev10_cpub1](~/includes/dev10-cpub1-md.md)]|其中包含指向演示如何实现此接口的主题添加了新注释|[!INCLUDE[enhancement](~/includes/enhancement-md.md)]|  
   
  ]]></format>
     </remarks>
@@ -61,7 +61,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果此规则仅适用于在包中的项目项，则此方法将执行执行任何操作。  
+ 如果此规则仅应用于包中的项目项，则此方法没有任何影响。  
   
  ]]></format>
         </remarks>
@@ -112,7 +112,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果此规则仅适用于在包中的功能，则此方法将执行执行任何操作。  
+ 如果此规则仅适用于在包中的功能，则此方法没有任何影响。  
   
  ]]></format>
         </remarks>

@@ -1,11 +1,11 @@
 <Type Name="ContentControlBase" FullName="Microsoft.Office.Tools.Word.ContentControlBase">
   <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="cf1732b4e9fe0b9fc90811425cc78ea3c3d5bc17" />
-    <Meta Name="ms.sourcegitcommit" Value="5a5a038b6c783bec52842c940b22504bfc62a810" />
+    <Meta Name="ms.openlocfilehash" Value="40b7393448afd221b3989b9d1efbbd4ea7b8a78f" />
+    <Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" />
     <Meta Name="ms.translationtype" Value="HT" />
     <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="08/03/2018" />
-    <Meta Name="ms.locfileid" Value="29433309" />
+    <Meta Name="ms.lasthandoff" Value="09/19/2018" />
+    <Meta Name="ms.locfileid" Value="46455566" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface ContentControlBase : IDisposable, System.ComponentModel.IComponent, System.ComponentModel.ISupportInitialize, System.Windows.Forms.IBindableComponent" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ContentControlBase implements class System.ComponentModel.IComponent, class System.ComponentModel.ISupportInitialize, class System.IDisposable, class System.Windows.Forms.IBindableComponent" />
@@ -46,7 +46,7 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Word.ContentControlBase>接口定义共享的所有内容控件的成员。 有八个类型的内容控件，您可以使用设计文档和 Microsoft Office Word 中的模板。 内容控件具有用户界面 (UI) 的有控制类似于窗体的输入。 可以使用内容控件来阻止用户编辑受保护的部分的文档或模板，并还可以将内容控件绑定到数据源。 有关详细信息，请参阅[内容控件](/visualstudio/vsto/content-controls.md)。  
+ <xref:Microsoft.Office.Tools.Word.ContentControlBase>接口定义共享的所有内容控件的成员。 有八个类型的内容控件，您可以使用设计文档和 Microsoft Office Word 中的模板。 内容控件具有用户界面 (UI) 的有控制类似于窗体的输入。 可以使用内容控件来阻止用户编辑受保护的部分的文档或模板，并还可以将内容控件绑定到数据源。 有关详细信息，请参阅[内容控件](/visualstudio/vsto/content-controls)。  
   
  [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
   
@@ -159,14 +159,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 可以将内容控件绑定到一段 XML 中的元素 (也称为*自定义 XML 部件*) 的嵌入到文档中。 有关详细信息，请参阅[内容控件](/visualstudio/vsto/content-controls.md)并[自定义 XML 部件概述](/visualstudio/vsto/custom-xml-parts-overview.md)。  
+ 可以将内容控件绑定到一段 XML 中的元素 (也称为*自定义 XML 部件*) 的嵌入到文档中。 有关详细信息，请参阅[内容控件](/visualstudio/vsto/content-controls)并[自定义 XML 部件概述](/visualstudio/vsto/custom-xml-parts-overview)。  
   
  <xref:Microsoft.Office.Tools.Word.ContentControlBase.ContentUpdating>打开文档时修改自定义 XML 部件中的数据时，才引发事件。 打开该文档并关闭文档时修改自定义 XML 部件中的数据时，不引发此事件。  
   
    
   
 ## Examples  
- 下面的代码示例演示了事件处理程序<xref:Microsoft.Office.Tools.Word.ContentControlBase.ContentUpdating>和<xref:Microsoft.Office.Tools.Word.ContentControlBase.StoreUpdating>事件。 此示例假定文档包含<xref:Microsoft.Office.Tools.Word.PlainTextContentControl>名为`plainTextContentControl1`绑定到自定义 XML 部件中的元素。 有关演示如何将内容控件绑定到自定义 XML 部件中的元素的代码示例，请参阅[演练： 将内容控件绑定到自定义 XML 部件](/visualstudio/vsto/walkthrough-binding-content-controls-to-custom-xml-parts.md)。  
+ 下面的代码示例演示了事件处理程序<xref:Microsoft.Office.Tools.Word.ContentControlBase.ContentUpdating>和<xref:Microsoft.Office.Tools.Word.ContentControlBase.StoreUpdating>事件。 此示例假定文档包含<xref:Microsoft.Office.Tools.Word.PlainTextContentControl>名为`plainTextContentControl1`绑定到自定义 XML 部件中的元素。 有关演示如何将内容控件绑定到自定义 XML 部件中的元素的代码示例，请参阅[演练： 将内容控件绑定到自定义 XML 部件](/visualstudio/vsto/walkthrough-binding-content-controls-to-custom-xml-parts)。  
   
  若要使用此代码，将其粘贴到`ThisDocument`在项目中的类。 对于 C#，则还必须附加到的事件处理程序<xref:Microsoft.Office.Tools.Word.ContentControlBase.ContentUpdating>并<xref:Microsoft.Office.Tools.Word.ContentControlBase.StoreUpdating>的事件`plainTextContentControl1`。  
   
@@ -344,7 +344,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- Office 项目中的每个主机控件的宿主应用程序对象模型中有一个基础对象。 使用<xref:Microsoft.Office.Tools.Word.ContentControlBase.InnerObject%2A>在 Word 项目中来访问基础<xref:Microsoft.Office.Interop.Word.ContentControl?displayProperty=fullName>对象<xref:Microsoft.Office.Tools.Word.ContentControlBase?displayProperty=fullName>对象。 有关详细信息，请参阅[主机项和主机控件概述](/visualstudio/vsto/host-items-and-host-controls-overview.md)并[编程限制的主机项和主机控件](/visualstudio/vsto/programmatic-limitations-of-host-items-and-host-controls.md)。  
+ Office 项目中的每个主机控件的宿主应用程序对象模型中有一个基础对象。 使用<xref:Microsoft.Office.Tools.Word.ContentControlBase.InnerObject%2A>在 Word 项目中来访问基础<xref:Microsoft.Office.Interop.Word.ContentControl?displayProperty=fullName>对象<xref:Microsoft.Office.Tools.Word.ContentControlBase?displayProperty=fullName>对象。 有关详细信息，请参阅[主机项和主机控件概述](/visualstudio/vsto/host-items-and-host-controls-overview)并[编程限制的主机项和主机控件](/visualstudio/vsto/programmatic-limitations-of-host-items-and-host-controls)。  
   
  ]]></format>
         </remarks>
@@ -368,14 +368,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 可以将内容控件绑定到一段 XML 中的元素 (也称为*自定义 XML 部件*) 的嵌入到文档中。 有关详细信息，请参阅[内容控件](/visualstudio/vsto/content-controls.md)并[自定义 XML 部件概述](/visualstudio/vsto/custom-xml-parts-overview.md)。  
+ 可以将内容控件绑定到一段 XML 中的元素 (也称为*自定义 XML 部件*) 的嵌入到文档中。 有关详细信息，请参阅[内容控件](/visualstudio/vsto/content-controls)并[自定义 XML 部件概述](/visualstudio/vsto/custom-xml-parts-overview)。  
   
  <xref:Microsoft.Office.Tools.Word.ContentControlBase.StoreUpdating>内容控件中的文本发生更改，并将内容控件绑定到自定义 XML 部件中的元素时引发事件。  
   
    
   
 ## Examples  
- 下面的代码示例演示了事件处理程序<xref:Microsoft.Office.Tools.Word.ContentControlBase.StoreUpdating>和<xref:Microsoft.Office.Tools.Word.ContentControlBase.ContentUpdating>事件。 此示例假定文档包含<xref:Microsoft.Office.Tools.Word.PlainTextContentControl>名为`plainTextContentControl1`绑定到自定义 XML 部件中的元素。 有关演示如何将内容控件绑定到自定义 XML 部件中的元素的代码示例，请参阅[演练： 将内容控件绑定到自定义 XML 部件](/visualstudio/vsto/walkthrough-binding-content-controls-to-custom-xml-parts.md)。  
+ 下面的代码示例演示了事件处理程序<xref:Microsoft.Office.Tools.Word.ContentControlBase.StoreUpdating>和<xref:Microsoft.Office.Tools.Word.ContentControlBase.ContentUpdating>事件。 此示例假定文档包含<xref:Microsoft.Office.Tools.Word.PlainTextContentControl>名为`plainTextContentControl1`绑定到自定义 XML 部件中的元素。 有关演示如何将内容控件绑定到自定义 XML 部件中的元素的代码示例，请参阅[演练： 将内容控件绑定到自定义 XML 部件](/visualstudio/vsto/walkthrough-binding-content-controls-to-custom-xml-parts)。  
   
  若要使用此代码，将其粘贴到`ThisDocument`在项目中的类。 对于 C#，则还必须附加到的事件处理程序<xref:Microsoft.Office.Tools.Word.ContentControlBase.StoreUpdating>并<xref:Microsoft.Office.Tools.Word.ContentControlBase.ContentUpdating>的事件`plainTextContentControl1`。  
   

@@ -1,11 +1,11 @@
 <Type Name="IMappedFolderCollection" FullName="Microsoft.VisualStudio.SharePoint.IMappedFolderCollection">
   <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="ebdeb23c74334715e71799d4dad67e5c34db8032" />
-    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.openlocfilehash" Value="d070322ede3461add6ea5520d67d2aca7fee9ff9" />
+    <Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" />
     <Meta Name="ms.translationtype" Value="HT" />
     <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
-    <Meta Name="ms.locfileid" Value="29409948" />
+    <Meta Name="ms.lasthandoff" Value="09/19/2018" />
+    <Meta Name="ms.locfileid" Value="46459245" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface IMappedFolderCollection : Microsoft.VisualStudio.SharePoint.ISharePointCollection&lt;Microsoft.VisualStudio.SharePoint.IMappedFolder&gt;, System.Collections.Generic.IEnumerable&lt;Microsoft.VisualStudio.SharePoint.IMappedFolder&gt;, System.Collections.Specialized.INotifyCollectionChanged, System.ComponentModel.INotifyPropertyChanged" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IMappedFolderCollection implements class Microsoft.VisualStudio.SharePoint.ISharePointCollection`1&lt;class Microsoft.VisualStudio.SharePoint.IMappedFolder&gt;, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.VisualStudio.SharePoint.IMappedFolder&gt;, class System.Collections.IEnumerable, class System.Collections.Specialized.INotifyCollectionChanged, class System.ComponentModel.INotifyPropertyChanged" />
@@ -34,7 +34,7 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 映射的文件夹是 SharePoint 项目中的 SharePoint Server 安装的某些文件的物理位置相对应的文件夹。 有关详细信息，请参阅[如何： 添加和移除映射文件夹](/visualstudio/sharepoint/how-to-add-and-remove-mapped-folders.md)。  
+ 映射的文件夹是 SharePoint 项目中的 SharePoint 服务器安装的某些文件的物理位置相对应的文件夹。 有关详细信息，请参阅[如何： 添加和移除映射文件夹](/visualstudio/sharepoint/how-to-add-and-remove-mapped-folders)。  
   
  ]]></format>
     </remarks>
@@ -63,7 +63,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 当你使用此方法时，你可以指定任何<xref:Microsoft.VisualStudio.SharePoint.MappedFolderType>值除外<xref:Microsoft.VisualStudio.SharePoint.MappedFolderType.Other>。  
+ 当使用此方法时，你可以指定任何<xref:Microsoft.VisualStudio.SharePoint.MappedFolderType>值除外<xref:Microsoft.VisualStudio.SharePoint.MappedFolderType.Other>。  
   
  ]]></format>
         </remarks>
@@ -94,7 +94,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 当你使用此方法创建一个映射的文件夹和您指定`deploymentPath`不对应的标准映射的文件夹位置，请之一的值<xref:Microsoft.VisualStudio.SharePoint.IMappedFolder.FolderType%2A>映射的文件夹的属性具有值<xref:Microsoft.VisualStudio.SharePoint.MappedFolderType.Other>。  
+ 当使用此方法创建的映射的文件夹并且指定`deploymentPath`不对应一个标准的映射的文件夹位置的值<xref:Microsoft.VisualStudio.SharePoint.IMappedFolder.FolderType%2A>的映射文件夹的属性具有值<xref:Microsoft.VisualStudio.SharePoint.MappedFolderType.Other>。  
   
  ]]></format>
         </remarks>
@@ -118,15 +118,14 @@
       </Parameters>
       <Docs>
         <param name="folderType">要创建的映射文件夹的类型。</param>
-        <param name="skipAutoPackage">
-          如果映射文件夹自动添加到项目的包中，则为 <see langword="false" />；否则为 <see langword="true" />。</param>
+        <param name="skipAutoPackage">如果映射文件夹自动添加到项目的包中，则为 <see langword="false" />；否则为 <see langword="true" />。</param>
         <summary>将指定类型的映射文件夹添加到当前的 SharePoint 项目中。</summary>
         <returns>已创建的映射文件夹。</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 当你使用此方法时，你可以指定任何<xref:Microsoft.VisualStudio.SharePoint.MappedFolderType>值除外<xref:Microsoft.VisualStudio.SharePoint.MappedFolderType.Other>。  
+ 当使用此方法时，你可以指定任何<xref:Microsoft.VisualStudio.SharePoint.MappedFolderType>值除外<xref:Microsoft.VisualStudio.SharePoint.MappedFolderType.Other>。  
   
  ]]></format>
         </remarks>
@@ -152,15 +151,14 @@
       </Parameters>
       <Docs>
         <param name="deploymentPath">SharePoint 中映射文件夹映射到的路径。 此路径相对于 SharePoint 配置单元的根目录。 如果文件夹当前不存在，则它将在部署解决方案时创建。</param>
-        <param name="skipAutoPackage">
-          如果映射文件夹自动添加到项目的包中，则为 <see langword="false" />；否则为 <see langword="true" />。</param>
+        <param name="skipAutoPackage">如果映射文件夹自动添加到项目的包中，则为 <see langword="false" />；否则为 <see langword="true" />。</param>
         <summary>将具有指定部署路径的映射文件夹添加到当前的 SharePoint 项目中。</summary>
         <returns>已创建的映射文件夹。</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 当你使用此方法创建一个映射的文件夹和您指定`deploymentPath`不对应的标准映射的文件夹位置，请之一的值<xref:Microsoft.VisualStudio.SharePoint.IMappedFolder.FolderType%2A>映射的文件夹的属性具有值<xref:Microsoft.VisualStudio.SharePoint.MappedFolderType.Other>。  
+ 当使用此方法创建的映射的文件夹并且指定`deploymentPath`不对应一个标准的映射的文件夹位置的值<xref:Microsoft.VisualStudio.SharePoint.IMappedFolder.FolderType%2A>的映射文件夹的属性具有值<xref:Microsoft.VisualStudio.SharePoint.MappedFolderType.Other>。  
   
  ]]></format>
         </remarks>
@@ -180,7 +178,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取与此映射文件夹集合相关联的 SharePoint 项目。</summary>
-        <value>与此关联的 SharePoint 项目映射文件夹集合。</value>
+        <value>与此相关联的 SharePoint 项目映射文件夹集合。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

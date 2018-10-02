@@ -1,11 +1,11 @@
 <Type Name="ControlSite" FullName="Microsoft.Office.Tools.Excel.ControlSite">
   <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="b6722c88e2e3c1f0570c3a981a221f0e9c4b6e9d" />
-    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.openlocfilehash" Value="f20a2c467ea6c3b502bf76fc82dbe20e38ccd99f" />
+    <Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" />
     <Meta Name="ms.translationtype" Value="HT" />
     <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
-    <Meta Name="ms.locfileid" Value="29433738" />
+    <Meta Name="ms.lasthandoff" Value="09/19/2018" />
+    <Meta Name="ms.locfileid" Value="46459622" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface ControlSite : IDisposable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ControlSite implements class System.IDisposable" />
@@ -37,7 +37,7 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- A<xref:Microsoft.Office.Tools.Excel.ControlSite>使用时返回<xref:Microsoft.Office.Tools.Excel.ControlCollection.AddControl%2A>方法以向文档添加控件。 有关详细信息，请参阅[在运行时向 Office 文档添加控件](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time.md)。  
+ 一个<xref:Microsoft.Office.Tools.Excel.ControlSite>使用时返回<xref:Microsoft.Office.Tools.Excel.ControlCollection.AddControl%2A>方法以向文档添加控件。 有关详细信息，请参阅 [在运行时向 Office 文档添加控件](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。  
   
  [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
   
@@ -190,8 +190,7 @@
       <Parameters />
       <Docs>
         <summary>激活 <see cref="T:Microsoft.Office.Tools.Excel.ControlSite" />。</summary>
-        <returns>
-          如果成功激活了 <see cref="T:Microsoft.Office.Tools.Excel.ControlSite" />，则为 <see langword="true" />；否则为 <see langword="false" />。</returns>
+        <returns>如果成功激活了 <see cref="T:Microsoft.Office.Tools.Excel.ControlSite" />，则为 <see langword="true" />；否则为 <see langword="false" />。</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -240,7 +239,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 你可以使用此属性与 OLE 自动化对象，以返回该对象的应用程序。  
+ 可以使用 OLE 自动化对象中使用此属性返回该对象的应用程序。  
   
  ]]></format>
         </remarks>
@@ -260,15 +259,14 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示 <see cref="T:Microsoft.Office.Tools.Excel.ControlSite" /> 在包含其的工作簿打开时是否自动加载。</summary>
-        <value>
-          如果 <see cref="T:Microsoft.Office.Tools.Excel.ControlSite" /> 在包含其的工作簿打开时自动加载，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果 <see cref="T:Microsoft.Office.Tools.Excel.ControlSite" /> 在包含其的工作簿打开时自动加载，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 由 ActiveX 控件，将忽略此属性。 打开工作簿时，始终进行加载 ActiveX 控件。  
+ 通过 ActiveX 控件，将忽略此属性。 打开工作簿时，始终进行加载的 ActiveX 控件。  
   
- 对于大多数 OLE 对象类型，此属性不应设置`true`。 默认情况下，<xref:Microsoft.Office.Tools.Excel.ControlSite.AutoLoad%2A>属性设置为`false`为新的 OLE 对象; 这将保存时间和内存时 Microsoft Office Excel 正在加载工作簿。 自动加载 OLE 对象的好处是，对于表示易失性数据的对象，可以立即重新建立指向源数据和必要时可以再次呈现的对象。  
+ 对于大多数 OLE 对象类型，此属性不应设置`true`。 默认情况下<xref:Microsoft.Office.Tools.Excel.ControlSite.AutoLoad%2A>属性设置为`false`为新的 OLE 对象; 这将保存时间和内存时 Microsoft Office Excel 正在加载工作簿。 自动加载的 OLE 对象的好处是，对于表示易失性数据的对象，可以立即重新建立指向源数据和对象可再次呈现，如有必要。  
   
  ]]></format>
         </remarks>
@@ -288,13 +286,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示 <see cref="T:Microsoft.Office.Tools.Excel.ControlSite" /> 在源更改时是否自动更新。</summary>
-        <value>
-          如果 <see cref="T:Microsoft.Office.Tools.Excel.ControlSite" /> 在源更改时自动更新，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果 <see cref="T:Microsoft.Office.Tools.Excel.ControlSite" /> 在源更改时自动更新，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性才有效仅当链接对象 (其<xref:Microsoft.Office.Tools.Excel.ControlSite.OLEType%2A>属性必须为<xref:Microsoft.Office.Interop.Excel.XlOLEType.xlOLELink>)。  
+ 此属性才有效，仅当链接对象 (其<xref:Microsoft.Office.Tools.Excel.ControlSite.OLEType%2A>属性必须为<xref:Microsoft.Office.Interop.Excel.XlOLEType.xlOLELink>)。  
   
  ]]></format>
         </remarks>
@@ -363,8 +360,7 @@
       <Parameters />
       <Docs>
         <summary>将 <see cref="T:Microsoft.Office.Tools.Excel.ControlSite" /> 置于 Z 顺序的顶层。</summary>
-        <returns>
-          如果成功更改了 Z 顺序，则为 <see langword="true" />；否则为 <see langword="false" />。</returns>
+        <returns>如果成功更改了 Z 顺序，则为 <see langword="true" />；否则为 <see langword="false" />。</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -383,8 +379,7 @@
       <Parameters />
       <Docs>
         <summary>将 <see cref="T:Microsoft.Office.Tools.Excel.ControlSite" /> 复制到剪贴板。</summary>
-        <returns>
-          如果复制成功，则为 <see langword="true" />；否则为 <see langword="false" />。</returns>
+        <returns>如果复制成功，则为 <see langword="true" />；否则为 <see langword="false" />。</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -414,8 +409,7 @@
         <param name="Format">
           <see cref="T:Microsoft.Office.Interop.Excel.XlCopyPictureFormat" /> 值之一，指定图片格式。</param>
         <summary>将 <see cref="T:Microsoft.Office.Tools.Excel.ControlSite" /> 作为图片复制到剪贴板。</summary>
-        <returns>
-          如果复制成功，则为 <see langword="true" />；否则为 <see langword="false" />。</returns>
+        <returns>如果复制成功，则为 <see langword="true" />；否则为 <see langword="false" />。</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -442,7 +436,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.ControlSite.Creator%2A>属性旨在用于在 Excel 中 Macintosh，其中每个应用程序具有四个字符创建者代码。  
+ <xref:Microsoft.Office.Tools.Excel.ControlSite.Creator%2A>属性用于在 Excel 中使用的 Macintosh 上，其中每个应用程序具有四个字符创建者代码。  
   
  ]]></format>
         </remarks>
@@ -463,8 +457,7 @@
       <Parameters />
       <Docs>
         <summary>将 <see cref="T:Microsoft.Office.Tools.Excel.ControlSite" /> 剪切到剪贴板。</summary>
-        <returns>
-          如果剪切成功，则为 <see langword="true" />；否则为 <see langword="false" />。</returns>
+        <returns>如果剪切成功，则为 <see langword="true" />；否则为 <see langword="false" />。</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -494,8 +487,7 @@
       <Parameters />
       <Docs>
         <summary>删除 <see cref="T:Microsoft.Office.Tools.Excel.ControlSite" />。</summary>
-        <returns>
-          如果删除成功，则为 <see langword="true" />；否则为 <see langword="false" />。</returns>
+        <returns>如果删除成功，则为 <see langword="true" />；否则为 <see langword="false" />。</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -533,8 +525,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示是否启用了 <see cref="T:Microsoft.Office.Tools.Excel.ControlSite" />。</summary>
-        <value>
-          如果启用 <see cref="T:Microsoft.Office.Tools.Excel.ControlSite" />，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果启用 <see cref="T:Microsoft.Office.Tools.Excel.ControlSite" />，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -628,7 +619,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果该窗口最大化，此属性返回一个负数，而异基于窗口边框的宽度。 将此属性设置为 0 （零） 将使窗口稍微小小于其应有应用程序窗口被最大化时。 换而言之，如果<xref:Microsoft.Office.Tools.Excel.ControlSite.Left%2A>属性为 0 （零），Microsoft Office Excel 主窗口的左边的框仅能执行将在屏幕上可见。  
+ 如果窗口已最大化，此属性返回一个负数，而异基于窗口边框的宽度。 此属性设置为 0 （零） 将使窗口不是将应用程序窗口被最大化时稍微有点小。 换而言之，如果<xref:Microsoft.Office.Tools.Excel.ControlSite.Left%2A>属性为 0 （零），主要的 Microsoft Office Excel 窗口的左边的框仅能执行将在屏幕上可见。  
   
  ]]></format>
         </remarks>
@@ -653,7 +644,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果将值放在链接的单元格，<xref:Microsoft.Office.Tools.Excel.ControlSite>采用此值。 同样，如果你更改的值<xref:Microsoft.Office.Tools.Excel.ControlSite>，值也放在单元格中。  
+ 如果将值放在链接的单元格中，<xref:Microsoft.Office.Tools.Excel.ControlSite>会将此值。 同样，如果您更改的值<xref:Microsoft.Office.Tools.Excel.ControlSite>，值也放置在单元格中。  
   
  ]]></format>
         </remarks>
@@ -678,11 +669,11 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- Microsoft Office Excel 读取的范围中每个单元格的内容，并插入到列表框中的单元格的值。 列表跟踪范围的单元格中的更改。  
+ Microsoft Office Excel 将范围中每个单元格的内容，并将单元格的值插入到列表框。 在列表中跟踪更改的范围的单元格。  
   
- 设置此属性将销毁列表框中的任何现有列表。  
+ 设置此属性会破坏任何现有列表的列表框中。  
   
- 列表框的列表中创建了<xref:Microsoft.Office.Interop.Excel.ControlFormat.AddItem%2A>方法，此属性返回一个空字符串 ("")。  
+ 如果创建了列表，列表框中使用<xref:Microsoft.Office.Interop.Excel.ControlFormat.AddItem%2A>方法，此属性返回空字符串 ("")。  
   
  ]]></format>
         </remarks>
@@ -706,8 +697,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示是否锁定了 <see cref="T:Microsoft.Office.Tools.Excel.ControlSite" />。</summary>
-        <value>
-          如果锁定了 <see cref="T:Microsoft.Office.Tools.Excel.ControlSite" />，则为 <see langword="true" />；如果可在工作表受保护时修改 <see cref="T:Microsoft.Office.Tools.Excel.ControlSite" />，则为 <see langword="false" />。</value>
+        <value>如果锁定了 <see cref="T:Microsoft.Office.Tools.Excel.ControlSite" />，则为 <see langword="true" />；如果可在工作表受保护时修改 <see cref="T:Microsoft.Office.Tools.Excel.ControlSite" />，则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -854,8 +844,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示打印文档时是否打印 <see cref="T:Microsoft.Office.Tools.Excel.ControlSite" />。</summary>
-        <value>
-          如果在打印文档时打印 <see cref="T:Microsoft.Office.Tools.Excel.ControlSite" />，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果在打印文档时打印 <see cref="T:Microsoft.Office.Tools.Excel.ControlSite" />，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -878,7 +867,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性始终返回相同的字符串，因为由相同的 ActiveX 控件托管在 Office 项目中的所有托管的控件。  
+ 此属性始终返回相同的字符串，因为由相同的 ActiveX 控件承载在 Office 项目中的所有托管的控件。  
   
  ]]></format>
         </remarks>
@@ -904,11 +893,9 @@
         <Parameter Name="Replace" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Replace">
-          如果为 <see langword="true" />，则使用指定的对象替换当前所选项。 如果设置为 <see langword="false" />，则扩展当前选择范围，使之包含以前选择的所有对象和指定对象。</param>
+        <param name="Replace">如果为 <see langword="true" />，则使用指定的对象替换当前所选项。 如果设置为 <see langword="false" />，则扩展当前选择范围，使之包含以前选择的所有对象和指定对象。</param>
         <summary>选择 <see cref="T:Microsoft.Office.Tools.Excel.ControlSite" />。</summary>
-        <returns>
-          如果选择成功，则为 <see langword="true" />；否则为 <see langword="false" />。</returns>
+        <returns>如果选择成功，则为 <see langword="true" />；否则为 <see langword="false" />。</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -931,8 +918,7 @@
       <Parameters />
       <Docs>
         <summary>将 <see cref="T:Microsoft.Office.Tools.Excel.ControlSite" /> 置于 Z 顺序的底层。</summary>
-        <returns>
-          如果成功更改了 Z 顺序，则为 <see langword="true" />；否则为 <see langword="false" />。</returns>
+        <returns>如果成功更改了 Z 顺序，则为 <see langword="true" />；否则为 <see langword="false" />。</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -950,8 +936,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示字体是否为阴影字体，或者 <see cref="T:Microsoft.Office.Tools.Excel.ControlSite" /> 是否具有阴影。</summary>
-        <value>
-          如果字体为阴影字体或是 <see cref="T:Microsoft.Office.Tools.Excel.ControlSite" /> 具有阴影，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果字体为阴影字体或是 <see cref="T:Microsoft.Office.Tools.Excel.ControlSite" /> 具有阴影，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1062,8 +1047,7 @@
       <Parameters />
       <Docs>
         <summary>更新链接。</summary>
-        <returns>
-          如果成功更新了链接，则为 <see langword="true" />；否则为 <see langword="false" />。</returns>
+        <returns>如果成功更新了链接，则为 <see langword="true" />；否则为 <see langword="false" />。</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1108,8 +1092,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示 <see cref="T:Microsoft.Office.Tools.Excel.ControlSite" /> 是否可见。</summary>
-        <value>
-          如果 <see cref="T:Microsoft.Office.Tools.Excel.ControlSite" /> 可见，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果 <see cref="T:Microsoft.Office.Tools.Excel.ControlSite" /> 可见，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1160,7 +1143,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 所有对象集合，集合中的第一个对象是在 z 顺序的底层对象且处 z 顺序的前面的对象集合中的最后一个对象。  
+ 中对象的任何集合，z 顺序的底层对象是集合中的第一个对象，并在 z 顺序的顶层对象是集合中的最后一个对象。  
   
  ]]></format>
         </remarks>

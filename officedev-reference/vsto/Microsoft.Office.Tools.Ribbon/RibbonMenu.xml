@@ -1,11 +1,11 @@
 <Type Name="RibbonMenu" FullName="Microsoft.Office.Tools.Ribbon.RibbonMenu">
   <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="2f08d8612e060b40ab3c36010cd07fbfa27fbd77" />
-    <Meta Name="ms.sourcegitcommit" Value="5a5a038b6c783bec52842c940b22504bfc62a810" />
+    <Meta Name="ms.openlocfilehash" Value="259b7d0bea481868837f9f00ceab16ddc63779cf" />
+    <Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" />
     <Meta Name="ms.translationtype" Value="HT" />
     <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="08/03/2018" />
-    <Meta Name="ms.locfileid" Value="29433725" />
+    <Meta Name="ms.lasthandoff" Value="09/19/2018" />
+    <Meta Name="ms.locfileid" Value="46454942" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface RibbonMenu : IDisposable, Microsoft.Office.Tools.Ribbon.RibbonControl, System.ComponentModel.IComponent" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract RibbonMenu implements class Microsoft.Office.Tools.Ribbon.RibbonComponent, class Microsoft.Office.Tools.Ribbon.RibbonControl, class System.ComponentModel.IComponent, class System.IDisposable" />
@@ -47,7 +47,7 @@
 -   通过使用 `Globals.Factory.GetRibbonFactory` 方法。 可从 Ribbon 类外的代码使用此方法。  
   
 ## <a name="common-tasks"></a>常规任务  
- 下表列出了可用于常见任务的成员。 可以在设计时执行所有这些任务。 可以在运行时只能在功能区加载到 Office 应用程序之前，或者该控件添加到动态菜单之前执行其中一些任务。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。  
+ 下表列出了可用于常见任务的成员。 可以在设计时执行所有这些任务。 可以在运行时只能在功能区加载到 Office 应用程序之前，或者该控件添加到动态菜单之前执行其中一些任务。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
   
 |任务|成员|  
 |----------|------------|  
@@ -68,7 +68,7 @@
 ## Examples  
  下面的示例演示如何添加和在运行时填充到现有菜单子菜单。  
   
- 更新在运行时的控件，并涉及到从使用语言集成查询 (LINQ) 的 AdventureWorks 示例数据库中获取数据的更丰富示例，请参阅[演练： 在运行时功能区上的控件](/visualstudio/vsto/walkthrough-updating-the-controls-on-a-ribbon-at-run-time.md)。  
+ 更新在运行时的控件，并涉及到从使用语言集成查询 (LINQ) 的 AdventureWorks 示例数据库中获取数据的更丰富示例，请参阅[演练： 在运行时功能区上的控件](/visualstudio/vsto/walkthrough-updating-the-controls-on-a-ribbon-at-run-time)。  
   
  若要运行此代码示例，必须首先执行以下步骤：  
   
@@ -166,9 +166,9 @@
 ## Remarks  
  设置<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Dynamic%2A>属性设置为`true`如果想要在运行时，由 Microsoft Office 应用程序加载功能区后，会将控件添加到菜单。  
   
- 用于在设计时添加到功能区菜单<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Dynamic%2A>只能在功能区加载之前，可以设置属性。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。  
+ 用于在设计时添加到功能区菜单<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Dynamic%2A>只能在功能区加载之前，可以设置属性。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
   
- 可以在运行时仅在某些情况下设置此属性。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。  
+ 可以在运行时仅在某些情况下设置此属性。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
   
  ]]></format>
         </remarks>
@@ -255,7 +255,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要在运行时添加到菜单的功能区控件，创建控件的实例，然后将新控件添加到<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Items%2A>集合。 如果你想要执行此操作在功能区加载到 Office 应用程序之后，必须设置<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Dynamic%2A>属性设置为`true`。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。  
+ 若要在运行时添加到菜单的功能区控件，创建控件的实例，然后将新控件添加到<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Items%2A>集合。 如果你想要执行此操作在功能区加载到 Office 应用程序之后，必须设置<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Dynamic%2A>属性设置为`true`。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
   
  使用功能区设计器将控件添加到菜单在 Visual Studio 会自动添加到控件<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Items%2A>菜单的属性。  
   
@@ -285,7 +285,7 @@
 ## Remarks  
  若要放大菜单上的控件，设置<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ItemSize%2A>属性的父 menu 的`Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge`。  
   
- 可以在运行时仅在某些情况下设置此属性。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。  
+ 可以在运行时仅在某些情况下设置此属性。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
   
  若要更改菜单的大小，请使用<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ControlSize%2A>属性。  
   
@@ -441,7 +441,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 可以在运行时仅在某些情况下设置此属性。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。  
+ 可以在运行时仅在某些情况下设置此属性。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
   
  <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Position%2A>属性时菜单放置在功能区选项卡上没有任何作用。  
   

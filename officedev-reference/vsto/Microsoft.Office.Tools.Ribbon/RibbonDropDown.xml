@@ -1,11 +1,11 @@
 <Type Name="RibbonDropDown" FullName="Microsoft.Office.Tools.Ribbon.RibbonDropDown">
   <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="c18515fa96427a280558c9723dd80ededc00de7a" />
-    <Meta Name="ms.sourcegitcommit" Value="5a5a038b6c783bec52842c940b22504bfc62a810" />
+    <Meta Name="ms.openlocfilehash" Value="b6a01534586d0a3232740be4d4bfebb51b628b46" />
+    <Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" />
     <Meta Name="ms.translationtype" Value="HT" />
     <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="08/03/2018" />
-    <Meta Name="ms.locfileid" Value="29433881" />
+    <Meta Name="ms.lasthandoff" Value="09/19/2018" />
+    <Meta Name="ms.locfileid" Value="46459791" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface RibbonDropDown : IDisposable, Microsoft.Office.Tools.Ribbon.RibbonControl, System.ComponentModel.IComponent" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract RibbonDropDown implements class Microsoft.Office.Tools.Ribbon.RibbonComponent, class Microsoft.Office.Tools.Ribbon.RibbonControl, class System.ComponentModel.IComponent, class System.IDisposable" />
@@ -68,7 +68,7 @@
   
 3.  在中**按钮集合编辑器**、 添加、 排序和编辑新的按钮控件。  
   
- 只能在功能区加载到 Office 应用程序之前，可以设置此类型的某些成员。 有关如何设置这些属性的信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。  
+ 只能在功能区加载到 Office 应用程序之前，可以设置此类型的某些成员。 有关如何设置这些属性的信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
   
  [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
   
@@ -124,7 +124,7 @@
 ## Remarks  
  <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>控件可同时包含<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem>控件和<xref:Microsoft.Office.Tools.Ribbon.RibbonButton>控件。  
   
- 您可以将按钮添加到<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Buttons%2A>只能在功能区加载之前的属性。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。  
+ 您可以将按钮添加到<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Buttons%2A>只能在功能区加载之前的属性。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
   
  ]]></format>
         </remarks>
@@ -180,7 +180,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ImageName%2A>属性标识控件显示的图像。 Office 应用程序此映像从你的解决方案只检索一次，以提高性能。 此属性可以设置只能在设计时，因为它标识的图像加载过程<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>事件。 <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage> 时将引发一次每个映像名称显示在功能区。 之后，不能使用此属性更改控件图像。 有关如何设置此属性的详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ImageName%2A>属性标识控件显示的图像。 Office 应用程序此映像从你的解决方案只检索一次，以提高性能。 此属性可以设置只能在设计时，因为它标识的图像加载过程<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>事件。 <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage> 时将引发一次每个映像名称显示在功能区。 之后，不能使用此属性更改控件图像。 有关如何设置此属性的详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
   
  若要加载图像，将代码添加到<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>事件处理程序。 检查<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs.ImageName%2A>的属性<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs>并设置<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs.Image%2A>属性的<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs>到想要加载的图像的对象。  
   
@@ -511,7 +511,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 可以在运行时仅在某些情况下设置此属性。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。  
+ 可以在运行时仅在某些情况下设置此属性。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
   
  ]]></format>
         </remarks>
@@ -581,7 +581,7 @@
 ## Remarks  
  当您将设置<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SizeString%2A>中功能区设计器中，Visual Studio 尝试大小属性<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>，以便将大小足以显示整个字符串。 尽管 Visual Studio 允许的长度最多为 1024年个字符的字符串，但在实践中可用的字符串长度可能要短得多。  
   
- 可以在运行时仅在某些情况下设置此属性。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview.md)。  
+ 可以在运行时仅在某些情况下设置此属性。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
   
  ]]></format>
         </remarks>

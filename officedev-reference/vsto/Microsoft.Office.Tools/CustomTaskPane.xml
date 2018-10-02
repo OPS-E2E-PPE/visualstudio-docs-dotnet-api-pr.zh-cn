@@ -1,11 +1,11 @@
 <Type Name="CustomTaskPane" FullName="Microsoft.Office.Tools.CustomTaskPane">
   <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="e0074abf4d0611f963cfd5dbc56b13898ed95852" />
-    <Meta Name="ms.sourcegitcommit" Value="5a5a038b6c783bec52842c940b22504bfc62a810" />
+    <Meta Name="ms.openlocfilehash" Value="5a3616c1859298dd906edba13308734133919256" />
+    <Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" />
     <Meta Name="ms.translationtype" Value="HT" />
     <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="08/03/2018" />
-    <Meta Name="ms.locfileid" Value="29433647" />
+    <Meta Name="ms.lasthandoff" Value="09/19/2018" />
+    <Meta Name="ms.locfileid" Value="46454760" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface CustomTaskPane : IDisposable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract CustomTaskPane implements class System.IDisposable" />
@@ -49,7 +49,7 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用<xref:Microsoft.Office.Tools.CustomTaskPane>应用程序级外接程序中来修改自定义任务窗格中，或响应的位置或自定义任务窗格的可见性发生更改时的对象。 任务窗格是用户界面面板，通常停靠到应用程序窗口的一侧。 有关如何创建自定义任务窗格的信息，请参阅[自定义任务窗格](/visualstudio/vsto/custom-task-panes.md)。  
+ 使用<xref:Microsoft.Office.Tools.CustomTaskPane>应用程序级外接程序中来修改自定义任务窗格中，或响应的位置或自定义任务窗格的可见性发生更改时的对象。 任务窗格是用户界面面板，通常停靠到应用程序窗口的一侧。 有关如何创建自定义任务窗格的信息，请参阅[自定义任务窗格](/visualstudio/vsto/custom-task-panes)。  
   
  若要控制的大小或自定义任务窗格的位置，可以使用属性，如<xref:Microsoft.Office.Tools.CustomTaskPane.Height%2A>， <xref:Microsoft.Office.Tools.CustomTaskPane.Width%2A>，和<xref:Microsoft.Office.Tools.CustomTaskPane.Visible%2A>。  
   
@@ -91,7 +91,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性返回<xref:System.Windows.Forms.UserControl>，用来创建自定义任务窗格。 有关详细信息，请参阅[自定义任务窗格](/visualstudio/vsto/custom-task-panes.md)。  
+ 此属性返回<xref:System.Windows.Forms.UserControl>，用来创建自定义任务窗格。 有关详细信息，请参阅[自定义任务窗格](/visualstudio/vsto/custom-task-panes)。  
   
    
   
@@ -146,7 +146,10 @@
  ]]></format>
         </remarks>
         <exception cref="T:System.ObjectDisposedException">已调用 <see cref="T:Microsoft.Office.Tools.CustomTaskPane" /> 的 <see cref="M:Microsoft.Office.Tools.CustomTaskPane.Dispose" /> 方法。</exception>
-        <exception cref="T:System.Runtime.InteropServices.COMException">当尝试更改 <see cref="P:Microsoft.Office.Tools.CustomTaskPane.DockPosition" /> 属性的值时，<see cref="P:Microsoft.Office.Tools.CustomTaskPane.DockPositionRestrict" /> 属性的值为 <c>Microsoft.Office.Core.MsoCTPDockPosition.msoCTPDockPositionRestrictNoChange</c>。  -或-  尝试在 <see cref="E:Microsoft.Office.Tools.CustomTaskPane.DockPositionChanged" /> 或 <see cref="E:Microsoft.Office.Tools.CustomTaskPane.VisibleChanged" /> 事件的事件处理程序中设置此属性。</exception>
+        <exception cref="T:System.Runtime.InteropServices.COMException">当尝试更改 <see cref="P:Microsoft.Office.Tools.CustomTaskPane.DockPosition" /> 属性的值时，<see cref="P:Microsoft.Office.Tools.CustomTaskPane.DockPositionRestrict" /> 属性的值为 <c>Microsoft.Office.Core.MsoCTPDockPosition.msoCTPDockPositionRestrictNoChange</c>。  
+  
+或 
+您可以尝试在 <see cref="E:Microsoft.Office.Tools.CustomTaskPane.DockPositionChanged" /> 或 <see cref="E:Microsoft.Office.Tools.CustomTaskPane.VisibleChanged" /> 事件的事件处理程序中设置此属性。</exception>
       </Docs>
     </Member>
     <Member MemberName="DockPositionChanged">
@@ -244,7 +247,10 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.Runtime.InteropServices.COMException">当尝试设置 <see cref="P:Microsoft.Office.Tools.CustomTaskPane.Height" /> 属性时，<see cref="P:Microsoft.Office.Tools.CustomTaskPane.DockPosition" /> 属性的值为 <c>Microsoft.Office.Core.MsoCTPDockPosition.msoCTPDockPositionRight</c> 或 <c>Microsoft.Office.Core.MsoCTPDockPosition.msoCTPDockPositionLeft</c>。  -或-  尝试在 <see cref="E:Microsoft.Office.Tools.CustomTaskPane.DockPositionChanged" /> 或 <see cref="E:Microsoft.Office.Tools.CustomTaskPane.VisibleChanged" /> 事件的事件处理程序中设置 <see cref="P:Microsoft.Office.Tools.CustomTaskPane.Height" /> 属性。</exception>
+        <exception cref="T:System.Runtime.InteropServices.COMException">当尝试设置 <see cref="P:Microsoft.Office.Tools.CustomTaskPane.Height" /> 属性时，<see cref="P:Microsoft.Office.Tools.CustomTaskPane.DockPosition" /> 属性的值为 <c>Microsoft.Office.Core.MsoCTPDockPosition.msoCTPDockPositionRight</c> 或 <c>Microsoft.Office.Core.MsoCTPDockPosition.msoCTPDockPositionLeft</c>。  
+  
+或 
+您可以尝试在 <see cref="P:Microsoft.Office.Tools.CustomTaskPane.Height" /> 或 <see cref="E:Microsoft.Office.Tools.CustomTaskPane.DockPositionChanged" /> 事件的事件处理程序中设置 <see cref="E:Microsoft.Office.Tools.CustomTaskPane.VisibleChanged" /> 属性。</exception>
         <exception cref="T:System.ObjectDisposedException">已调用 <see cref="T:Microsoft.Office.Tools.CustomTaskPane" /> 的 <see cref="M:Microsoft.Office.Tools.CustomTaskPane.Dispose" /> 方法。</exception>
       </Docs>
     </Member>
@@ -293,7 +299,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- Microsoft Office 应用程序不提供默认值为用户的 UI，以显示自定义任务窗格。 如果外接程序中创建自定义任务窗格，您还应创建 UI 元素，如按钮，用户可单击以显示或隐藏自定义任务窗格。 有关详细信息，请参阅[自定义任务窗格](/visualstudio/vsto/custom-task-panes.md)。  
+ Microsoft Office 应用程序不提供默认值为用户的 UI，以显示自定义任务窗格。 如果外接程序中创建自定义任务窗格，您还应创建 UI 元素，如按钮，用户可单击以显示或隐藏自定义任务窗格。 有关详细信息，请参阅[自定义任务窗格](/visualstudio/vsto/custom-task-panes)。  
   
    
   
@@ -327,12 +333,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- Microsoft Office 应用程序不提供默认值为用户的 UI，以显示自定义任务窗格。 如果外接程序中创建自定义任务窗格，您还应创建 UI 元素，如按钮，用户可单击以显示或隐藏自定义任务窗格。 有关详细信息，请参阅[自定义任务窗格](/visualstudio/vsto/custom-task-panes.md)。  
+ Microsoft Office 应用程序不提供默认值为用户的 UI，以显示自定义任务窗格。 如果外接程序中创建自定义任务窗格，您还应创建 UI 元素，如按钮，用户可单击以显示或隐藏自定义任务窗格。 有关详细信息，请参阅[自定义任务窗格](/visualstudio/vsto/custom-task-panes)。  
   
    
   
 ## Examples  
- 下面的代码示例演示的事件处理程序<xref:Microsoft.Office.Tools.CustomTaskPane.VisibleChanged>事件。 每当用户打开或关闭自定义任务窗格时，此事件处理程序更新的功能区上的切换按钮的状态。 此代码示例摘自[演练： 将自定义任务窗格与功能区按钮同步](/visualstudio/vsto/walkthrough-synchronizing-a-custom-task-pane-with-a-ribbon-button.md)。  
+ 下面的代码示例演示的事件处理程序<xref:Microsoft.Office.Tools.CustomTaskPane.VisibleChanged>事件。 每当用户打开或关闭自定义任务窗格时，此事件处理程序更新的功能区上的切换按钮的状态。 此代码示例摘自[演练： 将自定义任务窗格与功能区按钮同步](/visualstudio/vsto/walkthrough-synchronizing-a-custom-task-pane-with-a-ribbon-button)。  
   
  [!code-csharp[Trin_TaskPaneRibbonSynchronize#3](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_TaskPaneRibbonSynchronize/CS/ThisAddIn.cs#3)]
  [!code-vb[Trin_TaskPaneRibbonSynchronize#3](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_TaskPaneRibbonSynchronize/VB/ThisAddIn.vb#3)]  
@@ -376,7 +382,10 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.Runtime.InteropServices.COMException">当尝试设置 <see cref="P:Microsoft.Office.Tools.CustomTaskPane.Width" /> 属性时，<see cref="P:Microsoft.Office.Tools.CustomTaskPane.DockPosition" /> 属性的值为 <c>Microsoft.Office.Core.MsoCTPDockPosition.msoCTPDockPositionTop</c> 或 <c>Microsoft.Office.Core.MsoCTPDockPosition.msoCTPDockPositionBottom</c>。  -或-  尝试在 <see cref="E:Microsoft.Office.Tools.CustomTaskPane.DockPositionChanged" /> 或 <see cref="E:Microsoft.Office.Tools.CustomTaskPane.VisibleChanged" /> 事件的事件处理程序中设置 <see cref="P:Microsoft.Office.Tools.CustomTaskPane.Width" /> 属性。</exception>
+        <exception cref="T:System.Runtime.InteropServices.COMException">当尝试设置 <see cref="P:Microsoft.Office.Tools.CustomTaskPane.Width" /> 属性时，<see cref="P:Microsoft.Office.Tools.CustomTaskPane.DockPosition" /> 属性的值为 <c>Microsoft.Office.Core.MsoCTPDockPosition.msoCTPDockPositionTop</c> 或 <c>Microsoft.Office.Core.MsoCTPDockPosition.msoCTPDockPositionBottom</c>。  
+  
+或 
+您可以尝试在 <see cref="P:Microsoft.Office.Tools.CustomTaskPane.Width" /> 或 <see cref="E:Microsoft.Office.Tools.CustomTaskPane.DockPositionChanged" /> 事件的事件处理程序中设置 <see cref="E:Microsoft.Office.Tools.CustomTaskPane.VisibleChanged" /> 属性。</exception>
         <exception cref="T:System.ObjectDisposedException">已调用 <see cref="T:Microsoft.Office.Tools.CustomTaskPane" /> 的 <see cref="M:Microsoft.Office.Tools.CustomTaskPane.Dispose" /> 方法。</exception>
       </Docs>
     </Member>
@@ -411,7 +420,7 @@
 |InfoPath|`Microsoft.Office.Interop.InfoPath.WindowObject`|  
 |Outlook|`Microsoft.Office.Interop.Outlook.Explorer`<br /><br /> 或<br /><br /> `Microsoft.Office.Interop.Outlook.Inspector`|  
   
- 有关详细信息，请参阅[自定义任务窗格](/visualstudio/vsto/custom-task-panes.md)。  
+ 有关详细信息，请参阅[自定义任务窗格](/visualstudio/vsto/custom-task-panes)。  
   
  ]]></format>
         </remarks>

@@ -1,11 +1,11 @@
 <Type Name="ISharePointProject" FullName="Microsoft.VisualStudio.SharePoint.ISharePointProject">
   <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="5ec9f71b74a4f6865d08233a4dc96e385a4f6a2e" />
-    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.openlocfilehash" Value="f8b20fe3d95763cdf76c22617a14204d3156cbf4" />
+    <Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" />
     <Meta Name="ms.translationtype" Value="HT" />
     <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
-    <Meta Name="ms.locfileid" Value="29410520" />
+    <Meta Name="ms.lasthandoff" Value="09/19/2018" />
+    <Meta Name="ms.locfileid" Value="46459316" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface ISharePointProject : Microsoft.VisualStudio.SharePoint.ISharePointProjectMember, System.ComponentModel.INotifyPropertyChanged" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISharePointProject implements class Microsoft.VisualStudio.SharePoint.IAnnotatedObject, class Microsoft.VisualStudio.SharePoint.INotifyObjectDisposed, class Microsoft.VisualStudio.SharePoint.INotifyObjectDisposing, class Microsoft.VisualStudio.SharePoint.ISharePointProjectMember, class System.ComponentModel.INotifyPropertyChanged" />
@@ -64,9 +64,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 可以用作语言字符串在此 GUID<xref:EnvDTE80.Solution2.GetProjectItemTemplate%2A>函数可检索到模板的路径。  
+ 可以为语言字符串中使用此 GUID<xref:EnvDTE80.Solution2.GetProjectItemTemplate%2A>函数以检索到模板的路径。  
   
- 通常情况下，<xref:EnvDTE80.Solution2.GetProjectItemTemplate%2A>接受如"CSharp"或"VB"可检索特定于语言的模板语言字符串。 SharePoint 项目而不是字符串使用 Guid 来隐藏非 SharePoint 项目中的 SharePoint 项目项模板。  
+ 通常情况下，<xref:EnvDTE80.Solution2.GetProjectItemTemplate%2A>接受语言字符串，如"CSharp"或"VB"可检索特定于语言的模板。 SharePoint 项目使用 Guid 而不是字符串，来隐藏非 SharePoint 项目中的 SharePoint 项目项模板。  
   
  ]]></format>
         </remarks>
@@ -122,15 +122,14 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置是否在调试后收回解决方案。</summary>
-        <value>
-          如果要在调试后自动收回程序集，则为 <see langword="True" />；否则为 <see langword="false" />。</value>
+        <value>如果要在调试后自动收回程序集，则为 <see langword="True" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 默认情况下，SharePoint 解决方案在调试完成后从 SharePoint 收回。 但是，将此属性设置为`false`，可防止该解决方案在调试后被撤消。  
+ 默认情况下，SharePoint 解决方案调试完成后从 SharePoint 收回。 但是，此属性设置为`false`，可防止该解决方案在调试后被撤消。  
   
- 此属性公开为**调试后自动收回**选项**SharePoint** SharePoint 项目属性页选项卡。  
+ 为该属性公开**调试后自动收回**选项**SharePoint** SharePoint 项目属性页的选项卡。  
   
  ]]></format>
         </remarks>
@@ -204,8 +203,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置是否应打包项目程序集。</summary>
-        <value>
-          如果程序集应打包，则为 <see langword="True" />；否则为 <see langword="false" />。</value>
+        <value>如果程序集应打包，则为 <see langword="True" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -223,8 +221,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，指示应将项目包部署为沙盒解决方案还是场解决方案。</summary>
-        <value>
-          如果该项目是沙盒解决方案，则为 <see langword="True" />；否则为 <see langword="false" />。</value>
+        <value>如果该项目是沙盒解决方案，则为 <see langword="True" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -242,8 +239,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置是否启用 Silverlight 调试。</summary>
-        <value>
-          如果启用 Silverlight 调试，则为 <see langword="True" />；否则为 <see langword="false" />。</value>
+        <value>如果启用 Silverlight 调试，则为 <see langword="True" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -261,8 +257,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示是否启用工作流调试。</summary>
-        <value>
-          如果启用工作流调试，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果启用工作流调试，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -429,7 +424,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 有关使用此属性将数据保持在 SharePoint 项目的详细信息，请参阅[扩展 SharePoint 项目系统中保存数据](/visualstudio/sharepoint/saving-data-in-extensions-of-the-sharepoint-project-system.md)。  
+ 有关使用此属性将数据保存在 SharePoint 项目的详细信息，请参阅[扩展 SharePoint 项目系统中保存数据](/visualstudio/sharepoint/saving-data-in-extensions-of-the-sharepoint-project-system)。  
   
  ]]></format>
         </remarks>
@@ -526,7 +521,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果<xref:Microsoft.VisualStudio.SharePoint.ISharePointProject.StartupItem%2A>公开非 null 的绝对 Url，使用。 如果`StartupItem`公开非 null，相对 Url，将其与结合`SiteUrl`。 否则，默认为<xref:Microsoft.VisualStudio.SharePoint.ISharePointProject.SiteUrl%2A>。  
+ 如果<xref:Microsoft.VisualStudio.SharePoint.ISharePointProject.StartupItem%2A>公开非 null 的绝对 Url，使用它。 如果`StartupItem`公开非 null，相对 Url，将其与结合`SiteUrl`。 否则，默认为<xref:Microsoft.VisualStudio.SharePoint.ISharePointProject.SiteUrl%2A>。  
   
  ]]></format>
         </remarks>
@@ -551,7 +546,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法通常称为项目或项模板向导中之前访问 SharePoint 项目对象模型。 否则，在模板向导完成后，将更新 SharePoint 项目对象模型。  
+ 此方法通常称为项目或项模板向导中访问 SharePoint 项目对象模型之前。 否则，在模板向导完成后，将更新 SharePoint 项目对象模型。  
   
  ]]></format>
         </remarks>

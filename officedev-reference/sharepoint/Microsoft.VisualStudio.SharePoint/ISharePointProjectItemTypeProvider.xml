@@ -1,11 +1,11 @@
 <Type Name="ISharePointProjectItemTypeProvider" FullName="Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider">
   <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="0dff612bac06a3d2f162664325eb0496f90dc98a" />
-    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.openlocfilehash" Value="86a67c5da717a40a7d8f9e39b90dca74a3e9c747" />
+    <Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" />
     <Meta Name="ms.translationtype" Value="HT" />
     <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
-    <Meta Name="ms.locfileid" Value="29409233" />
+    <Meta Name="ms.lasthandoff" Value="09/19/2018" />
+    <Meta Name="ms.locfileid" Value="46456073" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface ISharePointProjectItemTypeProvider" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISharePointProjectItemTypeProvider" />
@@ -21,9 +21,9 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 实现<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider>接口可定义自定义 SharePoint 项目项类型。 有关详细信息，请参阅[定义自定义 SharePoint 项目项类型](/visualstudio/sharepoint/defining-custom-sharepoint-project-item-types.md)和[如何： 定义 SharePoint 项目项类型](/visualstudio/sharepoint/how-to-define-a-sharepoint-project-item-type.md)。  
+ 实现<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider>接口可定义自定义 SharePoint 项目项的类型。 有关详细信息，请参阅[定义自定义 SharePoint 项目项类型](/visualstudio/sharepoint/defining-custom-sharepoint-project-item-types)并[如何： 定义 SharePoint 项目项类型](/visualstudio/sharepoint/how-to-define-a-sharepoint-project-item-type)。  
   
- 实现此接口的类必须包括<xref:System.ComponentModel.Composition.ExportAttribute?displayProperty=fullName>和<xref:Microsoft.VisualStudio.SharePoint.SharePointProjectItemTypeAttribute>项目系统发现。  
+ 实现此接口的类必须包括<xref:System.ComponentModel.Composition.ExportAttribute?displayProperty=fullName>和<xref:Microsoft.VisualStudio.SharePoint.SharePointProjectItemTypeAttribute>由项目系统发现。  
   
  ]]></format>
     </remarks>
@@ -51,7 +51,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemType>实例将被冻结之后此方法调用，这意味着不更改其属性。  
+ <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemType>后此方法调用，这意味着不能更改其属性，将被冻结实例。  
   
  ]]></format>
         </remarks>

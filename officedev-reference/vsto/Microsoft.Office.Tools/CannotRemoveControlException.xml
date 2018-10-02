@@ -1,11 +1,11 @@
 <Type Name="CannotRemoveControlException" FullName="Microsoft.Office.Tools.CannotRemoveControlException">
   <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="4a4834487c84f8c6d309cc5bef51f41bed515c68" />
-    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.openlocfilehash" Value="ac65fa910e8084314fcb3044a37ed1090bcd31bb" />
+    <Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" />
     <Meta Name="ms.translationtype" Value="HT" />
     <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
-    <Meta Name="ms.locfileid" Value="29431996" />
+    <Meta Name="ms.lasthandoff" Value="09/19/2018" />
+    <Meta Name="ms.locfileid" Value="46457620" />
   </Metadata>
   <TypeSignature Language="C#" Value="public sealed class CannotRemoveControlException : Microsoft.VisualStudio.Tools.Applications.Runtime.RuntimeException" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit CannotRemoveControlException extends Microsoft.VisualStudio.Tools.Applications.Runtime.RuntimeException" />
@@ -29,15 +29,15 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果你将主机控件和 Windows 窗体控件添加到属于文档级自定义在设计时的文档中，你不能在运行时删除这些控件。 有关详细信息，请参阅[在运行时向 Office 文档添加控件](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time.md)。  
+ 如果在设计时文档中添加宿主控件和 Windows 窗体控件的文档级自定义的一部分，则无法在运行时删除这些控件。 有关详细信息，请参阅 [在运行时向 Office 文档添加控件](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。  
   
- 可以引发此异常[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]如果调用以下方法之一来删除已在设计时添加的控件：  
+ 可以通过引发此异常[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]如果调用以下方法来删除已在设计时添加的控件之一：  
   
--   <xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法<xref:Microsoft.Office.Tools.Excel.ControlCollection?displayProperty=fullName>Microsoft Office Excel 的文档级自定义项中的对象。  
+-   <xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法的<xref:Microsoft.Office.Tools.Excel.ControlCollection?displayProperty=fullName>Microsoft Office Excel 的文档级自定义项中的对象。  
   
--   <xref:Microsoft.Office.Tools.Word.ControlCollection.Remove%2A>方法<xref:Microsoft.Office.Tools.Word.ControlCollection?displayProperty=fullName>Microsoft Office Word 的文档级自定义项中的对象。  
+-   <xref:Microsoft.Office.Tools.Word.ControlCollection.Remove%2A>方法的<xref:Microsoft.Office.Tools.Word.ControlCollection?displayProperty=fullName>Microsoft Office Word 的文档级自定义项中的对象。  
   
--   `Delete`的主机控件或 Windows 窗体控件上的 Word 文档或 Excel 工作簿的方法。  
+-   `Delete`宿主控件或 Word 文档或 Excel 工作簿上的 Windows 窗体控件的方法。  
   
  ]]></format>
     </remarks>

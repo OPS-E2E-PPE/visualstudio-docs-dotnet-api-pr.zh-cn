@@ -1,11 +1,11 @@
 <Type Name="Label" FullName="Microsoft.Office.Tools.Excel.Controls.Label">
   <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="d42b76d589f08b742c91c9dea194cb1003a8d613" />
-    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.openlocfilehash" Value="8464c74e4aebfd9d20fcc736fbc8461642d5a1a5" />
+    <Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" />
     <Meta Name="ms.translationtype" Value="HT" />
     <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
-    <Meta Name="ms.locfileid" Value="29435168" />
+    <Meta Name="ms.lasthandoff" Value="09/19/2018" />
+    <Meta Name="ms.locfileid" Value="46458907" />
   </Metadata>
   <TypeSignature Language="C#" Value="public class Label : System.Windows.Forms.Label" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Label extends System.Windows.Forms.Label" />
@@ -38,9 +38,9 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.Controls.Label?displayProperty=fullName>不同于<xref:System.Windows.Forms.Label?displayProperty=fullName>。 <xref:Microsoft.Office.Tools.Excel.Controls.Label?displayProperty=fullName>具有支持可将其添加到 Excel 工作表并，使其具有更多的方法和属性的其他成员。  
+ <xref:Microsoft.Office.Tools.Excel.Controls.Label?displayProperty=fullName>不同于<xref:System.Windows.Forms.Label?displayProperty=fullName>。 <xref:Microsoft.Office.Tools.Excel.Controls.Label?displayProperty=fullName>具有其他成员，使其能够添加到 Excel 工作表并，为其提供的其他方法和属性。  
   
- 不要使用`New`构造函数来创建一个新<xref:Microsoft.Office.Tools.Excel.Controls.Label>。 使用<xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddLabel%2A>方法添加新<xref:Microsoft.Office.Tools.Excel.Controls.Label>向工作表中。  
+ 不要使用`New`构造函数创建一个新<xref:Microsoft.Office.Tools.Excel.Controls.Label>。 使用<xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddLabel%2A>方法将添加一个新<xref:Microsoft.Office.Tools.Excel.Controls.Label>到工作表。  
   
  ]]></format>
     </remarks>
@@ -116,8 +116,7 @@
       <Parameters />
       <Docs>
         <summary>激活 <see cref="T:Microsoft.Office.Tools.Excel.Controls.Label" />。</summary>
-        <returns>
-          如果 <see cref="T:Microsoft.Office.Tools.Excel.Controls.Label" /> 已激活，则为 <see langword="true" />；否则为 <see langword="false" />。</returns>
+        <returns>如果 <see cref="T:Microsoft.Office.Tools.Excel.Controls.Label" /> 已激活，则为 <see langword="true" />；否则为 <see langword="false" />。</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -299,7 +298,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 返回的单元格依赖于单元格的数目，该控件重叠以及的设置<xref:Microsoft.Office.Tools.Excel.Controls.Label.Placement%2A>属性。  
+ 返回的单元格依赖于单元格的数目，该控件重叠和的设置<xref:Microsoft.Office.Tools.Excel.Controls.Label.Placement%2A>属性。  
   
    
   
@@ -330,7 +329,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法设置的 z 顺序<xref:Microsoft.Office.Tools.Excel.Controls.Label>到中的最后一个索引<xref:Microsoft.Office.Interop.Excel.OLEObjects>集合; 编号的 z 顺序截然相反中的索引编号<xref:Microsoft.Office.Interop.Excel.OLEObjects>集合。 中的更高的索引<xref:Microsoft.Office.Interop.Excel.OLEObjects>集合、 z 顺序的较低<xref:Microsoft.Office.Tools.Excel.Controls.Label>。  
+ 此方法设置的 z 顺序<xref:Microsoft.Office.Tools.Excel.Controls.Label>到中的最后一个索引<xref:Microsoft.Office.Interop.Excel.OLEObjects>集合; 编号的 z 顺序是相反的中的索引编号<xref:Microsoft.Office.Interop.Excel.OLEObjects>集合。 更高版本中的索引<xref:Microsoft.Office.Interop.Excel.OLEObjects>集合、 z 顺序的较小<xref:Microsoft.Office.Tools.Excel.Controls.Label>。  
   
    
   
@@ -361,15 +360,14 @@
         <param name="Appearance">指定复制图片的方法。</param>
         <param name="Format">该图片的格式。 接受值 <see cref="F:Microsoft.Office.Interop.Excel.XlCopyPictureFormat.xlPicture" />。</param>
         <summary>将 <see cref="T:Microsoft.Office.Tools.Excel.Controls.Label" /> 作为图片复制到剪贴板。</summary>
-        <returns>
-          如果复制成功，则为 <see langword="true" />；否则为 <see langword="false" />。</returns>
+        <returns>如果复制成功，则为 <see langword="true" />；否则为 <see langword="false" />。</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
@@ -405,7 +403,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 因为<xref:Microsoft.Office.Tools.Excel.Controls.Label>创建在 Microsoft Office Excel 中，此属性将返回字符串接，这等同于十六进制数字 5843454c。  
+ 因为<xref:Microsoft.Office.Tools.Excel.Controls.Label>创建在 Microsoft Office Excel，此属性返回字符串 XCEL，这与十六进制数 5843454c。  
   
    
   
@@ -436,7 +434,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法仅应该用于<xref:Microsoft.Office.Tools.Excel.Controls.Label>，在运行时以编程方式创建。 如果在调用此方法引发异常<xref:Microsoft.Office.Tools.Excel.Controls.Label>，它在设计时添加到工作表。  
+ 此方法只应该用于<xref:Microsoft.Office.Tools.Excel.Controls.Label>，在运行时以编程方式创建。 如果在调用此方法引发异常<xref:Microsoft.Office.Tools.Excel.Controls.Label>在设计时添加到工作表。  
   
    
   
@@ -530,7 +528,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 对所做更改<xref:Microsoft.Office.Tools.Excel.Controls.Label.Height%2A>和<xref:Microsoft.Office.Tools.Excel.Controls.Label.Top%2A>属性值将导致<xref:Microsoft.Office.Tools.Excel.Controls.Label.Bottom%2A>属性值<xref:Microsoft.Office.Tools.Excel.Controls.Label>更改。  
+ 对所做更改<xref:Microsoft.Office.Tools.Excel.Controls.Label.Height%2A>并<xref:Microsoft.Office.Tools.Excel.Controls.Label.Top%2A>属性值将导致<xref:Microsoft.Office.Tools.Excel.Controls.Label.Bottom%2A>属性值为<xref:Microsoft.Office.Tools.Excel.Controls.Label>更改。  
   
  <xref:Microsoft.Office.Tools.Excel.Controls.Label.Height%2A?displayProperty=fullName>属性使用点，而<xref:System.Windows.Forms.Control.Height%2A?displayProperty=fullName>属性使用像素值。  
   
@@ -568,7 +566,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 控件添加到 Microsoft Office Excel 工作表的索引值开始在 2，因为它是索引<xref:Microsoft.Office.Interop.Excel.OLEObjects>表的集合。  
+ 控件添加到 Microsoft Office Excel 工作表的索引值的索引，因为它开始 2<xref:Microsoft.Office.Interop.Excel.OLEObjects>工作表的集合。  
   
    
   
@@ -629,7 +627,7 @@
 ## Remarks  
  <xref:Microsoft.Office.Tools.Excel.Controls.Label.Left%2A?displayProperty=fullName>属性使用点，而<xref:System.Windows.Forms.Control.Left%2A?displayProperty=fullName>属性使用像素值。  
   
- 将该值设置为负数或大于 12288 的数的数字不会引发异常，但会导致控件设置为介于 0 和 12288 之间。  
+ 将值设置为负数或大于 12288 数字不会引发异常，但会导致控件设置为介于 0 和 12288 之间。  
   
    
   
@@ -688,13 +686,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示当工作表受保护时，在设计时能否修改 <see cref="T:Microsoft.Office.Tools.Excel.Controls.Label" />。</summary>
-        <value>
-          如果当工作表受保护时不能在设计时修改 <see cref="T:Microsoft.Office.Tools.Excel.Controls.Label" />，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果当工作表受保护时不能在设计时修改 <see cref="T:Microsoft.Office.Tools.Excel.Controls.Label" />，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- A<xref:Microsoft.Office.Tools.Excel.Controls.Label>仅会在工作表保护时锁定。 锁定<xref:Microsoft.Office.Tools.Excel.Controls.Label>无法转移或在设计时调整大小。  
+ 一个<xref:Microsoft.Office.Tools.Excel.Controls.Label>仅可以在工作表受保护时锁定。 锁定<xref:Microsoft.Office.Tools.Excel.Controls.Label>不能移动或调整其大小在设计时。  
   
    
   
@@ -783,9 +780,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 父级<xref:Microsoft.Office.Tools.Excel.Controls.Label>是一个连接的容器控件<xref:Microsoft.Office.Tools.Excel.Controls.Label>与该文档不<xref:Microsoft.Office.Interop.Excel.Range>包含<xref:Microsoft.Office.Tools.Excel.Controls.Label>。  
+ 父<xref:Microsoft.Office.Tools.Excel.Controls.Label>是连接的容器控件<xref:Microsoft.Office.Tools.Excel.Controls.Label>与该文档不<xref:Microsoft.Office.Interop.Excel.Range>，其中包含<xref:Microsoft.Office.Tools.Excel.Controls.Label>。  
   
- 父级<xref:Microsoft.Office.Tools.Excel.Controls.Label>仅可作为访问<xref:System.Object>。  
+ 父<xref:Microsoft.Office.Tools.Excel.Controls.Label>仅可作为访问<xref:System.Object>。  
   
    
   
@@ -815,13 +812,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个对象，该对象指示 <see cref="T:Microsoft.Office.Tools.Excel.Controls.Label" /> 附加到其下面的单元格的方式。</summary>
-        <value>以下 <see cref="T:Microsoft.Office.Interop.Excel.XlPlacement" /> 值之一：  
+        <value>以下 <see cref="T:Microsoft.Office.Interop.Excel.XlPlacement" /> 值之一： 
+-   <see cref="F:Microsoft.Office.Interop.Excel.XlPlacement.xlFreeFloating" />.  
   
--   <see cref="F:Microsoft.Office.Interop.Excel.XlPlacement.xlFreeFloating" />。  
+-   <see cref="F:Microsoft.Office.Interop.Excel.XlPlacement.xlMove" />.  
   
--   <see cref="F:Microsoft.Office.Interop.Excel.XlPlacement.xlMove" />。  
-  
--   <see cref="F:Microsoft.Office.Interop.Excel.XlPlacement.xlMoveAndSize" />。</value>
+-   <see cref="F:Microsoft.Office.Interop.Excel.XlPlacement.xlMoveAndSize" />.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -854,8 +850,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示打印工作表时，是否打印 <see cref="T:Microsoft.Office.Tools.Excel.Controls.Label" />。</summary>
-        <value>
-          如果在打印工作表时打印 <see cref="T:Microsoft.Office.Tools.Excel.Controls.Label" />，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果在打印工作表时打印 <see cref="T:Microsoft.Office.Tools.Excel.Controls.Label" />，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -895,7 +890,7 @@
   
  <xref:Microsoft.Office.Tools.Excel.Controls.Label.Right%2A?displayProperty=fullName>属性使用点，而<xref:System.Windows.Forms.Control.Right%2A?displayProperty=fullName>属性使用像素值。  
   
- 将该值设置为负数或大于 12288 的数的数字不会引发异常，但会导致控件设置为介于 0 和 12288 之间。  
+ 将值设置为负数或大于 12288 数字不会引发异常，但会导致控件设置为介于 0 和 12288 之间。  
   
    
   
@@ -922,8 +917,7 @@
         <Parameter Name="Replace" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Replace">
-          如果设置为 <see langword="true" />，则用 <see cref="T:Microsoft.Office.Tools.Excel.Controls.Label" /> 替换当前选中的内容；如果设置为 <see langword="false" />，则扩展当前选择范围，使之包含以前选择的所有对象和 <see cref="T:Microsoft.Office.Tools.Excel.Controls.Label" />。</param>
+        <param name="Replace">如果设置为 <see langword="true" />，则用 <see cref="T:Microsoft.Office.Tools.Excel.Controls.Label" /> 替换当前选中的内容；如果设置为 <see langword="false" />，则扩展当前选择范围，使之包含以前选择的所有对象和 <see cref="T:Microsoft.Office.Tools.Excel.Controls.Label" />。</param>
         <summary>选择 <see cref="T:Microsoft.Office.Tools.Excel.Controls.Label" />。</summary>
         <returns>此方法将返回一个空引用（在 Visual Basic 中为 <see langword="Nothing" />）；否则，此方法将返回 <see langword="true" />。</returns>
         <remarks>
@@ -932,7 +926,7 @@
 ## Remarks  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
  ]]></format>
         </remarks>
@@ -958,7 +952,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法设置的 z 顺序<xref:Microsoft.Office.Tools.Excel.Controls.Label>到中的第一个索引<xref:Microsoft.Office.Interop.Excel.OLEObjects>集合; 编号的 z 顺序截然相反中的索引编号<xref:Microsoft.Office.Interop.Excel.OLEObjects>集合。 中的更高的索引<xref:Microsoft.Office.Interop.Excel.OLEObjects>集合、 z 顺序的较低<xref:Microsoft.Office.Tools.Excel.Controls.Label>。  
+ 此方法设置的 z 顺序<xref:Microsoft.Office.Tools.Excel.Controls.Label>到中的第一个索引<xref:Microsoft.Office.Interop.Excel.OLEObjects>集合; 编号的 z 顺序是相反的中的索引编号<xref:Microsoft.Office.Interop.Excel.OLEObjects>集合。 更高版本中的索引<xref:Microsoft.Office.Interop.Excel.OLEObjects>集合、 z 顺序的较小<xref:Microsoft.Office.Tools.Excel.Controls.Label>。  
   
    
   
@@ -1057,12 +1051,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 通常将重写此方法可以更改控件的可见性行为。  
+ 通常，将会替代此方法可以更改该控件的可见性行为。  
   
  ]]></format>
         </remarks>
         <block subset="none" type="overrides">
-          <para>在重写<see cref="M:Microsoft.Office.Tools.Excel.Controls.Label.SetVisibleCore(System.Boolean)" />在派生类中，一定要调用基类的<c>SetVisibleCore</c>方法，以强制要更改的控件的可见性。</para>
+          <para>重写时<see cref="M:Microsoft.Office.Tools.Excel.Controls.Label.SetVisibleCore(System.Boolean)" />在派生类中，请务必调用基类的<c>SetVisibleCore</c>方法来强制执行要更改的控件的可见性。</para>
         </block>
       </Docs>
     </Member>
@@ -1302,8 +1296,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值表示 <see cref="T:Microsoft.Office.Tools.Excel.Controls.Label" /> 是否可见。</summary>
-        <value>
-          如果 <see cref="T:Microsoft.Office.Tools.Excel.Controls.Label" /> 可见，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果 <see cref="T:Microsoft.Office.Tools.Excel.Controls.Label" /> 可见，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1339,11 +1332,11 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 对所做更改<xref:Microsoft.Office.Tools.Excel.Controls.Label.Width%2A>和 left 的属性值将导致<xref:Microsoft.Office.Tools.Excel.Controls.Label.Right%2A>属性值<xref:Microsoft.Office.Tools.Excel.Controls.Label>更改。  
+ 对所做更改<xref:Microsoft.Office.Tools.Excel.Controls.Label.Width%2A>和 left 的属性值将导致<xref:Microsoft.Office.Tools.Excel.Controls.Label.Right%2A>属性值为<xref:Microsoft.Office.Tools.Excel.Controls.Label>更改。  
   
  <xref:Microsoft.Office.Tools.Excel.Controls.Label.Width%2A?displayProperty=fullName>属性使用点，而<xref:System.Windows.Forms.Control.Width%2A?displayProperty=fullName>属性使用像素值。  
   
- 将该值设置为负数或大于 12288 的数的数字不会引发异常，但会导致控件设置为介于 1 和 12288 之间。  
+ 将值设置为负数或大于 12288 数字不会引发异常，但会导致控件设置为介于 1 和 12288 之间。  
   
    
   
@@ -1381,7 +1374,7 @@
 ## Remarks  
  Z 顺序由<xref:Microsoft.Office.Interop.Excel.OLEObjects>集合。  
   
- 在所有对象集合，该对象在 z 顺序的底层在*集合*(1)，并在 z 顺序的前面该对象是*集合*(*集合*。`Count`)。  
+ 对象的任何集合，在 z 顺序的底层对象是*集合*(1)，并在 z 顺序的顶层对象是*集合*(*集合*。`Count`)。  
   
    
   

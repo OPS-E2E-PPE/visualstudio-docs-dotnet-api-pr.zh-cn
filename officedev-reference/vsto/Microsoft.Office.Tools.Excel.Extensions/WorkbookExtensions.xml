@@ -1,11 +1,11 @@
 <Type Name="WorkbookExtensions" FullName="Microsoft.Office.Tools.Excel.Extensions.WorkbookExtensions">
   <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="877ebbd80d8be7db8f810dbf4bb70367d4c2e42f" />
-    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.openlocfilehash" Value="6994adc3d426344af8676a57f7a0423d2ac476af" />
+    <Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" />
     <Meta Name="ms.translationtype" Value="HT" />
     <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
-    <Meta Name="ms.locfileid" Value="29433036" />
+    <Meta Name="ms.lasthandoff" Value="09/19/2018" />
+    <Meta Name="ms.locfileid" Value="46454695" />
   </Metadata>
   <TypeSignature Language="C#" Value="public static class WorkbookExtensions" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit WorkbookExtensions extends System.Object" />
@@ -26,7 +26,7 @@
 ## Remarks  
  <xref:Microsoft.Office.Tools.Excel.Extensions.WorkbookExtensions>类包含*扩展方法*旨在上访问<xref:Microsoft.Office.Interop.Excel.Workbook?displayProperty=fullName>对象。 有关扩展方法的详细信息，请参阅[扩展方法](http://msdn.microsoft.com/library/175ce3ff-9bbf-4e64-8421-faeb81a0bb51)和[扩展方法](http://msdn.microsoft.com/library/b8020aae-374d-46a9-bcb7-8cc2390b93b6)。  
   
- 中的扩展方法<xref:Microsoft.Office.Tools.Excel.Extensions.WorkbookExtensions>类都重定为向后兼容的 Office 项目，从.NET Framework 3.5 到[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]或[!INCLUDE[net_v45](~/includes/net-v45-md.md)]。 在面向 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的新项目中，应调用由您的项目中的 `GetVstoObject` 对象提供的 `HasVstoObject` 和 `Globals.Factory` 方法。 有关详细信息，请参阅[扩展 Word 文档和 Excel VSTO 外接程序在运行时中的工作簿](/visualstudio/vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)和[文档级自定义项编程](/visualstudio/vsto/programming-document-level-customizations.md)。  
+ 中的扩展方法<xref:Microsoft.Office.Tools.Excel.Extensions.WorkbookExtensions>类不是提供用于向后兼容的 Office 项目重定目标到.NET Framework 3.5 中[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]或[!INCLUDE[net_v45](~/includes/net-v45-md.md)]。 在面向 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的新项目中，应调用由您的项目中的 `GetVstoObject` 对象提供的 `HasVstoObject` 和 `Globals.Factory` 方法。 有关详细信息，请参阅[Extending Word Documents and Excel Workbooks in VSTO 加载项在运行时](/visualstudio/vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time)并[文档级自定义项编程](/visualstudio/vsto/programming-document-level-customizations)。  
   
  ]]></format>
     </remarks>
@@ -57,14 +57,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 在应用程序级外接程序，调用此方法来扩展在 Excel 中打开的任何工作簿。 此方法将生成一个新<xref:Microsoft.Office.Tools.Excel.Workbook?displayProperty=fullName>主机项，如果已为生成无此对象<xref:Microsoft.Office.Interop.Excel.Workbook?displayProperty=fullName>对其调用此方法的对象。 后续调用此方法对同一个<xref:Microsoft.Office.Interop.Excel.Workbook?displayProperty=fullName>对象返回相同<xref:Microsoft.Office.Tools.Excel.Workbook?displayProperty=fullName>实例。  
+ 在应用程序级外接程序，此方法来扩展在 Excel 中打开任何工作簿的调用。 此方法将生成一个新<xref:Microsoft.Office.Tools.Excel.Workbook?displayProperty=fullName>主机项，如果没有此类对象已生成的<xref:Microsoft.Office.Interop.Excel.Workbook?displayProperty=fullName>对象调用此方法。 后续调用此方法在同一<xref:Microsoft.Office.Interop.Excel.Workbook?displayProperty=fullName>对象返回相同<xref:Microsoft.Office.Tools.Excel.Workbook?displayProperty=fullName>实例。  
   
  此方法用于实现与 Office 项目 (将其目标从 .NET Framework 3.5 重定为 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)]) 的向后兼容。 在面向 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的新项目中，应调用由您的项目中的 `GetVstoObject` 对象提供的 `Globals.Factory` 方法。  
   
- 有关详细信息，请参阅[扩展 Word 文档和 Excel VSTO 外接程序在运行时中的工作簿](/visualstudio/vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)。  
+ 有关更多信息，请参见 [在运行时在 VSTO 外接程序中扩展 Word 文档和 Excel 工作簿](/visualstudio/vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time)。  
   
 > [!NOTE]
->  `workbook`形参属于类型<xref:Microsoft.Office.Interop.Excel._Workbook?displayProperty=fullName>，即的父接口<xref:Microsoft.Office.Interop.Excel.Workbook?displayProperty=fullName>。 因此，此方法将这两种类型的扩展：<xref:Microsoft.Office.Interop.Excel._Workbook?displayProperty=fullName>和<xref:Microsoft.Office.Interop.Excel.Workbook?displayProperty=fullName>。 通常，当引用 Excel 工作簿时，你使用<xref:Microsoft.Office.Interop.Excel.Workbook?displayProperty=fullName>。  
+>  `workbook`参数的类型是<xref:Microsoft.Office.Interop.Excel._Workbook?displayProperty=fullName>，这是父接口的<xref:Microsoft.Office.Interop.Excel.Workbook?displayProperty=fullName>。 因此，此方法扩展了这两种类型：<xref:Microsoft.Office.Interop.Excel._Workbook?displayProperty=fullName>和<xref:Microsoft.Office.Interop.Excel.Workbook?displayProperty=fullName>。 通常情况下，在引用 Excel 工作簿时，您使用<xref:Microsoft.Office.Interop.Excel.Workbook?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -95,12 +95,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 文档级自定义项，可以调用此方法以获取<xref:Microsoft.Office.Tools.Excel.Workbook?displayProperty=fullName>当前自定义项中的主机项。 如果<xref:Microsoft.Office.Interop.Excel.Workbook?displayProperty=fullName>的基础对象不是在其调用此方法的对象<xref:Microsoft.Office.Tools.Excel.Workbook?displayProperty=fullName>主机项中当前自定义情况，此方法返回`null`。  
+ 在文档级自定义，您可以调用此方法以获取<xref:Microsoft.Office.Tools.Excel.Workbook?displayProperty=fullName>当前自定义项中的主机项。 如果<xref:Microsoft.Office.Interop.Excel.Workbook?displayProperty=fullName>对象调用此方法不是基础对象的<xref:Microsoft.Office.Tools.Excel.Workbook?displayProperty=fullName>宿主项中当前自定义项，此方法返回`null`。  
   
- 此方法用于实现与 Office 项目 (将其目标从 .NET Framework 3.5 重定为 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)]) 的向后兼容。 在面向 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的新项目中，应调用由您的项目中的 `GetVstoObject` 对象提供的 `Globals.Factory` 方法。 有关详细信息，请参阅[文档级自定义项编程](/visualstudio/vsto/programming-document-level-customizations.md)。  
+ 此方法用于实现与 Office 项目 (将其目标从 .NET Framework 3.5 重定为 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)]) 的向后兼容。 在面向 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的新项目中，应调用由您的项目中的 `GetVstoObject` 对象提供的 `Globals.Factory` 方法。 有关详细信息，请参阅[Programming Document-level Customizations](/visualstudio/vsto/programming-document-level-customizations)。  
   
 > [!NOTE]
->  `workbook`形参属于类型<xref:Microsoft.Office.Interop.Excel._Workbook?displayProperty=fullName>，即的父接口<xref:Microsoft.Office.Interop.Excel.Workbook?displayProperty=fullName>。 因此，此方法将这两种类型的扩展：<xref:Microsoft.Office.Interop.Excel._Workbook?displayProperty=fullName>和<xref:Microsoft.Office.Interop.Excel.Workbook?displayProperty=fullName>。 通常，当引用 Excel 工作簿时，你使用<xref:Microsoft.Office.Interop.Excel.Workbook?displayProperty=fullName>。  
+>  `workbook`参数的类型是<xref:Microsoft.Office.Interop.Excel._Workbook?displayProperty=fullName>，这是父接口的<xref:Microsoft.Office.Interop.Excel.Workbook?displayProperty=fullName>。 因此，此方法扩展了这两种类型：<xref:Microsoft.Office.Interop.Excel._Workbook?displayProperty=fullName>和<xref:Microsoft.Office.Interop.Excel.Workbook?displayProperty=fullName>。 通常情况下，在引用 Excel 工作簿时，您使用<xref:Microsoft.Office.Interop.Excel.Workbook?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -126,18 +126,17 @@
         <param name="workbook">要测试的本机工作簿对象。 请勿自己提供此参数。 在 Excel 工作簿中调用此方法时，运行时会提供此参数。</param>
         <param name="factory">一个对象，可访问应用程序级外接程序中某些功能。 将 <see langword="Globals.Factory" /> 对象传递到此参数。</param>
         <summary>返回一个值，该值指示是否为应用程序级外接程序中的当前 <see cref="T:Microsoft.Office.Interop.Excel.Workbook" /> 对象创建了 <see cref="T:Microsoft.Office.Tools.Excel.Workbook" /> 主机项。 将项目中的 <c>Globals.Factory</c> 对象传递到 <paramref name="factory" /> 参数。</summary>
-        <returns>
-          如果已为当前 <see cref="T:Microsoft.Office.Interop.Excel.Workbook" /> 对象创建 <see cref="T:Microsoft.Office.Tools.Excel.Workbook" /> 主机项，则为 <see langword="true" />，否则为 <see langword="false" />。</returns>
+        <returns>如果已为当前 <see cref="T:Microsoft.Office.Interop.Excel.Workbook" /> 对象创建 <see cref="T:Microsoft.Office.Tools.Excel.Workbook" /> 主机项，则为 <see langword="true" />，否则为 <see langword="false" />。</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 在应用程序级外接程序，你可以调用此方法以确定是否<xref:Microsoft.Office.Tools.Excel.Workbook?displayProperty=fullName>主机项存在任何<xref:Microsoft.Office.Interop.Excel.Workbook?displayProperty=fullName>对象。 通常情况下，你可以使用此方法以测试存在托管你想要关闭或保存的 Excel 工作簿之前保留的控件。  
+ 在应用程序级外接程序，您可以调用此方法以确定是否<xref:Microsoft.Office.Tools.Excel.Workbook?displayProperty=fullName>宿主项存在的任何<xref:Microsoft.Office.Interop.Excel.Workbook?displayProperty=fullName>对象。 通常情况下，使用此方法来测试存在你想要关闭或保存的 Excel 工作簿之前保留的托管控件。  
   
- 此方法用于实现与 Office 项目 (将其目标从 .NET Framework 3.5 重定为 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)]) 的向后兼容。 在面向 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的新项目中，应调用由您的项目中的 `GetVstoObject` 对象提供的 `Globals.Factory` 方法。 有关详细信息，请参阅[扩展 Word 文档和 Excel VSTO 外接程序在运行时中的工作簿](/visualstudio/vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)。  
+ 此方法用于实现与 Office 项目 (将其目标从 .NET Framework 3.5 重定为 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)]) 的向后兼容。 在面向 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的新项目中，应调用由您的项目中的 `GetVstoObject` 对象提供的 `Globals.Factory` 方法。 有关更多信息，请参见 [在运行时在 VSTO 外接程序中扩展 Word 文档和 Excel 工作簿](/visualstudio/vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time)。  
   
 > [!NOTE]
->  `Workbook`形参属于类型<xref:Microsoft.Office.Interop.Excel._Workbook?displayProperty=fullName>，即的父接口<xref:Microsoft.Office.Interop.Excel.Workbook?displayProperty=fullName>。 因此，此方法将这两种类型的扩展：<xref:Microsoft.Office.Interop.Excel._Workbook?displayProperty=fullName>和<xref:Microsoft.Office.Interop.Excel.Workbook?displayProperty=fullName>。 通常，当引用 Excel 工作簿时，你使用<xref:Microsoft.Office.Interop.Excel.Workbook?displayProperty=fullName>。  
+>  `Workbook`参数的类型是<xref:Microsoft.Office.Interop.Excel._Workbook?displayProperty=fullName>，这是父接口的<xref:Microsoft.Office.Interop.Excel.Workbook?displayProperty=fullName>。 因此，此方法扩展了这两种类型：<xref:Microsoft.Office.Interop.Excel._Workbook?displayProperty=fullName>和<xref:Microsoft.Office.Interop.Excel.Workbook?displayProperty=fullName>。 通常情况下，在引用 Excel 工作簿时，您使用<xref:Microsoft.Office.Interop.Excel.Workbook?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>
@@ -163,18 +162,17 @@
         <param name="workbook">要测试的本机工作簿对象。 请勿自己提供此参数。 在 Excel 工作簿中调用此方法时，运行时会提供此参数。</param>
         <param name="factory">一个对象，用于提供对文档级自定义中某些功能的访问权限。 将 <see langword="Globals.Factory" /> 对象传递到此参数。</param>
         <summary>返回一个值，该值指示是否为文档级自定义中的当前 <see cref="T:Microsoft.Office.Interop.Excel.Workbook" /> 对象创建了 <see cref="T:Microsoft.Office.Tools.Excel.Workbook" /> 主机项。 将项目中的 <c>Globals.Factory</c> 对象传递到 <paramref name="factory" /> 参数。</summary>
-        <returns>
-          如果已为当前 <see cref="T:Microsoft.Office.Interop.Excel.Workbook" /> 对象创建 <see cref="T:Microsoft.Office.Tools.Excel.Workbook" /> 主机项，则为 <see langword="true" />，否则为 <see langword="false" />。</returns>
+        <returns>如果已为当前 <see cref="T:Microsoft.Office.Interop.Excel.Workbook" /> 对象创建 <see cref="T:Microsoft.Office.Tools.Excel.Workbook" /> 主机项，则为 <see langword="true" />，否则为 <see langword="false" />。</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 文档级自定义项，此方法返回`true`才<xref:Microsoft.Office.Interop.Excel.Workbook?displayProperty=fullName>的基础对象是在其调用此方法的对象<xref:Microsoft.Office.Tools.Excel.Workbook?displayProperty=fullName>当前自定义项中的主机项。 否则，此方法返回 `false`。  
+ 在文档级自定义，此方法返回`true`仅当<xref:Microsoft.Office.Interop.Excel.Workbook?displayProperty=fullName>对象调用此方法是基础对象的<xref:Microsoft.Office.Tools.Excel.Workbook?displayProperty=fullName>当前自定义项中的主机项。 否则，此方法返回 `false`。  
   
- 此方法是重定为向后兼容的 Office 项目，从.NET Framework 3.5 到[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 在面向 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的新项目中，应调用由您的项目中的 `HasVstoObject` 对象提供的 `Globals.Factory` 方法。 有关详细信息，请参阅[文档级自定义项编程](/visualstudio/vsto/programming-document-level-customizations.md)。  
+ 此方法是提供用于向后兼容的 Office 项目重定目标到.NET Framework 3.5 中[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 在面向 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的新项目中，应调用由您的项目中的 `HasVstoObject` 对象提供的 `Globals.Factory` 方法。 有关详细信息，请参阅[Programming Document-level Customizations](/visualstudio/vsto/programming-document-level-customizations)。  
   
 > [!NOTE]
->  `Workbook`形参属于类型<xref:Microsoft.Office.Interop.Excel._Workbook?displayProperty=fullName>，即的父接口<xref:Microsoft.Office.Interop.Excel.Workbook?displayProperty=fullName>。 因此，此方法将这两种类型的扩展：<xref:Microsoft.Office.Interop.Excel._Workbook?displayProperty=fullName>和<xref:Microsoft.Office.Interop.Excel.Workbook?displayProperty=fullName>。 通常，当引用 Excel 工作簿时，你使用<xref:Microsoft.Office.Interop.Excel.Workbook?displayProperty=fullName>。  
+>  `Workbook`参数的类型是<xref:Microsoft.Office.Interop.Excel._Workbook?displayProperty=fullName>，这是父接口的<xref:Microsoft.Office.Interop.Excel.Workbook?displayProperty=fullName>。 因此，此方法扩展了这两种类型：<xref:Microsoft.Office.Interop.Excel._Workbook?displayProperty=fullName>和<xref:Microsoft.Office.Interop.Excel.Workbook?displayProperty=fullName>。 通常情况下，在引用 Excel 工作簿时，您使用<xref:Microsoft.Office.Interop.Excel.Workbook?displayProperty=fullName>。  
   
  ]]></format>
         </remarks>

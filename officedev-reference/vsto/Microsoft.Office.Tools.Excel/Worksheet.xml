@@ -1,11 +1,11 @@
 <Type Name="Worksheet" FullName="Microsoft.Office.Tools.Excel.Worksheet">
   <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="cd9528b17f5d022f0126880d9f3dbf29fd78427a" />
-    <Meta Name="ms.sourcegitcommit" Value="5a5a038b6c783bec52842c940b22504bfc62a810" />
+    <Meta Name="ms.openlocfilehash" Value="eddd33ddf8a2327011ba421c72de94b3a3b3fc5b" />
+    <Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" />
     <Meta Name="ms.translationtype" Value="HT" />
     <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="08/03/2018" />
-    <Meta Name="ms.locfileid" Value="29435753" />
+    <Meta Name="ms.lasthandoff" Value="09/19/2018" />
+    <Meta Name="ms.locfileid" Value="46455098" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface Worksheet : IDisposable, System.ComponentModel.IComponent, System.ComponentModel.ISupportInitialize, System.Windows.Forms.IBindableComponent" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Worksheet implements class System.ComponentModel.IComponent, class System.ComponentModel.ISupportInitialize, class System.IDisposable, class System.Windows.Forms.IBindableComponent" />
@@ -54,9 +54,9 @@
   
 -   工作表级别的事件，如<xref:Microsoft.Office.Tools.Excel.Worksheet.ActivateEvent>和<xref:Microsoft.Office.Tools.Excel.Worksheet.Change>，仅在 Excel 对象模型中的应用程序级别提供。 也就是说，在 Excel 对象模型中，这些事件定义中<xref:Microsoft.Office.Interop.Excel.Application?displayProperty=fullName>类而不是<xref:Microsoft.Office.Interop.Excel.Worksheet?displayProperty=fullName>接口。  
   
- 在应用程序级项目中，可以创建<xref:Microsoft.Office.Tools.Excel.Worksheet?displayProperty=fullName>以编程方式通过使用对象`GetVstoObject`方法。 有关更多信息，请参见 [在运行时在 VSTO 外接程序中扩展 Word 文档和 Excel 工作簿](/visualstudio/vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)。  
+ 在应用程序级项目中，可以创建<xref:Microsoft.Office.Tools.Excel.Worksheet?displayProperty=fullName>以编程方式通过使用对象`GetVstoObject`方法。 有关更多信息，请参见 [在运行时在 VSTO 外接程序中扩展 Word 文档和 Excel 工作簿](/visualstudio/vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time)。  
   
- 在文档级项目中，您通常不使用<xref:Microsoft.Office.Tools.Excel.Worksheet?displayProperty=fullName>直接对象。 请改用`Sheet` *n*类以编程方式访问你的项目中的工作表。 每个`Sheet` *n*类派生其大多数成员从<xref:Microsoft.Office.Tools.Excel.WorksheetBase?displayProperty=fullName>类。 此类将对其成员的所有调用重都定向到的内部实现<xref:Microsoft.Office.Tools.Excel.Worksheet?displayProperty=fullName>接口中[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]。 有关详细信息，请参阅[Programming Document-level Customizations](/visualstudio/vsto/programming-document-level-customizations.md)。  
+ 在文档级项目中，您通常不使用<xref:Microsoft.Office.Tools.Excel.Worksheet?displayProperty=fullName>直接对象。 请改用`Sheet` *n*类以编程方式访问你的项目中的工作表。 每个`Sheet` *n*类派生其大多数成员从<xref:Microsoft.Office.Tools.Excel.WorksheetBase?displayProperty=fullName>类。 此类将对其成员的所有调用重都定向到的内部实现<xref:Microsoft.Office.Tools.Excel.Worksheet?displayProperty=fullName>接口中[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]。 有关详细信息，请参阅[Programming Document-level Customizations](/visualstudio/vsto/programming-document-level-customizations)。  
   
  [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
   
@@ -828,7 +828,7 @@
  此方法不是等效于<xref:Microsoft.Office.Tools.Excel.Workbook.Charts%2A>属性。 此方法返回嵌入式的图表;<xref:Microsoft.Office.Tools.Excel.Workbook.Charts%2A>属性返回图表工作表。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
  ]]></format>
         </remarks>
@@ -895,7 +895,7 @@
  使用此方法来检查标头、 页脚和工作表上的对象。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
  ]]></format>
         </remarks>
@@ -1186,9 +1186,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- Office 解决方案中的工作表可以包含 Windows 窗体控件和宿主控件。 有关详细信息，请参阅[Office 文档上的控件](/visualstudio/vsto/controls-on-office-documents.md)。  
+ Office 解决方案中的工作表可以包含 Windows 窗体控件和宿主控件。 有关详细信息，请参阅[Office 文档上的控件](/visualstudio/vsto/controls-on-office-documents)。  
   
- 若要在运行时管理的工作表上的控件，使用的方法和属性<xref:Microsoft.Office.Tools.Excel.ControlCollection>返回对象<xref:Microsoft.Office.Tools.Excel.Worksheet.Controls%2A>属性。 有关详细信息，请参阅[在运行时向 Office 文档添加控件](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time.md)  
+ 若要在运行时管理的工作表上的控件，使用的方法和属性<xref:Microsoft.Office.Tools.Excel.ControlCollection>返回对象<xref:Microsoft.Office.Tools.Excel.Worksheet.Controls%2A>属性。 有关详细信息，请参阅[在运行时向 Office 文档添加控件](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)  
   
    
   
@@ -1237,7 +1237,7 @@
  如果未指定`Before`或`After`，Microsoft Office Excel 将创建包含复制表的表的新工作簿。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
  ]]></format>
         </remarks>
@@ -2227,7 +2227,7 @@
  如果未指定`Before`或`After`，Microsoft Office Excel 将创建包含移动的工作表的新工作簿。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
  ]]></format>
         </remarks>
@@ -2328,7 +2328,7 @@
 ## Remarks  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
  ]]></format>
         </remarks>
@@ -2617,7 +2617,7 @@
  此方法可能会修改表的选定区域，具体取决于剪贴板的内容。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
  ]]></format>
         </remarks>
@@ -2670,7 +2670,7 @@
  此方法可能会修改表的选定区域，具体取决于剪贴板的内容。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
  ]]></format>
         </remarks>
@@ -2891,7 +2891,7 @@
 ## Remarks  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
  ]]></format>
         </remarks>
@@ -2979,7 +2979,7 @@
  此方法不显示该数据透视表向导。 此方法不是可用于 OLE DB 数据源。 使用<xref:Microsoft.Office.Interop.Excel.Worksheets.Add%2A>方法以添加数据透视表的缓存，然后创建数据透视表报表基于缓存。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
  ]]></format>
         </remarks>
@@ -3124,7 +3124,7 @@
  "页"中的说明`From`和`To`指打印的页面，不适用于表或工作簿中的所有页。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
  ]]></format>
         </remarks>
@@ -3158,7 +3158,7 @@
 ## Remarks  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
  ]]></format>
         </remarks>
@@ -3228,7 +3228,7 @@
 >  未受保护，则表示可能会锁定该单元格 (**单元格格式**对话框)，但包含在中定义的范围**允许用户编辑范围**对话框中，并且用户已取消保护具有密码的范围或已通过 NT 权限验证。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
  ]]></format>
         </remarks>
@@ -3407,7 +3407,7 @@
  如果您使用<xref:Microsoft.Office.Tools.Excel.Worksheet.Range%2A>无需指定任何参数的属性，它将返回<xref:Microsoft.Office.Tools.Excel.Worksheet_RangeType>不应在代码中直接使用的对象。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
@@ -3553,7 +3553,7 @@
 ## Remarks  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
  ]]></format>
         </remarks>
@@ -3692,7 +3692,7 @@
 ## Remarks  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
  ]]></format>
         </remarks>
@@ -4180,7 +4180,7 @@
  如果忘记密码，则无法取消对工作表的保护。 最好将密码及其对应文档名的列表保存在安全的位置。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
  ]]></format>
         </remarks>
@@ -4296,7 +4296,7 @@
  如果在 XML 列表中的列中存在 XPath<xref:Microsoft.Office.Interop.Excel.Range>返回的对象不包含标头行或插入行。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
  ]]></format>
         </remarks>
@@ -4338,7 +4338,7 @@
  与不同<xref:Microsoft.Office.Tools.Excel.Worksheet.XmlDataQuery%2A>方法，<xref:Microsoft.Office.Tools.Excel.Worksheet.XmlMapQuery%2A>方法返回的 XML 列表，包括标题行和插入行的整个列。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
  ]]></format>
         </remarks>

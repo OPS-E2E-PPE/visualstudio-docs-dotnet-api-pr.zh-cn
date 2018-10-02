@@ -1,11 +1,11 @@
 <Type Name="ApplicationFactory" FullName="Microsoft.Office.Tools.Excel.ApplicationFactory">
   <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="bad593865ba6808ee62b760aebcb38500b0d8c2b" />
-    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.openlocfilehash" Value="4c27b0385efbcfabf339aaae9a100b1a403642e4" />
+    <Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" />
     <Meta Name="ms.translationtype" Value="HT" />
     <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
-    <Meta Name="ms.locfileid" Value="29433296" />
+    <Meta Name="ms.lasthandoff" Value="09/19/2018" />
+    <Meta Name="ms.locfileid" Value="46459479" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface ApplicationFactory : Microsoft.Office.Tools.Factory" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ApplicationFactory implements class Microsoft.Office.Tools.Factory" />
@@ -40,7 +40,7 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要获取<xref:Microsoft.Office.Tools.Excel.Factory>对象，请使用`Globals.Factory`项目中的属性。 有关详细信息，请参阅[对 Office 项目中对象的全局访问](/visualstudio/vsto/global-access-to-objects-in-office-projects.md)。  
+ 若要获取<xref:Microsoft.Office.Tools.Excel.Factory>对象，请使用`Globals.Factory`在项目中的属性。 有关详细信息，请参阅[对 Office 项目中的对象的全局访问](/visualstudio/vsto/global-access-to-objects-in-office-projects)。  
   
  [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
   
@@ -89,7 +89,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例演示如何在 Excel 工作簿项目中创建智能标记和操作。 若要使用此示例中，运行中的代码`ThisAddIn`类。  
+ 下面的代码示例演示如何在 Excel 工作簿项目中创建智能标记和一个操作。 若要使用此示例中，运行中的代码`ThisAddIn`类。  
   
  [!code-csharp[Trin_ExcelSmartTags#2](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelSmartTags/CS/Trin_ExcelSmartTags.cs#2)]
  [!code-vb[Trin_ExcelSmartTags#2](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelSmartTags/VB/ThisWorkbook.vb#2)]  
@@ -125,12 +125,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 针对的有效字符串的示例`smartTagType`参数是 http://smarttags.contoso.com#TagName。 字符串格式正确的智能标记类型不包含空格，并且下划线 (_) 或冒号 （:） 以字母 (a-z、 A-Z)，它启动。  
+ 有效字符串的示例`smartTagType`参数是http://smarttags.contoso.com#TagName。 字符串格式正确的智能标记类型不包含空格，并下划线 (_) 或一个冒号 （:） 以字母 (a-z、 A 到 Z)，它启动。  
   
    
   
 ## Examples  
- 下面的代码示例演示如何创建 Excel 外接程序项目中的智能标记和操作。 若要使用此示例中，运行中的代码`ThisAddIn`类。  
+ 下面的代码示例演示如何创建 Excel 外接程序项目中的智能标记和一个操作。 若要使用此示例中，运行中的代码`ThisAddIn`类。  
   
  [!code-csharp[Trin_ExcelSmartTags#2](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelSmartTags/CS/Trin_ExcelSmartTags.cs#2)]
  [!code-vb[Trin_ExcelSmartTags#2](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelSmartTags/VB/ThisWorkbook.vb#2)]  
@@ -168,17 +168,17 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 在应用程序级外接程序自定义任何 Excel 中打开的工作簿中调用此方法。 此方法将生成一个新<xref:Microsoft.Office.Tools.Excel.Workbook?displayProperty=fullName>对象如果已生成无此对象。 后续调用此方法返回现有的缓存的实例<xref:Microsoft.Office.Tools.Excel.Workbook?displayProperty=fullName>对象。 有关详细信息，请参阅[扩展 Word 文档和 Excel VSTO 外接程序在运行时中的工作簿](/visualstudio/vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)。  
+ 在应用程序级外接程序自定义在 Excel 中打开任何工作簿中调用此方法。 此方法将生成一个新<xref:Microsoft.Office.Tools.Excel.Workbook?displayProperty=fullName>对象如果已生成任何此类对象。 后续调用此方法返回的缓存的实例的现有<xref:Microsoft.Office.Tools.Excel.Workbook?displayProperty=fullName>对象。 有关更多信息，请参见 [在运行时在 VSTO 外接程序中扩展 Word 文档和 Excel 工作簿](/visualstudio/vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time)。  
   
 > [!NOTE]
->  在设置为"宏已启用"或"默认情况下禁用宏"时 VSTO 遵循"自动化安全"Office 组策略设置。 但是，VSTO 将始终允许在默认情况下，设置为"使用应用程序宏安全级别"，而不考虑应用程序设置时要运行的自动化。 若要防止 VSTO 允许可用于运行自动化，请选择"默认情况下的禁用宏"设置。  
+>  设置为"已启用宏"或"默认情况下禁用宏"时，VSTO 会遵循"自动化安全性"Office 组策略设置。 但是，VSTO 将始终允许自动化运行如果默认情况下，设置为"使用应用程序宏安全级别"，而不考虑应用程序设置。 若要防止 VSTO 允许运行的自动化，请选择"默认情况下禁用宏"设置。  
 >   
->  `workbook`形参属于类型<xref:Microsoft.Office.Interop.Excel._Workbook?displayProperty=fullName>，即的父接口<xref:Microsoft.Office.Interop.Excel.Workbook?displayProperty=fullName>。 因此，此方法可以接受这两种类型的对象：<xref:Microsoft.Office.Interop.Excel._Workbook?displayProperty=fullName>和<xref:Microsoft.Office.Interop.Excel.Workbook?displayProperty=fullName>。 通常，当引用 Excel 工作簿时，你使用<xref:Microsoft.Office.Interop.Excel.Workbook?displayProperty=fullName>。  
+>  `workbook`参数的类型是<xref:Microsoft.Office.Interop.Excel._Workbook?displayProperty=fullName>，这是父接口的<xref:Microsoft.Office.Interop.Excel.Workbook?displayProperty=fullName>。 因此，此方法可以接受这两种类型的对象：<xref:Microsoft.Office.Interop.Excel._Workbook?displayProperty=fullName>和<xref:Microsoft.Office.Interop.Excel.Workbook?displayProperty=fullName>。 通常情况下，在引用 Excel 工作簿时，您使用<xref:Microsoft.Office.Interop.Excel.Workbook?displayProperty=fullName>。  
   
    
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.Workbook?displayProperty=fullName>活动 Excel 工作簿主机项。 若要使用此代码，请在针对 `ThisAddIn` 或 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]的 Excel 外接程序项目中从 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 类运行它。  
+ 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.Workbook?displayProperty=fullName>active Excel 工作簿主机项。 若要使用此代码，请在针对 `ThisAddIn` 或 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]的 Excel 外接程序项目中从 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 类运行它。  
   
  [!code-csharp[Trin_ExcelAddIn_Extensions#1](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelAddIn_Extensions/cs/ThisAddIn.cs#1)]
  [!code-vb[Trin_ExcelAddIn_Extensions#1](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelAddIn_Extensions/vb/ThisAddIn.vb#1)]  
@@ -214,15 +214,15 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 在应用程序级外接程序自定义任何 Excel 中打开的工作表中调用此方法。 此方法将生成一个新<xref:Microsoft.Office.Tools.Excel.Worksheet?displayProperty=fullName>对象如果已生成无此对象。 后续调用此方法返回现有的缓存的实例<xref:Microsoft.Office.Tools.Excel.Worksheet?displayProperty=fullName>对象。 有关详细信息，请参阅[扩展 Word 文档和 Excel VSTO 外接程序在运行时中的工作簿](/visualstudio/vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)。  
+ 在应用程序级外接程序自定义在 Excel 中打开任意工作表中调用此方法。 此方法将生成一个新<xref:Microsoft.Office.Tools.Excel.Worksheet?displayProperty=fullName>对象如果已生成任何此类对象。 后续调用此方法返回的缓存的实例的现有<xref:Microsoft.Office.Tools.Excel.Worksheet?displayProperty=fullName>对象。 有关更多信息，请参见 [在运行时在 VSTO 外接程序中扩展 Word 文档和 Excel 工作簿](/visualstudio/vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time)。  
   
 > [!NOTE]
->  `worksheet`形参属于类型<xref:Microsoft.Office.Interop.Excel._Worksheet?displayProperty=fullName>，即的父接口<xref:Microsoft.Office.Interop.Excel.Worksheet?displayProperty=fullName>。 因此，此方法可以接受这两种类型的对象：<xref:Microsoft.Office.Interop.Excel._Worksheet?displayProperty=fullName>和<xref:Microsoft.Office.Interop.Excel.Worksheet?displayProperty=fullName>。 通常，当引用 Excel 工作表，你使用<xref:Microsoft.Office.Interop.Excel.Worksheet?displayProperty=fullName>。  
+>  `worksheet`参数的类型是<xref:Microsoft.Office.Interop.Excel._Worksheet?displayProperty=fullName>，这是父接口的<xref:Microsoft.Office.Interop.Excel.Worksheet?displayProperty=fullName>。 因此，此方法可以接受这两种类型的对象：<xref:Microsoft.Office.Interop.Excel._Worksheet?displayProperty=fullName>和<xref:Microsoft.Office.Interop.Excel.Worksheet?displayProperty=fullName>。 通常情况下，在引用 Excel 工作表时，您使用<xref:Microsoft.Office.Interop.Excel.Worksheet?displayProperty=fullName>。  
   
    
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.Worksheet?displayProperty=fullName>每个主机项<xref:Microsoft.Office.Interop.Excel.Workbook?displayProperty=fullName>具有主机项的对象。 若要使用此代码，请在针对 `ThisAddIn` 或 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]的 Excel 外接程序项目中从 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 类运行它。  
+ 下面的代码示例将创建<xref:Microsoft.Office.Tools.Excel.Worksheet?displayProperty=fullName>为每个主机项<xref:Microsoft.Office.Interop.Excel.Workbook?displayProperty=fullName>都有一个主机项的对象。 若要使用此代码，请在针对 `ThisAddIn` 或 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]的 Excel 外接程序项目中从 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 类运行它。  
   
  [!code-csharp[Trin_ExcelAddIn_Extensions#2](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelAddIn_Extensions/cs/ThisAddIn.cs#2)]
  [!code-vb[Trin_ExcelAddIn_Extensions#2](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelAddIn_Extensions/vb/ThisAddIn.vb#2)]  
@@ -258,12 +258,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 在应用程序级外接程序自定义任何 Excel 工作表中的列表对象中调用此方法。 此方法将生成一个新<xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName>对象如果已生成无此对象。 后续调用此方法返回现有的缓存的实例<xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName>对象。 有关详细信息，请参阅[扩展 Word 文档和 Excel VSTO 外接程序在运行时中的工作簿](/visualstudio/vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)。  
+ 在应用程序级外接程序自定义的 Excel 工作表中的任何列表对象中调用此方法。 此方法将生成一个新<xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName>对象如果已生成任何此类对象。 后续调用此方法返回的缓存的实例的现有<xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName>对象。 有关更多信息，请参见 [在运行时在 VSTO 外接程序中扩展 Word 文档和 Excel 工作簿](/visualstudio/vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time)。  
   
    
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName>主机项。 若要使用此代码，请在针对 `ThisAddIn` 或 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]的 Excel 外接程序项目中从 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 类运行它。  
+ 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName>宿主项。 若要使用此代码，请在针对 `ThisAddIn` 或 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]的 Excel 外接程序项目中从 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 类运行它。  
   
  [!code-csharp[Trin_ExcelAddIn_Extensions#4](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelAddIn_Extensions/cs/ThisAddIn.cs#4)]
  [!code-vb[Trin_ExcelAddIn_Extensions#4](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelAddIn_Extensions/vb/ThisAddIn.vb#4)]  
@@ -294,8 +294,7 @@
       <Docs>
         <param name="workbook">要测试的本机工作簿对象。 虽然此参数的类型是 <see cref="T:Microsoft.Office.Interop.Excel._Workbook" />，但通常会将 <see cref="T:Microsoft.Office.Interop.Excel.Workbook" /> 对象传递到此方法。</param>
         <summary>返回一个值，该值指示指定的 Excel 工作簿对象是否存在 <see cref="T:Microsoft.Office.Tools.Excel.Workbook" /> 宿主项。</summary>
-        <returns>
-          如果指定的 <see cref="T:Microsoft.Office.Tools.Excel.Workbook" /> 对象存在 <see cref="T:Microsoft.Office.Interop.Excel.Workbook" /> 宿主项，则为 <see langword="true" />；否则为 <see langword="false" />。</returns>
+        <returns>如果指定的 <see cref="T:Microsoft.Office.Tools.Excel.Workbook" /> 对象存在 <see cref="T:Microsoft.Office.Interop.Excel.Workbook" /> 宿主项，则为 <see langword="true" />；否则为 <see langword="false" />。</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -303,12 +302,12 @@
  在应用程序级外接程序来测试存在你想要关闭或保存 Excel 工作簿之前保留的托管控件，可以调用此方法。  
   
 > [!NOTE]
->  `workbook`形参属于类型<xref:Microsoft.Office.Interop.Excel._Workbook?displayProperty=fullName>，即的父接口<xref:Microsoft.Office.Interop.Excel.Workbook?displayProperty=fullName>。 因此，此方法可以接受这两种类型的对象：<xref:Microsoft.Office.Interop.Excel._Workbook?displayProperty=fullName>和<xref:Microsoft.Office.Interop.Excel.Workbook?displayProperty=fullName>。 通常，当引用 Excel 工作簿时，你使用<xref:Microsoft.Office.Interop.Excel.Workbook?displayProperty=fullName>。  
+>  `workbook`参数的类型是<xref:Microsoft.Office.Interop.Excel._Workbook?displayProperty=fullName>，这是父接口的<xref:Microsoft.Office.Interop.Excel.Workbook?displayProperty=fullName>。 因此，此方法可以接受这两种类型的对象：<xref:Microsoft.Office.Interop.Excel._Workbook?displayProperty=fullName>和<xref:Microsoft.Office.Interop.Excel.Workbook?displayProperty=fullName>。 通常情况下，在引用 Excel 工作簿时，您使用<xref:Microsoft.Office.Interop.Excel.Workbook?displayProperty=fullName>。  
   
    
   
 ## Examples  
- 下面的代码示例检查当前工作簿是否具有关联的宿主项。 若要使用此代码，请在针对 `ThisAddIn` 或 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]的 Excel 外接程序项目中从 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 类运行它。  
+ 下面的代码示例检查当前的工作簿是否具有关联的宿主项。 若要使用此代码，请在针对 `ThisAddIn` 或 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]的 Excel 外接程序项目中从 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 类运行它。  
   
  [!code-csharp[Trin_ExcelAddIn_Extensions#2](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelAddIn_Extensions/cs/ThisAddIn.cs#2)]
  [!code-vb[Trin_ExcelAddIn_Extensions#2](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelAddIn_Extensions/vb/ThisAddIn.vb#2)]  
@@ -339,8 +338,7 @@
       <Docs>
         <param name="worksheet">要测试的本机工作表对象。 虽然此参数的类型是 <see cref="T:Microsoft.Office.Interop.Excel._Worksheet" />，但通常会将 <see cref="T:Microsoft.Office.Interop.Excel.Worksheet" /> 对象传递到此方法。</param>
         <summary>返回一个值，该值指示指定的 Excel 工作表对象是否存在 <see cref="T:Microsoft.Office.Tools.Excel.Worksheet" /> 宿主项。</summary>
-        <returns>
-          如果指定的 <see cref="T:Microsoft.Office.Tools.Excel.Worksheet" /> 对象存在 <see cref="T:Microsoft.Office.Interop.Excel.Worksheet" /> 宿主项，则为 <see langword="true" />；否则为 <see langword="false" />。</returns>
+        <returns>如果指定的 <see cref="T:Microsoft.Office.Tools.Excel.Worksheet" /> 对象存在 <see cref="T:Microsoft.Office.Interop.Excel.Worksheet" /> 宿主项，则为 <see langword="true" />；否则为 <see langword="false" />。</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -348,12 +346,12 @@
  在应用程序级外接程序来测试存在你想要关闭或保存 Excel 工作表之前保留的托管控件，可以调用此方法。  
   
 > [!NOTE]
->  `worksheet`形参属于类型<xref:Microsoft.Office.Interop.Excel._Worksheet?displayProperty=fullName>，即的父接口<xref:Microsoft.Office.Interop.Excel.Worksheet?displayProperty=fullName>。 因此，此方法可以接受这两种类型的对象：<xref:Microsoft.Office.Interop.Excel._Worksheet?displayProperty=fullName>和<xref:Microsoft.Office.Interop.Excel.Worksheet?displayProperty=fullName>。 通常，当引用 Excel 工作表，你使用<xref:Microsoft.Office.Interop.Excel.Worksheet?displayProperty=fullName>。  
+>  `worksheet`参数的类型是<xref:Microsoft.Office.Interop.Excel._Worksheet?displayProperty=fullName>，这是父接口的<xref:Microsoft.Office.Interop.Excel.Worksheet?displayProperty=fullName>。 因此，此方法可以接受这两种类型的对象：<xref:Microsoft.Office.Interop.Excel._Worksheet?displayProperty=fullName>和<xref:Microsoft.Office.Interop.Excel.Worksheet?displayProperty=fullName>。 通常情况下，在引用 Excel 工作表时，您使用<xref:Microsoft.Office.Interop.Excel.Worksheet?displayProperty=fullName>。  
   
    
   
 ## Examples  
- 下面的代码示例检查当前工作簿中的工作表是否具有关联的宿主项。 若要使用此代码，请在针对 `ThisAddIn` 或 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]的 Excel 外接程序项目中从 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 类运行它。  
+ 下面的代码示例检查当前的工作簿中的工作表是否具有关联的宿主项。 若要使用此代码，请在针对 `ThisAddIn` 或 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]的 Excel 外接程序项目中从 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 类运行它。  
   
  [!code-csharp[Trin_ExcelAddIn_Extensions#2](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelAddIn_Extensions/cs/ThisAddIn.cs#2)]
  [!code-vb[Trin_ExcelAddIn_Extensions#2](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelAddIn_Extensions/vb/ThisAddIn.vb#2)]  
@@ -384,13 +382,12 @@
       <Docs>
         <param name="listObject">要测试的本机 Excel 列表对象。</param>
         <summary>返回一个值，该值指示指定的本机列表对象是否存在 <see cref="T:Microsoft.Office.Tools.Excel.ListObject" />。</summary>
-        <returns>
-          如果指定的 <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 对象存在 <see cref="T:Microsoft.Office.Interop.Excel.ListObject" />，则为 <see langword="true" />；否则为 <see langword="false" />。</returns>
+        <returns>如果指定的 <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 对象存在 <see cref="T:Microsoft.Office.Interop.Excel.ListObject" />，则为 <see langword="true" />；否则为 <see langword="false" />。</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例检查以确定关联的宿主项的列表对象是否工作表中每个本机列表对象。 若要使用此代码，请在针对 `ThisAddIn` 或 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]的 Excel 外接程序项目中从 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 类运行它。  
+ 下面的代码示例检查以确定如果列表对象中包含的相关联的主机项的工作表中每个本机列表对象。 若要使用此代码，请在针对 `ThisAddIn` 或 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]的 Excel 外接程序项目中从 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 类运行它。  
   
  [!code-csharp[Trin_ExcelAddIn_Extensions#5](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelAddIn_Extensions/cs/ThisAddIn.cs#5)]
  [!code-vb[Trin_ExcelAddIn_Extensions#5](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelAddIn_Extensions/vb/ThisAddIn.vb#5)]  

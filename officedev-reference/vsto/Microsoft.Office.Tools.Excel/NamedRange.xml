@@ -1,11 +1,11 @@
 <Type Name="NamedRange" FullName="Microsoft.Office.Tools.Excel.NamedRange">
   <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="08afd68956232229dd48b2ffa08f89143e65c3cf" />
-    <Meta Name="ms.sourcegitcommit" Value="5a5a038b6c783bec52842c940b22504bfc62a810" />
+    <Meta Name="ms.openlocfilehash" Value="abd26c4854668196611a881b937a26926bd34154" />
+    <Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" />
     <Meta Name="ms.translationtype" Value="HT" />
     <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="08/03/2018" />
-    <Meta Name="ms.locfileid" Value="29436507" />
+    <Meta Name="ms.lasthandoff" Value="09/19/2018" />
+    <Meta Name="ms.locfileid" Value="46459999" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface NamedRange : IDisposable, System.ComponentModel.IComponent, System.ComponentModel.ISupportInitialize, System.Windows.Forms.IBindableComponent" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract NamedRange implements class System.ComponentModel.IComponent, class System.ComponentModel.ISupportInitialize, class System.IDisposable, class System.Windows.Forms.IBindableComponent" />
@@ -40,7 +40,7 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 有关详细信息，请参阅[NamedRange 控件](/visualstudio/vsto/namedrange-control.md)。  
+ 有关详细信息，请参阅[NamedRange 控件](/visualstudio/vsto/namedrange-control)。  
   
  [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
   
@@ -175,7 +175,7 @@
  注释可以仅添加到<xref:Microsoft.Office.Tools.Excel.NamedRange>包含的单个单元格的控件。 如果不能添加注释<xref:Microsoft.Office.Tools.Excel.NamedRange>控件具有多个单元格。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
@@ -250,7 +250,7 @@
  如果该引用包含多个单元格`RowAbsolute`和`ColumnAbsolute`适用于所有行和列。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
@@ -304,7 +304,7 @@
  如果该引用包含多个单元格`RowAbsolute`和`ColumnAbsolute`适用于所有行和列。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
@@ -343,7 +343,8 @@
         <Parameter Name="Unique" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Action">可为下列 <see cref="T:Microsoft.Office.Interop.Excel.XlFilterAction" /> 值之一：<see cref="F:Microsoft.Office.Interop.Excel.XlFilterAction.xlFilterCopy" /><see cref="F:Microsoft.Office.Interop.Excel.XlFilterAction.xlFilterInPlace" /></param>
+        <param name="Action">可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlFilterAction" /> 值之一： 
+ <see cref="F:Microsoft.Office.Interop.Excel.XlFilterAction.xlFilterCopy" /><see cref="F:Microsoft.Office.Interop.Excel.XlFilterAction.xlFilterInPlace" /></param>
         <param name="CriteriaRange">条件范围。 如果省略此参数，则没有任何条件。</param>
         <param name="CopyToRange">如果 Action 为 <see cref="F:Microsoft.Office.Interop.Excel.XlFilterAction.xlFilterCopy" />，则为复制行的目标范围<c></c>。 否则，将忽略此参数。</param>
         <param name="Unique">如果仅筛选唯一的记录，则为 <see langword="true" />；如果筛选所有符合条件的记录，则为 <see langword="false" />。 默认值为 <see langword="false" />。</param>
@@ -356,7 +357,7 @@
  如果初始选择的单个单元格，则使用该单元格的当前区域。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
@@ -476,7 +477,10 @@
         <param name="UseRowColumnNames">如果在找不到指定范围的名称时使用包含该范围的行和列范围的名称，则为 <see langword="true" />；如果忽略 <c>OmitColumn</c> 和 <c>OmitRow</c> 参数，则为 <see langword="false" />。 默认值为 <see langword="true" />。</param>
         <param name="OmitColumn">如果将整个引用替换为面向行的名称，则为 <see langword="true" />。 只有当引用的单元格与公式在同一列中，而且位于面向行的命名范围中时，才能省略面向列的名称。 默认值为 <see langword="true" />。</param>
         <param name="OmitRow">如果将整个引用替换为面向列的名称，则为 <see langword="true" />。 只有当引用的单元格与公式在同一行中，而且位于面向列的命名范围中时，才能省略面向行的名称。 默认值为 <see langword="true" />。</param>
-        <param name="Order">确定在将单元格引用替换为面向行和面向列的范围名称时首先列出的范围名称。  可为下列 <see cref="T:Microsoft.Office.Interop.Excel.XlApplyNamesOrder" /> 常数之一：<see cref="F:Microsoft.Office.Interop.Excel.XlApplyNamesOrder.xlColumnThenRow" /><see cref="F:Microsoft.Office.Interop.Excel.XlApplyNamesOrder.xlRowThenColumn" /></param>
+        <param name="Order">确定在将单元格引用替换为面向行和面向列的范围名称时首先列出的范围名称。  
+  
+可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlApplyNamesOrder" /> 常数之一： 
+ <see cref="F:Microsoft.Office.Interop.Excel.XlApplyNamesOrder.xlColumnThenRow" /><see cref="F:Microsoft.Office.Interop.Excel.XlApplyNamesOrder.xlRowThenColumn" /></param>
         <param name="AppendLast">如果替换 <c>Names</c> 中名称的定义，还替换上次定义的名称的定义，则为 <see langword="true" />；如果仅替换 <c>Names</c> 中名称的定义，则为 <see langword="false" />。 默认值为 <see langword="false" />。</param>
         <summary>向 <see cref="T:Microsoft.Office.Tools.Excel.NamedRange" /> 控件中的单元格应用名称。</summary>
         <returns>To be added.</returns>
@@ -491,7 +495,7 @@
  您不能"不应用"名称;若要删除的名称，请使用`Delete`方法。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
@@ -603,7 +607,12 @@
       </Parameters>
       <Docs>
         <param name="Destination">要填充的单元格。 目标中必须包括源范围。</param>
-        <param name="Type">指定填充类型。  可为下列 <see cref="T:Microsoft.Office.Interop.Excel.XlAutoFillType" /> 值之一：<see cref="F:Microsoft.Office.Interop.Excel.XlAutoFillType.xlFillDays" /><see cref="F:Microsoft.Office.Interop.Excel.XlAutoFillType.xlFillFormats" /><see cref="F:Microsoft.Office.Interop.Excel.XlAutoFillType.xlFillSeries" /><see cref="F:Microsoft.Office.Interop.Excel.XlAutoFillType.xlFillWeekdays" /><see cref="F:Microsoft.Office.Interop.Excel.XlAutoFillType.xlGrowthTrend" /><see cref="F:Microsoft.Office.Interop.Excel.XlAutoFillType.xlFillCopy" /><see cref="F:Microsoft.Office.Interop.Excel.XlAutoFillType.xlFillDefault" /><see cref="F:Microsoft.Office.Interop.Excel.XlAutoFillType.xlFillMonths" /><see cref="F:Microsoft.Office.Interop.Excel.XlAutoFillType.xlFillValues" /><see cref="F:Microsoft.Office.Interop.Excel.XlAutoFillType.xlFillYears" /><see cref="F:Microsoft.Office.Interop.Excel.XlAutoFillType.xlLinearTrend" />  如果此参数为 <see cref="F:Microsoft.Office.Interop.Excel.XlAutoFillType.xlFillDefault" /> 或被省略，则 Microsoft Office Excel 将基于源范围选择最适合的填充类型。</param>
+        <param name="Type">指定填充类型。  
+  
+可以是这些 <see cref="T:Microsoft.Office.Interop.Excel.XlAutoFillType" /> 值之一： 
+ <see cref="F:Microsoft.Office.Interop.Excel.XlAutoFillType.xlFillDays" /><see cref="F:Microsoft.Office.Interop.Excel.XlAutoFillType.xlFillFormats" /><see cref="F:Microsoft.Office.Interop.Excel.XlAutoFillType.xlFillSeries" /><see cref="F:Microsoft.Office.Interop.Excel.XlAutoFillType.xlFillWeekdays" /><see cref="F:Microsoft.Office.Interop.Excel.XlAutoFillType.xlGrowthTrend" /><see cref="F:Microsoft.Office.Interop.Excel.XlAutoFillType.xlFillCopy" /><see cref="F:Microsoft.Office.Interop.Excel.XlAutoFillType.xlFillDefault" /><see cref="F:Microsoft.Office.Interop.Excel.XlAutoFillType.xlFillMonths" /><see cref="F:Microsoft.Office.Interop.Excel.XlAutoFillType.xlFillValues" /><see cref="F:Microsoft.Office.Interop.Excel.XlAutoFillType.xlFillYears" /><see cref="F:Microsoft.Office.Interop.Excel.XlAutoFillType.xlLinearTrend" />  
+  
+如果此参数为 <see cref="F:Microsoft.Office.Interop.Excel.XlAutoFillType.xlFillDefault" /> 或者被省略，则 Microsoft Office Excel 将基于源范围选择最适合的填充类型。</param>
         <summary>自动填充 <see cref="T:Microsoft.Office.Tools.Excel.NamedRange" /> 控件中的单元格。</summary>
         <returns>To be added.</returns>
         <remarks>
@@ -612,7 +621,7 @@
 ## Remarks  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
@@ -650,7 +659,10 @@
       <Docs>
         <param name="Field">要使筛选器基于的字段的偏移量（从列表的左边算起；最左边的字段为字段 1（一））。</param>
         <param name="Criteria1">条件（一个字符串；例如“101”）。 使用“=”查找空白字段，或使用“&lt;&gt;”查找非空白字段。 如果省略此参数，则条件为 <see langword="All" />。 如果 <c>Operator</c> 为 <see cref="F:Microsoft.Office.Interop.Excel.XlAutoFilterOperator.xlTop10Items" />，则 <c>Criteria1</c> 指定项数（如“10”）。</param>
-        <param name="Operator">可为下列 <see cref="T:Microsoft.Office.Interop.Excel.XlAutoFilterOperator" /> 常数之一：<see cref="F:Microsoft.Office.Interop.Excel.XlAutoFilterOperator.xlAnd" /><see cref="F:Microsoft.Office.Interop.Excel.XlAutoFilterOperator.xlBottom10Items" /><see cref="F:Microsoft.Office.Interop.Excel.XlAutoFilterOperator.xlBottom10Percent" /><see cref="F:Microsoft.Office.Interop.Excel.XlAutoFilterOperator.xlOr" /><see cref="F:Microsoft.Office.Interop.Excel.XlAutoFilterOperator.xlTop10Items" /><see cref="F:Microsoft.Office.Interop.Excel.XlAutoFilterOperator.xlTop10Percent" />  在 <c>Criteria1</c> 和 <c>Criteria2</c> 中使用 <see cref="F:Microsoft.Office.Interop.Excel.XlAutoFilterOperator.xlAnd" /> 和 <see cref="F:Microsoft.Office.Interop.Excel.XlAutoFilterOperator.xlOr" /> 来构造复合条件。</param>
+        <param name="Operator">可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlAutoFilterOperator" /> 常量之一： 
+ <see cref="F:Microsoft.Office.Interop.Excel.XlAutoFilterOperator.xlAnd" /><see cref="F:Microsoft.Office.Interop.Excel.XlAutoFilterOperator.xlBottom10Items" /><see cref="F:Microsoft.Office.Interop.Excel.XlAutoFilterOperator.xlBottom10Percent" /><see cref="F:Microsoft.Office.Interop.Excel.XlAutoFilterOperator.xlOr" /><see cref="F:Microsoft.Office.Interop.Excel.XlAutoFilterOperator.xlTop10Items" /><see cref="F:Microsoft.Office.Interop.Excel.XlAutoFilterOperator.xlTop10Percent" />  
+  
+在 <c>Criteria1</c> 和 <c>Criteria2</c> 中使用 <see cref="F:Microsoft.Office.Interop.Excel.XlAutoFilterOperator.xlAnd" /> 和 <see cref="F:Microsoft.Office.Interop.Excel.XlAutoFilterOperator.xlOr" /> 来构造复合条件。</param>
         <param name="Criteria2">第二个条件（字符串）。 与 <c>Criteria1</c> 和 <c>Operator</c> 一起用于构造复合条件。</param>
         <param name="VisibleDropDown">如果对所筛选字段显示自动筛选下拉箭头，则为 <see langword="true" />；如果对所筛选字段隐藏自动筛选下拉箭头，则为 <see langword="false" />。 默认值为 <see langword="true" />。</param>
         <summary>使用“自动筛选”筛选列表。</summary>
@@ -662,7 +674,7 @@
  如果省略了所有参数，此方法只需切换中的自动筛选下拉箭头显示<xref:Microsoft.Office.Tools.Excel.NamedRange>控件。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
@@ -925,9 +937,12 @@
         <Parameter Name="ThemeColor" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="LineStyle">边框的线型。 可为下列 <see cref="T:Microsoft.Office.Interop.Excel.XlLineStyle" /> 值之一：<see cref="F:Microsoft.Office.Interop.Excel.XlLineStyle.xlContinuous" /><see cref="F:Microsoft.Office.Interop.Excel.XlLineStyle.xlDash" /><see cref="F:Microsoft.Office.Interop.Excel.XlLineStyle.xlDashDot" /><see cref="F:Microsoft.Office.Interop.Excel.XlLineStyle.xlDashDotDot" /><see cref="F:Microsoft.Office.Interop.Excel.XlLineStyle.xlDot" /><see cref="F:Microsoft.Office.Interop.Excel.XlLineStyle.xlDouble" /><see cref="F:Microsoft.Office.Interop.Excel.XlLineStyle.xlSlantDashDot" /><see cref="F:Microsoft.Office.Interop.Excel.XlLineStyle.xlLineStyleNone" /></param>
-        <param name="Weight">边框的粗细。 可为下列 <see cref="T:Microsoft.Office.Interop.Excel.XlBorderWeight" /> 常数之一：<see cref="F:Microsoft.Office.Interop.Excel.XlBorderWeight.xlHairline" /><see cref="F:Microsoft.Office.Interop.Excel.XlBorderWeight.xlMedium" /><see cref="F:Microsoft.Office.Interop.Excel.XlBorderWeight.xlThick" /><see cref="F:Microsoft.Office.Interop.Excel.XlBorderWeight.xlThin" /></param>
-        <param name="ColorIndex">边框颜色（作为访问当前调色板的索引或作为 <see cref="T:Microsoft.Office.Interop.Excel.XlColorIndex" /> 常数）。 可为下列 <see cref="T:Microsoft.Office.Interop.Excel.XlColorIndex" /> 常数之一：<see cref="F:Microsoft.Office.Interop.Excel.XlColorIndex.xlColorIndexAutomatic" /><see cref="F:Microsoft.Office.Interop.Excel.XlColorIndex.xlColorIndexNone" /></param>
+        <param name="LineStyle">边框的线型。 可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlLineStyle" /> 值之一： 
+ <see cref="F:Microsoft.Office.Interop.Excel.XlLineStyle.xlContinuous" /><see cref="F:Microsoft.Office.Interop.Excel.XlLineStyle.xlDash" /><see cref="F:Microsoft.Office.Interop.Excel.XlLineStyle.xlDashDot" /><see cref="F:Microsoft.Office.Interop.Excel.XlLineStyle.xlDashDotDot" /><see cref="F:Microsoft.Office.Interop.Excel.XlLineStyle.xlDot" /><see cref="F:Microsoft.Office.Interop.Excel.XlLineStyle.xlDouble" /><see cref="F:Microsoft.Office.Interop.Excel.XlLineStyle.xlSlantDashDot" /><see cref="F:Microsoft.Office.Interop.Excel.XlLineStyle.xlLineStyleNone" /></param>
+        <param name="Weight">边框的粗细。 可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlBorderWeight" /> 常量之一： 
+ <see cref="F:Microsoft.Office.Interop.Excel.XlBorderWeight.xlHairline" /><see cref="F:Microsoft.Office.Interop.Excel.XlBorderWeight.xlMedium" /><see cref="F:Microsoft.Office.Interop.Excel.XlBorderWeight.xlThick" /><see cref="F:Microsoft.Office.Interop.Excel.XlBorderWeight.xlThin" /></param>
+        <param name="ColorIndex">边框颜色（作为访问当前调色板的索引或作为 <see cref="T:Microsoft.Office.Interop.Excel.XlColorIndex" /> 常数）。 可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlColorIndex" /> 常量之一： 
+ <see cref="F:Microsoft.Office.Interop.Excel.XlColorIndex.xlColorIndexAutomatic" /><see cref="F:Microsoft.Office.Interop.Excel.XlColorIndex.xlColorIndexNone" /></param>
         <param name="Color">边框颜色，采用 RGB 值的形式。</param>
         <param name="ThemeColor">主题颜色（作为访问当前颜色主题的索引或作为 <see cref="T:Microsoft.Office.Interop.Excel.XlThemeColor" /> 值）。</param>
         <summary>向 <see cref="T:Microsoft.Office.Tools.Excel.NamedRange" /> 控件添加一个边框，并设置新边框的 <see cref="P:Microsoft.Office.Interop.Excel.Border.Color" />、<see cref="P:Microsoft.Office.Interop.Excel.Border.LineStyle" /> 和 <see cref="P:Microsoft.Office.Interop.Excel.Border.Weight" /> 属性。</summary>
@@ -1142,7 +1157,7 @@
  可以使用<xref:Microsoft.Office.Interop.Excel.Characters?displayProperty=fullName>为格式字符在文本字符串中的对象。 <xref:Microsoft.Office.Interop.Excel.Characters?displayProperty=fullName>对象不是一个集合。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
@@ -1194,7 +1209,7 @@
  此窗体具有无返回值。Excel 显示**拼写**对话框。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
@@ -1602,7 +1617,8 @@
       </Parameters>
       <Docs>
         <param name="Sources">合并源（作为以 R1C1 样式表示法表示的文本引用字符串的数组）。 引用必须包含要合并的工作表的完整路径。</param>
-        <param name="Function">可为下列 <see cref="T:Microsoft.Office.Interop.Excel.XlConsolidationFunction" /> 常数之一：<see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlAverage" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlCount" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlCountNums" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlMax" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlMin" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlProduct" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlStDev" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlStDevP" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlSum" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlVar" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlVarP" /></param>
+        <param name="Function">可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlConsolidationFunction" /> 常量之一： 
+ <see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlAverage" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlCount" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlCountNums" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlMax" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlMin" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlProduct" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlStDev" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlStDevP" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlSum" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlVar" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlVarP" /></param>
         <param name="TopRow">如果基于合并范围内首行中的列标题合并数据，则为 <see langword="true" />；如果按位置合并数据，则为 <see langword="false" />。 默认值为 <see langword="false" />。</param>
         <param name="LeftColumn">如果基于合并范围内左列中的行标题合并数据，则为 <see langword="true" />；如果按位置合并数据，则为 <see langword="false" />。 默认值为 <see langword="false" />。</param>
         <param name="CreateLinks">如果让合并功能使用工作表链接，则为 <see langword="true" />；如果让合并功能复制数据，则为 <see langword="false" />。 默认值为 <see langword="false" />。</param>
@@ -1614,7 +1630,7 @@
 ## Remarks  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
@@ -1673,7 +1689,7 @@
 ## Remarks  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
@@ -1721,7 +1737,7 @@
  记录集的当前行开始复制。 复制完成后，记录集对象的 EOF 属性是`true`。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
  ]]></format>
         </remarks>
@@ -1744,8 +1760,14 @@
         <Parameter Name="Format" Type="Microsoft.Office.Interop.Excel.XlCopyPictureFormat" />
       </Parameters>
       <Docs>
-        <param name="Appearance">指定复制图片的方法。  可为下列 <see cref="T:Microsoft.Office.Interop.Excel.XlPictureAppearance" /> 常数之一：<see cref="F:Microsoft.Office.Interop.Excel.XlPictureAppearance.xlPrinter" /><see cref="F:Microsoft.Office.Interop.Excel.XlPictureAppearance.xlScreen" /></param>
-        <param name="Format">该图片的格式。  可为下列 <see cref="T:Microsoft.Office.Interop.Excel.XlCopyPictureFormat" /> 常数之一：<see cref="F:Microsoft.Office.Interop.Excel.XlCopyPictureFormat.xlBitmap" /><see cref="F:Microsoft.Office.Interop.Excel.XlCopyPictureFormat.xlPicture" /></param>
+        <param name="Appearance">指定复制图片的方法。  
+  
+可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlPictureAppearance" /> 常量之一： 
+ <see cref="F:Microsoft.Office.Interop.Excel.XlPictureAppearance.xlPrinter" /><see cref="F:Microsoft.Office.Interop.Excel.XlPictureAppearance.xlScreen" /></param>
+        <param name="Format">该图片的格式。  
+  
+可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlCopyPictureFormat" /> 常量之一： 
+ <see cref="F:Microsoft.Office.Interop.Excel.XlCopyPictureFormat.xlBitmap" /><see cref="F:Microsoft.Office.Interop.Excel.XlCopyPictureFormat.xlPicture" /></param>
         <summary>将 <see cref="T:Microsoft.Office.Tools.Excel.NamedRange" /> 控件作为图片复制到剪贴板。</summary>
         <returns>To be added.</returns>
         <remarks>
@@ -1754,7 +1776,7 @@
 ## Remarks  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
@@ -1851,7 +1873,7 @@
  如果未指定任一`Top`， `Left`， `Bottom`，或`Right`，Microsoft Office Excel 猜测的文本标签，基于形状的位置<xref:Microsoft.Office.Tools.Excel.NamedRange>控件。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
  ]]></format>
         </remarks>
@@ -2010,7 +2032,7 @@
 ## Remarks  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
@@ -2048,8 +2070,12 @@
       </Parameters>
       <Docs>
         <param name="Rowcol">可以为 <see cref="F:Microsoft.Office.Interop.Excel.XlRowCol.xlRows" /> 或 <see cref="F:Microsoft.Office.Interop.Excel.XlRowCol.xlColumns" /> 常数以将数据系列分别输入行或列中。 如果省略此参数，则使用该范围的大小和形状。</param>
-        <param name="Type">可为下列 <see cref="T:Microsoft.Office.Interop.Excel.XlDataSeriesType" /> 常数之一：<see cref="F:Microsoft.Office.Interop.Excel.XlDataSeriesType.xlAutoFill" /><see cref="F:Microsoft.Office.Interop.Excel.XlDataSeriesType.xlDataSeriesLinear" /><see cref="F:Microsoft.Office.Interop.Excel.XlDataSeriesType.xlChronological" /><see cref="F:Microsoft.Office.Interop.Excel.XlDataSeriesType.xlGrowth" /></param>
-        <param name="Date">如果 <c>Type</c> 参数为 <see cref="F:Microsoft.Office.Interop.Excel.XlDataSeriesType.xlChronological" />，则 <c>Date</c> 参数指示步长日期单位。  可为下列 <see cref="T:Microsoft.Office.Interop.Excel.XlDataSeriesDate" /> 常数之一：<see cref="F:Microsoft.Office.Interop.Excel.XlDataSeriesDate.xlDay" /><see cref="F:Microsoft.Office.Interop.Excel.XlDataSeriesDate.xlWeekday" /><see cref="F:Microsoft.Office.Interop.Excel.XlDataSeriesDate.xlMonth" /><see cref="F:Microsoft.Office.Interop.Excel.XlDataSeriesDate.xlYear" /></param>
+        <param name="Type">可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlDataSeriesType" /> 常量之一： 
+ <see cref="F:Microsoft.Office.Interop.Excel.XlDataSeriesType.xlAutoFill" /><see cref="F:Microsoft.Office.Interop.Excel.XlDataSeriesType.xlDataSeriesLinear" /><see cref="F:Microsoft.Office.Interop.Excel.XlDataSeriesType.xlChronological" /><see cref="F:Microsoft.Office.Interop.Excel.XlDataSeriesType.xlGrowth" /></param>
+        <param name="Date">如果 <c>Type</c> 参数为 <see cref="F:Microsoft.Office.Interop.Excel.XlDataSeriesType.xlChronological" />，则 <c>Date</c> 参数指示步长日期单位。  
+  
+可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlDataSeriesDate" /> 常量之一： 
+ <see cref="F:Microsoft.Office.Interop.Excel.XlDataSeriesDate.xlDay" /><see cref="F:Microsoft.Office.Interop.Excel.XlDataSeriesDate.xlWeekday" /><see cref="F:Microsoft.Office.Interop.Excel.XlDataSeriesDate.xlMonth" /><see cref="F:Microsoft.Office.Interop.Excel.XlDataSeriesDate.xlYear" /></param>
         <param name="Step">该系列的步长值。 默认值为 1（一）。</param>
         <param name="Stop">该系列的终止值。 如果省略此参数，则 Microsoft Office Excel 会填充到该范围的末尾。</param>
         <param name="Trend">如果创建等差序列或等比序列，则为 <see langword="true" />；如果创建标准数据系列，则为 <see langword="false" />。 默认值为 <see langword="false" />。</param>
@@ -2061,7 +2087,7 @@
 ## Remarks  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
@@ -2753,7 +2779,10 @@
         <param name="LookIn">信息的类型。</param>
         <param name="LookAt">可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlLookAt" /> 值之一：<see cref="F:Microsoft.Office.Interop.Excel.XlLookAt.xlWhole" /> 或 <see cref="F:Microsoft.Office.Interop.Excel.XlLookAt.xlPart" />。</param>
         <param name="SearchOrder">可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlSearchOrder" /> 值之一：<see cref="F:Microsoft.Office.Interop.Excel.XlSearchOrder.xlByRows" /> 或 <see cref="F:Microsoft.Office.Interop.Excel.XlSearchOrder.xlByColumns" />。</param>
-        <param name="SearchDirection">搜索方向。  可为下列 <see cref="T:Microsoft.Office.Interop.Excel.XlSearchDirection" /> 值之一：<see cref="F:Microsoft.Office.Interop.Excel.XlSearchDirection.xlNext" /> 或 <see cref="F:Microsoft.Office.Interop.Excel.XlSearchDirection.xlPrevious" />。</param>
+        <param name="SearchDirection">搜索方向。  
+  
+可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlSearchDirection" /> 值之一： 
+ <see cref="F:Microsoft.Office.Interop.Excel.XlSearchDirection.xlNext" /> 或 <see cref="F:Microsoft.Office.Interop.Excel.XlSearchDirection.xlPrevious" />。</param>
         <param name="MatchCase">如果在搜索时区分大小写，则为 <see langword="true" />。 默认值为 <see langword="false" />。</param>
         <param name="MatchByte">仅当已选择或安装双字节语言支持时，才会用到此参数。 如果让双字节字符仅与双字节字符相匹配，则为 <see langword="true" />；如果让双字节字符与其单字节等效字符相匹配，则为 <see langword="false" />。</param>
         <param name="SearchFormat">搜索格式。</param>
@@ -2774,7 +2803,7 @@
  如果搜索到达搜索指定的搜索范围的结束，它会绕到范围的开头。 若要停止搜索此头尾回绕发生时，保存该地址的第一个找到的单元格，然后测试对此已保存的地址的每个后续找到单元格地址。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
@@ -2820,7 +2849,7 @@
  如果搜索到达搜索指定的搜索范围的结束，它会绕到范围的开头。 若要停止搜索此头尾回绕发生时，保存该地址的第一个找到的单元格，然后测试对此已保存的地址的每个后续找到单元格地址。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
@@ -2866,7 +2895,7 @@
  如果搜索到达搜索指定的搜索范围的开头，它会绕到范围的末尾。 若要停止搜索此头尾回绕发生时，保存该地址的第一个找到的单元格，然后测试对此已保存的地址的每个后续找到单元格地址。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
@@ -3296,7 +3325,15 @@
         <param name="Start">要进行分组的第一个值。 如果省略此参数或者它为 <see langword="true" />，则使用该字段中的第一个值。</param>
         <param name="End">要进行分组的最后一个值。 如果省略此参数或者它为 <see langword="true" />，则使用该字段中的最后一个值。</param>
         <param name="By">如果该字段为数值字段，则此参数指定每组的大小。 如果该字段是日期字段，则此参数指定当 <c>Periods</c> 数组中的元素 4 为 <see langword="true" /> 而所有其他元素为 <see langword="false" /> 时每一组中的天数。 否则，将忽略此参数。 如果省略此参数，则 Microsoft Office Excel 会自动选择一个默认的组大小。</param>
-        <param name="Periods">一个由 7 个布尔值构成的数组，它指示组的时段，如下所示：1 - 秒  2 - 分钟  3 - 小时  4 - 天  5 - 月  6 - 季度  7 - 年  如果数组中的元素为 <see langword="true" />，则为相应时间创建组；如果元素为 <see langword="false" />，则不创建任何组。 如果字段不是日期字段，则省略此参数。</param>
+        <param name="Periods">一个数组，包含七个为该组指定时间段的布尔值，如下所示： 
+1 — 秒 
+2 — 分钟 
+3 —  
+4 — 日期 
+5 — 月份 
+6 — 季度 
+7 — 年份 
+如果数组中的某个元素为 <see langword="true" />，则针对相应的时间创建一个组；如果该元素为 <see langword="false" />，则不创建组。 如果字段不是日期字段，则省略此参数。</param>
         <summary>当 <see cref="T:Microsoft.Office.Tools.Excel.NamedRange" /> 控件表示数据透视表字段的数据范围中的单个单元格时，<see cref="M:Microsoft.Office.Tools.Excel.NamedRange.Group(System.Object,System.Object,System.Object,System.Object)" /> 方法在该字段中执行基于数值或日期的分组。</summary>
         <returns>To be added.</returns>
         <remarks>
@@ -3306,7 +3343,7 @@
  <xref:Microsoft.Office.Tools.Excel.NamedRange>控件必须为数据透视表字段的数据区域中的单个单元格。 如果尝试将此方法应用于多个单元，它将失败 （而不显示一条错误消息）。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
@@ -3576,7 +3613,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 可以使用<xref:Microsoft.Office.Tools.Excel.NamedRange.InnerObject%2A>属性来访问基础<xref:Microsoft.Office.Interop.Excel.Range?displayProperty=fullName>有关<xref:Microsoft.Office.Tools.Excel.NamedRange>并将其传递到方法或属性需要<xref:Microsoft.Office.Interop.Excel.Range?displayProperty=fullName>作为传递<xref:Microsoft.Office.Interop.Excel.Range?displayProperty=fullName>。 有关更多信息，请参见 [宿主项和宿主控件的编程限制](/visualstudio/vsto/programmatic-limitations-of-host-items-and-host-controls.md)。  
+ 可以使用<xref:Microsoft.Office.Tools.Excel.NamedRange.InnerObject%2A>属性来访问基础<xref:Microsoft.Office.Interop.Excel.Range?displayProperty=fullName>有关<xref:Microsoft.Office.Tools.Excel.NamedRange>并将其传递到方法或属性需要<xref:Microsoft.Office.Interop.Excel.Range?displayProperty=fullName>作为传递<xref:Microsoft.Office.Interop.Excel.Range?displayProperty=fullName>。 有关更多信息，请参见 [宿主项和宿主控件的编程限制](/visualstudio/vsto/programmatic-limitations-of-host-items-and-host-controls)。  
   
    
   
@@ -3620,7 +3657,7 @@
 ## Remarks  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
@@ -4020,7 +4057,7 @@
  在左上角的单元格中指定的合并范围内的值<xref:Microsoft.Office.Tools.Excel.NamedRange>控件。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
@@ -4162,7 +4199,7 @@
  选择引用单元格、 依赖方或错误的单元格。 如果将应用于没有可见的跟踪标志箭头的单元格，则此方法将导致错误。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
@@ -4247,7 +4284,7 @@
  若要添加包含超过 255 个字符的注释，使用此方法一次指定的前 255 个字符，然后再次使用它来追加 （不超过 255 个字符一次） 的说明的其余部分。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
@@ -4366,7 +4403,7 @@
  如果尝试使用<xref:Microsoft.Office.Tools.Excel.NamedRange.Offset%2A>而无需指定任何参数，<xref:Microsoft.Office.Tools.Excel.NamedRange.Offset%2A>将获取<xref:Microsoft.Office.Tools.Excel.NamedRange_OffsetType>对象，它是 Visual Studio 基础结构的一部分，不应在代码中直接使用。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
@@ -4533,7 +4570,11 @@
         <Parameter Name="Destination" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="ParseLine">一个字符串，包含指示应在何处拆分单元格的左中括号和右中括号。  例如，“<c>[xxx][xxx]</c>”会在目标范围的第一列中插入前三个字符，并在第二列中插入随后的三个字符。  如果省略此参数，则 Microsoft Office Excel 基于该范围中左上角单元格的间距猜测在何处拆分列。 如果要使用另一个范围来猜测分析行，请将 <see cref="T:Microsoft.Office.Interop.Excel.Range" /> 对象用作 <c>ParseLine</c> 参数。 该范围必须是正被分析的那些单元格之一。 <c>ParseLine</c> 参数不能超过 255 个字符，包括括号和空格。</param>
+        <param name="ParseLine">一个字符串，包含指示应在何处拆分单元格的左中括号和右中括号。  
+  
+例如，“<c>[xxx][xxx]</c>”会在目标范围的第一列中插入前三个字符，并在第二列中插入随后的三个字符。  
+  
+如果省略此参数，则 Microsoft Office Excel 基于该范围中左上角单元格的间距猜测在何处拆分列。 如果要使用另一个范围来猜测分析行，请将 <see cref="T:Microsoft.Office.Interop.Excel.Range" /> 对象用作 <c>ParseLine</c> 参数。 该范围必须是正被分析的那些单元格之一。 <c>ParseLine</c> 参数不能超过 255 个字符，包括括号和空格。</param>
         <param name="Destination">一个 <see cref="T:Microsoft.Office.Interop.Excel.Range" /> 对象，表示所分析数据的目标范围的左上角。 如果省略此参数，则 Excel 就地分析。</param>
         <summary>分析某一范围的数据并将它分成多个单元格。</summary>
         <returns>To be added.</returns>
@@ -4576,8 +4617,14 @@
         <Parameter Name="Transpose" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Paste">该范围中要粘贴的部分。  可为下列 <see cref="T:Microsoft.Office.Interop.Excel.XlPasteType" /> 值之一：<see cref="F:Microsoft.Office.Interop.Excel.XlPasteType.xlPasteAll" /><see cref="F:Microsoft.Office.Interop.Excel.XlPasteType.xlPasteAllExceptBorders" /><see cref="F:Microsoft.Office.Interop.Excel.XlPasteType.xlPasteColumnWidths" /><see cref="F:Microsoft.Office.Interop.Excel.XlPasteType.xlPasteComments" /><see cref="F:Microsoft.Office.Interop.Excel.XlPasteType.xlPasteFormats" /><see cref="F:Microsoft.Office.Interop.Excel.XlPasteType.xlPasteFormulas" /><see cref="F:Microsoft.Office.Interop.Excel.XlPasteType.xlPasteFormulasAndNumberFormats" /><see cref="F:Microsoft.Office.Interop.Excel.XlPasteType.xlPasteValidation" /><see cref="F:Microsoft.Office.Interop.Excel.XlPasteType.xlPasteValues" /><see cref="F:Microsoft.Office.Interop.Excel.XlPasteType.xlPasteValuesAndNumberFormats" /></param>
-        <param name="Operation">粘贴操作。  可为下列 <see cref="T:Microsoft.Office.Interop.Excel.XlPasteSpecialOperation" /> 值之一：<see cref="F:Microsoft.Office.Interop.Excel.XlPasteSpecialOperation.xlPasteSpecialOperationAdd" /><see cref="F:Microsoft.Office.Interop.Excel.XlPasteSpecialOperation.xlPasteSpecialOperationDivide" /><see cref="F:Microsoft.Office.Interop.Excel.XlPasteSpecialOperation.xlPasteSpecialOperationMultiply" /><see cref="F:Microsoft.Office.Interop.Excel.XlPasteSpecialOperation.xlPasteSpecialOperationNone" /><see cref="F:Microsoft.Office.Interop.Excel.XlPasteSpecialOperation.xlPasteSpecialOperationSubtract" /></param>
+        <param name="Paste">该范围中要粘贴的部分。  
+  
+可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlPasteType" /> 值之一： 
+ <see cref="F:Microsoft.Office.Interop.Excel.XlPasteType.xlPasteAll" /><see cref="F:Microsoft.Office.Interop.Excel.XlPasteType.xlPasteAllExceptBorders" /><see cref="F:Microsoft.Office.Interop.Excel.XlPasteType.xlPasteColumnWidths" /><see cref="F:Microsoft.Office.Interop.Excel.XlPasteType.xlPasteComments" /><see cref="F:Microsoft.Office.Interop.Excel.XlPasteType.xlPasteFormats" /><see cref="F:Microsoft.Office.Interop.Excel.XlPasteType.xlPasteFormulas" /><see cref="F:Microsoft.Office.Interop.Excel.XlPasteType.xlPasteFormulasAndNumberFormats" /><see cref="F:Microsoft.Office.Interop.Excel.XlPasteType.xlPasteValidation" /><see cref="F:Microsoft.Office.Interop.Excel.XlPasteType.xlPasteValues" /><see cref="F:Microsoft.Office.Interop.Excel.XlPasteType.xlPasteValuesAndNumberFormats" /></param>
+        <param name="Operation">粘贴操作。  
+  
+可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlPasteSpecialOperation" /> 值之一： 
+ <see cref="F:Microsoft.Office.Interop.Excel.XlPasteSpecialOperation.xlPasteSpecialOperationAdd" /><see cref="F:Microsoft.Office.Interop.Excel.XlPasteSpecialOperation.xlPasteSpecialOperationDivide" /><see cref="F:Microsoft.Office.Interop.Excel.XlPasteSpecialOperation.xlPasteSpecialOperationMultiply" /><see cref="F:Microsoft.Office.Interop.Excel.XlPasteSpecialOperation.xlPasteSpecialOperationNone" /><see cref="F:Microsoft.Office.Interop.Excel.XlPasteSpecialOperation.xlPasteSpecialOperationSubtract" /></param>
         <param name="SkipBlanks">如果不将剪贴板上该范围中的空单元格粘贴到目标范围，则为 <see langword="true" />。 默认值为 <see langword="false" />。</param>
         <param name="Transpose">如果在粘贴该范围时对行和列进行转置，则为 <see langword="true" />。 默认值为 <see langword="false" />。</param>
         <summary>将剪贴板上 <see cref="T:Microsoft.Office.Interop.Excel.Range" /> 对象的内容粘贴到 <see cref="T:Microsoft.Office.Tools.Excel.NamedRange" /> 控件中。</summary>
@@ -4588,7 +4635,7 @@
 ## Remarks  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
@@ -4990,7 +5037,7 @@
 ## Remarks  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
@@ -5334,7 +5381,7 @@
  设置`LookAt`， `SearchOrder`， `MatchCase`，和`MatchByte`保存每次使用此方法。 如果下次调用该方法时未指定这些参数的值，将使用保存的值。 设置这些参数将更改中的设置**查找**对话框中，并更改中的设置**查找**对话框更改保存的值，如果省略自变量，则使用。 若要避免出现问题，这些参数显式设置每次使用此方法。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
@@ -5379,7 +5426,7 @@
  如果尝试使用<xref:Microsoft.Office.Tools.Excel.NamedRange.Resize%2A>而无需指定任何参数，<xref:Microsoft.Office.Tools.Excel.NamedRange.Resize%2A>将获取<xref:Microsoft.Office.Tools.Excel.NamedRange_ResizeType>对象，它是 Visual Studio 基础结构的一部分，不应在代码中直接使用。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
@@ -5844,7 +5891,7 @@
  <xref:Microsoft.Office.Tools.Excel.NamedRange>控件必须是单个单元格。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
@@ -5944,7 +5991,7 @@
  <xref:Microsoft.Office.Tools.Excel.NamedRange>控件必须是单个单元格。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
@@ -6032,40 +6079,70 @@
       </Parameters>
       <Docs>
         <param name="Key1">第一个排序字段，要么是文本（范围名称），要么是一个 <see cref="T:Microsoft.Office.Interop.Excel.Range" /> 对象（例如，“Dept”或 <c>Cells(1, 1)</c>）。</param>
-        <param name="Order1">在 <c>Key1</c> 中指定的字段或范围的排序顺序。  可为下列 <see cref="T:Microsoft.Office.Interop.Excel.XlSortOrder" /> 值之一：<see cref="F:Microsoft.Office.Interop.Excel.XlSortOrder.xlDescending" />。 将 <c>Key1</c> 按降序排序。  
+        <param name="Order1">在 <c>Key1</c> 中指定的字段或范围的排序顺序。  
+  
+可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlSortOrder" /> 值之一： 
+ <see cref="F:Microsoft.Office.Interop.Excel.XlSortOrder.xlDescending" />。 将 <c>Key1</c> 按降序排序。  
   
  <see cref="F:Microsoft.Office.Interop.Excel.XlSortOrder.xlAscending" />。 将 <c>Key1</c> 按升序排序。</param>
         <param name="Key2">第二个排序字段，要么是文本（范围名称），要么是一个 <see cref="T:Microsoft.Office.Interop.Excel.Range" /> 对象。 如果您省略此参数，则没有第二个排序字段。</param>
-        <param name="Type">指定要进行排序的元素。 只有当对数据透视表进行排序时，才使用此参数。  可为下列 <see cref="T:Microsoft.Office.Interop.Excel.XlSortType" /> 值之一：<see cref="F:Microsoft.Office.Interop.Excel.XlSortType.xlSortLabels" />。 按标签对数据透视表进行排序。  
+        <param name="Type">指定要进行排序的元素。 只有当对数据透视表进行排序时，才使用此参数。  
+  
+可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlSortType" /> 值之一： 
+ <see cref="F:Microsoft.Office.Interop.Excel.XlSortType.xlSortLabels" />。 按标签对数据透视表进行排序。  
   
  <see cref="F:Microsoft.Office.Interop.Excel.XlSortType.xlSortValues" />。 按值对数据透视表进行排序。</param>
-        <param name="Order2">在 <c>Key2</c> 中指定的范围的排序顺序。 不可用于数据透视表的排序。  可为下列 <see cref="T:Microsoft.Office.Interop.Excel.XlSortOrder" /> 值之一：<see cref="F:Microsoft.Office.Interop.Excel.XlSortOrder.xlDescending" />。 将 <c>Key2</c> 按降序排序。  
+        <param name="Order2">在 <c>Key2</c> 中指定的范围的排序顺序。 不可用于数据透视表的排序。  
+  
+可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlSortOrder" /> 值之一： 
+ <see cref="F:Microsoft.Office.Interop.Excel.XlSortOrder.xlDescending" />。 将 <c>Key2</c> 按降序排序。  
   
  <see cref="F:Microsoft.Office.Interop.Excel.XlSortOrder.xlAscending" />。 将 <c>Key2</c> 按升序排序。</param>
         <param name="Key3">第三个排序字段，要么是文本（范围名称），要么是一个 <see cref="T:Microsoft.Office.Interop.Excel.Range" /> 对象。 如果您省略此参数，则没有第三个排序字段。 不可用于数据透视表的排序。</param>
-        <param name="Order3">在 <c>Key3</c> 中指定的字段或范围的排序顺序。 不可用于数据透视表的排序。  可为下列 <see cref="T:Microsoft.Office.Interop.Excel.XlSortOrder" /> 值之一：<see cref="F:Microsoft.Office.Interop.Excel.XlSortOrder.xlDescending" />。 将 <c>Key3</c> 按降序排序。  
+        <param name="Order3">在 <c>Key3</c> 中指定的字段或范围的排序顺序。 不可用于数据透视表的排序。  
+  
+可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlSortOrder" /> 值之一： 
+ <see cref="F:Microsoft.Office.Interop.Excel.XlSortOrder.xlDescending" />。 将 <c>Key3</c> 按降序排序。  
   
  <see cref="F:Microsoft.Office.Interop.Excel.XlSortOrder.xlAscending" />。 将 <c>Key3</c> 按升序排序。</param>
-        <param name="Header">指定第一行中是否包含标题。 不可用于数据透视表的排序。  可为下列 <see cref="T:Microsoft.Office.Interop.Excel.XlYesNoGuess" /> 值之一：<see cref="F:Microsoft.Office.Interop.Excel.XlYesNoGuess.xlGuess" />。 让 Microsoft Office Excel 确定是否有标题，如果有的话，确定它的位置。  
+        <param name="Header">指定第一行中是否包含标题。 不可用于数据透视表的排序。  
+  
+可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlYesNoGuess" /> 值之一： 
+ <see cref="F:Microsoft.Office.Interop.Excel.XlYesNoGuess.xlGuess" />。 让 Microsoft Office Excel 确定是否有标题，如果有的话，确定它的位置。  
   
  <see cref="F:Microsoft.Office.Interop.Excel.XlYesNoGuess.xlNo" />。 （应当对整个范围进行排序。）  
   
  <see cref="F:Microsoft.Office.Interop.Excel.XlYesNoGuess.xlYes" />。 （不应当对整个范围进行排序。）</param>
         <param name="OrderCustom">此参数是一个在自定义排序顺序列表中的从 1 开始的整数偏移量。 如果省略 <c>OrderCustom</c>，则使用正常排序。</param>
         <param name="MatchCase">如果执行区分大小写的排序，则为 <see langword="true" />；如果执行不区分大小写的排序，则为 <see langword="false" />。 不可用于数据透视表的排序。</param>
-        <param name="Orientation">排序方向。  可为下列 <see cref="T:Microsoft.Office.Interop.Excel.XlSortOrientation" /> 值之一：<see cref="F:Microsoft.Office.Interop.Excel.XlSortOrientation.xlSortRows" />。 按行排序。  
+        <param name="Orientation">排序方向。  
+  
+可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlSortOrientation" /> 值之一： 
+ <see cref="F:Microsoft.Office.Interop.Excel.XlSortOrientation.xlSortRows" />。 按行排序。  
   
  <see cref="F:Microsoft.Office.Interop.Excel.XlSortOrientation.xlSortColumns" />。 按列排序。</param>
-        <param name="SortMethod">排序的类型。 您可能无法使用其中某些常数，具体取决于您选择或安装的语言支持（例如，美国美式英语）。  可为下列 <see cref="T:Microsoft.Office.Interop.Excel.XlSortMethod" /> 值之一：<see cref="F:Microsoft.Office.Interop.Excel.XlSortMethod.xlStroke" />。 按每个字符中的笔画数进行排序。  
+        <param name="SortMethod">排序的类型。 您可能无法使用其中某些常数，具体取决于您选择或安装的语言支持（例如，美国美式英语）。  
+  
+可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlSortMethod" /> 值之一： 
+ <see cref="F:Microsoft.Office.Interop.Excel.XlSortMethod.xlStroke" />。 按每个字符中的笔画数进行排序。  
   
  <see cref="F:Microsoft.Office.Interop.Excel.XlSortMethod.xlPinYin" />。 字符的中文拼音排序顺序。</param>
-        <param name="DataOption1">指定如何对 <c>key1</c> 中的文本排序。 不可用于数据透视表的排序。  可为下列 <see cref="T:Microsoft.Office.Interop.Excel.XlSortDataOption" /> 值之一：<see cref="F:Microsoft.Office.Interop.Excel.XlSortDataOption.xlSortTextAsNumbers" />。 在进行排序时将文本数据视为数值数据。  
+        <param name="DataOption1">指定如何对 <c>key1</c> 中的文本排序。 不可用于数据透视表的排序。  
+  
+可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlSortDataOption" /> 值之一： 
+ <see cref="F:Microsoft.Office.Interop.Excel.XlSortDataOption.xlSortTextAsNumbers" />。 在进行排序时将文本数据视为数值数据。  
   
  <see cref="F:Microsoft.Office.Interop.Excel.XlSortDataOption.xlSortNormal" />。 分别对数值数据和文本数据进行排序。</param>
-        <param name="DataOption2">指定如何对 <c>key2</c> 中的文本排序。 不可用于数据透视表的排序。  可为下列 <see cref="T:Microsoft.Office.Interop.Excel.XlSortDataOption" /> 值之一：<see cref="F:Microsoft.Office.Interop.Excel.XlSortDataOption.xlSortTextAsNumbers" />。 在进行排序时将文本数据视为数值数据。  
+        <param name="DataOption2">指定如何对 <c>key2</c> 中的文本排序。 不可用于数据透视表的排序。  
+  
+可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlSortDataOption" /> 值之一： 
+ <see cref="F:Microsoft.Office.Interop.Excel.XlSortDataOption.xlSortTextAsNumbers" />。 在进行排序时将文本数据视为数值数据。  
   
  <see cref="F:Microsoft.Office.Interop.Excel.XlSortDataOption.xlSortNormal" />。 分别对数值数据和文本数据进行排序。</param>
-        <param name="DataOption3">指定如何对 <c>key3</c> 中的文本排序。 不可用于数据透视表的排序。  可为下列 <see cref="T:Microsoft.Office.Interop.Excel.XlSortDataOption" /> 值之一：<see cref="F:Microsoft.Office.Interop.Excel.XlSortDataOption.xlSortTextAsNumbers" />。 在进行排序时将文本数据视为数值数据。  
+        <param name="DataOption3">指定如何对 <c>key3</c> 中的文本排序。 不可用于数据透视表的排序。  
+  
+可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlSortDataOption" /> 值之一： 
+ <see cref="F:Microsoft.Office.Interop.Excel.XlSortDataOption.xlSortTextAsNumbers" />。 在进行排序时将文本数据视为数值数据。  
   
  <see cref="F:Microsoft.Office.Interop.Excel.XlSortDataOption.xlSortNormal" />。 分别对数值数据和文本数据进行排序。</param>
         <summary>对 <see cref="T:Microsoft.Office.Tools.Excel.NamedRange" /> 控件中的数据进行排序。</summary>
@@ -6081,7 +6158,7 @@
  如果使用此方法不定义了任何自变量，Microsoft Office Excel 将对所选内容以升序进行排序。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
@@ -6127,39 +6204,66 @@
         <Parameter Name="DataOption3" Type="Microsoft.Office.Interop.Excel.XlSortDataOption" />
       </Parameters>
       <Docs>
-        <param name="SortMethod">排序的类型。 您可能无法使用其中某些常数，具体取决于您选择或安装的语言支持（例如，美国美式英语）。  可为下列 <see cref="T:Microsoft.Office.Interop.Excel.XlSortMethod" /> 值之一：<see cref="F:Microsoft.Office.Interop.Excel.XlSortMethod.xlStroke" />。 按每个字符中的笔画数进行排序。  
+        <param name="SortMethod">排序的类型。 您可能无法使用其中某些常数，具体取决于您选择或安装的语言支持（例如，美国美式英语）。  
+  
+可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlSortMethod" /> 值之一： 
+ <see cref="F:Microsoft.Office.Interop.Excel.XlSortMethod.xlStroke" />。 按每个字符中的笔画数进行排序。  
   
  <see cref="F:Microsoft.Office.Interop.Excel.XlSortMethod.xlPinYin" />（默认）。 字符的中文拼音排序顺序。</param>
         <param name="Key1">第一个排序字段，要么是文本（范围名称），要么是一个 <see cref="T:Microsoft.Office.Interop.Excel.Range" /> 对象（例如，“Dept”或 <c>Cells(1, 1)</c>）。</param>
-        <param name="Order1">在 <c>Key1</c> 中指定的字段或范围的排序顺序。  可为下列 <see cref="T:Microsoft.Office.Interop.Excel.XlSortOrder" /> 值之一：<see cref="F:Microsoft.Office.Interop.Excel.XlSortOrder.xlDescending" />。 将 <c>Key1</c> 按降序排序。  
+        <param name="Order1">在 <c>Key1</c> 中指定的字段或范围的排序顺序。  
+  
+可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlSortOrder" /> 值之一： 
+ <see cref="F:Microsoft.Office.Interop.Excel.XlSortOrder.xlDescending" />。 将 <c>Key1</c> 按降序排序。  
   
  <see cref="F:Microsoft.Office.Interop.Excel.XlSortOrder.xlAscending" />（默认）。 将 <c>Key1</c> 按升序排序。</param>
         <param name="Type">指定要进行排序的元素。 只有当对数据透视表进行排序时，才使用此参数。</param>
         <param name="Key2">第二个排序字段，要么是文本（范围名称），要么是一个 <see cref="T:Microsoft.Office.Interop.Excel.Range" /> 对象。 如果您省略此参数，则没有第二个排序字段。 不可用于数据透视表的排序。</param>
-        <param name="Order2">在 <c>Key2</c> 参数中指定的字段或范围的排序顺序。 不可用于数据透视表的排序。  可为下列 <see cref="T:Microsoft.Office.Interop.Excel.XlSortOrder" /> 值之一：<see cref="F:Microsoft.Office.Interop.Excel.XlSortOrder.xlDescending" />。 将 <c>Key2</c> 按降序排序。  
+        <param name="Order2">在 <c>Key2</c> 参数中指定的字段或范围的排序顺序。 不可用于数据透视表的排序。  
+  
+可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlSortOrder" /> 值之一： 
+ <see cref="F:Microsoft.Office.Interop.Excel.XlSortOrder.xlDescending" />。 将 <c>Key2</c> 按降序排序。  
   
  <see cref="F:Microsoft.Office.Interop.Excel.XlSortOrder.xlAscending" />（默认）。 将 <c>Key2</c> 按升序排序。</param>
         <param name="Key3">第三个排序字段，要么是文本（范围名称），要么是一个 <see cref="T:Microsoft.Office.Interop.Excel.Range" /> 对象。 如果您省略此参数，则没有第三个排序字段。 不可用于数据透视表的排序。</param>
-        <param name="Order3">在 <c>Key3</c> 参数中指定的字段或范围的排序顺序。 不可用于数据透视表的排序。  可为下列 <see cref="T:Microsoft.Office.Interop.Excel.XlSortOrder" /> 值之一：<see cref="F:Microsoft.Office.Interop.Excel.XlSortOrder.xlDescending" />。 将 <c>Key3</c> 按降序排序。  
+        <param name="Order3">在 <c>Key3</c> 参数中指定的字段或范围的排序顺序。 不可用于数据透视表的排序。  
+  
+可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlSortOrder" /> 值之一： 
+ <see cref="F:Microsoft.Office.Interop.Excel.XlSortOrder.xlDescending" />。 将 <c>Key3</c> 按降序排序。  
   
  <see cref="F:Microsoft.Office.Interop.Excel.XlSortOrder.xlAscending" />（默认）。 将 <c>Key3</c> 按升序排序。</param>
-        <param name="Header">指定第一行中是否包含标题。 不可用于数据透视表的排序。  可为下列 <see cref="T:Microsoft.Office.Interop.Excel.XlYesNoGuess" /> 值之一：<see cref="F:Microsoft.Office.Interop.Excel.XlYesNoGuess.xlGuess" />。 让 Microsoft Office Excel 确定是否有标题，如果有的话，确定它的位置。  
+        <param name="Header">指定第一行中是否包含标题。 不可用于数据透视表的排序。  
+  
+可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlYesNoGuess" /> 值之一： 
+ <see cref="F:Microsoft.Office.Interop.Excel.XlYesNoGuess.xlGuess" />。 让 Microsoft Office Excel 确定是否有标题，如果有的话，确定它的位置。  
   
  <see cref="F:Microsoft.Office.Interop.Excel.XlYesNoGuess.xlNo" />（默认）。 应当对整个范围进行排序。  
   
  <see cref="F:Microsoft.Office.Interop.Excel.XlYesNoGuess.xlYes" />。 不应当对整个范围进行排序。</param>
         <param name="OrderCustom">此参数是一个在自定义排序顺序列表中的从 1 开始的整数偏移量。 如果省略 <c>OrderCustom</c>，则使用正常排序顺序。</param>
         <param name="MatchCase">如果执行区分大小写的排序，则为 <see langword="true" />；如果执行不区分大小写的排序，则为 <see langword="false" />。 不可用于数据透视表的排序。</param>
-        <param name="Orientation">排序方向。  可为下列 <see cref="T:Microsoft.Office.Interop.Excel.XlSortOrientation" /> 值之一：<see cref="F:Microsoft.Office.Interop.Excel.XlSortOrientation.xlSortRows" />（默认）。 按行进行排序。  
+        <param name="Orientation">排序方向。  
+  
+可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlSortOrientation" /> 值之一： 
+ <see cref="F:Microsoft.Office.Interop.Excel.XlSortOrientation.xlSortRows" />（默认）。 按行进行排序。  
   
  <see cref="F:Microsoft.Office.Interop.Excel.XlSortOrientation.xlSortColumns" />。 按列进行了排序。</param>
-        <param name="DataOption1">指定如何对 <c>key1</c> 中的文本排序。 不可用于数据透视表的排序。  可为下列 <see cref="T:Microsoft.Office.Interop.Excel.XlSortDataOption" /> 值之一：<see cref="F:Microsoft.Office.Interop.Excel.XlSortDataOption.xlSortTextAsNumbers" />。 在进行排序时将文本数据视为数值数据。  
+        <param name="DataOption1">指定如何对 <c>key1</c> 中的文本排序。 不可用于数据透视表的排序。  
+  
+可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlSortDataOption" /> 值之一： 
+ <see cref="F:Microsoft.Office.Interop.Excel.XlSortDataOption.xlSortTextAsNumbers" />。 在进行排序时将文本数据视为数值数据。  
   
  <see cref="F:Microsoft.Office.Interop.Excel.XlSortDataOption.xlSortNormal" />（默认）。 分别对数值数据和文本数据进行排序。</param>
-        <param name="DataOption2">指定如何对 <c>key2</c> 中的文本排序。 不可用于数据透视表的排序。  可为下列 <see cref="T:Microsoft.Office.Interop.Excel.XlSortDataOption" /> 值之一：<see cref="F:Microsoft.Office.Interop.Excel.XlSortDataOption.xlSortTextAsNumbers" />。 在进行排序时将文本数据视为数值数据。  
+        <param name="DataOption2">指定如何对 <c>key2</c> 中的文本排序。 不可用于数据透视表的排序。  
+  
+可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlSortDataOption" /> 值之一： 
+ <see cref="F:Microsoft.Office.Interop.Excel.XlSortDataOption.xlSortTextAsNumbers" />。 在进行排序时将文本数据视为数值数据。  
   
  <see cref="F:Microsoft.Office.Interop.Excel.XlSortDataOption.xlSortNormal" />（默认）。 分别对数值数据和文本数据进行排序。</param>
-        <param name="DataOption3">指定如何对 <c>key3</c> 中的文本排序。 不可用于数据透视表的排序。  可为下列 <see cref="T:Microsoft.Office.Interop.Excel.XlSortDataOption" /> 值之一：<see cref="F:Microsoft.Office.Interop.Excel.XlSortDataOption.xlSortTextAsNumbers" />。 在进行排序时将文本数据视为数值数据。  
+        <param name="DataOption3">指定如何对 <c>key3</c> 中的文本排序。 不可用于数据透视表的排序。  
+  
+可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlSortDataOption" /> 值之一： 
+ <see cref="F:Microsoft.Office.Interop.Excel.XlSortDataOption.xlSortTextAsNumbers" />。 在进行排序时将文本数据视为数值数据。  
   
  <see cref="F:Microsoft.Office.Interop.Excel.XlSortDataOption.xlSortNormal" />（默认）。 分别对数值数据和文本数据进行排序。</param>
         <summary>使用东亚排序方法对 <see cref="T:Microsoft.Office.Tools.Excel.NamedRange" /> 控件进行排序。 例如，在日语中，按照假名音节表顺序进行排序。 有关更多信息，请参见参数列表。</summary>
@@ -6171,7 +6275,7 @@
  如果使用此方法不定义了任何自变量，Microsoft Office Excel 会对所选内容以升序进行排序。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
@@ -6265,7 +6369,7 @@
 ## Remarks  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
@@ -6298,7 +6402,10 @@
         <Parameter Name="Value" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Type">要包括的单元格。  可为下列 <see cref="T:Microsoft.Office.Interop.Excel.XlCellType" /> 值之一：<see cref="F:Microsoft.Office.Interop.Excel.XlCellType.xlCellTypeAllFormatConditions" />。 任何格式的单元格。  
+        <param name="Type">要包括的单元格。  
+  
+可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlCellType" /> 值之一： 
+ <see cref="F:Microsoft.Office.Interop.Excel.XlCellType.xlCellTypeAllFormatConditions" />。 任何格式的单元格。  
   
  <see cref="F:Microsoft.Office.Interop.Excel.XlCellType.xlCellTypeAllValidation" />。 具有验证条件的单元格。  
   
@@ -6317,7 +6424,8 @@
  <see cref="F:Microsoft.Office.Interop.Excel.XlCellType.xlCellTypeSameValidation" />。 具有相同验证条件的单元格。  
   
  <see cref="F:Microsoft.Office.Interop.Excel.XlCellType.xlCellTypeVisible" />。 所有可见的单元格。</param>
-        <param name="Value">如果 <c>Type</c> 为 <see cref="F:Microsoft.Office.Interop.Excel.XlCellType.xlCellTypeConstants" /> 或 <see cref="F:Microsoft.Office.Interop.Excel.XlCellType.xlCellTypeFormulas" />，则此参数用于确定要在结果中包含哪些类型的单元格。 这些值可以一起添加以返回多种类型。 默认情况下，无论是何种类型，都选择所有的常数或公式。 可为下列 <see cref="T:Microsoft.Office.Interop.Excel.XlSpecialCellsValue" /> 值之一：<see cref="F:Microsoft.Office.Interop.Excel.XlSpecialCellsValue.xlErrors" /><see cref="F:Microsoft.Office.Interop.Excel.XlSpecialCellsValue.xlLogical" /><see cref="F:Microsoft.Office.Interop.Excel.XlSpecialCellsValue.xlNumbers" /><see cref="F:Microsoft.Office.Interop.Excel.XlSpecialCellsValue.xlTextValues" /></param>
+        <param name="Value">如果 <c>Type</c> 为 <see cref="F:Microsoft.Office.Interop.Excel.XlCellType.xlCellTypeConstants" /> 或 <see cref="F:Microsoft.Office.Interop.Excel.XlCellType.xlCellTypeFormulas" />，则此参数用于确定要在结果中包含哪些类型的单元格。 这些值可以一起添加以返回多种类型。 默认情况下，无论是何种类型，都选择所有的常数或公式。 可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlSpecialCellsValue" /> 值之一： 
+ <see cref="F:Microsoft.Office.Interop.Excel.XlSpecialCellsValue.xlErrors" /><see cref="F:Microsoft.Office.Interop.Excel.XlSpecialCellsValue.xlLogical" /><see cref="F:Microsoft.Office.Interop.Excel.XlSpecialCellsValue.xlNumbers" /><see cref="F:Microsoft.Office.Interop.Excel.XlSpecialCellsValue.xlTextValues" /></param>
         <summary>获取一个 <see cref="T:Microsoft.Office.Interop.Excel.Range" /> 对象，该对象表示与指定的类型和值相匹配的所有单元格。</summary>
         <returns>一个 <see cref="T:Microsoft.Office.Interop.Excel.Range" /> 对象，表示与指定的类型和值相匹配的所有单元格。</returns>
         <remarks>
@@ -6326,7 +6434,7 @@
 ## Remarks  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
@@ -6418,11 +6526,17 @@
       </Parameters>
       <Docs>
         <param name="GroupBy">要作为分组依据的字段，是从 1 开始的整数偏移量。</param>
-        <param name="Function">小计函数。  可为下列 <see cref="T:Microsoft.Office.Interop.Excel.XlConsolidationFunction" /> 值之一：<see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlAverage" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlCount" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlCountNums" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlMax" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlMin" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlProduct" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlStDev" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlStDevP" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlSum" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlUnknown" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlVar" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlVarP" /></param>
+        <param name="Function">小计函数。  
+  
+可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlConsolidationFunction" /> 值之一： 
+ <see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlAverage" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlCount" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlCountNums" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlMax" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlMin" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlProduct" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlStDev" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlStDevP" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlSum" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlUnknown" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlVar" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlVarP" /></param>
         <param name="TotalList">一个从 1 开始的字段偏移量数组，指示要将小计添加到的字段。</param>
         <param name="Replace">如果替换现有的小计，则为 <see langword="true" />。 默认值为 <see langword="false" />。</param>
         <param name="PageBreaks">如果在每组后面添加分页符，则为 <see langword="true" />。 默认值为 <see langword="false" />。</param>
-        <param name="SummaryBelowData">放置与小计相关的摘要数据。  可为下列 <see cref="T:Microsoft.Office.Interop.Excel.XlSummaryRow" /> 值之一：<see cref="F:Microsoft.Office.Interop.Excel.XlSummaryRow.xlSummaryAbove" /><see cref="F:Microsoft.Office.Interop.Excel.XlSummaryRow.xlSummaryBelow" />（默认）</param>
+        <param name="SummaryBelowData">放置与小计相关的摘要数据。  
+  
+可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlSummaryRow" /> 值之一： 
+ <see cref="F:Microsoft.Office.Interop.Excel.XlSummaryRow.xlSummaryAbove" /><see cref="F:Microsoft.Office.Interop.Excel.XlSummaryRow.xlSummaryBelow" />（默认值）</param>
         <summary>为 <see cref="T:Microsoft.Office.Tools.Excel.NamedRange" /> 控件创建小计。</summary>
         <returns>To be added.</returns>
         <remarks>
@@ -6431,7 +6545,7 @@
 ## Remarks  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
@@ -6500,7 +6614,7 @@
  使用数据的表执行假设分析通过更改在工作表中，若要查看如何影响其他单元中的值的某些常量值。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
@@ -6607,8 +6721,14 @@
       </Parameters>
       <Docs>
         <param name="Destination">一个 <see cref="T:Microsoft.Office.Interop.Excel.Range" /> 对象，指定 Microsoft Office Excel 将在何处放置结果。 如果范围大于单个单元格，则使用左上角的单元格。</param>
-        <param name="DataType">要拆分成多列的文本的格式。  可为下列 <see cref="T:Microsoft.Office.Interop.Excel.XlTextParsingType" /> 常数之一：<see cref="F:Microsoft.Office.Interop.Excel.XlTextParsingType.xlDelimited" />（默认）  <see cref="F:Microsoft.Office.Interop.Excel.XlTextParsingType.xlFixedWidth" /></param>
-        <param name="TextQualifier">可为下列 <see cref="T:Microsoft.Office.Interop.Excel.XlTextQualifier" /> 值之一：<see cref="F:Microsoft.Office.Interop.Excel.XlTextQualifier.xlTextQualifierDoubleQuote" />（默认）  <see cref="F:Microsoft.Office.Interop.Excel.XlTextQualifier.xlTextQualifierNone" /><see cref="F:Microsoft.Office.Interop.Excel.XlTextQualifier.xlTextQualifierSingleQuote" /></param>
+        <param name="DataType">要拆分成多列的文本的格式。  
+  
+可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlTextParsingType" /> 常量之一： 
+ <see cref="F:Microsoft.Office.Interop.Excel.XlTextParsingType.xlDelimited" />（默认值） 
+ <see cref="F:Microsoft.Office.Interop.Excel.XlTextParsingType.xlFixedWidth" /></param>
+        <param name="TextQualifier">可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlTextQualifier" /> 值之一： 
+ <see cref="F:Microsoft.Office.Interop.Excel.XlTextQualifier.xlTextQualifierDoubleQuote" />（默认值） 
+ <see cref="F:Microsoft.Office.Interop.Excel.XlTextQualifier.xlTextQualifierNone" /><see cref="F:Microsoft.Office.Interop.Excel.XlTextQualifier.xlTextQualifierSingleQuote" /></param>
         <param name="ConsecutiveDelimiter">如果让 Excel 将连续分隔符视为一个分隔符，则为 <see langword="true" />。 默认值为 <see langword="false" />。</param>
         <param name="Tab">如果让 <c>DataType</c> 为 <see cref="F:Microsoft.Office.Interop.Excel.XlTextParsingType.xlDelimited" />，并将制表符用作分隔符，则为 <see langword="true" />。 默认值为 <see langword="false" />。</param>
         <param name="Semicolon">如果让 <c>DataType</c> 为 <see cref="F:Microsoft.Office.Interop.Excel.XlTextParsingType.xlDelimited" />，并将分号用作分隔符，则为 <see langword="true" />。 默认值为 <see langword="false" />。</param>
@@ -6616,7 +6736,16 @@
         <param name="Space">如果让 <c>DataType</c> 为 <see cref="F:Microsoft.Office.Interop.Excel.XlTextParsingType.xlDelimited" />，并将空格字符用作分隔符，则为 <see langword="true" />。 默认值为 <see langword="false" />。</param>
         <param name="Other">如果让 <c>DataType</c> 为 <see cref="F:Microsoft.Office.Interop.Excel.XlTextParsingType.xlDelimited" />，并且将 <c>OtherChar</c> 参数指定的字符用作分隔符，则为 <see langword="true" />。 默认值为 <see langword="false" />。</param>
         <param name="OtherChar">当 <c>Other</c> 为 <see langword="true" /> 时的分隔符字符。 如果指定了多个字符，则只使用该字符串的第一个字符；忽略其余字符。</param>
-        <param name="FieldInfo">一个数组，包含各个数据列的分析信息。 解释取决于 <c>DataType</c> 的值。 当对数据进行分隔时，此参数是一个由两元素数组组成的数组，每个两元素数组都指定特定列的转换选项。 第一个元素是列号（从 1 开始），第二个元素是指定如何分析列的 <see cref="T:Microsoft.Office.Interop.Excel.XlColumnDataType" /> 常量之一。  可为下列 <see cref="T:Microsoft.Office.Interop.Excel.XlColumnDataType" /> 值之一：<see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlGeneralFormat" /><see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlTextFormat" /><see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlMDYFormat" /><see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlDMYFormat" /><see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlYMDFormat" /><see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlMYDFormat" /><see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlDYMFormat" /><see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlYDMFormat" /><see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlEMDFormat" /><see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlSkipColumn" />  仅在已安装和选择繁体中文支持时，才可使用 <see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlEMDFormat" />。 <see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlEMDFormat" /> 指定要使用的繁体中文纪元日期。  列说明符可以采用任何顺序。 如果对于输入数据中的特定列，给定的列说明符不存在，则用 <see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlGeneralFormat" /> 设置对列进行分析。  如果源数据具有固定宽度的列，则每个两元素数组中的第一个元素都指定该列中的起始字符位置（以整数形式指定；0（零）是第一个字符）。 两元素数组的第二个元素将该列的分析选项指定为从 1 至 9 的数字，如上面列出的那样。</param>
+        <param name="FieldInfo">一个数组，包含各个数据列的分析信息。 解释取决于 <c>DataType</c> 的值。 当对数据进行分隔时，此参数是一个由两元素数组组成的数组，每个两元素数组都指定特定列的转换选项。 第一个元素是列号（从 1 开始），第二个元素是指定如何分析列的 <see cref="T:Microsoft.Office.Interop.Excel.XlColumnDataType" /> 常量之一。  
+  
+可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlColumnDataType" /> 值之一： 
+ <see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlGeneralFormat" /><see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlTextFormat" /><see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlMDYFormat" /><see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlDMYFormat" /><see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlYMDFormat" /><see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlMYDFormat" /><see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlDYMFormat" /><see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlYDMFormat" /><see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlEMDFormat" /><see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlSkipColumn" />  
+  
+仅当已安装和选择繁体中文支持时，才会用到 <see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlEMDFormat" />。 <see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlEMDFormat" /> 指定要使用的繁体中文纪元日期。  
+  
+列说明符可以采用任何顺序。 如果对于输入数据中的特定列，给定的列说明符不存在，则用 <see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlGeneralFormat" /> 设置对列进行分析。  
+  
+如果源数据具有固定宽度的列，则每个两元素数组中的第一个元素都指定该列中的起始字符位置（以整数形式指定；0（零）是第一个字符）。 两元素数组的第二个元素将该列的分析选项指定为从 1 至 9 的数字，如上面列出的那样。</param>
         <param name="DecimalSeparator">Excel 用于识别数字的小数点分隔符。 默认设置是系统设置。</param>
         <param name="ThousandsSeparator">Excel 用于识别数字的千位分隔符。 默认设置是系统设置。</param>
         <param name="TrailingMinusNumbers">以负号开头的数字。</param>
@@ -6637,7 +6766,7 @@
 |段|逗号|段|空格|123 123.45|123,123.45 （数值）|  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
@@ -6787,7 +6916,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 必须使用工作表的启动事件处理程序将验证添加到命名范围。 启动事件处理程序有关的详细信息，请参阅[Events in Office Projects](/visualstudio/vsto/events-in-office-projects.md)。  
+ 必须使用工作表的启动事件处理程序将验证添加到命名范围。 启动事件处理程序有关的详细信息，请参阅[Events in Office Projects](/visualstudio/vsto/events-in-office-projects)。  
   
    
   
@@ -6831,7 +6960,7 @@
 |`_arg1`|<xref:Microsoft.Office.Tools.Excel.NamedRange> 控件的值。 此参数只用于<xref:Microsoft.Office.Tools.Excel.NamedRange.set_Value%2A>访问器。|  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   

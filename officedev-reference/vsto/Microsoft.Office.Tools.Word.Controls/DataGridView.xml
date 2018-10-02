@@ -1,11 +1,11 @@
 <Type Name="DataGridView" FullName="Microsoft.Office.Tools.Word.Controls.DataGridView">
   <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="e3f6cc9d8cdbd2e044c078e380f42a88191de21d" />
-    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.openlocfilehash" Value="f595fcf76a36b3c6d72667bd00974a096ea6093f" />
+    <Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" />
     <Meta Name="ms.translationtype" Value="HT" />
     <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
-    <Meta Name="ms.locfileid" Value="29433244" />
+    <Meta Name="ms.lasthandoff" Value="09/19/2018" />
+    <Meta Name="ms.locfileid" Value="46459726" />
   </Metadata>
   <TypeSignature Language="C#" Value="public class DataGridView : System.Windows.Forms.DataGridView" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataGridView extends System.Windows.Forms.DataGridView" />
@@ -38,9 +38,9 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Word.Controls.DataGridView?displayProperty=fullName>不同于<xref:System.Windows.Forms.DataGridView?displayProperty=fullName>。 <xref:Microsoft.Office.Tools.Word.Controls.DataGridView?displayProperty=fullName>具有支持可将其添加到 Word 文档并，使其具有更多的方法和属性的其他成员。  
+ <xref:Microsoft.Office.Tools.Word.Controls.DataGridView?displayProperty=fullName>不同于<xref:System.Windows.Forms.DataGridView?displayProperty=fullName>。 <xref:Microsoft.Office.Tools.Word.Controls.DataGridView?displayProperty=fullName>具有其他成员，使其能够添加到 Word 文档并，为其提供的其他方法和属性。  
   
- 不使用构造函数创建新<xref:Microsoft.Office.Tools.Word.Controls.DataGridView>。 使用<xref:Microsoft.Office.Tools.Word.ControlExtensions.AddDataGridView%2A>方法添加新<xref:Microsoft.Office.Tools.Word.Controls.DataGridView>到文档。  
+ 不要使用构造函数来创建一个新<xref:Microsoft.Office.Tools.Word.Controls.DataGridView>。 使用<xref:Microsoft.Office.Tools.Word.ControlExtensions.AddDataGridView%2A>方法将添加一个新<xref:Microsoft.Office.Tools.Word.Controls.DataGridView>到文档。  
   
  ]]></format>
     </remarks>
@@ -217,7 +217,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取 <see cref="T:Microsoft.Office.Tools.Word.Controls.DataGridView" /> 的下边缘与该文档的上边缘之间的距离（以磅为单位）。</summary>
-        <value>以磅为单位，底部边缘之间的距离<see cref="T:Microsoft.Office.Tools.Word.Controls.DataGridView" />文档的上边缘。</value>
+        <value>以磅为单位的下边缘之间的距离<see cref="T:Microsoft.Office.Tools.Word.Controls.DataGridView" />和文档的上边缘。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -254,7 +254,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法仅应该用于<xref:Microsoft.Office.Tools.Word.Controls.DataGridView>，在运行时以编程方式创建。 如果在调用此方法引发异常<xref:Microsoft.Office.Tools.Word.Controls.DataGridView>，它在设计时添加到文档。  
+ 此方法只应该用于<xref:Microsoft.Office.Tools.Word.Controls.DataGridView>，在运行时以编程方式创建。 如果在调用此方法引发异常<xref:Microsoft.Office.Tools.Word.Controls.DataGridView>，在设计时添加到文档。  
   
    
   
@@ -348,7 +348,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 对所做更改<xref:Microsoft.Office.Tools.Word.Controls.DataGridView.Height%2A>和<xref:Microsoft.Office.Tools.Word.Controls.DataGridView.Top%2A>属性值将导致<xref:Microsoft.Office.Tools.Word.Controls.DataGridView.Bottom%2A>属性值<xref:Microsoft.Office.Tools.Word.Controls.DataGridView>更改。  
+ 对所做更改<xref:Microsoft.Office.Tools.Word.Controls.DataGridView.Height%2A>并<xref:Microsoft.Office.Tools.Word.Controls.DataGridView.Top%2A>属性值将导致<xref:Microsoft.Office.Tools.Word.Controls.DataGridView.Bottom%2A>属性值为<xref:Microsoft.Office.Tools.Word.Controls.DataGridView>更改。  
   
  <xref:Microsoft.Office.Tools.Word.Controls.DataGridView.Height%2A?displayProperty=fullName>属性使用点，而<xref:System.Windows.Forms.Control.Height%2A?displayProperty=fullName>属性使用像素值。  
   
@@ -408,9 +408,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Interop.Word.InlineShape>属性使您能够获得文档上控件的确切位置。  
+ <xref:Microsoft.Office.Interop.Word.InlineShape>属性使您能够获取该文档上的控件的准确位置。  
   
- 如果该控件的换行样式未设置为**与文本对齐**、<xref:Microsoft.Office.Interop.Word.InlineShape>属性返回`null`。  
+ 如果该控件的换行样式未设置为**与文本对齐**，则<xref:Microsoft.Office.Interop.Word.InlineShape>属性返回`null`。  
   
  ]]></format>
         </remarks>
@@ -435,14 +435,14 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置 <see cref="T:Microsoft.Office.Tools.Word.Controls.DataGridView" /> 的左边缘与该文档的左边缘之间的距离（以磅为单位）。</summary>
-        <value>以磅为单位的左边缘之间的距离<see cref="T:Microsoft.Office.Tools.Word.Controls.DataGridView" />和文档的左边的缘。</value>
+        <value>以磅为单位，左边缘之间的距离<see cref="T:Microsoft.Office.Tools.Word.Controls.DataGridView" />和文档的左边的缘。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
  <xref:Microsoft.Office.Tools.Word.Controls.DataGridView.Left%2A?displayProperty=fullName>属性使用点，而<xref:System.Windows.Forms.Control.Left%2A?displayProperty=fullName>属性使用像素值。  
   
- 你只能使用<xref:Microsoft.Office.Tools.Word.Controls.DataGridView.Left%2A?displayProperty=fullName>属性<xref:Microsoft.Office.Tools.Word.Controls.DataGridView>不与文本对齐的控件。 有关详细信息，请参阅[在运行时向 Office 文档添加控件](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time.md)。  
+ 您只能使用<xref:Microsoft.Office.Tools.Word.Controls.DataGridView.Left%2A?displayProperty=fullName>属性的<xref:Microsoft.Office.Tools.Word.Controls.DataGridView>不是与文本对齐的控件。 有关详细信息，请参阅 [在运行时向 Office 文档添加控件](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。  
   
    
   
@@ -592,7 +592,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法不应使用，不支持。 有关详细信息，请参阅[限制的 Windows 窗体控件 Office 文档上](/visualstudio/vsto/limitations-of-windows-forms-controls-on-office-documents.md)。  
+ 此方法不应使用和不受支持。 有关详细信息，请参阅[Limitations of Windows Forms Controls on Office Documents](/visualstudio/vsto/limitations-of-windows-forms-controls-on-office-documents)。  
   
  ]]></format>
         </remarks>
@@ -622,9 +622,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Interop.Word.Shape>属性使您可以获得文档上控件的确切位置。  
+ <xref:Microsoft.Office.Interop.Word.Shape>属性使您可以获得该文档上的控件的准确位置。  
   
- 如果该控件的换行样式设置为**与文本对齐**、<xref:Microsoft.Office.Interop.Word.Shape>属性返回`null`。  
+ 如果该控件的换行样式设置为**与文本对齐**，则<xref:Microsoft.Office.Interop.Word.Shape>属性返回`null`。  
   
  ]]></format>
         </remarks>
@@ -724,14 +724,14 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置 <see cref="T:Microsoft.Office.Tools.Word.Controls.DataGridView" /> 的上边缘与该文档的上边缘之间的距离（以磅为单位）。</summary>
-        <value>以磅为单位的上边缘之间的距离<see cref="T:Microsoft.Office.Tools.Word.Controls.DataGridView" />文档的上边缘。</value>
+        <value>以磅为单位的上边缘之间的距离<see cref="T:Microsoft.Office.Tools.Word.Controls.DataGridView" />和文档的上边缘。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
  <xref:Microsoft.Office.Tools.Word.Controls.DataGridView.Top%2A?displayProperty=fullName>属性使用点，而<xref:System.Windows.Forms.Control.Top%2A?displayProperty=fullName>属性使用像素值。  
   
- 你只能使用<xref:Microsoft.Office.Tools.Word.Controls.DataGridView.Top%2A>属性<xref:Microsoft.Office.Tools.Word.Controls.DataGridView>不与文本对齐的控件。 有关详细信息，请参阅[在运行时向 Office 文档添加控件](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time.md)。  
+ 您只能使用<xref:Microsoft.Office.Tools.Word.Controls.DataGridView.Top%2A>属性的<xref:Microsoft.Office.Tools.Word.Controls.DataGridView>不是与文本对齐的控件。 有关详细信息，请参阅 [在运行时向 Office 文档添加控件](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。  
   
    
   
@@ -819,7 +819,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 对所做更改<xref:Microsoft.Office.Tools.Word.Controls.DataGridView.Width%2A>和 left 的属性值将导致<xref:Microsoft.Office.Tools.Word.Controls.DataGridView.Right%2A>属性值<xref:Microsoft.Office.Tools.Word.Controls.DataGridView>更改。  
+ 对所做更改<xref:Microsoft.Office.Tools.Word.Controls.DataGridView.Width%2A>和 left 的属性值将导致<xref:Microsoft.Office.Tools.Word.Controls.DataGridView.Right%2A>属性值为<xref:Microsoft.Office.Tools.Word.Controls.DataGridView>更改。  
   
  <xref:Microsoft.Office.Tools.Word.Controls.DataGridView.Width%2A?displayProperty=fullName>属性使用点，而<xref:System.Windows.Forms.Control.Width%2A?displayProperty=fullName>属性使用像素值。  
   

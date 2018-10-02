@@ -1,11 +1,11 @@
 <Type Name="IDeploymentConflict" FullName="Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflict">
   <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="a869340a61c731ac8d7a68446be935118efcd2b4" />
-    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.openlocfilehash" Value="63a0eb210cb8da40f2a0101661cf2d4276f23543" />
+    <Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" />
     <Meta Name="ms.translationtype" Value="HT" />
     <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
-    <Meta Name="ms.locfileid" Value="29407257" />
+    <Meta Name="ms.lasthandoff" Value="09/19/2018" />
+    <Meta Name="ms.locfileid" Value="46459414" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface IDeploymentConflict : System.ComponentModel.INotifyPropertyChanged" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDeploymentConflict implements class System.ComponentModel.INotifyPropertyChanged" />
@@ -25,7 +25,7 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要创建一个新<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflict>对象以处理部署冲突，请使用<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflictCollection.Add%2A?displayProperty=fullName>方法。 有关示例，请参阅[如何： 处理部署冲突](/visualstudio/sharepoint/how-to-handle-deployment-conflicts.md)。  
+ 若要创建一个新<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflict>对象以处理部署冲突，请使用<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflictCollection.Add%2A?displayProperty=fullName>方法。 有关示例，请参阅[如何： 处理部署冲突](/visualstudio/sharepoint/how-to-handle-deployment-conflicts)。  
   
  ]]></format>
     </remarks>
@@ -81,13 +81,12 @@
       </ReturnValue>
       <Docs>
         <summary>指示执行 <see cref="M:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflict.Resolve" /> 方法之前是否提示用户。</summary>
-        <value>
-          如果提示用户，则为 <see langword="True" />；否则为 <see langword="false" />。</value>
+        <value>如果提示用户，则为 <see langword="True" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 更改此属性会通知通过<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.ProjectItemPropertyChanged>事件  
+ 此属性更改的通知通过<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.ProjectItemPropertyChanged>事件  
   
  ]]></format>
         </remarks>
@@ -108,13 +107,12 @@
       <Parameters />
       <Docs>
         <summary>如果可能，将解决当前实例所表示的部署冲突。</summary>
-        <returns>
-          如果解决成功，则为 <see langword="True " />；否则为 <see langword="false" />。</returns>
+        <returns>如果解决成功，则为 <see langword="True " />；否则为 <see langword="false" />。</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 在调用此方法时，Visual Studio 将执行传递给该方法`resolve`参数<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflictCollection.Add%2A>方法。  
+ 当调用此方法时，Visual Studio 执行传递给方法`resolve`参数的<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflictCollection.Add%2A>方法。  
   
  ]]></format>
         </remarks>

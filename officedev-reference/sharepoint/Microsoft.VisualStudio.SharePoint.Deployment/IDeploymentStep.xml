@@ -1,11 +1,11 @@
 <Type Name="IDeploymentStep" FullName="Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep">
   <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="2b7a2f72c390846b9d38d0f5a670f7cc77d76ff1" />
-    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.openlocfilehash" Value="2cb641c9a5069e77e56e6000b126ffaa814fdd27" />
+    <Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" />
     <Meta Name="ms.translationtype" Value="HT" />
     <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
-    <Meta Name="ms.locfileid" Value="29410325" />
+    <Meta Name="ms.lasthandoff" Value="09/19/2018" />
+    <Meta Name="ms.locfileid" Value="46457179" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface IDeploymentStep" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDeploymentStep" />
@@ -21,11 +21,11 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 实现<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep>接口，以创建 SharePoint 项目自定义部署步骤。 部署 SharePoint 项目时，[!INCLUDE[vs_current_short](~/includes/vs-current-short-md.md)] 会执行一系列部署步骤。 Visual Studio 包含用于很多任务的内置部署步骤，如收回和添加解决方案。 但是，还可以创建自己的部署步骤。 有关详细信息，请参阅[扩展 SharePoint 打包和部署](/visualstudio/sharepoint/extending-sharepoint-packaging-and-deployment.md)和[演练： 为 SharePoint 项目创建自定义部署步骤](/visualstudio/sharepoint/walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects.md)。  
+ 实现<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep>接口，以创建 SharePoint 项目自定义部署步骤。 部署 SharePoint 项目时，[!INCLUDE[vs_current_short](~/includes/vs-current-short-md.md)] 会执行一系列部署步骤。 Visual Studio 包含用于很多任务的内置部署步骤，如收回和添加解决方案。 但是，还可以创建自己的部署步骤。 有关详细信息，请参阅[扩展 SharePoint 打包和部署](/visualstudio/sharepoint/extending-sharepoint-packaging-and-deployment)并[演练： 为 SharePoint 项目创建自定义部署步骤](/visualstudio/sharepoint/walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects)。  
   
- 部署步骤是单一实例是一个实例化一次，每个 Visual Studio 实例。  
+ 部署步骤都一个实例化一次，每个 Visual Studio 实例的单一实例。  
   
- 实现此接口的类必须包括<xref:System.ComponentModel.Composition.ExportAttribute?displayProperty=fullName>和<xref:Microsoft.VisualStudio.SharePoint.Deployment.DeploymentStepAttribute>项目系统发现。  
+ 实现此接口的类必须包括<xref:System.ComponentModel.Composition.ExportAttribute?displayProperty=fullName>和<xref:Microsoft.VisualStudio.SharePoint.Deployment.DeploymentStepAttribute>由项目系统发现。  
   
  ]]></format>
     </remarks>
@@ -49,19 +49,18 @@
       <Docs>
         <param name="context">一个提供可用于确定在其中执行部署步骤的上下文的对象。</param>
         <summary>确定是否可在当前上下文中执行部署步骤。</summary>
-        <returns>
-          如果可执行部署步骤，则为 <see langword="true" />，否则为 <see langword="false" />。</returns>
+        <returns>如果可执行部署步骤，则为 <see langword="true" />，否则为 <see langword="false" />。</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用收回 SharePoint 项目时，此方法从 UI 线程中执行**收回**选项**生成**Visual Studio 中的菜单。 从后台线程在以下情况下执行此方法：  
+ 使用收回 SharePoint 项目时此方法从 UI 线程执行**Retract**选项卡上**生成**Visual Studio 菜单中的。 从后台线程在以下情况下执行此方法：  
   
--   当调试后自动收回项目。 发生这种情况时**调试后自动收回**属性**SharePoint**选择的项目属性的选项卡。  
+-   当一个项目调试后自动收回。 发生这种情况时**调试后自动收回**上的属性**SharePoint**选择的项目属性的选项卡。  
   
--   当部署项目。  
+-   当部署一个项目。  
   
- Visual Studio 对象模型中的一些 Api 可能无法按预期从后台线程。 如果你需要调用这些 Api 从之一<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep.CanExecute%2A>方法，可以通过使用对 UI 线程的调用封送<xref:System.Threading.SynchronizationContext>对象。 实现中<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep.Initialize%2A>方法，请使用<xref:System.Threading.SynchronizationContext.Current%2A>属性来获取<xref:System.Threading.SynchronizationContext>的 UI 线程。 然后，在你实现<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep.CanExecute%2A>方法，请使用<xref:System.Threading.SynchronizationContext.Post%2A>或<xref:System.Threading.SynchronizationContext.Send%2A>方法<xref:System.Threading.SynchronizationContext>要对 UI 线程的调用封送对象。  
+ Visual Studio 对象模型中的某些 Api 可能无法按预期的方式从后台线程。 如果需要调用这些 Api 从之一<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep.CanExecute%2A>方法，您可以通过使用封送对 UI 线程的调用<xref:System.Threading.SynchronizationContext>对象。 中的实现<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep.Initialize%2A>方法，请使用<xref:System.Threading.SynchronizationContext.Current%2A>属性获取<xref:System.Threading.SynchronizationContext>的 UI 线程。 然后，在你的实现<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep.CanExecute%2A>方法，请使用<xref:System.Threading.SynchronizationContext.Post%2A>或<xref:System.Threading.SynchronizationContext.Send%2A>方法的<xref:System.Threading.SynchronizationContext>对象封送对 UI 线程的调用。  
   
  ]]></format>
         </remarks>
@@ -91,13 +90,13 @@
 ## Remarks  
  在此方法中实现你的部署步骤逻辑。  
   
- 使用收回 SharePoint 项目时，此方法从 UI 线程中执行**收回**选项**生成**Visual Studio 中的菜单。 从后台线程在以下情况下执行此方法：  
+ 使用收回 SharePoint 项目时此方法从 UI 线程执行**Retract**选项卡上**生成**Visual Studio 菜单中的。 从后台线程在以下情况下执行此方法：  
   
--   当调试后自动收回项目。 发生这种情况时**调试后自动收回**属性**SharePoint**选择的项目属性的选项卡。  
+-   当一个项目调试后自动收回。 发生这种情况时**调试后自动收回**上的属性**SharePoint**选择的项目属性的选项卡。  
   
--   当部署项目。  
+-   当部署一个项目。  
   
- Visual Studio 对象模型中的一些 Api 可能无法按预期从后台线程。 如果你需要调用这些 Api 从之一<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep.Execute%2A>方法，可以通过使用对 UI 线程的调用封送<xref:System.Threading.SynchronizationContext>对象。 实现中<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep.Initialize%2A>方法，请使用<xref:System.Threading.SynchronizationContext.Current%2A>属性来获取<xref:System.Threading.SynchronizationContext>的 UI 线程。 然后，在你实现<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep.Execute%2A>方法，请使用<xref:System.Threading.SynchronizationContext.Post%2A>或<xref:System.Threading.SynchronizationContext.Send%2A>方法<xref:System.Threading.SynchronizationContext>要对 UI 线程的调用封送对象。  
+ Visual Studio 对象模型中的某些 Api 可能无法按预期的方式从后台线程。 如果需要调用这些 Api 从之一<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep.Execute%2A>方法，您可以通过使用封送对 UI 线程的调用<xref:System.Threading.SynchronizationContext>对象。 中的实现<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep.Initialize%2A>方法，请使用<xref:System.Threading.SynchronizationContext.Current%2A>属性获取<xref:System.Threading.SynchronizationContext>的 UI 线程。 然后，在你的实现<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep.Execute%2A>方法，请使用<xref:System.Threading.SynchronizationContext.Post%2A>或<xref:System.Threading.SynchronizationContext.Send%2A>方法的<xref:System.Threading.SynchronizationContext>对象封送对 UI 线程的调用。  
   
  ]]></format>
         </remarks>
@@ -125,11 +124,11 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 当首次初始化了部署步骤，visual Studio 会调用此方法。 发生这种情况仅一次每个 Visual Studio 实例。  
+ 首次初始化部署步骤时，visual Studio 将调用此方法。 发生这种情况仅一次每个 Visual Studio 实例。  
   
- 实现中<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep.Initialize%2A>，设置属性的`stepInfo`参数来指定名称、 说明和部署步骤的其他详细信息。  
+ 中的实现<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep.Initialize%2A>，设置属性的`stepInfo`参数来指定名称、 说明和部署步骤的其他详细信息。  
   
- 此方法始终从 UI 线程执行。  
+ 此方法始终执行从 UI 线程。  
   
  ]]></format>
         </remarks>
