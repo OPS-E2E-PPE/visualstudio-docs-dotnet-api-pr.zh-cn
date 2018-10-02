@@ -1,0 +1,2 @@
+> [!NOTE]
+>  此接口由 Visual Studio Tools for Office Runtime 实现。 不应在代码中实现此接口。 有关更多信息，请参见 [Visual Studio Tools for Office Runtime Overview](/visualstudio/vsto/visual-studio-tools-for-office-runtime-overview)。

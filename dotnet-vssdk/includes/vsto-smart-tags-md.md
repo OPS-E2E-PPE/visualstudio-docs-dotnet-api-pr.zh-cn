@@ -1,0 +1,1 @@
+此类型或成员只适合在 2007 Microsoft Office system 项目中使用。 Office 2010 中已弃用智能标记。
