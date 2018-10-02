@@ -1,0 +1,1 @@
+<span data-ttu-id="77880-101">Visual Studio SDK</span><span class="sxs-lookup"><span data-stu-id="77880-101">Visual Studio SDK</span></span>

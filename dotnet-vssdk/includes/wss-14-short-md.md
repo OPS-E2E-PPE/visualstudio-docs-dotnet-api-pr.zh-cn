@@ -1,0 +1,1 @@
+ <span data-ttu-id="5bf2a-101">SharePoint Foundation 2010</span><span class="sxs-lookup"><span data-stu-id="5bf2a-101">SharePoint Foundation 2010</span></span> 

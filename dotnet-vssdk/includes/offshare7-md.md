@@ -1,0 +1,1 @@
+<span data-ttu-id="c571e-101">Microsoft Office SharePoint Server 2007</span><span class="sxs-lookup"><span data-stu-id="c571e-101">Microsoft Office SharePoint Server 2007</span></span>

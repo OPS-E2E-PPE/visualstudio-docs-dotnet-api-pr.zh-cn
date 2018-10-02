@@ -1,0 +1,1 @@
+<span data-ttu-id="f625a-101">x64</span><span class="sxs-lookup"><span data-stu-id="f625a-101">x64</span></span>

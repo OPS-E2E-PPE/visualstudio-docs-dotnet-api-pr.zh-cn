@@ -1,0 +1,1 @@
+ <span data-ttu-id="2a0b7-101">SharePoint Server 2010</span><span class="sxs-lookup"><span data-stu-id="2a0b7-101">SharePoint Server 2010</span></span> 

@@ -1,0 +1,1 @@
+ <span data-ttu-id="0d97c-101">Visual Studio Tools for Office Runtime</span><span class="sxs-lookup"><span data-stu-id="0d97c-101">Visual Studio Tools for Office runtime</span></span> 

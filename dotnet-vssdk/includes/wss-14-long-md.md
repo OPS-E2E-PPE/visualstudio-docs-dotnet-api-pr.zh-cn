@@ -1,0 +1,1 @@
+ <span data-ttu-id="ecc24-101">Microsoft SharePoint Foundation 2010</span><span class="sxs-lookup"><span data-stu-id="ecc24-101">Microsoft SharePoint Foundation 2010</span></span> 

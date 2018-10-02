@@ -1,0 +1,1 @@
+<span data-ttu-id="f4b05-101">2010 年 5 月</span><span class="sxs-lookup"><span data-stu-id="f4b05-101">May 2010</span></span>
