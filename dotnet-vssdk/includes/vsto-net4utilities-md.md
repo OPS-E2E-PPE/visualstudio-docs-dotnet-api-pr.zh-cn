@@ -1,0 +1,1 @@
+此类型仅用于面向 .NET Framework 4 或更高版本的 Office 项目。 定义此类型的程序集不是 Visual Studio Tools for Office Runtime 的一部分。 你必须与解决方案一起部署此程序集。 有关详细信息，请参阅 [Visual Studio Tools for Office Runtime 中的程序集](/visualstudio/vsto/assemblies-in-the-visual-studio-tools-for-office-runtime)。

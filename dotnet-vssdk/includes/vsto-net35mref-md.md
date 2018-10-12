@@ -1,0 +1,1 @@
+本文档介绍面向 .NET Framework 4 或更高版本的 Office 项目中所用的此类型的版本。 在面向 .NET Framework 3.5 的项目中，此类型可能具有不同的成员，因此本文档为此类型提供的代码示例可能并不适用。 有关在面向 .NET Framework 3.5 的项目中使用此类型的文档，请参阅 Visual Studio 2008 文档中的以下参考部分：[http://go.microsoft.com/fwlink/?LinkId=160658](http://go.microsoft.com/fwlink/?LinkId=160658)。
