@@ -1,11 +1,11 @@
 <Type Name="WorksheetBase" FullName="Microsoft.Office.Tools.Excel.WorksheetBase">
   <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="58c064d58f5c7d4d6282af02a839806546f0d0c3" />
-    <Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" />
+    <Meta Name="ms.openlocfilehash" Value="2aca535c24a4ab50f64fbb6047ec5d4355e9998a" />
+    <Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" />
     <Meta Name="ms.translationtype" Value="HT" />
     <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="02/21/2018" />
-    <Meta Name="ms.locfileid" Value="29436403" />
+    <Meta Name="ms.lasthandoff" Value="09/19/2018" />
+    <Meta Name="ms.locfileid" Value="46459856" />
   </Metadata>
   <TypeSignature Language="C#" Value="public abstract class WorksheetBase : IDisposable, Microsoft.Office.Tools.Excel.IWorksheetExtension, System.ComponentModel.IComponent, System.ComponentModel.ISupportInitialize, System.Windows.Forms.IBindableComponent" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit WorksheetBase extends System.Object implements class Microsoft.Office.Tools.EntryPoint, class Microsoft.Office.Tools.Excel.IWorksheetExtension, class Microsoft.Office.Tools.IExtension, class System.ComponentModel.IComponent, class System.ComponentModel.ISupportInitialize, class System.IDisposable, class System.Windows.Forms.IBindableComponent" />
@@ -40,29 +40,29 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>提供 Microsoft Office Excel 的文档级项目中的 <c>Sheet</c>n 类的基类。</summary>
+    <summary>提供 Microsoft Office Excel 的文档级项目中 Sheetn 类的基类<c></c>。</summary>
     <remarks>
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.WorksheetBase>类是适用于基`Sheet` * n *通过使用 Visual Studio 创建的文档级 Excel 项目中的类。 使用`Sheet` * n *类以编程方式访问你的项目中的工作表。 <xref:Microsoft.Office.Tools.Excel.WorksheetBase>类是*主机项*表示文档级项目中的工作表。 有关详细信息，请参阅[主机项和主机控件概述](/visualstudio/vsto/host-items-and-host-controls-overview.md)和[工作表主机项](/visualstudio/vsto/worksheet-host-item.md)。  
+ <xref:Microsoft.Office.Tools.Excel.WorksheetBase>类是类的基类`Sheet` *n*使用 Visual Studio 创建的文档级 Excel 项目中的类。 使用`Sheet` *n*类以编程方式访问你的项目中的工作表。 <xref:Microsoft.Office.Tools.Excel.WorksheetBase>类是*宿主项*，表示文档级项目中的工作表。 有关详细信息，请参阅[主机项和主机控件概述](/visualstudio/vsto/host-items-and-host-controls-overview)并[工作表主机项](/visualstudio/vsto/worksheet-host-item)。  
   
- <xref:Microsoft.Office.Tools.Excel.WorksheetBase>类提供相同的成员<xref:Microsoft.Office.Interop.Excel.Worksheet?displayProperty=fullName>中 Excel 主互操作程序集，但它的类添加以下功能：  
+ <xref:Microsoft.Office.Tools.Excel.WorksheetBase>类提供了相同的成员<xref:Microsoft.Office.Interop.Excel.Worksheet?displayProperty=fullName>中 Excel 主互操作程序集，但它的类添加了以下功能：  
   
--   <xref:Microsoft.Office.Tools.Excel.WorksheetBase.Controls%2A> 属性。 将托管的控件添加到 Excel 工作表，或删除控件，在运行时，请使用此属性。  
+-   <xref:Microsoft.Office.Tools.Excel.WorksheetBase.Controls%2A> 属性。 若要将托管的控件添加到 Excel 工作表，或删除控件，在运行时，请使用此属性。  
   
 -   <xref:Microsoft.Office.Tools.Excel.WorksheetBase.InnerObject%2A> 属性。 使用此属性来获取基础<xref:Microsoft.Office.Interop.Excel.Worksheet?displayProperty=fullName>工作表主机项的对象。  
   
--   <xref:Microsoft.Office.Tools.Excel.WorksheetBase.GetAutomationObject%2A> 方法。 重写此方法以公开你的项目向工作表中的 VBA 代码中的类。  
+-   <xref:Microsoft.Office.Tools.Excel.WorksheetBase.GetAutomationObject%2A> 方法。 重写此方法以将向工作表中的 VBA 代码项目中的类公开。  
   
--   文档级事件，如<xref:Microsoft.Office.Tools.Excel.WorksheetBase.ActivateEvent>和<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Change>，仅在 Excel 对象模型中的应用程序级别提供。 也就是说，在 Excel 对象模型中，这些事件中定义<xref:Microsoft.Office.Interop.Excel.Application?displayProperty=fullName>类而不是<xref:Microsoft.Office.Interop.Excel.Worksheet?displayProperty=fullName>类。  
+-   文档级事件，如<xref:Microsoft.Office.Tools.Excel.WorksheetBase.ActivateEvent>和<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Change>，仅在 Excel 对象模型中的应用程序级别提供。 也就是说，在 Excel 对象模型中，这些事件定义中<xref:Microsoft.Office.Interop.Excel.Application?displayProperty=fullName>类而不是<xref:Microsoft.Office.Interop.Excel.Worksheet?displayProperty=fullName>类。  
   
-## <a name="creating-worksheet-host-items"></a>创建工作表宿主项  
+## <a name="creating-worksheet-host-items"></a>创建工作表主机项  
  无法创建<xref:Microsoft.Office.Tools.Excel.WorksheetBase>以编程方式在 Office 项目中的对象。  
   
- 在文档级项目中， `Sheet` * n *类 (从其派生<xref:Microsoft.Office.Tools.Excel.WorksheetBase>) 自动实例化[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]当最终用户打开工作簿。 有关详细信息，请参阅[文档级自定义项编程](/visualstudio/vsto/programming-document-level-customizations.md)。  
+ 在文档级项目中， `Sheet` *n*类 (从其派生<xref:Microsoft.Office.Tools.Excel.WorksheetBase>) 自动实例化[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]当最终用户打开工作簿。 有关详细信息，请参阅[Programming Document-level Customizations](/visualstudio/vsto/programming-document-level-customizations)。  
   
- 在应用程序级项目中，你可以创建工作表主机项以编程方式使用`GetVstoObject`方法。 创建工作表主机项是<xref:Microsoft.Office.Tools.Excel.Worksheet?displayProperty=fullName>对象，而不是<xref:Microsoft.Office.Tools.Excel.WorksheetBase>对象。 有关详细信息，请参阅[扩展 Word 文档和 Excel VSTO 外接程序在运行时中的工作簿](/visualstudio/vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)。  
+ 在应用程序级项目中，您可以创建工作表主机项以编程方式使用`GetVstoObject`方法。 创建工作表宿主项这<xref:Microsoft.Office.Tools.Excel.Worksheet?displayProperty=fullName>对象，而非<xref:Microsoft.Office.Tools.Excel.WorksheetBase>对象。 有关更多信息，请参见 [在运行时在 VSTO 外接程序中扩展 Word 文档和 Excel 工作簿](/visualstudio/vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time)。  
   
 ## <a name="usage"></a>用法  
  [!INCLUDE[vsto_net4utilities](~/includes/vsto-net4utilities-md.md)]  
@@ -177,7 +177,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例演示的处理程序<xref:Microsoft.Office.Tools.Excel.WorksheetBase.ActivateEvent>显示工作表的名称时，它将激活的事件。  
+ 下面的代码示例演示了一个处理程序<xref:Microsoft.Office.Tools.Excel.WorksheetBase.ActivateEvent>激活时显示的工作表名称的事件。  
   
  此示例适用于文档级自定义。  
   
@@ -207,7 +207,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Application%2A>重新排列应用程序窗口的属性。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Application%2A>属性来重新排列应用程序窗口。  
   
  此示例适用于文档级自定义。  
   
@@ -264,12 +264,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要以编程方式启用筛选，请使用<xref:Microsoft.Office.Interop.Excel.Range.AutoFilter%2A>方法<xref:Microsoft.Office.Interop.Excel.Range>对象或<xref:Microsoft.Office.Tools.Excel.NamedRange.AutoFilter%2A>方法<xref:Microsoft.Office.Tools.Excel.NamedRange>对象。  
+ 若要以编程方式启用筛选，请使用<xref:Microsoft.Office.Interop.Excel.Range.AutoFilter%2A>方法<xref:Microsoft.Office.Interop.Excel.Range>对象或<xref:Microsoft.Office.Tools.Excel.NamedRange.AutoFilter%2A>方法的<xref:Microsoft.Office.Tools.Excel.NamedRange>对象。  
   
    
   
 ## Examples  
- 下面的代码示例创建水果中的筛选的列表<xref:Microsoft.Office.Interop.Excel.Range>，然后使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.AutoFilter%2A>属性来显示列表的筛选条件。 然后，该示例提示用户关闭筛选器，通过使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.AutoFilterMode%2A>属性，并且最后使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.FilterMode%2A>属性来显示工作表是否能筛选的列表。  
+ 下面的代码示例创建的筛选的列表中的水果<xref:Microsoft.Office.Interop.Excel.Range>，然后使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.AutoFilter%2A>属性来显示列表的筛选条件。 该示例然后会提示用户关闭筛选器，通过使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.AutoFilterMode%2A>属性，并最后使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.FilterMode%2A>属性来显示工作表是否可以筛选的列表。  
   
  此示例适用于文档级自定义。  
   
@@ -294,20 +294,19 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示当前是否在工作表上启用了筛选功能（即，当前是否显示了筛选器下拉箭头）。</summary>
-        <value>
-          如果当前已在工作表上启用筛选功能，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果当前已在工作表上启用筛选功能，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 你可以将此属性设置为`false`禁用筛选 (即，若要删除的筛选器下拉箭头)，但不能将其设置为`true`。 启用筛选并创建筛选的列表，请使用<xref:Microsoft.Office.Interop.Excel.Range.AutoFilter%2A>方法<xref:Microsoft.Office.Interop.Excel.Range>对象，或使用<xref:Microsoft.Office.Tools.Excel.NamedRange.AutoFilter%2A>方法<xref:Microsoft.Office.Tools.Excel.NamedRange>对象。  
+ 可以将此属性设置为`false`若要禁用筛选 (也就是说，若要删除筛选器下拉箭头)，但不能将其设置为`true`。 若要启用筛选并创建已筛选的列表，请使用<xref:Microsoft.Office.Interop.Excel.Range.AutoFilter%2A>方法<xref:Microsoft.Office.Interop.Excel.Range>对象，或使用<xref:Microsoft.Office.Tools.Excel.NamedRange.AutoFilter%2A>方法的<xref:Microsoft.Office.Tools.Excel.NamedRange>对象。  
   
- 此属性仅指示是否启用筛选;它不指示是否要筛选的任何数据。 若要确定表是否正在主动筛选数据，请使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.FilterMode%2A>属性。  
+ 此属性仅指示是否启用筛选;它不指示是否正在筛选的任何数据。 若要确定是否在工作表正在主动筛选数据，请使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.FilterMode%2A>属性。  
   
    
   
 ## Examples  
- 下面的代码示例创建水果中的筛选的列表<xref:Microsoft.Office.Interop.Excel.Range>，然后使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.AutoFilter%2A>属性来显示列表的筛选条件。 然后，该示例提示用户关闭筛选器，通过使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.AutoFilterMode%2A>属性，并且最后使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.FilterMode%2A>属性来显示工作表是否能筛选的列表。  
+ 下面的代码示例创建的筛选的列表中的水果<xref:Microsoft.Office.Interop.Excel.Range>，然后使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.AutoFilter%2A>属性来显示列表的筛选条件。 该示例然后会提示用户关闭筛选器，通过使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.AutoFilterMode%2A>属性，并最后使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.FilterMode%2A>属性来显示工作表是否可以筛选的列表。  
   
  此示例适用于文档级自定义。  
   
@@ -338,7 +337,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.WorksheetBase>类扩展<xref:Microsoft.Office.Tools.Excel.Worksheet>对象通过实现<xref:Microsoft.Office.Tools.Excel.IWorksheetExtension>接口。  
+ <xref:Microsoft.Office.Tools.Excel.WorksheetBase>类用于扩展<xref:Microsoft.Office.Tools.Excel.Worksheet>通过实现对象<xref:Microsoft.Office.Tools.Excel.IWorksheetExtension>接口。  
   
  ]]></format>
         </remarks>
@@ -362,12 +361,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件不会发生，当用户双击单元格的边框。  
+ 当用户双击单元格的边框不会发生此事件。  
   
    
   
 ## Examples  
- 下面的代码示例演示的处理程序<xref:Microsoft.Office.Tools.Excel.WorksheetBase.BeforeDoubleClick>取消当前的工作表上双击操作的事件。 事件处理程序告知用户双击不允许进行的工作表，然后设置`Cancel`参数<xref:Microsoft.Office.Interop.Excel.DocEvents_BeforeDoubleClickEventHandler>事件处理程序`true`，以便 Microsoft Office Excel 取消双击操作。  
+ 下面的代码示例演示了一个处理程序<xref:Microsoft.Office.Tools.Excel.WorksheetBase.BeforeDoubleClick>取消当前工作表上的双击操作的事件。 事件处理程序会通知用户双击不允许对工作表，然后设置`Cancel`的参数<xref:Microsoft.Office.Interop.Excel.DocEvents_BeforeDoubleClickEventHandler>事件处理程序`true`，以便 Microsoft Office Excel 取消双击操作。  
   
  此示例适用于文档级自定义。  
   
@@ -396,7 +395,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例演示的处理程序<xref:Microsoft.Office.Tools.Excel.WorksheetBase.BeforeRightClick>取消当前的工作表上右键单击操作的事件。 事件处理程序通知的用户，右键单击不允许的工作表，然后设置`Cancel`参数<xref:Microsoft.Office.Interop.Excel.DocEvents_BeforeRightClickEventHandler>事件处理程序`true`，以便 Microsoft Office Excel 取消右键单击操作。  
+ 下面的代码示例演示了一个处理程序<xref:Microsoft.Office.Tools.Excel.WorksheetBase.BeforeRightClick>取消当前工作表上的右键单击操作的事件。 事件处理程序将通知用户，右键单击不允许对工作表，然后设置`Cancel`的参数<xref:Microsoft.Office.Interop.Excel.DocEvents_BeforeRightClickEventHandler>事件处理程序`true`，以便 Microsoft Office Excel 取消右键单击操作。  
   
  此示例适用于文档级自定义。  
   
@@ -505,7 +504,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例演示的处理程序<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Calculate>显示工作表的名称，当计算出它时的事件。  
+ 下面的代码示例演示了一个处理程序<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Calculate>时计算出它显示的工作表名称的事件。  
   
  此示例适用于文档级自定义。  
   
@@ -553,7 +552,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Cells%2A>属性可以在每个单元格设置名称、 大小和加粗字体的工作表上。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Cells%2A>属性工作表上每个单元格中设置名称、 大小和的字体。  
   
  此示例适用于文档级自定义。  
   
@@ -582,12 +581,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 在重新计算期间更改单元格时，此事件不会发生。  
+ 不会触发重新计算的单元格更改此事件。  
   
    
   
 ## Examples  
- 下面的代码示例演示的处理程序<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Change>显示工作表的名称和已更改的单元格范围的事件。  
+ 下面的代码示例演示了一个处理程序<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Change>显示工作表的名称和已更改的单元格的范围的事件。  
   
  此示例适用于文档级自定义。  
   
@@ -621,15 +620,15 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法不是等效于<xref:Microsoft.Office.Tools.Excel.Workbook.Charts%2A>属性。 此方法返回嵌入的图表;<xref:Microsoft.Office.Tools.Excel.Workbook.Charts%2A>属性返回图表工作表。  
+ 此方法不是等效于<xref:Microsoft.Office.Tools.Excel.Workbook.Charts%2A>属性。 此方法返回嵌入式的图表;<xref:Microsoft.Office.Tools.Excel.Workbook.Charts%2A>属性返回图表工作表。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例演示如何使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.ChartObjects%2A>方法以获取嵌入的图表和单个嵌入式的图表的集合。 该示例首先使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.ChartObjects%2A>方法以获取<xref:Microsoft.Office.Interop.Excel.ChartObjects?displayProperty=fullName>当前工作表的集合并创建新<xref:Microsoft.Office.Interop.Excel.ChartObject?displayProperty=fullName>。 格式化新后<xref:Microsoft.Office.Interop.Excel.ChartObject?displayProperty=fullName>并提供相关<xref:Microsoft.Office.Interop.Excel.ChartObject?displayProperty=fullName>一个名称，然后该示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.ChartObjects%2A>方法以获取新<xref:Microsoft.Office.Interop.Excel.ChartObject?displayProperty=fullName>（按其名称进行索引），并显示打印预览的图表。  
+ 下面的代码示例演示如何使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.ChartObjects%2A>方法以获取嵌入式的图表和的单个嵌入式的图表的集合。 该示例首先使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.ChartObjects%2A>方法以获取<xref:Microsoft.Office.Interop.Excel.ChartObjects?displayProperty=fullName>的当前工作表集合并创建新的<xref:Microsoft.Office.Interop.Excel.ChartObject?displayProperty=fullName>。 设置格式的新后<xref:Microsoft.Office.Interop.Excel.ChartObject?displayProperty=fullName>并给予<xref:Microsoft.Office.Interop.Excel.ChartObject?displayProperty=fullName>名称，该示例然后使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.ChartObjects%2A>方法以获取新<xref:Microsoft.Office.Interop.Excel.ChartObject?displayProperty=fullName>（按其名称进行索引），并显示在图表的打印预览。  
   
  此示例适用于文档级自定义。  
   
@@ -731,12 +730,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 必须删除循环引用，然后计算才能继续。  
+ 计算可以继续操作之前，必须删除循环引用。  
   
    
   
 ## Examples  
- 下面的代码示例通过设置单元格 A1 和 B1 解析为各自的值的公式创建一个循环引用。 然后该示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.CircularReference%2A>属性报告该工作表是否含有循环引用。  
+ 下面的代码示例通过设置单元格 A1 和 B1 解析为每个其他的值的公式创建循环引用。 该示例然后使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.CircularReference%2A>属性来报告工作表是否具有循环引用。  
   
  此示例适用于文档级自定义。  
   
@@ -784,7 +783,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.CircleInvalid%2A>到包含无效的数据的圆圈单元格的方法。  
+ 使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.CircleInvalid%2A>到圆形的单元格包含无效数据的方法。  
   
  ]]></format>
         </remarks>
@@ -832,19 +831,19 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果使用不带参数，此属性返回<xref:Microsoft.Office.Interop.Excel.Range>对象，其中包含工作表上的所有列。  
+ 如果使用不带参数，该属性返回<xref:Microsoft.Office.Interop.Excel.Range>对象，其中包含工作表上的所有列。  
   
- 此属性可以使用以下可选参数，用于获取工作表上的特定列。 如果参数中使用此属性，返回值是必须强制转换为对象<xref:Microsoft.Office.Interop.Excel.Range>。  
+ 此属性可以使用以下可选参数，用于在工作表上获取特定的列。 如果参数中使用此属性，返回值是必须强制转换为对象<xref:Microsoft.Office.Interop.Excel.Range>。  
   
 |参数|描述|  
 |---------------|-----------------|  
-|`RowIndex`|若要获取的一个或多个列的索引。<br /><br /> 若要获取的单个列，请将以下对象之一传递给此参数：<br /><br /> 的一个整数，指定你想要获取的列的索引。 列索引从 1 开始。<br />的你想要获取的列的字母组成字符串。<br /><br /> 若要获取多个连续列，请传递与格式字符串"`first column letter`:`last column letter`"。 例如，若要获取列 A 到 E，传递"A:E"。 **注意：** 此参数的名称有误导性; 此参数指定你想要获取，不是行的列的索引。|  
-|`ColumnIndex`|不使用此参数。 此属性将引发<xref:System.Runtime.InteropServices.COMException>如果你尝试将值传递给此参数。|  
+|`RowIndex`|若要获取的一个或多个列的索引。<br /><br /> 若要获取的单个列，请将下列对象之一传递给此参数：<br /><br /> -一个整数，指定你想要获取的列的索引。 列索引从 1 开始。<br />的你想要获取的列的字母组成字符串。<br /><br /> 若要获取多个相邻的列，请将传递格式的字符串"`first column letter`:`last column letter`"。 例如，若要获取列 A 到 E，传递"A:E"。 **注意：** 此参数的名称会令人误解; 此参数指定你想要获取，不是行的列的索引。|  
+|`ColumnIndex`|不使用此参数。 此属性将引发<xref:System.Runtime.InteropServices.COMException>如果尝试将值传递给此参数。|  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Columns%2A>属性可以在第一列中设置颜色、 名称、 大小和加粗的字体的所有单元格，工作表上。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Columns%2A>要在工作表上第一列中设置颜色、 名称、 大小和的所有单元格的字体属性。  
   
  此示例适用于文档级自定义。 若要运行此代码，请将其复制到你的项目中的工作表类之一。  
   
@@ -874,7 +873,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Comments%2A>属性之前和之后将注释添加到 A1 单元格当前工作表显示注释的数目。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Comments%2A>属性之前和之后将注释添加到单元格 A1 当前工作表上显示的评论数。  
   
  此示例适用于文档级自定义。  
   
@@ -905,7 +904,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.ConsolidationFunction%2A>属性来确定哪个函数由合并工作表。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.ConsolidationFunction%2A>属性来确定哪一个函数由合并工作表。  
   
  此示例适用于文档级自定义。  
   
@@ -935,18 +934,18 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果返回的数组中元素是`true`，则设置相应的选项。 数组中的三个元素为：  
+ 如果返回的数组中的元素是`true`，则设置相应的选项。 数组中的三个元素是：  
   
 |元素|含义|  
 |-------------|-------------|  
-|1|顶行中使用标签|  
+|1|在顶部行中使用标签|  
 |2|在左侧列中使用标签|  
 |3|创建链接到源数据|  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.ConsolidationOptions%2A>属性，以显示当前工作表的合并选项的值。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.ConsolidationOptions%2A>属性来显示当前工作表的合并选项的值。  
   
  此示例适用于文档级自定义。  
   
@@ -976,7 +975,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例在当前表上创建一个合并，然后使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.ConsolidationSources%2A>属性来显示合并的源。  
+ 下面的代码示例在当前表中，创建一个合并，然后使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.ConsolidationSources%2A>属性来显示合并的源。  
   
  此示例适用于文档级自定义。  
   
@@ -1006,9 +1005,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- Office 解决方案中的工作表可以包含 Windows 窗体控件和主机控件。 有关详细信息，请参阅[Office 文档上的控件](/visualstudio/vsto/controls-on-office-documents.md)。  
+ Office 解决方案中的工作表可以包含 Windows 窗体控件和宿主控件。 有关详细信息，请参阅[Office 文档上的控件](/visualstudio/vsto/controls-on-office-documents)。  
   
- 若要在运行时管理的工作表上的控件，请使用方法和属性<xref:Microsoft.Office.Tools.Excel.ControlCollection>返回对象<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Controls%2A>属性。 有关详细信息，请参阅[在运行时向 Office 文档添加控件](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time.md)  
+ 若要在运行时管理的工作表上的控件，使用的方法和属性<xref:Microsoft.Office.Tools.Excel.ControlCollection>返回对象<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Controls%2A>属性。 有关详细信息，请参阅[在运行时向 Office 文档添加控件](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)  
   
    
   
@@ -1048,17 +1047,17 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 新工作表是<xref:Microsoft.Office.Interop.Excel.Worksheet?displayProperty=fullName>对象，并且不具有工作表宿主项具有的代码或数据绑定功能。  
+ 新工作表是<xref:Microsoft.Office.Interop.Excel.Worksheet?displayProperty=fullName>对象并不具有工作表宿主项具有的代码或数据绑定功能。  
   
- 如果不指定`Before`或`After`，Microsoft Office Excel 创建新的工作簿包含复制的表。  
+ 如果未指定`Before`或`After`，Microsoft Office Excel 将创建包含复制表的表的新工作簿。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Copy%2A>方法来创建副本的当前工作表之前`Sheet1`后`Sheet3`。 该示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.InnerObject%2A>属性来访问基础<xref:Microsoft.Office.Interop.Excel.Worksheet?displayProperty=fullName>为`Sheet1`和`Sheet3`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Copy%2A>方法来创建副本的当前工作表之前`Sheet1`及`Sheet3`。 该示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.InnerObject%2A>属性来访问基础<xref:Microsoft.Office.Interop.Excel.Worksheet?displayProperty=fullName>有关`Sheet1`和`Sheet3`。  
   
  此示例适用于文档级自定义。  
   
@@ -1088,12 +1087,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性用于在 Microsoft Office Excel 中用于的 Macintosh，其中每个应用程序具有四个字符创建者代码。 例如，Excel 具有接的创建者代码。  
+ 此属性用于在 Microsoft Office Excel 中用于的 Macintosh 上，其中每个应用程序具有四个字符创建者代码。 例如，Excel 具有 XCEL 的创建者代码。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Creator%2A>属性来显示是否在 Microsoft Office Excel 中创建了当前工作表。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Creator%2A>属性来显示是否在 Microsoft Office Excel 中创建的当前工作表。  
   
  此示例适用于文档级自定义。  
   
@@ -1123,7 +1122,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.CustomProperties%2A>属性来添加自定义属性名为"Microsoft"值"MSFT"到当前工作表。 直到找到"Microsoft"属性，并将此属性的值设置为 A1 单元格，该示例然后循环访问的自定义属性的集合。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.CustomProperties%2A>添加自定义属性的属性名为"Microsoft"值为"MSFT"到当前工作表。 直到找到"Microsoft"属性，并将此属性的值设置为单元格 A1，该示例然后循环访问的自定义属性的集合。  
   
  此示例适用于文档级自定义。  
   
@@ -1188,7 +1187,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例演示的处理程序<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Deactivate>显示工作表的名称，它被停用时的事件。  
+ 下面的代码示例演示了一个处理程序<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Deactivate>停用后显示的工作表名称的事件。  
   
  此示例适用于文档级自定义。  
   
@@ -1254,13 +1253,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示分页符（自动和手动）是否显示在工作表上。</summary>
-        <value>
-          如果分页符（自动和手动）显示在表上，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果分页符（自动和手动）显示在表上，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果你没有安装打印机，不能设置此属性。  
+ 如果没有安装打印机，不能设置此属性。  
   
  ]]></format>
         </remarks>
@@ -1280,8 +1278,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示是否是从右向左，而不是从左向右显示工作表。</summary>
-        <value>
-          如果工作表是从右向左，而不是从左向右显示，则为 <see langword="true" />；如果该对象是从左向右显示，则为 <see langword="false" />。</value>
+        <value>如果工作表是从右向左，而不是从左向右显示，则为 <see langword="true" />；如果该对象是从左向右显示，则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1304,9 +1301,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 不要调用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Dispose%2A>方法自己。 当关闭的文档级自定义项中的文档时，[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]清理使用自定义项的所有资源。  
+ 不要调用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Dispose%2A>方法自己。 关闭文档级自定义项中的文档时，[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]清理使用自定义项的所有资源。  
   
- 有关详细信息<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Dispose%2A>方法，请参阅[清洗向上非托管资源](http://msdn.microsoft.com/library/a17b0066-71c2-4ba4-9822-8e19332fc213)。  
+ 有关详细信息<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Dispose%2A>方法，请参阅[清理了非托管资源](http://msdn.microsoft.com/library/a17b0066-71c2-4ba4-9822-8e19332fc213)。  
   
  ]]></format>
         </remarks>
@@ -1424,8 +1421,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示当打开仅限用户界面保护时是否启用“自动筛选”箭头。</summary>
-        <value>
-          如果在打开仅限用户界面保护时启用“自动筛选”箭头，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果在打开仅限用户界面保护时启用“自动筛选”箭头，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1450,13 +1446,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示 Microsoft Office Excel 是否在必要时自动重新计算工作表。</summary>
-        <value>
-          如果 Excel 在必要时自动重新计算工作表，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果 Excel 在必要时自动重新计算工作表，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性的值时`false`，不能请求重新计算。 当你更改的值从`false`到`true`，Excel 会重新计算工作表。  
+ 当此属性的值是`false`，不能请求重新计算。 当将值从`false`到`true`，Excel 重新计算工作表。  
   
  ]]></format>
         </remarks>
@@ -1476,15 +1471,14 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值确定条件格式是否将自动发生。</summary>
-        <value>
-          如果条件格式的计算将自动发生，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="true" />。</value>
+        <value>如果条件格式的计算将自动发生，则为 <see langword="true" />；否则为 <see langword="false" />。 默认值为 <see langword="true" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 当<xref:Microsoft.Office.Tools.Excel.WorksheetBase.EnableFormatConditionsCalculation%2A>属性设置为`false`，不会重新评估现有的条件格式。 任何以前应用的条件格式设置将仍是可见的但不是会作为单元格的值更新或更改 AppliesTo 范围。  
+ 当<xref:Microsoft.Office.Tools.Excel.WorksheetBase.EnableFormatConditionsCalculation%2A>属性设置为`false`，现有的条件格式不会重新计算。 任何以前应用的条件格式设置仍将可见，但将不会更新为单元格的值或更改 AppliesTo 范围。  
   
- 将此属性设置为`true`以对其进行评估之前完全配置一个规则。 如果对其应用条件的范围很大，这可能导致性能增加。  
+ 将此属性设置为`true`以对其进行评估之前完全配置一个规则。 如果对其应用条件的范围很大，这可能导致性能提升。  
   
  ]]></format>
         </remarks>
@@ -1504,8 +1498,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示当打开仅限用户界面保护时是否启用大纲显示符号。 [!INCLUDE[vsto_smart_tags](~/includes/vsto-smart-tags-md.md)]。 [!INCLUDE[vsto_smart_tags](~/includes/vsto-smart-tags-md.md)]。</summary>
-        <value>
-          如果在打开仅限用户界面保护时启用大纲显示符号，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果在打开仅限用户界面保护时启用大纲显示符号，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1530,15 +1523,14 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示当打开仅限用户界面保护时是否启用数据透视表控件及操作。</summary>
-        <value>
-          如果在打开仅限用户界面保护时启用数据透视表控件及操作，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果在打开仅限用户界面保护时启用数据透视表控件及操作，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
  此属性适用于每个工作表，并且不与工作表或会话一起保存。  
   
- 必须有足够数量的未锁定的单元格下方，并重新计算和显示数据透视表报告的 Microsoft Office excel 数据透视表的右侧。  
+ 必须有足够数量的未锁定单元格下面以及 Microsoft Office Excel 重新计算和显示数据透视表报告的透视表的右侧。  
   
  ]]></format>
         </remarks>
@@ -1564,12 +1556,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性仅在受保护工作表时，才起作用：<xref:Microsoft.Office.Interop.Excel.XlEnableSelection.xlNoSelection>可防止在表中，任何所选内容<xref:Microsoft.Office.Interop.Excel.XlEnableSelection.xlUnlockedCells>允许未锁定要选择这些单元格和<xref:Microsoft.Office.Interop.Excel.XlEnableSelection.xlNoRestrictions>允许要选择的任何单元格。  
+ 此属性仅当在工作表保护时，才会生效：<xref:Microsoft.Office.Interop.Excel.XlEnableSelection.xlNoSelection>会阻止任何在表中，选择<xref:Microsoft.Office.Interop.Excel.XlEnableSelection.xlUnlockedCells>允许未锁定要选择这些单元格和<xref:Microsoft.Office.Interop.Excel.XlEnableSelection.xlNoRestrictions>允许要选择任何单元格。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Protect%2A>方法来保护工作表，然后使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.EnableSelection%2A>属性以防止工作表中的任意单元格选择。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Protect%2A>方法来保护工作表，然后使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.EnableSelection%2A>属性以防止在工作表上的任何单元格被选中。  
   
  此示例适用于文档级自定义。  
   
@@ -1621,16 +1613,16 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用此方法，可以使用以下类型的名称在 Excel 中：  
+ 可以使用此方法使用的名称在 Excel 中的以下类型：  
   
 -   定义的名称。 您可以指定任何名称。  
   
--   外部引用。 你可以使用 ！ 若要引用在另一个工作簿中定义的工作表的运算符。  
+-   外部引用。 可以使用 ！ 若要引用另一个工作簿中定义的工作表的运算符。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Evaluate%2A>方法的值进行比较的 A1 单元格作为输入到 Excel`SIN`函数。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Evaluate%2A>方法计算单元格 A1 的值作为输入到 Excel`SIN`函数。  
   
  此示例适用于文档级自定义。  
   
@@ -1668,26 +1660,23 @@
         <param name="type">其中一个 <see langword="Microsoft.Office.Interop.Excel.XlFixedFormatType" /> 值，该值指定是否要将工作簿保存为 PDF 或 XPS 格式。</param>
         <param name="filename">新 PDF 或 XPS 文件的完整路径。 如果省略此参数，Excel 会将文件保存在当前文件夹中。</param>
         <param name="quality">其中一个 <see langword="Microsoft.Office.Interop.Excel.XlFixedFormatQuality" /> 值，该值指定导出文件的质量。</param>
-        <param name="includeDocProperties">
-          如果要在导出的文件中包含文档属性，则为 <see langword="true" />；否则为 <see langword="false" />。</param>
-        <param name="ignorePrintAreas">
-          若要在导出时忽略任何打印区域设置，请使用 <see langword="true" />；否则使用 <see langword="false" />。</param>
+        <param name="includeDocProperties">如果要在导出的文件中包含文档属性，则为 <see langword="true" />；否则为 <see langword="false" />。</param>
+        <param name="ignorePrintAreas">若要在导出时忽略任何打印区域设置，请使用 <see langword="true" />；否则使用 <see langword="false" />。</param>
         <param name="from">要从其处开始导出的页码。 若忽略此参数，则从第一页开始导出。</param>
         <param name="to">要导出的最后一页的页码。 若忽略此参数，则导出至最后一页。</param>
-        <param name="openAfterPublish">
-          如果立即在查看器中显示文件，则为 <see langword="true" />；否则为 <see langword="false" />。</param>
+        <param name="openAfterPublish">如果立即在查看器中显示文件，则为 <see langword="true" />；否则为 <see langword="false" />。</param>
         <param name="fixedFormatExtClassPtr">一个指向 <see langword="IMsoDocExporter" /> 接口的实现的指针，可使工作簿保存为另一种固定格式。 有关详细信息，请参阅“扩展 Office (2007) 固定格式导出功能”。</param>
         <summary>导出到指定格式的文件。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法还支持初始化外接程序将文件导出到固定格式文件。 例如，如果存在转换器，则 Excel 将执行文件的格式转换。 通常由用户启动转换。  
+ 此方法还支持外接程序以固定格式文件导出的文件初始化。 例如，如果存在转换器，则 Excel 将执行文件格式转换。 通常由用户启动转换。  
   
    
   
 ## Examples  
- 下面的代码示例将工作表的内容保存`Sheet1`以 PDF 格式，最多前四个页并 （忽略打印区域）。 PDF 文件保存到指定的文件路径和文件的名称，使用标准质量分辨率。 该文件包含工作簿属性。 若要运行此代码示例，你的工作簿必须包含一些数据的名为 Sheet1 的表。  
+ 下面的代码示例将工作表的内容保存`Sheet1`以 PDF 格式，最多前四个页 （忽略打印区域）。 PDF 文件将保存到指定的文件路径和文件名使用标准质量解析。 该文件包括工作簿属性。 若要运行此代码示例，您的工作簿必须包含名为 Sheet1，一些数据的表。  
   
  此示例适用于文档级自定义。  
   
@@ -1712,22 +1701,21 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，该值指示工作表是否正在主动筛选数据。</summary>
-        <value>
-          如果工作表正在主动筛选数据，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果工作表正在主动筛选数据，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要确定是否可以使用筛选当前已启用 （即，是否在工作表中显示的筛选器下拉箭头），请使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.AutoFilterMode%2A>属性。  
+ 若要确定是否筛选当前已启用 （即，是否在工作表上显示筛选器下拉箭头），请使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.AutoFilterMode%2A>属性。  
   
- 启用筛选并创建筛选的列表，请使用<xref:Microsoft.Office.Interop.Excel.Range.AutoFilter%2A>方法<xref:Microsoft.Office.Interop.Excel.Range>对象，或使用<xref:Microsoft.Office.Tools.Excel.NamedRange.AutoFilter%2A>方法<xref:Microsoft.Office.Tools.Excel.NamedRange>对象。  
+ 若要启用筛选并创建已筛选的列表，请使用<xref:Microsoft.Office.Interop.Excel.Range.AutoFilter%2A>方法<xref:Microsoft.Office.Interop.Excel.Range>对象，或使用<xref:Microsoft.Office.Tools.Excel.NamedRange.AutoFilter%2A>方法的<xref:Microsoft.Office.Tools.Excel.NamedRange>对象。  
   
- 此属性是`true`如果工作表包含其中有隐藏的行的筛选的列表。  
+ 此属性是`true`如果工作表包含在隐藏的行的筛选后的列表。  
   
    
   
 ## Examples  
- 下面的代码示例创建水果中的筛选的列表<xref:Microsoft.Office.Interop.Excel.Range>，然后使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.AutoFilter%2A>属性来显示列表的筛选条件。 然后，该示例提示用户关闭筛选器，通过使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.AutoFilterMode%2A>属性，并且最后使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.FilterMode%2A>属性来显示工作表是否能筛选的列表。  
+ 下面的代码示例创建的筛选的列表中的水果<xref:Microsoft.Office.Interop.Excel.Range>，然后使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.AutoFilter%2A>属性来显示列表的筛选条件。 该示例然后会提示用户关闭筛选器，通过使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.AutoFilterMode%2A>属性，并最后使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.FilterMode%2A>属性来显示工作表是否可以筛选的列表。  
   
  此示例适用于文档级自定义。  
   
@@ -1774,7 +1762,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例演示的处理程序<xref:Microsoft.Office.Tools.Excel.WorksheetBase.FollowHyperlink>保留已单击当前工作簿中所有超链接的列表的事件以及包含这些超链接，在工作表名称<xref:System.Windows.Forms.ListBox>控件。  
+ 下面的代码示例演示了一个处理程序<xref:Microsoft.Office.Tools.Excel.WorksheetBase.FollowHyperlink>已单击当前工作簿中保留的所有超链接列表的事件以及包含这些超链接，在工作表的名称<xref:System.Windows.Forms.ListBox>控件。  
   
  此示例适用于文档级自定义。  
   
@@ -1805,7 +1793,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 重写此方法以返回到工作表中的 VBA 代码的已公开的类的实例。 有关详细信息，请参阅[结合 VBA 和文档级自定义项](/visualstudio/vsto/combining-vba-and-document-level-customizations.md)。  
+ 重写此方法以返回到工作表中的 VBA 代码的已公开的类的实例。 有关详细信息，请参阅[结合 VBA 和文档级自定义项](/visualstudio/vsto/combining-vba-and-document-level-customizations)。  
   
  ]]></format>
         </remarks>
@@ -1902,12 +1890,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 没有 1026年水平上每个表的分页符限制。  
+ 没有每张纸打印的 1026年水平分页符的限制。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.HPageBreaks%2A>属性在单元格 C5 处添加水平分页符。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.HPageBreaks%2A>属性在单元格 C5 处添加一个水平分页符。  
   
  此示例适用于文档级自定义。  
   
@@ -1968,7 +1956,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Index%2A>属性之前和之后到最后一个移动工作表中显示当前工作表的索引号来定位工作簿中使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Move%2A>方法。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Index%2A>属性来显示当前工作表的索引号之前和之后的最后一个移动工作表来定位工作簿中使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Move%2A>方法。  
   
  此示例适用于文档级自定义。  
   
@@ -2180,7 +2168,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.MailEnvelope%2A>要分配属性<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Name%2A>简介电子邮件标头的工作表的工作表。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.MailEnvelope%2A>要分配属性<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Name%2A>的工作表的电子邮件头引入工作表。  
   
  此示例适用于文档级自定义。  
   
@@ -2378,15 +2366,15 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果不指定`Before`或`After`，Microsoft Office Excel 创建新的工作簿包含移动的工作表。  
+ 如果未指定`Before`或`After`，Microsoft Office Excel 将创建包含移动的工作表的新工作簿。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Index%2A>属性之前和之后到最后一个移动工作表中显示当前工作表的索引号来定位工作簿中使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Move%2A>方法。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Index%2A>属性来显示当前工作表的索引号之前和之后的最后一个移动工作表来定位工作簿中使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Move%2A>方法。  
   
  此示例适用于文档级自定义。  
   
@@ -2416,7 +2404,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.MailEnvelope%2A>要分配属性<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Name%2A>简介电子邮件标头的工作表的工作表。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.MailEnvelope%2A>要分配属性<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Name%2A>的工作表的电子邮件头引入工作表。  
   
  此示例适用于文档级自定义。  
   
@@ -2441,12 +2429,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个 <see cref="T:Microsoft.Office.Interop.Excel.Names" /> 集合，该集合表示所有工作表特定的名称（以“WorksheetName!” 前缀定义名称）。</summary>
-        <value>A<see cref="T:Microsoft.Office.Interop.Excel.Names" />集合，表示所有特定于工作表的名称 （使用"WorksheetName ！"定义的名称 前缀）。</value>
+        <value>一个<see cref="T:Microsoft.Office.Interop.Excel.Names" />集合，表示所有特定于工作表的名称 （名称以"WorksheetName ！"与已定义 前缀定义名称）。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Names%2A>属性添加到工作表的名称。 然后该示例显示**定义名称**对话框来验证是否已添加该名称。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Names%2A>属性添加到工作表的名称。 该示例然后显示**定义名称**对话框来验证是否已添加该名称。  
   
  此示例适用于文档级自定义。  
   
@@ -2476,7 +2464,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Next%2A>属性来确定是否当前<xref:Microsoft.Office.Tools.Excel.WorksheetBase>是工作簿中的最后一个表。 如果当前<xref:Microsoft.Office.Tools.Excel.WorksheetBase>不是最后一个表，则显示下一个工作表的名称。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Next%2A>属性来确定是否当前<xref:Microsoft.Office.Tools.Excel.WorksheetBase>是工作簿中的最后一个表。 如果当前<xref:Microsoft.Office.Tools.Excel.WorksheetBase>不是最后一个表，则显示下一步工作表的名称。  
   
  此示例适用于文档级自定义。  
   
@@ -2512,12 +2500,12 @@
 ## Remarks  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.OLEObjects%2A>当前工作表中的方法来显示 OLE 对象。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.OLEObjects%2A>方法来显示 OLE 数当前工作表中的对象。  
   
  此示例适用于文档级自定义。  
   
@@ -2748,7 +2736,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Outline%2A>属性以使概要中的当前工作表使用自动样式。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Outline%2A>属性以使当前工作表大纲使用自动设置样式。  
   
  此示例适用于文档级自定义。  
   
@@ -2805,7 +2793,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.PageSetup%2A>属性设置的下边缘和标头的边距，第一页号，和 center 页眉和页脚工作表。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.PageSetup%2A>属性来设置下边框和标头边距、 第一页号，和中心标头和工作表的页脚。  
   
  此示例适用于文档级自定义。  
   
@@ -2835,7 +2823,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Parent%2A>属性来确定是否当前<xref:Microsoft.Office.Tools.Excel.WorksheetBase>有父项。 如果当前<xref:Microsoft.Office.Tools.Excel.WorksheetBase>有父级，则显示父工作簿的名称。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Parent%2A>属性来确定是否当前<xref:Microsoft.Office.Tools.Excel.WorksheetBase>具有一个父级。 如果当前<xref:Microsoft.Office.Tools.Excel.WorksheetBase>具有父级，则会显示父工作簿的名称。  
   
  此示例适用于文档级自定义。  
   
@@ -2864,24 +2852,23 @@
       </Parameters>
       <Docs>
         <param name="destination">一个 <see cref="T:Microsoft.Office.Interop.Excel.Range" /> 对象，指定应粘贴剪贴板内容的位置。 如果省略此参数，则使用当前选择。 仅当可将剪贴板的内容粘贴到范围中时，才能指定此参数。 如果指定了此参数，则无法使用 <c>Link</c> 参数。</param>
-        <param name="link">
-          为 <see langword="true" /> 可建立指向粘贴数据的源的链接。 如果指定了此参数，则无法使用 <c>Destination</c> 参数。 默认值为 <see langword="false" />。</param>
+        <param name="link">为 <see langword="true" /> 可建立指向粘贴数据的源的链接。 如果指定了此参数，则无法使用 <c>Destination</c> 参数。 默认值为 <see langword="false" />。</param>
         <summary>将剪贴板的内容粘贴到工作表上。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果不指定`Destination`自变量，你必须选择目标范围之前使用此方法。  
+ 如果未指定`Destination`参数，您必须选择目标范围才能使用此方法。  
   
- 此方法可以修改表的选定区域，具体取决于剪贴板的内容。  
+ 此方法可能会修改表的选定区域，具体取决于剪贴板的内容。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例将文本到剪贴板上的"粘贴示例"，然后使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Paste%2A>方法以将剪贴板内容粘贴到 A1 单元格。  
+ 下面的代码示例将文本到剪贴板上的"粘贴示例"，然后使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Paste%2A>方法以将剪贴板的内容粘贴到单元格 A1。  
   
  此示例适用于文档级自定义。  
   
@@ -2915,35 +2902,32 @@
       </Parameters>
       <Docs>
         <param name="format">一个字符串，指定数据的剪贴板格式。 常见格式字符串包括“HTML”、“位图”、“超链接”、“Unicode 文本”和“文本”。</param>
-        <param name="link">
-          为 <see langword="true" /> 可建立指向粘贴数据的源的链接。 如果源数据不适合链接或源应用程序不支持链接，则忽略此参数。 默认值为 <see langword="false" />。</param>
-        <param name="displayAsIcon">
-          为 <see langword="true" /> 可以图标形式显示粘贴的对象。 默认值为 <see langword="false" />。</param>
+        <param name="link">为 <see langword="true" /> 可建立指向粘贴数据的源的链接。 如果源数据不适合链接或源应用程序不支持链接，则忽略此参数。 默认值为 <see langword="false" />。</param>
+        <param name="displayAsIcon">为 <see langword="true" /> 可以图标形式显示粘贴的对象。 默认值为 <see langword="false" />。</param>
         <param name="iconFileName">如果 <c>DisplayAsIcon</c> 为 <see langword="true" />，则为包含要使用的图标的文件的名称。</param>
         <param name="iconIndex">图标文件中该图标的索引号。</param>
         <param name="iconLabel">图标的文本标签。</param>
-        <param name="noHTMLFormatting">
-          为 <see langword="true" /> 可从 HTML 移除所有格式设置、超链接和图像；为 <see langword="false" /> 可按原样粘贴 HTML。 默认值为 <see langword="false" />。</param>
+        <param name="noHTMLFormatting">为 <see langword="true" /> 可从 HTML 移除所有格式设置、超链接和图像；为 <see langword="false" /> 可按原样粘贴 HTML。 默认值为 <see langword="false" />。</param>
         <summary>使用指定的格式将剪贴板的内容粘贴到工作表上。 使用此方法可粘贴来自其他应用程序的数据或以特定格式粘贴数据。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果不知道要传递给该格式参数的字符串，则可以查看尝试在 Excel 中的粘贴命令与在剪贴板上的数据兼容的字符串。 将数据复制到剪贴板，使用**选择性粘贴**在 Excel 中，命令，然后查看中列出的格式**选择性粘贴**对话框。  
+ 如果不知道哪些字符串将传递给的格式参数，则可以查看通过尝试在 Excel 中的粘贴命令与剪贴板上的数据兼容的字符串。 将数据复制到剪贴板中，使用**选择性粘贴**在 Excel 中，命令，然后查看中列出的格式**选择性粘贴**对话框。  
   
- `NoHTMLFormatting` 将仅一回事时`Format`="HTML"。 在所有其他情况下，`NoHTMLFormatting`将被忽略。  
+ `NoHTMLFormatting` 将仅就时`Format`="HTML"。 在所有其他情况下，`NoHTMLFormatting`将被忽略。  
   
- 使用此方法之前，您必须选择目标范围。  
+ 使用此方法之前，必须选择目标范围。  
   
- 此方法可以修改表的选定区域，具体取决于剪贴板的内容。  
+ 此方法可能会修改表的选定区域，具体取决于剪贴板的内容。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例将 HTML 放置到剪贴板，然后使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.PasteSpecial%2A>方法以将剪贴板内容粘贴到 A1 单元格。 请注意此示例选择之前调用范围<xref:Microsoft.Office.Tools.Excel.WorksheetBase.PasteSpecial%2A>方法。  
+ 下面的代码示例将 HTML 放置到剪贴板，然后使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.PasteSpecial%2A>方法以将剪贴板的内容粘贴到单元格 A1。 请注意示例选择之前调用范围<xref:Microsoft.Office.Tools.Excel.WorksheetBase.PasteSpecial%2A>方法。  
   
  此示例适用于文档级自定义。  
   
@@ -2999,10 +2983,10 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.WorksheetBase.PivotTableAfterValueChange>事件不会在编辑或重新计算单元格以外的任何情况下发生。 例如，它时不会出现数据透视表是刷新、 排序、 筛选，或向下钻取，即使这些操作移动单元格，并可能从 OLAP 数据源中检索新值。  
+ <xref:Microsoft.Office.Tools.Excel.WorksheetBase.PivotTableAfterValueChange>事件编辑或重新计算的单元格以外的任何条件下不会出现。 例如，它不会在数据透视表进行刷新、 排序、 筛选，或向下钻取，即使这些操作移动单元格，并可能从 OLAP 数据源中检索新值。  
   
 > [!NOTE]
->  此事件出现在 IntelliSense Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Excel 2007 项目中使用此事件。  
+>  此事件将显示在 IntelliSense 中 Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Excel 2007 项目中使用此事件。  
   
  ]]></format>
         </remarks>
@@ -3027,10 +3011,10 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.WorksheetBase.PivotTableBeforeAllocateChanges> Excel 立即执行 UPDATE CUBE 语句以将所有更改都应用到数据透视表的 OLAP 数据源之前, 和用户已选择的用户界面以都应用更改后立即时发生事件。  
+ <xref:Microsoft.Office.Tools.Excel.WorksheetBase.PivotTableBeforeAllocateChanges> Excel 立即执行 UPDATE CUBE 语句以应用到数据透视表的 OLAP 数据源，所有更改之前，用户已选择要都应用的用户界面中的更改后立即发生的事件。  
   
 > [!NOTE]
->  此事件出现在 IntelliSense Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Excel 2007 项目中使用此事件。  
+>  此事件将显示在 IntelliSense 中 Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Excel 2007 项目中使用此事件。  
   
  ]]></format>
         </remarks>
@@ -3055,10 +3039,10 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.WorksheetBase.PivotTableBeforeCommitChanges> Excel 立即执行针对数据透视表的 OLAP 数据源，提交事务之前，用户已选择为整个数据透视表中保存更改后立即发生的事件。  
+ <xref:Microsoft.Office.Tools.Excel.WorksheetBase.PivotTableBeforeCommitChanges> Excel 立即执行 COMMIT TRANSACTION 对数据透视表的 OLAP 数据源之前，用户已选择为整个数据透视表中保存更改后立即发生的事件。  
   
 > [!NOTE]
->  此事件出现在 IntelliSense Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Excel 2007 项目中使用此事件。  
+>  此事件将显示在 IntelliSense 中 Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Excel 2007 项目中使用此事件。  
   
  ]]></format>
         </remarks>
@@ -3083,10 +3067,10 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- Excel 执行针对 OLAP 数据源，ROLLBACK TRANSACTION 语句，如果在事务仍处于活动状态，且然后用户已选择放弃所做的更改之后将丢弃所有数据透视表中, 编辑过的值之前立即发生。  
+ Excel 执行 ROLLBACK TRANSACTION 语句，在针对 OLAP 数据源，如果事务仍处于活动状态，并且后用户已选择放弃更改，然后放弃该数据透视表中的所有已编辑的值之前立即发生。  
   
 > [!NOTE]
->  此事件出现在 IntelliSense Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Excel 2007 项目中使用此事件。  
+>  此事件将显示在 IntelliSense 中 Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Excel 2007 项目中使用此事件。  
   
  ]]></format>
         </remarks>
@@ -3111,10 +3095,10 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.WorksheetBase.PivotTableChangeSync>过程中发生的大多数更改在数据透视表，以便你可以编写代码以响应用户操作，例如清除、 分组或刷新数据透视表中的项。  
+ <xref:Microsoft.Office.Tools.Excel.WorksheetBase.PivotTableChangeSync>过程中发生的大多数更改在数据透视表，以便您可以编写代码来响应用户操作，例如清除、 分组或刷新数据透视表中的项。  
   
 > [!NOTE]
->  此事件出现在 IntelliSense Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Excel 2007 项目中使用此事件。  
+>  此事件将显示在 IntelliSense 中 Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Excel 2007 项目中使用此事件。  
   
  ]]></format>
         </remarks>
@@ -3146,7 +3130,7 @@
 ## Remarks  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
@@ -3180,7 +3164,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例演示的处理程序<xref:Microsoft.Office.Tools.Excel.WorksheetBase.PivotTableUpdate>已更新数据透视表时显示一条消息的事件。  
+ 下面的代码示例演示了一个处理程序<xref:Microsoft.Office.Tools.Excel.WorksheetBase.PivotTableUpdate>已更新数据透视表报表时显示一条消息的事件。  
   
  此示例适用于文档级自定义。  
   
@@ -3226,24 +3210,17 @@
         <param name="sourceData">新报表的数据。 可以是 <see cref="T:Microsoft.Office.Interop.Excel.Range" /> 对象、范围数组或表示其他报表的名称的文本常数。 对于外部数据库，<c>SourceData</c> 是包含 SQL 查询字符串的字符串数组，其中每个元素的最大长度为 255 个字符。 应使用 <c>Connection</c> 参数指定 ODBC 连接字符串。 为了与较早版本的 Excel 兼容，<c>SourceData</c> 可以是二元素数组。 第一个元素是指定数据的 ODBC 源的连接字符串。 第二个元素是用于获取数据的 SQL 查询字符串。 如果指定 <c>SourceData</c>，还必须指定 <c>SourceType</c>。 如果活动单元格在 <c>SourceData</c> 范围内，则还必须指定 <c>TableDestination</c>。</param>
         <param name="tableDestination">一个 <see cref="T:Microsoft.Office.Interop.Excel.Range" /> 对象，指定应在工作表上放置报表的位置。 如果省略此参数，则报表将放置在活动单元格上。</param>
         <param name="tableName">新报表的名称。</param>
-        <param name="rowGrand">
-          为 <see langword="true" /> 可显示报表中的总行数。</param>
-        <param name="columnGrand">
-          为 <see langword="true" /> 可显示报表中的总列数。</param>
-        <param name="saveData">
-          为 <see langword="true" />，则保存报表数据；为 <see langword="false" />，则仅保存报表定义。</param>
-        <param name="hasAutoFormat">
-          如果为 <see langword="true" />，则 Microsoft Office Excel 可在刷新报表或移动字段后自动设置报表格式。</param>
+        <param name="rowGrand">为 <see langword="true" /> 可显示报表中的总行数。</param>
+        <param name="columnGrand">为 <see langword="true" /> 可显示报表中的总列数。</param>
+        <param name="saveData">为 <see langword="true" />，则保存报表数据；为 <see langword="false" />，则仅保存报表定义。</param>
+        <param name="hasAutoFormat">如果为 <see langword="true" />，则 Microsoft Office Excel 可在刷新报表或移动字段后自动设置报表格式。</param>
         <param name="autoPage">仅当 <c>SourceType</c> 为 <see cref="F:Microsoft.Office.Interop.Excel.XlPivotTableSourceType.xlConsolidation" /> 时才有效。 如果让 Excel 创建一个用于合并的页字段，则为 <see langword="true" />。 如果 <c>AutoPage</c> 为 <see langword="false" />，则必须创建一个或多个页字段。</param>
         <param name="reserved">Excel 不使用。</param>
-        <param name="backgroundQuery">
-          如果为 <see langword="true" />，则 Excel 可异步执行（在后台）报表查询。 默认值为 <see langword="false" />。</param>
-        <param name="optimizeCache">
-          如果为 <see langword="true" />，则可在构造数据透视表时对其缓存进行优化。 默认值为 <see langword="false" />。</param>
+        <param name="backgroundQuery">如果为 <see langword="true" />，则 Excel 可异步执行（在后台）报表查询。 默认值为 <see langword="false" />。</param>
+        <param name="optimizeCache">如果为 <see langword="true" />，则可在构造数据透视表时对其缓存进行优化。 默认值为 <see langword="false" />。</param>
         <param name="pageFieldOrder">向数据透视表的布局添加页字段的顺序。 可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlOrder" /> 常数之一：<see cref="F:Microsoft.Office.Interop.Excel.XlOrder.xlDownThenOver" /> 或 <see cref="F:Microsoft.Office.Interop.Excel.XlOrder.xlOverThenDown" />。 默认值为 <see cref="F:Microsoft.Office.Interop.Excel.XlOrder.xlDownThenOver" />。</param>
         <param name="pageFieldWrapCount">数据透视表中每列或每行中的页字段数。 默认值为 0（零）。</param>
-        <param name="readData">
-          如果为 <see langword="true" />，则可创建包含外部数据库所有记录的数据透视表缓存；此缓存可能很大。 如果 <c>ReadData</c> 为 <see langword="false" />，则可以在实际读取数据前，将某些字段设置为基于服务器的页字段。</param>
+        <param name="readData">如果为 <see langword="true" />，则可创建包含外部数据库所有记录的数据透视表缓存；此缓存可能很大。 如果 <c>ReadData</c> 为 <see langword="false" />，则可以在实际读取数据前，将某些字段设置为基于服务器的页字段。</param>
         <param name="connection">一个字符串，包含使 Excel 连接到 ODBC 数据源的 ODBC 设置。 连接字符串具有格式“ODBC;&lt;连接字符串&gt;”。 此参数重写 <see cref="T:Microsoft.Office.Interop.Excel.PivotCache" /> 对象的 <see cref="P:Microsoft.Office.Interop.Excel.PivotCache.Connection" /> 属性的所有以前的设置。</param>
         <summary>创建一个 <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> 对象。</summary>
         <returns>
@@ -3252,15 +3229,15 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法不显示数据透视表向导。 此方法不是可用于 OLE DB 数据源。 使用<xref:Microsoft.Office.Interop.Excel.Worksheets.Add%2A>方法可添加数据透视表缓存中，然后创建一个数据透视表报告基于该高速缓存。  
+ 此方法不显示该数据透视表向导。 此方法不是可用于 OLE DB 数据源。 使用<xref:Microsoft.Office.Interop.Excel.Worksheets.Add%2A>方法以添加数据透视表的缓存，然后创建数据透视表报表基于缓存。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.PivotTableWizard%2A>方法来创建数据透视表基于范围的 A1 至 C4 当前工作表的单元格的内容。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.PivotTableWizard%2A>方法来创建数据透视表报表基于 A1 至 C4 当前工作表的单元格的范围的内容。  
   
  此示例适用于文档级自定义。  
   
@@ -3290,7 +3267,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Previous%2A>属性来确定是否当前<xref:Microsoft.Office.Tools.Excel.WorksheetBase>是工作簿中的第一个表。 如果当前<xref:Microsoft.Office.Tools.Excel.WorksheetBase>不是第一个表，则显示上一个工作表的名称。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Previous%2A>属性来确定是否当前<xref:Microsoft.Office.Tools.Excel.WorksheetBase>是工作簿中的第一个表。 如果当前<xref:Microsoft.Office.Tools.Excel.WorksheetBase>不是第一个表，则显示前一个工作表的名称。  
   
  此示例适用于文档级自定义。  
   
@@ -3320,10 +3297,10 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.WorksheetBase.PrintedCommentPages%2A>属性仅将返回一个数字大于零如果**注释**上设置**表**选项卡**页面设置**对话框中设置为**在表的末尾**。 如果表是图表工作表或 MS Excel 5.0 对话框工作表，此属性将返回零。  
+ <xref:Microsoft.Office.Tools.Excel.WorksheetBase.PrintedCommentPages%2A>属性仅将返回一个数字大于零 if**注释**上设置**表**选项卡**页面设置**对话框的设置为**在表的末尾**。 如果表是图表工作表或 MS Excel 5.0 对话框工作表，此属性将返回零。  
   
 > [!NOTE]
->  此属性将出现在 IntelliSense Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Excel 2007 项目中使用此属性。  
+>  此属性将出现在 IntelliSense 中 Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，此属性不能使用 Excel 2007 项目中。  
   
  ]]></format>
         </remarks>
@@ -3397,30 +3374,26 @@
         <param name="from">要从其处开始打印的页码。 如果省略此参数，则打印从第一页开始。</param>
         <param name="to">要打印的最后一页的页码。 若忽略此参数，则打印至最后一页。</param>
         <param name="copies">要打印的份数。 如果忽略此参数，则打印一份。</param>
-        <param name="preview">
-          若要在打印对象前让 Microsoft Office Excel 调用打印预览，请使用 <see langword="true" />。 若要立即打印对象，请使用 <see langword="false" />。</param>
+        <param name="preview">若要在打印对象前让 Microsoft Office Excel 调用打印预览，请使用 <see langword="true" />。 若要立即打印对象，请使用 <see langword="false" />。</param>
         <param name="activePrinter">设置活动打印机的名称。</param>
-        <param name="printToFile">
-          若要打印到文件，请使用 <see langword="true" />。 若未指定 <c>PrToFileName</c>，则 Excel 会提示用户输入输出文件的名称。</param>
-        <param name="collate">
-          若逐份打印多个副本，请使用 <see langword="true" />。</param>
+        <param name="printToFile">若要打印到文件，请使用 <see langword="true" />。 若未指定 <c>PrToFileName</c>，则 Excel 会提示用户输入输出文件的名称。</param>
+        <param name="collate">若逐份打印多个副本，请使用 <see langword="true" />。</param>
         <param name="prToFileName">如果 <c>PrintToFile</c> 设为 <see langword="true" />，则此参数指定要打印到的文件的名称。</param>
-        <param name="ignorePrintAreas">
-          如果要忽略打印区域并打印整个工作簿，则为 <see langword="true" />；否则为 <see langword="false" />。</param>
+        <param name="ignorePrintAreas">如果要忽略打印区域并打印整个工作簿，则为 <see langword="true" />；否则为 <see langword="false" />。</param>
         <summary>打印工作表。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- "页"中的说明`From`和`To`指打印的页面，不适用于表或工作簿中的全部页。  
+ "页"中的说明`From`和`To`指打印的页面，不适用于表或工作簿中的所有页。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.PrintOutEx%2A>方法打印到默认打印机工作表的前两个页的两个已设置排序规则的副本。 若要运行此代码示例，你的工作簿必须包含名为工作表`Sheet1`的某些数据。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.PrintOutEx%2A>方法打印两个逐的份打印到默认打印机工作表的前两个页。 若要运行此代码示例，您的工作簿必须包含名为`Sheet1`一些数据。  
   
  此示例适用于文档级自定义。  
   
@@ -3455,12 +3428,12 @@
 ## Remarks  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.PrintPreview%2A>方法以显示当前工作表的打印预览。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.PrintPreview%2A>方法来显示当前工作表的打印预览。  
   
  此示例适用于文档级自定义。  
   
@@ -3503,55 +3476,40 @@
       </Parameters>
       <Docs>
         <param name="password">工作表的密码，区分大小写。 如果省略此参数，则无需使用密码即可取消对工作表的保护。 否则，您必须指定密码才能取消对工作表的保护。 如果忘记密码，则无法取消对工作表的保护。 最好将密码及其对应文档名的列表保存在安全的位置。</param>
-        <param name="drawingObjects">
-          为 <see langword="true" /> 时保护形状。 默认值为 <see langword="false" />。</param>
-        <param name="contents">
-          为 <see langword="true" /> 可保护锁定单元格中的内容。 默认值为 <see langword="true" />。</param>
-        <param name="scenarios">
-          为 <see langword="true" /> 时保护方案。 默认值为 <see langword="true" />。</param>
-        <param name="userInterfaceOnly">
-          为 <see langword="true" /> 可保护用户界面，但不保护宏。 如果省略此参数，则同时对宏和用户界面应用保护。</param>
-        <param name="allowFormattingCells">
-          为 <see langword="true" />，则允许用户格式化受保护的工作表上的任何单元格。 默认值为 <see langword="false" />。</param>
-        <param name="allowFormattingColumns">
-          为 <see langword="true" />，则允许用户格式化受保护的工作表上的任何列。 默认值为 <see langword="false" />。</param>
-        <param name="allowFormattingRows">
-          为 <see langword="true" />，则允许用户格式化受保护的工作表上的任何行。 默认值为 <see langword="false" />。</param>
-        <param name="allowInsertingColumns">
-          为 <see langword="true" />，则允许用户在受保护的工作表上插入列。 默认值为 <see langword="false" />。</param>
-        <param name="allowInsertingRows">
-          为 <see langword="true" />，则允许用户在受保护的工作表上插入行。 默认值为 <see langword="false" />。</param>
-        <param name="allowInsertingHyperlinks">
-          为 <see langword="true" />，则允许用户在工作表上插入超链接。 默认值为 <see langword="false" />。</param>
-        <param name="allowDeletingColumns">
-          为 <see langword="true" />，则允许用户在受保护的工作表上删除列，此处要删除的列中的每个单元格都已被解除锁定。 默认值为 <see langword="false" />。</param>
-        <param name="allowDeletingRows">
-          为 <see langword="true" />，则允许用户在受保护的工作表上删除行，此处要删除的行中的每个单元格都已被解除锁定。 默认值为 <see langword="false" />。</param>
-        <param name="allowSorting">
-          为 <see langword="true" />，则允许用户在受保护的工作表上进行排序。 排序范围中的每个单元格都必须已解除锁定或不受保护。 默认值为 <see langword="false" />。</param>
-        <param name="allowFiltering">
-          为 <see langword="true" />，则允许用户在受保护的工作表上设置筛选器。 用户可以更改筛选条件，但不能启用或禁用自动筛选。 用户可以在现有的自动筛选上设置筛选器。 默认值为 <see langword="false" />。</param>
-        <param name="allowUsingPivotTables">
-          为 <see langword="true" />，则允许用户在受保护的工作表上使用数据透视表。 默认值为 <see langword="false" />。</param>
+        <param name="drawingObjects">为 <see langword="true" /> 时保护形状。 默认值为 <see langword="false" />。</param>
+        <param name="contents">为 <see langword="true" /> 可保护锁定单元格中的内容。 默认值为 <see langword="true" />。</param>
+        <param name="scenarios">为 <see langword="true" /> 时保护方案。 默认值为 <see langword="true" />。</param>
+        <param name="userInterfaceOnly">为 <see langword="true" /> 可保护用户界面，但不保护宏。 如果省略此参数，则同时对宏和用户界面应用保护。</param>
+        <param name="allowFormattingCells">为 <see langword="true" />，则允许用户格式化受保护的工作表上的任何单元格。 默认值为 <see langword="false" />。</param>
+        <param name="allowFormattingColumns">为 <see langword="true" />，则允许用户格式化受保护的工作表上的任何列。 默认值为 <see langword="false" />。</param>
+        <param name="allowFormattingRows">为 <see langword="true" />，则允许用户格式化受保护的工作表上的任何行。 默认值为 <see langword="false" />。</param>
+        <param name="allowInsertingColumns">为 <see langword="true" />，则允许用户在受保护的工作表上插入列。 默认值为 <see langword="false" />。</param>
+        <param name="allowInsertingRows">为 <see langword="true" />，则允许用户在受保护的工作表上插入行。 默认值为 <see langword="false" />。</param>
+        <param name="allowInsertingHyperlinks">为 <see langword="true" />，则允许用户在工作表上插入超链接。 默认值为 <see langword="false" />。</param>
+        <param name="allowDeletingColumns">为 <see langword="true" />，则允许用户在受保护的工作表上删除列，此处要删除的列中的每个单元格都已被解除锁定。 默认值为 <see langword="false" />。</param>
+        <param name="allowDeletingRows">为 <see langword="true" />，则允许用户在受保护的工作表上删除行，此处要删除的行中的每个单元格都已被解除锁定。 默认值为 <see langword="false" />。</param>
+        <param name="allowSorting">为 <see langword="true" />，则允许用户在受保护的工作表上进行排序。 排序范围中的每个单元格都必须已解除锁定或不受保护。 默认值为 <see langword="false" />。</param>
+        <param name="allowFiltering">为 <see langword="true" />，则允许用户在受保护的工作表上设置筛选器。 用户可以更改筛选条件，但不能启用或禁用自动筛选。 用户可以在现有的自动筛选上设置筛选器。 默认值为 <see langword="false" />。</param>
+        <param name="allowUsingPivotTables">为 <see langword="true" />，则允许用户在受保护的工作表上使用数据透视表。 默认值为 <see langword="false" />。</param>
         <summary>保护工作表使其无法修改。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果将应用此方法与`UserInterfaceOnly`参数设置为`true`以及然后保存该工作簿，整张工作表 （而不仅仅是接口） 将完全保护时重新打开工作簿。 若要打开工作簿后，重新启用用户界面保护，必须再次应用使用此方法`UserInterfaceOnly`设置为`true`。  
+ 如果应用使用此方法`UserInterfaceOnly`参数设置为`true`，然后保存该工作簿，整个工作表 （而不仅仅是接口） 将完全受到保护时重新打开工作簿。 若要打开该工作簿后，重新启用用户界面保护，必须再次应用使用此方法`UserInterfaceOnly`设置为`true`。  
   
- 可对受保护工作表进行更改，如果提供密码。 此外，另一种方法将取消保护工作表，进行必要的更改，然后然后再次保护工作表。  
+ 就可以对受保护工作表进行更改，如果提供密码。 此外，另一个方法是： 取消保护工作表，进行必要的更改，然后再次保护工作表。  
   
 > [!NOTE]
->  未受保护，则表示可能会锁定该单元格 (**设置单元格格式**对话框)，但包括在中定义的范围**允许用户编辑范围**对话框中，并且用户已取消保护具有密码的范围或已验证通过 NT 权限。  
+>  未受保护，则表示可能会锁定该单元格 (**单元格格式**对话框)，但包含在中定义的范围**允许用户编辑范围**对话框中，并且用户已取消保护具有密码的范围或已通过 NT 权限验证。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例获取的值<xref:Microsoft.Office.Tools.Excel.WorksheetBase.ProtectContents%2A>属性以确定是否受保护工作表内容。 如果内容未受保护，则<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Protect%2A>方法调用与`Contents`参数设置为`true`以便保护内容。  
+ 下面的代码示例获取的值<xref:Microsoft.Office.Tools.Excel.WorksheetBase.ProtectContents%2A>属性来确定是否受保护工作表的内容。 如果内容未受保护，则<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Protect%2A>与调用方法`Contents`参数设置为`true`，以便将受保护的内容。  
   
  此示例适用于文档级自定义。  
   
@@ -3576,13 +3534,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，该值指示工作表的内容（单个单元格）是否受保护。</summary>
-        <value>
-          如果表的内容受保护，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果表的内容受保护，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例获取的值<xref:Microsoft.Office.Tools.Excel.WorksheetBase.ProtectContents%2A>属性以确定是否受保护工作表内容。 如果内容未受保护，则<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Protect%2A>方法调用与`Contents`参数设置为`true`以便保护内容。  
+ 下面的代码示例获取的值<xref:Microsoft.Office.Tools.Excel.WorksheetBase.ProtectContents%2A>属性来确定是否受保护工作表的内容。 如果内容未受保护，则<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Protect%2A>与调用方法`Contents`参数设置为`true`，以便将受保护的内容。  
   
  此示例适用于文档级自定义。  
   
@@ -3607,13 +3564,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，该值指示形状是否受保护。</summary>
-        <value>
-          如果形状受保护，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果形状受保护，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例获取的值<xref:Microsoft.Office.Tools.Excel.WorksheetBase.ProtectDrawingObjects%2A>属性以确定是否受保护工作表上的形状。 如果形状未受保护，则<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Protect%2A>方法调用与`DrawingObjects`参数设置为`true`以便图形处于保护状态。  
+ 下面的代码示例获取的值<xref:Microsoft.Office.Tools.Excel.WorksheetBase.ProtectDrawingObjects%2A>属性来确定是否受保护工作表上的形状。 如果形状未受保护，则<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Protect%2A>与调用方法`DrawingObjects`参数设置为`true`以便形状是否受保护。  
   
  此示例适用于文档级自定义。  
   
@@ -3643,7 +3599,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例获取的值<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Protection%2A>属性来确定是否当前允许单元格格式。 如果不允许单元格格式，则<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Protect%2A>方法调用与`AllowFormattingCells`参数设置为`true`以便单元格可进行格式设置。  
+ 下面的代码示例获取的值<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Protection%2A>属性以确定是否当前允许单元格格式设置。 如果不允许单元格格式设置，则<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Protect%2A>与调用方法`AllowFormattingCells`参数设置为`true`，以便可以设置格式的单元格。  
   
  此示例适用于文档级自定义。  
   
@@ -3668,18 +3624,17 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，该值指示是否打开仅限用户界面保护。</summary>
-        <value>
-          如果打开仅限用户界面保护，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果打开仅限用户界面保护，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要打开用户界面保护，使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Protect%2A>方法替换`UserInterfaceOnly`参数设置为`true`。  
+ 若要启用用户界面保护，使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Protect%2A>方法替换`UserInterfaceOnly`参数设置为`true`。  
   
    
   
 ## Examples  
- 下面的代码示例获取的值<xref:Microsoft.Office.Tools.Excel.WorksheetBase.ProtectionMode%2A>属性来确定是否受到保护的用户界面。 如果用户界面未受保护，则<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Protect%2A>方法调用与`UserInterfaceOnly`参数设置为`true`这样的用户界面会受到保护。  
+ 下面的代码示例获取的值<xref:Microsoft.Office.Tools.Excel.WorksheetBase.ProtectionMode%2A>属性来确定是否受保护的用户界面。 如果用户界面未受保护，则<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Protect%2A>与调用方法`UserInterfaceOnly`参数设置为`true`这样的用户界面会受到保护。  
   
  此示例适用于文档级自定义。  
   
@@ -3704,13 +3659,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，该值指示工作表方案是否受保护。</summary>
-        <value>
-          如果工作表方案受保护，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果工作表方案受保护，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例获取的值<xref:Microsoft.Office.Tools.Excel.WorksheetBase.ProtectScenarios%2A>属性以确定是否受保护工作表方案。 如果方案不受保护，则<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Protect%2A>方法调用与`Scenarios`参数设置为`true`以便方案处于保护状态。  
+ 下面的代码示例获取的值<xref:Microsoft.Office.Tools.Excel.WorksheetBase.ProtectScenarios%2A>属性来确定工作表方案是否受保护。 如果方案不受保护，则<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Protect%2A>与调用方法`Scenarios`参数设置为`true`以便方案是否受保护。  
   
  此示例适用于文档级自定义。  
   
@@ -3741,7 +3695,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.QueryTables%2A>属性刷新中的数据每个<xref:Microsoft.Office.Interop.Excel.QueryTable?displayProperty=fullName>上当前工作表。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.QueryTables%2A>属性来刷新中的数据每隔<xref:Microsoft.Office.Interop.Excel.QueryTable?displayProperty=fullName>当前工作表上。  
   
  此示例适用于文档级自定义。  
   
@@ -3778,15 +3732,15 @@
 |`Cell1`|采用应用程序语言的以 A1 样式表示法表示的范围名称。 范围名称可以包括范围运算符（冒号）、交集运算符（空格）或并集运算符（逗号）。 范围名称还可以包括货币符号，但是这些符号被忽略。 可以在范围的任何部分中使用本地定义的名称。 如果使用一个名称，则假定该名称使用的是应用程序的语言。 此参数是必需的。|  
 |`Cell2`|范围右下角的单元格。 可以是一个包含单个单元格、整列、整行的 <xref:Microsoft.Office.Interop.Excel.Range?displayProperty=fullName>，或者可以是一个以应用程序的语言命名单个单元格的字符串。 此参数在 Visual Basic 中是可选的。|  
   
- 如果你尝试使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Range%2A>而不指定任何参数，<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Range%2A>将获取<xref:Microsoft.Office.Tools.Excel.Worksheet._RangeType>对象，是 Visual Studio 基础结构的一部分和不应在代码中直接使用。  
+ 如果尝试使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Range%2A>而无需指定任何参数，<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Range%2A>将获取<xref:Microsoft.Office.Tools.Excel.Worksheet._RangeType>对象，它是 Visual Studio 基础结构的一部分，不应在代码中直接使用。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例演示使用不同方式<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Range%2A>属性来访问单个或多个单元格。  
+ 下面的代码示例演示如何使用不同方式<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Range%2A>属性来访问单个或多个单元格。  
   
  此示例适用于文档级自定义。  
   
@@ -3861,19 +3815,19 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果使用不带参数，此属性返回<xref:Microsoft.Office.Interop.Excel.Range>对象，其中包含工作表上的所有行。  
+ 如果使用不带参数，该属性返回<xref:Microsoft.Office.Interop.Excel.Range>对象，其中包含工作表上的所有行。  
   
- 此属性可以使用以下可选参数，用于获取工作表上的特定行。 如果参数中使用此属性，返回值是必须强制转换为对象<xref:Microsoft.Office.Interop.Excel.Range>。  
+ 此属性可以使用以下可选参数，用于在工作表上获取特定行。 如果参数中使用此属性，返回值是必须强制转换为对象<xref:Microsoft.Office.Interop.Excel.Range>。  
   
 |参数|描述|  
 |---------------|-----------------|  
-|`RowIndex`|若要获取的一个或多个行的索引。<br /><br /> 若要获取单个行，请传递一个整数，指定你想要获取的行的索引。 从 1 开始的行索引。<br /><br /> 若要获取多个连续行，请传递与格式字符串"`first row`:`last row`"。 例如，若要获取行 1 至 5，可传递"1:5"。|  
-|`ColumnIndex`|不使用此参数。 此属性将引发<xref:System.Runtime.InteropServices.COMException>如果你尝试将值传递给此参数。|  
+|`RowIndex`|若要获取的一个或多个行的索引。<br /><br /> 若要获取的单个行，请将传递一个整数，指定你想要获取的行的索引。 行索引从 1 开始。<br /><br /> 若要获取多个连续的行，请将传递格式的字符串"`first row`:`last row`"。 例如，若要获取行 1 至 5，传递"1:5"。|  
+|`ColumnIndex`|不使用此参数。 此属性将引发<xref:System.Runtime.InteropServices.COMException>如果尝试将值传递给此参数。|  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Rows%2A>属性设置颜色、 名称、 大小和加粗的字体的所有单元格的前五个行中，工作表上。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Rows%2A>属性工作表上的前五个行中设置颜色、 名称、 大小和的所有单元格的字体。  
   
  此示例适用于文档级自定义。 若要运行此代码，请将其复制到你的项目中的工作表类之一。  
   
@@ -3913,16 +3867,12 @@
         <param name="fileFormat">保存文件时要使用的文件格式。 有关有效选项的列表，请参见 <see cref="P:Microsoft.Office.Tools.Excel.Workbook.FileFormat" /> 属性。 对于现有文件，默认格式为最后一种指定文件格式；对于新文件，默认格式为所用 Excel 版本的格式。</param>
         <param name="password">一个区分大小写的字符串（不超过 15 个字符），指示为文件指定的保护密码。</param>
         <param name="writeResPassword">文件的写保护密码。 如果保存文件时指定了密码，但打开文件时没有提供密码，则该文件以只读方式打开。</param>
-        <param name="readOnlyRecommended">
-          如果为 <see langword="true" />，则在打开该文件时显示一条消息，建议以只读方式打开该文件。</param>
-        <param name="createBackup">
-          如果为 <see langword="true" />，则创建备份文件。</param>
-        <param name="addToMru">
-          如果为 <see langword="true" />，则将工作簿添加到最近使用的文件列表中。 默认值为 <see langword="false" />。</param>
+        <param name="readOnlyRecommended">如果为 <see langword="true" />，则在打开该文件时显示一条消息，建议以只读方式打开该文件。</param>
+        <param name="createBackup">如果为 <see langword="true" />，则创建备份文件。</param>
+        <param name="addToMru">如果为 <see langword="true" />，则将工作簿添加到最近使用的文件列表中。 默认值为 <see langword="false" />。</param>
         <param name="textCodepage">不在美国使用英语 Excel。</param>
         <param name="textVisualLayout">不在美国使用英语 Excel。</param>
-        <param name="local">
-          如果为 <see langword="true" />，则针对 Excel 语言保存文件（包括控制面板设置）；如果为 <see langword="false" />（默认），则针对 Visual Basic for Applications (VBA) 语言保存文件。</param>
+        <param name="local">如果为 <see langword="true" />，则针对 Excel 语言保存文件（包括控制面板设置）；如果为 <see langword="false" />（默认），则针对 Visual Basic for Applications (VBA) 语言保存文件。</param>
         <summary>在另一个文件中保存对工作表所做的更改。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -3930,12 +3880,12 @@
 ## Remarks  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.SaveAs%2A>方法以将保存当前工作表的新副本。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.SaveAs%2A>方法以保存当前工作表的新副本。  
   
  此示例适用于文档级自定义。  
   
@@ -3969,7 +3919,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Scenarios%2A>方法将一个新的方案添加到当前工作表，并显示**方案 Manager**对话框来验证是否添加了该方案。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Scenarios%2A>方法将新方案添加到当前工作表，并显示**方案 Manager**对话框来验证是否添加了该方案。  
   
  此示例适用于文档级自定义。  
   
@@ -4024,12 +3974,12 @@
 ## Remarks  
  不能选择滚动区域以外的单元格。  
   
- 将此属性设置为空字符串 ("") 以启用整张工作表的单元格选定区域。  
+ 将此属性设置为空字符串 ("") 以允许单元格选定整个工作表。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.ScrollArea%2A>属性 a1 至 Z100 将当前工作表的滚动区域设置为的单元格范围。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.ScrollArea%2A>属性从 A1 到 Z100 将当前工作表的滚动区域设置为单元格的范围。  
   
  此示例适用于  
   
@@ -4085,8 +4035,7 @@
         <Parameter Name="replace" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="replace">
-          如果设置为 <see langword="true" />，则移除当前选择并转为选择该工作表；如果设置为 <see langword="false" />，则扩展当前选定内容以包括任何之前选定的对象和该工作表。</param>
+        <param name="replace">如果设置为 <see langword="true" />，则移除当前选择并转为选择该工作表；如果设置为 <see langword="false" />，则扩展当前选定内容以包括任何之前选定的对象和该工作表。</param>
         <summary>选择工作表。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -4094,12 +4043,12 @@
 ## Remarks  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Select%2A>方法来选择`Sheet1`，，然后将扩展以包括所选内容`Sheet2`和`Sheet3`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Select%2A>方法来选择`Sheet1`，然后将其扩展以包含所选内容并`Sheet2`和`Sheet3`。  
   
  此示例适用于文档级自定义。  
   
@@ -4128,7 +4077,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例演示的处理程序<xref:Microsoft.Office.Tools.Excel.WorksheetBase.SelectionChange>状态栏中显示的表名称和地址的所选范围内的事件。  
+ 下面的代码示例演示了一个处理程序<xref:Microsoft.Office.Tools.Excel.WorksheetBase.SelectionChange>状态栏中显示的工作表名称和所选范围的地址的事件。  
   
  此示例适用于文档级自定义。  
   
@@ -4161,7 +4110,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.SetBackgroundPicture%2A>方法以设置到名为 image1.jpg 工作表的背景图像。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.SetBackgroundPicture%2A>方法将工作表的背景图像设置为一个名为 image1.jpg 文件。  
   
  此示例适用于文档级自定义。  
   
@@ -4239,9 +4188,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 尽管你使用数据窗体，将暂停执行。 在之后的行时关闭数据窗体，请继续执行<xref:Microsoft.Office.Tools.Excel.WorksheetBase.ShowDataForm%2A>方法。  
+ 使用数据窗体时，将暂停执行。 在之后的行数据窗体关闭时，恢复执行<xref:Microsoft.Office.Tools.Excel.WorksheetBase.ShowDataForm%2A>方法。  
   
- 如果存在，此方法将自定义数据窗体上，运行。  
+ 如果存在，则此方法运行自定义数据窗体。  
   
  ]]></format>
         </remarks>
@@ -4265,16 +4214,16 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 这是要在中调用的最后一个事件<xref:Microsoft.Office.Tools.Excel.WorksheetBase>类作为<xref:Microsoft.Office.Tools.Excel.WorksheetBase>类卸载。 此事件用于任何其他清理过程。  
+ 这是要在中调用的最后一个事件<xref:Microsoft.Office.Tools.Excel.WorksheetBase>声明为类<xref:Microsoft.Office.Tools.Excel.WorksheetBase>类卸载。 使用此事件的任何其他清理过程。  
   
- 文档级自定义项，工作表主机项关闭时，将卸载程序集的应用程序域。  
+ 文档级自定义项，该程序集的应用程序域卸载时工作表宿主项关闭。  
   
- 在应用程序级外接程序，工作表主机项关闭时，不会不卸载应用程序域。 此外，基础的工作表对象将不再可用。 若要访问该工作表关闭使用之前<xref:Microsoft.Office.Tools.Excel.Workbook.BeforeClose>相反。  
+ 在应用程序级外接程序，应用程序域不会卸载时工作表宿主项关闭。 此外，基础的工作表对象将不再可用。 若要访问该工作表关闭使用之前<xref:Microsoft.Office.Tools.Excel.Workbook.BeforeClose>相反。  
   
    
   
 ## Examples  
- 下面的代码示例演示的处理程序<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Shutdown>显示一条消息的事件时<xref:Microsoft.Office.Tools.Excel.WorksheetBase>类卸载。  
+ 下面的代码示例演示了一个处理程序<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Shutdown>显示一条消息的事件时<xref:Microsoft.Office.Tools.Excel.WorksheetBase>类卸载。  
   
  此示例适用于文档级自定义。  
   
@@ -4345,7 +4294,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例填充标头和员工名称与当前工作表中的范围。 接下来，该示例访问<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Sort%2A>包括要作为排序依据的列范围和排序顺序的工作表并设置属性的属性。 最后，该代码调用`Microsoft.Office.Interop.Excel.Sort.Apply`方法指定的工作表数据进行排序。 运行此代码时，员工数据将进行排序以升序基于雇员的名字。  
+ 下面的代码示例填充的范围标头和员工名称在当前工作表中。 接下来，该示例访问<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Sort%2A>包括要作为排序依据的列范围和排序顺序的工作表并设置属性的属性。 最后，该代码调用`Microsoft.Office.Interop.Excel.Sort.Apply`方法指定的工作表数据进行排序。 当您运行此代码时，员工数据将以升序基于雇员的名字进行排序。  
   
  此示例适用于文档级自定义。  
   
@@ -4402,7 +4351,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.StandardHeight%2A>属性在当前工作表中显示的所有行的默认高度。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.StandardHeight%2A>属性来显示当前工作表中的所有行的默认高度。  
   
  此示例适用于文档级自定义。  
   
@@ -4432,12 +4381,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 一个单元的列宽度等于正文样式中的一个字符的宽度。 对于非等宽字体使用的字符 0 （零） 的宽度。  
+ 正文样式中的一个字符的宽度相等列宽度的一个单元。 对于非等宽字体，使用 0 （零） 的字符的宽度。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.StandardWidth%2A>属性在当前工作表中显示所有列的默认宽度。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.StandardWidth%2A>属性来显示当前工作表中的所有列的默认宽度。  
   
  此示例适用于文档级自定义。  
   
@@ -4484,7 +4433,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Tab%2A>属性设置为蓝色的工作表的选项卡的主色。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Tab%2A>属性设置为蓝色的工作表的选项卡的主颜色。  
   
  此示例适用于文档级自定义。  
   
@@ -4561,13 +4510,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示 Microsoft Office Excel 是否对工作表使用 Lotus 1-2-3 表达式计算规则。</summary>
-        <value>
-          如果 Excel 对工作表使用 Lotus 1-2-3 表达式计算规则，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果 Excel 对工作表使用 Lotus 1-2-3 表达式计算规则，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 执行与相同的功能**转换输入公式**选项**转换**选项卡**选项**对话框。  
+ 执行相同的功能**转换输入公式**选项卡上**过渡**选项卡**选项**对话框。  
   
  ]]></format>
         </remarks>
@@ -4587,8 +4535,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示 Microsoft Office Excel 是否对工作表使用 Lotus 1-2-3 公式规则。</summary>
-        <value>
-          如果 Excel 对工作表使用 Lotus 1-2-3 公式规则，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果 Excel 对工作表使用 Lotus 1-2-3 公式规则，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -4612,7 +4559,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Type%2A>属性来显示当前工作表是否工作表，对话表或一个消息框中的图表。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Type%2A>属性来显示当前工作表是工作表、 对话表，还是一个消息框中的图表。  
   
  此示例适用于文档级自定义。  
   
@@ -4648,12 +4595,12 @@
  如果忘记密码，则无法取消对工作表的保护。 最好将密码及其对应文档名的列表保存在安全的位置。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例确定是否当前的工作表的单元格内容受保护。 如果受保护的单元格内容，则该示例将提示用户取消单元格内容保护使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Unprotect%2A>方法。  
+ 下面的代码示例确定当前的工作表的单元格内容是否受保护。 如果单元格内容受到保护，则该示例会提示用户取消单元格内容保护使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Unprotect%2A>方法。  
   
  此示例适用于文档级自定义。  
   
@@ -4683,12 +4630,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用的范围还包括曾经使用任何单元格。 例如，如果单元格**A1**包含一个值，然后删除值，则单元格**A1**被视为使用。 在这种情况下，<xref:Microsoft.Office.Tools.Excel.WorksheetBase.UsedRange%2A>属性将返回一系列，包括单元格**A1**。  
+ 使用的范围包括曾经使用任何单元格。 例如，如果单元格**A1**包含一个值，然后删除值，则单元格**A1**被视为使用。 在这种情况下，<xref:Microsoft.Office.Tools.Excel.WorksheetBase.UsedRange%2A>属性将返回一系列，包括单元格**A1**。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.UsedRange%2A>属性选择的范围使用工作表上的单元格。 本示例首先设置单元格的范围从 A1 为 C3 在为 23 的值的当前工作表。 如果工作表是可见的则该示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.UsedRange%2A>属性以选择<xref:Microsoft.Office.Interop.Excel.Range?displayProperty=fullName>使用的单元格。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.UsedRange%2A>属性选择的范围使用的工作表上的单元格。 该示例首先设置单元格的范围从 A1 到 C3 为 23 的值在当前工作表上。 如果工作表可见，则该示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.UsedRange%2A>属性来选择<xref:Microsoft.Office.Interop.Excel.Range?displayProperty=fullName>使用的单元格。  
   
  此示例适用于文档级自定义。  
   
@@ -4719,7 +4666,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Visible%2A>属性，以帮助选择的范围使用工作表上的单元格。 本示例首先设置单元格的范围从 A1 为 C3 在为 23 的值的当前工作表。 如果<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Visible%2A>属性指示工作表是可见的则该示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.UsedRange%2A>属性以选择<xref:Microsoft.Office.Interop.Excel.Range?displayProperty=fullName>使用的单元格。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Visible%2A>属性以帮助选择的范围使用的工作表上的单元格。 该示例首先设置单元格的范围从 A1 到 C3 为 23 的值在当前工作表上。 如果<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Visible%2A>属性指示工作表可见，则该示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.UsedRange%2A>属性来选择<xref:Microsoft.Office.Interop.Excel.Range?displayProperty=fullName>使用的单元格。  
   
  此示例适用于文档级自定义。  
   
@@ -4749,7 +4696,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.VPageBreaks%2A>属性在单元格 C5 处添加垂直分页符。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.VPageBreaks%2A>属性在单元格 C5 添加垂直分页符。  
   
  此示例适用于文档级自定义。  
   
@@ -4787,17 +4734,17 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- XML 功能，除了将文件保存 XML 电子表格格式，将仅在 Microsoft Office Professional Edition 2003 和 Microsoft Office Excel 2003 中可用。  
+ 仅在 Microsoft Office Professional Edition 2003 和 Microsoft Office Excel 2003 中可用的 XML 功能，除了将文件保存 XML 电子表格格式。  
   
- 如果 XPath 中的 XML 列表中中的列存在则<xref:Microsoft.Office.Interop.Excel.Range>返回的对象是否不包含标头行或插入行。  
+ 如果在 XML 列表中的列中存在 XPath<xref:Microsoft.Office.Interop.Excel.Range>返回的对象不包含标头行或插入行。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.XmlDataQuery%2A>方法以获取<xref:Microsoft.Office.Interop.Excel.Range>映射到特定的 XPath 的单元格。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.XmlDataQuery%2A>方法以获取<xref:Microsoft.Office.Interop.Excel.Range>映射到特定 XPath 的单元格。  
   
  此示例适用于文档级自定义。  
   
@@ -4835,17 +4782,17 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- XML 功能，除了将文件保存 XML 电子表格格式，将仅在 Microsoft Office Professional Edition 2003 和 Microsoft Office Excel 2003 中可用。  
+ 仅在 Microsoft Office Professional Edition 2003 和 Microsoft Office Excel 2003 中可用的 XML 功能，除了将文件保存 XML 电子表格格式。  
   
  与不同<xref:Microsoft.Office.Tools.Excel.WorksheetBase.XmlDataQuery%2A>方法，<xref:Microsoft.Office.Tools.Excel.WorksheetBase.XmlMapQuery%2A>方法返回的 XML 列表，包括标题行和插入行的整个列。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions.md)。  
+ 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.XmlMapQuery%2A>方法以获取<xref:Microsoft.Office.Interop.Excel.Range>映射到特定的 XPath 的单元格。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.XmlMapQuery%2A>方法以获取<xref:Microsoft.Office.Interop.Excel.Range>映射到特定 XPath 的单元格。  
   
  此示例适用于文档级自定义。  
   
