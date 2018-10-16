@@ -1,11 +1,11 @@
 <Type Name="Workbook" FullName="Microsoft.Office.Tools.Excel.Workbook">
   <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="35559515a5d47d74d665df6f124a894d2e7db1a2" />
-    <Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" />
+    <Meta Name="ms.openlocfilehash" Value="e7fce2c01adeb2ef060622b85a949d688c49a0ca" />
+    <Meta Name="ms.sourcegitcommit" Value="22c8ada331b6fa1e8d8b35cf9c101488afbe75e5" />
     <Meta Name="ms.translationtype" Value="HT" />
     <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="09/19/2018" />
-    <Meta Name="ms.locfileid" Value="46455241" />
+    <Meta Name="ms.lasthandoff" Value="10/11/2018" />
+    <Meta Name="ms.locfileid" Value="49079777" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface Workbook : IDisposable, System.ComponentModel.IComponent, System.ComponentModel.ISupportInitialize, System.Windows.Forms.IBindableComponent" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Workbook implements class System.ComponentModel.IComponent, class System.ComponentModel.ISupportInitialize, class System.IDisposable, class System.Windows.Forms.IBindableComponent" />
@@ -52,9 +52,9 @@
   
 -   <xref:Microsoft.Office.Tools.Excel.Workbook.InnerObject%2A> 属性。 使用此属性来获取基础<xref:Microsoft.Office.Interop.Excel.Workbook?displayProperty=fullName>对象<xref:Microsoft.Office.Tools.Excel.Workbook?displayProperty=fullName>宿主项。  
   
- 在应用程序级项目中，可以创建<xref:Microsoft.Office.Tools.Excel.Workbook?displayProperty=fullName>以编程方式通过使用对象`GetVstoObject`方法。 有关更多信息，请参见 [在运行时在 VSTO 外接程序中扩展 Word 文档和 Excel 工作簿](/visualstudio/vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time)。  
+ 在应用程序级项目中，可以创建<xref:Microsoft.Office.Tools.Excel.Workbook?displayProperty=fullName>以编程方式通过使用对象`GetVstoObject`方法。 有关更多信息，请参见 [Extending Word Documents and Excel Workbooks in VSTO Add-ins at Run Time](/visualstudio/vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time)。  
   
- 在文档级项目中，您通常不使用<xref:Microsoft.Office.Tools.Excel.Workbook?displayProperty=fullName>直接对象。 请改用`ThisWorkbook`类以编程方式访问你的项目中的工作簿。 `ThisWorkbook`类派生其大多数成员从<xref:Microsoft.Office.Tools.Excel.WorkbookBase?displayProperty=fullName>类。 此类将对其成员的所有调用重都定向到的内部实现<xref:Microsoft.Office.Tools.Excel.Workbook?displayProperty=fullName>接口中[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]。 有关详细信息，请参阅[Programming Document-level Customizations](/visualstudio/vsto/programming-document-level-customizations)。  
+ 在文档级项目中，您通常不使用<xref:Microsoft.Office.Tools.Excel.Workbook?displayProperty=fullName>直接对象。 请改用`ThisWorkbook`类以编程方式访问你的项目中的工作簿。 `ThisWorkbook`类派生其大多数成员从<xref:Microsoft.Office.Tools.Excel.WorkbookBase?displayProperty=fullName>类。 此类将对其成员的所有调用重都定向到的内部实现<xref:Microsoft.Office.Tools.Excel.Workbook?displayProperty=fullName>接口中[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]。 有关详细信息，请参阅 [Programming Document-Level Customizations](/visualstudio/vsto/programming-document-level-customizations)。  
   
  [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
   
@@ -1586,7 +1586,7 @@
 |---------------|-----------------|  
 |`Index`|索引数 （从 1 到 56) 工作簿调色板中的颜色。 如果未指定此参数，此属性将返回包含所有 56 种颜色调色板中的数组。|  
   
- 如果尝试使用<xref:Microsoft.Office.Tools.Excel.Workbook.Colors%2A>而无需指定任何参数，<xref:Microsoft.Office.Tools.Excel.Workbook.Colors%2A>将获取<xref:Microsoft.Office.Tools.Excel.Workbook._ColorsType>对象属于的 Office 开发 Visual Studio 基础结构中的工具，但不可在代码中直接使用。  
+ 如果尝试使用<xref:Microsoft.Office.Tools.Excel.Workbook.Colors%2A>而无需指定任何参数，<xref:Microsoft.Office.Tools.Excel.Workbook.Colors%2A>将获取<xref:Microsoft.Office.Tools.Excel.Workbook_ColorsType>对象属于的 Office 开发 Visual Studio 基础结构中的工具，但不可在代码中直接使用。  
   
  工作簿调色板有 56 条目，每个所表示的 RGB 值。  
   
@@ -2631,7 +2631,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 自定义扩展插件是一种实现的<xref:Microsoft.Office.Tools.Excel.IWorkbookExtension>通过使用 Visual Studio 中的 Office 开发工具创建的 Excel 解决方案中的接口。 在文档级项目中，此属性返回所生成的实例`ThisWorkbook`默认情况下的类。 `ThisWorkbook`类实现<xref:Microsoft.Office.Tools.Excel.IWorkbookExtension>接口通过<xref:Microsoft.Office.Tools.Excel.WorkbookBase>类。 有关详细信息，请参阅[Programming Document-level Customizations](/visualstudio/vsto/programming-document-level-customizations)。  
+ 自定义扩展插件是一种实现的<xref:Microsoft.Office.Tools.Excel.IWorkbookExtension>通过使用 Visual Studio 中的 Office 开发工具创建的 Excel 解决方案中的接口。 在文档级项目中，此属性返回所生成的实例`ThisWorkbook`默认情况下的类。 `ThisWorkbook`类实现<xref:Microsoft.Office.Tools.Excel.IWorkbookExtension>接口通过<xref:Microsoft.Office.Tools.Excel.WorkbookBase>类。 有关详细信息，请参阅 [Programming Document-Level Customizations](/visualstudio/vsto/programming-document-level-customizations)。  
   
  ]]></format>
         </remarks>
@@ -4725,7 +4725,7 @@
 ## Remarks  
  此方法通过执行以下任务来删除自定义项：  
   
--   它将删除`_AssemblyName`和`_AssemblyLocation`工作簿中的自定义属性。 有关详细信息，请参阅[自定义文档属性概述](/visualstudio/vsto/custom-document-properties-overview)。  
+-   它将删除`_AssemblyName`和`_AssemblyLocation`工作簿中的自定义属性。 有关更多信息，请参见 [Custom Document Properties Overview](/visualstudio/vsto/custom-document-properties-overview)。  
   
 -   它从工作簿中删除缓存的数据。 有关缓存数据的详细信息，请参阅[缓存数据](/visualstudio/vsto/caching-data)。  
   
