@@ -1,13 +1,5 @@
 <Type Name="ControlCollection" FullName="Microsoft.Office.Tools.Word.ControlCollection">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="a6019f940e4c6e92974f93f9e52953660ee03ee7" />
-    <Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" />
-    <Meta Name="ms.translationtype" Value="HT" />
-    <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="09/19/2018" />
-    <Meta Name="ms.locfileid" Value="46459492" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface ControlCollection : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="a6019f940e4c6e92974f93f9e52953660ee03ee7" /><Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="09/19/2018" /><Meta Name="ms.locfileid" Value="46459492" /></Metadata><TypeSignature Language="C#" Value="public interface ControlCollection : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ControlCollection implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Word.ControlCollection" />
   <AssemblyInfo>
@@ -141,10 +133,8 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="name" /> 或 <paramref name="range" /> 参数为 <see langword="null" />，或者 <paramref name="name" /> 参数长度为零。</exception>
-        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
-          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中已存在一个同名控件。</exception>
+        <exception cref="T:System.ArgumentNullException"><paramref name="name" /> 或 <paramref name="range" /> 参数为 <see langword="null" />，或者 <paramref name="name" /> 参数长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException"><see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中已存在一个同名控件。</exception>
         <exception cref="T:Microsoft.Office.Tools.InvalidRangeException">指定的范围无效。</exception>
       </Docs>
     </Member>
@@ -166,8 +156,7 @@
       <Docs>
         <param name="name">新控件的名称。</param>
         <summary>在文档的当前选定内容中添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" />。</summary>
-        <returns>
-          <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" />，已添加到该文档。</returns>
+        <returns><see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" />，已添加到该文档。</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -191,10 +180,8 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="name" /> 为 <see langword="null" />，或其长度为零。</exception>
-        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
-          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 中已存在具有相同名称的控件。</exception>
+        <exception cref="T:System.ArgumentNullException"><paramref name="name" /> 为 <see langword="null" />，或其长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException"><see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 中已存在具有相同名称的控件。</exception>
       </Docs>
     </Member>
     <Member MemberName="AddBuildingBlockGalleryContentControl">
@@ -217,8 +204,7 @@
         <param name="contentControl">一个 <see cref="T:Microsoft.Office.Interop.Word.ContentControl" />，它是新控件的基础。</param>
         <param name="name">新控件的名称。</param>
         <summary>将新 <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" /> 添加到集合中。 新控件基于文档中已存在的本机内容控件。</summary>
-        <returns>
-          <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" />，已添加到该文档。</returns>
+        <returns><see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" />，已添加到该文档。</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -254,15 +240,12 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="contentControl" /> 为 <see langword="null" />。  
+        <exception cref="T:System.ArgumentNullException"><paramref name="contentControl" /> 为 <see langword="null" />。  
   
 或 
  <paramref name="name" /> 为 <see langword="null" />，或其长度为零。</exception>
-        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
-          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 中已存在具有相同名称的控件。</exception>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="contentControl" /> 不是构建基块库（即 <paramref name="contentControl" /> 的 <see cref="P:Microsoft.Office.Interop.Word.ContentControl.Type" /> 属性不具有值 <c>Microsoft.Office.Interop.Word.WdContentControlType.wdContentControlBuildingBlockGallery</c>）。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException"><see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 中已存在具有相同名称的控件。</exception>
+        <exception cref="T:System.ArgumentException"><paramref name="contentControl" /> 不是构建基块库（即 <paramref name="contentControl" /> 的 <see cref="P:Microsoft.Office.Interop.Word.ContentControl.Type" /> 属性不具有值 <c>Microsoft.Office.Interop.Word.WdContentControlType.wdContentControlBuildingBlockGallery</c>）。</exception>
       </Docs>
     </Member>
     <Member MemberName="AddBuildingBlockGalleryContentControl">
@@ -282,12 +265,10 @@
         <Parameter Name="name" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="range">
-          <see cref="T:Microsoft.Office.Interop.Word.Range" />，可为新控件提供边界。</param>
+        <param name="range"><see cref="T:Microsoft.Office.Interop.Word.Range" />，可为新控件提供边界。</param>
         <param name="name">新控件的名称。</param>
         <summary>在文档的指定范围中，添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" />。</summary>
-        <returns>
-          <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" />，已添加到该文档。</returns>
+        <returns><see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" />，已添加到该文档。</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -311,10 +292,8 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="name" /> 为 <see langword="null" />，或其长度为零。</exception>
-        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
-          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 中已存在具有相同名称的控件。</exception>
+        <exception cref="T:System.ArgumentNullException"><paramref name="name" /> 为 <see langword="null" />，或其长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException"><see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 中已存在具有相同名称的控件。</exception>
       </Docs>
     </Member>
     <Member MemberName="AddComboBoxContentControl">
@@ -335,8 +314,7 @@
       <Docs>
         <param name="name">新控件的名称。</param>
         <summary>在文档的当前选定内容中添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.ComboBoxContentControl" />。</summary>
-        <returns>
-          <see cref="T:Microsoft.Office.Tools.Word.ComboBoxContentControl" />，已添加到该文档。</returns>
+        <returns><see cref="T:Microsoft.Office.Tools.Word.ComboBoxContentControl" />，已添加到该文档。</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -360,10 +338,8 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="name" /> 为 <see langword="null" />，或其长度为零。</exception>
-        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
-          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 中已存在具有相同名称的控件。</exception>
+        <exception cref="T:System.ArgumentNullException"><paramref name="name" /> 为 <see langword="null" />，或其长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException"><see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 中已存在具有相同名称的控件。</exception>
       </Docs>
     </Member>
     <Member MemberName="AddComboBoxContentControl">
@@ -386,8 +362,7 @@
         <param name="contentControl">一个 <see cref="T:Microsoft.Office.Interop.Word.ContentControl" />，它是新控件的基础。</param>
         <param name="name">新控件的名称。</param>
         <summary>将新 <see cref="T:Microsoft.Office.Tools.Word.ComboBoxContentControl" /> 添加到集合中。 新控件基于文档中已存在的本机内容控件。</summary>
-        <returns>
-          <see cref="T:Microsoft.Office.Tools.Word.ComboBoxContentControl" />，已添加到该文档。</returns>
+        <returns><see cref="T:Microsoft.Office.Tools.Word.ComboBoxContentControl" />，已添加到该文档。</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -423,15 +398,12 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="contentControl" /> 为 <see langword="null" />。  
+        <exception cref="T:System.ArgumentNullException"><paramref name="contentControl" /> 为 <see langword="null" />。  
   
 或 
  <paramref name="name" /> 为 <see langword="null" />，或其长度为零。</exception>
-        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
-          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 中已存在具有相同名称的控件。</exception>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="contentControl" /> 不是构建基块库（即 <paramref name="contentControl" /> 的 <see cref="P:Microsoft.Office.Interop.Word.ContentControl.Type" /> 属性不具有值 <c>Microsoft.Office.Interop.Word.WdContentControlType.wdContentControlComboBox</c>）。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException"><see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 中已存在具有相同名称的控件。</exception>
+        <exception cref="T:System.ArgumentException"><paramref name="contentControl" /> 不是构建基块库（即 <paramref name="contentControl" /> 的 <see cref="P:Microsoft.Office.Interop.Word.ContentControl.Type" /> 属性不具有值 <c>Microsoft.Office.Interop.Word.WdContentControlType.wdContentControlComboBox</c>）。</exception>
       </Docs>
     </Member>
     <Member MemberName="AddComboBoxContentControl">
@@ -451,12 +423,10 @@
         <Parameter Name="name" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="range">
-          <see cref="T:Microsoft.Office.Interop.Word.Range" />，可为新控件提供边界。</param>
+        <param name="range"><see cref="T:Microsoft.Office.Interop.Word.Range" />，可为新控件提供边界。</param>
         <param name="name">新控件的名称。</param>
         <summary>在文档的指定范围中，添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.ComboBoxContentControl" />。</summary>
-        <returns>
-          <see cref="T:Microsoft.Office.Tools.Word.ComboBoxContentControl" />，已添加到该文档。</returns>
+        <returns><see cref="T:Microsoft.Office.Tools.Word.ComboBoxContentControl" />，已添加到该文档。</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -480,10 +450,8 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="name" /> 为 <see langword="null" />，或其长度为零。</exception>
-        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
-          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 中已存在具有相同名称的控件。</exception>
+        <exception cref="T:System.ArgumentNullException"><paramref name="name" /> 为 <see langword="null" />，或其长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException"><see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 中已存在具有相同名称的控件。</exception>
       </Docs>
     </Member>
     <Member MemberName="AddContentControl">
@@ -506,8 +474,7 @@
         <param name="contentControl">一个 <see langword="Microsoft.Office.Interop.Word.ContentControl" />，它是新控件的基础。</param>
         <param name="name">新控件的名称。</param>
         <summary>添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.ContentControl" />，它基于文档中的本机内容控件。</summary>
-        <returns>
-          <see cref="T:Microsoft.Office.Tools.Word.ContentControl" />，已添加到该文档。</returns>
+        <returns><see cref="T:Microsoft.Office.Tools.Word.ContentControl" />，已添加到该文档。</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -516,15 +483,12 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="contentControl" /> 为 <see langword="null" />。  
+        <exception cref="T:System.ArgumentNullException"><paramref name="contentControl" /> 为 <see langword="null" />。  
   
 或 
  <paramref name="name" /> 为 <see langword="null" />，或其长度为零。</exception>
-        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
-          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 中已存在具有相同名称的控件。</exception>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="contentControl" /> 不是构建基块库（即 <paramref name="contentControl" /> 的 <c>Microsoft.Office.Interop.Word.ContentControl.Type</c> 属性不具有值 <c>Microsoft.Office.Interop.Word.WdContentControlType.wdContentControlRichText</c>）。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException"><see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 中已存在具有相同名称的控件。</exception>
+        <exception cref="T:System.ArgumentException"><paramref name="contentControl" /> 不是构建基块库（即 <paramref name="contentControl" /> 的 <c>Microsoft.Office.Interop.Word.ContentControl.Type</c> 属性不具有值 <c>Microsoft.Office.Interop.Word.WdContentControlType.wdContentControlRichText</c>）。</exception>
       </Docs>
     </Member>
     <Member MemberName="AddContentControl">
@@ -545,11 +509,9 @@
       </Parameters>
       <Docs>
         <param name="name">新控件的名称。</param>
-        <param name="contentControlType">
-          <see langword="Microsoft.Office.Interop.Word.WdContentControlType" /> 值之一，指定新内容控件的基础类型。</param>
+        <param name="contentControlType"><see langword="Microsoft.Office.Interop.Word.WdContentControlType" /> 值之一，指定新内容控件的基础类型。</param>
         <summary>将一个指定类型的新 <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> 添加到文档中当前选定的位置。</summary>
-        <returns>
-          <see cref="T:Microsoft.Office.Tools.Word.ContentControl" />，已添加到该文档。</returns>
+        <returns><see cref="T:Microsoft.Office.Tools.Word.ContentControl" />，已添加到该文档。</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -558,10 +520,8 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="name" /> 为 <see langword="null" />，或其长度为零。</exception>
-        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
-          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 中已存在具有相同名称的控件。</exception>
+        <exception cref="T:System.ArgumentNullException"><paramref name="name" /> 为 <see langword="null" />，或其长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException"><see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 中已存在具有相同名称的控件。</exception>
       </Docs>
     </Member>
     <Member MemberName="AddContentControl">
@@ -582,14 +542,11 @@
         <Parameter Name="contentControlType" Type="Microsoft.Office.Interop.Word.WdContentControlType" />
       </Parameters>
       <Docs>
-        <param name="range">
-          <see cref="T:Microsoft.Office.Interop.Word.Range" />，可为新控件提供边界。</param>
+        <param name="range"><see cref="T:Microsoft.Office.Interop.Word.Range" />，可为新控件提供边界。</param>
         <param name="name">新控件的名称。</param>
-        <param name="contentControlType">
-          <see langword="Microsoft.Office.Interop.Word.WdContentControlType" /> 值之一，指定新内容控件的基础类型。</param>
+        <param name="contentControlType"><see langword="Microsoft.Office.Interop.Word.WdContentControlType" /> 值之一，指定新内容控件的基础类型。</param>
         <summary>将一个指定类型的新 <see cref="T:Microsoft.Office.Tools.Word.ContentControl" /> 添加到文档中的指定范围。</summary>
-        <returns>
-          <see cref="T:Microsoft.Office.Tools.Word.ContentControl" />，已添加到该文档。</returns>
+        <returns><see cref="T:Microsoft.Office.Tools.Word.ContentControl" />，已添加到该文档。</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -598,10 +555,8 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="name" /> 为 <see langword="null" />，或其长度为零。</exception>
-        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
-          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 中已存在具有相同名称的控件。</exception>
+        <exception cref="T:System.ArgumentNullException"><paramref name="name" /> 为 <see langword="null" />，或其长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException"><see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 中已存在具有相同名称的控件。</exception>
       </Docs>
     </Member>
     <Member MemberName="AddControl">
@@ -651,12 +606,9 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="name" />，或 <paramref name="range" /> 参数为 <see langword="null" />，或 <paramref name="name" /> 参数长度为零。</exception>
-        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
-          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中已存在一个同名控件。</exception>
-        <exception cref="T:Microsoft.VisualStudio.Tools.Applications.Runtime.ControlCouldNotBeInitializedException ">
-          <paramref name="control" /> 参数为 <see langword="null" />。</exception>
+        <exception cref="T:System.ArgumentNullException"><paramref name="name" />，或 <paramref name="range" /> 参数为 <see langword="null" />，或 <paramref name="name" /> 参数长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException"><see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中已存在一个同名控件。</exception>
+        <exception cref="T:Microsoft.VisualStudio.Tools.Applications.Runtime.ControlCouldNotBeInitializedException "><paramref name="control" /> 参数为 <see langword="null" />。</exception>
       </Docs>
     </Member>
     <Member MemberName="AddControl">
@@ -708,12 +660,9 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="name" /> 参数为 <see langword="null" />，或 <paramref name="name" /> 参数的长度为零。</exception>
-        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
-          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中已存在一个同名控件。</exception>
-        <exception cref=" T:Microsoft.VisualStudio.Tools.Applications.Runtime.ControlCouldNotBeInitializedException">
-          <paramref name="control" /> 参数为 <see langword="null" />。</exception>
+        <exception cref="T:System.ArgumentNullException"><paramref name="name" /> 参数为 <see langword="null" />，或 <paramref name="name" /> 参数的长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException"><see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例中已存在一个同名控件。</exception>
+        <exception cref=" T:Microsoft.VisualStudio.Tools.Applications.Runtime.ControlCouldNotBeInitializedException"><paramref name="control" /> 参数为 <see langword="null" />。</exception>
       </Docs>
     </Member>
     <Member MemberName="AddDatePickerContentControl">
@@ -734,8 +683,7 @@
       <Docs>
         <param name="name">新控件的名称。</param>
         <summary>在文档的当前选定内容中添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" />。</summary>
-        <returns>
-          <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" />，已添加到该文档。</returns>
+        <returns><see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" />，已添加到该文档。</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -759,10 +707,8 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="name" /> 为 <see langword="null" />，或其长度为零。</exception>
-        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
-          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 中已存在具有相同名称的控件。</exception>
+        <exception cref="T:System.ArgumentNullException"><paramref name="name" /> 为 <see langword="null" />，或其长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException"><see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 中已存在具有相同名称的控件。</exception>
       </Docs>
     </Member>
     <Member MemberName="AddDatePickerContentControl">
@@ -785,8 +731,7 @@
         <param name="contentControl">一个 <see cref="T:Microsoft.Office.Interop.Word.ContentControl" />，它是新控件的基础。</param>
         <param name="name">新控件的名称。</param>
         <summary>将新 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 添加到集合中。 新控件基于文档中已存在的本机内容控件。</summary>
-        <returns>
-          <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" />，已添加到该文档。</returns>
+        <returns><see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" />，已添加到该文档。</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -822,15 +767,12 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="contentControl" /> 为 <see langword="null" />。  
+        <exception cref="T:System.ArgumentNullException"><paramref name="contentControl" /> 为 <see langword="null" />。  
   
 或 
  <paramref name="name" /> 为 <see langword="null" />，或其长度为零。</exception>
-        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
-          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 中已存在具有相同名称的控件。</exception>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="contentControl" /> 不是构建基块库（即 <paramref name="contentControl" /> 的 <see cref="P:Microsoft.Office.Interop.Word.ContentControl.Type" /> 属性不具有值 <c>Microsoft.Office.Interop.Word.WdContentControlType.wdContentControlDate</c>）。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException"><see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 中已存在具有相同名称的控件。</exception>
+        <exception cref="T:System.ArgumentException"><paramref name="contentControl" /> 不是构建基块库（即 <paramref name="contentControl" /> 的 <see cref="P:Microsoft.Office.Interop.Word.ContentControl.Type" /> 属性不具有值 <c>Microsoft.Office.Interop.Word.WdContentControlType.wdContentControlDate</c>）。</exception>
       </Docs>
     </Member>
     <Member MemberName="AddDatePickerContentControl">
@@ -850,12 +792,10 @@
         <Parameter Name="name" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="range">
-          <see cref="T:Microsoft.Office.Interop.Word.Range" />，可为新控件提供边界。</param>
+        <param name="range"><see cref="T:Microsoft.Office.Interop.Word.Range" />，可为新控件提供边界。</param>
         <param name="name">新控件的名称。</param>
         <summary>在文档的指定范围中，添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" />。</summary>
-        <returns>
-          <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" />，已添加到该文档。</returns>
+        <returns><see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" />，已添加到该文档。</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -879,10 +819,8 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="name" /> 为 <see langword="null" />，或其长度为零。</exception>
-        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
-          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 中已存在具有相同名称的控件。</exception>
+        <exception cref="T:System.ArgumentNullException"><paramref name="name" /> 为 <see langword="null" />，或其长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException"><see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 中已存在具有相同名称的控件。</exception>
       </Docs>
     </Member>
     <Member MemberName="AddDropDownListContentControl">
@@ -903,8 +841,7 @@
       <Docs>
         <param name="name">新控件的名称。</param>
         <summary>在文档的当前选定内容中添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.DropDownListContentControl" />。</summary>
-        <returns>
-          <see cref="T:Microsoft.Office.Tools.Word.DropDownListContentControl" />，已添加到该文档。</returns>
+        <returns><see cref="T:Microsoft.Office.Tools.Word.DropDownListContentControl" />，已添加到该文档。</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -928,10 +865,8 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="name" /> 为 <see langword="null" />，或其长度为零。</exception>
-        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
-          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 中已存在具有相同名称的控件。</exception>
+        <exception cref="T:System.ArgumentNullException"><paramref name="name" /> 为 <see langword="null" />，或其长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException"><see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 中已存在具有相同名称的控件。</exception>
       </Docs>
     </Member>
     <Member MemberName="AddDropDownListContentControl">
@@ -954,8 +889,7 @@
         <param name="contentControl">一个 <see cref="T:Microsoft.Office.Interop.Word.ContentControl" />，它是新控件的基础。</param>
         <param name="name">新控件的名称。</param>
         <summary>将新 <see cref="T:Microsoft.Office.Tools.Word.DropDownListContentControl" /> 添加到集合中。 新控件基于文档中已存在的本机内容控件。</summary>
-        <returns>
-          <see cref="T:Microsoft.Office.Tools.Word.DropDownListContentControl" />，已添加到该文档。</returns>
+        <returns><see cref="T:Microsoft.Office.Tools.Word.DropDownListContentControl" />，已添加到该文档。</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -991,15 +925,12 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="contentControl" /> 为 <see langword="null" />。  
+        <exception cref="T:System.ArgumentNullException"><paramref name="contentControl" /> 为 <see langword="null" />。  
   
 或 
  <paramref name="name" /> 为 <see langword="null" />，或其长度为零。</exception>
-        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
-          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 中已存在具有相同名称的控件。</exception>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="contentControl" /> 不是构建基块库（即 <paramref name="contentControl" /> 的 <see cref="P:Microsoft.Office.Interop.Word.ContentControl.Type" /> 属性不具有值 <c>Microsoft.Office.Interop.Word.WdContentControlType.wdContentControlDropdownList</c>）。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException"><see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 中已存在具有相同名称的控件。</exception>
+        <exception cref="T:System.ArgumentException"><paramref name="contentControl" /> 不是构建基块库（即 <paramref name="contentControl" /> 的 <see cref="P:Microsoft.Office.Interop.Word.ContentControl.Type" /> 属性不具有值 <c>Microsoft.Office.Interop.Word.WdContentControlType.wdContentControlDropdownList</c>）。</exception>
       </Docs>
     </Member>
     <Member MemberName="AddDropDownListContentControl">
@@ -1019,12 +950,10 @@
         <Parameter Name="name" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="range">
-          <see cref="T:Microsoft.Office.Interop.Word.Range" />，可为新控件提供边界。</param>
+        <param name="range"><see cref="T:Microsoft.Office.Interop.Word.Range" />，可为新控件提供边界。</param>
         <param name="name">新控件的名称。</param>
         <summary>在文档的指定范围中，添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.DropDownListContentControl" />。</summary>
-        <returns>
-          <see cref="T:Microsoft.Office.Tools.Word.DropDownListContentControl" />，已添加到该文档。</returns>
+        <returns><see cref="T:Microsoft.Office.Tools.Word.DropDownListContentControl" />，已添加到该文档。</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1048,10 +977,8 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="name" /> 为 <see langword="null" />，或其长度为零。</exception>
-        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
-          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 中已存在具有相同名称的控件。</exception>
+        <exception cref="T:System.ArgumentNullException"><paramref name="name" /> 为 <see langword="null" />，或其长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException"><see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 中已存在具有相同名称的控件。</exception>
       </Docs>
     </Member>
     <Member MemberName="AddGroupContentControl">
@@ -1072,8 +999,7 @@
       <Docs>
         <param name="name">新控件的名称。</param>
         <summary>在文档的当前选定内容中添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.GroupContentControl" />。</summary>
-        <returns>
-          <see cref="T:Microsoft.Office.Tools.Word.GroupContentControl" />，已添加到该文档。</returns>
+        <returns><see cref="T:Microsoft.Office.Tools.Word.GroupContentControl" />，已添加到该文档。</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1097,10 +1023,8 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="name" /> 为 <see langword="null" />，或其长度为零。</exception>
-        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
-          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 中已存在具有相同名称的控件。</exception>
+        <exception cref="T:System.ArgumentNullException"><paramref name="name" /> 为 <see langword="null" />，或其长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException"><see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 中已存在具有相同名称的控件。</exception>
       </Docs>
     </Member>
     <Member MemberName="AddGroupContentControl">
@@ -1123,8 +1047,7 @@
         <param name="contentControl">一个 <see cref="T:Microsoft.Office.Interop.Word.ContentControl" />，它是新控件的基础。</param>
         <param name="name">新控件的名称。</param>
         <summary>添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.GroupContentControl" />，它基于文档中的本机内容控件。</summary>
-        <returns>
-          <see cref="T:Microsoft.Office.Tools.Word.GroupContentControl" />，已添加到该文档。</returns>
+        <returns><see cref="T:Microsoft.Office.Tools.Word.GroupContentControl" />，已添加到该文档。</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1160,15 +1083,12 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="contentControl" /> 为 <see langword="null" />。  
+        <exception cref="T:System.ArgumentNullException"><paramref name="contentControl" /> 为 <see langword="null" />。  
   
 或 
  <paramref name="name" /> 为 <see langword="null" />，或其长度为零。</exception>
-        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
-          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 中已存在具有相同名称的控件。</exception>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="contentControl" /> 不是构建基块库（即 <paramref name="contentControl" /> 的 <see cref="P:Microsoft.Office.Interop.Word.ContentControl.Type" /> 属性不具有值 <c>Microsoft.Office.Interop.Word.WdContentControlType.wdContentControlGroup</c>）。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException"><see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 中已存在具有相同名称的控件。</exception>
+        <exception cref="T:System.ArgumentException"><paramref name="contentControl" /> 不是构建基块库（即 <paramref name="contentControl" /> 的 <see cref="P:Microsoft.Office.Interop.Word.ContentControl.Type" /> 属性不具有值 <c>Microsoft.Office.Interop.Word.WdContentControlType.wdContentControlGroup</c>）。</exception>
       </Docs>
     </Member>
     <Member MemberName="AddGroupContentControl">
@@ -1188,12 +1108,10 @@
         <Parameter Name="name" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="range">
-          <see cref="T:Microsoft.Office.Interop.Word.Range" />，可为新控件提供边界。</param>
+        <param name="range"><see cref="T:Microsoft.Office.Interop.Word.Range" />，可为新控件提供边界。</param>
         <param name="name">新控件的名称。</param>
         <summary>在文档的指定范围中，添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.GroupContentControl" />。</summary>
-        <returns>
-          <see cref="T:Microsoft.Office.Tools.Word.GroupContentControl" />，已添加到该文档。</returns>
+        <returns><see cref="T:Microsoft.Office.Tools.Word.GroupContentControl" />，已添加到该文档。</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1217,10 +1135,8 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="name" /> 为 <see langword="null" />，或其长度为零。</exception>
-        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
-          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 中已存在具有相同名称的控件。</exception>
+        <exception cref="T:System.ArgumentNullException"><paramref name="name" /> 为 <see langword="null" />，或其长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException"><see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 中已存在具有相同名称的控件。</exception>
       </Docs>
     </Member>
     <Member MemberName="AddPictureContentControl">
@@ -1241,8 +1157,7 @@
       <Docs>
         <param name="name">新控件的名称。</param>
         <summary>在文档的当前选定内容中添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.PictureContentControl" />。</summary>
-        <returns>
-          <see cref="T:Microsoft.Office.Tools.Word.PictureContentControl" />，已添加到该文档。</returns>
+        <returns><see cref="T:Microsoft.Office.Tools.Word.PictureContentControl" />，已添加到该文档。</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1266,10 +1181,8 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="name" /> 为 <see langword="null" />，或其长度为零。</exception>
-        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
-          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 中已存在具有相同名称的控件。</exception>
+        <exception cref="T:System.ArgumentNullException"><paramref name="name" /> 为 <see langword="null" />，或其长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException"><see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 中已存在具有相同名称的控件。</exception>
       </Docs>
     </Member>
     <Member MemberName="AddPictureContentControl">
@@ -1292,8 +1205,7 @@
         <param name="contentControl">一个 <see cref="T:Microsoft.Office.Interop.Word.ContentControl" />，它是新控件的基础。</param>
         <param name="name">新控件的名称。</param>
         <summary>添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.PictureContentControl" />，它基于文档中的本机内容控件。</summary>
-        <returns>
-          <see cref="T:Microsoft.Office.Tools.Word.PictureContentControl" />，已添加到该文档。</returns>
+        <returns><see cref="T:Microsoft.Office.Tools.Word.PictureContentControl" />，已添加到该文档。</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1329,15 +1241,12 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="contentControl" /> 为 <see langword="null" />。  
+        <exception cref="T:System.ArgumentNullException"><paramref name="contentControl" /> 为 <see langword="null" />。  
   
 或 
  <paramref name="name" /> 为 <see langword="null" />，或其长度为零。</exception>
-        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
-          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 中已存在具有相同名称的控件。</exception>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="contentControl" /> 不是构建基块库（即 <paramref name="contentControl" /> 的 <see cref="P:Microsoft.Office.Interop.Word.ContentControl.Type" /> 属性不具有值 <c>Microsoft.Office.Interop.Word.WdContentControlType.wdContentControlPicture</c>）。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException"><see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 中已存在具有相同名称的控件。</exception>
+        <exception cref="T:System.ArgumentException"><paramref name="contentControl" /> 不是构建基块库（即 <paramref name="contentControl" /> 的 <see cref="P:Microsoft.Office.Interop.Word.ContentControl.Type" /> 属性不具有值 <c>Microsoft.Office.Interop.Word.WdContentControlType.wdContentControlPicture</c>）。</exception>
       </Docs>
     </Member>
     <Member MemberName="AddPictureContentControl">
@@ -1357,12 +1266,10 @@
         <Parameter Name="name" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="range">
-          <see cref="T:Microsoft.Office.Interop.Word.Range" />，可为新控件提供边界。</param>
+        <param name="range"><see cref="T:Microsoft.Office.Interop.Word.Range" />，可为新控件提供边界。</param>
         <param name="name">新控件的名称。</param>
         <summary>在文档的指定范围中，添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.PictureContentControl" />。</summary>
-        <returns>
-          <see cref="T:Microsoft.Office.Tools.Word.PictureContentControl" />，已添加到该文档。</returns>
+        <returns><see cref="T:Microsoft.Office.Tools.Word.PictureContentControl" />，已添加到该文档。</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1386,10 +1293,8 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="name" /> 为 <see langword="null" />，或其长度为零。</exception>
-        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
-          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 中已存在具有相同名称的控件。</exception>
+        <exception cref="T:System.ArgumentNullException"><paramref name="name" /> 为 <see langword="null" />，或其长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException"><see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 中已存在具有相同名称的控件。</exception>
       </Docs>
     </Member>
     <Member MemberName="AddPlainTextContentControl">
@@ -1410,8 +1315,7 @@
       <Docs>
         <param name="name">新控件的名称。</param>
         <summary>在文档的当前选定内容中添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.PlainTextContentControl" />。</summary>
-        <returns>
-          <see cref="T:Microsoft.Office.Tools.Word.PlainTextContentControl" />，已添加到该文档。</returns>
+        <returns><see cref="T:Microsoft.Office.Tools.Word.PlainTextContentControl" />，已添加到该文档。</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1435,10 +1339,8 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="name" /> 为 <see langword="null" />，或其长度为零。</exception>
-        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
-          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 中已存在具有相同名称的控件。</exception>
+        <exception cref="T:System.ArgumentNullException"><paramref name="name" /> 为 <see langword="null" />，或其长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException"><see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 中已存在具有相同名称的控件。</exception>
       </Docs>
     </Member>
     <Member MemberName="AddPlainTextContentControl">
@@ -1461,8 +1363,7 @@
         <param name="contentControl">一个 <see cref="T:Microsoft.Office.Interop.Word.ContentControl" />，它是新控件的基础。</param>
         <param name="name">新控件的名称。</param>
         <summary>添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.PlainTextContentControl" />，它基于文档中的本机内容控件。</summary>
-        <returns>
-          <see cref="T:Microsoft.Office.Tools.Word.PlainTextContentControl" />，已添加到该文档。</returns>
+        <returns><see cref="T:Microsoft.Office.Tools.Word.PlainTextContentControl" />，已添加到该文档。</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1498,15 +1399,12 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="contentControl" /> 为 <see langword="null" />。  
+        <exception cref="T:System.ArgumentNullException"><paramref name="contentControl" /> 为 <see langword="null" />。  
   
 或 
  <paramref name="name" /> 为 <see langword="null" />，或其长度为零。</exception>
-        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
-          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 中已存在具有相同名称的控件。</exception>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="contentControl" /> 不是构建基块库（即 <paramref name="contentControl" /> 的 <see cref="P:Microsoft.Office.Interop.Word.ContentControl.Type" /> 属性不具有值 <c>Microsoft.Office.Interop.Word.WdContentControlType.wdContentControlText</c>）。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException"><see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 中已存在具有相同名称的控件。</exception>
+        <exception cref="T:System.ArgumentException"><paramref name="contentControl" /> 不是构建基块库（即 <paramref name="contentControl" /> 的 <see cref="P:Microsoft.Office.Interop.Word.ContentControl.Type" /> 属性不具有值 <c>Microsoft.Office.Interop.Word.WdContentControlType.wdContentControlText</c>）。</exception>
       </Docs>
     </Member>
     <Member MemberName="AddPlainTextContentControl">
@@ -1526,12 +1424,10 @@
         <Parameter Name="name" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="range">
-          <see cref="T:Microsoft.Office.Interop.Word.Range" />，可为新控件提供边界。</param>
+        <param name="range"><see cref="T:Microsoft.Office.Interop.Word.Range" />，可为新控件提供边界。</param>
         <param name="name">新控件的名称。</param>
         <summary>在文档的指定范围中，添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.PlainTextContentControl" />。</summary>
-        <returns>
-          <see cref="T:Microsoft.Office.Tools.Word.PlainTextContentControl" />，已添加到该文档。</returns>
+        <returns><see cref="T:Microsoft.Office.Tools.Word.PlainTextContentControl" />，已添加到该文档。</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1555,10 +1451,8 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="name" /> 为 <see langword="null" />，或其长度为零。</exception>
-        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
-          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 中已存在具有相同名称的控件。</exception>
+        <exception cref="T:System.ArgumentNullException"><paramref name="name" /> 为 <see langword="null" />，或其长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException"><see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 中已存在具有相同名称的控件。</exception>
       </Docs>
     </Member>
     <Member MemberName="AddRichTextContentControl">
@@ -1579,8 +1473,7 @@
       <Docs>
         <param name="name">新控件的名称。</param>
         <summary>在文档的当前选定内容中添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.RichTextContentControl" />。</summary>
-        <returns>
-          <see cref="T:Microsoft.Office.Tools.Word.RichTextContentControl" />，已添加到该文档。</returns>
+        <returns><see cref="T:Microsoft.Office.Tools.Word.RichTextContentControl" />，已添加到该文档。</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1604,10 +1497,8 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="name" /> 为 <see langword="null" />，或其长度为零。</exception>
-        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
-          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 中已存在具有相同名称的控件。</exception>
+        <exception cref="T:System.ArgumentNullException"><paramref name="name" /> 为 <see langword="null" />，或其长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException"><see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 中已存在具有相同名称的控件。</exception>
       </Docs>
     </Member>
     <Member MemberName="AddRichTextContentControl">
@@ -1630,8 +1521,7 @@
         <param name="contentControl">一个 <see cref="T:Microsoft.Office.Interop.Word.ContentControl" />，它是新控件的基础。</param>
         <param name="name">新控件的名称。</param>
         <summary>添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.RichTextContentControl" />，它基于文档中的本机内容控件。</summary>
-        <returns>
-          <see cref="T:Microsoft.Office.Tools.Word.RichTextContentControl" />，已添加到该文档。</returns>
+        <returns><see cref="T:Microsoft.Office.Tools.Word.RichTextContentControl" />，已添加到该文档。</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1667,15 +1557,12 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="contentControl" /> 为 <see langword="null" />。  
+        <exception cref="T:System.ArgumentNullException"><paramref name="contentControl" /> 为 <see langword="null" />。  
   
 或 
  <paramref name="name" /> 为 <see langword="null" />，或其长度为零。</exception>
-        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
-          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 中已存在具有相同名称的控件。</exception>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="contentControl" /> 不是构建基块库（即 <paramref name="contentControl" /> 的 <c>Microsoft.Office.Interop.Word.ContentControl.Type</c> 属性不具有值 <c>Microsoft.Office.Interop.Word.WdContentControlType.wdContentControlRichText</c>）。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException"><see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 中已存在具有相同名称的控件。</exception>
+        <exception cref="T:System.ArgumentException"><paramref name="contentControl" /> 不是构建基块库（即 <paramref name="contentControl" /> 的 <c>Microsoft.Office.Interop.Word.ContentControl.Type</c> 属性不具有值 <c>Microsoft.Office.Interop.Word.WdContentControlType.wdContentControlRichText</c>）。</exception>
       </Docs>
     </Member>
     <Member MemberName="AddRichTextContentControl">
@@ -1695,12 +1582,10 @@
         <Parameter Name="name" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="range">
-          <see cref="T:Microsoft.Office.Interop.Word.Range" />，可为新控件提供边界。</param>
+        <param name="range"><see cref="T:Microsoft.Office.Interop.Word.Range" />，可为新控件提供边界。</param>
         <param name="name">新控件的名称。</param>
         <summary>在文档的指定范围中，添加一个新的 <see cref="T:Microsoft.Office.Tools.Word.RichTextContentControl" />。</summary>
-        <returns>
-          <see cref="T:Microsoft.Office.Tools.Word.RichTextContentControl" />，已添加到该文档。</returns>
+        <returns><see cref="T:Microsoft.Office.Tools.Word.RichTextContentControl" />，已添加到该文档。</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1724,10 +1609,8 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="name" /> 为 <see langword="null" />，或其长度为零。</exception>
-        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException">
-          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 中已存在具有相同名称的控件。</exception>
+        <exception cref="T:System.ArgumentNullException"><paramref name="name" /> 为 <see langword="null" />，或其长度为零。</exception>
+        <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException"><see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 中已存在具有相同名称的控件。</exception>
       </Docs>
     </Member>
     <Member MemberName="Capacity">
@@ -1744,8 +1627,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置 <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 可包含的控件数。</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 可包含的控件数。</value>
+        <value><see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 可包含的控件数。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1817,8 +1699,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取 <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 中控件的数目。</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 中控件的数目。</value>
+        <value><see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 中控件的数目。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2124,8 +2005,7 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentOutOfRangeException">
-          <paramref name="index" /> 小于零，或者 <paramref name="index" /> 等于或大于计数。</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="index" /> 小于零，或者 <paramref name="index" /> 等于或大于计数。</exception>
       </Docs>
     </Member>
     <MemberGroup MemberName="Contains">

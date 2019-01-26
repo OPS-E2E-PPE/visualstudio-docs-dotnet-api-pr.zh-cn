@@ -1,13 +1,5 @@
 <Type Name="XmlMappedRange" FullName="Microsoft.Office.Tools.Excel.XmlMappedRange">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="0db7d04476fc717ff915c1c75178286cf2e6f446" />
-    <Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" />
-    <Meta Name="ms.translationtype" Value="HT" />
-    <Meta Name="ms.contentlocale" Value="zh-CN" />
-    <Meta Name="ms.lasthandoff" Value="09/19/2018" />
-    <Meta Name="ms.locfileid" Value="46459934" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface XmlMappedRange : IDisposable, System.ComponentModel.IComponent, System.ComponentModel.ISupportInitialize, System.Windows.Forms.IBindableComponent" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="0db7d04476fc717ff915c1c75178286cf2e6f446" /><Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="09/19/2018" /><Meta Name="ms.locfileid" Value="46459934" /></Metadata><TypeSignature Language="C#" Value="public interface XmlMappedRange : IDisposable, System.ComponentModel.IComponent, System.ComponentModel.ISupportInitialize, System.Windows.Forms.IBindableComponent" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract XmlMappedRange implements class System.ComponentModel.IComponent, class System.ComponentModel.ISupportInitialize, class System.IDisposable, class System.Windows.Forms.IBindableComponent" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Excel.XmlMappedRange" />
   <AssemblyInfo>
@@ -34,8 +26,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>
-      <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件是在非重复架构元素映射到单元格上时创建的范围。</summary>
+    <summary><see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件是在非重复架构元素映射到单元格上时创建的范围。</summary>
     <remarks>
       <format type="text/markdown"><![CDATA[  
   
@@ -444,7 +435,17 @@
         <param name="Field">要使筛选器基于的字段的偏移量（从列表的左边算起；最左边的字段为字段 1（一））。</param>
         <param name="Criteria1">条件（一个字符串；例如“101”）。 使用“=”查找空白字段，或使用“&lt;&gt;”查找非空白字段。 如果省略此参数，则条件为 <see langword="All" />。 如果 <c>Operator</c> 为 <see cref="F:Microsoft.Office.Interop.Excel.XlAutoFilterOperator.xlTop10Items" />，则 <c>Criteria1</c> 指定项数（如“10”）。</param>
         <param name="Operator">可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlAutoFilterOperator" /> 常量之一： 
- <see cref="F:Microsoft.Office.Interop.Excel.XlAutoFilterOperator.xlAnd" /><see cref="F:Microsoft.Office.Interop.Excel.XlAutoFilterOperator.xlBottom10Items" /><see cref="F:Microsoft.Office.Interop.Excel.XlAutoFilterOperator.xlBottom10Percent" /><see cref="F:Microsoft.Office.Interop.Excel.XlAutoFilterOperator.xlOr" /><see cref="F:Microsoft.Office.Interop.Excel.XlAutoFilterOperator.xlTop10Items" /><see cref="F:Microsoft.Office.Interop.Excel.XlAutoFilterOperator.xlTop10Percent" />  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlAutoFilterOperator.xlAnd" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlAutoFilterOperator.xlBottom10Items" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlAutoFilterOperator.xlBottom10Percent" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlAutoFilterOperator.xlOr" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlAutoFilterOperator.xlTop10Items" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlAutoFilterOperator.xlTop10Percent" />  
   
 在 <c>Criteria1</c> 和 <c>Criteria2</c> 中使用 <see cref="F:Microsoft.Office.Interop.Excel.XlAutoFilterOperator.xlAnd" /> 和 <see cref="F:Microsoft.Office.Interop.Excel.XlAutoFilterOperator.xlOr" /> 来构造复合条件。</param>
         <param name="Criteria2">第二个条件（字符串）。 与 <c>Criteria1</c> 和 <c>Operator</c> 一起用于构造复合条件。</param>
@@ -615,11 +616,33 @@
       </Parameters>
       <Docs>
         <param name="LineStyle">边框的线型。 可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlLineStyle" /> 值之一： 
- <see cref="F:Microsoft.Office.Interop.Excel.XlLineStyle.xlContinuous" /><see cref="F:Microsoft.Office.Interop.Excel.XlLineStyle.xlDash" /><see cref="F:Microsoft.Office.Interop.Excel.XlLineStyle.xlDashDot" /><see cref="F:Microsoft.Office.Interop.Excel.XlLineStyle.xlDashDotDot" /><see cref="F:Microsoft.Office.Interop.Excel.XlLineStyle.xlDot" /><see cref="F:Microsoft.Office.Interop.Excel.XlLineStyle.xlDouble" /><see cref="F:Microsoft.Office.Interop.Excel.XlLineStyle.xlSlantDashDot" /><see cref="F:Microsoft.Office.Interop.Excel.XlLineStyle.xlLineStyleNone" /></param>
+ <see cref="F:Microsoft.Office.Interop.Excel.XlLineStyle.xlContinuous" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlLineStyle.xlDash" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlLineStyle.xlDashDot" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlLineStyle.xlDashDotDot" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlLineStyle.xlDot" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlLineStyle.xlDouble" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlLineStyle.xlSlantDashDot" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlLineStyle.xlLineStyleNone" /></param>
         <param name="Weight">边框的粗细。 可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlBorderWeight" /> 常量之一： 
- <see cref="F:Microsoft.Office.Interop.Excel.XlBorderWeight.xlHairline" /><see cref="F:Microsoft.Office.Interop.Excel.XlBorderWeight.xlMedium" /><see cref="F:Microsoft.Office.Interop.Excel.XlBorderWeight.xlThick" /><see cref="F:Microsoft.Office.Interop.Excel.XlBorderWeight.xlThin" /></param>
+ <see cref="F:Microsoft.Office.Interop.Excel.XlBorderWeight.xlHairline" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlBorderWeight.xlMedium" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlBorderWeight.xlThick" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlBorderWeight.xlThin" /></param>
         <param name="ColorIndex">边框颜色（作为访问当前调色板的索引或作为 <see cref="T:Microsoft.Office.Interop.Excel.XlColorIndex" /> 常数）。 可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlColorIndex" /> 常量之一： 
- <see cref="F:Microsoft.Office.Interop.Excel.XlColorIndex.xlColorIndexAutomatic" /><see cref="F:Microsoft.Office.Interop.Excel.XlColorIndex.xlColorIndexNone" /></param>
+ <see cref="F:Microsoft.Office.Interop.Excel.XlColorIndex.xlColorIndexAutomatic" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlColorIndex.xlColorIndexNone" /></param>
         <param name="Color">边框颜色，采用 RGB 值的形式。</param>
         <param name="ThemeColor">主题颜色（作为访问当前颜色主题的索引或作为 <see cref="T:Microsoft.Office.Interop.Excel.XlThemeColor" /> 值）。</param>
         <summary>向 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件添加一个边框，并设置新边框的 <see cref="P:Microsoft.Office.Interop.Excel.Border.Color" />、<see cref="P:Microsoft.Office.Interop.Excel.Border.LineStyle" /> 和 <see cref="P:Microsoft.Office.Interop.Excel.Border.Weight" /> 属性。</summary>
@@ -1052,8 +1075,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件中的列号。</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件中的列号。</value>
+        <value><see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件中的列号。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1126,8 +1148,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件中的列宽。</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件中的列宽。</value>
+        <value><see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件中的列宽。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1198,7 +1219,27 @@
       <Docs>
         <param name="Sources">合并源（作为以 R1C1 样式表示法表示的文本引用字符串的数组）。 引用必须包含要合并的工作表的完整路径。</param>
         <param name="Function">可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlConsolidationFunction" /> 常量之一： 
- <see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlAverage" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlCount" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlCountNums" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlMax" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlMin" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlProduct" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlStDev" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlStDevP" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlSum" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlVar" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlVarP" /></param>
+ <see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlAverage" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlCount" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlCountNums" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlMax" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlMin" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlProduct" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlStDev" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlStDevP" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlSum" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlVar" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlVarP" /></param>
         <param name="TopRow">如果基于合并范围内首行中的列标题合并数据，则为 <see langword="true" />；如果按位置合并数据，则为 <see langword="false" />。 默认值为 <see langword="false" />。</param>
         <param name="LeftColumn">如果基于合并范围内左列中的行标题合并数据，则为 <see langword="true" />；如果按位置合并数据，则为 <see langword="false" />。 默认值为 <see langword="false" />。</param>
         <param name="CreateLinks">如果让合并功能使用工作表链接，则为 <see langword="true" />；如果让合并功能复制数据，则为 <see langword="false" />。 默认值为 <see langword="false" />。</param>
@@ -1339,11 +1380,15 @@
         <param name="Appearance">指定复制图片的方法。  
   
 可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlPictureAppearance" /> 常量之一： 
- <see cref="F:Microsoft.Office.Interop.Excel.XlPictureAppearance.xlPrinter" /><see cref="F:Microsoft.Office.Interop.Excel.XlPictureAppearance.xlScreen" /></param>
+ <see cref="F:Microsoft.Office.Interop.Excel.XlPictureAppearance.xlPrinter" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlPictureAppearance.xlScreen" /></param>
         <param name="Format">该图片的格式。  
   
 可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlCopyPictureFormat" /> 常量之一： 
- <see cref="F:Microsoft.Office.Interop.Excel.XlCopyPictureFormat.xlBitmap" /><see cref="F:Microsoft.Office.Interop.Excel.XlCopyPictureFormat.xlPicture" /></param>
+ <see cref="F:Microsoft.Office.Interop.Excel.XlCopyPictureFormat.xlBitmap" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlCopyPictureFormat.xlPicture" /></param>
         <summary>将 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件作为图片复制到剪贴板。</summary>
         <returns>To be added.</returns>
         <remarks>
@@ -1380,8 +1425,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件中的对象数。</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件中的对象数。</value>
+        <value><see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件中的对象数。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1502,8 +1546,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，该值指示在其中创建此 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件的应用程序。</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" /> 值之一。</value>
+        <value><see cref="T:Microsoft.Office.Interop.Excel.XlCreator" /> 值之一。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1637,11 +1680,23 @@
       <Docs>
         <param name="Rowcol">可以为 <see cref="F:Microsoft.Office.Interop.Excel.XlRowCol.xlRows" /> 或 <see cref="F:Microsoft.Office.Interop.Excel.XlRowCol.xlColumns" /> 常数以将数据系列分别输入行或列中。 如果省略此参数，则使用该范围的大小和形状。</param>
         <param name="Type">可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlDataSeriesType" /> 常量之一： 
- <see cref="F:Microsoft.Office.Interop.Excel.XlDataSeriesType.xlAutoFill" /><see cref="F:Microsoft.Office.Interop.Excel.XlDataSeriesType.xlDataSeriesLinear" /><see cref="F:Microsoft.Office.Interop.Excel.XlDataSeriesType.xlChronological" /><see cref="F:Microsoft.Office.Interop.Excel.XlDataSeriesType.xlGrowth" /></param>
+ <see cref="F:Microsoft.Office.Interop.Excel.XlDataSeriesType.xlAutoFill" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlDataSeriesType.xlDataSeriesLinear" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlDataSeriesType.xlChronological" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlDataSeriesType.xlGrowth" /></param>
         <param name="Date">如果 <c>Type</c> 参数为 <see cref="F:Microsoft.Office.Interop.Excel.XlDataSeriesType.xlChronological" />，则 <c>Date</c> 参数指示步长日期单位。  
   
 可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlDataSeriesDate" /> 常量之一： 
- <see cref="F:Microsoft.Office.Interop.Excel.XlDataSeriesDate.xlDay" /><see cref="F:Microsoft.Office.Interop.Excel.XlDataSeriesDate.xlWeekday" /><see cref="F:Microsoft.Office.Interop.Excel.XlDataSeriesDate.xlMonth" /><see cref="F:Microsoft.Office.Interop.Excel.XlDataSeriesDate.xlYear" /></param>
+ <see cref="F:Microsoft.Office.Interop.Excel.XlDataSeriesDate.xlDay" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlDataSeriesDate.xlWeekday" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlDataSeriesDate.xlMonth" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlDataSeriesDate.xlYear" /></param>
         <param name="Step">该系列的步长值。 默认值为 1（一）。</param>
         <param name="Stop">该系列的终止值。 如果省略此参数，则 Microsoft Office Excel 会填充到该范围的末尾。</param>
         <param name="Trend">如果创建等差序列或等比序列，则为 <see langword="true" />；如果创建标准数据系列，则为 <see langword="false" />。 默认值为 <see langword="false" />。</param>
@@ -2444,8 +2499,7 @@
       </ReturnValue>
       <Docs>
         <summary>以 A1 样式表示法获取或设置 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件的公式。</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件的公式（以 A1 样式表示法表示）。</value>
+        <value><see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件的公式（以 A1 样式表示法表示）。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -2484,8 +2538,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件的数组公式。</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件的数组公式。</value>
+        <value><see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件的数组公式。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -2570,8 +2623,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件的公式，该公式使用用户语言的 A1 样式的引用。</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件的公式，使用用户语言的 A1 样式的引用。</value>
+        <value><see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件的公式，使用用户语言的 A1 样式的引用。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -2610,8 +2662,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件的公式（使用 R1C1 样式的表示法）。</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件的公式（使用 R1C1 样式的表示法）。</value>
+        <value><see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件的公式（使用 R1C1 样式的表示法）。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -2650,8 +2701,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件的公式，该公式使用用户语言的 R1C1 样式表示法。</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件的公式，使用用户语言的 R1C1 样式表示法。</value>
+        <value><see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件的公式，使用用户语言的 R1C1 样式表示法。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -2845,8 +2895,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件的高度（以磅为单位）。</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件的高度（以磅为单位）。</value>
+        <value><see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件的高度（以磅为单位）。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -2897,8 +2946,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件的水平对齐方式。</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Excel.XlHAlign" /> 值之一。</value>
+        <value><see cref="T:Microsoft.Office.Interop.Excel.XlHAlign" /> 值之一。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -2992,8 +3040,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件的缩进级别。</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件的缩进级别。</value>
+        <value><see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件的缩进级别。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -3301,8 +3348,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取 <see cref="T:Microsoft.Office.Interop.Excel.ListObject" /> 控件的 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" />。</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Excel.ListObject" /> 控件的一个 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" />。</value>
+        <value><see cref="T:Microsoft.Office.Interop.Excel.ListObject" /> 控件的一个 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -3320,8 +3366,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个常数，该常数描述包含 <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> 控件左上角的 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 报表部分。</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Excel.XlLocationInTable" /> 值之一。</value>
+        <value><see cref="T:Microsoft.Office.Interop.Excel.XlLocationInTable" /> 值之一。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -3645,8 +3690,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件的格式代码。</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件的格式代码。</value>
+        <value><see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件的格式代码。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -3681,8 +3725,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件的采用用户语言的格式代码。</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件的采用用户语言的格式代码。</value>
+        <value><see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件的采用用户语言的格式代码。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -3786,8 +3829,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 的当前大纲级别。</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 的当前大纲级别。</value>
+        <value><see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 的当前大纲级别。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -3927,11 +3969,37 @@
         <param name="Paste">该范围中要粘贴的部分。  
   
 可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlPasteType" /> 值之一： 
- <see cref="F:Microsoft.Office.Interop.Excel.XlPasteType.xlPasteAll" /><see cref="F:Microsoft.Office.Interop.Excel.XlPasteType.xlPasteAllExceptBorders" /><see cref="F:Microsoft.Office.Interop.Excel.XlPasteType.xlPasteColumnWidths" /><see cref="F:Microsoft.Office.Interop.Excel.XlPasteType.xlPasteComments" /><see cref="F:Microsoft.Office.Interop.Excel.XlPasteType.xlPasteFormats" /><see cref="F:Microsoft.Office.Interop.Excel.XlPasteType.xlPasteFormulas" /><see cref="F:Microsoft.Office.Interop.Excel.XlPasteType.xlPasteFormulasAndNumberFormats" /><see cref="F:Microsoft.Office.Interop.Excel.XlPasteType.xlPasteValidation" /><see cref="F:Microsoft.Office.Interop.Excel.XlPasteType.xlPasteValues" /><see cref="F:Microsoft.Office.Interop.Excel.XlPasteType.xlPasteValuesAndNumberFormats" /></param>
+ <see cref="F:Microsoft.Office.Interop.Excel.XlPasteType.xlPasteAll" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlPasteType.xlPasteAllExceptBorders" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlPasteType.xlPasteColumnWidths" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlPasteType.xlPasteComments" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlPasteType.xlPasteFormats" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlPasteType.xlPasteFormulas" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlPasteType.xlPasteFormulasAndNumberFormats" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlPasteType.xlPasteValidation" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlPasteType.xlPasteValues" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlPasteType.xlPasteValuesAndNumberFormats" /></param>
         <param name="Operation">粘贴操作。  
   
 可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlPasteSpecialOperation" /> 值之一： 
- <see cref="F:Microsoft.Office.Interop.Excel.XlPasteSpecialOperation.xlPasteSpecialOperationAdd" /><see cref="F:Microsoft.Office.Interop.Excel.XlPasteSpecialOperation.xlPasteSpecialOperationDivide" /><see cref="F:Microsoft.Office.Interop.Excel.XlPasteSpecialOperation.xlPasteSpecialOperationMultiply" /><see cref="F:Microsoft.Office.Interop.Excel.XlPasteSpecialOperation.xlPasteSpecialOperationNone" /><see cref="F:Microsoft.Office.Interop.Excel.XlPasteSpecialOperation.xlPasteSpecialOperationSubtract" /></param>
+ <see cref="F:Microsoft.Office.Interop.Excel.XlPasteSpecialOperation.xlPasteSpecialOperationAdd" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlPasteSpecialOperation.xlPasteSpecialOperationDivide" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlPasteSpecialOperation.xlPasteSpecialOperationMultiply" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlPasteSpecialOperation.xlPasteSpecialOperationNone" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlPasteSpecialOperation.xlPasteSpecialOperationSubtract" /></param>
         <param name="SkipBlanks">如果不将剪贴板上该范围中的空单元格粘贴到目标范围，则为 <see langword="true" />。 默认值为 <see langword="false" />。</param>
         <param name="Transpose">如果在粘贴该范围时对行和列进行转置，则为 <see langword="true" />。 默认值为 <see langword="false" />。</param>
         <summary>将 <see cref="T:Microsoft.Office.Interop.Excel.Range" /> 的内容从剪贴板粘贴到 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件中。</summary>
@@ -3970,8 +4038,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取 <see cref="T:Microsoft.Office.Interop.Excel.Phonetic" /> 对象，它包含 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件中的特定拼音文本字符串的有关信息。</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Excel.Phonetic" /> 对象，包含 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件中的特定拼音文本字符串的有关信息。</value>
+        <value><see cref="T:Microsoft.Office.Interop.Excel.Phonetic" /> 对象，包含 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件中的特定拼音文本字符串的有关信息。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -3996,8 +4063,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取 <see cref="T:Microsoft.Office.Interop.Excel.Phonetics" /> 控件的 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 集合。</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Excel.Phonetics" /> 控件的 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 集合。</value>
+        <value><see cref="T:Microsoft.Office.Interop.Excel.Phonetics" /> 控件的 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 集合。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -4120,8 +4186,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件的前缀字符。</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件的前缀字符。</value>
+        <value><see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件的前缀字符。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -5146,7 +5211,13 @@
   
  <see cref="F:Microsoft.Office.Interop.Excel.XlCellType.xlCellTypeVisible" />。 所有可见的单元格。</param>
         <param name="Value">如果 <c>Type</c> 为 <see cref="F:Microsoft.Office.Interop.Excel.XlCellType.xlCellTypeConstants" /> 或 <see cref="F:Microsoft.Office.Interop.Excel.XlCellType.xlCellTypeFormulas" />，则此参数用于确定要在结果中包含哪些类型的单元格。 这些值可以一起添加以返回多种类型。 默认情况下，无论是何种类型，都选择所有的常数或公式。 可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlSpecialCellsValue" /> 值之一： 
- <see cref="F:Microsoft.Office.Interop.Excel.XlSpecialCellsValue.xlErrors" /><see cref="F:Microsoft.Office.Interop.Excel.XlSpecialCellsValue.xlLogical" /><see cref="F:Microsoft.Office.Interop.Excel.XlSpecialCellsValue.xlNumbers" /><see cref="F:Microsoft.Office.Interop.Excel.XlSpecialCellsValue.xlTextValues" /></param>
+ <see cref="F:Microsoft.Office.Interop.Excel.XlSpecialCellsValue.xlErrors" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlSpecialCellsValue.xlLogical" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlSpecialCellsValue.xlNumbers" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlSpecialCellsValue.xlTextValues" /></param>
         <summary>获取一个 <see cref="T:Microsoft.Office.Interop.Excel.Range" />，它表示匹配指定类型和值的所有单元格。</summary>
         <returns>一个 <see cref="T:Microsoft.Office.Interop.Excel.Range" />，表示匹配指定类型和值的所有单元格。</returns>
         <remarks>
@@ -5246,14 +5317,38 @@
         <param name="Function">小计函数。  
   
 可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlConsolidationFunction" /> 值之一： 
- <see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlAverage" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlCount" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlCountNums" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlMax" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlMin" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlProduct" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlStDev" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlStDevP" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlSum" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlUnknown" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlVar" /><see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlVarP" /></param>
+ <see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlAverage" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlCount" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlCountNums" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlMax" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlMin" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlProduct" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlStDev" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlStDevP" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlSum" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlUnknown" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlVar" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlConsolidationFunction.xlVarP" /></param>
         <param name="TotalList">一个从 1 开始的字段偏移量数组，指示要将小计添加到的字段。</param>
         <param name="Replace">如果替换现有的小计，则为 <see langword="true" />。 默认值为 <see langword="false" />。</param>
         <param name="PageBreaks">如果在每组后面添加分页符，则为 <see langword="true" />。 默认值为 <see langword="false" />。</param>
         <param name="SummaryBelowData">放置与小计相关的摘要数据。  
   
 可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlSummaryRow" /> 值之一： 
- <see cref="F:Microsoft.Office.Interop.Excel.XlSummaryRow.xlSummaryAbove" /><see cref="F:Microsoft.Office.Interop.Excel.XlSummaryRow.xlSummaryBelow" />（默认值）</param>
+ <see cref="F:Microsoft.Office.Interop.Excel.XlSummaryRow.xlSummaryAbove" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlSummaryRow.xlSummaryBelow" />（默认值）</param>
         <summary>为 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件创建小计。</summary>
         <returns>To be added.</returns>
         <remarks>
@@ -5359,8 +5454,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件的文本。</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件的文本。</value>
+        <value><see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件的文本。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -5411,7 +5505,9 @@
  <see cref="F:Microsoft.Office.Interop.Excel.XlTextParsingType.xlFixedWidth" /></param>
         <param name="TextQualifier">可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlTextQualifier" /> 值之一： 
  <see cref="F:Microsoft.Office.Interop.Excel.XlTextQualifier.xlTextQualifierDoubleQuote" />（默认值） 
- <see cref="F:Microsoft.Office.Interop.Excel.XlTextQualifier.xlTextQualifierNone" /><see cref="F:Microsoft.Office.Interop.Excel.XlTextQualifier.xlTextQualifierSingleQuote" /></param>
+ <see cref="F:Microsoft.Office.Interop.Excel.XlTextQualifier.xlTextQualifierNone" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlTextQualifier.xlTextQualifierSingleQuote" /></param>
         <param name="ConsecutiveDelimiter">如果让 Excel 将连续分隔符视为一个分隔符，则为 <see langword="true" />。 默认值为 <see langword="false" />。</param>
         <param name="Tab">如果让 <c>DataType</c> 为 <see cref="F:Microsoft.Office.Interop.Excel.XlTextParsingType.xlDelimited" />，并将制表符用作分隔符，则为 <see langword="true" />。 默认值为 <see langword="false" />。</param>
         <param name="Semicolon">如果让 <c>DataType</c> 为 <see cref="F:Microsoft.Office.Interop.Excel.XlTextParsingType.xlDelimited" />，并将分号用作分隔符，则为 <see langword="true" />。 默认值为 <see langword="false" />。</param>
@@ -5422,7 +5518,25 @@
         <param name="FieldInfo">一个数组，包含各个数据列的分析信息。 解释取决于 <c>DataType</c> 的值。 当对数据进行分隔时，此参数是一个由两元素数组组成的数组，每个两元素数组都指定特定列的转换选项。 第一个元素是列号（从 1 开始），第二个元素是指定如何分析列的 <see cref="T:Microsoft.Office.Interop.Excel.XlColumnDataType" /> 常量之一。  
   
 可以是下列 <see cref="T:Microsoft.Office.Interop.Excel.XlColumnDataType" /> 值之一： 
- <see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlGeneralFormat" /><see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlTextFormat" /><see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlMDYFormat" /><see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlDMYFormat" /><see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlYMDFormat" /><see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlMYDFormat" /><see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlDYMFormat" /><see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlYDMFormat" /><see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlEMDFormat" /><see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlSkipColumn" />  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlGeneralFormat" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlTextFormat" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlMDYFormat" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlDMYFormat" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlYMDFormat" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlMYDFormat" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlDYMFormat" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlYDMFormat" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlEMDFormat" />  
+  
+ <see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlSkipColumn" />  
   
 仅当已安装和选择繁体中文支持时，才会用到 <see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlEMDFormat" />。 <see cref="F:Microsoft.Office.Interop.Excel.XlColumnDataType.xlEMDFormat" /> 指定要使用的繁体中文纪元日期。  
   
@@ -5590,8 +5704,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取 <see cref="T:Microsoft.Office.Interop.Excel.Validation" /> 对象，该对象表示 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件的数据验证。</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Excel.Validation" /> 对象，表示 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件的数据验证。</value>
+        <value><see cref="T:Microsoft.Office.Interop.Excel.Validation" /> 对象，表示 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件的数据验证。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -5619,8 +5732,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件的值。</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件的值。</value>
+        <value><see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件的值。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -5661,8 +5773,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件值。</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件的值。</value>
+        <value><see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件的值。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -5695,8 +5806,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件的垂直对齐方式。</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件的垂直对齐方式。</value>
+        <value><see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件的垂直对齐方式。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -5739,8 +5849,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取 <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件的宽度（以磅为单位）。</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件的宽度（以磅为单位）。</value>
+        <value><see cref="T:Microsoft.Office.Tools.Excel.XmlMappedRange" /> 控件的宽度（以磅为单位）。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
