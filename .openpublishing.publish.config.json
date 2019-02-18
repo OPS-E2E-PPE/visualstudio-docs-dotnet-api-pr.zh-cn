@@ -1,19 +1,20 @@
 {
   "build_entry_point": "docs",
+  "need_generate_pdf": false,
+  "need_generate_intellisense": false,
   "docsets_to_publish": [
     {
       "docset_name": "dotnet-vssdk",
       "build_source_folder": "dotnet-vssdk",
       "build_output_subfolder": "dotnet-vssdk",
-      "locale": "zh-CN",
-      "monikers": [
-        "visualstudiosdk-2015",
-        "visualstudiosdk-2017",
-        "sharepoint-projects-2017",
-        "vsto-2017",
-        "mstest-net-1.2.0"
-      ],
+      "locale": "zh-cn",
+      "monikers": ["visualstudiosdk-2015", "visualstudiosdk-2017", "sharepoint-projects-2017", "vsto-2017", "mstest-net-1.2.0"],
       "open_to_public_contributors": false,
+      "type_mapping": {
+        "Conceptual": "Content",
+        "ManagedReference": "Content",
+        "RestApi": "Content"
+      },
       "build_entry_point": "docs",
       "template_folder": "_themes",
       "version": 0,
@@ -42,7 +43,7 @@
   "dependent_repositories": [
     {
       "path_to_root": "_themes",
-      "url": "https://github.com/Microsoft/templates.docs.msft.zh-CN",
+      "url": "https://github.com/Microsoft/templates.docs.msft.zh-cn",
       "branch": "master",
       "branch_mapping": {}
     },
@@ -56,9 +57,6 @@
       }
     }
   ],
-  "need_generate_pdf_url_template": false,
-  "need_generate_pdf": false,
-  "need_generate_intellisense": false,
   "dependent_packages": [
     {
       "path_to_root": "_dependentPackages/CommonPlugins",
@@ -120,5 +118,6 @@
   ],
   "DiffFolder": [
     "dotnet-vssdk/api"
-  ]
+  ],
+  "need_generate_pdf_url_template": false
 }
