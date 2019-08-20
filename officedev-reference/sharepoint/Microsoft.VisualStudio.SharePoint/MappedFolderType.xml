@@ -1,5 +1,5 @@
 <Type Name="MappedFolderType" FullName="Microsoft.VisualStudio.SharePoint.MappedFolderType">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="8e721066ab8fb7ce95e3437dc24105f4408352b9" /><Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="02/21/2018" /><Meta Name="ms.locfileid" Value="29410377" /></Metadata><TypeSignature Language="C#" Value="public enum MappedFolderType" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="cf512d8cc3f12b6f08e01dfb5f5844b55fa3cda3" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69007116" /></Metadata><TypeSignature Language="C#" Value="public enum MappedFolderType" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MappedFolderType extends System.Enum" />
   <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.SharePoint.MappedFolderType" />
   <AssemblyInfo>
@@ -20,13 +20,13 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 你可以使用<xref:Microsoft.VisualStudio.SharePoint.MappedFolderType>以下方案中的值：  
+ 可以在以下方案<xref:Microsoft.VisualStudio.SharePoint.MappedFolderType>中使用这些值:  
   
--   若要指定类型的映射的文件夹，你想要通过使用创建<xref:Microsoft.VisualStudio.SharePoint.IMappedFolderCollection.Add%28Microsoft.VisualStudio.SharePoint.MappedFolderType%29?displayProperty=fullName>或<xref:Microsoft.VisualStudio.SharePoint.IMappedFolderCollection.Add%28Microsoft.VisualStudio.SharePoint.MappedFolderType%2CSystem.Boolean%29?displayProperty=fullName>方法。  
+-   指定要使用<xref:Microsoft.VisualStudio.SharePoint.IMappedFolderCollection.Add%28Microsoft.VisualStudio.SharePoint.MappedFolderType%29?displayProperty=fullName>或<xref:Microsoft.VisualStudio.SharePoint.IMappedFolderCollection.Add%28Microsoft.VisualStudio.SharePoint.MappedFolderType%2CSystem.Boolean%29?displayProperty=fullName>方法创建的映射文件夹的类型。  
   
--   若要确定类型映射的文件夹，<xref:Microsoft.VisualStudio.SharePoint.IMappedFolder>对象所表示。 使用<xref:Microsoft.VisualStudio.SharePoint.IMappedFolder.FolderType%2A>属性来确定这。  
+-   确定<xref:Microsoft.VisualStudio.SharePoint.IMappedFolder>对象表示的映射文件夹的类型。 <xref:Microsoft.VisualStudio.SharePoint.IMappedFolder.FolderType%2A>使用属性来确定这一点。  
   
- 当你通过创建映射的文件夹<xref:Microsoft.VisualStudio.SharePoint.IMappedFolderCollection.Add%28System.String%29?displayProperty=fullName>或<xref:Microsoft.VisualStudio.SharePoint.IMappedFolderCollection.Add%28System.String%2CSystem.Boolean%29?displayProperty=fullName>方法，<xref:Microsoft.VisualStudio.SharePoint.IMappedFolder.FolderType%2A>属性的新映射的文件夹会自动设置基于你指定的相对路径。 如果指定不对应的标准映射的文件夹位置，请之一的相对路径<xref:Microsoft.VisualStudio.SharePoint.IMappedFolder.FolderType%2A>新映射的文件夹的属性具有值<xref:Microsoft.VisualStudio.SharePoint.MappedFolderType.Other>。  
+ 使用<xref:Microsoft.VisualStudio.SharePoint.IMappedFolderCollection.Add%28System.String%29?displayProperty=fullName> <xref:Microsoft.VisualStudio.SharePoint.IMappedFolder.FolderType%2A>或<xref:Microsoft.VisualStudio.SharePoint.IMappedFolderCollection.Add%28System.String%2CSystem.Boolean%29?displayProperty=fullName>方法创建映射文件夹时, 将基于指定的相对路径自动设置新映射文件夹的属性。 如果指定与标准映射文件夹位置之一不对应的相对路径, 则新的映射文件夹的<xref:Microsoft.VisualStudio.SharePoint.IMappedFolder.FolderType%2A>属性将具有值。 <xref:Microsoft.VisualStudio.SharePoint.MappedFolderType.Other>  
   
  ]]></format>
     </remarks>
@@ -44,6 +44,7 @@
       <ReturnValue>
         <ReturnType>Microsoft.VisualStudio.SharePoint.MappedFolderType</ReturnType>
       </ReturnValue>
+      <MemberValue>1</MemberValue>
       <Docs>
         <summary>指示映射到 {SharePointRoot}\Template\ControlTemplates 的映射文件夹。</summary>
       </Docs>
@@ -60,6 +61,7 @@
       <ReturnValue>
         <ReturnType>Microsoft.VisualStudio.SharePoint.MappedFolderType</ReturnType>
       </ReturnValue>
+      <MemberValue>2</MemberValue>
       <Docs>
         <summary>指示映射到 {SharePointRoot}\Template\Images 的映射文件夹。</summary>
       </Docs>
@@ -76,6 +78,7 @@
       <ReturnValue>
         <ReturnType>Microsoft.VisualStudio.SharePoint.MappedFolderType</ReturnType>
       </ReturnValue>
+      <MemberValue>3</MemberValue>
       <Docs>
         <summary>指示映射到 {SharePointRoot}\Template\Layouts 的映射文件夹。</summary>
       </Docs>
@@ -92,6 +95,7 @@
       <ReturnValue>
         <ReturnType>Microsoft.VisualStudio.SharePoint.MappedFolderType</ReturnType>
       </ReturnValue>
+      <MemberValue>0</MemberValue>
       <Docs>
         <summary>此值用于未映射到由其他 <see cref="T:Microsoft.VisualStudio.SharePoint.MappedFolderType" /> 值所指定任一文件夹的任何映射文件夹。</summary>
       </Docs>
@@ -108,6 +112,7 @@
       <ReturnValue>
         <ReturnType>Microsoft.VisualStudio.SharePoint.MappedFolderType</ReturnType>
       </ReturnValue>
+      <MemberValue>4</MemberValue>
       <Docs>
         <summary>指示映射到 {SharePointRoot} 的映射文件夹。</summary>
       </Docs>
@@ -124,6 +129,7 @@
       <ReturnValue>
         <ReturnType>Microsoft.VisualStudio.SharePoint.MappedFolderType</ReturnType>
       </ReturnValue>
+      <MemberValue>5</MemberValue>
       <Docs>
         <summary>指示映射到 {SharePointRoot}\Template 的映射文件夹。</summary>
       </Docs>

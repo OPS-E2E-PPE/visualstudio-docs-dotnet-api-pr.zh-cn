@@ -1,5 +1,5 @@
 <Type Name="FormRegionStorageNullException" FullName="Microsoft.Office.Tools.Outlook.FormRegionStorageNullException">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="7b96efe630643720dbec255ae05cd2a8101f5e8f" /><Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="02/21/2018" /><Meta Name="ms.locfileid" Value="29429903" /></Metadata><TypeSignature Language="C#" Value="public sealed class FormRegionStorageNullException : Microsoft.VisualStudio.Tools.Applications.Runtime.RuntimeException" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="60910b5846789c43600125f9f3b9609815296e7e" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69003347" /></Metadata><TypeSignature Language="C#" Value="public sealed class FormRegionStorageNullException : Microsoft.VisualStudio.Tools.Applications.Runtime.RuntimeException" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit FormRegionStorageNullException extends Microsoft.VisualStudio.Tools.Applications.Runtime.RuntimeException" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Outlook.FormRegionStorageNullException" />
   <AssemblyInfo>
@@ -14,6 +14,9 @@
     <Attribute>
       <AttributeName>System.Diagnostics.DebuggerNonUserCode</AttributeName>
     </Attribute>
+    <Attribute>
+      <AttributeName>System.Serializable</AttributeName>
+    </Attribute>
   </Attributes>
   <Docs>
     <summary>表示在表单区域工厂类的 <see cref="M:Microsoft.Office.Tools.Outlook.IFormRegionFactory.GetFormRegionStorage(System.Object,Microsoft.Office.Interop.Outlook.OlFormRegionMode,Microsoft.Office.Interop.Outlook.OlFormRegionSize)" /> 方法返回 <see langword="null" /> 时发生的错误。</summary>
@@ -21,7 +24,7 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Outlook.IFormRegionFactory.GetFormRegionStorage%2A>窗体区域工厂类由 Outlook 才<xref:Microsoft.Office.Tools.Outlook.IFormRegionFactory.Kind%2A>属性的窗体区域工厂返回<xref:Microsoft.Office.Tools.Outlook.FormRegionKindConstants.Ofs>枚举值。  
+ 仅当窗体区域工厂的属性返回枚举值时,Outlook才会调用窗体区域工厂类的。<xref:Microsoft.Office.Tools.Outlook.FormRegionKindConstants.Ofs> <xref:Microsoft.Office.Tools.Outlook.IFormRegionFactory.Kind%2A> <xref:Microsoft.Office.Tools.Outlook.IFormRegionFactory.GetFormRegionStorage%2A>  
   
  ]]></format>
     </remarks>

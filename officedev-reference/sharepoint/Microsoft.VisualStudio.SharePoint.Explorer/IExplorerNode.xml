@@ -1,5 +1,5 @@
 <Type Name="IExplorerNode" FullName="Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="4187d7bd5c87d0ac8c08853232152f56d386b17c" /><Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="09/19/2018" /><Meta Name="ms.locfileid" Value="46454448" /></Metadata><TypeSignature Language="C#" Value="public interface IExplorerNode : Microsoft.VisualStudio.SharePoint.IAnnotatedObject, Microsoft.VisualStudio.SharePoint.INotifyObjectDisposed, Microsoft.VisualStudio.SharePoint.INotifyObjectDisposing, System.ComponentModel.INotifyPropertyChanged" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="7b6719b9274d7ceea8f59521f2fa01466aad537e" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69011490" /></Metadata><TypeSignature Language="C#" Value="public interface IExplorerNode : Microsoft.VisualStudio.SharePoint.IAnnotatedObject, Microsoft.VisualStudio.SharePoint.INotifyObjectDisposed, Microsoft.VisualStudio.SharePoint.INotifyObjectDisposing, System.ComponentModel.INotifyPropertyChanged" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IExplorerNode implements class Microsoft.VisualStudio.SharePoint.IAnnotatedObject, class Microsoft.VisualStudio.SharePoint.INotifyObjectDisposed, class Microsoft.VisualStudio.SharePoint.INotifyObjectDisposing, class System.ComponentModel.INotifyPropertyChanged" />
   <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode" />
   <AssemblyInfo>
@@ -26,7 +26,7 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 可以获取<xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode>对象时创建的 SharePoint 节点中，扩展或定义新类型的节点时。 有关详细信息，请参阅[如何： 扩展服务器资源管理器中的 SharePoint 节点](/visualstudio/sharepoint/how-to-extend-a-sharepoint-node-in-server-explorer)并[如何： 将自定义 SharePoint 节点添加到服务器资源管理器](/visualstudio/sharepoint/how-to-add-a-custom-sharepoint-node-to-server-explorer)。  
+ 在为 SharePoint 节点<xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode>创建扩展时, 或在定义新类型的节点时, 可以获取对象。 有关详细信息，请参阅[如何：在服务器资源管理器](/visualstudio/sharepoint/how-to-extend-a-sharepoint-node-in-server-explorer)中扩展 SharePoint 节点, [以及如何:将自定义 SharePoint 节点添加到](/visualstudio/sharepoint/how-to-add-a-custom-sharepoint-node-to-server-explorer)服务器资源管理器。  
   
  ]]></format>
     </remarks>
@@ -46,7 +46,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取作为当前节点的子节点的 <see cref="T:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode" /> 对象的集合。</summary>
-        <value>集合<see cref="T:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode" />的当前节点的子对象。</value>
+        <value>作为当前节点<see cref="T:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode" />子级的对象的集合。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -69,14 +69,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 可以使用<xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeContext>对象以执行 SharePoint 命令调入 SharePoint 服务器对象模型，获取该 URL 的 SharePoint 站点，以及执行其他任务。  
+ 您可以使用<xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeContext>对象执行调入 sharepoint 服务器对象模型的 sharepoint 命令, 获取 sharepoint 站点的 URL, 以及执行其他任务。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="DoubleClick">
-      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeEventArgs&gt; DoubleClick;" />
+      <MemberSignature Language="C#" Value="event EventHandler&lt;Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeEventArgs&gt; DoubleClick;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeEventArgs&gt; DoubleClick" />
       <MemberSignature Language="DocId" Value="E:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode.DoubleClick" />
       <MemberType>Event</MemberType>
@@ -124,7 +124,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，该值指示是否每次刷新其父节点时重新创建该节点。</summary>
-        <value><see langword="true" /> 如果每次刷新其父节点; 重新创建该节点否则为<see langword="false" />。</value>
+        <value><see langword="true" />如果在每次刷新节点的父节点时重新创建节点, 则为; 否则为。否则为<see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -142,7 +142,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取 <see cref="T:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeType" /> 对象，用于定义此节点的行为。</summary>
-        <value><see cref="T:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeType" />对象，用于定义此节点的行为。</value>
+        <value>定义此节点的行为的对象。<see cref="T:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeType" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -219,7 +219,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 节点将首先按其<xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode.SortOrder%2A>属性，然后通过其<xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode.Text%2A>属性。  
+ 首先按<xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode.SortOrder%2A>节点的属性对节点进行排序, 然后<xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode.Text%2A>按属性进行排序。  
   
  ]]></format>
         </remarks>

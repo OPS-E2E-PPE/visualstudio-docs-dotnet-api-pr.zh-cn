@@ -1,5 +1,5 @@
 <Type Name="IFormRegionFactory" FullName="Microsoft.Office.Tools.Outlook.IFormRegionFactory">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="a3acd6180c96fc5587b599692b012f631ec09b31" /><Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="02/21/2018" /><Meta Name="ms.locfileid" Value="29432555" /></Metadata><TypeSignature Language="C#" Value="public interface IFormRegionFactory" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="2a159884f0be5e5b78abee4697723a481638511b" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69003276" /></Metadata><TypeSignature Language="C#" Value="public interface IFormRegionFactory" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IFormRegionFactory" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Outlook.IFormRegionFactory" />
   <AssemblyInfo>
@@ -15,9 +15,6 @@
     <Attribute>
       <AttributeName>System.Runtime.InteropServices.Guid("0EA930C9-8CAB-4557-89D9-3BE282E4B926")</AttributeName>
     </Attribute>
-    <Attribute>
-      <AttributeName>System.Runtime.InteropServices.TypeIdentifier</AttributeName>
-    </Attribute>
   </Attributes>
   <Docs>
     <summary>定义一个接口，该接口创建实现 <see cref="T:Microsoft.Office.Tools.Outlook.IFormRegion" /> 的类的实例。</summary>
@@ -25,13 +22,13 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Outlook.IFormRegionFactory>接口定义通过 Microsoft Office Outlook 和 Outlook 外接程序用于创建实现的类的实例的方法<xref:Microsoft.Office.Tools.Outlook.IFormRegion>。  
+ 接口定义 Microsoft Office outlook 和 outlook 外接程序用来创建实现<xref:Microsoft.Office.Tools.Outlook.IFormRegion>的类的实例的方法。 <xref:Microsoft.Office.Tools.Outlook.IFormRegionFactory>  
   
- 当你将添加**Outlook 窗体区域**项向 Outlook 外接程序项目，Visual Studio 将窗体区域工厂类添加到实现的项目<xref:Microsoft.Office.Tools.Outlook.IFormRegionFactory>接口。  
+ 向 outlook 外接程序项目添加 " **outlook 窗体区域**" 项时, Visual Studio 会将窗体区域工厂类添加到实现该<xref:Microsoft.Office.Tools.Outlook.IFormRegionFactory>接口的项目。  
   
- 你也可以手动创建的窗体区域工厂类实现<xref:Microsoft.Office.Tools.Outlook.IFormRegionFactory>接口。 如果这样做，你还必须创建实现的窗体区域类<xref:Microsoft.Office.Tools.Outlook.IFormRegion>。  
+ 你还可以手动创建实现<xref:Microsoft.Office.Tools.Outlook.IFormRegionFactory>接口的窗体区域工厂类。 如果执行此操作, 还必须创建实现<xref:Microsoft.Office.Tools.Outlook.IFormRegion>的窗体区域类。  
   
- 创建中的窗体区域类的实例<xref:Microsoft.Office.Tools.Outlook.IFormRegionFactory.CreateFormRegion%2A>窗体区域工厂类的方法。  
+ 在窗体区域工厂类的<xref:Microsoft.Office.Tools.Outlook.IFormRegionFactory.CreateFormRegion%2A>方法中创建窗体区域类的实例。  
   
  ]]></format>
     </remarks>
@@ -60,9 +57,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果你手动创建的窗体区域工厂类，则必须创建实现的窗体区域类<xref:Microsoft.Office.Tools.Outlook.IFormRegion>接口。  
+ 如果手动创建窗体区域工厂类, 还必须创建实现<xref:Microsoft.Office.Tools.Outlook.IFormRegion>接口的窗体区域类。  
   
- 创建中的窗体区域类的实例<xref:Microsoft.Office.Tools.Outlook.IFormRegionFactory.CreateFormRegion%2A>方法，并且返回到 Outlook 的对象。  
+ 在<xref:Microsoft.Office.Tools.Outlook.IFormRegionFactory.CreateFormRegion%2A>方法中创建窗体区域类的实例, 并将该对象返回到 Outlook。  
   
  ]]></format>
         </remarks>
@@ -95,7 +92,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 仅当调用此方法<xref:Microsoft.Office.Tools.Outlook.IFormRegionFactory.Kind%2A>属性的窗体区域工厂返回<xref:Microsoft.Office.Tools.Outlook.FormRegionKindConstants.Ofs>枚举值。  
+ 仅当窗体区域工厂的<xref:Microsoft.Office.Tools.Outlook.IFormRegionFactory.Kind%2A>属性<xref:Microsoft.Office.Tools.Outlook.FormRegionKindConstants.Ofs>返回枚举值时, 才会调用此方法。  
   
  ]]></format>
         </remarks>
@@ -128,7 +125,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果你手动创建的窗体区域工厂类，可以使用此方法若要禁止显示窗体区域的 Outlook 项。  
+ 如果手动创建窗体区域工厂类, 则可以使用此方法阻止 Outlook 项显示窗体区域。  
   
  ]]></format>
         </remarks>
@@ -148,12 +145,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取工厂创建的表单区域的类型。</summary>
-        <value>一个字符串，表示该工厂创建的窗体区域的类型。</value>
+        <value>一个字符串, 表示工厂创建的窗体区域的类型。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果你手动创建的窗体区域工厂类，您必须返回<xref:Microsoft.Office.Tools.Outlook.FormRegionKindConstants.WindowsForms>或<xref:Microsoft.Office.Tools.Outlook.FormRegionKindConstants.Ofs>此属性。  
+ 如果手动创建窗体区域工厂类, 则必须为此属性<xref:Microsoft.Office.Tools.Outlook.FormRegionKindConstants.WindowsForms>返回<xref:Microsoft.Office.Tools.Outlook.FormRegionKindConstants.Ofs>或。  
   
  ]]></format>
         </remarks>
@@ -173,7 +170,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取属性的集合，这些属性描述表单区域在 Microsoft Office Outlook 中的显示方式。</summary>
-        <value>A<see cref="T:Microsoft.Office.Tools.Outlook.FormRegionManifest" />表示描述窗体区域在 Outlook 中的显示方式的属性集合。</value>
+        <value><see cref="T:Microsoft.Office.Tools.Outlook.FormRegionManifest" /> , 它表示属性的集合, 这些属性描述窗体区域在 Outlook 中的显示方式。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

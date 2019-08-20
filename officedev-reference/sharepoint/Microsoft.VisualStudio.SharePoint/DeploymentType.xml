@@ -1,5 +1,5 @@
 <Type Name="DeploymentType" FullName="Microsoft.VisualStudio.SharePoint.DeploymentType">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="7f6aa7b0bea7ac61df029352e6d7c751ca311628" /><Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="02/21/2018" /><Meta Name="ms.locfileid" Value="29410091" /></Metadata><TypeSignature Language="C#" Value="public enum DeploymentType" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="0f04fac66d184948adb3b87f39c6829f63f02936" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69008537" /></Metadata><TypeSignature Language="C#" Value="public enum DeploymentType" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DeploymentType extends System.Enum" />
   <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.SharePoint.DeploymentType" />
   <AssemblyInfo>
@@ -31,13 +31,14 @@
       <ReturnValue>
         <ReturnType>Microsoft.VisualStudio.SharePoint.DeploymentType</ReturnType>
       </ReturnValue>
+      <MemberValue>7</MemberValue>
       <Docs>
         <summary>指定作为应用程序全局资源部署到 SharePoint 的文件部署。 AppGlobalResource 的默认路径为 <c>{WebApplicationRoot}\App_GlobalResources</c>。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 应用程序全局资源引用的包清单 (manifest.xml)。 它们将部署到 SharePoint Web 应用程序的 App_GlobalResources 文件夹。  
+ 应用程序全局资源由包清单 (manifest .xml) 引用。 它们将部署到 SharePoint Web 应用程序的 "App_GlobalResources" 文件夹。  
   
  ]]></format>
         </remarks>
@@ -55,6 +56,7 @@
       <ReturnValue>
         <ReturnType>Microsoft.VisualStudio.SharePoint.DeploymentType</ReturnType>
       </ReturnValue>
+      <MemberValue>6</MemberValue>
       <Docs>
         <summary>指定作为应用程序资源部署到 SharePoint 的文件部署。 应用程序资源由包清单 (manifest.xml) 引用。 ApplicationResource 的默认路径为 <c>{WebApplicationRoot}\Resources</c>。</summary>
       </Docs>
@@ -71,6 +73,7 @@
       <ReturnValue>
         <ReturnType>Microsoft.VisualStudio.SharePoint.DeploymentType</ReturnType>
       </ReturnValue>
+      <MemberValue>11</MemberValue>
       <Docs>
         <summary>指定作为 SharePoint 的应用的一部分、但未打包到 wsp 的文件部署。</summary>
       </Docs>
@@ -87,6 +90,7 @@
       <ReturnValue>
         <ReturnType>Microsoft.VisualStudio.SharePoint.DeploymentType</ReturnType>
       </ReturnValue>
+      <MemberValue>5</MemberValue>
       <Docs>
         <summary>指定作为类资源部署到 SharePoint 的文件部署。 类资源由包清单 (manifest.xml) 引用。 ClassResource 的默认路径为 <c>{ClassResourcePath}</c>。</summary>
       </Docs>
@@ -103,6 +107,7 @@
       <ReturnValue>
         <ReturnType>Microsoft.VisualStudio.SharePoint.DeploymentType</ReturnType>
       </ReturnValue>
+      <MemberValue>10</MemberValue>
       <Docs>
         <summary>指定一个标记为“资源”的文件，该资源在包清单中作为 Dwp 文件被引用。 Dwp 文件由包清单 (manifest.xml) 引用。 DwpFile 的默认路径为 <c>{WebApplicationRoot}\wpcatalog</c>。</summary>
       </Docs>
@@ -119,6 +124,7 @@
       <ReturnValue>
         <ReturnType>Microsoft.VisualStudio.SharePoint.DeploymentType</ReturnType>
       </ReturnValue>
+      <MemberValue>2</MemberValue>
       <Docs>
         <summary>指定部署到 SharePoint 的元素文件部署。 元素文件由功能清单 (feature.xml) 引用。 ElementFile 的默认路径为 <c>{SharePointRoot}\Template\Features</c>。</summary>
       </Docs>
@@ -135,6 +141,7 @@
       <ReturnValue>
         <ReturnType>Microsoft.VisualStudio.SharePoint.DeploymentType</ReturnType>
       </ReturnValue>
+      <MemberValue>1</MemberValue>
       <Docs>
         <summary>指定部署到 SharePoint 的元素清单部署。 元素清单由功能清单 (feature.xml) 引用。 ElementManifest 的默认路径为 <c>{SharePointRoot}\Template\Features</c>。</summary>
       </Docs>
@@ -151,6 +158,7 @@
       <ReturnValue>
         <ReturnType>Microsoft.VisualStudio.SharePoint.DeploymentType</ReturnType>
       </ReturnValue>
+      <MemberValue>0</MemberValue>
       <Docs>
         <summary>指定不部署到 SharePoint 的文件。 NoDeployment 的默认路径为空字符串。</summary>
       </Docs>
@@ -167,6 +175,7 @@
       <ReturnValue>
         <ReturnType>Microsoft.VisualStudio.SharePoint.DeploymentType</ReturnType>
       </ReturnValue>
+      <MemberValue>8</MemberValue>
       <Docs>
         <summary>指定标记为“仅限包”的文件，该文件包含在 WSP 文件中，且无任何部署详细信息。 PackageOnly 的默认路径为空字符串。</summary>
       </Docs>
@@ -183,13 +192,14 @@
       <ReturnValue>
         <ReturnType>Microsoft.VisualStudio.SharePoint.DeploymentType</ReturnType>
       </ReturnValue>
+      <MemberValue>9</MemberValue>
       <Docs>
         <summary>指定作为资源文件部署到 SharePoint 的文件部署。 Resource 的默认路径为 <c>{SharePointRoot}\Template\Features</c>。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 资源文件引用的包清单 (manifest.xml)。  
+ 资源文件由包清单 (manifest .xml) 引用。  
   
  ]]></format>
         </remarks>
@@ -207,6 +217,7 @@
       <ReturnValue>
         <ReturnType>Microsoft.VisualStudio.SharePoint.DeploymentType</ReturnType>
       </ReturnValue>
+      <MemberValue>4</MemberValue>
       <Docs>
         <summary>指定部署到 SharePoint 的根文件部署。 根文件由包清单 (manifest.xml) 引用。 RootFile 的默认路径为 <c>{SharePointRoot}</c>。</summary>
       </Docs>
@@ -223,6 +234,7 @@
       <ReturnValue>
         <ReturnType>Microsoft.VisualStudio.SharePoint.DeploymentType</ReturnType>
       </ReturnValue>
+      <MemberValue>3</MemberValue>
       <Docs>
         <summary>指定部署到 SharePoint 的模板文件部署。 模板文件由包清单 (manifest.xml) 引用。 TemplateFile 的默认路径为 <c>{SharePointRoot}\Template</c>。</summary>
       </Docs>

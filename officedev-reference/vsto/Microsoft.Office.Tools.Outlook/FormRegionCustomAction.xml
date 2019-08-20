@@ -1,5 +1,5 @@
 <Type Name="FormRegionCustomAction" FullName="Microsoft.Office.Tools.Outlook.FormRegionCustomAction">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="16c96cae6832d7579b8ccfbc5a11c42dd3a202d5" /><Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="09/19/2018" /><Meta Name="ms.locfileid" Value="46456021" /></Metadata><TypeSignature Language="C#" Value="public interface FormRegionCustomAction" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="6e4f5225d7a20577776c5d6a44f37dc892826812" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69003773" /></Metadata><TypeSignature Language="C#" Value="public interface FormRegionCustomAction" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract FormRegionCustomAction" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Outlook.FormRegionCustomAction" />
   <AssemblyInfo>
@@ -15,9 +15,6 @@
     <Attribute>
       <AttributeName>System.Runtime.InteropServices.Guid("e0f1e721-d4f3-4abf-9e4e-938fa7cd98c3")</AttributeName>
     </Attribute>
-    <Attribute>
-      <AttributeName>System.Runtime.InteropServices.TypeIdentifier</AttributeName>
-    </Attribute>
   </Attributes>
   <Docs>
     <summary>表示 Outlook 项的功能区的“自定义操作”组中显示的自定义操作。</summary>
@@ -25,9 +22,9 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 操作显示按钮，使用户能够对 Microsoft Office Outlook 项做出响应。 可以创建自定义操作打开任何类型的 Outlook 项。 这些操作出现在**自定义操作**Outlook 项的功能区上的组。  
+ 操作显示使用户能够响应 Microsoft Office Outlook 项目的按钮。 你可以创建一个自定义操作, 该操作将打开任何类型的 Outlook 项。 这些操作显示在 Outlook 项的功能区上的 "**自定义操作**" 组中。  
   
- 有关自定义操作的详细信息，请参阅[Outlook 窗体区域中的自定义操作](/visualstudio/vsto/custom-actions-in-outlook-form-regions)。  
+ 有关自定义操作的详细信息, 请参阅[Outlook 窗体区域中的自定义操作](/visualstudio/vsto/custom-actions-in-outlook-form-regions)。  
   
  [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
   
@@ -57,9 +54,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 目标窗体可以转发原始消息和附件，回复到原始发件人，回复所有收件人的原始消息，或通过发布消息文件夹回复。  
+ 目标窗体可以转发原始邮件及其附件、回复原始发件人、回复原始邮件的所有收件人或通过发布到邮件文件夹进行回复。  
   
- 设置<xref:Microsoft.Office.Tools.Outlook.FormRegionCustomAction.AddressLike%2A>属性设置为<xref:Microsoft.Office.Tools.Outlook.FormRegionCustomActionAddressLike.Response>如果你想将打开目标窗体以显示当用户单击的按钮**投票**按钮**响应**功能区组。  
+ 如果希望在用户单击功能区的 "**响应**" 组中的 "**投票**" 按钮时显示目标窗体, 则将<xref:Microsoft.Office.Tools.Outlook.FormRegionCustomActionAddressLike.Response> <xref:Microsoft.Office.Tools.Outlook.FormRegionCustomAction.AddressLike%2A>属性设置为。  
   
  ]]></format>
         </remarks>
@@ -84,7 +81,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 在窗体可以包括原始项作为附件，或以文本形式显示的项的正文中包括原始项。 你可以忽略对原始项的任何引用。 有关详细信息，请参见 <xref:Microsoft.Office.Tools.Outlook.FormRegionCustomActionBody> 枚举。  
+ 窗体可以将原始项作为附件包括在内, 或将原始项作为文本显示在项的正文中。 您还可以省略对原始项的任何引用。 有关详细信息，请参见 <xref:Microsoft.Office.Tools.Outlook.FormRegionCustomActionBody> 枚举。  
   
  ]]></format>
         </remarks>
@@ -109,7 +106,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果您设置<xref:Microsoft.Office.Tools.Outlook.FormRegionCustomAction.Enabled%2A>到`false`，自定义操作不会出现在**自定义操作**打开显示窗体区域在 Outlook 中的项时在功能区的组。  
+ 如果将设置<xref:Microsoft.Office.Tools.Outlook.FormRegionCustomAction.Enabled%2A>为`false`, 则在 Outlook 中打开显示窗体区域的项时, 自定义操作将不会显示在功能区的 "**自定义操作**" 组中。  
   
  ]]></format>
         </remarks>
@@ -134,7 +131,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性用于指定是否要打开新窗体、 立即发送窗体或提示用户打开或发送新窗体。  
+ 使用此属性来指定是要打开新窗体、立即发送窗体, 还是提示用户打开或发送新窗体。  
   
  ]]></format>
         </remarks>
@@ -159,7 +156,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 名称不必是唯一的。 一个<xref:Microsoft.Office.Tools.Outlook.FormRegionCustomAction>可以共享相同的名称<xref:Microsoft.Office.Tools.Outlook.FormRegionCustomAction>在同一个<xref:Microsoft.Office.Tools.Outlook.FormRegionCustomActionCollection>。  
+ 该名称不必是唯一的。 可以与<xref:Microsoft.Office.Tools.Outlook.FormRegionCustomAction> 相同<xref:Microsoft.Office.Tools.Outlook.FormRegionCustomActionCollection>的相同名称共享同一名称。 <xref:Microsoft.Office.Tools.Outlook.FormRegionCustomAction>  
   
  ]]></format>
         </remarks>
@@ -186,7 +183,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果您设置<xref:Microsoft.Office.Tools.Outlook.FormRegionCustomAction.AddressLike%2A>属性设置为<xref:Microsoft.Office.Tools.Outlook.FormRegionCustomActionAddressLike.Response>和<xref:Microsoft.Office.Tools.Outlook.FormRegionCustomAction.ShowOnRibbon%2A>属性设置为`false`，然后单击时，自定义操作将不显示为选项**投票**按钮**响应**功能区组。  
+ <xref:Microsoft.Office.Tools.Outlook.FormRegionCustomAction.AddressLike%2A>如果将属性设置为<xref:Microsoft.Office.Tools.Outlook.FormRegionCustomActionAddressLike.Response> , 并<xref:Microsoft.Office.Tools.Outlook.FormRegionCustomAction.ShowOnRibbon%2A>将属性设置`false`为, 则当单击功能区的 "**响应**" 组中的 "**投票**" 按钮时, 自定义操作不会显示为选项。  
   
  ]]></format>
         </remarks>
@@ -211,7 +208,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 例如，如果您设置<xref:Microsoft.Office.Tools.Outlook.FormRegionCustomAction.TargetForm%2A>属性设置为`IPM.Note`，当用户执行自定义操作时，将出现一个邮件项。 在显示的文本**使用者**新邮件项的字段将以您为指定的字符串开头<xref:Microsoft.Office.Tools.Outlook.FormRegionCustomAction.SubjectPrefix%2A>属性后加一个冒号 （:）。  
+ 例如, 如果将<xref:Microsoft.Office.Tools.Outlook.FormRegionCustomAction.TargetForm%2A>属性设置为`IPM.Note`, 则当用户执行自定义操作时, 会出现邮件项。 新邮件项的 "**主题**" 字段中显示的文本将以您为<xref:Microsoft.Office.Tools.Outlook.FormRegionCustomAction.SubjectPrefix%2A>属性指定的字符串开头, 后跟一个冒号 (:)。  
   
  ]]></format>
         </remarks>
@@ -237,7 +234,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 指定邮件类，以确定你想要在用户执行自定义操作时显示的窗体的类型。 例如，如果你想要打开邮件项的自定义操作，则设置<xref:Microsoft.Office.Tools.Outlook.FormRegionCustomAction.TargetForm%2A>属性设置为`IPM.Note`。  
+ 指定邮件类, 以标识用户执行自定义操作时要显示的窗体类型。 例如, 如果希望自定义操作打开邮件项, 请将<xref:Microsoft.Office.Tools.Outlook.FormRegionCustomAction.TargetForm%2A>属性设置为。 `IPM.Note`  
   
  ]]></format>
         </remarks>
@@ -259,12 +256,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个名称，该名称用于标识功能区的“自定义操作”组中的自定义操作。</summary>
-        <value>一个字符串，表示用于标识中的自定义操作的名称**自定义操作**功能区组。</value>
+        <value>一个字符串, 该字符串表示用于标识功能区的 "**自定义操作**" 组中的自定义操作的名称。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果您设置<xref:Microsoft.Office.Tools.Outlook.FormRegionCustomAction.AddressLike%2A>属性设置为<xref:Microsoft.Office.Tools.Outlook.FormRegionCustomActionAddressLike.Response>，单击时，标题将显示为一个选项**投票**按钮**响应**功能区组。  
+ 如果将<xref:Microsoft.Office.Tools.Outlook.FormRegionCustomAction.AddressLike%2A>属性设置为<xref:Microsoft.Office.Tools.Outlook.FormRegionCustomActionAddressLike.Response>, 则当单击功能区的 "**响应**" 组中的 "**投票**" 按钮时, 标题将显示为一个选项。  
   
  ]]></format>
         </remarks>
@@ -291,11 +288,11 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用<xref:Microsoft.Office.Tools.Outlook.FormRegionCustomAction.ToXml%2A>方法如果你想要创建 XML 清单文件描述的自定义操作。  
+ 若要创建描述自定义操作的 XML 清单文件, 请使用方法。<xref:Microsoft.Office.Tools.Outlook.FormRegionCustomAction.ToXml%2A>  
   
- 此方法返回一个字符串，包含用于描述元素和属性<xref:Microsoft.Office.Tools.Outlook.FormRegionCustomAction>。  
+ 此方法返回一个字符串, 其中包含描述的<xref:Microsoft.Office.Tools.Outlook.FormRegionCustomAction>元素和特性。  
   
- 您可以调用`ToXML`方法中的其他类型<xref:Microsoft.Office.Tools.Outlook>命名空间来构建一个完整的 XML 清单文件。  
+ 可以调用`ToXML` <xref:Microsoft.Office.Tools.Outlook>命名空间中其他类型的方法以生成完整的 XML 清单文件。  
   
  ]]></format>
         </remarks>

@@ -1,5 +1,5 @@
 <Type Name="FormRegionManifest" FullName="Microsoft.Office.Tools.Outlook.FormRegionManifest">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="77e83607162feb5c625eb1c2b0fd9e5a66f56c8e" /><Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="09/19/2018" /><Meta Name="ms.locfileid" Value="46456190" /></Metadata><TypeSignature Language="C#" Value="public interface FormRegionManifest" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="dce71a4578f0b101bfabdf2d3db956567cf537da" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69003485" /></Metadata><TypeSignature Language="C#" Value="public interface FormRegionManifest" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract FormRegionManifest" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Outlook.FormRegionManifest" />
   <AssemblyInfo>
@@ -15,9 +15,6 @@
     <Attribute>
       <AttributeName>System.Runtime.InteropServices.Guid("d4086552-24ea-462c-bb44-0a1e811e40c3")</AttributeName>
     </Attribute>
-    <Attribute>
-      <AttributeName>System.Runtime.InteropServices.TypeIdentifier</AttributeName>
-    </Attribute>
   </Attributes>
   <Docs>
     <summary>表示一个窗体区域清单，该清单描述窗体区域如何出现在 Outlook 中。</summary>
@@ -25,9 +22,9 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 窗体区域清单是描述窗体区域在 Outlook 中的显示方式的属性集合。 例如，可以指定窗体区域是否应出现在 Outlook 项，在阅读窗格或提供你想要显示在标题**操作**菜单或**选择窗体**对话框当用户选择替换或全部替换窗体区域在 Outlook 中。  
+ 窗体区域清单是说明窗体区域在 Outlook 中的显示方式的属性的集合。 例如, 您可以指定窗体区域是否应出现在 Outlook 项的 "阅读" 窗格中, 或提供您希望在用户选择替换或全部替换时在 "**操作**" 菜单或 "**选择窗体**" 对话框中显示的标题。Outlook 中的窗体区域。  
   
- 可以在设计时设置这些属性**属性**窗口中，或在运行时之前 Outlook 检索窗体区域清单中的 Outlook 外接程序。  
+ 您可以在设计时在 "**属性**" 窗口中设置这些属性, 也可以在运行时在 Outlook 从 outlook 外接程序中检索窗体区域清单之前进行设置。  
   
  [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
   
@@ -52,7 +49,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置出现在 Outlook 的“选择表单”对话框中的用来表示替换和全部替换表单区域的名称。</summary>
-        <value>一个字符串，表示在显示的名称**选择窗体**来表示替换和全部替换窗体区域的 Outlook 中的对话框。</value>
+        <value>一个字符串, 该字符串表示在 Outlook 的 "**选择窗体**" 对话框中显示的用于替换和全部替换窗体区域的名称。</value>
         <remarks>To be added.</remarks>
         <exception cref="T:System.InvalidOperationException"><see cref="P:Microsoft.Office.Tools.Outlook.FormRegionManifest.Locked" /> 为 <see langword="true" />。</exception>
         <exception cref="T:System.ArgumentException">该值的长度大于 256 个字符。</exception>
@@ -72,12 +69,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个集合，该集合包含在显示表单区域的 Outlook 项功能区的“自定义操作”组中出现的所有自定义操作。</summary>
-        <value>一个<see cref="T:Microsoft.Office.Tools.Outlook.FormRegionCustomActionCollection" />，其中包含的所有自定义操作中显示**自定义操作**组的显示窗体区域的 Outlook 项功能区上。</value>
+        <value>一个<see cref="T:Microsoft.Office.Tools.Outlook.FormRegionCustomActionCollection" /> , 其中包含在显示窗体区域的 Outlook 项的功能区上的 "**自定义操作**" 组中出现的所有自定义操作。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 有关自定义操作的详细信息，请参阅[Outlook 窗体区域中的自定义操作](/visualstudio/vsto/custom-actions-in-outlook-form-regions)。  
+ 有关自定义操作的详细信息, 请参阅[Outlook 窗体区域中的自定义操作](/visualstudio/vsto/custom-actions-in-outlook-form-regions)。  
   
  ]]></format>
         </remarks>
@@ -97,7 +94,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置 Outlook 的“选择表单”对话框中出现的用来表示替换和全部替换表单区域的文本。</summary>
-        <value>一个字符串，表示在显示的文本**选择窗体**来表示替换和全部替换窗体区域的 Outlook 中的对话框。</value>
+        <value>一个字符串, 表示在 Outlook 的 "**选择窗体**" 对话框中显示的用于替换和全部替换窗体区域的文本。</value>
         <remarks>To be added.</remarks>
         <exception cref="T:System.InvalidOperationException"><see cref="P:Microsoft.Office.Tools.Outlook.FormRegionManifest.Locked" /> 为 <see langword="true" />。</exception>
         <exception cref="T:System.ArgumentException">该值的长度大于 256 个字符。</exception>
@@ -122,11 +119,11 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 例如，如果您设置<xref:Microsoft.Office.Tools.Outlook.FormRegionManifest.DisplayAfter%2A>相邻的窗体区域的名称的属性，此窗体区域的 Outlook 窗体上显示该窗体区域。  
+ 例如, 如果将<xref:Microsoft.Office.Tools.Outlook.FormRegionManifest.DisplayAfter%2A>属性设置为相邻窗体区域的名称, 则该窗体区域将显示在 Outlook 窗体上此窗体区域之前。  
   
- 使用<xref:Microsoft.Office.Tools.Outlook.FormRegionNameAttribute.Name%2A>若要将此属性设置为窗体区域。  
+ <xref:Microsoft.Office.Tools.Outlook.FormRegionNameAttribute.Name%2A>使用窗体区域的设置此属性。  
   
- 有关窗体区域名称的详细信息，请参阅[创建 Outlook 窗体区域的准则](/visualstudio/vsto/guidelines-for-creating-outlook-form-regions)。  
+ 有关窗体区域名称的详细信息, 请参阅[创建 Outlook 窗体区域的准则](/visualstudio/vsto/guidelines-for-creating-outlook-form-regions)。  
   
  ]]></format>
         </remarks>
@@ -153,9 +150,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 默认情况下，自定义 message 类继承 message 基类的所有窗体区域关联。 例如，message 类名为`IPM.Task.Contoso`派生自`IPM.Task`。 因此，`IPM.Task.Contoso`继承的窗体区域关联`IPM.Task`。  
+ 默认情况下，自定义 message 类继承 message 基类的所有窗体区域关联。 例如，名为 `IPM.Task.Contoso` 的 message 类派生自 `IPM.Task`。 因此，`IPM.Task.Contoso` 继承 `IPM.Task` 的窗体区域关联。  
   
- 如果不希望窗体区域与任何派生的 message 类关联，设置<xref:Microsoft.Office.Tools.Outlook.FormRegionManifest.ExactMessageClass%2A>向窗体区域属性`true`。 例如，如果将一个相邻的窗体区域与相关联`IPM.Task`并设置<xref:Microsoft.Office.Tools.Outlook.FormRegionManifest.ExactMessageClass%2A>属性设置为`true`，窗体区域只会追加到标准任务窗体的底部。 窗体区域不会追加到任何自定义版本的标准任务窗体的底部。  
+ 如果不希望窗体区域与任何派生的 message 类关联，将窗体区域的 <xref:Microsoft.Office.Tools.Outlook.FormRegionManifest.ExactMessageClass%2A> 属性设置为 `true`。 例如，如果将一个相邻的窗体区域与 `IPM.Task` 关联并将 <xref:Microsoft.Office.Tools.Outlook.FormRegionManifest.ExactMessageClass%2A> 属性设置为 `true`，窗体区域只会追加到标准任务窗体的底部。 窗体区域不会追加到任何自定义版本的标准任务窗体的底部。  
   
  ]]></format>
         </remarks>
@@ -204,11 +201,11 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 对于单独的窗体区域，此文本出现在**显示**的组**消息**上的 Outlook 项的功能区选项卡。  
+ 对于单独的窗体区域, 此文本显示在 Outlook 项的功能区上的 "**消息**" 选项卡的 "**显示**" 组中。  
   
- 对于相邻窗体区域，此文本出现在窗体区域的标题文本。  
+ 对于相邻的窗体区域, 此文本显示在窗体区域的标题文本中。  
   
- 对于替换和全部替换窗体区域，此文本出现在**选择窗体**对话框和**操作**在 Outlook 中的菜单。  
+ 对于替换和全部替换窗体区域, 此文本显示在 Outlook 的 "**选择窗体**" 对话框和 "**操作**" 菜单中。  
   
  ]]></format>
         </remarks>
@@ -250,7 +247,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示替换和全部替换表单区域是否出现在 Outlook 的“选择表单”对话框中。</summary>
-        <value><see langword="true" /> 如果替换和全部替换窗体区域不出现在**选择窗体**对话框中，在 Outlook 中; 否则为<see langword="false" />。 默认值为 <see langword="false" />。</value>
+        <value><see langword="true" />如果替换和全部替换窗体区域未出现在 Outlook 的 "**选择窗体**" 对话框中,否则为<see langword="false" />。 默认值为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
         <exception cref="T:System.InvalidOperationException"><see cref="P:Microsoft.Office.Tools.Outlook.FormRegionManifest.Locked" /> 为 <see langword="true" />。</exception>
       </Docs>
@@ -293,9 +290,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果您将窗体区域与自定义消息类相关联，并启用此属性，还将加载在 Outlook 中设计并与相同的邮件类关联的任何窗体。  
+ 如果您将窗体区域与自定义邮件类关联并启用此属性, 则在 Outlook 中设计并且与同一邮件类关联的任何窗体也将加载。  
   
- 此属性才影响替换和全部替换窗体区域。 启用此属性可能会导致性能略有下降。  
+ 此属性仅影响替换和全部替换窗体区域。 启用此属性可能会导致性能稍微降低。  
   
  ]]></format>
         </remarks>
@@ -326,7 +323,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性设置为`true`Outlook 时检索从 Outlook 外接程序的窗体区域清单。  
+ 当 outlook 从 outlook 外`true`接程序中检索窗体区域清单时, 此属性设置为。  
   
  ]]></format>
         </remarks>
@@ -351,9 +348,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 字符串必须介于 1 到 2 个字符，并且必须包含空格、 制表符或换行字符。  
+ 字符串的长度必须介于1到2个字符之间, 并且不能包含空格、制表符或换行符。  
   
- 您可以使用访问键组合作为此键盘快捷方式激活单独、 替换或全部替换窗体区域。 对于单独的窗体区域，键盘快捷方式时将出现在 Outlook 项的功能区按 ALT 键。  
+ 您可以使用此键盘快捷方式作为访问键组合来激活单独的、替换或全部替换窗体区域。 对于单独的窗体区域, 按 ALT 键时, Outlook 项的功能区上将显示键盘快捷方式。  
   
  ]]></format>
         </remarks>
@@ -380,7 +377,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果可以将内容添加到项，的 Outlook 检查器处于撰写模式。 例如，当您打开新邮件项，该项将显示在检查器处于撰写模式。  
+ 如果您可以向项中添加内容, 则 Outlook 检查器处于撰写模式。 例如, 当您打开一个新邮件项时, 该项会显示在处于撰写模式下的检查器中。  
   
  ]]></format>
         </remarks>
@@ -406,7 +403,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果无法将内容添加到项，Outlook 检查器处于读取模式。 例如，当您打开现有的邮件项，项将显示在检查器处于读取模式。  
+ 如果无法将内容添加到项目中, Outlook 检查器处于读取模式。 例如, 当您打开现有的邮件项时, 该项会显示在处于读取模式的检查器中。  
   
  ]]></format>
         </remarks>
@@ -432,10 +429,10 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 阅读窗格中，有时称为预览窗格中，提供信息的只读的视图。 在阅读窗格可用于预览项，无需打开的项。  
+ 阅读窗格有时称为预览窗格, 提供信息的只读视图。 您可以使用阅读窗格在不打开项目的情况下预览项目。  
   
 > [!NOTE]
->  您将添加到相邻的窗体区域，例如文本框中，输入的控件可能会发生意外行为时的项目和窗体区域是在阅读窗格中打开。 有关详细信息，请参阅[创建 Outlook 窗体区域的准则](/visualstudio/vsto/guidelines-for-creating-outlook-form-regions)。  
+>  当项和窗体区域在阅读窗格中打开时, 添加到相邻窗体区域 (例如文本框) 的输入控件可能不会按预期方式运行。 有关详细信息, 请参阅[创建 Outlook 窗体区域的准则](/visualstudio/vsto/guidelines-for-creating-outlook-form-regions)。  
   
  ]]></format>
         </remarks>
@@ -456,12 +453,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置出现在 Outlook 的“操作”菜单和“选择表单”对话框中的用来表示替换和全部替换表单区域的名称。</summary>
-        <value>一个字符串，表示在显示的文本**操作**菜单并**选择窗体**来表示替换和全部替换窗体区域的 Outlook 中的对话框。</value>
+        <value>表示显示在 Outlook 的 "**操作**" 菜单和 "**选择窗体**" 对话框中的文本的字符串, 用于替换和全部替换窗体区域。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果未设置<xref:Microsoft.Office.Tools.Outlook.FormRegionManifest.Title%2A>属性，则值<xref:Microsoft.Office.Tools.Outlook.FormRegionManifest.FormRegionName%2A>属性将出现在**操作**菜单并**选择窗体**在 Outlook 中的对话框。  
+ 如果未设置<xref:Microsoft.Office.Tools.Outlook.FormRegionManifest.Title%2A>该属性, 则该<xref:Microsoft.Office.Tools.Outlook.FormRegionManifest.FormRegionName%2A>属性的值将显示在 Outlook 的 "**操作**" 菜单和 "**选择窗体**" 对话框中。  
   
  ]]></format>
         </remarks>
@@ -489,9 +486,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用<xref:Microsoft.Office.Tools.Outlook.FormRegionManifest.ToXml%2A>方法如果你想要创建 XML 清单文件描述窗体区域。  
+ 若要创建描述窗体区域的 XML 清单文件, 请使用方法。<xref:Microsoft.Office.Tools.Outlook.FormRegionManifest.ToXml%2A>  
   
- 此方法返回一个字符串，包含用于描述元素和属性<xref:Microsoft.Office.Tools.Outlook.FormRegionManifest>。 您可以调用`ToXML`方法中的其他类型<xref:Microsoft.Office.Tools.Outlook>命名空间来构建一个完整的 XML 清单文件。  
+ 此方法返回一个字符串, 其中包含描述的<xref:Microsoft.Office.Tools.Outlook.FormRegionManifest>元素和特性。 可以调用`ToXML` <xref:Microsoft.Office.Tools.Outlook>命名空间中其他类型的方法以生成完整的 XML 清单文件。  
   
  ]]></format>
         </remarks>

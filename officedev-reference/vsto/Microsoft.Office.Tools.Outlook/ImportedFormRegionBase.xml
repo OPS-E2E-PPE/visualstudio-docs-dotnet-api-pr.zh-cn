@@ -1,5 +1,5 @@
 <Type Name="ImportedFormRegionBase" FullName="Microsoft.Office.Tools.Outlook.ImportedFormRegionBase">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="48fd57b5540d78e68627e0c4d96c73a6eb9e0fd3" /><Meta Name="ms.sourcegitcommit" Value="5a5a038b6c783bec52842c940b22504bfc62a810" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/03/2018" /><Meta Name="ms.locfileid" Value="29432516" /></Metadata><TypeSignature Language="C#" Value="public abstract class ImportedFormRegionBase : Microsoft.Office.Tools.Outlook.IFormRegion, Microsoft.Office.Tools.Outlook.IImportedFormRegionExtension" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="6024d129fb34902281caf5f1865fae1af093d7e0" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69003209" /></Metadata><TypeSignature Language="C#" Value="public abstract class ImportedFormRegionBase : Microsoft.Office.Tools.Outlook.IFormRegion, Microsoft.Office.Tools.Outlook.IImportedFormRegionExtension" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ImportedFormRegionBase extends System.Object implements class Microsoft.Office.Tools.IExtension, class Microsoft.Office.Tools.Outlook.IFormRegion, class Microsoft.Office.Tools.Outlook.IImportedFormRegionExtension" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Outlook.ImportedFormRegionBase" />
   <AssemblyInfo>
@@ -10,6 +10,9 @@
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
   <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Office.Tools.IExtension</InterfaceName>
+    </Interface>
     <Interface>
       <InterfaceName>Microsoft.Office.Tools.Outlook.IFormRegion</InterfaceName>
     </Interface>
@@ -23,7 +26,7 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果您将添加**Outlook 窗体区域**项向 Outlook 外接程序项目，然后选择**导入 Outlook 窗体存储 (.ofs) 文件**中的第一页**新建 Outlook 窗体区域**向导、 Visual Studio 将添加继承的窗体区域类<xref:Microsoft.Office.Tools.Outlook.ImportedFormRegionBase>。  
+ 如果将**Outlook 窗体区域**项添加到 outlook 外接程序项目, 并在 "**新建 Outlook 窗体区域**" 向导的第一页中选择 "**导入 Outlook 窗体存储 (.ofs) 文件**", 则 Visual Studio 将添加一个继承自的窗体区域类<xref:Microsoft.Office.Tools.Outlook.ImportedFormRegionBase>.  
   
 ## <a name="usage"></a>用法  
  [!INCLUDE[vsto_net4utilities](~/includes/vsto-net4utilities-md.md)]  
@@ -89,7 +92,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 可以使用此属性来跟踪创建的当前实例的窗体区域工厂类<xref:Microsoft.Office.Tools.Outlook.ImportedFormRegionBase>。  
+ 您可以使用此属性来跟踪创建的当前实例<xref:Microsoft.Office.Tools.Outlook.ImportedFormRegionBase>的窗体区域工厂类。  
   
  ]]></format>
         </remarks>
@@ -113,9 +116,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要获取为其显示窗体区域的 Microsoft Office Outlook 项，请调用<xref:Microsoft.Office.Tools.Outlook.ImportedFormRegionBase.OutlookItem%2A>属性。  
+ 若要获取窗体区域显示 Microsoft Office Outlook 项, 请调用<xref:Microsoft.Office.Tools.Outlook.ImportedFormRegionBase.OutlookItem%2A>属性。  
   
- 若要获取显示的 Outlook 项的检查器，请调用<xref:Microsoft.Office.Tools.Outlook.ImportedFormRegionBase.OutlookFormRegion%2A>若要获取的实例<xref:Microsoft.Office.Interop.Outlook.FormRegion?displayProperty=fullName>，然后调用<xref:Microsoft.Office.Interop.Outlook._FormRegion.Inspector%2A>属性的<xref:Microsoft.Office.Interop.Outlook.FormRegion?displayProperty=fullName>对象。  
+ 若要获取显示 Outlook 项的检查器, 请调用<xref:Microsoft.Office.Tools.Outlook.ImportedFormRegionBase.OutlookFormRegion%2A>以获取的<xref:Microsoft.Office.Interop.Outlook.FormRegion?displayProperty=fullName>实例<xref:Microsoft.Office.Interop.Outlook._FormRegion.Inspector%2A> , 然后<xref:Microsoft.Office.Interop.Outlook.FormRegion?displayProperty=fullName>调用对象的属性。  
   
  ]]></format>
         </remarks>
@@ -139,9 +142,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要获取为其显示窗体区域的 Outlook 项，请调用<xref:Microsoft.Office.Tools.Outlook.ImportedFormRegionBase.OutlookItem%2A>属性。  
+ 若要获取显示窗体区域的 Outlook 项, 请调用<xref:Microsoft.Office.Tools.Outlook.ImportedFormRegionBase.OutlookItem%2A>属性。  
   
- 若要获取显示的 Outlook 项的检查器，请调用<xref:Microsoft.Office.Tools.Outlook.ImportedFormRegionBase.OutlookFormRegion%2A>若要获取的实例<xref:Microsoft.Office.Interop.Outlook.FormRegion?displayProperty=fullName>，然后调用<xref:Microsoft.Office.Interop.Outlook._FormRegion.Inspector%2A>属性的<xref:Microsoft.Office.Interop.Outlook.FormRegion?displayProperty=fullName>对象。  
+ 若要获取显示 Outlook 项的检查器, 请调用<xref:Microsoft.Office.Tools.Outlook.ImportedFormRegionBase.OutlookFormRegion%2A>以获取的<xref:Microsoft.Office.Interop.Outlook.FormRegion?displayProperty=fullName>实例<xref:Microsoft.Office.Interop.Outlook._FormRegion.Inspector%2A> , 然后<xref:Microsoft.Office.Interop.Outlook.FormRegion?displayProperty=fullName>调用对象的属性。  
   
  ]]></format>
         </remarks>
@@ -176,6 +179,9 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void InitializeControls() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Outlook.ImportedFormRegionBase.InitializeControls" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Office.Tools.Outlook.IImportedFormRegionExtension.InitializeControls</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Outlook.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -194,6 +200,9 @@
       <MemberSignature Language="ILAsm" Value=".property instance object Microsoft.Office.Tools.IExtension.ExtensionBase" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Outlook.ImportedFormRegionBase.Microsoft#Office#Tools#IExtension#ExtensionBase" />
       <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Microsoft.Office.Tools.IExtension.ExtensionBase</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Outlook.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -212,6 +221,9 @@
       <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void Microsoft.Office.Tools.Outlook.IFormRegion.OnShutdown() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Outlook.ImportedFormRegionBase.Microsoft#Office#Tools#Outlook#IFormRegion#OnShutdown" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Office.Tools.Outlook.IFormRegion.OnShutdown</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Outlook.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -230,6 +242,9 @@
       <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void Microsoft.Office.Tools.Outlook.IFormRegion.OnStartup() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Outlook.ImportedFormRegionBase.Microsoft#Office#Tools#Outlook#IFormRegion#OnStartup" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Office.Tools.Outlook.IFormRegion.OnStartup</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Outlook.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -248,6 +263,9 @@
       <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void Microsoft.Office.Tools.Outlook.IImportedFormRegionExtension.InitializeControls() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Outlook.ImportedFormRegionBase.Microsoft#Office#Tools#Outlook#IImportedFormRegionExtension#InitializeControls" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Office.Tools.Outlook.IImportedFormRegionExtension.InitializeControls</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Outlook.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -280,7 +298,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 您可以调用<xref:Microsoft.Office.Interop.Outlook._FormRegion.Inspector%2A>属性的<xref:Microsoft.Office.Interop.Outlook.FormRegion?displayProperty=fullName>要获取显示窗体区域的检查器的实例对象。  
+ 可以调用<xref:Microsoft.Office.Interop.Outlook.FormRegion?displayProperty=fullName>对象的<xref:Microsoft.Office.Interop.Outlook._FormRegion.Inspector%2A>属性来获取显示窗体区域的检查器的实例。  
   
  ]]></format>
         </remarks>
@@ -305,7 +323,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 将对象转换为与关联窗体区域的项类型。 例如，如果窗体区域与联系人项目相关联，将对象强制转换返回的<xref:Microsoft.Office.Tools.Outlook.ImportedFormRegionBase.OutlookItem%2A>属性设置为<xref:Microsoft.Office.Interop.Outlook.ContactItem>。  
+ 将对象强制转换为与窗体区域关联的项类型。 例如, 如果窗体区域与某个联系人项关联, 则会将该<xref:Microsoft.Office.Tools.Outlook.ImportedFormRegionBase.OutlookItem%2A>属性返回的对象强制转换<xref:Microsoft.Office.Interop.Outlook.ContactItem>为。  
   
  ]]></format>
         </remarks>

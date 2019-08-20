@@ -1,5 +1,5 @@
 <Type Name="IExplorerNodeType" FullName="Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeType">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="2322349cfbae514cad8235bd3ed507930ab82d6b" /><Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="09/19/2018" /><Meta Name="ms.locfileid" Value="46456450" /></Metadata><TypeSignature Language="C#" Value="public interface IExplorerNodeType : Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeEvents, Microsoft.VisualStudio.SharePoint.IAnnotatedObject" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="debf4571f567e01c253fd7a55d58e2875eb98c54" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69011429" /></Metadata><TypeSignature Language="C#" Value="public interface IExplorerNodeType : Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeEvents, Microsoft.VisualStudio.SharePoint.IAnnotatedObject" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IExplorerNodeType implements class Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeEvents, class Microsoft.VisualStudio.SharePoint.IAnnotatedObject" />
   <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeType" />
   <AssemblyInfo>
@@ -20,9 +20,9 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 可以通过实现来扩展现有的节点类型的行为<xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeExtension>接口。 有关详细信息，请参阅[如何： 扩展服务器资源管理器中的 SharePoint 节点](/visualstudio/sharepoint/how-to-extend-a-sharepoint-node-in-server-explorer)。  
+ 可以通过实现<xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeExtension>接口来扩展现有节点类型的行为。 有关详细信息，请参阅[如何：在服务器资源管理器](/visualstudio/sharepoint/how-to-extend-a-sharepoint-node-in-server-explorer)中扩展 SharePoint 节点。  
   
- 若要创建新的节点类型，实现<xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeProvider>接口，并使用它来初始化<xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeDefinition>对象。 有关详细信息，请参阅[如何： 将自定义 SharePoint 节点添加到服务器资源管理器](/visualstudio/sharepoint/how-to-add-a-custom-sharepoint-node-to-server-explorer)  
+ 若要创建新的节点类型, 请<xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeProvider>实现接口, 并使用它来<xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeDefinition>初始化对象。 有关详细信息，请参阅[如何：将自定义 SharePoint 节点添加到服务器资源管理器](/visualstudio/sharepoint/how-to-add-a-custom-sharepoint-node-to-server-explorer)  
   
  ]]></format>
     </remarks>
@@ -83,7 +83,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性可以由到此节点类型的扩展插件所取代。  
+ 此节点类型的扩展可以取代此属性。  
   
  ]]></format>
         </remarks>
@@ -108,7 +108,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 名称显示在**属性**窗口时选择此类型的节点。  
+ 当选择此类型的节点时, 该名称将显示在 "**属性**" 窗口中。  
   
  ]]></format>
         </remarks>

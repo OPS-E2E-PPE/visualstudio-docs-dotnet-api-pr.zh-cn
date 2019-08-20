@@ -1,5 +1,5 @@
 <Type Name="BuildingBlockGalleryContentControl" FullName="Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="f2621502a6ca049365b0bf6ae7ab86de7c0c91d1" /><Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="09/19/2018" /><Meta Name="ms.locfileid" Value="46458400" /></Metadata><TypeSignature Language="C#" Value="public interface BuildingBlockGalleryContentControl : IDisposable, Microsoft.Office.Tools.Word.ContentControlBase, System.ComponentModel.IComponent, System.ComponentModel.ISupportInitialize, System.Windows.Forms.IBindableComponent" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="957372d5833cfd59236fba9574f984fb8d122d2e" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69001018" /></Metadata><TypeSignature Language="C#" Value="public interface BuildingBlockGalleryContentControl : IDisposable, Microsoft.Office.Tools.Word.ContentControlBase, System.ComponentModel.IComponent, System.ComponentModel.ISupportInitialize, System.Windows.Forms.IBindableComponent" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract BuildingBlockGalleryContentControl implements class Microsoft.Office.Tools.Word.ContentControlBase, class System.ComponentModel.IComponent, class System.ComponentModel.ISupportInitialize, class System.IDisposable, class System.Windows.Forms.IBindableComponent" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" />
   <AssemblyInfo>
@@ -34,14 +34,14 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 一个<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>显示的列表*文档构建基块*用户可以将插入到文档。 文档构建基块是为了多次使用而创建的一段内容，例如共同的封面页、格式化表格或标头。 若要选择想要显示构建基块，使用<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.BuildingBlockCategory%2A>和<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.BuildingBlockType%2A>属性。  
+ 显示用户可以插入文档的*文档构建基块*的列表。 <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl> 文档构建基块是为了多次使用而创建的一段内容，例如共同的封面页、格式化表格或标头。 若要选择要显示的构建基块, 请使用<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.BuildingBlockCategory%2A>和<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.BuildingBlockType%2A>属性。  
   
- 有关文档构建基块的详细信息，请参阅[What's New for Word 2007 中的开发人员](http://msdn.microsoft.com/en-us/74aa6688-65b3-4167-997d-131f26ad8f84)。  
+ 有关文档构建基块的详细信息, 请参阅[Word 2007 中面向开发人员的新增功能](http://msdn.microsoft.com/en-us/74aa6688-65b3-4167-997d-131f26ad8f84)。  
   
  [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
   
 ## <a name="content-controls"></a>内容控件  
- <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>是八个类型的内容控件，您可以使用设计文档和 Microsoft Office Word 中的模板之一。 内容控件具有用户界面 (UI) 的有控制类似于窗体的输入。 可以使用内容控件来阻止用户编辑受保护的部分的文档或模板，并还可以将内容控件绑定到数据源。 有关详细信息，请参阅[内容控件](/visualstudio/vsto/content-controls)。  
+ <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>是八种类型的内容控件之一, 可用于在 Microsoft Office Word 中设计文档和模板。 内容控件具有一个用户界面 (UI), 该界面具有像窗体这样的受控输入。 你可以使用内容控件来防止用户编辑文档或模板的受保护节, 还可以将内容控件绑定到数据源。 有关详细信息，请参阅 [Content Controls](/visualstudio/vsto/content-controls)。  
   
 ## <a name="usage"></a>用法  
  [!INCLUDE[vsto_net35mref](~/includes/vsto-net35mref-md.md)]  
@@ -49,14 +49,14 @@
    
   
 ## Examples  
- 下面的代码示例添加一个新<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>到文档开头。 <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>显示提供的 Microsoft Office Word 的等式构建基块。  
+ 下面的代码示例将一个新<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>添加到文档的开头。 <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>显示 Microsoft Office Word 提供的公式构造块。  
   
- 此版本是文档级自定义项。 若要使用此代码，将其粘贴到`ThisDocument`类中，你的项目，并调用`AddBuildingBlockControlAtSelection`方法从`ThisDocument_Startup`方法。  
+ 此版本适用于文档级自定义项。 若要使用此代码, 请将其`ThisDocument`粘贴到项目的类中, 然后`AddBuildingBlockControlAtSelection`从`ThisDocument_Startup`方法调用方法。  
   
  [!code-csharp[Trin_ContentControlReference#1](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference/CS/BuildingBlockGallery.cs#1)]
  [!code-vb[Trin_ContentControlReference#1](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference/VB/BuildingBlockGallery.vb#1)]  
   
- 此版本用于针对应用程序级外接程序。 若要使用此代码，将其粘贴到`ThisAddIn`类中，你的项目，并调用`AddBuildingBlockControlAtSelection`方法从`ThisAddIn_Startup`方法。  
+ 此版本适用于应用程序级外接程序。 若要使用此代码, 请将其`ThisAddIn`粘贴到项目的类中, 然后`AddBuildingBlockControlAtSelection`从`ThisAddIn_Startup`方法调用方法。  
   
  [!code-csharp[Trin_ContentControlReference_AppLevelAddIn#1](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/CS/BuildingBlockGallery.cs#1)]
  [!code-vb[Trin_ContentControlReference_AppLevelAddIn#1](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/VB/BuildingBlockGallery.vb#1)]  
@@ -84,7 +84,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.Application%2A>属性公开有关 Word 中，应用于该实例的选项的当前实例的信息，并在该实例中打开当前文档。  
+ <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.Application%2A>属性公开有关 Word 的当前实例、应用于该实例的选项以及在实例中打开的当前文档的信息。  
   
  ]]></format>
         </remarks>
@@ -109,21 +109,21 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 所有构建基块都属于一个类别和库。 使用<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.BuildingBlockCategory%2A>属性指定的情况下会显示构建基块的类别<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>。 可以设置此属性设置为值`Built-In`或`General`类别定义的 Microsoft Office word，也可以指定自定义类别。  
+ 所有构建基块都属于类别和库。 使用属性来指定显示<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>的生成块的类别。 <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.BuildingBlockCategory%2A> 您可以将此属性的值设置为或`Built-In` `General` Microsoft Office Word 定义的类别, 也可以指定自定义类别。  
   
- 若要指定哪些库的构建基块中显示<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>，使用<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.BuildingBlockType%2A>属性。  
+ 若要指定要在中<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>显示的生成块库, 请<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.BuildingBlockType%2A>使用属性。  
   
    
   
 ## Examples  
- 下面的代码示例添加一个新<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>到文档开头。 <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>显示提供的 Microsoft Office Word 的等式构建基块。 该示例设置<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.BuildingBlockCategory%2A>属性设置为`Built-In`类别。  
+ 下面的代码示例将一个新<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>添加到文档的开头。 <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>显示 Microsoft Office Word 提供的公式构造块。 该示例将<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.BuildingBlockCategory%2A>属性设置`Built-In`为类别。  
   
- 此版本是文档级自定义项。 若要使用此代码，将其粘贴到`ThisDocument`类中，你的项目，并调用`AddBuildingBlockControlAtSelection`方法从`ThisDocument_Startup`方法。  
+ 此版本适用于文档级自定义项。 若要使用此代码, 请将其`ThisDocument`粘贴到项目的类中, 然后`AddBuildingBlockControlAtSelection`从`ThisDocument_Startup`方法调用方法。  
   
  [!code-csharp[Trin_ContentControlReference#1](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference/CS/BuildingBlockGallery.cs#1)]
  [!code-vb[Trin_ContentControlReference#1](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference/VB/BuildingBlockGallery.vb#1)]  
   
- 此版本用于针对应用程序级外接程序。 若要使用此代码，将其粘贴到`ThisAddIn`类中，你的项目，并调用`AddBuildingBlockControlAtSelection`方法从`ThisAddIn_Startup`方法。  
+ 此版本适用于应用程序级外接程序。 若要使用此代码, 请将其`ThisAddIn`粘贴到项目的类中, 然后`AddBuildingBlockControlAtSelection`从`ThisAddIn_Startup`方法调用方法。  
   
  [!code-csharp[Trin_ContentControlReference_AppLevelAddIn#1](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/CS/BuildingBlockGallery.cs#1)]
  [!code-vb[Trin_ContentControlReference_AppLevelAddIn#1](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/VB/BuildingBlockGallery.vb#1)]  
@@ -151,9 +151,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 所有构建基块都属于库和一个类别。 使用<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.BuildingBlockType%2A>属性指定的构建基块中显示哪些库<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>。  
+ 所有构建基块都属于库和类别。 使用属性指定要在中显示的生成块库<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>。 <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.BuildingBlockType%2A>  
   
- 一个<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>只能显示某些库的构建基块。 <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.BuildingBlockType%2A>属性可以设置只为以下<xref:Microsoft.Office.Interop.Word.WdBuildingBlockTypes?displayProperty=fullName>值：  
+ <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>只能显示构建基块的某些库。 属性只能设置为以下<xref:Microsoft.Office.Interop.Word.WdBuildingBlockTypes?displayProperty=fullName>值: <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.BuildingBlockType%2A>  
   
 -   `wdTypeAutoText`  
   
@@ -181,19 +181,19 @@
   
 -   `wdTypeTables`  
   
- 若要指定类别的情况下显示的构建基块<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>，使用<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.BuildingBlockCategory%2A>属性。  
+ 若要指定显示<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>的生成块的类别, 请<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.BuildingBlockCategory%2A>使用属性。  
   
    
   
 ## Examples  
- 下面的代码示例添加一个新<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>到文档开头。 <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>显示提供的 Microsoft Office Word 的等式构建基块。 该示例设置<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.BuildingBlockType%2A>属性设置为`wdTypeEquations`。  
+ 下面的代码示例将一个新<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>添加到文档的开头。 <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>显示 Microsoft Office Word 提供的公式构造块。 该示例将<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.BuildingBlockType%2A>属性设置为`wdTypeEquations`。  
   
- 此版本是文档级自定义项。 若要使用此代码，将其粘贴到`ThisDocument`类中，你的项目，并调用`AddBuildingBlockControlAtSelection`方法从`ThisDocument_Startup`方法。  
+ 此版本适用于文档级自定义项。 若要使用此代码, 请将其`ThisDocument`粘贴到项目的类中, 然后`AddBuildingBlockControlAtSelection`从`ThisDocument_Startup`方法调用方法。  
   
  [!code-csharp[Trin_ContentControlReference#1](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference/CS/BuildingBlockGallery.cs#1)]
  [!code-vb[Trin_ContentControlReference#1](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference/VB/BuildingBlockGallery.vb#1)]  
   
- 此版本用于针对应用程序级外接程序。 若要使用此代码，将其粘贴到`ThisAddIn`类中，你的项目，并调用`AddBuildingBlockControlAtSelection`方法从`ThisAddIn_Startup`方法。  
+ 此版本适用于应用程序级外接程序。 若要使用此代码, 请将其`ThisAddIn`粘贴到项目的类中, 然后`AddBuildingBlockControlAtSelection`从`ThisAddIn_Startup`方法调用方法。  
   
  [!code-csharp[Trin_ContentControlReference_AppLevelAddIn#1](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/CS/BuildingBlockGallery.cs#1)]
  [!code-vb[Trin_ContentControlReference_AppLevelAddIn#1](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/VB/BuildingBlockGallery.vb#1)]  
@@ -222,7 +222,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 当你使用<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.Copy%2A>方法时，原始<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>保留在文档。 一份<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>，其中包括所有文本和属性设置、 添加到剪贴板。  
+ 使用<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.Copy%2A>方法时, 原始<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>文件仍保留在文档中。 的副本<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>(包括所有文本和属性设置) 将添加到剪贴板。  
   
  ]]></format>
         </remarks>
@@ -247,7 +247,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>在 Microsoft Office Word 中创建<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.Creator%2A>属性返回表示字符串的十六进制数 4d535744， `MSWD`。 此字符串是 Word 的四个字符创建者代码。  
+ 如果是<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>在 Microsoft Office Word 中创建的, <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.Creator%2A>则属性返回十六进制数字 4D535744, 它表示字符串`MSWD`。 此字符串是 Word 的四字符创建者代码。  
   
  ]]></format>
         </remarks>
@@ -272,7 +272,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 当你使用<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.Cut%2A>方法时，原始<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>从文档中删除。 一份<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>，其中包括所有文本和属性设置、 添加到剪贴板。  
+ 使用<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.Cut%2A>方法时, 原始<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>将从文档中移除。 的副本<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>(包括所有文本和属性设置) 将添加到剪贴板。  
   
  ]]></format>
         </remarks>
@@ -292,7 +292,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取用于设置 <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" /> 中的文本格式的字符样式的名称。</summary>
-        <value>用于设置 <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" /> 中的文本格式的字符样式的名称。 默认值是**默认段落字体**。</value>
+        <value>用于设置 <see cref="T:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl" /> 中的文本格式的字符样式的名称。 默认值为**默认段落字体**。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -315,7 +315,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要阻止用户编辑的内容<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>，使用<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.LockContents%2A>属性。 有关如何使用详细信息<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>若要保护的文档的一部分，请参阅[内容控件](/visualstudio/vsto/content-controls)并[如何： 使用内容控件保护文档的某些部分](/visualstudio/vsto/how-to-protect-parts-of-documents-by-using-content-controls)。  
+ 若要防止用户编辑的内容<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>, 请<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.LockContents%2A>使用属性。 有关如何使用<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>保护文档部分的详细信息, 请参阅[内容控件](/visualstudio/vsto/content-controls)和[如何:使用内容控件](/visualstudio/vsto/how-to-protect-parts-of-documents-by-using-content-controls)保护文档的各个部分。  
   
  ]]></format>
         </remarks>
@@ -341,7 +341,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要阻止用户删除<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>从文档中，使用<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.LockContentControl%2A>属性。 有关使用详细信息<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>若要保护的文档的一部分，请参阅[内容控件](/visualstudio/vsto/content-controls)并[如何： 使用内容控件保护文档的某些部分](/visualstudio/vsto/how-to-protect-parts-of-documents-by-using-content-controls)。  
+ 若要防止用户从文档<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>中删除, 请<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.LockContentControl%2A>使用属性。 有关使用<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>保护文档的一部分的详细信息, 请参阅[内容控件](/visualstudio/vsto/content-controls)和[如何:使用内容控件](/visualstudio/vsto/how-to-protect-parts-of-documents-by-using-content-controls)保护文档的各个部分。  
   
  ]]></format>
         </remarks>
@@ -366,9 +366,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 父<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>是控件所在的对象。 例如，如果控件是文档的正文中，此属性将返回<xref:Microsoft.Office.Interop.Word.Document?displayProperty=fullName>对象。  
+ 的父级<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>是包含控件的对象。 例如, 如果控件位于文档的主体中, 则此属性将返回一个<xref:Microsoft.Office.Interop.Word.Document?displayProperty=fullName>对象。  
   
- 若要获取的父<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>中包含<xref:Microsoft.Office.Tools.Word.RichTextContentControl>或<xref:Microsoft.Office.Tools.Word.GroupContentControl>，使用<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.ParentContentControl%2A>属性。  
+ 若<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>要获取<xref:Microsoft.Office.Tools.Word.RichTextContentControl> 或<xref:Microsoft.Office.Tools.Word.GroupContentControl>中包含的的父级, 请使用属性。<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.ParentContentControl%2A>  
   
  ]]></format>
         </remarks>
@@ -393,7 +393,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Word.RichTextContentControl>和<xref:Microsoft.Office.Tools.Word.GroupContentControl>控件是可以包含嵌套的内容控件的内容控件的唯一类型。  
+ <xref:Microsoft.Office.Tools.Word.RichTextContentControl> 和<xref:Microsoft.Office.Tools.Word.GroupContentControl>控件是只能包含嵌套内容控件的内容控件的类型。  
   
  ]]></format>
         </remarks>
@@ -418,21 +418,21 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 占位符文本会显示用户选择构建基块，或使用来自数据源的数据填充控件之前。  
+ 占位符文本在用户选择某一构建基块或用数据源中的数据填充控件之前显示。  
   
- 若要设置中的占位符文本<xref:Microsoft.Office.Interop.Word.BuildingBlock>或<xref:Microsoft.Office.Interop.Word.Range>，使用<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.SetPlaceholderText%2A>方法。  
+ 若要将占位符文本设置为<xref:Microsoft.Office.Interop.Word.BuildingBlock> <xref:Microsoft.Office.Interop.Word.Range>或中的文本, 请使用<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.SetPlaceholderText%2A>方法。  
   
    
   
 ## Examples  
- 下面的代码示例添加一个新<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>到文档开头。 <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>显示提供的 Microsoft Office Word 的等式构建基块。 该示例设置<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.PlaceholderText%2A>属性设置为一个字符串，会提示用户选择一个公式。  
+ 下面的代码示例将一个新<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>添加到文档的开头。 <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>显示 Microsoft Office Word 提供的公式构造块。 该示例将<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.PlaceholderText%2A>属性设置为提示用户选择公式的字符串。  
   
- 此版本是文档级自定义项。 若要使用此代码，将其粘贴到`ThisDocument`类中，你的项目，并调用`AddBuildingBlockControlAtSelection`方法从`ThisDocument_Startup`方法。  
+ 此版本适用于文档级自定义项。 若要使用此代码, 请将其`ThisDocument`粘贴到项目的类中, 然后`AddBuildingBlockControlAtSelection`从`ThisDocument_Startup`方法调用方法。  
   
  [!code-csharp[Trin_ContentControlReference#1](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference/CS/BuildingBlockGallery.cs#1)]
  [!code-vb[Trin_ContentControlReference#1](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference/VB/BuildingBlockGallery.vb#1)]  
   
- 此版本用于针对应用程序级外接程序。 若要使用此代码，将其粘贴到`ThisAddIn`类中，你的项目，并调用`AddBuildingBlockControlAtSelection`方法从`ThisAddIn_Startup`方法。  
+ 此版本适用于应用程序级外接程序。 若要使用此代码, 请将其`ThisAddIn`粘贴到项目的类中, 然后`AddBuildingBlockControlAtSelection`从`ThisAddIn_Startup`方法调用方法。  
   
  [!code-csharp[Trin_ContentControlReference_AppLevelAddIn#1](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/CS/BuildingBlockGallery.cs#1)]
  [!code-vb[Trin_ContentControlReference_AppLevelAddIn#1](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/VB/BuildingBlockGallery.vb#1)]  
@@ -460,9 +460,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.Range%2A>属性来访问中的所有项<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>。 此外可以使用此属性来访问控件中文本的格式设置和其他文本属性。 有关详细信息<xref:Microsoft.Office.Interop.Word.Range>对象，请参阅[Word 对象模型概述](/visualstudio/vsto/word-object-model-overview)。  
+ 使用属性来访问中的所有项<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>。 <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.Range%2A> 你还可以使用此属性来访问控件中的文本格式和其他文本属性。 有关<xref:Microsoft.Office.Interop.Word.Range>对象的详细信息, 请参阅[Word 对象模型概述](/visualstudio/vsto/word-object-model-overview)。  
   
- 若要访问中显示的文本<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>，使用<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.Text%2A>属性。  
+ 若要仅访问在中显示<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>的文本, 请<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.Text%2A>使用属性。  
   
  ]]></format>
         </remarks>
@@ -494,11 +494,11 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 占位符文本会显示用户选择构建基块，或使用来自数据源的数据填充控件之前。  
+ 占位符文本在用户选择某一构建基块或用数据源中的数据填充控件之前显示。  
   
- 在调用时使用参数的唯一一个<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.SetPlaceholderText%2A>方法。 如果指定多个参数，则 Microsoft Office Word 使用的第一个指定的参数。 如果所有参数都被都省略，占位符文本是空字符串。  
+ 调用<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.SetPlaceholderText%2A>方法时仅使用其中一个参数。 如果指定了多个参数, 则 Microsoft Office Word 使用第一个指定的参数。 如果省略所有参数, 则占位符文本为空字符串。  
   
- 若要获取的占位符文本<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>，使用<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.PlaceholderText%2A>属性。 此外可以使用此属性设置为字符串的占位符文本。  
+ 若要获取的占位符文本<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>, 请<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.PlaceholderText%2A>使用属性。 还可以使用此属性将占位符文本设置为字符串。  
   
  ]]></format>
         </remarks>
@@ -523,7 +523,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 占位符文本显示中的文本之前<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>由用户操作或某个其他操作更改。 若要获取或设置占位符文本，请使用<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.PlaceholderText%2A>属性或<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.SetPlaceholderText%2A>方法。  
+ 在用户操作或某个其他操作更改了<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>中的文本之前, 将显示占位符文本。 若要获取或设置占位符文本, 请使用<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.PlaceholderText%2A>属性<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.SetPlaceholderText%2A>或方法。  
   
  ]]></format>
         </remarks>
@@ -548,9 +548,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 可以使用<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.Tag%2A>属性来存储与之关联的字符串<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>文档处于打开状态时。  
+ 当文档打开时<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.Tag%2A> , 可以使用属性存储与关联的<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>字符串。  
   
- 可以使用<xref:Microsoft.Office.Tools.Word.Document.SelectContentControlsByTag%2A>方法来查找相应的标记的内容控件。  
+ 可以使用<xref:Microsoft.Office.Tools.Word.Document.SelectContentControlsByTag%2A>方法通过标记来查找内容控件。  
   
  ]]></format>
         </remarks>
@@ -575,7 +575,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.Temporary%2A>属性是`true`，则<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>当用户在控件中，或以编程方式更改控件中的文本时，会自动删除。 当<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>自动删除从文档，该控件将保持在文档中的文本。  
+ 如果属性为`true` ,<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>则当用户键入控件时, 或者以编程方式更改控件中的文本时, 将自动删除。 <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.Temporary%2A> <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>当自动从文档中删除时, 该控件中的文本将保留在文档中。  
   
  ]]></format>
         </remarks>
@@ -601,7 +601,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要访问的控件和其他文本属性中的文本格式设置，请使用<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.Range%2A>属性。  
+ 若要访问控件中的文本格式和其他文本属性, 请使用<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl.Range%2A>属性。  
   
  ]]></format>
         </remarks>
@@ -626,7 +626,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 标题显示在边框的<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>当用户单击它。  
+ 当用户单击标题时, 标题将显示<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>在的边框中。  
   
  ]]></format>
         </remarks>

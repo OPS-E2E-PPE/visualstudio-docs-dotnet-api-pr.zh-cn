@@ -1,5 +1,5 @@
 <Type Name="WorksheetBase" FullName="Microsoft.Office.Tools.Excel.WorksheetBase">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="2aca535c24a4ab50f64fbb6047ec5d4355e9998a" /><Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="09/19/2018" /><Meta Name="ms.locfileid" Value="46459856" /></Metadata><TypeSignature Language="C#" Value="public abstract class WorksheetBase : IDisposable, Microsoft.Office.Tools.Excel.IWorksheetExtension, System.ComponentModel.IComponent, System.ComponentModel.ISupportInitialize, System.Windows.Forms.IBindableComponent" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="8daff1c4b452253a0b7e2d8f1106786f00f6b1c6" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69004231" /></Metadata><TypeSignature Language="C#" Value="public abstract class WorksheetBase : IDisposable, Microsoft.Office.Tools.Excel.IWorksheetExtension, System.ComponentModel.IComponent, System.ComponentModel.ISupportInitialize, System.Windows.Forms.IBindableComponent" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit WorksheetBase extends System.Object implements class Microsoft.Office.Tools.EntryPoint, class Microsoft.Office.Tools.Excel.IWorksheetExtension, class Microsoft.Office.Tools.IExtension, class System.ComponentModel.IComponent, class System.ComponentModel.ISupportInitialize, class System.IDisposable, class System.Windows.Forms.IBindableComponent" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Excel.WorksheetBase" />
   <AssemblyInfo>
@@ -11,7 +11,13 @@
   </Base>
   <Interfaces>
     <Interface>
+      <InterfaceName>Microsoft.Office.Tools.EntryPoint</InterfaceName>
+    </Interface>
+    <Interface>
       <InterfaceName>Microsoft.Office.Tools.Excel.IWorksheetExtension</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>Microsoft.Office.Tools.IExtension</InterfaceName>
     </Interface>
     <Interface>
       <InterfaceName>System.ComponentModel.IComponent</InterfaceName>
@@ -37,24 +43,24 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.WorksheetBase>类是类的基类`Sheet` *n*使用 Visual Studio 创建的文档级 Excel 项目中的类。 使用`Sheet` *n*类以编程方式访问你的项目中的工作表。 <xref:Microsoft.Office.Tools.Excel.WorksheetBase>类是*宿主项*，表示文档级项目中的工作表。 有关详细信息，请参阅[主机项和主机控件概述](/visualstudio/vsto/host-items-and-host-controls-overview)并[工作表主机项](/visualstudio/vsto/worksheet-host-item)。  
+ 类是使用 Visual Studio 创建的文档`Sheet`级 Excel 项目中的 n 类的基类。  <xref:Microsoft.Office.Tools.Excel.WorksheetBase> 使用 n 类以编程方式访问项目中的工作表。  `Sheet` 类是表示文档级项目中的工作表的*主机项。* <xref:Microsoft.Office.Tools.Excel.WorksheetBase> 有关详细信息, 请参阅[主机项和主机控件概述](/visualstudio/vsto/host-items-and-host-controls-overview)和[工作表主机项](/visualstudio/vsto/worksheet-host-item)。  
   
- <xref:Microsoft.Office.Tools.Excel.WorksheetBase>类提供了相同的成员<xref:Microsoft.Office.Interop.Excel.Worksheet?displayProperty=fullName>中 Excel 主互操作程序集，但它的类添加了以下功能：  
+ 该类提供与 Excel 主互操作程序集中的类相同的成员,但它添加了以下功能:<xref:Microsoft.Office.Interop.Excel.Worksheet?displayProperty=fullName> <xref:Microsoft.Office.Tools.Excel.WorksheetBase>  
   
--   <xref:Microsoft.Office.Tools.Excel.WorksheetBase.Controls%2A> 属性。 若要将托管的控件添加到 Excel 工作表，或删除控件，在运行时，请使用此属性。  
+-   <xref:Microsoft.Office.Tools.Excel.WorksheetBase.Controls%2A> 属性。 使用此属性可以在运行时将托管控件添加到 Excel 工作表或删除控件。  
   
--   <xref:Microsoft.Office.Tools.Excel.WorksheetBase.InnerObject%2A> 属性。 使用此属性来获取基础<xref:Microsoft.Office.Interop.Excel.Worksheet?displayProperty=fullName>工作表主机项的对象。  
+-   <xref:Microsoft.Office.Tools.Excel.WorksheetBase.InnerObject%2A> 属性。 使用此属性可获取工作表<xref:Microsoft.Office.Interop.Excel.Worksheet?displayProperty=fullName>宿主项的基础对象。  
   
--   <xref:Microsoft.Office.Tools.Excel.WorksheetBase.GetAutomationObject%2A> 方法。 重写此方法以将向工作表中的 VBA 代码项目中的类公开。  
+-   <xref:Microsoft.Office.Tools.Excel.WorksheetBase.GetAutomationObject%2A> 方法。 重写此方法以向工作表中的 VBA 代码公开项目中的类。  
   
--   文档级事件，如<xref:Microsoft.Office.Tools.Excel.WorksheetBase.ActivateEvent>和<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Change>，仅在 Excel 对象模型中的应用程序级别提供。 也就是说，在 Excel 对象模型中，这些事件定义中<xref:Microsoft.Office.Interop.Excel.Application?displayProperty=fullName>类而不是<xref:Microsoft.Office.Interop.Excel.Worksheet?displayProperty=fullName>类。  
+-   文档级事件 (例如<xref:Microsoft.Office.Tools.Excel.WorksheetBase.ActivateEvent>和<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Change>), 仅在 Excel 对象模型中的应用程序级别提供。 也就是说, 在 Excel 对象模型中, 这些事件是在<xref:Microsoft.Office.Interop.Excel.Application?displayProperty=fullName>类而不<xref:Microsoft.Office.Interop.Excel.Worksheet?displayProperty=fullName>是类中定义的。  
   
 ## <a name="creating-worksheet-host-items"></a>创建工作表主机项  
- 无法创建<xref:Microsoft.Office.Tools.Excel.WorksheetBase>以编程方式在 Office 项目中的对象。  
+ 不能在<xref:Microsoft.Office.Tools.Excel.WorksheetBase> Office 项目中以编程方式创建对象。  
   
- 在文档级项目中， `Sheet` *n*类 (从其派生<xref:Microsoft.Office.Tools.Excel.WorksheetBase>) 自动实例化[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]当最终用户打开工作簿。 有关详细信息，请参阅[Programming Document-level Customizations](/visualstudio/vsto/programming-document-level-customizations)。  
+ 在文档级`Sheet`项目中, [!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]当最终用户打开工作簿时<xref:Microsoft.Office.Tools.Excel.WorksheetBase>, 将自动实例化*n*类 (派生自)。 有关详细信息，请参阅 [Programming Document-Level Customizations](/visualstudio/vsto/programming-document-level-customizations)。  
   
- 在应用程序级项目中，您可以创建工作表主机项以编程方式使用`GetVstoObject`方法。 创建工作表宿主项这<xref:Microsoft.Office.Tools.Excel.Worksheet?displayProperty=fullName>对象，而非<xref:Microsoft.Office.Tools.Excel.WorksheetBase>对象。 有关更多信息，请参见 [在运行时在 VSTO 外接程序中扩展 Word 文档和 Excel 工作簿](/visualstudio/vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time)。  
+ 在应用程序级项目中, 您可以使用`GetVstoObject`方法以编程方式创建工作表宿主项。 你创建的工作表宿主项是<xref:Microsoft.Office.Tools.Excel.Worksheet?displayProperty=fullName>一个对象, 而不<xref:Microsoft.Office.Tools.Excel.WorksheetBase>是一个对象。 有关更多信息，请参见 [Extending Word Documents and Excel Workbooks in VSTO Add-ins at Run Time](/visualstudio/vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time)。  
   
 ## <a name="usage"></a>用法  
  [!INCLUDE[vsto_net4utilities](~/includes/vsto-net4utilities-md.md)]  
@@ -169,9 +175,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例演示了一个处理程序<xref:Microsoft.Office.Tools.Excel.WorksheetBase.ActivateEvent>激活时显示的工作表名称的事件。  
+ 下面的代码示例演示了一个<xref:Microsoft.Office.Tools.Excel.WorksheetBase.ActivateEvent>事件的处理程序, 该事件在激活工作表时显示该工作表的名称。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#200](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#200)]
  [!code-vb[Trin_ExcelWorkSheet#200](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#200)]  
@@ -199,9 +205,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Application%2A>属性来重新排列应用程序窗口。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Application%2A>属性重新排列应用程序窗口。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#1](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#1)]
  [!code-vb[Trin_ExcelWorkSheet#1](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#1)]  
@@ -256,14 +262,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要以编程方式启用筛选，请使用<xref:Microsoft.Office.Interop.Excel.Range.AutoFilter%2A>方法<xref:Microsoft.Office.Interop.Excel.Range>对象或<xref:Microsoft.Office.Tools.Excel.NamedRange.AutoFilter%2A>方法的<xref:Microsoft.Office.Tools.Excel.NamedRange>对象。  
+ 若要以编程方式启用筛选<xref:Microsoft.Office.Interop.Excel.Range.AutoFilter%2A> , 请使用<xref:Microsoft.Office.Interop.Excel.Range>对象的方法<xref:Microsoft.Office.Tools.Excel.NamedRange.AutoFilter%2A> <xref:Microsoft.Office.Tools.Excel.NamedRange>或对象的方法。  
   
    
   
 ## Examples  
- 下面的代码示例创建的筛选的列表中的水果<xref:Microsoft.Office.Interop.Excel.Range>，然后使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.AutoFilter%2A>属性来显示列表的筛选条件。 该示例然后会提示用户关闭筛选器，通过使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.AutoFilterMode%2A>属性，并最后使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.FilterMode%2A>属性来显示工作表是否可以筛选的列表。  
+ 下面的代码示例在中<xref:Microsoft.Office.Interop.Excel.Range>创建水果的筛选列表, 然后<xref:Microsoft.Office.Tools.Excel.WorksheetBase.AutoFilter%2A>使用属性显示列表的筛选条件。 然后, 该示例通过使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.AutoFilterMode%2A>属性提示用户关闭筛选器, 最后<xref:Microsoft.Office.Tools.Excel.WorksheetBase.FilterMode%2A>使用属性显示工作表是否具有筛选后的列表。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#2](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#2)]
  [!code-vb[Trin_ExcelWorkSheet#2](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#2)]  
@@ -291,16 +297,16 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 可以将此属性设置为`false`若要禁用筛选 (也就是说，若要删除筛选器下拉箭头)，但不能将其设置为`true`。 若要启用筛选并创建已筛选的列表，请使用<xref:Microsoft.Office.Interop.Excel.Range.AutoFilter%2A>方法<xref:Microsoft.Office.Interop.Excel.Range>对象，或使用<xref:Microsoft.Office.Tools.Excel.NamedRange.AutoFilter%2A>方法的<xref:Microsoft.Office.Tools.Excel.NamedRange>对象。  
+ 您可以将此属性设置`false`为以禁用筛选 (也就是说, 删除筛选器下拉箭头), 但不能将其设置为。 `true` 若要启用筛选并创建筛选列表, 请使用<xref:Microsoft.Office.Interop.Excel.Range.AutoFilter%2A> <xref:Microsoft.Office.Interop.Excel.Range> <xref:Microsoft.Office.Tools.Excel.NamedRange.AutoFilter%2A>对象的方法, 或<xref:Microsoft.Office.Tools.Excel.NamedRange>使用对象的方法。  
   
- 此属性仅指示是否启用筛选;它不指示是否正在筛选的任何数据。 若要确定是否在工作表正在主动筛选数据，请使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.FilterMode%2A>属性。  
+ 此属性仅指示是否启用了筛选;它不指示是否正在筛选任何数据。 若要确定工作表是否正在主动筛选数据, 请<xref:Microsoft.Office.Tools.Excel.WorksheetBase.FilterMode%2A>使用属性。  
   
    
   
 ## Examples  
- 下面的代码示例创建的筛选的列表中的水果<xref:Microsoft.Office.Interop.Excel.Range>，然后使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.AutoFilter%2A>属性来显示列表的筛选条件。 该示例然后会提示用户关闭筛选器，通过使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.AutoFilterMode%2A>属性，并最后使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.FilterMode%2A>属性来显示工作表是否可以筛选的列表。  
+ 下面的代码示例在中<xref:Microsoft.Office.Interop.Excel.Range>创建水果的筛选列表, 然后<xref:Microsoft.Office.Tools.Excel.WorksheetBase.AutoFilter%2A>使用属性显示列表的筛选条件。 然后, 该示例通过使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.AutoFilterMode%2A>属性提示用户关闭筛选器, 最后<xref:Microsoft.Office.Tools.Excel.WorksheetBase.FilterMode%2A>使用属性显示工作表是否具有筛选后的列表。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#2](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#2)]
  [!code-vb[Trin_ExcelWorkSheet#2](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#2)]  
@@ -329,7 +335,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.WorksheetBase>类用于扩展<xref:Microsoft.Office.Tools.Excel.Worksheet>通过实现对象<xref:Microsoft.Office.Tools.Excel.IWorksheetExtension>接口。  
+ 类通过<xref:Microsoft.Office.Tools.Excel.Worksheet> 实现<xref:Microsoft.Office.Tools.Excel.IWorksheetExtension>接口来扩展对象。 <xref:Microsoft.Office.Tools.Excel.WorksheetBase>  
   
  ]]></format>
         </remarks>
@@ -353,14 +359,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 当用户双击单元格的边框不会发生此事件。  
+ 当用户双击单元格的边框时, 此事件不会发生。  
   
    
   
 ## Examples  
- 下面的代码示例演示了一个处理程序<xref:Microsoft.Office.Tools.Excel.WorksheetBase.BeforeDoubleClick>取消当前工作表上的双击操作的事件。 事件处理程序会通知用户双击不允许对工作表，然后设置`Cancel`的参数<xref:Microsoft.Office.Interop.Excel.DocEvents_BeforeDoubleClickEventHandler>事件处理程序`true`，以便 Microsoft Office Excel 取消双击操作。  
+ 下面的代码示例演示了在当前工作<xref:Microsoft.Office.Tools.Excel.WorksheetBase.BeforeDoubleClick>表上取消双击操作的事件的处理程序。 事件处理程序通知用户不允许对工作表进行双击, 然后将`Cancel` <xref:Microsoft.Office.Interop.Excel.DocEvents_BeforeDoubleClickEventHandler>事件处理程序的参数设置为`true` , 以便 Microsoft Office Excel 取消双击操作。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#201](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#201)]
  [!code-vb[Trin_ExcelWorkSheet#201](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#201)]  
@@ -387,9 +393,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例演示了一个处理程序<xref:Microsoft.Office.Tools.Excel.WorksheetBase.BeforeRightClick>取消当前工作表上的右键单击操作的事件。 事件处理程序将通知用户，右键单击不允许对工作表，然后设置`Cancel`的参数<xref:Microsoft.Office.Interop.Excel.DocEvents_BeforeRightClickEventHandler>事件处理程序`true`，以便 Microsoft Office Excel 取消右键单击操作。  
+ 下面的代码示例演示了在当前工作<xref:Microsoft.Office.Tools.Excel.WorksheetBase.BeforeRightClick>表上取消右键单击操作的事件的处理程序。 事件处理程序通知用户: 对于工作表不允许右键单击, 然后将`Cancel` <xref:Microsoft.Office.Interop.Excel.DocEvents_BeforeRightClickEventHandler>事件处理程序的参数设置为`true` , 以便 Microsoft Office Excel 取消右键单击操作。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#202](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#202)]
  [!code-vb[Trin_ExcelWorkSheet#202](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#202)]  
@@ -403,6 +409,10 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void BeginInit() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.WorksheetBase.BeginInit" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Office.Tools.EntryPoint.BeginInit</InterfaceMember>
+        <InterfaceMember>M:System.ComponentModel.ISupportInitialize.BeginInit</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -421,6 +431,9 @@
       <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.BindingContext BindingContext" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Excel.WorksheetBase.BindingContext" />
       <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:System.Windows.Forms.IBindableComponent.BindingContext</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -496,9 +509,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例演示了一个处理程序<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Calculate>时计算出它显示的工作表名称的事件。  
+ 下面的代码示例演示<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Calculate>事件的处理程序, 该事件在计算工作表时显示其名称。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#203](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#203)]
  [!code-vb[Trin_ExcelWorkSheet#203](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#203)]  
@@ -544,9 +557,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Cells%2A>属性工作表上每个单元格中设置名称、 大小和的字体。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Cells%2A>属性设置工作表的每个单元格中字体的名称、大小和加粗程度。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#3](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#3)]
  [!code-vb[Trin_ExcelWorkSheet#3](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#3)]  
@@ -573,14 +586,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 不会触发重新计算的单元格更改此事件。  
+ 当在重新计算期间更改单元格时, 不会发生此事件。  
   
    
   
 ## Examples  
- 下面的代码示例演示了一个处理程序<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Change>显示工作表的名称和已更改的单元格的范围的事件。  
+ 下面的代码示例演示了一个<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Change>事件的处理程序, 该事件显示工作表的名称和已更改的单元格范围。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#204](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#204)]
  [!code-vb[Trin_ExcelWorkSheet#204](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#204)]  
@@ -612,17 +625,17 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法不是等效于<xref:Microsoft.Office.Tools.Excel.Workbook.Charts%2A>属性。 此方法返回嵌入式的图表;<xref:Microsoft.Office.Tools.Excel.Workbook.Charts%2A>属性返回图表工作表。  
+ 此方法与<xref:Microsoft.Office.Tools.Excel.Workbook.Charts%2A>属性不等效。 此方法返回嵌入的图表;<xref:Microsoft.Office.Tools.Excel.Workbook.Charts%2A>属性返回图表工作表。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
+ 有关可选参数的信息, 请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例演示如何使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.ChartObjects%2A>方法以获取嵌入式的图表和的单个嵌入式的图表的集合。 该示例首先使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.ChartObjects%2A>方法以获取<xref:Microsoft.Office.Interop.Excel.ChartObjects?displayProperty=fullName>的当前工作表集合并创建新的<xref:Microsoft.Office.Interop.Excel.ChartObject?displayProperty=fullName>。 设置格式的新后<xref:Microsoft.Office.Interop.Excel.ChartObject?displayProperty=fullName>并给予<xref:Microsoft.Office.Interop.Excel.ChartObject?displayProperty=fullName>名称，该示例然后使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.ChartObjects%2A>方法以获取新<xref:Microsoft.Office.Interop.Excel.ChartObject?displayProperty=fullName>（按其名称进行索引），并显示在图表的打印预览。  
+ 下面的代码示例演示如何使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.ChartObjects%2A>方法来获取嵌入图表和单个嵌入图表的集合。 该示例首先使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.ChartObjects%2A>方法<xref:Microsoft.Office.Interop.Excel.ChartObjects?displayProperty=fullName>获取当前工作表的集合, 然后创建新<xref:Microsoft.Office.Interop.Excel.ChartObject?displayProperty=fullName>的。 设置新<xref:Microsoft.Office.Interop.Excel.ChartObject?displayProperty=fullName>的格式并<xref:Microsoft.Office.Interop.Excel.ChartObject?displayProperty=fullName>赋予名称后, <xref:Microsoft.Office.Tools.Excel.WorksheetBase.ChartObjects%2A>该示例使用方法来获取新<xref:Microsoft.Office.Interop.Excel.ChartObject?displayProperty=fullName>的 (按名称编制索引), 并显示图表的打印预览。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#100](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#100)]
  [!code-vb[Trin_ExcelWorkSheet#100](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#100)]  
@@ -722,14 +735,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 计算可以继续操作之前，必须删除循环引用。  
+ 必须先删除循环引用, 然后才能继续进行计算。  
   
    
   
 ## Examples  
- 下面的代码示例通过设置单元格 A1 和 B1 解析为每个其他的值的公式创建循环引用。 该示例然后使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.CircularReference%2A>属性来报告工作表是否具有循环引用。  
+ 下面的代码示例通过设置单元格 A1 和 B1 的公式来创建循环引用, 以解析为彼此的值。 然后, 该示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.CircularReference%2A>属性报告工作表是否具有循环引用。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#4](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#4)]
  [!code-vb[Trin_ExcelWorkSheet#4](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#4)]  
@@ -775,7 +788,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.CircleInvalid%2A>到圆形的单元格包含无效数据的方法。  
+ <xref:Microsoft.Office.Tools.Excel.WorksheetBase.CircleInvalid%2A>使用方法可对包含无效数据的单元格进行圈释。  
   
  ]]></format>
         </remarks>
@@ -823,21 +836,21 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果使用不带参数，该属性返回<xref:Microsoft.Office.Interop.Excel.Range>对象，其中包含工作表上的所有列。  
+ 当未使用参数时, 此属性将<xref:Microsoft.Office.Interop.Excel.Range>返回一个对象, 该对象包含工作表中的所有列。  
   
- 此属性可以使用以下可选参数，用于在工作表上获取特定的列。 如果参数中使用此属性，返回值是必须强制转换为对象<xref:Microsoft.Office.Interop.Excel.Range>。  
+ 此属性可与以下可选参数一起使用, 以获取工作表中的特定列。 如果将此属性与参数一起使用, 则返回值是必须强制转换为的<xref:Microsoft.Office.Interop.Excel.Range>对象。  
   
-|参数|描述|  
+|参数|说明|  
 |---------------|-----------------|  
-|`RowIndex`|若要获取的一个或多个列的索引。<br /><br /> 若要获取的单个列，请将下列对象之一传递给此参数：<br /><br /> -一个整数，指定你想要获取的列的索引。 列索引从 1 开始。<br />的你想要获取的列的字母组成字符串。<br /><br /> 若要获取多个相邻的列，请将传递格式的字符串"`first column letter`:`last column letter`"。 例如，若要获取列 A 到 E，传递"A:E"。 **注意：** 此参数的名称会令人误解; 此参数指定你想要获取，不是行的列的索引。|  
-|`ColumnIndex`|不使用此参数。 此属性将引发<xref:System.Runtime.InteropServices.COMException>如果尝试将值传递给此参数。|  
+|`RowIndex`|要获取的一个或多个列的索引。<br /><br /> 若要获取单列, 请将以下对象之一传递到此参数:<br /><br /> -一个整数, 它指定要获取的列的索引。 列索引从1开始。<br />-一个字符串, 包含要获取的列的字母。<br /><br /> 若要获取多个连续列, 请传递 "`first column letter`:`last column letter`" 格式的字符串。 例如, 若要获取 A 到 E 列, 请传递 "A:E"。 **注意：** 此参数的名称是误导的;此参数指定要获取的列的索引, 而不是行的索引。|  
+|`ColumnIndex`|不使用此参数。 <xref:System.Runtime.InteropServices.COMException>如果尝试向此参数传递值, 则此属性将引发。|  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Columns%2A>要在工作表上第一列中设置颜色、 名称、 大小和的所有单元格的字体属性。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Columns%2A>属性设置工作表的第一列中所有单元格的字体的颜色、名称、大小和加粗程度。  
   
- 此示例适用于文档级自定义。 若要运行此代码，请将其复制到你的项目中的工作表类之一。  
+ 此示例适用于文档级自定义项。 若要运行此代码, 请将其复制到项目中的一个工作表类。  
   
  [!code-csharp[Trin_ExcelWorkSheet#5](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#5)]
  [!code-vb[Trin_ExcelWorkSheet#5](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#5)]  
@@ -865,9 +878,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Comments%2A>属性之前和之后将注释添加到单元格 A1 当前工作表上显示的评论数。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Comments%2A>属性来显示在将注释添加到单元格 A1 之前和之后当前工作表上的注释数。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#6](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#6)]
  [!code-vb[Trin_ExcelWorkSheet#6](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#6)]  
@@ -895,9 +908,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.ConsolidationFunction%2A>属性来确定哪一个函数由合并工作表。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.ConsolidationFunction%2A>属性来确定工作表用于合并的函数。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#7](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#7)]
  [!code-vb[Trin_ExcelWorkSheet#7](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#7)]  
@@ -925,20 +938,20 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果返回的数组中的元素是`true`，则设置相应的选项。 数组中的三个元素是：  
+ 如果返回的数组中的元素为`true`, 则设置相应的选项。 数组中有三个元素:  
   
 |元素|含义|  
 |-------------|-------------|  
-|1|在顶部行中使用标签|  
-|2|在左侧列中使用标签|  
-|3|创建链接到源数据|  
+|1|在顶行使用标签|  
+|2|使用左栏中的标签|  
+|3|创建指向源数据的链接|  
   
    
   
 ## Examples  
  下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.ConsolidationOptions%2A>属性来显示当前工作表的合并选项的值。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#8](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#8)]
  [!code-vb[Trin_ExcelWorkSheet#8](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#8)]  
@@ -966,9 +979,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例在当前表中，创建一个合并，然后使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.ConsolidationSources%2A>属性来显示合并的源。  
+ 下面的代码示例在当前工作表上创建合并, 然后使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.ConsolidationSources%2A>属性显示合并的源。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#9](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#9)]
  [!code-vb[Trin_ExcelWorkSheet#9](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#9)]  
@@ -996,16 +1009,16 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- Office 解决方案中的工作表可以包含 Windows 窗体控件和宿主控件。 有关详细信息，请参阅[Office 文档上的控件](/visualstudio/vsto/controls-on-office-documents)。  
+ Office 解决方案中的工作表可以包含 Windows 窗体控件和宿主控件。 有关详细信息, 请参阅[Office 文档中的控件](/visualstudio/vsto/controls-on-office-documents)。  
   
- 若要在运行时管理的工作表上的控件，使用的方法和属性<xref:Microsoft.Office.Tools.Excel.ControlCollection>返回对象<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Controls%2A>属性。 有关详细信息，请参阅[在运行时向 Office 文档添加控件](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)  
+ 若要在运行时管理工作表上的控件, 请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection> <xref:Microsoft.Office.Tools.Excel.WorksheetBase.Controls%2A>属性返回的对象的方法和属性。 有关详细信息, 请参阅[在运行时将控件添加到 Office 文档](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Controls%2A>属性来添加<xref:System.Windows.Forms.Button>到当前工作表。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Controls%2A>属性<xref:System.Windows.Forms.Button>将添加到当前工作表。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#10](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#10)]
  [!code-vb[Trin_ExcelWorkSheet#10](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#10)]  
@@ -1038,19 +1051,19 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 新工作表是<xref:Microsoft.Office.Interop.Excel.Worksheet?displayProperty=fullName>对象并不具有工作表宿主项具有的代码或数据绑定功能。  
+ 新工作表是一个<xref:Microsoft.Office.Interop.Excel.Worksheet?displayProperty=fullName>对象, 并且没有工作表主机项具有的代码或数据绑定功能。  
   
- 如果未指定`Before`或`After`，Microsoft Office Excel 将创建包含复制表的表的新工作簿。  
+ 如果未指定`Before`或`After`, 则 Microsoft Office Excel 将创建包含复制的工作表的新工作簿。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
+ 有关可选参数的信息, 请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Copy%2A>方法来创建副本的当前工作表之前`Sheet1`及`Sheet3`。 该示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.InnerObject%2A>属性来访问基础<xref:Microsoft.Office.Interop.Excel.Worksheet?displayProperty=fullName>有关`Sheet1`和`Sheet3`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Copy%2A>方法在之前`Sheet1`和之后`Sheet3`创建当前工作表的副本。 该示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.InnerObject%2A>属性来`Sheet1`访问和`Sheet3`的基础<xref:Microsoft.Office.Interop.Excel.Worksheet?displayProperty=fullName> 。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#102](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#102)]
  [!code-vb[Trin_ExcelWorkSheet#102](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#102)]  
@@ -1078,14 +1091,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性用于在 Microsoft Office Excel 中用于的 Macintosh 上，其中每个应用程序具有四个字符创建者代码。 例如，Excel 具有 XCEL 的创建者代码。  
+ 此属性设计为适用于 Macintosh Microsoft Office Excel 中, 其中每个应用程序都有一个四字符创建者代码。 例如, Excel 的创建者代码为 x。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Creator%2A>属性来显示是否在 Microsoft Office Excel 中创建的当前工作表。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Creator%2A>属性来显示当前工作表是否是在 Microsoft Office Excel 中创建的。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#11](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#11)]
  [!code-vb[Trin_ExcelWorkSheet#11](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#11)]  
@@ -1113,9 +1126,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.CustomProperties%2A>添加自定义属性的属性名为"Microsoft"值为"MSFT"到当前工作表。 直到找到"Microsoft"属性，并将此属性的值设置为单元格 A1，该示例然后循环访问的自定义属性的集合。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.CustomProperties%2A>属性, 将名为 "Microsoft" 的自定义属性 (值为 "MSFT") 添加到当前工作表。 然后, 该示例遍历自定义属性的集合, 直到找到 "Microsoft" 属性, 并将此属性的值设置为单元格 A1。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#12](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#12)]
  [!code-vb[Trin_ExcelWorkSheet#12](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#12)]  
@@ -1129,6 +1142,9 @@
       <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.ControlBindingsCollection DataBindings" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Excel.WorksheetBase.DataBindings" />
       <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:System.Windows.Forms.IBindableComponent.DataBindings</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -1178,9 +1194,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例演示了一个处理程序<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Deactivate>停用后显示的工作表名称的事件。  
+ 下面的代码示例演示<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Deactivate>事件的处理程序, 该事件在停用时显示工作表的名称。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#205](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#205)]
  [!code-vb[Trin_ExcelWorkSheet#205](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#205)]  
@@ -1249,7 +1265,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果没有安装打印机，不能设置此属性。  
+ 如果未安装打印机, 则不能设置此属性。  
   
  ]]></format>
         </remarks>
@@ -1278,6 +1294,9 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.WorksheetBase.Dispose" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -1292,9 +1311,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 不要调用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Dispose%2A>方法自己。 关闭文档级自定义项中的文档时，[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]清理使用自定义项的所有资源。  
+ 不要自己调用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Dispose%2A>方法。 关闭文档级自定义项中的文档时, 将清理[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]自定义项所使用的所有资源。  
   
- 有关详细信息<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Dispose%2A>方法，请参阅[清理了非托管资源](http://msdn.microsoft.com/library/a17b0066-71c2-4ba4-9822-8e19332fc213)。  
+ 有关<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Dispose%2A>方法的详细信息, 请参阅[清理非托管资源](http://msdn.microsoft.com/library/a17b0066-71c2-4ba4-9822-8e19332fc213)。  
   
  ]]></format>
         </remarks>
@@ -1305,6 +1324,9 @@
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Disposed" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.Excel.WorksheetBase.Disposed" />
       <MemberType>Event</MemberType>
+      <Implements>
+        <InterfaceMember>E:System.ComponentModel.IComponent.Disposed</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -1417,7 +1439,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性适用于每个工作表，并且不与工作表或会话一起保存。  
+ 此属性应用于每个工作表, 不会与工作表或会话一起保存。  
   
  ]]></format>
         </remarks>
@@ -1442,7 +1464,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 当此属性的值是`false`，不能请求重新计算。 当将值从`false`到`true`，Excel 重新计算工作表。  
+ 如果此属性的值为`false`, 则不能请求重新计算。 将的值从`false`更改为`true`时, Excel 将重新计算工作表。  
   
  ]]></format>
         </remarks>
@@ -1467,9 +1489,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 当<xref:Microsoft.Office.Tools.Excel.WorksheetBase.EnableFormatConditionsCalculation%2A>属性设置为`false`，现有的条件格式不会重新计算。 任何以前应用的条件格式设置仍将可见，但将不会更新为单元格的值或更改 AppliesTo 范围。  
+ 当属性设置为`false`时, 不会重新计算现有的条件格式。 <xref:Microsoft.Office.Tools.Excel.WorksheetBase.EnableFormatConditionsCalculation%2A> 所有以前应用的条件格式仍将可见, 但将不会更新为单元值或 AppliesTo 范围更改。  
   
- 将此属性设置为`true`以对其进行评估之前完全配置一个规则。 如果对其应用条件的范围很大，这可能导致性能提升。  
+ 将此属性设置`true`为, 以在评估规则之前完全配置规则。 如果应用条件的范围很大, 则这可能会提高性能。  
   
  ]]></format>
         </remarks>
@@ -1494,7 +1516,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性适用于每个工作表，并且不与工作表或会话一起保存。  
+ 此属性应用于每个工作表, 不会与工作表或会话一起保存。  
   
  ]]></format>
         </remarks>
@@ -1519,9 +1541,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性适用于每个工作表，并且不与工作表或会话一起保存。  
+ 此属性应用于每个工作表, 不会与工作表或会话一起保存。  
   
- 必须有足够数量的未锁定单元格下面以及 Microsoft Office Excel 重新计算和显示数据透视表报告的透视表的右侧。  
+ 在 Microsoft Office Excel 的数据透视表的数据透视表中, 数据透视表的数量必须足够多, 并显示数据透视表。  
   
  ]]></format>
         </remarks>
@@ -1546,14 +1568,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性仅当在工作表保护时，才会生效：<xref:Microsoft.Office.Interop.Excel.XlEnableSelection.xlNoSelection>会阻止任何在表中，选择<xref:Microsoft.Office.Interop.Excel.XlEnableSelection.xlUnlockedCells>允许未锁定要选择这些单元格和<xref:Microsoft.Office.Interop.Excel.XlEnableSelection.xlNoRestrictions>允许要选择任何单元格。  
+ 此属性仅在工作表受保护时才会<xref:Microsoft.Office.Interop.Excel.XlEnableSelection.xlNoSelection>生效: 禁止在工作表中<xref:Microsoft.Office.Interop.Excel.XlEnableSelection.xlUnlockedCells>选择任何内容, 只允许选择未锁定的单元格, <xref:Microsoft.Office.Interop.Excel.XlEnableSelection.xlNoRestrictions>并允许选择任何单元格。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Protect%2A>方法来保护工作表，然后使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.EnableSelection%2A>属性以防止在工作表上的任何单元格被选中。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Protect%2A>方法来保护工作表, 然后<xref:Microsoft.Office.Tools.Excel.WorksheetBase.EnableSelection%2A>使用属性阻止选中工作表上的任何单元格。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#13](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#13)]
  [!code-vb[Trin_ExcelWorkSheet#13](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#13)]  
@@ -1567,6 +1589,10 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndInit() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.WorksheetBase.EndInit" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Office.Tools.EntryPoint.EndInit</InterfaceMember>
+        <InterfaceMember>M:System.ComponentModel.ISupportInitialize.EndInit</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -1603,18 +1629,18 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 可以使用此方法使用的名称在 Excel 中的以下类型：  
+ 在 Excel 中, 可以将以下类型的名称用于此方法:  
   
--   定义的名称。 您可以指定任何名称。  
+-   定义的名称。 可以指定任意名称。  
   
--   外部引用。 可以使用 ！ 若要引用另一个工作簿中定义的工作表的运算符。  
+-   外部引用。 您可以使用! 运算符引用在另一个工作簿中定义的工作表。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Evaluate%2A>方法计算单元格 A1 的值作为输入到 Excel`SIN`函数。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Evaluate%2A>方法来计算单元格 A1 的值作为 Excel `SIN`函数的输入。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#103](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#103)]
  [!code-vb[Trin_ExcelWorkSheet#103](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#103)]  
@@ -1661,14 +1687,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法还支持外接程序以固定格式文件导出的文件初始化。 例如，如果存在转换器，则 Excel 将执行文件格式转换。 通常由用户启动转换。  
+ 此方法还支持初始化外接程序以将文件导出到固定格式的文件。 例如, 如果存在转换器, Excel 将执行文件格式转换。 转换通常由用户启动。  
   
    
   
 ## Examples  
- 下面的代码示例将工作表的内容保存`Sheet1`以 PDF 格式，最多前四个页 （忽略打印区域）。 PDF 文件将保存到指定的文件路径和文件名使用标准质量解析。 该文件包括工作簿属性。 若要运行此代码示例，您的工作簿必须包含名为 Sheet1，一些数据的表。  
+ 下面的代码示例将工作表`Sheet1`的内容保存为 PDF 格式, 最多显示前四页 (忽略打印区域)。 PDF 文件使用标准质量分辨率保存到指定的文件路径和文件名。 文件包含工作簿属性。 若要运行此代码示例, 工作簿必须包含一个名为 Sheet1 的工作表以及一些数据。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkbook_Additional#9](~/snippets/csharp/VS_Snippets_OfficeSP/trin_excelworkbook_additional/cs/ThisWorkbook.cs#9)]
  [!code-vb[Trin_ExcelWorkbook_Additional#9](~/snippets/visualbasic/VS_Snippets_OfficeSP/trin_excelworkbook_additional/vb/ThisWorkbook.vb#9)]  
@@ -1696,18 +1722,18 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要确定是否筛选当前已启用 （即，是否在工作表上显示筛选器下拉箭头），请使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.AutoFilterMode%2A>属性。  
+ 若要确定筛选当前是否已启用 (即, 筛选器下拉箭头是否显示在工作表上), 请使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.AutoFilterMode%2A>属性。  
   
- 若要启用筛选并创建已筛选的列表，请使用<xref:Microsoft.Office.Interop.Excel.Range.AutoFilter%2A>方法<xref:Microsoft.Office.Interop.Excel.Range>对象，或使用<xref:Microsoft.Office.Tools.Excel.NamedRange.AutoFilter%2A>方法的<xref:Microsoft.Office.Tools.Excel.NamedRange>对象。  
+ 若要启用筛选并创建筛选列表, 请使用<xref:Microsoft.Office.Interop.Excel.Range.AutoFilter%2A> <xref:Microsoft.Office.Interop.Excel.Range> <xref:Microsoft.Office.Tools.Excel.NamedRange.AutoFilter%2A>对象的方法, 或<xref:Microsoft.Office.Tools.Excel.NamedRange>使用对象的方法。  
   
- 此属性是`true`如果工作表包含在隐藏的行的筛选后的列表。  
+ 如果工作表`true`包含隐藏行的筛选列表, 则此属性为。  
   
    
   
 ## Examples  
- 下面的代码示例创建的筛选的列表中的水果<xref:Microsoft.Office.Interop.Excel.Range>，然后使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.AutoFilter%2A>属性来显示列表的筛选条件。 该示例然后会提示用户关闭筛选器，通过使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.AutoFilterMode%2A>属性，并最后使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.FilterMode%2A>属性来显示工作表是否可以筛选的列表。  
+ 下面的代码示例在中<xref:Microsoft.Office.Interop.Excel.Range>创建水果的筛选列表, 然后<xref:Microsoft.Office.Tools.Excel.WorksheetBase.AutoFilter%2A>使用属性显示列表的筛选条件。 然后, 该示例通过使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.AutoFilterMode%2A>属性提示用户关闭筛选器, 最后<xref:Microsoft.Office.Tools.Excel.WorksheetBase.FilterMode%2A>使用属性显示工作表是否具有筛选后的列表。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#2](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#2)]
  [!code-vb[Trin_ExcelWorkSheet#2](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#2)]  
@@ -1721,6 +1747,9 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void FinishInitialization() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.WorksheetBase.FinishInitialization" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Office.Tools.EntryPoint.FinishInitialization</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -1752,9 +1781,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例演示了一个处理程序<xref:Microsoft.Office.Tools.Excel.WorksheetBase.FollowHyperlink>已单击当前工作簿中保留的所有超链接列表的事件以及包含这些超链接，在工作表的名称<xref:System.Windows.Forms.ListBox>控件。  
+ 下面的代码示例演示了一个<xref:Microsoft.Office.Tools.Excel.WorksheetBase.FollowHyperlink>事件的处理程序, 该事件在<xref:System.Windows.Forms.ListBox>控件中保留当前工作簿中已单击的所有超链接的列表以及包含这些超链接的工作表的名称。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#206](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#206)]
  [!code-vb[Trin_ExcelWorkSheet#206](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#206)]  
@@ -1763,11 +1792,43 @@
         </remarks>
       </Docs>
     </Member>
+    <Member MemberName="get_Range">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Excel.Range get_Range (object cell1, object cell2);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Office.Interop.Excel.Range get_Range(object cell1, object cell2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.WorksheetBase.get_Range(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Excel.Range</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cell1" Type="System.Object" />
+        <Parameter Name="cell2" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="cell1">To be added.</param>
+        <param name="cell2">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="GetAutomationObject">
       <MemberSignature Language="C#" Value="protected virtual object GetAutomationObject ();" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance object GetAutomationObject() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.WorksheetBase.GetAutomationObject" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Office.Tools.Excel.IWorksheetExtension.GetAutomationObject</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -1783,7 +1844,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 重写此方法以返回到工作表中的 VBA 代码的已公开的类的实例。 有关详细信息，请参阅[结合 VBA 和文档级自定义项](/visualstudio/vsto/combining-vba-and-document-level-customizations)。  
+ 重写此方法以返回您向工作表中的 VBA 代码公开的类的实例。 有关详细信息，请参阅 [Combining VBA and Document-Level Customizations](/visualstudio/vsto/combining-vba-and-document-level-customizations)。  
   
  ]]></format>
         </remarks>
@@ -1880,14 +1941,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 没有每张纸打印的 1026年水平分页符的限制。  
+ 每个工作表的水平分页符限制为1026。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.HPageBreaks%2A>属性在单元格 C5 处添加一个水平分页符。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.HPageBreaks%2A>属性在单元格 C5 处添加水平分页符。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#14](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#14)]
  [!code-vb[Trin_ExcelWorkSheet#14](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#14)]  
@@ -1915,9 +1976,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Hyperlinks%2A>属性添加到超链接<xref:Microsoft.Office.Interop.Excel.Hyperlinks?displayProperty=fullName>工作表的集合。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Hyperlinks%2A>属性将超链接添加<xref:Microsoft.Office.Interop.Excel.Hyperlinks?displayProperty=fullName>到工作表的集合。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#15](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#15)]
  [!code-vb[Trin_ExcelWorkSheet#15](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#15)]  
@@ -1945,9 +2006,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Index%2A>属性来显示当前工作表的索引号之前和之后的最后一个移动工作表来定位工作簿中使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Move%2A>方法。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Index%2A>属性, 在将工作表移动到工作簿<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Move%2A>中的最后一个位置之前和之后, 使用方法显示当前工作表的索引号。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#16](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#16)]
  [!code-vb[Trin_ExcelWorkSheet#16](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#16)]  
@@ -1961,6 +2022,9 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Initialize() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.WorksheetBase.Initialize" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Office.Tools.EntryPoint.Initialize</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -1979,6 +2043,9 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void InitializeDataBindings() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.WorksheetBase.InitializeDataBindings" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Office.Tools.EntryPoint.InitializeDataBindings</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -2128,9 +2195,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.ListObjects%2A>属性来添加<xref:Microsoft.Office.Interop.Excel.ListObject?displayProperty=fullName>到当前工作表。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.ListObjects%2A>属性<xref:Microsoft.Office.Interop.Excel.ListObject?displayProperty=fullName>将添加到当前工作表。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  Trin_ExcelWorkSheet#17  
   
@@ -2157,9 +2224,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.MailEnvelope%2A>要分配属性<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Name%2A>的工作表的电子邮件头引入工作表。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.MailEnvelope%2A>属性<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Name%2A>将工作表的指定给工作表的电子邮件头的引入。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#18](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#18)]
  [!code-vb[Trin_ExcelWorkSheet#18](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#18)]  
@@ -2173,6 +2240,9 @@
       <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void Microsoft.Office.Tools.EntryPoint.BeginInit() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.WorksheetBase.Microsoft#Office#Tools#EntryPoint#BeginInit" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Office.Tools.EntryPoint.BeginInit</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -2191,6 +2261,9 @@
       <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void Microsoft.Office.Tools.EntryPoint.EndInit() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.WorksheetBase.Microsoft#Office#Tools#EntryPoint#EndInit" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Office.Tools.EntryPoint.EndInit</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -2209,6 +2282,9 @@
       <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void Microsoft.Office.Tools.EntryPoint.FinishInitialization() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.WorksheetBase.Microsoft#Office#Tools#EntryPoint#FinishInitialization" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Office.Tools.EntryPoint.FinishInitialization</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -2227,6 +2303,9 @@
       <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void Microsoft.Office.Tools.EntryPoint.Initialize() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.WorksheetBase.Microsoft#Office#Tools#EntryPoint#Initialize" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Office.Tools.EntryPoint.Initialize</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -2245,6 +2324,9 @@
       <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void Microsoft.Office.Tools.EntryPoint.InitializeDataBindings() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.WorksheetBase.Microsoft#Office#Tools#EntryPoint#InitializeDataBindings" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Office.Tools.EntryPoint.InitializeDataBindings</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -2263,6 +2345,9 @@
       <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void Microsoft.Office.Tools.EntryPoint.OnShutdown() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.WorksheetBase.Microsoft#Office#Tools#EntryPoint#OnShutdown" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Office.Tools.EntryPoint.OnShutdown</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -2281,6 +2366,9 @@
       <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void Microsoft.Office.Tools.EntryPoint.OnStartup() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.WorksheetBase.Microsoft#Office#Tools#EntryPoint#OnStartup" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Office.Tools.EntryPoint.OnStartup</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -2299,6 +2387,9 @@
       <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object Microsoft.Office.Tools.Excel.IWorksheetExtension.GetAutomationObject() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.WorksheetBase.Microsoft#Office#Tools#Excel#IWorksheetExtension#GetAutomationObject" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Office.Tools.Excel.IWorksheetExtension.GetAutomationObject</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -2318,6 +2409,9 @@
       <MemberSignature Language="ILAsm" Value=".property instance object Microsoft.Office.Tools.IExtension.ExtensionBase" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Excel.WorksheetBase.Microsoft#Office#Tools#IExtension#ExtensionBase" />
       <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Microsoft.Office.Tools.IExtension.ExtensionBase</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -2355,17 +2449,17 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果未指定`Before`或`After`，Microsoft Office Excel 将创建包含移动的工作表的新工作簿。  
+ 如果未指定`Before`或`After`, 则 Microsoft Office Excel 将创建包含已移动的工作表的新工作簿。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
+ 有关可选参数的信息, 请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Index%2A>属性来显示当前工作表的索引号之前和之后的最后一个移动工作表来定位工作簿中使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Move%2A>方法。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Index%2A>属性, 在将工作表移动到工作簿<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Move%2A>中的最后一个位置之前和之后, 使用方法显示当前工作表的索引号。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#16](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#16)]
  [!code-vb[Trin_ExcelWorkSheet#16](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#16)]  
@@ -2393,9 +2487,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.MailEnvelope%2A>要分配属性<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Name%2A>的工作表的电子邮件头引入工作表。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.MailEnvelope%2A>属性<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Name%2A>将工作表的指定给工作表的电子邮件头的引入。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#18](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#18)]
  [!code-vb[Trin_ExcelWorkSheet#18](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#18)]  
@@ -2418,14 +2512,14 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个 <see cref="T:Microsoft.Office.Interop.Excel.Names" /> 集合，该集合表示所有工作表特定的名称（以“WorksheetName!” 前缀定义名称）。</summary>
-        <value>一个<see cref="T:Microsoft.Office.Interop.Excel.Names" />集合，表示所有特定于工作表的名称 （名称以"WorksheetName ！"与已定义 前缀定义名称）。</value>
+        <value>一个<see cref="T:Microsoft.Office.Interop.Excel.Names" />集合, 该集合表示所有工作表特定的名称 (使用 "WorksheetName!" 定义的名称) 前缀定义名称）。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Names%2A>属性添加到工作表的名称。 该示例然后显示**定义名称**对话框来验证是否已添加该名称。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Names%2A>属性将名称添加到工作表中。 然后, 该示例将显示 "**定义名称**" 对话框以验证是否已添加该名称。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#19](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#19)]
  [!code-vb[Trin_ExcelWorkSheet#19](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#19)]  
@@ -2453,9 +2547,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Next%2A>属性来确定是否当前<xref:Microsoft.Office.Tools.Excel.WorksheetBase>是工作簿中的最后一个表。 如果当前<xref:Microsoft.Office.Tools.Excel.WorksheetBase>不是最后一个表，则显示下一步工作表的名称。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Next%2A>属性来确定当前<xref:Microsoft.Office.Tools.Excel.WorksheetBase>是否为工作簿中的最后一个工作表。 如果当前<xref:Microsoft.Office.Tools.Excel.WorksheetBase>不是最后一页, 则显示下一个工作表的名称。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#20](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#20)]
  [!code-vb[Trin_ExcelWorkSheet#20](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#20)]  
@@ -2489,14 +2583,14 @@
 ## Remarks  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
+ 有关可选参数的信息, 请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.OLEObjects%2A>方法来显示 OLE 数当前工作表中的对象。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.OLEObjects%2A>方法来显示当前工作表中 OLE 对象的数量。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#104](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#104)]
  [!code-vb[Trin_ExcelWorkSheet#104](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#104)]  
@@ -2648,6 +2742,9 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnShutdown() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.WorksheetBase.OnShutdown" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Office.Tools.EntryPoint.OnShutdown</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -2666,6 +2763,9 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnStartup() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.WorksheetBase.OnStartup" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Office.Tools.EntryPoint.OnStartup</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -2725,9 +2825,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Outline%2A>属性以使当前工作表大纲使用自动设置样式。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Outline%2A>属性使当前工作表的轮廓使用自动样式。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#21](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#21)]
  [!code-vb[Trin_ExcelWorkSheet#21](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#21)]  
@@ -2782,9 +2882,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.PageSetup%2A>属性来设置下边框和标头边距、 第一页号，和中心标头和工作表的页脚。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.PageSetup%2A>属性设置工作表的底端边距和页眉边距、第一个页码以及居中页眉和页脚。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#22](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#22)]
  [!code-vb[Trin_ExcelWorkSheet#22](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#22)]  
@@ -2812,9 +2912,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Parent%2A>属性来确定是否当前<xref:Microsoft.Office.Tools.Excel.WorksheetBase>具有一个父级。 如果当前<xref:Microsoft.Office.Tools.Excel.WorksheetBase>具有父级，则会显示父工作簿的名称。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Parent%2A>属性来确定当前<xref:Microsoft.Office.Tools.Excel.WorksheetBase>是否有父级。 如果当前<xref:Microsoft.Office.Tools.Excel.WorksheetBase>有父级, 则显示父工作簿的名称。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#23](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#23)]
  [!code-vb[Trin_ExcelWorkSheet#23](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#23)]  
@@ -2847,19 +2947,19 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果未指定`Destination`参数，您必须选择目标范围才能使用此方法。  
+ 如果未指定`Destination`参数, 则必须先选择目标范围, 然后才能使用此方法。  
   
- 此方法可能会修改表的选定区域，具体取决于剪贴板的内容。  
+ 此方法可能会根据剪贴板的内容修改工作表选择。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
+ 有关可选参数的信息, 请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例将文本到剪贴板上的"粘贴示例"，然后使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Paste%2A>方法以将剪贴板的内容粘贴到单元格 A1。  
+ 下面的代码示例将文本 "Paste example" 放到剪贴板上, 然后使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Paste%2A>方法将剪贴板的内容粘贴到 A1 单元格。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#105](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#105)]
  [!code-vb[Trin_ExcelWorkSheet#105](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#105)]  
@@ -2902,23 +3002,23 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果不知道哪些字符串将传递给的格式参数，则可以查看通过尝试在 Excel 中的粘贴命令与剪贴板上的数据兼容的字符串。 将数据复制到剪贴板中，使用**选择性粘贴**在 Excel 中，命令，然后查看中列出的格式**选择性粘贴**对话框。  
+ 如果不知道要传递到 Format 参数的字符串, 可以通过在 Excel 中尝试 "粘贴" 命令, 查看与剪贴板上的数据兼容的字符串。 将数据复制到剪贴板, 使用 Excel 中的 "**选择性粘贴**" 命令, 然后查看 "**选择性粘贴**" 对话框中列出的格式。  
   
- `NoHTMLFormatting` 将仅就时`Format`="HTML"。 在所有其他情况下，`NoHTMLFormatting`将被忽略。  
+ `NoHTMLFormatting`仅在 = " `Format` HTML" 时才有意义。 在所有其他情况下`NoHTMLFormatting` , 都将被忽略。  
   
- 使用此方法之前，必须选择目标范围。  
+ 使用此方法之前, 必须选择目标范围。  
   
- 此方法可能会修改表的选定区域，具体取决于剪贴板的内容。  
+ 此方法可能会根据剪贴板的内容修改工作表选择。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
+ 有关可选参数的信息, 请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例将 HTML 放置到剪贴板，然后使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.PasteSpecial%2A>方法以将剪贴板的内容粘贴到单元格 A1。 请注意示例选择之前调用范围<xref:Microsoft.Office.Tools.Excel.WorksheetBase.PasteSpecial%2A>方法。  
+ 下面的代码示例将 HTML 置于剪贴板上, 然后使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.PasteSpecial%2A>方法将剪贴板的内容粘贴到 A1 单元格。 请注意, 该示例在调用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.PasteSpecial%2A>方法之前选择范围。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#106](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#106)]
  [!code-vb[Trin_ExcelWorkSheet#106](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#106)]  
@@ -2972,10 +3072,10 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.WorksheetBase.PivotTableAfterValueChange>事件编辑或重新计算的单元格以外的任何条件下不会出现。 例如，它不会在数据透视表进行刷新、 排序、 筛选，或向下钻取，即使这些操作移动单元格，并可能从 OLAP 数据源中检索新值。  
+ 在<xref:Microsoft.Office.Tools.Excel.WorksheetBase.PivotTableAfterValueChange>编辑或重新计算单元格以外的任何情况下, 事件不会发生。 例如, 如果对数据透视表进行刷新、排序、筛选或深化, 则不会发生这种情况, 即使这些操作移动单元格并且可能从 OLAP 数据源检索新值也是如此。  
   
 > [!NOTE]
->  此事件将显示在 IntelliSense 中 Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Excel 2007 项目中使用此事件。  
+>  此事件显示在面向的[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]Excel 2007 项目中的 IntelliSense 中。 但是, 在 Excel 2007 项目中不能使用此事件。  
   
  ]]></format>
         </remarks>
@@ -3000,10 +3100,10 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.WorksheetBase.PivotTableBeforeAllocateChanges> Excel 立即执行 UPDATE CUBE 语句以应用到数据透视表的 OLAP 数据源，所有更改之前，用户已选择要都应用的用户界面中的更改后立即发生的事件。  
+ <xref:Microsoft.Office.Tools.Excel.WorksheetBase.PivotTableBeforeAllocateChanges>事件在 Excel 执行 UPDATE CUBE 语句之前立即发生, 以将所有更改应用于数据透视表的 OLAP 数据源, 并在用户选择在用户界面中应用更改之后立即发生。  
   
 > [!NOTE]
->  此事件将显示在 IntelliSense 中 Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Excel 2007 项目中使用此事件。  
+>  此事件显示在面向的[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]Excel 2007 项目中的 IntelliSense 中。 但是, 在 Excel 2007 项目中不能使用此事件。  
   
  ]]></format>
         </remarks>
@@ -3028,10 +3128,10 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.WorksheetBase.PivotTableBeforeCommitChanges> Excel 立即执行 COMMIT TRANSACTION 对数据透视表的 OLAP 数据源之前，用户已选择为整个数据透视表中保存更改后立即发生的事件。  
+ 此<xref:Microsoft.Office.Tools.Excel.WorksheetBase.PivotTableBeforeCommitChanges>事件在 Excel 针对数据透视表的 OLAP 数据源执行 COMMIT TRANSACTION 之前发生, 并在用户选择保存整个数据透视表的更改之后立即发生。  
   
 > [!NOTE]
->  此事件将显示在 IntelliSense 中 Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Excel 2007 项目中使用此事件。  
+>  此事件显示在面向的[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]Excel 2007 项目中的 IntelliSense 中。 但是, 在 Excel 2007 项目中不能使用此事件。  
   
  ]]></format>
         </remarks>
@@ -3056,10 +3156,10 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- Excel 执行 ROLLBACK TRANSACTION 语句，在针对 OLAP 数据源，如果事务仍处于活动状态，并且后用户已选择放弃更改，然后放弃该数据透视表中的所有已编辑的值之前立即发生。  
+ 如果事务仍处于活动状态, 则在 Excel 对 OLAP 数据源执行 ROLLBACK TRANSACTION 语句之前立即发生, 然后在用户选择放弃更改后丢弃数据透视表中的所有编辑值。  
   
 > [!NOTE]
->  此事件将显示在 IntelliSense 中 Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Excel 2007 项目中使用此事件。  
+>  此事件显示在面向的[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]Excel 2007 项目中的 IntelliSense 中。 但是, 在 Excel 2007 项目中不能使用此事件。  
   
  ]]></format>
         </remarks>
@@ -3084,10 +3184,10 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.WorksheetBase.PivotTableChangeSync>过程中发生的大多数更改在数据透视表，以便您可以编写代码来响应用户操作，例如清除、 分组或刷新数据透视表中的项。  
+ 在<xref:Microsoft.Office.Tools.Excel.WorksheetBase.PivotTableChangeSync>对数据透视表进行大多数更改期间发生, 以便您可以编写代码来响应用户操作, 如清除、分组或刷新数据透视表中的项。  
   
 > [!NOTE]
->  此事件将显示在 IntelliSense 中 Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，不能在 Excel 2007 项目中使用此事件。  
+>  此事件显示在面向的[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]Excel 2007 项目中的 IntelliSense 中。 但是, 在 Excel 2007 项目中不能使用此事件。  
   
  ]]></format>
         </remarks>
@@ -3119,14 +3219,14 @@
 ## Remarks  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
+ 有关可选参数的信息, 请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.PivotTables%2A>方法以获取<xref:Microsoft.Office.Interop.Excel.PivotTables?displayProperty=fullName>当前工作表的集合，并刷新集合中的每个数据透视表  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.PivotTables%2A>方法<xref:Microsoft.Office.Interop.Excel.PivotTables?displayProperty=fullName>获取当前工作表的集合, 并刷新该集合中的每个数据透视表  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#107](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#107)]
  [!code-vb[Trin_ExcelWorkSheet#107](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#107)]  
@@ -3153,9 +3253,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例演示了一个处理程序<xref:Microsoft.Office.Tools.Excel.WorksheetBase.PivotTableUpdate>已更新数据透视表报表时显示一条消息的事件。  
+ 下面的代码示例演示了一个<xref:Microsoft.Office.Tools.Excel.WorksheetBase.PivotTableUpdate>事件的处理程序, 该处理程序用于在数据透视表更新时显示一条消息。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#207](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#207)]
  [!code-vb[Trin_ExcelWorkSheet#207](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#207)]  
@@ -3217,17 +3317,17 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法不显示该数据透视表向导。 此方法不是可用于 OLE DB 数据源。 使用<xref:Microsoft.Office.Interop.Excel.Worksheets.Add%2A>方法以添加数据透视表的缓存，然后创建数据透视表报表基于缓存。  
+ 此方法不显示 "数据透视表" 向导。 此方法不适用于 OLE DB 数据源。 <xref:Microsoft.Office.Interop.Excel.Worksheets.Add%2A>使用方法添加一个数据透视表缓存, 然后基于该缓存创建一个数据透视表。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
+ 有关可选参数的信息, 请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.PivotTableWizard%2A>方法来创建数据透视表报表基于 A1 至 C4 当前工作表的单元格的范围的内容。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.PivotTableWizard%2A>方法创建一个数据透视表, 该报表基于当前工作表的 A1 到 C4 范围内的单元格的内容。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#108](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#108)]
  [!code-vb[Trin_ExcelWorkSheet#108](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#108)]  
@@ -3255,9 +3355,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Previous%2A>属性来确定是否当前<xref:Microsoft.Office.Tools.Excel.WorksheetBase>是工作簿中的第一个表。 如果当前<xref:Microsoft.Office.Tools.Excel.WorksheetBase>不是第一个表，则显示前一个工作表的名称。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Previous%2A>属性来确定当前<xref:Microsoft.Office.Tools.Excel.WorksheetBase>是否为工作簿中的第一个工作表。 如果当前<xref:Microsoft.Office.Tools.Excel.WorksheetBase>不是第一个工作表, 则显示上一个表的名称。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#24](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#24)]
  [!code-vb[Trin_ExcelWorkSheet#24](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#24)]  
@@ -3285,10 +3385,10 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.WorksheetBase.PrintedCommentPages%2A>属性仅将返回一个数字大于零 if**注释**上设置**表**选项卡**页面设置**对话框的设置为**在表的末尾**。 如果表是图表工作表或 MS Excel 5.0 对话框工作表，此属性将返回零。  
+ 如果<xref:Microsoft.Office.Tools.Excel.WorksheetBase.PrintedCommentPages%2A>在 "**页面设置**" 对话框的 "**工作表**" 选项卡上将 "**注释**" 设置设置为 "**在表尾**", 则该属性将仅返回一个大于零的数字。 如果工作表是图表工作表或 MS Excel 5.0 对话框工作表, 则此属性将返回零。  
   
 > [!NOTE]
->  此属性将出现在 IntelliSense 中 Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，此属性不能使用 Excel 2007 项目中。  
+>  此属性显示在面向的[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]Excel 2007 项目中的 IntelliSense 中。 但是, 不能在 Excel 2007 项目中使用此属性。  
   
  ]]></format>
         </remarks>
@@ -3373,17 +3473,17 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- "页"中的说明`From`和`To`指打印的页面，不适用于表或工作簿中的所有页。  
+ `From` 和`To`中的 "页" 是指打印页, 而不是对工作表或工作簿中的所有页。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
+ 有关可选参数的信息, 请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.PrintOutEx%2A>方法打印两个逐的份打印到默认打印机工作表的前两个页。 若要运行此代码示例，您的工作簿必须包含名为`Sheet1`一些数据。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.PrintOutEx%2A>方法将工作表的前两页的两个逐份打印副本打印到默认打印机。 若要运行此代码示例, 工作簿必须包含一个名`Sheet1`为的工作表, 其中包含一些数据。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkBook_Additional#13](~/snippets/csharp/VS_Snippets_OfficeSP/trin_excelworkbook_additional/cs/ThisWorkbook.cs#13)]
  [!code-vb[Trin_ExcelWorkBook_Additional#13](~/snippets/visualbasic/VS_Snippets_OfficeSP/trin_excelworkbook_additional/vb/ThisWorkbook.vb#13)]  
@@ -3416,14 +3516,14 @@
 ## Remarks  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
+ 有关可选参数的信息, 请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
  下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.PrintPreview%2A>方法来显示当前工作表的打印预览。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#110](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#110)]
  [!code-vb[Trin_ExcelWorkSheet#110](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#110)]  
@@ -3484,22 +3584,22 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果应用使用此方法`UserInterfaceOnly`参数设置为`true`，然后保存该工作簿，整个工作表 （而不仅仅是接口） 将完全受到保护时重新打开工作簿。 若要打开该工作簿后，重新启用用户界面保护，必须再次应用使用此方法`UserInterfaceOnly`设置为`true`。  
+ 如果将此方法`UserInterfaceOnly`应用于参数设置为`true`的, 然后保存该工作簿, 则当您重新打开工作簿时, 整个工作表 (而不仅仅是界面) 都将完全受到保护。 若要在打开工作簿后重新启用用户界面保护, 你必须再次将此方法`UserInterfaceOnly`应用到设置为。 `true`  
   
- 就可以对受保护工作表进行更改，如果提供密码。 此外，另一个方法是： 取消保护工作表，进行必要的更改，然后再次保护工作表。  
+ 如果提供密码, 则可以对受保护的工作表做出更改。 此外, 另一种方法是取消对工作表的保护, 进行必要的更改, 然后再次保护工作表。  
   
 > [!NOTE]
->  未受保护，则表示可能会锁定该单元格 (**单元格格式**对话框)，但包含在中定义的范围**允许用户编辑范围**对话框中，并且用户已取消保护具有密码的范围或已通过 NT 权限验证。  
+>  "未保护" 表示单元格可能被锁定 ("**设置单元格格式**" 对话框), 但包含在 "**允许用户编辑范围**" 对话框中定义的范围内, 并且用户已通过密码保护该范围或通过 NT 权限进行验证。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
+ 有关可选参数的信息, 请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例获取的值<xref:Microsoft.Office.Tools.Excel.WorksheetBase.ProtectContents%2A>属性来确定是否受保护工作表的内容。 如果内容未受保护，则<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Protect%2A>与调用方法`Contents`参数设置为`true`，以便将受保护的内容。  
+ 下面的代码示例获取<xref:Microsoft.Office.Tools.Excel.WorksheetBase.ProtectContents%2A>属性的值, 以确定是否保护工作表的内容。 如果内容未受保护, <xref:Microsoft.Office.Tools.Excel.WorksheetBase.Protect%2A>则调用方法`Contents`并将参数设置为`true` , 以使内容受到保护。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#25](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#25)]
  [!code-vb[Trin_ExcelWorkSheet#25](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#25)]  
@@ -3527,9 +3627,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例获取的值<xref:Microsoft.Office.Tools.Excel.WorksheetBase.ProtectContents%2A>属性来确定是否受保护工作表的内容。 如果内容未受保护，则<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Protect%2A>与调用方法`Contents`参数设置为`true`，以便将受保护的内容。  
+ 下面的代码示例获取<xref:Microsoft.Office.Tools.Excel.WorksheetBase.ProtectContents%2A>属性的值, 以确定是否保护工作表的内容。 如果内容未受保护, <xref:Microsoft.Office.Tools.Excel.WorksheetBase.Protect%2A>则调用方法`Contents`并将参数设置为`true` , 以使内容受到保护。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#25](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#25)]
  [!code-vb[Trin_ExcelWorkSheet#25](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#25)]  
@@ -3557,9 +3657,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例获取的值<xref:Microsoft.Office.Tools.Excel.WorksheetBase.ProtectDrawingObjects%2A>属性来确定是否受保护工作表上的形状。 如果形状未受保护，则<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Protect%2A>与调用方法`DrawingObjects`参数设置为`true`以便形状是否受保护。  
+ 下面的代码示例获取<xref:Microsoft.Office.Tools.Excel.WorksheetBase.ProtectDrawingObjects%2A>属性的值, 以确定工作表上的形状是否受保护。 如果形状未受保护, 则<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Protect%2A>在`DrawingObjects`参数设置为`true`的情况下调用方法, 以使形状受保护。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#26](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#26)]
  [!code-vb[Trin_ExcelWorkSheet#26](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#26)]  
@@ -3587,9 +3687,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例获取的值<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Protection%2A>属性以确定是否当前允许单元格格式设置。 如果不允许单元格格式设置，则<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Protect%2A>与调用方法`AllowFormattingCells`参数设置为`true`，以便可以设置格式的单元格。  
+ 下面的代码示例获取<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Protection%2A>属性的值, 以确定当前是否允许单元格格式设置。 如果不允许单元格格式设置, <xref:Microsoft.Office.Tools.Excel.WorksheetBase.Protect%2A>则调用方法`AllowFormattingCells`并将参数设置为`true` , 以便可以设置单元格的格式。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#27](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#27)]
  [!code-vb[Trin_ExcelWorkSheet#27](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#27)]  
@@ -3617,14 +3717,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要启用用户界面保护，使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Protect%2A>方法替换`UserInterfaceOnly`参数设置为`true`。  
+ 若要启用用户界面保护, 请使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Protect%2A>方法`UserInterfaceOnly` , 将参数设置为`true`。  
   
    
   
 ## Examples  
- 下面的代码示例获取的值<xref:Microsoft.Office.Tools.Excel.WorksheetBase.ProtectionMode%2A>属性来确定是否受保护的用户界面。 如果用户界面未受保护，则<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Protect%2A>与调用方法`UserInterfaceOnly`参数设置为`true`这样的用户界面会受到保护。  
+ 下面的代码示例获取<xref:Microsoft.Office.Tools.Excel.WorksheetBase.ProtectionMode%2A>属性的值, 以确定是否保护用户界面。 如果未保护用户界面, 则会调用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Protect%2A>方法, `UserInterfaceOnly`并将参数设置为`true` , 以使用户界面受到保护。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#28](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#28)]
  [!code-vb[Trin_ExcelWorkSheet#28](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#28)]  
@@ -3652,9 +3752,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例获取的值<xref:Microsoft.Office.Tools.Excel.WorksheetBase.ProtectScenarios%2A>属性来确定工作表方案是否受保护。 如果方案不受保护，则<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Protect%2A>与调用方法`Scenarios`参数设置为`true`以便方案是否受保护。  
+ 下面的代码示例获取<xref:Microsoft.Office.Tools.Excel.WorksheetBase.ProtectScenarios%2A>属性的值, 以确定是否保护工作表方案。 如果未保护方案, 则会<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Protect%2A>调用方法, `Scenarios`并将参数设置为`true` , 以便使方案受到保护。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#29](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#29)]
  [!code-vb[Trin_ExcelWorkSheet#29](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#29)]  
@@ -3682,9 +3782,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.QueryTables%2A>属性来刷新中的数据每隔<xref:Microsoft.Office.Interop.Excel.QueryTable?displayProperty=fullName>当前工作表上。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.QueryTables%2A>属性刷新当前工作表上每个<xref:Microsoft.Office.Interop.Excel.QueryTable?displayProperty=fullName>中的数据。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#30](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#30)]
  [!code-vb[Trin_ExcelWorkSheet#30](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#30)]  
@@ -3712,24 +3812,24 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.WorksheetBase.Range%2A>属性应与以下参数一起使用。  
+ 此<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Range%2A>属性应与以下参数一起使用。  
   
-|参数|描述|  
+|参数|说明|  
 |---------------|-----------------|  
 |`Cell1`|采用应用程序语言的以 A1 样式表示法表示的范围名称。 范围名称可以包括范围运算符（冒号）、交集运算符（空格）或并集运算符（逗号）。 范围名称还可以包括货币符号，但是这些符号被忽略。 可以在范围的任何部分中使用本地定义的名称。 如果使用一个名称，则假定该名称使用的是应用程序的语言。 此参数是必需的。|  
 |`Cell2`|范围右下角的单元格。 可以是一个包含单个单元格、整列、整行的 <xref:Microsoft.Office.Interop.Excel.Range?displayProperty=fullName>，或者可以是一个以应用程序的语言命名单个单元格的字符串。 此参数在 Visual Basic 中是可选的。|  
   
- 如果尝试使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Range%2A>而无需指定任何参数，<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Range%2A>将获取<xref:Microsoft.Office.Tools.Excel.Worksheet._RangeType>对象，它是 Visual Studio 基础结构的一部分，不应在代码中直接使用。  
+ 如果尝试在不指定<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Range%2A>任何参数的情况下<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Range%2A>使用, 将<xref:Microsoft.Office.Tools.Excel.Worksheet._RangeType>获取属于 Visual Studio 基础结构的对象, 并且不应在代码中直接使用。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
+ 有关可选参数的信息, 请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例演示如何使用不同方式<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Range%2A>属性来访问单个或多个单元格。  
+ 下面的代码示例演示了使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Range%2A>属性访问单个或多个单元格的不同方法。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#42](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#42)]
  [!code-vb[Trin_ExcelWorkSheet#42](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#42)]  
@@ -3802,21 +3902,21 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果使用不带参数，该属性返回<xref:Microsoft.Office.Interop.Excel.Range>对象，其中包含工作表上的所有行。  
+ 当未使用参数时, 此属性将<xref:Microsoft.Office.Interop.Excel.Range>返回一个对象, 该对象包含工作表中的所有行。  
   
- 此属性可以使用以下可选参数，用于在工作表上获取特定行。 如果参数中使用此属性，返回值是必须强制转换为对象<xref:Microsoft.Office.Interop.Excel.Range>。  
+ 此属性可与以下可选参数一起使用, 以获取工作表中的特定行。 如果将此属性与参数一起使用, 则返回值是必须强制转换为的<xref:Microsoft.Office.Interop.Excel.Range>对象。  
   
-|参数|描述|  
+|参数|说明|  
 |---------------|-----------------|  
-|`RowIndex`|若要获取的一个或多个行的索引。<br /><br /> 若要获取的单个行，请将传递一个整数，指定你想要获取的行的索引。 行索引从 1 开始。<br /><br /> 若要获取多个连续的行，请将传递格式的字符串"`first row`:`last row`"。 例如，若要获取行 1 至 5，传递"1:5"。|  
-|`ColumnIndex`|不使用此参数。 此属性将引发<xref:System.Runtime.InteropServices.COMException>如果尝试将值传递给此参数。|  
+|`RowIndex`|要获取的一个或多个行的索引。<br /><br /> 若要获取单个行, 请传递一个整数, 该整数指定要获取的行的索引。 行索引从1开始。<br /><br /> 若要获取多个连续行, 请传递格式为 "`first row`:`last row`" 的字符串。 例如, 若要获取第1到5行, 请传递 "1:5"。|  
+|`ColumnIndex`|不使用此参数。 <xref:System.Runtime.InteropServices.COMException>如果尝试向此参数传递值, 则此属性将引发。|  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Rows%2A>属性工作表上的前五个行中设置颜色、 名称、 大小和的所有单元格的字体。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Rows%2A>属性设置工作表的前五行中所有单元格的字体的颜色、名称、大小和加粗程度。  
   
- 此示例适用于文档级自定义。 若要运行此代码，请将其复制到你的项目中的工作表类之一。  
+ 此示例适用于文档级自定义项。 若要运行此代码, 请将其复制到项目中的一个工作表类。  
   
  [!code-csharp[Trin_ExcelWorkSheet#31](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#31)]
  [!code-vb[Trin_ExcelWorkSheet#31](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#31)]  
@@ -3867,14 +3967,14 @@
 ## Remarks  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
+ 有关可选参数的信息, 请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.SaveAs%2A>方法以保存当前工作表的新副本。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.SaveAs%2A>方法保存当前工作表的新副本。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#111](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#111)]
  [!code-vb[Trin_ExcelWorkSheet#111](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#111)]  
@@ -3906,9 +4006,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Scenarios%2A>方法将新方案添加到当前工作表，并显示**方案 Manager**对话框来验证是否添加了该方案。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Scenarios%2A>方法将一个新方案添加到当前工作表, 然后显示 "**方案管理器**" 对话框以验证是否添加了该方案。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#112](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#112)]
  [!code-vb[Trin_ExcelWorkSheet#112](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#112)]  
@@ -3959,14 +4059,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 不能选择滚动区域以外的单元格。  
+ 不能选择滚动区域外的单元。  
   
- 将此属性设置为空字符串 ("") 以允许单元格选定整个工作表。  
+ 将此属性设置为空字符串 ("") 可为整个工作表启用单元格选定内容。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.ScrollArea%2A>属性从 A1 到 Z100 将当前工作表的滚动区域设置为单元格的范围。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.ScrollArea%2A>属性将当前工作表的滚动区域设置为从 A1 到 Z100 的单元格范围。  
   
  此示例适用于  
   
@@ -4030,14 +4130,14 @@
 ## Remarks  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
+ 有关可选参数的信息, 请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Select%2A>方法来选择`Sheet1`，然后将其扩展以包含所选内容并`Sheet2`和`Sheet3`。  
+ 下面<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Select%2A>的代码示例使用方法来选择`Sheet1`, 然后将选择范围扩展为包含`Sheet2`和`Sheet3`。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#113](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#113)]
  [!code-vb[Trin_ExcelWorkSheet#113](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#113)]  
@@ -4064,9 +4164,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例演示了一个处理程序<xref:Microsoft.Office.Tools.Excel.WorksheetBase.SelectionChange>状态栏中显示的工作表名称和所选范围的地址的事件。  
+ 下面的代码示例演示<xref:Microsoft.Office.Tools.Excel.WorksheetBase.SelectionChange>事件的处理程序, 该事件在状态栏中显示工作表名称和所选范围的地址。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#208](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#208)]
  [!code-vb[Trin_ExcelWorkSheet#208](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#208)]  
@@ -4097,9 +4197,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.SetBackgroundPicture%2A>方法将工作表的背景图像设置为一个名为 image1.jpg 文件。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.SetBackgroundPicture%2A>方法将工作表的背景图像设置为名为 image1 的文件。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#114](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#114)]
  [!code-vb[Trin_ExcelWorkSheet#114](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#114)]  
@@ -4127,9 +4227,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Shapes%2A>属性将圆环图形状添加到当前工作表。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Shapes%2A>属性将圆环形状添加到当前工作表。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#33](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#33)]
  [!code-vb[Trin_ExcelWorkSheet#33](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#33)]  
@@ -4175,9 +4275,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用数据窗体时，将暂停执行。 在之后的行数据窗体关闭时，恢复执行<xref:Microsoft.Office.Tools.Excel.WorksheetBase.ShowDataForm%2A>方法。  
+ 使用数据窗体时, 执行将暂停。 关闭数据窗体时, 执行将<xref:Microsoft.Office.Tools.Excel.WorksheetBase.ShowDataForm%2A>在方法之后的行中恢复。  
   
- 如果存在，则此方法运行自定义数据窗体。  
+ 此方法运行自定义数据窗体 (如果有)。  
   
  ]]></format>
         </remarks>
@@ -4201,18 +4301,18 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 这是要在中调用的最后一个事件<xref:Microsoft.Office.Tools.Excel.WorksheetBase>声明为类<xref:Microsoft.Office.Tools.Excel.WorksheetBase>类卸载。 使用此事件的任何其他清理过程。  
+ 这是卸载<xref:Microsoft.Office.Tools.Excel.WorksheetBase> <xref:Microsoft.Office.Tools.Excel.WorksheetBase>类时要在类中调用的最后一个事件。 此事件用于任何其他清理。  
   
- 文档级自定义项，该程序集的应用程序域卸载时工作表宿主项关闭。  
+ 在文档级自定义项中, 工作表宿主项关闭时程序集的应用程序域将卸载。  
   
- 在应用程序级外接程序，应用程序域不会卸载时工作表宿主项关闭。 此外，基础的工作表对象将不再可用。 若要访问该工作表关闭使用之前<xref:Microsoft.Office.Tools.Excel.Workbook.BeforeClose>相反。  
+ 在应用程序级外接程序中, 工作表宿主项关闭时不会卸载应用程序域。 此外, 基础工作表对象不再可用。 若要在工作表关闭之前对其<xref:Microsoft.Office.Tools.Excel.Workbook.BeforeClose>进行访问, 请改用。  
   
    
   
 ## Examples  
- 下面的代码示例演示了一个处理程序<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Shutdown>显示一条消息的事件时<xref:Microsoft.Office.Tools.Excel.WorksheetBase>类卸载。  
+ 下面的代码示例演示了一个<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Shutdown>事件的处理程序, 该事件在<xref:Microsoft.Office.Tools.Excel.WorksheetBase>类卸载时显示一条消息。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#209](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#209)]
  [!code-vb[Trin_ExcelWorkSheet#209](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#209)]  
@@ -4226,6 +4326,9 @@
       <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.ISite Site" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Excel.WorksheetBase.Site" />
       <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:System.ComponentModel.IComponent.Site</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -4281,9 +4384,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例填充的范围标头和员工名称在当前工作表中。 接下来，该示例访问<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Sort%2A>包括要作为排序依据的列范围和排序顺序的工作表并设置属性的属性。 最后，该代码调用`Microsoft.Office.Interop.Excel.Sort.Apply`方法指定的工作表数据进行排序。 当您运行此代码时，员工数据将以升序基于雇员的名字进行排序。  
+ 下面的代码示例使用标题和雇员姓名填充当前工作表中的某个范围。 接下来, 该示例访问<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Sort%2A>工作表的属性, 并设置包含要排序的列范围的属性和排序顺序。 最后, 该代码调用`Microsoft.Office.Interop.Excel.Sort.Apply`方法以对指定的工作表数据进行排序。 当你运行此代码时, 将根据雇员名字以升序对员工数据进行排序。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_Excelworkbook_Additional#31](~/snippets/csharp/VS_Snippets_OfficeSP/trin_excelworkbook_additional/cs/Sheet3.cs#31)]
  [!code-vb[Trin_Excelworkbook_Additional#31](~/snippets/visualbasic/VS_Snippets_OfficeSP/trin_excelworkbook_additional/vb/Sheet3.vb#31)]  
@@ -4338,9 +4441,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.StandardHeight%2A>属性来显示当前工作表中的所有行的默认高度。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.StandardHeight%2A>属性显示当前工作表中所有行的默认高度。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#36](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#36)]
  [!code-vb[Trin_ExcelWorkSheet#36](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#36)]  
@@ -4368,14 +4471,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 正文样式中的一个字符的宽度相等列宽度的一个单元。 对于非等宽字体，使用 0 （零） 的字符的宽度。  
+ 列宽的单位等于普通样式中一个字符的宽度。 对于比例字体, 使用字符 0 (零) 的宽度。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.StandardWidth%2A>属性来显示当前工作表中的所有列的默认宽度。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.StandardWidth%2A>属性显示当前工作表中所有列的默认宽度。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#37](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#37)]
  [!code-vb[Trin_ExcelWorkSheet#37](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#37)]  
@@ -4420,9 +4523,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Tab%2A>属性设置为蓝色的工作表的选项卡的主颜色。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Tab%2A>属性将工作表的选项卡的主色设置为蓝色。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#38](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#38)]
  [!code-vb[Trin_ExcelWorkSheet#38](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#38)]  
@@ -4450,7 +4553,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 一个常见用途<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Tag%2A>属性是用于存储与工作表密切关联的数据。  
+ <xref:Microsoft.Office.Tools.Excel.WorksheetBase.Tag%2A>属性的常见用途是存储与工作表密切关联的数据。  
   
  ]]></format>
         </remarks>
@@ -4502,7 +4605,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 执行相同的功能**转换输入公式**选项卡上**过渡**选项卡**选项**对话框。  
+ 执行与 "**选项**" 对话框的 "**转换**" 选项卡上的 "**转换公式" 条目**选项相同的功能。  
   
  ]]></format>
         </remarks>
@@ -4545,9 +4648,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Type%2A>属性来显示当前工作表是工作表、 对话表，还是一个消息框中的图表。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Type%2A>属性来显示当前工作表是工作表、对话框表还是消息框中的图表。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#40](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#40)]
  [!code-vb[Trin_ExcelWorkSheet#40](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#40)]  
@@ -4581,14 +4684,14 @@
  如果忘记密码，则无法取消对工作表的保护。 最好将密码及其对应文档名的列表保存在安全的位置。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
+ 有关可选参数的信息, 请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例确定当前的工作表的单元格内容是否受保护。 如果单元格内容受到保护，则该示例会提示用户取消单元格内容保护使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Unprotect%2A>方法。  
+ 下面的代码示例确定当前工作表的单元格内容是否受到保护。 如果单元格内容受保护, 则该示例将提示用户使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Unprotect%2A>方法取消对单元格内容的保护。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#115](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#115)]
  [!code-vb[Trin_ExcelWorkSheet#115](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#115)]  
@@ -4616,14 +4719,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用的范围包括曾经使用任何单元格。 例如，如果单元格**A1**包含一个值，然后删除值，则单元格**A1**被视为使用。 在这种情况下，<xref:Microsoft.Office.Tools.Excel.WorksheetBase.UsedRange%2A>属性将返回一系列，包括单元格**A1**。  
+ 使用的范围包含曾经使用过的任何单元。 例如, 如果单元格**A1**包含一个值, 然后删除该值, 则会将单元格**a1**视为已使用。 在这种情况下<xref:Microsoft.Office.Tools.Excel.WorksheetBase.UsedRange%2A> , 属性将返回包含单元格**A1**的范围。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.UsedRange%2A>属性选择的范围使用的工作表上的单元格。 该示例首先设置单元格的范围从 A1 到 C3 为 23 的值在当前工作表上。 如果工作表可见，则该示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.UsedRange%2A>属性来选择<xref:Microsoft.Office.Interop.Excel.Range?displayProperty=fullName>使用的单元格。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.UsedRange%2A>属性来选择工作表上使用的单元格的范围。 该示例首先将当前工作表上 A1 到 C3 的单元格范围设置为值23。 如果工作表可见, 则该示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.UsedRange%2A>属性<xref:Microsoft.Office.Interop.Excel.Range?displayProperty=fullName>选择已使用单元格的。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#41](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#41)]
  [!code-vb[Trin_ExcelWorkSheet#41](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#41)]  
@@ -4651,9 +4754,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Visible%2A>属性以帮助选择的范围使用的工作表上的单元格。 该示例首先设置单元格的范围从 A1 到 C3 为 23 的值在当前工作表上。 如果<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Visible%2A>属性指示工作表可见，则该示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.UsedRange%2A>属性来选择<xref:Microsoft.Office.Interop.Excel.Range?displayProperty=fullName>使用的单元格。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Visible%2A>属性来帮助选择工作表上已使用单元格的范围。 该示例首先将当前工作表上 A1 到 C3 的单元格范围设置为值23。 如果属性指示工作表可见, 则该示例<xref:Microsoft.Office.Tools.Excel.WorksheetBase.UsedRange%2A>使用属性选择<xref:Microsoft.Office.Interop.Excel.Range?displayProperty=fullName>已使用单元格的。 <xref:Microsoft.Office.Tools.Excel.WorksheetBase.Visible%2A>  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#41](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#41)]
  [!code-vb[Trin_ExcelWorkSheet#41](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#41)]  
@@ -4681,9 +4784,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.VPageBreaks%2A>属性在单元格 C5 添加垂直分页符。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.VPageBreaks%2A>属性在单元格 C5 处添加垂直分页符。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#14](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#14)]
  [!code-vb[Trin_ExcelWorkSheet#14](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#14)]  
@@ -4719,19 +4822,19 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 仅在 Microsoft Office Professional Edition 2003 和 Microsoft Office Excel 2003 中可用的 XML 功能，除了将文件保存 XML 电子表格格式。  
+ XML 功能 (保存为 XML 电子表格格式的文件除外) 仅在 Microsoft Office Professional Edition 2003 和 Microsoft Office Excel 2003 中提供。  
   
- 如果在 XML 列表中的列中存在 XPath<xref:Microsoft.Office.Interop.Excel.Range>返回的对象不包含标头行或插入行。  
+ 如果 XPath 存在于 XML 列表中的某一列内, <xref:Microsoft.Office.Interop.Excel.Range>则返回的对象不包含标题行或插入行。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
+ 有关可选参数的信息, 请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.XmlDataQuery%2A>方法以获取<xref:Microsoft.Office.Interop.Excel.Range>映射到特定 XPath 的单元格。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.XmlDataQuery%2A>方法<xref:Microsoft.Office.Interop.Excel.Range>获取映射到特定 XPath 的单元格的。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#116](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#116)]
  [!code-vb[Trin_ExcelWorkSheet#116](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#116)]  
@@ -4767,19 +4870,19 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 仅在 Microsoft Office Professional Edition 2003 和 Microsoft Office Excel 2003 中可用的 XML 功能，除了将文件保存 XML 电子表格格式。  
+ XML 功能 (保存为 XML 电子表格格式的文件除外) 仅在 Microsoft Office Professional Edition 2003 和 Microsoft Office Excel 2003 中提供。  
   
- 与不同<xref:Microsoft.Office.Tools.Excel.WorksheetBase.XmlDataQuery%2A>方法，<xref:Microsoft.Office.Tools.Excel.WorksheetBase.XmlMapQuery%2A>方法返回的 XML 列表，包括标题行和插入行的整个列。  
+ 与方法不同, 该<xref:Microsoft.Office.Tools.Excel.WorksheetBase.XmlMapQuery%2A>方法返回 XML 列表的整个列, 包括标题行和插入行。 <xref:Microsoft.Office.Tools.Excel.WorksheetBase.XmlDataQuery%2A>  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
+ 有关可选参数的信息, 请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.XmlMapQuery%2A>方法以获取<xref:Microsoft.Office.Interop.Excel.Range>映射到特定 XPath 的单元格。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.WorksheetBase.XmlMapQuery%2A>方法<xref:Microsoft.Office.Interop.Excel.Range>获取映射到特定 XPath 的单元格的。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelWorkSheet#117](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/CS/Trin_ExcelWorkSheet.cs#117)]
  [!code-vb[Trin_ExcelWorkSheet#117](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelWorkSheet/VB/Sheet1.vb#117)]  

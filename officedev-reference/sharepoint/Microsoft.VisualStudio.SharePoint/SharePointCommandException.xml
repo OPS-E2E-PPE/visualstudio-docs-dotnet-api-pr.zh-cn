@@ -1,5 +1,5 @@
 <Type Name="SharePointCommandException" FullName="Microsoft.VisualStudio.SharePoint.SharePointCommandException">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="55e7cad17fde105fe5ee9ce5b50490117a83eb58" /><Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="09/19/2018" /><Meta Name="ms.locfileid" Value="46454916" /></Metadata><TypeSignature Language="C#" Value="public class SharePointCommandException : Exception" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="0aed083e302dfc4368027caf84e318fe6b01d29f" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69006919" /></Metadata><TypeSignature Language="C#" Value="public class SharePointCommandException : Exception" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit SharePointCommandException extends System.Exception" />
   <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.SharePoint.SharePointCommandException" />
   <AssemblyInfo>
@@ -10,15 +10,20 @@
     <BaseTypeName>System.Exception</BaseTypeName>
   </Base>
   <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Serializable</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
     <summary>SharePoint 命令失败时引发的异常。</summary>
     <remarks>
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- *SharePoint 命令*是可用于在 SharePoint 工具扩展中调入 SharePoint 服务器对象模型的方法。 通过名为 vssphost4.exe 的 64 位进程执行 SharePoint 命令。 Vssphost4.exe 中引发的任何异常返回到 SharePoint 命令的访问权限<xref:Microsoft.VisualStudio.SharePoint.SharePointCommandException>。  
+ *Sharepoint 命令*是可以在 sharepoint 工具扩展中用于调入 sharepoint 服务器对象模型的方法。 SharePoint 命令通过名为 vssphost4.exe 进程的64位进程来执行。 在 vssphost4.exe 进程中引发的任何异常都作为<xref:Microsoft.VisualStudio.SharePoint.SharePointCommandException>返回到 SharePoint 命令。  
   
- 有关 SharePoint 命令的详细信息，请参阅[调入 SharePoint 对象模型](/visualstudio/sharepoint/calling-into-the-sharepoint-object-models)。  
+ 有关 SharePoint 命令的详细信息, 请参阅[调入 Sharepoint 对象模型](/visualstudio/sharepoint/calling-into-the-sharepoint-object-models)。  
   
  ]]></format>
     </remarks>
@@ -165,7 +170,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取导致异常的命令 ID。</summary>
-        <value>一个字符串，表示命令 id。</value>
+        <value>表示命令 ID 的字符串。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

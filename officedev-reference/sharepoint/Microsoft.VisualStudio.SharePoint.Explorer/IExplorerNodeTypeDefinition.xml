@@ -1,5 +1,5 @@
 <Type Name="IExplorerNodeTypeDefinition" FullName="Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeDefinition">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="017605ec03d2b5da673a57c68b156419e30eb8f9" /><Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="09/19/2018" /><Meta Name="ms.locfileid" Value="46454072" /></Metadata><TypeSignature Language="C#" Value="public interface IExplorerNodeTypeDefinition : Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeEvents, Microsoft.VisualStudio.SharePoint.IAnnotatedObject" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="383d6f1bddcaf57af8211527a04bf40d3872d021" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69011418" /></Metadata><TypeSignature Language="C#" Value="public interface IExplorerNodeTypeDefinition : Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeEvents, Microsoft.VisualStudio.SharePoint.IAnnotatedObject" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IExplorerNodeTypeDefinition implements class Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeEvents, class Microsoft.VisualStudio.SharePoint.IAnnotatedObject" />
   <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeDefinition" />
   <AssemblyInfo>
@@ -20,9 +20,9 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要创建新的节点类型，实现<xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeProvider>接口。 中的实现<xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeProvider.InitializeType%2A>方法，可以使用属性和事件<xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeDefinition>参数来定义新的节点类型的行为。 有关详细信息，请参阅[如何： 将自定义 SharePoint 节点添加到服务器资源管理器](/visualstudio/sharepoint/how-to-add-a-custom-sharepoint-node-to-server-explorer)。  
+ 若要创建新类型的节点, 请实现<xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeProvider>接口。 在<xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeProvider.InitializeType%2A>方法的实现中, 可以使用<xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeDefinition>参数的属性和事件来定义新节点类型的行为。 有关详细信息，请参阅[如何：将自定义 SharePoint 节点添加到](/visualstudio/sharepoint/how-to-add-a-custom-sharepoint-node-to-server-explorer)服务器资源管理器。  
   
- 每种类型的节点初始化由一个<xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeDefinition>对象。  
+ 每种类型的节点都由一个<xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeDefinition>对象进行初始化。  
   
  ]]></format>
     </remarks>
@@ -42,7 +42,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置由此节点类型定义的节点的默认图标。</summary>
-        <value>此节点类型由定义的节点的默认图标。</value>
+        <value>此节点类型定义的节点的默认图标。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -60,12 +60,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，该值指示此类型的节点是否没有子节点。</summary>
-        <value>一个值，指示此类型的节点是否具有任何子节点。</value>
+        <value>一个值, 该值指示此类型的节点是否没有子节点。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性可以由到此节点类型的扩展插件所取代。  
+ 此节点类型的扩展可以取代此属性。  
   
  ]]></format>
         </remarks>
@@ -90,7 +90,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 名称显示在**属性**窗口时选择此类型的节点。  
+ 当选择此类型的节点时, 该名称将显示在 "**属性**" 窗口中。  
   
  ]]></format>
         </remarks>
@@ -110,7 +110,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个布尔值，该值指示此类型的节点是否通常没有子节点。 如果存在 <see cref="T:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeType" /> 的扩展，将取代此属性。</summary>
-        <value>表示节点类型的值。</value>
+        <value>一个表示节点类型的值。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

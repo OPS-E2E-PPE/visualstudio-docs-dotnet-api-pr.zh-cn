@@ -1,5 +1,5 @@
 <Type Name="ControlCollection" FullName="Microsoft.Office.Tools.Word.ControlCollection">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="a6019f940e4c6e92974f93f9e52953660ee03ee7" /><Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="09/19/2018" /><Meta Name="ms.locfileid" Value="46459492" /></Metadata><TypeSignature Language="C#" Value="public interface ControlCollection : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="1e34c175007e37b1074086850d306ebbcd3048bc" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69000468" /></Metadata><TypeSignature Language="C#" Value="public interface ControlCollection : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ControlCollection implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Word.ControlCollection" />
   <AssemblyInfo>
@@ -19,9 +19,6 @@
     <Attribute>
       <AttributeName>System.Runtime.InteropServices.Guid("E1180F09-B903-4D03-8D30-2845219AEE2C")</AttributeName>
     </Attribute>
-    <Attribute>
-      <AttributeName>System.Runtime.InteropServices.TypeIdentifier</AttributeName>
-    </Attribute>
   </Attributes>
   <Docs>
     <summary>表示一个 Word 文档中的托管控件集合，该文档已通过使用 Visual Studio 中的 Office 开发工具进行自定义。</summary>
@@ -29,19 +26,19 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用<xref:Microsoft.Office.Tools.Word.ControlCollection>方法和属性来管理在 Word 文档上的控件。 有关详细信息，请参阅 [在运行时向 Office 文档添加控件](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。  
+ <xref:Microsoft.Office.Tools.Word.ControlCollection>使用方法和属性来管理 Word 文档中的控件。 有关详细信息，请参阅 [Adding Controls to Office Documents at Run Time](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。  
   
- 若要获取<xref:Microsoft.Office.Tools.Word.ControlCollection>对象在文档级项目中，使用<xref:Microsoft.Office.Tools.Word.Document.Controls%2A>属性的`ThisDocument`在项目中的类。 若要获取<xref:Microsoft.Office.Tools.Word.ControlCollection>在应用程序级项目中，使用对象<xref:Microsoft.Office.Tools.Word.Document.Controls%2A>属性的<xref:Microsoft.Office.Tools.Word.Document>在运行时以编程方式创建宿主项。 有关更多信息，请参见 [在运行时在 VSTO 外接程序中扩展 Word 文档和 Excel 工作簿](/visualstudio/vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time)。  
+ 若要在<xref:Microsoft.Office.Tools.Word.ControlCollection>文档级项目中获取对象, 请在项目<xref:Microsoft.Office.Tools.Word.Document.Controls%2A>中使用`ThisDocument`类的属性。 若要获取<xref:Microsoft.Office.Tools.Word.ControlCollection>应用程序级项目中的对象, 请<xref:Microsoft.Office.Tools.Word.Document.Controls%2A>使用在运行时<xref:Microsoft.Office.Tools.Word.Document>以编程方式创建的主机项的属性。 有关更多信息，请参见 [Extending Word Documents and Excel Workbooks in VSTO Add-ins at Run Time](/visualstudio/vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time)。  
   
- 下表显示了如何使用<xref:Microsoft.Office.Tools.Word.ControlCollection>成员来执行一些常见的任务与文档上的控件。  
+ 下表显示了如何使用<xref:Microsoft.Office.Tools.Word.ControlCollection>成员执行一些与文档上的控件相关的常见任务。  
   
 |任务|操作|  
 |----------|------------|  
-|向文档添加控件。|使用添加之一*ControlName*方法。 例如，若要添加内容控件，请使用<xref:Microsoft.Office.Tools.Word.ControlCollection.AddContentControl%2A>方法。|  
-|从文档中移除的控件。|使用 <xref:Microsoft.Office.Tools.Word.ControlCollection.Remove%2A> 方法。|  
-|确定控件是否在集合中。|将控件或其名称传递<xref:Microsoft.Office.Tools.Word.ControlCollection.Contains%2A>方法。|  
-|获取集合中的控件的索引。|将控件或其名称传递<xref:Microsoft.Office.Tools.Word.ControlCollection.IndexOf%2A>方法。|  
-|从集合中获取一个控件。|传递的索引或名称，该控件的<xref:Microsoft.Office.Tools.Word.ControlCollection.Item%2A>属性。|  
+|向文档添加控件。|使用 Add*ControlName*方法之一。 例如, 若要添加内容控件, 请使用<xref:Microsoft.Office.Tools.Word.ControlCollection.AddContentControl%2A>方法。|  
+|从文档中删除控件。|使用 <xref:Microsoft.Office.Tools.Word.ControlCollection.Remove%2A> 方法。|  
+|确定控件是否在集合中。|将控件或其名称传递给<xref:Microsoft.Office.Tools.Word.ControlCollection.Contains%2A>方法。|  
+|获取集合中的控件的索引。|将控件或其名称传递给<xref:Microsoft.Office.Tools.Word.ControlCollection.IndexOf%2A>方法。|  
+|从集合中获取一个控件。|向<xref:Microsoft.Office.Tools.Word.ControlCollection.Item%2A>属性传递控件的索引或名称。|  
   
  [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
   
@@ -52,24 +49,6 @@
     </remarks>
   </Docs>
   <Members>
-    <Member MemberName="_VtblGap1_29">
-      <MemberSignature Language="C#" Value="public void _VtblGap1_29 ();" />
-      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void _VtblGap1_29() cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.ControlCollection._VtblGap1_29" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Office.Tools.Word.v4.0.Utilities</AssemblyName>
-        <AssemblyVersion>10.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Void</ReturnType>
-      </ReturnValue>
-      <Parameters />
-      <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
     <Member MemberName="AddBookmark">
       <MemberSignature Language="C#" Value="public Microsoft.Office.Tools.Word.Bookmark AddBookmark (Microsoft.Office.Interop.Word.Bookmark bookmark, string name);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.Tools.Word.Bookmark AddBookmark(class Microsoft.Office.Interop.Word.Bookmark bookmark, string name) cil managed" />
@@ -119,14 +98,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法可以添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件添加到末尾<xref:Microsoft.Office.Tools.Word.ControlCollection>。  
+ 此方法使你能够将<xref:Microsoft.Office.Tools.Word.Bookmark>控件添加到的末尾。 <xref:Microsoft.Office.Tools.Word.ControlCollection>  
   
- 若要删除<xref:Microsoft.Office.Tools.Word.Bookmark>以编程方式添加的控件，请使用<xref:Microsoft.Office.Tools.Word.ControlCollection.Remove%2A>方法。  
+ 若要移除<xref:Microsoft.Office.Tools.Word.Bookmark>以编程方式添加的控件, 请<xref:Microsoft.Office.Tools.Word.ControlCollection.Remove%2A>使用方法。  
   
    
   
 ## Examples  
- 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Bookmark>到文档中，控制，然后将文本添加到该书签。  
+ 下面的代码示例将<xref:Microsoft.Office.Tools.Word.Bookmark>控件添加到文档中, 然后将文本添加到书签。  
   
  [!code-csharp[Trin_WordControlCollection#1](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#1)]
  [!code-vb[Trin_WordControlCollection#1](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#1)]  
@@ -161,19 +140,19 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用此方法将添加一个新<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>在运行时在文档中当前选定的位置。 有关详细信息，请参阅 [在运行时向 Office 文档添加控件](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。  
+ 使用此方法可以在运行时<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>在文档的当前选定内容中添加一个新的。 有关详细信息，请参阅 [Adding Controls to Office Documents at Run Time](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。  
   
    
   
 ## Examples  
- 下面的代码示例添加一个新<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>到文档开头。 <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>显示提供的 Microsoft Office Word 的等式构建基块。  
+ 下面的代码示例将一个新<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>添加到文档的开头。 <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>显示 Microsoft Office Word 提供的公式构造块。  
   
- 此版本是文档级自定义项。 若要使用此代码，将其粘贴到`ThisDocument`类中，你的项目，并调用`AddBuildingBlockControlAtSelection`方法从`ThisDocument_Startup`方法。  
+ 此版本适用于文档级自定义项。 若要使用此代码, 请将其`ThisDocument`粘贴到项目的类中, 然后`AddBuildingBlockControlAtSelection`从`ThisDocument_Startup`方法调用方法。  
   
  [!code-csharp[Trin_ContentControlReference#1](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference/CS/BuildingBlockGallery.cs#1)]
  [!code-vb[Trin_ContentControlReference#1](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference/VB/BuildingBlockGallery.vb#1)]  
   
- 此版本用于针对 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的应用程序级外接程序。 若要使用此代码，将其粘贴到`ThisAddIn`类中，你的项目，并调用`AddBuildingBlockControlAtSelection`方法从`ThisAddIn_Startup`方法。  
+ 此版本用于针对 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的应用程序级外接程序。 若要使用此代码, 请将其`ThisAddIn`粘贴到项目的类中, 然后`AddBuildingBlockControlAtSelection`从`ThisAddIn_Startup`方法调用方法。  
   
  [!code-csharp[Trin_ContentControlReference_AppLevelAddIn#1](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/CS/BuildingBlockGallery.cs#1)]
  [!code-vb[Trin_ContentControlReference_AppLevelAddIn#1](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/VB/BuildingBlockGallery.vb#1)]  
@@ -209,31 +188,31 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用此方法将添加一个新<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>基于文档中的本机内容控件。 这是有用的在创建时<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>在运行时，并且你想要在下次打开该文档时重新创建相同的控件。 有关详细信息，请参阅 [在运行时向 Office 文档添加控件](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。  
+ 使用此方法可添加基于文档<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>中的本机内容控件的新。 当您<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>在运行时创建, 并且您想要在下次打开文档时重新创建同一个控件时, 这非常有用。 有关详细信息，请参阅 [Adding Controls to Office Documents at Run Time](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。  
   
    
   
 ## Examples  
- 下面的代码示例创建一个新<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>为已在文档中每个本机构建基块库。  
+ 下面的代码示例为已在<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>文档中的每个本机构建基块库创建一个新的。  
   
- 此版本是文档级自定义项。 若要使用此代码，将其粘贴到`ThisDocument`类中，你的项目，并调用`CreateBuildingBlockControlsFromNativeControls`方法从`ThisDocument_Startup`方法。  
+ 此版本适用于文档级自定义项。 若要使用此代码, 请将其`ThisDocument`粘贴到项目的类中, 然后`CreateBuildingBlockControlsFromNativeControls`从`ThisDocument_Startup`方法调用方法。  
   
  [!code-csharp[Trin_ContentControlReference#3](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference/CS/BuildingBlockGallery.cs#3)]
  [!code-vb[Trin_ContentControlReference#3](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference/VB/BuildingBlockGallery.vb#3)]  
   
- 此版本用于针对 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的应用程序级外接程序。 若要使用此代码，将其粘贴到`ThisAddIn`类中外, 接程序项目，并调用`CreateBuildingBlockControlsFromNativeControls`方法从`ThisAddIn_Startup`方法。  
+ 此版本用于针对 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的应用程序级外接程序。 若要使用此代码, 请将其`ThisAddIn`粘贴到外接程序项目中的类中, `CreateBuildingBlockControlsFromNativeControls`然后从`ThisAddIn_Startup`方法调用方法。  
   
  [!code-csharp[Trin_ContentControlReference_AppLevelAddIn#3](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/CS/BuildingBlockGallery.cs#3)]
  [!code-vb[Trin_ContentControlReference_AppLevelAddIn#3](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/VB/BuildingBlockGallery.vb#3)]  
   
- 下面的代码示例创建一个新<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>为每个用户添加到文档的本机构建基块库。  
+ 下面的代码示例为用户添加<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>到文档中的每个本机构建基块库创建一个新的。  
   
- 此版本是文档级自定义项。 若要使用此代码，将其粘贴到`ThisDocument`在项目中的类。 对于 C#，则还必须附加`ThisDocument_BuildingBlockContentControlAfterAdd`事件处理程序<xref:Microsoft.Office.Tools.Word.Document.ContentControlAfterAdd>事件的`ThisDocument`类。  
+ 此版本适用于文档级自定义项。 若要使用此代码, 请将其`ThisDocument`粘贴到项目中的类。 对于C#, 还必须将`ThisDocument_BuildingBlockContentControlAfterAdd` <xref:Microsoft.Office.Tools.Word.Document.ContentControlAfterAdd>事件处理程序附加到`ThisDocument`类的事件。  
   
  [!code-csharp[Trin_ContentControlReference#4](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference/CS/BuildingBlockGallery.cs#4)]
  [!code-vb[Trin_ContentControlReference#4](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference/VB/BuildingBlockGallery.vb#4)]  
   
- 此版本用于针对 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的应用程序级外接程序。 若要使用此代码，将其粘贴到`ThisAddIn`在项目中的类。 此外，您必须将附加`ActiveDocument_BuildingBlockContentControlAfterAdd`事件处理程序<xref:Microsoft.Office.Tools.Word.Document.ContentControlAfterAdd>活动文档的事件。  
+ 此版本用于针对 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的应用程序级外接程序。 若要使用此代码, 请将其`ThisAddIn`粘贴到项目中的类。 此外, 还必须将`ActiveDocument_BuildingBlockContentControlAfterAdd`事件处理程序附加<xref:Microsoft.Office.Tools.Word.Document.ContentControlAfterAdd>到活动文档的事件。  
   
  [!code-csharp[Trin_ContentControlReference_AppLevelAddIn#4](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/CS/BuildingBlockGallery.cs#4)]
  [!code-vb[Trin_ContentControlReference_AppLevelAddIn#4](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/VB/BuildingBlockGallery.vb#4)]  
@@ -242,7 +221,7 @@
         </remarks>
         <exception cref="T:System.ArgumentNullException"><paramref name="contentControl" /> 为 <see langword="null" />。  
   
-或 
+- 或 - 
  <paramref name="name" /> 为 <see langword="null" />，或其长度为零。</exception>
         <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException"><see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 中已存在具有相同名称的控件。</exception>
         <exception cref="T:System.ArgumentException"><paramref name="contentControl" /> 不是构建基块库（即 <paramref name="contentControl" /> 的 <see cref="P:Microsoft.Office.Interop.Word.ContentControl.Type" /> 属性不具有值 <c>Microsoft.Office.Interop.Word.WdContentControlType.wdContentControlBuildingBlockGallery</c>）。</exception>
@@ -273,19 +252,19 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用此方法将添加一个新<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>在运行时在文档中的指定范围内。 有关详细信息，请参阅 [在运行时向 Office 文档添加控件](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。  
+ 使用此方法可在运行时<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>在文档中的指定范围内添加新的。 有关详细信息，请参阅 [Adding Controls to Office Documents at Run Time](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。  
   
    
   
 ## Examples  
- 下面的代码示例添加一个新<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>到文档开头。 <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>显示提供的 Microsoft Office Word 的等式构建基块。  
+ 下面的代码示例将一个新<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>添加到文档的开头。 <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>显示 Microsoft Office Word 提供的公式构造块。  
   
- 此版本是文档级自定义项。 若要使用此代码，将其粘贴到`ThisDocument`类中，你的项目，并调用`AddBuildingBlockControlAtRange`方法从`ThisDocument_Startup`方法。  
+ 此版本适用于文档级自定义项。 若要使用此代码, 请将其`ThisDocument`粘贴到项目的类中, 然后`AddBuildingBlockControlAtRange`从`ThisDocument_Startup`方法调用方法。  
   
  [!code-csharp[Trin_ContentControlReference#2](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference/CS/BuildingBlockGallery.cs#2)]
  [!code-vb[Trin_ContentControlReference#2](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference/VB/BuildingBlockGallery.vb#2)]  
   
- 此版本用于针对 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的应用程序级外接程序。 若要使用此代码，将其粘贴到`ThisAddIn`类中，你的项目，并调用`AddBuildingBlockControlAtRange`方法从`ThisAddIn_Startup`方法。  
+ 此版本用于针对 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的应用程序级外接程序。 若要使用此代码, 请将其`ThisAddIn`粘贴到项目的类中, 然后`AddBuildingBlockControlAtRange`从`ThisAddIn_Startup`方法调用方法。  
   
  [!code-csharp[Trin_ContentControlReference_AppLevelAddIn#2](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/CS/BuildingBlockGallery.cs#2)]
  [!code-vb[Trin_ContentControlReference_AppLevelAddIn#2](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/VB/BuildingBlockGallery.vb#2)]  
@@ -319,19 +298,19 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用此方法将添加一个新<xref:Microsoft.Office.Tools.Word.ComboBoxContentControl>在运行时在文档中当前选定的位置。 有关详细信息，请参阅 [在运行时向 Office 文档添加控件](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。  
+ 使用此方法可以在运行时<xref:Microsoft.Office.Tools.Word.ComboBoxContentControl>在文档的当前选定内容中添加一个新的。 有关详细信息，请参阅 [Adding Controls to Office Documents at Run Time](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。  
   
    
   
 ## Examples  
- 下面的代码示例添加一个新<xref:Microsoft.Office.Tools.Word.ComboBoxContentControl>到文档开头。 该示例还将多种颜色的名称添加到的用户可以选择在控件中的项列表。  
+ 下面的代码示例将一个新<xref:Microsoft.Office.Tools.Word.ComboBoxContentControl>添加到文档的开头。 该示例还将若干颜色的名称添加到用户可在控件中选择的项的列表中。  
   
- 此版本是文档级自定义项。 若要使用此代码，将其粘贴到`ThisDocument`类中，你的项目，并调用`AddComboBoxControlAtSelection`方法从`ThisDocument_Startup`方法。  
+ 此版本适用于文档级自定义项。 若要使用此代码, 请将其`ThisDocument`粘贴到项目的类中, 然后`AddComboBoxControlAtSelection`从`ThisDocument_Startup`方法调用方法。  
   
  [!code-csharp[Trin_ContentControlReference#100](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference/CS/ComboBox.cs#100)]
  [!code-vb[Trin_ContentControlReference#100](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference/VB/ComboBox.vb#100)]  
   
- 此版本用于针对 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的应用程序级外接程序。 若要使用此代码，将其粘贴到`ThisAddIn`类中，你的项目，并调用`AddComboBoxControlAtSelection`方法从`ThisAddIn_Startup`方法。  
+ 此版本用于针对 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的应用程序级外接程序。 若要使用此代码, 请将其`ThisAddIn`粘贴到项目的类中, 然后`AddComboBoxControlAtSelection`从`ThisAddIn_Startup`方法调用方法。  
   
  [!code-csharp[Trin_ContentControlReference_AppLevelAddIn#100](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/CS/ComboBox.cs#100)]
  [!code-vb[Trin_ContentControlReference_AppLevelAddIn#100](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/VB/ComboBox.vb#100)]  
@@ -367,31 +346,31 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用此方法将添加一个新<xref:Microsoft.Office.Tools.Word.ComboBoxContentControl>，基于在运行时在文档中的本机内容控件。 这是有用的在创建时<xref:Microsoft.Office.Tools.Word.ComboBoxContentControl>在运行时，并且你想要在下次打开该文档时重新创建相同的控件。 有关详细信息，请参阅 [在运行时向 Office 文档添加控件](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。  
+ 使用此方法可在运行时<xref:Microsoft.Office.Tools.Word.ComboBoxContentControl>添加基于文档中的本机内容控件的新。 当您<xref:Microsoft.Office.Tools.Word.ComboBoxContentControl>在运行时创建, 并且您想要在下次打开文档时重新创建同一个控件时, 这非常有用。 有关详细信息，请参阅 [Adding Controls to Office Documents at Run Time](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。  
   
    
   
 ## Examples  
- 下面的代码示例创建一个新<xref:Microsoft.Office.Tools.Word.ComboBoxContentControl>为已在文档中每个本机组合框。  
+ 下面的代码示例为文档中<xref:Microsoft.Office.Tools.Word.ComboBoxContentControl>的每个本机组合框创建一个新的。  
   
- 此版本是文档级自定义项。 若要使用此代码，将其粘贴到`ThisDocument`类中，你的项目，并调用`CreateComboBoxControlsFromNativeControls`方法从`ThisDocument_Startup`方法。  
+ 此版本适用于文档级自定义项。 若要使用此代码, 请将其`ThisDocument`粘贴到项目的类中, 然后`CreateComboBoxControlsFromNativeControls`从`ThisDocument_Startup`方法调用方法。  
   
  [!code-csharp[Trin_ContentControlReference#102](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference/CS/ComboBox.cs#102)]
  [!code-vb[Trin_ContentControlReference#102](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference/VB/ComboBox.vb#102)]  
   
- 此版本用于针对 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的应用程序级外接程序。 若要使用此代码，将其粘贴到`ThisAddIn`类中，你的项目，并调用`CreateComboBoxControlsFromNativeControls`方法从`ThisAddIn_Startup`方法。  
+ 此版本用于针对 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的应用程序级外接程序。 若要使用此代码, 请将其`ThisAddIn`粘贴到项目的类中, 然后`CreateComboBoxControlsFromNativeControls`从`ThisAddIn_Startup`方法调用方法。  
   
  [!code-csharp[Trin_ContentControlReference_AppLevelAddIn#102](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/CS/ComboBox.cs#102)]
  [!code-vb[Trin_ContentControlReference_AppLevelAddIn#102](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/VB/ComboBox.vb#102)]  
   
- 下面的代码示例创建一个新<xref:Microsoft.Office.Tools.Word.ComboBoxContentControl>为每个用户添加到文档的本机组合框。  
+ 下面的代码示例为用户添加<xref:Microsoft.Office.Tools.Word.ComboBoxContentControl>到文档中的每个本机组合框创建一个新的。  
   
- 此版本是文档级自定义项。 若要使用此代码，将其粘贴到`ThisDocument`在项目中的类。 对于 C#，则还必须附加`ThisDocument_ComboBoxContentControlAfterAdd`事件处理程序<xref:Microsoft.Office.Tools.Word.Document.ContentControlAfterAdd>事件的`ThisDocument`类。  
+ 此版本适用于文档级自定义项。 若要使用此代码, 请将其`ThisDocument`粘贴到项目中的类。 对于C#, 还必须将`ThisDocument_ComboBoxContentControlAfterAdd` <xref:Microsoft.Office.Tools.Word.Document.ContentControlAfterAdd>事件处理程序附加到`ThisDocument`类的事件。  
   
  [!code-csharp[Trin_ContentControlReference#103](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference/CS/ComboBox.cs#103)]
  [!code-vb[Trin_ContentControlReference#103](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference/VB/ComboBox.vb#103)]  
   
- 此版本用于针对 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的应用程序级外接程序。 若要使用此代码，将其粘贴到`ThisAddIn`在项目中的类。 此外，您必须将附加`ActiveDocument_ComboBoxContentControlAfterAdd`事件处理程序<xref:Microsoft.Office.Tools.Word.Document.ContentControlAfterAdd>活动文档的事件。  
+ 此版本用于针对 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的应用程序级外接程序。 若要使用此代码, 请将其`ThisAddIn`粘贴到项目中的类。 此外, 还必须将`ActiveDocument_ComboBoxContentControlAfterAdd`事件处理程序附加<xref:Microsoft.Office.Tools.Word.Document.ContentControlAfterAdd>到活动文档的事件。  
   
  [!code-csharp[Trin_ContentControlReference_AppLevelAddIn#103](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/CS/ComboBox.cs#103)]
  [!code-vb[Trin_ContentControlReference_AppLevelAddIn#103](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/VB/ComboBox.vb#103)]  
@@ -400,7 +379,7 @@
         </remarks>
         <exception cref="T:System.ArgumentNullException"><paramref name="contentControl" /> 为 <see langword="null" />。  
   
-或 
+- 或 - 
  <paramref name="name" /> 为 <see langword="null" />，或其长度为零。</exception>
         <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException"><see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 中已存在具有相同名称的控件。</exception>
         <exception cref="T:System.ArgumentException"><paramref name="contentControl" /> 不是构建基块库（即 <paramref name="contentControl" /> 的 <see cref="P:Microsoft.Office.Interop.Word.ContentControl.Type" /> 属性不具有值 <c>Microsoft.Office.Interop.Word.WdContentControlType.wdContentControlComboBox</c>）。</exception>
@@ -431,19 +410,19 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用此方法将添加一个新<xref:Microsoft.Office.Tools.Word.ComboBoxContentControl>在运行时在文档中的指定范围内。 有关详细信息，请参阅 [在运行时向 Office 文档添加控件](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。  
+ 使用此方法可在运行时<xref:Microsoft.Office.Tools.Word.ComboBoxContentControl>在文档中的指定范围内添加新的。 有关详细信息，请参阅 [Adding Controls to Office Documents at Run Time](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。  
   
    
   
 ## Examples  
- 下面的代码示例添加一个新<xref:Microsoft.Office.Tools.Word.ComboBoxContentControl>到文档开头。 该示例还将多种颜色的名称添加到的用户可以选择在控件中的项列表。  
+ 下面的代码示例将一个新<xref:Microsoft.Office.Tools.Word.ComboBoxContentControl>添加到文档的开头。 该示例还将若干颜色的名称添加到用户可在控件中选择的项的列表中。  
   
- 此版本是文档级自定义项。 若要使用此代码，将其粘贴到`ThisDocument`类中，你的项目，并调用`AddComboBoxControlAtRange`方法从`ThisDocument_Startup`方法。  
+ 此版本适用于文档级自定义项。 若要使用此代码, 请将其`ThisDocument`粘贴到项目的类中, 然后`AddComboBoxControlAtRange`从`ThisDocument_Startup`方法调用方法。  
   
  [!code-csharp[Trin_ContentControlReference#101](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference/CS/ComboBox.cs#101)]
  [!code-vb[Trin_ContentControlReference#101](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference/VB/ComboBox.vb#101)]  
   
- 此版本用于针对 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的应用程序级外接程序。 若要使用此代码，将其粘贴到`ThisAddIn`类中，你的项目，并调用`AddComboBoxControlAtRange`方法从`ThisAddIn_Startup`方法。  
+ 此版本用于针对 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的应用程序级外接程序。 若要使用此代码, 请将其`ThisAddIn`粘贴到项目的类中, 然后`AddComboBoxControlAtRange`从`ThisAddIn_Startup`方法调用方法。  
   
  [!code-csharp[Trin_ContentControlReference_AppLevelAddIn#101](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/CS/ComboBox.cs#101)]
  [!code-vb[Trin_ContentControlReference_AppLevelAddIn#101](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/VB/ComboBox.vb#101)]  
@@ -479,7 +458,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用此方法将添加一个新<xref:Microsoft.Office.Tools.Word.ContentControl>，基于在运行时在文档中的本机内容控件。 这是有用的在创建时<xref:Microsoft.Office.Tools.Word.ContentControl>在运行时，并且你想要在下次打开该文档时重新创建相同的控件。 有关详细信息，请参阅 [在运行时向 Office 文档添加控件](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。  
+ 使用此方法可在运行时<xref:Microsoft.Office.Tools.Word.ContentControl>添加基于文档中的本机内容控件的新。 当您<xref:Microsoft.Office.Tools.Word.ContentControl>在运行时创建, 并且您想要在下次打开文档时重新创建同一个控件时, 这非常有用。 有关详细信息，请参阅 [Adding Controls to Office Documents at Run Time](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。  
   
  ]]></format>
         </remarks>
@@ -516,7 +495,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用此方法将添加一个新<xref:Microsoft.Office.Tools.Word.ContentControl>在运行时在文档中当前选定的位置。 有关详细信息，请参阅 [在运行时向 Office 文档添加控件](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。  
+ 使用此方法可以在运行时<xref:Microsoft.Office.Tools.Word.ContentControl>在文档的当前选定内容中添加一个新的。 有关详细信息，请参阅 [Adding Controls to Office Documents at Run Time](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。  
   
  ]]></format>
         </remarks>
@@ -551,7 +530,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用此方法将添加一个新<xref:Microsoft.Office.Tools.Word.ContentControl>在运行时在文档中的指定范围内。 有关详细信息，请参阅 [在运行时向 Office 文档添加控件](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。  
+ 使用此方法可在运行时<xref:Microsoft.Office.Tools.Word.ContentControl>在文档中的指定范围内添加新的。 有关详细信息，请参阅 [Adding Controls to Office Documents at Run Time](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。  
   
  ]]></format>
         </remarks>
@@ -594,12 +573,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法可用于任何控件添加到<xref:Microsoft.Office.Tools.Word.ControlCollection>在运行时。 有关详细信息，请参阅 [在运行时向 Office 文档添加控件](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。  
+ 此方法可用于<xref:Microsoft.Office.Tools.Word.ControlCollection>在运行时向添加任何控件。 有关详细信息，请参阅 [Adding Controls to Office Documents at Run Time](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。  
   
    
   
 ## Examples  
- 下面的代码示例将两个自定义用户控件添加到文档使用<xref:Microsoft.Office.Tools.Word.ControlCollection.AddControl%2A>方法。 第一个控件添加到<xref:Microsoft.Office.Interop.Word.Range>。 第二个控件添加到特定位置。 代码更改<xref:System.Windows.Forms.Control.Top%2A>属性的第一个自定义用户控件，仅将控件移动相对于<xref:Microsoft.Office.Tools.Word.ControlSite>，其中包含在文档上的控件。 代码随后设置<xref:System.Windows.Forms.Control.Top%2A>的属性<xref:Microsoft.Office.Tools.Word.ControlSite>返回的第二个的用户控件，用于说明设置的正确方法<xref:System.Windows.Forms.Control.Top%2A>控件的属性。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.ControlCollection.AddControl%2A>方法将两个自定义用户控件添加到文档中。 第一个控件添加到<xref:Microsoft.Office.Interop.Word.Range>。 将第二个控件添加到特定位置。 此代码会更改<xref:System.Windows.Forms.Control.Top%2A>第一个自定义用户控件的属性, 这只<xref:Microsoft.Office.Tools.Word.ControlSite>会将控件移动到文档上包含控件的。 然后, 该代码设置<xref:System.Windows.Forms.Control.Top%2A>第二个<xref:Microsoft.Office.Tools.Word.ControlSite>用户控件返回的的属性, 以说明设置控件的<xref:System.Windows.Forms.Control.Top%2A>属性的正确方法。  
   
  [!code-csharp[Trin_WordControlCollection#10](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#10)]
  [!code-vb[Trin_WordControlCollection#10](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#10)]  
@@ -648,12 +627,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法可用于任何控件添加到<xref:Microsoft.Office.Tools.Word.ControlCollection>在运行时。 有关详细信息，请参阅 [在运行时向 Office 文档添加控件](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。  
+ 此方法可用于<xref:Microsoft.Office.Tools.Word.ControlCollection>在运行时向添加任何控件。 有关详细信息，请参阅 [Adding Controls to Office Documents at Run Time](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。  
   
    
   
 ## Examples  
- 下面的代码示例将两个自定义用户控件添加到文档使用<xref:Microsoft.Office.Tools.Word.ControlCollection.AddControl%2A>方法。 第一个控件添加到<xref:Microsoft.Office.Interop.Word.Range>。 第二个控件添加到特定位置。 代码更改<xref:System.Windows.Forms.Control.Top%2A>属性的第一个自定义用户控件，仅将控件移动相对于<xref:Microsoft.Office.Tools.Word.ControlSite>，其中包含在文档上的控件。 代码随后设置<xref:System.Windows.Forms.Control.Top%2A>的属性<xref:Microsoft.Office.Tools.Word.ControlSite>返回的第二个的用户控件，用于说明设置的正确方法<xref:System.Windows.Forms.Control.Top%2A>控件的属性。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.ControlCollection.AddControl%2A>方法将两个自定义用户控件添加到文档中。 第一个控件添加到<xref:Microsoft.Office.Interop.Word.Range>。 将第二个控件添加到特定位置。 此代码会更改<xref:System.Windows.Forms.Control.Top%2A>第一个自定义用户控件的属性, 这只<xref:Microsoft.Office.Tools.Word.ControlSite>会将控件移动到文档上包含控件的。 然后, 该代码设置<xref:System.Windows.Forms.Control.Top%2A>第二个<xref:Microsoft.Office.Tools.Word.ControlSite>用户控件返回的的属性, 以说明设置控件的<xref:System.Windows.Forms.Control.Top%2A>属性的正确方法。  
   
  [!code-csharp[Trin_WordControlCollection#10](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#10)]
  [!code-vb[Trin_WordControlCollection#10](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#10)]  
@@ -688,19 +667,19 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用此方法将添加一个新<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>在运行时在文档中当前选定的位置。 有关详细信息，请参阅 [在运行时向 Office 文档添加控件](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。  
+ 使用此方法可以在运行时<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>在文档的当前选定内容中添加一个新的。 有关详细信息，请参阅 [Adding Controls to Office Documents at Run Time](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。  
   
    
   
 ## Examples  
- 下面的代码示例添加一个新<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>到文档开头。 该示例还会修改该控件显示日期的格式。  
+ 下面的代码示例将一个新<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>添加到文档的开头。 该示例还会修改控件显示日期的格式。  
   
- 此版本是文档级自定义项。 若要使用此代码，将其粘贴到`ThisDocument`类中，你的项目，并调用`AddDatePickerControlAtSelection`方法从`ThisDocument_Startup`方法。  
+ 此版本适用于文档级自定义项。 若要使用此代码, 请将其`ThisDocument`粘贴到项目的类中, 然后`AddDatePickerControlAtSelection`从`ThisDocument_Startup`方法调用方法。  
   
  [!code-csharp[Trin_ContentControlReference#200](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference/CS/DatePicker.cs#200)]
  [!code-vb[Trin_ContentControlReference#200](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference/VB/DatePicker.vb#200)]  
   
- 此版本用于针对 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的应用程序级外接程序。 若要使用此代码，将其粘贴到`ThisAddIn`类中，你的项目，并调用`AddDatePickerControlAtSelection`方法从`ThisAddIn_Startup`方法。  
+ 此版本用于针对 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的应用程序级外接程序。 若要使用此代码, 请将其`ThisAddIn`粘贴到项目的类中, 然后`AddDatePickerControlAtSelection`从`ThisAddIn_Startup`方法调用方法。  
   
  [!code-csharp[Trin_ContentControlReference_AppLevelAddIn#200](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/CS/DatePicker.cs#200)]
  [!code-vb[Trin_ContentControlReference_AppLevelAddIn#200](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/VB/DatePicker.vb#200)]  
@@ -736,31 +715,31 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用此方法将添加一个新<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>，基于在运行时在文档中的本机内容控件。 这是有用的在创建时<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>在运行时，并且你想要在下次打开该文档时重新创建相同的控件。 有关详细信息，请参阅 [在运行时向 Office 文档添加控件](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。  
+ 使用此方法可在运行时<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>添加基于文档中的本机内容控件的新。 当您<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>在运行时创建, 并且您想要在下次打开文档时重新创建同一个控件时, 这非常有用。 有关详细信息，请参阅 [Adding Controls to Office Documents at Run Time](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。  
   
    
   
 ## Examples  
- 下面的代码示例创建一个新<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>为文档中的每个本机日期控件。  
+ 下面的代码示例为文档中<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>的每个本机日期控件创建一个新的。  
   
- 此版本是文档级自定义项。 若要使用此代码，将其粘贴到`ThisDocument`类中，你的项目，并调用`CreateDatePickerControlsFromNativeControls`方法从`ThisDocument_Startup`方法。  
+ 此版本适用于文档级自定义项。 若要使用此代码, 请将其`ThisDocument`粘贴到项目的类中, 然后`CreateDatePickerControlsFromNativeControls`从`ThisDocument_Startup`方法调用方法。  
   
  [!code-csharp[Trin_ContentControlReference#202](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference/CS/DatePicker.cs#202)]
  [!code-vb[Trin_ContentControlReference#202](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference/VB/DatePicker.vb#202)]  
   
- 此版本用于针对 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的应用程序级外接程序。 若要使用此代码，将其粘贴到`ThisAddIn`类中，你的项目，并调用`CreateDatePickerControlsFromNativeControls`方法从`ThisAddIn_Startup`方法。  
+ 此版本用于针对 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的应用程序级外接程序。 若要使用此代码, 请将其`ThisAddIn`粘贴到项目的类中, 然后`CreateDatePickerControlsFromNativeControls`从`ThisAddIn_Startup`方法调用方法。  
   
  [!code-csharp[Trin_ContentControlReference_AppLevelAddIn#202](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/CS/DatePicker.cs#202)]
  [!code-vb[Trin_ContentControlReference_AppLevelAddIn#202](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/VB/DatePicker.vb#202)]  
   
- 下面的代码示例创建一个新<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>的每个本机日期控件向文档添加用户。  
+ 下面的代码示例为用户添加<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>到文档中的每个本机日期控件创建一个新的。  
   
- 此版本是文档级自定义项。 若要使用此代码，将其粘贴到`ThisDocument`在项目中的类。 对于 C#，则还必须附加`ThisDocument_DatePickerContentControlAfterAdd`事件处理程序<xref:Microsoft.Office.Tools.Word.Document.ContentControlAfterAdd>事件的`ThisDocument`类。  
+ 此版本适用于文档级自定义项。 若要使用此代码, 请将其`ThisDocument`粘贴到项目中的类。 对于C#, 还必须将`ThisDocument_DatePickerContentControlAfterAdd` <xref:Microsoft.Office.Tools.Word.Document.ContentControlAfterAdd>事件处理程序附加到`ThisDocument`类的事件。  
   
  [!code-csharp[Trin_ContentControlReference#203](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference/CS/DatePicker.cs#203)]
  [!code-vb[Trin_ContentControlReference#203](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference/VB/DatePicker.vb#203)]  
   
- 若要使用此代码，将其粘贴到`ThisAddIn`在项目中的类。 此外，您必须将附加`ActiveDocument_DatePickerContentControlAfterAdd`事件处理程序<xref:Microsoft.Office.Tools.Word.Document.ContentControlAfterAdd>活动文档的事件。  
+ 若要使用此代码, 请将其`ThisAddIn`粘贴到项目中的类。 此外, 还必须将`ActiveDocument_DatePickerContentControlAfterAdd`事件处理程序附加<xref:Microsoft.Office.Tools.Word.Document.ContentControlAfterAdd>到活动文档的事件。  
   
  [!code-csharp[Trin_ContentControlReference_AppLevelAddIn#203](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/CS/DatePicker.cs#203)]
  [!code-vb[Trin_ContentControlReference_AppLevelAddIn#203](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/VB/DatePicker.vb#203)]  
@@ -800,19 +779,19 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用此方法将添加一个新<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>在运行时在文档中的指定范围内。 有关详细信息，请参阅 [在运行时向 Office 文档添加控件](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。  
+ 使用此方法可在运行时<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>在文档中的指定范围内添加新的。 有关详细信息，请参阅 [Adding Controls to Office Documents at Run Time](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。  
   
    
   
 ## Examples  
- 下面的代码示例添加一个新<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>到文档开头。 该示例还会修改该控件显示日期的格式。  
+ 下面的代码示例将一个新<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>添加到文档的开头。 该示例还会修改控件显示日期的格式。  
   
- 此版本是文档级自定义项。 若要使用此代码，将其粘贴到`ThisDocument`类中，你的项目，并调用`AddDatePickerControlAtRange`方法从`ThisDocument_Startup`方法。  
+ 此版本适用于文档级自定义项。 若要使用此代码, 请将其`ThisDocument`粘贴到项目的类中, 然后`AddDatePickerControlAtRange`从`ThisDocument_Startup`方法调用方法。  
   
  [!code-csharp[Trin_ContentControlReference#201](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference/CS/DatePicker.cs#201)]
  [!code-vb[Trin_ContentControlReference#201](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference/VB/DatePicker.vb#201)]  
   
- 此版本用于针对 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的应用程序级外接程序。 若要使用此代码，将其粘贴到`ThisAddIn`类中，你的项目，并调用`AddDatePickerControlAtRange`方法从`ThisAddIn_Startup`方法。  
+ 此版本用于针对 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的应用程序级外接程序。 若要使用此代码, 请将其`ThisAddIn`粘贴到项目的类中, 然后`AddDatePickerControlAtRange`从`ThisAddIn_Startup`方法调用方法。  
   
  [!code-csharp[Trin_ContentControlReference_AppLevelAddIn#201](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/CS/DatePicker.cs#201)]
  [!code-vb[Trin_ContentControlReference_AppLevelAddIn#201](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/VB/DatePicker.vb#201)]  
@@ -846,19 +825,19 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用此方法将添加一个新<xref:Microsoft.Office.Tools.Word.DropDownListContentControl>在运行时在文档中当前选定的位置。 有关详细信息，请参阅 [在运行时向 Office 文档添加控件](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。  
+ 使用此方法可以在运行时<xref:Microsoft.Office.Tools.Word.DropDownListContentControl>在文档的当前选定内容中添加一个新的。 有关详细信息，请参阅 [Adding Controls to Office Documents at Run Time](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。  
   
    
   
 ## Examples  
- 下面的代码示例添加一个新<xref:Microsoft.Office.Tools.Word.DropDownListContentControl>到文档开头。 该示例还将几天的名称添加到的用户可以选择在控件中的项列表。  
+ 下面的代码示例将一个新<xref:Microsoft.Office.Tools.Word.DropDownListContentControl>添加到文档的开头。 该示例还将几天的名称添加到用户可在控件中选择的项的列表中。  
   
- 此版本是文档级自定义项。 若要使用此代码，将其粘贴到`ThisDocument`类中，你的项目，并调用`AddDropDownListControlAtSelection`方法从`ThisDocument_Startup`方法。  
+ 此版本适用于文档级自定义项。 若要使用此代码, 请将其`ThisDocument`粘贴到项目的类中, 然后`AddDropDownListControlAtSelection`从`ThisDocument_Startup`方法调用方法。  
   
  [!code-csharp[Trin_ContentControlReference#300](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference/CS/DropDownList.cs#300)]
  [!code-vb[Trin_ContentControlReference#300](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference/VB/DropDownList.vb#300)]  
   
- 此版本用于针对 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的应用程序级外接程序。 若要使用此代码，将其粘贴到`ThisAddIn`类中，你的项目，并调用`AddDropDownListControlAtSelection`方法从`ThisAddIn_Startup`方法。  
+ 此版本用于针对 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的应用程序级外接程序。 若要使用此代码, 请将其`ThisAddIn`粘贴到项目的类中, 然后`AddDropDownListControlAtSelection`从`ThisAddIn_Startup`方法调用方法。  
   
  [!code-csharp[Trin_ContentControlReference_AppLevelAddIn#300](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/CS/DropDownList.cs#300)]
  [!code-vb[Trin_ContentControlReference_AppLevelAddIn#300](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/VB/DropDownList.vb#300)]  
@@ -894,31 +873,31 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用此方法将添加一个新<xref:Microsoft.Office.Tools.Word.DropDownListContentControl>，基于在运行时在文档中的本机内容控件。 这是有用的在创建时<xref:Microsoft.Office.Tools.Word.DropDownListContentControl>在运行时，并且你想要在下次打开该文档时重新创建相同的控件。 有关详细信息，请参阅 [在运行时向 Office 文档添加控件](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。  
+ 使用此方法可在运行时<xref:Microsoft.Office.Tools.Word.DropDownListContentControl>添加基于文档中的本机内容控件的新。 当您<xref:Microsoft.Office.Tools.Word.DropDownListContentControl>在运行时创建, 并且您想要在下次打开文档时重新创建同一个控件时, 这非常有用。 有关详细信息，请参阅 [Adding Controls to Office Documents at Run Time](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。  
   
    
   
 ## Examples  
- 下面的代码示例创建一个新<xref:Microsoft.Office.Tools.Word.DropDownListContentControl>为每个本机下拉文档中的列表。  
+ 下面的代码示例为文档中<xref:Microsoft.Office.Tools.Word.DropDownListContentControl>的每个本机下拉列表创建一个新的。  
   
- 此版本是文档级自定义项。 若要使用此代码，将其粘贴到`ThisDocument`类中，你的项目，并调用`CreateDropDownListControlsFromNativeControls`方法从`ThisDocument_Startup`方法。  
+ 此版本适用于文档级自定义项。 若要使用此代码, 请将其`ThisDocument`粘贴到项目的类中, 然后`CreateDropDownListControlsFromNativeControls`从`ThisDocument_Startup`方法调用方法。  
   
  [!code-csharp[Trin_ContentControlReference#302](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference/CS/DropDownList.cs#302)]
  [!code-vb[Trin_ContentControlReference#302](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference/VB/DropDownList.vb#302)]  
   
- 此版本用于针对 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的应用程序级外接程序。 若要使用此代码，将其粘贴到`ThisAddIn`类中外, 接程序项目，并调用`CreateDropDownListControlsFromNativeControls`方法从`ThisAddIn_Startup`方法。  
+ 此版本用于针对 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的应用程序级外接程序。 若要使用此代码, 请将其`ThisAddIn`粘贴到外接程序项目中的类中, `CreateDropDownListControlsFromNativeControls`然后从`ThisAddIn_Startup`方法调用方法。  
   
  [!code-csharp[Trin_ContentControlReference_AppLevelAddIn#302](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/CS/DropDownList.cs#302)]
  [!code-vb[Trin_ContentControlReference_AppLevelAddIn#302](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/VB/DropDownList.vb#302)]  
   
- 下面的代码示例创建一个新<xref:Microsoft.Office.Tools.Word.DropDownListContentControl>为每个本机下拉列表，该用户添加到文档列表。  
+ 下面的代码示例为用户添加<xref:Microsoft.Office.Tools.Word.DropDownListContentControl>到文档中的每个本机下拉列表创建一个新的。  
   
- 此版本是文档级自定义项。 若要使用此代码，将其粘贴到`ThisDocument`在项目中的类。 对于 C#，则还必须附加`ThisDocument_DropDownListContentControlAfterAdd`事件处理程序<xref:Microsoft.Office.Tools.Word.Document.ContentControlAfterAdd>事件的`ThisDocument`类。  
+ 此版本适用于文档级自定义项。 若要使用此代码, 请将其`ThisDocument`粘贴到项目中的类。 对于C#, 还必须将`ThisDocument_DropDownListContentControlAfterAdd` <xref:Microsoft.Office.Tools.Word.Document.ContentControlAfterAdd>事件处理程序附加到`ThisDocument`类的事件。  
   
  [!code-csharp[Trin_ContentControlReference#303](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference/CS/DropDownList.cs#303)]
  [!code-vb[Trin_ContentControlReference#303](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference/VB/DropDownList.vb#303)]  
   
- 此版本用于针对 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的应用程序级外接程序。 若要使用此代码，将其粘贴到`ThisAddIn`在项目中的类。 此外，您必须将附加`ActiveDocument_DropDownListContentControlAfterAdd`事件处理程序<xref:Microsoft.Office.Tools.Word.Document.ContentControlAfterAdd>活动文档的事件。  
+ 此版本用于针对 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的应用程序级外接程序。 若要使用此代码, 请将其`ThisAddIn`粘贴到项目中的类。 此外, 还必须将`ActiveDocument_DropDownListContentControlAfterAdd`事件处理程序附加<xref:Microsoft.Office.Tools.Word.Document.ContentControlAfterAdd>到活动文档的事件。  
   
  [!code-csharp[Trin_ContentControlReference_AppLevelAddIn#303](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/CS/DropDownList.cs#303)]
  [!code-vb[Trin_ContentControlReference_AppLevelAddIn#303](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/VB/DropDownList.vb#303)]  
@@ -927,7 +906,7 @@
         </remarks>
         <exception cref="T:System.ArgumentNullException"><paramref name="contentControl" /> 为 <see langword="null" />。  
   
-或 
+- 或 - 
  <paramref name="name" /> 为 <see langword="null" />，或其长度为零。</exception>
         <exception cref="T:Microsoft.Office.Tools.ControlNameAlreadyExistsException"><see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 中已存在具有相同名称的控件。</exception>
         <exception cref="T:System.ArgumentException"><paramref name="contentControl" /> 不是构建基块库（即 <paramref name="contentControl" /> 的 <see cref="P:Microsoft.Office.Interop.Word.ContentControl.Type" /> 属性不具有值 <c>Microsoft.Office.Interop.Word.WdContentControlType.wdContentControlDropdownList</c>）。</exception>
@@ -958,19 +937,19 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用此方法将添加一个新<xref:Microsoft.Office.Tools.Word.DropDownListContentControl>在运行时在文档中的指定范围内。 有关详细信息，请参阅 [在运行时向 Office 文档添加控件](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。  
+ 使用此方法可在运行时<xref:Microsoft.Office.Tools.Word.DropDownListContentControl>在文档中的指定范围内添加新的。 有关详细信息，请参阅 [Adding Controls to Office Documents at Run Time](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。  
   
    
   
 ## Examples  
- 下面的代码示例添加一个新<xref:Microsoft.Office.Tools.Word.DropDownListContentControl>到文档开头。 该示例还将几天的名称添加到的用户可以选择在控件中的项列表。  
+ 下面的代码示例将一个新<xref:Microsoft.Office.Tools.Word.DropDownListContentControl>添加到文档的开头。 该示例还将几天的名称添加到用户可在控件中选择的项的列表中。  
   
- 此版本是文档级自定义项。 若要使用此代码，将其粘贴到`ThisDocument`类中，你的项目，并调用`AddDropDownListControlAtRange`方法从`ThisDocument_Startup`方法。  
+ 此版本适用于文档级自定义项。 若要使用此代码, 请将其`ThisDocument`粘贴到项目的类中, 然后`AddDropDownListControlAtRange`从`ThisDocument_Startup`方法调用方法。  
   
  [!code-csharp[Trin_ContentControlReference#301](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference/CS/DropDownList.cs#301)]
  [!code-vb[Trin_ContentControlReference#301](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference/VB/DropDownList.vb#301)]  
   
- 此版本用于针对 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的应用程序级外接程序。 若要使用此代码，将其粘贴到`ThisAddIn`类中，你的项目，并调用`AddDropDownListControlAtRange`方法从`ThisAddIn_Startup`方法。  
+ 此版本用于针对 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的应用程序级外接程序。 若要使用此代码, 请将其`ThisAddIn`粘贴到项目的类中, 然后`AddDropDownListControlAtRange`从`ThisAddIn_Startup`方法调用方法。  
   
  [!code-csharp[Trin_ContentControlReference_AppLevelAddIn#301](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/CS/DropDownList.cs#301)]
  [!code-vb[Trin_ContentControlReference_AppLevelAddIn#301](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/VB/DropDownList.vb#301)]  
@@ -1004,19 +983,19 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用此方法将添加一个新<xref:Microsoft.Office.Tools.Word.GroupContentControl>在运行时在文档中当前选定的位置。 有关详细信息，请参阅 [在运行时向 Office 文档添加控件](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。  
+ 使用此方法可以在运行时<xref:Microsoft.Office.Tools.Word.GroupContentControl>在文档的当前选定内容中添加一个新的。 有关详细信息，请参阅 [Adding Controls to Office Documents at Run Time](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。  
   
    
   
 ## Examples  
- 下面的代码示例将一个新段落添加到文档的开头并创建一个新<xref:Microsoft.Office.Tools.Word.GroupContentControl>，其中包含此段落。 <xref:Microsoft.Office.Tools.Word.GroupContentControl>阻止用户编辑段落中的文本。 有关使用详细信息<xref:Microsoft.Office.Tools.Word.GroupContentControl>若要保护的文档的一部分，请参阅[内容控件](/visualstudio/vsto/content-controls)。  
+ 下面的代码示例将一个新段落添加到文档的开头, 并创建一个包含此段落<xref:Microsoft.Office.Tools.Word.GroupContentControl>的新段落。 <xref:Microsoft.Office.Tools.Word.GroupContentControl>阻止用户编辑段落中的文本。 有关使用<xref:Microsoft.Office.Tools.Word.GroupContentControl>保护文档的某一部分的详细信息, 请参阅[内容控件](/visualstudio/vsto/content-controls)。  
   
- 此版本是文档级自定义项。 若要使用此代码，将其粘贴到`ThisDocument`类中，你的项目，并调用`AddGroupControlAtSelection`方法从`ThisDocument_Startup`方法。  
+ 此版本适用于文档级自定义项。 若要使用此代码, 请将其`ThisDocument`粘贴到项目的类中, 然后`AddGroupControlAtSelection`从`ThisDocument_Startup`方法调用方法。  
   
  [!code-csharp[Trin_ContentControlReference#400](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference/CS/Group.cs#400)]
  [!code-vb[Trin_ContentControlReference#400](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference/VB/Group.vb#400)]  
   
- 此版本用于针对 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的应用程序级外接程序。 若要使用此代码，将其粘贴到`ThisAddIn`类中，你的项目，并调用`AddGroupControlAtSelection`方法从`ThisAddIn_Startup`方法。  
+ 此版本用于针对 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的应用程序级外接程序。 若要使用此代码, 请将其`ThisAddIn`粘贴到项目的类中, 然后`AddGroupControlAtSelection`从`ThisAddIn_Startup`方法调用方法。  
   
  [!code-csharp[Trin_ContentControlReference_AppLevelAddIn#400](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/CS/Group.cs#400)]
  [!code-vb[Trin_ContentControlReference_AppLevelAddIn#400](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/VB/Group.vb#400)]  
@@ -1052,31 +1031,31 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用此方法将添加一个新<xref:Microsoft.Office.Tools.Word.GroupContentControl>，基于在运行时在文档中的本机内容控件。 这是有用的在创建时<xref:Microsoft.Office.Tools.Word.GroupContentControl>在运行时，并且你想要在下次打开该文档时重新创建相同的控件。 有关详细信息，请参阅 [在运行时向 Office 文档添加控件](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。  
+ 使用此方法可在运行时<xref:Microsoft.Office.Tools.Word.GroupContentControl>添加基于文档中的本机内容控件的新。 当您<xref:Microsoft.Office.Tools.Word.GroupContentControl>在运行时创建, 并且您想要在下次打开文档时重新创建同一个控件时, 这非常有用。 有关详细信息，请参阅 [Adding Controls to Office Documents at Run Time](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。  
   
    
   
 ## Examples  
- 下面的代码示例创建一个新<xref:Microsoft.Office.Tools.Word.GroupContentControl>为文档中的每个本机组控件。  
+ 下面的代码示例为文档中<xref:Microsoft.Office.Tools.Word.GroupContentControl>的每个本机组控件创建一个新的。  
   
- 此版本是文档级自定义项。 若要使用此代码，将其粘贴到`ThisDocument`类中，你的项目，并调用`CreateGroupControlsFromNativeControls`方法从`ThisDocument_Startup`方法。  
+ 此版本适用于文档级自定义项。 若要使用此代码, 请将其`ThisDocument`粘贴到项目的类中, 然后`CreateGroupControlsFromNativeControls`从`ThisDocument_Startup`方法调用方法。  
   
  [!code-csharp[Trin_ContentControlReference#402](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference/CS/Group.cs#402)]
  [!code-vb[Trin_ContentControlReference#402](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference/VB/Group.vb#402)]  
   
- 此版本用于针对 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的应用程序级外接程序。 若要使用此代码，将其粘贴到`ThisAddIn`类中，你的项目，并调用`CreateGroupControlsFromNativeControls`方法从`ThisAddIn_Startup`方法。  
+ 此版本用于针对 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的应用程序级外接程序。 若要使用此代码, 请将其`ThisAddIn`粘贴到项目的类中, 然后`CreateGroupControlsFromNativeControls`从`ThisAddIn_Startup`方法调用方法。  
   
  [!code-csharp[Trin_ContentControlReference_AppLevelAddIn#402](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/CS/Group.cs#402)]
  [!code-vb[Trin_ContentControlReference_AppLevelAddIn#402](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/VB/Group.vb#402)]  
   
- 下面的代码示例创建一个新<xref:Microsoft.Office.Tools.Word.GroupContentControl>为每个用户添加到文档的本机组控件。  
+ 下面的代码示例为用户添加<xref:Microsoft.Office.Tools.Word.GroupContentControl>到文档中的每个本机组控件创建一个新的。  
   
- 此版本是文档级自定义项。 若要使用此代码，将其粘贴到`ThisDocument`在项目中的类。 对于 C#，则还必须附加`ThisDocument_GroupContentControlAfterAdd`事件处理程序<xref:Microsoft.Office.Tools.Word.Document.ContentControlAfterAdd>事件的`ThisDocument`类。  
+ 此版本适用于文档级自定义项。 若要使用此代码, 请将其`ThisDocument`粘贴到项目中的类。 对于C#, 还必须将`ThisDocument_GroupContentControlAfterAdd` <xref:Microsoft.Office.Tools.Word.Document.ContentControlAfterAdd>事件处理程序附加到`ThisDocument`类的事件。  
   
  [!code-csharp[Trin_ContentControlReference#403](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference/CS/Group.cs#403)]
  [!code-vb[Trin_ContentControlReference#403](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference/VB/Group.vb#403)]  
   
- 此版本用于针对 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的应用程序级外接程序。 若要使用此代码，将其粘贴到`ThisAddIn`在项目中的类。 此外，您必须将附加`ActiveDocument_GroupContentControlAfterAdd`事件处理程序<xref:Microsoft.Office.Tools.Word.Document.ContentControlAfterAdd>活动文档的事件。  
+ 此版本用于针对 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的应用程序级外接程序。 若要使用此代码, 请将其`ThisAddIn`粘贴到项目中的类。 此外, 还必须将`ActiveDocument_GroupContentControlAfterAdd`事件处理程序附加<xref:Microsoft.Office.Tools.Word.Document.ContentControlAfterAdd>到活动文档的事件。  
   
  [!code-csharp[Trin_ContentControlReference_AppLevelAddIn#403](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/CS/Group.cs#403)]
  [!code-vb[Trin_ContentControlReference_AppLevelAddIn#403](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/VB/Group.vb#403)]  
@@ -1116,19 +1095,19 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用此方法将添加一个新<xref:Microsoft.Office.Tools.Word.GroupContentControl>在运行时在文档中的指定范围内。 有关详细信息，请参阅 [在运行时向 Office 文档添加控件](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。  
+ 使用此方法可在运行时<xref:Microsoft.Office.Tools.Word.GroupContentControl>在文档中的指定范围内添加新的。 有关详细信息，请参阅 [Adding Controls to Office Documents at Run Time](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。  
   
    
   
 ## Examples  
- 下面的代码示例将一个新段落添加到文档的开头并创建<xref:Microsoft.Office.Tools.Word.GroupContentControl>，其中包含此段落。 <xref:Microsoft.Office.Tools.Word.GroupContentControl>阻止用户编辑段落中的文本。 有关使用详细信息<xref:Microsoft.Office.Tools.Word.GroupContentControl>若要保护的文档的一部分，请参阅[内容控件](/visualstudio/vsto/content-controls)。  
+ 下面的代码示例将一个新段落添加到文档的开头, 并创建一个<xref:Microsoft.Office.Tools.Word.GroupContentControl>包含此段落的。 <xref:Microsoft.Office.Tools.Word.GroupContentControl>阻止用户编辑段落中的文本。 有关使用<xref:Microsoft.Office.Tools.Word.GroupContentControl>保护文档的某一部分的详细信息, 请参阅[内容控件](/visualstudio/vsto/content-controls)。  
   
- 此版本是文档级自定义项。 若要使用此代码，将其粘贴到`ThisDocument`类中，你的项目，并调用`AddGroupControlAtRange`方法从`ThisDocument_Startup`方法。  
+ 此版本适用于文档级自定义项。 若要使用此代码, 请将其`ThisDocument`粘贴到项目的类中, 然后`AddGroupControlAtRange`从`ThisDocument_Startup`方法调用方法。  
   
  [!code-csharp[Trin_ContentControlReference#401](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference/CS/Group.cs#401)]
  [!code-vb[Trin_ContentControlReference#401](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference/VB/Group.vb#401)]  
   
- 此版本用于针对 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的应用程序级外接程序。 若要使用此代码，将其粘贴到`ThisAddIn`类中，你的项目，并调用`AddGroupControlAtRange`方法从`ThisAddIn_Startup`方法。  
+ 此版本用于针对 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的应用程序级外接程序。 若要使用此代码, 请将其`ThisAddIn`粘贴到项目的类中, 然后`AddGroupControlAtRange`从`ThisAddIn_Startup`方法调用方法。  
   
  [!code-csharp[Trin_ContentControlReference_AppLevelAddIn#401](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/CS/Group.cs#401)]
  [!code-vb[Trin_ContentControlReference_AppLevelAddIn#401](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/VB/Group.vb#401)]  
@@ -1162,19 +1141,19 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用此方法将添加一个新<xref:Microsoft.Office.Tools.Word.PictureContentControl>在运行时在文档中当前选定的位置。 有关详细信息，请参阅 [在运行时向 Office 文档添加控件](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。  
+ 使用此方法可以在运行时<xref:Microsoft.Office.Tools.Word.PictureContentControl>在文档的当前选定内容中添加一个新的。 有关详细信息，请参阅 [Adding Controls to Office Documents at Run Time](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。  
   
    
   
 ## Examples  
- 下面的代码示例添加一个新<xref:Microsoft.Office.Tools.Word.PictureContentControl>到文档开头。 此示例假定文件命名为`picture.bmp`%UserProfile%\My Documents 文件夹 （对于 Windows XP 及更早版本） 或 %UserProfile%\Documents 文件夹中存在 （对于 Windows Vista)。  
+ 下面的代码示例将一个新<xref:Microsoft.Office.Tools.Word.PictureContentControl>添加到文档的开头。 此示例假定%UserProfile%\My Documents 文件夹 ( `picture.bmp`适用于 windows XP 及更低版本) 或%UserProfile%\Documents 文件夹 (适用于 windows Vista) 中存在名为的文件。  
   
- 此版本是文档级自定义项。 若要使用此代码，将其粘贴到`ThisDocument`类中，你的项目，并调用`AddPictureControlAtSelection`方法从`ThisDocument_Startup`方法。  
+ 此版本适用于文档级自定义项。 若要使用此代码, 请将其`ThisDocument`粘贴到项目的类中, 然后`AddPictureControlAtSelection`从`ThisDocument_Startup`方法调用方法。  
   
  [!code-csharp[Trin_ContentControlReference#500](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference/CS/Picture.cs#500)]
  [!code-vb[Trin_ContentControlReference#500](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference/VB/Picture.vb#500)]  
   
- 此版本用于针对 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的应用程序级外接程序。 若要使用此代码，将其粘贴到`ThisAddIn`类中，你的项目，并调用`AddPictureControlAtSelection`方法从`ThisAddIn_Startup`方法。  
+ 此版本用于针对 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的应用程序级外接程序。 若要使用此代码, 请将其`ThisAddIn`粘贴到项目的类中, 然后`AddPictureControlAtSelection`从`ThisAddIn_Startup`方法调用方法。  
   
  [!code-csharp[Trin_ContentControlReference_AppLevelAddIn#500](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/CS/Picture.cs#500)]
  [!code-vb[Trin_ContentControlReference_AppLevelAddIn#500](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/VB/Picture.vb#500)]  
@@ -1210,31 +1189,31 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用此方法将添加一个新<xref:Microsoft.Office.Tools.Word.PictureContentControl>，基于在运行时在文档中的本机内容控件。 这是有用的在创建时<xref:Microsoft.Office.Tools.Word.PictureContentControl>在运行时，并且你想要在下次打开该文档时重新创建相同的控件。 有关详细信息，请参阅 [在运行时向 Office 文档添加控件](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。  
+ 使用此方法可在运行时<xref:Microsoft.Office.Tools.Word.PictureContentControl>添加基于文档中的本机内容控件的新。 当您<xref:Microsoft.Office.Tools.Word.PictureContentControl>在运行时创建, 并且您想要在下次打开文档时重新创建同一个控件时, 这非常有用。 有关详细信息，请参阅 [Adding Controls to Office Documents at Run Time](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。  
   
    
   
 ## Examples  
- 下面的代码示例创建一个新<xref:Microsoft.Office.Tools.Word.PictureContentControl>为文档中的每个本机图片控件。  
+ 下面的代码示例为文档中<xref:Microsoft.Office.Tools.Word.PictureContentControl>的每个本机图片控件创建一个新的。  
   
- 此版本是文档级自定义项。 若要使用此代码，将其粘贴到`ThisDocument`类中，你的项目，并调用`CreatePictureControlFromNativeControl`方法从`ThisDocument_Startup`方法。  
+ 此版本适用于文档级自定义项。 若要使用此代码, 请将其`ThisDocument`粘贴到项目的类中, 然后`CreatePictureControlFromNativeControl`从`ThisDocument_Startup`方法调用方法。  
   
  [!code-csharp[Trin_ContentControlReference#502](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference/CS/Picture.cs#502)]
  [!code-vb[Trin_ContentControlReference#502](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference/VB/Picture.vb#502)]  
   
- 此版本用于针对 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的应用程序级外接程序。 若要使用此代码，将其粘贴到`ThisAddIn`类中，你的项目，并调用`CreatePictureControlFromNativeControl`方法从`ThisAddIn_Startup`方法。  
+ 此版本用于针对 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的应用程序级外接程序。 若要使用此代码, 请将其`ThisAddIn`粘贴到项目的类中, 然后`CreatePictureControlFromNativeControl`从`ThisAddIn_Startup`方法调用方法。  
   
  [!code-csharp[Trin_ContentControlReference_AppLevelAddIn#502](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/CS/Picture.cs#502)]
  [!code-vb[Trin_ContentControlReference_AppLevelAddIn#502](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/VB/Picture.vb#502)]  
   
- 下面的代码示例创建一个新<xref:Microsoft.Office.Tools.Word.PictureContentControl>的每个本机图片控件向文档添加用户。  
+ 下面的代码示例为用户添加<xref:Microsoft.Office.Tools.Word.PictureContentControl>到文档中的每个本机图片控件创建一个新的。  
   
- 此版本是文档级自定义项。 若要使用此代码，将其粘贴到`ThisDocument`在项目中的类。 对于 C#，则还必须附加`ThisDocument_PictureContentControlAfterAdd`事件处理程序<xref:Microsoft.Office.Tools.Word.Document.ContentControlAfterAdd>事件的`ThisDocument`类。  
+ 此版本适用于文档级自定义项。 若要使用此代码, 请将其`ThisDocument`粘贴到项目中的类。 对于C#, 还必须将`ThisDocument_PictureContentControlAfterAdd` <xref:Microsoft.Office.Tools.Word.Document.ContentControlAfterAdd>事件处理程序附加到`ThisDocument`类的事件。  
   
  [!code-csharp[Trin_ContentControlReference#503](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference/CS/Picture.cs#503)]
  [!code-vb[Trin_ContentControlReference#503](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference/VB/Picture.vb#503)]  
   
- 此版本用于针对 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的应用程序级外接程序。 若要使用此代码，将其粘贴到`ThisAddIn`在项目中的类。 此外，您必须将附加`ActiveDocument_PictureContentControlAfterAdd`事件处理程序<xref:Microsoft.Office.Tools.Word.Document.ContentControlAfterAdd>活动文档的事件。  
+ 此版本用于针对 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的应用程序级外接程序。 若要使用此代码, 请将其`ThisAddIn`粘贴到项目中的类。 此外, 还必须将`ActiveDocument_PictureContentControlAfterAdd`事件处理程序附加<xref:Microsoft.Office.Tools.Word.Document.ContentControlAfterAdd>到活动文档的事件。  
   
  [!code-csharp[Trin_ContentControlReference_AppLevelAddIn#503](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/CS/Picture.cs#503)]
  [!code-vb[Trin_ContentControlReference_AppLevelAddIn#503](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/VB/Picture.vb#503)]  
@@ -1274,19 +1253,19 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用此方法将添加一个新<xref:Microsoft.Office.Tools.Word.PictureContentControl>在运行时在文档中的指定范围内。 有关详细信息，请参阅 [在运行时向 Office 文档添加控件](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。  
+ 使用此方法可在运行时<xref:Microsoft.Office.Tools.Word.PictureContentControl>在文档中的指定范围内添加新的。 有关详细信息，请参阅 [Adding Controls to Office Documents at Run Time](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。  
   
    
   
 ## Examples  
- 下面的代码示例添加一个新<xref:Microsoft.Office.Tools.Word.PictureContentControl>到文档开头。 此示例假定文件命名为`picture.bmp`%UserProfile%\My Documents 文件夹 （对于 Windows XP 及更早版本） 或 %UserProfile%\Documents 文件夹中存在 （对于 Windows Vista)。  
+ 下面的代码示例将一个新<xref:Microsoft.Office.Tools.Word.PictureContentControl>添加到文档的开头。 此示例假定%UserProfile%\My Documents 文件夹 ( `picture.bmp`适用于 windows XP 及更低版本) 或%UserProfile%\Documents 文件夹 (适用于 windows Vista) 中存在名为的文件。  
   
- 此版本是文档级自定义项。 若要使用此代码，将其粘贴到`ThisDocument`类中，你的项目，并调用`AddPictureControlAtRange`方法从`ThisDocument_Startup`方法。  
+ 此版本适用于文档级自定义项。 若要使用此代码, 请将其`ThisDocument`粘贴到项目的类中, 然后`AddPictureControlAtRange`从`ThisDocument_Startup`方法调用方法。  
   
  [!code-csharp[Trin_ContentControlReference#501](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference/CS/Picture.cs#501)]
  [!code-vb[Trin_ContentControlReference#501](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference/VB/Picture.vb#501)]  
   
- 此版本用于针对 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的应用程序级外接程序。 若要使用此代码，将其粘贴到`ThisAddIn`类中，你的项目，并调用`AddPictureControlAtRange`方法从`ThisAddIn_Startup`方法。  
+ 此版本用于针对 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的应用程序级外接程序。 若要使用此代码, 请将其`ThisAddIn`粘贴到项目的类中, 然后`AddPictureControlAtRange`从`ThisAddIn_Startup`方法调用方法。  
   
  [!code-csharp[Trin_ContentControlReference_AppLevelAddIn#501](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/CS/Picture.cs#501)]
  [!code-vb[Trin_ContentControlReference_AppLevelAddIn#501](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/VB/Picture.vb#501)]  
@@ -1320,19 +1299,19 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用此方法将添加一个新<xref:Microsoft.Office.Tools.Word.PlainTextContentControl>在运行时在文档中当前选定的位置。 有关详细信息，请参阅 [在运行时向 Office 文档添加控件](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。  
+ 使用此方法可以在运行时<xref:Microsoft.Office.Tools.Word.PlainTextContentControl>在文档的当前选定内容中添加一个新的。 有关详细信息，请参阅 [Adding Controls to Office Documents at Run Time](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。  
   
    
   
 ## Examples  
- 下面的代码示例添加一个新<xref:Microsoft.Office.Tools.Word.PlainTextContentControl>到文档开头。  
+ 下面的代码示例将一个新<xref:Microsoft.Office.Tools.Word.PlainTextContentControl>添加到文档的开头。  
   
- 此版本是文档级自定义项。 若要使用此代码，将其粘贴到`ThisDocument`类中，你的项目，并调用`AddTextControlAtSelection`方法从`ThisDocument_Startup`方法。  
+ 此版本适用于文档级自定义项。 若要使用此代码, 请将其`ThisDocument`粘贴到项目的类中, 然后`AddTextControlAtSelection`从`ThisDocument_Startup`方法调用方法。  
   
  [!code-csharp[Trin_ContentControlReference#600](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference/CS/PlainText.cs#600)]
  [!code-vb[Trin_ContentControlReference#600](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference/VB/PlainText.vb#600)]  
   
- 此版本用于针对 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的应用程序级外接程序。 若要使用此代码，将其粘贴到`ThisAddIn`类中，你的项目，并调用`AddTextControlAtSelection`方法从`ThisAddIn_Startup`方法。  
+ 此版本用于针对 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的应用程序级外接程序。 若要使用此代码, 请将其`ThisAddIn`粘贴到项目的类中, 然后`AddTextControlAtSelection`从`ThisAddIn_Startup`方法调用方法。  
   
  [!code-csharp[Trin_ContentControlReference_AppLevelAddIn#600](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/CS/PlainText.cs#600)]
  [!code-vb[Trin_ContentControlReference_AppLevelAddIn#600](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/VB/PlainText.vb#600)]  
@@ -1368,31 +1347,31 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用此方法将添加一个新<xref:Microsoft.Office.Tools.Word.PlainTextContentControl>，基于在运行时在文档中的本机内容控件。 这是有用的在创建时<xref:Microsoft.Office.Tools.Word.PlainTextContentControl>在运行时，并且你想要在下次打开该文档时重新创建相同的控件。 有关详细信息，请参阅 [在运行时向 Office 文档添加控件](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。  
+ 使用此方法可在运行时<xref:Microsoft.Office.Tools.Word.PlainTextContentControl>添加基于文档中的本机内容控件的新。 当您<xref:Microsoft.Office.Tools.Word.PlainTextContentControl>在运行时创建, 并且您想要在下次打开文档时重新创建同一个控件时, 这非常有用。 有关详细信息，请参阅 [Adding Controls to Office Documents at Run Time](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。  
   
    
   
 ## Examples  
- 下面的代码示例创建一个新<xref:Microsoft.Office.Tools.Word.PlainTextContentControl>为文档中的每个本机纯文本控件。  
+ 下面的代码示例为文档中<xref:Microsoft.Office.Tools.Word.PlainTextContentControl>的每个本机纯文本控件创建一个新的。  
   
- 此版本是文档级自定义项。 若要使用此代码，将其粘贴到`ThisDocument`类中，你的项目，并调用`CreateTextControlsFromNativeControls`方法从`ThisDocument_Startup`方法。  
+ 此版本适用于文档级自定义项。 若要使用此代码, 请将其`ThisDocument`粘贴到项目的类中, 然后`CreateTextControlsFromNativeControls`从`ThisDocument_Startup`方法调用方法。  
   
  [!code-csharp[Trin_ContentControlReference#602](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference/CS/PlainText.cs#602)]
  [!code-vb[Trin_ContentControlReference#602](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference/VB/PlainText.vb#602)]  
   
- 此版本用于针对 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的应用程序级外接程序。 若要使用此代码，将其粘贴到`ThisAddIn`类中，你的项目，并调用`CreateTextControlsFromNativeControls`方法从`ThisAddIn_Startup`方法。  
+ 此版本用于针对 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的应用程序级外接程序。 若要使用此代码, 请将其`ThisAddIn`粘贴到项目的类中, 然后`CreateTextControlsFromNativeControls`从`ThisAddIn_Startup`方法调用方法。  
   
  [!code-csharp[Trin_ContentControlReference_AppLevelAddIn#602](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/CS/PlainText.cs#602)]
  [!code-vb[Trin_ContentControlReference_AppLevelAddIn#602](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/VB/PlainText.vb#602)]  
   
- 下面的代码示例创建一个新<xref:Microsoft.Office.Tools.Word.PlainTextContentControl>为每个用户添加到文档的本机纯文本控件。  
+ 下面的代码示例为用户添加<xref:Microsoft.Office.Tools.Word.PlainTextContentControl>到文档中的每个本机纯文本控件创建一个新的。  
   
- 此版本是文档级自定义项。 若要使用此代码，将其粘贴到`ThisDocument`在项目中的类。 对于 C#，则还必须附加`ThisDocument_PlainTextContentControlAfterAdd`事件处理程序<xref:Microsoft.Office.Tools.Word.Document.ContentControlAfterAdd>事件的`ThisDocument`类。  
+ 此版本适用于文档级自定义项。 若要使用此代码, 请将其`ThisDocument`粘贴到项目中的类。 对于C#, 还必须将`ThisDocument_PlainTextContentControlAfterAdd` <xref:Microsoft.Office.Tools.Word.Document.ContentControlAfterAdd>事件处理程序附加到`ThisDocument`类的事件。  
   
  [!code-csharp[Trin_ContentControlReference#603](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference/CS/PlainText.cs#603)]
  [!code-vb[Trin_ContentControlReference#603](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference/VB/PlainText.vb#603)]  
   
- 此版本用于针对 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的应用程序级外接程序。 若要使用此代码，将其粘贴到`ThisAddIn`在项目中的类。 此外，您必须将附加`ActiveDocument_PlainTextContentControlAfterAdd`事件处理程序<xref:Microsoft.Office.Tools.Word.Document.ContentControlAfterAdd>活动文档的事件。  
+ 此版本用于针对 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的应用程序级外接程序。 若要使用此代码, 请将其`ThisAddIn`粘贴到项目中的类。 此外, 还必须将`ActiveDocument_PlainTextContentControlAfterAdd`事件处理程序附加<xref:Microsoft.Office.Tools.Word.Document.ContentControlAfterAdd>到活动文档的事件。  
   
  [!code-csharp[Trin_ContentControlReference_AppLevelAddIn#603](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/CS/PlainText.cs#603)]
  [!code-vb[Trin_ContentControlReference_AppLevelAddIn#603](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/VB/PlainText.vb#603)]  
@@ -1432,19 +1411,19 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用此方法将添加一个新<xref:Microsoft.Office.Tools.Word.PlainTextContentControl>在运行时在文档中的指定范围内。 有关详细信息，请参阅 [在运行时向 Office 文档添加控件](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。  
+ 使用此方法可在运行时<xref:Microsoft.Office.Tools.Word.PlainTextContentControl>在文档中的指定范围内添加新的。 有关详细信息，请参阅 [Adding Controls to Office Documents at Run Time](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。  
   
    
   
 ## Examples  
- 下面的代码示例添加一个新<xref:Microsoft.Office.Tools.Word.PlainTextContentControl>到文档开头。  
+ 下面的代码示例将一个新<xref:Microsoft.Office.Tools.Word.PlainTextContentControl>添加到文档的开头。  
   
- 此版本是文档级自定义项。 若要使用此代码，将其粘贴到`ThisDocument`类中，你的项目，并调用`AddTextControlAtRange`方法从`ThisDocument_Startup`方法。  
+ 此版本适用于文档级自定义项。 若要使用此代码, 请将其`ThisDocument`粘贴到项目的类中, 然后`AddTextControlAtRange`从`ThisDocument_Startup`方法调用方法。  
   
  [!code-csharp[Trin_ContentControlReference#601](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference/CS/PlainText.cs#601)]
  [!code-vb[Trin_ContentControlReference#601](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference/VB/PlainText.vb#601)]  
   
- 此版本用于针对 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的应用程序级外接程序。 若要使用此代码，将其粘贴到`ThisAddIn`类中，你的项目，并调用`AddTextControlAtRange`方法从`ThisAddIn_Startup`方法。  
+ 此版本用于针对 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的应用程序级外接程序。 若要使用此代码, 请将其`ThisAddIn`粘贴到项目的类中, 然后`AddTextControlAtRange`从`ThisAddIn_Startup`方法调用方法。  
   
  [!code-csharp[Trin_ContentControlReference_AppLevelAddIn#601](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/CS/PlainText.cs#601)]
  [!code-vb[Trin_ContentControlReference_AppLevelAddIn#601](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/VB/PlainText.vb#601)]  
@@ -1478,19 +1457,19 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用此方法将添加一个新<xref:Microsoft.Office.Tools.Word.RichTextContentControl>在运行时在文档中当前选定的位置。 有关详细信息，请参阅 [在运行时向 Office 文档添加控件](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。  
+ 使用此方法可以在运行时<xref:Microsoft.Office.Tools.Word.RichTextContentControl>在文档的当前选定内容中添加一个新的。 有关详细信息，请参阅 [Adding Controls to Office Documents at Run Time](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。  
   
    
   
 ## Examples  
- 下面的代码示例添加一个新<xref:Microsoft.Office.Tools.Word.RichTextContentControl>到文档开头。  
+ 下面的代码示例将一个新<xref:Microsoft.Office.Tools.Word.RichTextContentControl>添加到文档的开头。  
   
- 此版本是文档级自定义项。 若要使用此代码，将其粘贴到`ThisDocument`类中，你的项目，并调用`AddRichTextControlAtSelection`方法从`ThisDocument_Startup`方法。  
+ 此版本适用于文档级自定义项。 若要使用此代码, 请将其`ThisDocument`粘贴到项目的类中, 然后`AddRichTextControlAtSelection`从`ThisDocument_Startup`方法调用方法。  
   
  [!code-csharp[Trin_ContentControlReference#700](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference/CS/RichText.cs#700)]
  [!code-vb[Trin_ContentControlReference#700](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference/VB/RichText.vb#700)]  
   
- 此版本用于针对 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的应用程序级外接程序。 若要使用此代码，将其粘贴到`ThisAddIn`类中，你的项目，并调用`AddRichTextControlAtSelection`方法从`ThisAddIn_Startup`方法。  
+ 此版本用于针对 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的应用程序级外接程序。 若要使用此代码, 请将其`ThisAddIn`粘贴到项目的类中, 然后`AddRichTextControlAtSelection`从`ThisAddIn_Startup`方法调用方法。  
   
  [!code-csharp[Trin_ContentControlReference_AppLevelAddIn#700](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/CS/RichText.cs#700)]
  [!code-vb[Trin_ContentControlReference_AppLevelAddIn#700](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/VB/RichText.vb#700)]  
@@ -1526,31 +1505,31 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用此方法将添加一个新<xref:Microsoft.Office.Tools.Word.RichTextContentControl>，基于在运行时在文档中的本机内容控件。 这是有用的在创建时<xref:Microsoft.Office.Tools.Word.RichTextContentControl>在运行时，并且你想要在下次打开该文档时重新创建相同的控件。 有关详细信息，请参阅 [在运行时向 Office 文档添加控件](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。  
+ 使用此方法可在运行时<xref:Microsoft.Office.Tools.Word.RichTextContentControl>添加基于文档中的本机内容控件的新。 当您<xref:Microsoft.Office.Tools.Word.RichTextContentControl>在运行时创建, 并且您想要在下次打开文档时重新创建同一个控件时, 这非常有用。 有关详细信息，请参阅 [Adding Controls to Office Documents at Run Time](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。  
   
    
   
 ## Examples  
- 下面的代码示例创建一个新<xref:Microsoft.Office.Tools.Word.RichTextContentControl>为文档中的每个本机多格式文本控件。  
+ 下面的代码示例为文档中<xref:Microsoft.Office.Tools.Word.RichTextContentControl>的每个本机多格式文本控件创建一个新的。  
   
- 此版本是文档级自定义项。 若要使用此代码，将其粘贴到`ThisDocument`类中，你的项目，并调用`CreateRichTextControlsFromNativeControls`方法从`ThisDocument_Startup`方法。  
+ 此版本适用于文档级自定义项。 若要使用此代码, 请将其`ThisDocument`粘贴到项目的类中, 然后`CreateRichTextControlsFromNativeControls`从`ThisDocument_Startup`方法调用方法。  
   
  [!code-csharp[Trin_ContentControlReference#702](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference/CS/RichText.cs#702)]
  [!code-vb[Trin_ContentControlReference#702](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference/VB/RichText.vb#702)]  
   
- 此版本用于针对 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的应用程序级外接程序。 若要使用此代码，将其粘贴到`ThisAddIn`类中，你的项目，并调用`CreateRichTextControlsFromNativeControls`方法从`ThisAddIn_Startup`方法。  
+ 此版本用于针对 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的应用程序级外接程序。 若要使用此代码, 请将其`ThisAddIn`粘贴到项目的类中, 然后`CreateRichTextControlsFromNativeControls`从`ThisAddIn_Startup`方法调用方法。  
   
  [!code-csharp[Trin_ContentControlReference_AppLevelAddIn#702](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/CS/RichText.cs#702)]
  [!code-vb[Trin_ContentControlReference_AppLevelAddIn#702](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/VB/RichText.vb#702)]  
   
- 下面的代码示例创建一个新<xref:Microsoft.Office.Tools.Word.RichTextContentControl>的每个本机多格式文本控件向文档添加用户。  
+ 下面的代码示例为用户添加<xref:Microsoft.Office.Tools.Word.RichTextContentControl>到文档中的每个本机多格式文本控件创建一个新的。  
   
- 此版本是文档级自定义项。 若要使用此代码，将其粘贴到`ThisDocument`在项目中的类。 对于 C#，则还必须附加`ThisDocument_RichTextContentControlAfterAdd`事件处理程序<xref:Microsoft.Office.Tools.Word.Document.ContentControlAfterAdd>事件的`ThisDocument`类。  
+ 此版本适用于文档级自定义项。 若要使用此代码, 请将其`ThisDocument`粘贴到项目中的类。 对于C#, 还必须将`ThisDocument_RichTextContentControlAfterAdd` <xref:Microsoft.Office.Tools.Word.Document.ContentControlAfterAdd>事件处理程序附加到`ThisDocument`类的事件。  
   
  [!code-csharp[Trin_ContentControlReference#703](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference/CS/RichText.cs#703)]
  [!code-vb[Trin_ContentControlReference#703](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference/VB/RichText.vb#703)]  
   
- 此版本用于针对 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的应用程序级外接程序。 若要使用此代码，将其粘贴到`ThisAddIn`在项目中的类。 此外，您必须将附加`ActiveDocument_RichTextContentControlAfterAdd`事件处理程序<xref:Microsoft.Office.Tools.Word.Document.ContentControlAfterAdd>活动文档的事件。  
+ 此版本用于针对 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的应用程序级外接程序。 若要使用此代码, 请将其`ThisAddIn`粘贴到项目中的类。 此外, 还必须将`ActiveDocument_RichTextContentControlAfterAdd`事件处理程序附加<xref:Microsoft.Office.Tools.Word.Document.ContentControlAfterAdd>到活动文档的事件。  
   
  [!code-csharp[Trin_ContentControlReference_AppLevelAddIn#703](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/CS/RichText.cs#703)]
  [!code-vb[Trin_ContentControlReference_AppLevelAddIn#703](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/VB/RichText.vb#703)]  
@@ -1590,19 +1569,19 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用此方法将添加一个新<xref:Microsoft.Office.Tools.Word.RichTextContentControl>在运行时在文档中的指定范围内。 有关详细信息，请参阅 [在运行时向 Office 文档添加控件](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。  
+ 使用此方法可在运行时<xref:Microsoft.Office.Tools.Word.RichTextContentControl>在文档中的指定范围内添加新的。 有关详细信息，请参阅 [Adding Controls to Office Documents at Run Time](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。  
   
    
   
 ## Examples  
- 下面的代码示例添加一个新<xref:Microsoft.Office.Tools.Word.RichTextContentControl>到文档开头。  
+ 下面的代码示例将一个新<xref:Microsoft.Office.Tools.Word.RichTextContentControl>添加到文档的开头。  
   
- 此版本是文档级自定义项。 若要使用此代码，将其粘贴到`ThisDocument`类中，你的项目，并调用`AddRichTextControlAtRange`方法从`ThisDocument_Startup`方法。  
+ 此版本适用于文档级自定义项。 若要使用此代码, 请将其`ThisDocument`粘贴到项目的类中, 然后`AddRichTextControlAtRange`从`ThisDocument_Startup`方法调用方法。  
   
  [!code-csharp[Trin_ContentControlReference#701](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference/CS/RichText.cs#701)]
  [!code-vb[Trin_ContentControlReference#701](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference/VB/RichText.vb#701)]  
   
- 此版本用于针对 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的应用程序级外接程序。 若要使用此代码，将其粘贴到`ThisAddIn`类中，你的项目，并调用`AddRichTextControlAtRange`方法从`ThisAddIn_Startup`方法。  
+ 此版本用于针对 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 的应用程序级外接程序。 若要使用此代码, 请将其`ThisAddIn`粘贴到项目的类中, 然后`AddRichTextControlAtRange`从`ThisAddIn_Startup`方法调用方法。  
   
  [!code-csharp[Trin_ContentControlReference_AppLevelAddIn#701](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/CS/RichText.cs#701)]
  [!code-vb[Trin_ContentControlReference_AppLevelAddIn#701](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/VB/RichText.vb#701)]  
@@ -1631,6 +1610,23 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="Contains">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>确定指定的控件是否为 <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例的成员。</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此方法使你可以在尝试对控件执行操作之前确定控件是否为集合的成员。 您可以使用此方法来确认控件是否已添加到<xref:Microsoft.Office.Tools.Word.ControlCollection>实例, 或仍是实例的成员。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="Contains">
       <MemberSignature Language="C#" Value="public bool Contains (object control);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Contains(object control) cil managed" />
@@ -1654,7 +1650,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Controls.Button>控制到起始位置的文档，并显示消息框中的按钮的索引。  
+ 下面的代码示例将<xref:Microsoft.Office.Tools.Word.Controls.Button>控件添加到文档的开头, 然后在消息框中显示该按钮的索引。  
   
  [!code-csharp[Trin_WordControlCollection#54](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#54)]
  [!code-vb[Trin_WordControlCollection#54](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#54)]  
@@ -1726,12 +1722,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果该控件的换行样式未设置为**与文本对齐**，则<xref:Microsoft.Office.Tools.Word.ControlCollection.GetInlineShapeForControl%2A>方法将返回`null`。  
+ 如果控件的换行样式未设置为 **"随文本对齐**", 则该<xref:Microsoft.Office.Tools.Word.ControlCollection.GetInlineShapeForControl%2A>方法将`null`返回。  
   
    
   
 ## Examples  
- 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Controls.Button>到文档，以便其环绕方式是使用文本内联。 然后，代码调用<xref:Microsoft.Office.Tools.Word.ControlCollection.GetInlineShapeForControl%2A>方法获取的控件的位置及其基础<xref:Microsoft.Office.Interop.Word.InlineShape>。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.Button>到文档中, 以使其换行样式与文本一起嵌入。 然后, 该代码调用<xref:Microsoft.Office.Tools.Word.ControlCollection.GetInlineShapeForControl%2A>方法以从其基础<xref:Microsoft.Office.Interop.Word.InlineShape>获取控件的位置。  
   
  [!code-csharp[Trin_WordControlCollection#59](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#59)]
  [!code-vb[Trin_WordControlCollection#59](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#59)]  
@@ -1763,12 +1759,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果该控件的换行样式设置为**与文本对齐**，则<xref:Microsoft.Office.Tools.Word.ControlCollection.GetShapeForControl%2A>方法将返回`null`。  
+ 如果控件的换行样式设置为 **"随文本对齐**", 则该<xref:Microsoft.Office.Tools.Word.ControlCollection.GetShapeForControl%2A>方法将`null`返回。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.Button>为文档中，然后使用<xref:Microsoft.Office.Tools.Word.ControlCollection.GetShapeForControl%2A>方法获取的控件的位置及其基础<xref:Microsoft.Office.Interop.Word.Shape>。  
+ 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.Button>到文档中, 然后<xref:Microsoft.Office.Tools.Word.ControlCollection.GetShapeForControl%2A>使用方法从其基础<xref:Microsoft.Office.Interop.Word.Shape>获取控件的位置。  
   
  [!code-csharp[Trin_WordControlCollection#58](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#58)]
  [!code-vb[Trin_WordControlCollection#58](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#58)]  
@@ -1800,7 +1796,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例添加<xref:Microsoft.Office.Tools.Word.Controls.Button>控制到起始位置的文档，并显示消息框中的按钮的索引。  
+ 下面的代码示例将<xref:Microsoft.Office.Tools.Word.Controls.Button>控件添加到文档的开头, 然后在消息框中显示该按钮的索引。  
   
  [!code-csharp[Trin_WordControlCollection#54](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#54)]
  [!code-vb[Trin_WordControlCollection#54](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#54)]  
@@ -1898,9 +1894,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 有关以编程方式添加控件`name`参数应包含为添加的最后一个参数指定的名称\<*控件*> 方法，不`Name`控件的属性。  
+ 对于以编程方式添加的控件, `name`参数应包含指定为添加\< `Name` *控件*> 方法的最后一个参数的名称, 而不是控件的属性。  
   
- 在设计时添加的控件的`name`参数应包含标识符。  
+ 对于在设计时添加的控件, 该`name`参数应包含标识符。  
   
  ]]></format>
         </remarks>
@@ -1928,7 +1924,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 在设计时添加的控件不能删除从<xref:Microsoft.Office.Tools.Word.ControlCollection>实例。 可以使用<xref:Microsoft.Office.Tools.Word.ControlCollection.Remove%2A>方法仅删除在运行时添加的控件。  
+ 在设计时添加的控件无法从<xref:Microsoft.Office.Tools.Word.ControlCollection>实例中移除。 您可以使用<xref:Microsoft.Office.Tools.Word.ControlCollection.Remove%2A>方法仅删除在运行时添加的控件。  
   
  ]]></format>
         </remarks>
@@ -1957,12 +1953,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 在设计时添加的控件不能删除从<xref:Microsoft.Office.Tools.Word.ControlCollection>实例。 可以使用<xref:Microsoft.Office.Tools.Word.ControlCollection.Remove%2A>方法仅删除在运行时添加的控件。  
+ 在设计时添加的控件无法从<xref:Microsoft.Office.Tools.Word.ControlCollection>实例中移除。 您可以使用<xref:Microsoft.Office.Tools.Word.ControlCollection.Remove%2A>方法仅删除在运行时添加的控件。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.Button>控件和一个<xref:Microsoft.Office.Tools.Word.Controls.MonthCalendar>控制到该文档，然后删除<xref:Microsoft.Office.Tools.Word.Controls.Button>控件。  
+ 下面的代码示例将一个<xref:Microsoft.Office.Tools.Word.Controls.Button>控件和一个<xref:Microsoft.Office.Tools.Word.Controls.MonthCalendar>控件添加到文档中, 然后删除该<xref:Microsoft.Office.Tools.Word.Controls.Button>控件。  
   
  [!code-csharp[Trin_WordControlCollection#55](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#55)]
  [!code-vb[Trin_WordControlCollection#55](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#55)]  
@@ -1993,12 +1989,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 在设计时添加的控件不能删除从<xref:Microsoft.Office.Tools.Word.ControlCollection>实例。 可以使用<xref:Microsoft.Office.Tools.Word.ControlCollection.RemoveAt%2A>仅以删除在运行时添加的控件。  
+ 在设计时添加的控件无法从<xref:Microsoft.Office.Tools.Word.ControlCollection>实例中移除。 只能使用<xref:Microsoft.Office.Tools.Word.ControlCollection.RemoveAt%2A>删除在运行时添加的控件。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Controls.Button>控件和一个<xref:Microsoft.Office.Tools.Word.Controls.MonthCalendar>控制到该文档，然后删除<xref:Microsoft.Office.Tools.Word.Controls.Button>控件。  
+ 下面的代码示例将一个<xref:Microsoft.Office.Tools.Word.Controls.Button>控件和一个<xref:Microsoft.Office.Tools.Word.Controls.MonthCalendar>控件添加到文档中, 然后删除该<xref:Microsoft.Office.Tools.Word.Controls.Button>控件。  
   
  [!code-csharp[Trin_WordControlCollection#56](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordControlCollection/CS/ThisDocument.cs#56)]
  [!code-vb[Trin_WordControlCollection#56](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordControlCollection/VB/ThisDocument.vb#56)]  
@@ -2008,22 +2004,5 @@
         <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="index" /> 小于零，或者 <paramref name="index" /> 等于或大于计数。</exception>
       </Docs>
     </Member>
-    <MemberGroup MemberName="Contains">
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
-        <AssemblyVersion>10.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <Docs>
-        <summary>确定指定的控件是否为 <see cref="T:Microsoft.Office.Tools.Word.ControlCollection" /> 实例的成员。</summary>
-        <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- 此方法可以确定控件是否是集合，然后再尝试对控件执行操作的成员。 可以使用此方法以确认控件已添加到或仍是的成员<xref:Microsoft.Office.Tools.Word.ControlCollection>实例。  
-  
- ]]></format>
-        </remarks>
-      </Docs>
-    </MemberGroup>
   </Members>
 </Type>

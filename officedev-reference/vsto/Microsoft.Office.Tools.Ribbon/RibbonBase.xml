@@ -1,5 +1,5 @@
 <Type Name="RibbonBase" FullName="Microsoft.Office.Tools.Ribbon.RibbonBase">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="8da99231c9fb8ce1651c4f4ab71fc135558aaef1" /><Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="09/19/2018" /><Meta Name="ms.locfileid" Value="46454903" /></Metadata><TypeSignature Language="C#" Value="public abstract class RibbonBase : System.ComponentModel.Component, IDisposable, Microsoft.Office.Tools.Ribbon.IRibbonExtension" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="1583e2a0a2971356261429c8b074542740a1e22b" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69003067" /></Metadata><TypeSignature Language="C#" Value="public abstract class RibbonBase : System.ComponentModel.Component, IDisposable, Microsoft.Office.Tools.Ribbon.IRibbonExtension" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit RibbonBase extends System.ComponentModel.Component implements class Microsoft.Office.Tools.IExtension, class Microsoft.Office.Tools.Ribbon.IRibbonExtension, class System.IDisposable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Ribbon.RibbonBase" />
   <AssemblyInfo>
@@ -10,6 +10,9 @@
     <BaseTypeName>System.ComponentModel.Component</BaseTypeName>
   </Base>
   <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Office.Tools.IExtension</InterfaceName>
+    </Interface>
     <Interface>
       <InterfaceName>Microsoft.Office.Tools.Ribbon.IRibbonExtension</InterfaceName>
     </Interface>
@@ -31,9 +34,9 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 添加一个新**功能区 （可视化设计器）** 项向 Office 项目，Visual Studio 添加功能区类，该类继承<xref:Microsoft.Office.Tools.Ribbon.RibbonBase>到项目。 <xref:Microsoft.Office.Tools.Ribbon.RibbonBase> 包含方法和属性所共有的功能区的所有类。  有关详细信息，请参阅[功能区设计器](/visualstudio/vsto/ribbon-designer)。  
+ 将新的 "**功能区 (可视化设计器)** " 项添加到 Office 项目时, Visual Studio 会将继承自<xref:Microsoft.Office.Tools.Ribbon.RibbonBase>的功能区类添加到项目。 <xref:Microsoft.Office.Tools.Ribbon.RibbonBase>包含所有功能区类共有的方法和属性。  有关详细信息，请参阅 [Ribbon Designer](/visualstudio/vsto/ribbon-designer)。  
   
- 某些属性<xref:Microsoft.Office.Tools.Ribbon.RibbonBase>可以只能在功能区加载到 Office 应用程序之前设置。 有关如何设置这些属性的信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
+ 的<xref:Microsoft.Office.Tools.Ribbon.RibbonBase>某些属性只能在功能区加载到 Office 应用程序中之前设置。 有关设置这些属性的信息, 请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
   
 ## <a name="usage"></a>用法  
  [!INCLUDE[vsto_net4utilities](~/includes/vsto-net4utilities-md.md)]  
@@ -61,7 +64,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 不使用此构造函数创建的实例<xref:Microsoft.Office.Tools.Ribbon.RibbonBase>类。 添加一个新**功能区 （可视化设计器）** 项到项目，Visual Studio 创建继承的类的实例<xref:Microsoft.Office.Tools.Ribbon.RibbonBase>。  
+ 不要使用此构造函数创建<xref:Microsoft.Office.Tools.Ribbon.RibbonBase>类的实例。 将新的 "**功能区 (可视化设计器)** " 项添加到项目时, Visual Studio 将创建一个继承自<xref:Microsoft.Office.Tools.Ribbon.RibbonBase>的类的实例。  
   
  ]]></format>
         </remarks>
@@ -103,7 +106,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 您可以使用此事件以释放特定于应用程序所分配的资源更早版本，例如，在<xref:Microsoft.Office.Tools.Ribbon.RibbonBase.Load>事件。  
+ 你可以使用此事件来释放以前分配的特定于应用程序的资源, 例如, 在<xref:Microsoft.Office.Tools.Ribbon.RibbonBase.Load>事件中。  
   
  ]]></format>
         </remarks>
@@ -128,9 +131,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 在 Outlook 中，此属性指的检查器窗口或资源管理器窗口中此<xref:Microsoft.Office.Tools.Ribbon.RibbonBase>显示。  
+ 在 Outlook 中, 此属性引用显示此<xref:Microsoft.Office.Tools.Ribbon.RibbonBase>的检查器窗口或资源管理器窗口。  
   
- 在所有其他 Office 项目中，此属性返回 null。  
+ 在所有其他 Office 项目中, 此属性返回 null。  
   
  ]]></format>
         </remarks>
@@ -152,22 +155,22 @@
         <Parameter Name="disposing" Type="System.Boolean" />
       </Parameters>
       <Docs>
-        <param name="disposing">若要释放托管资源和非托管资源，则为 <see langword="true" />；若仅释放非托管资源，则为 <see langword="false" />。</param>
+        <param name="disposing"><see langword="true" /> 表示释放托管资源和非托管资源；<see langword="false" /> 表示仅释放非托管资源。</param>
         <summary>释放 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" /> 类使用的非托管资源，并可以选择释放托管资源。</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 调用此方法由公共`Dispose()`方法和<xref:System.Object.Finalize%2A>方法。 `Dispose()` 调用受保护`Dispose(Boolean)`方法替换`disposing`参数设置为`true`。 <xref:System.Object.Finalize%2A> 调用`Dispose`与`disposing`设置为`false`。  
+ 此方法由公共`Dispose()`方法<xref:System.Object.Finalize%2A>和方法调用。 `Dispose()`调用受保护`Dispose(Boolean)`的方法, `disposing`并将参数`true`设置为。 <xref:System.Object.Finalize%2A>在`Dispose` 设置`disposing` 为`false`的情况调用。  
   
- 当`disposing`参数为 true 时，此方法释放任何托管对象所持有的所有资源，此<xref:Microsoft.Office.Tools.Ribbon.RibbonBase>的引用。 此方法调用每个引用对象的 `Dispose()` 方法。  
+ 当参数为 true 时, 此方法释放该<xref:Microsoft.Office.Tools.Ribbon.RibbonBase>引用的任何托管对象所持有的所有资源。 `disposing` 此方法调用每个引用对象的 `Dispose()` 方法。  
   
  ]]></format>
         </remarks>
         <block subset="none" type="overrides"><para>
-            <see langword="Dispose" /> 可以由其他对象多次调用。 重写时<see langword="Dispose(Boolean) " />小心不要引用已经释放的早期调用中的对象<see langword="Dispose" />。 有关如何实现详细信息<see langword=" Dispose(Boolean)" />，请参阅[实现 Dispose 方法](http://msdn.microsoft.com/library/eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9)。  
+            <see langword="Dispose" /> 可以由其他对象多次调用。 当重<see langword="Dispose(Boolean) " />写时, 请注意不要引用先前在<see langword="Dispose" />调用时已释放的对象。 有关如何实现<see langword=" Dispose(Boolean)" />的详细信息, 请参阅[实现 Dispose 方法](http://msdn.microsoft.com/library/eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9)。  
   
-有关详细信息<see langword="Dispose" />并<see cref="M:System.Object.Finalize" />，请参阅[清理了非托管资源](http://msdn.microsoft.com/library/a17b0066-71c2-4ba4-9822-8e19332fc213)。</para></block>
+有关<see langword="Dispose" /> 和<see cref="M:System.Object.Finalize" />的详细信息, 请参阅[清理非托管资源](http://msdn.microsoft.com/library/a17b0066-71c2-4ba4-9822-8e19332fc213)。</para></block>
       </Docs>
     </Member>
     <Member MemberName="Factory">
@@ -189,7 +192,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 可以使用此属性来跟踪创建的当前实例的功能区工厂类<xref:Microsoft.Office.Tools.Ribbon.RibbonBase>。  
+ 您可以使用此属性来跟踪创建的当前实例<xref:Microsoft.Office.Tools.Ribbon.RibbonBase>的功能区工厂类。  
   
  ]]></format>
         </remarks>
@@ -214,9 +217,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Ribbon.RibbonBase> 具有此属性设置为对象`false`每次打开新的 Outlook 检查器时创建。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonBase>此属性设置为`false`的对象将在每次打开新的 Outlook 检查器时创建。  
   
- 只能在功能区加载到 Office 应用程序之前，可以设置此属性。 有关设置此属性的信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
+ 此属性只能在功能区加载到 Office 应用程序中之前设置。 有关设置此属性的信息, 请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
   
  ]]></format>
         </remarks>
@@ -240,7 +243,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Ribbon.RibbonBase.Load>事件处理程序会自动添加到功能区代码文件。 使用此事件处理程序运行时在功能区加载自定义代码。  
+ 此<xref:Microsoft.Office.Tools.Ribbon.RibbonBase.Load>事件处理程序将自动添加到功能区代码文件中。 此事件处理程序用于在功能区加载时运行自定义代码。  
   
  ]]></format>
         </remarks>
@@ -264,26 +267,26 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Ribbon.RibbonBase.LoadImage>事件，可以缓存中的映像功能区自定义，这可以提高性能。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonBase.LoadImage>事件使你可以在功能区自定义项中缓存图像, 这可以提高性能。  
   
- 默认情况下，映像加载到功能区，每次用户显示的选项卡包含的图像。 映像重新加载，以编程方式更改图像将显示控件的属性的任何时间。  
+ 默认情况下, 每次用户显示包含图像的选项卡时, 都会将一个图像加载到功能区中。 当你以编程方式更改出现图像的控件的属性时, 将重新加载图像。  
   
- 使用<xref:Microsoft.Office.Tools.Ribbon.RibbonBase.LoadImage>事件以将图像分配到控件。 当用户选择功能区上的选项卡时，Microsoft Office 应用程序使用缓存的图像。 如果在运行时修改控件属性，Microsoft Office 应用程序将重新加载该控件上的映像。 这可以提供较小的性能提升。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonBase.LoadImage>使用事件将图像分配给控件。 当用户在功能区上选择选项卡时, Microsoft Office 应用程序将使用缓存的图像。 如果在运行时修改控件属性, Microsoft Office 应用程序将不会重载控件上的图像。 这会使你获得较小的性能提升。  
   
- 如果你想要缓存控件的图像，设置**ImageName**控件的属性。 <xref:Microsoft.Office.Tools.Ribbon.RibbonBase.LoadImage>除非设置不会引发事件**ImageName**至少一个控件的属性。  
+ 如果要缓存控件的图像, 请设置控件的**ImageName**属性。 除非<xref:Microsoft.Office.Tools.Ribbon.RibbonBase.LoadImage>至少设置一个控件的**ImageName**属性, 否则不会引发该事件。  
   
    
   
 ## Examples  
- 下面的示例为两个缓存图像<xref:Microsoft.Office.Tools.Ribbon.RibbonButton>控件。  
+ 下面的示例将缓存两个<xref:Microsoft.Office.Tools.Ribbon.RibbonButton>控件的图像。  
   
- 若要运行此代码示例，必须首先执行以下步骤：  
+ 若要运行此代码示例, 必须首先执行以下步骤:  
   
--   添加**功能区 （可视化设计器）** 到 Office 项目。  
+-   向 Office 项目添加**功能区 (可视化设计器)** 。  
   
--   如果使用 Visual Basic 项目，到功能区代码文件的顶部添加以下语句： `Imports Microsoft.Office.Tools.Ribbon`  
+-   如果你使用的是 Visual Basic 项目, 请将以下语句添加到功能区代码文件的顶部:`Imports Microsoft.Office.Tools.Ribbon`  
   
- 然后可以在生成的功能区类中运行此代码。  
+ 然后, 你可以在生成的功能区类中运行此代码。  
   
 ```vb  
 Private Sub Ribbon1_LoadImage(sender As Object, e As RibbonLoadImageEventArgs)  
@@ -320,6 +323,9 @@ private void Ribbon1_LoadImage(object sender, RibbonLoadImageEventArgs e)
       <MemberSignature Language="ILAsm" Value=".property instance object Microsoft.Office.Tools.IExtension.ExtensionBase" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Ribbon.RibbonBase.Microsoft#Office#Tools#IExtension#ExtensionBase" />
       <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Microsoft.Office.Tools.IExtension.ExtensionBase</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -352,9 +358,9 @@ private void Ribbon1_LoadImage(object sender, RibbonLoadImageEventArgs e)
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 控件的名称显示在**属性**窗口。 它是 Microsoft Office 用来标识此 ID <xref:Microsoft.Office.Tools.Ribbon.RibbonBase>，它是此实例的名称和<xref:Microsoft.Office.Tools.Ribbon.RibbonBase>在代码中。  
+ 控件的名称将显示在 "**属性**" 窗口中。 它是 Microsoft Office 用来标识此<xref:Microsoft.Office.Tools.Ribbon.RibbonBase>的 ID, 它是代码中此<xref:Microsoft.Office.Tools.Ribbon.RibbonBase>实例的名称。  
   
- 可以在运行时仅在某些情况下设置此属性。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
+ 仅在某些情况下, 才能在运行时设置此属性。 有关详细信息, 请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
   
  ]]></format>
         </remarks>
@@ -379,17 +385,17 @@ private void Ribbon1_LoadImage(object sender, RibbonLoadImageEventArgs e)
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- Microsoft Office 菜单是单击时打开的菜单**文件**选项卡 （适用于 Microsoft Office 2010) 或**Microsoft Office 按钮**（针对 2007 Microsoft Office 系统）。 只能通过使用功能区设计器，可以向 Microsoft Office 菜单添加控件。 有关详细信息，请参阅[如何： 将控件添加到 Backstage 视图](/visualstudio/vsto/how-to-add-controls-to-the-backstage-view)。  
+ Microsoft Office 菜单是单击 "**文件**" 选项卡时打开的菜单 (适用于 Microsoft Office 2010) 或 " **Microsoft Office" 按钮**(对于 2007 Microsoft Office 系统)。 只能使用功能区设计器将控件添加到 Microsoft Office 菜单。 有关详细信息，请参阅[如何：向 Backstage 视图](/visualstudio/vsto/how-to-add-controls-to-the-backstage-view)添加控件。  
   
- 可以使用访问 Microsoft Office 菜单自定义项在运行时中的功能区控件的只读集合<xref:Microsoft.Office.Tools.Ribbon.RibbonOfficeMenu.Items%2A>的属性<xref:Microsoft.Office.Tools.Ribbon.RibbonOfficeMenu>由的实例<xref:Microsoft.Office.Tools.Ribbon.RibbonBase.OfficeMenu%2A>属性。  
+ 您可以通过使用<xref:Microsoft.Office.Tools.Ribbon.RibbonOfficeMenu.Items%2A> <xref:Microsoft.Office.Tools.Ribbon.RibbonBase.OfficeMenu%2A>属性公开的<xref:Microsoft.Office.Tools.Ribbon.RibbonOfficeMenu>实例的属性, 在运行时访问 Microsoft Office 菜单自定义项中的功能区控件的只读集合。  
   
    
   
 ## Examples  
- 下面的示例获取 Microsoft Office 菜单自定义项中的自定义控件的数量。  
+ 下面的示例获取 Microsoft Office 菜单自定义中自定义控件的数目。  
   
 > [!NOTE]
->  若要运行此代码示例，必须首先添加**功能区 （可视化设计器）** 到 Office 项目。 然后可以在生成的功能区类中运行此代码。  
+>  若要运行此代码示例, 必须首先向 Office 项目添加**功能区 (可视化设计器)** 。 然后, 你可以在生成的功能区类中运行此代码。  
   
 ```vb  
 Dim numControlsInOfficeMenu As Integer = Me.OfficeMenu.Items.Count  
@@ -440,7 +446,7 @@ int numControlsInOfficeMenu = this.OfficeMenu.Items.Count;
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果父级不是动态的此方法会调用`Microsoft.Office.Core.IRibbonUI.InvalidateControl`当前控件如果布局未挂起的方法。  
+ 如果父级不是动态的, 则此方法将`Microsoft.Office.Core.IRibbonUI.InvalidateControl`调用当前控件的方法 (如果未挂起布局)。  
   
  ]]></format>
         </remarks>
@@ -465,9 +471,9 @@ int numControlsInOfficeMenu = this.OfficeMenu.Items.Count;
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 调用此方法<xref:Microsoft.Office.Tools.Ribbon.RibbonComponent.ResumeLayout%2A>方法。  
+ 此方法由<xref:Microsoft.Office.Tools.Ribbon.RibbonComponent.ResumeLayout%2A>方法调用。  
   
- 在内部，此方法调用`Microsoft.Office.Core.IRibbonUI.Invalidate`方法。  
+ 此方法在内部调用`Microsoft.Office.Core.IRibbonUI.Invalidate`方法。  
   
  ]]></format>
         </remarks>
@@ -492,9 +498,9 @@ int numControlsInOfficeMenu = this.OfficeMenu.Items.Count;
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 调用<xref:Microsoft.Office.Tools.Ribbon.RibbonBase.SuspendLayout%2A>可能会导致性能稍有增加，如果你的应用程序有很多经常更新的控件。  
+ 如果<xref:Microsoft.Office.Tools.Ribbon.RibbonBase.SuspendLayout%2A>你的应用程序有许多频繁更新的控件, 则调用可能会导致性能稍微提高。  
   
- 更改每个控件的状态后，可以调用<xref:Microsoft.Office.Tools.Ribbon.RibbonBase.ResumeLayout%2A>以允许 UI 以进行刷新。  
+ 更改每个控件的状态后, 可以调用<xref:Microsoft.Office.Tools.Ribbon.RibbonBase.ResumeLayout%2A>来允许刷新 UI。  
   
  ]]></format>
         </remarks>
@@ -540,9 +546,9 @@ int numControlsInOfficeMenu = this.OfficeMenu.Items.Count;
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 不应尝试将此属性设置。  
+ 不应尝试设置此属性。  
   
- 可以使用<xref:Microsoft.Office.Tools.Ribbon.RibbonBase.RibbonType%2A>属性来获取与此相关联的功能区 Id 的所有<xref:Microsoft.Office.Tools.Ribbon.RibbonBase>实例。 <xref:Microsoft.Office.Tools.Ribbon.RibbonBase.RibbonId%2A>属性将返回仅限单一 ID，用于创建此<xref:Microsoft.Office.Tools.Ribbon.RibbonBase>实例。 例如，可以使用此属性以确定是否正在邮件组合项中显示的此功能区实例。  
+ 您可以使用<xref:Microsoft.Office.Tools.Ribbon.RibbonBase.RibbonType%2A>属性来获取与此<xref:Microsoft.Office.Tools.Ribbon.RibbonBase>实例关联的所有功能区 id。 属性只返回用于创建此<xref:Microsoft.Office.Tools.Ribbon.RibbonBase>实例的单个 ID。 <xref:Microsoft.Office.Tools.Ribbon.RibbonBase.RibbonId%2A> 例如, 你可以使用此属性来确定此功能区实例是否正在邮件组合项中显示。  
   
  ]]></format>
         </remarks>
@@ -567,13 +573,13 @@ int numControlsInOfficeMenu = this.OfficeMenu.Items.Count;
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- Excel、 Word 和 PowerPoint 中此属性通常具有只有一个功能区 ID。 Outlook 可以有多个 Id，为其对应的各种消息类特定<xref:Microsoft.Office.Tools.Ribbon.RibbonBase>实例是否有效。  
+ Excel、Word 和 PowerPoint 通常在此属性中只有一个功能区 ID。 Outlook 可以有多个 id, 它们对应于特定<xref:Microsoft.Office.Tools.Ribbon.RibbonBase>实例有效的各种消息类。  
   
- 在设计器提供有效的功能区 Id 的下拉列表。  
+ 设计器提供有效功能区 Id 的下拉列表。  
   
- 功能区 Id 用于将功能区类与特定的上下文窗口相关联。  
+ 功能区 Id 用于将功能区类与特定上下文窗口相关联。  
   
- 只能在功能区加载到 Office 应用程序之前，可以设置此属性。 有关设置此属性的信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
+ 此属性只能在功能区加载到 Office 应用程序中之前设置。 有关设置此属性的信息, 请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
   
  ]]></format>
         </remarks>
@@ -593,12 +599,12 @@ int numControlsInOfficeMenu = this.OfficeMenu.Items.Count;
       </ReturnValue>
       <Docs>
         <summary>获取 Microsoft Office 应用程序提供给功能区扩展性代码的 <c>IRibbonUI</c> 实例。</summary>
-        <value><c>IRibbonUI</c>提供给功能区扩展性代码的 Office 应用程序的实例。</value>
+        <value>Office 应用程序提供给功能区扩展性代码的<c>IRibbonUI</c>实例。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性可以用于更新功能区 UI。  
+ 此属性可用于更新功能区 UI。  
   
  ]]></format>
         </remarks>
@@ -623,9 +629,9 @@ int numControlsInOfficeMenu = this.OfficeMenu.Items.Count;
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 只能在功能区加载到 Office 应用程序之前，可以设置此属性。 有关设置此属性的信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
+ 此属性只能在功能区加载到 Office 应用程序中之前设置。 有关设置此属性的信息, 请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
   
- 您不能在运行时更改自定义选项卡的可见性，如果此属性设置为`true`。  
+ 如果将此属性设置为`true`, 则不能在运行时更改自定义选项卡的可见性。  
   
  ]]></format>
         </remarks>
@@ -650,9 +656,9 @@ int numControlsInOfficeMenu = this.OfficeMenu.Items.Count;
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 调用<xref:Microsoft.Office.Tools.Ribbon.RibbonBase.SuspendLayout%2A>可能会导致性能稍有增加，如果你的应用程序有很多经常更新的控件。  
+ 如果<xref:Microsoft.Office.Tools.Ribbon.RibbonBase.SuspendLayout%2A>你的应用程序有许多频繁更新的控件, 则调用可能会导致性能稍微提高。  
   
- 更改每个控件的状态后，可以调用<xref:Microsoft.Office.Tools.Ribbon.RibbonBase.ResumeLayout%2A>以允许 UI 以进行刷新。  
+ 更改每个控件的状态后, 可以调用<xref:Microsoft.Office.Tools.Ribbon.RibbonBase.ResumeLayout%2A>来允许刷新 UI。  
   
  ]]></format>
         </remarks>
@@ -690,12 +696,12 @@ int numControlsInOfficeMenu = this.OfficeMenu.Items.Count;
       </ReturnValue>
       <Docs>
         <summary>获取或设置与此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" /> 关联的应用程序特定的数据。</summary>
-        <value><c>System.Object</c> ，表示与此相关联的特定于应用程序数据<see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" />。</value>
+        <value>一个<c></c>表示与此<see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBase" />关联的应用程序特定数据的 system.object。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 从派生的任何类型`System.Object`类可以分配给此属性。 但是，如果您设置<xref:Microsoft.Office.Tools.Ribbon.RibbonBase.Tag%2A>Visual Studio 中的属性**属性**窗口中，您可以仅将文本分配。  
+ 从类派生的`System.Object`任何类型都可以分配给此属性。 但是, 如果在 Visual Studio <xref:Microsoft.Office.Tools.Ribbon.RibbonBase.Tag%2A>的 "**属性**" 窗口中设置属性, 则只能分配文本。  
   
  ]]></format>
         </remarks>

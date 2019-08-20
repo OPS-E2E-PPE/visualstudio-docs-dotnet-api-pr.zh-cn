@@ -1,5 +1,5 @@
 <Type Name="ContextChangeEventArgs" FullName="Microsoft.Office.Tools.Word.ContextChangeEventArgs">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="faf683037799542059f861b1730432d61b1ad6c4" /><Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="02/21/2018" /><Meta Name="ms.locfileid" Value="29431918" /></Metadata><TypeSignature Language="C#" Value="public interface ContextChangeEventArgs" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="9a928fe24564d80175de0837f560b6c08a4f3c1e" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69000539" /></Metadata><TypeSignature Language="C#" Value="public interface ContextChangeEventArgs" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ContextChangeEventArgs" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Word.ContextChangeEventArgs" />
   <AssemblyInfo>
@@ -18,7 +18,7 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例演示了事件处理程序<xref:Microsoft.Office.Tools.Word.XMLNode.Select?displayProperty=fullName>， <xref:Microsoft.Office.Tools.Word.XMLNode.Deselect?displayProperty=fullName>， <xref:Microsoft.Office.Tools.Word.XMLNode.ContextEnter?displayProperty=fullName>，和<xref:Microsoft.Office.Tools.Word.XMLNode.ContextLeave?displayProperty=fullName>事件。 当<xref:Microsoft.Office.Tools.Word.XMLNode.Select?displayProperty=fullName>和<xref:Microsoft.Office.Tools.Word.XMLNode.Deselect?displayProperty=fullName>将引发事件，事件处理程序添加到所选内容的边框的双线或删除双线，具体取决于事件。 当<xref:Microsoft.Office.Tools.Word.XMLNode.ContextEnter?displayProperty=fullName>和<xref:Microsoft.Office.Tools.Word.XMLNode.ContextLeave?displayProperty=fullName>将引发事件，事件处理程序显示消息，指出新选择的节点和先前选择的节点的名称。 此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`。  
+ 下面的代码示例演示<xref:Microsoft.Office.Tools.Word.XMLNode.Select?displayProperty=fullName>了、 <xref:Microsoft.Office.Tools.Word.XMLNode.Deselect?displayProperty=fullName>、 <xref:Microsoft.Office.Tools.Word.XMLNode.ContextEnter?displayProperty=fullName>和<xref:Microsoft.Office.Tools.Word.XMLNode.ContextLeave?displayProperty=fullName>事件的事件处理程序。 <xref:Microsoft.Office.Tools.Word.XMLNode.Select?displayProperty=fullName>引发和<xref:Microsoft.Office.Tools.Word.XMLNode.Deselect?displayProperty=fullName>事件时, 事件处理程序会将双线添加到所选内容的边框上, 或根据事件删除双线。 <xref:Microsoft.Office.Tools.Word.XMLNode.ContextEnter?displayProperty=fullName>引发和<xref:Microsoft.Office.Tools.Word.XMLNode.ContextLeave?displayProperty=fullName>事件时, 事件处理程序会显示消息, 指出新选定节点和以前选择的节点的名称。 此示例假设当前文档包含一个<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`的。  
   
  [!code-csharp[Trin_WordXMLNode#201](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#201)]
  [!code-vb[Trin_WordXMLNode#201](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#201)]  
@@ -41,7 +41,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取选定内容移动到的 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 控件。</summary>
-        <value><see cref="T:Microsoft.Office.Tools.Word.XMLNode" />控制转移到所选内容已移动。</value>
+        <value>选定内容已移动到的控件。<see cref="T:Microsoft.Office.Tools.Word.XMLNode" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -59,7 +59,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取从其移动选定内容的 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 控件。</summary>
-        <value><see cref="T:Microsoft.Office.Tools.Word.XMLNode" />控件从所选内容已移动。</value>
+        <value>选定内容已移动到的控件。<see cref="T:Microsoft.Office.Tools.Word.XMLNode" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -95,7 +95,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取所选文本，包括 XML 元素。</summary>
-        <value>A <see cref="T:Microsoft.Office.Interop.Word.Selection" /> ，包括文本和 XML 元素，则<see langword="null" />如果未不选定任何文本。</value>
+        <value><see cref="T:Microsoft.Office.Interop.Word.Selection" />包含 text 和 XML 元素的;<see langword="null" />如果未选择任何文本, 则为。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

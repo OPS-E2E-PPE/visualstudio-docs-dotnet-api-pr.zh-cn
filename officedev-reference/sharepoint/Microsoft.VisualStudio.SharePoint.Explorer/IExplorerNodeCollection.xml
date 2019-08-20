@@ -1,5 +1,5 @@
 <Type Name="IExplorerNodeCollection" FullName="Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeCollection">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="73baa52c7d4bf8859fc2cf8700c0bc95082ec74f" /><Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="09/19/2018" /><Meta Name="ms.locfileid" Value="46455267" /></Metadata><TypeSignature Language="C#" Value="public interface IExplorerNodeCollection : System.Collections.Generic.IEnumerable&lt;Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode&gt;" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="6aa84e909ce95559f2e30b07d9de0b9d7ee01ca8" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69011468" /></Metadata><TypeSignature Language="C#" Value="public interface IExplorerNodeCollection : System.Collections.Generic.IEnumerable&lt;Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode&gt;" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IExplorerNodeCollection implements class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode&gt;, class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeCollection" />
   <AssemblyInfo>
@@ -9,6 +9,9 @@
   <Interfaces>
     <Interface>
       <InterfaceName>System.Collections.Generic.IEnumerable&lt;Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
     </Interface>
   </Interfaces>
   <Docs>
@@ -43,7 +46,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 有关使用详细信息<xref:Microsoft.VisualStudio.SharePoint.IAnnotatedObject.Annotations%2A>属性，请参阅[与 SharePoint 工具扩展相关联自定义数据](/visualstudio/sharepoint/associating-custom-data-with-sharepoint-tools-extensions)。  
+ 有关使用<xref:Microsoft.VisualStudio.SharePoint.IAnnotatedObject.Annotations%2A>属性的详细信息, 请参阅将[自定义数据与 SharePoint 工具扩展相关联](/visualstudio/sharepoint/associating-custom-data-with-sharepoint-tools-extensions)。  
   
  ]]></format>
         </remarks>
@@ -78,7 +81,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 有关使用详细信息<xref:Microsoft.VisualStudio.SharePoint.IAnnotatedObject.Annotations%2A>属性，请参阅[与 SharePoint 工具扩展相关联自定义数据](/visualstudio/sharepoint/associating-custom-data-with-sharepoint-tools-extensions)。  
+ 有关使用<xref:Microsoft.VisualStudio.SharePoint.IAnnotatedObject.Annotations%2A>属性的详细信息, 请参阅将[自定义数据与 SharePoint 工具扩展相关联](/visualstudio/sharepoint/associating-custom-data-with-sharepoint-tools-extensions)。  
   
  ]]></format>
         </remarks>
@@ -111,7 +114,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 当你使用<xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeCollection.AddFolder%2A>方法来创建一个文件夹节点，可以将传递<xref:System.Action%601>委托，它将自动调用，以创建新文件夹节点的节点的子级。 此委托的参数是<xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode>对象，表示可向其中添加子文件夹节点。 有关演示如何创建文件夹节点时指定的委托的演练，请参阅[演练： 扩展服务器资源管理器来显示 Web 部件](/visualstudio/sharepoint/walkthrough-extending-server-explorer-to-display-web-parts)。  
+ 使用<xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeCollection.AddFolder%2A>方法创建文件夹节点时, 可以传递一个<xref:System.Action%601>委托, 该委托将自动调用以创建新文件夹节点的子节点。 此委托的参数是一个<xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode>对象, 该对象表示可向其中添加子级的文件夹节点。 有关演示如何在创建文件夹节点时指定委托的演练, 请参阅[演练:扩展服务器资源管理器以显示 Web 部件](/visualstudio/sharepoint/walkthrough-extending-server-explorer-to-display-web-parts)。  
   
  ]]></format>
         </remarks>

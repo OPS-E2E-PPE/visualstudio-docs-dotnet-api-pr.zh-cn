@@ -1,5 +1,5 @@
 <Type Name="IExplorerNodeEvents" FullName="Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeEvents">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="e91064bacbf5580fabb0a295dcf7d5e959199b6a" /><Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="09/19/2018" /><Meta Name="ms.locfileid" Value="46457672" /></Metadata><TypeSignature Language="C#" Value="public interface IExplorerNodeEvents" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="cf88c2aa05b80b6a51ed3cb707a0b527876d3cb1" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69011440" /></Metadata><TypeSignature Language="C#" Value="public interface IExplorerNodeEvents" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IExplorerNodeEvents" />
   <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeEvents" />
   <AssemblyInfo>
@@ -13,7 +13,7 @@
   </Docs>
   <Members>
     <Member MemberName="NodeChildrenRequested">
-      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeEventArgs&gt; NodeChildrenRequested;" />
+      <MemberSignature Language="C#" Value="event EventHandler&lt;Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeEventArgs&gt; NodeChildrenRequested;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeEventArgs&gt; NodeChildrenRequested" />
       <MemberSignature Language="DocId" Value="E:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeEvents.NodeChildrenRequested" />
       <MemberType>Event</MemberType>
@@ -30,14 +30,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 处理此事件，以便将子节点添加到节点。 有关详细信息，请参阅[如何： 将自定义 SharePoint 节点添加到服务器资源管理器](/visualstudio/sharepoint/how-to-add-a-custom-sharepoint-node-to-server-explorer)。  
+ 处理此事件可向节点添加子节点。 有关详细信息，请参阅[如何：将自定义 SharePoint 节点添加到](/visualstudio/sharepoint/how-to-add-a-custom-sharepoint-node-to-server-explorer)服务器资源管理器。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="NodeDisposing">
-      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeEventArgs&gt; NodeDisposing;" />
+      <MemberSignature Language="C#" Value="event EventHandler&lt;Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeEventArgs&gt; NodeDisposing;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeEventArgs&gt; NodeDisposing" />
       <MemberSignature Language="DocId" Value="E:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeEvents.NodeDisposing" />
       <MemberType>Event</MemberType>
@@ -54,7 +54,7 @@
       </Docs>
     </Member>
     <Member MemberName="NodeInitialized">
-      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeEventArgs&gt; NodeInitialized;" />
+      <MemberSignature Language="C#" Value="event EventHandler&lt;Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeEventArgs&gt; NodeInitialized;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeEventArgs&gt; NodeInitialized" />
       <MemberSignature Language="DocId" Value="E:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeEvents.NodeInitialized" />
       <MemberType>Event</MemberType>
@@ -71,7 +71,7 @@
       </Docs>
     </Member>
     <Member MemberName="NodeMenuItemsRequested">
-      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeMenuItemsRequestedEventArgs&gt; NodeMenuItemsRequested;" />
+      <MemberSignature Language="C#" Value="event EventHandler&lt;Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeMenuItemsRequestedEventArgs&gt; NodeMenuItemsRequested;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeMenuItemsRequestedEventArgs&gt; NodeMenuItemsRequested" />
       <MemberSignature Language="DocId" Value="E:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeEvents.NodeMenuItemsRequested" />
       <MemberType>Event</MemberType>
@@ -88,14 +88,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 处理此事件添加到节点的快捷菜单项。 有关详细信息，请参阅[如何： 扩展服务器资源管理器中的 SharePoint 节点](/visualstudio/sharepoint/how-to-extend-a-sharepoint-node-in-server-explorer)。  
+ 处理此事件可向节点添加快捷菜单项。 有关详细信息，请参阅[如何：在服务器资源管理器](/visualstudio/sharepoint/how-to-extend-a-sharepoint-node-in-server-explorer)中扩展 SharePoint 节点。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="NodePropertiesRequested">
-      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodePropertiesRequestedEventArgs&gt; NodePropertiesRequested;" />
+      <MemberSignature Language="C#" Value="event EventHandler&lt;Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodePropertiesRequestedEventArgs&gt; NodePropertiesRequested;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodePropertiesRequestedEventArgs&gt; NodePropertiesRequested" />
       <MemberSignature Language="DocId" Value="E:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeEvents.NodePropertiesRequested" />
       <MemberType>Event</MemberType>
@@ -112,7 +112,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 处理此事件，以便将属性添加到节点。 属性将出现在**属性**窗口时选择的节点。 有关详细信息，请参阅[如何： 扩展服务器资源管理器中的 SharePoint 节点](/visualstudio/sharepoint/how-to-extend-a-sharepoint-node-in-server-explorer)。  
+ 处理此事件可向节点添加属性。 选择节点时, 属性将显示在 "**属性**" 窗口中。 有关详细信息，请参阅[如何：在服务器资源管理器](/visualstudio/sharepoint/how-to-extend-a-sharepoint-node-in-server-explorer)中扩展 SharePoint 节点。  
   
  ]]></format>
         </remarks>

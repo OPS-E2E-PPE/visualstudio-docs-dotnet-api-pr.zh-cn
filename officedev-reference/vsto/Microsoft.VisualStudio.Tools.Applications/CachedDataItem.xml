@@ -1,5 +1,5 @@
 <Type Name="CachedDataItem" FullName="Microsoft.VisualStudio.Tools.Applications.CachedDataItem">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="366909909d65e8b755522de5f3ee3a8bc57e5cd2" /><Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="09/19/2018" /><Meta Name="ms.locfileid" Value="46458894" /></Metadata><TypeSignature Language="C#" Value="public sealed class CachedDataItem : Microsoft.VisualStudio.Tools.Applications.CachedDataNodeBase" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="5360a7bd3238d876a10d6cc5289659a4fd1a672d" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="68997145" /></Metadata><TypeSignature Language="C#" Value="public sealed class CachedDataItem : Microsoft.VisualStudio.Tools.Applications.CachedDataNodeBase" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CachedDataItem extends Microsoft.VisualStudio.Tools.Applications.CachedDataNodeBase" />
   <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItem" />
   <AssemblyInfo>
@@ -16,24 +16,24 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 有关在文档级自定义项中缓存数据的详细信息，请参阅[缓存数据](/visualstudio/vsto/caching-data)并[访问服务器上的文档中的数据](/visualstudio/vsto/accessing-data-in-documents-on-the-server)。  
+ 有关在文档级自定义项中缓存数据的详细信息, 请参阅在服务器上[缓存数据](/visualstudio/vsto/caching-data)和[访问文档中的数据](/visualstudio/vsto/accessing-data-in-documents-on-the-server)。  
   
    
   
 ## Examples  
- 下面的代码示例检查每个<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem>Excel 工作簿，并显示的数据缓存中的每个名称缓存数据对象。  
+ 下面的代码示例检查 Excel <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem>工作簿的数据缓存中的每个, 并显示每个缓存数据对象的名称。  
   
  此示例需要：  
   
--   控制台应用程序项目或某些其他非 Office 项目。  
+-   一个控制台应用程序项目或一些其他非 Office 项目。  
   
--   对以下程序集的引用：  
+-   对以下程序集的引用:  
   
     -   Microsoft.VisualStudio.Tools.Applications.ServerDocument.dll  
   
     -   Microsoft.VisualStudio.Tools.Applications.Runtime.dll  
   
--   `Imports` （对于 Visual Basic) 或`using`（适用于 C#) 语句<xref:Microsoft.VisualStudio.Tools.Applications?displayProperty=fullName>和<xref:Microsoft.VisualStudio.Tools.Applications.Runtime?displayProperty=fullName>代码文件顶部的命名空间。  
+-   `Imports`(对于 Visual Basic) 或`using` (对于C#) <xref:Microsoft.VisualStudio.Tools.Applications?displayProperty=fullName>代码文件顶部<xref:Microsoft.VisualStudio.Tools.Applications.Runtime?displayProperty=fullName>的和命名空间。  
   
  [!code-csharp[Trin_ServerDocument#5](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ServerDocument/CS/Form1.cs#5)]
  [!code-vb[Trin_ServerDocument#5](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ServerDocument/VB/Form1.vb#5)]  
@@ -56,33 +56,33 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置缓存数据对象类型的程序集限定名称。</summary>
-        <value>缓存的数据对象的类型的程序集限定名称。</value>
+        <value>缓存数据对象的类型的程序集限定名称。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem.DataType%2A>属性返回的是有用的创建自定义类型的新实例的数据缓存中的缓存的数据类型的程序集限定名称。 例如，可以获取<xref:System.Type>并传递到程序集限定类型名称的自定义数据类型的<xref:System.Type.GetType%2A>方法。 然后可以通过传递此创建自定义类型的实例<xref:System.Type>作为参数<xref:System.Activator.CreateInstance%2A?displayProperty=fullName>方法。  
+ <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem.DataType%2A>属性返回缓存数据类型的程序集限定名称, 此名称对于创建位于数据缓存中的自定义类型的新实例很有用。 例如, 可以通过将程序集<xref:System.Type>限定的类型名称传递<xref:System.Type.GetType%2A>给方法来获取自定义数据类型的。 然后, 可以通过将此<xref:System.Type>实例作为参数传递<xref:System.Activator.CreateInstance%2A?displayProperty=fullName>给方法来创建自定义类型的实例。  
   
- 返回的程序集限定类型字符串的格式有关的详细信息<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem.DataType%2A>属性，请参阅<xref:System.Type.AssemblyQualifiedName%2A?displayProperty=fullName>属性。  
+ 有关<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem.DataType%2A>属性返回的程序集限定类型字符串的格式的详细信息, <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=fullName>请参见属性。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem.SerializeDataInstance%2A>方法来修改 Excel 工作簿的工作表中缓存的字符串的值。 该代码使用<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem.DataType%2A>属性以验证缓存的数据对象，尝试对其进行修改之前是一个字符串。  
+ 下面的代码示例使用<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem.SerializeDataInstance%2A>方法修改在 Excel 工作簿的工作表中缓存的字符串的值。 该代码使用<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem.DataType%2A>属性来验证缓存的数据对象是否为字符串, 然后再尝试修改该对象。  
   
  此示例需要：  
   
--   具有的 Excel 文档级自定义`Sheet1`类中`ExcelWorkbook1`命名空间，并在已缓存的字符串`Sheet1`类名为`CachedString`。  
+-   一个 Excel 文档级自定义项, 它具有`Sheet1` `ExcelWorkbook1`命名空间中的一个类和一个名为`CachedString`的`Sheet1`类中的缓存字符串。  
   
--   控制台应用程序项目或某些其他非 Office 项目。  
+-   一个控制台应用程序项目或一些其他非 Office 项目。  
   
--   对以下程序集的引用：  
+-   对以下程序集的引用:  
   
     -   Microsoft.VisualStudio.Tools.Applications.ServerDocument.dll  
   
     -   Microsoft.VisualStudio.Tools.Applications.Runtime.dll  
   
--   `Imports` （对于 Visual Basic) 或`using`（适用于 C#) 语句<xref:Microsoft.VisualStudio.Tools.Applications?displayProperty=fullName>和<xref:Microsoft.VisualStudio.Tools.Applications.Runtime?displayProperty=fullName>代码文件顶部的命名空间。  
+-   `Imports`(对于 Visual Basic) 或`using` (对于C#) <xref:Microsoft.VisualStudio.Tools.Applications?displayProperty=fullName>代码文件顶部<xref:Microsoft.VisualStudio.Tools.Applications.Runtime?displayProperty=fullName>的和命名空间。  
   
  [!code-csharp[Trin_ServerDocument#9](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ServerDocument/CS/Form1.cs#9)]
  [!code-vb[Trin_ServerDocument#9](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ServerDocument/VB/Form1.vb#9)]  
@@ -105,24 +105,24 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置通过 <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItem" /> 表示的缓存数据对象的名称。</summary>
-        <value>由表示的缓存的数据对象的名称<see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem" />。</value>
+        <value>所表示<see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem" />的缓存数据对象的名称。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem.Id%2A>属性来显示 Excel 工作簿中缓存的数据对象的名称。  
+ 下面的代码示例使用<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem.Id%2A>属性来显示 Excel 工作簿中的缓存数据对象的名称。  
   
  此示例需要：  
   
--   控制台应用程序项目或某些其他非 Office 项目。  
+-   一个控制台应用程序项目或一些其他非 Office 项目。  
   
--   对以下程序集的引用：  
+-   对以下程序集的引用:  
   
     -   Microsoft.VisualStudio.Tools.Applications.ServerDocument.dll  
   
     -   Microsoft.VisualStudio.Tools.Applications.Runtime.dll  
   
--   `Imports` （对于 Visual Basic) 或`using`（适用于 C#) 语句<xref:Microsoft.VisualStudio.Tools.Applications?displayProperty=fullName>和<xref:Microsoft.VisualStudio.Tools.Applications.Runtime?displayProperty=fullName>代码文件顶部的命名空间。  
+-   `Imports`(对于 Visual Basic) 或`using` (对于C#) <xref:Microsoft.VisualStudio.Tools.Applications?displayProperty=fullName>代码文件顶部<xref:Microsoft.VisualStudio.Tools.Applications.Runtime?displayProperty=fullName>的和命名空间。  
   
  [!code-csharp[Trin_ServerDocument#5](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ServerDocument/CS/Form1.cs#5)]
  [!code-vb[Trin_ServerDocument#5](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ServerDocument/VB/Form1.vb#5)]  
@@ -145,12 +145,12 @@
       </ReturnValue>
       <Docs>
         <summary>如果缓存数据对象为 <see cref="T:System.Data.DataSet" /> 或 <see cref="T:System.Data.DataTable" />，获取或设置描述由 <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItem" /> 表示的缓存数据对象的架构。</summary>
-        <value>缓存的数据对象是否<see cref="T:System.Data.DataSet" />或<see cref="T:System.Data.DataTable" />，此属性返回的架构，用于描述缓存的数据对象中; 否则为<see langword="null" />。</value>
+        <value>如果缓存的数据对象是<see cref="T:System.Data.DataSet" />或<see cref="T:System.Data.DataTable" />, 则此属性返回描述缓存的<see langword="null" />数据对象的架构; 否则为。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 有关演示如何使用的代码示例<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem.Schema%2A>属性，请参阅[ServerDocument 示例](http://msdn.microsoft.com/en-us/4d5a9093-d648-4c66-a182-65bebf6016d7)。  
+ 有关演示如何使用<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem.Schema%2A>属性的代码示例, 请参阅[ServerDocument 示例](http://msdn.microsoft.com/en-us/4d5a9093-d648-4c66-a182-65bebf6016d7)。  
   
  ]]></format>
         </remarks>
@@ -178,28 +178,28 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem.SerializeDataInstance%2A>方法以初始化或修改的缓存的数据对象的值。 此方法序列化`value`到缓存的数据的参数对象<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem>表示。 如对复杂的缓存的数据对象中的特定数据值进行更改<xref:System.Data.DataSet>或<xref:System.Data.DataTable>、 反序列化的 XML 表示形式的缓存数据到缓存的对象的新实例，对此副本进行的更改以及如何将<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem.SerializeDataInstance%2A>方法以序列化所做的更改回数据缓存。 有关详细信息，请参阅[在服务器上的文档中访问数据](/visualstudio/vsto/accessing-data-in-documents-on-the-server)和[演练： 更改服务器上的工作簿中的缓存数据](/visualstudio/vsto/walkthrough-changing-cached-data-in-a-workbook-on-a-server)。  
+ <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem.SerializeDataInstance%2A>使用方法初始化或修改缓存数据对象的值。 此方法将`value`参数序列化为所<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem>表示的缓存数据对象。 若要对复杂缓存数据对象 (如<xref:System.Data.DataSet>或<xref:System.Data.DataTable>) 中的特定数据值进行更改, 请将缓存数据的 XML 表示形式反序列化为缓存对象的新实例, 对此副本进行更改, 然后使用<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem.SerializeDataInstance%2A>将更改序列化回数据缓存的方法。 有关详细信息, 请参阅在[服务器上访问文档中的数据](/visualstudio/vsto/accessing-data-in-documents-on-the-server)和[演练:更改服务器](/visualstudio/vsto/walkthrough-changing-cached-data-in-a-workbook-on-a-server)上工作簿中的缓存数据。  
   
- 此方法使用 DiffGram 格式来序列化<xref:System.Data.DataSet>， <xref:System.Data.DataTable>，和类型的数据缓存到数据集对象。 这可确保更改脱机文档中的数据缓存正确发送到服务器。  
+ 此方法使用 DiffGram 格式将、 <xref:System.Data.DataSet> <xref:System.Data.DataTable>和类型化数据集对象序列化到数据缓存中。 这可确保将脱机文档中的数据缓存更改正确地发送到服务器。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem.SerializeDataInstance%2A>方法来修改 Excel 工作簿的工作表中缓存的字符串的值。  
+ 下面的代码示例使用<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem.SerializeDataInstance%2A>方法修改在 Excel 工作簿的工作表中缓存的字符串的值。  
   
  此示例需要：  
   
--   具有的 Excel 文档级自定义`Sheet1`类中`ExcelWorkbook1`命名空间，并在已缓存的字符串`Sheet1`类名为`CachedString`。  
+-   一个 Excel 文档级自定义项, 它具有`Sheet1` `ExcelWorkbook1`命名空间中的一个类和一个名为`CachedString`的`Sheet1`类中的缓存字符串。  
   
--   控制台应用程序项目或某些其他非 Office 项目。  
+-   一个控制台应用程序项目或一些其他非 Office 项目。  
   
--   对以下程序集的引用：  
+-   对以下程序集的引用:  
   
     -   Microsoft.VisualStudio.Tools.Applications.ServerDocument.dll  
   
     -   Microsoft.VisualStudio.Tools.Applications.Runtime.dll  
   
--   `Imports` （对于 Visual Basic) 或`using`（适用于 C#) 语句<xref:Microsoft.VisualStudio.Tools.Applications?displayProperty=fullName>和<xref:Microsoft.VisualStudio.Tools.Applications.Runtime?displayProperty=fullName>代码文件顶部的命名空间。  
+-   `Imports`(对于 Visual Basic) 或`using` (对于C#) <xref:Microsoft.VisualStudio.Tools.Applications?displayProperty=fullName>代码文件顶部<xref:Microsoft.VisualStudio.Tools.Applications.Runtime?displayProperty=fullName>的和命名空间。  
   
  [!code-csharp[Trin_ServerDocument#9](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ServerDocument/CS/Form1.cs#9)]
  [!code-vb[Trin_ServerDocument#9](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ServerDocument/VB/Form1.vb#9)]  
@@ -222,38 +222,38 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置由 <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItem" /> 表示的缓存数据对象的 XML 表示形式。</summary>
-        <value>缓存的数据对象所表示的 XML 表示形式<see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItem" />。</value>
+        <value>所表示<see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItem" />的缓存数据对象的 XML 表示形式。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要获取的缓存的数据对象的值，请使用<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem.Xml%2A>属性进行反序列化的 XML 表示形式的缓存数据到缓存的数据对象的新实例。 然后，您可以对此副本所做的更改和序列化更改都应用到数据缓存。  
+ 若要获取缓存数据对象的值, 请使用<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem.Xml%2A>属性将缓存数据的 XML 表示形式反序列化为缓存的数据对象的新实例。 然后, 你可以更改此副本并将更改序列化回数据缓存。  
   
- 在大多数情况下，可以使用<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem.SerializeDataInstance%2A>方法已更改的对象序列化到的数据缓存。 如果你想要对缓存数据的更改执行你自己的序列化，您还可以编写直接向<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem.Xml%2A>属性。 但是，如果要进行更改<xref:System.Data.DataSet>， <xref:System.Data.DataTable>，或将使用更新到数据库的类型化数据集<xref:System.Data.Common.DataAdapter>，所做的更改写入缓存的数据时指定 DiffGram 格式。 否则为对更改<xref:System.Data.DataSet>或<xref:System.Data.DataTable>将添加到数据库而不是已更改的行的新行。 有关详细信息，请参阅[在服务器上的文档中访问数据](/visualstudio/vsto/accessing-data-in-documents-on-the-server)。  
+ 在大多数情况下, 可以使用<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem.SerializeDataInstance%2A>方法将已更改的对象序列化到数据缓存中。 如果要对缓存数据的更改执行自己的序列化, 还可以直接写入到<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem.Xml%2A>属性。 但是, 如果您要对将使用<xref:System.Data.DataSet> <xref:System.Data.Common.DataAdapter>更新到<xref:System.Data.DataTable>数据库的、或类型化数据集进行更改, 请在将更改写入缓存的数据时指定 DiffGram 格式。 否则, 对<xref:System.Data.DataSet>或<xref:System.Data.DataTable>的更改将作为新行而不是更改的行添加到数据库中。 有关详细信息，请参阅 [Accessing Data in Documents on the Server](/visualstudio/vsto/accessing-data-in-documents-on-the-server)。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem.Xml%2A>属性来获取缓存中的 Excel 工作簿的工作表的字符串值。 该示例在一个消息框中显示的值。  
+ 下面的代码示例使用<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem.Xml%2A>属性获取在 Excel 工作簿的工作表中缓存的字符串的值。 该示例在消息框中显示值。  
   
  此示例需要：  
   
--   具有的 Excel 文档级自定义`Sheet1`类中`ExcelWorkbook1`命名空间，并在已缓存的字符串`Sheet1`类名为`CachedString`。  
+-   一个 Excel 文档级自定义项, 它具有`Sheet1` `ExcelWorkbook1`命名空间中的一个类和一个名为`CachedString`的`Sheet1`类中的缓存字符串。  
   
--   控制台应用程序项目或某些其他非 Office 项目。  
+-   一个控制台应用程序项目或一些其他非 Office 项目。  
   
--   对以下程序集的引用：  
+-   对以下程序集的引用:  
   
     -   Microsoft.VisualStudio.Tools.Applications.ServerDocument.dll  
   
     -   Microsoft.VisualStudio.Tools.Applications.Runtime.dll  
   
--   `Imports` （对于 Visual Basic) 或`using`（适用于 C#) 语句<xref:Microsoft.VisualStudio.Tools.Applications?displayProperty=fullName>和<xref:Microsoft.VisualStudio.Tools.Applications.Runtime?displayProperty=fullName>代码文件顶部的命名空间。  
+-   `Imports`(对于 Visual Basic) 或`using` (对于C#) <xref:Microsoft.VisualStudio.Tools.Applications?displayProperty=fullName>代码文件顶部<xref:Microsoft.VisualStudio.Tools.Applications.Runtime?displayProperty=fullName>的和命名空间。  
   
  [!code-csharp[Trin_ServerDocument#10](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ServerDocument/CS/Form1.cs#10)]
  [!code-vb[Trin_ServerDocument#10](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ServerDocument/VB/Form1.vb#10)]  
   
- 有关演示如何使用的代码示例<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem.Xml%2A>属性来修改和序列化对缓存的更改<xref:System.Data.DataSet>，请参阅[演练： 更改服务器上的工作簿中的缓存数据](/visualstudio/vsto/walkthrough-changing-cached-data-in-a-workbook-on-a-server)。  
+ 有关演示如何使用<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem.Xml%2A>属性修改和序列化缓存<xref:System.Data.DataSet>更改的代码示例, 请参阅[演练:更改服务器](/visualstudio/vsto/walkthrough-changing-cached-data-in-a-workbook-on-a-server)上工作簿中的缓存数据。  
   
  ]]></format>
         </remarks>

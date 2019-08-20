@@ -1,5 +1,5 @@
 <Type Name="DatePickerContentControl" FullName="Microsoft.Office.Tools.Word.DatePickerContentControl">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="9fc40a5094ace64af6096457b54e327adaf1a841" /><Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="09/19/2018" /><Meta Name="ms.locfileid" Value="46457555" /></Metadata><TypeSignature Language="C#" Value="public interface DatePickerContentControl : IDisposable, Microsoft.Office.Tools.Word.ContentControlBase, System.ComponentModel.IComponent, System.ComponentModel.ISupportInitialize, System.Windows.Forms.IBindableComponent" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="2eb0f96a1530bea1c5b1fd1a63ed31be7362fc46" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69000364" /></Metadata><TypeSignature Language="C#" Value="public interface DatePickerContentControl : IDisposable, Microsoft.Office.Tools.Word.ContentControlBase, System.ComponentModel.IComponent, System.ComponentModel.ISupportInitialize, System.Windows.Forms.IBindableComponent" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract DatePickerContentControl implements class Microsoft.Office.Tools.Word.ContentControlBase, class System.ComponentModel.IComponent, class System.ComponentModel.ISupportInitialize, class System.IDisposable, class System.Windows.Forms.IBindableComponent" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Word.DatePickerContentControl" />
   <AssemblyInfo>
@@ -34,14 +34,14 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 一个<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>提供一个使用户能够选择一个日期的日历。 最终用户单击控件中的下拉箭头时，就会显示日历。  
+ <xref:Microsoft.Office.Tools.Word.DatePickerContentControl>提供允许用户选择日期的日历。 最终用户单击控件中的下拉箭头时，就会显示日历。  
   
- 若要指定显示日期的格式，请使用<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.DateDisplayFormat%2A>和<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.DateDisplayLocale%2A>属性。 若要选择区域日历，请使用<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.DateCalendarType%2A>属性。  
+ 若要指定所显示日期的格式, 请使用<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.DateDisplayFormat%2A>和<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.DateDisplayLocale%2A>属性。 若要选择区域日历, 请使用<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.DateCalendarType%2A>属性。  
   
  [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
   
 ## <a name="content-controls"></a>内容控件  
- <xref:Microsoft.Office.Tools.Word.DatePickerContentControl>是八个类型的内容控件，您可以使用设计文档和 Microsoft Office Word 中的模板之一。 内容控件具有用户界面 (UI) 的有控制类似于窗体的输入。 可以使用内容控件来阻止用户编辑受保护的部分的文档或模板，并还可以将内容控件绑定到数据源。 有关详细信息，请参阅[内容控件](/visualstudio/vsto/content-controls)。  
+ <xref:Microsoft.Office.Tools.Word.DatePickerContentControl>是八种类型的内容控件之一, 可用于在 Microsoft Office Word 中设计文档和模板。 内容控件具有一个用户界面 (UI), 该界面具有像窗体这样的受控输入。 你可以使用内容控件来防止用户编辑文档或模板的受保护节, 还可以将内容控件绑定到数据源。 有关详细信息，请参阅 [Content Controls](/visualstudio/vsto/content-controls)。  
   
 ## <a name="usage"></a>用法  
  [!INCLUDE[vsto_net35mref](~/includes/vsto-net35mref-md.md)]  
@@ -49,14 +49,14 @@
    
   
 ## Examples  
- 下面的代码示例添加一个新<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>到文档开头。 该示例还会修改该控件显示日期的格式。  
+ 下面的代码示例将一个新<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>添加到文档的开头。 该示例还会修改控件显示日期的格式。  
   
- 此版本是文档级自定义项。 若要使用此代码，将其粘贴到`ThisDocument`类中，你的项目，并调用`AddDatePickerControlAtSelection`方法从`ThisDocument_Startup`方法。  
+ 此版本适用于文档级自定义项。 若要使用此代码, 请将其`ThisDocument`粘贴到项目的类中, 然后`AddDatePickerControlAtSelection`从`ThisDocument_Startup`方法调用方法。  
   
  [!code-csharp[Trin_ContentControlReference#200](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference/CS/DatePicker.cs#200)]
  [!code-vb[Trin_ContentControlReference#200](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference/VB/DatePicker.vb#200)]  
   
- 此版本用于针对应用程序级外接程序。 若要使用此代码，将其粘贴到`ThisAddIn`类中，你的项目，并调用`AddDatePickerControlAtSelection`方法从`ThisAddIn_Startup`方法。  
+ 此版本适用于应用程序级外接程序。 若要使用此代码, 请将其`ThisAddIn`粘贴到项目的类中, 然后`AddDatePickerControlAtSelection`从`ThisAddIn_Startup`方法调用方法。  
   
  [!code-csharp[Trin_ContentControlReference_AppLevelAddIn#200](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/CS/DatePicker.cs#200)]
  [!code-vb[Trin_ContentControlReference_AppLevelAddIn#200](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/VB/DatePicker.vb#200)]  
@@ -84,7 +84,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Word.DatePickerContentControl.Application%2A>属性公开有关 Word 中，应用于该实例的选项的当前实例的信息，并在该实例中打开当前文档。  
+ <xref:Microsoft.Office.Tools.Word.DatePickerContentControl.Application%2A>属性公开有关 Word 的当前实例、应用于该实例的选项以及在实例中打开的当前文档的信息。  
   
  ]]></format>
         </remarks>
@@ -109,7 +109,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 当你使用<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.Copy%2A>方法时，原始<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>保留在文档。 一份<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>，其中包括所有文本和属性设置、 添加到剪贴板。  
+ 使用<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.Copy%2A>方法时, 原始<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>文件仍保留在文档中。 的副本<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>(包括所有文本和属性设置) 将添加到剪贴板。  
   
  ]]></format>
         </remarks>
@@ -134,7 +134,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>在 Word 中，创建<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.Creator%2A>属性返回表示字符串的十六进制数 4d535744， `MSWD`。 此字符串是 Word 的四个字符创建者代码。  
+ 如果是<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>在 Word 中创建的, <xref:Microsoft.Office.Tools.Word.DatePickerContentControl.Creator%2A>则属性返回十六进制数字 4D535744, 它表示字符串`MSWD`。 此字符串是 Word 的四字符创建者代码。  
   
  ]]></format>
         </remarks>
@@ -159,7 +159,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 当你使用<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.Cut%2A>方法时，原始<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>从文档中删除。 一份<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>，其中包括所有文本和属性设置、 添加到剪贴板。  
+ 使用<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.Cut%2A>方法时, 原始<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>将从文档中移除。 的副本<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>(包括所有文本和属性设置) 将添加到剪贴板。  
   
  ]]></format>
         </remarks>
@@ -184,7 +184,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 默认日历类型取决于操作系统的区域设置。 例如，英语 （美国） 的区域设置的默认日历类型是`wdCalendarWestern`。  
+ 默认日历类型取决于操作系统的区域设置。 例如, 区域设置英语 (美国) 的默认日历类型为`wdCalendarWestern`。  
   
  ]]></format>
         </remarks>
@@ -209,19 +209,19 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 默认日期格式是在 Microsoft Office Word 中，这通常取决于操作系统的区域设置中指定的格式设置。 例如，对于英语 （美国） 的区域设置日期的默认格式是`M/dd/yyyy`。  
+ 默认日期格式是 Microsoft Office Word 中指定的格式设置, 通常取决于操作系统的区域设置。 例如, 区域设置英语 (美国) 日期的默认格式是`M/dd/yyyy`。  
   
    
   
 ## Examples  
- 下面的代码示例添加一个新<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>到文档开头。 该示例使用<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.DateDisplayFormat%2A>属性的格式显示日期`MMMM d, yyyy`。  
+ 下面的代码示例将一个新<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>添加到文档的开头。 该示例使用<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.DateDisplayFormat%2A>属性以格式`MMMM d, yyyy`显示日期。  
   
- 此版本是文档级自定义项。 若要使用此代码，将其粘贴到`ThisDocument`类中，你的项目，并调用`AddDatePickerControlAtSelection`方法从`ThisDocument_Startup`方法。  
+ 此版本适用于文档级自定义项。 若要使用此代码, 请将其`ThisDocument`粘贴到项目的类中, 然后`AddDatePickerControlAtSelection`从`ThisDocument_Startup`方法调用方法。  
   
  [!code-csharp[Trin_ContentControlReference#200](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference/CS/DatePicker.cs#200)]
  [!code-vb[Trin_ContentControlReference#200](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference/VB/DatePicker.vb#200)]  
   
- 此版本用于针对应用程序级外接程序。 若要使用此代码，将其粘贴到`ThisAddIn`类中，你的项目，并调用`AddDatePickerControlAtSelection`方法从`ThisAddIn_Startup`方法。  
+ 此版本适用于应用程序级外接程序。 若要使用此代码, 请将其`ThisAddIn`粘贴到项目的类中, 然后`AddDatePickerControlAtSelection`从`ThisAddIn_Startup`方法调用方法。  
   
  [!code-csharp[Trin_ContentControlReference_AppLevelAddIn#200](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/CS/DatePicker.cs#200)]
  [!code-vb[Trin_ContentControlReference_AppLevelAddIn#200](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/VB/DatePicker.vb#200)]  
@@ -249,7 +249,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 默认值<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.DateDisplayLocale%2A>属性依赖于 Microsoft Office Word 中指定的编辑语言。 例如，英语 （美国） 的默认语言格式是`wdEnglishUS`。  
+ <xref:Microsoft.Office.Tools.Word.DatePickerContentControl.DateDisplayLocale%2A>属性的默认值取决于 Microsoft Office Word 中指定的编辑语言。 例如, 英语 (美国) 的默认语言格式是`wdEnglishUS`。  
   
  ]]></format>
         </remarks>
@@ -269,14 +269,14 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一种格式，<see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 会以此格式将数据保存到自定义 XML 部件。</summary>
-        <value><see cref="T:Microsoft.Office.Interop.Word.WdContentControlDateStorageFormat" /> 值之一。 默认值是<c>值</c>。</value>
+        <value><see cref="T:Microsoft.Office.Interop.Word.WdContentControlDateStorageFormat" /> 值之一。 默认值为<c>wdContentControlDateStorageDateTime</c>。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>绑定到*自定义 XML 部件*在文档中，<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.DateStorageFormat%2A>属性指定控件在 XML 中保存日期的方式。 可以保存为 XML 架构日期的日期 (`xsd:date`)，XML 架构日期/时间 (`xsd:dateTime`)，或以文本形式。  
+ 如果绑定到文档中的*自定义 XML 部件*, 则<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.DateStorageFormat%2A>属性指定控件如何以 XML 保存日期。 <xref:Microsoft.Office.Tools.Word.DatePickerContentControl> 您可以保留日期作为 xml 架构日期 (`xsd:date`)、xml 架构日期/时间 (`xsd:dateTime`) 或文本。  
   
- 有关内容控件绑定到自定义 XML 部件的详细信息，请参阅[内容控件](/visualstudio/vsto/content-controls)并[自定义 XML 部件概述](/visualstudio/vsto/custom-xml-parts-overview)。  
+ 有关将内容控件绑定到自定义 XML 部件的详细信息, 请参阅[内容控件](/visualstudio/vsto/content-controls)和[自定义 xml 部件概述](/visualstudio/vsto/custom-xml-parts-overview)。  
   
  ]]></format>
         </remarks>
@@ -296,7 +296,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取用于设置 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 中的文本格式的字符样式的名称。</summary>
-        <value>用于设置 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 中的文本格式的字符样式的名称。 默认值是**默认段落字体**。</value>
+        <value>用于设置 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 中的文本格式的字符样式的名称。 默认值为**默认段落字体**。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -319,7 +319,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要阻止用户编辑的内容<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>，使用<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.LockContents%2A>属性。 有关如何使用详细信息<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>若要保护的文档的一部分，请参阅[内容控件](/visualstudio/vsto/content-controls)并[如何： 使用内容控件保护文档的某些部分](/visualstudio/vsto/how-to-protect-parts-of-documents-by-using-content-controls)。  
+ 若要防止用户编辑的内容<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>, 请<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.LockContents%2A>使用属性。 有关如何使用<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>保护文档部分的详细信息, 请参阅[内容控件](/visualstudio/vsto/content-controls)和[如何:使用内容控件](/visualstudio/vsto/how-to-protect-parts-of-documents-by-using-content-controls)保护文档的各个部分。  
   
  ]]></format>
         </remarks>
@@ -345,7 +345,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要阻止用户删除<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>从文档中，使用<xref:Microsoft.Office.Tools.Word.ComboBoxContentControl.LockContentControl%2A>属性。 有关使用详细信息<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>若要保护的文档的一部分，请参阅[内容控件](/visualstudio/vsto/content-controls)并[如何： 使用内容控件保护文档的某些部分](/visualstudio/vsto/how-to-protect-parts-of-documents-by-using-content-controls)。  
+ 若要防止用户从文档<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>中删除, 请<xref:Microsoft.Office.Tools.Word.ComboBoxContentControl.LockContentControl%2A>使用属性。 有关使用<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>保护文档的一部分的详细信息, 请参阅[内容控件](/visualstudio/vsto/content-controls)和[如何:使用内容控件](/visualstudio/vsto/how-to-protect-parts-of-documents-by-using-content-controls)保护文档的各个部分。  
   
  ]]></format>
         </remarks>
@@ -388,9 +388,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 父<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>是控件所在的对象。 例如，如果控件是文档的正文中，此属性将返回<xref:Microsoft.Office.Interop.Word.Document?displayProperty=fullName>对象。  
+ 的父级<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>是包含控件的对象。 例如, 如果控件位于文档的主体中, 则此属性将返回一个<xref:Microsoft.Office.Interop.Word.Document?displayProperty=fullName>对象。  
   
- 若要获取的父控件<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>中包含<xref:Microsoft.Office.Tools.Word.RichTextContentControl>或<xref:Microsoft.Office.Tools.Word.GroupContentControl>，使用<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.ParentContentControl%2A>属性。  
+ 若<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>要获取<xref:Microsoft.Office.Tools.Word.RichTextContentControl> 或<xref:Microsoft.Office.Tools.Word.GroupContentControl>中包含的的父控件, 请使用属性。<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.ParentContentControl%2A>  
   
  ]]></format>
         </remarks>
@@ -410,12 +410,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取嵌套在另一个内容控件内的 <see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> 的父内容控件。</summary>
-        <value>一个<c>Microsoft.Office.Interop.Word.ContentControl</c> ，表示在其中的内容控件<see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" />嵌套;<see langword="null" />如果<see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" />未嵌套在另一个内容控件中。</value>
+        <value>一个<c>system.windows.controls.contentcontrol&gt;</c> , 表示在其中嵌套的<see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" />内容控件; 例如,如果未嵌套在另一个内容控件中, 则为。<see cref="T:Microsoft.Office.Tools.Word.DatePickerContentControl" /> <see langword="null" /></value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Word.RichTextContentControl>和<xref:Microsoft.Office.Tools.Word.GroupContentControl>控件是可以包含嵌套的内容控件的内容控件的唯一类型。  
+ <xref:Microsoft.Office.Tools.Word.RichTextContentControl> 和<xref:Microsoft.Office.Tools.Word.GroupContentControl>控件是只能包含嵌套内容控件的内容控件的类型。  
   
  ]]></format>
         </remarks>
@@ -440,21 +440,21 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 占位符文本会显示直到用户选择日期或使用来自数据源的数据填充该控件或该控件中的新值的类型。  
+ 在用户选择日期或在控件中键入新值或用数据源中的数据填充控件之前, 会显示占位符文本。  
   
- 若要设置中的占位符文本<xref:Microsoft.Office.Interop.Word.BuildingBlock>或<xref:Microsoft.Office.Interop.Word.Range>，使用<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.SetPlaceholderText%2A>方法。  
+ 若要将占位符文本设置为<xref:Microsoft.Office.Interop.Word.BuildingBlock> <xref:Microsoft.Office.Interop.Word.Range>或中的文本, 请使用<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.SetPlaceholderText%2A>方法。  
   
    
   
 ## Examples  
- 下面的代码示例添加一个新<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>到文档开头。 该示例设置<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.PlaceholderText%2A>属性设置为一个字符串，会提示用户选择的日期。  
+ 下面的代码示例将一个新<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>添加到文档的开头。 该示例将<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.PlaceholderText%2A>属性设置为提示用户选择日期的字符串。  
   
- 此版本是文档级自定义项。 若要使用此代码，将其粘贴到`ThisDocument`类中，你的项目，并调用`AddDatePickerControlAtSelection`方法从`ThisDocument_Startup`方法。  
+ 此版本适用于文档级自定义项。 若要使用此代码, 请将其`ThisDocument`粘贴到项目的类中, 然后`AddDatePickerControlAtSelection`从`ThisDocument_Startup`方法调用方法。  
   
  [!code-csharp[Trin_ContentControlReference#200](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference/CS/DatePicker.cs#200)]
  [!code-vb[Trin_ContentControlReference#200](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference/VB/DatePicker.vb#200)]  
   
- 此版本用于针对应用程序级外接程序。 若要使用此代码，将其粘贴到`ThisAddIn`类中，你的项目，并调用`AddDatePickerControlAtSelection`方法从`ThisAddIn_Startup`方法。  
+ 此版本适用于应用程序级外接程序。 若要使用此代码, 请将其`ThisAddIn`粘贴到项目的类中, 然后`AddDatePickerControlAtSelection`从`ThisAddIn_Startup`方法调用方法。  
   
  [!code-csharp[Trin_ContentControlReference_AppLevelAddIn#200](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/CS/DatePicker.cs#200)]
  [!code-vb[Trin_ContentControlReference_AppLevelAddIn#200](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlReference_AppLevelAddIn/VB/DatePicker.vb#200)]  
@@ -482,9 +482,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.Range%2A>属性来访问控件和其他文本属性中的文本的格式设置。 有关详细信息<xref:Microsoft.Office.Interop.Word.Range>对象，请参阅[Word 对象模型概述](/visualstudio/vsto/word-object-model-overview)。  
+ <xref:Microsoft.Office.Tools.Word.DatePickerContentControl.Range%2A>使用属性可访问控件中的文本格式和其他文本属性。 有关<xref:Microsoft.Office.Interop.Word.Range>对象的详细信息, 请参阅[Word 对象模型概述](/visualstudio/vsto/word-object-model-overview)。  
   
- 若要访问中显示的文本<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>，使用<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.Text%2A>属性。  
+ 若要仅访问在中显示<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>的文本, 请<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.Text%2A>使用属性。  
   
  ]]></format>
         </remarks>
@@ -516,11 +516,11 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 占位符文本会显示直到用户编辑控件、 数据源中的数据填充控件或控件的内容将被删除。  
+ 占位符文本将显示, 直到用户编辑控件、用数据源中的数据填充控件或删除控件的内容。  
   
- 在调用时使用参数的唯一一个<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.SetPlaceholderText%2A>方法。 如果指定多个参数，则 Microsoft Office Word 使用的第一个指定的参数。 如果所有参数都被都省略，占位符文本是空字符串。  
+ 调用<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.SetPlaceholderText%2A>方法时仅使用其中一个参数。 如果指定了多个参数, 则 Microsoft Office Word 使用第一个指定的参数。 如果省略所有参数, 则占位符文本为空字符串。  
   
- 若要获取的占位符文本<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>，使用<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.PlaceholderText%2A>属性。 此外可以使用此属性设置为字符串的占位符文本。  
+ 若要获取的占位符文本<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>, 请<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.PlaceholderText%2A>使用属性。 还可以使用此属性将占位符文本设置为字符串。  
   
  ]]></format>
         </remarks>
@@ -545,7 +545,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 占位符文本显示中的文本之前<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>由用户操作或某个其他操作更改。 若要获取或设置占位符文本，请使用<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.PlaceholderText%2A>属性或<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.SetPlaceholderText%2A>方法。  
+ 在用户操作或某个其他操作更改了<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>中的文本之前, 将显示占位符文本。 若要获取或设置占位符文本, 请使用<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.PlaceholderText%2A>属性<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.SetPlaceholderText%2A>或方法。  
   
  ]]></format>
         </remarks>
@@ -570,9 +570,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 可以使用<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.Tag%2A>属性来存储与之关联的字符串<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>文档处于打开状态时。  
+ 当文档打开时<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.Tag%2A> , 可以使用属性存储与关联的<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>字符串。  
   
- 若要按其标记查找内容控件，请使用<xref:Microsoft.Office.Tools.Word.Document.SelectContentControlsByTag%2A>方法。  
+ 若要按标记查找内容控件, 请使用<xref:Microsoft.Office.Tools.Word.Document.SelectContentControlsByTag%2A>方法。  
   
  ]]></format>
         </remarks>
@@ -597,7 +597,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.Temporary%2A>属性是`true`，则<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>当用户在控件中，或以编程方式更改控件中的文本时，会自动删除。 当<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>自动删除从文档，该控件将保持在文档中的文本。  
+ 如果属性为`true` ,<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>则当用户键入控件时, 或者以编程方式更改控件中的文本时, 将自动删除。 <xref:Microsoft.Office.Tools.Word.DatePickerContentControl.Temporary%2A> <xref:Microsoft.Office.Tools.Word.DatePickerContentControl>当自动从文档中删除时, 该控件中的文本将保留在文档中。  
   
  ]]></format>
         </remarks>
@@ -623,7 +623,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要访问的控件和其他文本属性中的文本格式设置，请使用<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.Range%2A>属性。  
+ 若要访问控件中的文本格式和其他文本属性, 请使用<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.Range%2A>属性。  
   
  ]]></format>
         </remarks>
@@ -648,7 +648,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 标题显示在边框的<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>当用户单击它。  
+ 当用户单击标题时, 标题将显示<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>在的边框中。  
   
  ]]></format>
         </remarks>
@@ -673,12 +673,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用<xref:Microsoft.Office.Tools.Word.DatePickerContentControl.XMLMapping%2A>属性将绑定<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>到一段 XML 中的元素 (也称为*自定义 XML 部件*) 的嵌入到文档中。 有关详细信息，请参阅[内容控件](/visualstudio/vsto/content-controls)并[自定义 XML 部件概述](/visualstudio/vsto/custom-xml-parts-overview)。  
+ 使用属性将绑定到文档中嵌入的 XML 部分 (也称为*自定义 xml 部件*) 中的元素。 <xref:Microsoft.Office.Tools.Word.DatePickerContentControl> <xref:Microsoft.Office.Tools.Word.DatePickerContentControl.XMLMapping%2A> 有关详细信息, 请参阅[内容控件](/visualstudio/vsto/content-controls)和[自定义 XML 部件概述](/visualstudio/vsto/custom-xml-parts-overview)。  
   
    
   
 ## Examples  
- 有关演示如何使用此属性的代码示例，请参阅[演练： 将内容控件绑定到自定义 XML 部件](/visualstudio/vsto/walkthrough-binding-content-controls-to-custom-xml-parts)。  
+ 有关演示如何使用此属性的代码示例, 请参阅[演练:将内容控件绑定到自定义](/visualstudio/vsto/walkthrough-binding-content-controls-to-custom-xml-parts)XML 部件。  
   
  ]]></format>
         </remarks>

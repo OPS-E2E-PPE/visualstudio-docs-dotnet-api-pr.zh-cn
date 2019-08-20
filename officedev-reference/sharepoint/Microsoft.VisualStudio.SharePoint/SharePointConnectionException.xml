@@ -1,5 +1,5 @@
 <Type Name="SharePointConnectionException" FullName="Microsoft.VisualStudio.SharePoint.SharePointConnectionException">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="20bb84bfe062527d18f991d7644c7643499cbf61" /><Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="09/19/2018" /><Meta Name="ms.locfileid" Value="46453993" /></Metadata><TypeSignature Language="C#" Value="public class SharePointConnectionException : Exception" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="c7d3805fdd7553342b8016d6f5c5143711119b06" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69006881" /></Metadata><TypeSignature Language="C#" Value="public class SharePointConnectionException : Exception" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit SharePointConnectionException extends System.Exception" />
   <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.SharePoint.SharePointConnectionException" />
   <AssemblyInfo>
@@ -10,27 +10,32 @@
     <BaseTypeName>System.Exception</BaseTypeName>
   </Base>
   <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Serializable</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
     <summary>尝试连接到本地 SharePoint 站点失败时引发的异常。</summary>
     <remarks>
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此异常通常由下列条件之一引发：  
+ 通常, 此异常由下列情况之一引发:  
   
--   [!INCLUDE[moss_14_long](~/includes/moss-14-long-md.md)] 或[!INCLUDE[wss_14_long](~/includes/wss-14-long-md.md)]计算机上未安装。  
+-   [!INCLUDE[moss_14_long](~/includes/moss-14-long-md.md)]计算机[!INCLUDE[wss_14_long](~/includes/wss-14-long-md.md)]上未安装或。  
   
--   本地实例[!INCLUDE[moss_14_long](~/includes/moss-14-long-md.md)]或[!INCLUDE[wss_14_long](~/includes/wss-14-long-md.md)]未运行。  
+-   [!INCLUDE[moss_14_long](~/includes/moss-14-long-md.md)] 或[!INCLUDE[wss_14_long](~/includes/wss-14-long-md.md)]的本地实例未运行。  
   
--   当前用户在 SharePoint 中没有相应的权限。 有关详细信息，请参阅[开发 SharePoint 解决方案的要求](/visualstudio/sharepoint/requirements-for-developing-sharepoint-solutions)。  
+-   当前用户在 SharePoint 中没有适当的权限。 有关详细信息, 请参阅[开发 SharePoint 解决方案的要求](/visualstudio/sharepoint/requirements-for-developing-sharepoint-solutions)。  
   
--   不使用管理员特权运行 visual Studio 或当前用户不是本地系统上的管理员。  
+-   Visual Studio 不使用管理员权限运行, 或者当前用户不是本地系统上的管理员。  
   
--   在计算机上未安装.NET Framework 3.5 SP1。  
+-   计算机上未安装 .NET Framework 3.5 SP1。  
   
--   项目的站点 URL 无效。  
+-   项目的网站 URL 无效。  
   
--   内部通信错误。  
+-   发生了内部通信错误。  
   
  ]]></format>
     </remarks>
