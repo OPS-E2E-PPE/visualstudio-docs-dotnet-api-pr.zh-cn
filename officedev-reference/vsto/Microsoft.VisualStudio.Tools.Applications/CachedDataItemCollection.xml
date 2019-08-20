@@ -1,5 +1,5 @@
 <Type Name="CachedDataItemCollection" FullName="Microsoft.VisualStudio.Tools.Applications.CachedDataItemCollection">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="12af8c1bfe4b84eb852accc7a8b8802d71edf2b2" /><Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="09/19/2018" /><Meta Name="ms.locfileid" Value="46454214" /></Metadata><TypeSignature Language="C#" Value="public sealed class CachedDataItemCollection : System.Collections.ObjectModel.Collection&lt;Microsoft.VisualStudio.Tools.Applications.CachedDataItem&gt;" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="8f76e4dc15a291dc5a4cea453ad1bb344ee9d00d" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="68997118" /></Metadata><TypeSignature Language="C#" Value="public sealed class CachedDataItemCollection : System.Collections.ObjectModel.Collection&lt;Microsoft.VisualStudio.Tools.Applications.CachedDataItem&gt;" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit CachedDataItemCollection extends System.Collections.ObjectModel.Collection`1&lt;class Microsoft.VisualStudio.Tools.Applications.CachedDataItem&gt;" />
   <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItemCollection" />
   <AssemblyInfo>
@@ -13,15 +13,20 @@
     </BaseTypeArguments>
   </Base>
   <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Serializable</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
     <summary>表示文档级自定义中 <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItem" /> 对象的集合，该文档级自定义通过使用 Visual Studio 中的 Office 开发工具创建。</summary>
     <remarks>
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem.CachedData%2A>属性来获取<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItemCollection>的已缓存数据的 Office 解决方案文档。  
+ <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem.CachedData%2A>使用属性<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItemCollection>获取包含缓存数据的 Office 解决方案文档的。  
   
- 有关在文档级自定义项中缓存数据的详细信息，请参阅[缓存数据](/visualstudio/vsto/caching-data)并[访问服务器上的文档中的数据](/visualstudio/vsto/accessing-data-in-documents-on-the-server)。  
+ 有关在文档级自定义项中缓存数据的详细信息, 请参阅在服务器上[缓存数据](/visualstudio/vsto/caching-data)和[访问文档中的数据](/visualstudio/vsto/accessing-data-in-documents-on-the-server)。  
   
  ]]></format>
     </remarks>
@@ -52,9 +57,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 类型的程序集限定名称的格式的详细信息，请参阅<xref:System.Type.AssemblyQualifiedName%2A?displayProperty=fullName>属性。  
+ 有关类型的程序集限定名称的格式的详细信息, 请参见<xref:System.Type.AssemblyQualifiedName%2A?displayProperty=fullName>属性。  
   
- 若要添加<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem>集合中的特定索引位置处，使用<xref:System.Collections.ObjectModel.Collection%601.Insert%2A>方法。  
+ 若要将<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem>添加到集合中的特定索引位置, 请<xref:System.Collections.ObjectModel.Collection%601.Insert%2A>使用方法。  
   
  ]]></format>
         </remarks>
@@ -120,12 +125,12 @@
       <Docs>
         <param name="dataId">缓存的数据对象的名称。</param>
         <summary>获取由缓存的数据对象的名称标识的 <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItem" />。</summary>
-        <value><see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItem" />对应于<paramref name="dataID" />参数;<see langword="null" />如果没有<see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItem" />对应于<paramref name="dataID" />找到。</value>
+        <value><see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItem" />与<paramref name="dataID" />参数对应的;如果找<see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItem" />不到对应的, 则为<paramref name="dataID" />。 <see langword="null" /></value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 一个<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem>提供对文档级自定义项中的缓存的数据对象的访问。  
+ <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem>提供对文档级自定义项中的缓存数据对象的访问。  
   
  ]]></format>
         </remarks>
@@ -153,7 +158,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 一个<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem>提供对文档级自定义项中的缓存的数据对象的访问。  
+ <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem>提供对文档级自定义项中的缓存数据对象的访问。  
   
  ]]></format>
         </remarks>

@@ -1,5 +1,5 @@
 <Type Name="CannotFindMemberException" FullName="Microsoft.VisualStudio.Tools.Applications.Runtime.CannotFindMemberException">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="6c45c000ba99695f82c3a1a65f2d9a921b5f3571" /><Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="02/21/2018" /><Meta Name="ms.locfileid" Value="29439913" /></Metadata><TypeSignature Language="C#" Value="public sealed class CannotFindMemberException : Microsoft.VisualStudio.Tools.Applications.Runtime.RuntimeException" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="d9749bdd5735a298f326006e562fdd87714bbabd" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="68998415" /></Metadata><TypeSignature Language="C#" Value="public sealed class CannotFindMemberException : Microsoft.VisualStudio.Tools.Applications.Runtime.RuntimeException" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit CannotFindMemberException extends Microsoft.VisualStudio.Tools.Applications.Runtime.RuntimeException" />
   <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.Tools.Applications.Runtime.CannotFindMemberException" />
   <AssemblyInfo>
@@ -10,13 +10,18 @@
     <BaseTypeName>Microsoft.VisualStudio.Tools.Applications.Runtime.RuntimeException</BaseTypeName>
   </Base>
   <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Serializable</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
     <summary>如果尝试以编程方式从文档级自定义中的数据缓存添加或移除对象，但指定对象并未在指定主机项类中进行声明，则会引发此异常。</summary>
     <remarks>
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要以编程方式添加或从数据缓存中删除对象，使用`StartCaching`和`StopCaching`将主机项的方法。 主机项的示例包括<xref:Microsoft.Office.Tools.Word.Document?displayProperty=fullName>， <xref:Microsoft.Office.Tools.Excel.Workbook?displayProperty=fullName>，和<xref:Microsoft.Office.Tools.Excel.Worksheet?displayProperty=fullName>。  
+ 若要以编程方式添加或删除数据缓存中的对象, `StartCaching`请`StopCaching`使用主机项的和方法。 宿主项的示例包括<xref:Microsoft.Office.Tools.Word.Document?displayProperty=fullName>、 <xref:Microsoft.Office.Tools.Excel.Workbook?displayProperty=fullName>和<xref:Microsoft.Office.Tools.Excel.Worksheet?displayProperty=fullName>。  
   
  ]]></format>
     </remarks>

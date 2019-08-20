@@ -1,5 +1,5 @@
 <Type Name="LogCategory" FullName="Microsoft.VisualStudio.SharePoint.Commands.LogCategory">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="abb1791bca95c2cb90178ebe783b2073e4bd04e9" /><Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="09/19/2018" /><Meta Name="ms.locfileid" Value="46454344" /></Metadata><TypeSignature Language="C#" Value="public enum LogCategory" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="9ff7c8e9b0ef8458dd7ecf8e1a8f6f5d633ababc" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69011884" /></Metadata><TypeSignature Language="C#" Value="public enum LogCategory" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed LogCategory extends System.Enum" />
   <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.SharePoint.Commands.LogCategory" />
   <AssemblyInfo>
@@ -15,12 +15,12 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.VisualStudio.SharePoint.Commands.LogCategory>值指定是否在显示消息**输出**窗口或**错误列表**窗口 （或两者），和消息显示在组**错误列表**窗口。  
+ 值指定消息是显示在 "**输出**" 窗口还是 "**错误列表**" 窗口中 (或两者), 以及消息出现在 "错误列表" 窗口中的组。  <xref:Microsoft.VisualStudio.SharePoint.Commands.LogCategory>  
   
- 要写入到的消息**输出**窗口或**错误列表**窗口中的从 SharePoint 命令，使用一种<xref:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandLogger.WriteLine%2A>方法<xref:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandLogger>对象。  
+ 若要将消息写入到 "**输出**" 窗口或从 SharePoint 命令**错误列表**窗口, 请使用<xref:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandLogger.WriteLine%2A> <xref:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandLogger>对象的方法之一。  
   
 ## <a name="enabling-verbose-messages"></a>启用详细消息  
- 若要显示详细消息中的**输出**窗口中，HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\10.0\SharePointTools 必须设置为 1 的注册表项下的 EnableDiagnostics 值。 有关详细信息，请参阅[调试 SharePoint 解决方案](/visualstudio/sharepoint/debugging-sharepoint-solutions)。  
+ 若要在 "**输出**" 窗口中显示详细消息, 必须将注册表项 "HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\10.0\SharePointTools" 下的 EnableDiagnostics 值设置为1。 有关详细信息, 请参阅[调试 SharePoint 解决方案](/visualstudio/sharepoint/debugging-sharepoint-solutions)。  
   
  ]]></format>
     </remarks>
@@ -38,6 +38,7 @@
       <ReturnValue>
         <ReturnType>Microsoft.VisualStudio.SharePoint.Commands.LogCategory</ReturnType>
       </ReturnValue>
+      <MemberValue>0</MemberValue>
       <Docs>
         <summary>指定消息显示在“输出”窗口和“错误列表”窗口的“错误”组中。</summary>
       </Docs>
@@ -54,6 +55,7 @@
       <ReturnValue>
         <ReturnType>Microsoft.VisualStudio.SharePoint.Commands.LogCategory</ReturnType>
       </ReturnValue>
+      <MemberValue>3</MemberValue>
       <Docs>
         <summary>指定消息显示在“输出”窗口和“错误列表”窗口的“消息”组中。</summary>
       </Docs>
@@ -70,6 +72,7 @@
       <ReturnValue>
         <ReturnType>Microsoft.VisualStudio.SharePoint.Commands.LogCategory</ReturnType>
       </ReturnValue>
+      <MemberValue>4</MemberValue>
       <Docs>
         <summary>指定消息只出现在“输出”窗口。 消息不会出现在“错误列表”窗口。</summary>
       </Docs>
@@ -86,6 +89,7 @@
       <ReturnValue>
         <ReturnType>Microsoft.VisualStudio.SharePoint.Commands.LogCategory</ReturnType>
       </ReturnValue>
+      <MemberValue>2</MemberValue>
       <Docs>
         <summary>指定如果启用了详细消息则消息只出现在“输出”窗口。 消息不会出现在“错误列表”窗口。</summary>
       </Docs>
@@ -102,6 +106,7 @@
       <ReturnValue>
         <ReturnType>Microsoft.VisualStudio.SharePoint.Commands.LogCategory</ReturnType>
       </ReturnValue>
+      <MemberValue>1</MemberValue>
       <Docs>
         <summary>指定消息显示在“输出”窗口和“错误列表”窗口的“警告”组中。</summary>
       </Docs>

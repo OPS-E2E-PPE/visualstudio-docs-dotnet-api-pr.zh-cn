@@ -1,5 +1,5 @@
 <Type Name="ControlExtensions" FullName="Microsoft.Office.Tools.Excel.ControlExtensions">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="45f2fa050b7f979dab515f069b041a0ffdbf46aa" /><Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="09/19/2018" /><Meta Name="ms.locfileid" Value="46459713" /></Metadata><TypeSignature Language="C#" Value="public static class ControlExtensions" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="b9f105ce588976830c3bb9fe549c97793af5d43a" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69005070" /></Metadata><TypeSignature Language="C#" Value="public static class ControlExtensions" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit ControlExtensions extends System.Object" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Excel.ControlExtensions" />
   <AssemblyInfo>
@@ -21,17 +21,17 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.ControlExtensions>方法是可用的扩展方法<xref:Microsoft.Office.Tools.Excel.ControlCollection>返回的对象<xref:Microsoft.Office.Tools.Excel.Worksheet.Controls%2A?displayProperty=fullName>属性 （在应用程序级项目中） 或<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Controls%2A?displayProperty=fullName>属性 （在文档级项目中） 在运行时。 若要将特定控件添加到文档中，使用方法名称中包含的控件名称的方法。 例如，若要添加<xref:System.Windows.Forms.Button>，使用<xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddButton%2A>方法。  
+ 方法是在运行时<xref:Microsoft.Office.Tools.Excel.Worksheet.Controls%2A?displayProperty=fullName>由属性 (在应用<xref:Microsoft.Office.Tools.Excel.ControlCollection>程序级项目中) 或<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Controls%2A?displayProperty=fullName>属性 (在文档级项目中) 返回的对象上可用的扩展方法。 <xref:Microsoft.Office.Tools.Excel.ControlExtensions> 若要将特定控件添加到文档中, 请使用方法, 该方法在方法名称中包含控件的名称。 例如, 若要添加<xref:System.Windows.Forms.Button>, 请<xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddButton%2A>使用方法。  
   
- 有关文档控件的详细信息，请参阅[Adding Controls to Office Documents at Run Time](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。 有关扩展方法的详细信息，请参阅[扩展方法](http://msdn.microsoft.com/library/175ce3ff-9bbf-4e64-8421-faeb81a0bb51)和[扩展方法](http://msdn.microsoft.com/library/b8020aae-374d-46a9-bcb7-8cc2390b93b6)。  
+ 有关文档控件的详细信息, 请参阅[在运行时向 Office 文档添加控件](/visualstudio/vsto/adding-controls-to-office-documents-at-run-time)。 有关扩展方法的详细信息，请参阅[扩展方法](http://msdn.microsoft.com/library/175ce3ff-9bbf-4e64-8421-faeb81a0bb51)和[扩展方法](http://msdn.microsoft.com/library/b8020aae-374d-46a9-bcb7-8cc2390b93b6)。  
   
 > [!NOTE]
->  Excel 外接程序项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]，必须添加对 Microsoft.Office.Tools.Excel.v4.0.Utilities.dll 程序集的引用，然后才能访问<xref:Microsoft.Office.Tools.Excel.ControlExtensions>方法。  
+>  在面向的[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]Excel 外接程序项目中, 必须先添加对 "" 的引用, 然后才能<xref:Microsoft.Office.Tools.Excel.ControlExtensions>访问方法, 然后才能访问。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddButton%2A>方法中添加<xref:Microsoft.Office.Tools.Excel.Controls.Button>单元格的控件**A1**，然后将文本添加到按钮。 若要使用此示例中，运行从`Sheet1`在文档级项目中的类。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddButton%2A>方法<xref:Microsoft.Office.Tools.Excel.Controls.Button>将控件添加到单元格**A1**, 然后向该按钮添加文本。 若要使用此示例, 请在文档`Sheet1`级项目的类中运行它。  
   
  [!code-csharp[Trin_ExcelControlCollection#2](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#2)]
  [!code-vb[Trin_ExcelControlCollection#2](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#2)]  
@@ -67,14 +67,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddButton%2A>方法，可添加<xref:Microsoft.Office.Tools.Excel.Controls.Button>对象的末尾<xref:Microsoft.Office.Tools.Excel.ControlCollection>。 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.Button>的之前以编程方式添加，请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法。  
+ 方法使你能够将对象<xref:Microsoft.Office.Tools.Excel.Controls.Button>添加<xref:Microsoft.Office.Tools.Excel.ControlCollection>到的末尾。 <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddButton%2A> 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.Button>以前以编程方式添加的, 请<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>使用方法。  
   
- 该控件自动调整大小重设大小时范围。  
+ 调整范围大小时, 控件自动调整大小。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.Controls.Button>控制对单元格**A1**，然后将文本添加到按钮。 若要使用此示例中，运行从`Sheet1`在文档级项目中的类。  
+ 下面的代码示例向单元<xref:Microsoft.Office.Tools.Excel.Controls.Button>格**A1**添加一个控件, 然后向该按钮添加文本。 若要使用此示例, 请在文档`Sheet1`级项目的类中运行它。  
   
  [!code-csharp[Trin_ExcelControlCollection#2](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#2)]
  [!code-vb[Trin_ExcelControlCollection#2](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#2)]  
@@ -119,12 +119,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddButton%2A>方法，可添加<xref:Microsoft.Office.Tools.Excel.Controls.Button>对象的末尾<xref:Microsoft.Office.Tools.Excel.ControlCollection>。 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.Button>的之前以编程方式添加，请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法。  
+ 方法使你能够将对象<xref:Microsoft.Office.Tools.Excel.Controls.Button>添加<xref:Microsoft.Office.Tools.Excel.ControlCollection>到的末尾。 <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddButton%2A> 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.Button>以前以编程方式添加的, 请<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>使用方法。  
   
    
   
 ## Examples  
- 下面的代码示例添加<xref:Microsoft.Office.Tools.Excel.Controls.Button>控制转移到工作表中，顶部，然后将文本添加到按钮。 若要使用此示例中，运行从`Sheet1`在文档级项目中的类。  
+ 下面的代码示例向工作<xref:Microsoft.Office.Tools.Excel.Controls.Button>表顶部添加一个控件, 然后向该按钮添加文本。 若要使用此示例, 请在文档`Sheet1`级项目的类中运行它。  
   
  [!code-csharp[Trin_ExcelControlCollection#3](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#3)]
  [!code-vb[Trin_ExcelControlCollection#3](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#3)]  
@@ -162,14 +162,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddCheckBox%2A>方法，可添加<xref:Microsoft.Office.Tools.Excel.Controls.CheckBox>对象的末尾<xref:Microsoft.Office.Tools.Excel.ControlCollection>。 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.CheckBox>之前以编程方式添加的控件，请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法。  
+ 方法使你能够将对象<xref:Microsoft.Office.Tools.Excel.Controls.CheckBox>添加<xref:Microsoft.Office.Tools.Excel.ControlCollection>到的末尾。 <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddCheckBox%2A> 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.CheckBox>以前以编程方式添加的控件, 请<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>使用方法。  
   
- 该控件自动调整大小重设大小时范围。  
+ 调整范围大小时, 控件自动调整大小。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.Controls.CheckBox>控制对单元格**A1**，然后将文本添加到该复选框。 若要使用此示例中，运行从`Sheet1`在文档级项目中的类。  
+ 下面的代码示例将一个<xref:Microsoft.Office.Tools.Excel.Controls.CheckBox>控件添加到单元格**A1**, 然后将文本添加到该复选框。 若要使用此示例, 请在文档`Sheet1`级项目的类中运行它。  
   
  [!code-csharp[Trin_ExcelControlCollection#4](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#4)]
  [!code-vb[Trin_ExcelControlCollection#4](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#4)]  
@@ -214,12 +214,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddCheckBox%2A>方法，可添加<xref:Microsoft.Office.Tools.Excel.Controls.CheckBox>对象的末尾<xref:Microsoft.Office.Tools.Excel.ControlCollection>。 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.CheckBox>之前以编程方式添加的控件，请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法。  
+ 方法使你能够将对象<xref:Microsoft.Office.Tools.Excel.Controls.CheckBox>添加<xref:Microsoft.Office.Tools.Excel.ControlCollection>到的末尾。 <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddCheckBox%2A> 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.CheckBox>以前以编程方式添加的控件, 请<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>使用方法。  
   
    
   
 ## Examples  
- 下面的代码示例添加<xref:Microsoft.Office.Tools.Excel.Controls.CheckBox>控制转移到工作表中，顶部，然后将文本添加到该复选框。 若要使用此示例中，运行从`Sheet1`在文档级项目中的类。  
+ 下面的代码示例将<xref:Microsoft.Office.Tools.Excel.Controls.CheckBox>控件添加到工作表的顶部, 然后将文本添加到复选框。 若要使用此示例, 请在文档`Sheet1`级项目的类中运行它。  
   
  [!code-csharp[Trin_ExcelControlCollection#5](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#5)]
  [!code-vb[Trin_ExcelControlCollection#5](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#5)]  
@@ -257,14 +257,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddCheckedListBox%2A>方法，可添加<xref:Microsoft.Office.Tools.Excel.Controls.CheckedListBox>对象的末尾<xref:Microsoft.Office.Tools.Excel.ControlCollection>。 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.CheckedListBox>的之前以编程方式添加，请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法。  
+ 方法使你能够将对象<xref:Microsoft.Office.Tools.Excel.Controls.CheckedListBox>添加<xref:Microsoft.Office.Tools.Excel.ControlCollection>到的末尾。 <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddCheckedListBox%2A> 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.CheckedListBox>以前以编程方式添加的, 请<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>使用方法。  
   
- 该控件自动调整大小重设大小时范围。  
+ 调整范围大小时, 控件自动调整大小。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.Controls.CheckedListBox>控件的单元格**A1**通过**B5**、 向复选的列表框中，添加两个项，然后选择第一个项的复选框。 若要使用此示例中，运行从`Sheet1`在文档级项目中的类。  
+ 下面的代码示例将一个<xref:Microsoft.Office.Tools.Excel.Controls.CheckedListBox>控件添加到单元格**A1**到**B5**, 将两个项添加到复选列表框, 然后选中第一项复选框。 若要使用此示例, 请在文档`Sheet1`级项目的类中运行它。  
   
  [!code-csharp[Trin_ExcelControlCollection#6](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#6)]
  [!code-vb[Trin_ExcelControlCollection#6](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#6)]  
@@ -309,12 +309,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddCheckedListBox%2A>方法，可添加<xref:Microsoft.Office.Tools.Excel.Controls.CheckedListBox>对象的末尾<xref:Microsoft.Office.Tools.Excel.ControlCollection>。 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.CheckedListBox>之前以编程方式添加的控件，请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法。  
+ 方法使你能够将对象<xref:Microsoft.Office.Tools.Excel.Controls.CheckedListBox>添加<xref:Microsoft.Office.Tools.Excel.ControlCollection>到的末尾。 <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddCheckedListBox%2A> 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.CheckedListBox>以前以编程方式添加的控件, 请<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>使用方法。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.Controls.CheckedListBox>控制对工作表的顶部，向复选的列表框中，添加两个项，然后选择`First Item`复选框。 若要使用此示例中，运行从`Sheet1`在文档级项目中的类。  
+ 下面的代码示例将一个<xref:Microsoft.Office.Tools.Excel.Controls.CheckedListBox>控件添加到工作表的顶部, 将两个项添加到复选列表框, 然后选中该`First Item`复选框。 若要使用此示例, 请在文档`Sheet1`级项目的类中运行它。  
   
  [!code-csharp[Trin_ExcelControlCollection#7](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#7)]
  [!code-vb[Trin_ExcelControlCollection#7](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#7)]  
@@ -352,14 +352,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddComboBox%2A>方法，可添加<xref:Microsoft.Office.Tools.Excel.Controls.ComboBox>对象的末尾<xref:Microsoft.Office.Tools.Excel.ControlCollection>。 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.ComboBox>的之前以编程方式添加，请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法。  
+ 方法使你能够将对象<xref:Microsoft.Office.Tools.Excel.Controls.ComboBox>添加<xref:Microsoft.Office.Tools.Excel.ControlCollection>到的末尾。 <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddComboBox%2A> 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.ComboBox>以前以编程方式添加的, 请<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>使用方法。  
   
- 该控件自动调整大小重设大小时范围。  
+ 调整范围大小时, 控件自动调整大小。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.Controls.ComboBox>控件的单元格**A1**通过**B1**，将两个项添加到组合框，然后选择第一个项。 若要使用此示例中，运行从`Sheet1`在文档级项目中的类。  
+ 下面的代码示例将一个<xref:Microsoft.Office.Tools.Excel.Controls.ComboBox>控件添加到单元格**A1**到**B1**, 将两个项添加到组合框中, 然后选择第一个项。 若要使用此示例, 请在文档`Sheet1`级项目的类中运行它。  
   
  [!code-csharp[Trin_ExcelControlCollection#8](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#8)]
  [!code-vb[Trin_ExcelControlCollection#8](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#8)]  
@@ -404,12 +404,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddComboBox%2A>方法，可添加<xref:Microsoft.Office.Tools.Excel.Controls.ComboBox>对象的末尾<xref:Microsoft.Office.Tools.Excel.ControlCollection>。 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.ComboBox>之前以编程方式添加的控件，请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法。  
+ 方法使你能够将对象<xref:Microsoft.Office.Tools.Excel.Controls.ComboBox>添加<xref:Microsoft.Office.Tools.Excel.ControlCollection>到的末尾。 <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddComboBox%2A> 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.ComboBox>以前以编程方式添加的控件, 请<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>使用方法。  
   
    
   
 ## Examples  
- 下面的代码示例添加<xref:Microsoft.Office.Tools.Excel.Controls.ComboBox>控制转移到工作表的顶部，将两个项添加到组合框，然后选择第一项。 若要使用此示例中，运行从`Sheet1`在文档级项目中的类。  
+ 下面的代码示例将一个<xref:Microsoft.Office.Tools.Excel.Controls.ComboBox>控件添加到工作表的顶部, 将两个项添加到组合框中, 然后选择第一个项。 若要使用此示例, 请在文档`Sheet1`级项目的类中运行它。  
   
  [!code-csharp[Trin_ExcelControlCollection#9](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#9)]
  [!code-vb[Trin_ExcelControlCollection#9](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#9)]  
@@ -447,14 +447,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddDataGridView%2A>方法，可添加<xref:Microsoft.Office.Tools.Excel.Controls.DataGridView>对象的末尾<xref:Microsoft.Office.Tools.Excel.ControlCollection>。 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.DataGridView>的之前以编程方式添加，请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法。  
+ 方法使你能够将对象<xref:Microsoft.Office.Tools.Excel.Controls.DataGridView>添加<xref:Microsoft.Office.Tools.Excel.ControlCollection>到的末尾。 <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddDataGridView%2A> 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.DataGridView>以前以编程方式添加的, 请<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>使用方法。  
   
- 该控件自动调整大小重设大小时范围。  
+ 调整范围大小时, 控件自动调整大小。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.Controls.DataGridView>控件的单元格**A1**通过**D9**，然后将两个列添加到控件。 若要使用此示例中，运行从`Sheet1`在文档级项目中的类。  
+ 下面的代码示例向单元<xref:Microsoft.Office.Tools.Excel.Controls.DataGridView>格**A1**到**D9**添加一个控件, 然后向该控件添加两个列。 若要使用此示例, 请在文档`Sheet1`级项目的类中运行它。  
   
  [!code-csharp[Trin_ExcelControlCollection#11](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#11)]
  [!code-vb[Trin_ExcelControlCollection#11](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#11)]  
@@ -499,12 +499,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddDataGridView%2A>方法，可添加<xref:Microsoft.Office.Tools.Excel.Controls.DataGridView>对象的末尾<xref:Microsoft.Office.Tools.Excel.ControlCollection>。 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.DataGridView>之前以编程方式添加的控件，请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法。  
+ 方法使你能够将对象<xref:Microsoft.Office.Tools.Excel.Controls.DataGridView>添加<xref:Microsoft.Office.Tools.Excel.ControlCollection>到的末尾。 <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddDataGridView%2A> 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.DataGridView>以前以编程方式添加的控件, 请<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>使用方法。  
   
    
   
 ## Examples  
- 下面的代码示例添加<xref:Microsoft.Office.Tools.Excel.Controls.DataGridView>控制转移到工作表中，顶部，然后将两列添加到控件。 若要使用此示例中，运行从`Sheet1`在文档级项目中的类。  
+ 下面的代码示例将<xref:Microsoft.Office.Tools.Excel.Controls.DataGridView>控件添加到工作表的顶部, 然后将两列添加到控件中。 若要使用此示例, 请在文档`Sheet1`级项目的类中运行它。  
   
  [!code-csharp[Trin_ExcelControlCollection#12](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#12)]
  [!code-vb[Trin_ExcelControlCollection#12](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#12)]  
@@ -542,14 +542,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddDateTimePicker%2A>方法，可添加<xref:Microsoft.Office.Tools.Excel.Controls.DateTimePicker>对象的末尾<xref:Microsoft.Office.Tools.Excel.ControlCollection>。 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.DateTimePicker>的之前以编程方式添加，请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法。  
+ 方法使你能够将对象<xref:Microsoft.Office.Tools.Excel.Controls.DateTimePicker>添加<xref:Microsoft.Office.Tools.Excel.ControlCollection>到的末尾。 <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddDateTimePicker%2A> 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.DateTimePicker>以前以编程方式添加的, 请<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>使用方法。  
   
- 该控件自动调整大小重设大小时范围。  
+ 调整范围大小时, 控件自动调整大小。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.Controls.DateTimePicker>控件的单元格**A1**通过**C1**，然后将该日历的背景设置为浅蓝色。 若要使用此示例中，运行从`Sheet1`在文档级项目中的类。  
+ 下面的代码示例向单元<xref:Microsoft.Office.Tools.Excel.Controls.DateTimePicker>格**A1**到**c1**添加一个控件, 然后将该日历的背景设置为浅蓝色。 若要使用此示例, 请在文档`Sheet1`级项目的类中运行它。  
   
  [!code-csharp[Trin_ExcelControlCollection#13](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#13)]
  [!code-vb[Trin_ExcelControlCollection#13](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#13)]  
@@ -594,12 +594,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddDateTimePicker%2A>方法，可添加<xref:Microsoft.Office.Tools.Excel.Controls.DateTimePicker>对象的末尾<xref:Microsoft.Office.Tools.Excel.ControlCollection>。 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.DateTimePicker>之前以编程方式添加的控件，请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法。  
+ 方法使你能够将对象<xref:Microsoft.Office.Tools.Excel.Controls.DateTimePicker>添加<xref:Microsoft.Office.Tools.Excel.ControlCollection>到的末尾。 <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddDateTimePicker%2A> 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.DateTimePicker>以前以编程方式添加的控件, 请<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>使用方法。  
   
    
   
 ## Examples  
- 下面的代码示例添加<xref:Microsoft.Office.Tools.Excel.Controls.DateTimePicker>控制转移到顶部的工作表，然后设置为浅蓝色日历的背景。 若要使用此示例中，运行从`Sheet1`在文档级项目中的类。  
+ 下面的代码示例将<xref:Microsoft.Office.Tools.Excel.Controls.DateTimePicker>控件添加到工作表的顶部, 然后将日历背景设置为浅蓝色。 若要使用此示例, 请在文档`Sheet1`级项目的类中运行它。  
   
  [!code-csharp[Trin_ExcelControlCollection#14](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#14)]
  [!code-vb[Trin_ExcelControlCollection#14](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#14)]  
@@ -637,14 +637,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddDomainUpDown%2A>方法，可添加<xref:Microsoft.Office.Tools.Excel.Controls.DomainUpDown>对象的末尾<xref:Microsoft.Office.Tools.Excel.ControlCollection>。 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.DomainUpDown>的之前以编程方式添加，请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法。  
+ 方法使你能够将对象<xref:Microsoft.Office.Tools.Excel.Controls.DomainUpDown>添加<xref:Microsoft.Office.Tools.Excel.ControlCollection>到的末尾。 <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddDomainUpDown%2A> 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.DomainUpDown>以前以编程方式添加的, 请<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>使用方法。  
   
- 该控件自动调整大小重设大小时范围。  
+ 调整范围大小时, 控件自动调整大小。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.Controls.DomainUpDown>控件的单元格**A1**通过**B1**，然后将该控件的背景设置为黄色。 若要使用此示例中，运行从`Sheet1`在文档级项目中的类。  
+ 下面的代码示例将一个<xref:Microsoft.Office.Tools.Excel.Controls.DomainUpDown>控件添加到单元格**A1**到**B1**, 然后将该控件的背景设置为黄色。 若要使用此示例, 请在文档`Sheet1`级项目的类中运行它。  
   
  [!code-csharp[Trin_ExcelControlCollection#15](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#15)]
  [!code-vb[Trin_ExcelControlCollection#15](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#15)]  
@@ -689,12 +689,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddDomainUpDown%2A>方法，可添加<xref:Microsoft.Office.Tools.Excel.Controls.DomainUpDown>对象的末尾<xref:Microsoft.Office.Tools.Excel.ControlCollection>。 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.DomainUpDown>之前以编程方式添加的控件，请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法。  
+ 方法使你能够将对象<xref:Microsoft.Office.Tools.Excel.Controls.DomainUpDown>添加<xref:Microsoft.Office.Tools.Excel.ControlCollection>到的末尾。 <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddDomainUpDown%2A> 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.DomainUpDown>以前以编程方式添加的控件, 请<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>使用方法。  
   
    
   
 ## Examples  
- 下面的代码示例添加<xref:Microsoft.Office.Tools.Excel.Controls.DomainUpDown>控制转移到顶部的工作表，然后设置为黄色控件的背景。 若要使用此示例中，运行从`Sheet1`在文档级项目中的类。  
+ 下面的代码示例将<xref:Microsoft.Office.Tools.Excel.Controls.DomainUpDown>控件添加到工作表的顶部, 然后将控件的背景设置为黄色。 若要使用此示例, 请在文档`Sheet1`级项目的类中运行它。  
   
  [!code-csharp[Trin_ExcelControlCollection#16](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#16)]
  [!code-vb[Trin_ExcelControlCollection#16](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#16)]  
@@ -732,14 +732,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddHScrollBar%2A>方法，可添加<xref:Microsoft.Office.Tools.Excel.Controls.HScrollBar>对象的末尾<xref:Microsoft.Office.Tools.Excel.ControlCollection>。 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.HScrollBar>之前以编程方式添加的控件，请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法。  
+ 方法使你能够将对象<xref:Microsoft.Office.Tools.Excel.Controls.HScrollBar>添加<xref:Microsoft.Office.Tools.Excel.ControlCollection>到的末尾。 <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddHScrollBar%2A> 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.HScrollBar>以前以编程方式添加的控件, 请<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>使用方法。  
   
- 该控件自动调整大小重设大小时范围。  
+ 调整范围大小时, 控件自动调整大小。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.Controls.HScrollBar>控件的单元格**A1**通过**B1**，然后再将滚动框移动到滚动条的中心。 若要使用此示例中，运行从`Sheet1`在文档级项目中的类。  
+ 下面的代码示例将一个<xref:Microsoft.Office.Tools.Excel.Controls.HScrollBar>控件添加到单元格**A1**到**B1**, 然后将滚动框移到滚动条的中心。 若要使用此示例, 请在文档`Sheet1`级项目的类中运行它。  
   
  [!code-csharp[Trin_ExcelControlCollection#17](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#17)]
  [!code-vb[Trin_ExcelControlCollection#17](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#17)]  
@@ -784,12 +784,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddHScrollBar%2A>方法，可添加<xref:Microsoft.Office.Tools.Excel.Controls.HScrollBar>对象的末尾<xref:Microsoft.Office.Tools.Excel.ControlCollection>。 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.HScrollBar>之前以编程方式添加的控件，请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法。  
+ 方法使你能够将对象<xref:Microsoft.Office.Tools.Excel.Controls.HScrollBar>添加<xref:Microsoft.Office.Tools.Excel.ControlCollection>到的末尾。 <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddHScrollBar%2A> 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.HScrollBar>以前以编程方式添加的控件, 请<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>使用方法。  
   
    
   
 ## Examples  
- 下面的代码示例添加<xref:Microsoft.Office.Tools.Excel.Controls.HScrollBar>控件顶部的工作表，然后转到滚动框移到中心的滚动条。 若要使用此示例中，运行从`Sheet1`在文档级项目中的类。  
+ 下面的代码示例将<xref:Microsoft.Office.Tools.Excel.Controls.HScrollBar>控件添加到工作表的顶部, 然后将滚动框移到滚动条的中心。 若要使用此示例, 请在文档`Sheet1`级项目的类中运行它。  
   
  [!code-csharp[Trin_ExcelControlCollection#18](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#18)]
  [!code-vb[Trin_ExcelControlCollection#18](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#18)]  
@@ -827,14 +827,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddLabel%2A>方法，可添加<xref:Microsoft.Office.Tools.Excel.Controls.Label>对象的末尾<xref:Microsoft.Office.Tools.Excel.ControlCollection>。 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.Label>的之前以编程方式添加，请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法。  
+ 方法使你能够将对象<xref:Microsoft.Office.Tools.Excel.Controls.Label>添加<xref:Microsoft.Office.Tools.Excel.ControlCollection>到的末尾。 <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddLabel%2A> 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.Label>以前以编程方式添加的, 请<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>使用方法。  
   
- 该控件自动调整大小重设大小时范围。  
+ 调整范围大小时, 控件自动调整大小。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.Controls.Label>控制对单元格**A1**，然后将更改到文本**名字**。 若要使用此示例中，运行从`Sheet1`在文档级项目中的类。  
+ 下面的代码示例将一个<xref:Microsoft.Office.Tools.Excel.Controls.Label>控件添加到单元格**A1**, 然后将文本更改为**First Name**。 若要使用此示例, 请在文档`Sheet1`级项目的类中运行它。  
   
  [!code-csharp[Trin_ExcelControlCollection#19](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#19)]
  [!code-vb[Trin_ExcelControlCollection#19](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#19)]  
@@ -879,12 +879,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddLabel%2A>方法，可添加<xref:Microsoft.Office.Tools.Excel.Controls.Label>对象的末尾<xref:Microsoft.Office.Tools.Excel.ControlCollection>。 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.Label>之前以编程方式添加的控件，请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法。  
+ 方法使你能够将对象<xref:Microsoft.Office.Tools.Excel.Controls.Label>添加<xref:Microsoft.Office.Tools.Excel.ControlCollection>到的末尾。 <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddLabel%2A> 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.Label>以前以编程方式添加的控件, 请<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>使用方法。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.Controls.Label>控制到顶部的工作表，然后更改到的文本**名字**。 若要使用此示例中，运行从`Sheet1`在文档级项目中的类。  
+ 下面的代码示例将<xref:Microsoft.Office.Tools.Excel.Controls.Label>控件添加到工作表的顶部, 然后将文本更改为**First Name**。 若要使用此示例, 请在文档`Sheet1`级项目的类中运行它。  
   
  [!code-csharp[Trin_ExcelControlCollection#20](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#20)]
  [!code-vb[Trin_ExcelControlCollection#20](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#20)]  
@@ -922,14 +922,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddLinkLabel%2A>方法，可添加<xref:Microsoft.Office.Tools.Excel.Controls.LinkLabel>对象的末尾<xref:Microsoft.Office.Tools.Excel.ControlCollection>。 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.LinkLabel>的之前以编程方式添加，请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法。  
+ 方法使你能够将对象<xref:Microsoft.Office.Tools.Excel.Controls.LinkLabel>添加<xref:Microsoft.Office.Tools.Excel.ControlCollection>到的末尾。 <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddLinkLabel%2A> 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.LinkLabel>以前以编程方式添加的, 请<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>使用方法。  
   
- 该控件自动调整大小重设大小时范围。  
+ 调整范围大小时, 控件自动调整大小。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.Controls.LinkLabel>控制对单元格**A1**，然后将更改到文本`First Name`。 然后，代码更改为蓝色的链接的颜色并设置<xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A>到<xref:System.Windows.Forms.LinkBehavior.HoverUnderline>。 若要使用此示例中，运行从`Sheet1`在文档级项目中的类。  
+ 下面的代码示例将一个<xref:Microsoft.Office.Tools.Excel.Controls.LinkLabel>控件添加到单元格**A1**, 然后将文本更改`First Name`为。 然后, 代码将链接的颜色更改为蓝色, 并将设置<xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A>为<xref:System.Windows.Forms.LinkBehavior.HoverUnderline>。 若要使用此示例, 请在文档`Sheet1`级项目的类中运行它。  
   
  [!code-csharp[Trin_ExcelControlCollection#22](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#22)]
  [!code-vb[Trin_ExcelControlCollection#22](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#22)]  
@@ -974,12 +974,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddLinkLabel%2A>方法，可添加<xref:Microsoft.Office.Tools.Excel.Controls.LinkLabel>对象的末尾<xref:Microsoft.Office.Tools.Excel.ControlCollection>。 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.LinkLabel>之前以编程方式添加的控件，请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法。  
+ 方法使你能够将对象<xref:Microsoft.Office.Tools.Excel.Controls.LinkLabel>添加<xref:Microsoft.Office.Tools.Excel.ControlCollection>到的末尾。 <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddLinkLabel%2A> 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.LinkLabel>以前以编程方式添加的控件, 请<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>使用方法。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.Controls.LinkLabel>控制到顶部的工作表，然后更改到的文本`First Name`。 然后，代码更改为蓝色的链接的颜色并设置<xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A>到<xref:System.Windows.Forms.LinkBehavior.HoverUnderline>。 若要使用此示例中，运行从`Sheet1`在文档级项目中的类。  
+ 下面的代码示例将<xref:Microsoft.Office.Tools.Excel.Controls.LinkLabel>控件添加到工作表的顶部, 然后将文本更改为。 `First Name` 然后, 代码将链接的颜色更改为蓝色, 并将设置<xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A>为<xref:System.Windows.Forms.LinkBehavior.HoverUnderline>。 若要使用此示例, 请在文档`Sheet1`级项目的类中运行它。  
   
  [!code-csharp[Trin_ExcelControlCollection#23](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#23)]
  [!code-vb[Trin_ExcelControlCollection#23](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#23)]  
@@ -1017,14 +1017,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddListBox%2A>方法，可添加<xref:Microsoft.Office.Tools.Excel.Controls.ListBox>对象的末尾<xref:Microsoft.Office.Tools.Excel.ControlCollection>。 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.ListBox>的之前以编程方式添加，请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法。  
+ 方法使你能够将对象<xref:Microsoft.Office.Tools.Excel.Controls.ListBox>添加<xref:Microsoft.Office.Tools.Excel.ControlCollection>到的末尾。 <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddListBox%2A> 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.ListBox>以前以编程方式添加的, 请<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>使用方法。  
   
- 该控件自动调整大小重设大小时范围。  
+ 调整范围大小时, 控件自动调整大小。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.Controls.ListBox>控件的单元格**A1**通过**B6**、 添加到列表框中，两个项，然后选择第一个项。 若要使用此示例中，运行从`Sheet1`在文档级项目中的类。  
+ 下面的代码示例向单元<xref:Microsoft.Office.Tools.Excel.Controls.ListBox>格**A1**到**B6**添加一个控件, 将两个项添加到列表框中, 然后选择第一个项。 若要使用此示例, 请在文档`Sheet1`级项目的类中运行它。  
   
  [!code-csharp[Trin_ExcelControlCollection#23](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#23)]
  [!code-vb[Trin_ExcelControlCollection#23](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#23)]  
@@ -1069,12 +1069,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddListBox%2A>方法，可添加<xref:Microsoft.Office.Tools.Excel.Controls.ListBox>对象的末尾<xref:Microsoft.Office.Tools.Excel.ControlCollection>。 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.ListBox>之前以编程方式添加的控件，请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法。  
+ 方法使你能够将对象<xref:Microsoft.Office.Tools.Excel.Controls.ListBox>添加<xref:Microsoft.Office.Tools.Excel.ControlCollection>到的末尾。 <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddListBox%2A> 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.ListBox>以前以编程方式添加的控件, 请<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>使用方法。  
   
    
   
 ## Examples  
- 下面的代码示例添加<xref:Microsoft.Office.Tools.Excel.Controls.ListBox>控制转移到工作表的顶部，添加到列表框中，两个项，然后选择第一项。 若要使用此示例中，运行从`Sheet1`在文档级项目中的类。  
+ 下面的代码示例将一个<xref:Microsoft.Office.Tools.Excel.Controls.ListBox>控件添加到工作表的顶部, 将两个项添加到列表框中, 然后选择第一个项。 若要使用此示例, 请在文档`Sheet1`级项目的类中运行它。  
   
  [!code-csharp[Trin_ExcelControlCollection#24](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#24)]
  [!code-vb[Trin_ExcelControlCollection#24](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#24)]  
@@ -1112,14 +1112,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddListView%2A>方法，可添加<xref:Microsoft.Office.Tools.Excel.Controls.ListView>对象的末尾<xref:Microsoft.Office.Tools.Excel.ControlCollection>。 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.ListView>的之前以编程方式添加，请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法。  
+ 方法使你能够将对象<xref:Microsoft.Office.Tools.Excel.Controls.ListView>添加<xref:Microsoft.Office.Tools.Excel.ControlCollection>到的末尾。 <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddListView%2A> 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.ListView>以前以编程方式添加的, 请<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>使用方法。  
   
- 该控件自动调整大小重设大小时范围。  
+ 调整范围大小时, 控件自动调整大小。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.Controls.ListView>控件的单元格**A1**通过**B6**，将视图更改为`List`，然后将添加到两个项<xref:Microsoft.Office.Tools.Excel.Controls.ListView>。 若要使用此示例中，运行从`Sheet1`在文档级项目中的类。  
+ 下面的代码示例向单元<xref:Microsoft.Office.Tools.Excel.Controls.ListView>格**A1**到**B6**添加一个控件, 将视图更改`List`为, 然后将两个项添加<xref:Microsoft.Office.Tools.Excel.Controls.ListView>到中。 若要使用此示例, 请在文档`Sheet1`级项目的类中运行它。  
   
  [!code-csharp[Trin_ExcelControlCollection#25](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#25)]
  [!code-vb[Trin_ExcelControlCollection#25](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#25)]  
@@ -1164,12 +1164,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddListView%2A>方法，可添加<xref:Microsoft.Office.Tools.Excel.Controls.ListView>对象的末尾<xref:Microsoft.Office.Tools.Excel.ControlCollection>。 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.ListView>之前以编程方式添加的控件，请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法。  
+ 方法使你能够将对象<xref:Microsoft.Office.Tools.Excel.Controls.ListView>添加<xref:Microsoft.Office.Tools.Excel.ControlCollection>到的末尾。 <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddListView%2A> 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.ListView>以前以编程方式添加的控件, 请<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>使用方法。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.Controls.ListView>控制到工作表的顶部，将视图更改为`List`，然后将添加到两个项<xref:Microsoft.Office.Tools.Excel.Controls.ListView>。 若要使用此示例中，运行从`Sheet1`在文档级项目中的类。  
+ 下面的代码示例将一个<xref:Microsoft.Office.Tools.Excel.Controls.ListView>控件添加到工作表的顶部, 将视图更改为`List`, 然后<xref:Microsoft.Office.Tools.Excel.Controls.ListView>将两个项添加到中。 若要使用此示例, 请在文档`Sheet1`级项目的类中运行它。  
   
  [!code-csharp[Trin_ExcelControlCollection#26](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#26)]
  [!code-vb[Trin_ExcelControlCollection#26](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#26)]  
@@ -1207,12 +1207,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法可以添加<xref:Microsoft.Office.Tools.Excel.Controls.MaskedTextBox>到末尾的对象<xref:Microsoft.Office.Tools.Excel.ControlCollection>。 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.MaskedTextBox>的之前以编程方式添加，请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法。  
+ 此方法使你能够将<xref:Microsoft.Office.Tools.Excel.Controls.MaskedTextBox>对象添加到的末尾。 <xref:Microsoft.Office.Tools.Excel.ControlCollection> 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.MaskedTextBox>以前以编程方式添加的, 请<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>使用方法。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.Controls.MaskedTextBox>单元格的控件**A1**，然后设置`Mask`为 00 00/0000 属性。 若要使用此示例中，运行从`Sheet1`在文档级项目中的类。  
+ 下面的代码示例将一个<xref:Microsoft.Office.Tools.Excel.Controls.MaskedTextBox>控件添加到单元格**A1**, 然后将`Mask`该属性设置为00/00/0000。 若要使用此示例, 请在文档`Sheet1`级项目的类中运行它。  
   
  [!code-csharp[Trin_ExcelControlCollection#27](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#27)]
  [!code-vb[Trin_ExcelControlCollection#27](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#27)]  
@@ -1254,12 +1254,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法可以添加<xref:Microsoft.Office.Tools.Excel.Controls.MaskedTextBox>到末尾的对象<xref:Microsoft.Office.Tools.Excel.ControlCollection>。 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.MaskedTextBox>的之前以编程方式添加，请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法。  
+ 此方法使你能够将<xref:Microsoft.Office.Tools.Excel.Controls.MaskedTextBox>对象添加到的末尾。 <xref:Microsoft.Office.Tools.Excel.ControlCollection> 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.MaskedTextBox>以前以编程方式添加的, 请<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>使用方法。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.Controls.MaskedTextBox>控件的工作表，然后设置页首`Mask`为 00 00/0000 属性。 若要使用此示例中，运行从`Sheet1`在文档级项目中的类。  
+ 下面的代码示例将<xref:Microsoft.Office.Tools.Excel.Controls.MaskedTextBox>控件添加到工作表的顶部, 然后将`Mask`属性设置为00/00/0000。 若要使用此示例, 请在文档`Sheet1`级项目的类中运行它。  
   
  [!code-csharp[Trin_ExcelControlCollection#28](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#28)]
  [!code-vb[Trin_ExcelControlCollection#28](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#28)]  
@@ -1295,12 +1295,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddMonthCalendar%2A>方法，可添加<xref:Microsoft.Office.Tools.Excel.Controls.MonthCalendar>对象的末尾<xref:Microsoft.Office.Tools.Excel.ControlCollection>。 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.MonthCalendar>之前以编程方式添加的控件，请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法。 该控件自动调整大小重设大小时范围。  
+ 方法使你能够将对象<xref:Microsoft.Office.Tools.Excel.Controls.MonthCalendar>添加<xref:Microsoft.Office.Tools.Excel.ControlCollection>到的末尾。 <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddMonthCalendar%2A> 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.MonthCalendar>以前以编程方式添加的控件, 请<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>使用方法。 调整范围大小时, 控件自动调整大小。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.Controls.MonthCalendar>控件的单元格**A1**通过**C10**，，然后设置<xref:System.Windows.Forms.MonthCalendar.FirstDayOfWeek%2A>属性设置为星期一。 若要使用此示例中，运行从`Sheet1`在文档级项目中的类。  
+ 下面的代码示例向单元<xref:Microsoft.Office.Tools.Excel.Controls.MonthCalendar>格**A1**到**C10**添加一个控件, 然后将该<xref:System.Windows.Forms.MonthCalendar.FirstDayOfWeek%2A>属性设置为 Monday。 若要使用此示例, 请在文档`Sheet1`级项目的类中运行它。  
   
  [!code-csharp[Trin_ExcelControlCollection#29](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#29)]
  [!code-vb[Trin_ExcelControlCollection#29](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#29)]  
@@ -1345,12 +1345,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddMonthCalendar%2A>方法，可添加<xref:Microsoft.Office.Tools.Excel.Controls.MonthCalendar>对象的末尾<xref:Microsoft.Office.Tools.Excel.ControlCollection>。 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.MonthCalendar>之前以编程方式添加的控件，请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法。  
+ 方法使你能够将对象<xref:Microsoft.Office.Tools.Excel.Controls.MonthCalendar>添加<xref:Microsoft.Office.Tools.Excel.ControlCollection>到的末尾。 <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddMonthCalendar%2A> 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.MonthCalendar>以前以编程方式添加的控件, 请<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>使用方法。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.Controls.MonthCalendar>控件的工作表，然后设置页首<xref:System.Windows.Forms.MonthCalendar.FirstDayOfWeek%2A>属性设置为星期一。 若要使用此示例中，运行从`Sheet1`在文档级项目中的类。  
+ 下面的代码示例将<xref:Microsoft.Office.Tools.Excel.Controls.MonthCalendar>控件添加到工作表的顶部, 然后将<xref:System.Windows.Forms.MonthCalendar.FirstDayOfWeek%2A>属性设置为 Monday。 若要使用此示例, 请在文档`Sheet1`级项目的类中运行它。  
   
  [!code-csharp[Trin_ExcelControlCollection#30](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#30)]
  [!code-vb[Trin_ExcelControlCollection#30](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#30)]  
@@ -1388,14 +1388,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddNumericUpDown%2A>方法，可添加<xref:Microsoft.Office.Tools.Excel.Controls.NumericUpDown>对象的末尾<xref:Microsoft.Office.Tools.Excel.ControlCollection>。 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.NumericUpDown>之前以编程方式添加的控件，请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法。  
+ 方法使你能够将对象<xref:Microsoft.Office.Tools.Excel.Controls.NumericUpDown>添加<xref:Microsoft.Office.Tools.Excel.ControlCollection>到的末尾。 <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddNumericUpDown%2A> 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.NumericUpDown>以前以编程方式添加的控件, 请<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>使用方法。  
   
- 该控件自动调整大小重设大小时范围。  
+ 调整范围大小时, 控件自动调整大小。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.Controls.NumericUpDown>控制对单元格**A1**，然后将值设置为 10。 若要使用此示例中，运行从`Sheet1`在文档级项目中的类。  
+ 下面的代码示例将一个<xref:Microsoft.Office.Tools.Excel.Controls.NumericUpDown>控件添加到单元格**A1**, 然后将值设置为10。 若要使用此示例, 请在文档`Sheet1`级项目的类中运行它。  
   
  [!code-csharp[Trin_ExcelControlCollection#31](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#31)]
  [!code-vb[Trin_ExcelControlCollection#31](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#31)]  
@@ -1440,12 +1440,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddNumericUpDown%2A>方法，可添加<xref:Microsoft.Office.Tools.Excel.Controls.NumericUpDown>对象的末尾<xref:Microsoft.Office.Tools.Excel.ControlCollection>。 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.NumericUpDown>之前以编程方式添加的控件，请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法。  
+ 方法使你能够将对象<xref:Microsoft.Office.Tools.Excel.Controls.NumericUpDown>添加<xref:Microsoft.Office.Tools.Excel.ControlCollection>到的末尾。 <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddNumericUpDown%2A> 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.NumericUpDown>以前以编程方式添加的控件, 请<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>使用方法。  
   
    
   
 ## Examples  
- 下面的代码示例添加<xref:Microsoft.Office.Tools.Excel.Controls.NumericUpDown>控制转移到顶部的工作表，然后设置为 10 的值。 若要使用此示例中，运行从`Sheet1`在文档级项目中的类。  
+ 下面的代码示例将<xref:Microsoft.Office.Tools.Excel.Controls.NumericUpDown>控件添加到工作表的顶部, 然后将值设置为10。 若要使用此示例, 请在文档`Sheet1`级项目的类中运行它。  
   
  [!code-csharp[Trin_ExcelControlCollection#32](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#32)]
  [!code-vb[Trin_ExcelControlCollection#32](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#32)]  
@@ -1483,14 +1483,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddPictureBox%2A>方法，可添加<xref:Microsoft.Office.Tools.Excel.Controls.PictureBox>对象的末尾<xref:Microsoft.Office.Tools.Excel.ControlCollection>。 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.PictureBox>的之前以编程方式添加，请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法。  
+ 方法使你能够将对象<xref:Microsoft.Office.Tools.Excel.Controls.PictureBox>添加<xref:Microsoft.Office.Tools.Excel.ControlCollection>到的末尾。 <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddPictureBox%2A> 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.PictureBox>以前以编程方式添加的, 请<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>使用方法。  
   
- 该控件自动调整大小重设大小时范围。  
+ 调整范围大小时, 控件自动调整大小。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.Controls.PictureBox>控件的单元格**A1**通过**C12**，然后添加图像。 该示例假定名为的文件`Image.jpg`C 目录的根目录上存在。 若要使用此示例中，运行从`Sheet1`在文档级项目中的类。  
+ 下面的代码示例向单元<xref:Microsoft.Office.Tools.Excel.Controls.PictureBox>格**A1**到**C12**添加一个控件, 然后添加一个图像。 该示例假定在 C 目录`Image.jpg`的根目录存在一个名为的文件。 若要使用此示例, 请在文档`Sheet1`级项目的类中运行它。  
   
  [!code-csharp[Trin_ExcelControlCollection#33](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#33)]
  [!code-vb[Trin_ExcelControlCollection#33](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#33)]  
@@ -1535,12 +1535,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddPictureBox%2A>方法，可添加<xref:Microsoft.Office.Tools.Excel.Controls.PictureBox>对象的末尾<xref:Microsoft.Office.Tools.Excel.ControlCollection>。 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.PictureBox>之前以编程方式添加的控件，请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法。  
+ 方法使你能够将对象<xref:Microsoft.Office.Tools.Excel.Controls.PictureBox>添加<xref:Microsoft.Office.Tools.Excel.ControlCollection>到的末尾。 <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddPictureBox%2A> 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.PictureBox>以前以编程方式添加的控件, 请<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>使用方法。  
   
    
   
 ## Examples  
- 下面的代码示例添加<xref:Microsoft.Office.Tools.Excel.Controls.PictureBox>控件到工作表中，顶部，然后添加图像。 该示例假定名为的文件`Image.jpg`C 目录的根目录上存在。 若要使用此示例中，运行从`Sheet1`在文档级项目中的类。  
+ 下面的代码示例将一个<xref:Microsoft.Office.Tools.Excel.Controls.PictureBox>控件添加到工作表的顶部, 然后添加一个图像。 该示例假定在 C 目录`Image.jpg`的根目录存在一个名为的文件。 若要使用此示例, 请在文档`Sheet1`级项目的类中运行它。  
   
  [!code-csharp[Trin_ExcelControlCollection#34](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#34)]
  [!code-vb[Trin_ExcelControlCollection#34](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#34)]  
@@ -1578,14 +1578,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddProgressBar%2A>方法，可添加<xref:Microsoft.Office.Tools.Excel.Controls.ProgressBar>对象的末尾<xref:Microsoft.Office.Tools.Excel.ControlCollection>。 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.ProgressBar>的之前以编程方式添加，请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法。  
+ 方法使你能够将对象<xref:Microsoft.Office.Tools.Excel.Controls.ProgressBar>添加<xref:Microsoft.Office.Tools.Excel.ControlCollection>到的末尾。 <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddProgressBar%2A> 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.ProgressBar>以前以编程方式添加的, 请<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>使用方法。  
   
- 该控件自动调整大小重设大小时范围。  
+ 调整范围大小时, 控件自动调整大小。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.Controls.ProgressBar>控件的单元格**A1**通过**B1**，，之后会增加到 50 的控件的当前位置。 若要使用此示例中，运行从`Sheet1`在文档级项目中的类。  
+ 下面的代码示例将一个<xref:Microsoft.Office.Tools.Excel.Controls.ProgressBar>控件添加到单元格**A1**到**B1**, 然后将该控件的当前位置增加到50。 若要使用此示例, 请在文档`Sheet1`级项目的类中运行它。  
   
  [!code-csharp[Trin_ExcelControlCollection#35](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#35)]
  [!code-vb[Trin_ExcelControlCollection#35](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#35)]  
@@ -1630,12 +1630,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddProgressBar%2A>方法，可添加<xref:Microsoft.Office.Tools.Excel.Controls.ProgressBar>对象的末尾<xref:Microsoft.Office.Tools.Excel.ControlCollection>。 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.ProgressBar>之前以编程方式添加的控件，请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法。  
+ 方法使你能够将对象<xref:Microsoft.Office.Tools.Excel.Controls.ProgressBar>添加<xref:Microsoft.Office.Tools.Excel.ControlCollection>到的末尾。 <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddProgressBar%2A> 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.ProgressBar>以前以编程方式添加的控件, 请<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>使用方法。  
   
    
   
 ## Examples  
- 下面的代码示例添加<xref:Microsoft.Office.Tools.Excel.Controls.ProgressBar>控件顶部的工作表，然后增加到 50 到控件的当前位置。 若要使用此示例中，运行从`Sheet1`在文档级项目中的类。  
+ 下面的代码示例将<xref:Microsoft.Office.Tools.Excel.Controls.ProgressBar>控件添加到工作表的顶部, 然后将控件的当前位置增加到50。 若要使用此示例, 请在文档`Sheet1`级项目的类中运行它。  
   
  [!code-csharp[Trin_ExcelControlCollection#36](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#36)]
  [!code-vb[Trin_ExcelControlCollection#36](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#36)]  
@@ -1673,14 +1673,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddPropertyGrid%2A>方法，可添加<xref:Microsoft.Office.Tools.Excel.Controls.PropertyGrid>对象的末尾<xref:Microsoft.Office.Tools.Excel.ControlCollection>。 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.PropertyGrid>之前以编程方式添加的控件，请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法。  
+ 方法使你能够将对象<xref:Microsoft.Office.Tools.Excel.Controls.PropertyGrid>添加<xref:Microsoft.Office.Tools.Excel.ControlCollection>到的末尾。 <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddPropertyGrid%2A> 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.PropertyGrid>以前以编程方式添加的控件, 请<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>使用方法。  
   
- 该控件自动调整大小重设大小时范围。  
+ 调整范围大小时, 控件自动调整大小。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.Controls.PropertyGrid>控件的单元格**A1**通过**C12**和一个<xref:Microsoft.Office.Tools.Excel.Controls.Button>到单元格的控件**A14**。 然后，它显示的属性中的按钮<xref:Microsoft.Office.Tools.Excel.Controls.PropertyGrid>。 若要使用此示例中，运行从`Sheet1`在文档级项目中的类。  
+ 下面的代码示例将一个<xref:Microsoft.Office.Tools.Excel.Controls.PropertyGrid>控件添加到单元格**A1**到**C12** , 并向单元格<xref:Microsoft.Office.Tools.Excel.Controls.Button> **A14**添加一个控件。 然后, 它会在中<xref:Microsoft.Office.Tools.Excel.Controls.PropertyGrid>显示按钮的属性。 若要使用此示例, 请在文档`Sheet1`级项目的类中运行它。  
   
  [!code-csharp[Trin_ExcelControlCollection#37](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#37)]
  [!code-vb[Trin_ExcelControlCollection#37](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#37)]  
@@ -1725,12 +1725,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddPropertyGrid%2A>方法，可添加<xref:Microsoft.Office.Tools.Excel.Controls.PropertyGrid>对象的末尾<xref:Microsoft.Office.Tools.Excel.ControlCollection>。 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.PropertyGrid>之前以编程方式添加的控件，请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法。  
+ 方法使你能够将对象<xref:Microsoft.Office.Tools.Excel.Controls.PropertyGrid>添加<xref:Microsoft.Office.Tools.Excel.ControlCollection>到的末尾。 <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddPropertyGrid%2A> 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.PropertyGrid>以前以编程方式添加的控件, 请<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>使用方法。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.Controls.PropertyGrid>控件和一个<xref:Microsoft.Office.Tools.Excel.Controls.Button>到工作表中的控件。 然后，代码显示的属性中的按钮<xref:Microsoft.Office.Tools.Excel.Controls.PropertyGrid>。 若要使用此示例中，运行从`Sheet1`在文档级项目中的类。  
+ 下面的代码示例向工作<xref:Microsoft.Office.Tools.Excel.Controls.PropertyGrid>表添加一个<xref:Microsoft.Office.Tools.Excel.Controls.Button>控件和一个控件。 然后, 该代码显示中<xref:Microsoft.Office.Tools.Excel.Controls.PropertyGrid>的按钮的属性。 若要使用此示例, 请在文档`Sheet1`级项目的类中运行它。  
   
  [!code-csharp[Trin_ExcelControlCollection#38](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#38)]
  [!code-vb[Trin_ExcelControlCollection#38](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#38)]  
@@ -1768,16 +1768,16 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddRadioButton%2A>方法，可添加<xref:Microsoft.Office.Tools.Excel.Controls.RadioButton>对象的末尾<xref:Microsoft.Office.Tools.Excel.ControlCollection>。 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.RadioButton>的之前以编程方式添加，请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法。  
+ 方法使你能够将对象<xref:Microsoft.Office.Tools.Excel.Controls.RadioButton>添加<xref:Microsoft.Office.Tools.Excel.ControlCollection>到的末尾。 <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddRadioButton%2A> 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.RadioButton>以前以编程方式添加的, 请<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>使用方法。  
   
- 该控件自动调整大小重设大小时范围。  
+ 调整范围大小时, 控件自动调整大小。  
   
- 直接向文档添加多个单选按钮的单选按钮是不互相排斥。 可以编写代码以使单选按钮相互排斥;但是，首选的方法是向用户控件添加单选按钮，然后将用户控件添加到文档。  
+ 当您将多个单选按钮直接添加到文档时, 单选按钮并不是互相排斥的。 你可以编写代码以使单选按钮互斥;但是, 首选方法是将单选按钮添加到用户控件, 然后将该用户控件添加到文档中。  
   
    
   
 ## Examples  
- 下面的代码示例添加两个<xref:Microsoft.Office.Tools.Excel.Controls.RadioButton>控件添加到工作表中的单元格**A1**并**A2**，然后将文本分配给每个控件。 若要使用此示例中，运行从`Sheet1`在文档级项目中的类。  
+ 下面的代码示例将两<xref:Microsoft.Office.Tools.Excel.Controls.RadioButton>个控件添加到单元格**A1**和**A2**中的工作表, 然后将文本分配给每个控件。 若要使用此示例, 请在文档`Sheet1`级项目的类中运行它。  
   
  [!code-csharp[Trin_ExcelControlCollection#39](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#39)]
  [!code-vb[Trin_ExcelControlCollection#39](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#39)]  
@@ -1822,14 +1822,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddRadioButton%2A>方法，可添加<xref:Microsoft.Office.Tools.Excel.Controls.RadioButton>对象的末尾<xref:Microsoft.Office.Tools.Excel.ControlCollection>。 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.RadioButton>之前以编程方式添加的控件，请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法。  
+ 方法使你能够将对象<xref:Microsoft.Office.Tools.Excel.Controls.RadioButton>添加<xref:Microsoft.Office.Tools.Excel.ControlCollection>到的末尾。 <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddRadioButton%2A> 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.RadioButton>以前以编程方式添加的控件, 请<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>使用方法。  
   
- 直接向文档添加多个单选按钮的单选按钮是不互相排斥。 可以编写代码以使单选按钮相互排斥;但是，首选的方法是向用户控件添加单选按钮，然后将用户控件添加到文档。  
+ 当您将多个单选按钮直接添加到文档时, 单选按钮并不是互相排斥的。 你可以编写代码以使单选按钮互斥;但是, 首选方法是将单选按钮添加到用户控件, 然后将该用户控件添加到文档中。  
   
    
   
 ## Examples  
- 下面的代码示例添加两个<xref:Microsoft.Office.Tools.Excel.Controls.RadioButton>控件添加到工作表中，顶部，然后将文本分配到每个控件。 若要使用此示例中，运行从`Sheet1`在文档级项目中的类。  
+ 下面的代码示例将两<xref:Microsoft.Office.Tools.Excel.Controls.RadioButton>个控件添加到工作表的顶部, 然后将文本分配给每个控件。 若要使用此示例, 请在文档`Sheet1`级项目的类中运行它。  
   
  [!code-csharp[Trin_ExcelControlCollection#40](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#40)]
  [!code-vb[Trin_ExcelControlCollection#40](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#40)]  
@@ -1867,14 +1867,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddRichTextBox%2A>方法，可添加<xref:Microsoft.Office.Tools.Excel.Controls.RichTextBox>对象的末尾<xref:Microsoft.Office.Tools.Excel.ControlCollection>。 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.RichTextBox>的之前以编程方式添加，请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法。  
+ 方法使你能够将对象<xref:Microsoft.Office.Tools.Excel.Controls.RichTextBox>添加<xref:Microsoft.Office.Tools.Excel.ControlCollection>到的末尾。 <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddRichTextBox%2A> 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.RichTextBox>以前以编程方式添加的, 请<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>使用方法。  
   
- 该控件自动调整大小重设大小时范围。  
+ 调整范围大小时, 控件自动调整大小。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.Controls.RichTextBox>控件的单元格**A1**通过**B2**，并为文本分配给该控件，然后设置文本的格式。 若要使用此示例中，运行从`Sheet1`在文档级项目中的类。  
+ 下面的代码示例向单元<xref:Microsoft.Office.Tools.Excel.Controls.RichTextBox>格**A1**到**B2**添加一个控件, 向控件分配文本, 然后设置文本格式。 若要使用此示例, 请在文档`Sheet1`级项目的类中运行它。  
   
  [!code-csharp[Trin_ExcelControlCollection#41](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#41)]
  [!code-vb[Trin_ExcelControlCollection#41](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#41)]  
@@ -1919,12 +1919,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddRichTextBox%2A>方法，可添加<xref:Microsoft.Office.Tools.Excel.Controls.RichTextBox>对象的末尾<xref:Microsoft.Office.Tools.Excel.ControlCollection>。 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.RichTextBox>之前以编程方式添加的控件，请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法。  
+ 方法使你能够将对象<xref:Microsoft.Office.Tools.Excel.Controls.RichTextBox>添加<xref:Microsoft.Office.Tools.Excel.ControlCollection>到的末尾。 <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddRichTextBox%2A> 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.RichTextBox>以前以编程方式添加的控件, 请<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>使用方法。  
   
    
   
 ## Examples  
- 下面的代码示例添加<xref:Microsoft.Office.Tools.Excel.Controls.RichTextBox>控制到工作表中，为控制，然后格式指定文本的顶部的文本。 若要使用此示例中，运行从`Sheet1`在文档级项目中的类。  
+ 下面的代码示例将一个<xref:Microsoft.Office.Tools.Excel.Controls.RichTextBox>控件添加到工作表的顶部, 将文本分配给该控件, 然后设置文本格式。 若要使用此示例, 请在文档`Sheet1`级项目的类中运行它。  
   
  [!code-csharp[Trin_ExcelControlCollection#41](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#41)]
  [!code-vb[Trin_ExcelControlCollection#41](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#41)]  
@@ -1962,14 +1962,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddTextBox%2A>方法，可添加<xref:Microsoft.Office.Tools.Excel.Controls.TextBox>对象的末尾<xref:Microsoft.Office.Tools.Excel.ControlCollection>。 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.TextBox>的之前以编程方式添加，请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法。  
+ 方法使你能够将对象<xref:Microsoft.Office.Tools.Excel.Controls.TextBox>添加<xref:Microsoft.Office.Tools.Excel.ControlCollection>到的末尾。 <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddTextBox%2A> 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.TextBox>以前以编程方式添加的, 请<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>使用方法。  
   
- 该控件自动调整大小重设大小时范围。  
+ 调整范围大小时, 控件自动调整大小。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.Controls.TextBox>控件的单元格**A1**通过**B2**，，然后将文本分配给控件。 若要使用此示例中，运行从`Sheet1`在文档级项目中的类。  
+ 下面的代码示例向单元<xref:Microsoft.Office.Tools.Excel.Controls.TextBox>格**A1**到**B2**添加一个控件, 然后向该控件分配文本。 若要使用此示例, 请在文档`Sheet1`级项目的类中运行它。  
   
  [!code-csharp[Trin_ExcelControlCollection#43](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#43)]
  [!code-vb[Trin_ExcelControlCollection#43](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#43)]  
@@ -2014,12 +2014,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddTextBox%2A>方法，可添加<xref:Microsoft.Office.Tools.Excel.Controls.TextBox>对象的末尾<xref:Microsoft.Office.Tools.Excel.ControlCollection>。 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.TextBox>之前以编程方式添加的控件，请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法。  
+ 方法使你能够将对象<xref:Microsoft.Office.Tools.Excel.Controls.TextBox>添加<xref:Microsoft.Office.Tools.Excel.ControlCollection>到的末尾。 <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddTextBox%2A> 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.TextBox>以前以编程方式添加的控件, 请<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>使用方法。  
   
    
   
 ## Examples  
- 下面的代码示例添加<xref:Microsoft.Office.Tools.Excel.Controls.TextBox>到工作表，然后为该控件指定文本的顶部的控件。 若要使用此示例中，运行从`Sheet1`在文档级项目中的类。  
+ 下面的代码示例将<xref:Microsoft.Office.Tools.Excel.Controls.TextBox>控件添加到工作表的顶部, 然后将文本分配给控件。 若要使用此示例, 请在文档`Sheet1`级项目的类中运行它。  
   
  [!code-csharp[Trin_ExcelControlCollection#44](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#44)]
  [!code-vb[Trin_ExcelControlCollection#44](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#44)]  
@@ -2057,14 +2057,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddTrackBar%2A>方法，可添加<xref:Microsoft.Office.Tools.Excel.Controls.TrackBar>对象的末尾<xref:Microsoft.Office.Tools.Excel.ControlCollection>。 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.TrackBar>的之前以编程方式添加，请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法。  
+ 方法使你能够将对象<xref:Microsoft.Office.Tools.Excel.Controls.TrackBar>添加<xref:Microsoft.Office.Tools.Excel.ControlCollection>到的末尾。 <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddTrackBar%2A> 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.TrackBar>以前以编程方式添加的, 请<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>使用方法。  
   
- 该控件自动调整大小重设大小时范围。  
+ 调整范围大小时, 控件自动调整大小。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.Controls.TrackBar>控件的单元格**A1**通过**B2**，然后设置之间的位置数<xref:System.TimeSpan.Ticks%2A>上<xref:Microsoft.Office.Tools.Excel.Controls.TrackBar>。 若要使用此示例中，运行从`Sheet1`在文档级项目中的类。  
+ 下面的代码示例向单元<xref:Microsoft.Office.Tools.Excel.Controls.TrackBar>格**A1**到**B2**添加一个控件, 然后<xref:System.TimeSpan.Ticks%2A>设置在上的位置<xref:Microsoft.Office.Tools.Excel.Controls.TrackBar>数。 若要使用此示例, 请在文档`Sheet1`级项目的类中运行它。  
   
  [!code-csharp[Trin_ExcelControlCollection#45](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#45)]
  [!code-vb[Trin_ExcelControlCollection#45](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#45)]  
@@ -2109,12 +2109,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddTrackBar%2A>方法，可添加<xref:Microsoft.Office.Tools.Excel.Controls.TrackBar>对象的末尾<xref:Microsoft.Office.Tools.Excel.ControlCollection>。 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.TrackBar>之前以编程方式添加的控件，请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法。  
+ 方法使你能够将对象<xref:Microsoft.Office.Tools.Excel.Controls.TrackBar>添加<xref:Microsoft.Office.Tools.Excel.ControlCollection>到的末尾。 <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddTrackBar%2A> 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.TrackBar>以前以编程方式添加的控件, 请<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>使用方法。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.Controls.TrackBar>控制的工作表，并设置顶部之间的位置数<xref:System.TimeSpan.Ticks%2A>上<xref:Microsoft.Office.Tools.Excel.Controls.TrackBar>。 若要使用此示例中，运行从`Sheet1`在文档级项目中的类。  
+ 下面的代码示例将一个<xref:Microsoft.Office.Tools.Excel.Controls.TrackBar>控件添加到工作表的顶部, 然后设置<xref:System.TimeSpan.Ticks%2A>在上<xref:Microsoft.Office.Tools.Excel.Controls.TrackBar>的位置数。 若要使用此示例, 请在文档`Sheet1`级项目的类中运行它。  
   
  [!code-csharp[Trin_ExcelControlCollection#46](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#46)]
  [!code-vb[Trin_ExcelControlCollection#46](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#46)]  
@@ -2152,14 +2152,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddTreeView%2A>方法，可添加<xref:Microsoft.Office.Tools.Excel.Controls.TreeView>对象的末尾<xref:Microsoft.Office.Tools.Excel.ControlCollection>。 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.TreeView>的之前以编程方式添加，请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法。  
+ 方法使你能够将对象<xref:Microsoft.Office.Tools.Excel.Controls.TreeView>添加<xref:Microsoft.Office.Tools.Excel.ControlCollection>到的末尾。 <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddTreeView%2A> 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.TreeView>以前以编程方式添加的, 请<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>使用方法。  
   
- 该控件自动调整大小重设大小时范围。  
+ 调整范围大小时, 控件自动调整大小。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.Controls.TreeView>控件的单元格**A1**通过**B6**，然后将一个父节点和两个子节点添加到控件。 若要使用此示例中，运行从`Sheet1`在文档级项目中的类。  
+ 下面的代码示例向单元<xref:Microsoft.Office.Tools.Excel.Controls.TreeView>格**A1**到**B6**添加一个控件, 然后向该控件添加一个父节点和两个子节点。 若要使用此示例, 请在文档`Sheet1`级项目的类中运行它。  
   
  [!code-csharp[Trin_ExcelControlCollection#47](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#47)]
  [!code-vb[Trin_ExcelControlCollection#47](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#47)]  
@@ -2204,12 +2204,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddTreeView%2A>方法，可添加<xref:Microsoft.Office.Tools.Excel.Controls.TreeView>对象的末尾<xref:Microsoft.Office.Tools.Excel.ControlCollection>。 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.TreeView>之前以编程方式添加的控件，请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法。  
+ 方法使你能够将对象<xref:Microsoft.Office.Tools.Excel.Controls.TreeView>添加<xref:Microsoft.Office.Tools.Excel.ControlCollection>到的末尾。 <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddTreeView%2A> 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.TreeView>以前以编程方式添加的控件, 请<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>使用方法。  
   
    
   
 ## Examples  
- 下面的代码示例添加<xref:Microsoft.Office.Tools.Excel.Controls.TreeView>控制转移到工作表中，顶部，然后向控件中添加父节点和两个子节点。 若要使用此示例中，运行从`Sheet1`在文档级项目中的类。  
+ 下面的代码示例向工作<xref:Microsoft.Office.Tools.Excel.Controls.TreeView>表顶部添加一个控件, 然后向该控件添加一个父节点和两个子节点。 若要使用此示例, 请在文档`Sheet1`级项目的类中运行它。  
   
  [!code-csharp[Trin_ExcelControlCollection#48](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#48)]
  [!code-vb[Trin_ExcelControlCollection#48](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#48)]  
@@ -2247,14 +2247,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddVScrollBar%2A>方法，可添加<xref:Microsoft.Office.Tools.Excel.Controls.VScrollBar>对象的末尾<xref:Microsoft.Office.Tools.Excel.ControlCollection>。 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.VScrollBar>之前以编程方式添加的控件，请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法。  
+ 方法使你能够将对象<xref:Microsoft.Office.Tools.Excel.Controls.VScrollBar>添加<xref:Microsoft.Office.Tools.Excel.ControlCollection>到的末尾。 <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddVScrollBar%2A> 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.VScrollBar>以前以编程方式添加的控件, 请<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>使用方法。  
   
- 该控件自动调整大小重设大小时范围。  
+ 调整范围大小时, 控件自动调整大小。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.Controls.VScrollBar>控件的单元格**A1**通过**A8**，然后再将滚动框移动到滚动条的中心。 若要使用此示例中，运行从`Sheet1`在文档级项目中的类。  
+ 下面的代码示例向单元<xref:Microsoft.Office.Tools.Excel.Controls.VScrollBar>格**A1**到**A8**添加一个控件, 然后将滚动框移到滚动条的中心。 若要使用此示例, 请在文档`Sheet1`级项目的类中运行它。  
   
  [!code-csharp[Trin_ExcelControlCollection#49](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#49)]
  [!code-vb[Trin_ExcelControlCollection#49](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#49)]  
@@ -2299,12 +2299,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddVScrollBar%2A>方法，可添加<xref:Microsoft.Office.Tools.Excel.Controls.VScrollBar>对象的末尾<xref:Microsoft.Office.Tools.Excel.ControlCollection>。 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.VScrollBar>之前以编程方式添加的控件，请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法。  
+ 方法使你能够将对象<xref:Microsoft.Office.Tools.Excel.Controls.VScrollBar>添加<xref:Microsoft.Office.Tools.Excel.ControlCollection>到的末尾。 <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddVScrollBar%2A> 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.VScrollBar>以前以编程方式添加的控件, 请<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>使用方法。  
   
    
   
 ## Examples  
- 下面的代码示例添加<xref:Microsoft.Office.Tools.Excel.Controls.VScrollBar>控件顶部的工作表，然后转到滚动框移到中心的滚动条。 若要使用此示例中，运行从`Sheet1`在文档级项目中的类。  
+ 下面的代码示例将<xref:Microsoft.Office.Tools.Excel.Controls.VScrollBar>控件添加到工作表的顶部, 然后将滚动框移到滚动条的中心。 若要使用此示例, 请在文档`Sheet1`级项目的类中运行它。  
   
  [!code-csharp[Trin_ExcelControlCollection#50](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#50)]
  [!code-vb[Trin_ExcelControlCollection#50](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#50)]  
@@ -2342,14 +2342,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddWebBrowser%2A>方法，可添加<xref:Microsoft.Office.Tools.Excel.Controls.WebBrowser>对象的末尾<xref:Microsoft.Office.Tools.Excel.ControlCollection>。 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.WebBrowser>的之前以编程方式添加，请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法。  
+ 方法使你能够将对象<xref:Microsoft.Office.Tools.Excel.Controls.WebBrowser>添加<xref:Microsoft.Office.Tools.Excel.ControlCollection>到的末尾。 <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddWebBrowser%2A> 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.WebBrowser>以前以编程方式添加的, 请<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>使用方法。  
   
- 该控件自动调整大小重设大小时范围。  
+ 调整范围大小时, 控件自动调整大小。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Excel.Controls.WebBrowser>控件的单元格**A1**通过**M31**，，然后转到 www.microsoft.com。 若要使用此示例中，运行从`Sheet1`在文档级项目中的类。  
+ 下面的代码示例向单元<xref:Microsoft.Office.Tools.Excel.Controls.WebBrowser>格**A1**到**M31**添加一个控件, 然后导航到 www.microsoft.com。 若要使用此示例, 请在文档`Sheet1`级项目的类中运行它。  
   
  [!code-csharp[Trin_ExcelControlCollection#51](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#51)]
  [!code-vb[Trin_ExcelControlCollection#51](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#51)]  
@@ -2394,12 +2394,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddWebBrowser%2A>方法，可添加<xref:Microsoft.Office.Tools.Excel.Controls.WebBrowser>对象的末尾<xref:Microsoft.Office.Tools.Excel.ControlCollection>。 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.WebBrowser>之前以编程方式添加的控件，请使用<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>方法。  
+ 方法使你能够将对象<xref:Microsoft.Office.Tools.Excel.Controls.WebBrowser>添加<xref:Microsoft.Office.Tools.Excel.ControlCollection>到的末尾。 <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddWebBrowser%2A> 若要删除<xref:Microsoft.Office.Tools.Excel.Controls.WebBrowser>以前以编程方式添加的控件, 请<xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A>使用方法。  
   
    
   
 ## Examples  
- 下面的代码示例添加<xref:Microsoft.Office.Tools.Excel.Controls.WebBrowser>到工作表中，控制，然后转到 www.microsoft.com。 若要使用此示例中，运行从`Sheet1`在文档级项目中的类。  
+ 下面的代码示例向工作<xref:Microsoft.Office.Tools.Excel.Controls.WebBrowser>表添加一个控件, 然后导航到 www.microsoft.com。 若要使用此示例, 请在文档`Sheet1`级项目的类中运行它。  
   
  [!code-csharp[Trin_ExcelControlCollection#52](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/CS/Sheet1.cs#52)]
  [!code-vb[Trin_ExcelControlCollection#52](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelControlCollection/VB/Sheet1.vb#52)]  

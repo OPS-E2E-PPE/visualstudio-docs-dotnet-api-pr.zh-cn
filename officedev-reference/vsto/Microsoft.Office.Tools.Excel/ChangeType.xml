@@ -1,5 +1,5 @@
 <Type Name="ChangeType" FullName="Microsoft.Office.Tools.Excel.ChangeType">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="59989a20f6076fc30193f820b68af4f06dd31f2e" /><Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="02/21/2018" /><Meta Name="ms.locfileid" Value="29430566" /></Metadata><TypeSignature Language="C#" Value="public enum ChangeType" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="77fa38423ddd72f4875385b59bec35985d8f0ae4" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69005305" /></Metadata><TypeSignature Language="C#" Value="public enum ChangeType" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ChangeType extends System.Enum" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Excel.ChangeType" />
   <AssemblyInfo>
@@ -15,14 +15,14 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 当<xref:Microsoft.Office.Tools.Excel.ListObject>控件绑定到数据以及用户执行的操作，不允许，<xref:Microsoft.Office.Tools.Excel.ListObject>控件将自身还原为其以前的状态并引发<xref:Microsoft.Office.Tools.Excel.ListObject.OriginalDataRestored>事件。 <xref:Microsoft.Office.Tools.Excel.ChangeType>枚举提供了有关发生的还原类型信息。  
+ 当控件绑定到数据, 并且用户执行不允许的操作时, 该<xref:Microsoft.Office.Tools.Excel.ListObject>控件会将其自身还原到<xref:Microsoft.Office.Tools.Excel.ListObject.OriginalDataRestored>以前的状态, 并引发事件。 <xref:Microsoft.Office.Tools.Excel.ListObject> <xref:Microsoft.Office.Tools.Excel.ChangeType>枚举提供有关所发生的还原类型的信息。  
   
    
   
 ## Examples  
- 下面的代码示例创建<xref:System.Data.DataTable>和<xref:Microsoft.Office.Tools.Excel.ListObject>，并将绑定<xref:Microsoft.Office.Tools.Excel.ListObject>到<xref:System.Data.DataTable>。 然后，它创建<xref:Microsoft.Office.Tools.Excel.ListObject.OriginalDataRestored>事件处理程序。 要测试此事件，请右键单击上方的列字母<xref:Microsoft.Office.Tools.Excel.ListObject>在工作表 1，然后单击**删除**的快捷菜单中。 事件处理程序替换列和列标题数据，并显示一条指示什么类型的数据已还原消息和，还原原始数据的原因。  
+ 下面<xref:System.Data.DataTable>的代码示例创建<xref:Microsoft.Office.Tools.Excel.ListObject>和, <xref:System.Data.DataTable>并将绑定<xref:Microsoft.Office.Tools.Excel.ListObject>到。 然后, 创建一个<xref:Microsoft.Office.Tools.Excel.ListObject.OriginalDataRestored>事件处理程序。 若要测试该事件, 请右键单击 "工作表 1 <xref:Microsoft.Office.Tools.Excel.ListObject> " 上方的列号, 然后单击快捷菜单中的 "**删除**"。 该事件处理程序将替换列和列标题数据, 并显示一条消息, 指示已还原的数据类型和还原原始数据的原因。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelListObject#25](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelListObject/CS/Trin_ExcelListObject.cs#25)]
  [!code-vb[Trin_ExcelListObject#25](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelListObject/VB/Sheet1.vb#25)]  
@@ -43,6 +43,7 @@
       <ReturnValue>
         <ReturnType>Microsoft.Office.Tools.Excel.ChangeType</ReturnType>
       </ReturnValue>
+      <MemberValue>1</MemberValue>
       <Docs>
         <summary>已添加到 <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 控件中的列。</summary>
       </Docs>
@@ -59,6 +60,7 @@
       <ReturnValue>
         <ReturnType>Microsoft.Office.Tools.Excel.ChangeType</ReturnType>
       </ReturnValue>
+      <MemberValue>5</MemberValue>
       <Docs>
         <summary>列标题文本已还原到为原始值。</summary>
       </Docs>
@@ -75,6 +77,7 @@
       <ReturnValue>
         <ReturnType>Microsoft.Office.Tools.Excel.ChangeType</ReturnType>
       </ReturnValue>
+      <MemberValue>2</MemberValue>
       <Docs>
         <summary>已从 <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 控件移除的列。</summary>
       </Docs>
@@ -91,6 +94,7 @@
       <ReturnValue>
         <ReturnType>Microsoft.Office.Tools.Excel.ChangeType</ReturnType>
       </ReturnValue>
+      <MemberValue>0</MemberValue>
       <Docs>
         <summary>一个范围内的值已还原为数据源中的值。</summary>
       </Docs>
@@ -107,6 +111,7 @@
       <ReturnValue>
         <ReturnType>Microsoft.Office.Tools.Excel.ChangeType</ReturnType>
       </ReturnValue>
+      <MemberValue>3</MemberValue>
       <Docs>
         <summary>已添加到 <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 控件中的行。</summary>
       </Docs>
@@ -123,6 +128,7 @@
       <ReturnValue>
         <ReturnType>Microsoft.Office.Tools.Excel.ChangeType</ReturnType>
       </ReturnValue>
+      <MemberValue>4</MemberValue>
       <Docs>
         <summary>已从 <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 控件移除的行。</summary>
       </Docs>

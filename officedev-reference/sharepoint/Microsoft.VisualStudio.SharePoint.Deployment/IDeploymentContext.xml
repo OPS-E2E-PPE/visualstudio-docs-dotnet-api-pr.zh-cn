@@ -1,5 +1,5 @@
 <Type Name="IDeploymentContext" FullName="Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="31db528d68ea786576a0ca417bc210e231473fb5" /><Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="02/21/2018" /><Meta Name="ms.locfileid" Value="29410039" /></Metadata><TypeSignature Language="C#" Value="public interface IDeploymentContext : Microsoft.VisualStudio.SharePoint.IAnnotatedObject" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="0f115fd31b8f36244c8565117d1b878f61ce68da" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69011756" /></Metadata><TypeSignature Language="C#" Value="public interface IDeploymentContext : Microsoft.VisualStudio.SharePoint.IAnnotatedObject" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDeploymentContext implements class Microsoft.VisualStudio.SharePoint.IAnnotatedObject" />
   <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext" />
   <AssemblyInfo>
@@ -17,9 +17,9 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- Visual Studio 将传递<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext>到<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep.CanExecute%2A>和<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep.Execute%2A>的部署步骤的方法。 在开始部署和收回操作初始化新的部署上下文。  
+ Visual Studio 会<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext>传递到<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep.CanExecute%2A>部署<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep.Execute%2A>步骤的和方法。 在部署和收回操作开始时, 将初始化新的部署上下文。  
   
- <xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext>接口实现<xref:Microsoft.VisualStudio.SharePoint.IAnnotatedObject>以便部署步骤来存储和步骤之间传递数据。  
+ 接口实现, 以<xref:Microsoft.VisualStudio.SharePoint.IAnnotatedObject>启用在步骤之间存储和传递数据的部署步骤。 <xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext>  
   
  ]]></format>
     </remarks>
@@ -39,8 +39,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取部署是否已被用户取消。</summary>
-        <value>
-          如果部署已被用户取消，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果部署已被用户取消，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -58,8 +57,7 @@
       </ReturnValue>
       <Docs>
         <summary>确定该项目是否正被部署。</summary>
-        <value>
-          如果正在部署项目，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果正在部署项目，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -77,8 +75,7 @@
       </ReturnValue>
       <Docs>
         <summary>确定该项目是否正被收回。</summary>
-        <value>
-          如果正在撤消项目，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果正在撤消项目，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -138,7 +135,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 可能是 SiteUrl 相同，如果该站点 WebRoot 其站点集合。  
+ 可能与 SiteUrl 相同, 如果该站点是其网站集的 WebRoot。  
   
  ]]></format>
         </remarks>
@@ -164,11 +161,11 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 这可能或可能不能与相同<xref:Microsoft.VisualStudio.SharePoint.ISharePointProject.SiteUrl%2A?displayProperty=fullName>，但它们指向相同的资源。  
+ 这可能与相同<xref:Microsoft.VisualStudio.SharePoint.ISharePointProject.SiteUrl%2A?displayProperty=fullName>, 也可能不相同, 但它们指向相同资源。  
   
- 此值将从 SharePoint 查询，以便与 SiteCollectionUrl 一致。  
+ 此值将从 SharePoint 中查询, 使其与 SiteCollectionUrl 一致。  
   
- 例如，<xref:Microsoft.VisualStudio.SharePoint.ISharePointProject.SiteUrl%2A?displayProperty=fullName>可能 http://localhost，但 SharePoint 将将其解析为 http://hostname。  
+ 例如, <xref:Microsoft.VisualStudio.SharePoint.ISharePointProject.SiteUrl%2A?displayProperty=fullName>可以为http://localhost, 但 SharePoint 会将其解析为http://hostname。  
   
  ]]></format>
         </remarks>

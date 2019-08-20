@@ -1,5 +1,5 @@
 <Type Name="ICodeRefactoringEvents" FullName="Microsoft.VisualStudio.SharePoint.ICodeRefactoringEvents">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="06774a7db00ec0298989b3f690c0d4f56a3c6c30" /><Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="02/21/2018" /><Meta Name="ms.locfileid" Value="29409662" /></Metadata><TypeSignature Language="C#" Value="public interface ICodeRefactoringEvents" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="e0b7306316f7e5ba2184604c91d1c0e08022309c" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69008403" /></Metadata><TypeSignature Language="C#" Value="public interface ICodeRefactoringEvents" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ICodeRefactoringEvents" />
   <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.SharePoint.ICodeRefactoringEvents" />
   <AssemblyInfo>
@@ -13,7 +13,7 @@
   </Docs>
   <Members>
     <Member MemberName="ClassNameChanged">
-      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.VisualStudio.SharePoint.ClassNameChangedEventArgs&gt; ClassNameChanged;" />
+      <MemberSignature Language="C#" Value="event EventHandler&lt;Microsoft.VisualStudio.SharePoint.ClassNameChangedEventArgs&gt; ClassNameChanged;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.VisualStudio.SharePoint.ClassNameChangedEventArgs&gt; ClassNameChanged" />
       <MemberSignature Language="DocId" Value="E:Microsoft.VisualStudio.SharePoint.ICodeRefactoringEvents.ClassNameChanged" />
       <MemberType>Event</MemberType>
@@ -30,14 +30,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 在这种情况，可以执行自定义重构代码。 声明中添加任何其他文件<xref:Microsoft.VisualStudio.SharePoint.ICodeRefactoringEvents.ClassNameChanging>此处未列出事件。  
+ 在此事件中, 你可以执行自定义重构代码。 此处未列出在<xref:Microsoft.VisualStudio.SharePoint.ICodeRefactoringEvents.ClassNameChanging>事件中添加的任何其他文件。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="ClassNameChanging">
-      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.VisualStudio.SharePoint.ClassNameChangingEventArgs&gt; ClassNameChanging;" />
+      <MemberSignature Language="C#" Value="event EventHandler&lt;Microsoft.VisualStudio.SharePoint.ClassNameChangingEventArgs&gt; ClassNameChanging;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.VisualStudio.SharePoint.ClassNameChangingEventArgs&gt; ClassNameChanging" />
       <MemberSignature Language="DocId" Value="E:Microsoft.VisualStudio.SharePoint.ICodeRefactoringEvents.ClassNameChanging" />
       <MemberType>Event</MemberType>
@@ -54,14 +54,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用事件自变量列表其他文件，也可能会影响你的代码或取消重构。  
+ 使用事件参数可以列出可能受你的代码影响的其他文件或取消重构。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="NamespaceNameChanged">
-      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.VisualStudio.SharePoint.NamespaceNameChangedEventArgs&gt; NamespaceNameChanged;" />
+      <MemberSignature Language="C#" Value="event EventHandler&lt;Microsoft.VisualStudio.SharePoint.NamespaceNameChangedEventArgs&gt; NamespaceNameChanged;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.VisualStudio.SharePoint.NamespaceNameChangedEventArgs&gt; NamespaceNameChanged" />
       <MemberSignature Language="DocId" Value="E:Microsoft.VisualStudio.SharePoint.ICodeRefactoringEvents.NamespaceNameChanged" />
       <MemberType>Event</MemberType>
@@ -78,14 +78,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 在这种情况，可以执行自定义重构代码。 声明中添加任何其他文件<xref:Microsoft.VisualStudio.SharePoint.ICodeRefactoringEvents.NamespaceNameChanged>未在此处列出。  
+ 在此事件中, 你可以执行自定义重构代码。 此处未列出你在中添加的<xref:Microsoft.VisualStudio.SharePoint.ICodeRefactoringEvents.NamespaceNameChanged>任何其他文件。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="NamespaceNameChanging">
-      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.VisualStudio.SharePoint.NamespaceNameChangingEventArgs&gt; NamespaceNameChanging;" />
+      <MemberSignature Language="C#" Value="event EventHandler&lt;Microsoft.VisualStudio.SharePoint.NamespaceNameChangingEventArgs&gt; NamespaceNameChanging;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.VisualStudio.SharePoint.NamespaceNameChangingEventArgs&gt; NamespaceNameChanging" />
       <MemberSignature Language="DocId" Value="E:Microsoft.VisualStudio.SharePoint.ICodeRefactoringEvents.NamespaceNameChanging" />
       <MemberType>Event</MemberType>
@@ -102,7 +102,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用事件自变量列表其他文件，也可能会影响你的代码或取消重构。  
+ 使用事件参数可以列出可能受你的代码影响的其他文件或取消重构。  
   
  ]]></format>
         </remarks>

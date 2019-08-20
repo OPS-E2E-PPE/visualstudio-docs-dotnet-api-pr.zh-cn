@@ -1,5 +1,5 @@
 <Type Name="RibbonToggleButton" FullName="Microsoft.Office.Tools.Ribbon.RibbonToggleButton">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="0e01e252d2aab6adbb9ab20192f1b9e6b81863d5" /><Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="09/19/2018" /><Meta Name="ms.locfileid" Value="46455761" /></Metadata><TypeSignature Language="C#" Value="public interface RibbonToggleButton : IDisposable, Microsoft.Office.Tools.Ribbon.RibbonControl, System.ComponentModel.IComponent" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="5e7766b722a4a0bc1991cb1c7989602fd33eafd4" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69002073" /></Metadata><TypeSignature Language="C#" Value="public interface RibbonToggleButton : IDisposable, Microsoft.Office.Tools.Ribbon.RibbonControl, System.ComponentModel.IComponent" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract RibbonToggleButton implements class Microsoft.Office.Tools.Ribbon.RibbonComponent, class Microsoft.Office.Tools.Ribbon.RibbonControl, class System.ComponentModel.IComponent, class System.IDisposable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Ribbon.RibbonToggleButton" />
   <AssemblyInfo>
@@ -7,6 +7,9 @@
     <AssemblyVersion>10.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Office.Tools.Ribbon.RibbonComponent</InterfaceName>
+    </Interface>
     <Interface>
       <InterfaceName>Microsoft.Office.Tools.Ribbon.RibbonControl</InterfaceName>
     </Interface>
@@ -28,9 +31,9 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 一个<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton>可用于显示某项被选定。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton>可用于显示是否选择了某个项。  
   
- 您可以创建<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton>在运行时通过使用<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.CreateRibbonToggleButton%2A>方法的<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory>对象。  
+ 您可以通过<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.CreateRibbonToggleButton%2A>使用<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton> <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory>对象的方法在运行时创建。  
   
  可通过两种方法来访问 <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory> 对象：  
   
@@ -66,14 +69,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Checked%2A>属性可以在运行时更改。  
+ 可以<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Checked%2A>在运行时更改该属性。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="Click">
-      <MemberSignature Language="C#" Value="public event Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler Click;" />
+      <MemberSignature Language="C#" Value="event Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler Click;" />
       <MemberSignature Language="ILAsm" Value=".event class Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler Click" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Click" />
       <MemberType>Event</MemberType>
@@ -90,7 +93,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 当用户单击<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton>控件，<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Checked%2A>属性更改前<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Click>引发事件。  
+ 当用户单击<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton>控件时, 在<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Checked%2A>引发<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Click>事件之前, 属性会发生更改。  
   
  ]]></format>
         </remarks>
@@ -110,14 +113,14 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonToggleButton" /> 控件的大小。</summary>
-        <value>一个<c>Microsoft.Office.Core.RibbonControlSize</c>表示大小的<see cref="T:Microsoft.Office.Tools.Ribbon.RibbonToggleButton" />控件。</value>
+        <value>一个<c>RibbonControlSize</c> , 它表示<see cref="T:Microsoft.Office.Tools.Ribbon.RibbonToggleButton" />控件的大小。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果该按钮菜单的一部分，则此属性无效。 `Microsoft.Office.Core.RibbonControlSize`菜单上显示的按钮始终设置为`Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeRegular`。  
+ 如果按钮是菜单的一部分, 则此属性不起作用。 菜单上显示的按钮的将始终设置为`Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeRegular`。 `Microsoft.Office.Core.RibbonControlSize`  
   
- 若要更改的大小<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton>在菜单上，使用<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ItemSize%2A>属性。  
+ 若要更改菜单<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton>上的大小, 请<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ItemSize%2A>使用属性。  
   
  ]]></format>
         </remarks>
@@ -142,7 +145,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Description%2A>时，会出现<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton>嵌套在另一个菜单，并<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ItemSize%2A>父菜单的属性设置为`Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge`。 如果<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ItemSize%2A>设置为`Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeRegular`，说明未显示。  
+ 如果<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Description%2A> 嵌套<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton>在另一个菜单中`Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge`, 并且父菜单的属性设置为,则会显示。<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ItemSize%2A> 如果将设置为`Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeRegular`, 则不会显示说明。 <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ItemSize%2A>  
   
  可以在运行时更改此属性。  
   
@@ -169,13 +172,13 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 建议的图像格式是 PNG，因为 PNG 格式的图像支持通过其 alpha 通道的透明度。  
+ 建议的图像格式为 PNG, 因为 PNG 格式的图像通过其 alpha 通道支持透明度。  
   
- <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A>属性标识控件显示的图像。 在设计时或在运行时，可以设置此属性。 如果在运行时中更新此属性，该控件的外观被更新以反映更改。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A>属性标识控件显示的图像。 此属性可在设计时或运行时设置。 如果在运行时更新此属性, 控件的外观将更新以反映更改。  
   
- 如果<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A>设置属性，则<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.OfficeImageId%2A>和<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ImageName%2A>属性将被忽略。 尽管<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A>属性可让您更好地控制比其他两个属性，这一点可以是速度较慢，因为每次更新控件时，图像对象发送到 Office 应用程序。  
+ 如果设置了<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.OfficeImageId%2A> <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ImageName%2A>属性, 则将忽略和属性。 <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A> <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A>尽管属性比其他两个属性提供的控件更多, 但它可能会变慢, 因为每次更新控件时, 都会将 image 对象发送到 Office 应用程序。  
   
- <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ShowImage%2A>属性必须为`true`控件来显示图像。 当您将设置<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A>属性在设计时，Visual Studio 将自动设置<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ShowImage%2A>属性设置为`true`。 如果您设置<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A>在运行时属性，则你必须设置<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ShowImage%2A>属性设置为`true`在代码中。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ShowImage%2A> 属性`true`必须为, 控件才能显示图像。 在设计时设置<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A>属性时, Visual Studio 会将<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ShowImage%2A>属性自动设置为`true`。 如果在运行时<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A>设置属性, 必须在代码中<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ShowImage%2A>将属性设置为`true` 。  
   
  ]]></format>
         </remarks>
@@ -200,30 +203,30 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ImageName%2A>属性标识控件显示的图像。 Office 应用程序此映像从你的解决方案只检索一次，以提高性能。 此属性可以设置只能在设计时，因为它标识的图像加载过程<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>事件。 <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage> 时将引发一次每个映像名称显示在功能区。 之后，不能使用此属性更改控件图像。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ImageName%2A>属性标识控件显示的图像。 Office 应用程序仅从解决方案中检索一次此映像, 以提高性能。 只能在设计时设置此属性, 因为该属性标识的图像将在<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>事件中加载。 <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>当显示功能区时, 每个映像名称只引发一次。 之后, 不能使用此属性更改控制图像。  
   
- 若要加载图像，将代码添加到<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>事件处理程序。 检查<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs.ImageName%2A>的属性<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs>并设置<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs.Image%2A>属性的<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs>到想要加载的图像的对象。  
+ 若要加载图像, 请将代码添加<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>到事件处理程序。 <xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs.Image%2A>检查的<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs>属性,并<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs>将对象的属性设置为要加载的图像。 <xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs.ImageName%2A>  
   
- 如果忽略此属性<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A>属性或<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.OfficeImageId%2A>属性设置。 标识的图像<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ImageName%2A>属性可以稍快于标识的图像加载<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A>显示属性，因为 Office 应用程序中检索映像解决方案仅在首次从功能区。  
+ 如果设置了<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A>属性<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.OfficeImageId%2A>或属性, 则忽略此属性。 与<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A>属性标识的<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ImageName%2A>图像相比, 属性所标识的映像的加载速度要快得多, 因为 Office 应用程序只会在首次显示功能区时从你的解决方案中检索该图像。  
   
- <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ShowImage%2A>属性必须为`true`控件来显示图像。 当您将设置<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ImageName%2A>属性在设计时，Visual Studio 将自动设置<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ShowImage%2A>属性设置为`true`。 如果您设置<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ImageName%2A>在运行时属性，则你必须设置<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ShowImage%2A>属性设置为`true`在代码中。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ShowImage%2A> 属性`true`必须为, 控件才能显示图像。 在设计时设置<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ImageName%2A>属性时, Visual Studio 会将<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ShowImage%2A>属性自动设置为`true`。 如果在运行时<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ImageName%2A>设置属性, 必须在代码中<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ShowImage%2A>将属性设置为`true` 。  
   
    
   
 ## Examples  
- 下面的示例将缓存两个按钮的的图像。  
+ 下面的示例为两个按钮缓存图像。  
   
- 若要运行此代码示例，必须首先执行以下步骤：  
+ 若要运行此代码示例, 必须首先执行以下步骤:  
   
-1.  添加**功能区 （可视化设计器）** 到 Office 项目的项。  
+1.  向 Office 项目添加 "**功能区 (可视化设计器)** " 项。  
   
 2.  将组添加到自定义选项卡。  
   
 3.  将两个按钮添加到组。  
   
-4.  将两个映像添加到项目资源。  
+4.  将两个图像添加到项目资源。  
   
- 然后可以在生成的功能区类中运行此代码。  
+ 然后, 你可以在生成的功能区类中运行此代码。  
   
  [!code-csharp[Trin_Ribbon_ObjectModel#6](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_Ribbon_ObjectModel/CS/Ribbon1.cs#6)]
  [!code-vb[Trin_Ribbon_ObjectModel#6](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_Ribbon_ObjectModel/VB/Ribbon1.vb#6)]  
@@ -251,11 +254,11 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- Keytip 必须包含 1 到 3 个字符，不能包含空格、 制表符或换行字符。  
+ KeyTip 必须有1到3个字符, 并且不得包含空格、制表符或换行符。  
   
- Keytip 有时也称为访问密钥或加速器和用作激活控件的快捷组合键。 按下 ALT 键时，键提示将显示在功能区上。 如果内置控件或从其他加载项，你的快捷键提示与键提示冲突，Microsoft Office 可能会自动分配非冲突快捷键提示值。  
+ Keytip 有时称为 "访问键" 或 "加速器", 用作激活控件的快捷键组合。 按 ALT 键时, 功能区上将显示键提示。 如果 KeyTip 与内置控件或其他外接程序的 keytip 发生冲突, Microsoft Office 可能会自动分配不冲突的 KeyTip 值。  
   
- 有关详细信息，请参阅[使用键盘处理功能区程序](http://go.microsoft.com/fwlink/?LinkId=93523)。  
+ 有关详细信息, 请参阅[使用键盘处理功能区程序](http://go.microsoft.com/fwlink/?LinkId=93523)。  
   
  可以在运行时更改此属性。  
   
@@ -307,26 +310,26 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.OfficeImageId%2A>属性标识的控件显示 Office 图标。 属性值是一个字符串，标识`imageMso`所选图标的值。 在设计时或在运行时，可以设置此属性。 如果在运行时中更新此属性，该控件的外观被更新以反映更改。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.OfficeImageId%2A>属性标识控件显示的 Office 图标。 属性值是标识`imageMso`所选图标的值的字符串。 此属性可在设计时或运行时设置。 如果在运行时更新此属性, 控件的外观将更新以反映更改。  
   
- 有关一系列`imageMso`值，请参阅 Microsoft 下载中心页[2010 Office System 外接程序： 图标库](http://go.microsoft.com/fwlink/?LinkID=220760)。  
+ 有关`imageMso`值的列表, 请参阅 Microsoft 下载中心页面[2010 Office 系统外接程序:图标库](http://go.microsoft.com/fwlink/?LinkID=220760)。  
   
- 如果忽略此属性<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A>属性设置。 标识的图像<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.OfficeImageId%2A>属性可以稍快于标识的图像加载<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A>属性，因为这些图像缓存在 Office 应用程序。  
+ 如果设置了<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A>属性, 则忽略此属性。 由于图像缓存在<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.OfficeImageId%2A> Office 应用程序中, 因此可以比<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A>属性标识的图像稍快地加载属性标识的图像。  
   
- <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ShowImage%2A>属性必须为`true`控件来显示图像。 当您将设置<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A>属性在设计时，Visual Studio 将自动设置<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ShowImage%2A>属性设置为`true`。 如果您设置<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A>在运行时属性，则你必须设置<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ShowImage%2A>属性设置为`true`在代码中。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ShowImage%2A> 属性`true`必须为, 控件才能显示图像。 在设计时设置<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A>属性时, Visual Studio 会将<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ShowImage%2A>属性自动设置为`true`。 如果在运行时<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A>设置属性, 必须在代码中<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ShowImage%2A>将属性设置为`true` 。  
   
    
   
 ## Examples  
- 下面的示例将 Microsoft Office 图标分配给一个菜单。  
+ 下面的示例将 Microsoft Office 图标分配给菜单。  
   
- 若要运行此代码示例，必须首先执行以下步骤：  
+ 若要运行此代码示例, 必须首先执行以下步骤:  
   
-1.  添加**功能区 （可视化设计器）** 到 Office 项目的项。  
+1.  向 Office 项目添加 "**功能区 (可视化设计器)** " 项。  
   
 2.  将组添加到自定义选项卡。  
   
-3.  向组添加一个切换按钮。  
+3.  向组添加切换按钮。  
   
  [!code-csharp[Trin_Ribbon_ControlProperties#8](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_Ribbon_ControlProperties/CS/Ribbon1.cs#8)]
  [!code-vb[Trin_Ribbon_ControlProperties#8](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_Ribbon_ControlProperties/VB/Ribbon1.vb#8)]  
@@ -354,9 +357,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 不能使用此属性设置的位置<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton>组中的控件。 若要排列按钮，将它们拖到中的正确位置**功能区设计器**。  
+ 不能使用此属性来设置<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton>控件在组中的位置。 若要排列按钮, 请将其拖动到**功能区设计器**中的正确位置。  
   
- 可以在运行时仅在某些情况下设置此属性。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
+ 仅在某些情况下, 才能在运行时设置此属性。 有关详细信息, 请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
   
  ]]></format>
         </remarks>
@@ -381,11 +384,11 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ScreenTip%2A>值必须是长度小于 1024年个字符。  
+ 值<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ScreenTip%2A>的长度必须小于1024个字符。  
   
- 当<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.SuperTip%2A>设置属性，则<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ScreenTip%2A>值将显示的标题为<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.SuperTip%2A>。  
+ 设置属性时<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ScreenTip%2A> , 值显示<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.SuperTip%2A>为的标题。 <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.SuperTip%2A>  
   
- 此属性可以更改在设计时和运行时。  
+ 此属性可在设计时和运行时进行更改。  
   
  ]]></format>
         </remarks>
@@ -410,9 +413,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性自动设置为`true`如果您设置<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A>， <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ImageName%2A>，或<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.OfficeImageId%2A>在设计器中的属性。  
+ 如果设置了设计器中`true`的<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A>、或<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.OfficeImageId%2A>属性, <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ImageName%2A>则此属性将自动设置为。  
   
- 此属性始终为`true`如果您设置<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ControlSize%2A>属性设置为`Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge`。  
+ 如果`true` `Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge`将属性设置为, 则此属性始终为。 <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ControlSize%2A>  
   
  可以在运行时更改此属性。  
   
@@ -439,7 +442,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性始终为`true`如果您设置<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.ControlSize%2A>属性设置为`Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge`。  
+ 如果`true` `Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge`将属性设置为, 则此属性始终为。 <xref:Microsoft.Office.Tools.Ribbon.RibbonButton.ControlSize%2A>  
   
  可以在运行时更改此属性。  
   
@@ -466,11 +469,11 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 字符串必须是长度小于 1024年个字符。  
+ 字符串的长度必须小于1024个字符。  
   
- <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.SuperTip%2A>下显示<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ScreenTip%2A>文本。 与不同<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ScreenTip%2A>，则<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.SuperTip%2A>启用换行符的字符串中。  
+ 显示<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.SuperTip%2A>在 " <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ScreenTip%2A>文本" 下。 与不同<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ScreenTip%2A>的是<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.SuperTip%2A> , 会在字符串中启用分行符。  
   
- 您可以更改<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.SuperTip%2A>在设计时和运行时。  
+ 您可以在设计<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.SuperTip%2A>时和运行时更改。  
   
  ]]></format>
         </remarks>

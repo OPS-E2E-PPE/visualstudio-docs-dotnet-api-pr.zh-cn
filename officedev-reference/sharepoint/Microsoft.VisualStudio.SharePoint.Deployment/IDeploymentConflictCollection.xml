@@ -1,5 +1,5 @@
 <Type Name="IDeploymentConflictCollection" FullName="Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflictCollection">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="827723484fada7e685133559b91c15fef9aa83d8" /><Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="09/19/2018" /><Meta Name="ms.locfileid" Value="46458218" /></Metadata><TypeSignature Language="C#" Value="public interface IDeploymentConflictCollection : System.Collections.Generic.IEnumerable&lt;Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflict&gt;" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="e6c662908323d16366edce341946de9959a9424a" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69011794" /></Metadata><TypeSignature Language="C#" Value="public interface IDeploymentConflictCollection : System.Collections.Generic.IEnumerable&lt;Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflict&gt;" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDeploymentConflictCollection implements class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflict&gt;, class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflictCollection" />
   <AssemblyInfo>
@@ -10,6 +10,9 @@
     <Interface>
       <InterfaceName>System.Collections.Generic.IEnumerable&lt;Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflict&gt;</InterfaceName>
     </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
+    </Interface>
   </Interfaces>
   <Docs>
     <summary>表示 <see cref="T:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflict" /> 对象集合。 每个 <see cref="T:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflict" /> 表示 SharePoint 项目项所部署的项与 SharePoint 站点上的项之间的冲突。</summary>
@@ -17,9 +20,9 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflictCollection>返回对象<xref:Microsoft.VisualStudio.SharePoint.DeploymentStepStartedEventArgs.Conflicts%2A?displayProperty=fullName>属性。 如果您决定部署冲突存在 SharePoint 项目项部署时，请使用<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflictCollection.Add%2A?displayProperty=fullName>方法以通知此冲突的 Visual Studio，并指定 Visual Studio 将调用来解决冲突的方法。 <xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflictCollection.Add%2A?displayProperty=fullName>方法将返回<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflict>对象，表示新的部署冲突。  
+ <xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflictCollection> 对象<xref:Microsoft.VisualStudio.SharePoint.DeploymentStepStartedEventArgs.Conflicts%2A?displayProperty=fullName>由属性返回。 如果确定在部署 SharePoint 项目项时存在部署冲突, 请使用<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflictCollection.Add%2A?displayProperty=fullName>方法通知 visual studio 冲突, 并指定 visual studio 将调用以解决冲突的方法。 方法返回一个<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflict>对象, 该对象表示新的部署冲突。 <xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflictCollection.Add%2A?displayProperty=fullName>  
   
- 有关示例，请参阅[如何： 处理部署冲突](/visualstudio/sharepoint/how-to-handle-deployment-conflicts)。  
+ 有关示例，请参见 [如何：处理部署冲突](/visualstudio/sharepoint/how-to-handle-deployment-conflicts)。  
   
  ]]></format>
     </remarks>
@@ -52,7 +55,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 有关示例，演示如何创建<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflict>对象以处理部署冲突，请参见[如何： 处理部署冲突](/visualstudio/sharepoint/how-to-handle-deployment-conflicts)。  
+ 有关演示如何创建<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflict>对象以处理部署冲突的示例, 请参阅[如何:处理部署冲突](/visualstudio/sharepoint/how-to-handle-deployment-conflicts)。  
   
  ]]></format>
         </remarks>

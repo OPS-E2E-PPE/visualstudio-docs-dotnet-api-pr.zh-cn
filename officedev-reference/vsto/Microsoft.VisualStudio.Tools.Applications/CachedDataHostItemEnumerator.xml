@@ -1,5 +1,5 @@
 <Type Name="CachedDataHostItemEnumerator" FullName="Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="9166e2d3e4349688fac5ff15e501db5131ac4277" /><Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="02/21/2018" /><Meta Name="ms.locfileid" Value="29439328" /></Metadata><TypeSignature Language="C#" Value="public sealed class CachedDataHostItemEnumerator : System.Collections.Generic.IEnumerator&lt;Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem&gt;" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="12926b22e523eea0232f0a2170ee1cbe5fb92459" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="68997196" /></Metadata><TypeSignature Language="C#" Value="public sealed class CachedDataHostItemEnumerator : System.Collections.Generic.IEnumerator&lt;Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem&gt;" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CachedDataHostItemEnumerator extends System.Object implements class System.Collections.Generic.IEnumerator`1&lt;class Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem&gt;, class System.Collections.IEnumerator, class System.IDisposable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator" />
   <AssemblyInfo>
@@ -13,6 +13,12 @@
     <Interface>
       <InterfaceName>System.Collections.Generic.IEnumerator&lt;Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem&gt;</InterfaceName>
     </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerator</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
   </Interfaces>
   <Docs>
     <summary>循环访问 <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemCollection" />。</summary>
@@ -20,17 +26,17 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- Visual Basic 和 C# 每个包含的语句的隐藏了枚举数的复杂性 (`foreach`在 C# 和`For Each`在 Visual Basic 中)。 为正在使用，而不直接操作枚举数的语言中使用的适当语句。  
+ Visual Basic, C#并且每个都包含一个语句, 该语句隐藏了`foreach`枚举C#器`For Each`的复杂性 (在 Visual Basic 的和中)。 使用所使用语言的适当语句, 而不是直接操作枚举器。  
   
  枚举器可用于读取集合中的数据，但不能用于修改基础集合。  
   
- 最初，枚举数定位在集合中第一个元素的前面。 <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.Reset%2A>方法还会枚举器放回此位置。 在此位置上，设置<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.Current%2A>属性引发异常。 因此，必须调用<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.MoveNext%2A>方法将枚举数前移到集合，然后再读取的值的第一个元素<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.Current%2A>。  
+ 最初，枚举数定位在集合中第一个元素的前面。 <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.Reset%2A>方法还将枚举器恢复到此位置。 在此位置, 设置<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.Current%2A>属性会引发异常。 因此, 在读取的<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.MoveNext%2A> <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.Current%2A>值之前, 必须调用方法, 以将枚举器前进到集合的第一个元素。  
   
  在调用 <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.Current%2A> 或 <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.MoveNext%2A> 之前，<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.Reset%2A> 返回同一对象。 <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.MoveNext%2A> 将 <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.Current%2A> 设置为下一个元素。  
   
- 如果<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.MoveNext%2A>越过的末尾的集合，枚举数定位在集合中的最后一个元素的后面和<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.MoveNext%2A>返回`false`。 当枚举器位于此位置上，后续调用<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.MoveNext%2A>还返回`false`。 如果最后一次调用到<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.MoveNext%2A>返回`false`，则调用<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.Current%2A>引发异常。 若要再次将 <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.Current%2A> 设置为集合的第一个元素，可以调用 <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.Reset%2A> 并接着调用 <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.MoveNext%2A>。  
+ 如果<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.MoveNext%2A>越过集合的末尾, 则枚举器将定位在集合中最后一个元素之后, 并<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.MoveNext%2A>返回`false`。 当枚举器位于此位置时, 对<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.MoveNext%2A>的后续调用也将返回。 `false` 如果最后一次调用<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.MoveNext%2A>返回`false`, 则<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.Current%2A>调用会引发异常。 若要再次将 <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.Current%2A> 设置为集合的第一个元素，可以调用 <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.Reset%2A> 并接着调用 <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.MoveNext%2A>。  
   
- 只要集合保持不变，枚举数就保持有效。 如果对集合进行更改，例如添加、 修改或删除元素，则枚举数将失效且不可恢复失效，并且下次调用<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.MoveNext%2A>或<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.Reset%2A>引发<xref:System.InvalidOperationException>。 如果之间修改集合<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.MoveNext%2A>和<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.Current%2A>，<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.Current%2A>返回到，设置的元素，即使枚举数已经无效。  
+ 只要集合保持不变，枚举数就保持有效。 如果对集合所做的更改 (如添加、修改或删除元素), 则枚举器将失效且不可恢复, 并且对<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.MoveNext%2A>或<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.Reset%2A>的下<xref:System.InvalidOperationException>一个调用将引发。 如果在和<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.MoveNext%2A> <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.Current%2A>之间修改集合, <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.Current%2A>则将返回它设置为的元素, 即使枚举器已失效也是如此。  
   
  枚举数没有对集合的独占访问权；因此，从头到尾对一个集合进行枚举在本质上不是一个线程安全的过程。 即使某个集合已同步，其他线程仍可以修改该集合，这会导致枚举数引发异常。 若要确保枚举过程中的线程安全性，可以在整个枚举期间锁定集合，或者捕获由其他线程进行的更改所导致的异常。  
   
@@ -43,6 +49,9 @@
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem Current" />
       <MemberSignature Language="DocId" Value="P:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.Current" />
       <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:System.Collections.Generic.IEnumerator`1.Current</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.VisualStudio.Tools.Applications.ServerDocument</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -52,18 +61,18 @@
       </ReturnValue>
       <Docs>
         <summary>获取枚举数当前位置的 <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem" />。</summary>
-        <value><see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem" />位于枚举数当前位置。</value>
+        <value><see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem" />位于枚举数当前位置的。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 创建一个枚举器或<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.Reset%2A>调用方法时，<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.MoveNext%2A>必须调用方法来枚举器向前移动到集合，然后再读取的值的第一个元素<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.Current%2A>; 否则为<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.Current%2A>是未定义。  
+ 在创建枚举器之后或在调用<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.Reset%2A>方法后<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.MoveNext%2A> , 必须调用方法以将枚举数前移到集合的第一个元素, <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.Current%2A>然后才能读取的值; 否则, <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.Current%2A>为尚未.  
   
- <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.Current%2A> 如果最后一次调用到也会引发异常<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.MoveNext%2A>返回`false`，指示集合的末尾。  
+ <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.Current%2A>如果最后一次调用<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.MoveNext%2A>返回`false`(指示集合的末尾), 也会引发异常。  
   
- <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.Current%2A> 不会移动的位置的枚举器，并对连续调用<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.Current%2A>之前返回同一对象<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.MoveNext%2A>或<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.Reset%2A>调用。  
+ <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.Current%2A>不移动枚举器的位置, 并且连续调用将<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.Current%2A>返回相同的对象, <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.MoveNext%2A>直到调用或<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.Reset%2A> 。  
   
- 只要集合保持不变，枚举数就保持有效。 如果对集合进行更改，例如添加、 修改或删除元素，则枚举数将失效且不可恢复失效，并且下次调用<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.MoveNext%2A>或<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.Reset%2A>引发<xref:System.InvalidOperationException>。 如果之间修改集合<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.MoveNext%2A>和<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.Current%2A>，<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.Current%2A>返回到，设置的元素，即使枚举数已经无效。  
+ 只要集合保持不变，枚举数就保持有效。 如果对集合所做的更改 (如添加、修改或删除元素), 则枚举器将失效且不可恢复, 并且对<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.MoveNext%2A>或<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.Reset%2A>的下<xref:System.InvalidOperationException>一个调用将引发。 如果在和<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.MoveNext%2A> <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.Current%2A>之间修改集合, <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.Current%2A>则将返回它设置为的元素, 即使枚举器已失效也是如此。  
   
  ]]></format>
         </remarks>
@@ -75,6 +84,9 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool MoveNext() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.MoveNext" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Collections.IEnumerator.MoveNext</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.VisualStudio.Tools.Applications.ServerDocument</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -85,17 +97,16 @@
       <Parameters />
       <Docs>
         <summary>将枚举数推进到 <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemCollection" /> 中的下一个 <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem" />。</summary>
-        <returns>
-          如果枚举数成功地推进到下一个 <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem" />，则为 <see langword="true" />；如果枚举数越过集合的结尾，则为 <see langword="false" />。</returns>
+        <returns>如果枚举数成功地推进到下一个 <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem" />，则为 <see langword="true" />；如果枚举数越过集合的结尾，则为 <see langword="false" />。</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 创建一个枚举器或<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.Reset%2A>方法被调用时，枚举数定位在集合中，并且首次调用的第一个元素之前<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.MoveNext%2A>移动到的集合的第一个元素的枚举数。  
+ 在创建枚举器之后或在调用<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.Reset%2A>方法之后, 枚举数将定位在集合的第一个元素之前, 第一次<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.MoveNext%2A>调用将枚举数移到集合的第一个元素。  
   
- 如果<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.MoveNext%2A>越过的末尾的集合，枚举数定位在集合中的最后一个元素的后面和<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.MoveNext%2A>返回`false`。 当枚举器位于此位置上，后续调用<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.MoveNext%2A>还返回`false`直到<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.Reset%2A>调用。  
+ 如果<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.MoveNext%2A>越过集合的末尾, 则枚举器将定位在集合中最后一个元素之后, 并<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.MoveNext%2A>返回`false`。 当枚举器位于此位置时, 对<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.MoveNext%2A>的后续调用也将返回`false` , 直到<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.Reset%2A>调用。  
   
- 只要集合保持不变，枚举数就保持有效。 如果对集合进行更改，例如添加、 修改或删除元素，则枚举数将失效且不可恢复失效，并且下次调用<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.MoveNext%2A>或<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.Reset%2A>引发<xref:System.InvalidOperationException>。  
+ 只要集合保持不变，枚举数就保持有效。 如果对集合所做的更改 (如添加、修改或删除元素), 则枚举器将失效且不可恢复, 并且对<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.MoveNext%2A>或<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.Reset%2A>的下<xref:System.InvalidOperationException>一个调用将引发。  
   
  ]]></format>
         </remarks>
@@ -107,6 +118,9 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Reset() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.Reset" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Collections.IEnumerator.Reset</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.VisualStudio.Tools.Applications.ServerDocument</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -121,7 +135,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 只要集合保持不变，枚举数就保持有效。 如果对集合进行更改，例如添加、 修改或删除元素，则枚举数将失效且不可恢复失效，并且下次调用<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.MoveNext%2A>或<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.Reset%2A>引发<xref:System.InvalidOperationException>。  
+ 只要集合保持不变，枚举数就保持有效。 如果对集合所做的更改 (如添加、修改或删除元素), 则枚举器将失效且不可恢复, 并且对<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.MoveNext%2A>或<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.Reset%2A>的下<xref:System.InvalidOperationException>一个调用将引发。  
   
  ]]></format>
         </remarks>
@@ -133,6 +147,9 @@
       <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.IEnumerator.Current" />
       <MemberSignature Language="DocId" Value="P:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.System#Collections#IEnumerator#Current" />
       <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:System.Collections.IEnumerator.Current</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.VisualStudio.Tools.Applications.ServerDocument</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -151,6 +168,9 @@
       <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.IDisposable.Dispose() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.System#IDisposable#Dispose" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.VisualStudio.Tools.Applications.ServerDocument</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -165,12 +185,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 在完成使用 <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.System%23IDisposable%23Dispose%2A> 后，应调用 <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator>。 <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.System%23IDisposable%23Dispose%2A> 方法使 <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator> 处于不可用状态。 在调用<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.System%23IDisposable%23Dispose%2A>，必须释放对所有引用<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator>以便垃圾回收器才能回收的内存，<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator>占用。 有关详细信息，请参阅[清洗向上非托管资源](http://msdn.microsoft.com/library/a17b0066-71c2-4ba4-9822-8e19332fc213)和[实现 Dispose 方法](http://msdn.microsoft.com/library/eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9)。  
+ 在完成使用 <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.System%23IDisposable%23Dispose%2A> 后，应调用 <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator>。 <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.System%23IDisposable%23Dispose%2A> 方法使 <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator> 处于不可用状态。 调用<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.System%23IDisposable%23Dispose%2A>后, 必须释放对的<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator>所有引用, 以便垃圾回收器能够<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator>回收占用的内存。 有关详细信息, 请参阅[清理非托管资源](http://msdn.microsoft.com/library/a17b0066-71c2-4ba4-9822-8e19332fc213)和[实现 Dispose 方法](http://msdn.microsoft.com/library/eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9)。  
   
 > [!NOTE]
 >  每次释放对 <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator.System%23IDisposable%23Dispose%2A> 的最后一个引用前，均应调用 <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator>。 否则，在垃圾回收器调用 <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator> 对象的 `Finalize` 方法之前，该对象正在使用的资源不会被释放。  
   
- 此方法是显式接口成员的实现。 它只能在 <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator> 实例强制转换为 <xref:System.IDisposable> 接口时使用。  
+ 此方法是显式接口成员实现。 它只能在 <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItemEnumerator> 实例被强制转换为 <xref:System.IDisposable> 接口时使用。  
   
  ]]></format>
         </remarks>

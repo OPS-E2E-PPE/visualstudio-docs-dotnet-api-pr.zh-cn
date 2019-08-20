@@ -1,5 +1,5 @@
 <Type Name="ISharePointProjectMemberReferenceCollection" FullName="Microsoft.VisualStudio.SharePoint.ISharePointProjectMemberReferenceCollection">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="93240726e67f327e82f41b15b9bffe6ab9f809c9" /><Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="02/21/2018" /><Meta Name="ms.locfileid" Value="29408999" /></Metadata><TypeSignature Language="C#" Value="public interface ISharePointProjectMemberReferenceCollection : System.Collections.Generic.ICollection&lt;Microsoft.VisualStudio.SharePoint.ISharePointProjectMemberReference&gt;, System.Collections.Generic.IEnumerable&lt;Microsoft.VisualStudio.SharePoint.ISharePointProjectMemberReference&gt;, System.Collections.Generic.IList&lt;Microsoft.VisualStudio.SharePoint.ISharePointProjectMemberReference&gt;" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="29e06f6dc3ed06cc62700029d8c1a559da1b206a" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69007296" /></Metadata><TypeSignature Language="C#" Value="public interface ISharePointProjectMemberReferenceCollection : System.Collections.Generic.ICollection&lt;Microsoft.VisualStudio.SharePoint.ISharePointProjectMemberReference&gt;, System.Collections.Generic.IEnumerable&lt;Microsoft.VisualStudio.SharePoint.ISharePointProjectMemberReference&gt;, System.Collections.Generic.IList&lt;Microsoft.VisualStudio.SharePoint.ISharePointProjectMemberReference&gt;" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISharePointProjectMemberReferenceCollection implements class System.Collections.Generic.ICollection`1&lt;class Microsoft.VisualStudio.SharePoint.ISharePointProjectMemberReference&gt;, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.VisualStudio.SharePoint.ISharePointProjectMemberReference&gt;, class System.Collections.Generic.IList`1&lt;class Microsoft.VisualStudio.SharePoint.ISharePointProjectMemberReference&gt;, class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectMemberReferenceCollection" />
   <AssemblyInfo>
@@ -11,10 +11,19 @@
       <InterfaceName>System.Collections.Generic.ICollection&lt;Microsoft.VisualStudio.SharePoint.ISharePointProjectMemberReference&gt;</InterfaceName>
     </Interface>
     <Interface>
+      <InterfaceName>System.Collections.Generic.ICollection&lt;T&gt;</InterfaceName>
+    </Interface>
+    <Interface>
       <InterfaceName>System.Collections.Generic.IEnumerable&lt;Microsoft.VisualStudio.SharePoint.ISharePointProjectMemberReference&gt;</InterfaceName>
     </Interface>
     <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;T&gt;</InterfaceName>
+    </Interface>
+    <Interface>
       <InterfaceName>System.Collections.Generic.IList&lt;Microsoft.VisualStudio.SharePoint.ISharePointProjectMemberReference&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
     </Interface>
   </Interfaces>
   <Docs>
@@ -47,11 +56,11 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此路径应为相对于当前项目。 也就是说，该引用，引用的项所属的项目。  
+ 此路径应相对于当前项目。 也就是说, 引用 (而不是引用的项) 所属的项目。  
   
- 如果该路径是`null`或为空，则当前项目假定。  
+ 如果路径为`null`或空, 则假定为当前项目。  
   
- 路径可以是绝对的但不是建议因为风险将绑定到特定开发系统的解决方案。  
+ 路径可以是绝对路径, 但不建议这样做, 因为它会导致将解决方案与特定开发系统相关的风险。  
   
  ]]></format>
         </remarks>

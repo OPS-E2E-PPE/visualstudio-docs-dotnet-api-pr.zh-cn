@@ -1,5 +1,5 @@
 <Type Name="RibbonFactory" FullName="Microsoft.Office.Tools.Ribbon.RibbonFactory">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="197cdd49855face605b9321c004faf0952f52972" /><Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="09/19/2018" /><Meta Name="ms.locfileid" Value="46459297" /></Metadata><TypeSignature Language="C#" Value="public interface RibbonFactory" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="036a80f2a86eb4ad4cd44aa4e8a3caf8b666d798" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69002563" /></Metadata><TypeSignature Language="C#" Value="public interface RibbonFactory" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract RibbonFactory" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Ribbon.RibbonFactory" />
   <AssemblyInfo>
@@ -18,9 +18,6 @@
     <Attribute>
       <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
     </Attribute>
-    <Attribute>
-      <AttributeName>System.Runtime.InteropServices.TypeIdentifier</AttributeName>
-    </Attribute>
   </Attributes>
   <Docs>
     <summary>提供可用于创建 Microsoft Office 功能区自定义项的功能区控件的方法。</summary>
@@ -33,7 +30,7 @@
    
   
 ## Examples  
- 以下示例访问<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory>的 Excel 2010 工作簿项目的功能区代码文件中的项目的实例。  此代码使用中的方法<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory>对象来创建一个下拉列表项、 菜单和按钮。 若要查看完整的示例，请参阅[演练： 在运行时功能区上的控件](/visualstudio/vsto/walkthrough-updating-the-controls-on-a-ribbon-at-run-time)。  
+ 下面的示例访问<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory> Excel 2010 工作簿项目的功能区代码文件中的项目实例。  此代码使用对象中的<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory>方法来创建下拉项、菜单和按钮。 若要查看完整的示例, [请参阅演练:在运行时](/visualstudio/vsto/walkthrough-updating-the-controls-on-a-ribbon-at-run-time)更新功能区上的控件。  
   
  [!code-csharp[Trin_Ribbon_Update_At_Runtime#3](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_Ribbon_Update_At_Runtime/CS/CustomerRibbon.cs#3)]
  [!code-vb[Trin_Ribbon_Update_At_Runtime#3](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_Ribbon_Update_At_Runtime/VB/CustomerRibbon.vb#3)]  
@@ -42,24 +39,6 @@
     </remarks>
   </Docs>
   <Members>
-    <Member MemberName="_VtblGap1_19">
-      <MemberSignature Language="C#" Value="public void _VtblGap1_19 ();" />
-      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void _VtblGap1_19() cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Ribbon.RibbonFactory._VtblGap1_19" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
-        <AssemblyVersion>10.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Void</ReturnType>
-      </ReturnValue>
-      <Parameters />
-      <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
     <Member MemberName="CreateOfficeRibbon">
       <MemberSignature Language="C#" Value="public Microsoft.Office.Tools.Ribbon.OfficeRibbon CreateOfficeRibbon (Microsoft.Office.Tools.Ribbon.IRibbonExtension extension);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.Tools.Ribbon.OfficeRibbon CreateOfficeRibbon(class Microsoft.Office.Tools.Ribbon.IRibbonExtension extension) cil managed" />
@@ -73,6 +52,11 @@
         <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Microsoft.Office.Tools.Ribbon.OfficeRibbon</ReturnType>
       </ReturnValue>
@@ -106,7 +90,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Ribbon.RibbonBox>自动对齐到添加的功能区控件<xref:Microsoft.Office.Tools.Ribbon.RibbonBox>。  
+ 自动对齐添加<xref:Microsoft.Office.Tools.Ribbon.RibbonBox>到中的功能区控件。 <xref:Microsoft.Office.Tools.Ribbon.RibbonBox>  
   
  ]]></format>
         </remarks>
@@ -151,7 +135,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Ribbon.RibbonButtonGroup> 控件可以包含按钮、 切换按钮、 菜单、 拆分按钮和库。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonButtonGroup>控件可以包含按钮、切换按钮、菜单、拆分按钮和库。  
   
  ]]></format>
         </remarks>
@@ -196,7 +180,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 组合框向用户提供文本输入字段和下拉列表菜单中的选项列表。  
+ 组合框显示一个用户, 其中包含文本输入字段和下拉菜单中的选项列表。  
   
  ]]></format>
         </remarks>
@@ -222,7 +206,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 一个<xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher>默认情况下显示的右下角的一个组。  
+ 默认情况下, 组的右下角显示。 <xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher>  
   
  ]]></format>
         </remarks>
@@ -248,7 +232,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 一个<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>可以包含<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem>对象和<xref:Microsoft.Office.Tools.Ribbon.RibbonButton>控件。  
+ 可以包含<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem>对象和<xref:Microsoft.Office.Tools.Ribbon.RibbonButton>控件。 <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>  
   
  ]]></format>
         </remarks>
@@ -293,7 +277,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Ribbon.RibbonEditBox>控件显示带标签的框，用户可以键入和编辑文本。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonEditBox>控件将显示一个带标签的框, 用户可以在其中键入和编辑文本。  
   
  ]]></format>
         </remarks>
@@ -379,15 +363,15 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 返回`IRibbonExtensibility`中的对象`CreateRibbonExtensibilityObject`方法`ThisAddin`， `ThisWorkbook`，或`ThisDocument`项目以返回要显示在 Office 应用程序在功能区的类。  
+ `CreateRibbonExtensibilityObject` 返回项目`ThisAddin`的、或类的方法中的对象,以返回要在Office应用程序中显示的功能区。`ThisWorkbook` `IRibbonExtensibility` `ThisDocument`  
   
    
   
 ## Examples  
- 下面的示例使用条件来确定要显示自定义功能区。 然后，此示例使用<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.CreateRibbonManager%2A>方法来创建，并返回`IRibbonExtension`对象，表示自定义功能区。  
+ 下面的示例使用条件来确定要显示的自定义功能区。 然后, 此示例使用<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.CreateRibbonManager%2A>方法创建并返回一个`IRibbonExtension`对象, 该对象表示自定义功能区。  
   
 > [!NOTE]
->  在此示例中所使用的语法返回已通过使用功能区**功能区 （可视化设计器）** 项。 返回通过使用创建的功能区的语法**功能区 (XML)** 项会略有不同。 返回有关详细信息**功能区 (XML)** 项，请参阅[功能区 XML](/visualstudio/vsto/ribbon-xml)。  
+>  本示例中使用的语法返回使用 "**功能区 (可视化设计器)** " 项创建的功能区。 返回使用**功能区 (XML)** 项创建的功能区的语法略有不同。 有关返回**功能区 (XML)** 项的详细信息, 请参阅[功能区 XML](/visualstudio/vsto/ribbon-xml)。  
   
  [!code-csharp[Trin_Ribbon_Choose_Ribbon#1](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_Ribbon_Choose_Ribbon/CS/ThisWorkbook.cs#1)]
  [!code-vb[Trin_Ribbon_Choose_Ribbon#1](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_Ribbon_Choose_Ribbon/VB/ThisWorkbook.vb#1)]  
@@ -416,7 +400,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的示例创建一个新菜单使用<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.CreateRibbonMenu%2A>方法。  
+ 下面的示例使用<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.CreateRibbonMenu%2A>方法创建一个新菜单。  
   
  [!code-csharp[Trin_Ribbon_ControlProperties#14](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_Ribbon_ControlProperties/CS/Ribbon1.cs#14)]
  [!code-vb[Trin_Ribbon_ControlProperties#14](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_Ribbon_ControlProperties/VB/Ribbon1.vb#14)]  
@@ -538,7 +522,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonPositionStatics" /> 对象，可将其用于指定功能区自定义项中的控件、组或选项卡的位置。</summary>
-        <value>一个<see cref="T:Microsoft.Office.Tools.Ribbon.RibbonPositionStatics" />对象可以使用功能区自定义项中指定的控件、 组或选项卡的位置。</value>
+        <value>一个<see cref="T:Microsoft.Office.Tools.Ribbon.RibbonPositionStatics" />对象, 可用于指定功能区自定义项中的控件、组或选项卡的位置。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

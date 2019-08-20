@@ -1,5 +1,5 @@
 <Type Name="EmbedTypeLibrary" FullName="Microsoft.VisualStudio.Tools.Office.BuildTasks.EmbedTypeLibrary">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="a484478185f653f29821d9a41a2d258456aff8ac" /><Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="09/19/2018" /><Meta Name="ms.locfileid" Value="46454461" /></Metadata><TypeSignature Language="C#" Value="public sealed class EmbedTypeLibrary : Microsoft.VisualStudio.Tools.Office.BuildTasks.BuildTask" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="4338856921e17e8f1b3aa0b9662380b4b9be0d73" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="68996879" /></Metadata><TypeSignature Language="C#" Value="public sealed class EmbedTypeLibrary : Microsoft.VisualStudio.Tools.Office.BuildTasks.BuildTask" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit EmbedTypeLibrary extends Microsoft.VisualStudio.Tools.Office.BuildTasks.BuildTask" />
   <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.Tools.Office.BuildTasks.EmbedTypeLibrary" />
   <AssemblyInfo>
@@ -16,9 +16,9 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 将所有设置<xref:Microsoft.VisualStudio.Tools.Office.BuildTasks.EmbedTypeLibrary>属性，然后调用<xref:Microsoft.VisualStudio.Tools.Office.BuildTasks.EmbedTypeLibrary.Execute%2A>若要运行此任务。  
+ 设置所有<xref:Microsoft.VisualStudio.Tools.Office.BuildTasks.EmbedTypeLibrary>属性, 然后调用<xref:Microsoft.VisualStudio.Tools.Office.BuildTasks.EmbedTypeLibrary.Execute%2A>以运行此任务。  
   
- Microsoft 生成引擎使用 <xref:Microsoft.VisualStudio.Tools.Office.BuildTasks> 生成和部署 Office 解决方案。 但是，可以使用这些类和基于 MSBuild XML 的项目文件来创建自己的生成系统。 有关详细信息，请参阅[MSBuild 引用](~/msbuild/msbuild-reference)。  
+ Microsoft 生成引擎使用 <xref:Microsoft.VisualStudio.Tools.Office.BuildTasks> 生成和部署 Office 解决方案。 但是，可以使用这些类和基于 MSBuild XML 的项目文件来创建自己的生成系统。 有关详细信息，请参阅 [MSBuild 参考](~/msbuild/msbuild-reference)。  
   
  ]]></format>
     </remarks>
@@ -58,7 +58,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置要从中提取类型库的程序集。</summary>
-        <value><see cref="T:Microsoft.Build.Framework.ITaskItem" /> ，表示要从中提取类型库的程序集。</value>
+        <value>一个<see cref="T:Microsoft.Build.Framework.ITaskItem" /> , 它表示要从中提取类型库的程序集。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -100,11 +100,11 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要生成的密钥文件，在 Visual Studio 命令提示符下键入以下命令： `sn -k` *文件*  
+ 若要生成密钥文件, 请在 Visual Studio 命令提示符下键入以下命令: `sn -k` *file*  
   
- 若要安装到容器的密钥文件，请键入以下命令： `sn -k`*文件容器名称*  
+ 若要将密钥文件安装到容器, 请键入以下命令: `sn -k` *file 容器*  
   
- 可以使用两种<xref:Microsoft.VisualStudio.Tools.Office.BuildTasks.EmbedTypeLibrary.KeyFile%2A>或<xref:Microsoft.VisualStudio.Tools.Office.BuildTasks.EmbedTypeLibrary.KeyContainer%2A>以进行强名称签名的程序集。  
+ 使用程序集的强<xref:Microsoft.VisualStudio.Tools.Office.BuildTasks.EmbedTypeLibrary.KeyContainer%2A>名称签名的或。<xref:Microsoft.VisualStudio.Tools.Office.BuildTasks.EmbedTypeLibrary.KeyFile%2A>  
   
  ]]></format>
         </remarks>
@@ -124,14 +124,14 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置加密密钥文件的路径。</summary>
-        <value>一个<see cref="T:System.String" />，表示加密密钥文件的路径。</value>
+        <value>一个<see cref="T:System.String" /> , 表示加密密钥文件的路径。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要生成的密钥文件，在 Visual Studio 命令提示符下键入以下命令： `sn -k` *文件*  
+ 若要生成密钥文件, 请在 Visual Studio 命令提示符下键入以下命令: `sn -k` *file*  
   
- 可以使用两种<xref:Microsoft.VisualStudio.Tools.Office.BuildTasks.EmbedTypeLibrary.KeyFile%2A>或<xref:Microsoft.VisualStudio.Tools.Office.BuildTasks.EmbedTypeLibrary.KeyContainer%2A>以进行强名称签名的程序集。  
+ 使用程序集的强<xref:Microsoft.VisualStudio.Tools.Office.BuildTasks.EmbedTypeLibrary.KeyContainer%2A>名称签名的或。<xref:Microsoft.VisualStudio.Tools.Office.BuildTasks.EmbedTypeLibrary.KeyFile%2A>  
   
  ]]></format>
         </remarks>
@@ -174,12 +174,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置从 <see cref="P:Microsoft.VisualStudio.Tools.Office.BuildTasks.EmbedTypeLibrary.Assembly" /> 中提取的类型库名称。</summary>
-        <value><see cref="T:Microsoft.Build.Framework.ITaskItem" />表示 DLL 文件。</value>
+        <value>一个<see cref="T:Microsoft.Build.Framework.ITaskItem" /> , 表示 DLL 文件。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果未提供的类型库名称，该任务通过使用程序集的名称以及扩展.tlb 创建文件。  
+ 如果未提供类型库名称, 则该任务将使用带有扩展名 .tlb 的程序集名称创建文件。  
   
  ]]></format>
         </remarks>

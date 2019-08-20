@@ -1,5 +1,5 @@
 <Type Name="SelectionEventHandler" FullName="Microsoft.Office.Tools.Word.SelectionEventHandler">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="17759a3fd0e9231751e22f0ea731faea2fb616a4" /><Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="02/21/2018" /><Meta Name="ms.locfileid" Value="29432087" /></Metadata><TypeSignature Language="C#" Value="public delegate void SelectionEventHandler(object sender, SelectionEventArgs e);" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="c87f65a9bf0b7cb3c9328c35f29ad31c99a2e52f" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="68999773" /></Metadata><TypeSignature Language="C#" Value="public delegate void SelectionEventHandler(object sender, SelectionEventArgs e);" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SelectionEventHandler extends System.MulticastDelegate" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Word.SelectionEventHandler" />
   <AssemblyInfo>
@@ -13,11 +13,6 @@
   <Base>
     <BaseTypeName>System.Delegate</BaseTypeName>
   </Base>
-  <Attributes>
-    <Attribute>
-      <AttributeName>System.Runtime.InteropServices.TypeIdentifier("4207AD1E-362C-4DB4-A3A7-7CC03A7EF41B", "Microsoft.Office.Tools.Word.SelectionEventHandler")</AttributeName>
-    </Attribute>
-  </Attributes>
   <Parameters>
     <Parameter Name="sender" Type="System.Object" />
     <Parameter Name="e" Type="Microsoft.Office.Tools.Word.SelectionEventArgs" />
@@ -33,14 +28,14 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 创建 <xref:Microsoft.Office.Tools.Word.SelectionEventHandler> 委托时，需要标识将处理该事件的方法。 若要将事件与事件处理程序关联，请将该委托的一个实例添加到事件中。 每当发生该事件时，直到移除了该委托，都会调用事件处理程序。  
+ 创建 <xref:Microsoft.Office.Tools.Word.SelectionEventHandler> 委托时，需要标识将处理该事件的方法。 若要将事件与事件处理程序关联，请将该委托的一个实例添加到事件中。 事件发生时, 将调用事件处理程序, 直到删除委托。  
   
    
   
 ## Examples  
- 下面的代码示例将添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件带到文档的文本，然后创建一个事件处理程序<xref:Microsoft.Office.Tools.Word.Bookmark.Selected>事件。 当你将光标移到书签时，显示一个消息框。  
+ 下面的代码示例将包含<xref:Microsoft.Office.Tools.Word.Bookmark>文本的控件添加到文档中, 然后<xref:Microsoft.Office.Tools.Word.Bookmark.Selected>为事件创建事件处理程序。 将光标移到书签中时, 将显示一个消息框。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_WordBookmark#95](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordBookMark/CS/Trin_WordBookMark.cs#95)]
  [!code-vb[Trin_WordBookmark#95](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordBookMark/VB/ThisDocument.vb#95)]  

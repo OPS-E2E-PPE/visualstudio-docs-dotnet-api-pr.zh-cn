@@ -1,5 +1,5 @@
 <Type Name="ISharePointProjectEvents" FullName="Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="58672e7163592ab390b60afbf4d43e854d9b2372" /><Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="02/21/2018" /><Meta Name="ms.locfileid" Value="29409805" /></Metadata><TypeSignature Language="C#" Value="public interface ISharePointProjectEvents" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="194d7327dc983ce49545bcfeb6665231873349f8" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69007960" /></Metadata><TypeSignature Language="C#" Value="public interface ISharePointProjectEvents" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISharePointProjectEvents" />
   <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents" />
   <AssemblyInfo>
@@ -13,14 +13,14 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 中的所有事件的发送方应<xref:Microsoft.VisualStudio.SharePoint.ISharePointProject>与事件相关的实例。  
+ 所有事件中的发送方都应该<xref:Microsoft.VisualStudio.SharePoint.ISharePointProject>是与事件相关的实例。  
   
  ]]></format>
     </remarks>
   </Docs>
   <Members>
     <Member MemberName="DeploymentCompleted">
-      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.VisualStudio.SharePoint.DeploymentEventArgs&gt; DeploymentCompleted;" />
+      <MemberSignature Language="C#" Value="event EventHandler&lt;Microsoft.VisualStudio.SharePoint.DeploymentEventArgs&gt; DeploymentCompleted;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.VisualStudio.SharePoint.DeploymentEventArgs&gt; DeploymentCompleted" />
       <MemberSignature Language="DocId" Value="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.DeploymentCompleted" />
       <MemberType>Event</MemberType>
@@ -37,7 +37,7 @@
       </Docs>
     </Member>
     <Member MemberName="DeploymentStarted">
-      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.VisualStudio.SharePoint.DeploymentEventArgs&gt; DeploymentStarted;" />
+      <MemberSignature Language="C#" Value="event EventHandler&lt;Microsoft.VisualStudio.SharePoint.DeploymentEventArgs&gt; DeploymentStarted;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.VisualStudio.SharePoint.DeploymentEventArgs&gt; DeploymentStarted" />
       <MemberSignature Language="DocId" Value="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.DeploymentStarted" />
       <MemberType>Event</MemberType>
@@ -54,7 +54,7 @@
       </Docs>
     </Member>
     <Member MemberName="ProjectAdded">
-      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.VisualStudio.SharePoint.SharePointProjectEventArgs&gt; ProjectAdded;" />
+      <MemberSignature Language="C#" Value="event EventHandler&lt;Microsoft.VisualStudio.SharePoint.SharePointProjectEventArgs&gt; ProjectAdded;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.VisualStudio.SharePoint.SharePointProjectEventArgs&gt; ProjectAdded" />
       <MemberSignature Language="DocId" Value="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.ProjectAdded" />
       <MemberType>Event</MemberType>
@@ -71,7 +71,7 @@
       </Docs>
     </Member>
     <Member MemberName="ProjectDisposing">
-      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.VisualStudio.SharePoint.SharePointProjectEventArgs&gt; ProjectDisposing;" />
+      <MemberSignature Language="C#" Value="event EventHandler&lt;Microsoft.VisualStudio.SharePoint.SharePointProjectEventArgs&gt; ProjectDisposing;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.VisualStudio.SharePoint.SharePointProjectEventArgs&gt; ProjectDisposing" />
       <MemberSignature Language="DocId" Value="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.ProjectDisposing" />
       <MemberType>Event</MemberType>
@@ -88,7 +88,7 @@
       </Docs>
     </Member>
     <Member MemberName="ProjectInitialized">
-      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.VisualStudio.SharePoint.SharePointProjectEventArgs&gt; ProjectInitialized;" />
+      <MemberSignature Language="C#" Value="event EventHandler&lt;Microsoft.VisualStudio.SharePoint.SharePointProjectEventArgs&gt; ProjectInitialized;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.VisualStudio.SharePoint.SharePointProjectEventArgs&gt; ProjectInitialized" />
       <MemberSignature Language="DocId" Value="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.ProjectInitialized" />
       <MemberType>Event</MemberType>
@@ -105,7 +105,7 @@
       </Docs>
     </Member>
     <Member MemberName="ProjectMenuItemsRequested">
-      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.VisualStudio.SharePoint.SharePointProjectMenuItemsRequestedEventArgs&gt; ProjectMenuItemsRequested;" />
+      <MemberSignature Language="C#" Value="event EventHandler&lt;Microsoft.VisualStudio.SharePoint.SharePointProjectMenuItemsRequestedEventArgs&gt; ProjectMenuItemsRequested;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.VisualStudio.SharePoint.SharePointProjectMenuItemsRequestedEventArgs&gt; ProjectMenuItemsRequested" />
       <MemberSignature Language="DocId" Value="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.ProjectMenuItemsRequested" />
       <MemberType>Event</MemberType>
@@ -122,7 +122,7 @@
       </Docs>
     </Member>
     <Member MemberName="ProjectNameChanged">
-      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.VisualStudio.SharePoint.NameChangedEventArgs&gt; ProjectNameChanged;" />
+      <MemberSignature Language="C#" Value="event EventHandler&lt;Microsoft.VisualStudio.SharePoint.NameChangedEventArgs&gt; ProjectNameChanged;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.VisualStudio.SharePoint.NameChangedEventArgs&gt; ProjectNameChanged" />
       <MemberSignature Language="DocId" Value="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.ProjectNameChanged" />
       <MemberType>Event</MemberType>
@@ -139,7 +139,7 @@
       </Docs>
     </Member>
     <Member MemberName="ProjectPropertiesRequested">
-      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.VisualStudio.SharePoint.SharePointProjectPropertiesRequestedEventArgs&gt; ProjectPropertiesRequested;" />
+      <MemberSignature Language="C#" Value="event EventHandler&lt;Microsoft.VisualStudio.SharePoint.SharePointProjectPropertiesRequestedEventArgs&gt; ProjectPropertiesRequested;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.VisualStudio.SharePoint.SharePointProjectPropertiesRequestedEventArgs&gt; ProjectPropertiesRequested" />
       <MemberSignature Language="DocId" Value="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.ProjectPropertiesRequested" />
       <MemberType>Event</MemberType>
@@ -156,7 +156,7 @@
       </Docs>
     </Member>
     <Member MemberName="ProjectPropertyChanged">
-      <MemberSignature Language="C#" Value="public event System.ComponentModel.PropertyChangedEventHandler ProjectPropertyChanged;" />
+      <MemberSignature Language="C#" Value="event System.ComponentModel.PropertyChangedEventHandler ProjectPropertyChanged;" />
       <MemberSignature Language="ILAsm" Value=".event class System.ComponentModel.PropertyChangedEventHandler ProjectPropertyChanged" />
       <MemberSignature Language="DocId" Value="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.ProjectPropertyChanged" />
       <MemberType>Event</MemberType>
@@ -173,7 +173,7 @@
       </Docs>
     </Member>
     <Member MemberName="ProjectRemoved">
-      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.VisualStudio.SharePoint.SharePointProjectEventArgs&gt; ProjectRemoved;" />
+      <MemberSignature Language="C#" Value="event EventHandler&lt;Microsoft.VisualStudio.SharePoint.SharePointProjectEventArgs&gt; ProjectRemoved;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.VisualStudio.SharePoint.SharePointProjectEventArgs&gt; ProjectRemoved" />
       <MemberSignature Language="DocId" Value="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.ProjectRemoved" />
       <MemberType>Event</MemberType>

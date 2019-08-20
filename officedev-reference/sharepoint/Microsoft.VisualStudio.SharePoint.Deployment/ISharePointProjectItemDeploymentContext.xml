@@ -1,5 +1,5 @@
 <Type Name="ISharePointProjectItemDeploymentContext" FullName="Microsoft.VisualStudio.SharePoint.Deployment.ISharePointProjectItemDeploymentContext">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="38f1b1208cb202666d5590007f6974d3479eb1ae" /><Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="02/21/2018" /><Meta Name="ms.locfileid" Value="29408375" /></Metadata><TypeSignature Language="C#" Value="public interface ISharePointProjectItemDeploymentContext : Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="6fbf4f71d2b86774428919091512f8d6e98dfd5a" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69011728" /></Metadata><TypeSignature Language="C#" Value="public interface ISharePointProjectItemDeploymentContext : Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISharePointProjectItemDeploymentContext implements class Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext, class Microsoft.VisualStudio.SharePoint.IAnnotatedObject" />
   <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.SharePoint.Deployment.ISharePointProjectItemDeploymentContext" />
   <AssemblyInfo>
@@ -10,6 +10,9 @@
     <Interface>
       <InterfaceName>Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentContext</InterfaceName>
     </Interface>
+    <Interface>
+      <InterfaceName>Microsoft.VisualStudio.SharePoint.IAnnotatedObject</InterfaceName>
+    </Interface>
   </Interfaces>
   <Docs>
     <summary>表示特定项目项的部署上下文。</summary>
@@ -17,7 +20,7 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用<xref:Microsoft.VisualStudio.SharePoint.Deployment.ISharePointProjectItemDeploymentContext>对象以确定部署的项目项和其服务器上的文件的位置。 Visual Studio 将传递<xref:Microsoft.VisualStudio.SharePoint.Deployment.ISharePointProjectItemDeploymentContext>的对象添加到事件处理程序<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.DeploymentStepStarted>， <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.DeploymentStepCompleted>，和<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition.ProjectItemStartupUrlRequested>事件。  
+ 使用<xref:Microsoft.VisualStudio.SharePoint.Deployment.ISharePointProjectItemDeploymentContext>对象确定已部署的项目项及其文件在服务器上的位置。 Visual Studio 将<xref:Microsoft.VisualStudio.SharePoint.Deployment.ISharePointProjectItemDeploymentContext>对象传递给<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.DeploymentStepStarted>、 <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.DeploymentStepCompleted>和<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition.ProjectItemStartupUrlRequested>事件的事件处理程序。  
   
  ]]></format>
     </remarks>
@@ -37,14 +40,14 @@
       </ReturnValue>
       <Docs>
         <summary>获取与项目项关联的主要功能。</summary>
-        <value>一个表示 SharePoint 功能对象。</value>
+        <value>表示 SharePoint 功能的对象。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果项目项是否存在于多个功能，则使用最具体的部署范围的功能。  
+ 如果项目项在多个功能中存在, 则将使用具有最特定部署范围的功能。  
   
- 如果多个功能具有相同的部署范围，则使用任意功能。  
+ 如果多个功能具有相同的部署范围, 则使用任意功能。  
   
  ]]></format>
         </remarks>
@@ -82,7 +85,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取正在部署的项目项。</summary>
-        <value>表示 SharePoint 项目项的对象。</value>
+        <value>一个表示 SharePoint 项目项的对象。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

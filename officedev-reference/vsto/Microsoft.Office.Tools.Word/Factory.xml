@@ -1,5 +1,5 @@
 <Type Name="Factory" FullName="Microsoft.Office.Tools.Word.Factory">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="e4445dccc19c19f17c26563dbe82a46143c4e9ca" /><Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="09/19/2018" /><Meta Name="ms.locfileid" Value="46454422" /></Metadata><TypeSignature Language="C#" Value="public interface Factory" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="8c197cdd959f6eed676dc82f8db04a7f51b74cbf" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69000215" /></Metadata><TypeSignature Language="C#" Value="public interface Factory" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Factory" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Word.Factory" />
   <AssemblyInfo>
@@ -18,9 +18,6 @@
     <Attribute>
       <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
     </Attribute>
-    <Attribute>
-      <AttributeName>System.Runtime.InteropServices.TypeIdentifier</AttributeName>
-    </Attribute>
   </Attributes>
   <Docs>
     <summary>提供可用于在文档级自定义项中执行杂项任务（如在运行时创建功能区控件以及向文档添加智能标记）的方法。</summary>
@@ -28,7 +25,7 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要获取<xref:Microsoft.Office.Tools.Word.Factory>对象，请使用`Globals.Factory`在项目中的属性。 有关详细信息，请参阅[对 Office 项目中的对象的全局访问](/visualstudio/vsto/global-access-to-objects-in-office-projects)。  
+ 若要获取<xref:Microsoft.Office.Tools.Word.Factory>对象, 请使用`Globals.Factory`项目中的属性。 有关详细信息, 请参阅[对 Office 项目中对象的全局访问](/visualstudio/vsto/global-access-to-objects-in-office-projects)。  
   
  [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
   
@@ -36,60 +33,6 @@
     </remarks>
   </Docs>
   <Members>
-    <Member MemberName="_VtblGap1_2">
-      <MemberSignature Language="C#" Value="public void _VtblGap1_2 ();" />
-      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void _VtblGap1_2() cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.Factory._VtblGap1_2" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Office.Tools.Word.v4.0.Utilities</AssemblyName>
-        <AssemblyVersion>10.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Void</ReturnType>
-      </ReturnValue>
-      <Parameters />
-      <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="_VtblGap2_11">
-      <MemberSignature Language="C#" Value="public void _VtblGap2_11 ();" />
-      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void _VtblGap2_11() cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.Factory._VtblGap2_11" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Office.Tools.Word.v4.0.Utilities</AssemblyName>
-        <AssemblyVersion>10.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Void</ReturnType>
-      </ReturnValue>
-      <Parameters />
-      <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="_VtblGap3_2">
-      <MemberSignature Language="C#" Value="public void _VtblGap3_2 ();" />
-      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void _VtblGap3_2() cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.Factory._VtblGap3_2" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Office.Tools.Word.v4.0.Utilities</AssemblyName>
-        <AssemblyVersion>10.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Void</ReturnType>
-      </ReturnValue>
-      <Parameters />
-      <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
     <Member MemberName="CreateAction">
       <MemberSignature Language="C#" Value="public Microsoft.Office.Tools.Word.Action CreateAction (string caption);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.Tools.Word.Action CreateAction(string caption) cil managed" />
@@ -265,6 +208,11 @@
         <AssemblyName>Microsoft.Office.Tools.Word.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Microsoft.Office.Tools.Word.ControlSite</ReturnType>
       </ReturnValue>
@@ -336,6 +284,11 @@
         <AssemblyName>Microsoft.Office.Tools.Word.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Microsoft.Office.Tools.Word.Document</ReturnType>
       </ReturnValue>
@@ -561,7 +514,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 有效字符串的示例`smartTagType`参数是http://smarttags.contoso.com#TagName。 字符串格式正确的智能标记类型不包含空格，并下划线 (_) 或一个冒号 （:） 以字母 (a-z、 A 到 Z)，它启动。  
+ `smartTagType`参数的有效字符串的一个示例是http://smarttags.contoso.com#TagName。 格式正确的智能标记类型字符串不包含空格, 并且以字母 (a-z, a-z)、下划线 (_) 或冒号 (:) 开头。  
   
  ]]></format>
         </remarks>
@@ -658,7 +611,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 当在运行时创建功能区控件时，可以将其添加到通过创建自定义功能区**功能区 （可视化设计器）** Office 项目中的项目项。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
+ 在运行时创建功能区控件时, 可以将其添加到通过使用 Office 项目中的 "**功能区 (可视化设计器)** " 项目项创建的自定义功能区。 有关详细信息, 请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
   
  ]]></format>
         </remarks>
@@ -691,7 +644,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 文档级自定义项中，您不能使用此方法生成一个新扩展<xref:Microsoft.Office.Tools.Word.Document?displayProperty=fullName>本机文档对象的对象。 可以使用此方法只用于获取<xref:Microsoft.Office.Tools.Word.Document?displayProperty=fullName>当前自定义项中的对象。 有关详细信息，请参阅[Programming Document-level Customizations](/visualstudio/vsto/programming-document-level-customizations)。  
+ 在文档级自定义项中, 不能使用此方法为本机文档对象<xref:Microsoft.Office.Tools.Word.Document?displayProperty=fullName>生成新的扩展对象。 此方法只能用于获取<xref:Microsoft.Office.Tools.Word.Document?displayProperty=fullName>当前自定义项中的对象。 有关详细信息，请参阅 [Programming Document-Level Customizations](/visualstudio/vsto/programming-document-level-customizations)。  
   
  ]]></format>
         </remarks>
@@ -724,7 +677,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 在文档级自定义，此方法返回`true`只有如果本机文档对象的基础对象<xref:Microsoft.Office.Tools.Word.Document?displayProperty=fullName>当前自定义项中的对象。 否则，此方法返回 `false`。 有关详细信息，请参阅[Programming Document-level Customizations](/visualstudio/vsto/programming-document-level-customizations)。  
+ 在文档级自定义项中, 仅当`true`本机文档对象是当前自定义项中的<xref:Microsoft.Office.Tools.Word.Document?displayProperty=fullName>对象的基础对象时, 此方法才会返回。 否则，该方法将返回 `false`。 有关详细信息，请参阅 [Programming Document-Level Customizations](/visualstudio/vsto/programming-document-level-customizations)。  
   
  ]]></format>
         </remarks>

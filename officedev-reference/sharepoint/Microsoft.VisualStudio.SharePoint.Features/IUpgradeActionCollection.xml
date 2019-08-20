@@ -1,5 +1,5 @@
 <Type Name="IUpgradeActionCollection" FullName="Microsoft.VisualStudio.SharePoint.Features.IUpgradeActionCollection">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="64b3a95f8defa89e3fe594d5b21f0ceb513123ca" /><Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="02/21/2018" /><Meta Name="ms.locfileid" Value="29410026" /></Metadata><TypeSignature Language="C#" Value="public interface IUpgradeActionCollection : System.Collections.Generic.ICollection&lt;Microsoft.VisualStudio.SharePoint.Features.IUpgradeAction&gt;, System.Collections.Generic.IEnumerable&lt;Microsoft.VisualStudio.SharePoint.Features.IUpgradeAction&gt;, System.Collections.Generic.IList&lt;Microsoft.VisualStudio.SharePoint.Features.IUpgradeAction&gt;" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="91d2081324838d796d02c06abb8fc58a06f7d5a8" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69011072" /></Metadata><TypeSignature Language="C#" Value="public interface IUpgradeActionCollection : System.Collections.Generic.ICollection&lt;Microsoft.VisualStudio.SharePoint.Features.IUpgradeAction&gt;, System.Collections.Generic.IEnumerable&lt;Microsoft.VisualStudio.SharePoint.Features.IUpgradeAction&gt;, System.Collections.Generic.IList&lt;Microsoft.VisualStudio.SharePoint.Features.IUpgradeAction&gt;" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IUpgradeActionCollection implements class System.Collections.Generic.ICollection`1&lt;class Microsoft.VisualStudio.SharePoint.Features.IUpgradeAction&gt;, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.VisualStudio.SharePoint.Features.IUpgradeAction&gt;, class System.Collections.Generic.IList`1&lt;class Microsoft.VisualStudio.SharePoint.Features.IUpgradeAction&gt;, class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.SharePoint.Features.IUpgradeActionCollection" />
   <AssemblyInfo>
@@ -11,10 +11,19 @@
       <InterfaceName>System.Collections.Generic.ICollection&lt;Microsoft.VisualStudio.SharePoint.Features.IUpgradeAction&gt;</InterfaceName>
     </Interface>
     <Interface>
+      <InterfaceName>System.Collections.Generic.ICollection&lt;T&gt;</InterfaceName>
+    </Interface>
+    <Interface>
       <InterfaceName>System.Collections.Generic.IEnumerable&lt;Microsoft.VisualStudio.SharePoint.Features.IUpgradeAction&gt;</InterfaceName>
     </Interface>
     <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;T&gt;</InterfaceName>
+    </Interface>
+    <Interface>
       <InterfaceName>System.Collections.Generic.IList&lt;Microsoft.VisualStudio.SharePoint.Features.IUpgradeAction&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
     </Interface>
   </Interfaces>
   <Docs>
@@ -23,7 +32,7 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 有关升级功能的详细信息，请参阅[升级功能](http://go.microsoft.com/fwlink/?LinkId=178610)。  
+ 有关升级功能的详细信息, 请参阅[升级功能](http://go.microsoft.com/fwlink/?LinkId=178610)。  
   
  ]]></format>
     </remarks>
@@ -49,9 +58,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 当将新字段添加到的内容类型，你应以编程方式将字段添加到现有内容类型中。  
+ 将新字段添加到内容类型时, 应以编程方式将该字段添加到现有内容类型。  
   
- 有关升级功能的详细信息，请参阅[升级功能](http://go.microsoft.com/fwlink/?LinkId=178610)。  
+ 有关升级功能的详细信息, 请参阅[升级功能](http://go.microsoft.com/fwlink/?LinkId=178610)。  
   
  ]]></format>
         </remarks>
@@ -77,9 +86,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 新的字段定义为包含功能的新的激活设置。  功能的现有激活不会自动获取新的字段定义，因此功能必须强制重新激活通过使用代码可以接收的任何更改。  
+ 为包含功能的新激活预配新的字段定义。  此功能的现有激活不会自动获取新的字段定义, 因此, 必须通过使用代码接收任何更改来强制重新激活功能。  
   
- 有关升级功能的详细信息，请参阅[升级功能](http://go.microsoft.com/fwlink/?LinkId=178610)。  
+ 有关升级功能的详细信息, 请参阅[升级功能](http://go.microsoft.com/fwlink/?LinkId=178610)。  
   
  ]]></format>
         </remarks>
@@ -105,7 +114,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 有关升级功能的详细信息，请参阅[升级功能](http://go.microsoft.com/fwlink/?LinkId=178610)。  
+ 有关升级功能的详细信息, 请参阅[升级功能](http://go.microsoft.com/fwlink/?LinkId=178610)。  
   
  ]]></format>
         </remarks>
@@ -131,9 +140,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 将映射到 Office 14 文件夹 Office 12 文件夹中的非自定义的文件。  
+ 将非自带文件从 Office 12 文件夹映射到 Office 14 文件夹。  
   
- 有关升级功能的详细信息，请参阅[升级功能](http://go.microsoft.com/fwlink/?LinkId=178610)。  
+ 有关升级功能的详细信息, 请参阅[升级功能](http://go.microsoft.com/fwlink/?LinkId=178610)。  
   
  ]]></format>
         </remarks>
@@ -159,9 +168,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 指定在元素中的升级操作应仅对指定的版本范围内的应用。  
+ 指定元素中的升级操作仅应用于指定版本范围。  
   
- 有关升级功能的详细信息，请参阅[升级功能](http://go.microsoft.com/fwlink/?LinkId=178610)。  
+ 有关升级功能的详细信息, 请参阅[升级功能](http://go.microsoft.com/fwlink/?LinkId=178610)。  
   
  ]]></format>
         </remarks>

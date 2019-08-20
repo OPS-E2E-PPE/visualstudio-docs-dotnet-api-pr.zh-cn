@@ -1,5 +1,5 @@
 <Type Name="RibbonSeparator" FullName="Microsoft.Office.Tools.Ribbon.RibbonSeparator">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="9b56967fb3da32299ba68decc8b19d8d653a7b5c" /><Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="09/19/2018" /><Meta Name="ms.locfileid" Value="46455072" /></Metadata><TypeSignature Language="C#" Value="public interface RibbonSeparator : IDisposable, Microsoft.Office.Tools.Ribbon.RibbonControl, System.ComponentModel.IComponent" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="85fc4d3f26b82d36b6e08a26e94ba4c1ccb9dd90" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69002161" /></Metadata><TypeSignature Language="C#" Value="public interface RibbonSeparator : IDisposable, Microsoft.Office.Tools.Ribbon.RibbonControl, System.ComponentModel.IComponent" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract RibbonSeparator implements class Microsoft.Office.Tools.Ribbon.RibbonComponent, class Microsoft.Office.Tools.Ribbon.RibbonControl, class System.ComponentModel.IComponent, class System.IDisposable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Ribbon.RibbonSeparator" />
   <AssemblyInfo>
@@ -7,6 +7,9 @@
     <AssemblyVersion>10.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Office.Tools.Ribbon.RibbonComponent</InterfaceName>
+    </Interface>
     <Interface>
       <InterfaceName>Microsoft.Office.Tools.Ribbon.RibbonControl</InterfaceName>
     </Interface>
@@ -28,19 +31,19 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 一个<xref:Microsoft.Office.Tools.Ribbon.RibbonSeparator>控件绘制一条，水平或垂直。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonSeparator>控件绘制线条 (水平或垂直)。  
   
- Microsoft Office 菜单上，对于<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu>，和一个<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton>，则<xref:Microsoft.Office.Tools.Ribbon.RibbonSeparator>是水平的。  
+ 对于 Microsoft Office 菜单, <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu> <xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton>和<xref:Microsoft.Office.Tools.Ribbon.RibbonSeparator>为水平。  
   
- 功能区中，为<xref:Microsoft.Office.Tools.Ribbon.RibbonSeparator>是垂直的。  
+ 对于功能区, 是<xref:Microsoft.Office.Tools.Ribbon.RibbonSeparator>垂直的。  
   
- 可以设置<xref:Microsoft.Office.Tools.Ribbon.RibbonSeparator.Title%2A>属性来对菜单中的分隔符的文本。  
+ 可以在菜单的<xref:Microsoft.Office.Tools.Ribbon.RibbonSeparator.Title%2A>分隔符上将属性设置为 "文本"。  
   
- 如果<xref:Microsoft.Office.Tools.Ribbon.RibbonSeparator>位于菜单的末尾处<xref:Microsoft.Office.Tools.Ribbon.RibbonSeparator>可见在功能区设计器中，但不是在 Microsoft Office 应用程序。  
+ 如果位于菜单的末尾<xref:Microsoft.Office.Tools.Ribbon.RibbonSeparator> , 则在功能区设计器中可见, 但在 Microsoft Office 应用程序中不可见。 <xref:Microsoft.Office.Tools.Ribbon.RibbonSeparator>  
   
- <xref:Microsoft.Office.Tools.Ribbon.RibbonSeparator> 实现分隔符和 menuSeparator RibbonX 元素。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonSeparator>实现 separator 和 menuSeparator RibbonX 元素。  
   
- 您可以创建<xref:Microsoft.Office.Tools.Ribbon.RibbonSeparator>在运行时通过使用<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.CreateRibbonSeparator%2A>方法的<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory>对象。  
+ 您可以通过<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.CreateRibbonSeparator%2A>使用<xref:Microsoft.Office.Tools.Ribbon.RibbonSeparator> <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory>对象的方法在运行时创建。  
   
  可通过两种方法来访问 <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory> 对象：  
   
@@ -76,7 +79,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Ribbon.RibbonSeparator.Position%2A>属性不起作用时，才<xref:Microsoft.Office.Tools.Ribbon.RibbonSeparator>Microsoft Office 菜单上。 有关详细信息，请参阅[如何： 将控件添加到 Backstage 视图](/visualstudio/vsto/how-to-add-controls-to-the-backstage-view)。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonSeparator.Position%2A> 仅<xref:Microsoft.Office.Tools.Ribbon.RibbonSeparator>当位于 Microsoft Office 菜单上时, 属性才有效果。 有关详细信息，请参阅[如何：向 Backstage 视图](/visualstudio/vsto/how-to-add-controls-to-the-backstage-view)添加控件。  
   
  ]]></format>
         </remarks>
@@ -101,7 +104,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Ribbon.RibbonSeparator.Title%2A>属性是可仅该分隔符是在 Microsoft Office 菜单中，如菜单上<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu>，或<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton>。 无法将文本添加到组中的分隔符。  
+ 仅当分隔符位于菜单 (如 Microsoft Office 菜单、 <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu>或<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton>) 中时,属性才可用。<xref:Microsoft.Office.Tools.Ribbon.RibbonSeparator.Title%2A> 不能将文本添加到组中的分隔符。  
   
  ]]></format>
         </remarks>

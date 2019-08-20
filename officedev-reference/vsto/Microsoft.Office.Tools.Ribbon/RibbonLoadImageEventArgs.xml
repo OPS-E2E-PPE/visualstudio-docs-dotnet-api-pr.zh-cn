@@ -1,5 +1,5 @@
 <Type Name="RibbonLoadImageEventArgs" FullName="Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="79c157cebd0f41ff0d32b2b54b612e75ca51f0ad" /><Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="02/21/2018" /><Meta Name="ms.locfileid" Value="29432165" /></Metadata><TypeSignature Language="C#" Value="public interface RibbonLoadImageEventArgs" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="0bafa08856f88d6cfd84f96f4843a415cd8ca3c1" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69002406" /></Metadata><TypeSignature Language="C#" Value="public interface RibbonLoadImageEventArgs" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract RibbonLoadImageEventArgs" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs" />
   <AssemblyInfo>
@@ -15,9 +15,6 @@
     <Attribute>
       <AttributeName>System.Runtime.InteropServices.Guid("faacd97a-39b2-4c40-a1c2-6eec43ce950f")</AttributeName>
     </Attribute>
-    <Attribute>
-      <AttributeName>System.Runtime.InteropServices.TypeIdentifier</AttributeName>
-    </Attribute>
   </Attributes>
   <Docs>
     <summary>为 <see cref="E:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage" /> 事件提供数据。</summary>
@@ -25,24 +22,24 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 处理<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>事件，如果你想要加载的映像由标识`ImageName`控件的属性。 Microsoft Office 应用程序检索此映像从你的解决方案一次，功能区显示时，若要提高性能。 之后，不能更改控制映像。  
+ 如果要加载`ImageName`由控件的属性标识的图像, 请处理事件。<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage> 仅当显示功能区时, Microsoft Office 应用程序从你的解决方案中检索此图像, 以便提高性能。 之后, 无法更改控制图像。  
   
- 若要加载的控件的图像，将代码添加到<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>事件处理程序。 如果<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs.ImageName%2A>属性<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs>匹配`ImageName`的控件属性设置<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs.Image%2A>属性设置为你想要加载的映像。  
+ 若要为控件加载图像, 请将代码添加到<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>事件处理程序。 `ImageName`如果的<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs.ImageName%2A> <xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs>属性与控件的属性匹配, 则将<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs.Image%2A>属性设置为要加载的图像。  
   
    
   
 ## Examples  
- 下面的示例适用于两个缓存图像<xref:Microsoft.Office.Tools.Ribbon.RibbonButton>控件。  
+ 下面的示例将缓存两个<xref:Microsoft.Office.Tools.Ribbon.RibbonButton>控件的图像。  
   
- 若要运行此代码示例，必须首先执行以下步骤：  
+ 若要运行此代码示例, 必须首先执行以下步骤:  
   
-1.  添加**功能区 （可视化设计器）** 项到 Office 项目。  
+1.  向 Office 项目添加 "**功能区 (可视化设计器)** " 项。  
   
 2.  将组添加到自定义选项卡。  
   
 3.  将两个按钮添加到组。  
   
-4.  将两个映像添加到的项目资源。  
+4.  将两个图像添加到项目资源。  
   
  [!code-csharp[Trin_Ribbon_ObjectModel#6](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_Ribbon_ObjectModel/CS/Ribbon1.cs#6)]
  [!code-vb[Trin_Ribbon_ObjectModel#6](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_Ribbon_ObjectModel/VB/Ribbon1.vb#6)]  
@@ -65,16 +62,16 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置想要加载的功能区控件的图像。</summary>
-        <value>表示要加载的图像的以下对象之一： <see cref="T:System.Drawing.Image" />、 <c>IPictureDisp</c>实现或一个字符串，指定<c>imageMso</c>内置 Office 图标的值.</value>
+        <value>以下表示你要加载的图像的对象之一: <see cref="T:System.Drawing.Image" />、 <c>IPictureDisp</c>实现或指定内置 Office 图标的<c>imageMso</c>值的字符串中。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 在事件处理程序中使用此属性<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>事件才能加载的控件图像。 如果<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs.ImageName%2A>属性<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs>匹配`ImageName`的控件属性设置<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs.Image%2A>属性设置为你想要加载的映像。  
+ 在事件的事件处理程序<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>中使用此属性来加载控件的图像。 `ImageName`如果的<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs.ImageName%2A> <xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs>属性与控件的属性匹配, 则将<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs.Image%2A>属性设置为要加载的图像。  
   
- 若要缓存的自定义映像，请将此属性设置为<xref:System.Drawing.Image>或`IPictureDisp`，表示的图像。 有关详细信息`IPictureDisp`COM 接口，请参阅[IPictureDisp](http://msdn.microsoft.com/en-us/42efa5a3-66af-4432-a2fd-616261b1f407)。  
+ 若要缓存自定义图像, 请将此属性<xref:System.Drawing.Image>设置为`IPictureDisp`表示图像的或。 有关`IPictureDisp` COM 接口的详细信息, 请参阅[IPictureDisp](http://msdn.microsoft.com/en-us/42efa5a3-66af-4432-a2fd-616261b1f407)。  
   
- 若要缓存的内置图标，请将此属性设置为`imageMso`图标的值。 有关的列表`imageMso`值，请参阅 Microsoft 下载中心页面[Office 2010 外接程序： 图标库](http://go.microsoft.com/fwlink/?LinkID=220760)。  
+ 若要缓存内置图标, 请将此属性设置为`imageMso`该图标的值。 有关`imageMso`值的列表, 请参阅 Microsoft 下载中心页面[Office 2010 外接程序:图标库](http://go.microsoft.com/fwlink/?LinkID=220760)。  
   
  ]]></format>
         </remarks>
@@ -99,7 +96,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 在事件处理程序中使用此属性<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>事件才能加载的控件图像。 如果<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs.ImageName%2A>属性<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs>匹配`ImageName`的控件属性设置<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs.Image%2A>属性设置为你想要加载的映像。  
+ 在事件的事件处理程序<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>中使用此属性来加载控件的图像。 `ImageName`如果的<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs.ImageName%2A> <xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs>属性与控件的属性匹配, 则将<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs.Image%2A>属性设置为要加载的图像。  
   
  ]]></format>
         </remarks>

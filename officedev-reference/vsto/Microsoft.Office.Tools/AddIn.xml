@@ -1,5 +1,5 @@
 <Type Name="AddIn" FullName="Microsoft.Office.Tools.AddIn">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="d39a657fefab607488bdf0448f69ccb254eb2723" /><Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="09/19/2018" /><Meta Name="ms.locfileid" Value="46457516" /></Metadata><TypeSignature Language="C#" Value="public interface AddIn : IDisposable, System.ComponentModel.IComponent, System.Windows.Forms.IBindableComponent" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="efb4fbb9c5c3137798150f926fb12650d7781839" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="68999457" /></Metadata><TypeSignature Language="C#" Value="public interface AddIn : IDisposable, System.ComponentModel.IComponent, System.Windows.Forms.IBindableComponent" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract AddIn implements class System.ComponentModel.IComponent, class System.IDisposable, class System.Windows.Forms.IBindableComponent" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.AddIn" />
   <AssemblyInfo>
@@ -29,9 +29,6 @@
     <Attribute>
       <AttributeName>System.Runtime.InteropServices.Guid("122bc42d-92fe-47f4-9f66-d7b282a1325b")</AttributeName>
     </Attribute>
-    <Attribute>
-      <AttributeName>System.Runtime.InteropServices.TypeIdentifier</AttributeName>
-    </Attribute>
   </Attributes>
   <Docs>
     <summary>定义外接程序的核心功能，该外接程序通过使用 Visual Studio 中的 Office 开发工具创建。</summary>
@@ -39,9 +36,9 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 当使用 Visual Studio 中的 Office 开发工具创建应用程序级外接程序时，您通常不使用<xref:Microsoft.Office.Tools.AddIn>直接接口。 请改用生成`ThisAddIn`在项目中的类。 `ThisAddIn`类派生其大多数成员从<xref:Microsoft.Office.Tools.AddInBase>类。 此基类会将对其成员的所有调用都重定向到 [!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)] 中 <xref:Microsoft.Office.Tools.AddIn> 接口的内部实现。  
+ 使用 Visual Studio 中的 Office 开发工具创建应用程序级外接程序时, 通常不会直接使用该<xref:Microsoft.Office.Tools.AddIn>接口。 改为在项目中`ThisAddIn`使用生成的类。 `ThisAddIn` 类<xref:Microsoft.Office.Tools.AddInBase>从类派生其大多数成员。 此基类会将对其成员的所有调用都重定向到 <xref:Microsoft.Office.Tools.AddIn> 中 [!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]接口的内部实现。  
   
- 有关详细信息，请参阅[Programming VSTO Add-ins](/visualstudio/vsto/programming-vsto-add-ins)。  
+ 有关详细信息，请参阅 [Programming VSTO Add-Ins](/visualstudio/vsto/programming-vsto-add-ins)。  
   
  [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
   
@@ -52,26 +49,8 @@
     </remarks>
   </Docs>
   <Members>
-    <Member MemberName="_VtblGap1_1">
-      <MemberSignature Language="C#" Value="public void _VtblGap1_1 ();" />
-      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void _VtblGap1_1() cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.AddIn._VtblGap1_1" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
-        <AssemblyVersion>10.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Void</ReturnType>
-      </ReturnValue>
-      <Parameters />
-      <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
     <Member MemberName="BindingContextChanged">
-      <MemberSignature Language="C#" Value="public event EventHandler BindingContextChanged;" />
+      <MemberSignature Language="C#" Value="event EventHandler BindingContextChanged;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler BindingContextChanged" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.AddIn.BindingContextChanged" />
       <MemberType>Event</MemberType>
@@ -136,7 +115,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 默认扩展名<xref:Microsoft.Office.Tools.IAddInExtension>对象，它由实现[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]。  
+ 默认扩展插件是<xref:Microsoft.Office.Tools.IAddInExtension> [!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]由实现的对象。  
   
  ]]></format>
         </remarks>
@@ -161,7 +140,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 自定义扩展插件是一种实现的<xref:Microsoft.Office.Tools.IAddInExtension>中通过使用 Visual Studio 中的 Office 开发工具创建的外接程序的接口。 默认情况下，此属性返回所生成的实例`ThisAddIn`类。 `ThisAddIn`类实现<xref:Microsoft.Office.Tools.IAddInExtension>接口通过<xref:Microsoft.Office.Tools.AddInBase>类。 有关详细信息，请参阅[Programming VSTO Add-ins](/visualstudio/vsto/programming-vsto-add-ins)。  
+ 自定义扩展是使用 Visual Studio 中<xref:Microsoft.Office.Tools.IAddInExtension>的 Office 开发工具创建的外接程序中的接口的实现。 默认情况下, 此属性返回生成`ThisAddIn`的类的实例。 `ThisAddIn`类<xref:Microsoft.Office.Tools.IAddInExtension>通过类<xref:Microsoft.Office.Tools.AddInBase>实现接口。 有关详细信息，请参阅 [Programming VSTO Add-Ins](/visualstudio/vsto/programming-vsto-add-ins)。  
   
  ]]></format>
         </remarks>
@@ -212,7 +191,7 @@
       </Docs>
     </Member>
     <Member MemberName="Shutdown">
-      <MemberSignature Language="C#" Value="public event EventHandler Shutdown;" />
+      <MemberSignature Language="C#" Value="event EventHandler Shutdown;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Shutdown" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.AddIn.Shutdown" />
       <MemberType>Event</MemberType>
@@ -233,16 +212,16 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用默认<xref:Microsoft.Office.Tools.AddIn.Shutdown>中的事件处理程序`ThisAddIn`类，而不是创建您自己为此事件的事件处理程序。 默认值<xref:Microsoft.Office.Tools.AddIn.Shutdown>事件处理程序命名为`ThisAddIn_Shutdown`。  
+ 使用<xref:Microsoft.Office.Tools.AddIn.Shutdown> 类`ThisAddIn`中的默认事件处理程序, 而不是为此事件创建自己的事件处理程序。 默认<xref:Microsoft.Office.Tools.AddIn.Shutdown>事件处理程序命名为`ThisAddIn_Shutdown`。  
   
- 有关详细信息，请参阅[Events in Office Projects](/visualstudio/vsto/events-in-office-projects)。 有关详细信息`ThisAddIn`类，请参阅[VSTO 外接程序编程](/visualstudio/vsto/programming-vsto-add-ins)。  
+ 有关详细信息，请参阅 [Events in Office Projects](/visualstudio/vsto/events-in-office-projects)。 有关`ThisAddIn`类的详细信息, 请参阅[VSTO 外接程序编程](/visualstudio/vsto/programming-vsto-add-ins)。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="Startup">
-      <MemberSignature Language="C#" Value="public event EventHandler Startup;" />
+      <MemberSignature Language="C#" Value="event EventHandler Startup;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Startup" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.AddIn.Startup" />
       <MemberType>Event</MemberType>
@@ -263,9 +242,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用默认<xref:Microsoft.Office.Tools.AddIn.Startup>中的事件处理程序`ThisAddIn`类，而不是创建您自己为此事件的事件处理程序。 默认值<xref:Microsoft.Office.Tools.AddIn.Startup>事件处理程序命名为`ThisAddIn_Startup`。  
+ 使用<xref:Microsoft.Office.Tools.AddIn.Startup> 类`ThisAddIn`中的默认事件处理程序, 而不是为此事件创建自己的事件处理程序。 默认<xref:Microsoft.Office.Tools.AddIn.Startup>事件处理程序命名为`ThisAddIn_Startup`。  
   
- 有关详细信息，请参阅[Events in Office Projects](/visualstudio/vsto/events-in-office-projects)。 有关详细信息`ThisAddIn`类，请参阅[VSTO 外接程序编程](/visualstudio/vsto/programming-vsto-add-ins)。  
+ 有关详细信息，请参阅 [Events in Office Projects](/visualstudio/vsto/events-in-office-projects)。 有关`ThisAddIn`类的详细信息, 请参阅[VSTO 外接程序编程](/visualstudio/vsto/programming-vsto-add-ins)。  
   
  ]]></format>
         </remarks>

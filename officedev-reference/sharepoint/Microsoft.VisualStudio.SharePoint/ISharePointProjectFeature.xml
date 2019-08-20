@@ -1,5 +1,5 @@
 <Type Name="ISharePointProjectFeature" FullName="Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="355872c9188d2a6f30956ed092502847141d2b0b" /><Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="02/21/2018" /><Meta Name="ms.locfileid" Value="29410208" /></Metadata><TypeSignature Language="C#" Value="public interface ISharePointProjectFeature : Microsoft.VisualStudio.SharePoint.ISharePointProjectMember, System.ComponentModel.INotifyPropertyChanged" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="1048a82c3ff7c14ca4f525fa803de3650544304a" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69007837" /></Metadata><TypeSignature Language="C#" Value="public interface ISharePointProjectFeature : Microsoft.VisualStudio.SharePoint.ISharePointProjectMember, System.ComponentModel.INotifyPropertyChanged" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISharePointProjectFeature implements class Microsoft.VisualStudio.SharePoint.IAnnotatedObject, class Microsoft.VisualStudio.SharePoint.INotifyObjectDisposed, class Microsoft.VisualStudio.SharePoint.INotifyObjectDisposing, class Microsoft.VisualStudio.SharePoint.ISharePointProjectMember, class System.ComponentModel.INotifyPropertyChanged" />
   <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature" />
   <AssemblyInfo>
@@ -7,6 +7,15 @@
     <AssemblyVersion>15.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.VisualStudio.SharePoint.IAnnotatedObject</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>Microsoft.VisualStudio.SharePoint.INotifyObjectDisposed</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>Microsoft.VisualStudio.SharePoint.INotifyObjectDisposing</InterfaceName>
+    </Interface>
     <Interface>
       <InterfaceName>Microsoft.VisualStudio.SharePoint.ISharePointProjectMember</InterfaceName>
     </Interface>
@@ -20,7 +29,7 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature> 是与具有.feature 文件的文件夹。  
+ <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature>与带有. 功能文件的文件夹关联。  
   
  ]]></format>
     </remarks>
@@ -40,7 +49,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取与功能相关联的事件接收器代码文件。</summary>
-        <value>表示事件接收器文件的对象。</value>
+        <value>表示事件接收程序文件的对象。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -58,7 +67,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取 .feature 文件的项目成员。</summary>
-        <value>表示项目成员的对象。</value>
+        <value>一个表示项目成员的对象。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -76,7 +85,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取功能文件的 ID。</summary>
-        <value>表示一个 ID 值的 GUID。</value>
+        <value>一个表示 ID 值的 GUID。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -112,7 +121,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取功能文件的对象模型。</summary>
-        <value>表示的对象模型的对象。</value>
+        <value>表示对象模型的对象。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -167,8 +176,7 @@
       <Parameters />
       <Docs>
         <summary>对功能运行设计时验证，并更新 IDE 中的错误列表。</summary>
-        <returns>
-          如果验证成功，则为 <see langword="True" />；如果发现错误，则为 <see langword="false" />。</returns>
+        <returns>如果验证成功，则为 <see langword="True" />；如果发现错误，则为 <see langword="false" />。</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

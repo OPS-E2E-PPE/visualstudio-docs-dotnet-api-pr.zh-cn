@@ -1,5 +1,5 @@
 <Type Name="ClickEventHandler" FullName="Microsoft.Office.Tools.Word.ClickEventHandler">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="0dd7dda19c8bcb86f91d44a26084b2e186cf1ef8" /><Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="02/21/2018" /><Meta Name="ms.locfileid" Value="29429929" /></Metadata><TypeSignature Language="C#" Value="public delegate void ClickEventHandler(object sender, ClickEventArgs e);" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="74e49dd25476eb65bf3a7b467c8015fb6c177316" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69000956" /></Metadata><TypeSignature Language="C#" Value="public delegate void ClickEventHandler(object sender, ClickEventArgs e);" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ClickEventHandler extends System.MulticastDelegate" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Word.ClickEventHandler" />
   <AssemblyInfo>
@@ -13,11 +13,6 @@
   <Base>
     <BaseTypeName>System.Delegate</BaseTypeName>
   </Base>
-  <Attributes>
-    <Attribute>
-      <AttributeName>System.Runtime.InteropServices.TypeIdentifier("4207AD1E-362C-4DB4-A3A7-7CC03A7EF41B", "Microsoft.Office.Tools.Word.ClickEventHandler")</AttributeName>
-    </Attribute>
-  </Attributes>
   <Parameters>
     <Parameter Name="sender" Type="System.Object" />
     <Parameter Name="e" Type="Microsoft.Office.Tools.Word.ClickEventArgs" />
@@ -33,14 +28,14 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 创建 <xref:Microsoft.Office.Tools.Word.ClickEventHandler> 委托时，需要标识将处理该事件的方法。 若要将事件与事件处理程序关联，请将该委托的一个实例添加到事件中。 每当发生该事件时，直到移除了该委托，都会调用事件处理程序。  
+ 创建 <xref:Microsoft.Office.Tools.Word.ClickEventHandler> 委托时，需要标识将处理该事件的方法。 若要将事件与事件处理程序关联，请将该委托的一个实例添加到事件中。 事件发生时, 将调用事件处理程序, 直到删除委托。  
   
    
   
 ## Examples  
- 下面的代码示例演示的事件处理程序<xref:Microsoft.Office.Tools.Word.Document.BeforeDoubleClick>事件。 当用户双击文档，事件处理程序将显示一条消息。  
+ 下面的代码示例演示<xref:Microsoft.Office.Tools.Word.Document.BeforeDoubleClick>事件的事件处理程序。 当用户双击文档时, 事件处理程序将显示一条消息。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_WordDocument#57](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordDocument/CS/ThisDocument.cs#57)]
  [!code-vb[Trin_WordDocument#57](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordDocument/VB/ThisDocument.vb#57)]  

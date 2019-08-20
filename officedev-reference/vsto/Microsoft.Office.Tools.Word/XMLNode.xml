@@ -1,5 +1,5 @@
 <Type Name="XMLNode" FullName="Microsoft.Office.Tools.Word.XMLNode">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="85093bf1a33eed13060c10dc9c2e911ace9c64a8" /><Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" /><Meta Name="ms.translationtype" Value="HT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="09/19/2018" /><Meta Name="ms.locfileid" Value="46459830" /></Metadata><TypeSignature Language="C#" Value="public interface XMLNode : IDisposable, System.ComponentModel.IComponent, System.ComponentModel.ISupportInitialize, System.Windows.Forms.IBindableComponent" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="70a4aee86cbb522b430cc3e2b3285ef51bf40ebc" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="68999610" /></Metadata><TypeSignature Language="C#" Value="public interface XMLNode : IDisposable, System.ComponentModel.IComponent, System.ComponentModel.ISupportInitialize, System.Windows.Forms.IBindableComponent" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract XMLNode implements class System.ComponentModel.IComponent, class System.ComponentModel.ISupportInitialize, class System.IDisposable, class System.Windows.Forms.IBindableComponent" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Word.XMLNode" />
   <AssemblyInfo>
@@ -31,9 +31,9 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 当您在设计时映射到 Microsoft Office Word 文档上的非重复架构元素时，Visual Studio 将创建<xref:Microsoft.Office.Tools.Word.XMLNode>允许仅一次出现在文档中每个元素的控件。 非重复架构元素是具有的元素`maxOccurs`特性设置为 1。  
+ 当你在设计时将非重复架构元素映射到 Microsoft Office 的 Word 文档时, Visual Studio 将<xref:Microsoft.Office.Tools.Word.XMLNode>为每个元素创建一个控件, 该控件只允许在文档中出现一次。 非重复架构元素是`maxOccurs`属性设置为1的元素。  
   
- <xref:Microsoft.Office.Tools.Word.XMLNode> 在设计时，可以仅在 Word 文档级项目中创建控件。 也不能在运行时或在应用程序级项目中创建。 有关详细信息，请参阅[XMLNode 控件](/visualstudio/vsto/xmlnode-control)并[如何： 向 Word 文档添加 XMLNode 控件](/visualstudio/vsto/how-to-add-xmlnode-controls-to-word-documents)。  
+ <xref:Microsoft.Office.Tools.Word.XMLNode>只能在设计时在 Word 文档级项目中创建控件。 它们不能在运行时或在应用程序级项目中创建。 有关详细信息, 请参阅[XMLNode 控件](/visualstudio/vsto/xmlnode-control)和[如何:向 Word 文档](/visualstudio/vsto/how-to-add-xmlnode-controls-to-word-documents)添加 XMLNode 控件。  
   
  [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
   
@@ -45,7 +45,7 @@
   </Docs>
   <Members>
     <Member MemberName="AfterInsert">
-      <MemberSignature Language="C#" Value="public event Microsoft.Office.Tools.Word.NodeInsertAndDeleteEventHandler AfterInsert;" />
+      <MemberSignature Language="C#" Value="event Microsoft.Office.Tools.Word.NodeInsertAndDeleteEventHandler AfterInsert;" />
       <MemberSignature Language="ILAsm" Value=".event class Microsoft.Office.Tools.Word.NodeInsertAndDeleteEventHandler AfterInsert" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.Word.XMLNode.AfterInsert" />
       <MemberType>Event</MemberType>
@@ -62,7 +62,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例演示了事件处理程序<xref:Microsoft.Office.Tools.Word.XMLNode.AfterInsert>和<xref:Microsoft.Office.Tools.Word.XMLNode.BeforeDelete>事件。 代码将显示消息框，然后<xref:Microsoft.Office.Tools.Word.XMLNode>从文档和之后删除<xref:Microsoft.Office.Tools.Word.XMLNode>添加到文档。 此示例还使用<xref:Microsoft.Office.Tools.Word.XMLNode.RemoveChild%2A>方法来删除节点，并以编程方式引发<xref:Microsoft.Office.Tools.Word.XMLNode.BeforeDelete>事件。 此示例假定当前文档，包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`，其中包含一个名为的子节点`CustomerDateNode`。  
+ 下面的代码示例演示了<xref:Microsoft.Office.Tools.Word.XMLNode.AfterInsert>和<xref:Microsoft.Office.Tools.Word.XMLNode.BeforeDelete>事件的事件处理程序。 在从文档中删除之前<xref:Microsoft.Office.Tools.Word.XMLNode> , 以及<xref:Microsoft.Office.Tools.Word.XMLNode>在将添加到文档之后, 代码将显示一个消息框。 该示例还使用<xref:Microsoft.Office.Tools.Word.XMLNode.RemoveChild%2A>方法来删除节点并以编程方式<xref:Microsoft.Office.Tools.Word.XMLNode.BeforeDelete>引发事件。 此示例假设当前文档包含一个<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`的, 其中包含名为`CustomerDateNode`的子节点。  
   
  [!code-csharp[Trin_WordXMLNode#200](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#200)]
  [!code-vb[Trin_WordXMLNode#200](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#200)]  
@@ -90,7 +90,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.Application%2A>属性以最小化活动应用程序窗口。 此示例假定当前文档，包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerLastNameNode`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.Application%2A>属性将活动应用程序窗口降到最低。 此示例假设当前文档包含一个<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerLastNameNode`的。  
   
  [!code-csharp[Trin_WordXMLNode#1](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#1)]
  [!code-vb[Trin_WordXMLNode#1](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#1)]  
@@ -118,12 +118,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 所有<xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName>中的控件<xref:Microsoft.Office.Interop.Word.XMLNodes?displayProperty=fullName>返回通过使用集合<xref:Microsoft.Office.Tools.Word.XMLNode.Attributes%2A>属性具有<xref:Microsoft.Office.Interop.Word.XMLNode.NodeType%2A?displayProperty=fullName>属性值为<xref:Microsoft.Office.Interop.Word.WdXMLNodeType.wdXMLNodeAttribute>。  
+ <xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName> 使用属性<xref:Microsoft.Office.Tools.Word.XMLNode.Attributes%2A>返回的<xref:Microsoft.Office.Interop.Word.XMLNodes?displayProperty=fullName>集合中的所有控件都具有<xref:Microsoft.Office.Interop.Word.WdXMLNodeType.wdXMLNodeAttribute>属性值。<xref:Microsoft.Office.Interop.Word.XMLNode.NodeType%2A?displayProperty=fullName>  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.Attributes%2A>属性添加到属性<xref:Microsoft.Office.Tools.Word.XMLNode>控件。 <xref:Microsoft.Office.Tools.Word.XMLNode.NamespaceURI%2A>属性用于指定架构命名空间。 该示例然后循环访问中的每个属性<xref:Microsoft.Office.Tools.Word.XMLNode>和显示属性名称及其值。 名称<xref:Microsoft.Office.Tools.Word.XMLNode>从获取<xref:Microsoft.Office.Tools.Word.XMLNode.BaseName%2A>属性。 此示例假定当前文档，包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`具有`NewCustomer`属性在架构中声明。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.Attributes%2A>属性将特性添加<xref:Microsoft.Office.Tools.Word.XMLNode>到控件。 <xref:Microsoft.Office.Tools.Word.XMLNode.NamespaceURI%2A>属性用于指定架构命名空间。 然后, 该示例将循环访问中的<xref:Microsoft.Office.Tools.Word.XMLNode>每个属性, 并显示属性名称及其值。 的名称是<xref:Microsoft.Office.Tools.Word.XMLNode.BaseName%2A>从<xref:Microsoft.Office.Tools.Word.XMLNode>属性获取的。 此示例假设当前文档包含一个<xref:Microsoft.Office.Tools.Word.XMLNode>具有`NewCustomer`在架构`CustomerNode`中声明的属性的命名。  
   
  [!code-csharp[Trin_WordXMLNode#2](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#2)]
  [!code-vb[Trin_WordXMLNode#2](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#2)]  
@@ -151,7 +151,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.Attributes%2A>属性添加到属性<xref:Microsoft.Office.Tools.Word.XMLNode>控件。 <xref:Microsoft.Office.Tools.Word.XMLNode.NamespaceURI%2A>属性用于指定架构命名空间。 该示例然后循环访问中的每个属性<xref:Microsoft.Office.Tools.Word.XMLNode>和显示属性名称及其值。 名称<xref:Microsoft.Office.Tools.Word.XMLNode>从获取<xref:Microsoft.Office.Tools.Word.XMLNode.BaseName%2A>属性。 此示例假定当前文档，包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`具有`NewCustomer`属性在架构中声明。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.Attributes%2A>属性将特性添加<xref:Microsoft.Office.Tools.Word.XMLNode>到控件。 <xref:Microsoft.Office.Tools.Word.XMLNode.NamespaceURI%2A>属性用于指定架构命名空间。 然后, 该示例将循环访问中的<xref:Microsoft.Office.Tools.Word.XMLNode>每个属性, 并显示属性名称及其值。 的名称是<xref:Microsoft.Office.Tools.Word.XMLNode.BaseName%2A>从<xref:Microsoft.Office.Tools.Word.XMLNode>属性获取的。 此示例假设当前文档包含一个<xref:Microsoft.Office.Tools.Word.XMLNode>具有`NewCustomer`在架构`CustomerNode`中声明的属性的命名。  
   
  [!code-csharp[Trin_WordXMLNode#2](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#2)]
  [!code-vb[Trin_WordXMLNode#2](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#2)]  
@@ -161,7 +161,7 @@
       </Docs>
     </Member>
     <Member MemberName="BeforeDelete">
-      <MemberSignature Language="C#" Value="public event Microsoft.Office.Tools.Word.NodeInsertAndDeleteEventHandler BeforeDelete;" />
+      <MemberSignature Language="C#" Value="event Microsoft.Office.Tools.Word.NodeInsertAndDeleteEventHandler BeforeDelete;" />
       <MemberSignature Language="ILAsm" Value=".event class Microsoft.Office.Tools.Word.NodeInsertAndDeleteEventHandler BeforeDelete" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.Word.XMLNode.BeforeDelete" />
       <MemberType>Event</MemberType>
@@ -178,12 +178,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果`InUndoRedo`参数是`true`，不应更改文档中的 XML。  
+ 如果参数为`true`, 则不应更改文档中的 XML。 `InUndoRedo`  
   
    
   
 ## Examples  
- 下面的代码示例演示了事件处理程序<xref:Microsoft.Office.Tools.Word.XMLNode.AfterInsert>和<xref:Microsoft.Office.Tools.Word.XMLNode.BeforeDelete>事件。 代码将显示消息框，然后<xref:Microsoft.Office.Tools.Word.XMLNode>从文档和之后删除<xref:Microsoft.Office.Tools.Word.XMLNode>添加到文档。 此示例还使用<xref:Microsoft.Office.Tools.Word.XMLNode.RemoveChild%2A>方法来删除节点，并以编程方式引发<xref:Microsoft.Office.Tools.Word.XMLNode.BeforeDelete>事件。 此示例假定当前文档，包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`，其中包含一个名为的子节点`CustomerDateNode`。  
+ 下面的代码示例演示了<xref:Microsoft.Office.Tools.Word.XMLNode.AfterInsert>和<xref:Microsoft.Office.Tools.Word.XMLNode.BeforeDelete>事件的事件处理程序。 在从文档中删除之前<xref:Microsoft.Office.Tools.Word.XMLNode> , 以及<xref:Microsoft.Office.Tools.Word.XMLNode>在将添加到文档之后, 代码将显示一个消息框。 该示例还使用<xref:Microsoft.Office.Tools.Word.XMLNode.RemoveChild%2A>方法来删除节点并以编程方式<xref:Microsoft.Office.Tools.Word.XMLNode.BeforeDelete>引发事件。 此示例假设当前文档包含一个<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`的, 其中包含名为`CustomerDateNode`的子节点。  
   
  [!code-csharp[Trin_WordXMLNode#200](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#200)]
  [!code-vb[Trin_WordXMLNode#200](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#200)]  
@@ -193,7 +193,7 @@
       </Docs>
     </Member>
     <Member MemberName="BindingContextChanged">
-      <MemberSignature Language="C#" Value="public event EventHandler BindingContextChanged;" />
+      <MemberSignature Language="C#" Value="event EventHandler BindingContextChanged;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler BindingContextChanged" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.Word.XMLNode.BindingContextChanged" />
       <MemberType>Event</MemberType>
@@ -210,7 +210,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果引发此事件<xref:System.Windows.Forms.IBindableComponent.BindingContext%2A>更改属性以编程方式修改或用户交互更改。 有关详细信息的用途有关<xref:System.Windows.Forms.IBindableComponent.BindingContext%2A>属性，请参阅<xref:System.Windows.Forms.BindingContext>类。  
+ 如果更改了<xref:System.Windows.Forms.IBindableComponent.BindingContext%2A>属性, 则会引发此事件, 方法是编程修改或用户交互。 有关<xref:System.Windows.Forms.IBindableComponent.BindingContext%2A>属性用途的详细信息, <xref:System.Windows.Forms.BindingContext>请参阅类。  
   
  ]]></format>
         </remarks>
@@ -235,7 +235,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.ChildNodes%2A>属性创建的所有子节点的名称的列表<xref:Microsoft.Office.Tools.Word.XMLNode>控件。 它然后在消息框中显示的列表。 此示例假定当前文档，包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.ChildNodes%2A>属性创建<xref:Microsoft.Office.Tools.Word.XMLNode>控件的所有子节点的名称列表。 然后, 它将在一个消息框中显示该列表。 此示例假设当前文档包含一个<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`的。  
   
  [!code-csharp[Trin_WordXMLNode#3](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#3)]
  [!code-vb[Trin_WordXMLNode#3](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#3)]  
@@ -263,12 +263,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 每个<xref:Microsoft.Office.Interop.Word.XMLChildNodeSuggestion>中<xref:Microsoft.Office.Interop.Word.XMLChildNodeSuggestions>集合是允许的 XML 元素的底部列表中的项**XML 结构**任务窗格。  
+ 集合中的每个<xref:Microsoft.Office.Interop.Word.XMLChildNodeSuggestion>都是 " **xml 结构**" 任务窗格底部允许的 XML 元素列表中的项。 <xref:Microsoft.Office.Interop.Word.XMLChildNodeSuggestions>  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.ChildNodeSuggestions%2A>要添加的所有子元素的属性<xref:Microsoft.Office.Tools.Word.XMLNode>。 此示例假定当前文档，包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.ChildNodeSuggestions%2A>属性添加的所有子元素。 <xref:Microsoft.Office.Tools.Word.XMLNode> 此示例假设当前文档包含一个<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`的。  
   
  [!code-csharp[Trin_WordXMLNode#4](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#4)]
  [!code-vb[Trin_WordXMLNode#4](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#4)]  
@@ -296,7 +296,7 @@
       </Docs>
     </Member>
     <Member MemberName="ContextEnter">
-      <MemberSignature Language="C#" Value="public event Microsoft.Office.Tools.Word.ContextChangeEventHandler ContextEnter;" />
+      <MemberSignature Language="C#" Value="event Microsoft.Office.Tools.Word.ContextChangeEventHandler ContextEnter;" />
       <MemberSignature Language="ILAsm" Value=".event class Microsoft.Office.Tools.Word.ContextChangeEventHandler ContextEnter" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.Word.XMLNode.ContextEnter" />
       <MemberType>Event</MemberType>
@@ -313,12 +313,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Word.XMLNode.ContextEnter>事件不同于<xref:Microsoft.Office.Tools.Word.XMLNode.Select>事件。 <xref:Microsoft.Office.Tools.Word.XMLNode.ContextEnter>仅当上下文更改时引发事件。 有关详细信息，请参阅[XMLNode 控件](/visualstudio/vsto/xmlnode-control)。  
+ <xref:Microsoft.Office.Tools.Word.XMLNode.ContextEnter>事件不同<xref:Microsoft.Office.Tools.Word.XMLNode.Select>于事件。 仅在上下文更改时引发事件。<xref:Microsoft.Office.Tools.Word.XMLNode.ContextEnter> 有关详细信息, 请参阅[XMLNode 控件](/visualstudio/vsto/xmlnode-control)。  
   
    
   
 ## Examples  
- 下面的代码示例演示了事件处理程序<xref:Microsoft.Office.Tools.Word.XMLNode.Select>， <xref:Microsoft.Office.Tools.Word.XMLNode.Deselect>， <xref:Microsoft.Office.Tools.Word.XMLNode.ContextEnter>，和<xref:Microsoft.Office.Tools.Word.XMLNode.ContextLeave>事件。 当<xref:Microsoft.Office.Tools.Word.XMLNode.Select>和<xref:Microsoft.Office.Tools.Word.XMLNode.Deselect>将引发事件，事件处理程序添加到所选内容的边框的双线或删除双线，具体取决于该事件。 当<xref:Microsoft.Office.Tools.Word.XMLNode.ContextEnter>和<xref:Microsoft.Office.Tools.Word.XMLNode.ContextLeave>将引发事件，事件处理程序显示消息，指出新选择的节点和先前选定的节点的名称。 此示例假定当前文档，包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`。  
+ 下面的代码示例演示<xref:Microsoft.Office.Tools.Word.XMLNode.Select>了、 <xref:Microsoft.Office.Tools.Word.XMLNode.Deselect>、 <xref:Microsoft.Office.Tools.Word.XMLNode.ContextEnter>和<xref:Microsoft.Office.Tools.Word.XMLNode.ContextLeave>事件的事件处理程序。 <xref:Microsoft.Office.Tools.Word.XMLNode.Select>引发和<xref:Microsoft.Office.Tools.Word.XMLNode.Deselect>事件时, 事件处理程序会将双线添加到所选内容的边框上, 或根据事件删除双线。 <xref:Microsoft.Office.Tools.Word.XMLNode.ContextEnter>引发和<xref:Microsoft.Office.Tools.Word.XMLNode.ContextLeave>事件时, 事件处理程序会显示消息, 指出新选定节点和以前选择的节点的名称。 此示例假设当前文档包含一个<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`的。  
   
  [!code-csharp[Trin_WordXMLNode#201](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#201)]
  [!code-vb[Trin_WordXMLNode#201](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#201)]  
@@ -328,7 +328,7 @@
       </Docs>
     </Member>
     <Member MemberName="ContextLeave">
-      <MemberSignature Language="C#" Value="public event Microsoft.Office.Tools.Word.ContextChangeEventHandler ContextLeave;" />
+      <MemberSignature Language="C#" Value="event Microsoft.Office.Tools.Word.ContextChangeEventHandler ContextLeave;" />
       <MemberSignature Language="ILAsm" Value=".event class Microsoft.Office.Tools.Word.ContextChangeEventHandler ContextLeave" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.Word.XMLNode.ContextLeave" />
       <MemberType>Event</MemberType>
@@ -345,12 +345,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Word.XMLNode.ContextLeave>事件不同于<xref:Microsoft.Office.Tools.Word.XMLNode.Deselect>事件。 <xref:Microsoft.Office.Tools.Word.XMLNode.ContextLeave>仅当上下文更改时引发事件。 有关详细信息，请参阅[XMLNode 控件](/visualstudio/vsto/xmlnode-control)。  
+ <xref:Microsoft.Office.Tools.Word.XMLNode.ContextLeave>事件不同<xref:Microsoft.Office.Tools.Word.XMLNode.Deselect>于事件。 仅在上下文更改时引发事件。<xref:Microsoft.Office.Tools.Word.XMLNode.ContextLeave> 有关详细信息, 请参阅[XMLNode 控件](/visualstudio/vsto/xmlnode-control)。  
   
    
   
 ## Examples  
- 下面的代码示例演示了事件处理程序<xref:Microsoft.Office.Tools.Word.XMLNode.Select>， <xref:Microsoft.Office.Tools.Word.XMLNode.Deselect>， <xref:Microsoft.Office.Tools.Word.XMLNode.ContextEnter>，和<xref:Microsoft.Office.Tools.Word.XMLNode.ContextLeave>事件。 当<xref:Microsoft.Office.Tools.Word.XMLNode.Select>和<xref:Microsoft.Office.Tools.Word.XMLNode.Deselect>将引发事件，事件处理程序添加到所选内容的边框的双线或删除双线，具体取决于该事件。 当<xref:Microsoft.Office.Tools.Word.XMLNode.ContextEnter>和<xref:Microsoft.Office.Tools.Word.XMLNode.ContextLeave>将引发事件，事件处理程序显示消息，指出新选择的节点和先前选定的节点的名称。 此示例假定当前文档，包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`。  
+ 下面的代码示例演示<xref:Microsoft.Office.Tools.Word.XMLNode.Select>了、 <xref:Microsoft.Office.Tools.Word.XMLNode.Deselect>、 <xref:Microsoft.Office.Tools.Word.XMLNode.ContextEnter>和<xref:Microsoft.Office.Tools.Word.XMLNode.ContextLeave>事件的事件处理程序。 <xref:Microsoft.Office.Tools.Word.XMLNode.Select>引发和<xref:Microsoft.Office.Tools.Word.XMLNode.Deselect>事件时, 事件处理程序会将双线添加到所选内容的边框上, 或根据事件删除双线。 <xref:Microsoft.Office.Tools.Word.XMLNode.ContextEnter>引发和<xref:Microsoft.Office.Tools.Word.XMLNode.ContextLeave>事件时, 事件处理程序会显示消息, 指出新选定节点和以前选择的节点的名称。 此示例假设当前文档包含一个<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`的。  
   
  [!code-csharp[Trin_WordXMLNode#201](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#201)]
  [!code-vb[Trin_WordXMLNode#201](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#201)]  
@@ -396,12 +396,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 因为<xref:Microsoft.Office.Tools.Word.XMLNode>控件在 Microsoft Office Word 中创建，则此属性返回十六进制数字 4d535744，它表示字符串"MSWD。" 此值还可表示由常数<xref:Microsoft.Office.Interop.Word.WdConstants.wdCreatorCode>。  
+ 由于控件<xref:Microsoft.Office.Tools.Word.XMLNode>是在 Microsoft Office Word 中创建的, 因此该属性返回十六进制数 4D535744, 它表示字符串 "MSWD"。 此值还可以由常数<xref:Microsoft.Office.Interop.Word.WdConstants.wdCreatorCode>表示。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.Creator%2A>属性来显示一个消息，指示是否<xref:Microsoft.Office.Tools.Word.XMLNode>控件在 Microsoft Office Word 中创建。 此示例假定当前文档，包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.Creator%2A>属性来显示一条消息, 指示<xref:Microsoft.Office.Tools.Word.XMLNode>是否在 Microsoft Office Word 中创建了控件。 此示例假设当前文档包含一个<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`的。  
   
  [!code-csharp[Trin_WordXMLNode#5](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#5)]
  [!code-vb[Trin_WordXMLNode#5](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#5)]  
@@ -442,19 +442,19 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置 <see cref="T:System.Windows.Forms.DataSourceUpdateMode" /> 的默认 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" />。</summary>
-        <value><see cref="T:System.Windows.Forms.DataSourceUpdateMode" /> 值之一。 默认值是<c>System.Windows.Forms.DataSourceUpdateMode.Never</c>。</value>
+        <value><see cref="T:System.Windows.Forms.DataSourceUpdateMode" /> 值之一。 默认值为 " <c>DataSourceUpdateMode</c>"。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性可在情况下，<xref:System.Windows.Forms.Binding>而无需<xref:System.Windows.Forms.Binding.DataSourceUpdateMode%2A>指定值添加到<xref:System.Windows.Forms.IBindableComponent.DataBindings%2A>集合。  
+ 如果未<xref:System.Windows.Forms.Binding> 指定值<xref:System.Windows.Forms.Binding.DataSourceUpdateMode%2A>的情况下将添加到集合中,则使用此属性。<xref:System.Windows.Forms.IBindableComponent.DataBindings%2A>  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="Deselect">
-      <MemberSignature Language="C#" Value="public event Microsoft.Office.Tools.Word.ContextChangeEventHandler Deselect;" />
+      <MemberSignature Language="C#" Value="event Microsoft.Office.Tools.Word.ContextChangeEventHandler Deselect;" />
       <MemberSignature Language="ILAsm" Value=".event class Microsoft.Office.Tools.Word.ContextChangeEventHandler Deselect" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.Word.XMLNode.Deselect" />
       <MemberType>Event</MemberType>
@@ -471,12 +471,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Word.XMLNode.Deselect>事件不同于<xref:Microsoft.Office.Tools.Word.XMLNode.ContextLeave>事件。 有关详细信息，请参阅[XMLNode 控件](/visualstudio/vsto/xmlnode-control)。  
+ <xref:Microsoft.Office.Tools.Word.XMLNode.Deselect>事件不同<xref:Microsoft.Office.Tools.Word.XMLNode.ContextLeave>于事件。 有关详细信息, 请参阅[XMLNode 控件](/visualstudio/vsto/xmlnode-control)。  
   
    
   
 ## Examples  
- 下面的代码示例演示了事件处理程序<xref:Microsoft.Office.Tools.Word.XMLNode.Select>， <xref:Microsoft.Office.Tools.Word.XMLNode.Deselect>， <xref:Microsoft.Office.Tools.Word.XMLNode.ContextEnter>，和<xref:Microsoft.Office.Tools.Word.XMLNode.ContextLeave>事件。 当<xref:Microsoft.Office.Tools.Word.XMLNode.Select>和<xref:Microsoft.Office.Tools.Word.XMLNode.Deselect>将引发事件，事件处理程序添加到所选内容的边框的双线或删除双线，具体取决于该事件。 当<xref:Microsoft.Office.Tools.Word.XMLNode.ContextEnter>和<xref:Microsoft.Office.Tools.Word.XMLNode.ContextLeave>将引发事件，事件处理程序显示消息，指出新选择的节点和先前选定的节点的名称。 此示例假定当前文档，包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`。  
+ 下面的代码示例演示<xref:Microsoft.Office.Tools.Word.XMLNode.Select>了、 <xref:Microsoft.Office.Tools.Word.XMLNode.Deselect>、 <xref:Microsoft.Office.Tools.Word.XMLNode.ContextEnter>和<xref:Microsoft.Office.Tools.Word.XMLNode.ContextLeave>事件的事件处理程序。 <xref:Microsoft.Office.Tools.Word.XMLNode.Select>引发和<xref:Microsoft.Office.Tools.Word.XMLNode.Deselect>事件时, 事件处理程序会将双线添加到所选内容的边框上, 或根据事件删除双线。 <xref:Microsoft.Office.Tools.Word.XMLNode.ContextEnter>引发和<xref:Microsoft.Office.Tools.Word.XMLNode.ContextLeave>事件时, 事件处理程序会显示消息, 指出新选定节点和以前选择的节点的名称。 此示例假设当前文档包含一个<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`的。  
   
  [!code-csharp[Trin_WordXMLNode#201](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#201)]
  [!code-vb[Trin_WordXMLNode#201](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#201)]  
@@ -504,18 +504,72 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用<xref:Microsoft.Office.Tools.Word.XMLNode.LastChild%2A>属性来访问的最后一个子节点。  
+ <xref:Microsoft.Office.Tools.Word.XMLNode.LastChild%2A>使用属性访问最后一个子节点。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.FirstChild%2A>属性来显示的第一个子节点的名称<xref:Microsoft.Office.Tools.Word.XMLNode>控件。 此示例还使用<xref:Microsoft.Office.Tools.Word.XMLNode.HasChildNodes%2A>属性来确定是否<xref:Microsoft.Office.Tools.Word.XMLNode>控件具有任何子节点。 此示例假定当前文档，包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.FirstChild%2A>属性显示<xref:Microsoft.Office.Tools.Word.XMLNode>控件的第一个子节点的名称。 该示例还使用<xref:Microsoft.Office.Tools.Word.XMLNode.HasChildNodes%2A>属性来确定<xref:Microsoft.Office.Tools.Word.XMLNode>控件是否有任何子节点。 此示例假设当前文档包含一个<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`的。  
   
  [!code-csharp[Trin_WordXMLNode#6](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#6)]
  [!code-vb[Trin_WordXMLNode#6](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#6)]  
   
  ]]></format>
         </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="get_ValidationErrorText">
+      <MemberSignature Language="C#" Value="public string get_ValidationErrorText (bool Advanced = false);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string get_ValidationErrorText(bool Advanced) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.XMLNode.get_ValidationErrorText(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Advanced" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="Advanced">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="get_XML">
+      <MemberSignature Language="C#" Value="public string get_XML (bool DataOnly = false);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string get_XML(bool DataOnly) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.XMLNode.get_XML(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="DataOnly" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="DataOnly">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="HasChildNodes">
@@ -537,7 +591,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.FirstChild%2A>属性来显示的第一个子节点的名称<xref:Microsoft.Office.Tools.Word.XMLNode>控件。 此示例还使用<xref:Microsoft.Office.Tools.Word.XMLNode.HasChildNodes%2A>属性来确定是否<xref:Microsoft.Office.Tools.Word.XMLNode>控件具有任何子节点。 此示例假定当前文档，包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.FirstChild%2A>属性显示<xref:Microsoft.Office.Tools.Word.XMLNode>控件的第一个子节点的名称。 该示例还使用<xref:Microsoft.Office.Tools.Word.XMLNode.HasChildNodes%2A>属性来确定<xref:Microsoft.Office.Tools.Word.XMLNode>控件是否有任何子节点。 此示例假设当前文档包含一个<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`的。  
   
  [!code-csharp[Trin_WordXMLNode#6](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#6)]
  [!code-vb[Trin_WordXMLNode#6](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#6)]  
@@ -565,7 +619,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 不能将传递<xref:Microsoft.Office.Tools.Word.XMLNode?displayProperty=fullName>承载于方法或要求的基础对象的属性的控件 ( <xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName>)。 必须使用<xref:Microsoft.Office.Tools.Word.XMLNode.InnerObject%2A>的属性<xref:Microsoft.Office.Tools.Word.XMLNode?displayProperty=fullName>承载控件来访问基础<xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName>。 然后将此对象传递给方法或属性需要<xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName>。 有关更多信息，请参见 [宿主项和宿主控件的编程限制](/visualstudio/vsto/programmatic-limitations-of-host-items-and-host-controls)。  
+ 不能将<xref:Microsoft.Office.Tools.Word.XMLNode?displayProperty=fullName>宿主控件传递给需要基础对象 (a <xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName>) 的方法或属性。 必须使用<xref:Microsoft.Office.Tools.Word.XMLNode.InnerObject%2A> <xref:Microsoft.Office.Tools.Word.XMLNode?displayProperty=fullName>宿主控件的属性来访问基础<xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName>。 然后, 将此对象传递到需要的<xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName>方法或属性。 有关更多信息，请参见 [Programmatic Limitations of Host Items and Host Controls](/visualstudio/vsto/programmatic-limitations-of-host-items-and-host-controls)。  
   
  ]]></format>
         </remarks>
@@ -590,12 +644,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用<xref:Microsoft.Office.Tools.Word.XMLNode.FirstChild%2A>属性来访问第一个子节点。  
+ <xref:Microsoft.Office.Tools.Word.XMLNode.FirstChild%2A>使用属性访问第一个子节点。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.LastChild%2A>属性来显示的最后一个子节点的名称<xref:Microsoft.Office.Tools.Word.XMLNode>控件。 此示例还使用<xref:Microsoft.Office.Tools.Word.XMLNode.HasChildNodes%2A>属性来确定是否<xref:Microsoft.Office.Tools.Word.XMLNode>控件具有任何子节点。 此示例假定当前文档，包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.LastChild%2A>属性显示<xref:Microsoft.Office.Tools.Word.XMLNode>控件的最后一个子节点的名称。 该示例还使用<xref:Microsoft.Office.Tools.Word.XMLNode.HasChildNodes%2A>属性来确定<xref:Microsoft.Office.Tools.Word.XMLNode>控件是否有任何子节点。 此示例假设当前文档包含一个<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`的。  
   
  [!code-csharp[Trin_WordXMLNode#8](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#8)]
  [!code-vb[Trin_WordXMLNode#8](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#8)]  
@@ -623,7 +677,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.Level%2A>属性来显示的级别<xref:Microsoft.Office.Tools.Word.XMLNode>控件。 此示例假定当前文档，包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.Level%2A>属性来显示<xref:Microsoft.Office.Tools.Word.XMLNode>控件的级别。 此示例假设当前文档包含一个<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`的。  
   
  [!code-csharp[Trin_WordXMLNode#9](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#9)]
  [!code-vb[Trin_WordXMLNode#9](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#9)]  
@@ -654,14 +708,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法不会添加其他<xref:Microsoft.Office.Tools.Word.XMLNode>控件或删除不必要<xref:Microsoft.Office.Tools.Word.XMLNode>从文档的控件。  
+ 此方法不会添加其他<xref:Microsoft.Office.Tools.Word.XMLNode>控件或从文档<xref:Microsoft.Office.Tools.Word.XMLNode>中删除不必要的控件。  
   
- 此方法将更新的所有属性<xref:Microsoft.Office.Tools.Word.XMLNode>控件。  
+ 此方法更新<xref:Microsoft.Office.Tools.Word.XMLNode>控件的所有属性。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.Load%2A>方法来填充<xref:Microsoft.Office.Tools.Word.XMLNode>XML 文件中的数据。 此示例假定当前文档，包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`。 此示例还假定 XML 文件命名为 Customers.xml，与关联的架构符合`CustomerNode`，D 目录的根目录上存在。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.Load%2A>方法来<xref:Microsoft.Office.Tools.Word.XMLNode>填充 XML 文件中的数据。 此示例假设当前文档包含一个<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`的。 此示例还假设名为 Customers 的 xml 文件与与`CustomerNode`关联的架构位于 D 目录的根目录中。  
   
  [!code-csharp[Trin_WordXMLNode#100](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#100)]
  [!code-vb[Trin_WordXMLNode#100](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#100)]  
@@ -670,6 +724,25 @@
         </remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="LoadXml">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>使用数据填充 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 控件。</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此方法不会添加其他<xref:Microsoft.Office.Tools.Word.XMLNode>控件或从文档<xref:Microsoft.Office.Tools.Word.XMLNode>中删除不必要的控件。  
+  
+ 此方法更新<xref:Microsoft.Office.Tools.Word.XMLNode>控件的所有属性。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="LoadXml">
       <MemberSignature Language="C#" Value="public void LoadXml (string xml);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void LoadXml(string xml) cil managed" />
@@ -692,14 +765,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法不会添加其他<xref:Microsoft.Office.Tools.Word.XMLNode>控件或删除不必要<xref:Microsoft.Office.Tools.Word.XMLNode>从文档的控件。  
+ 此方法不会添加其他<xref:Microsoft.Office.Tools.Word.XMLNode>控件或从文档<xref:Microsoft.Office.Tools.Word.XMLNode>中删除不必要的控件。  
   
- 此方法将更新的所有属性<xref:Microsoft.Office.Tools.Word.XMLNode>控件。  
+ 此方法更新<xref:Microsoft.Office.Tools.Word.XMLNode>控件的所有属性。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.LoadXml%2A>方法来填充<xref:Microsoft.Office.Tools.Word.XMLNode>具有 XML 字符串中的数据控件。 此示例假定当前文档，包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`，且与关联的架构的命名空间和元素的 XML 字符串中所述符合`CustomerNode`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.LoadXml%2A>方法通过 XML 字符串中的数据<xref:Microsoft.Office.Tools.Word.XMLNode>填充控件。 此示例假设当前文档包含一个<xref:Microsoft.Office.Tools.Word.XMLNode>命名`CustomerNode`的, 并且 XML 字符串中描述的命名空间和元素符合与`CustomerNode`相关联的架构。  
   
  [!code-csharp[Trin_WordXMLNode#101](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#101)]
  [!code-vb[Trin_WordXMLNode#101](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#101)]  
@@ -730,14 +803,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法不会添加其他<xref:Microsoft.Office.Tools.Word.XMLNode>控件或删除不必要<xref:Microsoft.Office.Tools.Word.XMLNode>从文档的控件。  
+ 此方法不会添加其他<xref:Microsoft.Office.Tools.Word.XMLNode>控件或从文档<xref:Microsoft.Office.Tools.Word.XMLNode>中删除不必要的控件。  
   
- 此方法将更新的所有属性<xref:Microsoft.Office.Tools.Word.XMLNode>控件。  
+ 此方法更新<xref:Microsoft.Office.Tools.Word.XMLNode>控件的所有属性。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.LoadXml%2A>方法来填充<xref:Microsoft.Office.Tools.Word.XMLNode>中的数据<xref:System.Xml.XmlDocument>。 示例将读取到 XML 文件的内容<xref:System.IO.StreamReader>，加载这<xref:System.IO.StreamReader>到<xref:System.Xml.XmlDocument>，然后使用<xref:System.Xml.XmlDocument>有关`document`参数<xref:Microsoft.Office.Tools.Word.XMLNode.LoadXml%2A>方法。 此示例假定当前文档，包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`。 此示例还假定 XML 文件命名为 Customers.xml，与关联的架构符合`CustomerNode`，D 目录的根目录上存在。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.LoadXml%2A>方法来<xref:Microsoft.Office.Tools.Word.XMLNode>填充中<xref:System.Xml.XmlDocument>的数据。 此示例将 XML 文件的内容<xref:System.IO.StreamReader>读取到, 将其<xref:System.IO.StreamReader> <xref:Microsoft.Office.Tools.Word.XMLNode.LoadXml%2A> <xref:System.Xml.XmlDocument>加载到<xref:System.Xml.XmlDocument>中, 然后将用于`document`该方法的参数。 此示例假设当前文档包含一个<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`的。 此示例还假设名为 Customers 的 xml 文件与与`CustomerNode`关联的架构位于 D 目录的根目录中。  
   
  [!code-csharp[Trin_WordXMLNode#102](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#102)]
  [!code-vb[Trin_WordXMLNode#102](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#102)]  
@@ -768,14 +841,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法不会添加其他<xref:Microsoft.Office.Tools.Word.XMLNode>控件或删除不必要<xref:Microsoft.Office.Tools.Word.XMLNode>从文档的控件。  
+ 此方法不会添加其他<xref:Microsoft.Office.Tools.Word.XMLNode>控件或从文档<xref:Microsoft.Office.Tools.Word.XMLNode>中删除不必要的控件。  
   
- 此方法将更新的所有属性<xref:Microsoft.Office.Tools.Word.XMLNode>控件。  
+ 此方法更新<xref:Microsoft.Office.Tools.Word.XMLNode>控件的所有属性。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.LoadXml%2A>方法来填充<xref:Microsoft.Office.Tools.Word.XMLNode>中的数据<xref:System.Xml.XmlElement>。 该示例读取到 XML 文件的内容<xref:System.IO.StreamReader>，将加载此<xref:System.IO.StreamReader>到<xref:System.Xml.XmlDocument>，然后初始化<xref:System.Xml.XmlElement>表示中的第一个子元素<xref:System.Xml.XmlDocument>。 这<xref:System.Xml.XmlElement>则用于`xmlElement`参数的<xref:Microsoft.Office.Tools.Word.XMLNode.LoadXml%2A>方法。 此示例假定当前文档，包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerLastNameNode`对应于关联的架构中的第一个子元素。 此示例还假定名为 Customers.xml，符合相关联的架构，XML 文件位于 D 目录的根目录。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.LoadXml%2A>方法来<xref:Microsoft.Office.Tools.Word.XMLNode>填充中<xref:System.Xml.XmlElement>的数据。 此示例将 XML 文件的内容<xref:System.IO.StreamReader>读取到, 将其<xref:System.IO.StreamReader>加载到<xref:System.Xml.XmlDocument>中, 然后初始化<xref:System.Xml.XmlElement>表示中<xref:System.Xml.XmlDocument>第一个子元素的。 然后<xref:System.Xml.XmlElement> , 将此用于`xmlElement` <xref:Microsoft.Office.Tools.Word.XMLNode.LoadXml%2A>方法的参数。 此示例假设当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNode>与关联的架构中的第一个子元素对应的名为`CustomerLastNameNode`的。 此示例还假定名为 Customers .xml 的 XML 文件存在于 D 目录的根目录下。  
   
  [!code-csharp[Trin_WordXMLNode#103](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#103)]
  [!code-vb[Trin_WordXMLNode#103](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#103)]  
@@ -803,12 +876,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果要创作使用 Microsoft Office Word 使用的 XML 架构，强烈建议您指定<xref:System.Xml.Schema.XmlSchema.TargetNamespace%2A>设置在架构中。  
+ 如果要编写用于 Microsoft Office Word 的 XML 架构, 则强烈建议您在架构中指定<xref:System.Xml.Schema.XmlSchema.TargetNamespace%2A>设置。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.Attributes%2A>属性添加到属性<xref:Microsoft.Office.Tools.Word.XMLNode>控件。 <xref:Microsoft.Office.Tools.Word.XMLNode.NamespaceURI%2A>属性用于指定架构命名空间。 该示例然后循环访问中的每个属性<xref:Microsoft.Office.Tools.Word.XMLNode>和显示属性名称及其值。 名称<xref:Microsoft.Office.Tools.Word.XMLNode>从获取<xref:Microsoft.Office.Tools.Word.XMLNode.BaseName%2A>属性。 此示例假定当前文档，包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`具有`NewCustomer`属性在架构中声明。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.Attributes%2A>属性将特性添加<xref:Microsoft.Office.Tools.Word.XMLNode>到控件。 <xref:Microsoft.Office.Tools.Word.XMLNode.NamespaceURI%2A>属性用于指定架构命名空间。 然后, 该示例将循环访问中的<xref:Microsoft.Office.Tools.Word.XMLNode>每个属性, 并显示属性名称及其值。 的名称是<xref:Microsoft.Office.Tools.Word.XMLNode.BaseName%2A>从<xref:Microsoft.Office.Tools.Word.XMLNode>属性获取的。 此示例假设当前文档包含一个<xref:Microsoft.Office.Tools.Word.XMLNode>具有`NewCustomer`在架构`CustomerNode`中声明的属性的命名。  
   
  [!code-csharp[Trin_WordXMLNode#2](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#2)]
  [!code-vb[Trin_WordXMLNode#2](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#2)]  
@@ -836,12 +909,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果指定的元素中的最后一个元素<xref:Microsoft.Office.Tools.Word.XMLNodes?displayProperty=fullName>此级别的集合，此属性返回`null`。  
+ 如果指定的元素是此级别的<xref:Microsoft.Office.Tools.Word.XMLNodes?displayProperty=fullName>集合中的最后一个元素, 则此属性返回。 `null`  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.PreviousSibling%2A>并<xref:Microsoft.Office.Tools.Word.XMLNode.NextSibling%2A>属性，若要显示的元素的名称之前, 和之后<xref:Microsoft.Office.Tools.Word.XMLNode>控件。 此示例假定当前文档，包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerFirstNameNode`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.PreviousSibling%2A>和<xref:Microsoft.Office.Tools.Word.XMLNode.NextSibling%2A>属性来显示<xref:Microsoft.Office.Tools.Word.XMLNode>控件前后的元素的名称。 此示例假设当前文档包含一个<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerFirstNameNode`的。  
   
  [!code-csharp[Trin_WordXMLNode#10](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#10)]
  [!code-vb[Trin_WordXMLNode#10](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#10)]  
@@ -869,12 +942,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 设置文本值不会删除任何现有书签内的<xref:Microsoft.Office.Tools.Word.XMLNode>控件。  
+ 设置文本值不会删除控件内的<xref:Microsoft.Office.Tools.Word.XMLNode>任何现有书签。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.NodeType%2A>属性来确定是否<xref:Microsoft.Office.Tools.Word.XMLNode>是一个元素或属性的节点。 如果<xref:Microsoft.Office.Tools.Word.XMLNode>是一个元素，此示例将使用<xref:Microsoft.Office.Tools.Word.XMLNode.NodeText%2A>属性来设置元素中的文本。 如果<xref:Microsoft.Office.Tools.Word.XMLNode>是一个属性，此示例将使用<xref:Microsoft.Office.Tools.Word.XMLNode.NodeValue%2A>属性来设置属性值。 此示例假定当前文档，包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerLastNameNode`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.NodeType%2A>属性确定<xref:Microsoft.Office.Tools.Word.XMLNode>是否为元素节点或属性节点。 如果是一个元素, 则该示例<xref:Microsoft.Office.Tools.Word.XMLNode.NodeText%2A>使用属性设置元素中的文本。 <xref:Microsoft.Office.Tools.Word.XMLNode> 如果是特性, 则该示例<xref:Microsoft.Office.Tools.Word.XMLNode.NodeValue%2A>使用属性设置特性值。 <xref:Microsoft.Office.Tools.Word.XMLNode> 此示例假设当前文档包含一个<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerLastNameNode`的。  
   
  [!code-csharp[Trin_WordXMLNode#11](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#11)]
  [!code-vb[Trin_WordXMLNode#11](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#11)]  
@@ -902,18 +975,18 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Word.XMLNode.NodeType%2A>属性可以是下列任一<xref:Microsoft.Office.Interop.Word.WdXMLNodeType>值：  
+ 属性可以是以下<xref:Microsoft.Office.Interop.Word.WdXMLNodeType>值之一: <xref:Microsoft.Office.Tools.Word.XMLNode.NodeType%2A>  
   
--   <xref:Microsoft.Office.Interop.Word.WdXMLNodeType.wdXMLNodeAttribute> 指示属性节点。  
+-   <xref:Microsoft.Office.Interop.Word.WdXMLNodeType.wdXMLNodeAttribute>指示属性节点。  
   
--   <xref:Microsoft.Office.Interop.Word.WdXMLNodeType.wdXMLNodeElement> 指示元素节点。  
+-   <xref:Microsoft.Office.Interop.Word.WdXMLNodeType.wdXMLNodeElement>指示元素节点。  
   
- 使用<xref:Microsoft.Office.Tools.Word.XMLNode.NodeType%2A>属性来确定哪种类型的正在使用，以便不尝试执行无效操作的节点上的节点。 例如，<xref:Microsoft.Office.Interop.Word.XMLNode.Attributes%2A>属性仅适用于元素节点，但它会显示在列表中的可用属性<xref:Microsoft.Office.Tools.Word.XMLNode>控件。  
+ <xref:Microsoft.Office.Tools.Word.XMLNode.NodeType%2A>使用属性可以确定正在使用的节点类型, 以便不会尝试在节点上执行无效的操作。 例如, <xref:Microsoft.Office.Interop.Word.XMLNode.Attributes%2A>属性仅适用于元素节点, 但它显示在<xref:Microsoft.Office.Tools.Word.XMLNode>控件的可用属性列表中。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.NodeType%2A>属性来确定是否<xref:Microsoft.Office.Tools.Word.XMLNode>是一个元素或属性的节点。 如果<xref:Microsoft.Office.Tools.Word.XMLNode>是一个元素，此示例将使用<xref:Microsoft.Office.Tools.Word.XMLNode.NodeText%2A>属性来设置元素中的文本。 如果<xref:Microsoft.Office.Tools.Word.XMLNode>是一个属性，此示例将使用<xref:Microsoft.Office.Tools.Word.XMLNode.NodeValue%2A>属性来设置属性值。 此示例假定当前文档，包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerLastNameNode`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.NodeType%2A>属性确定<xref:Microsoft.Office.Tools.Word.XMLNode>是否为元素节点或属性节点。 如果是一个元素, 则该示例<xref:Microsoft.Office.Tools.Word.XMLNode.NodeText%2A>使用属性设置元素中的文本。 <xref:Microsoft.Office.Tools.Word.XMLNode> 如果是特性, 则该示例<xref:Microsoft.Office.Tools.Word.XMLNode.NodeValue%2A>使用属性设置特性值。 <xref:Microsoft.Office.Tools.Word.XMLNode> 此示例假设当前文档包含一个<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerLastNameNode`的。  
   
  [!code-csharp[Trin_WordXMLNode#11](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#11)]
  [!code-vb[Trin_WordXMLNode#11](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#11)]  
@@ -941,14 +1014,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用<xref:Microsoft.Office.Tools.Word.XMLNode.NodeType%2A>属性来确定使用哪种类型的节点。  
+ <xref:Microsoft.Office.Tools.Word.XMLNode.NodeType%2A>使用属性可以确定要使用的节点类型。  
   
- 有关<xref:Microsoft.Office.Tools.Word.XMLNode>控件<xref:Microsoft.Office.Interop.Word.XMLNode.NodeType%2A>的值<xref:Microsoft.Office.Interop.Word.WdXMLNodeType.wdXMLNodeElement>，则<xref:Microsoft.Office.Interop.Word.XMLNode.NodeValue%2A>属性不返回任何内容。  
+ 对于<xref:Microsoft.Office.Tools.Word.XMLNode> <xref:Microsoft.Office.Interop.Word.XMLNode.NodeType%2A>值为<xref:Microsoft.Office.Interop.Word.XMLNode.NodeValue%2A>的<xref:Microsoft.Office.Interop.Word.WdXMLNodeType.wdXMLNodeElement>控件, 该属性不返回任何内容。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.NodeType%2A>属性来确定是否<xref:Microsoft.Office.Tools.Word.XMLNode>是一个元素或属性的节点。 如果<xref:Microsoft.Office.Tools.Word.XMLNode>是一个元素，此示例将使用<xref:Microsoft.Office.Tools.Word.XMLNode.NodeText%2A>属性来设置元素中的文本。 如果<xref:Microsoft.Office.Tools.Word.XMLNode>是一个属性，此示例将使用<xref:Microsoft.Office.Tools.Word.XMLNode.NodeValue%2A>属性来设置属性值。 此示例假定当前文档，包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerLastNameNode`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.NodeType%2A>属性确定<xref:Microsoft.Office.Tools.Word.XMLNode>是否为元素节点或属性节点。 如果是一个元素, 则该示例<xref:Microsoft.Office.Tools.Word.XMLNode.NodeText%2A>使用属性设置元素中的文本。 <xref:Microsoft.Office.Tools.Word.XMLNode> 如果是特性, 则该示例<xref:Microsoft.Office.Tools.Word.XMLNode.NodeValue%2A>使用属性设置特性值。 <xref:Microsoft.Office.Tools.Word.XMLNode> 此示例假设当前文档包含一个<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerLastNameNode`的。  
   
  [!code-csharp[Trin_WordXMLNode#11](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#11)]
  [!code-vb[Trin_WordXMLNode#11](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#11)]  
@@ -976,12 +1049,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Word.XMLNode.OwnerDocument%2A>属性将返回相同的结果<xref:Microsoft.Office.Tools.Word.XMLNode.Parent%2A>属性。  
+ 属性返回的结果<xref:Microsoft.Office.Tools.Word.XMLNode.Parent%2A>与属性相同。 <xref:Microsoft.Office.Tools.Word.XMLNode.OwnerDocument%2A>  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.OwnerDocument%2A>属性来显示的所有者文档的名称<xref:Microsoft.Office.Tools.Word.XMLNode>控件。 此示例假定当前文档，包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.OwnerDocument%2A>属性显示<xref:Microsoft.Office.Tools.Word.XMLNode>控件的所有者文档的名称。 此示例假设当前文档包含一个<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`的。  
   
  [!code-csharp[Trin_WordXMLNode#12](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#12)]
  [!code-vb[Trin_WordXMLNode#12](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#12)]  
@@ -1009,7 +1082,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.Parent%2A>属性显示名称的父文档<xref:Microsoft.Office.Tools.Word.XMLNode>控件。 此示例假定当前文档，包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.Parent%2A>属性显示<xref:Microsoft.Office.Tools.Word.XMLNode>控件的父文档的名称。 此示例假设当前文档包含一个<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`的。  
   
  [!code-csharp[Trin_WordXMLNode#13](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#13)]
  [!code-vb[Trin_WordXMLNode#13](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#13)]  
@@ -1037,12 +1110,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 对于根节点，<xref:Microsoft.Office.Tools.Word.XMLNode.ParentNode%2A>属性返回`null`。  
+ 对于根节点, <xref:Microsoft.Office.Tools.Word.XMLNode.ParentNode%2A>属性返回。 `null`  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.ParentNode%2A>属性来显示的父节点的名称<xref:Microsoft.Office.Tools.Word.XMLNode>控件。 此示例假定当前文档，包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerFirstNameNode`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.ParentNode%2A>属性显示<xref:Microsoft.Office.Tools.Word.XMLNode>控件的父节点的名称。 此示例假设当前文档包含一个<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerFirstNameNode`的。  
   
  [!code-csharp[Trin_WordXMLNode#14](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#14)]
  [!code-vb[Trin_WordXMLNode#14](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#14)]  
@@ -1070,12 +1143,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- Microsoft Office Word 中显示占位符文本时，才**显示 XML 文档中标记**中的复选框**XML 结构**清除任务窗格。 **显示 XML 文档中标记**复选框对应于<xref:Microsoft.Office.Interop.Word.View.ShowXMLMarkup%2A>属性。  
+ 仅当清除了 " **Xml 结构**" 任务窗格中的 "**在文档中显示 xml 标记**" 复选框时, 占位符文本才会显示在 Microsoft Office Word 中。 "在**文档中显示 XML 标记**" 复选框与<xref:Microsoft.Office.Interop.Word.View.ShowXMLMarkup%2A>属性相对应。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.PlaceholderText%2A>属性设置的默认文本<xref:Microsoft.Office.Tools.Word.XMLNode>，然后设置<xref:Microsoft.Office.Interop.Word.View.ShowXMLMarkup%2A>属性设为 0 （零），以便不显示 XML 标记。 此示例假定当前文档，包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerFirstNameNode`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.PlaceholderText%2A>属性设置的默认文本<xref:Microsoft.Office.Tools.Word.XMLNode> <xref:Microsoft.Office.Interop.Word.View.ShowXMLMarkup%2A> , 然后将属性设置为 0 (零), 以便不显示 XML 标记。 此示例假设当前文档包含一个<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerFirstNameNode`的。  
   
  [!code-csharp[Trin_WordXMLNode#15](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#15)]
  [!code-vb[Trin_WordXMLNode#15](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#15)]  
@@ -1103,12 +1176,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果当前<xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName>中的第一个元素<xref:Microsoft.Office.Interop.Word.XMLNodes?displayProperty=fullName>集合，此属性返回`null`。  
+ 如果当前<xref:Microsoft.Office.Interop.Word.XMLNode?displayProperty=fullName>为<xref:Microsoft.Office.Interop.Word.XMLNodes?displayProperty=fullName>集合中的第一个元素, 则此属性返回`null`。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.PreviousSibling%2A>并<xref:Microsoft.Office.Tools.Word.XMLNode.NextSibling%2A>属性，若要显示的元素的名称之前, 和之后<xref:Microsoft.Office.Tools.Word.XMLNode>控件。 此示例假定当前文档，包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerFirstNameNode`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.PreviousSibling%2A>和<xref:Microsoft.Office.Tools.Word.XMLNode.NextSibling%2A>属性来显示<xref:Microsoft.Office.Tools.Word.XMLNode>控件前后的元素的名称。 此示例假设当前文档包含一个<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerFirstNameNode`的。  
   
  [!code-csharp[Trin_WordXMLNode#10](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#10)]
  [!code-vb[Trin_WordXMLNode#10](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#10)]  
@@ -1136,7 +1209,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.Range%2A>属性设置的字体并应用中的文本为粗体格式<xref:Microsoft.Office.Tools.Word.XMLNode>。 此示例假定当前文档，包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerLastNameNode`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.Range%2A>属性设置字体, 并将粗体格式应用于<xref:Microsoft.Office.Tools.Word.XMLNode>中的文本。 此示例假设当前文档包含一个<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerLastNameNode`的。  
   
  [!code-csharp[Trin_WordXMLNode#16](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#16)]
  [!code-vb[Trin_WordXMLNode#16](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#16)]  
@@ -1167,7 +1240,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例演示了事件处理程序<xref:Microsoft.Office.Tools.Word.XMLNode.AfterInsert>和<xref:Microsoft.Office.Tools.Word.XMLNode.BeforeDelete>事件。 代码将显示消息框，然后<xref:Microsoft.Office.Tools.Word.XMLNode>从文档和之后删除<xref:Microsoft.Office.Tools.Word.XMLNode>添加到文档。 此示例还使用<xref:Microsoft.Office.Tools.Word.XMLNode.RemoveChild%2A>方法来删除节点，并以编程方式引发<xref:Microsoft.Office.Tools.Word.XMLNode.BeforeDelete>事件。 此示例假定当前文档，包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`，其中包含一个名为的子节点`CustomerDateNode`。  
+ 下面的代码示例演示了<xref:Microsoft.Office.Tools.Word.XMLNode.AfterInsert>和<xref:Microsoft.Office.Tools.Word.XMLNode.BeforeDelete>事件的事件处理程序。 在从文档中删除之前<xref:Microsoft.Office.Tools.Word.XMLNode> , 以及<xref:Microsoft.Office.Tools.Word.XMLNode>在将添加到文档之后, 代码将显示一个消息框。 该示例还使用<xref:Microsoft.Office.Tools.Word.XMLNode.RemoveChild%2A>方法来删除节点并以编程方式<xref:Microsoft.Office.Tools.Word.XMLNode.BeforeDelete>引发事件。 此示例假设当前文档包含一个<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`的, 其中包含名为`CustomerDateNode`的子节点。  
   
  [!code-csharp[Trin_WordXMLNode#200](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#200)]
  [!code-vb[Trin_WordXMLNode#200](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#200)]  
@@ -1177,7 +1250,7 @@
       </Docs>
     </Member>
     <Member MemberName="Select">
-      <MemberSignature Language="C#" Value="public event Microsoft.Office.Tools.Word.ContextChangeEventHandler Select;" />
+      <MemberSignature Language="C#" Value="event Microsoft.Office.Tools.Word.ContextChangeEventHandler Select;" />
       <MemberSignature Language="ILAsm" Value=".event class Microsoft.Office.Tools.Word.ContextChangeEventHandler Select" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.Word.XMLNode.Select" />
       <MemberType>Event</MemberType>
@@ -1194,12 +1267,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Word.XMLNode.Select>事件不同于<xref:Microsoft.Office.Tools.Word.XMLNode.ContextEnter>事件。 有关详细信息，请参阅[XMLNode 控件](/visualstudio/vsto/xmlnode-control)。  
+ <xref:Microsoft.Office.Tools.Word.XMLNode.Select>事件不同<xref:Microsoft.Office.Tools.Word.XMLNode.ContextEnter>于事件。 有关详细信息, 请参阅[XMLNode 控件](/visualstudio/vsto/xmlnode-control)。  
   
    
   
 ## Examples  
- 下面的代码示例演示了事件处理程序<xref:Microsoft.Office.Tools.Word.XMLNode.Select>， <xref:Microsoft.Office.Tools.Word.XMLNode.Deselect>， <xref:Microsoft.Office.Tools.Word.XMLNode.ContextEnter>，和<xref:Microsoft.Office.Tools.Word.XMLNode.ContextLeave>事件。 当<xref:Microsoft.Office.Tools.Word.XMLNode.Select>和<xref:Microsoft.Office.Tools.Word.XMLNode.Deselect>将引发事件，事件处理程序添加到所选内容的边框的双线或删除双线，具体取决于该事件。 当<xref:Microsoft.Office.Tools.Word.XMLNode.ContextEnter>和<xref:Microsoft.Office.Tools.Word.XMLNode.ContextLeave>将引发事件，事件处理程序显示消息，指出新选择的节点和先前选定的节点的名称。 此示例假定当前文档，包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`。  
+ 下面的代码示例演示<xref:Microsoft.Office.Tools.Word.XMLNode.Select>了、 <xref:Microsoft.Office.Tools.Word.XMLNode.Deselect>、 <xref:Microsoft.Office.Tools.Word.XMLNode.ContextEnter>和<xref:Microsoft.Office.Tools.Word.XMLNode.ContextLeave>事件的事件处理程序。 <xref:Microsoft.Office.Tools.Word.XMLNode.Select>引发和<xref:Microsoft.Office.Tools.Word.XMLNode.Deselect>事件时, 事件处理程序会将双线添加到所选内容的边框上, 或根据事件删除双线。 <xref:Microsoft.Office.Tools.Word.XMLNode.ContextEnter>引发和<xref:Microsoft.Office.Tools.Word.XMLNode.ContextLeave>事件时, 事件处理程序会显示消息, 指出新选定节点和以前选择的节点的名称。 此示例假设当前文档包含一个<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`的。  
   
  [!code-csharp[Trin_WordXMLNode#201](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#201)]
  [!code-vb[Trin_WordXMLNode#201](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#201)]  
@@ -1235,15 +1308,15 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 设置`FastSearchSkippingTextNodes`参数`false`降低性能，因为 Microsoft Office Word 搜索文本节点中包含文档中的所有节点。  
+ 设置参数以`false`降低性能, 因为 Microsoft Office Word 搜索文档中包含在节点中的文本的所有节点。 `FastSearchSkippingTextNodes`  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
+ 有关可选参数的信息, 请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.SelectNodes%2A>方法以获取匹配的节点的子集合给定`XPath`参数。 该示例然后显示找到的节点数。 此示例假定当前文档，包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`使用匹配的架构元素包含一个或多个名为的子节点`FirstName`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.SelectNodes%2A>方法获取与给定`XPath`参数匹配的子节点的集合。 然后, 该示例显示找到的节点数。 此示例假设当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNode> `CustomerNode`具有匹配的架构元素的, 该元素包含一个或多个名为`FirstName`的子节点。  
   
  [!code-csharp[Trin_WordXMLNode#104](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#104)]
  [!code-vb[Trin_WordXMLNode#104](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#104)]  
@@ -1279,15 +1352,15 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 设置`FastSearchSkippingTextNodes`参数`false`降低性能，因为 Microsoft Office Word 搜索文本节点中包含文档中的所有节点。  
+ 设置参数以降低`false`性能, 因为 Microsoft Office Word 搜索文档中包含在节点中的文本的所有节点。 `FastSearchSkippingTextNodes`  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
+ 有关可选参数的信息, 请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.SelectSingleNode%2A>方法以获取匹配的子节点给定`XPath`参数。 该示例然后显示找到的节点的名称。 此示例假定当前文档，包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`使用匹配的架构元素包含一个或多个名为的子节点`LastName`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.SelectSingleNode%2A>方法来获取与给定`XPath`参数匹配的子节点。 然后, 该示例显示找到的节点的名称。 此示例假设当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNode> `CustomerNode`具有匹配的架构元素的, 该元素包含一个或多个名为`LastName`的子节点。  
   
  [!code-csharp[Trin_WordXMLNode#105](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#105)]
  [!code-vb[Trin_WordXMLNode#105](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#105)]  
@@ -1298,7 +1371,7 @@
     </Member>
     <Member MemberName="SetValidationError">
       <MemberSignature Language="C#" Value="public void SetValidationError (Microsoft.Office.Interop.Word.WdXMLValidationStatus Status, ref object ErrorText, bool ClearedAutomatically = true);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetValidationError(valuetype Microsoft.Office.Interop.Word.WdXMLValidationStatus Status, object ErrorText, bool ClearedAutomatically) cil managed" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetValidationError(valuetype Microsoft.Office.Interop.Word.WdXMLValidationStatus Status, object&amp; ErrorText, bool ClearedAutomatically) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Word.XMLNode.SetValidationError(Microsoft.Office.Interop.Word.WdXMLValidationStatus,System.Object@,System.Boolean)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -1310,7 +1383,7 @@
       </ReturnValue>
       <Parameters>
         <Parameter Name="Status" Type="Microsoft.Office.Interop.Word.WdXMLValidationStatus" />
-        <Parameter Name="ErrorText" Type="System.Object&amp;" RefType="ref" />
+        <Parameter Name="ErrorText" Type="System.Object" RefType="ref" />
         <Parameter Name="ClearedAutomatically" Type="System.Boolean" />
       </Parameters>
       <Docs>
@@ -1322,15 +1395,15 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要设置自定义错误文本，请使用<xref:Microsoft.Office.Interop.Word.WdXMLValidationStatus.wdXMLValidationStatusCustom>常量。  
+ 若要设置自定义错误文本, <xref:Microsoft.Office.Interop.Word.WdXMLValidationStatus.wdXMLValidationStatusCustom>请使用常数。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
+ 有关可选参数的信息, 请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.SetValidationError%2A>方法设置的自定义验证错误消息的<xref:Microsoft.Office.Tools.Word.XMLNode>。 事件处理程序<xref:Microsoft.Office.Tools.Word.XMLNode.ValidationError>事件显示的自定义验证错误消息，如果<xref:Microsoft.Office.Tools.Word.XMLNode>不会验证。 此示例假定当前文档包含两个<xref:Microsoft.Office.Tools.Word.XMLNode>名为的对象`CustomerAddress1Node`和`CustomerZipNode`，它将映射到具有整数数据类型的架构元素。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.SetValidationError%2A>方法来设置的自定义验证错误消息。 <xref:Microsoft.Office.Tools.Word.XMLNode> 如果未验证, <xref:Microsoft.Office.Tools.Word.XMLNode.ValidationError> <xref:Microsoft.Office.Tools.Word.XMLNode>事件的事件处理程序会显示自定义验证错误消息。 此示例假设当前文档包含两个<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerAddress1Node`和`CustomerZipNode`的对象, 这些对象映射到具有整数数据类型的架构元素。  
   
  [!code-csharp[Trin_WordXMLNode#202](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#202)]
  [!code-vb[Trin_WordXMLNode#202](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#202)]  
@@ -1399,14 +1472,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 设置此属性将替换所有内的文本<xref:Microsoft.Office.Tools.Word.XMLNode>，包括任何子节点。  
+ 设置此属性将替换中的<xref:Microsoft.Office.Tools.Word.XMLNode>所有文本, 包括任何子节点。  
   
- 此属性在设计时是只读的。 它可以仅设置在运行时。  
+ 此属性在设计时为只读。 只能在运行时设置。  
   
    
   
 ## Examples  
- 下面的代码示例显示中的子节点数<xref:Microsoft.Office.Tools.Word.XMLNode>，将替换内的文本<xref:Microsoft.Office.Tools.Word.XMLNode>通过使用<xref:Microsoft.Office.Tools.Word.XMLNode.Text%2A>属性，然后再次显示子节点的数目。 设置后<xref:Microsoft.Office.Tools.Word.XMLNode.Text%2A>属性，子节点数为零。 此示例假定当前文档，包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`。  
+ 下面的代码示例显示中<xref:Microsoft.Office.Tools.Word.XMLNode>的子节点数, 使用<xref:Microsoft.Office.Tools.Word.XMLNode.Text%2A>属性替换中的<xref:Microsoft.Office.Tools.Word.XMLNode>文本, 然后再次显示子节点的数目。 设置<xref:Microsoft.Office.Tools.Word.XMLNode.Text%2A>属性后, 子节点数为零。 此示例假设当前文档包含一个<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`的。  
   
  [!code-csharp[Trin_WordXMLNode#19](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#19)]
  [!code-vb[Trin_WordXMLNode#19](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#19)]  
@@ -1434,14 +1507,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用<xref:Microsoft.Office.Tools.Word.XMLNode.Validate%2A>方法替换<xref:Microsoft.Office.Tools.Word.XMLNode.ValidationStatus%2A>和<xref:Microsoft.Office.Tools.Word.XMLNode.ValidationErrorText%2A>属性以确定是否符合应用的架构的 XML 元素和要向用户显示哪些错误文本。 使用<xref:Microsoft.Office.Tools.Word.XMLNode.SetValidationError%2A>方法重写自定义验证错误的架构冲突。  
+ <xref:Microsoft.Office.Tools.Word.XMLNode.Validate%2A> 使用<xref:Microsoft.Office.Tools.Word.XMLNode.ValidationStatus%2A>带有和<xref:Microsoft.Office.Tools.Word.XMLNode.ValidationErrorText%2A>属性的方法可根据应用的架构和向用户显示的错误文本来确定 XML 元素是否有效。 <xref:Microsoft.Office.Tools.Word.XMLNode.SetValidationError%2A>使用方法可使用自定义验证错误覆盖架构冲突。  
   
- 在运行时<xref:Microsoft.Office.Tools.Word.XMLNode.Validate%2A>方法，Microsoft Office Word 填充<xref:Microsoft.Office.Interop.Word._Document.XMLSchemaViolations%2A>与具有验证错误的 XML 节点的集合。  
+ 当你运行<xref:Microsoft.Office.Tools.Word.XMLNode.Validate%2A>方法时, Microsoft Office Word 使用具有<xref:Microsoft.Office.Interop.Word._Document.XMLSchemaViolations%2A>验证错误的 XML 节点填充集合。  
   
    
   
 ## Examples  
- 下面的代码示例设置的文本值<xref:Microsoft.Office.Tools.Word.XMLNode>，并通过使用验证节点<xref:Microsoft.Office.Tools.Word.XMLNode.Validate%2A>方法。 该示例然后使用<xref:Microsoft.Office.Tools.Word.XMLNode.ValidationStatus%2A>属性来确定节点是否验证。 如果节点尚未验证，则该示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.ValidationErrorText%2A>属性显示验证错误消息。 此示例假定当前文档，包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerAddress1Node`。 如果`CustomerAddress1Node`映射到具有整数数据的架构元素类型，则验证将失败。  
+ 下面的代码示例<xref:Microsoft.Office.Tools.Word.XMLNode> <xref:Microsoft.Office.Tools.Word.XMLNode.Validate%2A>使用方法设置的文本值, 并验证节点。 然后, 该示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.ValidationStatus%2A>属性来确定节点是否已验证。 如果节点未验证, 则该示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.ValidationErrorText%2A>属性来显示验证错误消息。 此示例假设当前文档包含一个<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerAddress1Node`的。 如果`CustomerAddress1Node`映射到具有整数数据类型的架构元素, 则验证将失败。  
   
  [!code-csharp[Trin_WordXMLNode#20](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#20)]
  [!code-vb[Trin_WordXMLNode#20](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#20)]  
@@ -1451,7 +1524,7 @@
       </Docs>
     </Member>
     <Member MemberName="ValidationError">
-      <MemberSignature Language="C#" Value="public event EventHandler ValidationError;" />
+      <MemberSignature Language="C#" Value="event EventHandler ValidationError;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ValidationError" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.Word.XMLNode.ValidationError" />
       <MemberType>Event</MemberType>
@@ -1468,7 +1541,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.SetValidationError%2A>方法设置的自定义验证错误消息的<xref:Microsoft.Office.Tools.Word.XMLNode>。 事件处理程序<xref:Microsoft.Office.Tools.Word.XMLNode.ValidationError>事件显示的自定义验证错误消息，如果<xref:Microsoft.Office.Tools.Word.XMLNode>不会验证。 此示例假定当前文档包含两个<xref:Microsoft.Office.Tools.Word.XMLNode>名为的对象`CustomerAddress1Node`和`CustomerZipNode`，它将映射到具有整数数据类型的架构元素。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.SetValidationError%2A>方法来设置的自定义验证错误消息。 <xref:Microsoft.Office.Tools.Word.XMLNode> 如果未验证, <xref:Microsoft.Office.Tools.Word.XMLNode.ValidationError> <xref:Microsoft.Office.Tools.Word.XMLNode>事件的事件处理程序会显示自定义验证错误消息。 此示例假设当前文档包含两个<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerAddress1Node`和`CustomerZipNode`的对象, 这些对象映射到具有整数数据类型的架构元素。  
   
  [!code-csharp[Trin_WordXMLNode#202](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#202)]
  [!code-vb[Trin_WordXMLNode#202](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#202)]  
@@ -1496,21 +1569,21 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Word.XMLNode.ValidationErrorText%2A>属性应与以下参数一起使用。  
+ 此<xref:Microsoft.Office.Tools.Word.XMLNode.ValidationErrorText%2A>属性应与以下参数一起使用。  
   
-|参数|描述|  
+|参数|说明|  
 |---------------|-----------------|  
-|`Advanced`|`true` 若要显示的验证错误说明，来自包含 Microsoft Office Word; 的 MSXML 5.0 组件的高级的版本否则为`false`。|  
+|`Advanced`|`true`显示验证错误说明的高级版本, 来自 Microsoft Office Word 随附的 MSXML 5.0 组件;否则为`false`。|  
   
- 如果您使用<xref:Microsoft.Office.Tools.Word.XMLNode.ValidationErrorText%2A>而无需指定参数的属性，它返回<xref:Microsoft.Office.Tools.Word.XMLNode_ValidationErrorTextType>不适于在代码中直接使用的对象。  
+ 如果在不指定<xref:Microsoft.Office.Tools.Word.XMLNode.ValidationErrorText%2A>参数的情况下使用属性, 它将<xref:Microsoft.Office.Tools.Word.XMLNode_ValidationErrorTextType>返回一个不应在代码中直接使用的对象。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
+ 有关可选参数的信息, 请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例设置的文本值<xref:Microsoft.Office.Tools.Word.XMLNode>，并通过使用验证节点<xref:Microsoft.Office.Tools.Word.XMLNode.Validate%2A>方法。 该示例然后使用<xref:Microsoft.Office.Tools.Word.XMLNode.ValidationStatus%2A>属性来确定节点是否验证。 如果节点尚未验证，则该示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.ValidationErrorText%2A>属性显示验证错误消息。 此示例假定当前文档，包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerAddress1Node`。 如果`CustomerAddress1Node`映射到具有整数数据的架构元素类型，则验证将失败。  
+ 下面的代码示例<xref:Microsoft.Office.Tools.Word.XMLNode> <xref:Microsoft.Office.Tools.Word.XMLNode.Validate%2A>使用方法设置的文本值, 并验证节点。 然后, 该示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.ValidationStatus%2A>属性来确定节点是否已验证。 如果节点未验证, 则该示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.ValidationErrorText%2A>属性来显示验证错误消息。 此示例假设当前文档包含一个<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerAddress1Node`的。 如果`CustomerAddress1Node`映射到具有整数数据类型的架构元素, 则验证将失败。  
   
  [!code-csharp[Trin_WordXMLNode#20](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#20)]
  [!code-vb[Trin_WordXMLNode#20](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#20)]  
@@ -1538,18 +1611,18 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Word.XMLNode.ValidationStatus%2A>属性可以是下列任一<xref:Microsoft.Office.Interop.Word.WdXMLValidationStatus>值：  
+ 属性可以是以下<xref:Microsoft.Office.Interop.Word.WdXMLValidationStatus>值之一: <xref:Microsoft.Office.Tools.Word.XMLNode.ValidationStatus%2A>  
   
--   <xref:Microsoft.Office.Interop.Word.WdXMLValidationStatus.wdXMLValidationStatusCustom> 指示<xref:Microsoft.Office.Interop.Word.XMLNode.SetValidationError%2A>方法用于设置<xref:Microsoft.Office.Interop.Word.XMLNode.ValidationErrorText%2A>属性设置为自定义文本字符串。  
+-   <xref:Microsoft.Office.Interop.Word.WdXMLValidationStatus.wdXMLValidationStatusCustom>指示此<xref:Microsoft.Office.Interop.Word.XMLNode.SetValidationError%2A>方法用于<xref:Microsoft.Office.Interop.Word.XMLNode.ValidationErrorText%2A>将属性设置为自定义文本字符串。  
   
--   <xref:Microsoft.Office.Interop.Word.WdXMLValidationStatus.wdXMLValidationStatusOK> 指示 XML 元素或属性有效对于附加的架构。  
+-   <xref:Microsoft.Office.Interop.Word.WdXMLValidationStatus.wdXMLValidationStatusOK>指示根据附加架构, XML 元素或属性是有效的。  
   
- 虽然这些都是只有两个命名的常量<xref:Microsoft.Office.Tools.Word.XMLNode.ValidationStatus%2A>属性允许，有许多来自中包含的 Microsoft Office Word 的 MSXML 5.0 组件的更多未命名的值。  
+ 虽然这是<xref:Microsoft.Office.Tools.Word.XMLNode.ValidationStatus%2A>属性允许的两个命名常量, 但还有许多来自 Microsoft Office Word 附带的 MSXML 5.0 组件的未命名的值。  
   
    
   
 ## Examples  
- 下面的代码示例设置的文本值<xref:Microsoft.Office.Tools.Word.XMLNode>，并通过使用验证节点<xref:Microsoft.Office.Tools.Word.XMLNode.Validate%2A>方法。 该示例然后使用<xref:Microsoft.Office.Tools.Word.XMLNode.ValidationStatus%2A>属性来确定节点是否验证。 如果节点尚未验证，则该示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.ValidationErrorText%2A>属性显示验证错误消息。 此示例假定当前文档，包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerAddress1Node`。 如果`CustomerAddress1Node`映射到具有整数数据的架构元素类型，则验证将失败。  
+ 下面的代码示例<xref:Microsoft.Office.Tools.Word.XMLNode> <xref:Microsoft.Office.Tools.Word.XMLNode.Validate%2A>使用方法设置的文本值, 并验证节点。 然后, 该示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.ValidationStatus%2A>属性来确定节点是否已验证。 如果节点未验证, 则该示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.ValidationErrorText%2A>属性来显示验证错误消息。 此示例假设当前文档包含一个<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerAddress1Node`的。 如果`CustomerAddress1Node`映射到具有整数数据类型的架构元素, 则验证将失败。  
   
  [!code-csharp[Trin_WordXMLNode#20](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#20)]
  [!code-vb[Trin_WordXMLNode#20](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#20)]  
@@ -1577,7 +1650,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性只返回的 XML 中表示指定的 XML 节点所需的文档。  
+ 此属性只在文档中返回表示指定 XML 节点所需的 XML。  
   
  ]]></format>
         </remarks>
@@ -1602,21 +1675,21 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Word.XMLNode.XML%2A>属性应与以下参数一起使用。  
+ 此<xref:Microsoft.Office.Tools.Word.XMLNode.XML%2A>属性应与以下参数一起使用。  
   
-|参数|描述|  
+|参数|说明|  
 |---------------|-----------------|  
-|`ListTemplate`|`true` 若要返回的而不使用 Word XML 标记中; XML 文本否则为`false`。 默认值为 `false`。|  
+|`ListTemplate`|`true`若要返回 XML 的文本而不包含 Word XML 标记, 则为;否则为`false`。 默认值为 `false`。|  
   
- 如果您使用<xref:Microsoft.Office.Tools.Word.XMLNode.XML%2A>而无需指定参数的属性，它返回<xref:Microsoft.Office.Tools.Word.XMLNode_XMLType>不应在代码中直接使用的对象。  
+ 如果在不指定<xref:Microsoft.Office.Tools.Word.XMLNode.XML%2A>参数的情况下使用属性, 它将<xref:Microsoft.Office.Tools.Word.XMLNode_XMLType>返回一个不应在代码中直接使用的对象。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
+ 有关可选参数的信息, 请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.XML%2A>属性来显示的 XML 内容<xref:Microsoft.Office.Tools.Word.XMLNode>使用和不使用 Word XML 标记。 此示例假定当前文档，包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Word.XMLNode.XML%2A>属性来显示<xref:Microsoft.Office.Tools.Word.XMLNode>具有和不包含 Word xml 标记的的 XML 内容。 此示例假设当前文档包含一个<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`的。  
   
  [!code-csharp[Trin_WordXMLNode#21](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#21)]
  [!code-vb[Trin_WordXMLNode#21](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#21)]  
@@ -1625,24 +1698,5 @@
         </remarks>
       </Docs>
     </Member>
-    <MemberGroup MemberName="LoadXml">
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Office.Tools.Word</AssemblyName>
-        <AssemblyVersion>10.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <Docs>
-        <summary>使用数据填充 <see cref="T:Microsoft.Office.Tools.Word.XMLNode" /> 控件。</summary>
-        <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- 此方法不会添加其他<xref:Microsoft.Office.Tools.Word.XMLNode>控件或删除不必要<xref:Microsoft.Office.Tools.Word.XMLNode>从文档的控件。  
-  
- 此方法将更新的所有属性<xref:Microsoft.Office.Tools.Word.XMLNode>控件。  
-  
- ]]></format>
-        </remarks>
-      </Docs>
-    </MemberGroup>
   </Members>
 </Type>

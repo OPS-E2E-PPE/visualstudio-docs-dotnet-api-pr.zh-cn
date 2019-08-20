@@ -1,5 +1,5 @@
 <Type Name="ISharePointProjectMemberReference" FullName="Microsoft.VisualStudio.SharePoint.ISharePointProjectMemberReference">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="9f4ae3b056e775d67dcdb10423567ce2e6b767be" /><Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="02/21/2018" /><Meta Name="ms.locfileid" Value="29409571" /></Metadata><TypeSignature Language="C#" Value="public interface ISharePointProjectMemberReference" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="f0e21b2723ab38ee714b19723917349bb0bb7761" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69007369" /></Metadata><TypeSignature Language="C#" Value="public interface ISharePointProjectMemberReference" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISharePointProjectMemberReference" />
   <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectMemberReference" />
   <AssemblyInfo>
@@ -13,7 +13,7 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 引用可能与 SharePoint 功能和包定义，除了项目项相关联。  
+ 除了项目项外, 引用可以与 SharePoint 功能和包定义相关联。  
   
  ]]></format>
     </remarks>
@@ -33,12 +33,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取引用项的 ID。</summary>
-        <value>表示项目项的 GUID id。</value>
+        <value>一个表示项目项 ID 的 GUID。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此 ID 由 SharePoint 项目系统分配，并不引用任何由 SharePoint 本身所用的 ID。  
+ 此 ID 由 SharePoint 项目系统分配, 不引用 SharePoint 本身使用的任何 ID。  
   
  ]]></format>
         </remarks>
@@ -63,11 +63,11 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此路径应为相对于当前项目。 也就是说，该引用，引用的项所属的项目。  
+ 此路径应相对于当前项目。 也就是说, 引用 (而不是引用的项) 所属的项目。  
   
- 如果该路径是`null`或为空，则当前项目假定。  
+ 如果路径为`null`或空, 则假定为当前项目。  
   
- 路径可以是绝对的但建议不要，因为它将关联产生的解决方案的特定开发系统的风险。  
+ 路径可以是绝对路径, 但不建议这样做, 因为它会导致将解决方案与特定开发系统相关的风险。  
   
  ]]></format>
         </remarks>

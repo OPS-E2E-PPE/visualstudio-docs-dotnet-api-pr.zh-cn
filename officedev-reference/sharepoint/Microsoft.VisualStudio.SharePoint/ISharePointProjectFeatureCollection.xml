@@ -1,5 +1,5 @@
 <Type Name="ISharePointProjectFeatureCollection" FullName="Microsoft.VisualStudio.SharePoint.ISharePointProjectFeatureCollection">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="95c84e8f03883f7d743c0e3e6f290c55a47b39f5" /><Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="02/21/2018" /><Meta Name="ms.locfileid" Value="29410260" /></Metadata><TypeSignature Language="C#" Value="public interface ISharePointProjectFeatureCollection : Microsoft.VisualStudio.SharePoint.ISharePointCollection&lt;Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature&gt;, System.Collections.Generic.IEnumerable&lt;Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature&gt;, System.Collections.Specialized.INotifyCollectionChanged, System.ComponentModel.INotifyPropertyChanged" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="575c144104d28ef42f460f58b988f217707f0c5e" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69007805" /></Metadata><TypeSignature Language="C#" Value="public interface ISharePointProjectFeatureCollection : Microsoft.VisualStudio.SharePoint.ISharePointCollection&lt;Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature&gt;, System.Collections.Generic.IEnumerable&lt;Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature&gt;, System.Collections.Specialized.INotifyCollectionChanged, System.ComponentModel.INotifyPropertyChanged" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISharePointProjectFeatureCollection implements class Microsoft.VisualStudio.SharePoint.ISharePointCollection`1&lt;class Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature&gt;, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature&gt;, class System.Collections.IEnumerable, class System.Collections.Specialized.INotifyCollectionChanged, class System.ComponentModel.INotifyPropertyChanged" />
   <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeatureCollection" />
   <AssemblyInfo>
@@ -14,6 +14,12 @@
       <InterfaceName>System.Collections.Generic.IEnumerable&lt;Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature&gt;</InterfaceName>
     </Interface>
     <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;T&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
+    </Interface>
+    <Interface>
       <InterfaceName>System.Collections.Specialized.INotifyCollectionChanged</InterfaceName>
     </Interface>
     <Interface>
@@ -26,7 +32,7 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 在项目中定义的功能可能或可能不包含向解决方案包与项目关联。 可以从与其他项目关联的包中引用功能。  
+ 在项目中定义的功能可以包含也可以不包含到与项目关联的解决方案包。 可以从与其他项目关联的包中引用功能。  
   
  ]]></format>
     </remarks>
@@ -162,12 +168,12 @@
       <Docs>
         <param name="folderPath"><see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature" /> 文件夹路径。</param>
         <summary>获取具有指定文件夹路径的 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature" /> 的实例。</summary>
-        <value>如果它找到，则 SharePoint 功能的一个实例<see langword="null" /> (或<see langword="Nothing" />中[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]) 否则为。</value>
+        <value>如果找到 SharePoint 功能, 则为该实例; 否则为否则为<see langword="null" />。 <see langword="Nothing" /> [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 文件夹路径可以是绝对文件夹路径，指向项目文件夹或文件夹名称的相对路径。  
+ 文件夹路径可以是绝对文件夹路径、项目文件夹的相对路径或文件夹名称。  
   
  ]]></format>
         </remarks>

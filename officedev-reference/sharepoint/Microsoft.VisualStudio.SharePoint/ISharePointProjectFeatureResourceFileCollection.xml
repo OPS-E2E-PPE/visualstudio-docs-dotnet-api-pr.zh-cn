@@ -1,5 +1,5 @@
 <Type Name="ISharePointProjectFeatureResourceFileCollection" FullName="Microsoft.VisualStudio.SharePoint.ISharePointProjectFeatureResourceFileCollection">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="6f83367f5818ed12613ef6c449f577ae73c71efd" /><Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="02/21/2018" /><Meta Name="ms.locfileid" Value="29409675" /></Metadata><TypeSignature Language="C#" Value="public interface ISharePointProjectFeatureResourceFileCollection : Microsoft.VisualStudio.SharePoint.ISharePointCollection&lt;Microsoft.VisualStudio.SharePoint.ISharePointProjectFeatureResourceFile&gt;, System.Collections.Generic.IEnumerable&lt;Microsoft.VisualStudio.SharePoint.ISharePointProjectFeatureResourceFile&gt;, System.Collections.Specialized.INotifyCollectionChanged, System.ComponentModel.INotifyPropertyChanged" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="bcfd778ad8c867fb3ba32664c08480ac0620b8af" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69007786" /></Metadata><TypeSignature Language="C#" Value="public interface ISharePointProjectFeatureResourceFileCollection : Microsoft.VisualStudio.SharePoint.ISharePointCollection&lt;Microsoft.VisualStudio.SharePoint.ISharePointProjectFeatureResourceFile&gt;, System.Collections.Generic.IEnumerable&lt;Microsoft.VisualStudio.SharePoint.ISharePointProjectFeatureResourceFile&gt;, System.Collections.Specialized.INotifyCollectionChanged, System.ComponentModel.INotifyPropertyChanged" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISharePointProjectFeatureResourceFileCollection implements class Microsoft.VisualStudio.SharePoint.ISharePointCollection`1&lt;class Microsoft.VisualStudio.SharePoint.ISharePointProjectFeatureResourceFile&gt;, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.VisualStudio.SharePoint.ISharePointProjectFeatureResourceFile&gt;, class System.Collections.IEnumerable, class System.Collections.Specialized.INotifyCollectionChanged, class System.ComponentModel.INotifyPropertyChanged" />
   <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeatureResourceFileCollection" />
   <AssemblyInfo>
@@ -12,6 +12,12 @@
     </Interface>
     <Interface>
       <InterfaceName>System.Collections.Generic.IEnumerable&lt;Microsoft.VisualStudio.SharePoint.ISharePointProjectFeatureResourceFile&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;T&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
     </Interface>
     <Interface>
       <InterfaceName>System.Collections.Specialized.INotifyCollectionChanged</InterfaceName>
@@ -45,7 +51,7 @@
         <summary>为指定区域性创建新的资源文件，并将其添加到此集合。</summary>
         <returns>表示资源文件的对象。</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">如果 <paramref name="cultureInfo" /> 是 <see langword="null" />，则会发生此异常。</exception>
+        <exception cref="T:System.ArgumentNullException">当 <paramref name="cultureInfo" /> 为 <see langword="null" /> 时发生。</exception>
         <exception cref="T:System.ArgumentException">如果已存在具有指定 <paramref name="cultureInfo" /> 的资源文件，则会发生。</exception>
       </Docs>
     </Member>
@@ -63,7 +69,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取父项目功能。</summary>
-        <value>表示一项功能的对象。</value>
+        <value>表示功能的对象。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -87,7 +93,7 @@
         <summary>查找具有指定区域性的功能资源文件。</summary>
         <returns>如果找到，则为表示功能资源文件的对象；否则为 <see langword="null" />。</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">如果 <paramref name="cultureInfo" /> 是 <see langword="null" />，则会发生此异常。</exception>
+        <exception cref="T:System.ArgumentNullException">当 <paramref name="cultureInfo" /> 为 <see langword="null" /> 时发生。</exception>
       </Docs>
     </Member>
     <Member MemberName="Item">
@@ -108,9 +114,9 @@
       <Docs>
         <param name="fileName">功能文件夹的相对路径或功能的绝对文件路径。</param>
         <summary>获取文件名指定的功能资源文件。</summary>
-        <value>如果它找到，则表示一项功能的对象<see langword="null" />如果它找不到。</value>
+        <value>如果找到了一个表示功能的对象, 则为该对象; 否则为。<see langword="null" />如果未找到, 则为。</value>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">如果 <paramref name="fileName" /> 是 <see langword="null" />，则会发生此异常。</exception>
+        <exception cref="T:System.ArgumentNullException">当 <paramref name="fileName" /> 为 <see langword="null" /> 时发生。</exception>
       </Docs>
     </Member>
   </Members>

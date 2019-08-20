@@ -1,5 +1,5 @@
 <Type Name="RibbonComboBox" FullName="Microsoft.Office.Tools.Ribbon.RibbonComboBox">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="649cc90f6545049efc8b0bbb2fe467f19ef83428" /><Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="09/19/2018" /><Meta Name="ms.locfileid" Value="46454812" /></Metadata><TypeSignature Language="C#" Value="public interface RibbonComboBox : IDisposable, Microsoft.Office.Tools.Ribbon.RibbonControl, System.ComponentModel.IComponent" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="c10a45f5ba5edb00e7aea456464bcf24ec71aba7" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69002835" /></Metadata><TypeSignature Language="C#" Value="public interface RibbonComboBox : IDisposable, Microsoft.Office.Tools.Ribbon.RibbonControl, System.ComponentModel.IComponent" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract RibbonComboBox implements class Microsoft.Office.Tools.Ribbon.RibbonComponent, class Microsoft.Office.Tools.Ribbon.RibbonControl, class System.ComponentModel.IComponent, class System.IDisposable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Ribbon.RibbonComboBox" />
   <AssemblyInfo>
@@ -7,6 +7,9 @@
     <AssemblyVersion>10.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Office.Tools.Ribbon.RibbonComponent</InterfaceName>
+    </Interface>
     <Interface>
       <InterfaceName>Microsoft.Office.Tools.Ribbon.RibbonControl</InterfaceName>
     </Interface>
@@ -28,9 +31,9 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 组合框向用户提供文本输入字段和下拉列表菜单中的选项列表。  
+ 组合框显示一个用户, 其中包含文本输入字段和下拉菜单中的选项列表。  
   
- 您可以创建<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox>在运行时通过使用<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.CreateRibbonComboBox%2A>方法的<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory>对象。  
+ 您可以通过<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.CreateRibbonComboBox%2A>使用<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox> <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory>对象的方法在运行时创建。  
   
  可通过两种方法来访问 <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory> 对象：  
   
@@ -38,7 +41,7 @@
   
 -   通过使用 `Globals.Factory.GetRibbonFactory` 方法。 可从 Ribbon 类外的代码使用此方法。  
   
- 只能在功能区加载到 Office 应用程序之前，可以设置此类型的某些成员。 有关如何设置这些属性的信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
+ 只有在功能区加载到 Office 应用程序中之前, 才能设置此类型的某些成员。 有关设置这些属性的信息, 请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
   
  [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
   
@@ -68,15 +71,15 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 建议的图像格式是 PNG，因为 PNG 格式的图像支持通过其 alpha 通道的透明度。  
+ 建议的图像格式为 PNG, 因为 PNG 格式的图像通过其 alpha 通道支持透明度。  
   
- <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Image%2A>属性标识控件显示的图像。 在设计时或在运行时，可以设置此属性。 如果在运行时中更新此属性，该控件的外观被更新以反映更改。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Image%2A>属性标识控件显示的图像。 此属性可在设计时或运行时设置。 如果在运行时更新此属性, 控件的外观将更新以反映更改。  
   
- 建议的图像格式是 PNG，因为 PNG 格式的图像支持通过其 Alpha 通道的透明度。  
+ 建议的图像格式为 PNG, 因为 PNG 格式的图像通过其 Alpha 通道支持透明度。  
   
- 如果<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Image%2A>设置属性，则<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.OfficeImageId%2A>和<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ImageName%2A>属性将被忽略。 尽管<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Image%2A>属性可让您更好地控制比其他两个属性，这一点可以是速度较慢，因为每次更新控件时，图像对象发送到 Office 应用程序。  
+ 如果设置了<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.OfficeImageId%2A> <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ImageName%2A>属性, 则将忽略和属性。 <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Image%2A> <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Image%2A>尽管属性比其他两个属性提供的控件更多, 但它可能会变慢, 因为每次更新控件时, 都会将 image 对象发送到 Office 应用程序。  
   
- <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ShowImage%2A>属性必须为`true`控件来显示图像。 当您将设置<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Image%2A>属性在设计时，Visual Studio 将自动设置<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ShowImage%2A>属性设置为`true`。 如果您设置<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Image%2A>在运行时属性，则你必须设置<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ShowImage%2A>属性设置为`true`在代码中。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ShowImage%2A> 属性`true`必须为, 控件才能显示图像。 在设计时设置<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Image%2A>属性时, Visual Studio 会将<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ShowImage%2A>属性自动设置为`true`。 如果在运行时<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Image%2A>设置属性, 必须在代码中<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ShowImage%2A>将属性设置为`true` 。  
   
  ]]></format>
         </remarks>
@@ -101,17 +104,17 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 可以在运行时仅在某些情况下设置此属性。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
+ 仅在某些情况下, 才能在运行时设置此属性。 有关详细信息, 请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
   
- 有关设置此属性的信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
+ 有关设置此属性的信息, 请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
   
- <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ImageName%2A>属性标识控件显示的图像。 Office 应用程序此映像从你的解决方案只检索一次，以提高性能。 此属性可以设置只能在设计时，因为它标识的图像加载过程<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>事件。 <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage> 时将引发一次每个映像名称显示在功能区。 之后，不能使用此属性更改控件图像。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ImageName%2A>属性标识控件显示的图像。 Office 应用程序仅从解决方案中检索一次此映像, 以提高性能。 只能在设计时设置此属性, 因为该属性标识的图像将在<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>事件中加载。 <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>当显示功能区时, 每个映像名称只引发一次。 之后, 不能使用此属性更改控制图像。  
   
- 若要加载图像，将代码添加到<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>事件处理程序。 检查<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs.ImageName%2A>的属性<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs>并设置<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs.Image%2A>属性的<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs>到想要加载的图像的对象。  
+ 若要加载图像, 请将代码添加<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>到事件处理程序。 <xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs.Image%2A>检查的<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs>属性,并<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs>将对象的属性设置为要加载的图像。 <xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs.ImageName%2A>  
   
- 如果忽略此属性<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Image%2A>属性或<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.OfficeImageId%2A>属性设置。 标识的图像<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ImageName%2A>属性可以稍快于标识的图像加载<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Image%2A>显示属性，因为 Office 应用程序中检索映像解决方案仅在首次从功能区。  
+ 如果设置了<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Image%2A>属性<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.OfficeImageId%2A>或属性, 则忽略此属性。 与<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Image%2A>属性标识的<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ImageName%2A>图像相比, 属性所标识的映像的加载速度要快得多, 因为 Office 应用程序只会在首次显示功能区时从你的解决方案中检索该图像。  
   
- <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ShowImage%2A>属性必须为`true`控件来显示图像。 当您将设置<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ImageName%2A>属性在设计时，Visual Studio 将自动设置<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ShowImage%2A>属性设置为`true`。 如果您设置<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ImageName%2A>在运行时属性，则你必须设置<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ShowImage%2A>属性设置为`true`在代码中。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ShowImage%2A> 属性`true`必须为, 控件才能显示图像。 在设计时设置<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ImageName%2A>属性时, Visual Studio 会将<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ShowImage%2A>属性自动设置为`true`。 如果在运行时<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ImageName%2A>设置属性, 必须在代码中<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ShowImage%2A>将属性设置为`true` 。  
   
  ]]></format>
         </remarks>
@@ -136,14 +139,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 可以添加、 删除或更新<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem>对象在设计时或在运行时。  
+ 您可以在设计时或运行时<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem>添加、删除或更新对象。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="ItemsLoading">
-      <MemberSignature Language="C#" Value="public event Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler ItemsLoading;" />
+      <MemberSignature Language="C#" Value="event Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler ItemsLoading;" />
       <MemberSignature Language="ILAsm" Value=".event class Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler ItemsLoading" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ItemsLoading" />
       <MemberType>Event</MemberType>
@@ -160,9 +163,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 添加到项<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox>关闭其下拉列表时才加载到 Office 应用程序在用户打开下拉列表。  
+ 在用户打开下拉<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox>列表之前, 添加到中的项在其下拉列表关闭后不会加载到 Office 应用程序中。  
   
- 可以使用此事件来更新的项在此列表<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox>显示给用户之前。  
+ 在向用户显示此事件之前, 可以使用此事件来<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox>更新此项的列表。  
   
  ]]></format>
         </remarks>
@@ -187,11 +190,11 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- Keytip 必须包含 1 到 3 个大写字符，不能包含空格、 制表符或换行字符。  
+ KeyTip 必须包含1至3个大写字符, 不能包含空格、制表符或换行符。  
   
- Keytip 有时也称为访问密钥或加速器和用作激活控件的快捷组合键。 按下 ALT 键时，键提示将显示在功能区上。 如果内置控件或从其他加载项，你的快捷键提示与键提示冲突，Microsoft Office 可能会自动分配非冲突快捷键提示值。  
+ Keytip 有时称为 "访问键" 或 "加速器", 用作激活控件的快捷键组合。 按 ALT 键时, 功能区上将显示键提示。 如果 KeyTip 与内置控件或其他外接程序的 keytip 发生冲突, Microsoft Office 可能会自动分配不冲突的 KeyTip 值。  
   
- 有关详细信息，请参阅[使用键盘处理功能区程序](http://go.microsoft.com/fwlink/?LinkId=93523)。  
+ 有关详细信息, 请参阅[使用键盘处理功能区程序](http://go.microsoft.com/fwlink/?LinkId=93523)。  
   
  ]]></format>
         </remarks>
@@ -234,9 +237,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 可以在运行时仅在某些情况下设置此属性。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
+ 仅在某些情况下, 才能在运行时设置此属性。 有关详细信息, 请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
   
- <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.MaxLength%2A>属性未指定显示的输入字符串。 若要更改显示限制，请设置<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.SizeString%2A>属性。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.MaxLength%2A>属性不指定输入字符串的显示量。 若要更改显示限制, 请设置<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.SizeString%2A>属性。  
   
  ]]></format>
         </remarks>
@@ -261,26 +264,26 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.OfficeImageId%2A>属性标识的控件显示 Office 图标。 属性值是一个字符串，标识`imageMso`所选图标的值。 在设计时或在运行时，可以设置此属性。 如果在运行时中更新此属性，该控件的外观被更新以反映更改。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.OfficeImageId%2A>属性标识控件显示的 Office 图标。 属性值是标识`imageMso`所选图标的值的字符串。 此属性可在设计时或运行时设置。 如果在运行时更新此属性, 控件的外观将更新以反映更改。  
   
- 有关一系列`imageMso`值，请参阅 Microsoft 下载中心页[Office 2010 外接程序： 图标库](http://go.microsoft.com/fwlink/?LinkID=220760)。  
+ 有关`imageMso`值的列表, 请参阅 Microsoft 下载中心页面[Office 2010 外接程序:图标库](http://go.microsoft.com/fwlink/?LinkID=220760)。  
   
- 如果忽略此属性<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Image%2A>属性设置。 标识的图像<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.OfficeImageId%2A>属性可以稍快于标识的图像加载<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Image%2A>属性，因为这些图像缓存在 Office 应用程序。  
+ 如果设置了<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Image%2A>属性, 则忽略此属性。 由于图像缓存在<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.OfficeImageId%2A> Office 应用程序中, 因此可以比<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Image%2A>属性标识的图像稍快地加载属性标识的图像。  
   
- <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ShowImage%2A>属性必须为`true`控件来显示图像。 当您将设置<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.OfficeImageId%2A>属性在设计时，Visual Studio 将自动设置<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ShowImage%2A>属性设置为`true`。 如果您设置<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.OfficeImageId%2A>在运行时属性，则你必须设置<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ShowImage%2A>属性设置为`true`在代码中。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ShowImage%2A> 属性`true`必须为, 控件才能显示图像。 在设计时设置<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.OfficeImageId%2A>属性时, Visual Studio 会将<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ShowImage%2A>属性自动设置为`true`。 如果在运行时<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.OfficeImageId%2A>设置属性, 必须在代码中<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ShowImage%2A>将属性设置为`true` 。  
   
    
   
 ## Examples  
- 下面的示例将分配给一个组合框的 Microsoft Office 筛选器图标。  
+ 下面的示例将 Microsoft Office 筛选器图标分配给组合框。  
   
- 若要运行此代码示例，必须首先执行以下步骤：  
+ 若要运行此代码示例, 必须首先执行以下步骤:  
   
-1.  添加**功能区 （可视化设计器）** 到 Office 项目的项。  
+1.  向 Office 项目添加 "**功能区 (可视化设计器)** " 项。  
   
 2.  将组添加到自定义选项卡。  
   
-3.  将组合框添加到组。  
+3.  向组中添加组合框。  
   
  [!code-csharp[Trin_Ribbon_ControlProperties#2](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_Ribbon_ControlProperties/CS/Ribbon1.cs#2)]
  [!code-vb[Trin_Ribbon_ControlProperties#2](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_Ribbon_ControlProperties/VB/Ribbon1.vb#2)]  
@@ -308,9 +311,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 值必须是长度小于 1024年个字符。  
+ 值的长度必须小于1024个字符。  
   
- 当<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.SuperTip%2A>设置属性，则<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ScreenTip%2A>文本显示的标题为<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.SuperTip%2A>。  
+ 设置属性时<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ScreenTip%2A> , 文本显示<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.SuperTip%2A>为的标题。 <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.SuperTip%2A>  
   
  ]]></format>
         </remarks>
@@ -335,11 +338,11 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性自动设置为`true`如果您设置<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Image%2A>， <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ImageName%2A>，或<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.OfficeImageId%2A>在功能区设计器中的属性。 可以将其设置为`false`以与要隐藏此控件关联的图像。  
+ 如果在功能区设计器`true`中<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Image%2A>设置、或<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.OfficeImageId%2A>属性<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ImageName%2A>, 则此属性将自动设置为。 您可以将其设置`false`为, 以使与此控件关联的图像处于隐藏状态。  
   
- 设置<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Image%2A>， <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ImageName%2A>，或<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.OfficeImageId%2A>在运行时属性的值不更改<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ShowImage%2A>属性。  
+ 在运行<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.OfficeImageId%2A> <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ImageName%2A> <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Image%2A>时设置、或属性不会更改<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ShowImage%2A>属性的值。  
   
- 此属性不起作用的实例，此按钮上快速访问工具栏显示。  
+ 此属性对快速访问工具栏上显示的此按钮的实例无效。  
   
  ]]></format>
         </remarks>
@@ -364,9 +367,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 可以在运行时仅在某些情况下设置此属性。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
+ 仅在某些情况下, 才能在运行时设置此属性。 有关详细信息, 请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
   
- 有关设置此属性的信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
+ 有关设置此属性的信息, 请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
   
  ]]></format>
         </remarks>
@@ -409,9 +412,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 当您将设置<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.SizeString%2A>功能区设计器中的属性，Microsoft Office 应用程序会尝试将大小<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox>，以便将大小足以显示整个字符串。 尽管 Visual Studio 允许的长度最多为 1024年个字符的字符串，但在实践中可用的字符串长度可能要短得多。  
+ 在功能区设计<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.SizeString%2A>器中设置属性时, Microsoft Office 应用程序会尝试<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox>调整大小, 以使其足以显示整个字符串。 尽管 Visual Studio 允许长度最多为1024个字符的字符串, 但实际上, 使用的字符串长度可能要短得多。  
   
- 可以在运行时仅在某些情况下设置此属性。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
+ 仅在某些情况下, 才能在运行时设置此属性。 有关详细信息, 请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
   
  ]]></format>
         </remarks>
@@ -436,9 +439,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 字符串必须是长度小于 1024年个字符。  
+ 字符串的长度必须小于1024个字符。  
   
- <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.SuperTip%2A>下显示<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ScreenTip%2A>文本。 与不同<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ScreenTip%2A>，则<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.SuperTip%2A>启用换行符的字符串中。  
+ 显示<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.SuperTip%2A>在 " <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ScreenTip%2A>文本" 下。 与不同<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ScreenTip%2A>的是<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.SuperTip%2A> , 会在字符串中启用分行符。  
   
  ]]></format>
         </remarks>
@@ -463,14 +466,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果您以编程方式更改此属性<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.TextChanged>不会引发事件。  
+ 如果以编程方式更改此属性, <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.TextChanged>则不会引发事件。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="TextChanged">
-      <MemberSignature Language="C#" Value="public event Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler TextChanged;" />
+      <MemberSignature Language="C#" Value="event Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler TextChanged;" />
       <MemberSignature Language="ILAsm" Value=".event class Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler TextChanged" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.Ribbon.RibbonComboBox.TextChanged" />
       <MemberType>Event</MemberType>
@@ -487,7 +490,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox>更改文本，当用户更改文本之后, 将输入的焦点移到另一个控件之后，用户按 ENTER 键时或当用户在不同于当前显示的文本列表中选择某个项时引发此事件播放。 通过将分配到一个新值更改文本时不引发<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Text%2A>属性。  
+ 当用户在更改文本后按 ENTER 键、在更改文本后用户将输入焦点移到另一个控件时, 或当用户在列表中选择的项不同于当前正在拆装的文本时,引发此事件。<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox>棋. 通过将新值分配给<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Text%2A>属性来更改文本时不会引发此方法。  
   
  ]]></format>
         </remarks>

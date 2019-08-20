@@ -1,5 +1,5 @@
 <Type Name="GenerateOfficeAddInManifest" FullName="Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeAddInManifest">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="3b7f4c406c9f0041bcd89208182f1140ba5c6560" /><Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="09/19/2018" /><Meta Name="ms.locfileid" Value="46458855" /></Metadata><TypeSignature Language="C#" Value="public sealed class GenerateOfficeAddInManifest : Microsoft.VisualStudio.Tools.Office.BuildTasks.BuildTask" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="eae760998682e29bfe76bd9a6c854018ab35cf1f" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="68996819" /></Metadata><TypeSignature Language="C#" Value="public sealed class GenerateOfficeAddInManifest : Microsoft.VisualStudio.Tools.Office.BuildTasks.BuildTask" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit GenerateOfficeAddInManifest extends Microsoft.VisualStudio.Tools.Office.BuildTasks.BuildTask" />
   <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeAddInManifest" />
   <AssemblyInfo>
@@ -21,9 +21,9 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 全部设<xref:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeAddInManifest>属性，然后调用<xref:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeAddInManifest.Execute%2A>若要运行此任务。  
+ 设置所有<xref:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeAddInManifest>属性, 然后调用<xref:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeAddInManifest.Execute%2A>以运行此任务。  
   
- Microsoft 生成引擎使用 <xref:Microsoft.VisualStudio.Tools.Office.BuildTasks> 生成和部署 Office 解决方案。 但是，可以使用这些类和基于 MSBuild XML 的项目文件来创建自己的生成系统。 有关详细信息，请参阅[MSBuild 引用](~/msbuild/msbuild-reference)。  
+ Microsoft 生成引擎使用 <xref:Microsoft.VisualStudio.Tools.Office.BuildTasks> 生成和部署 Office 解决方案。 但是，可以使用这些类和基于 MSBuild XML 的项目文件来创建自己的生成系统。 有关详细信息，请参阅 [MSBuild 参考](~/msbuild/msbuild-reference)。  
   
  ]]></format>
     </remarks>
@@ -58,7 +58,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置项目说明。</summary>
-        <value>一个<see cref="T:System.String" />表示项目说明。</value>
+        <value>一个<see cref="T:System.String" />表示项目说明的。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -95,7 +95,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置有关自定义程序集中表单区域的信息。</summary>
-        <value>一个数组<see cref="T:Microsoft.Build.Framework.ITaskItem" />表示自定义程序集中的窗体区域有关的信息的对象。</value>
+        <value><see cref="T:Microsoft.Build.Framework.ITaskItem" />对象的数组, 这些对象表示有关自定义项程序集中的窗体区域的信息。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -118,12 +118,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置项目的备用名称。</summary>
-        <value>一个<see cref="T:System.String" />，表示项目的备用名称。</value>
+        <value><see cref="T:System.String" />表示项目的备用名称的。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeAddInManifest.FriendlyName%2A>必须将属性分配之前<xref:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeAddInManifest.Execute%2A>调用。  
+ 在<xref:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeAddInManifest.FriendlyName%2A>调用之前<xref:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeAddInManifest.Execute%2A> , 必须分配属性。  
   
  ]]></format>
         </remarks>
@@ -148,14 +148,14 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置注册表项的名称，该名称为默认的加载项名称。</summary>
-        <value>一个<see cref="T:System.String" />表示注册表项，这是默认的外接程序名称的名称。</value>
+        <value>一个<see cref="T:System.String" /> , 它表示作为默认外接程序名称的注册表项的名称。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 这是应用程序将用于加载外接程序的注册表项。 有关详细信息，请参阅[VSTO 外接程序的注册表项](/visualstudio/vsto/registry-entries-for-vsto-add-ins)。  
+ 这是应用程序加载外接程序时将使用的注册表项。 有关详细信息，请参阅 [Registry Entries for VSTO Add-ins](/visualstudio/vsto/registry-entries-for-vsto-add-ins)。  
   
- <xref:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeAddInManifest.KeyName%2A>必须将属性分配之前<xref:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeAddInManifest.Execute%2A>调用。  
+ 在<xref:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeAddInManifest.KeyName%2A>调用之前<xref:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeAddInManifest.Execute%2A> , 必须分配属性。  
   
  ]]></format>
         </remarks>
@@ -180,14 +180,14 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置加载行为。</summary>
-        <value><see cref="T:System.Int32" />指定加载行为。 如果值为 2 外, 接程序是断开连接或已禁用。 如果值为 3，则启用外接程序。</value>
+        <value><see cref="T:System.Int32" />指定加载行为的。 如果值为 2, 则外接程序会断开连接或被禁用。 如果值为 3, 则外接程序处于启用状态。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 加载行为值的列表，请参阅[VSTO 外接程序的注册表项](/visualstudio/vsto/registry-entries-for-vsto-add-ins)。  
+ 有关加载行为值的列表, 请参阅[VSTO 外接程序的注册表项](/visualstudio/vsto/registry-entries-for-vsto-add-ins)。  
   
- <xref:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeAddInManifest.LoadBehavior%2A>必须将属性分配之前<xref:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeAddInManifest.Execute%2A>调用。  
+ 在<xref:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeAddInManifest.LoadBehavior%2A>调用之前<xref:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeAddInManifest.Execute%2A> , 必须分配属性。  
   
  ]]></format>
         </remarks>
@@ -212,12 +212,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置运行当前加载项的 Microsoft Office 应用程序的名称。</summary>
-        <value>一个<see cref="T:System.String" />，表示正在运行的当前外接程序的 Microsoft Office 应用程序的名称。</value>
+        <value><see cref="T:System.String" /> , 表示运行当前外接程序的 Microsoft Office 应用程序的名称。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeAddInManifest.OfficeApplication%2A>必须将属性分配之前<xref:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeAddInManifest.Execute%2A>调用。  
+ 在<xref:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeAddInManifest.OfficeApplication%2A>调用之前<xref:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeAddInManifest.Execute%2A> , 必须分配属性。  
   
  ]]></format>
         </remarks>
@@ -242,7 +242,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取描述 Office 加载项的应用程序清单部分。</summary>
-        <value><see cref="T:Microsoft.Build.Framework.ITaskItem" /> ，它表示应用程序清单文件用于描述外接程序的 Visual Studio 部分中的 Office 解决方案。</value>
+        <value><see cref="T:Microsoft.Build.Framework.ITaskItem" /> , 表示应用程序清单文件的 Visual Studio 中的 Office 解决方案部分, 它描述外接程序。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

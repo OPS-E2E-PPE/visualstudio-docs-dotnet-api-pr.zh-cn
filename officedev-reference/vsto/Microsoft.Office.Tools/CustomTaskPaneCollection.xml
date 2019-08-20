@@ -1,5 +1,5 @@
 <Type Name="CustomTaskPaneCollection" FullName="Microsoft.Office.Tools.CustomTaskPaneCollection">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="02f2b47f80bed93963932aa0ab4c54ead7e4874b" /><Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="09/19/2018" /><Meta Name="ms.locfileid" Value="46457139" /></Metadata><TypeSignature Language="C#" Value="public interface CustomTaskPaneCollection : IDisposable, System.Collections.Generic.IEnumerable&lt;Microsoft.Office.Tools.CustomTaskPane&gt;" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="a9ffe1eae05b7cf5b6af4f7906e5086dd601fb24" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="68999323" /></Metadata><TypeSignature Language="C#" Value="public interface CustomTaskPaneCollection : IDisposable, System.Collections.Generic.IEnumerable&lt;Microsoft.Office.Tools.CustomTaskPane&gt;" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract CustomTaskPaneCollection implements class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Office.Tools.CustomTaskPane&gt;, class System.Collections.IEnumerable, class System.IDisposable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.CustomTaskPaneCollection" />
   <AssemblyInfo>
@@ -9,6 +9,9 @@
   <Interfaces>
     <Interface>
       <InterfaceName>System.Collections.Generic.IEnumerable&lt;Microsoft.Office.Tools.CustomTaskPane&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
     </Interface>
     <Interface>
       <InterfaceName>System.IDisposable</InterfaceName>
@@ -25,9 +28,9 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用<xref:Microsoft.Office.Tools.CustomTaskPaneCollection>中应用程序级外接程序以向应用程序添加自定义任务窗格、 删除自定义任务窗格中，或访问现有的自定义任务窗格对象。 访问<xref:Microsoft.Office.Tools.CustomTaskPaneCollection>对象，请使用`CustomTaskPanes`字段`ThisAddIn`外接程序项目中的类。 有关详细信息，请参阅[Programming VSTO Add-ins](/visualstudio/vsto/programming-vsto-add-ins)。  
+ 使用应用<xref:Microsoft.Office.Tools.CustomTaskPaneCollection>程序级外接程序中的对象可向应用程序添加自定义任务窗格、删除自定义任务窗格或访问现有的自定义任务窗格。 若要访问<xref:Microsoft.Office.Tools.CustomTaskPaneCollection>对象, 请在`CustomTaskPanes`外接程序`ThisAddIn`项目中使用类的字段。 有关详细信息，请参阅 [Programming VSTO Add-Ins](/visualstudio/vsto/programming-vsto-add-ins)。  
   
- 任务窗格是用户界面面板，通常停靠到应用程序窗口的一侧。 有关如何创建自定义任务窗格的详细信息，请参阅[自定义任务窗格](/visualstudio/vsto/custom-task-panes)。  
+ 任务窗格是用户界面面板, 通常停靠在应用程序窗口的一侧。 有关如何创建自定义任务窗格的详细信息, 请参阅[自定义任务窗格](/visualstudio/vsto/custom-task-panes)。  
   
  [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
   
@@ -37,7 +40,7 @@
    
   
 ## Examples  
- 下面的代码示例演示如何通过创建自定义任务窗格<xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%28System.Windows.Forms.UserControl%2CSystem.String%29>方法。 此示例还使用的属性<xref:Microsoft.Office.Tools.CustomTaskPane>对象来修改自定义任务窗格的默认外观。 此代码示例是为提供一个更大示例的一部分<xref:Microsoft.Office.Tools.CustomTaskPane>。  
+ 下面的代码示例演示如何使用<xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%28System.Windows.Forms.UserControl%2CSystem.String%29>方法创建自定义任务窗格。 该示例还使用<xref:Microsoft.Office.Tools.CustomTaskPane>对象的属性来修改自定义任务窗格的默认外观。 此代码示例是为提供的<xref:Microsoft.Office.Tools.CustomTaskPane>更大示例的一部分。  
   
  [!code-csharp[Trin_TaskPaneReference#2](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_TaskPaneReference/CS/ThisAddIn.cs#2)]
  [!code-vb[Trin_TaskPaneReference#2](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_TaskPaneReference/VB/ThisAddIn.vb#2)]  
@@ -71,16 +74,16 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用此方法创建一个新<xref:Microsoft.Office.Tools.CustomTaskPane>与 Microsoft Office 应用程序的活动窗口关联。  
+ 使用此方法创建与 Microsoft Office 应用<xref:Microsoft.Office.Tools.CustomTaskPane>程序的活动窗口关联的新。  
   
- 尽管<xref:Microsoft.Office.Tools.CustomTaskPaneCollection>对象是一系列<xref:Microsoft.Office.Tools.CustomTaskPane>对象，<xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%2A>方法接受<xref:System.Windows.Forms.UserControl>对象而不是<xref:Microsoft.Office.Tools.CustomTaskPane>对象。 有关详细信息，请参阅[自定义任务窗格](/visualstudio/vsto/custom-task-panes)。  
+ <xref:Microsoft.Office.Tools.CustomTaskPane> <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%2A> <xref:System.Windows.Forms.UserControl>尽管对象是对象的集合, 但方法接受对象而不<xref:Microsoft.Office.Tools.CustomTaskPane>是对象。 <xref:Microsoft.Office.Tools.CustomTaskPaneCollection> 有关详细信息, 请参阅[自定义任务窗格](/visualstudio/vsto/custom-task-panes)。  
   
- 如果你想要指定特定窗口并将自定义任务窗格与它相关联，请使用<xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%28System.Windows.Forms.UserControl%2CSystem.String%2CSystem.Object%29>方法。  
+ 若要指定特定窗口并将自定义任务窗格与之关联, 请使用<xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%28System.Windows.Forms.UserControl%2CSystem.String%2CSystem.Object%29>方法。  
   
    
   
 ## Examples  
- 下面的代码示例演示如何通过创建自定义任务窗格<xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%28System.Windows.Forms.UserControl%2CSystem.String%29>方法。 此示例还使用的属性<xref:Microsoft.Office.Tools.CustomTaskPane>对象来修改自定义任务窗格的默认外观。 此代码示例是为提供一个更大示例的一部分<xref:Microsoft.Office.Tools.CustomTaskPane>。  
+ 下面的代码示例演示如何使用<xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%28System.Windows.Forms.UserControl%2CSystem.String%29>方法创建自定义任务窗格。 该示例还使用<xref:Microsoft.Office.Tools.CustomTaskPane>对象的属性来修改自定义任务窗格的默认外观。 此代码示例是为提供的<xref:Microsoft.Office.Tools.CustomTaskPane>更大示例的一部分。  
   
  [!code-csharp[Trin_TaskPaneReference#2](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_TaskPaneReference/CS/ThisAddIn.cs#2)]
  [!code-vb[Trin_TaskPaneReference#2](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_TaskPaneReference/VB/ThisAddIn.vb#2)]  
@@ -118,9 +121,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用此方法创建一个新<xref:Microsoft.Office.Tools.CustomTaskPane>与特定的应用程序窗口相关联。 此方法很有用，如果你想要创建具有多个检查器或资源管理器在 Outlook 中，或多个文档在 Word 或 InfoPath 中可见的自定义任务窗格。  
+ 使用此方法创建与特定应用<xref:Microsoft.Office.Tools.CustomTaskPane>程序窗口关联的新。 如果你想要创建自定义任务窗格, 这些任务窗格在 Outlook 中具有多个检查器或资源管理器, 或者在 Word 或 InfoPath 中具有多个文档, 则此方法非常有用。  
   
- 类型`window`参数取决于应用程序。 下表列出了有效的类型的`window`参数。  
+ `window`参数的类型取决于应用程序。 下表列出了`window`参数的有效类型。  
   
 |应用程序|参数类型|  
 |-----------------|--------------------|  
@@ -130,7 +133,7 @@
 |InfoPath|<xref:Microsoft.Office.Interop.InfoPath.WindowObject?displayProperty=fullName>|  
 |Outlook|<xref:Microsoft.Office.Interop.Outlook.Explorer?displayProperty=fullName><br /><br /> 或<br /><br /> <xref:Microsoft.Office.Interop.Outlook.Inspector?displayProperty=fullName>|  
   
- 尽管<xref:Microsoft.Office.Tools.CustomTaskPaneCollection>是一系列<xref:Microsoft.Office.Tools.CustomTaskPane>对象，<xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%2A>方法接受<xref:System.Windows.Forms.UserControl>对象而不是<xref:Microsoft.Office.Tools.CustomTaskPane>对象。 有关详细信息，请参阅[自定义任务窗格](/visualstudio/vsto/custom-task-panes)。  
+ <xref:Microsoft.Office.Tools.CustomTaskPane> <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%2A> <xref:System.Windows.Forms.UserControl>尽管是对象的集合, 但方法接受对象而不<xref:Microsoft.Office.Tools.CustomTaskPane>是对象。 <xref:Microsoft.Office.Tools.CustomTaskPaneCollection> 有关详细信息, 请参阅[自定义任务窗格](/visualstudio/vsto/custom-task-panes)。  
   
  ]]></format>
         </remarks>
@@ -239,9 +242,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果外接程序不再需要自定义任务窗格，可以使用<xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Remove%2A>方法以清理外接程序仍在运行时使用任务窗格中的资源。 使用此方法时<xref:Microsoft.Office.Tools.CustomTaskPane.Dispose%2A>方法指定的<xref:Microsoft.Office.Tools.CustomTaskPane>对象自动调用。  
+ 如果外接程序不再需要自定义任务窗格, 则可以使用<xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Remove%2A>方法清理加载项仍在运行时任务窗格使用的资源。 使用此方法时, <xref:Microsoft.Office.Tools.CustomTaskPane.Dispose%2A>将自动调用指定<xref:Microsoft.Office.Tools.CustomTaskPane>对象的方法。  
   
- [!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]会自动清理外接程序卸载时使用自定义任务窗格的资源。 不要调用<xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Remove%2A>中的方法`ThisAddIn_Shutdown`在项目中的事件处理程序。 此方法将引发<xref:System.ObjectDisposedException>，因为[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]所使用的资源将清理<xref:Microsoft.Office.Tools.CustomTaskPane>对象之前`ThisAddIn_Shutdown`调用。  
+ 卸载[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]外接程序时, 会自动清理自定义任务窗格使用的资源。 不要在项目中<xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Remove%2A>的`ThisAddIn_Shutdown`事件处理程序中调用方法。 <xref:System.ObjectDisposedException>此方法将引发, 因为在[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]调用之前`ThisAddIn_Shutdown`会清除<xref:Microsoft.Office.Tools.CustomTaskPane>对象使用的资源。  
   
  ]]></format>
         </remarks>
@@ -271,9 +274,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果外接程序不再需要自定义任务窗格，可以使用<xref:Microsoft.Office.Tools.CustomTaskPaneCollection.RemoveAt%2A>方法以清理外接程序仍在运行时使用任务窗格中的资源。 使用此方法时<xref:Microsoft.Office.Tools.CustomTaskPane.Dispose%2A>方法指定的<xref:Microsoft.Office.Tools.CustomTaskPane>对象自动调用。  
+ 如果外接程序不再需要自定义任务窗格, 则可以使用<xref:Microsoft.Office.Tools.CustomTaskPaneCollection.RemoveAt%2A>方法清理加载项仍在运行时任务窗格使用的资源。 使用此方法时, <xref:Microsoft.Office.Tools.CustomTaskPane.Dispose%2A>将自动调用指定<xref:Microsoft.Office.Tools.CustomTaskPane>对象的方法。  
   
- [!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]会自动清理外接程序卸载时使用自定义任务窗格的资源。 不要调用<xref:Microsoft.Office.Tools.CustomTaskPaneCollection.RemoveAt%2A>中的方法`ThisAddIn_Shutdown`在项目中的事件处理程序。 此方法将引发<xref:System.ObjectDisposedException>，因为[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]所使用的资源将清理<xref:Microsoft.Office.Tools.CustomTaskPane>对象之前`ThisAddIn_Shutdown`调用。  
+ 卸载[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]外接程序时, 会自动清理自定义任务窗格使用的资源。 不要在项目中<xref:Microsoft.Office.Tools.CustomTaskPaneCollection.RemoveAt%2A>的`ThisAddIn_Shutdown`事件处理程序中调用方法。 <xref:System.ObjectDisposedException>此方法将引发, 因为在[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]调用之前`ThisAddIn_Shutdown`会清除<xref:Microsoft.Office.Tools.CustomTaskPane>对象使用的资源。  
   
  ]]></format>
         </remarks>

@@ -1,5 +1,5 @@
 <Type Name="RibbonButton" FullName="Microsoft.Office.Tools.Ribbon.RibbonButton">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="1657d00126a12da80565de4455d8de8fb90e1347" /><Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="09/19/2018" /><Meta Name="ms.locfileid" Value="46455631" /></Metadata><TypeSignature Language="C#" Value="public interface RibbonButton : IDisposable, Microsoft.Office.Tools.Ribbon.RibbonControl, System.ComponentModel.IComponent" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="66fb3a2307ca39ed6eaa73b3e81dde8eff23f8ca" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69002926" /></Metadata><TypeSignature Language="C#" Value="public interface RibbonButton : IDisposable, Microsoft.Office.Tools.Ribbon.RibbonControl, System.ComponentModel.IComponent" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract RibbonButton implements class Microsoft.Office.Tools.Ribbon.RibbonComponent, class Microsoft.Office.Tools.Ribbon.RibbonControl, class System.ComponentModel.IComponent, class System.IDisposable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Ribbon.RibbonButton" />
   <AssemblyInfo>
@@ -7,6 +7,9 @@
     <AssemblyVersion>10.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Office.Tools.Ribbon.RibbonComponent</InterfaceName>
+    </Interface>
     <Interface>
       <InterfaceName>Microsoft.Office.Tools.Ribbon.RibbonControl</InterfaceName>
     </Interface>
@@ -28,13 +31,13 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- Visual Studio 将创建一个实现类的实例<xref:Microsoft.Office.Tools.Ribbon.RibbonButton>接口时您拖动**按钮**控件从**Office 功能区控件**选项卡**工具箱**拖动到功能区设计器。  
+ 将 "**按钮**" 控件从 "**工具箱**" 的 " <xref:Microsoft.Office.Tools.Ribbon.RibbonButton> **Office 功能区控件**" 选项卡拖动到功能区设计器上时, Visual Studio 将创建实现接口的类的实例。  
   
- 此外可以在运行时创建此控件的实例，并将其添加到动态菜单。 菜单是动态的如果您设置其<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Dynamic%2A>属性设置为`true`。  
+ 你还可以在运行时创建此控件的实例, 并将其添加到动态菜单。 如果将其<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Dynamic%2A>属性设置为, `true`则菜单为动态菜单。  
   
- 可以设置此控件的某些属性，只能在功能区加载到 Office 应用程序之前，或者该控件添加到动态菜单之前。 有关如何设置这些属性的信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
+ 只能在功能区加载到 Office 应用程序之前或在运行时将控件添加到动态菜单之前设置此控件的某些属性。 有关设置这些属性的信息, 请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
   
- 您可以创建<xref:Microsoft.Office.Tools.Ribbon.RibbonButton>在运行时通过使用<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.CreateRibbonButton%2A>方法的<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory>对象。  
+ 您可以通过<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.CreateRibbonButton%2A>使用<xref:Microsoft.Office.Tools.Ribbon.RibbonButton> <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory>对象的方法在运行时创建。  
   
  可通过两种方法来访问 <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory> 对象：  
   
@@ -47,11 +50,11 @@
   
 |任务|成员|  
 |----------|------------|  
-|在运行时，将按钮添加到一个菜单，其中具有其<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Dynamic%2A>属性设置为 true。|创建实现的类的实例<xref:Microsoft.Office.Tools.Ribbon.RibbonButton>使用接口 <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.CreateRibbonButton%2A><br /><br /> 方法的<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory>类。 有关详细信息，请参阅[对 Office 项目中的对象的全局访问](/visualstudio/vsto/global-access-to-objects-in-office-projects)。<br /><br /> 将实例添加到菜单的`Items`集合。|  
-|更改按钮的大小。|设置<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.ControlSize%2A>到所需的值。 例如，对于大型的按钮，将其设置为`Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge`。|  
-|在按钮上显示图像。|有三种方法可显示图像：<br /><br /> -使用<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.Image%2A>属性。 此属性提供的最大控制。<br />-设置<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.OfficeImageId%2A>为你想要显示为按钮的图标的内置 Microsoft Office 映像的 ID。<br />-使用<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.ImageName%2A>属性连同<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>事件。 此属性提供了一些性能优势。|  
-|禁用或隐藏按钮。|若要禁用按钮，设置<xref:Microsoft.Office.Tools.Ribbon.RibbonControl.Enabled%2A>到`false`。<br /><br /> 若要隐藏按钮，设置<xref:Microsoft.Office.Tools.Ribbon.RibbonControl.Visible%2A>到`false`。|  
-|当用户单击按钮时运行代码。|将代码添加到<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.Click>事件处理程序。|  
+|在运行时, 向菜单添加一个按钮, 该<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Dynamic%2A>按钮的属性设置为 true。|使用创建实现<xref:Microsoft.Office.Tools.Ribbon.RibbonButton>接口的类的实例。<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.CreateRibbonButton%2A><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory>类的方法。 有关详细信息, 请参阅[对 Office 项目中对象的全局访问](/visualstudio/vsto/global-access-to-objects-in-office-projects)。<br /><br /> 将实例添加到菜单的`Items`集合中。|  
+|更改按钮的大小。|设置<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.ControlSize%2A>为所需的值。 例如, 对于大按钮, 将其设置为`Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge`。|  
+|在按钮上显示图像。|可以通过三种方式显示图像:<br /><br /> -使用<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.Image%2A>属性。 此属性可提供最大程度的控制。<br />-设置<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.OfficeImageId%2A>为要显示为按钮图标的内置 Microsoft Office 映像的 ID。<br />-将<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.ImageName%2A>属性<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>与事件一起使用。 此属性提供了一些性能优势。|  
+|禁用或隐藏按钮。|若要禁用按钮, 请<xref:Microsoft.Office.Tools.Ribbon.RibbonControl.Enabled%2A>将`false`设置为。<br /><br /> 若要隐藏按钮, 请<xref:Microsoft.Office.Tools.Ribbon.RibbonControl.Visible%2A>将`false`设置为。|  
+|用户单击按钮时运行代码。|将代码添加到<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.Click>事件处理程序。|  
   
  [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
   
@@ -61,17 +64,17 @@
    
   
 ## Examples  
- 下面的示例创建一个新按钮，设置各种属性的按钮，然后将按钮添加到菜单。 若要运行此代码示例，必须首先执行以下步骤：  
+ 下面的示例创建一个新按钮, 设置该按钮的各种属性, 然后将该按钮添加到菜单中。 若要运行此代码示例, 必须首先执行以下步骤:  
   
-1.  添加**功能区 （可视化设计器）** 项通过使用 Visual Studio 中的 Office 开发工具创建的项目。  
+1.  向使用 Visual Studio 中的 Office 开发工具创建的项目添加 "**功能区 (可视化设计器)** " 项。  
   
 2.  将组添加到自定义选项卡。  
   
-3.  向组添加一个菜单。  
+3.  将菜单添加到组。  
   
-4.  设置**动态**属性的 menu 的`true`。  
+4.  将菜单的**动态**属性设置为`true`。  
   
-5.  设置**ItemSize**属性的到菜单上**RibbonControlSizeLarge**。  
+5.  将菜单的**ItemSize**属性设置为**RibbonControlSizeLarge**。  
   
  [!code-csharp[Trin_Ribbon_ObjectModel#9](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_Ribbon_ObjectModel/CS/Ribbon1.cs#9)]
  [!code-vb[Trin_Ribbon_ObjectModel#9](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_Ribbon_ObjectModel/VB/Ribbon1.vb#9)]  
@@ -81,7 +84,7 @@
   </Docs>
   <Members>
     <Member MemberName="Click">
-      <MemberSignature Language="C#" Value="public event Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler Click;" />
+      <MemberSignature Language="C#" Value="event Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler Click;" />
       <MemberSignature Language="ILAsm" Value=".event class Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler Click" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.Ribbon.RibbonButton.Click" />
       <MemberType>Event</MemberType>
@@ -111,23 +114,23 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置按钮的大小。</summary>
-        <value>一个<c>Microsoft.Office.Core.RibbonControlSize</c> ，表示按钮大小。</value>
+        <value>一个<c>RibbonControlSize</c> , 它表示按钮的大小。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果该按钮菜单的一部分，则此属性无效。 始终显示一个按钮是一个菜单的一部分，如同其<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ControlSize%2A>属性设置为父菜单的值<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ItemSize%2A>属性。 若要使按钮显示得更大菜单上，设置<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ItemSize%2A>的属性<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu>到`Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge`。  
+ 如果按钮是菜单的一部分, 则此属性不起作用。 作为菜单的一部分的按钮始终显示为, 因为其<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ControlSize%2A>属性已设置为父菜单的<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ItemSize%2A>属性的值。 若要使按钮在菜单上显示得更大<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ItemSize%2A> , 请将<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu>的`Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge`属性设置为。  
   
    
   
 ## Examples  
- 以下示例将显示得更大的按钮。 若要运行此代码示例，必须首先执行以下步骤：  
+ 下面的示例使按钮显示得更大。 若要运行此代码示例, 必须首先执行以下步骤:  
   
-1.  添加**功能区 （可视化设计器）** 项通过使用 Visual Studio 中的 Office 开发工具创建的项目。  
+1.  向使用 Visual Studio 中的 Office 开发工具创建的项目添加 "**功能区 (可视化设计器)** " 项。  
   
 2.  将组添加到自定义选项卡。  
   
-3.  向组添加一个按钮。  
+3.  向组中添加一个按钮。  
   
  [!code-csharp[Trin_Ribbon_ObjectModel#4](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_Ribbon_ObjectModel/CS/Ribbon1.cs#4)]
  [!code-vb[Trin_Ribbon_ObjectModel#4](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_Ribbon_ObjectModel/VB/Ribbon1.vb#4)]  
@@ -150,7 +153,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置在将菜单的 <see cref="P:Microsoft.Office.Tools.Ribbon.RibbonMenu.ItemSize" /> 属性设置为 <c>Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge</c> 时菜单中此按钮上显示的文本。</summary>
-        <value>如果此控件嵌套在另一个菜单或拆分按钮，显示的说明和<see cref="P:Microsoft.Office.Tools.Ribbon.RibbonMenu.ItemSize" />属性的父菜单或<see cref="P:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.ItemSize" />拆分按钮的属性设置为<c>Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge</c>。  
+        <value>当此控件嵌套在另一个菜单或拆分按钮中, 并且<see cref="P:Microsoft.Office.Tools.Ribbon.RibbonMenu.ItemSize" />父菜单的属性<see cref="P:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.ItemSize" />或拆分按钮的属性设置为<c>时, 将显示说明。RibbonControlSize. RibbonControlSizeLarge</c>。  
   
 可以在运行时更改此属性。</value>
         <remarks>To be added.</remarks>
@@ -175,26 +178,26 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 建议的图像格式是 PNG，因为 PNG 格式的图像支持通过其 alpha 通道的透明度。  
+ 建议的图像格式为 PNG, 因为 PNG 格式的图像通过其 alpha 通道支持透明度。  
   
- <xref:Microsoft.Office.Tools.Ribbon.RibbonButton.Image%2A>属性标识控件显示的图像。 在设计时或在运行时，可以设置此属性。 如果在运行时中更新此属性，该控件的外观被更新以反映更改。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonButton.Image%2A>属性标识控件显示的图像。 此属性可在设计时或运行时设置。 如果在运行时更新此属性, 控件的外观将更新以反映更改。  
   
- 如果<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.Image%2A>设置属性，则<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.OfficeImageId%2A>和<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.ImageName%2A>属性将被忽略。 尽管<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.Image%2A>属性可让您更好地控制比其他两个属性，这一点可以是速度较慢，因为每次更新控件时，图像对象发送到 Office 应用程序。  
+ 如果设置了<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.OfficeImageId%2A> <xref:Microsoft.Office.Tools.Ribbon.RibbonButton.ImageName%2A>属性, 则将忽略和属性。 <xref:Microsoft.Office.Tools.Ribbon.RibbonButton.Image%2A> <xref:Microsoft.Office.Tools.Ribbon.RibbonButton.Image%2A>尽管属性比其他两个属性提供的控件更多, 但它可能会变慢, 因为每次更新控件时, 都会将 image 对象发送到 Office 应用程序。  
   
- <xref:Microsoft.Office.Tools.Ribbon.RibbonButton.ShowImage%2A>属性必须为`true`控件来显示图像。 当您将设置<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.Image%2A>属性在设计时，Visual Studio 将自动设置<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.ShowImage%2A>属性设置为`true`。 如果您设置<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.Image%2A>在运行时属性，则你必须设置<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.ShowImage%2A>属性设置为`true`在代码中。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonButton.ShowImage%2A> 属性`true`必须为, 控件才能显示图像。 在设计时设置<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.Image%2A>属性时, Visual Studio 会将<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.ShowImage%2A>属性自动设置为`true`。 如果在运行时<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.Image%2A>设置属性, 必须在代码中<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.ShowImage%2A>将属性设置为`true` 。  
   
    
   
 ## Examples  
- 下面的示例设置<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.Image%2A>的两个按钮的属性。 若要运行此代码示例，必须首先执行以下步骤：  
+ 下面的示例设置<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.Image%2A>两个按钮的属性。 若要运行此代码示例, 必须首先执行以下步骤:  
   
-1.  添加**功能区 （可视化设计器）** 项通过使用 Visual Studio 中的 Office 开发工具创建的项目。  
+1.  向使用 Visual Studio 中的 Office 开发工具创建的项目添加 "**功能区 (可视化设计器)** " 项。  
   
 2.  将组添加到自定义选项卡。  
   
 3.  将两个按钮添加到组。  
   
-4.  将两个映像添加到项目资源。  
+4.  将两个图像添加到项目资源。  
   
  [!code-csharp[Trin_Ribbon_ObjectModel#5](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_Ribbon_ObjectModel/CS/Ribbon1.cs#5)]
  [!code-vb[Trin_Ribbon_ObjectModel#5](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_Ribbon_ObjectModel/VB/Ribbon1.vb#5)]  
@@ -222,34 +225,34 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 可以在运行时仅在某些情况下设置此属性。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
+ 仅在某些情况下, 才能在运行时设置此属性。 有关详细信息, 请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
   
- 有关设置此属性的信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
+ 有关设置此属性的信息, 请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
   
- <xref:Microsoft.Office.Tools.Ribbon.RibbonButton.ImageName%2A>属性标识控件显示的图像。 Office 应用程序此映像从你的解决方案只检索一次，以提高性能。 此属性可以设置只能在设计时，因为它标识的图像加载过程<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>事件。 <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage> 时将引发一次每个映像名称显示在功能区。 之后，不能使用此属性更改控件图像。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonButton.ImageName%2A>属性标识控件显示的图像。 Office 应用程序仅从解决方案中检索一次此映像, 以提高性能。 只能在设计时设置此属性, 因为该属性标识的图像将在<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>事件中加载。 <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>当显示功能区时, 每个映像名称只引发一次。 之后, 不能使用此属性更改控制图像。  
   
- 若要加载图像，将代码添加到<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>事件处理程序。 检查<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs.ImageName%2A>的属性<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs>并设置<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs.Image%2A>属性的<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs>到想要加载的图像的对象。  
+ 若要加载图像, 请将代码添加<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>到事件处理程序。 <xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs.Image%2A>检查的<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs>属性,并<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs>将对象的属性设置为要加载的图像。 <xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs.ImageName%2A>  
   
- 如果忽略此属性<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.Image%2A>属性或<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.OfficeImageId%2A>属性设置。 标识的图像<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.ImageName%2A>属性可以稍快于标识的图像加载<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.Image%2A>显示属性，因为 Office 应用程序中检索映像解决方案仅在首次从功能区。  
+ 如果设置了<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.Image%2A>属性<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.OfficeImageId%2A>或属性, 则忽略此属性。 与<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.Image%2A>属性标识的<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.ImageName%2A>图像相比, 属性所标识的映像的加载速度要快得多, 因为 Office 应用程序只会在首次显示功能区时从你的解决方案中检索该图像。  
   
- <xref:Microsoft.Office.Tools.Ribbon.RibbonButton.ShowImage%2A>属性必须为`true`控件来显示图像。 当您将设置<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.ImageName%2A>属性在设计时，Visual Studio 将自动设置<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.ShowImage%2A>属性设置为`true`。 如果您设置<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.ImageName%2A>在运行时属性，则你必须设置<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.ShowImage%2A>属性设置为`true`在代码中。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonButton.ShowImage%2A> 属性`true`必须为, 控件才能显示图像。 在设计时设置<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.ImageName%2A>属性时, Visual Studio 会将<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.ShowImage%2A>属性自动设置为`true`。 如果在运行时<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.ImageName%2A>设置属性, 必须在代码中<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.ShowImage%2A>将属性设置为`true` 。  
   
    
   
 ## Examples  
- 下面的示例将缓存两个按钮的的图像。  
+ 下面的示例为两个按钮缓存图像。  
   
- 若要运行此代码示例，必须首先执行以下步骤：  
+ 若要运行此代码示例, 必须首先执行以下步骤:  
   
-1.  添加**功能区 （可视化设计器）** 项通过使用 Visual Studio 中的 Office 开发工具创建的项目。  
+1.  向使用 Visual Studio 中的 Office 开发工具创建的项目添加 "**功能区 (可视化设计器)** " 项。  
   
 2.  将组添加到自定义选项卡。  
   
 3.  将两个按钮添加到组。  
   
-4.  将两个映像添加到项目资源。 有关详细信息，请参阅[如何： 添加或删除资源](http://msdn.microsoft.com/en-us/7b77bc06-3952-4799-b029-def3f8f7f88d)。  
+4.  将两个图像添加到项目资源。 有关详细信息，请参阅[如何：添加或删除资源](http://msdn.microsoft.com/en-us/7b77bc06-3952-4799-b029-def3f8f7f88d)。  
   
- 然后可以在生成的功能区类中运行此代码。  
+ 然后, 你可以在生成的功能区类中运行此代码。  
   
  [!code-csharp[Trin_Ribbon_ObjectModel#6](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_Ribbon_ObjectModel/CS/Ribbon1.cs#6)]
  [!code-vb[Trin_Ribbon_ObjectModel#6](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_Ribbon_ObjectModel/VB/Ribbon1.vb#6)]  
@@ -277,24 +280,24 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- Keytip 必须介于 1 到 3 个大写字符，不能包含空格、 制表符或换行字符。  
+ KeyTip 必须为1到3个大写字符, 不能包含空格、制表符或换行符。  
   
- Keytip 有时也称为访问密钥或加速器和用作激活控件的快捷组合键。 按下 ALT 键时，键提示将显示在功能区上。 如果内置控件或从其他加载项，你的快捷键提示与键提示冲突，Microsoft Office 可能会自动分配非冲突快捷键提示值。  
+ Keytip 有时称为 "访问键" 或 "加速器", 用作激活控件的快捷键组合。 按 ALT 键时, 功能区上将显示键提示。 如果 KeyTip 与内置控件或其他外接程序的 keytip 发生冲突, Microsoft Office 可能会自动分配不冲突的 KeyTip 值。  
   
- 有关详细信息，请参阅[使用键盘处理功能区程序](http://go.microsoft.com/fwlink/?LinkId=93523)。  
+ 有关详细信息, 请参阅[使用键盘处理功能区程序](http://go.microsoft.com/fwlink/?LinkId=93523)。  
   
    
   
 ## Examples  
- 下面的示例将 KeyTip 分配给一个按钮和复选框。  
+ 下面的示例将 KeyTip 分配给按钮和复选框。  
   
- 若要运行此代码示例，必须首先执行以下步骤：  
+ 若要运行此代码示例, 必须首先执行以下步骤:  
   
-1.  添加**功能区 （可视化设计器）** 项通过使用 Visual Studio 中的 Office 开发工具创建的项目。  
+1.  向使用 Visual Studio 中的 Office 开发工具创建的项目添加 "**功能区 (可视化设计器)** " 项。  
   
 2.  将组添加到自定义选项卡。  
   
-3.  向组添加一个按钮和复选框。  
+3.  向组添加一个按钮和一个复选框。  
   
  [!code-csharp[Trin_Ribbon_ObjectModel#7](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_Ribbon_ObjectModel/CS/Ribbon1.cs#7)]
  [!code-vb[Trin_Ribbon_ObjectModel#7](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_Ribbon_ObjectModel/VB/Ribbon1.vb#7)]  
@@ -322,7 +325,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要隐藏标签，设置<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.ShowLabel%2A>到`false`。  
+ 若要隐藏标签, 请<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.ShowLabel%2A>将`false`设置为。  
   
  ]]></format>
         </remarks>
@@ -347,28 +350,28 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Ribbon.RibbonButton.OfficeImageId%2A>属性标识的控件显示 Office 图标。 属性值是一个字符串，标识`imageMso`所选图标的值。 在设计时或在运行时，可以设置此属性。 如果在运行时中更新此属性，该控件的外观被更新以反映更改。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonButton.OfficeImageId%2A>属性标识控件显示的 Office 图标。 属性值是标识`imageMso`所选图标的值的字符串。 此属性可在设计时或运行时设置。 如果在运行时更新此属性, 控件的外观将更新以反映更改。  
   
- 有关一系列`imageMso`值，请参阅 Microsoft 下载中心页[Office 2010 外接程序： 图标库](http://go.microsoft.com/fwlink/?LinkID=220760)。  
+ 有关`imageMso`值的列表, 请参阅 Microsoft 下载中心页面[Office 2010 外接程序:图标库](http://go.microsoft.com/fwlink/?LinkID=220760)。  
   
- 如果忽略此属性<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.Image%2A>属性设置。 标识的图像<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.OfficeImageId%2A>属性可以稍快于标识的图像加载<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.Image%2A>属性，因为这些图像缓存在 Office 应用程序。  
+ 如果设置了<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.Image%2A>属性, 则忽略此属性。 由于图像缓存在<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.OfficeImageId%2A> Office 应用程序中, 因此可以比<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.Image%2A>属性标识的图像稍快地加载属性标识的图像。  
   
- <xref:Microsoft.Office.Tools.Ribbon.RibbonButton.ShowImage%2A>属性必须为`true`控件来显示图像。 当您将设置<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.OfficeImageId%2A>属性在设计时，Visual Studio 将自动设置<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.ShowImage%2A>属性设置为`true`。 如果您设置<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.OfficeImageId%2A>在运行时属性，则你必须设置<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.ShowImage%2A>属性设置为`true`在代码中。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonButton.ShowImage%2A> 属性`true`必须为, 控件才能显示图像。 在设计时设置<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.OfficeImageId%2A>属性时, Visual Studio 会将<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.ShowImage%2A>属性自动设置为`true`。 如果在运行时<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.OfficeImageId%2A>设置属性, 必须在代码中<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.ShowImage%2A>将属性设置为`true` 。  
   
    
   
 ## Examples  
- 下面的示例将 Microsoft Office 图标的按钮。  
+ 下面的示例为按钮指定 Microsoft Office 图标。  
   
- 若要运行此代码示例，必须首先执行以下步骤：  
+ 若要运行此代码示例, 必须首先执行以下步骤:  
   
-1.  添加**功能区 （可视化设计器）** 项通过使用 Visual Studio 中的 Office 开发工具创建的项目。  
+1.  向使用 Visual Studio 中的 Office 开发工具创建的项目添加 "**功能区 (可视化设计器)** " 项。  
   
 2.  将组添加到自定义选项卡。  
   
-3.  向组添加一个按钮。  
+3.  向组中添加一个按钮。  
   
-4.  设置 **（名称）** 到按钮的属性`mySaveButton`。  
+4.  将按钮的 " **(Name)** " 属性设置`mySaveButton`为。  
   
  [!code-csharp[Trin_Ribbon_ControlProperties#1](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_Ribbon_ControlProperties/CS/Ribbon1.cs#1)]
  [!code-vb[Trin_Ribbon_ControlProperties#1](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_Ribbon_ControlProperties/VB/Ribbon1.vb#1)]  
@@ -396,9 +399,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 可以在运行时仅在某些情况下设置此属性。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
+ 仅在某些情况下, 才能在运行时设置此属性。 有关详细信息, 请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
   
- <xref:Microsoft.Office.Tools.Ribbon.RibbonButton.Position%2A>属性时该按钮放置在功能区组中没有任何作用。 有关详细信息，请参阅[如何： 将控件添加到 Backstage 视图](/visualstudio/vsto/how-to-add-controls-to-the-backstage-view)。  
+ 将<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.Position%2A>按钮放入功能区上的组中时, 属性不起作用。 有关详细信息，请参阅[如何：向 Backstage 视图](/visualstudio/vsto/how-to-add-controls-to-the-backstage-view)添加控件。  
   
  ]]></format>
         </remarks>
@@ -423,9 +426,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 屏幕提示值必须是长度小于 1024年个字符。  
+ 屏幕提示值的长度必须小于1024个字符。  
   
- 当<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.SuperTip%2A>设置属性，则<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.ScreenTip%2A>值将显示的标题为<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.SuperTip%2A>。  
+ 设置属性时<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.ScreenTip%2A> , 值显示<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.SuperTip%2A>为的标题。 <xref:Microsoft.Office.Tools.Ribbon.RibbonButton.SuperTip%2A>  
   
  ]]></format>
         </remarks>
@@ -450,13 +453,13 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性自动设置为`true`如果您设置<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.Image%2A>， <xref:Microsoft.Office.Tools.Ribbon.RibbonButton.ImageName%2A>，或<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.OfficeImageId%2A>在功能区设计器中的属性。 可以将其设置为`false`以与要隐藏此控件关联的图像。  
+ 如果在功能区设计器`true`中<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.Image%2A>设置、或<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.OfficeImageId%2A>属性<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.ImageName%2A>, 则此属性将自动设置为。 您可以将其设置`false`为, 以使与此控件关联的图像处于隐藏状态。  
   
- 设置<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.Image%2A>， <xref:Microsoft.Office.Tools.Ribbon.RibbonButton.ImageName%2A>，或<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.OfficeImageId%2A>在运行时属性的值不更改<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.ShowImage%2A>属性。  
+ 在运行<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.OfficeImageId%2A> <xref:Microsoft.Office.Tools.Ribbon.RibbonButton.ImageName%2A> <xref:Microsoft.Office.Tools.Ribbon.RibbonButton.Image%2A>时设置、或属性不会更改<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.ShowImage%2A>属性的值。  
   
- 此属性不起作用的实例，此按钮上快速访问工具栏显示。  
+ 此属性对快速访问工具栏上显示的此按钮的实例无效。  
   
- 如果<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.ControlSize%2A>属性设置为`Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge`，按钮的行为如同<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.ShowImage%2A>始终`true`。  
+ 如果将`Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge` <xref:Microsoft.Office.Tools.Ribbon.RibbonButton.ShowImage%2A>属性设置为, 则按钮的行为方式如下: 始终`true`为。 <xref:Microsoft.Office.Tools.Ribbon.RibbonButton.ControlSize%2A>  
   
  ]]></format>
         </remarks>
@@ -481,7 +484,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.ControlSize%2A>属性设置为`Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge`，按钮的行为如同<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.ShowLabel%2A>始终`true`。  
+ 如果将`Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge` <xref:Microsoft.Office.Tools.Ribbon.RibbonButton.ShowLabel%2A>属性设置为, 则按钮的行为方式如下: 始终`true`为。 <xref:Microsoft.Office.Tools.Ribbon.RibbonButton.ControlSize%2A>  
   
  ]]></format>
         </remarks>
@@ -506,9 +509,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 字符串必须是长度小于 1024年个字符。  
+ 字符串的长度必须小于1024个字符。  
   
- <xref:Microsoft.Office.Tools.Ribbon.RibbonButton.SuperTip%2A>下显示<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.ScreenTip%2A>文本。 与不同<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.ScreenTip%2A>，则<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.SuperTip%2A>启用换行符的字符串中。  
+ 显示<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.SuperTip%2A>在 " <xref:Microsoft.Office.Tools.Ribbon.RibbonButton.ScreenTip%2A>文本" 下。 与不同<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.ScreenTip%2A>的是<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.SuperTip%2A> , 会在字符串中启用分行符。  
   
  ]]></format>
         </remarks>

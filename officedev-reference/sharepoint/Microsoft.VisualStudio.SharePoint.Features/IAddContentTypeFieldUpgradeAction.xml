@@ -1,5 +1,5 @@
 <Type Name="IAddContentTypeFieldUpgradeAction" FullName="Microsoft.VisualStudio.SharePoint.Features.IAddContentTypeFieldUpgradeAction">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="e2b9641a9d5d848cfa60f746d3fa3b0cfb17687e" /><Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="02/21/2018" /><Meta Name="ms.locfileid" Value="29407595" /></Metadata><TypeSignature Language="C#" Value="public interface IAddContentTypeFieldUpgradeAction : Microsoft.VisualStudio.SharePoint.Features.IDiscreteUpgradeAction" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="5409a4476559d255c9e1fd8e06a6ddf8590ba682" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69011316" /></Metadata><TypeSignature Language="C#" Value="public interface IAddContentTypeFieldUpgradeAction : Microsoft.VisualStudio.SharePoint.Features.IDiscreteUpgradeAction" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IAddContentTypeFieldUpgradeAction implements class Microsoft.VisualStudio.SharePoint.Features.IDiscreteUpgradeAction, class Microsoft.VisualStudio.SharePoint.Features.IUpgradeAction, class Microsoft.VisualStudio.SharePoint.IObservableModelElement" />
   <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.SharePoint.Features.IAddContentTypeFieldUpgradeAction" />
   <AssemblyInfo>
@@ -9,6 +9,12 @@
   <Interfaces>
     <Interface>
       <InterfaceName>Microsoft.VisualStudio.SharePoint.Features.IDiscreteUpgradeAction</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>Microsoft.VisualStudio.SharePoint.Features.IUpgradeAction</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>Microsoft.VisualStudio.SharePoint.IObservableModelElement</InterfaceName>
     </Interface>
   </Interfaces>
   <Docs>
@@ -30,7 +36,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置受升级操作影响的内容类型的 ID。</summary>
-        <value>表示的内容类型的 GUID。</value>
+        <value>表示内容类型的 GUID。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -48,7 +54,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置列模板 ID。</summary>
-        <value>GUID 表示模板 id。</value>
+        <value>表示模板 ID 的 GUID。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -66,7 +72,7 @@
       </ReturnValue>
       <Docs>
         <summary>了解或设置是否将指定的已修改内容类型传播到其子内容类型和列表中。</summary>
-        <value>一个布尔值，表示是否传播的内容类型。</value>
+        <value>表示是否传播内容类型的布尔值。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

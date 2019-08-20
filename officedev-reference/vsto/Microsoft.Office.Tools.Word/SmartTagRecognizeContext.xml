@@ -1,5 +1,5 @@
 <Type Name="SmartTagRecognizeContext" FullName="Microsoft.Office.Tools.Word.SmartTagRecognizeContext">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="f3d564d19728d95dfcf5521ab0222d3b60224f26" /><Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="02/21/2018" /><Meta Name="ms.locfileid" Value="29432061" /></Metadata><TypeSignature Language="C#" Value="public interface SmartTagRecognizeContext" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="02b0b761da67a52d1a72be71f6db747aaf3bde17" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="68999727" /></Metadata><TypeSignature Language="C#" Value="public interface SmartTagRecognizeContext" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract SmartTagRecognizeContext" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Word.SmartTagRecognizeContext" />
   <AssemblyInfo>
@@ -18,10 +18,10 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 当实现<xref:Microsoft.Office.Tools.Word.ISmartTagExtension.Recognize%2A>方法用来定义自定义的智能标记识别器`context`参数是<xref:Microsoft.Office.Tools.Word.SmartTagRecognizeContext>对象。 使用<xref:Microsoft.Office.Tools.Word.SmartTagRecognizeContext.ParagraphText%2A>获取文本的段落中发送到识别器，并使用该对象的属性<xref:Microsoft.Office.Tools.Word.SmartTagRecognizeContext.PersistTag%2A>的此对象以指示已找到的智能标记的方法。  
+ 实现<xref:Microsoft.Office.Tools.Word.ISmartTagExtension.Recognize%2A>方法以定义自定义智能标记识别器时`context` , 参数是一个<xref:Microsoft.Office.Tools.Word.SmartTagRecognizeContext>对象。 使用此<xref:Microsoft.Office.Tools.Word.SmartTagRecognizeContext.ParagraphText%2A>对象的属性可获取发送到识别器的段落中的文本, 并<xref:Microsoft.Office.Tools.Word.SmartTagRecognizeContext.PersistTag%2A>使用此对象的方法来指示找到了智能标记。  
   
 ## <a name="usage"></a>用法  
- 此类型旨在用于 Word 2007 仅在项目中。 Word 2010 中已弃用智能标记。  
+ 此类型仅用于 Word 2007 的项目。 Word 2010 中已弃用智能标记。  
   
  ]]></format>
     </remarks>
@@ -41,7 +41,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取发送给 <see cref="M:Microsoft.Office.Tools.Word.ISmartTagExtension.Recognize(System.String,Microsoft.Office.Interop.SmartTag.ISmartTagRecognizerSite,Microsoft.Office.Interop.SmartTag.ISmartTagTokenList,Microsoft.Office.Tools.Word.SmartTagRecognizeContext)" /> 方法的段落中的文本。 [!INCLUDE[vsto_smart_tags](~/includes/vsto-smart-tags-md.md)]。</summary>
-        <value>发送到的段落中的文本<see cref="M:Microsoft.Office.Tools.Word.ISmartTagExtension.Recognize(System.String,Microsoft.Office.Interop.SmartTag.ISmartTagRecognizerSite,Microsoft.Office.Interop.SmartTag.ISmartTagTokenList,Microsoft.Office.Tools.Word.SmartTagRecognizeContext)" />方法。</value>
+        <value>发送给<see cref="M:Microsoft.Office.Tools.Word.ISmartTagExtension.Recognize(System.String,Microsoft.Office.Interop.SmartTag.ISmartTagRecognizerSite,Microsoft.Office.Interop.SmartTag.ISmartTagTokenList,Microsoft.Office.Tools.Word.SmartTagRecognizeContext)" />方法的段落中的文本。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -71,19 +71,18 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 调用<xref:Microsoft.Office.Tools.Word.SmartTagRecognizeContext.PersistTag%2A>的实现从<xref:Microsoft.Office.Tools.Word.ISmartTagExtension.Recognize%2A>方法，以指示的智能标记文本中找到。 使用`propertyBag`参数来提交的智能标记的任何自定义属性。 这些属性可用于自定义时选择从智能标记快捷菜单项执行的操作。  
+ 从<xref:Microsoft.Office.Tools.Word.SmartTagRecognizeContext.PersistTag%2A> <xref:Microsoft.Office.Tools.Word.ISmartTagExtension.Recognize%2A>方法的实现调用以指示在文本中找到智能标记。 `propertyBag`使用参数可提交智能标记的任何自定义属性。 您可以使用这些属性自定义从智能标记快捷菜单中选择项时执行的操作。  
   
    
   
 ## Examples  
- 下面的代码示例演示如何调用<xref:Microsoft.Office.Tools.Word.SmartTagRecognizeContext.PersistTag%2A>的实现从<xref:Microsoft.Office.Tools.Word.ISmartTagExtension.Recognize%2A>方法。 此实现将每个智能标记术语与段落的内容进行比较。 对于每个段落中的智能标记术语，代码将添加一个自定义的智能标记属性，然后使用<xref:Microsoft.Office.Tools.Word.SmartTagRecognizeContext.PersistTag%2A>方法以识别的智能标记。 此示例假定你已添加到的引用**Microsoft.Office.Interop.SmartTag**从 **.NET**选项卡**添加引用**对话框。 此代码示例摘自更大的示例为提供<xref:Microsoft.Office.Tools.Word.ISmartTagExtension>接口。  
+ 下面的代码示例演示如何从<xref:Microsoft.Office.Tools.Word.SmartTagRecognizeContext.PersistTag%2A> <xref:Microsoft.Office.Tools.Word.ISmartTagExtension.Recognize%2A>方法的实现调用。 此实现将每个智能标记字词与段落内容进行比较。 对于段落中的每个智能标记术语, 代码将添加一个自定义智能标记属性, 然后<xref:Microsoft.Office.Tools.Word.SmartTagRecognizeContext.PersistTag%2A>使用方法来识别智能标记。 此示例假设已在 "**添加引用**" 对话框的 " **.net** " 选项卡中添加对**智能标记**的引用。 此代码示例是为<xref:Microsoft.Office.Tools.Word.ISmartTagExtension>接口提供的更大示例的一部分。  
   
 <!-- TODO: review snippet reference  [!CODE [Trin_WordDerivedSmartTags4#2](Trin_WordDerivedSmartTags4#2)]  -->  
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.InvalidOperationException">
-          未使用 <see cref="M:Microsoft.Office.Tools.Word.ISmartTagExtension.Recognize(System.String,Microsoft.Office.Interop.SmartTag.ISmartTagRecognizerSite,Microsoft.Office.Interop.SmartTag.ISmartTagTokenList,Microsoft.Office.Tools.Word.SmartTagRecognizeContext)" /> 方法调用 <see cref="M:Microsoft.Office.Tools.Word.SmartTagRecognizeContext.PersistTag(System.Int32,System.Int32,Microsoft.Office.Interop.SmartTag.ISmartTagProperties)" />。</exception>
+        <exception cref="T:System.InvalidOperationException">未使用 <see cref="M:Microsoft.Office.Tools.Word.ISmartTagExtension.Recognize(System.String,Microsoft.Office.Interop.SmartTag.ISmartTagRecognizerSite,Microsoft.Office.Interop.SmartTag.ISmartTagTokenList,Microsoft.Office.Tools.Word.SmartTagRecognizeContext)" /> 方法调用 <see cref="M:Microsoft.Office.Tools.Word.SmartTagRecognizeContext.PersistTag(System.Int32,System.Int32,Microsoft.Office.Interop.SmartTag.ISmartTagProperties)" />。</exception>
       </Docs>
     </Member>
   </Members>

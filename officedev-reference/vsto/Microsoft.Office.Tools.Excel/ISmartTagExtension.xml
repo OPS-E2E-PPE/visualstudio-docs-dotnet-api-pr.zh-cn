@@ -1,5 +1,5 @@
 <Type Name="ISmartTagExtension" FullName="Microsoft.Office.Tools.Excel.ISmartTagExtension">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="dfd079a6b99032f3895369eba5e96b075ef18e5c" /><Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="02/21/2018" /><Meta Name="ms.locfileid" Value="29430020" /></Metadata><TypeSignature Language="C#" Value="public interface ISmartTagExtension : Microsoft.Office.Tools.IExtension" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="c54a621860aa0b1c187e61beeb8d32e56b11ff2f" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69004836" /></Metadata><TypeSignature Language="C#" Value="public interface ISmartTagExtension : Microsoft.Office.Tools.IExtension" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISmartTagExtension implements class Microsoft.Office.Tools.IExtension" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Excel.ISmartTagExtension" />
   <AssemblyInfo>
@@ -22,15 +22,15 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 实现<xref:Microsoft.Office.Tools.Excel.ISmartTagExtension>接口如果你想要控制 Excel 如何识别在工作表中的智能标记。  
+ 如果要控制 Excel 如何识别工作表中的智能标记, 请实现接口。<xref:Microsoft.Office.Tools.Excel.ISmartTagExtension>  
   
 ## <a name="usage"></a>用法  
- 此类型旨在用于 Excel 2007 仅在项目中。 Excel 2010 中已弃用智能标记。  
+ 此类型仅适用于 Excel 2007 的项目。 智能标记在 Excel 2010 中已弃用。  
   
    
   
 ## Examples  
- 下面的代码示例演示如何实现<xref:Microsoft.Office.Tools.Excel.ISmartTagExtension>创建你自己的智能标记识别器。 该示例实现<xref:Microsoft.Office.Tools.Excel.ISmartTagExtension.Recognize%2A>方法以识别每个智能标记术语找到在单元格中。 此示例假定你已添加到的引用**Microsoft.Office.Interop.SmartTag**从 **.NET**选项卡**添加引用**对话框。  
+ 下面的代码示例演示如何实现<xref:Microsoft.Office.Tools.Excel.ISmartTagExtension>来创建自己的智能标记识别器。 该示例实现了<xref:Microsoft.Office.Tools.Excel.ISmartTagExtension.Recognize%2A>方法来识别单元中找到的每个智能标记术语。 此示例假设已在 "**添加引用**" 对话框的 " **.net** " 选项卡中添加对**智能标记**的引用。  
   
  [!code-csharp[Trin_ExcelDerivedSmartTags#1](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelDerivedSmartTags/CS/CustomSmartTag.cs#1)]
  [!code-vb[Trin_ExcelDerivedSmartTags#1](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelDerivedSmartTags/VB/CustomSmartTag.vb#1)]  
@@ -67,7 +67,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 调用此方法[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]要识别出的词汇搜索文本。 如果你想要合并你自己的搜索算法来运行此外到标准识别器，则实现此方法。  
+ 此方法由调用, 以便[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]在文本中搜索识别的字词。 如果要合并自己的搜索算法以便除了标准识别器外运行, 请实现此方法。  
   
  若要查看示例代码，请参见本主题的 Microsoft Visual Studio 2008/.NET Framework 3.5 版。  
   

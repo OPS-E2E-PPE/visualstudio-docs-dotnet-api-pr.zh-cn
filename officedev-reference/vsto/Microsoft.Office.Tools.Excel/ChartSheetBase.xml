@@ -1,5 +1,5 @@
 <Type Name="ChartSheetBase" FullName="Microsoft.Office.Tools.Excel.ChartSheetBase">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="617b3e84049e6e534d646afb6f4ab13383cf62e2" /><Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="09/19/2018" /><Meta Name="ms.locfileid" Value="46459843" /></Metadata><TypeSignature Language="C#" Value="public abstract class ChartSheetBase : IDisposable, Microsoft.Office.Tools.Excel.IChartSheetExtension, System.ComponentModel.IComponent, System.ComponentModel.ISupportInitialize, System.Windows.Forms.IBindableComponent" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="3cdb7d5d08fb58ff9a48b829f9c7e632ce503538" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69005116" /></Metadata><TypeSignature Language="C#" Value="public abstract class ChartSheetBase : IDisposable, Microsoft.Office.Tools.Excel.IChartSheetExtension, System.ComponentModel.IComponent, System.ComponentModel.ISupportInitialize, System.Windows.Forms.IBindableComponent" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ChartSheetBase extends System.Object implements class Microsoft.Office.Tools.EntryPoint, class Microsoft.Office.Tools.Excel.IChartSheetExtension, class Microsoft.Office.Tools.IExtension, class System.ComponentModel.IComponent, class System.ComponentModel.ISupportInitialize, class System.IDisposable, class System.Windows.Forms.IBindableComponent" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Excel.ChartSheetBase" />
   <AssemblyInfo>
@@ -11,7 +11,13 @@
   </Base>
   <Interfaces>
     <Interface>
+      <InterfaceName>Microsoft.Office.Tools.EntryPoint</InterfaceName>
+    </Interface>
+    <Interface>
       <InterfaceName>Microsoft.Office.Tools.Excel.IChartSheetExtension</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>Microsoft.Office.Tools.IExtension</InterfaceName>
     </Interface>
     <Interface>
       <InterfaceName>System.ComponentModel.IComponent</InterfaceName>
@@ -37,11 +43,11 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.ChartSheetBase>类是图表工作表的基类*宿主项*使用 Visual Studio 创建的文档级 Office 项目中。  
+ 类是使用 Visual Studio 创建的文档级 Office 项目中的图表工作表*主机项*的基类。 <xref:Microsoft.Office.Tools.Excel.ChartSheetBase>  
   
- 图表工作表是只包含一个图表工作表。 如果你想要创建嵌入的图表中的工作表还包含其他项，例如单元或其他控件，创建<xref:Microsoft.Office.Tools.Excel.Chart>相反。  
+ 图表工作表是只包含图表的工作表。 如果要在还包含其他项 (如单元或其他控件) 的工作表中创建嵌入图表, 请<xref:Microsoft.Office.Tools.Excel.Chart>改为创建。  
   
- <xref:Microsoft.Office.Tools.Excel.ChartSheetBase>类提供了与图表相关的所有功能本机<xref:Microsoft.Office.Interop.Excel.Chart?displayProperty=fullName>Excel 主互操作程序集中的对象。 但是，<xref:Microsoft.Office.Tools.Excel.ChartSheetBase>还公开了事件。  
+ 类提供 Excel 主互操作程序集中的本机<xref:Microsoft.Office.Interop.Excel.Chart?displayProperty=fullName>对象的所有图表相关功能。 <xref:Microsoft.Office.Tools.Excel.ChartSheetBase> 但是, <xref:Microsoft.Office.Tools.Excel.ChartSheetBase>也会公开事件。  
   
 ## <a name="usage"></a>用法  
  [!INCLUDE[vsto_net4utilities](~/includes/vsto-net4utilities-md.md)]  
@@ -133,7 +139,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例演示了一个处理程序<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.ActivateEvent>事件显示一条消息框时当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>激活。  
+ 下面的代码示例演示了一个<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.ActivateEvent>事件的处理程序, 该事件在当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>激活时显示一个消息框。  
   
  [!code-csharp[Trin_ExcelChartSheet#200](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/CS/Sales.cs#200)]
  [!code-vb[Trin_ExcelChartSheet#200](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/VB/Sales.vb#200)]  
@@ -161,7 +167,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Application%2A>属性与当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>要在消息框中显示的应用程序名称。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Application%2A>当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>的属性, 在消息框中显示应用程序名称。  
   
  [!code-csharp[Trin_ExcelChartSheet#1](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/CS/Sales.cs#1)]
  [!code-vb[Trin_ExcelChartSheet#1](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/VB/Sales.vb#1)]  
@@ -261,12 +267,12 @@
 ## Remarks  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
+ 有关可选参数的信息, 请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.ApplyDataLabels%2A>方法在当前显示的数据值<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.ApplyDataLabels%2A>方法来显示当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>中的数据值。  
   
  [!code-csharp[Trin_ExcelChartSheet#101](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/CS/Sales.cs#101)]
  [!code-vb[Trin_ExcelChartSheet#101](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/VB/Sales.vb#101)]  
@@ -299,17 +305,17 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 值`Layout`上的参数对应于可用的选项**图表布局**组**设计**功能区上的选项卡。 **设计**时您选择一个图表，选项卡才可用。  
+ `Layout`参数的值对应于功能区上 "**设计**" 选项卡上 "**图表布局**" 组中的可用选项。 选择图表时, "**设计**" 选项卡可用。  
   
- 图表的每个类型都有其自己的布局选项集。 例如，饼图的布局选项是不同于柱形图的布局选项。 如果你想要从不同的图表类型来应用布局，则可以使用`ChartType`参数来指定图表键入`Layout`参数引用。 例如，如果有一个柱形图和你想要从折线图应用布局，则传递<xref:Microsoft.Office.Interop.Excel.XlChartType.xlLine?displayProperty=fullName>值设为`ChartType`参数。 布局仅添加适用于该特定图表类型的图表元素。  
+ 每种图表类型都有自己的一组布局选项。 例如, 饼图的布局选项不同于柱形图的布局选项。 如果要从不同的图表类型应用布局, 可以使用`ChartType`参数来指定`Layout`参数将引用的图表类型。 例如, 如果您有一个柱形图, 并且想要从折线图应用布局, 请将<xref:Microsoft.Office.Interop.Excel.XlChartType.xlLine?displayProperty=fullName>值传递给该`ChartType`参数。 布局仅添加可用于该特定图表类型的图表元素。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 有关可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
+ 有关可选参数的信息, 请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例应用适用于图表工作表中的图表的图表类型的第十个布局`Chart1`。 此外，该示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.SetElement%2A>方法应用更多布局更改： 将图表标题为居中且位于图表网格区域内的样式设置、 添加水平轴的标题以及添加垂直轴的旋转的标题。 若要运行此代码示例，您的工作簿必须包含聚集的列二维图表工作表名为`Chart1`。  
+ 下面的代码示例应用了第10个布局, 该布局可用于图表工作表`Chart1`中的图表类型。 此外, 该示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.SetElement%2A>方法来应用进一步的布局更改: 将图表标题的样式设置为居中, 并位于图表网格区域内, 为水平轴添加标题, 并为垂直轴添加旋转的标题。 若要运行此代码示例, 工作簿必须包含一个名为`Chart1`的聚集柱形二维图表工作表。  
   
  [!code-csharp[Trin_ExcelWorkBook_Additional#18](~/snippets/csharp/VS_Snippets_OfficeSP/trin_excelworkbook_additional/cs/ThisWorkbook.cs#18)]
  [!code-vb[Trin_ExcelWorkBook_Additional#18](~/snippets/visualbasic/VS_Snippets_OfficeSP/trin_excelworkbook_additional/vb/ThisWorkbook.vb#18)]  
@@ -475,12 +481,12 @@
 ## Remarks  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
+ 有关可选参数的信息, 请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Axes%2A>方法设置的当前主坐标轴标题<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Axes%2A>方法设置当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>的主轴的标题。  
   
  [!code-csharp[Trin_ExcelChartSheet#103](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/CS/Sales.cs#103)]
  [!code-vb[Trin_ExcelChartSheet#103](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/VB/Sales.vb#103)]  
@@ -508,12 +514,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.BackWall%2A>属性来设置格式的三维图表的背面墙。  
+ <xref:Microsoft.Office.Tools.Excel.ChartSheetBase.BackWall%2A>使用属性可以设置三维图表的背面墙的格式。  
   
    
   
 ## Examples  
- 下面的代码示例指定墙壁和现有的三维图表工作表的最底层的颜色并设置图表样式为样式 4。 若要运行此代码示例，该工作簿必须包含名为图表工作表`Chart1`的三维类型。  
+ 下面的代码示例指定现有三维图表工作表的背景色和地面颜色, 并将图表样式设置为样式4。 若要运行此代码示例, 工作簿必须包含一个三维类型`Chart1`的图表工作表。  
   
  [!code-csharp[Trin_ExcelWorkbook_Additional#38](~/snippets/csharp/VS_Snippets_OfficeSP/trin_excelworkbook_additional/cs/ThisWorkbook.cs#38)]
  [!code-vb[Trin_ExcelWorkbook_Additional#38](~/snippets/visualbasic/VS_Snippets_OfficeSP/trin_excelworkbook_additional/vb/ThisWorkbook.vb#38)]  
@@ -591,7 +597,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.BarShape%2A>属性与当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>条形显示为柱状。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.BarShape%2A>当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>的属性将条形显示为圆柱。  
   
  [!code-csharp[Trin_ExcelChartSheet#4](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/CS/Sales.cs#4)]
  [!code-vb[Trin_ExcelChartSheet#4](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/VB/Sales.vb#4)]  
@@ -619,7 +625,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.ChartSheetBase>类用于扩展<xref:Microsoft.Office.Tools.Excel.ChartSheet>通过实现对象<xref:Microsoft.Office.Tools.Excel.IChartSheetExtension>接口。  
+ 类通过<xref:Microsoft.Office.Tools.Excel.ChartSheet> 实现<xref:Microsoft.Office.Tools.Excel.IChartSheetExtension>接口来扩展对象。 <xref:Microsoft.Office.Tools.Excel.ChartSheetBase>  
   
  ]]></format>
         </remarks>
@@ -643,12 +649,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Interop.Excel._Application.DoubleClick%2A>方法不会导致发生此事件。  
+ <xref:Microsoft.Office.Interop.Excel._Application.DoubleClick%2A>方法不会导致此事件发生。  
   
    
   
 ## Examples  
- 下面的代码示例演示了一个处理程序<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.BeforeDoubleClick>显示当前的消息框时轴的事件<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>双击。 该示例还设置`Cancel`参数的事件处理程序`true`，以便图表工作表不会接收的双击操作，当用户双击轴。  
+ 下面的代码示例演示了一个<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.BeforeDoubleClick>事件的处理程序, 该事件在双击当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>的轴时显示一个消息框。 该示例还将事件`Cancel`处理程序的参数设置为`true` , 以便当用户双击轴时, 图表工作表不会收到双击操作。  
   
  [!code-csharp[Trin_ExcelChartSheet#201](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/CS/Sales.cs#201)]
  [!code-vb[Trin_ExcelChartSheet#201](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/VB/Sales.vb#201)]  
@@ -675,7 +681,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例演示了一个处理程序<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.BeforeRightClick>事件显示一条消息框时当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>右键单击。 该示例还设置`Cancel`参数的事件处理程序`true`，以便图表工作表不会接收右键单击操作。  
+ 下面的代码示例演示了一个<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.BeforeRightClick>事件的处理程序, 该事件在右击当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>时显示一个消息框。 该示例还将事件`Cancel`处理程序的参数设置为`true` , 以使图表工作表不会收到右键单击操作。  
   
  [!code-csharp[Trin_ExcelChartSheet#202](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/CS/Sales.cs#202)]
  [!code-vb[Trin_ExcelChartSheet#202](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/VB/Sales.vb#202)]  
@@ -689,6 +695,10 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void BeginInit() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.ChartSheetBase.BeginInit" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Office.Tools.EntryPoint.BeginInit</InterfaceMember>
+        <InterfaceMember>M:System.ComponentModel.ISupportInitialize.BeginInit</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -707,6 +717,9 @@
       <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.BindingContext BindingContext" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Excel.ChartSheetBase.BindingContext" />
       <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:System.Windows.Forms.IBindableComponent.BindingContext</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -782,7 +795,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例演示了一个处理程序<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Calculate>事件显示一条消息框时源数据的当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>更改。  
+ 下面的代码示例演示了一个<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Calculate>事件的处理程序, 该事件在当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>更改的源数据发生时显示一个消息框。  
   
  [!code-csharp[Trin_ExcelChartSheet#203](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/CS/Sales.cs#203)]
  [!code-vb[Trin_ExcelChartSheet#203](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/VB/Sales.vb#203)]  
@@ -810,7 +823,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.ChartArea%2A>属性与当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>要修改的权重和图表区域边框的颜色。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.ChartArea%2A>当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>的属性来修改图表区边框的粗细和颜色。  
   
  [!code-csharp[Trin_ExcelChartSheet#5](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/CS/Sales.cs#5)]
  [!code-vb[Trin_ExcelChartSheet#5](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/VB/Sales.vb#5)]  
@@ -845,12 +858,12 @@
  返回的集合包括所有类型的组。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
+ 有关可选参数的信息, 请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.ChartGroups%2A>方法以设置当前的条之间的距离<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.ChartGroups%2A>方法设置当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>的条形之间的距离。  
   
  [!code-csharp[Trin_ExcelChartSheet#105](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/CS/Sales.cs#105)]
  [!code-vb[Trin_ExcelChartSheet#105](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/VB/Sales.vb#105)]  
@@ -882,15 +895,15 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法不是等效于<xref:Microsoft.Office.Interop.Excel._Workbook.Charts%2A>属性。 此方法返回嵌入式的图表;<xref:Microsoft.Office.Interop.Excel._Workbook.Charts%2A>属性返回图表工作表。 使用<xref:Microsoft.Office.Interop.Excel.ChartObject.Chart%2A>属性以返回<xref:Microsoft.Office.Interop.Excel.Chart?displayProperty=fullName>嵌入式图表的对象。  
+ 此方法与<xref:Microsoft.Office.Interop.Excel._Workbook.Charts%2A>属性不等效。 此方法返回嵌入的图表;<xref:Microsoft.Office.Interop.Excel._Workbook.Charts%2A>属性返回图表工作表。 使用属性可为嵌入图表<xref:Microsoft.Office.Interop.Excel.Chart?displayProperty=fullName>返回对象。 <xref:Microsoft.Office.Interop.Excel.ChartObject.Chart%2A>  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
+ 有关可选参数的信息, 请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.ChartObjects%2A>方法来显示是否由 Microsoft Office Excel 创建的嵌入式图表的集合。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.ChartObjects%2A>方法来显示嵌入图表的集合是否是由 Microsoft Office Excel 创建的。  
   
  [!code-csharp[Trin_ExcelChartSheet#106](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/CS/Sales.cs#106)]
  [!code-vb[Trin_ExcelChartSheet#106](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/VB/Sales.vb#106)]  
@@ -918,12 +931,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 值<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.ChartStyle%2A>上的属性对应于可用的选项**图表样式**组**设计**功能区上的选项卡。 **设计**时您选择一个图表，选项卡才可用。  
+ <xref:Microsoft.Office.Tools.Excel.ChartSheetBase.ChartStyle%2A>属性的值对应于功能区上 "**设计**" 选项卡上的 "**图表样式**" 组中的可用选项。 选择图表时, "**设计**" 选项卡可用。  
   
    
   
 ## Examples  
- 下面的代码示例指定墙壁和现有的三维图表工作表的最底层的颜色并设置图表样式为样式 4。 若要运行此代码示例，该工作簿必须包含名为图表工作表`Chart1`的三维类型。  
+ 下面的代码示例指定现有三维图表工作表的背景色和地面颜色, 并将图表样式设置为样式4。 若要运行此代码示例, 工作簿必须包含一个三维类型`Chart1`的图表工作表。  
   
  [!code-csharp[Trin_ExcelWorkbook_Additional#38](~/snippets/csharp/VS_Snippets_OfficeSP/trin_excelworkbook_additional/cs/ThisWorkbook.cs#38)]
  [!code-vb[Trin_ExcelWorkbook_Additional#38](~/snippets/visualbasic/VS_Snippets_OfficeSP/trin_excelworkbook_additional/vb/ThisWorkbook.vb#38)]  
@@ -951,7 +964,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.ChartTitle%2A>属性与当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>若要修改的标题的字体颜色。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.ChartTitle%2A>当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>的属性来修改标题的字体颜色。  
   
  [!code-csharp[Trin_ExcelChartSheet#6](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/CS/Sales.cs#6)]
  [!code-vb[Trin_ExcelChartSheet#6](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/VB/Sales.vb#6)]  
@@ -984,7 +997,7 @@
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.ChartType%2A>属性设置的当前类型<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>到三维簇状条形图。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.ChartType%2A>属性将当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>的类型设置为三维簇状条形图。  
   
  [!code-csharp[Trin_ExcelChartSheet#7](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/CS/Sales.cs#7)]
  [!code-vb[Trin_ExcelChartSheet#7](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/VB/Sales.vb#7)]  
@@ -1035,17 +1048,17 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 可以使用此方法来快速设置的格式<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>而无需设置所有单个属性。 此方法是非交互式的，它只更改指定的属性。  
+ 您可以使用此方法快速设置格式<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName> , 而无需设置所有的单个属性。 此方法是非交互式的，它只更改指定的属性。  
   
- 如果`Source`省略和所选内容不是嵌入的图表在活动工作表或活动工作表上不是现有图表，此方法将失败，出现错误。  
+ 如果`Source`省略, 并且所选内容不是活动工作表上的嵌入图表, 或者活动工作表不是现有图表, 则此方法将失败并出现错误。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
+ 有关可选参数的信息, 请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.ChartWizard%2A>方法以设置数据源和图表类型与当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.ChartWizard%2A>方法来设置数据源和当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>的图表类型。  
   
  [!code-csharp[Trin_ExcelChartSheet#107](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/CS/Sales.cs#107)]
  [!code-vb[Trin_ExcelChartSheet#107](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/VB/Sales.vb#107)]  
@@ -1112,12 +1125,12 @@
  Microsoft Office Excel 显示“拼写检查”对话框  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
+ 有关可选参数的信息, 请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.CheckSpelling%2A>方法来检查在当前拼写<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>使用美国英语字典。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.CheckSpelling%2A>方法来检查当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>使用美国英语字典的拼写。  
   
  [!code-csharp[Trin_ExcelChartSheet#108](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/CS/Sales.cs#108)]
  [!code-vb[Trin_ExcelChartSheet#108](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/VB/Sales.vb#108)]  
@@ -1145,7 +1158,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法用于重置为自动格式设置的图表元素。 如果使用此方法时，所有格式设置 （包括重写） 将重置。  
+ 使用此方法可以将图表元素格式重置为 "自动"。 如果使用此方法, 则将重置所有格式 (包括重写)。  
   
  ]]></format>
         </remarks>
@@ -1248,17 +1261,17 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果未指定`Before`或`After`，Microsoft Office Excel 将创建包含复制表的表的新工作簿。  
+ 如果未指定`Before`或`After`, 则 Microsoft Office Excel 将创建包含复制的工作表的新工作簿。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 新工作表是<xref:Microsoft.Office.Interop.Excel.Worksheet?displayProperty=fullName>，其中包含一个图表，不具有代码或数据绑定功能的<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>具有。  
+ 新工作表是一个<xref:Microsoft.Office.Interop.Excel.Worksheet?displayProperty=fullName> , 它包含一个图表, 并且没有代码或数据绑定功能。 <xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>  
   
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
+ 有关可选参数的信息, 请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Copy%2A>方法复制当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>到新工作表之前工作表位于`Sheet3`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Copy%2A>方法将当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>复制到工作表`Sheet3`之前的新工作表。  
   
  [!code-csharp[Trin_ExcelChartSheet#110](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/CS/Sales.cs#110)]
  [!code-vb[Trin_ExcelChartSheet#110](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/VB/Sales.vb#110)]  
@@ -1318,12 +1331,12 @@
 ## Remarks  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
+ 有关可选参数的信息, 请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.CopyPicture%2A>方法复制当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>到剪贴板作为位图。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.CopyPicture%2A>方法将当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>的作为位图复制到剪贴板。  
   
  [!code-csharp[Trin_ExcelChartSheet#111](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/CS/Sales.cs#111)]
  [!code-vb[Trin_ExcelChartSheet#111](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/VB/Sales.vb#111)]  
@@ -1412,7 +1425,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 因为<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>创建在 Microsoft Office Excel，此属性返回字符串 XCEL，这与十六进制数 5843454c。  
+ 由于是<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>在 Microsoft Office Excel 中创建的, 因此此属性返回字符串 x, 它等效于十六进制数5843454c 等效。  
   
  ]]></format>
         </remarks>
@@ -1423,6 +1436,9 @@
       <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.ControlBindingsCollection DataBindings" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Excel.ChartSheetBase.DataBindings" />
       <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:System.Windows.Forms.IBindableComponent.DataBindings</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -1473,7 +1489,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.DataTable%2A>属性与当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>在带有边框边框图表中显示数据的表。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.DataTable%2A>当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>的属性, 以在图表中显示带有边框的数据表。  
   
  [!code-csharp[Trin_ExcelChartSheet#9](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/CS/Sales.cs#9)]
  [!code-vb[Trin_ExcelChartSheet#9](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/VB/Sales.vb#9)]  
@@ -1500,7 +1516,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例演示了一个处理程序<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Deactivate>事件显示一条消息框时当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>停用。  
+ 下面的代码示例演示了一个<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Deactivate>事件的处理程序, 该事件在停用当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>的时显示一个消息框。  
   
  [!code-csharp[Trin_ExcelChartSheet#204](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/CS/Sales.cs#204)]
  [!code-vb[Trin_ExcelChartSheet#204](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/VB/Sales.vb#204)]  
@@ -1528,7 +1544,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法删除基础<xref:Microsoft.Office.Interop.Excel.Chart?displayProperty=fullName>对象，但不会删除<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>主机项，因此，建议不要使用此方法。  
+ 此方法删除基础<xref:Microsoft.Office.Interop.Excel.Chart?displayProperty=fullName>对象, 但不<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>删除主机项; 因此, 建议不要使用此方法。  
   
  ]]></format>
         </remarks>
@@ -1553,7 +1569,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.DepthPercent%2A>属性设置当前的三维部分的深度<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>宽度的 75%到<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.DepthPercent%2A>属性将当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>的3-d 部分的深度设置为的宽度<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>的 75%。  
   
  [!code-csharp[Trin_ExcelChartSheet#10](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/CS/Sales.cs#10)]
  [!code-vb[Trin_ExcelChartSheet#10](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/VB/Sales.vb#10)]  
@@ -1604,7 +1620,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.DisplayBlanksAs%2A>属性指定的当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>不会绘制数据区域中的空白单元格。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.DisplayBlanksAs%2A>属性指定当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>不在数据区域中绘制空白单元格。  
   
  [!code-csharp[Trin_ExcelChartSheet#11](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/CS/Sales.cs#11)]
  [!code-vb[Trin_ExcelChartSheet#11](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/VB/Sales.vb#11)]  
@@ -1618,6 +1634,9 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.ChartSheetBase.Dispose" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -1632,9 +1651,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 不要调用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Dispose%2A>方法自己。 关闭文档级自定义项中的文档时，[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]清理使用自定义项的所有资源。  
+ 不要自己调用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Dispose%2A>方法。 关闭文档级自定义项中的文档时, 将清理[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]自定义项所使用的所有资源。  
   
- 有关详细信息<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Dispose%2A>方法，请参阅[清理了非托管资源](http://msdn.microsoft.com/library/a17b0066-71c2-4ba4-9822-8e19332fc213)。  
+ 有关<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Dispose%2A>方法的详细信息, 请参阅[清理非托管资源](http://msdn.microsoft.com/library/a17b0066-71c2-4ba4-9822-8e19332fc213)。  
   
  ]]></format>
         </remarks>
@@ -1645,6 +1664,9 @@
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Disposed" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.Excel.ChartSheetBase.Disposed" />
       <MemberType>Event</MemberType>
+      <Implements>
+        <InterfaceMember>E:System.ComponentModel.IComponent.Disposed</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -1830,7 +1852,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Elevation%2A>属性来设置从其提升的当前视图<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>计算为 75 度。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Elevation%2A>属性将当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>视图的计算结果设置为75度。  
   
  [!code-csharp[Trin_ExcelChartSheet#12](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/CS/Sales.cs#12)]
  [!code-vb[Trin_ExcelChartSheet#12](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/VB/Sales.vb#12)]  
@@ -1844,6 +1866,10 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndInit() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.ChartSheetBase.EndInit" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Office.Tools.EntryPoint.EndInit</InterfaceMember>
+        <InterfaceMember>M:System.ComponentModel.ISupportInitialize.EndInit</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -1908,12 +1934,12 @@
 ## Remarks  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
+ 有关可选参数的信息, 请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Export%2A>方法将导出当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>为.gif 文件而不会显示文件选项。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Export%2A>方法将当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>作为 .gif 文件导出, 而不显示文件选项。  
   
  [!code-csharp[Trin_ExcelChartSheet#114](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/CS/Sales.cs#114)]
  [!code-vb[Trin_ExcelChartSheet#114](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/VB/Sales.vb#114)]  
@@ -1960,15 +1986,15 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 您可以将保存为 PDF 或 XPS 文件从 Microsoft Office Excel 才提供此功能的外接程序安装。 有关详细信息，搜索"启用支持其他文件格式，如 PDF 和 XPS"Office Online 上。  
+ 仅在安装了提供此功能的外接程序后, 才能将保存为 PDF 或 XPS 文件 Microsoft Office Excel。 有关详细信息, 请在 Office Online 上搜索 "为其他文件格式 (如 PDF 和 XPS) 启用支持"。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 有关可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
+ 有关可选参数的信息, 请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例将保存图表工作表中的一页`Chart1`以 PDF 格式保存到指定的文件路径和文件名使用标准质量解析。 生成的 PDF 文件包含工作簿属性。 若要运行此代码示例，您的工作簿必须包含名为图表工作表`Chart1`。  
+ 下面的代码示例使用标准质量分辨率将一`Chart1`页 PDF 格式的图表工作表保存到指定的文件路径和文件名。 生成的 PDF 文件包含工作簿属性。 若要运行此代码示例, 工作簿必须包含一个名为`Chart1`的图表工作表。  
   
  [!code-csharp[Trin_ExcelWorkbook_Additional#12](~/snippets/csharp/VS_Snippets_OfficeSP/trin_excelworkbook_additional/cs/ThisWorkbook.cs#12)]
  [!code-vb[Trin_ExcelWorkbook_Additional#12](~/snippets/visualbasic/VS_Snippets_OfficeSP/trin_excelworkbook_additional/vb/ThisWorkbook.vb#12)]  
@@ -1982,6 +2008,9 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void FinishInitialization() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.ChartSheetBase.FinishInitialization" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Office.Tools.EntryPoint.FinishInitialization</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -2014,7 +2043,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Floor%2A>属性来更改当前颜色<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>floor 为绿色。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Floor%2A>属性将当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>地面的颜色更改为绿色。  
   
  [!code-csharp[Trin_ExcelChartSheet#12](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/CS/Sales.cs#12)]
  [!code-vb[Trin_ExcelChartSheet#12](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/VB/Sales.vb#12)]  
@@ -2042,7 +2071,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.GapDepth%2A>属性设置在当前的数据系列之间的距离<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>%到 400%标记宽度。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.GapDepth%2A>属性将当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>数据序列之间的距离设置为标记宽度的 400%。  
   
  [!code-csharp[Trin_ExcelChartSheet#13](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/CS/Sales.cs#13)]
  [!code-vb[Trin_ExcelChartSheet#13](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/VB/Sales.vb#13)]  
@@ -2051,11 +2080,43 @@
         </remarks>
       </Docs>
     </Member>
+    <Member MemberName="get_HasAxis">
+      <MemberSignature Language="C#" Value="public object get_HasAxis (object index1, object index2);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object get_HasAxis(object index1, object index2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.ChartSheetBase.get_HasAxis(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index1" Type="System.Object" />
+        <Parameter Name="index2" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index1">To be added.</param>
+        <param name="index2">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="GetAutomationObject">
       <MemberSignature Language="C#" Value="protected virtual object GetAutomationObject ();" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance object GetAutomationObject() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.ChartSheetBase.GetAutomationObject" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Office.Tools.Excel.IChartSheetExtension.GetAutomationObject</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -2072,7 +2133,7 @@
     </Member>
     <Member MemberName="GetChartElement">
       <MemberSignature Language="C#" Value="public void GetChartElement (int x, int y, ref int elementID, ref int arg1, ref int arg2);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void GetChartElement(int32 x, int32 y, int32 elementID, int32 arg1, int32 arg2) cil managed" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void GetChartElement(int32 x, int32 y, int32&amp; elementID, int32&amp; arg1, int32&amp; arg2) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.ChartSheetBase.GetChartElement(System.Int32,System.Int32,System.Int32@,System.Int32@,System.Int32@)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -2085,9 +2146,9 @@
       <Parameters>
         <Parameter Name="x" Type="System.Int32" />
         <Parameter Name="y" Type="System.Int32" />
-        <Parameter Name="elementID" Type="System.Int32&amp;" RefType="ref" />
-        <Parameter Name="arg1" Type="System.Int32&amp;" RefType="ref" />
-        <Parameter Name="arg2" Type="System.Int32&amp;" RefType="ref" />
+        <Parameter Name="elementID" Type="System.Int32" RefType="ref" />
+        <Parameter Name="arg1" Type="System.Int32" RefType="ref" />
+        <Parameter Name="arg2" Type="System.Int32" RefType="ref" />
       </Parameters>
       <Docs>
         <param name="x">图表元素的 X 坐标。</param>
@@ -2100,9 +2161,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法比较特殊，，指定只有前两个参数的值。 Microsoft Office Excel 填写其他参数，并在方法返回时，你的代码应检查这些值。  
+ 此方法在不常见的情况下, 只为前两个参数指定值。 Microsoft Office Excel 将填充其他参数, 并且在该方法返回时, 代码应检查这些值。  
   
- 值`ElementID`确定该方法返回后是否`Arg1`和`Arg2`包含任何信息下, 表中所示。  
+ 在方法返回`ElementID`后, 的值将确定`Arg1`和`Arg2`是否包含任何信息, 如下表所示。  
   
 |`ElementID`|`Arg1`|`Arg2`|  
 |-----------------|------------|------------|  
@@ -2111,52 +2172,52 @@
 |<xref:Microsoft.Office.Interop.Excel.XlChartItem.xlDisplayUnitLabel>|AxisIndex|AxisType|  
 |<xref:Microsoft.Office.Interop.Excel.XlChartItem.xlMajorGridlines>|AxisIndex|AxisType|  
 |<xref:Microsoft.Office.Interop.Excel.XlChartItem.xlMinorGridlines>|AxisIndex|AxisType|  
-|<xref:Microsoft.Office.Interop.Excel.XlChartItem.xlPivotChartDropZone>|DropZoneType|无|  
+|<xref:Microsoft.Office.Interop.Excel.XlChartItem.xlPivotChartDropZone>|DropZoneType|None|  
 |<xref:Microsoft.Office.Interop.Excel.XlChartItem.xlPivotChartFieldButton>|DropZoneType|PivotFieldIndex|  
-|<xref:Microsoft.Office.Interop.Excel.XlChartItem.xlDownBars>|GroupIndex|无|  
-|<xref:Microsoft.Office.Interop.Excel.XlChartItem.xlDropLines>|GroupIndex|无|  
-|<xref:Microsoft.Office.Interop.Excel.XlChartItem.xlHiLoLines>|GroupIndex|无|  
-|<xref:Microsoft.Office.Interop.Excel.XlChartItem.xlRadarAxisLabels>|GroupIndex|无|  
-|<xref:Microsoft.Office.Interop.Excel.XlChartItem.xlSeriesLines>|GroupIndex|无|  
-|<xref:Microsoft.Office.Interop.Excel.XlChartItem.xlUpBars>|GroupIndex|无|  
-|<xref:Microsoft.Office.Interop.Excel.XlChartItem.xlChartArea>|无|无|  
-|<xref:Microsoft.Office.Interop.Excel.XlChartItem.xlChartTitle>|无|无|  
-|<xref:Microsoft.Office.Interop.Excel.XlChartItem.xlCorners>|无|无|  
-|<xref:Microsoft.Office.Interop.Excel.XlChartItem.xlDataTable>|无|无|  
-|<xref:Microsoft.Office.Interop.Excel.XlChartItem.xlFloor>|无|无|  
-|<xref:Microsoft.Office.Interop.Excel.XlChartItem.xlLeaderLines>|无|无|  
-|<xref:Microsoft.Office.Interop.Excel.XlChartItem.xlLegend>|无|无|  
-|<xref:Microsoft.Office.Interop.Excel.XlChartItem.xlNothing>|无|无|  
-|<xref:Microsoft.Office.Interop.Excel.XlChartItem.xlPlotArea>|无|无|  
-|<xref:Microsoft.Office.Interop.Excel.XlChartItem.xlWalls>|无|无|  
+|<xref:Microsoft.Office.Interop.Excel.XlChartItem.xlDownBars>|GroupIndex|None|  
+|<xref:Microsoft.Office.Interop.Excel.XlChartItem.xlDropLines>|GroupIndex|None|  
+|<xref:Microsoft.Office.Interop.Excel.XlChartItem.xlHiLoLines>|GroupIndex|None|  
+|<xref:Microsoft.Office.Interop.Excel.XlChartItem.xlRadarAxisLabels>|GroupIndex|None|  
+|<xref:Microsoft.Office.Interop.Excel.XlChartItem.xlSeriesLines>|GroupIndex|None|  
+|<xref:Microsoft.Office.Interop.Excel.XlChartItem.xlUpBars>|GroupIndex|None|  
+|<xref:Microsoft.Office.Interop.Excel.XlChartItem.xlChartArea>|None|None|  
+|<xref:Microsoft.Office.Interop.Excel.XlChartItem.xlChartTitle>|None|None|  
+|<xref:Microsoft.Office.Interop.Excel.XlChartItem.xlCorners>|None|None|  
+|<xref:Microsoft.Office.Interop.Excel.XlChartItem.xlDataTable>|None|None|  
+|<xref:Microsoft.Office.Interop.Excel.XlChartItem.xlFloor>|None|None|  
+|<xref:Microsoft.Office.Interop.Excel.XlChartItem.xlLeaderLines>|None|None|  
+|<xref:Microsoft.Office.Interop.Excel.XlChartItem.xlLegend>|None|None|  
+|<xref:Microsoft.Office.Interop.Excel.XlChartItem.xlNothing>|None|None|  
+|<xref:Microsoft.Office.Interop.Excel.XlChartItem.xlPlotArea>|None|None|  
+|<xref:Microsoft.Office.Interop.Excel.XlChartItem.xlWalls>|None|None|  
 |<xref:Microsoft.Office.Interop.Excel.XlChartItem.xlDataLabel>|SeriesIndex|PointIndex|  
-|<xref:Microsoft.Office.Interop.Excel.XlChartItem.xlErrorBars>|SeriesIndex|无|  
-|<xref:Microsoft.Office.Interop.Excel.XlChartItem.xlLegendEntry>|SeriesIndex|无|  
-|<xref:Microsoft.Office.Interop.Excel.XlChartItem.xlLegendKey>|SeriesIndex|无|  
+|<xref:Microsoft.Office.Interop.Excel.XlChartItem.xlErrorBars>|SeriesIndex|None|  
+|<xref:Microsoft.Office.Interop.Excel.XlChartItem.xlLegendEntry>|SeriesIndex|None|  
+|<xref:Microsoft.Office.Interop.Excel.XlChartItem.xlLegendKey>|SeriesIndex|None|  
 |<xref:Microsoft.Office.Interop.Excel.XlChartItem.xlSeries>|SeriesIndex|PointIndex|  
-|<xref:Microsoft.Office.Interop.Excel.XlChartItem.xlShape>|ShapeIndex|无|  
+|<xref:Microsoft.Office.Interop.Excel.XlChartItem.xlShape>|ShapeIndex|None|  
 |<xref:Microsoft.Office.Interop.Excel.XlChartItem.xlTrendline>|SeriesIndex|TrendLineIndex|  
-|<xref:Microsoft.Office.Interop.Excel.XlChartItem.xlXErrorBars>|SeriesIndex|无|  
-|<xref:Microsoft.Office.Interop.Excel.XlChartItem.xlYErrorBars>|SeriesIndex|无|  
+|<xref:Microsoft.Office.Interop.Excel.XlChartItem.xlXErrorBars>|SeriesIndex|None|  
+|<xref:Microsoft.Office.Interop.Excel.XlChartItem.xlYErrorBars>|SeriesIndex|None|  
   
- 下表介绍的含义`Arg1`和`Arg2`方法返回之后。  
+ 下表描述了方法返回后`Arg1`和`Arg2`的含义。  
   
-|参数|描述|  
+|参数|说明|  
 |--------------|-----------------|  
-|AxisIndex|指定轴是否为主要或辅助。 可以是下列 <xref:Microsoft.Office.Interop.Excel.XlAxisGroup> 常数之一：<xref:Microsoft.Office.Interop.Excel.XlAxisGroup.xlPrimary> 或 <xref:Microsoft.Office.Interop.Excel.XlAxisGroup.xlSecondary>。|  
+|AxisIndex|指定轴是 "主要" 还是 "辅助"。 可以是下列 <xref:Microsoft.Office.Interop.Excel.XlAxisGroup> 常数之一：<xref:Microsoft.Office.Interop.Excel.XlAxisGroup.xlPrimary> 或 <xref:Microsoft.Office.Interop.Excel.XlAxisGroup.xlSecondary>。|  
 |AxisType|指定轴类型。 可以为以下 <xref:Microsoft.Office.Interop.Excel.XlAxisType> 常数之一：<xref:Microsoft.Office.Interop.Excel.XlAxisType.xlCategory>、<xref:Microsoft.Office.Interop.Excel.XlAxisType.xlSeriesAxis> 或 <xref:Microsoft.Office.Interop.Excel.XlAxisType.xlValue>。|  
-|DropZoneType|指定拖放区域类型： 列、 数据、 页或行字段。 可以是以下值之一<xref:Microsoft.Office.Interop.Excel.XlPivotFieldOrientation>常量： <xref:Microsoft.Office.Interop.Excel.XlPivotFieldOrientation.xlColumnField>， <xref:Microsoft.Office.Interop.Excel.XlPivotFieldOrientation.xlDataField>， <xref:Microsoft.Office.Interop.Excel.XlPivotFieldOrientation.xlPageField>，或<xref:Microsoft.Office.Interop.Excel.XlPivotFieldOrientation.xlRowField>。 列和行字段常量分别指定序列和类别字段。|  
-|GroupIndex|指定的偏移量中<xref:Microsoft.Office.Interop.Excel.ChartGroups?displayProperty=fullName>特定图表组的集合。|  
-|PivotFieldIndex|指定特定列 （系列）、 数据、 页或行 （类别） 字段的 T:Microsoft.Office.Interop.Excel.PivotFields 集合内的偏移量。 拖放区域类型则为-1 <xref:Microsoft.Office.Interop.Excel.XlPivotFieldOrientation.xlDataField>。|  
-|PointIndex|指定的偏移量中<xref:Microsoft.Office.Interop.Excel.Points>内一系列的特定点的集合。 值为 – 1 指示已选择所有数据点。|  
-|SeriesIndex|指定的偏移量中<xref:Microsoft.Office.Interop.Excel.Series>特定系列的集合。|  
-|ShapeIndex|指定的偏移量中<xref:Microsoft.Office.Interop.Excel.Shapes>特定形状的集合。|  
-|TrendlineIndex|指定的偏移量中<xref:Microsoft.Office.Interop.Excel.Trendlines>一系列中的特定趋势线的集合。|  
+|DropZoneType|指定放置区类型: 列、数据、页或行字段。 <xref:Microsoft.Office.Interop.Excel.XlPivotFieldOrientation>可以是下列常量之一: <xref:Microsoft.Office.Interop.Excel.XlPivotFieldOrientation.xlDataField> <xref:Microsoft.Office.Interop.Excel.XlPivotFieldOrientation.xlColumnField>、、 <xref:Microsoft.Office.Interop.Excel.XlPivotFieldOrientation.xlPageField>或<xref:Microsoft.Office.Interop.Excel.XlPivotFieldOrientation.xlRowField>。 列和行字段常量分别指定序列和类别字段。|  
+|GroupIndex|指定特定图表组在<xref:Microsoft.Office.Interop.Excel.ChartGroups?displayProperty=fullName>集合内的偏移量。|  
+|PivotFieldIndex|在 T:Microsoft.Office.Interop.Excel.PivotFields 集合中指定特定列 (序列)、数据、页或行 (类别) 字段的偏移量。 如果放置区类型为<xref:Microsoft.Office.Interop.Excel.XlPivotFieldOrientation.xlDataField>, 则为-1。|  
+|PointIndex|为序列中的特定<xref:Microsoft.Office.Interop.Excel.Points>点指定集合内的偏移量。 值–1指示选择所有数据点。|  
+|SeriesIndex|指定特定序列的<xref:Microsoft.Office.Interop.Excel.Series>集合内的偏移量。|  
+|ShapeIndex|指定特定形状在<xref:Microsoft.Office.Interop.Excel.Shapes>集合内的偏移量。|  
+|TrendlineIndex|为序列中的特定<xref:Microsoft.Office.Interop.Excel.Trendlines>趋势指定集合内的偏移量。|  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.GetChartElement%2A>方法，以便当用户单击该图表显示的图表元素。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.GetChartElement%2A>方法在用户单击图表时显示图表元素。  
   
  [!code-csharp[Trin_ExcelChartSheet#115](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/CS/Sales.cs#115)]
  [!code-vb[Trin_ExcelChartSheet#115](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/VB/Sales.vb#115)]  
@@ -2238,24 +2299,24 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.HasAxis%2A>属性以隐藏或显示特定的轴上<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>。 <xref:Microsoft.Office.Tools.Excel.ChartSheetBase.HasAxis%2A>属性应与以下参数一起使用。  
+ 使用属性可隐藏或显示<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>上的特定轴。 <xref:Microsoft.Office.Tools.Excel.ChartSheetBase.HasAxis%2A> 此<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.HasAxis%2A>属性应与以下参数一起使用。  
   
-|参数|描述|  
+|参数|说明|  
 |---------------|-----------------|  
-|`Index1`|其中一个<xref:Microsoft.Office.Interop.Excel.XlAxisType>值，该值指定轴类型。 系列轴仅应用于三维图表。|  
-|`Index2`|其中一个<xref:Microsoft.Office.Interop.Excel.XlAxisGroup>值，该值指定轴组。 三维图表有只有一组轴。|  
+|`Index1`|指定轴类型的值之一。<xref:Microsoft.Office.Interop.Excel.XlAxisType> 系列轴仅适用于三维图表。|  
+|`Index2`|指定轴组的值之一。<xref:Microsoft.Office.Interop.Excel.XlAxisGroup> 三维图表只有一组轴。|  
   
- 如果尝试使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.HasAxis%2A>无需指定参数，<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.HasAxis%2A>将获取<xref:Microsoft.Office.Tools.Excel.ChartSheet._HasAxisType>对象，它是 Visual Studio 基础结构的一部分，不应在代码中直接使用。  
+ 如果尝试在不指定<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.HasAxis%2A>参数的情况下<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.HasAxis%2A>使用, 将<xref:Microsoft.Office.Tools.Excel.ChartSheet._HasAxisType>获取属于 Visual Studio 基础结构的对象, 并且不应在代码中直接使用。  
   
- Microsoft Office Excel 可能会创建或删除轴，如果更改图表类型或<xref:Microsoft.Office.Interop.Excel.Axis.AxisGroup%2A>属性。  
+ 如果更改图表类型或<xref:Microsoft.Office.Interop.Excel.Axis.AxisGroup%2A>属性, Microsoft Office Excel 可以创建或删除轴。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
+ 有关可选参数的信息, 请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.HasAxis%2A>属性来隐藏当前的主类别轴<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.HasAxis%2A>属性隐藏当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>的主类别轴。  
   
  [!code-csharp[Trin_ExcelChartSheet#29](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/CS/Sales.cs#29)]
  [!code-vb[Trin_ExcelChartSheet#29](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/VB/Sales.vb#29)]  
@@ -2283,7 +2344,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.HasDataTable%2A>并<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.DataTable%2A>属性，以显示数据的表在当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>带有边框的边框。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.HasDataTable%2A>和<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.DataTable%2A>属性来显示当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>带有边框的数据表。  
   
  [!code-csharp[Trin_ExcelChartSheet#9](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/CS/Sales.cs#9)]
  [!code-vb[Trin_ExcelChartSheet#9](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/VB/Sales.vb#9)]  
@@ -2352,7 +2413,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 一个<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>标题由<xref:Microsoft.Office.Interop.Excel.ChartTitle>对象。  
+ 标题由<xref:Microsoft.Office.Interop.Excel.ChartTitle>对象表示。 <xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>  
   
  ]]></format>
         </remarks>
@@ -2377,7 +2438,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.HeightPercent%2A>属性设置的当前高度<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>%到 50%的宽度<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.HeightPercent%2A>属性将的高度<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>设置为宽度<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>的 50%。  
   
  [!code-csharp[Trin_ExcelChartSheet#14](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/CS/Sales.cs#14)]
  [!code-vb[Trin_ExcelChartSheet#14](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/VB/Sales.vb#14)]  
@@ -2445,6 +2506,9 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Initialize() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.ChartSheetBase.Initialize" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Office.Tools.EntryPoint.Initialize</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -2463,6 +2527,9 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void InitializeDataBindings() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.ChartSheetBase.InitializeDataBindings" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Office.Tools.EntryPoint.InitializeDataBindings</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -2558,7 +2625,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Legend%2A>属性以修改在当前图例边框的颜色<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Legend%2A>属性修改当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>中图例边框的颜色。  
   
  [!code-csharp[Trin_ExcelChartSheet#15](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/CS/Sales.cs#15)]
  [!code-vb[Trin_ExcelChartSheet#15](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/VB/Sales.vb#15)]  
@@ -2696,7 +2763,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Location%2A>方法来移动当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>到名为"NewSheet"的新工作表。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Location%2A>方法将当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>的移动到名为 "NewSheet" 的新工作表。  
   
  [!code-csharp[Trin_ExcelChartSheet#117](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/CS/Sales.cs#117)]
  [!code-vb[Trin_ExcelChartSheet#117](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/VB/Sales.vb#117)]  
@@ -2728,6 +2795,9 @@
       <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void Microsoft.Office.Tools.EntryPoint.BeginInit() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.ChartSheetBase.Microsoft#Office#Tools#EntryPoint#BeginInit" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Office.Tools.EntryPoint.BeginInit</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -2746,6 +2816,9 @@
       <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void Microsoft.Office.Tools.EntryPoint.EndInit() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.ChartSheetBase.Microsoft#Office#Tools#EntryPoint#EndInit" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Office.Tools.EntryPoint.EndInit</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -2764,6 +2837,9 @@
       <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void Microsoft.Office.Tools.EntryPoint.FinishInitialization() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.ChartSheetBase.Microsoft#Office#Tools#EntryPoint#FinishInitialization" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Office.Tools.EntryPoint.FinishInitialization</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -2782,6 +2858,9 @@
       <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void Microsoft.Office.Tools.EntryPoint.Initialize() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.ChartSheetBase.Microsoft#Office#Tools#EntryPoint#Initialize" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Office.Tools.EntryPoint.Initialize</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -2800,6 +2879,9 @@
       <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void Microsoft.Office.Tools.EntryPoint.InitializeDataBindings() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.ChartSheetBase.Microsoft#Office#Tools#EntryPoint#InitializeDataBindings" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Office.Tools.EntryPoint.InitializeDataBindings</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -2818,6 +2900,9 @@
       <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void Microsoft.Office.Tools.EntryPoint.OnShutdown() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.ChartSheetBase.Microsoft#Office#Tools#EntryPoint#OnShutdown" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Office.Tools.EntryPoint.OnShutdown</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -2836,6 +2921,9 @@
       <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void Microsoft.Office.Tools.EntryPoint.OnStartup() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.ChartSheetBase.Microsoft#Office#Tools#EntryPoint#OnStartup" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Office.Tools.EntryPoint.OnStartup</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -2854,6 +2942,9 @@
       <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object Microsoft.Office.Tools.Excel.IChartSheetExtension.GetAutomationObject() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.ChartSheetBase.Microsoft#Office#Tools#Excel#IChartSheetExtension#GetAutomationObject" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Office.Tools.Excel.IChartSheetExtension.GetAutomationObject</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -2873,6 +2964,9 @@
       <MemberSignature Language="ILAsm" Value=".property instance object Microsoft.Office.Tools.IExtension.ExtensionBase" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Excel.ChartSheetBase.Microsoft#Office#Tools#IExtension#ExtensionBase" />
       <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Microsoft.Office.Tools.IExtension.ExtensionBase</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -2904,7 +2998,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例演示了一个处理程序<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.MouseDown>事件时鼠标指针位于当前按下鼠标将显示一个消息框<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>。 此示例还使用`x`和`y`事件处理程序，以显示鼠标指针的坐标的参数。  
+ 下面的代码示例演示一个<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.MouseDown>事件的处理程序, 该事件在指针位于当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>上并且按下鼠标时显示一个消息框。 该示例还使用事件`x`处理`y`程序的和参数来显示鼠标指针的坐标。  
   
  [!code-csharp[Trin_ExcelChartSheet#205](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/CS/Sales.cs#205)]
  [!code-vb[Trin_ExcelChartSheet#205](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/VB/Sales.vb#205)]  
@@ -2931,7 +3025,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例演示了一个处理程序<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.MouseMove>事件时鼠标指针移动到当前显示的消息框<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>时按下主鼠标按钮。  
+ 下面的代码示例演示一个<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.MouseMove>事件的处理程序, 该处理程序在按下鼠标指针时, 当鼠标指针移到当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>的上时显示一个消息框。  
   
  [!code-csharp[Trin_ExcelChartSheet#206](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/CS/Sales.cs#206)]
  [!code-vb[Trin_ExcelChartSheet#206](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/VB/Sales.vb#206)]  
@@ -2958,7 +3052,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例演示了一个处理程序<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.MouseUp>事件，当鼠标指针位于当前并释放鼠标按钮时显示一个消息框<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>。 此示例还使用`x`和`y`事件处理程序，以显示鼠标指针的坐标的参数。  
+ 下面的代码示例演示一个<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.MouseUp>事件的处理程序, 该处理程序在指针位于当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>上并且释放鼠标按钮时显示一个消息框。 该示例还使用事件`x`处理`y`程序的和参数来显示鼠标指针的坐标。  
   
  [!code-csharp[Trin_ExcelChartSheet#207](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/CS/Sales.cs#207)]
  [!code-vb[Trin_ExcelChartSheet#207](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/VB/Sales.vb#207)]  
@@ -2991,15 +3085,15 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果未指定`Before`或`After`，Microsoft Office Excel 将创建包含移动的工作表的新工作簿。  
+ 如果未指定`Before`或`After`, 则 Microsoft Office Excel 将创建包含已移动的工作表的新工作簿。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
+ 有关可选参数的信息, 请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Move%2A>方法来移动当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>到工作表之前`Sheet3`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Move%2A>方法将当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>的移动到工作表`Sheet3`之前。  
   
  [!code-csharp[Trin_ExcelChartSheet#118](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/CS/Sales.cs#118)]
  [!code-vb[Trin_ExcelChartSheet#118](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/VB/Sales.vb#118)]  
@@ -3027,7 +3121,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Name%2A>属性设置的当前名称<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>到"WidgetSales"。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Name%2A>属性将当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>的名称设置为 "WidgetSales"。  
   
  [!code-csharp[Trin_ExcelChartSheet#17](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/CS/Sales.cs#17)]
  [!code-vb[Trin_ExcelChartSheet#17](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/VB/Sales.vb#17)]  
@@ -3055,7 +3149,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Next%2A>并<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Previous%2A>属性，以显示当前的下一步和上一个工作表名称<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Next%2A>和<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Previous%2A>属性来显示当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>的下一个和上一个表的名称。  
   
  [!code-csharp[Trin_ExcelChartSheet#28](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/CS/Sales.cs#28)]
  [!code-vb[Trin_ExcelChartSheet#28](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/VB/Sales.vb#28)]  
@@ -3087,7 +3181,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.OLEObjects%2A>方法以获取 OLE 的集合对象上当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.OLEObjects%2A>方法获取当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>上的 OLE 对象的集合。  
   
  [!code-csharp[Trin_ExcelChartSheet#119](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/CS/Sales.cs#119)]
  [!code-vb[Trin_ExcelChartSheet#119](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/VB/Sales.vb#119)]  
@@ -3170,6 +3264,9 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnShutdown() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.ChartSheetBase.OnShutdown" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Office.Tools.EntryPoint.OnShutdown</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -3188,6 +3285,9 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnStartup() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.ChartSheetBase.OnStartup" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Office.Tools.EntryPoint.OnStartup</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -3313,7 +3413,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Paste%2A>方法以将其他范围数据从剪贴板粘贴到当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Paste%2A>方法将其他范围数据从剪贴板粘贴到当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>中。  
   
  [!code-csharp[Trin_ExcelChartSheet#120](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/CS/Sales.cs#120)]
  [!code-vb[Trin_ExcelChartSheet#120](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/VB/Sales.vb#120)]  
@@ -3341,12 +3441,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果忽略此属性<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.RightAngleAxes%2A>属性是`true`。  
+ 如果<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.RightAngleAxes%2A>属性为`true`, 则忽略此属性。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Perspective%2A>属性设置的当前视图角度<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>为 45 度。 该示例设置<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.RightAngleAxes%2A>属性设置为`false`之前设置<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Perspective%2A>属性。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Perspective%2A>属性将当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>的视图透视设置为45度。 该示例将<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.RightAngleAxes%2A>属性设置为`false` , 然后设置<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Perspective%2A>属性。  
   
  [!code-csharp[Trin_ExcelChartSheet#18](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/CS/Sales.cs#18)]
  [!code-vb[Trin_ExcelChartSheet#18](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/VB/Sales.vb#18)]  
@@ -3451,7 +3551,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>不是数据透视图报表，此属性的值是`null`。  
+ 如果不是数据透视图报表, 则此属性的值为`null`。 <xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>  
   
  ]]></format>
         </remarks>
@@ -3476,7 +3576,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.PlotArea%2A>属性与当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>更改图表的绘图区周围边框的颜色。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.PlotArea%2A>当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>的属性来更改图表绘图区周围边框的颜色。  
   
  [!code-csharp[Trin_ExcelChartSheet#20](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/CS/Sales.cs#20)]
  [!code-vb[Trin_ExcelChartSheet#20](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/VB/Sales.vb#20)]  
@@ -3504,12 +3604,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 对于数据透视图报表，此属性是只读的并且始终返回<xref:Microsoft.Office.Interop.Excel.XlRowCol.xlColumns>。  
+ 对于数据透视图报表, 此属性是只读的, 并且总是<xref:Microsoft.Office.Interop.Excel.XlRowCol.xlColumns>返回。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.PlotBy%2A>属性设置当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>可按行显示数据。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.PlotBy%2A>属性设置当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>以按行显示数据。  
   
  [!code-csharp[Trin_ExcelChartSheet#21](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/CS/Sales.cs#21)]
  [!code-vb[Trin_ExcelChartSheet#21](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/VB/Sales.vb#21)]  
@@ -3555,7 +3655,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Next%2A>并<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Previous%2A>属性，以显示当前的下一步和上一个工作表名称<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Next%2A>和<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Previous%2A>属性来显示当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>的下一个和上一个表的名称。  
   
  [!code-csharp[Trin_ExcelChartSheet#28](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/CS/Sales.cs#28)]
  [!code-vb[Trin_ExcelChartSheet#28](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/VB/Sales.vb#28)]  
@@ -3583,10 +3683,10 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 因为图表和图表工作表不支持注释<xref:Microsoft.Office.Tools.Excel.ChartSheet.PrintedCommentPages%2A>属性的<xref:Microsoft.Office.Tools.Excel.ChartSheet>对象将始终返回零。  
+ 由于图表和图表工作表不支持注释, 因此<xref:Microsoft.Office.Tools.Excel.ChartSheet.PrintedCommentPages%2A> <xref:Microsoft.Office.Tools.Excel.ChartSheet>对象的属性将始终返回零。  
   
 > [!NOTE]
->  此属性将出现在 IntelliSense 中 Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，此属性不能使用 Excel 2007 项目中。  
+>  此属性显示在面向的[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]Excel 2007 项目中的 IntelliSense 中。 但是, 不能在 Excel 2007 项目中使用此属性。  
   
  ]]></format>
         </remarks>
@@ -3669,15 +3769,15 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- "页"中的说明`From`和`To`打印页面是指 — 不是所有页中表或工作簿。  
+ `From` 和`To`中的 "页面" 是指打印的页面, 而不是工作表或工作簿中的整体页面。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 有关可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
+ 有关可选参数的信息, 请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.PrintOutEx%2A>方法以打印一份图表工作表的前两页`Chart1`到默认打印机。 若要运行此代码示例，您的工作簿必须包含名为图表工作表`Chart1`。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.PrintOutEx%2A>方法将图表工作表`Chart1`的前两页的一个副本打印到默认打印机。 若要运行此代码示例, 工作簿必须包含一个名为`Chart1`的图表工作表。  
   
  [!code-csharp[Trin_ExcelWorkBook_Additional#16](~/snippets/csharp/VS_Snippets_OfficeSP/trin_excelworkbook_additional/cs/ThisWorkbook.cs#16)]
  [!code-vb[Trin_ExcelWorkBook_Additional#16](~/snippets/visualbasic/VS_Snippets_OfficeSP/trin_excelworkbook_additional/vb/ThisWorkbook.vb#16)]  
@@ -3708,7 +3808,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.PrintPreview%2A>方法以预览当前打印输出<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.PrintPreview%2A>方法预览当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>的打印输出。  
   
  [!code-csharp[Trin_ExcelChartSheet#123](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/CS/Sales.cs#123)]
  [!code-vb[Trin_ExcelChartSheet#123](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/VB/Sales.vb#123)]  
@@ -3747,15 +3847,15 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用组合和小写字母、 数字和符号的强密码。 弱密码不混合使用这些元素。 强密码： Y6dh ！ et5。 弱密码： House27。 使用，以便无需将其记下可以记住的强密码。  
+ 使用强密码来合并大小写字母、数字和符号。 弱密码不会混合使用这些元素。 强密码:Y6dh!et5. 弱密码:House27. 使用可以记住的强密码, 这样就无需将其记下。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
+ 有关可选参数的信息, 请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Protect%2A>方法来保护所有内容的当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>。 该示例然后使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.ProtectContents%2A>属性以验证图表工作表受到保护，然后会提示用户使用从图表工作表中删除保护<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Unprotect%2A>方法。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Protect%2A>方法来保护当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>的所有内容。 然后, 该示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.ProtectContents%2A>属性来验证图表工作表是否受到保护, 然后提示用户通过<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Unprotect%2A>使用方法从图表工作表中移除保护。  
   
  [!code-csharp[Trin_ExcelChartSheet#124](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/CS/Sales.cs#124)]
  [!code-vb[Trin_ExcelChartSheet#124](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/VB/Sales.vb#124)]  
@@ -3783,12 +3883,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 这将保护整个<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>。  
+ 这就保护了<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>整个。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Protect%2A>方法来保护所有内容的当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>。 该示例然后使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.ProtectContents%2A>属性以验证图表工作表受到保护，然后会提示用户使用从图表工作表中删除保护<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Unprotect%2A>方法。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Protect%2A>方法来保护当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>的所有内容。 然后, 该示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.ProtectContents%2A>属性来验证图表工作表是否受到保护, 然后提示用户通过<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Unprotect%2A>使用方法从图表工作表中移除保护。  
   
  [!code-csharp[Trin_ExcelChartSheet#124](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/CS/Sales.cs#124)]
  [!code-vb[Trin_ExcelChartSheet#124](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/VB/Sales.vb#124)]  
@@ -3852,7 +3952,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 当此属性是`true`，则**对象**命令**格式**禁用菜单和<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>不能添加、 移动、 调整大小，或删除元素。  
+ 当此属性为`true`时, "**格式**" 菜单上的 "**对象**" <xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>命令将被禁用, 并且无法添加、移动、调整或删除元素。  
   
  ]]></format>
         </remarks>
@@ -3900,7 +4000,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要启用用户界面保护，使用<xref:Microsoft.Office.Interop.Excel._Chart.Protect%2A>方法替换`UserInterfaceOnly`参数设置为`true`。  
+ 若要启用用户界面保护, 请使用<xref:Microsoft.Office.Interop.Excel._Chart.Protect%2A>方法`UserInterfaceOnly` , 将参数设置为`true`。  
   
  ]]></format>
         </remarks>
@@ -3925,7 +4025,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 当此属性是`true`，无法将形状添加到<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>。  
+ 如果此属性为`true`, 则不能将形状添加<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>到中。  
   
  ]]></format>
         </remarks>
@@ -4039,14 +4139,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 仅适用于三维行、 列或栏<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>。  
+ 仅适用于三维线条、列或条形图<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>。  
   
- 如果此属性为`true`，则<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Perspective%2A>属性将被忽略。  
+ 如果此属性为`true` <xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Perspective%2A> , 则忽略属性。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Perspective%2A>属性设置的当前视图角度<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>为 45 度。 该示例设置<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.RightAngleAxes%2A>属性设置为`false`之前设置<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Perspective%2A>属性。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Perspective%2A>属性将当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>的视图透视设置为45度。 该示例将<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.RightAngleAxes%2A>属性设置为`false` , 然后设置<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Perspective%2A>属性。  
   
  [!code-csharp[Trin_ExcelChartSheet#9](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/CS/Sales.cs#9)]
  [!code-vb[Trin_ExcelChartSheet#9](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/VB/Sales.vb#9)]  
@@ -4069,17 +4169,17 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置三维 <see cref="T:Microsoft.Office.Tools.Excel.ChartSheetBase" /> 的旋转角。</summary>
-        <value>三维 <see cref="T:Microsoft.Office.Tools.Excel.ChartSheetBase" /> 的旋转角（绘图区绕 z 轴的旋转角，以度为单位）。 此属性的值必须在 0 到 360 之间，但三维条形图除外（其中该值必须在 0 到 44 之间）。 默认值为 20。</value>
+        <value>三维 <see cref="T:Microsoft.Office.Tools.Excel.ChartSheetBase" /> 的旋转角（绘图区绕 z 轴的旋转角，以度为单位）。 此属性的值必须在 0 到 360 之间，但三维条形图除外（其中该值必须在 0 到 44 之间）。 默认值为20。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 仅适用于一个三维<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>。  
+ 仅适用于三维<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Rotation%2A>属性来显示当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>而无需任何旋转。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Rotation%2A>属性来显示当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName> , 无需任何旋转。  
   
  [!code-csharp[Trin_ExcelChartSheet#22](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/CS/Sales.cs#22)]
  [!code-vb[Trin_ExcelChartSheet#22](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/VB/Sales.vb#22)]  
@@ -4130,12 +4230,12 @@
 ## Remarks  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
+ 有关可选参数的信息, 请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.SaveAs%2A>方法以保存当前的未受保护的副本<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.SaveAs%2A>方法保存当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>的未受保护的副本。  
   
  [!code-csharp[Trin_ExcelChartSheet#126](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/CS/Sales.cs#126)]
  [!code-vb[Trin_ExcelChartSheet#126](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/VB/Sales.vb#126)]  
@@ -4166,7 +4266,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 默认情况下，此方法将当前图表保存到用户的图表模板目录。 如果指定的 UNC 或 URL，则将保存图表到指定位置。  
+ 默认情况下, 此方法将当前图表保存到用户的图表模板目录。 如果指定了 UNC 或 URL, 则图表将改为保存到指定位置。  
   
  ]]></format>
         </remarks>
@@ -4246,7 +4346,7 @@
 ## Remarks  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
+ 有关可选参数的信息, 请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
  ]]></format>
         </remarks>
@@ -4270,7 +4370,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例演示了一个处理程序<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.SelectEvent>事件显示一条消息框时的当前主坐标轴<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>处于选中状态。  
+ 下面的代码示例演示了一个<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.SelectEvent>事件的处理程序, 该事件在选择当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>的主轴时显示一个消息框。  
   
  [!code-csharp[Trin_ExcelChartSheet#208](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/CS/Sales.cs#208)]
  [!code-vb[Trin_ExcelChartSheet#208](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/VB/Sales.vb#208)]  
@@ -4297,7 +4397,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例演示了一个处理程序<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.SeriesChange>设置为绿色时的当前数据点的点的边框颜色的事件<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>发生更改。  
+ 下面的代码示例演示了在当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.SeriesChange> <xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>的数据点发生更改时, 将点的边框颜色设置为绿色的事件的处理程序。  
   
  [!code-csharp[Trin_ExcelChartSheet#209](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/CS/Sales.cs#209)]
  [!code-vb[Trin_ExcelChartSheet#209](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/VB/Sales.vb#209)]  
@@ -4331,18 +4431,48 @@
 ## Remarks  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
+ 有关可选参数的信息, 请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.SeriesCollection%2A>方法将数据标签添加到当前的第一个数据系列<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.SeriesCollection%2A>方法将数据标签添加到当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>中的第一个数据序列。  
   
  [!code-csharp[Trin_ExcelChartSheet#127](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/CS/Sales.cs#127)]
  [!code-vb[Trin_ExcelChartSheet#127](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/VB/Sales.vb#127)]  
   
  ]]></format>
         </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="set_HasAxis">
+      <MemberSignature Language="C#" Value="public void set_HasAxis (object index1, object index2, object rHS);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void set_HasAxis(object index1, object index2, object rHS) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Excel.ChartSheetBase.set_HasAxis(System.Object,System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index1" Type="System.Object" />
+        <Parameter Name="index2" Type="System.Object" />
+        <Parameter Name="rHS" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index1">To be added.</param>
+        <param name="index2">To be added.</param>
+        <param name="rHS">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="SetBackgroundPicture">
@@ -4367,7 +4497,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.SetBackgroundPicture%2A>方法来设置当前的背景<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>到图像文件。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.SetBackgroundPicture%2A>方法将当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>的背景设置为映像文件。  
   
  [!code-csharp[Trin_ExcelChartSheet#128](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/CS/Sales.cs#128)]
  [!code-vb[Trin_ExcelChartSheet#128](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/VB/Sales.vb#128)]  
@@ -4419,22 +4549,22 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.SetElement%2A>方法来修改指定的选项根据图表元素`Microsoft.Office.Core.MsoChartElementType`值。 例如，若要隐藏表格图例，请将传递值`Microsoft.Office.Core.MsoChartElementType.msoElementLegendNone`到<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.SetElement%2A>方法。  
+ 根据值`Microsoft.Office.Core.MsoChartElementType`指定的选项, 使用方法修改图表的元素。<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.SetElement%2A> 例如, 若要隐藏表图例, 请将值`Microsoft.Office.Core.MsoChartElementType.msoElementLegendNone`传递<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.SetElement%2A>给方法。  
   
- 可以使用此方法执行的操作对应于以下按钮上**布局**选中图表后，功能区选项卡：  
+ 在选择图表时, 可以使用此方法执行的操作对应于功能区的 "**布局**" 选项卡上的以下按钮:  
   
--   中的所有按钮**标签**组。  
+-   **标签**组中的所有按钮。  
   
--   中的所有按钮**轴**组。  
+-   **轴**组中的所有按钮。  
   
--   中的所有按钮**分析**组。  
+-   **分析**组中的所有按钮。  
   
--   **绘图区**，**图表墙面**，并**图表地面**中的按钮**后台**组。  
+-   **背景**组中的**绘图区**、**图表墙**和**图表基底**按钮。  
   
    
   
 ## Examples  
- 下面的代码示例应用适用于图表工作表中的图表的图表类型的第十个布局`Chart1`。 此外，该示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.SetElement%2A>方法应用更多布局更改： 将图表标题为居中且位于图表网格区域内的样式设置、 添加水平轴的标题以及添加垂直轴的旋转的标题。 若要运行此代码示例，您的工作簿必须包含聚集的列二维图表工作表名为`Chart1`。  
+ 下面的代码示例应用了第10个布局, 该布局可用于图表工作表`Chart1`中的图表类型。 此外, 该示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.SetElement%2A>方法来应用进一步的布局更改: 将图表标题的样式设置为居中, 并位于图表网格区域内, 为水平轴添加标题, 并为垂直轴添加旋转的标题。 若要运行此代码示例, 工作簿必须包含一个名为`Chart1`的聚集柱形二维图表工作表。  
   
  [!code-csharp[Trin_ExcelWorkBook_Additional#18](~/snippets/csharp/VS_Snippets_OfficeSP/trin_excelworkbook_additional/cs/ThisWorkbook.cs#18)]
  [!code-vb[Trin_ExcelWorkBook_Additional#18](~/snippets/visualbasic/VS_Snippets_OfficeSP/trin_excelworkbook_additional/vb/ThisWorkbook.vb#18)]  
@@ -4469,12 +4599,12 @@
 ## Remarks  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
+ 有关可选参数的信息, 请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.SetSourceData%2A>方法以设置当前的数据源<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>为工作区域`Sheet1`包含单元格 A1 到 B5。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.SetSourceData%2A>方法将当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>的数据源设置为包含单元格 A1 到 B5 `Sheet1`的范围。  
   
  [!code-csharp[Trin_ExcelChartSheet#2](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/CS/Sales.cs#2)]
  [!code-vb[Trin_ExcelChartSheet#2](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/VB/Sales.vb#2)]  
@@ -4502,7 +4632,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Shapes%2A>属性来绘制圆环图形状上当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Shapes%2A>属性在当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>上绘制圆环形状。  
   
  [!code-csharp[Trin_ExcelChartSheet#23](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/CS/Sales.cs#23)]
  [!code-vb[Trin_ExcelChartSheet#23](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/VB/Sales.vb#23)]  
@@ -4530,12 +4660,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 设置<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.ShowAllFieldButtons%2A>属性设置为`true`显示在指定数据透视图上显示所有字段按钮<xref:Microsoft.Office.Tools.Excel.ChartSheetBase>。 将属性设置为`false`隐藏所有字段按钮。  
+ 将属性设置为`true` , 以在上显示<xref:Microsoft.Office.Tools.Excel.ChartSheetBase>的指定数据透视图上显示所有字段按钮。 <xref:Microsoft.Office.Tools.Excel.ChartSheetBase.ShowAllFieldButtons%2A> 将属性设置为`false`可隐藏所有字段按钮。  
   
- <xref:Microsoft.Office.Tools.Excel.ChartSheetBase.ShowAllFieldButtons%2A>属性对应于**全部隐藏**命令**字段按钮**的下拉列表**分析**在 Excel 中，这是可用的选项卡选择数据透视图。  
+ 此属性对应于 Excel 中 "分析" 选项卡的 "**字段按钮**" 下拉列表中的 "**全部隐藏**" 命令, 可在选择数据透视图时使用。  <xref:Microsoft.Office.Tools.Excel.ChartSheetBase.ShowAllFieldButtons%2A>  
   
 > [!NOTE]
->  此属性将出现在 IntelliSense 中 Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，此属性不能使用 Excel 2007 项目中。  
+>  此属性显示在面向的[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]Excel 2007 项目中的 IntelliSense 中。 但是, 不能在 Excel 2007 项目中使用此属性。  
   
  ]]></format>
         </remarks>
@@ -4561,12 +4691,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 设置<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.ShowAxisFieldButtons%2A>属性设置为`true`显示在指定的数据透视图上显示轴字段按钮<xref:Microsoft.Office.Tools.Excel.ChartSheetBase>。 将属性设置为`false`隐藏按钮。  
+ 将属性设置为`true` , 以在上显示<xref:Microsoft.Office.Tools.Excel.ChartSheetBase>的指定数据透视图上显示轴字段按钮。 <xref:Microsoft.Office.Tools.Excel.ChartSheetBase.ShowAxisFieldButtons%2A> 将属性设置为`false`以隐藏按钮。  
   
- <xref:Microsoft.Office.Tools.Excel.ChartSheetBase.ShowAxisFieldButtons%2A>属性对应于**显示轴字段****按钮**命令**字段按钮**的下拉列表**分析**在 Excel 中，选择一个数据透视图时，可以在选项卡。  
+    属性对应于 Excel 中 "分析" 选项卡的 "字段按钮" 下拉列表中的 "显示轴字段按钮" 命令, 可在选择数据透视图时使用。 <xref:Microsoft.Office.Tools.Excel.ChartSheetBase.ShowAxisFieldButtons%2A>  
   
 > [!NOTE]
->  此属性将出现在 IntelliSense 中 Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，此属性不能使用 Excel 2007 项目中。  
+>  此属性显示在面向的[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]Excel 2007 项目中的 IntelliSense 中。 但是, 不能在 Excel 2007 项目中使用此属性。  
   
  ]]></format>
         </remarks>
@@ -4592,7 +4722,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果更改中变得比数据点的大小较小的值轴，你可以使用此属性设置是否显示数据标签。 此属性适用于仅的二维图表。  
+ 如果更改了值轴, 使其变得小于数据点的大小, 则可以使用此属性来设置是否显示数据标签。 此属性仅适用于二维图表。  
   
  ]]></format>
         </remarks>
@@ -4617,12 +4747,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 设置<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.ShowLegendFieldButtons%2A>属性设置为`true`显示在指定数据透视图上显示图例字段按钮<xref:Microsoft.Office.Tools.Excel.ChartSheetBase>。 将属性设置为`false`隐藏按钮。  
+ 将属性设置为`true` , 以在上显示<xref:Microsoft.Office.Tools.Excel.ChartSheetBase>的指定数据透视图上显示图例字段按钮。 <xref:Microsoft.Office.Tools.Excel.ChartSheetBase.ShowLegendFieldButtons%2A> 将属性设置为`false`以隐藏按钮。  
   
- <xref:Microsoft.Office.Tools.Excel.ChartSheetBase.ShowLegendFieldButtons%2A>属性对应于**显示图例字段按钮**命令**字段按钮**的下拉列表**分析**在 Excel 中，这是选项卡选择一个数据透视图时可用。  
+ 属性对应于 Excel 中 "**分析**" 选项卡的 "**字段按钮**" 下拉列表中的 "**显示图例字段按钮**" 命令, 可在选择数据透视图时使用。 <xref:Microsoft.Office.Tools.Excel.ChartSheetBase.ShowLegendFieldButtons%2A>  
   
 > [!NOTE]
->  此属性将出现在 IntelliSense 中 Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，此属性不能使用 Excel 2007 项目中。  
+>  此属性显示在面向的[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]Excel 2007 项目中的 IntelliSense 中。 但是, 不能在 Excel 2007 项目中使用此属性。  
   
  ]]></format>
         </remarks>
@@ -4648,12 +4778,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 设置<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.ShowReportFilterFieldButtons%2A>属性设置为`true`显示在指定的数据透视图上显示报表筛选器字段按钮<xref:Microsoft.Office.Tools.Excel.ChartSheetBase>。 将属性设置为`false`隐藏按钮。  
+ 将属性设置为`true` , 以在上显示<xref:Microsoft.Office.Tools.Excel.ChartSheetBase>的指定数据透视图上显示报表筛选器字段按钮。 <xref:Microsoft.Office.Tools.Excel.ChartSheetBase.ShowReportFilterFieldButtons%2A> 将属性设置为`false`以隐藏按钮。  
   
- <xref:Microsoft.Office.Tools.Excel.ChartSheetBase.ShowReportFilterFieldButtons%2A>属性对应于**显示报告筛选器字段按钮**命令**字段按钮**的下拉列表**分析**在 Excel 中，选项卡的当选择一个数据透视图才可用。  
+ 属性对应于 Excel 中 "分析" 选项卡的 "**字段按钮**" 下拉列表中的 "**显示报表筛选器字段按钮**" 命令, 可在选择数据透视图时使用。  <xref:Microsoft.Office.Tools.Excel.ChartSheetBase.ShowReportFilterFieldButtons%2A>  
   
 > [!NOTE]
->  此属性将出现在 IntelliSense 中 Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，此属性不能使用 Excel 2007 项目中。  
+>  此属性显示在面向的[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]Excel 2007 项目中的 IntelliSense 中。 但是, 不能在 Excel 2007 项目中使用此属性。  
   
  ]]></format>
         </remarks>
@@ -4679,12 +4809,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 设置<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.ShowValueFieldButtons%2A>属性设置为`true`显示的值`field`上指定的数据透视图上显示的按钮<xref:Microsoft.Office.Tools.Excel.ChartSheetBase>。 将属性设置为`false`隐藏该按钮。  
+ 将属性设置为`true` , 以在上`field`显示<xref:Microsoft.Office.Tools.Excel.ChartSheetBase>的指定数据透视图上显示值按钮。 <xref:Microsoft.Office.Tools.Excel.ChartSheetBase.ShowValueFieldButtons%2A> 将属性设置为`false`以隐藏按钮。  
   
- <xref:Microsoft.Office.Tools.Excel.ChartSheetBase.ShowValueFieldButtons%2A>属性对应于**显示值字段按钮**命令**字段按钮**的下拉列表**分析**在 Excel 中，这是选项卡选择一个数据透视图时可用。  
+ 属性对应于 Excel 中 "**分析**" 选项卡的 "**字段按钮**" 下拉列表中的 "**显示值字段按钮**" 命令, 可在选择数据透视图时使用。 <xref:Microsoft.Office.Tools.Excel.ChartSheetBase.ShowValueFieldButtons%2A>  
   
 > [!NOTE]
->  此属性将出现在 IntelliSense 中 Excel 2007 项目中面向[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]。 但是，此属性不能使用 Excel 2007 项目中。  
+>  此属性显示在面向的[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]Excel 2007 项目中的 IntelliSense 中。 但是, 不能在 Excel 2007 项目中使用此属性。  
   
  ]]></format>
         </remarks>
@@ -4709,7 +4839,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 在中调用的最后一步<xref:Microsoft.Office.Tools.Excel.ChartSheetBase>声明为类<xref:Microsoft.Office.Tools.Excel.ChartSheetBase>类卸载。  
+ 在类卸载<xref:Microsoft.Office.Tools.Excel.ChartSheetBase> <xref:Microsoft.Office.Tools.Excel.ChartSheetBase>时要在类中调用的最后一项。  
   
  ]]></format>
         </remarks>
@@ -4734,12 +4864,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.SideWall%2A>属性来设置格式的三维图表的侧面墙。  
+ <xref:Microsoft.Office.Tools.Excel.ChartSheetBase.SideWall%2A>使用属性可以设置三维图表的侧面墙的格式。  
   
    
   
 ## Examples  
- 下面的代码示例指定墙壁和现有的三维图表工作表的最底层的颜色并设置图表样式为样式 4。 若要运行此代码示例，该工作簿必须包含名为图表工作表`Chart1`的三维类型。  
+ 下面的代码示例指定现有三维图表工作表的背景色和地面颜色, 并将图表样式设置为样式4。 若要运行此代码示例, 工作簿必须包含一个三维类型`Chart1`的图表工作表。  
   
  [!code-csharp[Trin_Excelworkbook_Additional#38](~/snippets/csharp/VS_Snippets_OfficeSP/trin_excelworkbook_additional/cs/ThisWorkbook.cs#38)]
  [!code-vb[Trin_Excelworkbook_Additional#38](~/snippets/visualbasic/VS_Snippets_OfficeSP/trin_excelworkbook_additional/vb/ThisWorkbook.vb#38)]  
@@ -4753,6 +4883,9 @@
       <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.ISite Site" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Excel.ChartSheetBase.Site" />
       <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:System.ComponentModel.IComponent.Site</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Excel.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -4811,7 +4944,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要运行用户代码中运行的类的构造函数中最后一件事。  
+ 在运行用户代码的类的构造函数中运行的最后一项操作。  
   
  ]]></format>
         </remarks>
@@ -4900,7 +5033,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 一个常见用途<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Tag%2A>属性是与密切关联的数据存储<xref:Microsoft.Office.Tools.Excel.ChartSheetBase>。  
+ <xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Tag%2A>属性的常见用途是存储与密切关联的<xref:Microsoft.Office.Tools.Excel.ChartSheetBase>数据。  
   
  ]]></format>
         </remarks>
@@ -4978,15 +5111,15 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果你忘记了密码，则无法取消保护<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>。 最好将密码及其对应文档名的列表保存在安全的位置。  
+ 如果忘记了密码, 则无法取消保护<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>。 最好将密码及其对应文档名的列表保存在安全的位置。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 可选参数的信息，请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
+ 有关可选参数的信息, 请参阅[Office 解决方案中的可选参数](/visualstudio/vsto/optional-parameters-in-office-solutions)。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Protect%2A>方法来保护所有内容的当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>。 该示例然后使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.ProtectContents%2A>属性以验证图表工作表受到保护，然后会提示用户使用从图表工作表中删除保护<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Unprotect%2A>方法。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Protect%2A>方法来保护当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>的所有内容。 然后, 该示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.ProtectContents%2A>属性来验证图表工作表是否受到保护, 然后提示用户通过<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Unprotect%2A>使用方法从图表工作表中移除保护。  
   
  [!code-csharp[Trin_ExcelChartSheet#124](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/CS/Sales.cs#124)]
  [!code-vb[Trin_ExcelChartSheet#124](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/VB/Sales.vb#124)]  
@@ -5014,7 +5147,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Visible%2A>属性来隐藏当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Visible%2A>属性隐藏当前。 <xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>  
   
  [!code-csharp[Trin_ExcelChartSheet#26](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/CS/Sales.cs#26)]
  [!code-vb[Trin_ExcelChartSheet#26](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/VB/Sales.vb#26)]  
@@ -5042,7 +5175,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Walls%2A>属性设置的粗细和颜色的当前墙纸<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.Excel.ChartSheetBase.Walls%2A>属性设置当前<xref:Microsoft.Office.Tools.Excel.ChartSheetBase?displayProperty=fullName>的墙的权重和颜色。  
   
  [!code-csharp[Trin_ExcelChartSheet#27](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/CS/Sales.cs#27)]
  [!code-vb[Trin_ExcelChartSheet#27](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelChartSheet/VB/Sales.vb#27)]  

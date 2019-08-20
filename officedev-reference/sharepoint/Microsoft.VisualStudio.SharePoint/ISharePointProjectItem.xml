@@ -1,5 +1,5 @@
 <Type Name="ISharePointProjectItem" FullName="Microsoft.VisualStudio.SharePoint.ISharePointProjectItem">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="947f45d5046b8f816b1bf0548287e7980f6fda02" /><Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="09/19/2018" /><Meta Name="ms.locfileid" Value="46454500" /></Metadata><TypeSignature Language="C#" Value="public interface ISharePointProjectItem : Microsoft.VisualStudio.SharePoint.ISharePointProjectMember, Microsoft.VisualStudio.SharePoint.ISharePointProjectStartupItem, System.ComponentModel.INotifyPropertyChanged" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="acb48999680e33781442ff37bc52efeb1b8f55ac" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69007757" /></Metadata><TypeSignature Language="C#" Value="public interface ISharePointProjectItem : Microsoft.VisualStudio.SharePoint.ISharePointProjectMember, Microsoft.VisualStudio.SharePoint.ISharePointProjectStartupItem, System.ComponentModel.INotifyPropertyChanged" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISharePointProjectItem implements class Microsoft.VisualStudio.SharePoint.IAnnotatedObject, class Microsoft.VisualStudio.SharePoint.INotifyObjectDisposed, class Microsoft.VisualStudio.SharePoint.INotifyObjectDisposing, class Microsoft.VisualStudio.SharePoint.ISharePointProjectMember, class Microsoft.VisualStudio.SharePoint.ISharePointProjectStartupItem, class System.ComponentModel.INotifyPropertyChanged" />
   <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem" />
   <AssemblyInfo>
@@ -7,6 +7,15 @@
     <AssemblyVersion>15.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.VisualStudio.SharePoint.IAnnotatedObject</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>Microsoft.VisualStudio.SharePoint.INotifyObjectDisposed</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>Microsoft.VisualStudio.SharePoint.INotifyObjectDisposing</InterfaceName>
+    </Interface>
     <Interface>
       <InterfaceName>Microsoft.VisualStudio.SharePoint.ISharePointProjectMember</InterfaceName>
     </Interface>
@@ -23,7 +32,7 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 包含项目项文件的 SharePoint 项目中的任何文件夹被假定为 SharePoint 项目项节点。  
+ SharePoint 项目中包含项目项文件的任何文件夹都假定为 SharePoint 项目项节点。  
   
  ]]></format>
     </remarks>
@@ -48,7 +57,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- SharePoint 扩展插件可以将此属性设置或处理<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem.Open>事件来控制项目项文件夹节点激活行为。  
+ SharePoint 扩展可以设置此属性, 也可以通过处理<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem.Open>事件来控制项目项文件夹节点的激活行为。  
   
  ]]></format>
         </remarks>
@@ -73,7 +82,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 有关使用此属性将数据保存在项目项的详细信息，请参阅[扩展 SharePoint 项目系统中保存数据](/visualstudio/sharepoint/saving-data-in-extensions-of-the-sharepoint-project-system)。  
+ 有关使用此属性在项目项中保存数据的详细信息, 请参阅[在 SharePoint 项目系统的扩展中保存数据](/visualstudio/sharepoint/saving-data-in-extensions-of-the-sharepoint-project-system)。  
   
  ]]></format>
         </remarks>
@@ -170,7 +179,7 @@
       </Docs>
     </Member>
     <Member MemberName="Open">
-      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.VisualStudio.SharePoint.SharePointProjectItemOpenEventArgs&gt; Open;" />
+      <MemberSignature Language="C#" Value="event EventHandler&lt;Microsoft.VisualStudio.SharePoint.SharePointProjectItemOpenEventArgs&gt; Open;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.VisualStudio.SharePoint.SharePointProjectItemOpenEventArgs&gt; Open" />
       <MemberSignature Language="DocId" Value="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem.Open" />
       <MemberType>Event</MemberType>
@@ -187,9 +196,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要"打开"SharePoint 项目项文件夹，可以双击该快捷方式，按**Enter**键，或执行"打开"命令。  
+ 若要 "打开" SharePoint 项目项文件夹, 可以双击它, 按**enter**键, 或者执行 "打开" 命令。  
   
- 项目项类型提供程序或扩展可通过设置覆盖默认行为<xref:Microsoft.VisualStudio.SharePoint.SharePointProjectItemOpenEventArgs.Handled%2A>到`true`。 默认情况下，使用 SharePoint 项目项<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem.DefaultFile%2A>实例，并打开它的默认编辑器。 您可以更改<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem.DefaultFile%2A>中的属性<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem.Open>事件处理程序。  
+ 项目项类型提供程序或扩展可以通过将设置<xref:Microsoft.VisualStudio.SharePoint.SharePointProjectItemOpenEventArgs.Handled%2A>为来`true`重写默认行为。 默认情况下, SharePoint 项目项使用<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem.DefaultFile%2A>实例, 并打开它的默认编辑器。 您可以<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem.DefaultFile%2A> <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem.Open>在事件处理程序中更改属性。  
   
  ]]></format>
         </remarks>
@@ -250,7 +259,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 项目用户文件是特定于用户，通常不提交到源代码管理系统。 字典中的键是名称和值为的值。  
+ 项目用户文件是特定于用户的, 通常不会提交到源代码管理系统。 字典中的键为名称, 值为值。  
   
  ]]></format>
         </remarks>

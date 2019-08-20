@@ -1,5 +1,5 @@
 <Type Name="IDeploymentStepInfo" FullName="Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStepInfo">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="57f2aa403d8c558e28467a757d8d32e112dad265" /><Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="02/21/2018" /><Meta Name="ms.locfileid" Value="29409051" /></Metadata><TypeSignature Language="C#" Value="public interface IDeploymentStepInfo" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="a02911321dd98662b6ddff9bc7689f6bcd380144" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69011758" /></Metadata><TypeSignature Language="C#" Value="public interface IDeploymentStepInfo" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDeploymentStepInfo" />
   <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStepInfo" />
   <AssemblyInfo>
@@ -13,7 +13,7 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- Visual Studio 将传递<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStepInfo>对象传递给<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep.Initialize%2A>方法<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep>实现。 设置属性的<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStepInfo>对象来指定名称、 说明和部署步骤的其他详细信息。  
+ Visual Studio 将<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStepInfo>对象传递<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep.Initialize%2A>到<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep>实现的方法。 设置<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStepInfo>对象的属性, 以指定部署步骤的名称、描述和其他详细信息。  
   
  ]]></format>
     </remarks>
@@ -38,7 +38,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 描述应该是已本地化的资源。  
+ 说明应为本地化资源。  
   
  ]]></format>
         </remarks>
@@ -63,7 +63,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- ID 应为本地化的资源。  
+ ID 应为本地化资源。  
   
  ]]></format>
         </remarks>
@@ -83,13 +83,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，该值指示 <see cref="T:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStepInfo" /> 对象是否为只读。</summary>
-        <value>
-          如果 <see cref="T:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStepInfo" /> 对象为只读，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果 <see cref="T:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStepInfo" /> 对象为只读，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStepInfo> 可以修改对象，仅在内<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep.Initialize%2A>方法<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep>实现。  
+ <xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStepInfo>只能在<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep.Initialize%2A> <xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep>实现的方法内修改对象。  
   
  ]]></format>
         </remarks>
@@ -127,12 +126,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置执行部署步骤时，状态栏中显示的消息。</summary>
-        <value>当执行部署步骤在状态栏中显示的消息。</value>
+        <value>执行部署步骤时状态栏中显示的消息。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 消息应的本地化的资源。  
+ 消息应为本地化资源。  
   
  ]]></format>
         </remarks>

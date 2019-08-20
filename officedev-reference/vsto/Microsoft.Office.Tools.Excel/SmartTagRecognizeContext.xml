@@ -1,5 +1,5 @@
 <Type Name="SmartTagRecognizeContext" FullName="Microsoft.Office.Tools.Excel.SmartTagRecognizeContext">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="8e0ab2b77c3811e5e22b947a27a8b5789e8058a2" /><Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="02/21/2018" /><Meta Name="ms.locfileid" Value="29432074" /></Metadata><TypeSignature Language="C#" Value="public interface SmartTagRecognizeContext" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="adb3e2a11b6eea7d8e366acd919b60620cf966af" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69004302" /></Metadata><TypeSignature Language="C#" Value="public interface SmartTagRecognizeContext" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract SmartTagRecognizeContext" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Excel.SmartTagRecognizeContext" />
   <AssemblyInfo>
@@ -18,10 +18,10 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 当实现<xref:Microsoft.Office.Tools.Excel.ISmartTagExtension.Recognize%2A>方法用来定义自定义的智能标记识别器`context`参数是<xref:Microsoft.Office.Tools.Excel.SmartTagRecognizeContext>对象。 使用<xref:Microsoft.Office.Tools.Excel.SmartTagRecognizeContext.CellText%2A>要获取的文本，从单元格发送到识别器，并使用此对象属性<xref:Microsoft.Office.Tools.Excel.SmartTagRecognizeContext.PersistTag%2A>的此对象以指示已找到的智能标记的方法。  
+ 实现<xref:Microsoft.Office.Tools.Excel.ISmartTagExtension.Recognize%2A>方法以定义自定义智能标记识别器时`context` , 参数是一个<xref:Microsoft.Office.Tools.Excel.SmartTagRecognizeContext>对象。 使用此<xref:Microsoft.Office.Tools.Excel.SmartTagRecognizeContext.CellText%2A>对象的属性从发送到识别器的单元格获取文本, 并<xref:Microsoft.Office.Tools.Excel.SmartTagRecognizeContext.PersistTag%2A>使用此对象的方法来指示找到智能标记。  
   
 ## <a name="usage"></a>用法  
- 此类型旨在用于 Excel 2007 仅在项目中。 Excel 2010 中已弃用智能标记。  
+ 此类型仅适用于 Excel 2007 的项目。 Excel 2010 中已弃用智能标记。  
   
  ]]></format>
     </remarks>
@@ -41,7 +41,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取发送给 <see cref="M:Microsoft.Office.Tools.Excel.ISmartTagExtension.Recognize(System.String,Microsoft.Office.Interop.SmartTag.ISmartTagRecognizerSite,Microsoft.Office.Interop.SmartTag.ISmartTagTokenList,Microsoft.Office.Tools.Excel.SmartTagRecognizeContext)" /> 方法的单元格中的文本。 [!INCLUDE[vsto_smart_tags](~/includes/vsto-smart-tags-md.md)]。 [!INCLUDE[vsto_smart_tags](~/includes/vsto-smart-tags-md.md)]。</summary>
-        <value>发送到的单元格中的文本<see cref="M:Microsoft.Office.Tools.Excel.ISmartTagExtension.Recognize(System.String,Microsoft.Office.Interop.SmartTag.ISmartTagRecognizerSite,Microsoft.Office.Interop.SmartTag.ISmartTagTokenList,Microsoft.Office.Tools.Excel.SmartTagRecognizeContext)" />方法。</value>
+        <value>发送到<see cref="M:Microsoft.Office.Tools.Excel.ISmartTagExtension.Recognize(System.String,Microsoft.Office.Interop.SmartTag.ISmartTagRecognizerSite,Microsoft.Office.Interop.SmartTag.ISmartTagTokenList,Microsoft.Office.Tools.Excel.SmartTagRecognizeContext)" />方法的单元中的文本。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -67,20 +67,19 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 调用<xref:Microsoft.Office.Tools.Excel.SmartTagRecognizeContext.PersistTag%2A>的实现从<xref:Microsoft.Office.Tools.Excel.ISmartTagExtension.Recognize%2A>方法，以指示的智能标记文本中找到。 使用`propertyBag`参数来提交的智能标记的任何自定义属性。 这些属性可用于自定义时选择从智能标记快捷菜单项执行的操作。  
+ 从<xref:Microsoft.Office.Tools.Excel.SmartTagRecognizeContext.PersistTag%2A> <xref:Microsoft.Office.Tools.Excel.ISmartTagExtension.Recognize%2A>方法的实现调用以指示在文本中找到智能标记。 `propertyBag`使用参数可提交智能标记的任何自定义属性。 您可以使用这些属性自定义从智能标记快捷菜单中选择项时执行的操作。  
   
    
   
 ## Examples  
- 下面的代码示例演示如何调用<xref:Microsoft.Office.Tools.Excel.SmartTagRecognizeContext.PersistTag%2A>的实现从<xref:Microsoft.Office.Tools.Excel.ISmartTagExtension.Recognize%2A>方法。 此实现将每个智能标记术语与单元格的内容进行比较。 对于每个单元中的智能标记术语，代码将添加一个自定义的智能标记属性，然后使用<xref:Microsoft.Office.Tools.Excel.SmartTagRecognizeContext.PersistTag%2A>方法以识别的智能标记。 此示例假定你已添加到的引用**Microsoft.Office.Interop.SmartTag**从 **.NET**选项卡**添加引用**对话框。 此代码示例摘自更大的示例为提供<xref:Microsoft.Office.Tools.Excel.ISmartTagExtension>接口。  
+ 下面的代码示例演示如何从<xref:Microsoft.Office.Tools.Excel.SmartTagRecognizeContext.PersistTag%2A> <xref:Microsoft.Office.Tools.Excel.ISmartTagExtension.Recognize%2A>方法的实现调用。 此实现将每个智能标记字词与单元格的内容进行比较。 对于单元中的每个智能标记术语, 代码将添加一个自定义智能标记属性, 然后<xref:Microsoft.Office.Tools.Excel.SmartTagRecognizeContext.PersistTag%2A>使用方法来识别智能标记。 此示例假设已在 "**添加引用**" 对话框的 " **.net** " 选项卡中添加对**智能标记**的引用。 此代码示例是为<xref:Microsoft.Office.Tools.Excel.ISmartTagExtension>接口提供的更大示例的一部分。  
   
  [!code-csharp[Trin_ExcelDerivedSmartTags#2](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelDerivedSmartTags/CS/CustomSmartTag.cs#2)]
  [!code-vb[Trin_ExcelDerivedSmartTags#2](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelDerivedSmartTags/VB/CustomSmartTag.vb#2)]  
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.InvalidOperationException">
-          未使用 <see cref="M:Microsoft.Office.Tools.Excel.ISmartTagExtension.Recognize(System.String,Microsoft.Office.Interop.SmartTag.ISmartTagRecognizerSite,Microsoft.Office.Interop.SmartTag.ISmartTagTokenList,Microsoft.Office.Tools.Excel.SmartTagRecognizeContext)" /> 方法调用 <see cref="M:Microsoft.Office.Tools.Excel.SmartTagRecognizeContext.PersistTag(Microsoft.Office.Interop.SmartTag.ISmartTagProperties)" />。</exception>
+        <exception cref="T:System.InvalidOperationException">未使用 <see cref="M:Microsoft.Office.Tools.Excel.ISmartTagExtension.Recognize(System.String,Microsoft.Office.Interop.SmartTag.ISmartTagRecognizerSite,Microsoft.Office.Interop.SmartTag.ISmartTagTokenList,Microsoft.Office.Tools.Excel.SmartTagRecognizeContext)" /> 方法调用 <see cref="M:Microsoft.Office.Tools.Excel.SmartTagRecognizeContext.PersistTag(Microsoft.Office.Interop.SmartTag.ISmartTagProperties)" />。</exception>
       </Docs>
     </Member>
   </Members>

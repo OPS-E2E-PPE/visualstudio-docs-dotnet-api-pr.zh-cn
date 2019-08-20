@@ -1,5 +1,5 @@
 <Type Name="CustomTaskPane" FullName="Microsoft.Office.Tools.CustomTaskPane">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="5a3616c1859298dd906edba13308734133919256" /><Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="09/19/2018" /><Meta Name="ms.locfileid" Value="46454760" /></Metadata><TypeSignature Language="C#" Value="public interface CustomTaskPane : IDisposable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="3dead16362c19b60edf67c574173fbe8b4348213" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="68999346" /></Metadata><TypeSignature Language="C#" Value="public interface CustomTaskPane : IDisposable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract CustomTaskPane implements class System.IDisposable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.CustomTaskPane" />
   <AssemblyInfo>
@@ -31,9 +31,6 @@
     <Attribute>
       <AttributeName>System.Runtime.InteropServices.Guid("881b42fd-484d-4494-8500-779de4e4aac1")</AttributeName>
     </Attribute>
-    <Attribute>
-      <AttributeName>System.Runtime.InteropServices.TypeIdentifier</AttributeName>
-    </Attribute>
   </Attributes>
   <Docs>
     <summary>表示 Microsoft Office 应用程序中的自定义任务窗格。</summary>
@@ -41,11 +38,11 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用<xref:Microsoft.Office.Tools.CustomTaskPane>应用程序级外接程序中来修改自定义任务窗格中，或响应的位置或自定义任务窗格的可见性发生更改时的对象。 任务窗格是用户界面面板，通常停靠到应用程序窗口的一侧。 有关如何创建自定义任务窗格的信息，请参阅[自定义任务窗格](/visualstudio/vsto/custom-task-panes)。  
+ 使用应用<xref:Microsoft.Office.Tools.CustomTaskPane>程序级外接程序中的对象可修改自定义任务窗格, 或在自定义任务窗格的位置或可见性发生更改时做出响应。 任务窗格是用户界面面板, 通常停靠在应用程序窗口的一侧。 有关如何创建自定义任务窗格的信息, 请参阅[自定义任务窗格](/visualstudio/vsto/custom-task-panes)。  
   
- 若要控制的大小或自定义任务窗格的位置，可以使用属性，如<xref:Microsoft.Office.Tools.CustomTaskPane.Height%2A>， <xref:Microsoft.Office.Tools.CustomTaskPane.Width%2A>，和<xref:Microsoft.Office.Tools.CustomTaskPane.Visible%2A>。  
+ 若要控制自定义任务窗格的大小或位置, 可以使用<xref:Microsoft.Office.Tools.CustomTaskPane.Height%2A>、 <xref:Microsoft.Office.Tools.CustomTaskPane.Width%2A>和<xref:Microsoft.Office.Tools.CustomTaskPane.Visible%2A>等属性。  
   
- 若要响应自定义任务窗格移动或更改可见性时，你可以处理<xref:Microsoft.Office.Tools.CustomTaskPane.DockPositionChanged>和<xref:Microsoft.Office.Tools.CustomTaskPane.VisibleChanged>事件。  
+ 若要在自定义任务窗格移动或更改可见性时做出响应, <xref:Microsoft.Office.Tools.CustomTaskPane.DockPositionChanged>可以<xref:Microsoft.Office.Tools.CustomTaskPane.VisibleChanged>处理和事件。  
   
  [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
   
@@ -55,7 +52,7 @@
    
   
 ## Examples  
- 下面的代码示例演示如何通过创建自定义任务窗格<xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%28System.Windows.Forms.UserControl%2CSystem.String%29>方法。 该示例使用的属性<xref:Microsoft.Office.Tools.CustomTaskPane>对象用于设置默认外观的自定义任务窗格中，并定义的事件处理程序<xref:Microsoft.Office.Tools.CustomTaskPane.DockPositionChanged>事件。 若要编译此示例中，将代码复制到`ThisAddIn`支持自定义任务窗格的应用程序的外接程序项目中的类。 替换默认`ThisAddIn_Startup`中的方法`ThisAddIn`类的`ThisAddIn_Startup`在此示例中的方法。 此示例还假定，此项目包含<xref:System.Windows.Forms.UserControl>名为`MyUserControl`，并<xref:System.Windows.Forms.UserControl>包含<xref:System.Windows.Forms.FlowLayoutPanel>名为`FlowPanel`。  
+ 下面的代码示例演示如何使用<xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%28System.Windows.Forms.UserControl%2CSystem.String%29>方法创建自定义任务窗格。 该示例使用<xref:Microsoft.Office.Tools.CustomTaskPane>对象的属性设置自定义任务窗格的默认外观, 并<xref:Microsoft.Office.Tools.CustomTaskPane.DockPositionChanged>为事件定义事件处理程序。 若要编译此示例, 请将代码复制`ThisAddIn`到支持自定义任务窗格的应用程序的外接程序项目中的类中。 将`ThisAddIn_Startup` 类`ThisAddIn`中的默认方法替换为此`ThisAddIn_Startup`示例中的方法。 此示例还假定项目包含一个<xref:System.Windows.Forms.UserControl>名`MyUserControl`为的, 并且<xref:System.Windows.Forms.UserControl>包含一个<xref:System.Windows.Forms.FlowLayoutPanel>名`FlowPanel`为的。  
   
  [!code-csharp[Trin_TaskPaneReference#1](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_TaskPaneReference/CS/ThisAddIn.cs#1)]
  [!code-vb[Trin_TaskPaneReference#1](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_TaskPaneReference/VB/ThisAddIn.vb#1)]  
@@ -83,12 +80,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性返回<xref:System.Windows.Forms.UserControl>，用来创建自定义任务窗格。 有关详细信息，请参阅[自定义任务窗格](/visualstudio/vsto/custom-task-panes)。  
+ 此属性返回用于<xref:System.Windows.Forms.UserControl>创建自定义任务窗格的。 有关详细信息, 请参阅[自定义任务窗格](/visualstudio/vsto/custom-task-panes)。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.Office.Tools.CustomTaskPane.Control%2A>属性来修改的大小<xref:System.Windows.Forms.UserControl>上的任务窗格中的事件处理程序<xref:Microsoft.Office.Tools.CustomTaskPane.DockPositionChanged>事件。 此代码示例是为提供一个更大示例的一部分<xref:Microsoft.Office.Tools.CustomTaskPane>。  
+ 下面的代码示例使用<xref:Microsoft.Office.Tools.CustomTaskPane.Control%2A>属性, 在<xref:Microsoft.Office.Tools.CustomTaskPane.DockPositionChanged>事件的事件处理程序<xref:System.Windows.Forms.UserControl>中修改任务窗格的大小。 此代码示例是为提供的<xref:Microsoft.Office.Tools.CustomTaskPane>更大示例的一部分。  
   
  [!code-csharp[Trin_TaskPaneReference#3](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_TaskPaneReference/CS/ThisAddIn.cs#3)]
  [!code-vb[Trin_TaskPaneReference#3](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_TaskPaneReference/VB/ThisAddIn.vb#3)]  
@@ -112,25 +109,25 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个指定自定义任务窗格相对于应用程序窗口的位置的值。</summary>
-        <value>之一<c>Microsoft.Office.Core.MsoCTPDockPosition</c>值。 默认值是<c>属性</c>。</value>
+        <value><c>为</c>值中的一个。 默认值为<c>为. msoCTPDockPositionRight</c>。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 下表列出了值的`Microsoft.Office.Core.MsoCTPDockPosition`枚举。  
+ 下表列出了`Microsoft.Office.Core.MsoCTPDockPosition`枚举的值。  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
-|`msoCTPDockPositionLeft`|将自定义任务窗格停靠到窗口的左侧。|  
-|`msoCTPDockPositionTop`|将自定义任务窗格停靠到窗口的顶部。|  
-|`msoCTPDockPositionRight`|将自定义任务窗格停靠到窗口的右侧。|  
-|`msoCTPDockPositionBottom`|将自定义任务窗格停靠到窗口的底部。|  
-|`msoCTPDockPositionFloating`|显示自定义任务窗格窗口的前面。 用户可以将任务窗格拖动到窗口中的任何位置。|  
+|`msoCTPDockPositionLeft`|将自定义任务窗格停靠在窗口的左侧。|  
+|`msoCTPDockPositionTop`|将自定义任务窗格停靠在窗口顶部。|  
+|`msoCTPDockPositionRight`|将自定义任务窗格停靠在窗口的右侧。|  
+|`msoCTPDockPositionBottom`|将自定义任务窗格停靠在窗口的底部。|  
+|`msoCTPDockPositionFloating`|在窗口的前面显示自定义任务窗格。 用户可以将任务窗格拖动到窗口中的任何位置。|  
   
    
   
 ## Examples  
- 下面的代码示例创建自定义任务窗格，并配置不同的默认大小时该窗格显示活动的应用程序窗口中的前面和停靠。 此代码示例是为提供一个更大示例的一部分<xref:Microsoft.Office.Tools.CustomTaskPane>。  
+ 下面的代码示例将创建一个自定义任务窗格, 并为窗格在活动应用程序窗口的前面显示的时间和停靠时间配置不同的默认大小。 此代码示例是为提供的<xref:Microsoft.Office.Tools.CustomTaskPane>更大示例的一部分。  
   
  [!code-csharp[Trin_TaskPaneReference#2](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_TaskPaneReference/CS/ThisAddIn.cs#2)]
  [!code-vb[Trin_TaskPaneReference#2](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_TaskPaneReference/VB/ThisAddIn.vb#2)]  
@@ -145,7 +142,7 @@
       </Docs>
     </Member>
     <Member MemberName="DockPositionChanged">
-      <MemberSignature Language="C#" Value="public event EventHandler DockPositionChanged;" />
+      <MemberSignature Language="C#" Value="event EventHandler DockPositionChanged;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler DockPositionChanged" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.CustomTaskPane.DockPositionChanged" />
       <MemberType>Event</MemberType>
@@ -162,7 +159,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- 下面的代码示例演示的事件处理程序<xref:Microsoft.Office.Tools.CustomTaskPane.DockPositionChanged>事件。 此事件处理程序通过修改更改任务窗格上的控件的水平或垂直排列<xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A>属性的<xref:System.Windows.Forms.FlowLayoutPanel>任务窗格上。 此代码示例假定任务窗格包含<xref:System.Windows.Forms.UserControl>名为`MyUserControl`，并<xref:System.Windows.Forms.UserControl>包含<xref:System.Windows.Forms.FlowLayoutPanel>名为`FlowPanel`。 此示例摘自一个更大的示例为提供<xref:Microsoft.Office.Tools.CustomTaskPane>。  
+ 下面的代码示例演示<xref:Microsoft.Office.Tools.CustomTaskPane.DockPositionChanged>事件的事件处理程序。 此事件处理程序通过在任务窗格上修改<xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A>的<xref:System.Windows.Forms.FlowLayoutPanel>属性来更改任务窗格上的控件的水平或垂直排列。 此代码示例假定任务窗格包含一个<xref:System.Windows.Forms.UserControl>命名`MyUserControl`的, 并且<xref:System.Windows.Forms.UserControl>包含一个<xref:System.Windows.Forms.FlowLayoutPanel>名`FlowPanel`为的。 此示例是为提供的<xref:Microsoft.Office.Tools.CustomTaskPane>更大示例的一部分。  
   
  [!code-csharp[Trin_TaskPaneReference#3](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_TaskPaneReference/CS/ThisAddIn.cs#3)]
  [!code-vb[Trin_TaskPaneReference#3](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_TaskPaneReference/VB/ThisAddIn.vb#3)]  
@@ -185,19 +182,19 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个禁止自定义任务窗格停靠在指定位置的值。</summary>
-        <value>之一<c>Microsoft.Office.Core.MsoCTPDockPositionRestrict</c>值。 默认值是<c>Microsoft.Office.Core.MsoCTPDockPosition.msoCTPDockPositionRestrictNone</c>。</value>
+        <value><c>MsoCTPDockPositionRestrict</c>值中的一个。 默认值为<c>为. msoCTPDockPositionRestrictNone</c>。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 下表列出了值的`Microsoft.Office.Core.MsoCTPDockPositionRestrict`枚举。  
+ 下表列出了`Microsoft.Office.Core.MsoCTPDockPositionRestrict`枚举的值。  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
-|`msoCTPDockPositionRestrictNone`|有自定义任务窗格的停靠行为没有限制。|  
-|`msoCTPDockPositionRestrictNoChange`|不能更改的停靠位置。 如果自定义任务窗格浮动的不能固定到侧窗口。|  
-|`msoCTPDockPositionRestrictNoHorizontal`|自定义任务窗格不能固定到顶部或窗口的底部。|  
-|`msoCTPDockPositionRestrictNoVertical`|不能自定义任务窗格停靠的左侧或右侧的窗口。|  
+|`msoCTPDockPositionRestrictNone`|自定义任务窗格的停靠行为没有任何限制。|  
+|`msoCTPDockPositionRestrictNoChange`|不能更改停靠位置。 如果自定义任务窗格是浮动的, 则不能停靠到窗口的一侧。|  
+|`msoCTPDockPositionRestrictNoHorizontal`|不能将自定义任务窗格停靠在窗口的顶部或底部。|  
+|`msoCTPDockPositionRestrictNoVertical`|自定义任务窗格不能停靠在窗口的左侧或右侧。|  
   
  ]]></format>
         </remarks>
@@ -223,16 +220,16 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 不要使用<xref:Microsoft.Office.Tools.CustomTaskPane.Height%2A>属性，如果自定义任务窗格停靠到左侧或文档窗口的右侧。 如果<xref:Microsoft.Office.Tools.CustomTaskPane.DockPosition%2A>属性是`Microsoft.Office.Core.MsoCTPDockPosition.msoCTPDockPositionRight`或`Microsoft.Office.Core.MsoCTPDockPosition.msoCTPDockPositionLeft`，则<xref:Microsoft.Office.Tools.CustomTaskPane.Height%2A>属性将返回 0，并且引发<xref:System.Runtime.InteropServices.COMException>如果尝试将其设置。  
+ 如果自定义任务<xref:Microsoft.Office.Tools.CustomTaskPane.Height%2A>窗格停靠在文档窗口的左侧或右侧, 则不使用属性。 `Microsoft.Office.Core.MsoCTPDockPosition.msoCTPDockPositionRight`如果属性为或`Microsoft.Office.Core.MsoCTPDockPosition.msoCTPDockPositionLeft` ,<xref:Microsoft.Office.Tools.CustomTaskPane.Height%2A>则属性将返回 0, 并在尝试设置时引发。 <xref:System.Runtime.InteropServices.COMException> <xref:Microsoft.Office.Tools.CustomTaskPane.DockPosition%2A>  
   
- 最大高度依赖于停靠位置。 自定义任务窗格停靠到顶部或底部的文档窗口中，最大高度时，大约半个屏幕的高度。 当自定义任务窗格浮动的时没有任何最大高度。  
+ 最大高度取决于停靠位置。 当自定义任务窗格停靠在文档窗口的顶部或底部时, 最大高度约为屏幕高度的一半。 自定义任务窗格浮动时, 没有最大高度。  
   
- 最小高度取决于若干因素，并可以更改在将来版本的 Microsoft Office。 如果您尝试设置<xref:Microsoft.Office.Tools.CustomTaskPane.Height%2A>属性的值小于最小高度，该应用程序将自动重新分配<xref:Microsoft.Office.Tools.CustomTaskPane.Height%2A>属性设置为最小高度。  
+ 最小高度取决于多个因素, 并且在 Microsoft Office 的未来版本中可能会更改。 如果尝试将<xref:Microsoft.Office.Tools.CustomTaskPane.Height%2A>属性设置为小于最小高度的值, 应用程序会自动将<xref:Microsoft.Office.Tools.CustomTaskPane.Height%2A>属性重新分配到最小高度。  
   
    
   
 ## Examples  
- 下面的代码示例创建一个自定义任务窗格活动应用程序窗口的前面时它将显示具有指定的高度。 此代码示例是为提供一个更大示例的一部分<xref:Microsoft.Office.Tools.CustomTaskPane>。  
+ 下面的代码示例创建一个自定义任务窗格, 该窗格在活动应用程序窗口的前面显示时具有指定的高度。 此代码示例是为提供的<xref:Microsoft.Office.Tools.CustomTaskPane>更大示例的一部分。  
   
  [!code-csharp[Trin_TaskPaneReference#2](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_TaskPaneReference/CS/ThisAddIn.cs#2)]
  [!code-vb[Trin_TaskPaneReference#2](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_TaskPaneReference/VB/ThisAddIn.vb#2)]  
@@ -241,7 +238,7 @@
         </remarks>
         <exception cref="T:System.Runtime.InteropServices.COMException">当尝试设置 <see cref="P:Microsoft.Office.Tools.CustomTaskPane.Height" /> 属性时，<see cref="P:Microsoft.Office.Tools.CustomTaskPane.DockPosition" /> 属性的值为 <c>Microsoft.Office.Core.MsoCTPDockPosition.msoCTPDockPositionRight</c> 或 <c>Microsoft.Office.Core.MsoCTPDockPosition.msoCTPDockPositionLeft</c>。  
   
-或 
+- 或 - 
 您可以尝试在 <see cref="P:Microsoft.Office.Tools.CustomTaskPane.Height" /> 或 <see cref="E:Microsoft.Office.Tools.CustomTaskPane.DockPositionChanged" /> 事件的事件处理程序中设置 <see cref="E:Microsoft.Office.Tools.CustomTaskPane.VisibleChanged" /> 属性。</exception>
         <exception cref="T:System.ObjectDisposedException">已调用 <see cref="T:Microsoft.Office.Tools.CustomTaskPane" /> 的 <see cref="M:Microsoft.Office.Tools.CustomTaskPane.Dispose" /> 方法。</exception>
       </Docs>
@@ -265,7 +262,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要设置自定义任务窗格的标题，请使用`title`参数的<xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%2A?displayProperty=fullName>方法。  
+ 若要设置自定义任务窗格的标题, 请使用`title` <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%2A?displayProperty=fullName>方法的参数。  
   
  ]]></format>
         </remarks>
@@ -291,12 +288,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- Microsoft Office 应用程序不提供默认值为用户的 UI，以显示自定义任务窗格。 如果外接程序中创建自定义任务窗格，您还应创建 UI 元素，如按钮，用户可单击以显示或隐藏自定义任务窗格。 有关详细信息，请参阅[自定义任务窗格](/visualstudio/vsto/custom-task-panes)。  
+ Microsoft Office 应用程序不提供用户用于显示自定义任务窗格的默认 UI。 如果在外接程序中创建自定义任务窗格, 还应创建一个 UI 元素 (如按钮), 用户可以单击该元素来显示或隐藏自定义任务窗格。 有关详细信息, 请参阅[自定义任务窗格](/visualstudio/vsto/custom-task-panes)。  
   
    
   
 ## Examples  
- 下面的代码示例创建一个自定义任务窗格，并显示它。 此代码示例是为提供一个更大示例的一部分<xref:Microsoft.Office.Tools.CustomTaskPane>。  
+ 下面的代码示例创建一个自定义任务窗格并显示它。 此代码示例是为提供的<xref:Microsoft.Office.Tools.CustomTaskPane>更大示例的一部分。  
   
  [!code-csharp[Trin_TaskPaneReference#2](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_TaskPaneReference/CS/ThisAddIn.cs#2)]
  [!code-vb[Trin_TaskPaneReference#2](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_TaskPaneReference/VB/ThisAddIn.vb#2)]  
@@ -308,7 +305,7 @@
       </Docs>
     </Member>
     <Member MemberName="VisibleChanged">
-      <MemberSignature Language="C#" Value="public event EventHandler VisibleChanged;" />
+      <MemberSignature Language="C#" Value="event EventHandler VisibleChanged;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler VisibleChanged" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.CustomTaskPane.VisibleChanged" />
       <MemberType>Event</MemberType>
@@ -325,12 +322,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- Microsoft Office 应用程序不提供默认值为用户的 UI，以显示自定义任务窗格。 如果外接程序中创建自定义任务窗格，您还应创建 UI 元素，如按钮，用户可单击以显示或隐藏自定义任务窗格。 有关详细信息，请参阅[自定义任务窗格](/visualstudio/vsto/custom-task-panes)。  
+ Microsoft Office 应用程序不提供用户用于显示自定义任务窗格的默认 UI。 如果在外接程序中创建自定义任务窗格, 还应创建一个 UI 元素 (如按钮), 用户可以单击该元素来显示或隐藏自定义任务窗格。 有关详细信息, 请参阅[自定义任务窗格](/visualstudio/vsto/custom-task-panes)。  
   
    
   
 ## Examples  
- 下面的代码示例演示的事件处理程序<xref:Microsoft.Office.Tools.CustomTaskPane.VisibleChanged>事件。 每当用户打开或关闭自定义任务窗格时，此事件处理程序更新的功能区上的切换按钮的状态。 此代码示例摘自[演练： 将自定义任务窗格与功能区按钮同步](/visualstudio/vsto/walkthrough-synchronizing-a-custom-task-pane-with-a-ribbon-button)。  
+ 下面的代码示例演示<xref:Microsoft.Office.Tools.CustomTaskPane.VisibleChanged>事件的事件处理程序。 每当用户打开或关闭自定义任务窗格时, 此事件处理程序都将更新功能区上切换按钮的状态。 此代码示例是演练中[提供的一个更大示例的一部分:将自定义任务窗格与功能区按钮](/visualstudio/vsto/walkthrough-synchronizing-a-custom-task-pane-with-a-ribbon-button)同步。  
   
  [!code-csharp[Trin_TaskPaneRibbonSynchronize#3](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_TaskPaneRibbonSynchronize/CS/ThisAddIn.cs#3)]
  [!code-vb[Trin_TaskPaneRibbonSynchronize#3](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_TaskPaneRibbonSynchronize/VB/ThisAddIn.vb#3)]  
@@ -358,16 +355,16 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 不要使用<xref:Microsoft.Office.Tools.CustomTaskPane.Width%2A>属性，如果自定义任务窗格停靠到顶部或底部的文档窗口。 如果<xref:Microsoft.Office.Tools.CustomTaskPane.DockPosition%2A>属性是`Microsoft.Office.Core.MsoCTPDockPosition.msoCTPDockPositionTop`或`Microsoft.Office.Core.MsoCTPDockPosition.msoCTPDockPositionBottom`，则<xref:Microsoft.Office.Tools.CustomTaskPane.Width%2A>属性将返回 0，并且引发<xref:System.Runtime.InteropServices.COMException>如果尝试将其设置。  
+ 如果自定义任务<xref:Microsoft.Office.Tools.CustomTaskPane.Width%2A>窗格停靠在文档窗口的顶部或底部, 则不使用属性。 `Microsoft.Office.Core.MsoCTPDockPosition.msoCTPDockPositionTop`如果属性为或`Microsoft.Office.Core.MsoCTPDockPosition.msoCTPDockPositionBottom` ,<xref:Microsoft.Office.Tools.CustomTaskPane.Width%2A>则属性将返回 0, 并在尝试设置时引发。 <xref:System.Runtime.InteropServices.COMException> <xref:Microsoft.Office.Tools.CustomTaskPane.DockPosition%2A>  
   
- 最大宽度取决于停靠位置。 自定义任务窗格停靠到左侧或右侧的文档窗口中，最大宽度时，大约半个屏幕的宽度。 如果自定义任务窗格浮动的则没有最大宽度。  
+ 最大宽度取决于停靠位置。 当自定义任务窗格停靠在文档窗口的左侧或右侧时, 最大宽度大约为屏幕宽度的一半。 自定义任务窗格浮动时, 没有最大宽度。  
   
- 最小宽度取决于若干因素，并可以更改在将来版本的 Microsoft Office。 如果您尝试设置<xref:Microsoft.Office.Tools.CustomTaskPane.Width%2A>属性的值小于最小宽度，该应用程序将自动重新分配<xref:Microsoft.Office.Tools.CustomTaskPane.Width%2A>属性设置为最小宽度。  
+ 最小宽度取决于多个因素, 并且在 Microsoft Office 的未来版本中可能会更改。 如果尝试将<xref:Microsoft.Office.Tools.CustomTaskPane.Width%2A>属性设置为小于最小宽度的值, 应用程序会自动将<xref:Microsoft.Office.Tools.CustomTaskPane.Width%2A>属性重新分配到最小宽度。  
   
    
   
 ## Examples  
- 下面的代码示例创建一个自定义任务窗格时它将显示活动的应用程序窗口中的前面和左侧或右侧的窗口停靠时具有不同的默认宽度。 此代码示例是为提供一个更大示例的一部分<xref:Microsoft.Office.Tools.CustomTaskPane>。  
+ 下面的代码示例创建一个自定义任务窗格, 该窗格在活动应用程序窗口的前面显示时, 以及当它停靠到窗口的左侧或右侧时具有不同的默认宽度。 此代码示例是为提供的<xref:Microsoft.Office.Tools.CustomTaskPane>更大示例的一部分。  
   
  [!code-csharp[Trin_TaskPaneReference#2](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_TaskPaneReference/CS/ThisAddIn.cs#2)]
  [!code-vb[Trin_TaskPaneReference#2](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_TaskPaneReference/VB/ThisAddIn.vb#2)]  
@@ -400,9 +397,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要指定自定义任务窗格与相关联的文档窗口，请使用`window`参数的<xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%28System.Windows.Forms.UserControl%2CSystem.String%2CSystem.Object%29>方法。  
+ 若要指定与自定义任务窗格关联的文档窗口, 请使用`window` <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%28System.Windows.Forms.UserControl%2CSystem.String%2CSystem.Object%29>方法的参数。  
   
- 类型<xref:Microsoft.Office.Tools.CustomTaskPane.Window%2A>属性取决于应用程序。 下表列出了有效的类型的`window`参数。  
+ <xref:Microsoft.Office.Tools.CustomTaskPane.Window%2A>属性的类型取决于应用程序。 下表列出了`window`参数的有效类型。  
   
 |应用程序|参数类型|  
 |-----------------|--------------------|  
@@ -410,9 +407,9 @@
 |Excel|`Microsoft.Office.Interop.Excel.Window`|  
 |PowerPoint|`Microsoft.Office.Interop.PowerPoint.DocumentWindow`|  
 |InfoPath|`Microsoft.Office.Interop.InfoPath.WindowObject`|  
-|Outlook|`Microsoft.Office.Interop.Outlook.Explorer`<br /><br /> 或<br /><br /> `Microsoft.Office.Interop.Outlook.Inspector`|  
+|Outlook|`Microsoft.Office.Interop.Outlook.Explorer`<br /><br /> - 或 -<br /><br /> `Microsoft.Office.Interop.Outlook.Inspector`|  
   
- 有关详细信息，请参阅[自定义任务窗格](/visualstudio/vsto/custom-task-panes)。  
+ 有关详细信息, 请参阅[自定义任务窗格](/visualstudio/vsto/custom-task-panes)。  
   
  ]]></format>
         </remarks>

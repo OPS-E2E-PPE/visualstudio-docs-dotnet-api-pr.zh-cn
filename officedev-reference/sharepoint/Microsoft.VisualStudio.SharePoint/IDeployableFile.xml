@@ -1,5 +1,5 @@
 <Type Name="IDeployableFile" FullName="Microsoft.VisualStudio.SharePoint.IDeployableFile">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="f696628c85bc9a539f9e220c73f8714dc56f468b" /><Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="02/21/2018" /><Meta Name="ms.locfileid" Value="29410169" /></Metadata><TypeSignature Language="C#" Value="public interface IDeployableFile" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="24f8774f880d7d66deec5c017265a821be82d616" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69008328" /></Metadata><TypeSignature Language="C#" Value="public interface IDeployableFile" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDeployableFile" />
   <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.SharePoint.IDeployableFile" />
   <AssemblyInfo>
@@ -31,7 +31,7 @@
       </Docs>
     </Member>
     <Member MemberName="DeploymentPathChanged">
-      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.VisualStudio.SharePoint.DeploymentPathChangedEventArgs&gt; DeploymentPathChanged;" />
+      <MemberSignature Language="C#" Value="event EventHandler&lt;Microsoft.VisualStudio.SharePoint.DeploymentPathChangedEventArgs&gt; DeploymentPathChanged;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.VisualStudio.SharePoint.DeploymentPathChangedEventArgs&gt; DeploymentPathChanged" />
       <MemberSignature Language="DocId" Value="E:Microsoft.VisualStudio.SharePoint.IDeployableFile.DeploymentPathChanged" />
       <MemberType>Event</MemberType>
@@ -66,12 +66,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此值使用以下令牌：  
+ 此值使用以下标记:  
   
-|标记名称|描述|  
+|标记名称|说明|  
 |----------------|-----------------|  
-|{SharePointRoot}|SharePoint hive 的根。|  
-|{FeatureName}|在其中功能的名称`ProjectItem`包含。|  
+|{SharePointRoot}|SharePoint 配置单元的根。|  
+|{FeatureName}|其中包含的`ProjectItem`功能的名称。|  
 |{ClassResourcePath}|SharePoint 上的类资源路径。 此值取决于程序集是否部署到全局程序集缓存 (GAC) 或 Web 应用程序。|  
   
  ]]></format>
@@ -97,7 +97,7 @@
       </Docs>
     </Member>
     <Member MemberName="DeploymentTypeChanged">
-      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.VisualStudio.SharePoint.DeploymentTypeChangedEventArgs&gt; DeploymentTypeChanged;" />
+      <MemberSignature Language="C#" Value="event EventHandler&lt;Microsoft.VisualStudio.SharePoint.DeploymentTypeChangedEventArgs&gt; DeploymentTypeChanged;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.VisualStudio.SharePoint.DeploymentTypeChangedEventArgs&gt; DeploymentTypeChanged" />
       <MemberSignature Language="DocId" Value="E:Microsoft.VisualStudio.SharePoint.IDeployableFile.DeploymentTypeChanged" />
       <MemberType>Event</MemberType>
@@ -114,9 +114,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 中的更改<xref:Microsoft.VisualStudio.SharePoint.IDeployableFile.DeploymentType%2A>属性后面通常跟随<xref:Microsoft.VisualStudio.SharePoint.IDeployableFile.DeploymentPathChanged>事件。  
+ <xref:Microsoft.VisualStudio.SharePoint.IDeployableFile.DeploymentType%2A>属性中的更改通常后跟<xref:Microsoft.VisualStudio.SharePoint.IDeployableFile.DeploymentPathChanged>事件。  
   
- 中时，在<xref:Microsoft.VisualStudio.SharePoint.IDeployableFile.DeploymentTypeChanged>事件处理程序，你可以访问的旧值仅<xref:Microsoft.VisualStudio.SharePoint.IDeployableFile.DeploymentPath%2A>属性。  
+ 在<xref:Microsoft.VisualStudio.SharePoint.IDeployableFile.DeploymentTypeChanged>事件处理程序中, 只能访问<xref:Microsoft.VisualStudio.SharePoint.IDeployableFile.DeploymentPath%2A>属性的旧值。  
   
  ]]></format>
         </remarks>

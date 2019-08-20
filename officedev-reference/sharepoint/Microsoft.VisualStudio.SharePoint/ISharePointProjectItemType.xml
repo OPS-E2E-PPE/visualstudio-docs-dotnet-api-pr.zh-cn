@@ -1,5 +1,5 @@
 <Type Name="ISharePointProjectItemType" FullName="Microsoft.VisualStudio.SharePoint.ISharePointProjectItemType">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="85e056f18fe86f02850893ae8b44c491d0fc8b06" /><Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="02/21/2018" /><Meta Name="ms.locfileid" Value="29410195" /></Metadata><TypeSignature Language="C#" Value="public interface ISharePointProjectItemType : Microsoft.VisualStudio.SharePoint.IAnnotatedObject, Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents, Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFileEvents" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="c5b7ff85e2f2ca1465c4e81aaf04ff5d1ffc4c58" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69007566" /></Metadata><TypeSignature Language="C#" Value="public interface ISharePointProjectItemType : Microsoft.VisualStudio.SharePoint.IAnnotatedObject, Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents, Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFileEvents" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISharePointProjectItemType implements class Microsoft.VisualStudio.SharePoint.IAnnotatedObject, class Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents, class Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFileEvents" />
   <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemType" />
   <AssemblyInfo>
@@ -36,14 +36,14 @@
       </ReturnValue>
       <Docs>
         <summary>获取 SharePoint 项目项类型的唯一 ID。</summary>
-        <value>一个字符串，表示一个 id。</value>
+        <value>表示 ID 的字符串。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 该 ID 通常是一个字符串，它显示为命名空间限定类型。 通过从 SharePointProjectItemTypeAttribute 项目初始化 ID。<xref:Microsoft.VisualStudio.SharePoint.SharePointProjectItemTypeAttribute.ProjectItemTypeId%2A>为提供值<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider>组件。  
+ 此 ID 通常是一个以命名空间限定类型显示的字符串。 该 ID 由项目从 SharePointProjectItemTypeAttribute 进行初始化。<xref:Microsoft.VisualStudio.SharePoint.SharePointProjectItemTypeAttribute.ProjectItemTypeId%2A> 为<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider>组件提供的值。  
   
- ID 必须匹配中存储的 ID。SPData 文件。  
+ ID 必须与中存储的 ID 匹配。SPData 文件。  
   
  ]]></format>
         </remarks>
@@ -63,13 +63,12 @@
       </ReturnValue>
       <Docs>
         <summary>了解项目项是否有效。</summary>
-        <value>
-          <see langword="True" /> 如果项目项是有效，则为<see langword="false" />否则为。</value>
+        <value><see langword="True" />如果项目项有效, 则为; 否则为。<see langword="false" />否则为。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 项目项类型被视为如果 SharePoint 项目可以找到组件实现相应项目项类型提供程序，并且能够成功创建并初始化此类型提供程序是否可有效。  
+ 如果 SharePoint 项目可以找到实现相应项目项类型提供程序的组件, 并且该提供程序能够成功创建和初始化该类型, 则该项目项类型将被视为有效。  
   
  ]]></format>
         </remarks>
@@ -107,7 +106,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取 SharePoint 项目服务的实例。</summary>
-        <value>表示一个 SharePoint 项目服务实例的对象。</value>
+        <value>一个表示 SharePoint 项目服务实例的对象。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -125,7 +124,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取此 <see cref="P:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFile.ProjectItem" /> 支持的程序集的部署位置。</summary>
-        <value>表示一个部署位置的对象。</value>
+        <value>一个表示部署位置的对象。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -143,12 +142,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取 SharePoint 中支持 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem" /> 部署的范围。</summary>
-        <value>表示部署范围的对象。</value>
+        <value>一个表示部署范围的对象。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 在选择包括为兼容的功能和限制功能和包设计器用户界面，对于其他用户使用此属性。  
+ 此属性用于为自动添加和限制功能和包设计器 Ui 选择兼容的功能, 以及其他用途。  
   
  ]]></format>
         </remarks>

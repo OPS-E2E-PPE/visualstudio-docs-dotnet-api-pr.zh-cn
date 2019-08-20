@@ -1,5 +1,5 @@
 <Type Name="ActionsPane" FullName="Microsoft.Office.Tools.ActionsPane">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="425da861994f261075eb96a35816b96ec3dc2093" /><Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="09/19/2018" /><Meta Name="ms.locfileid" Value="46459921" /></Metadata><TypeSignature Language="C#" Value="public interface ActionsPane : IDisposable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="3cf0808bbc213fa10071c929266c71fd87515a80" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="68999514" /></Metadata><TypeSignature Language="C#" Value="public interface ActionsPane : IDisposable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ActionsPane implements class System.IDisposable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.ActionsPane" />
   <AssemblyInfo>
@@ -22,19 +22,19 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 每个 Excel 或 Word 的文档级自定义公开<xref:Microsoft.Office.Tools.ActionsPane>对象。 可以使用此对象以自定义的用户界面**文档操作**在文档级项目中的任务窗格。 若要获取<xref:Microsoft.Office.Tools.ActionsPane>对象，请使用`ActionsPane`字段`ThisDocument`（针对 Word) 类或`ThisWorkbook`（针对 Excel) 项目中的类。 有关详细信息，请参阅[操作窗格概述](/visualstudio/vsto/actions-pane-overview)。  
+ Excel 或 Word 的每个文档级自定义项<xref:Microsoft.Office.Tools.ActionsPane>都公开了一个对象。 您可以使用此对象自定义文档级项目中 "**文档操作**" 任务窗格的用户界面。 若要获取<xref:Microsoft.Office.Tools.ActionsPane>对象, 请`ActionsPane`使用项目中`ThisDocument`类的字段 (对于 Word) 或`ThisWorkbook`类 (对于 Excel)。 有关更多信息，请参见 [Actions Pane Overview](/visualstudio/vsto/actions-pane-overview)。  
   
- 每个<xref:Microsoft.Office.Tools.ActionsPane>对象扩展基础的 Windows 窗体<xref:System.Windows.Forms.UserControl>，它提供一个用户界面，可以自定义。 大部分<xref:Microsoft.Office.Tools.ActionsPane>成员对应于的基础成员<xref:System.Windows.Forms.UserControl>。 使用以下<xref:Microsoft.Office.Tools.ActionsPane>成员访问操作窗格特有的功能：  
+ 每<xref:Microsoft.Office.Tools.ActionsPane>个对象都扩展了<xref:System.Windows.Forms.UserControl>一个基础 Windows 窗体, 该基础提供可自定义的用户界面。 大多数成员与基础<xref:System.Windows.Forms.UserControl>的成员相对应。 <xref:Microsoft.Office.Tools.ActionsPane> 使用以下<xref:Microsoft.Office.Tools.ActionsPane>成员访问操作窗格特定功能:  
   
--   <xref:Microsoft.Office.Tools.ActionsPane.Clear%2A> 方法。 使用此方法以分离操作窗格中的文档或工作簿。  
+-   <xref:Microsoft.Office.Tools.ActionsPane.Clear%2A> 方法。 使用此方法可以从文档或工作簿中分离操作窗格。  
   
--   <xref:Microsoft.Office.Tools.ActionsPane.AutoRecover%2A> 属性。 此属性用于阻止或允许最终用户从文档或工作簿操作窗格中分离。  
+-   <xref:Microsoft.Office.Tools.ActionsPane.AutoRecover%2A> 属性。 使用此属性可以阻止或允许最终用户从文档或工作簿分离操作窗格。  
   
--   <xref:Microsoft.Office.Tools.ActionsPane.Orientation%2A> 属性。 使用此属性以确定操作窗格是否停靠到顶部或底部的文档或工作簿，或从左到右的文档或工作簿。  
+-   <xref:Microsoft.Office.Tools.ActionsPane.Orientation%2A> 属性。 使用此属性来确定操作窗格是停靠到文档或工作簿的顶部还是底部, 或停靠到文档或工作簿的左侧或右侧。  
   
--   <xref:Microsoft.Office.Tools.ActionsPane.StackOrder%2A> 属性。 使用操作窗格堆叠此属性指定控件的方向。  
+-   <xref:Microsoft.Office.Tools.ActionsPane.StackOrder%2A> 属性。 使用此属性可指定控件在操作窗格上堆叠的方向。  
   
--   <xref:Microsoft.Office.Tools.ActionsPane.OrientationChanged> 事件。 使用此属性以确定当将操作窗格停靠到另一个位置。  
+-   <xref:Microsoft.Office.Tools.ActionsPane.OrientationChanged> 事件。 使用此属性确定操作窗格停靠到不同位置的时间。  
   
  [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
   
@@ -44,7 +44,7 @@
    
   
 ## Examples  
- 下面的代码示例演示如何创建一个简单的操作窗格，它会自动调整其内容的对齐方式。 当用户通过移动到应用程序窗口的不同部分的操作窗格来更改操作窗格的方向，或在用户单击<xref:System.Windows.Forms.Button>操作窗格中的控制<xref:Microsoft.Office.Tools.ActionsPane.Orientation%2A>使用属性来确定的新值<xref:Microsoft.Office.Tools.ActionsPane.StackOrder%2A>属性。 若要运行此代码，调用`InitActionsPane`方法从`ThisWorkbook_Startup`事件处理程序的 Excel 的文档级项目。  
+ 下面的代码示例演示如何创建一个自动调整其内容对齐方式的简单操作窗格。 当用户通过将操作窗格移动到应用程序窗口的其他部分, 或者用户单击<xref:System.Windows.Forms.Button> "操作" 窗格中的控件来更改操作窗格的方向时, 将<xref:Microsoft.Office.Tools.ActionsPane.Orientation%2A>使用属性来确定新的值。<xref:Microsoft.Office.Tools.ActionsPane.StackOrder%2A>属性。 若要运行此代码, 请`InitActionsPane`从 Excel 文档`ThisWorkbook_Startup`级项目的事件处理程序调用方法。  
   
  [!code-csharp[Trin_ActionsPane#1](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ActionsPane/CS/thisworkbook.cs#1)]
  [!code-vb[Trin_ActionsPane#1](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ActionsPane/VB/thisworkbook.vb#1)]  
@@ -80,7 +80,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.Control.AccessibilityObject%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.Control.AccessibilityObject%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.Control.AccessibilityObject%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.Control.AccessibilityObject%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -113,7 +113,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.Control.AccessibleDefaultActionDescription%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.Control.AccessibleDefaultActionDescription%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.Control.AccessibleDefaultActionDescription%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.Control.AccessibleDefaultActionDescription%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -143,7 +143,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.Control.AccessibleDescription%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.Control.AccessibleDescription%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.Control.AccessibleDescription%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.Control.AccessibleDescription%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -173,7 +173,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.Control.AccessibleName%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.Control.AccessibleName%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.Control.AccessibleName%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.Control.AccessibleName%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -198,7 +198,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.Control.AccessibleRole%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.Control.AccessibleRole%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.Control.AccessibleRole%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.Control.AccessibleRole%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -228,7 +228,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.ContainerControl.ActiveControl%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.ContainerControl.ActiveControl%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.ContainerControl.ActiveControl%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.ContainerControl.ActiveControl%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -253,7 +253,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.Control.AllowDrop%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.Control.AllowDrop%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.Control.AllowDrop%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.Control.AllowDrop%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -283,7 +283,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -308,7 +308,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果此属性设置为`true`，用户不能分离操作窗格解决方案。 这也是一种缓解方法的操作窗格解决方案意外删除。 若要强制分离操作窗格解决方案从文档，请使用<xref:Microsoft.Office.Tools.ActionsPane.Clear%2A>方法。  
+ 如果将此属性设置为`true`, 则不允许用户分离操作窗格解决方案。 这也是意外删除操作窗格解决方案的缓解技术。 若要强制从文档分离操作窗格解决方案, 请使用<xref:Microsoft.Office.Tools.ActionsPane.Clear%2A>方法。  
   
  ]]></format>
         </remarks>
@@ -344,7 +344,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -372,12 +372,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置操作窗格的自动缩放模式。</summary>
-        <value>一个表示当前缩放模式的值。 默认值是<c>System.Windows.Forms.AutoScaleMode.None</c>。</value>
+        <value>一个表示当前缩放模式的值。 默认值为 " <c>system.windows.forms.containercontrol.autoscalemode</c>"。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -407,7 +407,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -440,7 +440,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.ScrollableControl.AutoScrollMargin%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.ScrollableControl.AutoScrollMargin%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.ScrollableControl.AutoScrollMargin%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.ScrollableControl.AutoScrollMargin%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -473,7 +473,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.ScrollableControl.AutoScrollMinSize%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.ScrollableControl.AutoScrollMinSize%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.ScrollableControl.AutoScrollMinSize%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.ScrollableControl.AutoScrollMinSize%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -506,7 +506,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.Control.AutoScrollOffset%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.Control.AutoScrollOffset%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.Control.AutoScrollOffset%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.Control.AutoScrollOffset%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -536,7 +536,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.ScrollableControl.AutoScrollPosition%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.ScrollableControl.AutoScrollPosition%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.ScrollableControl.AutoScrollPosition%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.ScrollableControl.AutoScrollPosition%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -569,7 +569,7 @@
       </Docs>
     </Member>
     <Member MemberName="AutoSizeChanged">
-      <MemberSignature Language="C#" Value="public event EventHandler AutoSizeChanged;" />
+      <MemberSignature Language="C#" Value="event EventHandler AutoSizeChanged;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler AutoSizeChanged" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.AutoSizeChanged" />
       <MemberType>Event</MemberType>
@@ -615,12 +615,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置操作窗格控件自动调整自身大小的模式。</summary>
-        <value>一个值，该值指定操作窗格控件自动调整自身大小的模式。 默认值是<c>System.Windows.Forms.AutoSizeMode.GrowOnly</c>。</value>
+        <value>一个值，该值指定操作窗格控件自动调整自身大小的模式。 默认值为<c>AutoSizeMode. GrowOnly</c>。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.Form.AutoSizeMode%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.Form.AutoSizeMode%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.Form.AutoSizeMode%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.Form.AutoSizeMode%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -653,14 +653,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.ContainerControl.AutoValidate%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.ContainerControl.AutoValidate%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.ContainerControl.AutoValidate%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.ContainerControl.AutoValidate%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="AutoValidateChanged">
-      <MemberSignature Language="C#" Value="public event EventHandler AutoValidateChanged;" />
+      <MemberSignature Language="C#" Value="event EventHandler AutoValidateChanged;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler AutoValidateChanged" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.AutoValidateChanged" />
       <MemberType>Event</MemberType>
@@ -685,7 +685,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.ContainerControl.AutoValidateChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.ContainerControl.AutoValidateChanged?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.ContainerControl.AutoValidateChanged?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.ContainerControl.AutoValidateChanged?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -710,14 +710,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.Control.BackColor%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.Control.BackColor%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.Control.BackColor%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.Control.BackColor%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="BackColorChanged">
-      <MemberSignature Language="C#" Value="public event EventHandler BackColorChanged;" />
+      <MemberSignature Language="C#" Value="event EventHandler BackColorChanged;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler BackColorChanged" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.BackColorChanged" />
       <MemberType>Event</MemberType>
@@ -734,7 +734,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.Control.BackColorChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.BackColorChanged?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.Control.BackColorChanged?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.Control.BackColorChanged?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -764,14 +764,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.Control.BackgroundImage%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.Control.BackgroundImage%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.Control.BackgroundImage%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.Control.BackgroundImage%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="BackgroundImageChanged">
-      <MemberSignature Language="C#" Value="public event EventHandler BackgroundImageChanged;" />
+      <MemberSignature Language="C#" Value="event EventHandler BackgroundImageChanged;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler BackgroundImageChanged" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.BackgroundImageChanged" />
       <MemberType>Event</MemberType>
@@ -788,7 +788,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.Control.BackgroundImageChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.BackgroundImageChanged?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.Control.BackgroundImageChanged?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.Control.BackgroundImageChanged?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -818,14 +818,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.Control.BackgroundImageLayout%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.Control.BackgroundImageLayout%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.Control.BackgroundImageLayout%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.Control.BackgroundImageLayout%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="BackgroundImageLayoutChanged">
-      <MemberSignature Language="C#" Value="public event EventHandler BackgroundImageLayoutChanged;" />
+      <MemberSignature Language="C#" Value="event EventHandler BackgroundImageLayoutChanged;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler BackgroundImageLayoutChanged" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.BackgroundImageLayoutChanged" />
       <MemberType>Event</MemberType>
@@ -842,7 +842,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.Control.BackgroundImageLayoutChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.BackgroundImageLayoutChanged?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.Control.BackgroundImageLayoutChanged?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.Control.BackgroundImageLayoutChanged?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -866,6 +866,23 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="BeginInvoke">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>在创建操作窗格控件的基础句柄所在线程上异步执行委托。</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此方法提供与<xref:System.Windows.Forms.Control.BeginInvoke%2A?displayProperty=fullName>方法相同的功能。 有关使用此方法的详细信息, 请<xref:System.Windows.Forms.Control.BeginInvoke%2A?displayProperty=fullName>参阅。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="BeginInvoke">
       <MemberSignature Language="C#" Value="public IAsyncResult BeginInvoke (Delegate method);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginInvoke(class System.Delegate method) cil managed" />
@@ -894,7 +911,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供相同的功能<xref:System.Windows.Forms.Control.BeginInvoke%28System.Delegate%29?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.BeginInvoke%28System.Delegate%29?displayProperty=fullName>。  
+ 此方法提供与<xref:System.Windows.Forms.Control.BeginInvoke%28System.Delegate%29?displayProperty=fullName>方法相同的功能。 有关使用此方法的详细信息, 请<xref:System.Windows.Forms.Control.BeginInvoke%28System.Delegate%29?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -930,7 +947,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供相同的功能<xref:System.Windows.Forms.Control.BeginInvoke%28System.Delegate%2CSystem.Object%5B%5D%29?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.BeginInvoke%28System.Delegate%2CSystem.Object%5B%5D%29?displayProperty=fullName>。  
+ 此方法提供与<xref:System.Windows.Forms.Control.BeginInvoke%28System.Delegate%2CSystem.Object%5B%5D%29?displayProperty=fullName>方法相同的功能。 有关使用此方法的详细信息, 请<xref:System.Windows.Forms.Control.BeginInvoke%28System.Delegate%2CSystem.Object%5B%5D%29?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -963,14 +980,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.Control.BindingContext%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.Control.BindingContext%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.Control.BindingContext%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.Control.BindingContext%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="BindingContextChanged">
-      <MemberSignature Language="C#" Value="public event EventHandler BindingContextChanged;" />
+      <MemberSignature Language="C#" Value="event EventHandler BindingContextChanged;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler BindingContextChanged" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.BindingContextChanged" />
       <MemberType>Event</MemberType>
@@ -987,7 +1004,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.Control.BindingContextChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.BindingContextChanged?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.Control.BindingContextChanged?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.Control.BindingContextChanged?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -1020,7 +1037,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.UserControl.BorderStyle%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.UserControl.BorderStyle%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.UserControl.BorderStyle%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.UserControl.BorderStyle%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -1053,7 +1070,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.Control.Bottom%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.Control.Bottom%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.Control.Bottom%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.Control.Bottom%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -1086,7 +1103,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 通过设置此属性，不能更改的大小和位置的操作窗格。 有关如何以编程方式调整大小和更改信息的位置的操作窗格中，请参阅[操作窗格概述](/visualstudio/vsto/actions-pane-overview)。  
+ 不能通过设置此属性来更改操作窗格的大小和位置。 有关如何以编程方式调整大小和更改操作窗格的位置的信息, 请参阅[操作窗格概述](/visualstudio/vsto/actions-pane-overview)。  
   
  ]]></format>
         </remarks>
@@ -1111,7 +1128,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供相同的功能<xref:System.Windows.Forms.Control.BringToFront%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.BringToFront%2A?displayProperty=fullName>。  
+ 此方法提供与<xref:System.Windows.Forms.Control.BringToFront%2A?displayProperty=fullName>方法相同的功能。 有关使用此方法的详细信息, 请<xref:System.Windows.Forms.Control.BringToFront%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -1144,7 +1161,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.Control.CanFocus%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.Control.CanFocus%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.Control.CanFocus%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.Control.CanFocus%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -1177,7 +1194,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.Control.CanSelect%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.Control.CanSelect%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.Control.CanSelect%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.Control.CanSelect%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -1210,7 +1227,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.Control.Capture%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.Control.Capture%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.Control.Capture%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.Control.Capture%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -1235,14 +1252,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.Control.CausesValidation%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.Control.CausesValidation%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.Control.CausesValidation%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.Control.CausesValidation%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="CausesValidationChanged">
-      <MemberSignature Language="C#" Value="public event EventHandler CausesValidationChanged;" />
+      <MemberSignature Language="C#" Value="event EventHandler CausesValidationChanged;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler CausesValidationChanged" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.CausesValidationChanged" />
       <MemberType>Event</MemberType>
@@ -1259,14 +1276,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.Control.CausesValidationChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.CausesValidationChanged?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.Control.CausesValidationChanged?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.Control.CausesValidationChanged?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="ChangeUICues">
-      <MemberSignature Language="C#" Value="public event System.Windows.Forms.UICuesEventHandler ChangeUICues;" />
+      <MemberSignature Language="C#" Value="event System.Windows.Forms.UICuesEventHandler ChangeUICues;" />
       <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.UICuesEventHandler ChangeUICues" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.ChangeUICues" />
       <MemberType>Event</MemberType>
@@ -1283,7 +1300,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.Control.ChangeUICues?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.ChangeUICues?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.Control.ChangeUICues?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.Control.ChangeUICues?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -1308,14 +1325,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 调用<xref:Microsoft.Office.Tools.ActionsPane.Clear%2A>中的方法`Startup`事件处理程序`ThisDocument`或`ThisWorkbook`如果你想要确保不可用操作窗格打开时的文档。  
+ 在的`ThisDocument`事件处理程序<xref:Microsoft.Office.Tools.ActionsPane.Clear%2A> 中调用方法,如果要确保在打开文档时操作窗格不可用`ThisWorkbook`,则为。 `Startup`  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="Click">
-      <MemberSignature Language="C#" Value="public event EventHandler Click;" />
+      <MemberSignature Language="C#" Value="event EventHandler Click;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Click" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.Click" />
       <MemberType>Event</MemberType>
@@ -1332,7 +1349,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.Control.Click?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.Click?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.Control.Click?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.Control.Click?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -1365,7 +1382,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.Control.ClientRectangle%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.Control.ClientRectangle%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.Control.ClientRectangle%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.Control.ClientRectangle%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -1398,14 +1415,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.Control.ClientSize%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.Control.ClientSize%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.Control.ClientSize%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.Control.ClientSize%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="ClientSizeChanged">
-      <MemberSignature Language="C#" Value="public event EventHandler ClientSizeChanged;" />
+      <MemberSignature Language="C#" Value="event EventHandler ClientSizeChanged;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ClientSizeChanged" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.ClientSizeChanged" />
       <MemberType>Event</MemberType>
@@ -1422,7 +1439,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.Control.ClientSizeChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.ClientSizeChanged?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.Control.ClientSizeChanged?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.Control.ClientSizeChanged?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -1455,7 +1472,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.Control.CompanyName%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.Control.CompanyName%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.Control.CompanyName%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.Control.CompanyName%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -1502,7 +1519,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供相同的功能<xref:System.Windows.Forms.Control.Contains%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.Contains%2A?displayProperty=fullName>。  
+ 此方法提供与<xref:System.Windows.Forms.Control.Contains%2A?displayProperty=fullName>方法相同的功能。 有关使用此方法的详细信息, 请<xref:System.Windows.Forms.Control.Contains%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -1535,7 +1552,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.Control.ContainsFocus%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.Control.ContainsFocus%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.Control.ContainsFocus%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.Control.ContainsFocus%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -1565,14 +1582,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.Control.ContextMenu%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.Control.ContextMenu%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.Control.ContextMenu%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.Control.ContextMenu%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="ContextMenuChanged">
-      <MemberSignature Language="C#" Value="public event EventHandler ContextMenuChanged;" />
+      <MemberSignature Language="C#" Value="event EventHandler ContextMenuChanged;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ContextMenuChanged" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.ContextMenuChanged" />
       <MemberType>Event</MemberType>
@@ -1594,7 +1611,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.Control.ContextMenuChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.ContextMenuChanged?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.Control.ContextMenuChanged?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.Control.ContextMenuChanged?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -1619,14 +1636,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.Control.ContextMenuStrip%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.Control.ContextMenuStrip%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.Control.ContextMenuStrip%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.Control.ContextMenuStrip%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="ContextMenuStripChanged">
-      <MemberSignature Language="C#" Value="public event EventHandler ContextMenuStripChanged;" />
+      <MemberSignature Language="C#" Value="event EventHandler ContextMenuStripChanged;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ContextMenuStripChanged" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.ContextMenuStripChanged" />
       <MemberType>Event</MemberType>
@@ -1643,14 +1660,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.Control.ContextMenuStripChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.ContextMenuStripChanged?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.Control.ContextMenuStripChanged?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.Control.ContextMenuStripChanged?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="ControlAdded">
-      <MemberSignature Language="C#" Value="public event System.Windows.Forms.ControlEventHandler ControlAdded;" />
+      <MemberSignature Language="C#" Value="event System.Windows.Forms.ControlEventHandler ControlAdded;" />
       <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.ControlEventHandler ControlAdded" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.ControlAdded" />
       <MemberType>Event</MemberType>
@@ -1675,14 +1692,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.Control.ControlAdded?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.ControlAdded?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.Control.ControlAdded?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.Control.ControlAdded?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="ControlRemoved">
-      <MemberSignature Language="C#" Value="public event System.Windows.Forms.ControlEventHandler ControlRemoved;" />
+      <MemberSignature Language="C#" Value="event System.Windows.Forms.ControlEventHandler ControlRemoved;" />
       <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.ControlEventHandler ControlRemoved" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.ControlRemoved" />
       <MemberType>Event</MemberType>
@@ -1707,7 +1724,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.Control.ControlRemoved?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.ControlRemoved?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.Control.ControlRemoved?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.Control.ControlRemoved?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -1737,7 +1754,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.Control.Controls%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.Control.Controls%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.Control.Controls%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.Control.Controls%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -1762,7 +1779,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供相同的功能<xref:System.Windows.Forms.Control.CreateControl%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.CreateControl%2A?displayProperty=fullName>。  
+ 此方法提供与<xref:System.Windows.Forms.Control.CreateControl%2A?displayProperty=fullName>方法相同的功能。 有关使用此方法的详细信息, 请<xref:System.Windows.Forms.Control.CreateControl%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -1795,7 +1812,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.Control.Created%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.Control.Created%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.Control.Created%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.Control.Created%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -1821,7 +1838,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供相同的功能<xref:System.Windows.Forms.Control.CreateGraphics%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.CreateGraphics%2A?displayProperty=fullName>。  
+ 此方法提供与<xref:System.Windows.Forms.Control.CreateGraphics%2A?displayProperty=fullName>方法相同的功能。 有关使用此方法的详细信息, 请<xref:System.Windows.Forms.Control.CreateGraphics%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -1854,7 +1871,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.ContainerControl.CurrentAutoScaleDimensions%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.ContainerControl.CurrentAutoScaleDimensions%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.ContainerControl.CurrentAutoScaleDimensions%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.ContainerControl.CurrentAutoScaleDimensions%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -1879,14 +1896,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.Control.Cursor%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.Control.Cursor%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.Control.Cursor%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.Control.Cursor%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="CursorChanged">
-      <MemberSignature Language="C#" Value="public event EventHandler CursorChanged;" />
+      <MemberSignature Language="C#" Value="event EventHandler CursorChanged;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler CursorChanged" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.CursorChanged" />
       <MemberType>Event</MemberType>
@@ -1903,7 +1920,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.Control.CursorChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.CursorChanged?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.Control.CursorChanged?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.Control.CursorChanged?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -1928,7 +1945,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.Control.DataBindings%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.Control.DataBindings%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.Control.DataBindings%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.Control.DataBindings%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -1953,14 +1970,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.Control.DisplayRectangle%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.Control.DisplayRectangle%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.Control.DisplayRectangle%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.Control.DisplayRectangle%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="Disposed">
-      <MemberSignature Language="C#" Value="public event EventHandler Disposed;" />
+      <MemberSignature Language="C#" Value="event EventHandler Disposed;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Disposed" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.Disposed" />
       <MemberType>Event</MemberType>
@@ -2003,7 +2020,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.Control.Disposing%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.Control.Disposing%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.Control.Disposing%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.Control.Disposing%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -2033,14 +2050,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.Control.Dock%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.Control.Dock%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.Control.Dock%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.Control.Dock%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="DockChanged">
-      <MemberSignature Language="C#" Value="public event EventHandler DockChanged;" />
+      <MemberSignature Language="C#" Value="event EventHandler DockChanged;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler DockChanged" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.DockChanged" />
       <MemberType>Event</MemberType>
@@ -2057,7 +2074,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.Control.DockChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.DockChanged?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.Control.DockChanged?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.Control.DockChanged?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -2114,14 +2131,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供相同的功能<xref:System.Windows.Forms.Control.DoDragDrop%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.DoDragDrop%2A?displayProperty=fullName>。  
+ 此方法提供与<xref:System.Windows.Forms.Control.DoDragDrop%2A?displayProperty=fullName>方法相同的功能。 有关使用此方法的详细信息, 请<xref:System.Windows.Forms.Control.DoDragDrop%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="DoubleClick">
-      <MemberSignature Language="C#" Value="public event EventHandler DoubleClick;" />
+      <MemberSignature Language="C#" Value="event EventHandler DoubleClick;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler DoubleClick" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.DoubleClick" />
       <MemberType>Event</MemberType>
@@ -2138,14 +2155,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.Control.DoubleClick?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.DoubleClick?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.Control.DoubleClick?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.Control.DoubleClick?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="DragDrop">
-      <MemberSignature Language="C#" Value="public event System.Windows.Forms.DragEventHandler DragDrop;" />
+      <MemberSignature Language="C#" Value="event System.Windows.Forms.DragEventHandler DragDrop;" />
       <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.DragEventHandler DragDrop" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.DragDrop" />
       <MemberType>Event</MemberType>
@@ -2162,14 +2179,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.Control.DragDrop?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.DragDrop?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.Control.DragDrop?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.Control.DragDrop?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="DragEnter">
-      <MemberSignature Language="C#" Value="public event System.Windows.Forms.DragEventHandler DragEnter;" />
+      <MemberSignature Language="C#" Value="event System.Windows.Forms.DragEventHandler DragEnter;" />
       <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.DragEventHandler DragEnter" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.DragEnter" />
       <MemberType>Event</MemberType>
@@ -2186,14 +2203,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.Control.DragEnter?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.DragEnter?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.Control.DragEnter?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.Control.DragEnter?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="DragLeave">
-      <MemberSignature Language="C#" Value="public event EventHandler DragLeave;" />
+      <MemberSignature Language="C#" Value="event EventHandler DragLeave;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler DragLeave" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.DragLeave" />
       <MemberType>Event</MemberType>
@@ -2210,14 +2227,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.Control.DragLeave?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.DragLeave?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.Control.DragLeave?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.Control.DragLeave?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="DragOver">
-      <MemberSignature Language="C#" Value="public event System.Windows.Forms.DragEventHandler DragOver;" />
+      <MemberSignature Language="C#" Value="event System.Windows.Forms.DragEventHandler DragOver;" />
       <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.DragEventHandler DragOver" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.DragOver" />
       <MemberType>Event</MemberType>
@@ -2234,7 +2251,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.Control.DragOver?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.DragOver?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.Control.DragOver?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.Control.DragOver?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -2264,7 +2281,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供相同的功能<xref:System.Windows.Forms.Control.DrawToBitmap%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.DrawToBitmap%2A?displayProperty=fullName>。  
+ 此方法提供与<xref:System.Windows.Forms.Control.DrawToBitmap%2A?displayProperty=fullName>方法相同的功能。 有关使用此方法的详细信息, 请<xref:System.Windows.Forms.Control.DrawToBitmap%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -2294,14 +2311,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.Control.Enabled%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.Control.Enabled%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.Control.Enabled%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.Control.Enabled%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="EnabledChanged">
-      <MemberSignature Language="C#" Value="public event EventHandler EnabledChanged;" />
+      <MemberSignature Language="C#" Value="event EventHandler EnabledChanged;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler EnabledChanged" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.EnabledChanged" />
       <MemberType>Event</MemberType>
@@ -2318,7 +2335,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.Control.EnabledChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.EnabledChanged?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.Control.EnabledChanged?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.Control.EnabledChanged?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -2370,14 +2387,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供相同的功能<xref:System.Windows.Forms.Control.EndInvoke%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.EndInvoke%2A?displayProperty=fullName>。  
+ 此方法提供与<xref:System.Windows.Forms.Control.EndInvoke%2A?displayProperty=fullName>方法相同的功能。 有关使用此方法的详细信息, 请<xref:System.Windows.Forms.Control.EndInvoke%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="Enter">
-      <MemberSignature Language="C#" Value="public event EventHandler Enter;" />
+      <MemberSignature Language="C#" Value="event EventHandler Enter;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Enter" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.Enter" />
       <MemberType>Event</MemberType>
@@ -2394,7 +2411,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.Control.Enter?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.Enter?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.Control.Enter?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.Control.Enter?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -2420,7 +2437,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法返回`null`因为操作窗格不具有父窗体。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.FindForm%2A?displayProperty=fullName>。  
+ 此方法返回`null` , 因为操作窗格没有父窗体。 有关使用此方法的详细信息, 请<xref:System.Windows.Forms.Control.FindForm%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -2451,7 +2468,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供相同的功能<xref:System.Windows.Forms.Control.Focus%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.Focus%2A?displayProperty=fullName>。  
+ 此方法提供与<xref:System.Windows.Forms.Control.Focus%2A?displayProperty=fullName>方法相同的功能。 有关使用此方法的详细信息, 请<xref:System.Windows.Forms.Control.Focus%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -2484,7 +2501,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.Control.Focused%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.Control.Focused%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.Control.Focused%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.Control.Focused%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -2514,14 +2531,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.Control.Font%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.Control.Font%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.Control.Font%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.Control.Font%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="FontChanged">
-      <MemberSignature Language="C#" Value="public event EventHandler FontChanged;" />
+      <MemberSignature Language="C#" Value="event EventHandler FontChanged;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler FontChanged" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.FontChanged" />
       <MemberType>Event</MemberType>
@@ -2538,7 +2555,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.Control.FontChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.FontChanged?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.Control.FontChanged?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.Control.FontChanged?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -2563,14 +2580,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.Control.ForeColor%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.Control.ForeColor%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.Control.ForeColor%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.Control.ForeColor%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="ForeColorChanged">
-      <MemberSignature Language="C#" Value="public event EventHandler ForeColorChanged;" />
+      <MemberSignature Language="C#" Value="event EventHandler ForeColorChanged;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ForeColorChanged" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.ForeColorChanged" />
       <MemberType>Event</MemberType>
@@ -2587,12 +2604,29 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.Control.ForeColorChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.ForeColorChanged?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.Control.ForeColorChanged?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.Control.ForeColorChanged?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="GetChildAtPoint">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>检索指定位置的子控件。</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此方法提供与<xref:System.Windows.Forms.Control.GetChildAtPoint%2A?displayProperty=fullName>方法相同的功能。 有关使用此方法的详细信息, 请<xref:System.Windows.Forms.Control.GetChildAtPoint%2A?displayProperty=fullName>参阅。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="GetChildAtPoint">
       <MemberSignature Language="C#" Value="public System.Windows.Forms.Control GetChildAtPoint (System.Drawing.Point pt);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Forms.Control GetChildAtPoint(valuetype System.Drawing.Point pt) cil managed" />
@@ -2616,7 +2650,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供相同的功能<xref:System.Windows.Forms.Control.GetChildAtPoint%28System.Drawing.Point%29?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.GetChildAtPoint%28System.Drawing.Point%29?displayProperty=fullName>。  
+ 此方法提供与<xref:System.Windows.Forms.Control.GetChildAtPoint%28System.Drawing.Point%29?displayProperty=fullName>方法相同的功能。 有关使用此方法的详细信息, 请<xref:System.Windows.Forms.Control.GetChildAtPoint%28System.Drawing.Point%29?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -2647,7 +2681,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供相同的功能<xref:System.Windows.Forms.Control.GetChildAtPoint%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.GetChildAtPoint%2A?displayProperty=fullName>。  
+ 此方法提供与<xref:System.Windows.Forms.Control.GetChildAtPoint%2A?displayProperty=fullName>方法相同的功能。 有关使用此方法的详细信息, 请<xref:System.Windows.Forms.Control.GetChildAtPoint%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -2673,7 +2707,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供相同的功能<xref:System.Windows.Forms.Control.GetContainerControl%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.GetContainerControl%2A?displayProperty=fullName>。  
+ 此方法提供与<xref:System.Windows.Forms.Control.GetContainerControl%2A?displayProperty=fullName>方法相同的功能。 有关使用此方法的详细信息, 请<xref:System.Windows.Forms.Control.GetContainerControl%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -2704,7 +2738,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供相同的功能<xref:System.Windows.Forms.Control.GetNextControl%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.GetNextControl%2A?displayProperty=fullName>。  
+ 此方法提供与<xref:System.Windows.Forms.Control.GetNextControl%2A?displayProperty=fullName>方法相同的功能。 有关使用此方法的详细信息, 请<xref:System.Windows.Forms.Control.GetNextControl%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -2738,14 +2772,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供相同的功能<xref:System.Windows.Forms.Control.GetPreferredSize%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.GetPreferredSize%2A?displayProperty=fullName>。  
+ 此方法提供与<xref:System.Windows.Forms.Control.GetPreferredSize%2A?displayProperty=fullName>方法相同的功能。 有关使用此方法的详细信息, 请<xref:System.Windows.Forms.Control.GetPreferredSize%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="GiveFeedback">
-      <MemberSignature Language="C#" Value="public event System.Windows.Forms.GiveFeedbackEventHandler GiveFeedback;" />
+      <MemberSignature Language="C#" Value="event System.Windows.Forms.GiveFeedbackEventHandler GiveFeedback;" />
       <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.GiveFeedbackEventHandler GiveFeedback" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.GiveFeedback" />
       <MemberType>Event</MemberType>
@@ -2762,14 +2796,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.Control.GiveFeedback?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.GiveFeedback?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.Control.GiveFeedback?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.Control.GiveFeedback?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="GotFocus">
-      <MemberSignature Language="C#" Value="public event EventHandler GotFocus;" />
+      <MemberSignature Language="C#" Value="event EventHandler GotFocus;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler GotFocus" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.GotFocus" />
       <MemberType>Event</MemberType>
@@ -2794,7 +2828,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.Control.GotFocus?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.GotFocus?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.Control.GotFocus?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.Control.GotFocus?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -2824,14 +2858,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.Control.Handle%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.Control.Handle%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.Control.Handle%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.Control.Handle%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="HandleCreated">
-      <MemberSignature Language="C#" Value="public event EventHandler HandleCreated;" />
+      <MemberSignature Language="C#" Value="event EventHandler HandleCreated;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler HandleCreated" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.HandleCreated" />
       <MemberType>Event</MemberType>
@@ -2856,14 +2890,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.Control.HandleCreated?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.HandleCreated?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.Control.HandleCreated?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.Control.HandleCreated?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="HandleDestroyed">
-      <MemberSignature Language="C#" Value="public event EventHandler HandleDestroyed;" />
+      <MemberSignature Language="C#" Value="event EventHandler HandleDestroyed;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler HandleDestroyed" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.HandleDestroyed" />
       <MemberType>Event</MemberType>
@@ -2888,7 +2922,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.Control.HandleDestroyed?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.HandleDestroyed?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.Control.HandleDestroyed?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.Control.HandleDestroyed?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -2921,7 +2955,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.Control.HasChildren%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.Control.HasChildren%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.Control.HasChildren%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.Control.HasChildren%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -2954,14 +2988,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 设置此属性不能更改操作窗格的高度。 有关如何以编程方式调整大小操作窗格的信息，请参阅[操作窗格概述](/visualstudio/vsto/actions-pane-overview)。  
+ 不能通过设置此属性来更改操作窗格的高度。 有关如何以编程方式调整操作窗格的大小的信息, 请参阅[操作窗格概述](/visualstudio/vsto/actions-pane-overview)。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="HelpRequested">
-      <MemberSignature Language="C#" Value="public event System.Windows.Forms.HelpEventHandler HelpRequested;" />
+      <MemberSignature Language="C#" Value="event System.Windows.Forms.HelpEventHandler HelpRequested;" />
       <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.HelpEventHandler HelpRequested" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.HelpRequested" />
       <MemberType>Event</MemberType>
@@ -2978,7 +3012,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.Control.HelpRequested?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.HelpRequested?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.Control.HelpRequested?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.Control.HelpRequested?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -3003,15 +3037,15 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 调用<xref:Microsoft.Office.Tools.ActionsPane.Hide%2A>方法只会隐藏任务窗格用户界面，包括<xref:Microsoft.Office.Tools.ActionsPane>控件和任何已添加到它的控件。 此方法不会隐藏任务窗格自身。  
+ 调用方法仅隐藏任务窗格用户界面, <xref:Microsoft.Office.Tools.ActionsPane>包括控件和已添加到其中的任何控件。 <xref:Microsoft.Office.Tools.ActionsPane.Hide%2A> 此方法不会隐藏任务窗格本身。  
   
- 如果你想要隐藏任务窗格或确定任务窗格是否可见，请使用以下属性：  
+ 如果要隐藏任务窗格或确定任务窗格是否可见, 请使用以下属性:  
   
--   对于 Word，请使用<xref:Microsoft.Office.Interop.Word.TaskPane.Visible%2A?displayProperty=fullName>的属性<xref:Microsoft.Office.Interop.Word.TaskPane?displayProperty=fullName>对象，表示**文档操作**任务窗格。  
+-   对于 Word, 请使用<xref:Microsoft.Office.Interop.Word.TaskPane.Visible%2A?displayProperty=fullName>表示 "**文档操作**" 任务窗格的<xref:Microsoft.Office.Interop.Word.TaskPane?displayProperty=fullName>对象的属性。  
   
--   对于 Excel，请使用<xref:Microsoft.Office.Interop.Excel._Application.DisplayDocumentActionTaskPane%2A?displayProperty=fullName>属性的<xref:Microsoft.Office.Tools.Excel.Workbook.Application%2A?displayProperty=fullName>对象。  
+-   对于 Excel, 请使用<xref:Microsoft.Office.Interop.Excel._Application.DisplayDocumentActionTaskPane%2A?displayProperty=fullName> <xref:Microsoft.Office.Tools.Excel.Workbook.Application%2A?displayProperty=fullName>对象的属性。  
   
- 有关详细信息和代码示例，请参阅[操作窗格概述](/visualstudio/vsto/actions-pane-overview)。  
+ 有关详细信息和代码示例, 请参阅[操作窗格概述](/visualstudio/vsto/actions-pane-overview)。  
   
  ]]></format>
         </remarks>
@@ -3044,7 +3078,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.ScrollableControl.HorizontalScroll%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.ScrollableControl.HorizontalScroll%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.ScrollableControl.HorizontalScroll%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.ScrollableControl.HorizontalScroll%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -3074,14 +3108,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.Control.ImeMode%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.Control.ImeMode%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.Control.ImeMode%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.Control.ImeMode%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="ImeModeChanged">
-      <MemberSignature Language="C#" Value="public event EventHandler ImeModeChanged;" />
+      <MemberSignature Language="C#" Value="event EventHandler ImeModeChanged;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ImeModeChanged" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.ImeModeChanged" />
       <MemberType>Event</MemberType>
@@ -3098,12 +3132,29 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.Control.ImeModeChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.ImeModeChanged?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.Control.ImeModeChanged?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.Control.ImeModeChanged?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="Invalidate">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>使所有或部分操作窗格无效会导致向操作窗格发送绘制消息。</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此方法提供与<xref:System.Windows.Forms.Control.Invalidate%2A?displayProperty=fullName>方法相同的功能。 有关使用此方法的详细信息, 请<xref:System.Windows.Forms.Control.Invalidate%2A?displayProperty=fullName>参阅。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="Invalidate">
       <MemberSignature Language="C#" Value="public void Invalidate ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Invalidate() cil managed" />
@@ -3123,7 +3174,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供相同的功能<xref:System.Windows.Forms.Control.Invalidate?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.Invalidate?displayProperty=fullName>。  
+ 此方法提供与<xref:System.Windows.Forms.Control.Invalidate?displayProperty=fullName>方法相同的功能。 有关使用此方法的详细信息, 请<xref:System.Windows.Forms.Control.Invalidate?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -3151,7 +3202,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供相同的功能<xref:System.Windows.Forms.Control.Invalidate%28System.Boolean%29?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.Invalidate%28System.Boolean%29?displayProperty=fullName>。  
+ 此方法提供与<xref:System.Windows.Forms.Control.Invalidate%28System.Boolean%29?displayProperty=fullName>方法相同的功能。 有关使用此方法的详细信息, 请<xref:System.Windows.Forms.Control.Invalidate%28System.Boolean%29?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -3179,7 +3230,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供相同的功能<xref:System.Windows.Forms.Control.Invalidate%28System.Drawing.Rectangle%29?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.Invalidate%28System.Drawing.Rectangle%29?displayProperty=fullName>。  
+ 此方法提供与<xref:System.Windows.Forms.Control.Invalidate%28System.Drawing.Rectangle%29?displayProperty=fullName>方法相同的功能。 有关使用此方法的详细信息, 请<xref:System.Windows.Forms.Control.Invalidate%28System.Drawing.Rectangle%29?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -3207,7 +3258,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供相同的功能<xref:System.Windows.Forms.Control.Invalidate%28System.Drawing.Region%29?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.Invalidate%28System.Drawing.Region%29?displayProperty=fullName>。  
+ 此方法提供与<xref:System.Windows.Forms.Control.Invalidate%28System.Drawing.Region%29?displayProperty=fullName>方法相同的功能。 有关使用此方法的详细信息, 请<xref:System.Windows.Forms.Control.Invalidate%28System.Drawing.Region%29?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -3237,7 +3288,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供相同的功能<xref:System.Windows.Forms.Control.Invalidate%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.Invalidate%2A?displayProperty=fullName>。  
+ 此方法提供与<xref:System.Windows.Forms.Control.Invalidate%2A?displayProperty=fullName>方法相同的功能。 有关使用此方法的详细信息, 请<xref:System.Windows.Forms.Control.Invalidate%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -3267,14 +3318,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供相同的功能<xref:System.Windows.Forms.Control.Invalidate%28System.Drawing.Region%2CSystem.Boolean%29?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.Invalidate%28System.Drawing.Region%2CSystem.Boolean%29?displayProperty=fullName>。  
+ 此方法提供与<xref:System.Windows.Forms.Control.Invalidate%28System.Drawing.Region%2CSystem.Boolean%29?displayProperty=fullName>方法相同的功能。 有关使用此方法的详细信息, 请<xref:System.Windows.Forms.Control.Invalidate%28System.Drawing.Region%2CSystem.Boolean%29?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="Invalidated">
-      <MemberSignature Language="C#" Value="public event System.Windows.Forms.InvalidateEventHandler Invalidated;" />
+      <MemberSignature Language="C#" Value="event System.Windows.Forms.InvalidateEventHandler Invalidated;" />
       <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.InvalidateEventHandler Invalidated" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.Invalidated" />
       <MemberType>Event</MemberType>
@@ -3299,12 +3350,29 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.Control.Invalidated?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.Invalidated?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.Control.Invalidated?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.Control.Invalidated?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="Invoke">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>在拥有此操作窗格的基础窗口句柄的线程上执行委托。</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此方法提供与<xref:System.Windows.Forms.Control.Invoke%2A?displayProperty=fullName>方法相同的功能。 有关使用此方法的详细信息, 请<xref:System.Windows.Forms.Control.Invoke%2A?displayProperty=fullName>参阅。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="Invoke">
       <MemberSignature Language="C#" Value="public object Invoke (Delegate method);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Invoke(class System.Delegate method) cil managed" />
@@ -3328,7 +3396,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供相同的功能<xref:System.Windows.Forms.Control.Invoke%28System.Delegate%29?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.Invoke%28System.Delegate%29?displayProperty=fullName>。  
+ 此方法提供与<xref:System.Windows.Forms.Control.Invoke%28System.Delegate%29?displayProperty=fullName>方法相同的功能。 有关使用此方法的详细信息, 请<xref:System.Windows.Forms.Control.Invoke%28System.Delegate%29?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -3359,7 +3427,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供相同的功能<xref:System.Windows.Forms.Control.Invoke%28System.Delegate%2CSystem.Object%5B%5D%29?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.Invoke%28System.Delegate%2CSystem.Object%5B%5D%29?displayProperty=fullName>。  
+ 此方法提供与<xref:System.Windows.Forms.Control.Invoke%28System.Delegate%2CSystem.Object%5B%5D%29?displayProperty=fullName>方法相同的功能。 有关使用此方法的详细信息, 请<xref:System.Windows.Forms.Control.Invoke%28System.Delegate%2CSystem.Object%5B%5D%29?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -3392,7 +3460,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.Control.InvokeRequired%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.Control.InvokeRequired%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.Control.InvokeRequired%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.Control.InvokeRequired%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -3425,7 +3493,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.Control.IsAccessible%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.Control.IsAccessible%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.Control.IsAccessible%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.Control.IsAccessible%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -3458,7 +3526,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.Control.IsDisposed%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.Control.IsDisposed%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.Control.IsDisposed%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.Control.IsDisposed%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -3491,7 +3559,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.Control.IsHandleCreated%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.Control.IsHandleCreated%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.Control.IsHandleCreated%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.Control.IsHandleCreated%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -3524,14 +3592,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.Control.IsMirrored%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.Control.IsMirrored%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.Control.IsMirrored%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.Control.IsMirrored%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="KeyDown">
-      <MemberSignature Language="C#" Value="public event System.Windows.Forms.KeyEventHandler KeyDown;" />
+      <MemberSignature Language="C#" Value="event System.Windows.Forms.KeyEventHandler KeyDown;" />
       <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.KeyEventHandler KeyDown" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.KeyDown" />
       <MemberType>Event</MemberType>
@@ -3548,14 +3616,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.Control.KeyDown?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.KeyDown?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.Control.KeyDown?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.Control.KeyDown?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="KeyPress">
-      <MemberSignature Language="C#" Value="public event System.Windows.Forms.KeyPressEventHandler KeyPress;" />
+      <MemberSignature Language="C#" Value="event System.Windows.Forms.KeyPressEventHandler KeyPress;" />
       <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.KeyPressEventHandler KeyPress" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.KeyPress" />
       <MemberType>Event</MemberType>
@@ -3572,14 +3640,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.Control.KeyPress?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.KeyPress?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.Control.KeyPress?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.Control.KeyPress?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="KeyUp">
-      <MemberSignature Language="C#" Value="public event System.Windows.Forms.KeyEventHandler KeyUp;" />
+      <MemberSignature Language="C#" Value="event System.Windows.Forms.KeyEventHandler KeyUp;" />
       <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.KeyEventHandler KeyUp" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.KeyUp" />
       <MemberType>Event</MemberType>
@@ -3596,14 +3664,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.Control.KeyUp?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.KeyUp?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.Control.KeyUp?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.Control.KeyUp?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="Layout">
-      <MemberSignature Language="C#" Value="public event System.Windows.Forms.LayoutEventHandler Layout;" />
+      <MemberSignature Language="C#" Value="event System.Windows.Forms.LayoutEventHandler Layout;" />
       <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.LayoutEventHandler Layout" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.Layout" />
       <MemberType>Event</MemberType>
@@ -3620,7 +3688,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.Control.Layout?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.Layout?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.Control.Layout?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.Control.Layout?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -3653,14 +3721,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.Control.LayoutEngine%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.Control.LayoutEngine%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.Control.LayoutEngine%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.Control.LayoutEngine%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="Leave">
-      <MemberSignature Language="C#" Value="public event EventHandler Leave;" />
+      <MemberSignature Language="C#" Value="event EventHandler Leave;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Leave" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.Leave" />
       <MemberType>Event</MemberType>
@@ -3677,7 +3745,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.Control.Leave?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.Leave?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.Control.Leave?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.Control.Leave?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -3710,14 +3778,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 通过设置此属性不能更改操作窗格的位置。 有关如何以编程方式更改操作窗格的位置的信息，请参阅[操作窗格概述](/visualstudio/vsto/actions-pane-overview)。  
+ 不能通过设置此属性来更改操作窗格的位置。 有关如何以编程方式更改操作窗格的位置的信息, 请参阅[操作窗格概述](/visualstudio/vsto/actions-pane-overview)。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="Load">
-      <MemberSignature Language="C#" Value="public event EventHandler Load;" />
+      <MemberSignature Language="C#" Value="event EventHandler Load;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Load" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.Load" />
       <MemberType>Event</MemberType>
@@ -3734,7 +3802,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.UserControl.Load?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.UserControl.Load?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.UserControl.Load?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.UserControl.Load?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -3767,14 +3835,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.Control.Location%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.Control.Location%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.Control.Location%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.Control.Location%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="LocationChanged">
-      <MemberSignature Language="C#" Value="public event EventHandler LocationChanged;" />
+      <MemberSignature Language="C#" Value="event EventHandler LocationChanged;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler LocationChanged" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.LocationChanged" />
       <MemberType>Event</MemberType>
@@ -3791,14 +3859,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.Control.LocationChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.LocationChanged?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.Control.LocationChanged?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.Control.LocationChanged?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="LostFocus">
-      <MemberSignature Language="C#" Value="public event EventHandler LostFocus;" />
+      <MemberSignature Language="C#" Value="event EventHandler LostFocus;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler LostFocus" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.LostFocus" />
       <MemberType>Event</MemberType>
@@ -3823,7 +3891,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.Control.LostFocus?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.LostFocus?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.Control.LostFocus?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.Control.LostFocus?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -3856,14 +3924,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.Control.Margin%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.Control.Margin%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.Control.Margin%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.Control.Margin%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="MarginChanged">
-      <MemberSignature Language="C#" Value="public event EventHandler MarginChanged;" />
+      <MemberSignature Language="C#" Value="event EventHandler MarginChanged;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler MarginChanged" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.MarginChanged" />
       <MemberType>Event</MemberType>
@@ -3880,7 +3948,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.Control.MarginChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.MarginChanged?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.Control.MarginChanged?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.Control.MarginChanged?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -3910,7 +3978,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.Control.MaximumSize%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.Control.MaximumSize%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.Control.MaximumSize%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.Control.MaximumSize%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -3940,14 +4008,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.Control.MinimumSize%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.Control.MinimumSize%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.Control.MinimumSize%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.Control.MinimumSize%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="MouseCaptureChanged">
-      <MemberSignature Language="C#" Value="public event EventHandler MouseCaptureChanged;" />
+      <MemberSignature Language="C#" Value="event EventHandler MouseCaptureChanged;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler MouseCaptureChanged" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.MouseCaptureChanged" />
       <MemberType>Event</MemberType>
@@ -3964,14 +4032,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.Control.MouseCaptureChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.MouseCaptureChanged?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.Control.MouseCaptureChanged?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.Control.MouseCaptureChanged?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="MouseClick">
-      <MemberSignature Language="C#" Value="public event System.Windows.Forms.MouseEventHandler MouseClick;" />
+      <MemberSignature Language="C#" Value="event System.Windows.Forms.MouseEventHandler MouseClick;" />
       <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.MouseEventHandler MouseClick" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.MouseClick" />
       <MemberType>Event</MemberType>
@@ -3988,14 +4056,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.Control.MouseClick?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.MouseClick?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.Control.MouseClick?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.Control.MouseClick?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="MouseDoubleClick">
-      <MemberSignature Language="C#" Value="public event System.Windows.Forms.MouseEventHandler MouseDoubleClick;" />
+      <MemberSignature Language="C#" Value="event System.Windows.Forms.MouseEventHandler MouseDoubleClick;" />
       <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.MouseEventHandler MouseDoubleClick" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.MouseDoubleClick" />
       <MemberType>Event</MemberType>
@@ -4012,14 +4080,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.Control.MouseDoubleClick?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.MouseDoubleClick?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.Control.MouseDoubleClick?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.Control.MouseDoubleClick?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="MouseDown">
-      <MemberSignature Language="C#" Value="public event System.Windows.Forms.MouseEventHandler MouseDown;" />
+      <MemberSignature Language="C#" Value="event System.Windows.Forms.MouseEventHandler MouseDown;" />
       <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.MouseEventHandler MouseDown" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.MouseDown" />
       <MemberType>Event</MemberType>
@@ -4036,14 +4104,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.Control.MouseDown?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.MouseDown?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.Control.MouseDown?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.Control.MouseDown?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="MouseEnter">
-      <MemberSignature Language="C#" Value="public event EventHandler MouseEnter;" />
+      <MemberSignature Language="C#" Value="event EventHandler MouseEnter;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler MouseEnter" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.MouseEnter" />
       <MemberType>Event</MemberType>
@@ -4060,14 +4128,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.Control.MouseEnter?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.MouseEnter?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.Control.MouseEnter?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.Control.MouseEnter?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="MouseHover">
-      <MemberSignature Language="C#" Value="public event EventHandler MouseHover;" />
+      <MemberSignature Language="C#" Value="event EventHandler MouseHover;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler MouseHover" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.MouseHover" />
       <MemberType>Event</MemberType>
@@ -4084,14 +4152,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.Control.MouseHover?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.MouseHover?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.Control.MouseHover?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.Control.MouseHover?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="MouseLeave">
-      <MemberSignature Language="C#" Value="public event EventHandler MouseLeave;" />
+      <MemberSignature Language="C#" Value="event EventHandler MouseLeave;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler MouseLeave" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.MouseLeave" />
       <MemberType>Event</MemberType>
@@ -4108,14 +4176,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.Control.MouseLeave?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.MouseLeave?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.Control.MouseLeave?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.Control.MouseLeave?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="MouseMove">
-      <MemberSignature Language="C#" Value="public event System.Windows.Forms.MouseEventHandler MouseMove;" />
+      <MemberSignature Language="C#" Value="event System.Windows.Forms.MouseEventHandler MouseMove;" />
       <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.MouseEventHandler MouseMove" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.MouseMove" />
       <MemberType>Event</MemberType>
@@ -4132,14 +4200,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.Control.MouseMove?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.MouseMove?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.Control.MouseMove?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.Control.MouseMove?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="MouseUp">
-      <MemberSignature Language="C#" Value="public event System.Windows.Forms.MouseEventHandler MouseUp;" />
+      <MemberSignature Language="C#" Value="event System.Windows.Forms.MouseEventHandler MouseUp;" />
       <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.MouseEventHandler MouseUp" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.MouseUp" />
       <MemberType>Event</MemberType>
@@ -4156,14 +4224,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.Control.MouseUp?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.MouseUp?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.Control.MouseUp?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.Control.MouseUp?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="MouseWheel">
-      <MemberSignature Language="C#" Value="public event System.Windows.Forms.MouseEventHandler MouseWheel;" />
+      <MemberSignature Language="C#" Value="event System.Windows.Forms.MouseEventHandler MouseWheel;" />
       <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.MouseEventHandler MouseWheel" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.MouseWheel" />
       <MemberType>Event</MemberType>
@@ -4188,14 +4256,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.Control.MouseWheel?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.MouseWheel?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.Control.MouseWheel?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.Control.MouseWheel?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="Move">
-      <MemberSignature Language="C#" Value="public event EventHandler Move;" />
+      <MemberSignature Language="C#" Value="event EventHandler Move;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Move" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.Move" />
       <MemberType>Event</MemberType>
@@ -4212,7 +4280,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.Control.Move?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.Move?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.Control.Move?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.Control.Move?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -4242,7 +4310,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.Control.Name%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.Control.Name%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.Control.Name%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.Control.Name%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -4267,12 +4335,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果操作窗格浮动的或向左或向右，停靠<xref:Microsoft.Office.Tools.ActionsPane.Orientation%2A>是垂直的。 如果操作窗格停靠在底部或顶部，<xref:Microsoft.Office.Tools.ActionsPane.Orientation%2A>是水平的。  
+ 如果操作窗格是浮动的, 或停靠在左侧或右侧, 则是垂直<xref:Microsoft.Office.Tools.ActionsPane.Orientation%2A>的。 如果操作窗格停靠在底部或顶部, <xref:Microsoft.Office.Tools.ActionsPane.Orientation%2A>则为水平。  
   
    
   
 ## Examples  
- 下面的代码示例演示了操作窗格的自动调整其内容的对齐方式。 当用户通过移动到应用程序窗口的不同部分的操作窗格来更改操作窗格的方向，或在用户单击<xref:System.Windows.Forms.Button>操作窗格中的控制<xref:Microsoft.Office.Tools.ActionsPane.Orientation%2A>使用属性来确定的新值<xref:Microsoft.Office.Tools.ActionsPane.StackOrder%2A>属性。 若要运行此代码，调用`InitActionsPane`方法从`ThisWorkbook_Startup`Microsoft Office Excel 项目的事件处理程序。  
+ 下面的代码示例演示一个自动调整其内容对齐方式的操作窗格。 当用户通过将操作窗格移动到应用程序窗口的其他部分, 或者用户单击<xref:System.Windows.Forms.Button> "操作" 窗格中的控件来更改操作窗格的方向时, 将<xref:Microsoft.Office.Tools.ActionsPane.Orientation%2A>使用属性来确定新的值。<xref:Microsoft.Office.Tools.ActionsPane.StackOrder%2A>属性。 若要运行此代码, 请`InitActionsPane` `ThisWorkbook_Startup`从 Microsoft Office Excel 项目的事件处理程序调用方法。  
   
  [!code-csharp[Trin_ActionsPane#1](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ActionsPane/CS/thisworkbook.cs#1)]
  [!code-vb[Trin_ActionsPane#1](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ActionsPane/VB/thisworkbook.vb#1)]  
@@ -4282,7 +4350,7 @@
       </Docs>
     </Member>
     <Member MemberName="OrientationChanged">
-      <MemberSignature Language="C#" Value="public event EventHandler OrientationChanged;" />
+      <MemberSignature Language="C#" Value="event EventHandler OrientationChanged;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler OrientationChanged" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.OrientationChanged" />
       <MemberType>Event</MemberType>
@@ -4299,12 +4367,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 当用户将发生此事件**文档操作任务窗格**到相对于文档的新位置。  
+ 当用户将 "**文档操作" 任务窗格**移动到文档的新位置时, 将发生此事件。  
   
    
   
 ## Examples  
- 下面的代码示例演示如何创建一个简单的操作窗格，它会自动调整其内容的对齐方式。 用户将操作窗格中移到应用程序窗口中，事件处理程序的不同部分<xref:Microsoft.Office.Tools.ActionsPane.OrientationChanged>事件使用<xref:Microsoft.Office.Tools.ActionsPane.Orientation%2A>属性来确定在操作窗格中的控件的新堆栈顺序。 若要运行此代码，调用`InitActionsPane`方法从`ThisWorkbook_Startup`Microsoft Office Excel 项目的事件处理程序。  
+ 下面的代码示例演示如何创建一个自动调整其内容对齐方式的简单操作窗格。 当用户将操作窗格移动到应用程序窗口的另一部分时, <xref:Microsoft.Office.Tools.ActionsPane.OrientationChanged>事件的事件处理程序将<xref:Microsoft.Office.Tools.ActionsPane.Orientation%2A>使用属性来确定操作窗格中的控件的新堆栈顺序。 若要运行此代码, 请`InitActionsPane` `ThisWorkbook_Startup`从 Microsoft Office Excel 项目的事件处理程序调用方法。  
   
  [!code-csharp[Trin_ActionsPane#1](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ActionsPane/CS/thisworkbook.cs#1)]
  [!code-vb[Trin_ActionsPane#1](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ActionsPane/VB/thisworkbook.vb#1)]  
@@ -4337,14 +4405,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.Control.Padding%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.Control.Padding%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.Control.Padding%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.Control.Padding%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="PaddingChanged">
-      <MemberSignature Language="C#" Value="public event EventHandler PaddingChanged;" />
+      <MemberSignature Language="C#" Value="event EventHandler PaddingChanged;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler PaddingChanged" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.PaddingChanged" />
       <MemberType>Event</MemberType>
@@ -4361,14 +4429,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.Control.PaddingChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.PaddingChanged?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.Control.PaddingChanged?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.Control.PaddingChanged?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="Paint">
-      <MemberSignature Language="C#" Value="public event System.Windows.Forms.PaintEventHandler Paint;" />
+      <MemberSignature Language="C#" Value="event System.Windows.Forms.PaintEventHandler Paint;" />
       <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.PaintEventHandler Paint" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.Paint" />
       <MemberType>Event</MemberType>
@@ -4385,7 +4453,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.Control.Paint?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.Paint?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.Control.Paint?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.Control.Paint?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -4415,14 +4483,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.Control.Parent%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.Control.Parent%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.Control.Parent%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.Control.Parent%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="ParentChanged">
-      <MemberSignature Language="C#" Value="public event EventHandler ParentChanged;" />
+      <MemberSignature Language="C#" Value="event EventHandler ParentChanged;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ParentChanged" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.ParentChanged" />
       <MemberType>Event</MemberType>
@@ -4439,7 +4507,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.Control.ParentChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.ParentChanged?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.Control.ParentChanged?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.Control.ParentChanged?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -4487,12 +4555,29 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供相同的功能<xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A?displayProperty=fullName>。  
+ 此方法提供与<xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A?displayProperty=fullName>方法相同的功能。 有关使用此方法的详细信息, 请<xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="PerformLayout">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>强制操作窗格将布局逻辑应用于子控件。</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此方法提供与<xref:System.Windows.Forms.Control.PerfromLayout%2A?displayProperty=fullName>方法相同的功能。 有关使用此方法的详细信息, 请<xref:System.Windows.Forms.Control.PerfromLayout%2A?displayProperty=fullName>参阅。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="PerformLayout">
       <MemberSignature Language="C#" Value="public void PerformLayout ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void PerformLayout() cil managed" />
@@ -4517,7 +4602,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供相同的功能<xref:System.Windows.Forms.Control.PerformLayout?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.PerformLayout?displayProperty=fullName>。  
+ 此方法提供与<xref:System.Windows.Forms.Control.PerformLayout?displayProperty=fullName>方法相同的功能。 有关使用此方法的详细信息, 请<xref:System.Windows.Forms.Control.PerformLayout?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -4552,7 +4637,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供相同的功能<xref:System.Windows.Forms.Control.PerformLayout%28System.Windows.Forms.Control%2CSystem.String%29?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.PerformLayout%28System.Windows.Forms.Control%2CSystem.String%29?displayProperty=fullName>。  
+ 此方法提供与<xref:System.Windows.Forms.Control.PerformLayout%28System.Windows.Forms.Control%2CSystem.String%29?displayProperty=fullName>方法相同的功能。 有关使用此方法的详细信息, 请<xref:System.Windows.Forms.Control.PerformLayout%28System.Windows.Forms.Control%2CSystem.String%29?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -4581,7 +4666,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供相同的功能<xref:System.Windows.Forms.Control.PointToClient%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.PointToClient%2A?displayProperty=fullName>。  
+ 此方法提供与<xref:System.Windows.Forms.Control.PointToClient%2A?displayProperty=fullName>方法相同的功能。 有关使用此方法的详细信息, 请<xref:System.Windows.Forms.Control.PointToClient%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -4610,7 +4695,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供相同的功能<xref:System.Windows.Forms.Control.PointToScreen%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.PointToScreen%2A?displayProperty=fullName>。  
+ 此方法提供与<xref:System.Windows.Forms.Control.PointToScreen%2A?displayProperty=fullName>方法相同的功能。 有关使用此方法的详细信息, 请<xref:System.Windows.Forms.Control.PointToScreen%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -4640,7 +4725,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.Control.PreferredSize%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.Control.PreferredSize%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.Control.PreferredSize%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.Control.PreferredSize%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -4648,7 +4733,7 @@
     </Member>
     <Member MemberName="PreProcessControlMessage">
       <MemberSignature Language="C#" Value="public System.Windows.Forms.PreProcessControlState PreProcessControlMessage (ref System.Windows.Forms.Message msg);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Windows.Forms.PreProcessControlState PreProcessControlMessage(valuetype System.Windows.Forms.Message msg) cil managed" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Windows.Forms.PreProcessControlState PreProcessControlMessage(valuetype System.Windows.Forms.Message&amp; msg) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.ActionsPane.PreProcessControlMessage(System.Windows.Forms.Message@)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -4664,7 +4749,7 @@
         <ReturnType>System.Windows.Forms.PreProcessControlState</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="msg" Type="System.Windows.Forms.Message&amp;" RefType="ref" />
+        <Parameter Name="msg" Type="System.Windows.Forms.Message" RefType="ref" />
       </Parameters>
       <Docs>
         <param name="msg">一个 <see cref="T:System.Windows.Forms.Message" />，表示要处理的消息。</param>
@@ -4674,7 +4759,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供相同的功能<xref:System.Windows.Forms.Control.PreProcessControlMessage%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.PreProcessControlMessage%2A?displayProperty=fullName>。  
+ 此方法提供与<xref:System.Windows.Forms.Control.PreProcessControlMessage%2A?displayProperty=fullName>方法相同的功能。 有关使用此方法的详细信息, 请<xref:System.Windows.Forms.Control.PreProcessControlMessage%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -4682,7 +4767,7 @@
     </Member>
     <Member MemberName="PreProcessMessage">
       <MemberSignature Language="C#" Value="public bool PreProcessMessage (ref System.Windows.Forms.Message msg);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool PreProcessMessage(valuetype System.Windows.Forms.Message msg) cil managed" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool PreProcessMessage(valuetype System.Windows.Forms.Message&amp; msg) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.ActionsPane.PreProcessMessage(System.Windows.Forms.Message@)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -4693,7 +4778,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="msg" Type="System.Windows.Forms.Message&amp;" RefType="ref" />
+        <Parameter Name="msg" Type="System.Windows.Forms.Message" RefType="ref" />
       </Parameters>
       <Docs>
         <param name="msg">通过引用传递的 <see cref="T:System.Windows.Forms.Message" />，表示要处理的消息。 可能的值有 WM_KEYDOWN、WM_SYSKEYDOWN、WM_CHAR 和 WM_SYSCHAR。</param>
@@ -4703,14 +4788,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供相同的功能<xref:System.Windows.Forms.Control.PreProcessMessage%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.PreProcessMessage%2A?displayProperty=fullName>。  
+ 此方法提供与<xref:System.Windows.Forms.Control.PreProcessMessage%2A?displayProperty=fullName>方法相同的功能。 有关使用此方法的详细信息, 请<xref:System.Windows.Forms.Control.PreProcessMessage%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="PreviewKeyDown">
-      <MemberSignature Language="C#" Value="public event System.Windows.Forms.PreviewKeyDownEventHandler PreviewKeyDown;" />
+      <MemberSignature Language="C#" Value="event System.Windows.Forms.PreviewKeyDownEventHandler PreviewKeyDown;" />
       <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.PreviewKeyDownEventHandler PreviewKeyDown" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.PreviewKeyDown" />
       <MemberType>Event</MemberType>
@@ -4727,7 +4812,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.Control.PreviewKeyDown?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.PreviewKeyDown?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.Control.PreviewKeyDown?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.Control.PreviewKeyDown?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -4760,7 +4845,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.Control.ProductName%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.Control.ProductName%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.Control.ProductName%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.Control.ProductName%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -4793,14 +4878,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.Control.ProductVersion%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.Control.ProductVersion%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.Control.ProductVersion%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.Control.ProductVersion%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="QueryAccessibilityHelp">
-      <MemberSignature Language="C#" Value="public event System.Windows.Forms.QueryAccessibilityHelpEventHandler QueryAccessibilityHelp;" />
+      <MemberSignature Language="C#" Value="event System.Windows.Forms.QueryAccessibilityHelpEventHandler QueryAccessibilityHelp;" />
       <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.QueryAccessibilityHelpEventHandler QueryAccessibilityHelp" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.QueryAccessibilityHelp" />
       <MemberType>Event</MemberType>
@@ -4817,14 +4902,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.Control.QueryAccessibilityHelp?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.QueryAccessibilityHelp?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.Control.QueryAccessibilityHelp?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.Control.QueryAccessibilityHelp?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="QueryContinueDrag">
-      <MemberSignature Language="C#" Value="public event System.Windows.Forms.QueryContinueDragEventHandler QueryContinueDrag;" />
+      <MemberSignature Language="C#" Value="event System.Windows.Forms.QueryContinueDragEventHandler QueryContinueDrag;" />
       <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.QueryContinueDragEventHandler QueryContinueDrag" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.QueryContinueDrag" />
       <MemberType>Event</MemberType>
@@ -4841,7 +4926,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.Control.QueryContinueDrag?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.QueryContinueDrag?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.Control.QueryContinueDrag?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.Control.QueryContinueDrag?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -4874,7 +4959,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.Control.RecreatingHandle%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.Control.RecreatingHandle%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.Control.RecreatingHandle%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.Control.RecreatingHandle%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -4903,7 +4988,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供相同的功能<xref:System.Windows.Forms.Control.RectangleToClient%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.RectangleToClient%2A?displayProperty=fullName>。  
+ 此方法提供与<xref:System.Windows.Forms.Control.RectangleToClient%2A?displayProperty=fullName>方法相同的功能。 有关使用此方法的详细信息, 请<xref:System.Windows.Forms.Control.RectangleToClient%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -4932,7 +5017,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供相同的功能<xref:System.Windows.Forms.Control.RectangleToScreen%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.RectangleToScreen%2A?displayProperty=fullName>。  
+ 此方法提供与<xref:System.Windows.Forms.Control.RectangleToScreen%2A?displayProperty=fullName>方法相同的功能。 有关使用此方法的详细信息, 请<xref:System.Windows.Forms.Control.RectangleToScreen%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -4957,7 +5042,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供相同的功能<xref:System.Windows.Forms.Control.Refresh%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.Refresh%2A?displayProperty=fullName>。  
+ 此方法提供与<xref:System.Windows.Forms.Control.Refresh%2A?displayProperty=fullName>方法相同的功能。 有关使用此方法的详细信息, 请<xref:System.Windows.Forms.Control.Refresh%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -4990,14 +5075,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.Control.Region%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.Control.Region%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.Control.Region%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.Control.Region%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="RegionChanged">
-      <MemberSignature Language="C#" Value="public event EventHandler RegionChanged;" />
+      <MemberSignature Language="C#" Value="event EventHandler RegionChanged;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler RegionChanged" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.RegionChanged" />
       <MemberType>Event</MemberType>
@@ -5014,7 +5099,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.Control.RegionChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.RegionChanged?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.Control.RegionChanged?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.Control.RegionChanged?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -5200,7 +5285,7 @@
       </Docs>
     </Member>
     <Member MemberName="Resize">
-      <MemberSignature Language="C#" Value="public event EventHandler Resize;" />
+      <MemberSignature Language="C#" Value="event EventHandler Resize;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Resize" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.Resize" />
       <MemberType>Event</MemberType>
@@ -5222,12 +5307,29 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.Control.Resize?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.Resize?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.Control.Resize?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.Control.Resize?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="ResumeLayout">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>恢复正常的布局逻辑。</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此方法提供与<xref:System.Windows.Forms.Control.ResumeLayout%2A?displayProperty=fullName>方法相同的功能。 有关使用此方法的详细信息, 请<xref:System.Windows.Forms.Control.ResumeLayout%2A?displayProperty=fullName>参阅。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="ResumeLayout">
       <MemberSignature Language="C#" Value="public void ResumeLayout ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ResumeLayout() cil managed" />
@@ -5247,7 +5349,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供相同的功能<xref:System.Windows.Forms.Control.ResumeLayout?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.ResumeLayout?displayProperty=fullName>。  
+ 此方法提供与<xref:System.Windows.Forms.Control.ResumeLayout?displayProperty=fullName>方法相同的功能。 有关使用此方法的详细信息, 请<xref:System.Windows.Forms.Control.ResumeLayout?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -5275,7 +5377,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供相同的功能<xref:System.Windows.Forms.Control.ResumeLayout%28System.Boolean%29?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.ResumeLayout%28System.Boolean%29?displayProperty=fullName>。  
+ 此方法提供与<xref:System.Windows.Forms.Control.ResumeLayout%28System.Boolean%29?displayProperty=fullName>方法相同的功能。 有关使用此方法的详细信息, 请<xref:System.Windows.Forms.Control.ResumeLayout%28System.Boolean%29?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -5308,7 +5410,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.Control.Right%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.Control.Right%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.Control.Right%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.Control.Right%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -5338,14 +5440,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.Control.RightToLeft%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.Control.RightToLeft%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.Control.RightToLeft%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.Control.RightToLeft%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="RightToLeftChanged">
-      <MemberSignature Language="C#" Value="public event EventHandler RightToLeftChanged;" />
+      <MemberSignature Language="C#" Value="event EventHandler RightToLeftChanged;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler RightToLeftChanged" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.RightToLeftChanged" />
       <MemberType>Event</MemberType>
@@ -5362,7 +5464,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.Control.RightToLeftChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.RightToLeftChanged?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.Control.RightToLeftChanged?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.Control.RightToLeftChanged?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -5395,14 +5497,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供相同的功能<xref:System.Windows.Forms.Control.Scale%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.Scale%2A?displayProperty=fullName>。  
+ 此方法提供与<xref:System.Windows.Forms.Control.Scale%2A?displayProperty=fullName>方法相同的功能。 有关使用此方法的详细信息, 请<xref:System.Windows.Forms.Control.Scale%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="Scroll">
-      <MemberSignature Language="C#" Value="public event System.Windows.Forms.ScrollEventHandler Scroll;" />
+      <MemberSignature Language="C#" Value="event System.Windows.Forms.ScrollEventHandler Scroll;" />
       <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.ScrollEventHandler Scroll" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.Scroll" />
       <MemberType>Event</MemberType>
@@ -5419,7 +5521,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.ScrollableControl.Scroll?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.ScrollableControl.Scroll?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.ScrollableControl.Scroll?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.ScrollableControl.Scroll?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -5447,7 +5549,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供相同的功能<xref:System.Windows.Forms.ScrollableControl.ScrollControlIntoView%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.ScrollableControl.ScrollControlIntoView%2A?displayProperty=fullName>。  
+ 此方法提供与<xref:System.Windows.Forms.ScrollableControl.ScrollControlIntoView%2A?displayProperty=fullName>方法相同的功能。 有关使用此方法的详细信息, 请<xref:System.Windows.Forms.ScrollableControl.ScrollControlIntoView%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -5472,7 +5574,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供相同的功能<xref:System.Windows.Forms.Control.Select%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.Select%2A?displayProperty=fullName>。  
+ 此方法提供与<xref:System.Windows.Forms.Control.Select%2A?displayProperty=fullName>方法相同的功能。 有关使用此方法的详细信息, 请<xref:System.Windows.Forms.Control.Select%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -5509,7 +5611,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供相同的功能<xref:System.Windows.Forms.Control.SelectNextControl%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.SelectNextControl%2A?displayProperty=fullName>。  
+ 此方法提供与<xref:System.Windows.Forms.Control.SelectNextControl%2A?displayProperty=fullName>方法相同的功能。 有关使用此方法的详细信息, 请<xref:System.Windows.Forms.Control.SelectNextControl%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -5534,7 +5636,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供相同的功能<xref:System.Windows.Forms.Control.SendToBack%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.SendToBack%2A?displayProperty=fullName>。  
+ 此方法提供与<xref:System.Windows.Forms.Control.SendToBack%2A?displayProperty=fullName>方法相同的功能。 有关使用此方法的详细信息, 请<xref:System.Windows.Forms.Control.SendToBack%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -5564,12 +5666,29 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供相同的功能<xref:System.Windows.Forms.ScrollableControl.SetAutoScrollMargin%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.ScrollableControl.SetAutoScrollMargin%2A?displayProperty=fullName>。  
+ 此方法提供与<xref:System.Windows.Forms.ScrollableControl.SetAutoScrollMargin%2A?displayProperty=fullName>方法相同的功能。 有关使用此方法的详细信息, 请<xref:System.Windows.Forms.ScrollableControl.SetAutoScrollMargin%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="SetBounds">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>设置活动窗格的边界范围。</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此方法提供与<xref:System.Windows.Forms.Control.SetBounds%2A?displayProperty=fullName>方法相同的功能。 有关使用此方法的详细信息, 请<xref:System.Windows.Forms.Control.SetBounds%2A?displayProperty=fullName>参阅。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="SetBounds">
       <MemberSignature Language="C#" Value="public void SetBounds (int x, int y, int width, int height);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetBounds(int32 x, int32 y, int32 width, int32 height) cil managed" />
@@ -5598,7 +5717,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供相同的功能<xref:System.Windows.Forms.Control.SetBounds%28System.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%29?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.SetBounds%28System.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%29?displayProperty=fullName>。  
+ 此方法提供与<xref:System.Windows.Forms.Control.SetBounds%28System.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%29?displayProperty=fullName>方法相同的功能。 有关使用此方法的详细信息, 请<xref:System.Windows.Forms.Control.SetBounds%28System.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%29?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -5634,7 +5753,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供相同的功能<xref:System.Windows.Forms.Control.SetBounds%28System.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Windows.Forms.BoundsSpecified%29?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.SetBounds%28System.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Windows.Forms.BoundsSpecified%29?displayProperty=fullName>。  
+ 此方法提供与<xref:System.Windows.Forms.Control.SetBounds%28System.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Windows.Forms.BoundsSpecified%29?displayProperty=fullName>方法相同的功能。 有关使用此方法的详细信息, 请<xref:System.Windows.Forms.Control.SetBounds%28System.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Windows.Forms.BoundsSpecified%29?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -5659,15 +5778,15 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 调用<xref:Microsoft.Office.Tools.ActionsPane.Show%2A>方法的<xref:Microsoft.Office.Tools.ActionsPane>仅显示操作窗格，并控制是否在任务窗格可见; 它不显示任务窗格。  
+ 仅当任务窗格可见时, 调用的方法才会显示操作窗格和控件;它不显示任务窗格。<xref:Microsoft.Office.Tools.ActionsPane.Show%2A> <xref:Microsoft.Office.Tools.ActionsPane>  
   
- 如果你想要显示任务窗格中，使用以下属性：  
+ 如果要显示任务窗格, 请使用以下属性:  
   
--   对于 Word，请使用<xref:Microsoft.Office.Interop.Word.TaskPane.Visible%2A?displayProperty=fullName>的属性<xref:Microsoft.Office.Interop.Word.TaskPane?displayProperty=fullName>对象，表示**文档操作**任务窗格。  
+-   对于 Word, 请使用<xref:Microsoft.Office.Interop.Word.TaskPane.Visible%2A?displayProperty=fullName>表示 "**文档操作**" 任务窗格的<xref:Microsoft.Office.Interop.Word.TaskPane?displayProperty=fullName>对象的属性。  
   
--   对于 Excel，请使用<xref:Microsoft.Office.Interop.Excel._Application.DisplayDocumentActionTaskPane%2A?displayProperty=fullName>属性的<xref:Microsoft.Office.Tools.Excel.Workbook.Application%2A?displayProperty=fullName>对象。  
+-   对于 Excel, 请使用<xref:Microsoft.Office.Interop.Excel._Application.DisplayDocumentActionTaskPane%2A?displayProperty=fullName> <xref:Microsoft.Office.Tools.Excel.Workbook.Application%2A?displayProperty=fullName>对象的属性。  
   
- 有关详细信息和代码示例，请参阅[操作窗格概述](/visualstudio/vsto/actions-pane-overview)。  
+ 有关详细信息和代码示例, 请参阅[操作窗格概述](/visualstudio/vsto/actions-pane-overview)。  
   
  ]]></format>
         </remarks>
@@ -5697,7 +5816,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.Control.Site%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.Control.Site%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.Control.Site%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.Control.Site%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -5730,14 +5849,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 通过设置此属性，不能调整大小操作窗格。 有关如何以编程方式调整大小操作窗格的信息，请参阅[操作窗格概述](/visualstudio/vsto/actions-pane-overview)。  
+ 不能通过设置此属性来调整操作窗格的大小。 有关如何以编程方式调整操作窗格的大小的信息, 请参阅[操作窗格概述](/visualstudio/vsto/actions-pane-overview)。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="SizeChanged">
-      <MemberSignature Language="C#" Value="public event EventHandler SizeChanged;" />
+      <MemberSignature Language="C#" Value="event EventHandler SizeChanged;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler SizeChanged" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.SizeChanged" />
       <MemberType>Event</MemberType>
@@ -5754,7 +5873,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.Control.SizeChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.SizeChanged?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.Control.SizeChanged?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.Control.SizeChanged?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -5779,14 +5898,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 堆栈顺序取决于操作窗格的方向。 如果操作窗格的方向将设置为水平，你可能想要的堆栈顺序设置为`FromLeft`或`FromRight`的值<xref:Microsoft.Office.Tools.StackStyle>枚举。 如果操作窗格的方向将设置为垂直的您可能想要的堆栈顺序设置为`FromTop`或`FromBottom`的值<xref:Microsoft.Office.Tools.StackStyle>枚举。  
+ 堆栈顺序取决于操作窗格的方向。 如果操作窗格的方向设置为水平, 则您可能需要将堆栈顺序设置为`FromLeft` <xref:Microsoft.Office.Tools.StackStyle>枚举的或`FromRight`值。 如果操作窗格的方向设置为垂直, 则您可能需要将堆栈顺序设置为`FromTop` <xref:Microsoft.Office.Tools.StackStyle>枚举的或`FromBottom`值。  
   
- 更改为操作窗格的方向传达通过<xref:Microsoft.Office.Tools.ActionsPane.OrientationChanged>事件。  
+ 对操作窗格方向的更改将通过<xref:Microsoft.Office.Tools.ActionsPane.OrientationChanged>事件进行传达。  
   
    
   
 ## Examples  
- 下面的代码示例演示了操作窗格的自动调整其内容的对齐方式。 当用户通过移动到应用程序窗口的不同部分的操作窗格来更改操作窗格的方向，或在用户单击<xref:System.Windows.Forms.Button>操作窗格中的控制<xref:Microsoft.Office.Tools.ActionsPane.Orientation%2A>使用属性来确定的新值<xref:Microsoft.Office.Tools.ActionsPane.StackOrder%2A>属性。 若要运行此代码，调用`InitActionsPane`方法从`ThisWorkbook_Startup`Microsoft Office Excel 项目的事件处理程序。  
+ 下面的代码示例演示一个自动调整其内容对齐方式的操作窗格。 当用户通过将操作窗格移动到应用程序窗口的其他部分, 或者用户单击<xref:System.Windows.Forms.Button> "操作" 窗格中的控件来更改操作窗格的方向时, 将<xref:Microsoft.Office.Tools.ActionsPane.Orientation%2A>使用属性来确定新的值。<xref:Microsoft.Office.Tools.ActionsPane.StackOrder%2A>属性。 若要运行此代码, 请`InitActionsPane` `ThisWorkbook_Startup`从 Microsoft Office Excel 项目的事件处理程序调用方法。  
   
  [!code-csharp[Trin_ActionsPane#1](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ActionsPane/CS/thisworkbook.cs#1)]
  [!code-vb[Trin_ActionsPane#1](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ActionsPane/VB/thisworkbook.vb#1)]  
@@ -5796,7 +5915,7 @@
       </Docs>
     </Member>
     <Member MemberName="StyleChanged">
-      <MemberSignature Language="C#" Value="public event EventHandler StyleChanged;" />
+      <MemberSignature Language="C#" Value="event EventHandler StyleChanged;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler StyleChanged" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.StyleChanged" />
       <MemberType>Event</MemberType>
@@ -5813,7 +5932,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.Control.StyleChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.StyleChanged?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.Control.StyleChanged?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.Control.StyleChanged?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -5838,14 +5957,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供相同的功能<xref:System.Windows.Forms.Control.SuspendLayout%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.SuspendLayout%2A?displayProperty=fullName>。  
+ 此方法提供与<xref:System.Windows.Forms.Control.SuspendLayout%2A?displayProperty=fullName>方法相同的功能。 有关使用此方法的详细信息, 请<xref:System.Windows.Forms.Control.SuspendLayout%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="SystemColorsChanged">
-      <MemberSignature Language="C#" Value="public event EventHandler SystemColorsChanged;" />
+      <MemberSignature Language="C#" Value="event EventHandler SystemColorsChanged;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler SystemColorsChanged" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.SystemColorsChanged" />
       <MemberType>Event</MemberType>
@@ -5862,7 +5981,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.Control.SystemColorsChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.SystemColorsChanged?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.Control.SystemColorsChanged?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.Control.SystemColorsChanged?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -5895,14 +6014,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.Control.TabIndex%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.Control.TabIndex%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.Control.TabIndex%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.Control.TabIndex%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="TabIndexChanged">
-      <MemberSignature Language="C#" Value="public event EventHandler TabIndexChanged;" />
+      <MemberSignature Language="C#" Value="event EventHandler TabIndexChanged;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler TabIndexChanged" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.TabIndexChanged" />
       <MemberType>Event</MemberType>
@@ -5919,7 +6038,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.Control.TabIndexChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.TabIndexChanged?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.Control.TabIndexChanged?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.Control.TabIndexChanged?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -5944,14 +6063,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.Control.TabStop%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.Control.TabStop%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.Control.TabStop%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.Control.TabStop%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="TabStopChanged">
-      <MemberSignature Language="C#" Value="public event EventHandler TabStopChanged;" />
+      <MemberSignature Language="C#" Value="event EventHandler TabStopChanged;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler TabStopChanged" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.TabStopChanged" />
       <MemberType>Event</MemberType>
@@ -5968,7 +6087,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.Control.TabStopChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.TabStopChanged?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.Control.TabStopChanged?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.Control.TabStopChanged?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -5993,7 +6112,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.Control.Tag%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.Control.Tag%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.Control.Tag%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.Control.Tag%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -6026,7 +6145,7 @@
       </Docs>
     </Member>
     <Member MemberName="TextChanged">
-      <MemberSignature Language="C#" Value="public event EventHandler TextChanged;" />
+      <MemberSignature Language="C#" Value="event EventHandler TextChanged;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler TextChanged" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.TextChanged" />
       <MemberType>Event</MemberType>
@@ -6077,7 +6196,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 无法设置此属性来更改操作窗格的位置。 有关如何以编程方式更改操作窗格的位置的信息，请参阅[操作窗格概述](/visualstudio/vsto/actions-pane-overview)。  
+ 不能通过设置此属性来更改操作窗格的位置。 有关如何以编程方式更改操作窗格的位置的信息, 请参阅[操作窗格概述](/visualstudio/vsto/actions-pane-overview)。  
   
  ]]></format>
         </remarks>
@@ -6128,7 +6247,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供相同的功能<xref:System.Windows.Forms.Control.Update%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.Update%2A?displayProperty=fullName>。  
+ 此方法提供与<xref:System.Windows.Forms.Control.Update%2A?displayProperty=fullName>方法相同的功能。 有关使用此方法的详细信息, 请<xref:System.Windows.Forms.Control.Update%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -6161,12 +6280,29 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.Control.UseWaitCursor%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.Control.UseWaitCursor%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.Control.UseWaitCursor%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.Control.UseWaitCursor%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="Validate">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>通过以该顺序引发 <see cref="E:Microsoft.Office.Tools.ActionsPane.Validating" /> 和 <see cref="E:Microsoft.Office.Tools.ActionsPane.Validated" /> 事件，验证操作窗格的内容。</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此方法提供与<xref:System.Windows.Forms.ContainerControl.Validate%2A?displayProperty=fullName>方法相同的功能。 有关使用此方法的详细信息, 请<xref:System.Windows.Forms.ContainerControl.Validate%2A?displayProperty=fullName>参阅。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="Validate">
       <MemberSignature Language="C#" Value="public bool Validate ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Validate() cil managed" />
@@ -6187,7 +6323,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供相同的功能<xref:System.Windows.Forms.ContainerControl.Validate?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.ContainerControl.Validate?displayProperty=fullName>。  
+ 此方法提供与<xref:System.Windows.Forms.ContainerControl.Validate?displayProperty=fullName>方法相同的功能。 有关使用此方法的详细信息, 请<xref:System.Windows.Forms.ContainerControl.Validate?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -6216,12 +6352,29 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供相同的功能<xref:System.Windows.Forms.ContainerControl.Validate%28System.Boolean%29?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.ContainerControl.Validate%28System.Boolean%29?displayProperty=fullName>。  
+ 此方法提供与<xref:System.Windows.Forms.ContainerControl.Validate%28System.Boolean%29?displayProperty=fullName>方法相同的功能。 有关使用此方法的详细信息, 请<xref:System.Windows.Forms.ContainerControl.Validate%28System.Boolean%29?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="ValidateChildren">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>使控件内支持验证的所有子控件都对其数据进行验证。</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 此方法提供与<xref:System.Windows.Forms.ContainerControl.ValidateChildren%2A?displayProperty=fullName>方法相同的功能。 有关使用此方法的详细信息, 请<xref:System.Windows.Forms.ContainerControl.ValidateChildren%2A?displayProperty=fullName>参阅。  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="ValidateChildren">
       <MemberSignature Language="C#" Value="public bool ValidateChildren ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ValidateChildren() cil managed" />
@@ -6250,7 +6403,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供相同的功能<xref:System.Windows.Forms.ContainerControl.ValidateChildren?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.ContainerControl.ValidateChildren?displayProperty=fullName>。  
+ 此方法提供与<xref:System.Windows.Forms.ContainerControl.ValidateChildren?displayProperty=fullName>方法相同的功能。 有关使用此方法的详细信息, 请<xref:System.Windows.Forms.ContainerControl.ValidateChildren?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -6287,14 +6440,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法提供相同的功能<xref:System.Windows.Forms.ContainerControl.ValidateChildren%28System.Windows.Forms.ValidationConstraints%29?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.ContainerControl.ValidateChildren%28System.Windows.Forms.ValidationConstraints%29?displayProperty=fullName>。  
+ 此方法提供与<xref:System.Windows.Forms.ContainerControl.ValidateChildren%28System.Windows.Forms.ValidationConstraints%29?displayProperty=fullName>方法相同的功能。 有关使用此方法的详细信息, 请<xref:System.Windows.Forms.ContainerControl.ValidateChildren%28System.Windows.Forms.ValidationConstraints%29?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="Validated">
-      <MemberSignature Language="C#" Value="public event EventHandler Validated;" />
+      <MemberSignature Language="C#" Value="event EventHandler Validated;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Validated" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.Validated" />
       <MemberType>Event</MemberType>
@@ -6311,14 +6464,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.Control.Validated?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.Validated?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.Control.Validated?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.Control.Validated?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="Validating">
-      <MemberSignature Language="C#" Value="public event System.ComponentModel.CancelEventHandler Validating;" />
+      <MemberSignature Language="C#" Value="event System.ComponentModel.CancelEventHandler Validating;" />
       <MemberSignature Language="ILAsm" Value=".event class System.ComponentModel.CancelEventHandler Validating" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.Validating" />
       <MemberType>Event</MemberType>
@@ -6335,7 +6488,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.Control.Validating?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.Validating?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.Control.Validating?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.Control.Validating?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -6368,7 +6521,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性提供相同的功能<xref:System.Windows.Forms.ScrollableControl.VerticalScroll%2A?displayProperty=fullName>属性。 有关使用此属性的详细信息，请参阅<xref:System.Windows.Forms.ScrollableControl.VerticalScroll%2A?displayProperty=fullName>。  
+ 此属性提供与<xref:System.Windows.Forms.ScrollableControl.VerticalScroll%2A?displayProperty=fullName>属性相同的功能。 有关使用此属性的详细信息, 请<xref:System.Windows.Forms.ScrollableControl.VerticalScroll%2A?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -6398,22 +6551,22 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 设置<xref:Microsoft.Office.Tools.ActionsPane.Visible%2A>属性设置为`false`只会隐藏任务窗格用户界面，包括<xref:Microsoft.Office.Tools.ActionsPane>控件和任何已添加到它的控件。 此方法不会隐藏任务窗格自身。  
+ 将属性设置为`false`仅隐藏任务窗格<xref:Microsoft.Office.Tools.ActionsPane>用户界面, 包括控件和已添加到其中的任何控件。 <xref:Microsoft.Office.Tools.ActionsPane.Visible%2A> 此方法不会隐藏任务窗格本身。  
   
- 如果你想要隐藏任务窗格或确定任务窗格是否可见，请使用以下属性：  
+ 如果要隐藏任务窗格或确定任务窗格是否可见, 请使用以下属性:  
   
--   对于 Word，请使用<xref:Microsoft.Office.Interop.Word.TaskPane.Visible%2A?displayProperty=fullName>的属性<xref:Microsoft.Office.Interop.Word.TaskPane?displayProperty=fullName>对象，表示**文档操作**任务窗格。  
+-   对于 Word, 请使用<xref:Microsoft.Office.Interop.Word.TaskPane.Visible%2A?displayProperty=fullName>表示 "**文档操作**" 任务窗格的<xref:Microsoft.Office.Interop.Word.TaskPane?displayProperty=fullName>对象的属性。  
   
--   对于 Excel，请使用<xref:Microsoft.Office.Interop.Excel._Application.DisplayDocumentActionTaskPane%2A?displayProperty=fullName>属性的<xref:Microsoft.Office.Tools.Excel.Workbook.Application%2A?displayProperty=fullName>对象。  
+-   对于 Excel, 请使用<xref:Microsoft.Office.Interop.Excel._Application.DisplayDocumentActionTaskPane%2A?displayProperty=fullName> <xref:Microsoft.Office.Tools.Excel.Workbook.Application%2A?displayProperty=fullName>对象的属性。  
   
- 有关详细信息和代码示例，请参阅[操作窗格概述](/visualstudio/vsto/actions-pane-overview)。  
+ 有关详细信息和代码示例, 请参阅[操作窗格概述](/visualstudio/vsto/actions-pane-overview)。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="VisibleChanged">
-      <MemberSignature Language="C#" Value="public event EventHandler VisibleChanged;" />
+      <MemberSignature Language="C#" Value="event EventHandler VisibleChanged;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler VisibleChanged" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.ActionsPane.VisibleChanged" />
       <MemberType>Event</MemberType>
@@ -6430,7 +6583,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此事件提供相同的功能<xref:System.Windows.Forms.Control.VisibleChanged?displayProperty=fullName>事件。 有关使用此事件的详细信息，请参阅<xref:System.Windows.Forms.Control.VisibleChanged?displayProperty=fullName>。  
+ 此事件提供与<xref:System.Windows.Forms.Control.VisibleChanged?displayProperty=fullName>事件相同的功能。 有关使用此事件的详细信息, 请<xref:System.Windows.Forms.Control.VisibleChanged?displayProperty=fullName>参阅。  
   
  ]]></format>
         </remarks>
@@ -6463,7 +6616,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 设置此属性不能更改操作窗格的宽度。 有关如何以编程方式调整大小操作窗格的信息，请参阅[操作窗格概述](/visualstudio/vsto/actions-pane-overview)。  
+ 不能通过设置此属性来更改操作窗格的宽度。 有关如何以编程方式调整操作窗格的大小的信息, 请参阅[操作窗格概述](/visualstudio/vsto/actions-pane-overview)。  
   
  ]]></format>
         </remarks>
@@ -6495,158 +6648,5 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <MemberGroup MemberName="BeginInvoke">
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
-        <AssemblyVersion>10.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <Docs>
-        <summary>在创建操作窗格控件的基础句柄所在线程上异步执行委托。</summary>
-        <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- 此方法提供相同的功能<xref:System.Windows.Forms.Control.BeginInvoke%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.BeginInvoke%2A?displayProperty=fullName>。  
-  
- ]]></format>
-        </remarks>
-      </Docs>
-    </MemberGroup>
-    <MemberGroup MemberName="PerformLayout">
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
-        <AssemblyVersion>10.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <Docs>
-        <summary>强制操作窗格将布局逻辑应用于子控件。</summary>
-        <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- 此方法提供相同的功能<xref:System.Windows.Forms.Control.PerfromLayout%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.PerfromLayout%2A?displayProperty=fullName>。  
-  
- ]]></format>
-        </remarks>
-      </Docs>
-    </MemberGroup>
-    <MemberGroup MemberName="Invoke">
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
-        <AssemblyVersion>10.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <Docs>
-        <summary>在拥有此操作窗格的基础窗口句柄的线程上执行委托。</summary>
-        <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- 此方法提供相同的功能<xref:System.Windows.Forms.Control.Invoke%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.Invoke%2A?displayProperty=fullName>。  
-  
- ]]></format>
-        </remarks>
-      </Docs>
-    </MemberGroup>
-    <MemberGroup MemberName="ValidateChildren">
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
-        <AssemblyVersion>10.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <Docs>
-        <summary>使控件内支持验证的所有子控件都对其数据进行验证。</summary>
-        <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- 此方法提供相同的功能<xref:System.Windows.Forms.ContainerControl.ValidateChildren%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.ContainerControl.ValidateChildren%2A?displayProperty=fullName>。  
-  
- ]]></format>
-        </remarks>
-      </Docs>
-    </MemberGroup>
-    <MemberGroup MemberName="SetBounds">
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
-        <AssemblyVersion>10.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <Docs>
-        <summary>设置活动窗格的边界范围。</summary>
-        <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- 此方法提供相同的功能<xref:System.Windows.Forms.Control.SetBounds%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.SetBounds%2A?displayProperty=fullName>。  
-  
- ]]></format>
-        </remarks>
-      </Docs>
-    </MemberGroup>
-    <MemberGroup MemberName="Validate">
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
-        <AssemblyVersion>10.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <Docs>
-        <summary>通过以该顺序引发 <see cref="E:Microsoft.Office.Tools.ActionsPane.Validating" /> 和 <see cref="E:Microsoft.Office.Tools.ActionsPane.Validated" /> 事件，验证操作窗格的内容。</summary>
-        <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- 此方法提供相同的功能<xref:System.Windows.Forms.ContainerControl.Validate%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.ContainerControl.Validate%2A?displayProperty=fullName>。  
-  
- ]]></format>
-        </remarks>
-      </Docs>
-    </MemberGroup>
-    <MemberGroup MemberName="GetChildAtPoint">
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
-        <AssemblyVersion>10.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <Docs>
-        <summary>检索指定位置的子控件。</summary>
-        <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- 此方法提供相同的功能<xref:System.Windows.Forms.Control.GetChildAtPoint%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.GetChildAtPoint%2A?displayProperty=fullName>。  
-  
- ]]></format>
-        </remarks>
-      </Docs>
-    </MemberGroup>
-    <MemberGroup MemberName="ResumeLayout">
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
-        <AssemblyVersion>10.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <Docs>
-        <summary>恢复正常的布局逻辑。</summary>
-        <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- 此方法提供相同的功能<xref:System.Windows.Forms.Control.ResumeLayout%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.ResumeLayout%2A?displayProperty=fullName>。  
-  
- ]]></format>
-        </remarks>
-      </Docs>
-    </MemberGroup>
-    <MemberGroup MemberName="Invalidate">
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Office.Tools.Common</AssemblyName>
-        <AssemblyVersion>10.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <Docs>
-        <summary>使所有或部分操作窗格无效会导致向操作窗格发送绘制消息。</summary>
-        <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- 此方法提供相同的功能<xref:System.Windows.Forms.Control.Invalidate%2A?displayProperty=fullName>方法。 有关使用此方法的详细信息，请参阅<xref:System.Windows.Forms.Control.Invalidate%2A?displayProperty=fullName>。  
-  
- ]]></format>
-        </remarks>
-      </Docs>
-    </MemberGroup>
   </Members>
 </Type>

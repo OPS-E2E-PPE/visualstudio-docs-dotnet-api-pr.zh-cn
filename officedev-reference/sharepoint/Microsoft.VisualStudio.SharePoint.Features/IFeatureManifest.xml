@@ -1,5 +1,5 @@
 <Type Name="IFeatureManifest" FullName="Microsoft.VisualStudio.SharePoint.Features.IFeatureManifest">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="a8a9985fc8bc349327d746b9478abca26e1e7b26" /><Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="02/21/2018" /><Meta Name="ms.locfileid" Value="29410299" /></Metadata><TypeSignature Language="C#" Value="public interface IFeatureManifest : Microsoft.VisualStudio.SharePoint.IObservableModelElement" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="2d374b83a6e0f6a8d8971555909cca3aad0420ef" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69011139" /></Metadata><TypeSignature Language="C#" Value="public interface IFeatureManifest : Microsoft.VisualStudio.SharePoint.IObservableModelElement" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IFeatureManifest implements class Microsoft.VisualStudio.SharePoint.IObservableModelElement" />
   <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.SharePoint.Features.IFeatureManifest" />
   <AssemblyInfo>
@@ -30,8 +30,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置是否在安装过程中激活该功能。</summary>
-        <value>
-          <see langword="True" /> 如果在安装; 过程激活功能<see langword="false" />否则为。</value>
+        <value><see langword="True" />如果在安装过程中激活了该功能, 则为;<see langword="false" />否则为。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -49,7 +48,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取激活当前功能所依赖的功能的列表。</summary>
-        <value>表示相关功能的列表的对象的集合。</value>
+        <value>对象的集合, 表示依赖功能的列表。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -67,8 +66,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置是否应强制安装该功能，即使该功能已安装。</summary>
-        <value>
-          <see langword="True" /> 如果应强行; 安装该功能<see langword="false" />否则为。</value>
+        <value><see langword="True" />如果应强制安装该功能, 则为;<see langword="false" />否则为。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -86,8 +84,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置是否默认为管理员激活该功能。</summary>
-        <value>
-          <see langword="True" /> 如果默认情况下; 激活此功能<see langword="false" />否则为。</value>
+        <value><see langword="True" />如果默认情况下激活该功能, 则为;<see langword="false" />否则为。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -105,7 +102,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置创建该功能的开发人员的名称。</summary>
-        <value>表示开发人员名称的字符串。</value>
+        <value>表示开发人员姓名的字符串。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -159,7 +156,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取功能元素定义和支持文件的列表。</summary>
-        <value>表示功能元素定义和支持文件的对象的集合。</value>
+        <value>对象的集合, 这些对象表示功能元素定义和支持文件。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -177,7 +174,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置该功能的 SharePoint ID。</summary>
-        <value>表示功能 ID 的 GUID</value>
+        <value>表示功能 ID 的 GUID。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -195,7 +192,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置与该功能相关联的映像的文本。</summary>
-        <value>一个表示图像说明文本字符串。</value>
+        <value>表示图像说明文本的字符串。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -213,7 +210,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置与该功能相关联的映像的相对 URL。</summary>
-        <value>表示图像的 Web 位置 URL</value>
+        <value>表示图像的 Web 位置的 URL</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -231,8 +228,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置该功能在要激活的可用功能列表中是否可见。</summary>
-        <value>
-          <see langword="True" /> 如果的功能是出现在列表中;<see langword="false" />否则为。</value>
+        <value><see langword="True" />如果该功能在列表中可见, 则为;<see langword="false" />否则为。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -286,7 +282,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置该功能事件接收器的类名称。</summary>
-        <value>表示事件接收器类名的字符串。</value>
+        <value>表示事件接收器类名称的字符串。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -304,8 +300,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置 SharePoint 是否检查特定语言和区域性的资源。</summary>
-        <value>
-          <see langword="True" /> 如果 SharePoint 检查资源;<see langword="false" />否则为。</value>
+        <value><see langword="True" />如果 SharePoint 检查资源, 则为;<see langword="false" />否则为。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -323,7 +318,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置已激活某项功能的上下文。</summary>
-        <value>表示已激活该功能的上下文的对象。</value>
+        <value>一个对象, 该对象表示在其中激活功能的上下文。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -341,7 +336,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置将安装该功能的 SharePoint 服务器的 ID。 此属性仅用于基础结构，不应使用。</summary>
-        <value>For SharePoint 服务器 GUID。</value>
+        <value>SharePoint 服务器的 GUID。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -377,7 +372,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置指示站点的兼容版本的字符串。</summary>
-        <value>表示一个版本的字符串。</value>
+        <value>表示版本的字符串。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -395,7 +390,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取升级当前功能时要执行的操作的列表。</summary>
-        <value>表示应用升级功能时的操作的对象的集合。</value>
+        <value>对象的集合, 这些对象表示升级功能时要应用的操作。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -413,7 +408,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置包含用于处理自定义升级操作的功能事件接收器的程序集的完全限定名称。</summary>
-        <value>表示一个完全限定程序集名称的字符串。</value>
+        <value>表示完全限定的程序集名称的字符串。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -431,7 +426,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置用于处理自定义升级操作的功能事件接收器的类名称。</summary>
-        <value>表示功能事件接收器类名的字符串。</value>
+        <value>表示功能事件接收器类名称的字符串。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -449,7 +444,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置符合 <see langword="System.Version" /> 的功能版本表示形式。 此值最多可以有四个数字，由小数点分隔。</summary>
-        <value>A<see langword="Version" />值，该值表示该功能的版本。</value>
+        <value>一个<see langword="Version" />值, 该值表示功能的版本。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

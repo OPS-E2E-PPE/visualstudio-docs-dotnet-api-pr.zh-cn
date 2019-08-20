@@ -1,5 +1,5 @@
 <Type Name="ISharePointProjectItemTypeDefinition" FullName="Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="d9851c5f8861ba4e52027b306516f87bc5864db9" /><Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="02/21/2018" /><Meta Name="ms.locfileid" Value="29410143" /></Metadata><TypeSignature Language="C#" Value="public interface ISharePointProjectItemTypeDefinition : Microsoft.VisualStudio.SharePoint.IAnnotatedObject, Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents, Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFileEvents" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="065604224a87059a5374395cb7c5ffbbae75c06f" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69007542" /></Metadata><TypeSignature Language="C#" Value="public interface ISharePointProjectItemTypeDefinition : Microsoft.VisualStudio.SharePoint.IAnnotatedObject, Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents, Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFileEvents" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISharePointProjectItemTypeDefinition implements class Microsoft.VisualStudio.SharePoint.IAnnotatedObject, class Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents, class Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFileEvents" />
   <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition" />
   <AssemblyInfo>
@@ -23,9 +23,9 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 属性可以设置内部的仅<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider.InitializeType%2A>方法。  
+ 仅可在<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider.InitializeType%2A>方法内设置属性。  
   
- <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition> 允许将自定义数据与类型关联，因为它继承自<xref:Microsoft.VisualStudio.SharePoint.IAnnotatedObject>接口。  
+ <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition>允许将自定义数据与类型相关联, 因为它继承<xref:Microsoft.VisualStudio.SharePoint.IAnnotatedObject>自接口。  
   
  ]]></format>
     </remarks>
@@ -45,12 +45,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置设计器中显示的项目项类型的名称。 默认情况下，它是 ID。</summary>
-        <value>表示项目项类型名称的字符串。</value>
+        <value>一个表示项目项类型名称的字符串。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="ProjectItemStartupUrlRequested">
-      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.VisualStudio.SharePoint.SharePointProjectItemStartupUrlRequestedEventArgs&gt; ProjectItemStartupUrlRequested;" />
+      <MemberSignature Language="C#" Value="event EventHandler&lt;Microsoft.VisualStudio.SharePoint.SharePointProjectItemStartupUrlRequestedEventArgs&gt; ProjectItemStartupUrlRequested;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.VisualStudio.SharePoint.SharePointProjectItemStartupUrlRequestedEventArgs&gt; ProjectItemStartupUrlRequested" />
       <MemberSignature Language="DocId" Value="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition.ProjectItemStartupUrlRequested" />
       <MemberType>Event</MemberType>
@@ -98,7 +98,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取 SharePoint 项目服务的实例。</summary>
-        <value>表示的 SharePoint 项目服务实例的对象。</value>
+        <value>一个对象, 该对象表示 SharePoint 项目服务的实例。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -116,7 +116,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置此项目项支持的程序集的部署位置。</summary>
-        <value>表示程序集的部署位置的对象。</value>
+        <value>一个表示程序集部署位置的对象。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -134,12 +134,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置 SharePoint 中支持 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem" /> 部署的范围。</summary>
-        <value>表示项目项部署范围的对象。</value>
+        <value>一个表示项目项部署范围的对象。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 除了别的之外<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition.SupportedDeploymentScopes%2A>中选择兼容的功能包括，为和限制功能和包设计器用户接口使用。  
+ 除此之外, <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition.SupportedDeploymentScopes%2A>还用于为自动添加选择兼容功能, 并用于限制功能和包设计器用户界面。  
   
  ]]></format>
         </remarks>

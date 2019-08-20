@@ -1,5 +1,5 @@
 <Type Name="ISharePointConnection" FullName="Microsoft.VisualStudio.SharePoint.ISharePointConnection">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="64feddeb8e5799d5c4c582bc7ccb847da82df2ff" /><Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="09/19/2018" /><Meta Name="ms.locfileid" Value="46459648" /></Metadata><TypeSignature Language="C#" Value="public interface ISharePointConnection : IDisposable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="4ce6d0675947d389a5f3f19449c43e9088ce07ee" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69008002" /></Metadata><TypeSignature Language="C#" Value="public interface ISharePointConnection : IDisposable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISharePointConnection implements class System.IDisposable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.SharePoint.ISharePointConnection" />
   <AssemblyInfo>
@@ -17,7 +17,7 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- *SharePoint 命令*是可用于在 SharePoint 工具扩展中调入 SharePoint 服务器对象模型的方法。 定义 SharePoint 命令后，您可以通过获取执行它<xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection>对象，然后再调用之一`ExecuteCommand`方法。 有关详细信息，请参阅[如何： 执行 SharePoint 命令](/visualstudio/sharepoint/how-to-execute-a-sharepoint-command)。  
+ *Sharepoint 命令*是可以在 sharepoint 工具扩展中用于调入 sharepoint 服务器对象模型的方法。 定义 SharePoint 命令后, 可以通过获取<xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection>对象并调用其中一种`ExecuteCommand`方法来执行它。 有关详细信息，请参阅[如何：执行 SharePoint 命令](/visualstudio/sharepoint/how-to-execute-a-sharepoint-command)。  
   
  ]]></format>
     </remarks>
@@ -63,7 +63,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用此方法以执行 SharePoint 命令具有任何自定义的参数或返回值。 有关详细信息，请参阅[如何： 创建 SharePoint 命令](/visualstudio/sharepoint/how-to-create-a-sharepoint-command)并[如何： 执行 SharePoint 命令](/visualstudio/sharepoint/how-to-execute-a-sharepoint-command)。  
+ 使用此方法执行没有自定义参数或返回值的 SharePoint 命令。 有关详细信息，请参阅[如何：创建 SharePoint 命令](/visualstudio/sharepoint/how-to-create-a-sharepoint-command)和[如何:执行 SharePoint 命令](/visualstudio/sharepoint/how-to-execute-a-sharepoint-command)。  
   
  ]]></format>
         </remarks>
@@ -100,9 +100,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用此方法来执行 SharePoint 命令具有自定义参数，但没有返回值。 有关详细信息，请参阅[如何： 创建 SharePoint 命令](/visualstudio/sharepoint/how-to-create-a-sharepoint-command)并[如何： 执行 SharePoint 命令](/visualstudio/sharepoint/how-to-execute-a-sharepoint-command)。  
+ 使用此方法执行具有自定义参数但没有返回值的 SharePoint 命令。 有关详细信息，请参阅[如何：创建 SharePoint 命令](/visualstudio/sharepoint/how-to-create-a-sharepoint-command)和[如何:执行 SharePoint 命令](/visualstudio/sharepoint/how-to-execute-a-sharepoint-command)。  
   
- 有关可序列化由 Windows Communication Foundation (WCF) 的类型的详细信息，请参阅[类型支持的数据协定序列化程序](http://msdn.microsoft.com/library/7381b200-437a-4506-9556-d77bf1bc3f34)并[使用 XmlSerializer 类](http://msdn.microsoft.com/library/c680602d-39d3-44f1-bf22-8e6654ad5069)。  
+ 有关可由 Windows Communication Foundation (WCF) 序列化的类型的详细信息, 请参阅[数据协定序列化程序支持的类型](http://msdn.microsoft.com/library/7381b200-437a-4506-9556-d77bf1bc3f34)和[使用 XmlSerializer 类](http://msdn.microsoft.com/library/c680602d-39d3-44f1-bf22-8e6654ad5069)。  
   
  ]]></format>
         </remarks>
@@ -139,9 +139,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用此方法来执行 SharePoint 命令的返回值，但没有自定义参数。 有关详细信息，请参阅[如何： 创建 SharePoint 命令](/visualstudio/sharepoint/how-to-create-a-sharepoint-command)并[如何： 执行 SharePoint 命令](/visualstudio/sharepoint/how-to-execute-a-sharepoint-command)。  
+ 使用此方法执行具有返回值但没有自定义参数的 SharePoint 命令。 有关详细信息，请参阅[如何：创建 SharePoint 命令](/visualstudio/sharepoint/how-to-create-a-sharepoint-command)和[如何:执行 SharePoint 命令](/visualstudio/sharepoint/how-to-execute-a-sharepoint-command)。  
   
- 有关可序列化由 Windows Communication Foundation (WCF) 的类型的详细信息，请参阅[类型支持的数据协定序列化程序](http://msdn.microsoft.com/library/7381b200-437a-4506-9556-d77bf1bc3f34)并[使用 XmlSerializer 类](http://msdn.microsoft.com/library/c680602d-39d3-44f1-bf22-8e6654ad5069)。  
+ 有关可由 Windows Communication Foundation (WCF) 序列化的类型的详细信息, 请参阅[数据协定序列化程序支持的类型](http://msdn.microsoft.com/library/7381b200-437a-4506-9556-d77bf1bc3f34)和[使用 XmlSerializer 类](http://msdn.microsoft.com/library/c680602d-39d3-44f1-bf22-8e6654ad5069)。  
   
  ]]></format>
         </remarks>
@@ -182,15 +182,15 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用此方法来执行 SharePoint 命令具有返回值和自定义参数。 有关详细信息，请参阅[如何： 创建 SharePoint 命令](/visualstudio/sharepoint/how-to-create-a-sharepoint-command)并[如何： 执行 SharePoint 命令](/visualstudio/sharepoint/how-to-execute-a-sharepoint-command)。  
+ 使用此方法执行具有返回值和自定义参数的 SharePoint 命令。 有关详细信息，请参阅[如何：创建 SharePoint 命令](/visualstudio/sharepoint/how-to-create-a-sharepoint-command)和[如何:执行 SharePoint 命令](/visualstudio/sharepoint/how-to-execute-a-sharepoint-command)。  
   
- 有关可序列化由 Windows Communication Foundation (WCF) 的类型的详细信息，请参阅[类型支持的数据协定序列化程序](http://msdn.microsoft.com/library/7381b200-437a-4506-9556-d77bf1bc3f34)并[使用 XmlSerializer 类](http://msdn.microsoft.com/library/c680602d-39d3-44f1-bf22-8e6654ad5069)。  
+ 有关可由 Windows Communication Foundation (WCF) 序列化的类型的详细信息, 请参阅[数据协定序列化程序支持的类型](http://msdn.microsoft.com/library/7381b200-437a-4506-9556-d77bf1bc3f34)和[使用 XmlSerializer 类](http://msdn.microsoft.com/library/c680602d-39d3-44f1-bf22-8e6654ad5069)。  
   
  ]]></format>
         </remarks>
         <exception cref="T:System.InvalidOperationException">SharePoint 命令的参数类型与 <paramref name="T" /> 类型不匹配。  
   
-或 
+or 
 SharePoint 命令的返回值类型与 <paramref name="TResult" /> 类型不匹配。</exception>
         <exception cref="T:Microsoft.VisualStudio.SharePoint.SharePointConnectionException">与 SharePoint 连接时发生错误。</exception>
         <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="commandId" /> 与任何可用的 SharePoint 命令都不匹配。</exception>

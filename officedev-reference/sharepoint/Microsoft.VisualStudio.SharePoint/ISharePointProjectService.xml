@@ -1,5 +1,5 @@
 <Type Name="ISharePointProjectService" FullName="Microsoft.VisualStudio.SharePoint.ISharePointProjectService">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="f3bfea326191a36e979d7ae150e2dcbdff928b37" /><Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="02/21/2018" /><Meta Name="ms.locfileid" Value="29410312" /></Metadata><TypeSignature Language="C#" Value="public interface ISharePointProjectService : Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="e6abca57d6c0ad17eb0a1543039ef582a531dd7a" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69007239" /></Metadata><TypeSignature Language="C#" Value="public interface ISharePointProjectService : Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISharePointProjectService implements class Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents" />
   <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectService" />
   <AssemblyInfo>
@@ -63,22 +63,14 @@
         <Parameter Name="value" Type="TInput" />
       </Parameters>
       <Docs>
-        <typeparam name="TInput">输出类型参数。 支持下列类型：  
-  
- ISharePointProject  
-  
- ISharePointProjectItem  
-  
- ISharePointProjectFeature  
-  
- ISharePointProjectPackage  
-  
- EnvDTE.Project  
-  
- EnvDTE.ProjectItem  
-  
- Visual Studio 项目接口，如 Microsoft.VisualStudio.Shell.Interop.IVsHierarchy 和 Microsoft.VisualStudio.Shell.Interop.IVsProject。  
-  
+        <typeparam name="TInput">输出类型参数。 支持下列类型： 
+ISharePointProject 
+ISharePointProjectItem 
+ISharePointProjectFeature 
+ISharePointProjectPackage 
+EnvDTE.Project 
+EnvDTE.ProjectItem 
+Visual Studio 项目接口，如 Microsoft.VisualStudio.Shell.Interop.IVsHierarchy 和 Microsoft.VisualStudio.Shell.Interop.IVsProject。 
  <see langword="UInt32" /> 可用于检索 Microsoft.VisualStudio.Shell.Interop.IVsHierarchy 项 ID。</typeparam>
         <typeparam name="TOutput">输入类型参数。 支持下列类型：  
   
@@ -119,8 +111,7 @@
       </Parameters>
       <Docs>
         <param name="siteUrl">要连接的目标网站的 URL。</param>
-        <param name="alwaysCreateRemoteConnection">
-          如果即使目标站点在本地计算机上也应创建远程连接，则为 <see langword="true" />；否则为 <see langword="false" />。</param>
+        <param name="alwaysCreateRemoteConnection">如果即使目标站点在本地计算机上也应创建远程连接，则为 <see langword="true" />；否则为 <see langword="false" />。</param>
         <summary>用给定的网站 URL 创建本地或远程连接。</summary>
         <returns>具有给定网站 URL 的本地或远程连接。</returns>
         <remarks>To be added.</remarks>
@@ -145,7 +136,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 某些属性的<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStepInfo>未被初始化之前运行的步骤。  
+ 在运行该步骤之前<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStepInfo> , 不会初始化的某些属性。  
   
  ]]></format>
         </remarks>
@@ -165,8 +156,7 @@
       </ReturnValue>
       <Docs>
         <summary>返回是否在本地计算机上安装了 SharePoint。</summary>
-        <value>
-          如果 SharePoint 已安装，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
+        <value>如果 SharePoint 已安装，则为 <see langword="true" />；否则为 <see langword="false" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -229,9 +219,9 @@
   
  字典使用不区分大小写的序号字符串比较器。  
   
- 如果未初始化的检索到的项目项类型，，它被初始化之前它返回的状态。  
+ 如果检索到的项目项类型未初始化, 则会在返回之前对其进行初始化。  
   
- 如果项目项类型请求时进行初始化，则若要避免递归调用，请返回的项目项类型"作为-是"，没有任何进一步尝试会进行初始化，并且不会引发异常。  
+ 如果在初始化时请求了项目项类型, 则为了避免递归调用, 项目项类型将按 "原样" 返回, 不会进行进一步的初始化, 也不会引发异常。  
   
  ]]></format>
         </remarks>

@@ -1,5 +1,5 @@
 <Type Name="ServerDocument" FullName="Microsoft.VisualStudio.Tools.Applications.ServerDocument">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="a8fda5d830528a6ee257126a7eaaf30e3901979e" /><Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="09/19/2018" /><Meta Name="ms.locfileid" Value="46457899" /></Metadata><TypeSignature Language="C#" Value="public sealed class ServerDocument : IDisposable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="9cc94d407ee23e5feed9fb7cc58c715c1236f096" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="68997065" /></Metadata><TypeSignature Language="C#" Value="public sealed class ServerDocument : IDisposable" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ServerDocument extends System.Object implements class System.IDisposable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.Tools.Applications.ServerDocument" />
   <AssemblyInfo>
@@ -20,69 +20,69 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>类来管理未安装 Excel 的计算机上的文档级自定义的某些方面或安装 Word。 通常情况下，应用程序不与集成 Office，如控制台项目或 Windows 窗体项目，而不是 Office 项目中需要使用此类。  
+ <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>使用类管理文档级自定义项的某些方面, 该计算机上未安装 Excel 或 Word。 通常在不与 Office 集成的应用程序 (例如, 控制台项目或 Windows 窗体项目, 而不是 Office 项目) 中使用此类。  
   
- 使用下列成员的<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>类来执行常见任务：  
+ 使用<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>类的以下成员可以执行常见任务:  
   
--   若要访问和修改的服务器上的文档数据缓存中的数据，请使用<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.CachedData%2A>属性。  
+-   若要访问和修改服务器上文档的数据缓存中的数据, 请使用<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.CachedData%2A>属性。  
   
--   若要以编程方式将自定义项附加到文档或从文档中删除自定义项，使用<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.AddCustomization%2A>和<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.RemoveCustomization%2A>方法。  
+-   若要以编程方式将自定义项附加到文档或从文档中移除自<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.AddCustomization%2A>定义<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.RemoveCustomization%2A>项, 请使用和方法。  
   
--   若要访问或更改与文档相关联的部署清单的 URL，请使用<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.DeploymentManifestUrl%2A>属性。  
+-   若要访问或更改与文档关联的部署清单的 URL, 请使用<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.DeploymentManifestUrl%2A>属性。  
   
- 有两个不同版本<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>Visual Studio 2010 Tools for Office Runtime 中的类。 应使用的版本取决于目标的应用程序的.NET Framework 中想要使用的类：  
+ Visual Studio 2010 Tools for Office 运行<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>时中有两个不同版本的类。 应使用的版本取决于要在其中使用类的应用程序的目标 .NET Framework:  
   
--   对于面向应用程序[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]或[!INCLUDE[net_v45](~/includes/net-v45-md.md)]，使用<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument?displayProperty=fullName>Microsoft.VisualStudio.Tools.Applications.ServerDocument.dll 程序集中的类。  
+-   对于以[!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument?displayProperty=fullName>或为目标的应用程序,请使用VisualStudio程序集中的类。[!INCLUDE[net_v45](~/includes/net-v45-md.md)]  
   
--   对于面向.NET Framework 3.5 的应用程序，使用`Microsoft.VisualStudio.Tools.Applications.ServerDocument`Microsoft.VisualStudio.Tools.Applications.ServerDocument.v10.0.dll 程序集中的类。  
+-   对于目标为 .NET Framework 3.5 的应用程序, 请`Microsoft.VisualStudio.Tools.Applications.ServerDocument`使用 ServerDocument 程序集中的类。 VisualStudio。  
   
- 有关详细信息，请参阅 [使用 ServerDocument 类管理服务器上的文档](/visualstudio/vsto/managing-documents-on-a-server-by-using-the-serverdocument-class)。  
+ 有关详细信息，请参阅 [Managing Documents on a Server by Using the ServerDocument Class](/visualstudio/vsto/managing-documents-on-a-server-by-using-the-serverdocument-class)。  
   
-## <a name="choosing-which-constructor-to-use"></a>选择使用的构造函数  
- 若要使用<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>类来访问缓存的数据或部署清单在文档中的 URL，则必须创建<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>对象。  
+## <a name="choosing-which-constructor-to-use"></a>选择要使用的构造函数  
+ 若要使用<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>类访问文档中的缓存数据或部署清单 URL, 必须<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>创建对象。  
   
- 有两个组的<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>构造函数：  
+ 有两组<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>构造函数:  
   
--   一组可用于访问已在内存中打开的文档。  
+-   可用于访问已在内存中打开的文档的集合。  
   
--   一组可用于访问磁盘上的文档。  
+-   可用来访问磁盘上的文档的集合。  
   
 ### <a name="accessing-a-document-in-memory"></a>访问内存中的文档  
- 若要访问已在内存中打开的文档，请使用以下构造函数之一：  
+ 若要访问已在内存中打开的文档, 请使用以下构造函数之一:  
   
 -   <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.%23ctor%28System.Byte%5B%5D%2CSystem.String%29?displayProperty=fullName>  
   
 -   <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.%23ctor%28System.IO.Stream%2CSystem.String%29?displayProperty=fullName>  
   
- 这些构造函数接受字节数组或<xref:System.IO.Stream>表示在内存中的文档。 这是很有用，如果你想要修改的缓存的数据或应用程序清单中文档，再进行流式传输到目标使用 HTTP 协议。 若要使用这些构造函数，该文档必须已有自定义项;否则，这些构造函数将引发<xref:Microsoft.VisualStudio.Tools.Applications.Runtime.CannotLoadManifestException>异常。  
+ 这些构造函数接受一个表示内存中<xref:System.IO.Stream>文档的字节数组或。 如果要在文档中修改缓存的数据或应用程序清单, 然后使用 HTTP 协议将其流式传输到目标, 则此方法非常有用。 若要使用这些构造函数, 文档必须已具有自定义;否则, 这些构造函数将引发<xref:Microsoft.VisualStudio.Tools.Applications.Runtime.CannotLoadManifestException>异常。  
   
 ### <a name="accessing-a-document-on-disk"></a>访问磁盘上的文档  
- 若要访问磁盘上的文档，请使用以下构造函数之一：  
+ 若要访问磁盘上的文档, 请使用以下构造函数之一:  
   
 -   <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.%23ctor%28System.String%29?displayProperty=fullName>  
   
 -   <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.%23ctor%28System.String%2CSystem.IO.FileAccess%29?displayProperty=fullName>  
   
- 这些构造函数接受你想要打开的文档的完整路径。 默认情况下，具有读/写访问权限打开文档。 如果你想要使用只读或只写访问打开的文档，使用构造函数具有<xref:System.IO.FileAccess>参数。  
+ 这些构造函数接受要打开的文档的完整路径。 默认情况下, 文档以读/写访问权限打开。 如果要使用只读或只写访问权限打开文档, 请使用带有<xref:System.IO.FileAccess>参数的构造函数。  
   
    
   
 ## Examples  
- 下面的代码示例创建一个新<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>的加载指定的文档，然后显示附加到文档的自定义项的部署清单的 URL。  
+ 下面的代码示例创建一个新<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>的, 它将加载指定的文档, 然后显示附加到文档的自定义项的部署清单的 URL。  
   
  此示例需要：  
   
--   控制台应用程序项目或某些其他非 Office 项目。  
+-   一个控制台应用程序项目或一些其他非 Office 项目。  
   
--   对以下程序集的引用：  
+-   对以下程序集的引用:  
   
     -   Microsoft.VisualStudio.Tools.Applications.ServerDocument.dll 和 Microsoft.VisualStudio.Tools.Applications.Runtime.dll (如果项目面向 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)])。  
   
-         或  
+         or  
   
-    -   Microsoft.VisualStudio.Tools.Applications.ServerDocument.v10.0.dll 和 Microsoft.VisualStudio.Tools.Applications.Runtime.v9.0.dll （如果项目面向.NET Framework 3.5）。  
+    -   VisualStudio (如果项目以 .NET Framework 3.5) 为目标, 则为 ServerDocument (如果该项目面向的是的 VisualStudio。) 的。  
   
--   `Imports` （对于 Visual Basic) 或`using`（适用于 C#) 语句<xref:Microsoft.VisualStudio.Tools.Applications?displayProperty=fullName>和<xref:Microsoft.VisualStudio.Tools.Applications.Runtime?displayProperty=fullName>代码文件顶部的命名空间。  
+-   `Imports`(对于 Visual Basic) 或`using` (对于C#) <xref:Microsoft.VisualStudio.Tools.Applications?displayProperty=fullName>代码文件顶部<xref:Microsoft.VisualStudio.Tools.Applications.Runtime?displayProperty=fullName>的和命名空间。  
   
  [!code-csharp[Trin_ServerDocument#1](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ServerDocument/CS/Form1.cs#1)]
  [!code-vb[Trin_ServerDocument#1](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ServerDocument/VB/Form1.vb#1)]  
@@ -110,26 +110,26 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用此构造函数来访问在磁盘上的文档中的缓存的数据或部署清单信息。 当使用此构造函数时，具有读/写访问权限打开指定的文档。  
+ 使用此构造函数可以访问磁盘上的文档中的缓存数据或部署清单信息。 使用此构造函数时, 将以读/写访问权限打开指定的文档。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.%23ctor%28System.String%29>构造函数创建一个新<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>加载指定的文档。 该示例然后显示附加到文档的自定义项的部署清单的 URL。  
+ 下面的代码示例使用<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.%23ctor%28System.String%29>构造函数来创建一个新<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>的, 以便加载指定的文档。 然后, 该示例显示附加到文档的自定义项的部署清单的 URL。  
   
  此示例需要：  
   
--   控制台应用程序项目或某些其他非 Office 项目。  
+-   一个控制台应用程序项目或一些其他非 Office 项目。  
   
--   对以下程序集的引用：  
+-   对以下程序集的引用:  
   
     -   Microsoft.VisualStudio.Tools.Applications.ServerDocument.dll 和 Microsoft.VisualStudio.Tools.Applications.Runtime.dll (如果项目面向 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)])。  
   
-         或  
+         or  
   
-    -   Microsoft.VisualStudio.Tools.Applications.ServerDocument.v10.0.dll 和 Microsoft.VisualStudio.Tools.Applications.Runtime.v9.0.dll （如果项目面向.NET Framework 3.5）。  
+    -   VisualStudio (如果项目以 .NET Framework 3.5) 为目标, 则为 ServerDocument (如果该项目面向的是的 VisualStudio。) 的。  
   
--   `Imports` （对于 Visual Basic) 或`using`（适用于 C#) 语句<xref:Microsoft.VisualStudio.Tools.Applications?displayProperty=fullName>和<xref:Microsoft.VisualStudio.Tools.Applications.Runtime?displayProperty=fullName>代码文件顶部的命名空间。  
+-   `Imports`(对于 Visual Basic) 或`using` (对于C#) <xref:Microsoft.VisualStudio.Tools.Applications?displayProperty=fullName>代码文件顶部<xref:Microsoft.VisualStudio.Tools.Applications.Runtime?displayProperty=fullName>的和命名空间。  
   
  [!code-csharp[Trin_ServerDocument#1](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ServerDocument/CS/Form1.cs#1)]
  [!code-vb[Trin_ServerDocument#1](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ServerDocument/VB/Form1.vb#1)]  
@@ -163,30 +163,30 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用此构造函数来访问已在内存中的文档中的缓存的数据或部署清单信息。 当使用此构造函数时，具有读/写访问权限打开文档。  
+ 使用此构造函数可以访问已在内存中的文档中的缓存数据或部署清单信息。 使用此构造函数时, 将以读/写访问权限打开文档。  
   
- `fileType`参数仅用于确定存储在字节数组中的文档的类型。 值`fileType`映射到一个对于文档级自定义支持的文件类型。 不会尝试打开文件。 您可以选择性地传递中完整的文件名称 (例如，"Workbook1.xlsx")，但如果这样做，则使用文件扩展名。 有关受支持的文件类型的详细信息，请参阅[Architecture of Document-level Customizations](/visualstudio/vsto/architecture-of-document-level-customizations)。  
+ `fileType`参数仅用于确定存储在字节数组中的文档的类型。 的值`fileType`映射到文档级自定义项支持的文件类型之一。 不会尝试打开该文件。 您可以选择传递完整的文件名 (例如 "Workbook1"), 但如果这样做, 则只使用文件扩展名。 有关支持的文件类型的详细信息, 请参阅[文档级自定义项的体系结构](/visualstudio/vsto/architecture-of-document-level-customizations)。  
   
- 若要在调用此构造函数后访问该文档的字节数组，使用 [ServerDocument 构造函数 (字节\<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.Document%2A > 属性。  
+ 若要在调用此构造函数后访问文档的字节数组, 请使用 [ServerDocument 构造函数\<(byte x: ServerDocument% 2a > 属性。  
   
    
   
 ## Examples  
- 下面的代码示例使用 [ServerDocument 构造函数 (字节\<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.%23ctor%28System.Byte%5B%5D%2CSystem.String%29 > 构造函数来创建新的 [ServerDocument构造函数 (字节\<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument > 从字节数组，其中包含文件扩展名为.xlsx 的 Excel 工作簿。 然后该示例使用 [ServerDocument 构造函数 (字节\<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.Document%2A > 属性显示在文档中的字节数。  
+ 下面的代码示例使用 [ServerDocument 构造函数 (Byte\<x: ServerDocument% 23ctor% 28system.object% 2csystem.string% ServerDocument% 5d%% 29 > 构造函数来创建新的 [构造函数 (\<byte x: ServerDocument >, 其中包含扩展名为 .xlsx 的 Excel 工作簿的字节数组。 然后, 该示例使用 [ServerDocument 构造函数 (\<Byte x: ServerDocument% 2a > 属性来显示文档中的字节数。  
   
  此示例需要：  
   
--   控制台应用程序项目或某些其他非 Office 项目。  
+-   一个控制台应用程序项目或一些其他非 Office 项目。  
   
--   对以下程序集的引用：  
+-   对以下程序集的引用:  
   
     -   Microsoft.VisualStudio.Tools.Applications.ServerDocument.dll 和 Microsoft.VisualStudio.Tools.Applications.Runtime.dll (如果项目面向 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)])。  
   
-         或  
+         or  
   
-    -   Microsoft.VisualStudio.Tools.Applications.ServerDocument.v10.0.dll 和 Microsoft.VisualStudio.Tools.Applications.Runtime.v9.0.dll （如果项目面向.NET Framework 3.5）。  
+    -   VisualStudio (如果项目以 .NET Framework 3.5) 为目标, 则为 ServerDocument (如果该项目面向的是的 VisualStudio。) 的。  
   
--   `Imports` （对于 Visual Basic) 或`using`（适用于 C#) 语句 [ServerDocument 构造函数 (字节\<xref:Microsoft.VisualStudio.Tools.Applications?displayProperty=fullName > 和 [ServerDocument 构造函数 (字节\<xref:Microsoft.VisualStudio.Tools.Applications.Runtime?displayProperty=fullName > 你的代码文件顶部的命名空间。  
+-   `Imports`(对于 Visual Basic) 或`using` (for C#) 语句 (适用于 [ServerDocument 构造\<函数 (byte x: VisualStudio？ displayProperty = fullName > 和 [ServerDocument 构造函数 (字节)\<x: VisualStudio？ displayProperty = fullName > 你的代码文件顶部的命名空间。  
   
  [!code-csharp[Trin_ServerDocument#2](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ServerDocument/CS/Form1.cs#2)]
  [!code-vb[Trin_ServerDocument#2](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ServerDocument/VB/Form1.vb#2)]  
@@ -222,30 +222,30 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用此构造函数来访问已在内存中的文档中的缓存的数据或部署清单信息。 当使用此构造函数时，具有读/写访问权限打开文档。  
+ 使用此构造函数可以访问已在内存中的文档中的缓存数据或部署清单信息。 使用此构造函数时, 将以读/写访问权限打开文档。  
   
- `fileType`参数仅用于确定存储在字节数组中的文档的类型。 值`fileType`映射到一个对于文档级自定义支持的文件类型。 不会尝试打开文件。 您可以选择性地传递中完整的文件名称 (例如，"Workbook1.xlsx")，但如果这样做，则使用文件扩展名。 有关受支持的文件类型的详细信息，请参阅[Architecture of Document-level Customizations](/visualstudio/vsto/architecture-of-document-level-customizations)。  
+ `fileType`参数仅用于确定存储在字节数组中的文档的类型。 的值`fileType`映射到文档级自定义项支持的文件类型之一。 不会尝试打开该文件。 您可以选择传递完整的文件名 (例如 "Workbook1"), 但如果这样做, 则只使用文件扩展名。 有关支持的文件类型的详细信息, 请参阅[文档级自定义项的体系结构](/visualstudio/vsto/architecture-of-document-level-customizations)。  
   
- 若要在调用此构造函数后访问该文档的字节数组，使用<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.Document%2A>属性。  
+ 若要在调用此构造函数后访问文档的字节数组, 请<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.Document%2A>使用属性。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.%23ctor%28System.IO.Stream%2CSystem.String%29>构造函数创建一个新<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>从<xref:System.IO.FileStream>，其中包含文件扩展名为.xlsx 的 Excel 工作簿。 然后，该代码显示附加到文档的自定义项的部署清单的 URL。  
+ 下面的代码示例使用<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.%23ctor%28System.IO.Stream%2CSystem.String%29>构造函数从中<xref:System.IO.FileStream>创建一个<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>新的, 其中包含扩展名为 .xlsx 的 Excel 工作簿。 然后, 该代码显示附加到文档的自定义项的部署清单的 URL。  
   
  此示例需要：  
   
--   控制台应用程序项目或某些其他非 Office 项目。  
+-   一个控制台应用程序项目或一些其他非 Office 项目。  
   
--   对以下程序集的引用：  
+-   对以下程序集的引用:  
   
     -   Microsoft.VisualStudio.Tools.Applications.ServerDocument.dll 和 Microsoft.VisualStudio.Tools.Applications.Runtime.dll (如果项目面向 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)])。  
   
-         或  
+         or  
   
-    -   Microsoft.VisualStudio.Tools.Applications.ServerDocument.v10.0.dll 和 Microsoft.VisualStudio.Tools.Applications.Runtime.v9.0.dll （如果项目面向.NET Framework 3.5）。  
+    -   VisualStudio (如果项目以 .NET Framework 3.5) 为目标, 则为 ServerDocument (如果该项目面向的是的 VisualStudio。) 的。  
   
--   `Imports` （对于 Visual Basic) 或`using`（适用于 C#) 语句<xref:Microsoft.VisualStudio.Tools.Applications?displayProperty=fullName>和<xref:Microsoft.VisualStudio.Tools.Applications.Runtime?displayProperty=fullName>代码文件顶部的命名空间。  
+-   `Imports`(对于 Visual Basic) 或`using` (对于C#) <xref:Microsoft.VisualStudio.Tools.Applications?displayProperty=fullName>代码文件顶部<xref:Microsoft.VisualStudio.Tools.Applications.Runtime?displayProperty=fullName>的和命名空间。  
   
  [!code-csharp[Trin_ServerDocument#3](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ServerDocument/CS/Form1.cs#3)]
  [!code-vb[Trin_ServerDocument#3](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ServerDocument/VB/Form1.vb#3)]  
@@ -282,26 +282,26 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用此构造函数来访问位于磁盘，如果你想要使用只读或只写访问打开的文档的文档中的缓存的数据或部署清单信息。 默认情况下，其他<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>构造函数具有读/写访问权限打开的文档。  
+ 如果要使用只读或只写访问权限打开文档, 请使用此构造函数访问磁盘上的文档中的缓存数据或部署清单信息。 默认情况下, 其他<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>构造函数以读/写访问权限打开文档。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.%23ctor%28System.String%2CSystem.IO.FileAccess%29>构造函数创建一个新<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>加载指定的文档具有只读访问权限。 然后，该代码显示附加到文档的自定义项的部署清单的 URL。  
+ 下面的代码示例使用<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.%23ctor%28System.String%2CSystem.IO.FileAccess%29>构造函数来创建一个新<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>的, 它将加载具有只读访问权限的指定文档。 然后, 该代码显示附加到文档的自定义项的部署清单的 URL。  
   
  此示例需要：  
   
--   控制台应用程序项目或某些其他非 Office 项目。  
+-   一个控制台应用程序项目或一些其他非 Office 项目。  
   
--   对以下程序集的引用：  
+-   对以下程序集的引用:  
   
     -   Microsoft.VisualStudio.Tools.Applications.ServerDocument.dll 和 Microsoft.VisualStudio.Tools.Applications.Runtime.dll (如果项目面向 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)])。  
   
-         或  
+         or  
   
-    -   Microsoft.VisualStudio.Tools.Applications.ServerDocument.v10.0.dll 和 Microsoft.VisualStudio.Tools.Applications.Runtime.v9.0.dll （如果项目面向.NET Framework 3.5）。  
+    -   VisualStudio (如果项目以 .NET Framework 3.5) 为目标, 则为 ServerDocument (如果该项目面向的是的 VisualStudio。) 的。  
   
--   `Imports` （对于 Visual Basic) 或`using`（适用于 C#) 语句<xref:Microsoft.VisualStudio.Tools.Applications?displayProperty=fullName>和<xref:Microsoft.VisualStudio.Tools.Applications.Runtime?displayProperty=fullName>代码文件顶部的命名空间。  
+-   `Imports`(对于 Visual Basic) 或`using` (对于C#) <xref:Microsoft.VisualStudio.Tools.Applications?displayProperty=fullName>代码文件顶部<xref:Microsoft.VisualStudio.Tools.Applications.Runtime?displayProperty=fullName>的和命名空间。  
   
  [!code-csharp[Trin_ServerDocument#4](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ServerDocument/CS/Form1.cs#4)]
  [!code-vb[Trin_ServerDocument#4](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ServerDocument/VB/Form1.vb#4)]  
@@ -340,30 +340,30 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.AddCustomization%2A>方法将指定的自定义与文档关联通过添加`_AssemblyName`和`_AssemblyLocation`到文档的自定义文档属性。 这些属性确定文档具有自定义和指定部署清单的位置。 调用此方法成功，的下次用户打开指定的文档后运行时将尝试安装 Office 解决方案。 有关自定义文档属性的详细信息，请参阅[自定义文档属性概述](/visualstudio/vsto/custom-document-properties-overview)。  
+ 方法通过向文档中`_AssemblyName`添加和`_AssemblyLocation`自定义文档属性, 将指定的自定义与文档相关联。 <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.AddCustomization%2A> 这些属性标识文档具有自定义项, 并指定部署清单的位置。 成功调用此方法后, 当用户下一次打开指定的文档时, 运行时将尝试安装 Office 解决方案。 有关自定义文档属性的详细信息, 请参阅[自定义文档属性概述](/visualstudio/vsto/custom-document-properties-overview)。  
   
- 如果指定的文档不包含自定义项要求文档，一个控件<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.AddCustomization%2A>方法将成功，但该程序集将加载在用户打开文档时失败。  
+ 如果指定的文档不包含自定义项希望文档具有的控件, 则该<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.AddCustomization%2A>方法将会成功, 但当用户打开文档时, 该程序集将无法加载。  
   
- `fileType`参数必须指定具有对于文档级自定义支持的文件扩展名的文档。 无法将自定义项附加到 Word XML 文档中保存的文档 (* xml) 或 Word 2003 XML 文档 (\*xml) 文件格式。 有关受支持的文件类型的详细信息，请参阅[Architecture of Document-level Customizations](/visualstudio/vsto/architecture-of-document-level-customizations)。  
+ `fileType`参数必须指定具有文档级自定义项支持的文件扩展名的文档。 不能将自定义附加到以 word xml 文档 (* xml) 或 word 2003 XML 文档 (\*xml) 文件格式保存的文档。 有关支持的文件类型的详细信息, 请参阅[文档级自定义项的体系结构](/visualstudio/vsto/architecture-of-document-level-customizations)。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.AddCustomization%2A>方法将自定义项附加到指定的文档。  
+ 下面的代码示例使用<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.AddCustomization%2A>方法将自定义项附加到指定文档。  
   
  此示例需要：  
   
--   控制台应用程序项目或某些其他非 Office 项目。  
+-   一个控制台应用程序项目或一些其他非 Office 项目。  
   
--   对以下程序集的引用：  
+-   对以下程序集的引用:  
   
     -   Microsoft.VisualStudio.Tools.Applications.ServerDocument.dll 和 Microsoft.VisualStudio.Tools.Applications.Runtime.dll (如果项目面向 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)])。  
   
-         或  
+         or  
   
-    -   Microsoft.VisualStudio.Tools.Applications.ServerDocument.v10.0.dll 和 Microsoft.VisualStudio.Tools.Applications.Runtime.v9.0.dll （如果项目面向.NET Framework 3.5）。  
+    -   VisualStudio (如果项目以 .NET Framework 3.5) 为目标, 则为 ServerDocument (如果该项目面向的是的 VisualStudio。) 的。  
   
--   `Imports` （对于 Visual Basic) 或`using`（适用于 C#) 语句<xref:Microsoft.VisualStudio.Tools.Applications?displayProperty=fullName>和<xref:Microsoft.VisualStudio.Tools.Applications.Runtime?displayProperty=fullName>代码文件顶部的命名空间。  
+-   `Imports`(对于 Visual Basic) 或`using` (对于C#) <xref:Microsoft.VisualStudio.Tools.Applications?displayProperty=fullName>代码文件顶部<xref:Microsoft.VisualStudio.Tools.Applications.Runtime?displayProperty=fullName>的和命名空间。  
   
  [!code-csharp[Trin_ServerDocument#6](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ServerDocument/CS/Form1.cs#6)]
  [!code-vb[Trin_ServerDocument#6](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ServerDocument/VB/Form1.vb#6)]  
@@ -407,32 +407,32 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.AddCustomization%2A>方法将指定的自定义与文档关联通过添加`_AssemblyName`和`_AssemblyLocation`到文档的自定义文档属性。 这些属性确定文档具有自定义和指定部署清单的位置。 调用此方法成功，的下次用户打开指定的文档后运行时将尝试安装 Office 解决方案。 有关自定义文档属性的详细信息，请参阅[自定义文档属性概述](/visualstudio/vsto/custom-document-properties-overview)。  
+ 方法通过向文档中`_AssemblyName`添加和`_AssemblyLocation`自定义文档属性, 将指定的自定义与文档相关联。 <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.AddCustomization%2A> 这些属性标识文档具有自定义项, 并指定部署清单的位置。 成功调用此方法后, 当用户下一次打开指定的文档时, 运行时将尝试安装 Office 解决方案。 有关自定义文档属性的详细信息, 请参阅[自定义文档属性概述](/visualstudio/vsto/custom-document-properties-overview)。  
   
- GUID 传递给`solutionID`附加到文档的解决方案的应用程序清单中指定参数。 你必须传递中指定的同一个 GUID`solutionId`属性的`vstov4:document`应用程序清单中的元素。 有关详细信息，请参阅[Application and Deployment Manifests in Office Solutions](/visualstudio/vsto/application-and-deployment-manifests-in-office-solutions)并[ \&l t; 文档\&g t;元素](/visualstudio/vsto/document-element-office-development-in-visual-studio)。  
+ 传递给`solutionID`参数的 GUID 是在附加到文档的解决方案的应用程序清单中指定的。 必须传递应用程序清单中的`solutionId` `vstov4:document`元素的属性中指定的同一 GUID。 有关详细信息, 请参阅[Office 解决方案中的应用程序和部署清单](/visualstudio/vsto/application-and-deployment-manifests-in-office-solutions)和[ \&lt; 文档\&g t;元素](/visualstudio/vsto/document-element-office-development-in-visual-studio)。  
   
- 如果附加的自定义项从发布位置，请确保指定正确的程序集的文件名`assemblyName`参数。 当发布 Office 解决方案时，复制到发布文件夹的程序集具有.deploy 文件扩展名。 例如，如果程序集名称，WordDocument1.dll publish 文件夹中的程序集的文件名是 WordDocument1.dll.deploy。 有关详细信息，请参阅[部署 Office 解决方案使用 clickonce](/visualstudio/vsto/deploying-an-office-solution-by-using-clickonce)。  
+ 如果要从发布位置附加自定义项, 请确保在`assemblyName`参数中为程序集指定了正确的文件名。 发布 Office 解决方案时, 复制到发布文件夹的程序集具有 .deploy 文件扩展名。 例如, 如果程序集名称为 Worddocument1.docx, 则发布文件夹中的程序集的文件名为 Worddocument1.docx。 有关详细信息, 请参阅[使用 ClickOnce 部署 Office 解决方案](/visualstudio/vsto/deploying-an-office-solution-by-using-clickonce)。  
   
- 如果指定的文档不包含自定义项要求文档，一个控件<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.AddCustomization%2A>方法将成功，但该程序集将加载在用户打开文档时失败。  
+ 如果指定的文档不包含自定义项希望文档具有的控件, 则该<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.AddCustomization%2A>方法将会成功, 但当用户打开文档时, 该程序集将无法加载。  
   
- `fileType`参数必须指定具有支持的 Microsoft Office Word 和 Microsoft Office Excel 文档级自定义项的文件扩展名的文档。 无法将自定义项附加到 Word XML 文档中保存的文档 (* xml) 或 Word 2003 XML 文档 (\*xml) 文件格式。 有关受支持的文件类型的详细信息，请参阅[Architecture of Document-level Customizations](/visualstudio/vsto/architecture-of-document-level-customizations)。  
+ `fileType`参数必须指定具有文件扩展名的文档, 该文档级自定义项支持的文档级自定义项 Microsoft Office Word 和 Microsoft Office Excel。 不能将自定义附加到以 word xml 文档 (* xml) 或 word 2003 XML 文档 (\*xml) 文件格式保存的文档。 有关支持的文件类型的详细信息, 请参阅[文档级自定义项的体系结构](/visualstudio/vsto/architecture-of-document-level-customizations)。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.AddCustomization%2A>方法将自定义项附加到指定的文档。  
+ 下面的代码示例使用<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.AddCustomization%2A>方法将自定义项附加到指定文档。  
   
  此示例需要：  
   
--   控制台应用程序项目或某些其他非 Office 项目。  
+-   一个控制台应用程序项目或一些其他非 Office 项目。  
   
--   对以下程序集的引用：  
+-   对以下程序集的引用:  
   
     -   Microsoft.VisualStudio.Tools.Applications.ServerDocument.dll 和 Microsoft.VisualStudio.Tools.Applications.Runtime.dll (如果项目面向 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)])。  
   
-         或  
+         or  
   
-    -   Microsoft.VisualStudio.Tools.Applications.ServerDocument.v10.0.dll 和 Microsoft.VisualStudio.Tools.Applications.Runtime.v9.0.dll （如果项目面向.NET Framework 3.5）。  
+    -   VisualStudio (如果项目以 .NET Framework 3.5) 为目标, 则为 ServerDocument (如果该项目面向的是的 VisualStudio。) 的。  
   
  [!code-csharp[Trin_ServerDocument#7](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ServerDocument/CS/Form1.cs#7)]
  [!code-vb[Trin_ServerDocument#7](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ServerDocument/VB/Form1.vb#7)]  
@@ -448,7 +448,7 @@
     </Member>
     <Member MemberName="AddCustomization">
       <MemberSignature Language="C#" Value="public static void AddCustomization (string documentPath, string assemblyName, Guid solutionId, Uri deploymentManifestUrl, bool runAsLocal, out string[] nonpublicCachedDataMembers);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddCustomization(string documentPath, string assemblyName, valuetype System.Guid solutionId, class System.Uri deploymentManifestUrl, bool runAsLocal, string[] nonpublicCachedDataMembers) cil managed" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddCustomization(string documentPath, string assemblyName, valuetype System.Guid solutionId, class System.Uri deploymentManifestUrl, bool runAsLocal, [out] string[]&amp; nonpublicCachedDataMembers) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.VisualStudio.Tools.Applications.ServerDocument.AddCustomization(System.String,System.String,System.Guid,System.Uri,System.Boolean,System.String[]@)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -464,7 +464,7 @@
         <Parameter Name="solutionId" Type="System.Guid" />
         <Parameter Name="deploymentManifestUrl" Type="System.Uri" />
         <Parameter Name="runAsLocal" Type="System.Boolean" />
-        <Parameter Name="nonpublicCachedDataMembers" Type="System.String[]&amp;" RefType="out" />
+        <Parameter Name="nonpublicCachedDataMembers" Type="System.String[]" RefType="out" />
       </Parameters>
       <Docs>
         <param name="documentPath">To be added.</param>
@@ -496,26 +496,26 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 在文档中缓存的数据存储在对象的层次结构。 <xref:Microsoft.VisualStudio.Tools.Applications.CachedData>此属性返回的对象是该层次结构中的第一个对象。 有关详细信息，请参阅[在服务器上的文档中访问数据](/visualstudio/vsto/accessing-data-in-documents-on-the-server)。  
+ 文档中的缓存数据存储在对象的层次结构中。 此属性返回的对象是该层次结构中的第一个对象。<xref:Microsoft.VisualStudio.Tools.Applications.CachedData> 有关详细信息，请参阅 [Accessing Data in Documents on the Server](/visualstudio/vsto/accessing-data-in-documents-on-the-server)。  
   
    
   
 ## Examples  
- 下面的代码示例创建一个新<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>，然后使用<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.CachedData%2A>属性显示的数据缓存中对象的名称。  
+ 下面的代码示例创建一个新<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>的, 然后<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.CachedData%2A>使用属性显示数据缓存中的对象的名称。  
   
  此示例需要：  
   
--   控制台应用程序项目或某些其他非 Office 项目。  
+-   一个控制台应用程序项目或一些其他非 Office 项目。  
   
--   对以下程序集的引用：  
+-   对以下程序集的引用:  
   
     -   Microsoft.VisualStudio.Tools.Applications.ServerDocument.dll 和 Microsoft.VisualStudio.Tools.Applications.Runtime.dll (如果项目面向 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)])。  
   
-         或  
+         or  
   
-    -   Microsoft.VisualStudio.Tools.Applications.ServerDocument.v10.0.dll 和 Microsoft.VisualStudio.Tools.Applications.Runtime.v9.0.dll （如果项目面向.NET Framework 3.5）。  
+    -   VisualStudio (如果项目以 .NET Framework 3.5) 为目标, 则为 ServerDocument (如果该项目面向的是的 VisualStudio。) 的。  
   
--   `Imports` （对于 Visual Basic) 或`using`（适用于 C#) 语句<xref:Microsoft.VisualStudio.Tools.Applications?displayProperty=fullName>和<xref:Microsoft.VisualStudio.Tools.Applications.Runtime?displayProperty=fullName>代码文件顶部的命名空间。  
+-   `Imports`(对于 Visual Basic) 或`using` (对于C#) <xref:Microsoft.VisualStudio.Tools.Applications?displayProperty=fullName>代码文件顶部<xref:Microsoft.VisualStudio.Tools.Applications.Runtime?displayProperty=fullName>的和命名空间。  
   
  [!code-csharp[Trin_ServerDocument#5](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ServerDocument/CS/Form1.cs#5)]
  [!code-vb[Trin_ServerDocument#5](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ServerDocument/VB/Form1.vb#5)]  
@@ -543,26 +543,26 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 调用此方法以释放所有资源并关闭<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>。  
+ 调用此方法可释放所有资源并关闭<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>。  
   
    
   
 ## Examples  
- 下面的代码示例创建一个新<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>，将显示部署清单的 URL，然后使用<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.Close%2A>方法关闭<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>。  
+ 下面的代码示例创建一个新<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>的, 显示部署清单的 URL, 然后<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.Close%2A>使用方法关闭<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>。  
   
  此示例需要：  
   
--   控制台应用程序项目或某些其他非 Office 项目。  
+-   一个控制台应用程序项目或一些其他非 Office 项目。  
   
--   对以下程序集的引用：  
+-   对以下程序集的引用:  
   
     -   Microsoft.VisualStudio.Tools.Applications.ServerDocument.dll 和 Microsoft.VisualStudio.Tools.Applications.Runtime.dll (如果项目面向 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)])。  
   
-         或  
+         or  
   
-    -   Microsoft.VisualStudio.Tools.Applications.ServerDocument.v10.0.dll 和 Microsoft.VisualStudio.Tools.Applications.Runtime.v9.0.dll （如果项目面向.NET Framework 3.5）。  
+    -   VisualStudio (如果项目以 .NET Framework 3.5) 为目标, 则为 ServerDocument (如果该项目面向的是的 VisualStudio。) 的。  
   
--   `Imports` （对于 Visual Basic) 或`using`（适用于 C#) 语句<xref:Microsoft.VisualStudio.Tools.Applications?displayProperty=fullName>和<xref:Microsoft.VisualStudio.Tools.Applications.Runtime?displayProperty=fullName>代码文件顶部的命名空间。  
+-   `Imports`(对于 Visual Basic) 或`using` (对于C#) <xref:Microsoft.VisualStudio.Tools.Applications?displayProperty=fullName>代码文件顶部<xref:Microsoft.VisualStudio.Tools.Applications.Runtime?displayProperty=fullName>的和命名空间。  
   
  [!code-csharp[Trin_ServerDocument#1](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ServerDocument/CS/Form1.cs#1)]
  [!code-vb[Trin_ServerDocument#1](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ServerDocument/VB/Form1.vb#1)]  
@@ -590,33 +590,33 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果将部署清单自定义项移动到另一个位置，并且你想要查找从新位置的自定义项更新的文档，请将此属性设置为新的 URL。 如果设置此属性，该 URL 必须指向已与文档相关联的自定义项的部署清单。  
+ 如果将自定义项的部署清单移到其他位置, 并且希望文档从新位置查找自定义更新, 请将此属性设置为新的 URL。 如果设置此属性, 则 URL 必须指向已与文档相关联的自定义项的部署清单。  
   
- 此属性不能用于将新的自定义与文档相关联。 若要将自定义项添加到自定义的文档，请使用<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.AddCustomization%2A>方法。 若要将不同的自定义添加到自定义文档，首先使用<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.RemoveCustomization%2A>方法来删除当前自定义项，然后使用<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.AddCustomization%2A>方法。  
+ 不能使用此属性将新的自定义项与文档相关联。 若要将自定义添加到非自定义文档<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.AddCustomization%2A>中, 请使用方法。 若要将其他自定义添加到自定义文档, 请<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.RemoveCustomization%2A>首先使用方法移除当前自定义项, 然后<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.AddCustomization%2A>使用方法。  
   
-## <a name="getting-the-url-in-applications-that-target-the-net-framework-35"></a>在.NET Framework 3.5 为目标的应用程序中获取 URL  
- 当你使用`ServerDocument`Microsoft.VisualStudio.Tools.Applications.ServerDocument.v10.0.dll 程序集中的应用程序面向.NET Framework 3.5 中的类<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.DeploymentManifestUrl%2A>属性返回当前部署清单 URL 仅如果在运行该应用程序的计算机上安装了文档级自定义项。 对于其他类型的单元格，此属性返回 `null`。  
+## <a name="getting-the-url-in-applications-that-target-the-net-framework-35"></a>在应用程序中获取面向 .NET Framework 3.5 的 URL  
+ 当你在面向`ServerDocument` .NET Framework 3.5 的应用程序中使用 ServerDocument 中的 VisualStudio 程序集时<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.DeploymentManifestUrl%2A> , 属性将仅返回当前的部署清单 URL如果在运行应用程序的计算机上安装了文档级自定义项, 则为。 对于其他类型的单元格，此属性返回 `null`。  
   
- 如果你需要获取您运行的计算机未安装的文档级自定义项的部署清单 URL （例如，如果发布的文档级自定义项的服务器） 上的该应用程序面向.NET Framework 4 中应用程序中，引用 Microsoft.VisualStudio.Tools.Applications.ServerDocument.dll 程序集，并使用`ServerDocument`中该程序集的类。  
+ 如果需要获取在运行应用程序的计算机上未安装的文档级自定义项的部署清单 URL (例如, 在发布文档级自定义项的服务器上), 请将 .NET Framework 4 定位到该应用程序将引用 VisualStudio 程序集, 并使用该程序集中的`ServerDocument`类。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.%23ctor%28System.String%29>构造函数创建一个新<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>加载指定的文档。 该示例然后显示附加到文档的自定义项的部署清单的 URL。  
+ 下面的代码示例使用<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.%23ctor%28System.String%29>构造函数来创建一个新<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>的, 以便加载指定的文档。 然后, 该示例显示附加到文档的自定义项的部署清单的 URL。  
   
  此示例需要：  
   
--   控制台应用程序项目或某些其他非 Office 项目。  
+-   一个控制台应用程序项目或一些其他非 Office 项目。  
   
--   对以下程序集的引用：  
+-   对以下程序集的引用:  
   
     -   Microsoft.VisualStudio.Tools.Applications.ServerDocument.dll 和 Microsoft.VisualStudio.Tools.Applications.Runtime.dll (如果项目面向 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)])。  
   
-         或  
+         or  
   
-    -   Microsoft.VisualStudio.Tools.Applications.ServerDocument.v10.0.dll 和 Microsoft.VisualStudio.Tools.Applications.Runtime.v9.0.dll （如果项目面向.NET Framework 3.5）。  
+    -   VisualStudio (如果项目以 .NET Framework 3.5) 为目标, 则为 ServerDocument (如果该项目面向的是的 VisualStudio。) 的。  
   
--   `Imports` （对于 Visual Basic) 或`using`（适用于 C#) 语句<xref:Microsoft.VisualStudio.Tools.Applications?displayProperty=fullName>和<xref:Microsoft.VisualStudio.Tools.Applications.Runtime?displayProperty=fullName>代码文件顶部的命名空间。  
+-   `Imports`(对于 Visual Basic) 或`using` (对于C#) <xref:Microsoft.VisualStudio.Tools.Applications?displayProperty=fullName>代码文件顶部<xref:Microsoft.VisualStudio.Tools.Applications.Runtime?displayProperty=fullName>的和命名空间。  
   
  [!code-csharp[Trin_ServerDocument#1](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ServerDocument/CS/Form1.cs#1)]
  [!code-vb[Trin_ServerDocument#1](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ServerDocument/VB/Form1.vb#1)]  
@@ -644,28 +644,28 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果此属性返回已填充的字节数组<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>已通过使用<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.%23ctor%28System.Byte%5B%5D%2CSystem.String%29>具有一个字节数组参数的构造函数或<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.%23ctor%28System.IO.Stream%2CSystem.String%29>构造函数具有<xref:System.IO.Stream>参数。 否则，此属性返回一个空字节数组。  
+ 如果<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>是<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.%23ctor%28System.IO.Stream%2CSystem.String%29> <xref:System.IO.Stream>使用具有字节数组参数的构造函数创建的,或者具有参数的构造函数,则此属性返回填充的字节数组。<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.%23ctor%28System.Byte%5B%5D%2CSystem.String%29> 否则, 此属性返回一个空字节数组。  
   
- 使用此属性，可对文档进行更改并将其发送到客户端，而无需将文档写入磁盘。  
+ 使用此属性, 可以对文档进行更改并将其发送到客户端, 而无需将文档写入磁盘。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.%23ctor%28System.Byte%5B%5D%2CSystem.String%29>构造函数创建一个新<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>从字节数组，其中包含文件扩展名为.xlsx 的 Excel 工作簿。 该示例然后使用<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.Document%2A>属性显示在文档中的字节数。  
+ 下面的代码示例使用<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.%23ctor%28System.Byte%5B%5D%2CSystem.String%29>构造函数从包含扩展名为 .xlsx 的 Excel 工作簿的字节数组创建新<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>的。 然后, 该示例使用<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.Document%2A>属性显示文档中的字节数。  
   
  此示例需要：  
   
--   控制台应用程序项目或某些其他非 Office 项目。  
+-   一个控制台应用程序项目或一些其他非 Office 项目。  
   
--   对以下程序集的引用：  
+-   对以下程序集的引用:  
   
     -   Microsoft.VisualStudio.Tools.Applications.ServerDocument.dll 和 Microsoft.VisualStudio.Tools.Applications.Runtime.dll (如果项目面向 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)])。  
   
-         或  
+         or  
   
-    -   Microsoft.VisualStudio.Tools.Applications.ServerDocument.v10.0.dll 和 Microsoft.VisualStudio.Tools.Applications.Runtime.v9.0.dll （如果项目面向.NET Framework 3.5）。  
+    -   VisualStudio (如果项目以 .NET Framework 3.5) 为目标, 则为 ServerDocument (如果该项目面向的是的 VisualStudio。) 的。  
   
--   `Imports` （对于 Visual Basic) 或`using`（适用于 C#) 语句<xref:Microsoft.VisualStudio.Tools.Applications?displayProperty=fullName>和<xref:Microsoft.VisualStudio.Tools.Applications.Runtime?displayProperty=fullName>代码文件顶部的命名空间。  
+-   `Imports`(对于 Visual Basic) 或`using` (对于C#) <xref:Microsoft.VisualStudio.Tools.Applications?displayProperty=fullName>代码文件顶部<xref:Microsoft.VisualStudio.Tools.Applications.Runtime?displayProperty=fullName>的和命名空间。  
   
  [!code-csharp[Trin_ServerDocument#2](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ServerDocument/CS/Form1.cs#2)]
  [!code-vb[Trin_ServerDocument#2](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ServerDocument/VB/Form1.vb#2)]  
@@ -716,37 +716,37 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 不同版本的 Visual Studio 中创建 office 解决方案使用不同版本的[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]。 每个版本的运行时提供的不同版本`ServerDocument`旨在使用针对该版本的运行时的解决方案的类。 此版本的<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>类可用于通过使用创建的解决方案[!INCLUDE[vs_dev12](~/includes/vs-dev12-md.md)]，[!INCLUDE[vs_dev10_long](~/includes/vs-dev10-long-md.md)]和 2007 Microsoft Office 创建的解决方案，通过使用 Visual Studio 2008。  
+ 不同版本的 Visual Studio 中创建的 Office 解决方案使用的不同版本[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]。 每个版本的运行时提供不同版本`ServerDocument`的类, 旨在使用该版本的运行时的解决方案。 此版本的<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>类可用于使用创建[!INCLUDE[vs_dev12](~/includes/vs-dev12-md.md)]的解决方案, [!INCLUDE[vs_dev10_long](~/includes/vs-dev10-long-md.md)]以及使用 Visual Studio 2008 创建的 2007 Microsoft Office 解决方案。  
   
- 下表指定了此方法的返回值的含义。  
+ 下表指定此方法的返回值的含义。  
   
-|返回值|描述|  
+|返回值|说明|  
 |------------------|-----------------|  
-|0|文档不具有自定义项。|  
-|1|文档具有使用 Visual Studio Tools for Office 2003 版|  
-|2|文档具有使用 Visual Studio 2005 Tools for Office Second Edition 运行时 这是运行时使用的自定义项 Microsoft Office 2003 中 Visual Studio 2005 Tools for Office 和 Visual Studio 2008 的版本。|  
-|3|该文档具有已通过使用 Visual Studio 2010 Tools for Office Runtime 或 Visual Studio Tools for Microsoft Office system 的自定义项 (版本 3.0 运行时)。 自定义 2007 Microsoft Office system 在 Visual Studio 2008 中使用的运行时版本 3.0。|  
+|0|文档没有自定义。|  
+|1|文档具有使用 Visual Studio Tools for Office 版本2003创建的自定义项。|  
+|2|文档具有使用 Visual Studio 2005 Tools for Office Second Edition 运行时创建的自定义项。 这是在 Visual Studio 2005 Tools for Office 和 Visual Studio 2008 中, 自定义用于 Microsoft Office 2003 的运行时版本。|  
+|3|文档具有使用 Visual Studio 2010 Tools for Office Runtime 或 Microsoft Office 系统 (版本3.0 运行时) 的 Visual Studio Tools 创建的自定义项。 版本3.0 的运行时由 Visual Studio 2008 中 2007 Microsoft Office 系统的自定义项使用。|  
   
- 有关不同版本的详细信息[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]，请参阅[Visual Studio Tools for Office Runtime 概述](/visualstudio/vsto/visual-studio-tools-for-office-runtime-overview)。  
+ 有关不同版本[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]的的详细信息, 请参阅[Visual Studio Tools for Office 运行时概述](/visualstudio/vsto/visual-studio-tools-for-office-runtime-overview)。  
   
    
   
 ## Examples  
- 下面的代码示例创建一个新<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>的加载指定的文档，然后显示附加到文档的自定义项的部署清单的 URL。 在创建对象时之前, 的代码使用<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.GetCustomizationVersion%2A>方法以验证自定义项，通过使用 Visual Studio 2010 Tools for Office 运行时创建。  
+ 下面的代码示例创建一个新<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>的, 它将加载指定的文档, 然后显示附加到文档的自定义项的部署清单的 URL。 在创建对象之前, 代码使用<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.GetCustomizationVersion%2A>方法来验证是否已使用 Visual Studio 2010 Tools for Office Runtime 创建了自定义。  
   
  此示例需要：  
   
--   控制台应用程序项目或某些其他非 Office 项目。  
+-   一个控制台应用程序项目或一些其他非 Office 项目。  
   
--   对以下程序集的引用：  
+-   对以下程序集的引用:  
   
     -   Microsoft.VisualStudio.Tools.Applications.ServerDocument.dll 和 Microsoft.VisualStudio.Tools.Applications.Runtime.dll (如果项目面向 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)])。  
   
-         或  
+         or  
   
-    -   Microsoft.VisualStudio.Tools.Applications.ServerDocument.v10.0.dll 和 Microsoft.VisualStudio.Tools.Applications.Runtime.v9.0.dll （如果项目面向.NET Framework 3.5）。  
+    -   VisualStudio (如果项目以 .NET Framework 3.5) 为目标, 则为 ServerDocument (如果该项目面向的是的 VisualStudio。) 的。  
   
--   `Imports` （对于 Visual Basic) 或`using`（适用于 C#) 语句<xref:Microsoft.VisualStudio.Tools.Applications?displayProperty=fullName>和<xref:Microsoft.VisualStudio.Tools.Applications.Runtime?displayProperty=fullName>代码文件顶部的命名空间。  
+-   `Imports`(对于 Visual Basic) 或`using` (对于C#) <xref:Microsoft.VisualStudio.Tools.Applications?displayProperty=fullName>代码文件顶部<xref:Microsoft.VisualStudio.Tools.Applications.Runtime?displayProperty=fullName>的和命名空间。  
   
  [!code-csharp[Trin_ServerDocument#1](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ServerDocument/CS/Form1.cs#1)]
  [!code-vb[Trin_ServerDocument#1](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ServerDocument/VB/Form1.vb#1)]  
@@ -781,26 +781,26 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法不是数据缓存实际包含数据仅指示文档是否具有数据缓存的。 如果文档具有数据缓存，但不包含在其中任何数据，此方法仍返回`true`。  
+ 此方法只指示文档是否具有数据缓存, 而非数据缓存是否确实包含数据。 如果文档的数据缓存中不包含数据, 则此方法仍返回`true`。  
   
    
   
 ## Examples  
- 下面的代码示例创建一个新<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>，然后使用<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.CachedData%2A>属性来显示数据缓存的内容。 该示例首先使用<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.IsCacheEnabled%2A>方法以验证该工作簿具有数据缓存。  
+ 下面的代码示例创建一个新<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>的, 然后<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.CachedData%2A>使用属性显示数据缓存的内容。 该示例首先使用<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.IsCacheEnabled%2A>方法来验证工作簿是否具有数据缓存。  
   
  此示例需要：  
   
--   控制台应用程序项目或某些其他非 Office 项目。  
+-   一个控制台应用程序项目或一些其他非 Office 项目。  
   
--   对以下程序集的引用：  
+-   对以下程序集的引用:  
   
     -   Microsoft.VisualStudio.Tools.Applications.ServerDocument.dll 和 Microsoft.VisualStudio.Tools.Applications.Runtime.dll (如果项目面向 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)])。  
   
-         或  
+         or  
   
-    -   Microsoft.VisualStudio.Tools.Applications.ServerDocument.v10.0.dll 和 Microsoft.VisualStudio.Tools.Applications.Runtime.v9.0.dll （如果项目面向.NET Framework 3.5）。  
+    -   VisualStudio (如果项目以 .NET Framework 3.5) 为目标, 则为 ServerDocument (如果该项目面向的是的 VisualStudio。) 的。  
   
--   `Imports` （对于 Visual Basic) 或`using`（适用于 C#) 语句<xref:Microsoft.VisualStudio.Tools.Applications?displayProperty=fullName>和<xref:Microsoft.VisualStudio.Tools.Applications.Runtime?displayProperty=fullName>代码文件顶部的命名空间。  
+-   `Imports`(对于 Visual Basic) 或`using` (对于C#) <xref:Microsoft.VisualStudio.Tools.Applications?displayProperty=fullName>代码文件顶部<xref:Microsoft.VisualStudio.Tools.Applications.Runtime?displayProperty=fullName>的和命名空间。  
   
  [!code-csharp[Trin_ServerDocument#5](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ServerDocument/CS/Form1.cs#5)]
  [!code-vb[Trin_ServerDocument#5](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ServerDocument/VB/Form1.vb#5)]  
@@ -835,9 +835,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法将引发异常，如果指定的文档的自定义的项不是创建与 Visual Studio 2010 Tools for Office Runtime 或 Visual Studio Tools for Microsoft Office system (3.0 版运行时)。 例如，此方法引发异常，如果指定的文档，因为这些项目模板使用 Visual Studio 2005 Tools for Office Second Edition 运行时通过在 Visual Studio 2008 中，Microsoft Office 2003 项目模板创建。  
+ 如果指定的文档具有未使用 Visual Studio 2010 Tools for Office Runtime 创建的自定义项或 Microsoft Office 系统的 Visual Studio Tools (版本3.0 运行时), 则此方法将引发异常。 例如, 如果指定的文档是使用 Visual Studio 2008 中的 Microsoft Office 2003 的项目模板创建的, 则此方法将引发异常, 因为这些项目模板使用 Visual Studio 2005 Tools for Office Second Edition 运行时。  
   
- 若要确定文档是否具有已通过使用任何版本的 Visual Studio 的自定义项，请使用<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.GetCustomizationVersion%2A>方法而不是<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.IsCustomized%2A>方法。 <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.GetCustomizationVersion%2A> 如果文档不具有自定义项，则返回 0 （零）。  
+ 若要确定文档是否具有使用任意版本的 Visual Studio 创建的自定义项, 请使用<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.GetCustomizationVersion%2A>方法而不是<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.IsCustomized%2A>方法。 <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.GetCustomizationVersion%2A>如果文档没有自定义项, 则返回 0 (零)。  
   
  ]]></format>
         </remarks>
@@ -868,26 +868,26 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法将清除部署清单 URL 和缓存的数据清单中，并从文档中删除任何缓存的数据。 有关详细信息，请参阅[如何： 从文档中删除托管代码扩展](/visualstudio/vsto/how-to-remove-managed-code-extensions-from-documents)。  
+ 此方法清除部署清单 URL 和缓存的数据清单, 并从文档中删除任何缓存的数据。 有关详细信息，请参阅[如何：从文档](/visualstudio/vsto/how-to-remove-managed-code-extensions-from-documents)中删除托管代码扩展。  
   
    
   
 ## Examples  
- 下面的代码示例使用<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.RemoveCustomization%2A>方法从指定的文档中删除自定义项。 此示例的第一个调用<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.GetCustomizationVersion%2A>方法来确定文档是否具有自定义项。  
+ 下面的代码示例使用<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.RemoveCustomization%2A>方法从指定的文档中删除自定义项。 该示例首先调用<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.GetCustomizationVersion%2A>方法来确定文档是否具有自定义项。  
   
  此示例需要：  
   
--   控制台应用程序项目或某些其他非 Office 项目。  
+-   一个控制台应用程序项目或一些其他非 Office 项目。  
   
--   对以下程序集的引用：  
+-   对以下程序集的引用:  
   
     -   Microsoft.VisualStudio.Tools.Applications.ServerDocument.dll 和 Microsoft.VisualStudio.Tools.Applications.Runtime.dll (如果项目面向 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)])。  
   
-         或  
+         or  
   
-    -   Microsoft.VisualStudio.Tools.Applications.ServerDocument.v10.0.dll 和 Microsoft.VisualStudio.Tools.Applications.Runtime.v9.0.dll （如果项目面向.NET Framework 3.5）。  
+    -   VisualStudio (如果项目以 .NET Framework 3.5) 为目标, 则为 ServerDocument (如果该项目面向的是的 VisualStudio。) 的。  
   
--   `Imports` （对于 Visual Basic) 或`using`（适用于 C#) 语句<xref:Microsoft.VisualStudio.Tools.Applications?displayProperty=fullName>和<xref:Microsoft.VisualStudio.Tools.Applications.Runtime?displayProperty=fullName>代码文件顶部的命名空间。  
+-   `Imports`(对于 Visual Basic) 或`using` (对于C#) <xref:Microsoft.VisualStudio.Tools.Applications?displayProperty=fullName>代码文件顶部<xref:Microsoft.VisualStudio.Tools.Applications.Runtime?displayProperty=fullName>的和命名空间。  
   
  [!code-csharp[Trin_ServerDocument#8](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ServerDocument/CS/Form1.cs#8)]
  [!code-vb[Trin_ServerDocument#8](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ServerDocument/VB/Form1.vb#8)]  
@@ -920,28 +920,28 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.Save%2A>方法将保存或到部署清单 URL 在文档中缓存数据所做的任何更改。 如果您创建<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>对象使用的文档在磁盘上，此方法将这些更改保存到磁盘。 如果您创建<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>对象使用的文档在内存中，此方法将这些更改保存到内存缓冲区。  
+ 方法<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.Save%2A>将对缓存数据或部署清单 URL 所做的任何更改保存到文档中。 如果使用磁盘上<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>的文档创建了对象, 则此方法会将这些更改保存到磁盘。 如果使用内存中<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>的文档创建了对象, 则此方法会将这些更改保存到内存缓冲区。  
   
    
   
 ## Examples  
- 下面的代码示例创建一个新<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>为指定的 Excel 工作簿，修改通过使用缓存的工作表中的字符串的值<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem.SerializeDataInstance%2A>方法，然后将更改保存使用<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.Save%2A>方法。  
+ 下面的代码示例为指定的<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> Excel 工作簿创建新的, 通过<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem.SerializeDataInstance%2A>使用方法修改在工作表中缓存的字符串的值, 然后使用<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.Save%2A>方法保存更改。  
   
  此示例需要：  
   
--   具有的 Excel 文档级自定义`Sheet1`类中`ExcelWorkbook1`命名空间，并在已缓存的字符串`Sheet1`类名为`CachedString`。  
+-   一个 Excel 文档级自定义项, 它具有`Sheet1` `ExcelWorkbook1`命名空间中的一个类和一个名为`CachedString`的`Sheet1`类中的缓存字符串。  
   
--   控制台应用程序项目或某些其他非 Office 项目。  
+-   一个控制台应用程序项目或一些其他非 Office 项目。  
   
--   对以下程序集的引用：  
+-   对以下程序集的引用:  
   
     -   Microsoft.VisualStudio.Tools.Applications.ServerDocument.dll 和 Microsoft.VisualStudio.Tools.Applications.Runtime.dll (如果项目面向 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](~/includes/net-v45-md.md)])。  
   
-         或  
+         or  
   
-    -   Microsoft.VisualStudio.Tools.Applications.ServerDocument.v10.0.dll 和 Microsoft.VisualStudio.Tools.Applications.Runtime.v9.0.dll （如果项目面向.NET Framework 3.5）。  
+    -   VisualStudio (如果项目以 .NET Framework 3.5) 为目标, 则为 ServerDocument (如果该项目面向的是的 VisualStudio。) 的。  
   
--   `Imports` （对于 Visual Basic) 或`using`（适用于 C#) 语句<xref:Microsoft.VisualStudio.Tools.Applications?displayProperty=fullName>和<xref:Microsoft.VisualStudio.Tools.Applications.Runtime?displayProperty=fullName>代码文件顶部的命名空间。  
+-   `Imports`(对于 Visual Basic) 或`using` (对于C#) <xref:Microsoft.VisualStudio.Tools.Applications?displayProperty=fullName>代码文件顶部<xref:Microsoft.VisualStudio.Tools.Applications.Runtime?displayProperty=fullName>的和命名空间。  
   
  [!code-csharp[Trin_ServerDocument#9](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ServerDocument/CS/Form1.cs#9)]
  [!code-vb[Trin_ServerDocument#9](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ServerDocument/VB/Form1.vb#9)]  
@@ -973,7 +973,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 值<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.SolutionId%2A>属性是在中指定的相同 GUID`solutionId`属性的`vstov4:document`解决方案的应用程序清单中的元素。 有关详细信息，请参阅[Application and Deployment Manifests in Office Solutions](/visualstudio/vsto/application-and-deployment-manifests-in-office-solutions)并[ \&l t; 文档\&g t;元素](/visualstudio/vsto/document-element-office-development-in-visual-studio)。  
+ <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.SolutionId%2A>属性的值是在解决方案的应用程序清单中的`vstov4:document`元素的`solutionId`属性中指定的同一 GUID。 有关详细信息, 请参阅[Office 解决方案中的应用程序和部署清单](/visualstudio/vsto/application-and-deployment-manifests-in-office-solutions)和[ \&lt; 文档\&g t;元素](/visualstudio/vsto/document-element-office-development-in-visual-studio)。  
   
  ]]></format>
         </remarks>
@@ -984,6 +984,9 @@
       <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.IDisposable.Dispose() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.VisualStudio.Tools.Applications.ServerDocument.System#IDisposable#Dispose" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.VisualStudio.Tools.Applications.ServerDocument</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -998,7 +1001,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 不要调用<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.System%23IDisposable%23Dispose%2A>直接在您自己的代码中的方法。 完成后使用<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>，调用<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.Close%2A>方法相反。 <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.System%23IDisposable%23Dispose%2A> 在调用时将自动调用<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.Close%2A>方法。  
+ 不要直接在自己<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.System%23IDisposable%23Dispose%2A>的代码中调用方法。 使用<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>完后, 请改为<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.Close%2A>调用方法。 <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.System%23IDisposable%23Dispose%2A>当调用<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.Close%2A>方法时, 将自动调用。  
   
  ]]></format>
         </remarks>

@@ -1,5 +1,5 @@
 <Type Name="ISharePointProjectCollection" FullName="Microsoft.VisualStudio.SharePoint.ISharePointProjectCollection">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="3390108f842458ac26c5af16ffd60f2c0ef36b70" /><Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="02/21/2018" /><Meta Name="ms.locfileid" Value="29409480" /></Metadata><TypeSignature Language="C#" Value="public interface ISharePointProjectCollection : Microsoft.VisualStudio.SharePoint.ISharePointCollection&lt;Microsoft.VisualStudio.SharePoint.ISharePointProject&gt;, System.Collections.Generic.IEnumerable&lt;Microsoft.VisualStudio.SharePoint.ISharePointProject&gt;, System.Collections.Specialized.INotifyCollectionChanged, System.ComponentModel.INotifyPropertyChanged" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="411ca24d50ce778a778e2f5bfe4e5596b40b144b" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69008000" /></Metadata><TypeSignature Language="C#" Value="public interface ISharePointProjectCollection : Microsoft.VisualStudio.SharePoint.ISharePointCollection&lt;Microsoft.VisualStudio.SharePoint.ISharePointProject&gt;, System.Collections.Generic.IEnumerable&lt;Microsoft.VisualStudio.SharePoint.ISharePointProject&gt;, System.Collections.Specialized.INotifyCollectionChanged, System.ComponentModel.INotifyPropertyChanged" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISharePointProjectCollection implements class Microsoft.VisualStudio.SharePoint.ISharePointCollection`1&lt;class Microsoft.VisualStudio.SharePoint.ISharePointProject&gt;, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.VisualStudio.SharePoint.ISharePointProject&gt;, class System.Collections.IEnumerable, class System.Collections.Specialized.INotifyCollectionChanged, class System.ComponentModel.INotifyPropertyChanged" />
   <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectCollection" />
   <AssemblyInfo>
@@ -12,6 +12,12 @@
     </Interface>
     <Interface>
       <InterfaceName>System.Collections.Generic.IEnumerable&lt;Microsoft.VisualStudio.SharePoint.ISharePointProject&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;T&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
     </Interface>
     <Interface>
       <InterfaceName>System.Collections.Specialized.INotifyCollectionChanged</InterfaceName>
@@ -65,7 +71,7 @@
       <Docs>
         <param name="fullPath">所请求项目的完整路径。</param>
         <summary>获取使用指定项目路径的 SharePoint 项目的实例。</summary>
-        <value>SharePoint 项目中，如果它找到，则一个实例<see langword="null" />否则为。</value>
+        <value>如果找到，则为 SharePoint 项目的实例；否则为 <see langword="null" />。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -83,7 +89,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取 SharePoint 项目服务的实例。</summary>
-        <value>表示该 SharePoint 项目服务的对象。</value>
+        <value>一个表示 SharePoint 项目服务的对象。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

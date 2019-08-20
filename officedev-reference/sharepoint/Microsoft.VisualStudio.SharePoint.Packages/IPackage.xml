@@ -1,5 +1,5 @@
 <Type Name="IPackage" FullName="Microsoft.VisualStudio.SharePoint.Packages.IPackage">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="1aae4039b2dfa23b9f680e1dcec8ac72516ce370" /><Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="02/21/2018" /><Meta Name="ms.locfileid" Value="29407010" /></Metadata><TypeSignature Language="C#" Value="public interface IPackage : Microsoft.VisualStudio.SharePoint.Packages.IPackageManifest" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="c30549f58e8a11ab9eb191617291c4558528d5aa" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69010795" /></Metadata><TypeSignature Language="C#" Value="public interface IPackage : Microsoft.VisualStudio.SharePoint.Packages.IPackageManifest" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IPackage implements class Microsoft.VisualStudio.SharePoint.IObservableModelElement, class Microsoft.VisualStudio.SharePoint.Packages.IPackageManifest" />
   <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.SharePoint.Packages.IPackage" />
   <AssemblyInfo>
@@ -7,6 +7,9 @@
     <AssemblyVersion>15.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.VisualStudio.SharePoint.IObservableModelElement</InterfaceName>
+    </Interface>
     <Interface>
       <InterfaceName>Microsoft.VisualStudio.SharePoint.Packages.IPackageManifest</InterfaceName>
     </Interface>
@@ -30,7 +33,7 @@
       </ReturnValue>
       <Docs>
         <summary>要随包一起部署的功能。</summary>
-        <value>一个表示要与包一起部署的功能集合。</value>
+        <value>一个集合, 表示要与包一起部署的功能。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -48,8 +51,7 @@
       </ReturnValue>
       <Docs>
         <summary>了解是否启用设计器的包。</summary>
-        <value>
-          <see langword="True" /> 如果启用了设计器;<see langword="false" />否则为。</value>
+        <value><see langword="True" />如果启用设计器, 则为;<see langword="false" />否则为。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -67,7 +69,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取 SharePoint 包文件 (WSP) 的名称。</summary>
-        <value>表示 WSP 文件的名称的字符串。</value>
+        <value>表示 WSP 文件名称的字符串。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -85,7 +87,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取要与包一起部署的 SharePoint 项目项。</summary>
-        <value>一个表示要与包一起部署的项目项的集合。</value>
+        <value>一个集合, 表示要与包一起部署的项目项。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

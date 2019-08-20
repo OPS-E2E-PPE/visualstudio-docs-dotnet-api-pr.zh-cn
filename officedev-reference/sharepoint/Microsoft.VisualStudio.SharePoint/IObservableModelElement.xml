@@ -1,5 +1,5 @@
 <Type Name="IObservableModelElement" FullName="Microsoft.VisualStudio.SharePoint.IObservableModelElement">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="7b4896137607b7c9c860e54fc0f7ed212596a7bb" /><Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="02/21/2018" /><Meta Name="ms.locfileid" Value="29408817" /></Metadata><TypeSignature Language="C#" Value="public interface IObservableModelElement" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="31bb355697080380462524ba8cded964fc5297cd" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69008139" /></Metadata><TypeSignature Language="C#" Value="public interface IObservableModelElement" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IObservableModelElement" />
   <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.SharePoint.IObservableModelElement" />
   <AssemblyInfo>
@@ -13,16 +13,16 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- DSL 模型元素支持通过其自定义属性描述符的属性更改事件。  
+ DSL 模型元素通过其自定义属性描述符支持属性更改事件。  
   
- 模型将使用这些元素，例如，WPF 数据绑定。 但是，它们不是以编程方式使用非常方便的。 此外，如果[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]支持"传统"<xref:System.ComponentModel.INotifyPropertyChanging>或<xref:System.ComponentModel.INotifyPropertyChanged>接口，WPF 优先选择这些双向绑定，这将失败，因为它们不使用隐式事务的属性描述符。 因此， [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] DSL 模型元素而无需实现的接口本身实现传统的事件。  
+ 例如, 使用 WPF 数据绑定可以使用这些模型元素。 但是, 它们不太方便编程使用。 此外, 如果[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]支持 "传统" <xref:System.ComponentModel.INotifyPropertyChanging>或<xref:System.ComponentModel.INotifyPropertyChanged>接口, WPF 将更喜欢双向绑定的属性描述符, 因为它们不使用隐式事务。 因此, [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] DSL 模型元素实现了传统事件, 无需自行实现接口。  
   
  ]]></format>
     </remarks>
   </Docs>
   <Members>
     <Member MemberName="PropertyChanged">
-      <MemberSignature Language="C#" Value="public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;" />
+      <MemberSignature Language="C#" Value="event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;" />
       <MemberSignature Language="ILAsm" Value=".event class System.ComponentModel.PropertyChangedEventHandler PropertyChanged" />
       <MemberSignature Language="DocId" Value="E:Microsoft.VisualStudio.SharePoint.IObservableModelElement.PropertyChanged" />
       <MemberType>Event</MemberType>
@@ -39,7 +39,7 @@
       </Docs>
     </Member>
     <Member MemberName="PropertyChanging">
-      <MemberSignature Language="C#" Value="public event System.ComponentModel.PropertyChangingEventHandler PropertyChanging;" />
+      <MemberSignature Language="C#" Value="event System.ComponentModel.PropertyChangingEventHandler PropertyChanging;" />
       <MemberSignature Language="ILAsm" Value=".event class System.ComponentModel.PropertyChangingEventHandler PropertyChanging" />
       <MemberSignature Language="DocId" Value="E:Microsoft.VisualStudio.SharePoint.IObservableModelElement.PropertyChanging" />
       <MemberType>Event</MemberType>

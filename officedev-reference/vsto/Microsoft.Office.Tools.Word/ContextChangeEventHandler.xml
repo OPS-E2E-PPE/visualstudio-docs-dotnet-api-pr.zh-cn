@@ -1,5 +1,5 @@
 <Type Name="ContextChangeEventHandler" FullName="Microsoft.Office.Tools.Word.ContextChangeEventHandler">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="bfd03de33144980a60d781ec53d48f384a55acaf" /><Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="02/21/2018" /><Meta Name="ms.locfileid" Value="29431567" /></Metadata><TypeSignature Language="C#" Value="public delegate void ContextChangeEventHandler(object sender, ContextChangeEventArgs e);" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="009d2747951c81ca5fa28e0888a0754af7cd15f2" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69000491" /></Metadata><TypeSignature Language="C#" Value="public delegate void ContextChangeEventHandler(object sender, ContextChangeEventArgs e);" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ContextChangeEventHandler extends System.MulticastDelegate" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Word.ContextChangeEventHandler" />
   <AssemblyInfo>
@@ -24,12 +24,12 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 创建 <xref:Microsoft.Office.Tools.Word.ContextChangeEventHandler> 委托时，需要标识将处理该事件的方法。 若要将事件与事件处理程序关联，请将该委托的一个实例添加到事件中。 每当发生该事件时，直到移除了该委托，都会调用事件处理程序。  
+ 创建 <xref:Microsoft.Office.Tools.Word.ContextChangeEventHandler> 委托时，需要标识将处理该事件的方法。 若要将事件与事件处理程序关联，请将该委托的一个实例添加到事件中。 事件发生时, 将调用事件处理程序, 直到删除委托。  
   
    
   
 ## Examples  
- 下面的代码示例演示了事件处理程序<xref:Microsoft.Office.Tools.Word.XMLNode.Select?displayProperty=fullName>， <xref:Microsoft.Office.Tools.Word.XMLNode.Deselect?displayProperty=fullName>， <xref:Microsoft.Office.Tools.Word.XMLNode.ContextEnter?displayProperty=fullName>，和<xref:Microsoft.Office.Tools.Word.XMLNode.ContextLeave?displayProperty=fullName>事件。 当<xref:Microsoft.Office.Tools.Word.XMLNode.Select?displayProperty=fullName>和<xref:Microsoft.Office.Tools.Word.XMLNode.Deselect?displayProperty=fullName>将引发事件，事件处理程序添加到所选内容的边框的双线或删除双线，具体取决于事件。 当<xref:Microsoft.Office.Tools.Word.XMLNode.ContextEnter?displayProperty=fullName>和<xref:Microsoft.Office.Tools.Word.XMLNode.ContextLeave?displayProperty=fullName>将引发事件，事件处理程序显示消息，指出新选择的节点和先前选择的节点的名称。 此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`。  
+ 下面的代码示例演示<xref:Microsoft.Office.Tools.Word.XMLNode.Select?displayProperty=fullName>了、 <xref:Microsoft.Office.Tools.Word.XMLNode.Deselect?displayProperty=fullName>、 <xref:Microsoft.Office.Tools.Word.XMLNode.ContextEnter?displayProperty=fullName>和<xref:Microsoft.Office.Tools.Word.XMLNode.ContextLeave?displayProperty=fullName>事件的事件处理程序。 <xref:Microsoft.Office.Tools.Word.XMLNode.Select?displayProperty=fullName>引发和<xref:Microsoft.Office.Tools.Word.XMLNode.Deselect?displayProperty=fullName>事件时, 事件处理程序会将双线添加到所选内容的边框上, 或根据事件删除双线。 <xref:Microsoft.Office.Tools.Word.XMLNode.ContextEnter?displayProperty=fullName>引发和<xref:Microsoft.Office.Tools.Word.XMLNode.ContextLeave?displayProperty=fullName>事件时, 事件处理程序会显示消息, 指出新选定节点和以前选择的节点的名称。 此示例假设当前文档包含一个<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`的。  
   
  [!code-csharp[Trin_WordXMLNode#201](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#201)]
  [!code-vb[Trin_WordXMLNode#201](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#201)]  

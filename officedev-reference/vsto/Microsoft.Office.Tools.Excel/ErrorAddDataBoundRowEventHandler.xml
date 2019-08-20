@@ -1,5 +1,5 @@
 <Type Name="ErrorAddDataBoundRowEventHandler" FullName="Microsoft.Office.Tools.Excel.ErrorAddDataBoundRowEventHandler">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="53c04d9c14862887d0295ef5b73e1e509a8a8671" /><Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="02/21/2018" /><Meta Name="ms.locfileid" Value="29429487" /></Metadata><TypeSignature Language="C#" Value="public delegate void ErrorAddDataBoundRowEventHandler(object sender, ErrorAddDataBoundRowEventArgs e);" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="6d908e37aa61e818639e2dbe14cff0fb4ee9fb7f" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69005034" /></Metadata><TypeSignature Language="C#" Value="public delegate void ErrorAddDataBoundRowEventHandler(object sender, ErrorAddDataBoundRowEventArgs e);" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ErrorAddDataBoundRowEventHandler extends System.MulticastDelegate" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Excel.ErrorAddDataBoundRowEventHandler" />
   <AssemblyInfo>
@@ -24,14 +24,14 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 创建 <xref:Microsoft.Office.Tools.Excel.ErrorAddDataBoundRowEventHandler> 委托时，需要标识将要处理该事件的方法。 若要将事件与事件处理程序关联，请将该委托的一个实例添加到事件中。 每次事件发生时，除非移除了该委托调用事件处理程序方法。  
+ 创建 <xref:Microsoft.Office.Tools.Excel.ErrorAddDataBoundRowEventHandler> 委托时，需要标识将要处理该事件的方法。 若要将事件与事件处理程序关联，请将该委托的一个实例添加到事件中。 除非删除委托, 否则只要发生事件, 就会调用事件处理程序方法。  
   
    
   
 ## Examples  
- 下面的代码示例创建<xref:System.Data.DataTable>和<xref:Microsoft.Office.Tools.Excel.ListObject>，并将绑定<xref:Microsoft.Office.Tools.Excel.ListObject>到<xref:System.Data.DataTable>。 然后，它创建<xref:Microsoft.Office.Tools.Excel.ListObject.ErrorAddDataBoundRow>事件处理程序。 若要测试事件，手动向其中添加新行<xref:Microsoft.Office.Tools.Excel.ListObject>输入姓氏"通道"和第一个名称。 事件处理程序会显示一条消息。  
+ 下面<xref:System.Data.DataTable>的代码示例创建<xref:Microsoft.Office.Tools.Excel.ListObject>和, <xref:System.Data.DataTable>并将绑定<xref:Microsoft.Office.Tools.Excel.ListObject>到。 然后, 创建一个<xref:Microsoft.Office.Tools.Excel.ListObject.ErrorAddDataBoundRow>事件处理程序。 若要测试事件, 请将新行手动添加到<xref:Microsoft.Office.Tools.Excel.ListObject> , 并输入姓氏 "更改" 和名字。 事件处理程序将显示一条消息。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelListObject#20](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelListObject/CS/Trin_ExcelListObject.cs#20)]
  [!code-vb[Trin_ExcelListObject#20](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelListObject/VB/Sheet1.vb#20)]  

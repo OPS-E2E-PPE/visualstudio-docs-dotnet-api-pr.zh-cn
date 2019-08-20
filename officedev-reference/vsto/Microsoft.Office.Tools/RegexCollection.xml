@@ -1,5 +1,5 @@
 <Type Name="RegexCollection" FullName="Microsoft.Office.Tools.RegexCollection">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="f3669062b0302f7e91e166a46d2e5eef28f8b368" /><Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="02/21/2018" /><Meta Name="ms.locfileid" Value="29432776" /></Metadata><TypeSignature Language="C#" Value="public interface RegexCollection : System.Collections.IList" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="199c7036910e19dd25d1c450716511b0f3430ff6" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="68999015" /></Metadata><TypeSignature Language="C#" Value="public interface RegexCollection : System.Collections.IList" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract RegexCollection implements class System.Collections.ICollection, class System.Collections.IEnumerable, class System.Collections.IList" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.RegexCollection" />
   <AssemblyInfo>
@@ -7,6 +7,12 @@
     <AssemblyVersion>10.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
+    </Interface>
     <Interface>
       <InterfaceName>System.Collections.IList</InterfaceName>
     </Interface>
@@ -22,9 +28,9 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 当你创建<xref:Microsoft.Office.Tools.Excel.SmartTag?displayProperty=fullName>或<xref:Microsoft.Office.Tools.Word.SmartTag?displayProperty=fullName>对象以创建智能标记，你可以使用<xref:Microsoft.Office.Tools.SmartTagBase.Expressions%2A>属性将无法识别的智能标记的正则表达式。 <xref:Microsoft.Office.Tools.SmartTagBase.Expressions%2A>属性具有类型<xref:Microsoft.Office.Tools.RegexCollection>。  
+ 创建<xref:Microsoft.Office.Tools.Excel.SmartTag?displayProperty=fullName> <xref:Microsoft.Office.Tools.SmartTagBase.Expressions%2A>或<xref:Microsoft.Office.Tools.Word.SmartTag?displayProperty=fullName>对象以创建智能标记时, 可以使用属性添加要由智能标记识别的正则表达式。 属性的类型<xref:Microsoft.Office.Tools.RegexCollection>为。 <xref:Microsoft.Office.Tools.SmartTagBase.Expressions%2A>  
   
- 此类型旨在使用仅在项目中，适用于 Excel 2007 和 Word 2007。 Word 2010 和 Excel 2010 中已弃用智能标记。  
+ 此类型仅适用于 Excel 2007 和 Word 2007 的项目。 Word 2010 和 Excel 2010 中已弃用智能标记。  
   
  ]]></format>
     </remarks>
@@ -91,8 +97,7 @@
       <Docs>
         <param name="value">要包含在 <see cref="T:Microsoft.Office.Tools.RegexCollection" /> 中的正则表达式。</param>
         <summary>确定 <see cref="T:Microsoft.Office.Tools.RegexCollection" /> 是否包含特定正则表达式。</summary>
-        <returns>
-          如果 <see cref="T:Microsoft.Office.Tools.RegexCollection" /> 包含指定的 <paramref name="value" />，则为 <see langword="true" />；否则为 <see langword="false" />。</returns>
+        <returns>如果 <see cref="T:Microsoft.Office.Tools.RegexCollection" /> 包含指定的 <paramref name="value" />，则为 <see langword="true" />；否则为 <see langword="false" />。</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -117,16 +122,12 @@
         <param name="index"><c>array</c> 中从零开始的索引，在此处开始复制。</param>
         <summary>从目标数组的指定索引处开始，将整个 <see cref="T:Microsoft.Office.Tools.RegexCollection" /> 复制到兼容的一维数组。</summary>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="array" /> 为空引用。</exception>
-        <exception cref="T:System.ArgumentOutOfRangeException">
-          <paramref name="index" /> 小于零。</exception>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="array" /> 是多维的。  
+        <exception cref="T:System.ArgumentNullException"><paramref name="array" /> 为 null 引用。</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="index" /> 小于零。</exception>
+        <exception cref="T:System.ArgumentException"><paramref name="array" /> 是多维的。  
   
- 或  
-  
- 源 <see cref="T:Microsoft.Office.Tools.RegexCollection" /> 中的元素个数大于从 <paramref name="index" /> 到目标 <paramref name="array" /> 末尾之间的可用空间。</exception>
+- 或 - 
+源 <see cref="T:Microsoft.Office.Tools.RegexCollection" /> 中的元素个数大于从 <paramref name="index" /> 到目标 <paramref name="array" /> 末尾之间的可用空间。</exception>
         <exception cref="T:System.InvalidCastException">无法自动将源 <see cref="T:Microsoft.Office.Tools.RegexCollection" /> 的类型转换为目标 <paramref name="array" /> 的类型。</exception>
       </Docs>
     </Member>
@@ -176,23 +177,20 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果<xref:System.Collections.CollectionBase.Count%2A>已经等于容量、 列表的容量翻倍通过自动重新分配在内部数组，才能插入新元素。  
+ 如果<xref:System.Collections.CollectionBase.Count%2A>已等于容量, 则会在插入新元素之前自动重新分配内部数组, 从而使列表的容量加倍。  
   
- 如果`index`等同于<xref:System.Collections.CollectionBase.Count%2A>，`value`添加到末尾<xref:Microsoft.Office.Tools.RegexCollection>。  
+ 如果`index` <xref:Microsoft.Office.Tools.RegexCollection>等于,则`value`将添加到的末尾。 <xref:System.Collections.CollectionBase.Count%2A>  
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentOutOfRangeException">
-          <paramref name="index" /> 小于零。  
+        <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="index" /> 小于零。  
   
- 或  
-  
+或 
  <paramref name="index" /> 大于 <see cref="P:System.Collections.CollectionBase.Count" />。</exception>
         <exception cref="T:System.NotSupportedException"><see cref="T:Microsoft.Office.Tools.RegexCollection" /> 为只读。  
   
- 或  
-  
- <see cref="T:Microsoft.Office.Tools.RegexCollection" /> 具有固定的大小。</exception>
+- 或 - 
+<see cref="T:Microsoft.Office.Tools.RegexCollection" /> 具有固定的大小。</exception>
       </Docs>
     </Member>
     <Member MemberName="Item">
@@ -215,11 +213,9 @@
         <summary>获取或设置位于指定索引处的正则表达式。</summary>
         <value>位于指定索引处的 <see cref="T:System.Text.RegularExpressions.Regex" />。</value>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentOutOfRangeException">
-          <paramref name="index" /> 小于零。  
+        <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="index" /> 小于零。  
   
- 或  
-  
+或 
  <paramref name="index" /> 等于或大于 <see cref="P:System.Collections.CollectionBase.Count" />。</exception>
       </Docs>
     </Member>
@@ -245,15 +241,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果<xref:Microsoft.Office.Tools.RegexCollection>不包含指定<xref:System.Text.RegularExpressions.Regex>、<xref:Microsoft.Office.Tools.RegexCollection>保持不变。 不引发异常。  
+ 如果不包含指定<xref:System.Text.RegularExpressions.Regex>的, 则<xref:Microsoft.Office.Tools.RegexCollection>保持不变。 <xref:Microsoft.Office.Tools.RegexCollection> 不引发异常。  
   
  ]]></format>
         </remarks>
         <exception cref="T:System.NotSupportedException"><see cref="T:Microsoft.Office.Tools.RegexCollection" /> 为只读。  
   
- 或  
-  
- <see cref="T:Microsoft.Office.Tools.RegexCollection" /> 具有固定的大小。</exception>
+或 
+<see cref="T:Microsoft.Office.Tools.RegexCollection" /> 具有固定的大小。</exception>
       </Docs>
     </Member>
   </Members>

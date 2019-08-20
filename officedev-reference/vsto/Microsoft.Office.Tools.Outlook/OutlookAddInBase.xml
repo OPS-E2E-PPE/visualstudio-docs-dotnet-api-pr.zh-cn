@@ -1,5 +1,5 @@
 <Type Name="OutlookAddInBase" FullName="Microsoft.Office.Tools.Outlook.OutlookAddInBase">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="3678ee954ea9916571c7e2b06de2f11b41209a8c" /><Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="09/19/2018" /><Meta Name="ms.locfileid" Value="46454786" /></Metadata><TypeSignature Language="C#" Value="public abstract class OutlookAddInBase : Microsoft.Office.Tools.AddInBase" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="99e4c6f353283f3c40e1625274bb06579e7c2b15" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69003115" /></Metadata><TypeSignature Language="C#" Value="public abstract class OutlookAddInBase : Microsoft.Office.Tools.AddInBase" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit OutlookAddInBase extends Microsoft.Office.Tools.AddInBase" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Outlook.OutlookAddInBase" />
   <AssemblyInfo>
@@ -16,7 +16,7 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Outlook.OutlookAddInBase>类提供了用于 Outlook 加载项通过使用 Visual Studio 中的 Office 开发工具创建的功能。 <xref:Microsoft.Office.Tools.Outlook.OutlookAddInBase>类用于扩展<xref:Microsoft.Office.Tools.AddInBase>类通过提供可用于访问项目中的窗体区域的方法。 有关详细信息，请参阅[Programming VSTO Add-ins](/visualstudio/vsto/programming-vsto-add-ins)。  
+ <xref:Microsoft.Office.Tools.Outlook.OutlookAddInBase>类为使用 Visual Studio 中的 Office 开发工具创建的 Outlook 外接程序提供功能。 类通过提供<xref:Microsoft.Office.Tools.AddInBase>可用于访问项目中的窗体区域的方法来扩展类。 <xref:Microsoft.Office.Tools.Outlook.OutlookAddInBase> 有关详细信息，请参阅 [Programming VSTO Add-Ins](/visualstudio/vsto/programming-vsto-add-ins)。  
   
 ## <a name="usage"></a>用法  
  [!INCLUDE[vsto_net4utilities](~/includes/vsto-net4utilities-md.md)]  
@@ -85,11 +85,11 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 可以使用此事件以便在外接程序加载时提供一个或多个窗体区域。 必须描述在注册表中的窗体区域。 有关窗体区域注册表项的详细信息，请参阅[VSTO 外接程序的注册表项](/visualstudio/vsto/registry-entries-for-vsto-add-ins)。  
+ 在加载外接程序时, 可以使用此事件来提供一个或多个窗体区域。 必须在注册表中描述窗体区域。 有关窗体区域注册表项的详细信息, 请参阅[VSTO 外接程序的注册表项](/visualstudio/vsto/registry-entries-for-vsto-add-ins)。  
   
- 请确保在注册表中指定的名称，必须定义外接程序中的任意窗体区域的名称不匹配。  
+ 确保你在注册表中指定的名称不能与外接程序中定义的任何窗体区域的名称相匹配。  
   
- 在事件处理程序方法，并将<xref:Microsoft.Office.Tools.Outlook.FormRegionFactoryResolveEventArgs.FormRegionFactory%2A>实现任何类的实例到<xref:Microsoft.Office.Tools.Outlook.IFormRegionFactory>接口。  
+ 在事件处理程序方法中, 将<xref:Microsoft.Office.Tools.Outlook.FormRegionFactoryResolveEventArgs.FormRegionFactory%2A>设置为<xref:Microsoft.Office.Tools.Outlook.IFormRegionFactory>实现接口的任何类的实例。  
   
  ]]></format>
         </remarks>

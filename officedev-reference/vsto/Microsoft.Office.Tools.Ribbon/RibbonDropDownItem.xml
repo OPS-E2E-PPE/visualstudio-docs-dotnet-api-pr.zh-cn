@@ -1,5 +1,5 @@
 <Type Name="RibbonDropDownItem" FullName="Microsoft.Office.Tools.Ribbon.RibbonDropDownItem">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="e475e387a44da5811c377afd24c6d60832ce66f5" /><Meta Name="ms.sourcegitcommit" Value="5a5a038b6c783bec52842c940b22504bfc62a810" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/03/2018" /><Meta Name="ms.locfileid" Value="29432958" /></Metadata><TypeSignature Language="C#" Value="public interface RibbonDropDownItem" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="9cd8e34f103194a48d1d32f1f25bf3df0b0bd92f" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69002585" /></Metadata><TypeSignature Language="C#" Value="public interface RibbonDropDownItem" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract RibbonDropDownItem" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem" />
   <AssemblyInfo>
@@ -18,9 +18,9 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 一个<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem>对象包含需要用于以可视方式表示在列表中的项的所有数据<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox>， <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>，或<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>。 <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem> 项具有一个标签和关联的图像 （可选）。 它们还可以具有屏幕提示和增强屏幕提示，这是用户将鼠标指针暂停在控件上时，将显示这两个说明。  
+ 对象包含在<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox>、 <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>或<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>中以可视方式表示列表中的项所需的所有数据。 <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem> <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem>项具有标签和 (可选) 关联的图像。 它们还可以有屏幕提示和增强的屏幕提示, 这是用户将鼠标指针悬停在控件上时显示的说明。  
   
- 您可以创建<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem>在运行时通过使用<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.CreateRibbonDropDownItem%2A>方法的<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory>对象。  
+ 您可以通过<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.CreateRibbonDropDownItem%2A>使用<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem> <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory>对象的方法在运行时创建。  
   
  可通过两种方法来访问 <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory> 对象：  
   
@@ -74,11 +74,11 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 建议的图像格式是 PNG，因为 PNG 格式的图像支持通过其 alpha 通道的透明度。  
+ 建议的图像格式为 PNG, 因为 PNG 格式的图像通过其 alpha 通道支持透明度。  
   
- <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.Image%2A>属性标识控件显示的图像。 在设计时或在运行时，可以设置此属性。 如果在运行时中更新此属性，该控件的外观被更新以反映更改。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.Image%2A>属性标识控件显示的图像。 此属性可在设计时或运行时设置。 如果在运行时更新此属性, 控件的外观将更新以反映更改。  
   
- 如果<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.Image%2A>属性设置，<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.OfficeImageId%2A>属性将被忽略。 尽管<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.Image%2A>属性可让您更好地控制比其他两个属性，这一点可以是速度较慢，因为每次更新控件时，图像对象发送到 Office 应用程序。  
+ 如果设置<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.Image%2A>了属性<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.OfficeImageId%2A> , 则忽略属性。 <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.Image%2A>尽管属性比其他两个属性提供的控件更多, 但它可能会变慢, 因为每次更新控件时, 都会将 image 对象发送到 Office 应用程序。  
   
  ]]></format>
         </remarks>
@@ -126,24 +126,24 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.OfficeImageId%2A>属性标识的控件显示 Office 图标。 属性值是一个字符串，标识`imageMso`所选图标的值。 在设计时或在运行时，可以设置此属性。 如果在运行时中更新此属性，该控件的外观被更新以反映更改。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.OfficeImageId%2A>属性标识控件显示的 Office 图标。 属性值是标识`imageMso`所选图标的值的字符串。 此属性可在设计时或运行时设置。 如果在运行时更新此属性, 控件的外观将更新以反映更改。  
   
- 有关一系列`imageMso`值，请参阅 Microsoft 下载中心页[Office 2010 外接程序： 图标库](http://go.microsoft.com/fwlink/?LinkID=220760)。  
+ 有关`imageMso`值的列表, 请参阅 Microsoft 下载中心页面[Office 2010 外接程序:图标库](http://go.microsoft.com/fwlink/?LinkID=220760)。  
   
- 如果忽略此属性<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.Image%2A>属性设置。 标识的图像<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.OfficeImageId%2A>属性可以稍快于标识的图像加载<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.Image%2A>属性，因为这些图像缓存在 Office 应用程序。  
+ 如果设置了<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.Image%2A>属性, 则忽略此属性。 由于图像缓存在<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.OfficeImageId%2A> Office 应用程序中, 因此可以比<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.Image%2A>属性标识的图像稍快地加载属性标识的图像。  
   
    
   
 ## Examples  
- 下面的示例将 Microsoft Office 图标分配给在下拉框中的两个项。  
+ 下面的示例将 Microsoft Office 图标分配给下拉框中的两个项。  
   
- 若要运行此代码示例，必须首先执行以下步骤：  
+ 若要运行此代码示例, 必须首先执行以下步骤:  
   
-1.  添加**功能区 （可视化设计器）** 项通过使用 Visual Studio 中的 Office 开发工具创建的项目。  
+1.  向使用 Visual Studio 中的 Office 开发工具创建的项目添加 "**功能区 (可视化设计器)** " 项。  
   
 2.  将组添加到自定义选项卡。  
   
-3.  添加到组下拉框。  
+3.  向组中添加一个下拉框。  
   
  [!code-csharp[Trin_Ribbon_ControlProperties#4](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_Ribbon_ControlProperties/CS/Ribbon1.cs#4)]
  [!code-vb[Trin_Ribbon_ControlProperties#4](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_Ribbon_ControlProperties/VB/Ribbon1.vb#4)]  
@@ -176,7 +176,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果此<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem>尚未添加到一个控件，则<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.Parent%2A>属性返回`null`。  
+ 如果尚未<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem>将此添加到控件, 则属性将<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.Parent%2A>返回`null`。  
   
  ]]></format>
         </remarks>
@@ -206,7 +206,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.Ribbon%2A>属性是最适合用于导航到控件的控件层次结构的顶部附近。 如果层次结构稍有更高版本中有权访问控件或你想要查找在控件的下方，可以考虑使用其<xref:Microsoft.Office.Tools.Ribbon.RibbonComponent.Parent%2A>属性或其导航到你想要获取的项的子项的集合。  
+ 此<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.Ribbon%2A>属性最适合用于导航至控件层次结构顶部附近的控件。 如果您有权访问层次结构中略微位于要查找的控件的上方或下方的控件, 则可以考虑使用其<xref:Microsoft.Office.Tools.Ribbon.RibbonComponent.Parent%2A>属性或其子项集合来导航到要获取的项。  
   
  ]]></format>
         </remarks>
@@ -236,9 +236,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 屏幕提示值必须是长度小于 1024年个字符。  
+ 屏幕提示值的长度必须小于1024个字符。  
   
- 当<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.SuperTip%2A>设置属性，则<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.ScreenTip%2A>值将显示的标题为<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.SuperTip%2A>。  
+ 设置属性时<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.ScreenTip%2A> , 值显示<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.SuperTip%2A>为的标题。 <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.SuperTip%2A>  
   
  ]]></format>
         </remarks>
@@ -268,7 +268,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.SuperTip%2A>下显示<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.ScreenTip%2A>文本。 与不同<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.ScreenTip%2A>，则<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.SuperTip%2A>启用换行符的字符串中。  
+ 显示<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.SuperTip%2A>在 " <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.ScreenTip%2A>文本" 下。 与不同<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.ScreenTip%2A>的是<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.SuperTip%2A> , 会在字符串中启用分行符。  
   
  ]]></format>
         </remarks>
@@ -304,20 +304,20 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 从派生的任何类型`System.Object`类可以分配给此属性。 但是，如果您设置<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.Tag%2A>Visual Studio 中的属性**属性**窗口中，您可以仅将文本分配。  
+ 从类派生的`System.Object`任何类型都可以分配给此属性。 但是, 如果在 Visual Studio <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.Tag%2A>的 "**属性**" 窗口中设置属性, 则只能分配文本。  
   
- 一个常见用途<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.Tag%2A>属性是紧密地与项相关联的数据存储。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.Tag%2A>属性的常见用途是存储与该项密切关联的数据。  
   
    
   
 ## Examples  
- 下面的示例设置<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.Tag%2A>属性的<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem>下拉列表框中。  
+ 下面的示例在下拉<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem.Tag%2A>框中设置<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem>的属性。  
   
- 若要运行此代码示例，必须首先执行以下步骤：  
+ 若要运行此代码示例, 必须首先执行以下步骤:  
   
-1.  添加**功能区 （可视化设计器）** 项通过使用 Visual Studio 中的 Office 开发工具创建的项目。  
+1.  向使用 Visual Studio 中的 Office 开发工具创建的项目添加 "**功能区 (可视化设计器)** " 项。  
   
-2.  将下拉列表框添加到默认组`Group1`。  
+2.  向默认组`Group1`添加下拉框。  
   
  [!code-csharp[Trin_Ribbon_ControlProperties#13](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_Ribbon_ControlProperties/CS/Ribbon1.cs#13)]
  [!code-vb[Trin_Ribbon_ControlProperties#13](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_Ribbon_ControlProperties/VB/Ribbon1.vb#13)]  

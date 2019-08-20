@@ -1,5 +1,5 @@
 <Type Name="RibbonPosition" FullName="Microsoft.Office.Tools.Ribbon.RibbonPosition">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="3c49e7753ce9cba4557965f6f3815c461894d80d" /><Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="09/19/2018" /><Meta Name="ms.locfileid" Value="46453785" /></Metadata><TypeSignature Language="C#" Value="public interface RibbonPosition : IEquatable&lt;Microsoft.Office.Tools.Ribbon.RibbonPosition&gt;" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="0c8236031ea7042af70bfabf0674cc7c2ed90ba0" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69002286" /></Metadata><TypeSignature Language="C#" Value="public interface RibbonPosition : IEquatable&lt;Microsoft.Office.Tools.Ribbon.RibbonPosition&gt;" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract RibbonPosition implements class System.IEquatable`1&lt;class Microsoft.Office.Tools.Ribbon.RibbonPosition&gt;" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Ribbon.RibbonPosition" />
   <AssemblyInfo>
@@ -27,9 +27,6 @@
     <Attribute>
       <AttributeName>System.Runtime.InteropServices.Guid("d7167a9c-8d5c-4ca4-9de8-8d19b66d1aa5")</AttributeName>
     </Attribute>
-    <Attribute>
-      <AttributeName>System.Runtime.InteropServices.TypeIdentifier</AttributeName>
-    </Attribute>
   </Attributes>
   <Docs>
     <summary>表示 Microsoft Office 菜单上功能区控件相对于内置控件的位置、选项卡相对于内置选项卡的位置或组相对于内置组的位置。</summary>
@@ -37,15 +34,15 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用<xref:Microsoft.Office.Tools.Ribbon.RibbonGroup.Position%2A>属性的<xref:Microsoft.Office.Tools.Ribbon.RibbonGroup>指定组的位置上内置选项卡，相对于选项卡上的内置组。有关详细信息，请参阅[如何： 自定义内置选项卡](/visualstudio/vsto/how-to-customize-a-built-in-tab)。  
+ 使用的<xref:Microsoft.Office.Tools.Ribbon.RibbonGroup>属性可以指定内置选项卡上的组相对于选项卡上的内置组的位置。 <xref:Microsoft.Office.Tools.Ribbon.RibbonGroup.Position%2A>有关详细信息，请参阅[如何：自定义内置选项卡](/visualstudio/vsto/how-to-customize-a-built-in-tab)。  
   
- 使用`Position`可以在 Microsoft Office 菜单，如使用的控件属性<xref:Microsoft.Office.Tools.Ribbon.RibbonButton>指定相对于内置控件的菜单上控件的位置。 `Position`这些控件的属性时控件放置在功能区选项卡上没有任何作用。有关详细信息，请参阅[如何： 将控件添加到 Backstage 视图](/visualstudio/vsto/how-to-add-controls-to-the-backstage-view)。  
+ 使用可在 Microsoft Office 菜单上使用的控件的<xref:Microsoft.Office.Tools.Ribbon.RibbonButton>属性(例如)来指定控件相对于菜单上的内置控件的位置。`Position` 当`Position`控件放置在功能区选项卡上时, 这些控件的属性将不起作用。有关详细信息，请参阅[如何：向 Backstage 视图](/visualstudio/vsto/how-to-add-controls-to-the-backstage-view)添加控件。  
   
- 使用<xref:Microsoft.Office.Tools.Ribbon.RibbonTab.Position%2A>属性的<xref:Microsoft.Office.Tools.Ribbon.RibbonTab>指定相对于内置选项卡的选项卡的位置。  
+ 使用的<xref:Microsoft.Office.Tools.Ribbon.RibbonTab>属性可以指定选项卡相对于内置选项卡的位置。 <xref:Microsoft.Office.Tools.Ribbon.RibbonTab.Position%2A>  
   
- 若要创建<xref:Microsoft.Office.Tools.Ribbon.RibbonPosition>对象，请调用<xref:Microsoft.Office.Tools.Ribbon.RibbonPositionStatics.AfterOfficeId%2A>方法或<xref:Microsoft.Office.Tools.Ribbon.RibbonPositionStatics.BeforeOfficeId%2A>方法的<xref:Microsoft.Office.Tools.Ribbon.RibbonPositionStatics>对象。  
+ 若要创建<xref:Microsoft.Office.Tools.Ribbon.RibbonPosition>对象, 请<xref:Microsoft.Office.Tools.Ribbon.RibbonPositionStatics.AfterOfficeId%2A>调用<xref:Microsoft.Office.Tools.Ribbon.RibbonPositionStatics>对象的方法<xref:Microsoft.Office.Tools.Ribbon.RibbonPositionStatics.BeforeOfficeId%2A>或方法。  
   
- 可以获取<xref:Microsoft.Office.Tools.Ribbon.RibbonPositionStatics>在运行时通过使用对象<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.RibbonPosition%2A>属性的<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory>对象。  
+ 可以使用<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory>对象的<xref:Microsoft.Office.Tools.Ribbon.RibbonPositionStatics> <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.RibbonPosition%2A>属性在运行时获取对象。  
   
  可通过两种方法来访问 <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory> 对象：  
   
@@ -76,7 +73,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- ID 是唯一标识控件、 组或内置于 Microsoft Office 应用程序的选项卡的名称。 有关 Id 的列表，请参阅 Microsoft 下载中心网站页面[Office 2010 帮助文件： Office Fluent 用户界面控件标识符](http://go.microsoft.com/fwlink/?LinkID=181052)。  
+ ID 是唯一标识内置于 Microsoft Office 应用程序中的控件、组或选项卡的名称。 有关 id 列表, 请参阅 Microsoft 下载中心网页[Office 2010 帮助文件:Office 熟知用户界面控件标识符](http://go.microsoft.com/fwlink/?LinkID=181052)。  
   
  ]]></format>
         </remarks>
@@ -96,7 +93,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取一个值，该值指示当前 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonPosition" /> 表示内置控件、组或选项卡之前还是之后的位置。</summary>
-        <value>一个值，指示是否当前<see cref="T:Microsoft.Office.Tools.Ribbon.RibbonPosition" />之前或之后内置控件、 组或选项卡表示的位置。</value>
+        <value>一个值, 该值指示当前<see cref="T:Microsoft.Office.Tools.Ribbon.RibbonPosition" />是否表示内置控件、组或选项卡之前或之后的位置。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

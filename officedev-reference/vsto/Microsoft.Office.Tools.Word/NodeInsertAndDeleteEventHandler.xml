@@ -1,5 +1,5 @@
 <Type Name="NodeInsertAndDeleteEventHandler" FullName="Microsoft.Office.Tools.Word.NodeInsertAndDeleteEventHandler">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="22b1018ab9fe1360535c48c3932eb4780547f6fa" /><Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="02/21/2018" /><Meta Name="ms.locfileid" Value="29431892" /></Metadata><TypeSignature Language="C#" Value="public delegate void NodeInsertAndDeleteEventHandler(object sender, NodeInsertAndDeleteEventArgs e);" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="6ad103fd47ed63d0f1a6a877ec00a9f9b3ec2245" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="68999987" /></Metadata><TypeSignature Language="C#" Value="public delegate void NodeInsertAndDeleteEventHandler(object sender, NodeInsertAndDeleteEventArgs e);" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed NodeInsertAndDeleteEventHandler extends System.MulticastDelegate" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Word.NodeInsertAndDeleteEventHandler" />
   <AssemblyInfo>
@@ -24,12 +24,12 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 创建 <xref:Microsoft.Office.Tools.Word.NodeInsertAndDeleteEventHandler> 委托时，需要标识将处理该事件的方法。 若要将事件与事件处理程序关联，请将该委托的一个实例添加到事件中。 每当发生该事件时，直到移除了该委托，都会调用事件处理程序。  
+ 创建 <xref:Microsoft.Office.Tools.Word.NodeInsertAndDeleteEventHandler> 委托时，需要标识将处理该事件的方法。 若要将事件与事件处理程序关联，请将该委托的一个实例添加到事件中。 事件发生时, 将调用事件处理程序, 直到删除委托。  
   
    
   
 ## Examples  
- 下面的代码示例演示了事件处理程序<xref:Microsoft.Office.Tools.Word.XMLNode.AfterInsert>和<xref:Microsoft.Office.Tools.Word.XMLNode.BeforeDelete>事件。 这些事件处理程序显示消息框，然后<xref:Microsoft.Office.Tools.Word.XMLNode>文档，而后删除<xref:Microsoft.Office.Tools.Word.XMLNode>添加到文档。 此示例还使用<xref:Microsoft.Office.Tools.Word.XMLNode.RemoveChild%2A>方法来删除节点，并以编程方式引发<xref:Microsoft.Office.Tools.Word.XMLNode.BeforeDelete>事件。 此示例假定当前文档包含<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`，其中包含一个名为的子节点`CustomerDateNode`。  
+ 下面的代码示例演示了<xref:Microsoft.Office.Tools.Word.XMLNode.AfterInsert>和<xref:Microsoft.Office.Tools.Word.XMLNode.BeforeDelete>事件的事件处理程序。 这些事件处理程序在从文档中删除<xref:Microsoft.Office.Tools.Word.XMLNode>之前, 以及<xref:Microsoft.Office.Tools.Word.XMLNode>在将添加到文档之后, 会显示一个消息框。 该示例还使用<xref:Microsoft.Office.Tools.Word.XMLNode.RemoveChild%2A>方法来删除节点并以编程方式<xref:Microsoft.Office.Tools.Word.XMLNode.BeforeDelete>引发事件。 此示例假设当前文档包含一个<xref:Microsoft.Office.Tools.Word.XMLNode>名为`CustomerNode`的, 其中包含名为`CustomerDateNode`的子节点。  
   
  [!code-csharp[Trin_WordXMLNode#200](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordXMLNode/CS/ThisDocument.cs#200)]
  [!code-vb[Trin_WordXMLNode#200](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordXMLNode/VB/ThisDocument.vb#200)]  

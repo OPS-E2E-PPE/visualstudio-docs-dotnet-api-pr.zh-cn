@@ -1,5 +1,5 @@
 <Type Name="OriginalDataRestoredEventArgs" FullName="Microsoft.Office.Tools.Excel.OriginalDataRestoredEventArgs">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="663c52866ea0913e5fd22959da8c6a38733f8226" /><Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="02/21/2018" /><Meta Name="ms.locfileid" Value="29430553" /></Metadata><TypeSignature Language="C#" Value="public interface OriginalDataRestoredEventArgs" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="400e9fa6220fddb087dacfe6998ff5b46b9a4086" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69004480" /></Metadata><TypeSignature Language="C#" Value="public interface OriginalDataRestoredEventArgs" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract OriginalDataRestoredEventArgs" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Excel.OriginalDataRestoredEventArgs" />
   <AssemblyInfo>
@@ -18,14 +18,14 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.ListObject.OriginalDataRestored>事件由引发<xref:Microsoft.Office.Tools.Excel.ListObject>控制时它将数据还原到其原始状态。 <xref:Microsoft.Office.Tools.Excel.OriginalDataRestoredEventArgs.ChangeType%2A>自变量提供有关还原类信息<xref:Microsoft.Office.Tools.Excel.ListObject>控件执行，与<xref:Microsoft.Office.Tools.Excel.OriginalDataRestoredEventArgs.ChangeReason%2A>提供有关已执行此还原的原因的信息。  
+ 事件在将数据还原到<xref:Microsoft.Office.Tools.Excel.ListObject>其原始状态时由控件引发。 <xref:Microsoft.Office.Tools.Excel.ListObject.OriginalDataRestored> 参数提供有关所<xref:Microsoft.Office.Tools.Excel.ListObject>执行<xref:Microsoft.Office.Tools.Excel.OriginalDataRestoredEventArgs.ChangeReason%2A>控件的还原类型的信息, 并提供有关执行此还原的原因的信息。 <xref:Microsoft.Office.Tools.Excel.OriginalDataRestoredEventArgs.ChangeType%2A>  
   
    
   
 ## Examples  
- 下面的代码示例创建<xref:System.Data.DataTable>和<xref:Microsoft.Office.Tools.Excel.ListObject>，并将绑定<xref:Microsoft.Office.Tools.Excel.ListObject>到<xref:System.Data.DataTable>。 然后，它创建<xref:Microsoft.Office.Tools.Excel.ListObject.OriginalDataRestored>事件处理程序。 要测试此事件，请右键单击上方的列字母<xref:Microsoft.Office.Tools.Excel.ListObject>在工作表 1，然后单击**删除**的快捷菜单中。 事件处理程序替换列和列标题数据，并显示一条指示什么类型的数据已还原消息和，还原原始数据的原因。  
+ 下面<xref:System.Data.DataTable>的代码示例创建<xref:Microsoft.Office.Tools.Excel.ListObject>和, <xref:System.Data.DataTable>并将绑定<xref:Microsoft.Office.Tools.Excel.ListObject>到。 然后, 创建一个<xref:Microsoft.Office.Tools.Excel.ListObject.OriginalDataRestored>事件处理程序。 若要测试该事件, 请右键单击 "工作表 1 <xref:Microsoft.Office.Tools.Excel.ListObject> " 上方的列号, 然后单击快捷菜单中的 "**删除**"。 该事件处理程序将替换列和列标题数据, 并显示一条消息, 指示已还原的数据类型和还原原始数据的原因。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelListObject#25](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelListObject/CS/Trin_ExcelListObject.cs#25)]
  [!code-vb[Trin_ExcelListObject#25](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelListObject/VB/Sheet1.vb#25)]  

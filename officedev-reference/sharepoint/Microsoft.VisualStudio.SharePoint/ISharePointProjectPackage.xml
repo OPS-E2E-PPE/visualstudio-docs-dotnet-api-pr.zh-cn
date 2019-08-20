@@ -1,5 +1,5 @@
 <Type Name="ISharePointProjectPackage" FullName="Microsoft.VisualStudio.SharePoint.ISharePointProjectPackage">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="e95fdb83ec273d0ddedbc9ce2d01f080df7cdc7a" /><Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="02/21/2018" /><Meta Name="ms.locfileid" Value="29410130" /></Metadata><TypeSignature Language="C#" Value="public interface ISharePointProjectPackage : Microsoft.VisualStudio.SharePoint.ISharePointProjectMember, System.ComponentModel.INotifyPropertyChanged" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="9066b5d92a7000305ca22295c6b631a1d2c644ea" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69007256" /></Metadata><TypeSignature Language="C#" Value="public interface ISharePointProjectPackage : Microsoft.VisualStudio.SharePoint.ISharePointProjectMember, System.ComponentModel.INotifyPropertyChanged" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISharePointProjectPackage implements class Microsoft.VisualStudio.SharePoint.IAnnotatedObject, class Microsoft.VisualStudio.SharePoint.INotifyObjectDisposed, class Microsoft.VisualStudio.SharePoint.INotifyObjectDisposing, class Microsoft.VisualStudio.SharePoint.ISharePointProjectMember, class System.ComponentModel.INotifyPropertyChanged" />
   <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectPackage" />
   <AssemblyInfo>
@@ -7,6 +7,15 @@
     <AssemblyVersion>15.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.VisualStudio.SharePoint.IAnnotatedObject</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>Microsoft.VisualStudio.SharePoint.INotifyObjectDisposed</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>Microsoft.VisualStudio.SharePoint.INotifyObjectDisposing</InterfaceName>
+    </Interface>
     <Interface>
       <InterfaceName>Microsoft.VisualStudio.SharePoint.ISharePointProjectMember</InterfaceName>
     </Interface>
@@ -34,8 +43,7 @@
       <Parameters />
       <Docs>
         <summary>生成 SharePoint 解决方案包文件。</summary>
-        <returns>
-          如果生成已成功，则为 <see langword="True" />；否则为 <see langword="false" />。</returns>
+        <returns>如果生成已成功，则为 <see langword="True" />；否则为 <see langword="false" />。</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -53,7 +61,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取包文档对象中引用的功能的集合。</summary>
-        <value>功能集合。</value>
+        <value>功能的集合。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -71,7 +79,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取设计时所用包的 ID。</summary>
-        <value>表示包 id。 的 GUID</value>
+        <value>表示包 ID 的 GUID。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -125,7 +133,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取编译包的路径。</summary>
-        <value>表示一个路径的字符串。</value>
+        <value>表示路径的字符串。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -143,7 +151,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取 .package 文件的项目成员。</summary>
-        <value>表示项目成员的对象。</value>
+        <value>一个表示项目成员的对象。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -180,8 +188,7 @@
       <Parameters />
       <Docs>
         <summary>对包运行设计时验证，并更新 IDE 错误列表。</summary>
-        <returns>
-          如果验证成功，则为 <see langword="True" />；如果发生错误，则为 <see langword="false" />。</returns>
+        <returns>如果验证成功，则为 <see langword="True" />；如果发生错误，则为 <see langword="false" />。</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

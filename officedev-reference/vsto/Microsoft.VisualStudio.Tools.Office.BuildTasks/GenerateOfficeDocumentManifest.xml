@@ -1,5 +1,5 @@
 <Type Name="GenerateOfficeDocumentManifest" FullName="Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeDocumentManifest">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="c9d911a7501aaeda45f25d8040280920f4b4dbcf" /><Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="09/19/2018" /><Meta Name="ms.locfileid" Value="46456632" /></Metadata><TypeSignature Language="C#" Value="public sealed class GenerateOfficeDocumentManifest : Microsoft.VisualStudio.Tools.Office.BuildTasks.BuildTask" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="18935b9a13a819267a2cf0806eaaf3093d3e3232" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="68996731" /></Metadata><TypeSignature Language="C#" Value="public sealed class GenerateOfficeDocumentManifest : Microsoft.VisualStudio.Tools.Office.BuildTasks.BuildTask" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit GenerateOfficeDocumentManifest extends Microsoft.VisualStudio.Tools.Office.BuildTasks.BuildTask" />
   <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeDocumentManifest" />
   <AssemblyInfo>
@@ -21,9 +21,9 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 全部设<xref:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeDocumentManifest>属性，，然后调用<xref:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeDocumentManifest.Execute%2A>若要运行此任务。  
+ 设置所有<xref:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeDocumentManifest>属性, 然后调用<xref:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeDocumentManifest.Execute%2A>以运行此任务。  
   
- Microsoft 生成引擎使用 <xref:Microsoft.VisualStudio.Tools.Office.BuildTasks> 生成和部署 Office 解决方案。 但是，可以使用这些类和基于 MSBuild XML 的项目文件来创建自己的生成系统。 有关详细信息，请参阅[MSBuild 引用](~/msbuild/msbuild-reference)。  
+ Microsoft 生成引擎使用 <xref:Microsoft.VisualStudio.Tools.Office.BuildTasks> 生成和部署 Office 解决方案。 但是，可以使用这些类和基于 MSBuild XML 的项目文件来创建自己的生成系统。 有关详细信息，请参阅 [MSBuild 参考](~/msbuild/msbuild-reference)。  
   
  ]]></format>
     </remarks>
@@ -82,7 +82,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取 Office 文档级自定义的应用程序清单部分的 XML。</summary>
-        <value><see cref="T:Microsoft.Build.Framework.ITaskItem" />包含 Visual Studio 部分的文档级自定义应用程序清单中的 Office 解决方案的 XML。</value>
+        <value>一个<see cref="T:Microsoft.Build.Framework.ITaskItem" /> , 它包含文档级自定义项的应用程序清单的 Visual Studio 中的 Office 解决方案的 XML。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -123,14 +123,14 @@
       </ReturnValue>
       <Docs>
         <summary>设置 Visual Studio Tools for Office 运行时用于标识解决方案的 GUID。</summary>
-        <value>一个包含 Office 解决方案的 GUID 的字符串。</value>
+        <value>一个字符串, 其中包含 Office 解决方案的 GUID。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 您可以设置 Visual Studio Tools for Office 运行时使用其标识解决方案的 GUID。 有关详情，请参阅<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.SolutionId%2A?displayProperty=fullName>。  
+ 可以设置 Visual Studio Tools for Office 运行时用于标识解决方案的 GUID。 有关详细信息，请参阅 <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.SolutionId%2A?displayProperty=fullName>。  
   
- <xref:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeDocumentManifest.SolutionID%2A>必须将属性分配之前<xref:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeDocumentManifest.Execute%2A>调用。  
+ 在<xref:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeDocumentManifest.SolutionID%2A>调用之前<xref:Microsoft.VisualStudio.Tools.Office.BuildTasks.GenerateOfficeDocumentManifest.Execute%2A> , 必须分配属性。  
   
  ]]></format>
         </remarks>

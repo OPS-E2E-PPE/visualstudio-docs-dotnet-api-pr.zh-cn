@@ -1,5 +1,5 @@
 <Type Name="RibbonGallery" FullName="Microsoft.Office.Tools.Ribbon.RibbonGallery">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="e0d0ac7f97be55cca87259f62f8a28768405e952" /><Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="09/19/2018" /><Meta Name="ms.locfileid" Value="46459557" /></Metadata><TypeSignature Language="C#" Value="public interface RibbonGallery : IDisposable, Microsoft.Office.Tools.Ribbon.RibbonControl, System.ComponentModel.IComponent" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="3e34b06fd648429c30d5f1fc480f42c289a6de38" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69002530" /></Metadata><TypeSignature Language="C#" Value="public interface RibbonGallery : IDisposable, Microsoft.Office.Tools.Ribbon.RibbonControl, System.ComponentModel.IComponent" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract RibbonGallery implements class Microsoft.Office.Tools.Ribbon.RibbonComponent, class Microsoft.Office.Tools.Ribbon.RibbonControl, class System.ComponentModel.IComponent, class System.IDisposable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Ribbon.RibbonGallery" />
   <AssemblyInfo>
@@ -7,6 +7,9 @@
     <AssemblyVersion>10.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Office.Tools.Ribbon.RibbonComponent</InterfaceName>
+    </Interface>
     <Interface>
       <InterfaceName>Microsoft.Office.Tools.Ribbon.RibbonControl</InterfaceName>
     </Interface>
@@ -28,33 +31,33 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 像<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>接口，<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>显示的菜单<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem>对象和<xref:Microsoft.Office.Tools.Ribbon.RibbonButton>控件。  
+ 与接口一样, <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>会显示对象和<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem> <xref:Microsoft.Office.Tools.Ribbon.RibbonButton>控件的菜单。 <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>  
   
- 与不同<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>接口，<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>接口引发<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.Click>事件，而非<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectionChanged>事件，当用户单击<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem>。 这意味着，例如，<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.Click>两次用户单击相同时引发事件<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem>两次。 (<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectionChanged>时上相同的方案没有进行初始选择将最多一次引发事件<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>，取决于在第一次单击之前已的所选内容。)  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery> <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.Click> <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectionChanged>与接口不同, 当用户单击<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem>时, 接口将引发事件, 而不是事件。 <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown> 例如<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.Click> , 这意味着, 当用户单击<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem>两次时, 将引发两次事件。 (当对同一方案<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>进行初始选择时, 最多会引发一次此事件,具体取决于第一次单击之前所做的选择。)<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectionChanged>  
   
- <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ShowItemSelection%2A>属性控制是否当前所选<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem>以可视方式的区别在于未选择的项。 一次只有一项可以选择在<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>。  
+ 属性控制当前选定<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem>的是否从未选定的项中以可视方式区分。 <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ShowItemSelection%2A> 一次只能选择<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>一个项。  
   
- <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ItemImageSize%2A>属性可用于指定图像大小不是 16 x 16 和 32 x 32。  
+ 属性<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ItemImageSize%2A>可用于指定16x16 和32x32 以外的图像大小。  
   
-### <a name="to-add-ribbondropdownitem-objects-at-design-time"></a>若要在设计时添加 RibbonDropDownItem 对象  
+### <a name="to-add-ribbondropdownitem-objects-at-design-time"></a>在设计时添加 RibbonDropDownItem 对象  
   
-1.  单击**项**属性中的**属性**窗口。  
+1.  在 "**属性**" 窗口中单击 " **Items** " 属性。  
   
-2.  单击省略号 (**...**).  
+2.  单击省略号 (**...**)。  
   
-3.  在中**下拉列表中集合编辑器**、 添加、 排序和编辑新项。  
+3.  在**下拉集合编辑器**中, 添加、排序和编辑新项。  
   
- 您可以添加<xref:Microsoft.Office.Tools.Ribbon.RibbonButton>控件添加到<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>在设计时。  
+ 您可以<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>在<xref:Microsoft.Office.Tools.Ribbon.RibbonButton>设计时将控件添加到。  
   
-### <a name="to-add-ribbonbutton-controls-at-design-time"></a>若要将 RibbonButton 控件添加设计时  
+### <a name="to-add-ribbonbutton-controls-at-design-time"></a>在设计时添加 RibbonButton 控件  
   
-1.  单击**按钮**属性中的**属性**窗口。  
+1.  单击 "**属性**" 窗口中的 "**按钮**" 属性。  
   
-2.  单击省略号 (**...**).  
+2.  单击省略号 (**...**)。  
   
-3.  在中**按钮集合编辑器**、 添加、 排序和编辑新的按钮控件。  
+3.  在**按钮集合编辑器**中, 添加、排序和编辑新的按钮控件。  
   
- 您可以创建<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>在运行时通过使用<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.CreateRibbonGallery%2A>方法的<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory>对象。  
+ 您可以通过<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.CreateRibbonGallery%2A>使用<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery> <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory>对象的方法在运行时创建。  
   
  可通过两种方法来访问 <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory> 对象：  
   
@@ -62,7 +65,7 @@
   
 -   通过使用 `Globals.Factory.GetRibbonFactory` 方法。 可从 Ribbon 类外的代码使用此方法。  
   
- 可以设置此控件的某些属性，只能在功能区加载到 Office 应用程序之前，或者该控件添加到动态菜单之前。 有关如何设置这些属性的信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
+ 只能在功能区加载到 Office 应用程序之前或在运行时将控件添加到动态菜单之前设置此控件的某些属性。 有关设置这些属性的信息, 请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
   
  [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
   
@@ -74,7 +77,7 @@
   </Docs>
   <Members>
     <Member MemberName="ButtonClick">
-      <MemberSignature Language="C#" Value="public event Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler ButtonClick;" />
+      <MemberSignature Language="C#" Value="event Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler ButtonClick;" />
       <MemberSignature Language="ILAsm" Value=".event class Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler ButtonClick" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.Ribbon.RibbonGallery.ButtonClick" />
       <MemberType>Event</MemberType>
@@ -91,7 +94,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果在单击任何按钮，将引发此事件<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>。 您可以确定通过检查被单击的按钮`sender`事件处理程序的参数。  
+ 如果单击上的<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>任何按钮, 将引发此事件。 您可以通过检查事件处理程序的`sender`参数来确定单击了哪个按钮。  
   
  ]]></format>
         </remarks>
@@ -116,14 +119,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 可以将按钮添加到此<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>在运行时。 有关详情，请参阅<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>。  
+ 可以在运行时向此<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>添加按钮。 有关详细信息，请参阅 <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="Click">
-      <MemberSignature Language="C#" Value="public event Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler Click;" />
+      <MemberSignature Language="C#" Value="event Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler Click;" />
       <MemberSignature Language="ILAsm" Value=".event class Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler Click" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.Ribbon.RibbonGallery.Click" />
       <MemberType>Event</MemberType>
@@ -140,9 +143,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 每次用户单击时，将引发此事件<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem>对此<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>。  
+ 每次用户单击此<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem> <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>上的时, 都会引发此事件。  
   
- 如果<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ShowItemSelection%2A>属性设置为`true`，仅当用户单击当前未选的项时引发此事件。  
+ `true`如果将<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ShowItemSelection%2A>属性设置为, 则仅当用户单击当前未选择的项时, 才会引发此事件。  
   
  ]]></format>
         </remarks>
@@ -162,12 +165,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonGallery" /> 中的“项”列的数量<c></c>。</summary>
-        <value>数<c>项</c>在此列<see cref="T:Microsoft.Office.Tools.Ribbon.RibbonGallery" />。</value>
+        <value>此<see cref="T:Microsoft.Office.Tools.Ribbon.RibbonGallery" />中<c>项</c>列的数目。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 可以在运行时仅在某些情况下设置此属性。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
+ 仅在某些情况下, 才能在运行时设置此属性。 有关详细信息, 请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
   
  ]]></format>
         </remarks>
@@ -187,16 +190,16 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonGallery" /> 控件的大小。</summary>
-        <value>一个<c>Microsoft.Office.Core.RibbonControlSize</c>表示大小的<see cref="T:Microsoft.Office.Tools.Ribbon.RibbonGallery" />控件。</value>
+        <value>一个<c>RibbonControlSize</c> , 它表示<see cref="T:Microsoft.Office.Tools.Ribbon.RibbonGallery" />控件的大小。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性不起如果<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>是菜单的一部分。 <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ControlSize%2A>的<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>上出现一个菜单始终设置为`Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeRegular`除非父控件`ItemSize`设置为`Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge`。  
+ 如果<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>是菜单的一部分, 则此属性不起作用。 <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ControlSize%2A> 如果父`ItemSize`控件的设置为`Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeRegular` ,则在菜单上显示的将始终设置为。`Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge` <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>  
   
- 若要使<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton>下拉列表菜单控件显示得更大，设置<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.ItemSize%2A>的属性<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton>到`Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge`。  
+ 若要<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton>使下拉菜单控件显示得更大, 请<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.ItemSize%2A>将的<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton>属性设置为`Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge`。  
   
- 可以在运行时设置此属性。  
+ 此属性可在运行时设置。  
   
  ]]></format>
         </remarks>
@@ -221,7 +224,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果此控件嵌套在另一个菜单或拆分按钮，显示的说明和<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ItemSize%2A?displayProperty=fullName>菜单中，属性或<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.ItemSize%2A?displayProperty=fullName>拆分按钮的属性设置为`Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge`。  
+ 当此控件嵌套在另一个菜单或拆分按钮中, <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ItemSize%2A?displayProperty=fullName>菜单的属性<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.ItemSize%2A?displayProperty=fullName>或拆分按钮的属性设置为`Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge`时, 将显示此说明。  
   
  可以在运行时更改此属性。  
   
@@ -248,13 +251,13 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 建议的图像格式是 PNG，因为 PNG 格式的图像支持通过其 alpha 通道的透明度。  
+ 建议的图像格式为 PNG, 因为 PNG 格式的图像通过其 alpha 通道支持透明度。  
   
- <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.Image%2A>属性标识控件显示的图像。 在设计时或在运行时，可以设置此属性。 如果在运行时中更新此属性，该控件的外观被更新以反映更改。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.Image%2A>属性标识控件显示的图像。 此属性可在设计时或运行时设置。 如果在运行时更新此属性, 控件的外观将更新以反映更改。  
   
- 如果<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.Image%2A>设置属性，则<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.OfficeImageId%2A>和<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ImageName%2A>属性将被忽略。 尽管<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.Image%2A>属性可让您更好地控制比其他两个属性，这一点可以是速度较慢，因为每次更新控件时，图像对象发送到 Office 应用程序。  
+ 如果设置了<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.OfficeImageId%2A> <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ImageName%2A>属性, 则将忽略和属性。 <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.Image%2A> <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.Image%2A>尽管属性比其他两个属性提供的控件更多, 但它可能会变慢, 因为每次更新控件时, 都会将 image 对象发送到 Office 应用程序。  
   
- <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ShowImage%2A>属性必须为`true`控件来显示图像。 当您将设置<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.Image%2A>属性在设计时，Visual Studio 将自动设置<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ShowImage%2A>属性设置为`true`。 如果您设置<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.Image%2A>在运行时属性，则你必须设置<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ShowImage%2A>属性设置为`true`在代码中。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ShowImage%2A> 属性`true`必须为, 控件才能显示图像。 在设计时设置<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.Image%2A>属性时, Visual Studio 会将<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ShowImage%2A>属性自动设置为`true`。 如果在运行时<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.Image%2A>设置属性, 必须在代码中<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ShowImage%2A>将属性设置为`true` 。  
   
  ]]></format>
         </remarks>
@@ -279,15 +282,15 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 可以在运行时仅在某些情况下设置此属性。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
+ 仅在某些情况下, 才能在运行时设置此属性。 有关详细信息, 请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
   
- <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ImageName%2A>属性标识控件显示的图像。 Office 应用程序此映像从你的解决方案只检索一次，以提高性能。 此属性可以设置只能在设计时，因为它标识的图像加载过程<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>事件。 <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage> 时将引发一次每个映像名称显示在功能区。 之后，不能使用此属性更改控件图像。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ImageName%2A>属性标识控件显示的图像。 Office 应用程序仅从解决方案中检索一次此映像, 以提高性能。 只能在设计时设置此属性, 因为该属性标识的图像将在<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>事件中加载。 <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>当显示功能区时, 每个映像名称只引发一次。 之后, 不能使用此属性更改控制图像。  
   
- 若要加载图像，将代码添加到<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>事件处理程序。 检查<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs.ImageName%2A>的属性<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs>并设置<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs.Image%2A>属性的<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs>到想要加载的图像的对象。  
+ 若要加载图像, 请将代码添加<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>到事件处理程序。 <xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs.Image%2A>检查的<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs>属性,并<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs>将对象的属性设置为要加载的图像。 <xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs.ImageName%2A>  
   
- 如果忽略此属性<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.Image%2A>属性或<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.OfficeImageId%2A>属性设置。 标识的图像<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ImageName%2A>属性可以稍快于标识的图像加载<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.Image%2A>显示属性，因为 Office 应用程序中检索映像解决方案仅在首次从功能区。  
+ 如果设置了<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.Image%2A>属性<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.OfficeImageId%2A>或属性, 则忽略此属性。 与<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.Image%2A>属性标识的<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ImageName%2A>图像相比, 属性所标识的映像的加载速度要快得多, 因为 Office 应用程序只会在首次显示功能区时从你的解决方案中检索该图像。  
   
- <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ShowImage%2A>属性必须为`true`控件来显示图像。 当您将设置<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ImageName%2A>属性在设计时，Visual Studio 将自动设置<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ShowImage%2A>属性设置为`true`。 如果您设置<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ImageName%2A>在运行时属性，则你必须设置<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ShowImage%2A>属性设置为`true`在代码中。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ShowImage%2A> 属性`true`必须为, 控件才能显示图像。 在设计时设置<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ImageName%2A>属性时, Visual Studio 会将<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ShowImage%2A>属性自动设置为`true`。 如果在运行时<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ImageName%2A>设置属性, 必须在代码中<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ShowImage%2A>将属性设置为`true` 。  
   
  ]]></format>
         </remarks>
@@ -312,9 +315,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>接口提供了更好地控制映像大小以外<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu>或<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton>。 它是唯一的三个接口，可用于以像素为单位指定图像的宽度和高度。  
+ 接口可以更好地控制图像大小, 而不<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu>是<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton>或。 <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery> 这是三个接口中的唯一一个, 可用于指定图像宽度和高度 (以像素为单位)。  
   
- 此属性不会影响在此按钮上显示图像的大小<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>。  
+ 此属性不会影响此<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>中按钮上显示的图像的大小。  
   
  ]]></format>
         </remarks>
@@ -344,14 +347,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 您可以添加<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem>对象添加到<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>在设计时或在运行时。  
+ 可以<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>在设计<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem>时或运行时向添加对象。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="ItemsLoading">
-      <MemberSignature Language="C#" Value="public event Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler ItemsLoading;" />
+      <MemberSignature Language="C#" Value="event Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler ItemsLoading;" />
       <MemberSignature Language="ILAsm" Value=".event class Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler ItemsLoading" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.Ribbon.RibbonGallery.ItemsLoading" />
       <MemberType>Event</MemberType>
@@ -368,7 +371,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 发生此事件每次<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>打开时，即使没有任何项或在其中的按钮。  
+ 此事件在每次<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>打开时发生, 即使其中没有任何项或按钮也是如此。  
   
  ]]></format>
         </remarks>
@@ -393,11 +396,11 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- Keytip 必须包含 1 到 3 个大写字符，不能包含空格、 制表符或换行字符。  
+ KeyTip 必须包含1至3个大写字符, 不能包含空格、制表符或换行符。  
   
- Keytip 有时也称为访问密钥或加速器和用作激活控件的快捷组合键。 按下 ALT 键时，键提示将显示在功能区上。 如果内置控件或从其他加载项，你的快捷键提示与键提示冲突，Microsoft Office 可能会自动分配非冲突快捷键提示值。  
+ Keytip 有时称为 "访问键" 或 "加速器", 用作激活控件的快捷键组合。 按 ALT 键时, 功能区上将显示键提示。 如果 KeyTip 与内置控件或其他外接程序的 keytip 发生冲突, Microsoft Office 可能会自动分配不冲突的 KeyTip 值。  
   
- 有关详细信息，请参阅[使用键盘处理功能区程序](http://go.microsoft.com/fwlink/?LinkId=93523)。  
+ 有关详细信息, 请参阅[使用键盘处理功能区程序](http://go.microsoft.com/fwlink/?LinkId=93523)。  
   
  ]]></format>
         </remarks>
@@ -440,22 +443,22 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.OfficeImageId%2A>属性标识的控件显示 Office 图标。 属性值是一个字符串，标识`imageMso`所选图标的值。 在设计时或在运行时，可以设置此属性。 如果在运行时中更新此属性，该控件的外观被更新以反映更改。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.OfficeImageId%2A>属性标识控件显示的 Office 图标。 属性值是标识`imageMso`所选图标的值的字符串。 此属性可在设计时或运行时设置。 如果在运行时更新此属性, 控件的外观将更新以反映更改。  
   
- 有关一系列`imageMso`值，请参阅 Microsoft 下载中心页[Office 2010 外接程序： 图标库](http://go.microsoft.com/fwlink/?LinkID=220760)。  
+ 有关`imageMso`值的列表, 请参阅 Microsoft 下载中心页面[Office 2010 外接程序:图标库](http://go.microsoft.com/fwlink/?LinkID=220760)。  
   
- 如果忽略此属性<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.Image%2A>属性设置。 标识的图像<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.OfficeImageId%2A>属性可以稍快于标识的图像加载<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.Image%2A>属性，因为这些图像缓存在 Office 应用程序。  
+ 如果设置了<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.Image%2A>属性, 则忽略此属性。 由于图像缓存在<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.OfficeImageId%2A> Office 应用程序中, 因此可以比<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.Image%2A>属性标识的图像稍快地加载属性标识的图像。  
   
- <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ShowImage%2A>属性必须为`true`控件来显示图像。 当您将设置<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.OfficeImageId%2A>属性在设计时，Visual Studio 将自动设置<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ShowImage%2A>属性设置为`true`。 如果您设置<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.OfficeImageId%2A>在运行时属性，则你必须设置<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ShowImage%2A>属性设置为`true`在代码中。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ShowImage%2A> 属性`true`必须为, 控件才能显示图像。 在设计时设置<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.OfficeImageId%2A>属性时, Visual Studio 会将<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ShowImage%2A>属性自动设置为`true`。 如果在运行时<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.OfficeImageId%2A>设置属性, 必须在代码中<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ShowImage%2A>将属性设置为`true` 。  
   
    
   
 ## Examples  
- 下面的示例将 Microsoft Office 图标分配给在库控件中的两个项。  
+ 下面的示例将 Microsoft Office 图标分配给库控件中的两个项。  
   
- 若要运行此代码示例，必须首先执行以下步骤：  
+ 若要运行此代码示例, 必须首先执行以下步骤:  
   
-1.  添加**功能区 （可视化设计器）** 项通过使用 Visual Studio 中的 Office 项目模板创建的项目。  
+1.  向使用 Visual Studio 中的 Office 项目模板创建的项目添加 "**功能区 (可视化设计器)** " 项。  
   
 2.  将组添加到自定义选项卡。  
   
@@ -487,9 +490,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 可以在运行时仅在某些情况下设置此属性。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
+ 仅在某些情况下, 才能在运行时设置此属性。 有关详细信息, 请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
   
- <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.Position%2A>属性时库放置在功能区组中没有任何作用。  
+ 当<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.Position%2A>库位于功能区上的组中时, 属性不起作用。  
   
  ]]></format>
         </remarks>
@@ -514,9 +517,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 这<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>它包含更多的滚动<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem>超过了可显示的组件。  
+ 这<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>会滚动其组件是否<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem>比显示的组件多。  
   
- 可以在运行时仅在某些情况下设置此属性。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
+ 仅在某些情况下, 才能在运行时设置此属性。 有关详细信息, 请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
   
  ]]></format>
         </remarks>
@@ -541,9 +544,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ScreenTip%2A>值必须是长度小于 1024年个字符。  
+ 值<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ScreenTip%2A>的长度必须小于1024个字符。  
   
- 当<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.SuperTip%2A>设置属性，则<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ScreenTip%2A>值将显示的标题为<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.SuperTip%2A>。  
+ 设置属性时<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ScreenTip%2A> , 值显示<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.SuperTip%2A>为的标题。 <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.SuperTip%2A>  
   
  ]]></format>
         </remarks>
@@ -573,11 +576,11 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 当前选定的项只是以可视方式区分开来的项的其余部分如果<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ShowItemSelection%2A>属性设置为`true`。  
+ 如果<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ShowItemSelection%2A>将属性设置为`true`, 则当前选定的项仅与项的其余部分具有相同的外观。  
   
- 如果此<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>至少有一个<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem>在其<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.Items%2A>集合，然后<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.SelectedItem%2A>不保证是`null`。 默认情况下，第一个<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem>在<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.Items%2A>选择集合。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem> 如果它在其<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.Items%2A> <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery> 集合中至少有一个,则保证不是。`null` <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.SelectedItem%2A> 默认情况下, <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem> <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.Items%2A>集合中的第一个处于选中状态。  
   
- 此属性只能设置为<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem>组件中这<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>控件的<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.Items%2A>集合。  
+ 此属性只能设置为<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem>此<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>控件的<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.Items%2A>集合中的组件。  
   
  ]]></format>
         </remarks>
@@ -607,11 +610,11 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 更改<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.SelectedItemIndex%2A>属性返回的值更改<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.SelectedItem%2A>属性。 实际上，更改<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.SelectedItemIndex%2A>属性发生更改所选内容。  
+ 更改属性将更改由属性返回的值。 <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.SelectedItem%2A> <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.SelectedItemIndex%2A> 实际上, 更改<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.SelectedItemIndex%2A>属性会更改所选内容。  
   
- 分配给值<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.SelectedItemIndex%2A>必须为从 0 （零） 通过 (`Items.Count` -1)。  
+ 分配给的<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.SelectedItemIndex%2A>值必须介于 0 (零) 到 (`Items.Count` -1) 之间。  
   
- 如果<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.Items%2A>集合为空，则此属性返回-1。  
+ <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.Items%2A>如果集合为空, 则此属性返回-1。  
   
  ]]></format>
         </remarks>
@@ -636,13 +639,13 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此属性自动设置为`true`如果您设置<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Image%2A>， <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ImageName%2A>，或<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.OfficeImageId%2A>在设计时属性。 可以将其设置为`false`以与要隐藏此控件关联的图像。  
+ `true`如果在设计时<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Image%2A>设置、或<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.OfficeImageId%2A>属性, <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ImageName%2A>则此属性将自动设置为。 您可以将其设置`false`为, 以使与此控件关联的图像处于隐藏状态。  
   
- 设置<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Image%2A>， <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ImageName%2A>，或<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.OfficeImageId%2A>在运行时属性的值不更改<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ShowImage%2A>属性。  
+ 在运行<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.OfficeImageId%2A> <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ImageName%2A> <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Image%2A>时设置、或属性不会更改<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ShowImage%2A>属性的值。  
   
- 此属性不起作用的实例，此按钮上快速访问工具栏显示。  
+ 此属性对快速访问工具栏上显示的此按钮的实例无效。  
   
- 如果此属性设置为`true`，但没有与控件关联的图像，显示一个空白图像。  
+ 如果将此属性设置为`true`, 但没有与该控件关联的图像, 则会显示一个空白图像。  
   
  ]]></format>
         </remarks>
@@ -667,7 +670,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 可以在运行时仅在某些情况下设置此属性。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
+ 仅在某些情况下, 才能在运行时设置此属性。 有关详细信息, 请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
   
  ]]></format>
         </remarks>
@@ -692,7 +695,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 可以在运行时仅在某些情况下设置此属性。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
+ 仅在某些情况下, 才能在运行时设置此属性。 有关详细信息, 请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
   
  ]]></format>
         </remarks>
@@ -717,13 +720,13 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 设置<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ShowItemSelection%2A>属性设置为`false`不会导致当前所选内容已经被删除。 当前所选内容只是不是用户界面中直观地标识。  
+ 将属性设置为`false`不会导致当前的选择消失。 <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ShowItemSelection%2A> 当前所选内容只是在用户界面中未直观标识。  
   
- <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.SelectedItem%2A>保证不会`null`如果此<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>至少有一个<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem>中其<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.Items%2A>集合。 默认情况下，第一个<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem>在<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.Items%2A>选择集合。  
+ `null`如果<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.SelectedItem%2A>此<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem>在其集合中至少有一个, 则保证不为。 <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.Items%2A> <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery> 默认情况下, <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem> <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.Items%2A>集合中的第一个处于选中状态。  
   
- 如果<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ShowItemSelection%2A>属性设置为`true`，则<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.Click>事件的<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>仅当用户单击当前未选的项时引发。  
+ 如果将`true` <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.Click>属性设置为, 则仅当用户单击<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>当前未选择的项时, 才会引发的事件。 <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ShowItemSelection%2A>  
   
- 可以在运行时仅在某些情况下设置此属性。 有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
+ 仅在某些情况下, 才能在运行时设置此属性。 有关详细信息, 请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。  
   
  ]]></format>
         </remarks>
@@ -766,9 +769,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 字符串必须是长度小于 1024年个字符。  
+ 字符串的长度必须小于1024个字符。  
   
- <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.SuperTip%2A>下显示<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ScreenTip%2A>文本。 与不同<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ScreenTip%2A>，则<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.SuperTip%2A>启用换行符的字符串中。  
+ 显示<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.SuperTip%2A>在 " <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ScreenTip%2A>文本" 下。 与不同<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ScreenTip%2A>的是<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.SuperTip%2A> , 会在字符串中启用分行符。  
   
  ]]></format>
         </remarks>

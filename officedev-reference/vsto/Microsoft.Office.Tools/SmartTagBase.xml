@@ -1,5 +1,5 @@
 <Type Name="SmartTagBase" FullName="Microsoft.Office.Tools.SmartTagBase">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="a2557bf7c9f04413a0c9becd56a19712ae6edede" /><Meta Name="ms.sourcegitcommit" Value="5a5a038b6c783bec52842c940b22504bfc62a810" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/03/2018" /><Meta Name="ms.locfileid" Value="29432984" /></Metadata><TypeSignature Language="C#" Value="public interface SmartTagBase" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="05efed1b2e92aae2b98c6818e2454dae7699b0eb" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="68998995" /></Metadata><TypeSignature Language="C#" Value="public interface SmartTagBase" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract SmartTagBase" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.SmartTagBase" />
   <AssemblyInfo>
@@ -19,9 +19,6 @@
     <Attribute>
       <AttributeName>System.Runtime.InteropServices.Guid("1307c5bf-7322-4300-91a9-48393a86ea81")</AttributeName>
     </Attribute>
-    <Attribute>
-      <AttributeName>System.Runtime.InteropServices.TypeIdentifier</AttributeName>
-    </Attribute>
   </Attributes>
   <Docs>
     <summary>在 Office Word 和 Excel 解决方案中定义智能标记的共享功能。</summary>
@@ -29,12 +26,12 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.SmartTagBase> 是的基接口<xref:Microsoft.Office.Tools.Excel.SmartTag?displayProperty=fullName>和<xref:Microsoft.Office.Tools.Word.SmartTag?displayProperty=fullName>。 若要为 Word 或 Excel 的 Office 解决方案中创建智能标记，请使用`Globals.Factory.CreateSmartTag`方法来创建<xref:Microsoft.Office.Tools.Excel.SmartTag?displayProperty=fullName>或<xref:Microsoft.Office.Tools.Word.SmartTag?displayProperty=fullName>对象。  
+ <xref:Microsoft.Office.Tools.SmartTagBase>是<xref:Microsoft.Office.Tools.Excel.SmartTag?displayProperty=fullName> 和<xref:Microsoft.Office.Tools.Word.SmartTag?displayProperty=fullName>的基接口。 若要在 Word 或 Excel 的 Office 解决方案中创建智能标记, 请使用`Globals.Factory.CreateSmartTag`方法<xref:Microsoft.Office.Tools.Excel.SmartTag?displayProperty=fullName>创建或<xref:Microsoft.Office.Tools.Word.SmartTag?displayProperty=fullName>对象。  
   
  [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
   
 ## <a name="usage"></a>用法  
- 此类型旨在仅在项目中使用 Excel 2007 和 Word 2007。 Word 2010 和 Excel 2010 中已弃用智能标记。  
+ 此类型仅适用于 Excel 2007 和 Word 2007 的项目。 Word 2010 和 Excel 2010 中已弃用智能标记。  
   
  [!INCLUDE[vsto_net35mref](~/includes/vsto-net35mref-md.md)]  
   
@@ -61,12 +58,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 数组的大小必须预先确定的因为动态地将操作添加到智能标记会导致要重新加载的文档中的所有智能标记。  
+ 数组的大小必须是预先确定的, 因为向智能标记动态添加操作会导致文档中的所有智能标记重新加载。  
   
    
   
 ## Examples  
- 下面的代码示例将创建<xref:Microsoft.Office.Tools.Excel.SmartTag?displayProperty=fullName>，然后添加到操作<xref:Microsoft.Office.Tools.SmartTagBase.Actions%2A>属性。 此代码示例是为提供一个更大示例的一部分<xref:Microsoft.Office.Tools.Excel.Action?displayProperty=fullName>。  
+ 下面的代码示例创建一个<xref:Microsoft.Office.Tools.Excel.SmartTag?displayProperty=fullName> , 然后将一个操作添加<xref:Microsoft.Office.Tools.SmartTagBase.Actions%2A>到属性。 此代码示例是为提供的<xref:Microsoft.Office.Tools.Excel.Action?displayProperty=fullName>更大示例的一部分。  
   
  [!code-csharp[Trin_ExcelSmartTags#2](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelSmartTags/CS/Trin_ExcelSmartTags.cs#2)]
  [!code-vb[Trin_ExcelSmartTags#2](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelSmartTags/VB/ThisWorkbook.vb#2)]  
@@ -95,12 +92,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 顶部的智能标记菜单显示智能标记的名称。  
+ 智能标记的名称显示在智能标记菜单的顶部。  
   
    
   
 ## Examples  
- 下面的代码示例演示了一个处理程序<xref:Microsoft.Office.Tools.Excel.Action.Click?displayProperty=fullName>事件。 事件处理程序使用<xref:Microsoft.Office.Tools.SmartTagBase.Caption%2A>属性来显示智能标记的名称。 此代码示例是为提供一个更大示例的一部分<xref:Microsoft.Office.Tools.Excel.SmartTag?displayProperty=fullName>。  
+ 下面的代码示例演示<xref:Microsoft.Office.Tools.Excel.Action.Click?displayProperty=fullName>事件的处理程序。 事件处理程序使用<xref:Microsoft.Office.Tools.SmartTagBase.Caption%2A>属性来显示智能标记的名称。 此代码示例是为提供的<xref:Microsoft.Office.Tools.Excel.SmartTag?displayProperty=fullName>更大示例的一部分。  
   
  [!code-csharp[Trin_ExcelDerivedSmartTags#4](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelDerivedSmartTags/CS/CustomSmartTag.cs#4)]
  [!code-vb[Trin_ExcelDerivedSmartTags#4](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelDerivedSmartTags/VB/CustomSmartTag.vb#4)]  
@@ -128,12 +125,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用<xref:Microsoft.Office.Tools.RegexCollection.Add%2A>方法将正则表达式添加到的一套智能标记将识别的正则表达式。  
+ <xref:Microsoft.Office.Tools.RegexCollection.Add%2A>使用方法可将正则表达式添加到智能标记将识别的正则表达式集。  
   
    
   
 ## Examples  
- 下面的代码示例将创建<xref:Microsoft.Office.Tools.Excel.SmartTag?displayProperty=fullName>，然后使用<xref:Microsoft.Office.Tools.SmartTagBase.Expressions%2A>属性来添加正则表达式"[我&#124;我] ssue\s\d{5,6}"到智能标记识别的正则表达式的集合。 此代码示例是为提供一个更大示例的一部分<xref:Microsoft.Office.Tools.Excel.Action?displayProperty=fullName>。  
+ 下面的代码示例创建一个<xref:Microsoft.Office.Tools.Excel.SmartTag?displayProperty=fullName> , 然后<xref:Microsoft.Office.Tools.SmartTagBase.Expressions%2A>使用属性将正则表达式 "[i&#124;i I] ssue\s\d{5,6}" 添加到智能标记识别的正则表达式集合。 此代码示例是为提供的<xref:Microsoft.Office.Tools.Excel.Action?displayProperty=fullName>更大示例的一部分。  
   
  [!code-csharp[Trin_ExcelSmartTags#2](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelSmartTags/CS/Trin_ExcelSmartTags.cs#2)]
  [!code-vb[Trin_ExcelSmartTags#2](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelSmartTags/VB/ThisWorkbook.vb#2)]  
@@ -182,20 +179,20 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 每个智能标记类型定义由命名空间，以便其标识是唯一的。 命名空间是用于唯一地标识一组属于某个逻辑类别的 XML 标记的 XML 构造。 命名空间进行分组在一起以便于发现属性的相关的属性，并更重要的是，要保持该属性名称中唯一。  
+ 每个智能标记类型都由命名空间定义, 使其标识是唯一的。 命名空间是一个 XML 构造, 用于唯一标识属于逻辑类别的一组 XML 标记。 命名空间将相关属性组合在一起, 以便于属性发现, 更重要的是使属性名称保持唯一。  
   
- 属性名称是通过组合命名空间统一资源标识符 (URI) 和标记名称构成。 换而言之，属性名称组成的命名空间 URI 和标记名称的命名空间 URI。  
+ 属性名称是通过结合命名空间统一资源标识符 (URI) 和标记名称来构造的。 换言之, 属性名称由命名空间 URI 和命名空间 URI 的标记名称组成。  
   
- 同样，由唯一的命名空间 URI 和标记名称定义智能标记类型。 数字符号 （#） 追加到的命名空间 URI，用于根据标记名分隔开来的命名空间 URI。 格式如下所示： namespaceURI #tagname  
+ 同样, 智能标记类型由唯一的命名空间 URI 和标记名称定义。 数字符号 (#) 追加到命名空间 URI, 并用于将命名空间 URI 与其标记名称分隔开。 格式如下所示: namespaceURI # tagname  
   
- 智能标记类的一个示例是 urn： 架构-contoso-com:finance #StockTickerSymbol。 在这里，命名空间 URI 是 urn： 架构-contoso-com:finance，与 StockTickerSymbol 作为标记名称。 它们组合在一起窗体的属性，在这种情况下是智能标记类型的完全限定的名称。  
+ 智能标记类型的示例为 "urn: 架构-contoso-com: 财务 # StockTickerSymbol"。 此处, 命名空间 URI 为 urn: 架构-contoso-.com: 财经, 其中 StockTickerSymbol 作为标记名称。 它们组合在一起形成属性的完全限定名称, 在本例中为智能标记类型。  
   
- 智能标记类型为完全限定的 XML 标记的说明。 因此，每个智能标记类型唯一标识其命名空间除了根据标记名。 属性名称的 URI 部分可确保它是唯一的和明确。 可以使用命名空间区分具有相同的标记名称的两个属性。  
+ 智能标记类型是 XML 标记的完全限定说明。 因此, 除了命名空间, 每个智能标记类型都由其标记名称唯一标识。 属性名称的 URI 部分确保它是唯一的且明确的。 可以使用命名空间来区分具有相同标记名称的两个属性。  
   
    
   
 ## Examples  
- 下面的代码示例演示了一个处理程序<xref:Microsoft.Office.Tools.Excel.Action.Click?displayProperty=fullName>事件。 事件处理程序使用<xref:Microsoft.Office.Tools.SmartTagBase.SmartTagType%2A>属性来显示智能标记的唯一的命名空间标识符。 此代码示例是为提供一个更大示例的一部分<xref:Microsoft.Office.Tools.Excel.SmartTag?displayProperty=fullName>。  
+ 下面的代码示例演示<xref:Microsoft.Office.Tools.Excel.Action.Click?displayProperty=fullName>事件的处理程序。 事件处理程序使用<xref:Microsoft.Office.Tools.SmartTagBase.SmartTagType%2A>属性来显示智能标记的唯一命名空间标识符。 此代码示例是为提供的<xref:Microsoft.Office.Tools.Excel.SmartTag?displayProperty=fullName>更大示例的一部分。  
   
  [!code-csharp[Trin_ExcelDerivedSmartTags#4](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelDerivedSmartTags/CS/CustomSmartTag.cs#4)]
  [!code-vb[Trin_ExcelDerivedSmartTags#4](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelDerivedSmartTags/VB/CustomSmartTag.vb#4)]  
@@ -223,12 +220,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用<xref:System.Collections.Specialized.StringCollection.Add%2A>方法将字符串文本添加到的一套智能标记将识别的术语。  
+ <xref:System.Collections.Specialized.StringCollection.Add%2A>使用方法可将字符串文本添加到智能标记将识别的字词集。  
   
    
   
 ## Examples  
- 下面的代码示例将创建<xref:Microsoft.Office.Tools.Excel.SmartTag?displayProperty=fullName>，然后使用<xref:Microsoft.Office.Tools.SmartTagBase.Terms%2A>属性添加单词"`sale`"到集合的智能标记识别的术语。 此代码示例是为提供一个更大示例的一部分<xref:Microsoft.Office.Tools.Excel.Action?displayProperty=fullName>。  
+ 下面的代码示例创建一个<xref:Microsoft.Office.Tools.Excel.SmartTag?displayProperty=fullName> , 然后<xref:Microsoft.Office.Tools.SmartTagBase.Terms%2A>使用属性将单词 "`sale`" 添加到智能标记识别的字词的集合中。 此代码示例是为提供的<xref:Microsoft.Office.Tools.Excel.Action?displayProperty=fullName>更大示例的一部分。  
   
  [!code-csharp[Trin_ExcelSmartTags#2](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelSmartTags/CS/Trin_ExcelSmartTags.cs#2)]
  [!code-vb[Trin_ExcelSmartTags#2](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelSmartTags/VB/ThisWorkbook.vb#2)]  

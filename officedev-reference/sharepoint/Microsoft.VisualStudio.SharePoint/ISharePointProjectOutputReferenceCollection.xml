@@ -1,5 +1,5 @@
 <Type Name="ISharePointProjectOutputReferenceCollection" FullName="Microsoft.VisualStudio.SharePoint.ISharePointProjectOutputReferenceCollection">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="742c668d7cfe0135e4c8b6668a67e0043de1fe39" /><Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="02/21/2018" /><Meta Name="ms.locfileid" Value="29410390" /></Metadata><TypeSignature Language="C#" Value="public interface ISharePointProjectOutputReferenceCollection : Microsoft.VisualStudio.SharePoint.ISharePointCollection&lt;Microsoft.VisualStudio.SharePoint.ISharePointProjectOutputReference&gt;, System.Collections.Generic.IEnumerable&lt;Microsoft.VisualStudio.SharePoint.ISharePointProjectOutputReference&gt;, System.Collections.Specialized.INotifyCollectionChanged, System.ComponentModel.INotifyPropertyChanged" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="0e5b83b3b8b32deff90cfee634d9f5f2f49be3e2" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69007230" /></Metadata><TypeSignature Language="C#" Value="public interface ISharePointProjectOutputReferenceCollection : Microsoft.VisualStudio.SharePoint.ISharePointCollection&lt;Microsoft.VisualStudio.SharePoint.ISharePointProjectOutputReference&gt;, System.Collections.Generic.IEnumerable&lt;Microsoft.VisualStudio.SharePoint.ISharePointProjectOutputReference&gt;, System.Collections.Specialized.INotifyCollectionChanged, System.ComponentModel.INotifyPropertyChanged" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISharePointProjectOutputReferenceCollection implements class Microsoft.VisualStudio.SharePoint.ISharePointCollection`1&lt;class Microsoft.VisualStudio.SharePoint.ISharePointProjectOutputReference&gt;, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.VisualStudio.SharePoint.ISharePointProjectOutputReference&gt;, class System.Collections.IEnumerable, class System.Collections.Specialized.INotifyCollectionChanged, class System.ComponentModel.INotifyPropertyChanged" />
   <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectOutputReferenceCollection" />
   <AssemblyInfo>
@@ -14,6 +14,12 @@
       <InterfaceName>System.Collections.Generic.IEnumerable&lt;Microsoft.VisualStudio.SharePoint.ISharePointProjectOutputReference&gt;</InterfaceName>
     </Interface>
     <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;T&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
+    </Interface>
+    <Interface>
       <InterfaceName>System.Collections.Specialized.INotifyCollectionChanged</InterfaceName>
     </Interface>
     <Interface>
@@ -26,7 +32,7 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果你尝试添加项目输出引用具有与现有的引用相同的部署属性，则不添加任何新的输出引用。 相反，返回现有的引用。  
+ 如果尝试添加的项目输出引用具有与现有引用相同的部署属性, 则不会添加新的输出引用。 相反, 将返回现有的引用。  
   
  ]]></format>
     </remarks>
@@ -140,7 +146,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取对 SharePoint 项目项的引用。</summary>
-        <value>表示 SharePoint 项目项引用的对象。</value>
+        <value>一个对象, 表示 SharePoint 项目项引用。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -162,8 +168,7 @@
       <Docs>
         <param name="item">要删除的 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectOutputReference" /> 引用。</param>
         <summary>从集合中删除指定的项目输出引用。 但是，此方法不会删除 <see langword="Add" /> 方法添加的项目引用。</summary>
-        <returns>
-          如果删除操作成功，则为 <see langword="True" />；否则为 <see langword="false" />。</returns>
+        <returns>如果删除操作成功，则为 <see langword="True" />；否则为 <see langword="false" />。</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

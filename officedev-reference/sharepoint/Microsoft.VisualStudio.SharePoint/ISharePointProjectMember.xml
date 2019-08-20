@@ -1,5 +1,5 @@
 <Type Name="ISharePointProjectMember" FullName="Microsoft.VisualStudio.SharePoint.ISharePointProjectMember">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="36e6a0a312da49dbe34fb70c91742e9814f318e9" /><Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="02/21/2018" /><Meta Name="ms.locfileid" Value="29409961" /></Metadata><TypeSignature Language="C#" Value="public interface ISharePointProjectMember : Microsoft.VisualStudio.SharePoint.IAnnotatedObject, Microsoft.VisualStudio.SharePoint.INotifyObjectDisposed, Microsoft.VisualStudio.SharePoint.INotifyObjectDisposing, System.ComponentModel.INotifyPropertyChanged" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="5db99d4cbc92ab5b903c7507909797b5207de5b3" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69007385" /></Metadata><TypeSignature Language="C#" Value="public interface ISharePointProjectMember : Microsoft.VisualStudio.SharePoint.IAnnotatedObject, Microsoft.VisualStudio.SharePoint.INotifyObjectDisposed, Microsoft.VisualStudio.SharePoint.INotifyObjectDisposing, System.ComponentModel.INotifyPropertyChanged" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISharePointProjectMember implements class Microsoft.VisualStudio.SharePoint.IAnnotatedObject, class Microsoft.VisualStudio.SharePoint.INotifyObjectDisposed, class Microsoft.VisualStudio.SharePoint.INotifyObjectDisposing, class System.ComponentModel.INotifyPropertyChanged" />
   <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectMember" />
   <AssemblyInfo>
@@ -44,9 +44,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法循环访问此的所有子项<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectMember>实例中**解决方案资源管理器**并设置其<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectMember.IsExpanded%2A>属性`false`。  
+ <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectMember>此方法在**解决方案资源管理器**中循环访问此实例的所有子项目, 并<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectMember.IsExpanded%2A>将其`false`属性设置为。  
   
- 此方法不会更改的值<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectMember.IsExpanded%2A>此属性<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectMember>实例。  
+ 此方法不更改此<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectMember.IsExpanded%2A> <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectMember>实例的属性值。  
   
  ]]></format>
         </remarks>
@@ -66,7 +66,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取项目成员文件或目录的完整源路径。</summary>
-        <value>表示一个路径的字符串。</value>
+        <value>表示路径的字符串。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -84,7 +84,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取解决方案资源管理器中显示的项目成员节点的图标。</summary>
-        <value>表示一个图标的图像对象。</value>
+        <value>表示图标的图像对象。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -102,7 +102,7 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置是否在解决方案资源管理器中展开该节点。</summary>
-        <value>一个布尔值，表示是否已展开节点。</value>
+        <value>一个布尔值, 表示是否展开节点。</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -120,21 +120,21 @@
       </ReturnValue>
       <Docs>
         <summary>获取解决方案资源管理器中显示的项目成员节点的名称。</summary>
-        <value>表示项目节点的名称的字符串。</value>
+        <value>一个表示项目节点名称的字符串。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 情况下<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature>，  
+ 对于<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature>,  
   
- `Name`属性返回的功能文件夹名称，而不是功能文件名称。 若要获取的功能文件名称，请调用<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature.FeatureFile%2A>。  
+ 属性`Name`将返回功能文件夹名称, 而不是功能文件名称。 若要获取功能文件名, 请调用<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature.FeatureFile%2A>。  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="NameChanged">
-      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.VisualStudio.SharePoint.NameChangedEventArgs&gt; NameChanged;" />
+      <MemberSignature Language="C#" Value="event EventHandler&lt;Microsoft.VisualStudio.SharePoint.NameChangedEventArgs&gt; NameChanged;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.VisualStudio.SharePoint.NameChangedEventArgs&gt; NameChanged" />
       <MemberSignature Language="DocId" Value="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectMember.NameChanged" />
       <MemberType>Event</MemberType>

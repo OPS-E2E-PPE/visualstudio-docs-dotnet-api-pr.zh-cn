@@ -1,5 +1,5 @@
 <Type Name="ListObjectChangeHandler" FullName="Microsoft.Office.Tools.Excel.ListObjectChangeHandler">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="ddecf8535f76d981337e46e71d906e6f0a663b0e" /><Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="02/21/2018" /><Meta Name="ms.locfileid" Value="29429747" /></Metadata><TypeSignature Language="C#" Value="public delegate void ListObjectChangeHandler(Range targetRange, ListRanges changedRanges);" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="adc3e98135e9678692eb26903185d2b2946d2aca" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69004763" /></Metadata><TypeSignature Language="C#" Value="public delegate void ListObjectChangeHandler(Range targetRange, ListRanges changedRanges);" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ListObjectChangeHandler extends System.MulticastDelegate" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Excel.ListObjectChangeHandler" />
   <AssemblyInfo>
@@ -24,12 +24,12 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 创建 <xref:Microsoft.Office.Tools.Excel.ListObjectChangeHandler> 委托时，需要标识将处理该事件的方法。 若要将事件与事件处理程序关联，请将该委托的一个实例添加到事件中。 每次事件发生时，除非移除了该委托调用事件处理程序方法。  
+ 创建 <xref:Microsoft.Office.Tools.Excel.ListObjectChangeHandler> 委托时，需要标识将处理该事件的方法。 若要将事件与事件处理程序关联，请将该委托的一个实例添加到事件中。 除非删除委托, 否则只要发生事件, 就会调用事件处理程序方法。  
   
    
   
 ## Examples  
- 下面的代码示例创建<xref:Microsoft.Office.Tools.Excel.ListObject>和<xref:Microsoft.Office.Tools.Excel.ListObject.Change>事件处理程序。 若要引发<xref:Microsoft.Office.Tools.Excel.ListObject.Change>事件，将文本添加到中的单元格之一<xref:Microsoft.Office.Tools.Excel.ListObject>然后按 ENTER。  
+ 下面的代码示例创建一个<xref:Microsoft.Office.Tools.Excel.ListObject>和一个<xref:Microsoft.Office.Tools.Excel.ListObject.Change>事件处理程序。 若要引发<xref:Microsoft.Office.Tools.Excel.ListObject.Change>事件, 请将文本添加到<xref:Microsoft.Office.Tools.Excel.ListObject>中的一个单元格, 然后按 enter。  
   
  [!code-csharp[Trin_ExcelListObject#12](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelListObject/CS/Trin_ExcelListObject.cs#12)]
  [!code-vb[Trin_ExcelListObject#12](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelListObject/VB/Sheet1.vb#12)]  

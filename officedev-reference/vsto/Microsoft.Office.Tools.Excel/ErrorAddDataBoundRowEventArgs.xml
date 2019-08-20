@@ -1,5 +1,5 @@
 <Type Name="ErrorAddDataBoundRowEventArgs" FullName="Microsoft.Office.Tools.Excel.ErrorAddDataBoundRowEventArgs">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="018b6377ebcf058e3a74c0091371a756b82e61b1" /><Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="02/21/2018" /><Meta Name="ms.locfileid" Value="29431177" /></Metadata><TypeSignature Language="C#" Value="public interface ErrorAddDataBoundRowEventArgs" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="8ca9565feae3f21930301b7ac9173e83d78767b2" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69005019" /></Metadata><TypeSignature Language="C#" Value="public interface ErrorAddDataBoundRowEventArgs" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ErrorAddDataBoundRowEventArgs" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Excel.ErrorAddDataBoundRowEventArgs" />
   <AssemblyInfo>
@@ -18,14 +18,14 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.ListObject.ErrorAddDataBoundRow>事件由引发<xref:Microsoft.Office.Tools.Excel.ListObject>如果尝试将新行添加到数据源过程中发生异常的控件绑定到<xref:Microsoft.Office.Tools.Excel.ListObject>。 <xref:Microsoft.Office.Tools.Excel.ErrorAddDataBoundRowEventArgs.Item%2A>属性可以用于获取新项<xref:Microsoft.Office.Tools.Excel.ListObject>尝试添加。 <xref:Microsoft.Office.Tools.Excel.ErrorAddDataBoundRowEventArgs.InnerException%2A>属性提供已引发的异常和<xref:Microsoft.Office.Tools.Excel.ErrorAddDataBoundRowEventArgs.Retry%2A>属性可以用于指示是否应进行另一个尝试添加此行。  
+ 如果<xref:Microsoft.Office.Tools.Excel.ListObject.ErrorAddDataBoundRow>在将新行添加<xref:Microsoft.Office.Tools.Excel.ListObject>到绑定到的<xref:Microsoft.Office.Tools.Excel.ListObject>数据源的过程中发生异常, 则控件将引发该事件。 属性可用于获取<xref:Microsoft.Office.Tools.Excel.ListObject>尝试添加的新项。 <xref:Microsoft.Office.Tools.Excel.ErrorAddDataBoundRowEventArgs.Item%2A> 属性提供引发的异常, <xref:Microsoft.Office.Tools.Excel.ErrorAddDataBoundRowEventArgs.Retry%2A>属性可用于指示是否应进行其他尝试添加此行。 <xref:Microsoft.Office.Tools.Excel.ErrorAddDataBoundRowEventArgs.InnerException%2A>  
   
    
   
 ## Examples  
- 下面的代码示例创建<xref:System.Data.DataTable>和<xref:Microsoft.Office.Tools.Excel.ListObject>，并将绑定<xref:Microsoft.Office.Tools.Excel.ListObject>到<xref:System.Data.DataTable>。 然后，它创建<xref:Microsoft.Office.Tools.Excel.ListObject.ErrorAddDataBoundRow>事件处理程序。 若要测试事件，手动向其中添加新行<xref:Microsoft.Office.Tools.Excel.ListObject>输入姓氏"通道"和第一个名称。 事件处理程序会显示一条消息。  
+ 下面<xref:System.Data.DataTable>的代码示例创建<xref:Microsoft.Office.Tools.Excel.ListObject>和, <xref:System.Data.DataTable>并将绑定<xref:Microsoft.Office.Tools.Excel.ListObject>到。 然后, 创建一个<xref:Microsoft.Office.Tools.Excel.ListObject.ErrorAddDataBoundRow>事件处理程序。 若要测试事件, 请将新行手动添加到<xref:Microsoft.Office.Tools.Excel.ListObject> , 并输入姓氏 "更改" 和名字。 事件处理程序将显示一条消息。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_ExcelListObject#20](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelListObject/CS/Trin_ExcelListObject.cs#20)]
  [!code-vb[Trin_ExcelListObject#20](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelListObject/VB/Sheet1.vb#20)]  
@@ -53,7 +53,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.Excel.ListObject.ErrorAddDataBoundRow>作为尝试将新行添加到数据源时出现异常的直接结果引发事件。 使用<xref:Microsoft.Office.Tools.Excel.ErrorAddDataBoundRowEventArgs.InnerException%2A>属性来获取与此错误引发的异常。 例如，如果<xref:System.Data.DataTable>，它绑定到<xref:Microsoft.Office.Tools.Excel.ListObject>控件不允许将一个列`null`，和用户未指定此列的值，尝试将该行添加导致<xref:System.Data.NoNullAllowedException>被引发。  
+ 当尝试向数据源中添加新行时,事件将作为异常的直接结果引发。<xref:Microsoft.Office.Tools.Excel.ListObject.ErrorAddDataBoundRow> <xref:Microsoft.Office.Tools.Excel.ErrorAddDataBoundRowEventArgs.InnerException%2A>使用属性可获取导致此错误的异常。 <xref:System.Data.DataTable>例如, 如果绑定<xref:Microsoft.Office.Tools.Excel.ListObject>到控件的不`null`允许使用列, 并且用户未指定此列的值, 则尝试添加行将导致引发一个的<xref:System.Data.NoNullAllowedException> 。  
   
  ]]></format>
         </remarks>
@@ -78,7 +78,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 当<xref:Microsoft.Office.Tools.Excel.ListObject>绑定到<xref:System.Data.DataTable>，该项应当是<xref:System.Data.DataRowView>而不是<xref:System.Data.DataRow>。  
+ 当绑定<xref:System.Data.DataRowView>到时, 项将<xref:System.Data.DataRow>是而不是。 <xref:System.Data.DataTable> <xref:Microsoft.Office.Tools.Excel.ListObject>  
   
  ]]></format>
         </remarks>
@@ -98,13 +98,12 @@
       </ReturnValue>
       <Docs>
         <summary>获取或设置一个值，该值指示 <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 是否应该再次尝试添加此项。</summary>
-        <value>
-          <see langword="true" /> 如果应进行另一个尝试;否则为<see langword="false" />。 默认值为 <see langword="false" />。</value>
+        <value><see langword="true" />如果应进行其他尝试, 则为;否则为<see langword="false" />。 默认值为 <see langword="false" />。</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果<xref:Microsoft.Office.Tools.Excel.ListObject>添加新行中，在尝试时遇到错误<xref:Microsoft.Office.Tools.Excel.ListObject.ErrorAddDataBoundRow>引发事件。 开发人员可以处理此事件，并尝试解决出现的任何错误。  
+ 如果尝试添加新行时<xref:Microsoft.Office.Tools.Excel.ListObject.ErrorAddDataBoundRow> 遇到错误,则会引发事件。<xref:Microsoft.Office.Tools.Excel.ListObject> 开发人员可以处理此事件并尝试修复发生的任何错误。  
   
  ]]></format>
         </remarks>

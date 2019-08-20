@@ -1,5 +1,5 @@
 <Type Name="AddInBase" FullName="Microsoft.Office.Tools.AddInBase">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="c8e05201627472cd3eea1b226b16a00efa3c13fb" /><Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="09/19/2018" /><Meta Name="ms.locfileid" Value="46457295" /></Metadata><TypeSignature Language="C#" Value="public abstract class AddInBase : IDisposable, Microsoft.Office.Tools.IAddInExtension, System.ComponentModel.IComponent, System.ComponentModel.ISupportInitialize, System.Windows.Forms.IBindableComponent" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="1fc5a93b75178fccf6ccc6681c74c7c84f14cf4a" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="68999418" /></Metadata><TypeSignature Language="C#" Value="public abstract class AddInBase : IDisposable, Microsoft.Office.Tools.IAddInExtension, System.ComponentModel.IComponent, System.ComponentModel.ISupportInitialize, System.Windows.Forms.IBindableComponent" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit AddInBase extends System.Object implements class Microsoft.Office.Tools.EntryPoint, class Microsoft.Office.Tools.IAddInExtension, class Microsoft.Office.Tools.IExtension, class System.ComponentModel.IComponent, class System.ComponentModel.ISupportInitialize, class System.IDisposable, class System.Windows.Forms.IBindableComponent" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.AddInBase" />
   <AssemblyInfo>
@@ -11,7 +11,13 @@
   </Base>
   <Interfaces>
     <Interface>
+      <InterfaceName>Microsoft.Office.Tools.EntryPoint</InterfaceName>
+    </Interface>
+    <Interface>
       <InterfaceName>Microsoft.Office.Tools.IAddInExtension</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>Microsoft.Office.Tools.IExtension</InterfaceName>
     </Interface>
     <Interface>
       <InterfaceName>System.ComponentModel.IComponent</InterfaceName>
@@ -37,7 +43,7 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.AddInBase>类提供由所有加载项通过使用 Visual Studio 中的 Office 开发工具创建的共享的功能。 `ThisAddIn`外接程序项目中的类派生其大多数成员从<xref:Microsoft.Office.Tools.AddInBase>类。 有关详细信息，请参阅[Programming VSTO Add-ins](/visualstudio/vsto/programming-vsto-add-ins)。  
+ <xref:Microsoft.Office.Tools.AddInBase>类提供通过使用 Visual Studio 中的 Office 开发工具创建的所有外接程序所共享的功能。 外`ThisAddIn`接程序项目中的类<xref:Microsoft.Office.Tools.AddInBase>从类派生其大多数成员。 有关详细信息，请参阅 [Programming VSTO Add-Ins](/visualstudio/vsto/programming-vsto-add-ins)。  
   
 ## <a name="usage"></a>用法  
  [!INCLUDE[vsto_net4utilities](~/includes/vsto-net4utilities-md.md)]  
@@ -71,7 +77,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 无法创建<xref:Microsoft.Office.Tools.AddInBase>以编程方式主机项。 请改用`ThisAddIn`外接程序项目中自动创建的类。 `ThisAddIn` 类派生自 <xref:Microsoft.Office.Tools.AddInBase>。 有关详细信息，请参阅[Programming VSTO Add-ins](/visualstudio/vsto/programming-vsto-add-ins)。  
+ 不能以<xref:Microsoft.Office.Tools.AddInBase>编程方式创建宿主项。 而应使用在`ThisAddIn`外接程序项目中自动创建的类。 `ThisAddIn` 类派生自 <xref:Microsoft.Office.Tools.AddInBase>。 有关详细信息，请参阅 [Programming VSTO Add-Ins](/visualstudio/vsto/programming-vsto-add-ins)。  
   
  ]]></format>
         </remarks>
@@ -96,7 +102,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:Microsoft.Office.Tools.AddInBase>类用于扩展<xref:Microsoft.Office.Tools.AddIn>通过实现对象<xref:Microsoft.Office.Tools.IAddInExtension>接口。  
+ 类通过<xref:Microsoft.Office.Tools.AddIn> 实现<xref:Microsoft.Office.Tools.IAddInExtension>接口来扩展对象。 <xref:Microsoft.Office.Tools.AddInBase>  
   
  ]]></format>
         </remarks>
@@ -107,6 +113,10 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void BeginInit() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.AddInBase.BeginInit" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Office.Tools.EntryPoint.BeginInit</InterfaceMember>
+        <InterfaceMember>M:System.ComponentModel.ISupportInitialize.BeginInit</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -125,6 +135,9 @@
       <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.BindingContext BindingContext" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.AddInBase.BindingContext" />
       <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:System.Windows.Forms.IBindableComponent.BindingContext</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -160,6 +173,9 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Microsoft.Office.Core.IRibbonExtensibility CreateRibbonExtensibilityObject() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.AddInBase.CreateRibbonExtensibilityObject" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Office.Tools.IAddInExtension.CreateRibbonExtensibilityObject</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -175,13 +191,13 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 重写此方法以提供 Microsoft Office 应用程序的实现`Microsoft.Office.Core.IRibbonExtensibility`接口，或者如果你有多个功能区在项目中，并且你想要指定功能区显示在运行时。  
+ 重写此方法, 以向 Microsoft Office 应用程序提供`Microsoft.Office.Core.IRibbonExtensibility`接口的实现, 或者如果你在项目中有多个功能区, 并且想要指定要在运行时显示的功能区, 则为。  
   
- 无需重写此方法返回通过使用添加到项目的功能区**功能区 （可视化设计器）** 项模板。 默认情况下，此方法返回<xref:Microsoft.Office.Tools.Ribbon.RibbonManager>对象，表示所有**功能区 （可视化设计器）** 项目中的项。 有关详细信息，请参阅[功能区概述](/visualstudio/vsto/ribbon-overview)。  
+ 您不必重写此方法即可返回通过使用 "**功能区 (可视化设计器)** " 项模板添加到项目中的功能区。 默认情况下, 此方法返回<xref:Microsoft.Office.Tools.Ribbon.RibbonManager>一个对象, 该对象表示项目中的所有 "**功能区 (可视化设计器)** " 项。 有关详细信息, 请参阅[功能区概述](/visualstudio/vsto/ribbon-overview)。  
   
- 必须重写<xref:Microsoft.Office.Tools.AddInBase.CreateRibbonExtensibilityObject%2A>或<xref:Microsoft.Office.Tools.AddInBase.RequestService%2A>方法来返回功能区中的项目中使用添加**功能区 (XML)** 项模板。 详细了解如何重写<xref:Microsoft.Office.Tools.AddInBase.CreateRibbonExtensibilityObject%2A>方法，请参阅[功能区 XML](/visualstudio/vsto/ribbon-xml)。  
+ 您必须重写<xref:Microsoft.Office.Tools.AddInBase.CreateRibbonExtensibilityObject%2A>或<xref:Microsoft.Office.Tools.AddInBase.RequestService%2A>方法才能在您的项目中返回通过使用 "**功能区 (XML)** " 项模板添加的功能区。 有关如何重写<xref:Microsoft.Office.Tools.AddInBase.CreateRibbonExtensibilityObject%2A>方法的详细信息, 请参阅[功能区 XML](/visualstudio/vsto/ribbon-xml)。  
   
- 详细了解如何重写<xref:Microsoft.Office.Tools.AddInBase.RequestService%2A>方法，请参阅[自定义 UI 功能 By Using Extensibility Interfaces](/visualstudio/vsto/customizing-ui-features-by-using-extensibility-interfaces)。  
+ 有关如何重写<xref:Microsoft.Office.Tools.AddInBase.RequestService%2A>方法的详细信息, 请参阅[使用扩展性接口自定义 UI 功能](/visualstudio/vsto/customizing-ui-features-by-using-extensibility-interfaces)。  
   
  ]]></format>
         </remarks>
@@ -192,6 +208,9 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Microsoft.Office.Tools.Ribbon.IRibbonExtension[] CreateRibbonObjects() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.AddInBase.CreateRibbonObjects" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Office.Tools.IAddInExtension.CreateRibbonObjects</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -207,9 +226,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 默认实现调用此方法<xref:Microsoft.Office.Tools.AddInBase.CreateRibbonExtensibilityObject%2A>方法<xref:Microsoft.Office.Tools.AddInBase>类时该项目包含**功能区 （可视化设计器）** 项。  
+ 当项目包含<xref:Microsoft.Office.Tools.AddInBase.CreateRibbonExtensibilityObject%2A> **功能区 (可视化设计器)** 项时, <xref:Microsoft.Office.Tools.AddInBase>类的方法的默认实现将调用此方法。  
   
- 如果你想要指定功能区显示在运行时，重写此方法。 此外可以重写<xref:Microsoft.Office.Tools.AddInBase.CreateRibbonExtensibilityObject%2A>方法，以指定运行时功能区上显示。 有关详细信息，请参阅[功能区概述](/visualstudio/vsto/ribbon-overview)。  
+ 如果要指定要在运行时显示的功能区, 请重写此方法。 还可以重写<xref:Microsoft.Office.Tools.AddInBase.CreateRibbonExtensibilityObject%2A>方法, 以指定要在运行时显示的功能区。 有关详细信息, 请参阅[功能区概述](/visualstudio/vsto/ribbon-overview)。  
   
  ]]></format>
         </remarks>
@@ -220,6 +239,9 @@
       <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.ControlBindingsCollection DataBindings" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.AddInBase.DataBindings" />
       <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:System.Windows.Forms.IBindableComponent.DataBindings</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -256,6 +278,9 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.AddInBase.Dispose" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -270,9 +295,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 不要调用<xref:Microsoft.Office.Tools.AddInBase.Dispose%2A>方法自己。 外接程序卸载时，[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]清理外接程序使用的所有资源。  
+ 不要自己调用<xref:Microsoft.Office.Tools.AddInBase.Dispose%2A>方法。 卸载外接程序时, 将清理外[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]接程序使用的所有资源。  
   
- 有关详细信息<xref:Microsoft.Office.Tools.AddInBase.Dispose%2A>方法，请参阅[清理了非托管资源](http://msdn.microsoft.com/library/a17b0066-71c2-4ba4-9822-8e19332fc213)。  
+ 有关<xref:Microsoft.Office.Tools.AddInBase.Dispose%2A>方法的详细信息, 请参阅[清理非托管资源](http://msdn.microsoft.com/library/a17b0066-71c2-4ba4-9822-8e19332fc213)。  
   
  ]]></format>
         </remarks>
@@ -283,6 +308,9 @@
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Disposed" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.AddInBase.Disposed" />
       <MemberType>Event</MemberType>
+      <Implements>
+        <InterfaceMember>E:System.ComponentModel.IComponent.Disposed</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -300,6 +328,10 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndInit() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.AddInBase.EndInit" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Office.Tools.EntryPoint.EndInit</InterfaceMember>
+        <InterfaceMember>M:System.ComponentModel.ISupportInitialize.EndInit</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -318,6 +350,9 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void FinishInitialization() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.AddInBase.FinishInitialization" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Office.Tools.EntryPoint.FinishInitialization</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -386,6 +421,9 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Initialize() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.AddInBase.Initialize" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Office.Tools.EntryPoint.Initialize</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -404,6 +442,9 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void InitializeDataBindings() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.AddInBase.InitializeDataBindings" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Office.Tools.EntryPoint.InitializeDataBindings</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -440,6 +481,9 @@
       <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void Microsoft.Office.Tools.EntryPoint.BeginInit() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.AddInBase.Microsoft#Office#Tools#EntryPoint#BeginInit" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Office.Tools.EntryPoint.BeginInit</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -458,6 +502,9 @@
       <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void Microsoft.Office.Tools.EntryPoint.EndInit() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.AddInBase.Microsoft#Office#Tools#EntryPoint#EndInit" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Office.Tools.EntryPoint.EndInit</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -476,6 +523,9 @@
       <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void Microsoft.Office.Tools.EntryPoint.FinishInitialization() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.AddInBase.Microsoft#Office#Tools#EntryPoint#FinishInitialization" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Office.Tools.EntryPoint.FinishInitialization</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -494,6 +544,9 @@
       <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void Microsoft.Office.Tools.EntryPoint.Initialize() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.AddInBase.Microsoft#Office#Tools#EntryPoint#Initialize" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Office.Tools.EntryPoint.Initialize</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -512,6 +565,9 @@
       <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void Microsoft.Office.Tools.EntryPoint.InitializeDataBindings() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.AddInBase.Microsoft#Office#Tools#EntryPoint#InitializeDataBindings" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Office.Tools.EntryPoint.InitializeDataBindings</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -530,6 +586,9 @@
       <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void Microsoft.Office.Tools.EntryPoint.OnShutdown() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.AddInBase.Microsoft#Office#Tools#EntryPoint#OnShutdown" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Office.Tools.EntryPoint.OnShutdown</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -548,6 +607,9 @@
       <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void Microsoft.Office.Tools.EntryPoint.OnStartup() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.AddInBase.Microsoft#Office#Tools#EntryPoint#OnStartup" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Office.Tools.EntryPoint.OnStartup</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -566,6 +628,9 @@
       <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class Microsoft.Office.Core.IRibbonExtensibility Microsoft.Office.Tools.IAddInExtension.CreateRibbonExtensibilityObject() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.AddInBase.Microsoft#Office#Tools#IAddInExtension#CreateRibbonExtensibilityObject" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Office.Tools.IAddInExtension.CreateRibbonExtensibilityObject</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -585,6 +650,9 @@
       <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class Microsoft.Office.Tools.Ribbon.IRibbonExtension[] Microsoft.Office.Tools.IAddInExtension.CreateRibbonObjects() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.AddInBase.Microsoft#Office#Tools#IAddInExtension#CreateRibbonObjects" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Office.Tools.IAddInExtension.CreateRibbonObjects</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -604,6 +672,9 @@
       <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object Microsoft.Office.Tools.IAddInExtension.RequestComAddInAutomationService() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.AddInBase.Microsoft#Office#Tools#IAddInExtension#RequestComAddInAutomationService" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Office.Tools.IAddInExtension.RequestComAddInAutomationService</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -623,6 +694,9 @@
       <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object Microsoft.Office.Tools.IAddInExtension.RequestService(valuetype System.Guid serviceGuid) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.AddInBase.Microsoft#Office#Tools#IAddInExtension#RequestService(System.Guid)" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Office.Tools.IAddInExtension.RequestService(System.Guid)</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -645,6 +719,9 @@
       <MemberSignature Language="ILAsm" Value=".property instance object Microsoft.Office.Tools.IExtension.ExtensionBase" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.AddInBase.Microsoft#Office#Tools#IExtension#ExtensionBase" />
       <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Microsoft.Office.Tools.IExtension.ExtensionBase</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -663,6 +740,9 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnShutdown() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.AddInBase.OnShutdown" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Office.Tools.EntryPoint.OnShutdown</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -677,7 +757,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要运行代码，只需外接程序卸载之前，将代码添加到`ThisAddIn_Shutdown`中的方法`ThisAddIn`类。 此方法是默认事件处理程序<xref:Microsoft.Office.Tools.AddInBase.Shutdown>事件。 有关详细信息，请参阅[Events in Office Projects](/visualstudio/vsto/events-in-office-projects)。 有关详细信息`ThisAddIn`类，请参阅[VSTO 外接程序编程](/visualstudio/vsto/programming-vsto-add-ins)。  
+ 若要在卸载外接程序前运行代码, 请将代码添加到`ThisAddIn_Shutdown` `ThisAddIn`类中的方法。 此方法是<xref:Microsoft.Office.Tools.AddInBase.Shutdown>事件的默认事件处理程序。 有关详细信息，请参阅 [Events in Office Projects](/visualstudio/vsto/events-in-office-projects)。 有关`ThisAddIn`类的详细信息, 请参阅[VSTO 外接程序编程](/visualstudio/vsto/programming-vsto-add-ins)。  
   
  ]]></format>
         </remarks>
@@ -688,6 +768,9 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnStartup() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.AddInBase.OnStartup" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Office.Tools.EntryPoint.OnStartup</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -702,7 +785,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 若要运行的代码加载外接程序时，将代码添加到`ThisAddIn_Startup`中的方法`ThisAddIn`类。 此方法是默认事件处理程序<xref:Microsoft.Office.Tools.AddInBase.Startup>事件。 有关详细信息，请参阅[Events in Office Projects](/visualstudio/vsto/events-in-office-projects)。 有关详细信息`ThisAddIn`类，请参阅[VSTO 外接程序编程](/visualstudio/vsto/programming-vsto-add-ins)。  
+ 若要在加载外接程序时运行代码, 请将代码添加`ThisAddIn_Startup`到`ThisAddIn`类中的方法。 此方法是<xref:Microsoft.Office.Tools.AddInBase.Startup>事件的默认事件处理程序。 有关详细信息，请参阅 [Events in Office Projects](/visualstudio/vsto/events-in-office-projects)。 有关`ThisAddIn`类的详细信息, 请参阅[VSTO 外接程序编程](/visualstudio/vsto/programming-vsto-add-ins)。  
   
  ]]></format>
         </remarks>
@@ -713,6 +796,9 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance object RequestComAddInAutomationService() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.AddInBase.RequestComAddInAutomationService" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Office.Tools.IAddInExtension.RequestComAddInAutomationService</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -728,16 +814,16 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 重写此方法以公开外接程序向其他解决方案中的对象。 这包括其他外接程序和文档级自定义项中的相同应用程序进程、 VBA 代码和外部自动化代码运行。  
+ 重写此方法, 以向其他解决方案公开外接程序中的对象。 这包括在相同的应用程序进程中运行的其他外接程序和文档级自定义项、VBA 代码和外部自动化代码。  
   
- 返回的对象必须是公共的它必须是对于 COM 可见，并且必须公开[IDispatch](http://msdn.microsoft.com/en-us/ebbff4bc-36b2-4861-9efa-ffa45e013eb5)接口。 如果您返回的对象不满足这些要求[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]将引发<xref:System.InvalidCastException>后它会调用您的实现。  
+ 返回的对象必须是公共的, 它必须对 COM 可见, 并且必须公开[IDispatch](http://msdn.microsoft.com/en-us/ebbff4bc-36b2-4861-9efa-ffa45e013eb5)接口。 如果返回的对象不满足这些要求, [!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]则将在调用实现<xref:System.InvalidCastException>后引发。  
   
- 有关详细信息，请参阅 [从其他 Office 解决方案调用 VSTO 外接程序中的代码](/visualstudio/vsto/calling-code-in-vsto-add-ins-from-other-office-solutions)。  
+ 有关详细信息，请参阅 [Calling Code in VSTO Add-ins from Other Office Solutions](/visualstudio/vsto/calling-code-in-vsto-add-ins-from-other-office-solutions)。  
   
    
   
 ## Examples  
- 有关演示如何重写的代码示例<xref:Microsoft.Office.Tools.AddInBase.RequestComAddInAutomationService%2A>方法，请参阅[演练： VSTO 外接程序中从 VBA 调用代码](/visualstudio/vsto/walkthrough-calling-code-in-a-vsto-add-in-from-vba)。  
+ 有关演示如何重写<xref:Microsoft.Office.Tools.AddInBase.RequestComAddInAutomationService%2A>方法的代码示例, 请参阅[演练:从 VBA](/visualstudio/vsto/walkthrough-calling-code-in-a-vsto-add-in-from-vba)调用 VSTO 外接程序中的代码。  
   
  ]]></format>
         </remarks>
@@ -748,6 +834,9 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance object RequestService(valuetype System.Guid serviceGuid) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.AddInBase.RequestService(System.Guid)" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Office.Tools.IAddInExtension.RequestService(System.Guid)</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -766,17 +855,17 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 重写此方法在应用程序级外接程序来实现扩展性接口来扩展 Microsoft Office 应用程序中的功能。 有关详细信息，请参阅[自定义 UI 功能 By Using Extensibility Interfaces](/visualstudio/vsto/customizing-ui-features-by-using-extensibility-interfaces)。  
+ 在应用程序级外接程序中重写此方法, 以实现可扩展 Microsoft Office 应用程序中的功能的扩展性接口。 有关详细信息，请参阅 [Customizing UI Features By Using Extensibility Interfaces](/visualstudio/vsto/customizing-ui-features-by-using-extensibility-interfaces)。  
   
- 当你重写此方法时，检查的值`serviceGuid`参数，以确定请求的可扩展性接口时，，然后返回实现该接口的对象。 加载外接程序时，[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]调用<xref:Microsoft.Office.Tools.AddInBase.RequestService%2A>的应用程序，支持的每个接口的一个或多个时间且它将返回值发送到加载外接程序的 Microsoft Office 应用程序。 有关外接程序的加载过程的详细信息，请参阅[Architecture of VSTO 外接程序](/visualstudio/vsto/architecture-of-vsto-add-ins)。  
+ 重写此方法时, 请检查`serviceGuid`参数的值以确定请求的扩展性接口, 然后返回实现接口的对象。 加载外接程序时, 将[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]对应用程序支持的每个接口调用<xref:Microsoft.Office.Tools.AddInBase.RequestService%2A>一次或多次, 并将返回值发送到正在加载外接程序的 Microsoft Office 应用程序。 有关外接程序加载过程的详细信息, 请参阅[VSTO 外接程序的体系结构](/visualstudio/vsto/architecture-of-vsto-add-ins)。  
   
 > [!NOTE]
->  如果你通过自定义功能区用户界面创建自己的实现`Microsoft.Office.Core.IRibbonExtensibility`接口或通过添加**功能区 (XML)** 项到项目中，或者可以替代<xref:Microsoft.Office.Tools.AddInBase.CreateRibbonExtensibilityObject%2A>方法而不是<xref:Microsoft.Office.Tools.AddInBase.RequestService%2A>方法。 有关详细信息，请参阅[功能区概述](/visualstudio/vsto/ribbon-overview)并[功能区 XML](/visualstudio/vsto/ribbon-xml)。  
+>  如果要通过创建自己`Microsoft.Office.Core.IRibbonExtensibility`的接口实现或通过向项目添加**功能区 (XML)** 项来自定义功能区 UI, 则<xref:Microsoft.Office.Tools.AddInBase.CreateRibbonExtensibilityObject%2A>可以改为重写方法, 而不<xref:Microsoft.Office.Tools.AddInBase.RequestService%2A>是方法。 有关详细信息, 请参阅[功能区概述](/visualstudio/vsto/ribbon-overview)和[功能区 XML](/visualstudio/vsto/ribbon-xml)。  
   
    
   
 ## Examples  
- 有关代码示例演示如何实现扩展性接口并重写<xref:Microsoft.Office.Tools.AddInBase.RequestService%2A>方法，请参阅[自定义 UI 功能 By Using Extensibility Interfaces](/visualstudio/vsto/customizing-ui-features-by-using-extensibility-interfaces)。  
+ 有关演示如何实现扩展性接口并重写<xref:Microsoft.Office.Tools.AddInBase.RequestService%2A>方法的代码示例, 请参阅[使用扩展性接口自定义 UI 功能](/visualstudio/vsto/customizing-ui-features-by-using-extensibility-interfaces)。  
   
  ]]></format>
         </remarks>
@@ -800,11 +889,11 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用默认<xref:Microsoft.Office.Tools.AddInBase.Shutdown>中的事件处理程序`ThisAddIn`类，而不是创建您自己为此事件的事件处理程序。 默认值<xref:Microsoft.Office.Tools.AddInBase.Shutdown>事件处理程序命名为`ThisAddIn_Shutdown`。  
+ 使用<xref:Microsoft.Office.Tools.AddInBase.Shutdown> 类`ThisAddIn`中的默认事件处理程序, 而不是为此事件创建自己的事件处理程序。 默认<xref:Microsoft.Office.Tools.AddInBase.Shutdown>事件处理程序命名为`ThisAddIn_Shutdown`。  
   
- 在 Outlook 2010 中， <xref:Microsoft.Office.Tools.AddInBase.Shutdown> Outlook 退出时不会引发事件。 但是，将引发此事件，当用户禁用外接程序通过使用**COM 加载项**在 Outlook 中的对话框。  
+ 在 outlook 2010 中, <xref:Microsoft.Office.Tools.AddInBase.Shutdown>当 outlook 退出时不引发该事件。 但是, 当用户通过使用 Outlook 中的**COM 外**接程序对话框禁用外接程序时, 将引发此事件。  
   
- 有关详细信息，请参阅[Events in Office Projects](/visualstudio/vsto/events-in-office-projects)。 有关详细信息`ThisAddIn`类，请参阅[VSTO 外接程序编程](/visualstudio/vsto/programming-vsto-add-ins)。  
+ 有关详细信息，请参阅 [Events in Office Projects](/visualstudio/vsto/events-in-office-projects)。 有关`ThisAddIn`类的详细信息, 请参阅[VSTO 外接程序编程](/visualstudio/vsto/programming-vsto-add-ins)。  
   
  ]]></format>
         </remarks>
@@ -815,6 +904,9 @@
       <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.ISite Site" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.AddInBase.Site" />
       <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:System.ComponentModel.IComponent.Site</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -846,9 +938,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 使用默认<xref:Microsoft.Office.Tools.AddInBase.Startup>中的事件处理程序`ThisAddIn`类，而不是创建您自己为此事件的事件处理程序。 默认值<xref:Microsoft.Office.Tools.AddInBase.Startup>事件处理程序命名为`ThisAddIn_Startup`。  
+ 使用<xref:Microsoft.Office.Tools.AddInBase.Startup> 类`ThisAddIn`中的默认事件处理程序, 而不是为此事件创建自己的事件处理程序。 默认<xref:Microsoft.Office.Tools.AddInBase.Startup>事件处理程序命名为`ThisAddIn_Startup`。  
   
- 有关详细信息，请参阅[Events in Office Projects](/visualstudio/vsto/events-in-office-projects)。 有关详细信息`ThisAddIn`类，请参阅[VSTO 外接程序编程](/visualstudio/vsto/programming-vsto-add-ins)。  
+ 有关的详细信息, 请参阅[Office 项目中的事件](/visualstudio/vsto/events-in-office-projects)。 有关`ThisAddIn`类的详细信息, 请参阅[VSTO 外接程序编程](/visualstudio/vsto/programming-vsto-add-ins)。  
   
  ]]></format>
         </remarks>

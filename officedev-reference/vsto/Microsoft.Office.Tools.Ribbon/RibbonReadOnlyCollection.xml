@@ -1,5 +1,5 @@
 <Type Name="RibbonReadOnlyCollection" FullName="Microsoft.Office.Tools.Ribbon.RibbonReadOnlyCollection">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="1cb6f5e566e03b3edb6ffdc14f14952e55d3c0db" /><Meta Name="ms.sourcegitcommit" Value="5a5a038b6c783bec52842c940b22504bfc62a810" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/03/2018" /><Meta Name="ms.locfileid" Value="29431034" /></Metadata><TypeSignature Language="C#" Value="public interface RibbonReadOnlyCollection : System.Collections.Generic.ICollection&lt;Microsoft.Office.Tools.Ribbon.IRibbonExtension&gt;, System.Collections.Generic.IEnumerable&lt;Microsoft.Office.Tools.Ribbon.IRibbonExtension&gt;, System.Collections.Generic.IList&lt;Microsoft.Office.Tools.Ribbon.IRibbonExtension&gt;" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="d28d3108f824ef2e54267e05a55ed3555eda7284" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69002149" /></Metadata><TypeSignature Language="C#" Value="public interface RibbonReadOnlyCollection : System.Collections.Generic.ICollection&lt;Microsoft.Office.Tools.Ribbon.IRibbonExtension&gt;, System.Collections.Generic.IEnumerable&lt;Microsoft.Office.Tools.Ribbon.IRibbonExtension&gt;, System.Collections.Generic.IList&lt;Microsoft.Office.Tools.Ribbon.IRibbonExtension&gt;" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract RibbonReadOnlyCollection implements class System.Collections.Generic.ICollection`1&lt;class Microsoft.Office.Tools.Ribbon.IRibbonExtension&gt;, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Office.Tools.Ribbon.IRibbonExtension&gt;, class System.Collections.Generic.IList`1&lt;class Microsoft.Office.Tools.Ribbon.IRibbonExtension&gt;, class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Ribbon.RibbonReadOnlyCollection" />
   <AssemblyInfo>
@@ -15,18 +15,24 @@
       <InterfaceName>System.Collections.Generic.ICollection&lt;Microsoft.Office.Tools.Ribbon.IRibbonExtension&gt;</InterfaceName>
     </Interface>
     <Interface>
+      <InterfaceName>System.Collections.Generic.ICollection&lt;T&gt;</InterfaceName>
+    </Interface>
+    <Interface>
       <InterfaceName>System.Collections.Generic.IEnumerable&lt;Microsoft.Office.Tools.Ribbon.IRibbonExtension&gt;</InterfaceName>
     </Interface>
     <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;T&gt;</InterfaceName>
+    </Interface>
+    <Interface>
       <InterfaceName>System.Collections.Generic.IList&lt;Microsoft.Office.Tools.Ribbon.IRibbonExtension&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
     </Interface>
   </Interfaces>
   <Attributes>
     <Attribute>
       <AttributeName>System.Runtime.InteropServices.Guid("c3b587bc-42bc-401b-a1e7-f85777d5156a")</AttributeName>
-    </Attribute>
-    <Attribute>
-      <AttributeName>System.Runtime.InteropServices.TypeIdentifier</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -35,9 +41,9 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 表示此对象的集合可以包含要么都<xref:Microsoft.Office.Tools.Ribbon.IRibbonExtension>在功能区自定义，或只是任何类型的对象<xref:Microsoft.Office.Tools.Ribbon.IRibbonExtension>特定消息类或 Microsoft Office 应用程序的对象。  
+ 此对象表示的集合可以包含功能区自<xref:Microsoft.Office.Tools.Ribbon.IRibbonExtension>定义项中任何类型的所有对象, 或<xref:Microsoft.Office.Tools.Ribbon.IRibbonExtension>仅包含特定消息类或 Microsoft Office 应用程序的对象。  
   
- 在功能区添加到项目时，Visual Studio 添加`Globals`到你的应用程序的类。 `Ribbons`的属性`Globals`类返回一个实例，它派生自<xref:Microsoft.Office.Tools.Ribbon.RibbonCollectionBase>类。 可以使用`Globals.Ribbons`要访问与 Office 自定义相关联的功能区集合。  
+ 向项目添加功能区时, Visual Studio 会将类添加`Globals`到你的应用程序。 `Globals`类`Ribbons`的属性返回派生自<xref:Microsoft.Office.Tools.Ribbon.RibbonCollectionBase>类的实例。 可以使用`Globals.Ribbons`集合来访问与 Office 自定义项关联的功能区。  
   
  [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
   
