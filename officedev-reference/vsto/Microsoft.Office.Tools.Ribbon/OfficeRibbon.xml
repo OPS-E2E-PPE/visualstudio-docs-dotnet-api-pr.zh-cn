@@ -1,5 +1,5 @@
 <Type Name="OfficeRibbon" FullName="Microsoft.Office.Tools.Ribbon.OfficeRibbon">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="fcf8c6f0bfb2583017ad983fe9a7fc61ebe2311c" /><Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="09/19/2018" /><Meta Name="ms.locfileid" Value="46458660" /></Metadata><TypeSignature Language="C#" Value="public interface OfficeRibbon : IDisposable, Microsoft.Office.Tools.Ribbon.RibbonComponent, System.ComponentModel.IComponent" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="aefdb6aee478aeffc004497c13996965aafa396c" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69003085" /></Metadata><TypeSignature Language="C#" Value="public interface OfficeRibbon : IDisposable, Microsoft.Office.Tools.Ribbon.RibbonComponent, System.ComponentModel.IComponent" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract OfficeRibbon implements class Microsoft.Office.Tools.Ribbon.RibbonComponent, class System.ComponentModel.IComponent, class System.IDisposable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Ribbon.OfficeRibbon" />
   <AssemblyInfo>
@@ -25,49 +25,28 @@
     <Attribute>
       <AttributeName>System.Runtime.InteropServices.Guid("49fbf223-6d24-4c4b-9101-2d5833434328")</AttributeName>
     </Attribute>
-    <Attribute>
-      <AttributeName>System.Runtime.InteropServices.TypeIdentifier</AttributeName>
-    </Attribute>
   </Attributes>
   <Docs>
-    <summary><span data-ttu-id="d7173-101">表示 Visual Studio 中通过使用 Office 项目中的功能区设计器创建的 Microsoft Office 功能区自定义项。</span><span class="sxs-lookup"><span data-stu-id="d7173-101">Represents a Microsoft Office Ribbon customization that is created by using the Ribbon Designer in an Office project in Visual Studio.</span></span></summary>
+    <summary><span data-ttu-id="15c6e-101">表示 Visual Studio 中通过使用 Office 项目中的功能区设计器创建的 Microsoft Office 功能区自定义项。</span><span class="sxs-lookup"><span data-stu-id="15c6e-101">Represents a Microsoft Office Ribbon customization that is created by using the Ribbon Designer in an Office project in Visual Studio.</span></span></summary>
     <remarks>
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="d7173-102">通常不使用<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon>直接接口。</span><span class="sxs-lookup"><span data-stu-id="d7173-102">You typically do not use the <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon> interface directly.</span></span> <span data-ttu-id="d7173-103">相反，使用 Visual Studio 生成时添加一个新的功能区类**功能区 （可视化设计器）** 到你的项目项。</span><span class="sxs-lookup"><span data-stu-id="d7173-103">Instead, use the Ribbon class that Visual Studio generates when you add a new **Ribbon (Visual Designer)** item to your project.</span></span> <span data-ttu-id="d7173-104">可以完成与功能区在生成的功能区类中使用事件和属性相关的大多数任务。</span><span class="sxs-lookup"><span data-stu-id="d7173-104">You can accomplish most tasks related to the Ribbon by using events and properties in the generated Ribbon class.</span></span>  
+ <span data-ttu-id="15c6e-102">通常不会直接使用<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon>接口。</span><span class="sxs-lookup"><span data-stu-id="15c6e-102">You typically do not use the <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon> interface directly.</span></span> <span data-ttu-id="15c6e-103">相反, 请使用 Visual Studio 在你向项目添加新的**功能区 (可视化设计器)** 项时生成的功能区类。</span><span class="sxs-lookup"><span data-stu-id="15c6e-103">Instead, use the Ribbon class that Visual Studio generates when you add a new **Ribbon (Visual Designer)** item to your project.</span></span> <span data-ttu-id="15c6e-104">通过使用生成的功能区类中的事件和属性, 可以完成大多数与功能区相关的任务。</span><span class="sxs-lookup"><span data-stu-id="15c6e-104">You can accomplish most tasks related to the Ribbon by using events and properties in the generated Ribbon class.</span></span>  
   
- <span data-ttu-id="d7173-105">生成的功能区类继承自<xref:Microsoft.Office.Tools.Ribbon.RibbonBase>类。</span><span class="sxs-lookup"><span data-stu-id="d7173-105">The generated Ribbon class inherits from the <xref:Microsoft.Office.Tools.Ribbon.RibbonBase> class.</span></span> <span data-ttu-id="d7173-106">此基类将对其成员的所有调用重都定向到的内部实现<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon>接口[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="d7173-106">This base class redirects all calls to its members to an internal implementation of the <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon> interface the [!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)].</span></span> <span data-ttu-id="d7173-107">如果你想要使用<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon>直接对象，请使用<xref:Microsoft.Office.Tools.Ribbon.RibbonBase.Base%2A>生成功能区类的属性。</span><span class="sxs-lookup"><span data-stu-id="d7173-107">If you want to work with the <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon> object directly, use the <xref:Microsoft.Office.Tools.Ribbon.RibbonBase.Base%2A> property of the generated Ribbon class.</span></span>  
+ <span data-ttu-id="15c6e-105">生成的功能区类从<xref:Microsoft.Office.Tools.Ribbon.RibbonBase>类继承。</span><span class="sxs-lookup"><span data-stu-id="15c6e-105">The generated Ribbon class inherits from the <xref:Microsoft.Office.Tools.Ribbon.RibbonBase> class.</span></span> <span data-ttu-id="15c6e-106">此基类将对其成员的所有调用重定向到<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon>接口的[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]内部实现。</span><span class="sxs-lookup"><span data-stu-id="15c6e-106">This base class redirects all calls to its members to an internal implementation of the <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon> interface the [!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)].</span></span> <span data-ttu-id="15c6e-107">如果要<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon>直接使用对象, 请使用生成的功能区<xref:Microsoft.Office.Tools.Ribbon.RibbonBase.Base%2A>类的属性。</span><span class="sxs-lookup"><span data-stu-id="15c6e-107">If you want to work with the <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon> object directly, use the <xref:Microsoft.Office.Tools.Ribbon.RibbonBase.Base%2A> property of the generated Ribbon class.</span></span>  
   
  [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
   
-## <a name="usage"></a><span data-ttu-id="d7173-108">用法</span><span class="sxs-lookup"><span data-stu-id="d7173-108">Usage</span></span>  
+## <a name="usage"></a><span data-ttu-id="15c6e-108">用法</span><span class="sxs-lookup"><span data-stu-id="15c6e-108">Usage</span></span>  
  [!INCLUDE[vsto_net35mref](~/includes/vsto-net35mref-md.md)]  
   
  ]]></format>
     </remarks>
   </Docs>
   <Members>
-    <Member MemberName="_VtblGap1_2">
-      <MemberSignature Language="C#" Value="public void _VtblGap1_2 ();" />
-      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void _VtblGap1_2() cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Ribbon.OfficeRibbon._VtblGap1_2" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
-        <AssemblyVersion>10.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Void</ReturnType>
-      </ReturnValue>
-      <Parameters />
-      <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
     <Member MemberName="Close">
-      <MemberSignature Language="C#" Value="public event EventHandler Close;" />
+      <MemberSignature Language="C#" Value="event EventHandler Close;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Close" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.Ribbon.OfficeRibbon.Close" />
       <MemberType>Event</MemberType>
@@ -83,12 +62,12 @@
         <ReturnType>System.EventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="d7173-109">关闭此 <see cref="T:Microsoft.Office.Tools.Ribbon.OfficeRibbon" /> 实例时发生。</span><span class="sxs-lookup"><span data-stu-id="d7173-109">Occurs when this <see cref="T:Microsoft.Office.Tools.Ribbon.OfficeRibbon" /> instance is closing.</span></span></summary>
+        <summary><span data-ttu-id="15c6e-109">关闭此 <see cref="T:Microsoft.Office.Tools.Ribbon.OfficeRibbon" /> 实例时发生。</span><span class="sxs-lookup"><span data-stu-id="15c6e-109">Occurs when this <see cref="T:Microsoft.Office.Tools.Ribbon.OfficeRibbon" /> instance is closing.</span></span></summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="d7173-110">您可以使用此事件以释放特定于应用程序所分配的资源更早版本，例如，在<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.Load>事件。</span><span class="sxs-lookup"><span data-stu-id="d7173-110">You can use this event to release application-specific resources that were allocated earlier, for example, in the <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.Load> event.</span></span>  
+ <span data-ttu-id="15c6e-110">你可以使用此事件来释放以前分配的特定于应用程序的资源, 例如, 在<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.Load>事件中。</span><span class="sxs-lookup"><span data-stu-id="15c6e-110">You can use this event to release application-specific resources that were allocated earlier, for example, in the <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.Load> event.</span></span>  
   
  ]]></format>
         </remarks>
@@ -111,15 +90,15 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="d7173-111">获取 Outlook 中与此功能区关联的检查器窗口或资源管理器窗口。</span><span class="sxs-lookup"><span data-stu-id="d7173-111">Gets the Inspector window, or the Explorer window in Outlook, that is associated with this Ribbon.</span></span></summary>
-        <value><span data-ttu-id="d7173-112">一个 <see cref="T:System.Object" />，表示与此 <see cref="T:Microsoft.Office.Tools.Ribbon.OfficeRibbon" /> 对象关联的检查器窗口或资源管理器窗口。</span><span class="sxs-lookup"><span data-stu-id="d7173-112">An <see cref="T:System.Object" /> that represents the Inspector window or Explorer window that is associated with this <see cref="T:Microsoft.Office.Tools.Ribbon.OfficeRibbon" /> object.</span></span></value>
+        <summary><span data-ttu-id="15c6e-111">获取 Outlook 中与此功能区关联的检查器窗口或资源管理器窗口。</span><span class="sxs-lookup"><span data-stu-id="15c6e-111">Gets the Inspector window, or the Explorer window in Outlook, that is associated with this Ribbon.</span></span></summary>
+        <value><span data-ttu-id="15c6e-112">一个 <see cref="T:System.Object" />，表示与此 <see cref="T:Microsoft.Office.Tools.Ribbon.OfficeRibbon" /> 对象关联的检查器窗口或资源管理器窗口。</span><span class="sxs-lookup"><span data-stu-id="15c6e-112">An <see cref="T:System.Object" /> that represents the Inspector window or Explorer window that is associated with this <see cref="T:Microsoft.Office.Tools.Ribbon.OfficeRibbon" /> object.</span></span></value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="d7173-113">在 Outlook 中，此属性指的检查器窗口或资源管理器窗口中此<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon>显示。</span><span class="sxs-lookup"><span data-stu-id="d7173-113">In Outlook, this property refers to the Inspector window or Explorer window in which this <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon> is displayed.</span></span>  
+ <span data-ttu-id="15c6e-113">在 Outlook 中, 此属性引用显示此<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon>的检查器窗口或资源管理器窗口。</span><span class="sxs-lookup"><span data-stu-id="15c6e-113">In Outlook, this property refers to the Inspector window or Explorer window in which this <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon> is displayed.</span></span>  
   
- <span data-ttu-id="d7173-114">在所有其他 Office 项目中，此属性返回 null。</span><span class="sxs-lookup"><span data-stu-id="d7173-114">In all other Office projects, this property returns null.</span></span>  
+ <span data-ttu-id="15c6e-114">在所有其他 Office 项目中, 此属性返回 null。</span><span class="sxs-lookup"><span data-stu-id="15c6e-114">In all other Office projects, this property returns null.</span></span>  
   
  ]]></format>
         </remarks>
@@ -138,13 +117,13 @@
         <ReturnType>Microsoft.Office.Tools.Ribbon.IRibbonExtension</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="d7173-115">获取此 <see cref="T:Microsoft.Office.Tools.Ribbon.OfficeRibbon" /> 对象的默认扩展。</span><span class="sxs-lookup"><span data-stu-id="d7173-115">Gets the default extension for this <see cref="T:Microsoft.Office.Tools.Ribbon.OfficeRibbon" /> object.</span></span></summary>
-        <value><span data-ttu-id="d7173-116">此 <see cref="T:Microsoft.Office.Tools.Ribbon.OfficeRibbon" /> 对象的默认扩展。</span><span class="sxs-lookup"><span data-stu-id="d7173-116">The default extension for this <see cref="T:Microsoft.Office.Tools.Ribbon.OfficeRibbon" /> object.</span></span></value>
+        <summary><span data-ttu-id="15c6e-115">获取此 <see cref="T:Microsoft.Office.Tools.Ribbon.OfficeRibbon" /> 对象的默认扩展。</span><span class="sxs-lookup"><span data-stu-id="15c6e-115">Gets the default extension for this <see cref="T:Microsoft.Office.Tools.Ribbon.OfficeRibbon" /> object.</span></span></summary>
+        <value><span data-ttu-id="15c6e-116">此 <see cref="T:Microsoft.Office.Tools.Ribbon.OfficeRibbon" /> 对象的默认扩展。</span><span class="sxs-lookup"><span data-stu-id="15c6e-116">The default extension for this <see cref="T:Microsoft.Office.Tools.Ribbon.OfficeRibbon" /> object.</span></span></value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="d7173-117">默认扩展名<xref:Microsoft.Office.Tools.Ribbon.IRibbonExtension>对象，它由实现[!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="d7173-117">The default extension is an <xref:Microsoft.Office.Tools.Ribbon.IRibbonExtension> object that is implemented by the [!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)].</span></span>  
+ <span data-ttu-id="15c6e-117">默认扩展插件是<xref:Microsoft.Office.Tools.Ribbon.IRibbonExtension> [!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)]由实现的对象。</span><span class="sxs-lookup"><span data-stu-id="15c6e-117">The default extension is an <xref:Microsoft.Office.Tools.Ribbon.IRibbonExtension> object that is implemented by the [!INCLUDE[vsto_runtime](~/includes/vsto-runtime-md.md)].</span></span>  
   
  ]]></format>
         </remarks>
@@ -163,13 +142,13 @@
         <ReturnType>Microsoft.Office.Tools.Ribbon.IRibbonExtension</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="d7173-118">获取此 <see cref="T:Microsoft.Office.Tools.Ribbon.OfficeRibbon" /> 对象的自定义扩展。</span><span class="sxs-lookup"><span data-stu-id="d7173-118">Gets a custom extension for this <see cref="T:Microsoft.Office.Tools.Ribbon.OfficeRibbon" /> object.</span></span></summary>
-        <value><span data-ttu-id="d7173-119">此 <see cref="T:Microsoft.Office.Tools.Ribbon.OfficeRibbon" /> 对象的自定义扩展。</span><span class="sxs-lookup"><span data-stu-id="d7173-119">A custom extension for this <see cref="T:Microsoft.Office.Tools.Ribbon.OfficeRibbon" /> object.</span></span></value>
+        <summary><span data-ttu-id="15c6e-118">获取此 <see cref="T:Microsoft.Office.Tools.Ribbon.OfficeRibbon" /> 对象的自定义扩展。</span><span class="sxs-lookup"><span data-stu-id="15c6e-118">Gets a custom extension for this <see cref="T:Microsoft.Office.Tools.Ribbon.OfficeRibbon" /> object.</span></span></summary>
+        <value><span data-ttu-id="15c6e-119">此 <see cref="T:Microsoft.Office.Tools.Ribbon.OfficeRibbon" /> 对象的自定义扩展。</span><span class="sxs-lookup"><span data-stu-id="15c6e-119">A custom extension for this <see cref="T:Microsoft.Office.Tools.Ribbon.OfficeRibbon" /> object.</span></span></value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="d7173-120">自定义扩展插件是一种实现的<xref:Microsoft.Office.Tools.Ribbon.IRibbonExtension>接口在 Visual Studio 中使用的 Office 开发工具创建的解决方案中。</span><span class="sxs-lookup"><span data-stu-id="d7173-120">A custom extension is an implementation of the <xref:Microsoft.Office.Tools.Ribbon.IRibbonExtension> interface in a solution that is created by using the Office development tools in Visual Studio.</span></span>  
+ <span data-ttu-id="15c6e-120">自定义扩展是使用 Visual Studio 中<xref:Microsoft.Office.Tools.Ribbon.IRibbonExtension>的 Office 开发工具创建的解决方案中的接口实现。</span><span class="sxs-lookup"><span data-stu-id="15c6e-120">A custom extension is an implementation of the <xref:Microsoft.Office.Tools.Ribbon.IRibbonExtension> interface in a solution that is created by using the Office development tools in Visual Studio.</span></span>  
   
  ]]></format>
         </remarks>
@@ -192,22 +171,22 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="d7173-121">获取或设置一个值，该值确定此 <see cref="T:Microsoft.Office.Tools.Ribbon.OfficeRibbon" /> 是否可以同时在多个上下文中使用。</span><span class="sxs-lookup"><span data-stu-id="d7173-121">Gets or sets a value that determines whether this <see cref="T:Microsoft.Office.Tools.Ribbon.OfficeRibbon" /> can be used in multiple contexts simultaneously.</span></span></summary>
-        <value><span data-ttu-id="d7173-122">如果此 <see cref="T:Microsoft.Office.Tools.Ribbon.OfficeRibbon" /> 对象在多个上下文中共享，则为 <see langword="true" />；否则为 <see langword="false" />。</span><span class="sxs-lookup"><span data-stu-id="d7173-122"><see langword="true" /> if this <see cref="T:Microsoft.Office.Tools.Ribbon.OfficeRibbon" /> object is shared among multiple contexts; otherwise, <see langword="false" />.</span></span> <span data-ttu-id="d7173-123">默认值为 <see langword="true" />。</span><span class="sxs-lookup"><span data-stu-id="d7173-123">The default is <see langword="true" />.</span></span></value>
+        <summary><span data-ttu-id="15c6e-121">获取或设置一个值，该值确定此 <see cref="T:Microsoft.Office.Tools.Ribbon.OfficeRibbon" /> 是否可以同时在多个上下文中使用。</span><span class="sxs-lookup"><span data-stu-id="15c6e-121">Gets or sets a value that determines whether this <see cref="T:Microsoft.Office.Tools.Ribbon.OfficeRibbon" /> can be used in multiple contexts simultaneously.</span></span></summary>
+        <value><span data-ttu-id="15c6e-122">如果此 <see cref="T:Microsoft.Office.Tools.Ribbon.OfficeRibbon" /> 对象在多个上下文中共享，则为 <see langword="true" />；否则为 <see langword="false" />。</span><span class="sxs-lookup"><span data-stu-id="15c6e-122"><see langword="true" /> if this <see cref="T:Microsoft.Office.Tools.Ribbon.OfficeRibbon" /> object is shared among multiple contexts; otherwise, <see langword="false" />.</span></span> <span data-ttu-id="15c6e-123">默认值为 <see langword="true" />。</span><span class="sxs-lookup"><span data-stu-id="15c6e-123">The default is <see langword="true" />.</span></span></value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="d7173-124"><xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon> 具有此属性设置为对象`false`每次打开新的 Outlook 检查器时创建。</span><span class="sxs-lookup"><span data-stu-id="d7173-124"><xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon> objects that have this property set to `false` are created every time a new Outlook Inspector is opened.</span></span>  
+ <span data-ttu-id="15c6e-124"><xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon>此属性设置为`false`的对象将在每次打开新的 Outlook 检查器时创建。</span><span class="sxs-lookup"><span data-stu-id="15c6e-124"><xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon> objects that have this property set to `false` are created every time a new Outlook Inspector is opened.</span></span>  
   
- <span data-ttu-id="d7173-125">只能在功能区加载到 Office 应用程序之前，可以设置此属性。</span><span class="sxs-lookup"><span data-stu-id="d7173-125">This property can be set only before the Ribbon is loaded into the Office application.</span></span> <span data-ttu-id="d7173-126">有关设置此属性的信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。</span><span class="sxs-lookup"><span data-stu-id="d7173-126">For information about setting this property, see [Ribbon Object Model Overview](/visualstudio/vsto/ribbon-object-model-overview).</span></span>  
+ <span data-ttu-id="15c6e-125">此属性只能在功能区加载到 Office 应用程序中之前设置。</span><span class="sxs-lookup"><span data-stu-id="15c6e-125">This property can be set only before the Ribbon is loaded into the Office application.</span></span> <span data-ttu-id="15c6e-126">有关设置此属性的信息, 请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。</span><span class="sxs-lookup"><span data-stu-id="15c6e-126">For information about setting this property, see [Ribbon Object Model Overview](/visualstudio/vsto/ribbon-object-model-overview).</span></span>  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="Load">
-      <MemberSignature Language="C#" Value="public event Microsoft.Office.Tools.Ribbon.RibbonUIEventHandler Load;" />
+      <MemberSignature Language="C#" Value="event Microsoft.Office.Tools.Ribbon.RibbonUIEventHandler Load;" />
       <MemberSignature Language="ILAsm" Value=".event class Microsoft.Office.Tools.Ribbon.RibbonUIEventHandler Load" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.Ribbon.OfficeRibbon.Load" />
       <MemberType>Event</MemberType>
@@ -223,19 +202,19 @@
         <ReturnType>Microsoft.Office.Tools.Ribbon.RibbonUIEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="d7173-127">当 <see cref="T:Microsoft.Office.Tools.Ribbon.OfficeRibbon" /> 加载到 Microsoft Office 应用程序时发生。</span><span class="sxs-lookup"><span data-stu-id="d7173-127">Occurs when the <see cref="T:Microsoft.Office.Tools.Ribbon.OfficeRibbon" /> is loaded into the Microsoft Office application.</span></span></summary>
+        <summary><span data-ttu-id="15c6e-127">当 <see cref="T:Microsoft.Office.Tools.Ribbon.OfficeRibbon" /> 加载到 Microsoft Office 应用程序时发生。</span><span class="sxs-lookup"><span data-stu-id="15c6e-127">Occurs when the <see cref="T:Microsoft.Office.Tools.Ribbon.OfficeRibbon" /> is loaded into the Microsoft Office application.</span></span></summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="d7173-128"><xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.Load>事件处理程序会自动添加到功能区代码文件。</span><span class="sxs-lookup"><span data-stu-id="d7173-128">The <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.Load> event handler is automatically added to the Ribbon code file.</span></span> <span data-ttu-id="d7173-129">使用此事件处理程序运行时在功能区加载自定义代码。</span><span class="sxs-lookup"><span data-stu-id="d7173-129">Use this event handler to run custom code when the Ribbon loads.</span></span>  
+ <span data-ttu-id="15c6e-128">此<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.Load>事件处理程序将自动添加到功能区代码文件中。</span><span class="sxs-lookup"><span data-stu-id="15c6e-128">The <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.Load> event handler is automatically added to the Ribbon code file.</span></span> <span data-ttu-id="15c6e-129">此事件处理程序用于在功能区加载时运行自定义代码。</span><span class="sxs-lookup"><span data-stu-id="15c6e-129">Use this event handler to run custom code when the Ribbon loads.</span></span>  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="LoadImage">
-      <MemberSignature Language="C#" Value="public event Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventHandler LoadImage;" />
+      <MemberSignature Language="C#" Value="event Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventHandler LoadImage;" />
       <MemberSignature Language="ILAsm" Value=".event class Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventHandler LoadImage" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage" />
       <MemberType>Event</MemberType>
@@ -251,18 +230,18 @@
         <ReturnType>Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="d7173-130">如果为一个或多个控件设置 ImageName 属性，则在 <see cref="T:Microsoft.Office.Tools.Ribbon.OfficeRibbon" /> 加载时发生。</span><span class="sxs-lookup"><span data-stu-id="d7173-130">Occurs when the <see cref="T:Microsoft.Office.Tools.Ribbon.OfficeRibbon" /> loads, if the **ImageName** property is set for one or more controls.</span></span></summary>
+        <summary><span data-ttu-id="15c6e-130">如果为一个或多个控件设置 ImageName 属性，则在 <see cref="T:Microsoft.Office.Tools.Ribbon.OfficeRibbon" /> 加载时发生。</span><span class="sxs-lookup"><span data-stu-id="15c6e-130">Occurs when the <see cref="T:Microsoft.Office.Tools.Ribbon.OfficeRibbon" /> loads, if the **ImageName** property is set for one or more controls.</span></span></summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="d7173-131"><xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>事件，可以缓存中的映像功能区自定义，这可以提高性能。</span><span class="sxs-lookup"><span data-stu-id="d7173-131">The <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage> event enables you to cache images in the Ribbon customization, which can improve performance.</span></span>  
+ <span data-ttu-id="15c6e-131"><xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>事件使你可以在功能区自定义项中缓存图像, 这可以提高性能。</span><span class="sxs-lookup"><span data-stu-id="15c6e-131">The <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage> event enables you to cache images in the Ribbon customization, which can improve performance.</span></span>  
   
- <span data-ttu-id="d7173-132">默认情况下，映像加载到功能区，每次用户显示的选项卡包含的图像。</span><span class="sxs-lookup"><span data-stu-id="d7173-132">By default, an image is loaded into the Ribbon every time the user displays a tab that contains the image.</span></span> <span data-ttu-id="d7173-133">映像重新加载，以编程方式更改图像将显示控件的属性的任何时间。</span><span class="sxs-lookup"><span data-stu-id="d7173-133">An image is reloaded any time that you programmatically change the properties of a control on which the image appears.</span></span>  
+ <span data-ttu-id="15c6e-132">默认情况下, 每次用户显示包含图像的选项卡时, 都会将一个图像加载到功能区中。</span><span class="sxs-lookup"><span data-stu-id="15c6e-132">By default, an image is loaded into the Ribbon every time the user displays a tab that contains the image.</span></span> <span data-ttu-id="15c6e-133">当你以编程方式更改出现图像的控件的属性时, 将重新加载图像。</span><span class="sxs-lookup"><span data-stu-id="15c6e-133">An image is reloaded any time that you programmatically change the properties of a control on which the image appears.</span></span>  
   
- <span data-ttu-id="d7173-134">使用<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>事件以将图像分配到控件。</span><span class="sxs-lookup"><span data-stu-id="d7173-134">Use the <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage> event to assign an image to a control.</span></span> <span data-ttu-id="d7173-135">当用户选择功能区上的选项卡时，Microsoft Office 应用程序使用缓存的图像。</span><span class="sxs-lookup"><span data-stu-id="d7173-135">When the user selects a tab on the Ribbon, the Microsoft Office application uses the cached image.</span></span> <span data-ttu-id="d7173-136">如果在运行时修改控件属性，Microsoft Office 应用程序将重新加载该控件上的映像。</span><span class="sxs-lookup"><span data-stu-id="d7173-136">If you modify a control property at run time, the Microsoft Office application will not reload the image on the control.</span></span> <span data-ttu-id="d7173-137">这可以提供较小的性能提升。</span><span class="sxs-lookup"><span data-stu-id="d7173-137">This can give you a small performance gain.</span></span>  
+ <span data-ttu-id="15c6e-134"><xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>使用事件将图像分配给控件。</span><span class="sxs-lookup"><span data-stu-id="15c6e-134">Use the <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage> event to assign an image to a control.</span></span> <span data-ttu-id="15c6e-135">当用户在功能区上选择选项卡时, Microsoft Office 应用程序将使用缓存的图像。</span><span class="sxs-lookup"><span data-stu-id="15c6e-135">When the user selects a tab on the Ribbon, the Microsoft Office application uses the cached image.</span></span> <span data-ttu-id="15c6e-136">如果在运行时修改控件属性, Microsoft Office 应用程序将不会重载控件上的图像。</span><span class="sxs-lookup"><span data-stu-id="15c6e-136">If you modify a control property at run time, the Microsoft Office application will not reload the image on the control.</span></span> <span data-ttu-id="15c6e-137">这会使你获得较小的性能提升。</span><span class="sxs-lookup"><span data-stu-id="15c6e-137">This can give you a small performance gain.</span></span>  
   
- <span data-ttu-id="d7173-138">如果你想要缓存控件的图像，设置**ImageName**控件的属性。</span><span class="sxs-lookup"><span data-stu-id="d7173-138">If you want to cache the image of a control, set the **ImageName** property of the control.</span></span> <span data-ttu-id="d7173-139"><xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>除非设置不会引发事件**ImageName**至少一个控件的属性。</span><span class="sxs-lookup"><span data-stu-id="d7173-139">The <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage> event is not raised unless you set the **ImageName** property of at least one control.</span></span>  
+ <span data-ttu-id="15c6e-138">如果要缓存控件的图像, 请设置控件的**ImageName**属性。</span><span class="sxs-lookup"><span data-stu-id="15c6e-138">If you want to cache the image of a control, set the **ImageName** property of the control.</span></span> <span data-ttu-id="15c6e-139">除非<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>至少设置一个控件的**ImageName**属性, 否则不会引发该事件。</span><span class="sxs-lookup"><span data-stu-id="15c6e-139">The <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage> event is not raised unless you set the **ImageName** property of at least one control.</span></span>  
   
  ]]></format>
         </remarks>
@@ -285,15 +264,15 @@
         <ReturnType>Microsoft.Office.Tools.Ribbon.RibbonOfficeMenu</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="d7173-140">获取一个表示 Microsoft Office 菜单自定义项的 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonOfficeMenu" />。</span><span class="sxs-lookup"><span data-stu-id="d7173-140">Gets a <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonOfficeMenu" /> that represents the Microsoft Office Menu customization.</span></span></summary>
-        <value><span data-ttu-id="d7173-141">一个 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonOfficeMenu" />，表示 Microsoft Office 菜单自定义项。</span><span class="sxs-lookup"><span data-stu-id="d7173-141">A <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonOfficeMenu" /> that represents the Microsoft Office Menu customization.</span></span></value>
+        <summary><span data-ttu-id="15c6e-140">获取一个表示 Microsoft Office 菜单自定义项的 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonOfficeMenu" />。</span><span class="sxs-lookup"><span data-stu-id="15c6e-140">Gets a <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonOfficeMenu" /> that represents the Microsoft Office Menu customization.</span></span></summary>
+        <value><span data-ttu-id="15c6e-141">一个 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonOfficeMenu" />，表示 Microsoft Office 菜单自定义项。</span><span class="sxs-lookup"><span data-stu-id="15c6e-141">A <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonOfficeMenu" /> that represents the Microsoft Office Menu customization.</span></span></value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="d7173-142">Microsoft Office 菜单是单击时打开的菜单**Microsoft Office 按钮**。</span><span class="sxs-lookup"><span data-stu-id="d7173-142">The Microsoft Office Menu is the menu that opens when you click the **Microsoft Office Button**.</span></span> <span data-ttu-id="d7173-143">只能通过使用功能区设计器，可以向 Microsoft Office 菜单添加控件。</span><span class="sxs-lookup"><span data-stu-id="d7173-143">You can add controls to the Microsoft Office Menu only by using the Ribbon Designer.</span></span> <span data-ttu-id="d7173-144">有关详细信息，请参阅[如何： 将控件添加到 Backstage 视图](/visualstudio/vsto/how-to-add-controls-to-the-backstage-view)。</span><span class="sxs-lookup"><span data-stu-id="d7173-144">For more information, see [How to: Add Controls to the Backstage View](/visualstudio/vsto/how-to-add-controls-to-the-backstage-view).</span></span>  
+ <span data-ttu-id="15c6e-142">Microsoft Office 菜单是单击 " **Microsoft Office" 按钮**时打开的菜单。</span><span class="sxs-lookup"><span data-stu-id="15c6e-142">The Microsoft Office Menu is the menu that opens when you click the **Microsoft Office Button**.</span></span> <span data-ttu-id="15c6e-143">只能使用功能区设计器将控件添加到 Microsoft Office 菜单。</span><span class="sxs-lookup"><span data-stu-id="15c6e-143">You can add controls to the Microsoft Office Menu only by using the Ribbon Designer.</span></span> <span data-ttu-id="15c6e-144">有关详细信息，请参阅[如何：向 Backstage 视图](/visualstudio/vsto/how-to-add-controls-to-the-backstage-view)添加控件。</span><span class="sxs-lookup"><span data-stu-id="15c6e-144">For more information, see [How to: Add Controls to the Backstage View](/visualstudio/vsto/how-to-add-controls-to-the-backstage-view).</span></span>  
   
- <span data-ttu-id="d7173-145">可以使用访问 Microsoft Office 菜单自定义项在运行时中的功能区控件的只读集合<xref:Microsoft.Office.Tools.Ribbon.RibbonOfficeMenu.Items%2A>的属性<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.OfficeMenu%2A>由的实例<xref:Microsoft.Office.Tools.Ribbon.RibbonOfficeMenu>属性。</span><span class="sxs-lookup"><span data-stu-id="d7173-145">You can access a read-only collection of Ribbon controls in the Microsoft Office Menu customization at run time by using the <xref:Microsoft.Office.Tools.Ribbon.RibbonOfficeMenu.Items%2A> property of the <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.OfficeMenu%2A> instance that is exposed by the <xref:Microsoft.Office.Tools.Ribbon.RibbonOfficeMenu> property.</span></span>  
+ <span data-ttu-id="15c6e-145">您可以通过使用<xref:Microsoft.Office.Tools.Ribbon.RibbonOfficeMenu.Items%2A> <xref:Microsoft.Office.Tools.Ribbon.RibbonOfficeMenu>属性公开的<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.OfficeMenu%2A>实例的属性, 在运行时访问 Microsoft Office 菜单自定义项中的功能区控件的只读集合。</span><span class="sxs-lookup"><span data-stu-id="15c6e-145">You can access a read-only collection of Ribbon controls in the Microsoft Office Menu customization at run time by using the <xref:Microsoft.Office.Tools.Ribbon.RibbonOfficeMenu.Items%2A> property of the <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.OfficeMenu%2A> instance that is exposed by the <xref:Microsoft.Office.Tools.Ribbon.RibbonOfficeMenu> property.</span></span>  
   
  ]]></format>
         </remarks>
@@ -316,15 +295,15 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="d7173-146">获取用于创建 <see cref="T:Microsoft.Office.Tools.Ribbon.OfficeRibbon" /> 对象的此实例的功能区 ID。</span><span class="sxs-lookup"><span data-stu-id="d7173-146">Gets the Ribbon ID that was used to create this instance of the <see cref="T:Microsoft.Office.Tools.Ribbon.OfficeRibbon" /> object.</span></span></summary>
-        <value><span data-ttu-id="d7173-147">用于创建 <see cref="T:Microsoft.Office.Tools.Ribbon.OfficeRibbon" /> 接口的此实例的功能区 ID。</span><span class="sxs-lookup"><span data-stu-id="d7173-147">The Ribbon ID that was used to create this instance of the <see cref="T:Microsoft.Office.Tools.Ribbon.OfficeRibbon" /> interface.</span></span></value>
+        <summary><span data-ttu-id="15c6e-146">获取用于创建 <see cref="T:Microsoft.Office.Tools.Ribbon.OfficeRibbon" /> 对象的此实例的功能区 ID。</span><span class="sxs-lookup"><span data-stu-id="15c6e-146">Gets the Ribbon ID that was used to create this instance of the <see cref="T:Microsoft.Office.Tools.Ribbon.OfficeRibbon" /> object.</span></span></summary>
+        <value><span data-ttu-id="15c6e-147">用于创建 <see cref="T:Microsoft.Office.Tools.Ribbon.OfficeRibbon" /> 接口的此实例的功能区 ID。</span><span class="sxs-lookup"><span data-stu-id="15c6e-147">The Ribbon ID that was used to create this instance of the <see cref="T:Microsoft.Office.Tools.Ribbon.OfficeRibbon" /> interface.</span></span></value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="d7173-148">不应尝试将此属性设置。</span><span class="sxs-lookup"><span data-stu-id="d7173-148">You should not attempt to set this property.</span></span>  
+ <span data-ttu-id="15c6e-148">不应尝试设置此属性。</span><span class="sxs-lookup"><span data-stu-id="15c6e-148">You should not attempt to set this property.</span></span>  
   
- <span data-ttu-id="d7173-149">可以使用<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.RibbonType%2A>属性来获取与此相关联的功能区 Id 的所有<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon>实例。</span><span class="sxs-lookup"><span data-stu-id="d7173-149">You can use the <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.RibbonType%2A> property to get all of the Ribbon IDs that are associated with this <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon> instance.</span></span> <span data-ttu-id="d7173-150"><xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.RibbonId%2A>属性将返回仅限单一 ID，用于创建此<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon>实例。</span><span class="sxs-lookup"><span data-stu-id="d7173-150">The <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.RibbonId%2A> property returns only the single ID that was used to create this <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon> instance.</span></span> <span data-ttu-id="d7173-151">例如，可以使用此属性以确定是否正在邮件组合项中显示的此功能区实例。</span><span class="sxs-lookup"><span data-stu-id="d7173-151">For example, you can use this property to determine whether this Ribbon instance is being displayed in a mail composition item.</span></span>  
+ <span data-ttu-id="15c6e-149">您可以使用<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.RibbonType%2A>属性来获取与此<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon>实例关联的所有功能区 id。</span><span class="sxs-lookup"><span data-stu-id="15c6e-149">You can use the <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.RibbonType%2A> property to get all of the Ribbon IDs that are associated with this <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon> instance.</span></span> <span data-ttu-id="15c6e-150">属性只返回用于创建此<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon>实例的单个 ID。 <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.RibbonId%2A></span><span class="sxs-lookup"><span data-stu-id="15c6e-150">The <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.RibbonId%2A> property returns only the single ID that was used to create this <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon> instance.</span></span> <span data-ttu-id="15c6e-151">例如, 你可以使用此属性来确定此功能区实例是否正在邮件组合项中显示。</span><span class="sxs-lookup"><span data-stu-id="15c6e-151">For example, you can use this property to determine whether this Ribbon instance is being displayed in a mail composition item.</span></span>  
   
  ]]></format>
         </remarks>
@@ -347,19 +326,19 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="d7173-152">获取功能区 ID 的逗号分隔的列表，这些功能区 ID 与此 <see cref="T:Microsoft.Office.Tools.Ribbon.OfficeRibbon" /> 实例相关联。</span><span class="sxs-lookup"><span data-stu-id="d7173-152">Gets a comma-separated list of Ribbon IDs that are associated with this <see cref="T:Microsoft.Office.Tools.Ribbon.OfficeRibbon" /> instance.</span></span></summary>
-        <value><span data-ttu-id="d7173-153">功能区 ID 的逗号分隔的列表，这些功能区 ID 与此 <see cref="T:Microsoft.Office.Tools.Ribbon.OfficeRibbon" /> 实例相关联。</span><span class="sxs-lookup"><span data-stu-id="d7173-153">A comma-separated list of Ribbon IDs that are associated with this <see cref="T:Microsoft.Office.Tools.Ribbon.OfficeRibbon" /> instance.</span></span></value>
+        <summary><span data-ttu-id="15c6e-152">获取功能区 ID 的逗号分隔的列表，这些功能区 ID 与此 <see cref="T:Microsoft.Office.Tools.Ribbon.OfficeRibbon" /> 实例相关联。</span><span class="sxs-lookup"><span data-stu-id="15c6e-152">Gets a comma-separated list of Ribbon IDs that are associated with this <see cref="T:Microsoft.Office.Tools.Ribbon.OfficeRibbon" /> instance.</span></span></summary>
+        <value><span data-ttu-id="15c6e-153">功能区 ID 的逗号分隔的列表，这些功能区 ID 与此 <see cref="T:Microsoft.Office.Tools.Ribbon.OfficeRibbon" /> 实例相关联。</span><span class="sxs-lookup"><span data-stu-id="15c6e-153">A comma-separated list of Ribbon IDs that are associated with this <see cref="T:Microsoft.Office.Tools.Ribbon.OfficeRibbon" /> instance.</span></span></value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="d7173-154">Excel、 Word 和 PowerPoint 中此属性通常具有只有一个功能区 ID。</span><span class="sxs-lookup"><span data-stu-id="d7173-154">Excel, Word, and PowerPoint typically have only one Ribbon ID in this property.</span></span> <span data-ttu-id="d7173-155">Outlook 可以有多个 Id，为其对应的各种消息类特定<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon>实例是否有效。</span><span class="sxs-lookup"><span data-stu-id="d7173-155">Outlook can have several IDs, corresponding to the various message classes for which the particular <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon> instance is valid.</span></span>  
+ <span data-ttu-id="15c6e-154">Excel、Word 和 PowerPoint 通常在此属性中只有一个功能区 ID。</span><span class="sxs-lookup"><span data-stu-id="15c6e-154">Excel, Word, and PowerPoint typically have only one Ribbon ID in this property.</span></span> <span data-ttu-id="15c6e-155">Outlook 可以有多个 id, 它们对应于特定<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon>实例有效的各种消息类。</span><span class="sxs-lookup"><span data-stu-id="15c6e-155">Outlook can have several IDs, corresponding to the various message classes for which the particular <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon> instance is valid.</span></span>  
   
- <span data-ttu-id="d7173-156">在设计器提供有效的功能区 Id 的下拉列表。</span><span class="sxs-lookup"><span data-stu-id="d7173-156">The designer provides a drop-down list of valid Ribbon IDs.</span></span>  
+ <span data-ttu-id="15c6e-156">设计器提供有效功能区 Id 的下拉列表。</span><span class="sxs-lookup"><span data-stu-id="15c6e-156">The designer provides a drop-down list of valid Ribbon IDs.</span></span>  
   
- <span data-ttu-id="d7173-157">功能区 Id 用于将功能区类与特定的上下文窗口相关联。</span><span class="sxs-lookup"><span data-stu-id="d7173-157">Ribbon IDs are used to associate a Ribbon class with a particular context window.</span></span>  
+ <span data-ttu-id="15c6e-157">功能区 Id 用于将功能区类与特定上下文窗口相关联。</span><span class="sxs-lookup"><span data-stu-id="15c6e-157">Ribbon IDs are used to associate a Ribbon class with a particular context window.</span></span>  
   
- <span data-ttu-id="d7173-158">只能在功能区加载到 Office 应用程序之前，可以设置此属性。</span><span class="sxs-lookup"><span data-stu-id="d7173-158">This property can be set only before the Ribbon is loaded into the Office application.</span></span> <span data-ttu-id="d7173-159">有关设置此属性的信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。</span><span class="sxs-lookup"><span data-stu-id="d7173-159">For information about setting this property, see [Ribbon Object Model Overview](/visualstudio/vsto/ribbon-object-model-overview).</span></span>  
+ <span data-ttu-id="15c6e-158">此属性只能在功能区加载到 Office 应用程序中之前设置。</span><span class="sxs-lookup"><span data-stu-id="15c6e-158">This property can be set only before the Ribbon is loaded into the Office application.</span></span> <span data-ttu-id="15c6e-159">有关设置此属性的信息, 请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。</span><span class="sxs-lookup"><span data-stu-id="15c6e-159">For information about setting this property, see [Ribbon Object Model Overview](/visualstudio/vsto/ribbon-object-model-overview).</span></span>  
   
  ]]></format>
         </remarks>
@@ -382,15 +361,15 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="d7173-160">获取或设置一个值，该值指示是否隐藏功能区上的所有内置选项卡和 Microsoft Office 菜单上的大部分命令，并且是否仅显示在此功能区项中定义的自定义项。</span><span class="sxs-lookup"><span data-stu-id="d7173-160">Gets or sets a value that indicates whether to hide all built-in tabs on the Ribbon and most commands on the Microsoft Office Menu and display only the customizations that are defined in this Ribbon item.</span></span></summary>
-        <value><span data-ttu-id="d7173-161">如果功能区仅显示在此功能区项中定义的自定义项，则为 <see langword="true" />；否则为 <see langword="false" />。</span><span class="sxs-lookup"><span data-stu-id="d7173-161"><see langword="true" /> if the Ribbon displays only the customizations that are defined in this Ribbon item; otherwise, <see langword="false" />.</span></span> <span data-ttu-id="d7173-162">默认值为 <see langword="false" />。</span><span class="sxs-lookup"><span data-stu-id="d7173-162">The default is <see langword="false" />.</span></span></value>
+        <summary><span data-ttu-id="15c6e-160">获取或设置一个值，该值指示是否隐藏功能区上的所有内置选项卡和 Microsoft Office 菜单上的大部分命令，并且是否仅显示在此功能区项中定义的自定义项。</span><span class="sxs-lookup"><span data-stu-id="15c6e-160">Gets or sets a value that indicates whether to hide all built-in tabs on the Ribbon and most commands on the Microsoft Office Menu and display only the customizations that are defined in this Ribbon item.</span></span></summary>
+        <value><span data-ttu-id="15c6e-161">如果功能区仅显示在此功能区项中定义的自定义项，则为 <see langword="true" />；否则为 <see langword="false" />。</span><span class="sxs-lookup"><span data-stu-id="15c6e-161"><see langword="true" /> if the Ribbon displays only the customizations that are defined in this Ribbon item; otherwise, <see langword="false" />.</span></span> <span data-ttu-id="15c6e-162">默认值为 <see langword="false" />。</span><span class="sxs-lookup"><span data-stu-id="15c6e-162">The default is <see langword="false" />.</span></span></value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="d7173-163">只能在功能区加载到 Office 应用程序之前，可以设置此属性。</span><span class="sxs-lookup"><span data-stu-id="d7173-163">This property can be set only before the Ribbon is loaded into the Office application.</span></span> <span data-ttu-id="d7173-164">有关设置此属性的信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。</span><span class="sxs-lookup"><span data-stu-id="d7173-164">For information about setting this property, see [Ribbon Object Model Overview](/visualstudio/vsto/ribbon-object-model-overview).</span></span>  
+ <span data-ttu-id="15c6e-163">此属性只能在功能区加载到 Office 应用程序中之前设置。</span><span class="sxs-lookup"><span data-stu-id="15c6e-163">This property can be set only before the Ribbon is loaded into the Office application.</span></span> <span data-ttu-id="15c6e-164">有关设置此属性的信息, 请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。</span><span class="sxs-lookup"><span data-stu-id="15c6e-164">For information about setting this property, see [Ribbon Object Model Overview](/visualstudio/vsto/ribbon-object-model-overview).</span></span>  
   
- <span data-ttu-id="d7173-165">您不能在运行时更改自定义选项卡的可见性，如果此属性设置为`true`。</span><span class="sxs-lookup"><span data-stu-id="d7173-165">You cannot change the visibility of custom tabs at run time if this property is set to `true`.</span></span>  
+ <span data-ttu-id="15c6e-165">如果将此属性设置为`true`, 则不能在运行时更改自定义选项卡的可见性。</span><span class="sxs-lookup"><span data-stu-id="15c6e-165">You cannot change the visibility of custom tabs at run time if this property is set to `true`.</span></span>  
   
  ]]></format>
         </remarks>
@@ -413,8 +392,8 @@
         <ReturnType>System.Collections.Generic.IList&lt;Microsoft.Office.Tools.Ribbon.RibbonTab&gt;</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="d7173-166">获取 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonTab" /> 中 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonOfficeMenu" /> 对象的集合。</span><span class="sxs-lookup"><span data-stu-id="d7173-166">Gets a collection of <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonTab" /> objects in the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonOfficeMenu" />.</span></span></summary>
-        <value><span data-ttu-id="d7173-167"><see cref="T:Microsoft.Office.Tools.Ribbon.RibbonTab" /> 中 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonOfficeMenu" /> 对象的集合。</span><span class="sxs-lookup"><span data-stu-id="d7173-167">A collection of <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonTab" /> objects in the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonOfficeMenu" />.</span></span></value>
+        <summary><span data-ttu-id="15c6e-166">获取 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonTab" /> 中 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonOfficeMenu" /> 对象的集合。</span><span class="sxs-lookup"><span data-stu-id="15c6e-166">Gets a collection of <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonTab" /> objects in the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonOfficeMenu" />.</span></span></summary>
+        <value><span data-ttu-id="15c6e-167"><see cref="T:Microsoft.Office.Tools.Ribbon.RibbonTab" /> 中 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonOfficeMenu" /> 对象的集合。</span><span class="sxs-lookup"><span data-stu-id="15c6e-167">A collection of <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonTab" /> objects in the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonOfficeMenu" />.</span></span></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

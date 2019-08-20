@@ -1,5 +1,5 @@
 <Type Name="FormRegionCollectionBase" FullName="Microsoft.Office.Tools.Outlook.FormRegionCollectionBase">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="2e814cf0e1370debd444e47238e4164201405caa" /><Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="09/19/2018" /><Meta Name="ms.locfileid" Value="46455696" /></Metadata><TypeSignature Language="C#" Value="public abstract class FormRegionCollectionBase : Microsoft.Office.Tools.IExtension, System.Collections.Generic.ICollection&lt;Microsoft.Office.Tools.Outlook.IFormRegion&gt;, System.Collections.Generic.IEnumerable&lt;Microsoft.Office.Tools.Outlook.IFormRegion&gt;, System.Collections.Generic.IList&lt;Microsoft.Office.Tools.Outlook.IFormRegion&gt;" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="a3d3ee7fa23b1a2dbe3b6e71baab6dbfd14fd1e6" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69003808" /></Metadata><TypeSignature Language="C#" Value="public abstract class FormRegionCollectionBase : Microsoft.Office.Tools.IExtension, System.Collections.Generic.ICollection&lt;Microsoft.Office.Tools.Outlook.IFormRegion&gt;, System.Collections.Generic.IEnumerable&lt;Microsoft.Office.Tools.Outlook.IFormRegion&gt;, System.Collections.Generic.IList&lt;Microsoft.Office.Tools.Outlook.IFormRegion&gt;" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit FormRegionCollectionBase extends System.Object implements class Microsoft.Office.Tools.IExtension, class System.Collections.Generic.ICollection`1&lt;class Microsoft.Office.Tools.Outlook.IFormRegion&gt;, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Office.Tools.Outlook.IFormRegion&gt;, class System.Collections.Generic.IList`1&lt;class Microsoft.Office.Tools.Outlook.IFormRegion&gt;, class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Outlook.FormRegionCollectionBase" />
   <AssemblyInfo>
@@ -17,21 +17,30 @@
       <InterfaceName>System.Collections.Generic.ICollection&lt;Microsoft.Office.Tools.Outlook.IFormRegion&gt;</InterfaceName>
     </Interface>
     <Interface>
+      <InterfaceName>System.Collections.Generic.ICollection&lt;T&gt;</InterfaceName>
+    </Interface>
+    <Interface>
       <InterfaceName>System.Collections.Generic.IEnumerable&lt;Microsoft.Office.Tools.Outlook.IFormRegion&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;T&gt;</InterfaceName>
     </Interface>
     <Interface>
       <InterfaceName>System.Collections.Generic.IList&lt;Microsoft.Office.Tools.Outlook.IFormRegion&gt;</InterfaceName>
     </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
+    </Interface>
   </Interfaces>
   <Docs>
-    <summary><span data-ttu-id="af522-101">提供对 Outlook 外接程序项目中的 <see cref="T:Microsoft.Office.Tools.Outlook.IFormRegion" /> 对象的访问权限。</span><span class="sxs-lookup"><span data-stu-id="af522-101">Provides access to <see cref="T:Microsoft.Office.Tools.Outlook.IFormRegion" /> objects in an Outlook add-in project.</span></span></summary>
+    <summary><span data-ttu-id="deff6-101">提供对 Outlook 外接程序项目中的 <see cref="T:Microsoft.Office.Tools.Outlook.IFormRegion" /> 对象的访问权限。</span><span class="sxs-lookup"><span data-stu-id="deff6-101">Provides access to <see cref="T:Microsoft.Office.Tools.Outlook.IFormRegion" /> objects in an Outlook add-in project.</span></span></summary>
     <remarks>
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="af522-102">此集合包含的所有窗体区域与 Outlook 外接程序相关联。</span><span class="sxs-lookup"><span data-stu-id="af522-102">This collection contains all of the form regions that are associated with your Outlook add-in.</span></span> <span data-ttu-id="af522-103">访问<xref:Microsoft.Office.Tools.Outlook.FormRegionCollectionBase>在项目中，使用对象`Globals.FormRegions`属性。</span><span class="sxs-lookup"><span data-stu-id="af522-103">To access the <xref:Microsoft.Office.Tools.Outlook.FormRegionCollectionBase> object in your project, use the `Globals.FormRegions` property.</span></span> <span data-ttu-id="af522-104">有关详细信息，请参阅[对 Office 项目中的对象的全局访问](/visualstudio/vsto/global-access-to-objects-in-office-projects)。</span><span class="sxs-lookup"><span data-stu-id="af522-104">For more information, see [Global Access to Objects in Office Projects](/visualstudio/vsto/global-access-to-objects-in-office-projects).</span></span>  
+ <span data-ttu-id="deff6-102">此集合包含与 Outlook 外接程序关联的所有窗体区域。</span><span class="sxs-lookup"><span data-stu-id="deff6-102">This collection contains all of the form regions that are associated with your Outlook add-in.</span></span> <span data-ttu-id="deff6-103">若要访问<xref:Microsoft.Office.Tools.Outlook.FormRegionCollectionBase>项目中的对象, 请`Globals.FormRegions`使用属性。</span><span class="sxs-lookup"><span data-stu-id="deff6-103">To access the <xref:Microsoft.Office.Tools.Outlook.FormRegionCollectionBase> object in your project, use the `Globals.FormRegions` property.</span></span> <span data-ttu-id="deff6-104">有关详细信息, 请参阅[对 Office 项目中对象的全局访问](/visualstudio/vsto/global-access-to-objects-in-office-projects)。</span><span class="sxs-lookup"><span data-stu-id="deff6-104">For more information, see [Global Access to Objects in Office Projects](/visualstudio/vsto/global-access-to-objects-in-office-projects).</span></span>  
   
-## <a name="usage"></a><span data-ttu-id="af522-105">用法</span><span class="sxs-lookup"><span data-stu-id="af522-105">Usage</span></span>  
+## <a name="usage"></a><span data-ttu-id="deff6-105">用法</span><span class="sxs-lookup"><span data-stu-id="deff6-105">Usage</span></span>  
  [!INCLUDE[vsto_net4utilities](~/includes/vsto-net4utilities-md.md)]  
   
  ]]></format>
@@ -69,8 +78,8 @@
         <ReturnType>System.Collections.Generic.IList&lt;Microsoft.Office.Tools.Outlook.IFormRegion&gt;</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="af522-106">获取 <see cref="T:System.Collections.Generic.IList`1" /> 中的 <see cref="T:Microsoft.Office.Tools.Outlook.IFormRegion" /> 对象的 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionCollectionBase" />。</span><span class="sxs-lookup"><span data-stu-id="af522-106">Gets a <see cref="T:System.Collections.Generic.IList`1" /> of <see cref="T:Microsoft.Office.Tools.Outlook.IFormRegion" /> objects in the <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionCollectionBase" />.</span></span></summary>
-        <value><span data-ttu-id="af522-107">一个 <see cref="T:System.Collections.Generic.IList`1" /> 中的 <see cref="T:Microsoft.Office.Tools.Outlook.IFormRegion" /> 对象的 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionCollectionBase" />。</span><span class="sxs-lookup"><span data-stu-id="af522-107">A <see cref="T:System.Collections.Generic.IList`1" /> of <see cref="T:Microsoft.Office.Tools.Outlook.IFormRegion" /> objects in the <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionCollectionBase" />.</span></span></value>
+        <summary><span data-ttu-id="deff6-106">获取 <see cref="T:System.Collections.Generic.IList`1" /> 中的 <see cref="T:Microsoft.Office.Tools.Outlook.IFormRegion" /> 对象的 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionCollectionBase" />。</span><span class="sxs-lookup"><span data-stu-id="deff6-106">Gets a <see cref="T:System.Collections.Generic.IList`1" /> of <see cref="T:Microsoft.Office.Tools.Outlook.IFormRegion" /> objects in the <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionCollectionBase" />.</span></span></summary>
+        <value><span data-ttu-id="deff6-107">一个 <see cref="T:System.Collections.Generic.IList`1" /> 中的 <see cref="T:Microsoft.Office.Tools.Outlook.IFormRegion" /> 对象的 <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionCollectionBase" />。</span><span class="sxs-lookup"><span data-stu-id="deff6-107">A <see cref="T:System.Collections.Generic.IList`1" /> of <see cref="T:Microsoft.Office.Tools.Outlook.IFormRegion" /> objects in the <see cref="T:Microsoft.Office.Tools.Outlook.FormRegionCollectionBase" />.</span></span></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -79,6 +88,9 @@
       <MemberSignature Language="ILAsm" Value=".property instance object Microsoft.Office.Tools.IExtension.ExtensionBase" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Outlook.FormRegionCollectionBase.Microsoft#Office#Tools#IExtension#ExtensionBase" />
       <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Microsoft.Office.Tools.IExtension.ExtensionBase</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Outlook.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -97,6 +109,9 @@
       <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.Generic.ICollection&lt;Microsoft.Office.Tools.Outlook.IFormRegion&gt;.Add(class Microsoft.Office.Tools.Outlook.IFormRegion item) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Outlook.FormRegionCollectionBase.System#Collections#Generic#ICollection&lt;Microsoft#Office#Tools#Outlook#IFormRegion&gt;#Add(Microsoft.Office.Tools.Outlook.IFormRegion)" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Collections.Generic.ICollection`1.Add(`0)</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Outlook.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -118,6 +133,9 @@
       <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.Generic.ICollection&lt;Microsoft.Office.Tools.Outlook.IFormRegion&gt;.Clear() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Outlook.FormRegionCollectionBase.System#Collections#Generic#ICollection&lt;Microsoft#Office#Tools#Outlook#IFormRegion&gt;#Clear" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Collections.Generic.ICollection`1.Clear</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Outlook.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -136,6 +154,9 @@
       <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Collections.Generic.ICollection&lt;Microsoft.Office.Tools.Outlook.IFormRegion&gt;.Contains(class Microsoft.Office.Tools.Outlook.IFormRegion item) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Outlook.FormRegionCollectionBase.System#Collections#Generic#ICollection&lt;Microsoft#Office#Tools#Outlook#IFormRegion&gt;#Contains(Microsoft.Office.Tools.Outlook.IFormRegion)" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Collections.Generic.ICollection`1.Contains(`0)</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Outlook.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -181,6 +202,9 @@
       <MemberSignature Language="ILAsm" Value=".property instance int32 System.Collections.Generic.ICollection&lt;Microsoft.Office.Tools.Outlook.IFormRegion&gt;.Count" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Outlook.FormRegionCollectionBase.System#Collections#Generic#ICollection&lt;Microsoft#Office#Tools#Outlook#IFormRegion&gt;#Count" />
       <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:System.Collections.Generic.ICollection`1.Count</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Outlook.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -199,6 +223,9 @@
       <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.Generic.ICollection&lt;Microsoft.Office.Tools.Outlook.IFormRegion&gt;.IsReadOnly" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Outlook.FormRegionCollectionBase.System#Collections#Generic#ICollection&lt;Microsoft#Office#Tools#Outlook#IFormRegion&gt;#IsReadOnly" />
       <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:System.Collections.Generic.ICollection`1.IsReadOnly</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Outlook.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -217,6 +244,9 @@
       <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Collections.Generic.ICollection&lt;Microsoft.Office.Tools.Outlook.IFormRegion&gt;.Remove(class Microsoft.Office.Tools.Outlook.IFormRegion item) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Outlook.FormRegionCollectionBase.System#Collections#Generic#ICollection&lt;Microsoft#Office#Tools#Outlook#IFormRegion&gt;#Remove(Microsoft.Office.Tools.Outlook.IFormRegion)" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Collections.Generic.ICollection`1.Remove(`0)</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Outlook.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -239,6 +269,9 @@
       <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.Generic.IEnumerator`1&lt;class Microsoft.Office.Tools.Outlook.IFormRegion&gt; System.Collections.Generic.IEnumerable&lt;Microsoft.Office.Tools.Outlook.IFormRegion&gt;.GetEnumerator() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Outlook.FormRegionCollectionBase.System#Collections#Generic#IEnumerable&lt;Microsoft#Office#Tools#Outlook#IFormRegion&gt;#GetEnumerator" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Collections.Generic.IEnumerable`1.GetEnumerator</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Outlook.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -258,6 +291,9 @@
       <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.Generic.IList&lt;Microsoft.Office.Tools.Outlook.IFormRegion&gt;.IndexOf(class Microsoft.Office.Tools.Outlook.IFormRegion item) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Outlook.FormRegionCollectionBase.System#Collections#Generic#IList&lt;Microsoft#Office#Tools#Outlook#IFormRegion&gt;#IndexOf(Microsoft.Office.Tools.Outlook.IFormRegion)" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Collections.Generic.IList`1.IndexOf(`0)</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Outlook.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -280,6 +316,9 @@
       <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.Generic.IList&lt;Microsoft.Office.Tools.Outlook.IFormRegion&gt;.Insert(int32 index, class Microsoft.Office.Tools.Outlook.IFormRegion item) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Outlook.FormRegionCollectionBase.System#Collections#Generic#IList&lt;Microsoft#Office#Tools#Outlook#IFormRegion&gt;#Insert(System.Int32,Microsoft.Office.Tools.Outlook.IFormRegion)" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Collections.Generic.IList`1.Insert(System.Int32,`0)</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Outlook.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -303,6 +342,9 @@
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Tools.Outlook.IFormRegion System.Collections.Generic.IList&lt;Microsoft.Office.Tools.Outlook.IFormRegion&gt;.Item(int32)" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Outlook.FormRegionCollectionBase.System#Collections#Generic#IList&lt;Microsoft#Office#Tools#Outlook#IFormRegion&gt;#Item(System.Int32)" />
       <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:System.Collections.Generic.IList`1.Item(System.Int32)</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Outlook.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -325,6 +367,9 @@
       <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.Generic.IList&lt;Microsoft.Office.Tools.Outlook.IFormRegion&gt;.RemoveAt(int32 index) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Outlook.FormRegionCollectionBase.System#Collections#Generic#IList&lt;Microsoft#Office#Tools#Outlook#IFormRegion&gt;#RemoveAt(System.Int32)" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Collections.Generic.IList`1.RemoveAt(System.Int32)</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Outlook.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -346,6 +391,9 @@
       <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Outlook.FormRegionCollectionBase.System#Collections#IEnumerable#GetEnumerator" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Collections.IEnumerable.GetEnumerator</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Outlook.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
