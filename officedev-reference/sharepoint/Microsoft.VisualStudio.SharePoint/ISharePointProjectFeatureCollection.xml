@@ -1,5 +1,5 @@
 <Type Name="ISharePointProjectFeatureCollection" FullName="Microsoft.VisualStudio.SharePoint.ISharePointProjectFeatureCollection">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="95c84e8f03883f7d743c0e3e6f290c55a47b39f5" /><Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="02/21/2018" /><Meta Name="ms.locfileid" Value="29410260" /></Metadata><TypeSignature Language="C#" Value="public interface ISharePointProjectFeatureCollection : Microsoft.VisualStudio.SharePoint.ISharePointCollection&lt;Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature&gt;, System.Collections.Generic.IEnumerable&lt;Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature&gt;, System.Collections.Specialized.INotifyCollectionChanged, System.ComponentModel.INotifyPropertyChanged" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="575c144104d28ef42f460f58b988f217707f0c5e" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69007805" /></Metadata><TypeSignature Language="C#" Value="public interface ISharePointProjectFeatureCollection : Microsoft.VisualStudio.SharePoint.ISharePointCollection&lt;Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature&gt;, System.Collections.Generic.IEnumerable&lt;Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature&gt;, System.Collections.Specialized.INotifyCollectionChanged, System.ComponentModel.INotifyPropertyChanged" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISharePointProjectFeatureCollection implements class Microsoft.VisualStudio.SharePoint.ISharePointCollection`1&lt;class Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature&gt;, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature&gt;, class System.Collections.IEnumerable, class System.Collections.Specialized.INotifyCollectionChanged, class System.ComponentModel.INotifyPropertyChanged" />
   <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeatureCollection" />
   <AssemblyInfo>
@@ -14,6 +14,12 @@
       <InterfaceName>System.Collections.Generic.IEnumerable&lt;Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature&gt;</InterfaceName>
     </Interface>
     <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;T&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
+    </Interface>
+    <Interface>
       <InterfaceName>System.Collections.Specialized.INotifyCollectionChanged</InterfaceName>
     </Interface>
     <Interface>
@@ -21,12 +27,12 @@
     </Interface>
   </Interfaces>
   <Docs>
-    <summary><span data-ttu-id="51ea3-101">在 SharePoint 项目中定义的所有 SharePoint 功能的集合。</span><span class="sxs-lookup"><span data-stu-id="51ea3-101">A collection of all SharePoint features defined in the SharePoint project.</span></span></summary>
+    <summary><span data-ttu-id="2147b-101">在 SharePoint 项目中定义的所有 SharePoint 功能的集合。</span><span class="sxs-lookup"><span data-stu-id="2147b-101">A collection of all SharePoint features defined in the SharePoint project.</span></span></summary>
     <remarks>
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="51ea3-102">在项目中定义的功能可能或可能不包含向解决方案包与项目关联。</span><span class="sxs-lookup"><span data-stu-id="51ea3-102">Features defined in the project may or may not be included to the solution package associated with the project.</span></span> <span data-ttu-id="51ea3-103">可以从与其他项目关联的包中引用功能。</span><span class="sxs-lookup"><span data-stu-id="51ea3-103">Features can be referenced from packages associated with other projects.</span></span>  
+ <span data-ttu-id="2147b-102">在项目中定义的功能可以包含也可以不包含到与项目关联的解决方案包。</span><span class="sxs-lookup"><span data-stu-id="2147b-102">Features defined in the project may or may not be included to the solution package associated with the project.</span></span> <span data-ttu-id="2147b-103">可以从与其他项目关联的包中引用功能。</span><span class="sxs-lookup"><span data-stu-id="2147b-103">Features can be referenced from packages associated with other projects.</span></span>  
   
  ]]></format>
     </remarks>
@@ -46,8 +52,8 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary><span data-ttu-id="51ea3-104">添加新功能。</span><span class="sxs-lookup"><span data-stu-id="51ea3-104">Adds a new feature.</span></span></summary>
-        <returns><span data-ttu-id="51ea3-105">表示功能的对象。</span><span class="sxs-lookup"><span data-stu-id="51ea3-105">An object representing a feature.</span></span></returns>
+        <summary><span data-ttu-id="2147b-104">添加新功能。</span><span class="sxs-lookup"><span data-stu-id="2147b-104">Adds a new feature.</span></span></summary>
+        <returns><span data-ttu-id="2147b-105">表示功能的对象。</span><span class="sxs-lookup"><span data-stu-id="2147b-105">An object representing a feature.</span></span></returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -67,11 +73,11 @@
         <Parameter Name="skipAutoPackage" Type="System.Boolean" />
       </Parameters>
       <Docs>
-        <param name="skipAutoPackage"><span data-ttu-id="51ea3-106">如果为 <see langword="true" />，不要向项目包添加该功能。</span><span class="sxs-lookup"><span data-stu-id="51ea3-106">When <see langword="true" />, do not add the feature to the project package.</span></span></param>
-        <summary><span data-ttu-id="51ea3-107">添加新功能。</span><span class="sxs-lookup"><span data-stu-id="51ea3-107">Adds a new feature.</span></span></summary>
-        <returns><span data-ttu-id="51ea3-108">表示功能的对象。</span><span class="sxs-lookup"><span data-stu-id="51ea3-108">An object representing a feature.</span></span></returns>
+        <param name="skipAutoPackage"><span data-ttu-id="2147b-106">如果为 <see langword="true" />，不要向项目包添加该功能。</span><span class="sxs-lookup"><span data-stu-id="2147b-106">When <see langword="true" />, do not add the feature to the project package.</span></span></param>
+        <summary><span data-ttu-id="2147b-107">添加新功能。</span><span class="sxs-lookup"><span data-stu-id="2147b-107">Adds a new feature.</span></span></summary>
+        <returns><span data-ttu-id="2147b-108">表示功能的对象。</span><span class="sxs-lookup"><span data-stu-id="2147b-108">An object representing a feature.</span></span></returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ComponentModel.Design.CheckoutException"><span data-ttu-id="51ea3-109">无法签出项目或包文件时发生</span><span class="sxs-lookup"><span data-stu-id="51ea3-109">Occurs when the project or package file cannot be checked out</span></span></exception>
+        <exception cref="T:System.ComponentModel.Design.CheckoutException"><span data-ttu-id="2147b-109">无法签出项目或包文件时发生</span><span class="sxs-lookup"><span data-stu-id="2147b-109">Occurs when the project or package file cannot be checked out</span></span></exception>
       </Docs>
     </Member>
     <Member MemberName="Add">
@@ -90,11 +96,11 @@
         <Parameter Name="featureName" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="featureName"><span data-ttu-id="51ea3-110">功能的名称。</span><span class="sxs-lookup"><span data-stu-id="51ea3-110">The name of the feature.</span></span></param>
-        <summary><span data-ttu-id="51ea3-111">添加使用指定功能名称的新功能。</span><span class="sxs-lookup"><span data-stu-id="51ea3-111">Adds a new feature using the specified feature name.</span></span></summary>
-        <returns><span data-ttu-id="51ea3-112">表示功能的对象。</span><span class="sxs-lookup"><span data-stu-id="51ea3-112">An object representing a feature.</span></span></returns>
+        <param name="featureName"><span data-ttu-id="2147b-110">功能的名称。</span><span class="sxs-lookup"><span data-stu-id="2147b-110">The name of the feature.</span></span></param>
+        <summary><span data-ttu-id="2147b-111">添加使用指定功能名称的新功能。</span><span class="sxs-lookup"><span data-stu-id="2147b-111">Adds a new feature using the specified feature name.</span></span></summary>
+        <returns><span data-ttu-id="2147b-112">表示功能的对象。</span><span class="sxs-lookup"><span data-stu-id="2147b-112">An object representing a feature.</span></span></returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ComponentModel.Design.CheckoutException"><span data-ttu-id="51ea3-113">无法签出项目文件时发生</span><span class="sxs-lookup"><span data-stu-id="51ea3-113">Occurs when the project file cannot be checked out</span></span></exception>
+        <exception cref="T:System.ComponentModel.Design.CheckoutException"><span data-ttu-id="2147b-113">无法签出项目文件时发生</span><span class="sxs-lookup"><span data-stu-id="2147b-113">Occurs when the project file cannot be checked out</span></span></exception>
       </Docs>
     </Member>
     <Member MemberName="Add">
@@ -114,12 +120,12 @@
         <Parameter Name="skipAutoPackage" Type="System.Boolean" />
       </Parameters>
       <Docs>
-        <param name="featureName"><span data-ttu-id="51ea3-114">功能名称。</span><span class="sxs-lookup"><span data-stu-id="51ea3-114">The feature name.</span></span></param>
-        <param name="skipAutoPackage"><span data-ttu-id="51ea3-115">如果为 <see langword="true" />，不要向项目包添加该功能。</span><span class="sxs-lookup"><span data-stu-id="51ea3-115">When <see langword="true" />, do not add the feature to the project package.</span></span></param>
-        <summary><span data-ttu-id="51ea3-116">添加使用指定功能名称的新功能。</span><span class="sxs-lookup"><span data-stu-id="51ea3-116">Adds a new feature using the specified feature name.</span></span></summary>
-        <returns><span data-ttu-id="51ea3-117">表示功能的对象。</span><span class="sxs-lookup"><span data-stu-id="51ea3-117">An object representing a feature.</span></span></returns>
+        <param name="featureName"><span data-ttu-id="2147b-114">功能名称。</span><span class="sxs-lookup"><span data-stu-id="2147b-114">The feature name.</span></span></param>
+        <param name="skipAutoPackage"><span data-ttu-id="2147b-115">如果为 <see langword="true" />，不要向项目包添加该功能。</span><span class="sxs-lookup"><span data-stu-id="2147b-115">When <see langword="true" />, do not add the feature to the project package.</span></span></param>
+        <summary><span data-ttu-id="2147b-116">添加使用指定功能名称的新功能。</span><span class="sxs-lookup"><span data-stu-id="2147b-116">Adds a new feature using the specified feature name.</span></span></summary>
+        <returns><span data-ttu-id="2147b-117">表示功能的对象。</span><span class="sxs-lookup"><span data-stu-id="2147b-117">An object representing a feature.</span></span></returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ComponentModel.Design.CheckoutException"><span data-ttu-id="51ea3-118">无法签出项目或包文件时发生</span><span class="sxs-lookup"><span data-stu-id="51ea3-118">Occurs when the project or package file cannot be checked out</span></span></exception>
+        <exception cref="T:System.ComponentModel.Design.CheckoutException"><span data-ttu-id="2147b-118">无法签出项目或包文件时发生</span><span class="sxs-lookup"><span data-stu-id="2147b-118">Occurs when the project or package file cannot be checked out</span></span></exception>
       </Docs>
     </Member>
     <Member MemberName="Find">
@@ -138,9 +144,9 @@
         <Parameter Name="id" Type="System.Guid" />
       </Parameters>
       <Docs>
-        <param name="id"><span data-ttu-id="51ea3-119">功能的 ID。</span><span class="sxs-lookup"><span data-stu-id="51ea3-119">The ID of the feature.</span></span></param>
-        <summary><span data-ttu-id="51ea3-120">获取具有指定 ID 的 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature" /> 的实例。</span><span class="sxs-lookup"><span data-stu-id="51ea3-120">Gets an instance of an <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature" /> with the specified ID.</span></span></summary>
-        <returns><span data-ttu-id="51ea3-121">表示功能的对象。</span><span class="sxs-lookup"><span data-stu-id="51ea3-121">An object representing a feature.</span></span></returns>
+        <param name="id"><span data-ttu-id="2147b-119">功能的 ID。</span><span class="sxs-lookup"><span data-stu-id="2147b-119">The ID of the feature.</span></span></param>
+        <summary><span data-ttu-id="2147b-120">获取具有指定 ID 的 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature" /> 的实例。</span><span class="sxs-lookup"><span data-stu-id="2147b-120">Gets an instance of an <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature" /> with the specified ID.</span></span></summary>
+        <returns><span data-ttu-id="2147b-121">表示功能的对象。</span><span class="sxs-lookup"><span data-stu-id="2147b-121">An object representing a feature.</span></span></returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -160,14 +166,14 @@
         <Parameter Name="folderPath" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="folderPath"><span data-ttu-id="51ea3-122"><see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature" /> 文件夹路径。</span><span class="sxs-lookup"><span data-stu-id="51ea3-122">An <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature" /> folder path.</span></span></param>
-        <summary><span data-ttu-id="51ea3-123">获取具有指定文件夹路径的 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature" /> 的实例。</span><span class="sxs-lookup"><span data-stu-id="51ea3-123">Gets an instance of <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature" /> with the specified folder path.</span></span></summary>
-        <value><span data-ttu-id="51ea3-124">如果它找到，则 SharePoint 功能的一个实例<see langword="null" /> (或<see langword="Nothing" />中[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]) 否则为。</span><span class="sxs-lookup"><span data-stu-id="51ea3-124">An instance of the SharePoint feature if it is found; <see langword="null" /> (or <see langword="Nothing" /> in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]) otherwise.</span></span></value>
+        <param name="folderPath"><span data-ttu-id="2147b-122"><see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature" /> 文件夹路径。</span><span class="sxs-lookup"><span data-stu-id="2147b-122">An <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature" /> folder path.</span></span></param>
+        <summary><span data-ttu-id="2147b-123">获取具有指定文件夹路径的 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature" /> 的实例。</span><span class="sxs-lookup"><span data-stu-id="2147b-123">Gets an instance of <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature" /> with the specified folder path.</span></span></summary>
+        <value><span data-ttu-id="2147b-124">如果找到 SharePoint 功能, 则为该实例; 否则为否则为<see langword="null" />。 <see langword="Nothing" /> [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2147b-124">An instance of the SharePoint feature if it is found; <see langword="null" /> (or <see langword="Nothing" /> in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]) otherwise.</span></span></value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="51ea3-125">文件夹路径可以是绝对文件夹路径，指向项目文件夹或文件夹名称的相对路径。</span><span class="sxs-lookup"><span data-stu-id="51ea3-125">The folder path can be an absolute folder path, a relative path to the project folder, or a folder name.</span></span>  
+ <span data-ttu-id="2147b-125">文件夹路径可以是绝对文件夹路径、项目文件夹的相对路径或文件夹名称。</span><span class="sxs-lookup"><span data-stu-id="2147b-125">The folder path can be an absolute folder path, a relative path to the project folder, or a folder name.</span></span>  
   
  ]]></format>
         </remarks>
@@ -186,8 +192,8 @@
         <ReturnType>Microsoft.VisualStudio.SharePoint.ISharePointProject</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="51ea3-126">与功能关联的 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProject" />。</span><span class="sxs-lookup"><span data-stu-id="51ea3-126">The <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProject" /> to which the features are associated.</span></span></summary>
-        <value><span data-ttu-id="51ea3-127">一个表示 SharePoint 项目的对象。</span><span class="sxs-lookup"><span data-stu-id="51ea3-127">An object representing a SharePoint project.</span></span></value>
+        <summary><span data-ttu-id="2147b-126">与功能关联的 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProject" />。</span><span class="sxs-lookup"><span data-stu-id="2147b-126">The <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProject" /> to which the features are associated.</span></span></summary>
+        <value><span data-ttu-id="2147b-127">一个表示 SharePoint 项目的对象。</span><span class="sxs-lookup"><span data-stu-id="2147b-127">An object representing a SharePoint project.</span></span></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

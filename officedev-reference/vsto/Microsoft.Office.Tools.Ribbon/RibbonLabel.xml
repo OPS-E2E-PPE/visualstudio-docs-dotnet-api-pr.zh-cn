@@ -1,5 +1,5 @@
 <Type Name="RibbonLabel" FullName="Microsoft.Office.Tools.Ribbon.RibbonLabel">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="749bd3235cc3fd9a9c248087f8266dce7cfe250c" /><Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="09/19/2018" /><Meta Name="ms.locfileid" Value="46454201" /></Metadata><TypeSignature Language="C#" Value="public interface RibbonLabel : IDisposable, Microsoft.Office.Tools.Ribbon.RibbonControl, System.ComponentModel.IComponent" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="e3e43f2201341f6f8233e1121f01de88886070ed" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69002452" /></Metadata><TypeSignature Language="C#" Value="public interface RibbonLabel : IDisposable, Microsoft.Office.Tools.Ribbon.RibbonControl, System.ComponentModel.IComponent" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract RibbonLabel implements class Microsoft.Office.Tools.Ribbon.RibbonComponent, class Microsoft.Office.Tools.Ribbon.RibbonControl, class System.ComponentModel.IComponent, class System.IDisposable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Ribbon.RibbonLabel" />
   <AssemblyInfo>
@@ -7,6 +7,9 @@
     <AssemblyVersion>10.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Office.Tools.Ribbon.RibbonComponent</InterfaceName>
+    </Interface>
     <Interface>
       <InterfaceName>Microsoft.Office.Tools.Ribbon.RibbonControl</InterfaceName>
     </Interface>
@@ -23,26 +26,26 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary><span data-ttu-id="23029-101">表示 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonGroup" /> 或 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBox" /> 上的标签。</span><span class="sxs-lookup"><span data-stu-id="23029-101">Represents a label on a <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonGroup" /> or <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBox" />.</span></span></summary>
+    <summary><span data-ttu-id="2e5c8-101">表示 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonGroup" /> 或 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBox" /> 上的标签。</span><span class="sxs-lookup"><span data-stu-id="2e5c8-101">Represents a label on a <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonGroup" /> or <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBox" />.</span></span></summary>
     <remarks>
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="23029-102">Visual Studio 将创建<xref:Microsoft.Office.Tools.Ribbon.RibbonLabel>对象为你拖动时**标签**从**Office 功能区控件**选项卡**工具箱**到功能区设计器上。</span><span class="sxs-lookup"><span data-stu-id="23029-102">Visual Studio creates a <xref:Microsoft.Office.Tools.Ribbon.RibbonLabel> object for you when you drag a **Label** from the **Office Ribbon Controls** tab of the **Toolbox** onto the Ribbon Designer.</span></span>  
+ <span data-ttu-id="2e5c8-102">将**标签**从 " <xref:Microsoft.Office.Tools.Ribbon.RibbonLabel> **工具箱**" 的 " **Office 功能区控件**" 选项卡拖动到功能区设计器上时, Visual Studio 将为您创建一个对象。</span><span class="sxs-lookup"><span data-stu-id="2e5c8-102">Visual Studio creates a <xref:Microsoft.Office.Tools.Ribbon.RibbonLabel> object for you when you drag a **Label** from the **Office Ribbon Controls** tab of the **Toolbox** onto the Ribbon Designer.</span></span>  
   
- <span data-ttu-id="23029-103">若要在运行时将标签添加到组，创建一个新<xref:Microsoft.Office.Tools.Ribbon.RibbonLabel>对象，以及如何将此对象与<xref:Microsoft.Office.Tools.Ribbon.RibbonGroup.Items%2A>系列<xref:Microsoft.Office.Tools.Ribbon.RibbonGroup>或<xref:Microsoft.Office.Tools.Ribbon.RibbonBox.Items%2A>的集合<xref:Microsoft.Office.Tools.Ribbon.RibbonBox>。</span><span class="sxs-lookup"><span data-stu-id="23029-103">To add a label to a group at run time, create a new <xref:Microsoft.Office.Tools.Ribbon.RibbonLabel> object, and then add this object to the <xref:Microsoft.Office.Tools.Ribbon.RibbonGroup.Items%2A> collection of a <xref:Microsoft.Office.Tools.Ribbon.RibbonGroup> or the <xref:Microsoft.Office.Tools.Ribbon.RibbonBox.Items%2A> collection of a <xref:Microsoft.Office.Tools.Ribbon.RibbonBox>.</span></span> <span data-ttu-id="23029-104">只能在功能区加载之前，你可以执行此操作。</span><span class="sxs-lookup"><span data-stu-id="23029-104">You can do this only before the Ribbon is loaded.</span></span> <span data-ttu-id="23029-105">有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。</span><span class="sxs-lookup"><span data-stu-id="23029-105">For more information, see [Ribbon Object Model Overview](/visualstudio/vsto/ribbon-object-model-overview).</span></span>  
+ <span data-ttu-id="2e5c8-103">若要在运行时向组中添加标签, 请创建新<xref:Microsoft.Office.Tools.Ribbon.RibbonLabel>的对象, 然后将此对象添加<xref:Microsoft.Office.Tools.Ribbon.RibbonGroup.Items%2A>到的<xref:Microsoft.Office.Tools.Ribbon.RibbonBox.Items%2A>集合<xref:Microsoft.Office.Tools.Ribbon.RibbonGroup>或的集合<xref:Microsoft.Office.Tools.Ribbon.RibbonBox>。</span><span class="sxs-lookup"><span data-stu-id="2e5c8-103">To add a label to a group at run time, create a new <xref:Microsoft.Office.Tools.Ribbon.RibbonLabel> object, and then add this object to the <xref:Microsoft.Office.Tools.Ribbon.RibbonGroup.Items%2A> collection of a <xref:Microsoft.Office.Tools.Ribbon.RibbonGroup> or the <xref:Microsoft.Office.Tools.Ribbon.RibbonBox.Items%2A> collection of a <xref:Microsoft.Office.Tools.Ribbon.RibbonBox>.</span></span> <span data-ttu-id="2e5c8-104">只能在加载功能区之前执行此操作。</span><span class="sxs-lookup"><span data-stu-id="2e5c8-104">You can do this only before the Ribbon is loaded.</span></span> <span data-ttu-id="2e5c8-105">有关详细信息, 请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。</span><span class="sxs-lookup"><span data-stu-id="2e5c8-105">For more information, see [Ribbon Object Model Overview](/visualstudio/vsto/ribbon-object-model-overview).</span></span>  
   
- <span data-ttu-id="23029-106">您可以创建<xref:Microsoft.Office.Tools.Ribbon.RibbonLabel>在运行时通过使用<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.CreateRibbonLabel%2A>方法的<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory>对象。</span><span class="sxs-lookup"><span data-stu-id="23029-106">You can create a <xref:Microsoft.Office.Tools.Ribbon.RibbonLabel> at run time by using the <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.CreateRibbonLabel%2A> method of the <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory> object.</span></span>  
+ <span data-ttu-id="2e5c8-106">您可以通过<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.CreateRibbonLabel%2A>使用<xref:Microsoft.Office.Tools.Ribbon.RibbonLabel> <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory>对象的方法在运行时创建。</span><span class="sxs-lookup"><span data-stu-id="2e5c8-106">You can create a <xref:Microsoft.Office.Tools.Ribbon.RibbonLabel> at run time by using the <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.CreateRibbonLabel%2A> method of the <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory> object.</span></span>  
   
- <span data-ttu-id="23029-107">可通过两种方法来访问 <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory> 对象：</span><span class="sxs-lookup"><span data-stu-id="23029-107">There are two ways to access the <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory> object:</span></span>  
+ <span data-ttu-id="2e5c8-107">可通过两种方法来访问 <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory> 对象：</span><span class="sxs-lookup"><span data-stu-id="2e5c8-107">There are two ways to access the <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory> object:</span></span>  
   
--   <span data-ttu-id="23029-108">通过使用 Ribbon 类的 `Factory` 属性。</span><span class="sxs-lookup"><span data-stu-id="23029-108">By using the `Factory` property of the Ribbon class.</span></span> <span data-ttu-id="23029-109">可从 Ribbon 类中的代码使用此方法。</span><span class="sxs-lookup"><span data-stu-id="23029-109">Use this approach from code in your Ribbon class.</span></span>  
+-   <span data-ttu-id="2e5c8-108">通过使用 Ribbon 类的 `Factory` 属性。</span><span class="sxs-lookup"><span data-stu-id="2e5c8-108">By using the `Factory` property of the Ribbon class.</span></span> <span data-ttu-id="2e5c8-109">可从 Ribbon 类中的代码使用此方法。</span><span class="sxs-lookup"><span data-stu-id="2e5c8-109">Use this approach from code in your Ribbon class.</span></span>  
   
--   <span data-ttu-id="23029-110">通过使用 `Globals.Factory.GetRibbonFactory` 方法。</span><span class="sxs-lookup"><span data-stu-id="23029-110">By using the `Globals.Factory.GetRibbonFactory` method.</span></span> <span data-ttu-id="23029-111">可从 Ribbon 类外的代码使用此方法。</span><span class="sxs-lookup"><span data-stu-id="23029-111">Use this approach from code outside your Ribbon class.</span></span>  
+-   <span data-ttu-id="2e5c8-110">通过使用 `Globals.Factory.GetRibbonFactory` 方法。</span><span class="sxs-lookup"><span data-stu-id="2e5c8-110">By using the `Globals.Factory.GetRibbonFactory` method.</span></span> <span data-ttu-id="2e5c8-111">可从 Ribbon 类外的代码使用此方法。</span><span class="sxs-lookup"><span data-stu-id="2e5c8-111">Use this approach from code outside your Ribbon class.</span></span>  
   
  [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
   
-## <a name="usage"></a><span data-ttu-id="23029-112">用法</span><span class="sxs-lookup"><span data-stu-id="23029-112">Usage</span></span>  
+## <a name="usage"></a><span data-ttu-id="2e5c8-112">用法</span><span class="sxs-lookup"><span data-stu-id="2e5c8-112">Usage</span></span>  
  [!INCLUDE[vsto_net35mref](~/includes/vsto-net35mref-md.md)]  
   
  ]]></format>
@@ -62,13 +65,13 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="23029-113">获取或设置通过标签显示的文本。</span><span class="sxs-lookup"><span data-stu-id="23029-113">Gets or sets the text that is displayed by the label.</span></span></summary>
-        <value><span data-ttu-id="23029-114">通过标签显示的文本。</span><span class="sxs-lookup"><span data-stu-id="23029-114">The text that is displayed by the label.</span></span></value>
+        <summary><span data-ttu-id="2e5c8-113">获取或设置通过标签显示的文本。</span><span class="sxs-lookup"><span data-stu-id="2e5c8-113">Gets or sets the text that is displayed by the label.</span></span></summary>
+        <value><span data-ttu-id="2e5c8-114">通过标签显示的文本。</span><span class="sxs-lookup"><span data-stu-id="2e5c8-114">The text that is displayed by the label.</span></span></value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="23029-115">若要隐藏标签，设置<xref:Microsoft.Office.Tools.Ribbon.RibbonLabel.ShowLabel%2A>属性设置为`false`。</span><span class="sxs-lookup"><span data-stu-id="23029-115">To hide the label, set the <xref:Microsoft.Office.Tools.Ribbon.RibbonLabel.ShowLabel%2A> property to `false`.</span></span>  
+ <span data-ttu-id="2e5c8-115">若要隐藏标签, 请将<xref:Microsoft.Office.Tools.Ribbon.RibbonLabel.ShowLabel%2A>属性设置`false`为。</span><span class="sxs-lookup"><span data-stu-id="2e5c8-115">To hide the label, set the <xref:Microsoft.Office.Tools.Ribbon.RibbonLabel.ShowLabel%2A> property to `false`.</span></span>  
   
  ]]></format>
         </remarks>
@@ -87,13 +90,13 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="23029-116">此属性无效果。</span><span class="sxs-lookup"><span data-stu-id="23029-116">This property has no effect.</span></span></summary>
+        <summary><span data-ttu-id="2e5c8-116">此属性无效果。</span><span class="sxs-lookup"><span data-stu-id="2e5c8-116">This property has no effect.</span></span></summary>
         <value>To be added.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="23029-117">2007 Microsoft Office system 中的功能区标签不会显示提示文本。</span><span class="sxs-lookup"><span data-stu-id="23029-117">Ribbon labels in the 2007 Microsoft Office system do not display tip text.</span></span>  
+ <span data-ttu-id="2e5c8-117">2007 Microsoft Office 系统中的功能区标签不显示 tip 文本。</span><span class="sxs-lookup"><span data-stu-id="2e5c8-117">Ribbon labels in the 2007 Microsoft Office system do not display tip text.</span></span>  
   
  ]]></format>
         </remarks>
@@ -112,8 +115,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="23029-118">获取或设置一个值，该值指示标签显示的文本是否可见。</span><span class="sxs-lookup"><span data-stu-id="23029-118">Gets or sets a value that indicates whether the text displayed by the label is visible.</span></span></summary>
-        <value><span data-ttu-id="23029-119">如果标签显示的文本可见，则为 <see langword="true" />；否则为 <see langword="false" />。</span><span class="sxs-lookup"><span data-stu-id="23029-119"><see langword="true" /> if the text displayed by the label is visible; otherwise, <see langword="false" />.</span></span> <span data-ttu-id="23029-120">默认值为 <see langword="true" />。</span><span class="sxs-lookup"><span data-stu-id="23029-120">The default is <see langword="true" />.</span></span></value>
+        <summary><span data-ttu-id="2e5c8-118">获取或设置一个值，该值指示标签显示的文本是否可见。</span><span class="sxs-lookup"><span data-stu-id="2e5c8-118">Gets or sets a value that indicates whether the text displayed by the label is visible.</span></span></summary>
+        <value><span data-ttu-id="2e5c8-119">如果标签显示的文本可见，则为 <see langword="true" />；否则为 <see langword="false" />。</span><span class="sxs-lookup"><span data-stu-id="2e5c8-119"><see langword="true" /> if the text displayed by the label is visible; otherwise, <see langword="false" />.</span></span> <span data-ttu-id="2e5c8-120">默认值为 <see langword="true" />。</span><span class="sxs-lookup"><span data-stu-id="2e5c8-120">The default is <see langword="true" />.</span></span></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -130,13 +133,13 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="23029-121">此属性无效果。</span><span class="sxs-lookup"><span data-stu-id="23029-121">This property has no effect.</span></span></summary>
+        <summary><span data-ttu-id="2e5c8-121">此属性无效果。</span><span class="sxs-lookup"><span data-stu-id="2e5c8-121">This property has no effect.</span></span></summary>
         <value>To be added.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="23029-122">2007 Microsoft Office system 中的功能区标签不会显示提示文本。</span><span class="sxs-lookup"><span data-stu-id="23029-122">Ribbon labels in the 2007 Microsoft Office system do not display tip text.</span></span>  
+ <span data-ttu-id="2e5c8-122">2007 Microsoft Office 系统中的功能区标签不显示 tip 文本。</span><span class="sxs-lookup"><span data-stu-id="2e5c8-122">Ribbon labels in the 2007 Microsoft Office system do not display tip text.</span></span>  
   
  ]]></format>
         </remarks>

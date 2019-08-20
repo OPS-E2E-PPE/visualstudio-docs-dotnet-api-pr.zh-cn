@@ -1,5 +1,5 @@
 <Type Name="ISharePointCommandLogger" FullName="Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandLogger">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="5ae5b294eb7b3bd4caedb63f181297c4295b7ec5" /><Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="02/21/2018" /><Meta Name="ms.locfileid" Value="29410221" /></Metadata><TypeSignature Language="C#" Value="public interface ISharePointCommandLogger" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="e7017185fa1a558389b8ad6158a4c37a42aba3be" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69011910" /></Metadata><TypeSignature Language="C#" Value="public interface ISharePointCommandLogger" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISharePointCommandLogger" />
   <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandLogger" />
   <AssemblyInfo>
@@ -8,14 +8,14 @@
   </AssemblyInfo>
   <Interfaces />
   <Docs>
-    <summary><span data-ttu-id="5459d-101">表示 SharePoint 命令的日志记录服务。</span><span class="sxs-lookup"><span data-stu-id="5459d-101">Represents the logging service for SharePoint commands.</span></span></summary>
+    <summary><span data-ttu-id="3a714-101">表示 SharePoint 命令的日志记录服务。</span><span class="sxs-lookup"><span data-stu-id="3a714-101">Represents the logging service for SharePoint commands.</span></span></summary>
     <remarks>
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="5459d-102">使用日志记录服务，可以用于将消息写入到的 SharePoint 命令**输出**窗口或**错误列表**窗口。</span><span class="sxs-lookup"><span data-stu-id="5459d-102">The logging service enables SharePoint commands to write messages to the **Output** window or **Error List** window.</span></span>  
+ <span data-ttu-id="3a714-102">日志记录服务使 SharePoint 命令能够向 "**输出**" 窗口或**错误列表**窗口写入消息。</span><span class="sxs-lookup"><span data-stu-id="3a714-102">The logging service enables SharePoint commands to write messages to the **Output** window or **Error List** window.</span></span>  
   
- <span data-ttu-id="5459d-103">在**输出**窗口中，所有消息均都写入**SharePoint 工具**输出窗格中，如果从部署扩展编写消息除外。</span><span class="sxs-lookup"><span data-stu-id="5459d-103">In the **Output** window, all messages are written to the **SharePoint Tools** output pane, except when writing messages from deployment extensions.</span></span> <span data-ttu-id="5459d-104">在部署扩展中，消息会写入到**生成**输出窗格。</span><span class="sxs-lookup"><span data-stu-id="5459d-104">In deployment extensions, messages are written to the **Build** output pane.</span></span>  
+ <span data-ttu-id="3a714-103">在 "**输出**" 窗口中, 除从部署扩展写入消息以外, 所有消息都将写入 " **SharePoint 工具**输出" 窗格。</span><span class="sxs-lookup"><span data-stu-id="3a714-103">In the **Output** window, all messages are written to the **SharePoint Tools** output pane, except when writing messages from deployment extensions.</span></span> <span data-ttu-id="3a714-104">在部署扩展中, 消息将写入 "**生成**输出" 窗格。</span><span class="sxs-lookup"><span data-stu-id="3a714-104">In deployment extensions, messages are written to the **Build** output pane.</span></span>  
   
  ]]></format>
     </remarks>
@@ -38,9 +38,9 @@
         <Parameter Name="category" Type="Microsoft.VisualStudio.SharePoint.Commands.LogCategory" />
       </Parameters>
       <Docs>
-        <param name="message"><span data-ttu-id="5459d-105">消息文本。</span><span class="sxs-lookup"><span data-stu-id="5459d-105">The message text.</span></span></param>
-        <param name="category"><span data-ttu-id="5459d-106">消息的类别。</span><span class="sxs-lookup"><span data-stu-id="5459d-106">The category of the message.</span></span> <span data-ttu-id="5459d-107">这指定消息是否在“输出”窗口和/或“错误列表”窗口中显示，以及消息在“错误列表”窗口的何处显示。</span><span class="sxs-lookup"><span data-stu-id="5459d-107">This specifies whether the message appears in the **Output** window or **Error List** window (or both), and where the message appears in the **Error List** window.</span></span></param>
-        <summary><span data-ttu-id="5459d-108">将消息写入具有指定类别的“输出”窗口或“错误列表”窗口。</span><span class="sxs-lookup"><span data-stu-id="5459d-108">Writes a message to the **Output** window or **Error List** window with the specified category.</span></span></summary>
+        <param name="message"><span data-ttu-id="3a714-105">消息文本。</span><span class="sxs-lookup"><span data-stu-id="3a714-105">The message text.</span></span></param>
+        <param name="category"><span data-ttu-id="3a714-106">消息的类别。</span><span class="sxs-lookup"><span data-stu-id="3a714-106">The category of the message.</span></span> <span data-ttu-id="3a714-107">这指定消息是否在“输出”窗口和/或“错误列表”窗口中显示，以及消息在“错误列表”窗口的何处显示。</span><span class="sxs-lookup"><span data-stu-id="3a714-107">This specifies whether the message appears in the **Output** window or **Error List** window (or both), and where the message appears in the **Error List** window.</span></span></param>
+        <summary><span data-ttu-id="3a714-108">将消息写入具有指定类别的“输出”窗口或“错误列表”窗口。</span><span class="sxs-lookup"><span data-stu-id="3a714-108">Writes a message to the **Output** window or **Error List** window with the specified category.</span></span></summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -62,10 +62,10 @@
         <Parameter Name="helpKeyword" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="message"><span data-ttu-id="5459d-109">消息文本。</span><span class="sxs-lookup"><span data-stu-id="5459d-109">The message text.</span></span></param>
-        <param name="category"><span data-ttu-id="5459d-110">消息的类别。</span><span class="sxs-lookup"><span data-stu-id="5459d-110">The category of the message.</span></span> <span data-ttu-id="5459d-111">这指定消息是否在“输出”窗口和/或“错误列表”窗口中显示，以及消息在“错误列表”窗口的何处显示。</span><span class="sxs-lookup"><span data-stu-id="5459d-111">This specifies whether the message appears in the **Output** window or **Error List** window (or both), and where the message appears in the **Error List** window.</span></span></param>
-        <param name="helpKeyword"><span data-ttu-id="5459d-112">此错误的“帮助”关键字。</span><span class="sxs-lookup"><span data-stu-id="5459d-112">The Help keyword for the error.</span></span></param>
-        <summary><span data-ttu-id="5459d-113">将消息写入具有指定类别和“帮助”关键字的“输出”窗口或“错误列表”窗口。</span><span class="sxs-lookup"><span data-stu-id="5459d-113">Writes a message to the **Output** window or **Error List** window with the specified category and Help keyword.</span></span></summary>
+        <param name="message"><span data-ttu-id="3a714-109">消息文本。</span><span class="sxs-lookup"><span data-stu-id="3a714-109">The message text.</span></span></param>
+        <param name="category"><span data-ttu-id="3a714-110">消息的类别。</span><span class="sxs-lookup"><span data-stu-id="3a714-110">The category of the message.</span></span> <span data-ttu-id="3a714-111">这指定消息是否在“输出”窗口和/或“错误列表”窗口中显示，以及消息在“错误列表”窗口的何处显示。</span><span class="sxs-lookup"><span data-stu-id="3a714-111">This specifies whether the message appears in the **Output** window or **Error List** window (or both), and where the message appears in the **Error List** window.</span></span></param>
+        <param name="helpKeyword"><span data-ttu-id="3a714-112">此错误的“帮助”关键字。</span><span class="sxs-lookup"><span data-stu-id="3a714-112">The Help keyword for the error.</span></span></param>
+        <summary><span data-ttu-id="3a714-113">将消息写入具有指定类别和“帮助”关键字的“输出”窗口或“错误列表”窗口。</span><span class="sxs-lookup"><span data-stu-id="3a714-113">Writes a message to the **Output** window or **Error List** window with the specified category and Help keyword.</span></span></summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -89,17 +89,17 @@
         <Parameter Name="columnNumber" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="message"><span data-ttu-id="5459d-114">消息文本。</span><span class="sxs-lookup"><span data-stu-id="5459d-114">The message text.</span></span></param>
-        <param name="category"><span data-ttu-id="5459d-115">消息的类别。</span><span class="sxs-lookup"><span data-stu-id="5459d-115">The category of the message.</span></span> <span data-ttu-id="5459d-116">这指定消息是否在“输出”窗口和/或“错误列表”窗口中显示，以及消息在“错误列表”窗口的何处显示。</span><span class="sxs-lookup"><span data-stu-id="5459d-116">This specifies whether the message appears in the **Output** window or **Error List** window (or both), and where the message appears in the **Error List** window.</span></span></param>
-        <param name="filePath"><span data-ttu-id="5459d-117">具有错误或警告的文件的完整路径。</span><span class="sxs-lookup"><span data-stu-id="5459d-117">The full path to the file with the error or warning.</span></span></param>
-        <param name="lineNumber"><span data-ttu-id="5459d-118">错误或警告的行号。</span><span class="sxs-lookup"><span data-stu-id="5459d-118">The line number of the error or warning.</span></span></param>
-        <param name="columnNumber"><span data-ttu-id="5459d-119">错误或警告的列号。</span><span class="sxs-lookup"><span data-stu-id="5459d-119">The column number of the error or warning.</span></span></param>
-        <summary><span data-ttu-id="5459d-120">将消息写入具有指定类别和错误位置信息的“输出”窗口或“错误列表”窗口。</span><span class="sxs-lookup"><span data-stu-id="5459d-120">Writes a message to the **Output** window or **Error List** window with the specified category and error location information.</span></span></summary>
+        <param name="message"><span data-ttu-id="3a714-114">消息文本。</span><span class="sxs-lookup"><span data-stu-id="3a714-114">The message text.</span></span></param>
+        <param name="category"><span data-ttu-id="3a714-115">消息的类别。</span><span class="sxs-lookup"><span data-stu-id="3a714-115">The category of the message.</span></span> <span data-ttu-id="3a714-116">这指定消息是否在“输出”窗口和/或“错误列表”窗口中显示，以及消息在“错误列表”窗口的何处显示。</span><span class="sxs-lookup"><span data-stu-id="3a714-116">This specifies whether the message appears in the **Output** window or **Error List** window (or both), and where the message appears in the **Error List** window.</span></span></param>
+        <param name="filePath"><span data-ttu-id="3a714-117">具有错误或警告的文件的完整路径。</span><span class="sxs-lookup"><span data-stu-id="3a714-117">The full path to the file with the error or warning.</span></span></param>
+        <param name="lineNumber"><span data-ttu-id="3a714-118">错误或警告的行号。</span><span class="sxs-lookup"><span data-stu-id="3a714-118">The line number of the error or warning.</span></span></param>
+        <param name="columnNumber"><span data-ttu-id="3a714-119">错误或警告的列号。</span><span class="sxs-lookup"><span data-stu-id="3a714-119">The column number of the error or warning.</span></span></param>
+        <summary><span data-ttu-id="3a714-120">将消息写入具有指定类别和错误位置信息的“输出”窗口或“错误列表”窗口。</span><span class="sxs-lookup"><span data-stu-id="3a714-120">Writes a message to the **Output** window or **Error List** window with the specified category and error location information.</span></span></summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="5459d-121">当[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]写入 IDE，如**错误**窗口中，则`lineNumber`和`columnNumber`值是从零开始，但当用户代码写入 IDE，则值都基于 1。</span><span class="sxs-lookup"><span data-stu-id="5459d-121">When [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] writes to the IDE, such as the **Error** window, then the `lineNumber` and `columnNumber` values are zero-based, but when user code writes to the IDE, then the values are one-based.</span></span> <span data-ttu-id="5459d-122">这意味着，如果，例如，你指定`lineNumber`的 10 和`columnNumber`在代码中，20 的[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]它所报告的第 11 行和列 21。</span><span class="sxs-lookup"><span data-stu-id="5459d-122">This means that if, for example, you specify a `lineNumber` of 10 and a `columnNumber` of 20 in your code, [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] reports it as line 11 and column 21.</span></span>  
+ <span data-ttu-id="3a714-121">写入[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] ide 时, 如**错误** `lineNumber`窗口, 和`columnNumber`值从零开始, 但当用户代码写入 ide 时, 值是从1开始的。</span><span class="sxs-lookup"><span data-stu-id="3a714-121">When [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] writes to the IDE, such as the **Error** window, then the `lineNumber` and `columnNumber` values are zero-based, but when user code writes to the IDE, then the values are one-based.</span></span> <span data-ttu-id="3a714-122">这意味着, 如果你在代码中指定了`lineNumber` 10 `columnNumber`和20的, [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]则会将其报告为第11行和第21列。</span><span class="sxs-lookup"><span data-stu-id="3a714-122">This means that if, for example, you specify a `lineNumber` of 10 and a `columnNumber` of 20 in your code, [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] reports it as line 11 and column 21.</span></span>  
   
  ]]></format>
         </remarks>
@@ -126,18 +126,18 @@
         <Parameter Name="helpKeyword" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="message"><span data-ttu-id="5459d-123">消息文本。</span><span class="sxs-lookup"><span data-stu-id="5459d-123">The message text.</span></span></param>
-        <param name="category"><span data-ttu-id="5459d-124">消息的类别。</span><span class="sxs-lookup"><span data-stu-id="5459d-124">The category of the message.</span></span> <span data-ttu-id="5459d-125">这指定消息是否在“输出”窗口和/或“错误列表”窗口中显示，以及消息在“错误列表”窗口的何处显示。</span><span class="sxs-lookup"><span data-stu-id="5459d-125">This specifies whether the message appears in the **Output** window or **Error List** window (or both), and where the message appears in the **Error List** window.</span></span></param>
-        <param name="filePath"><span data-ttu-id="5459d-126">具有错误或警告的文件的完整路径。</span><span class="sxs-lookup"><span data-stu-id="5459d-126">The full path to the file with the error or warning.</span></span></param>
-        <param name="lineNumber"><span data-ttu-id="5459d-127">错误或警告的行号。</span><span class="sxs-lookup"><span data-stu-id="5459d-127">The line number of the error or warning.</span></span></param>
-        <param name="columnNumber"><span data-ttu-id="5459d-128">错误或警告的列号。</span><span class="sxs-lookup"><span data-stu-id="5459d-128">The column number of the error or warning.</span></span></param>
-        <param name="helpKeyword"><span data-ttu-id="5459d-129">此错误的“帮助”关键字。</span><span class="sxs-lookup"><span data-stu-id="5459d-129">The Help keyword for the error.</span></span></param>
-        <summary><span data-ttu-id="5459d-130">将消息写入具有指定类别、错误位置信息和“帮助”关键字的“输出”窗口或“错误列表”窗口。</span><span class="sxs-lookup"><span data-stu-id="5459d-130">Writes a message to the **Output** window or **Error List** window with the specified category, error location information, and Help keyword.</span></span></summary>
+        <param name="message"><span data-ttu-id="3a714-123">消息文本。</span><span class="sxs-lookup"><span data-stu-id="3a714-123">The message text.</span></span></param>
+        <param name="category"><span data-ttu-id="3a714-124">消息的类别。</span><span class="sxs-lookup"><span data-stu-id="3a714-124">The category of the message.</span></span> <span data-ttu-id="3a714-125">这指定消息是否在“输出”窗口和/或“错误列表”窗口中显示，以及消息在“错误列表”窗口的何处显示。</span><span class="sxs-lookup"><span data-stu-id="3a714-125">This specifies whether the message appears in the **Output** window or **Error List** window (or both), and where the message appears in the **Error List** window.</span></span></param>
+        <param name="filePath"><span data-ttu-id="3a714-126">具有错误或警告的文件的完整路径。</span><span class="sxs-lookup"><span data-stu-id="3a714-126">The full path to the file with the error or warning.</span></span></param>
+        <param name="lineNumber"><span data-ttu-id="3a714-127">错误或警告的行号。</span><span class="sxs-lookup"><span data-stu-id="3a714-127">The line number of the error or warning.</span></span></param>
+        <param name="columnNumber"><span data-ttu-id="3a714-128">错误或警告的列号。</span><span class="sxs-lookup"><span data-stu-id="3a714-128">The column number of the error or warning.</span></span></param>
+        <param name="helpKeyword"><span data-ttu-id="3a714-129">此错误的“帮助”关键字。</span><span class="sxs-lookup"><span data-stu-id="3a714-129">The Help keyword for the error.</span></span></param>
+        <summary><span data-ttu-id="3a714-130">将消息写入具有指定类别、错误位置信息和“帮助”关键字的“输出”窗口或“错误列表”窗口。</span><span class="sxs-lookup"><span data-stu-id="3a714-130">Writes a message to the **Output** window or **Error List** window with the specified category, error location information, and Help keyword.</span></span></summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="5459d-131">当[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]写入 IDE，如**错误**窗口中，则`lineNumber`和`columnNumber`值是从零开始，但当用户代码写入 IDE，则值都基于 1。</span><span class="sxs-lookup"><span data-stu-id="5459d-131">When [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] writes to the IDE, such as the **Error** window, then the `lineNumber` and `columnNumber` values are zero-based, but when user code writes to the IDE, then the values are one-based.</span></span> <span data-ttu-id="5459d-132">这意味着，如果，例如，你指定`lineNumber`的 10 和`columnNumber`在代码中，20 的[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]它所报告的第 11 行和列 21。</span><span class="sxs-lookup"><span data-stu-id="5459d-132">This means that if, for example, you specify a `lineNumber` of 10 and a `columnNumber` of 20 in your code, [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] reports it as line 11 and column 21.</span></span>  
+ <span data-ttu-id="3a714-131">写入[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] ide 时, 如**错误** `lineNumber`窗口, 和`columnNumber`值从零开始, 但当用户代码写入 ide 时, 值是从1开始的。</span><span class="sxs-lookup"><span data-stu-id="3a714-131">When [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] writes to the IDE, such as the **Error** window, then the `lineNumber` and `columnNumber` values are zero-based, but when user code writes to the IDE, then the values are one-based.</span></span> <span data-ttu-id="3a714-132">这意味着, 如果你在代码中指定了`lineNumber` 10 `columnNumber`和20的, [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]则会将其报告为第11行和第21列。</span><span class="sxs-lookup"><span data-stu-id="3a714-132">This means that if, for example, you specify a `lineNumber` of 10 and a `columnNumber` of 20 in your code, [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] reports it as line 11 and column 21.</span></span>  
   
  ]]></format>
         </remarks>

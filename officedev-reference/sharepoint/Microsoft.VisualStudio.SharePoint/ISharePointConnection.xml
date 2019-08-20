@@ -1,5 +1,5 @@
 <Type Name="ISharePointConnection" FullName="Microsoft.VisualStudio.SharePoint.ISharePointConnection">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="64feddeb8e5799d5c4c582bc7ccb847da82df2ff" /><Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="09/19/2018" /><Meta Name="ms.locfileid" Value="46459648" /></Metadata><TypeSignature Language="C#" Value="public interface ISharePointConnection : IDisposable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="4ce6d0675947d389a5f3f19449c43e9088ce07ee" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69008002" /></Metadata><TypeSignature Language="C#" Value="public interface ISharePointConnection : IDisposable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISharePointConnection implements class System.IDisposable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.SharePoint.ISharePointConnection" />
   <AssemblyInfo>
@@ -12,12 +12,12 @@
     </Interface>
   </Interfaces>
   <Docs>
-    <summary><span data-ttu-id="2f7ee-101">提供可用于执行 SharePoint 命令的方法，该命令在 Visual Studio 中从 SharePoint 工具扩展调用到 SharePoint 服务器对象模型。</span><span class="sxs-lookup"><span data-stu-id="2f7ee-101">Provides methods you can use to execute SharePoint commands that call into the SharePoint server object model from an extension of the SharePoint tools in Visual Studio.</span></span></summary>
+    <summary><span data-ttu-id="69015-101">提供可用于执行 SharePoint 命令的方法，该命令在 Visual Studio 中从 SharePoint 工具扩展调用到 SharePoint 服务器对象模型。</span><span class="sxs-lookup"><span data-stu-id="69015-101">Provides methods you can use to execute SharePoint commands that call into the SharePoint server object model from an extension of the SharePoint tools in Visual Studio.</span></span></summary>
     <remarks>
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="2f7ee-102">*SharePoint 命令*是可用于在 SharePoint 工具扩展中调入 SharePoint 服务器对象模型的方法。</span><span class="sxs-lookup"><span data-stu-id="2f7ee-102">*SharePoint commands* are methods that can be used in a SharePoint tools extension to call into the SharePoint server object model.</span></span> <span data-ttu-id="2f7ee-103">定义 SharePoint 命令后，您可以通过获取执行它<xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection>对象，然后再调用之一`ExecuteCommand`方法。</span><span class="sxs-lookup"><span data-stu-id="2f7ee-103">After you define a SharePoint command, you can execute it by obtaining an <xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection> object and then calling one of the `ExecuteCommand` methods.</span></span> <span data-ttu-id="2f7ee-104">有关详细信息，请参阅[如何： 执行 SharePoint 命令](/visualstudio/sharepoint/how-to-execute-a-sharepoint-command)。</span><span class="sxs-lookup"><span data-stu-id="2f7ee-104">For more information, see [How to: Execute a SharePoint Command](/visualstudio/sharepoint/how-to-execute-a-sharepoint-command).</span></span>  
+ <span data-ttu-id="69015-102">*Sharepoint 命令*是可以在 sharepoint 工具扩展中用于调入 sharepoint 服务器对象模型的方法。</span><span class="sxs-lookup"><span data-stu-id="69015-102">*SharePoint commands* are methods that can be used in a SharePoint tools extension to call into the SharePoint server object model.</span></span> <span data-ttu-id="69015-103">定义 SharePoint 命令后, 可以通过获取<xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection>对象并调用其中一种`ExecuteCommand`方法来执行它。</span><span class="sxs-lookup"><span data-stu-id="69015-103">After you define a SharePoint command, you can execute it by obtaining an <xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection> object and then calling one of the `ExecuteCommand` methods.</span></span> <span data-ttu-id="69015-104">有关详细信息，请参阅[如何：执行 SharePoint 命令](/visualstudio/sharepoint/how-to-execute-a-sharepoint-command)。</span><span class="sxs-lookup"><span data-stu-id="69015-104">For more information, see [How to: Execute a SharePoint Command](/visualstudio/sharepoint/how-to-execute-a-sharepoint-command).</span></span>  
   
  ]]></format>
     </remarks>
@@ -36,8 +36,8 @@
         <ReturnType>Microsoft.VisualStudio.SharePoint.SharePointAuthenticationMode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="2f7ee-105">获取此 SharePoint 连接的身份验证模式。</span><span class="sxs-lookup"><span data-stu-id="2f7ee-105">Gets the authentication mode for this SharePoint connection.</span></span></summary>
-        <value><span data-ttu-id="2f7ee-106">此 SharePoint 连接的身份验证模式。</span><span class="sxs-lookup"><span data-stu-id="2f7ee-106">The authentication mode for this SharePoint connection.</span></span></value>
+        <summary><span data-ttu-id="69015-105">获取此 SharePoint 连接的身份验证模式。</span><span class="sxs-lookup"><span data-stu-id="69015-105">Gets the authentication mode for this SharePoint connection.</span></span></summary>
+        <value><span data-ttu-id="69015-106">此 SharePoint 连接的身份验证模式。</span><span class="sxs-lookup"><span data-stu-id="69015-106">The authentication mode for this SharePoint connection.</span></span></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -57,19 +57,19 @@
         <Parameter Name="commandId" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="commandId"><span data-ttu-id="2f7ee-107">要执行的 SharePoint 命令的标识符。</span><span class="sxs-lookup"><span data-stu-id="2f7ee-107">The identifier of the SharePoint command to execute.</span></span></param>
-        <summary><span data-ttu-id="2f7ee-108">使用指定的标识符执行 SharePoint 命令。</span><span class="sxs-lookup"><span data-stu-id="2f7ee-108">Executes the SharePoint command with the specified identifier.</span></span></summary>
+        <param name="commandId"><span data-ttu-id="69015-107">要执行的 SharePoint 命令的标识符。</span><span class="sxs-lookup"><span data-stu-id="69015-107">The identifier of the SharePoint command to execute.</span></span></param>
+        <summary><span data-ttu-id="69015-108">使用指定的标识符执行 SharePoint 命令。</span><span class="sxs-lookup"><span data-stu-id="69015-108">Executes the SharePoint command with the specified identifier.</span></span></summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="2f7ee-109">使用此方法以执行 SharePoint 命令具有任何自定义的参数或返回值。</span><span class="sxs-lookup"><span data-stu-id="2f7ee-109">Use this method to execute a SharePoint command that has no custom parameter or return value.</span></span> <span data-ttu-id="2f7ee-110">有关详细信息，请参阅[如何： 创建 SharePoint 命令](/visualstudio/sharepoint/how-to-create-a-sharepoint-command)并[如何： 执行 SharePoint 命令](/visualstudio/sharepoint/how-to-execute-a-sharepoint-command)。</span><span class="sxs-lookup"><span data-stu-id="2f7ee-110">For more information, see [How to: Create a SharePoint Command](/visualstudio/sharepoint/how-to-create-a-sharepoint-command) and [How to: Execute a SharePoint Command](/visualstudio/sharepoint/how-to-execute-a-sharepoint-command).</span></span>  
+ <span data-ttu-id="69015-109">使用此方法执行没有自定义参数或返回值的 SharePoint 命令。</span><span class="sxs-lookup"><span data-stu-id="69015-109">Use this method to execute a SharePoint command that has no custom parameter or return value.</span></span> <span data-ttu-id="69015-110">有关详细信息，请参阅[如何：创建 SharePoint 命令](/visualstudio/sharepoint/how-to-create-a-sharepoint-command)和[如何:执行 SharePoint 命令](/visualstudio/sharepoint/how-to-execute-a-sharepoint-command)。</span><span class="sxs-lookup"><span data-stu-id="69015-110">For more information, see [How to: Create a SharePoint Command](/visualstudio/sharepoint/how-to-create-a-sharepoint-command) and [How to: Execute a SharePoint Command](/visualstudio/sharepoint/how-to-execute-a-sharepoint-command).</span></span>  
   
  ]]></format>
         </remarks>
-        <exception cref="T:Microsoft.VisualStudio.SharePoint.SharePointConnectionException"><span data-ttu-id="2f7ee-111">与 SharePoint 连接时发生错误。</span><span class="sxs-lookup"><span data-stu-id="2f7ee-111">An error occurred while connecting to SharePoint.</span></span></exception>
-        <exception cref="T:System.ArgumentOutOfRangeException"><span data-ttu-id="2f7ee-112"><paramref name="commandId" /> 与任何可用的 SharePoint 命令都不匹配。</span><span class="sxs-lookup"><span data-stu-id="2f7ee-112"><paramref name="commandId" /> does not match any available SharePoint commands.</span></span></exception>
-        <exception cref="T:Microsoft.VisualStudio.SharePoint.SharePointCommandException"><span data-ttu-id="2f7ee-113">SharePoint 命令失败引发异常。</span><span class="sxs-lookup"><span data-stu-id="2f7ee-113">An exception was thrown by the SharePoint command.</span></span></exception>
+        <exception cref="T:Microsoft.VisualStudio.SharePoint.SharePointConnectionException"><span data-ttu-id="69015-111">与 SharePoint 连接时发生错误。</span><span class="sxs-lookup"><span data-stu-id="69015-111">An error occurred while connecting to SharePoint.</span></span></exception>
+        <exception cref="T:System.ArgumentOutOfRangeException"><span data-ttu-id="69015-112"><paramref name="commandId" /> 与任何可用的 SharePoint 命令都不匹配。</span><span class="sxs-lookup"><span data-stu-id="69015-112"><paramref name="commandId" /> does not match any available SharePoint commands.</span></span></exception>
+        <exception cref="T:Microsoft.VisualStudio.SharePoint.SharePointCommandException"><span data-ttu-id="69015-113">SharePoint 命令失败引发异常。</span><span class="sxs-lookup"><span data-stu-id="69015-113">An exception was thrown by the SharePoint command.</span></span></exception>
       </Docs>
     </Member>
     <Member MemberName="ExecuteCommand&lt;T&gt;">
@@ -92,24 +92,24 @@
         <Parameter Name="arg" Type="T" />
       </Parameters>
       <Docs>
-        <typeparam name="T"><span data-ttu-id="2f7ee-114">要执行的 SharePoint 命令的参数的类型。</span><span class="sxs-lookup"><span data-stu-id="2f7ee-114">The type of the parameter of the SharePoint command to execute.</span></span> <span data-ttu-id="2f7ee-115">这必须是可由 Windows Communication Foundation (WCF) 序列化的类型。</span><span class="sxs-lookup"><span data-stu-id="2f7ee-115">This must be a type that can be serialized by Windows Communication Foundation (WCF).</span></span></typeparam>
-        <param name="commandId"><span data-ttu-id="2f7ee-116">要执行的 SharePoint 命令的标识符。</span><span class="sxs-lookup"><span data-stu-id="2f7ee-116">The identifier of the SharePoint command to execute.</span></span></param>
-        <param name="arg"><span data-ttu-id="2f7ee-117">要传递给 SharePoint 命令的参数。</span><span class="sxs-lookup"><span data-stu-id="2f7ee-117">The argument to pass to the SharePoint command.</span></span></param>
-        <summary><span data-ttu-id="2f7ee-118">使用指定的标识符和参数类型执行 SharePoint 命令。</span><span class="sxs-lookup"><span data-stu-id="2f7ee-118">Executes the SharePoint command with the specified identifier and parameter type.</span></span></summary>
+        <typeparam name="T"><span data-ttu-id="69015-114">要执行的 SharePoint 命令的参数的类型。</span><span class="sxs-lookup"><span data-stu-id="69015-114">The type of the parameter of the SharePoint command to execute.</span></span> <span data-ttu-id="69015-115">这必须是可由 Windows Communication Foundation (WCF) 序列化的类型。</span><span class="sxs-lookup"><span data-stu-id="69015-115">This must be a type that can be serialized by Windows Communication Foundation (WCF).</span></span></typeparam>
+        <param name="commandId"><span data-ttu-id="69015-116">要执行的 SharePoint 命令的标识符。</span><span class="sxs-lookup"><span data-stu-id="69015-116">The identifier of the SharePoint command to execute.</span></span></param>
+        <param name="arg"><span data-ttu-id="69015-117">要传递给 SharePoint 命令的参数。</span><span class="sxs-lookup"><span data-stu-id="69015-117">The argument to pass to the SharePoint command.</span></span></param>
+        <summary><span data-ttu-id="69015-118">使用指定的标识符和参数类型执行 SharePoint 命令。</span><span class="sxs-lookup"><span data-stu-id="69015-118">Executes the SharePoint command with the specified identifier and parameter type.</span></span></summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="2f7ee-119">使用此方法来执行 SharePoint 命令具有自定义参数，但没有返回值。</span><span class="sxs-lookup"><span data-stu-id="2f7ee-119">Use this method to execute a SharePoint command that has a custom parameter but no return value.</span></span> <span data-ttu-id="2f7ee-120">有关详细信息，请参阅[如何： 创建 SharePoint 命令](/visualstudio/sharepoint/how-to-create-a-sharepoint-command)并[如何： 执行 SharePoint 命令](/visualstudio/sharepoint/how-to-execute-a-sharepoint-command)。</span><span class="sxs-lookup"><span data-stu-id="2f7ee-120">For more information, see [How to: Create a SharePoint Command](/visualstudio/sharepoint/how-to-create-a-sharepoint-command) and [How to: Execute a SharePoint Command](/visualstudio/sharepoint/how-to-execute-a-sharepoint-command).</span></span>  
+ <span data-ttu-id="69015-119">使用此方法执行具有自定义参数但没有返回值的 SharePoint 命令。</span><span class="sxs-lookup"><span data-stu-id="69015-119">Use this method to execute a SharePoint command that has a custom parameter but no return value.</span></span> <span data-ttu-id="69015-120">有关详细信息，请参阅[如何：创建 SharePoint 命令](/visualstudio/sharepoint/how-to-create-a-sharepoint-command)和[如何:执行 SharePoint 命令](/visualstudio/sharepoint/how-to-execute-a-sharepoint-command)。</span><span class="sxs-lookup"><span data-stu-id="69015-120">For more information, see [How to: Create a SharePoint Command](/visualstudio/sharepoint/how-to-create-a-sharepoint-command) and [How to: Execute a SharePoint Command](/visualstudio/sharepoint/how-to-execute-a-sharepoint-command).</span></span>  
   
- <span data-ttu-id="2f7ee-121">有关可序列化由 Windows Communication Foundation (WCF) 的类型的详细信息，请参阅[类型支持的数据协定序列化程序](http://msdn.microsoft.com/library/7381b200-437a-4506-9556-d77bf1bc3f34)并[使用 XmlSerializer 类](http://msdn.microsoft.com/library/c680602d-39d3-44f1-bf22-8e6654ad5069)。</span><span class="sxs-lookup"><span data-stu-id="2f7ee-121">For more information about types that can be serialized by Windows Communication Foundation (WCF), see [Types Supported by the Data Contract Serializer](http://msdn.microsoft.com/library/7381b200-437a-4506-9556-d77bf1bc3f34) and [Using the XmlSerializer Class](http://msdn.microsoft.com/library/c680602d-39d3-44f1-bf22-8e6654ad5069).</span></span>  
+ <span data-ttu-id="69015-121">有关可由 Windows Communication Foundation (WCF) 序列化的类型的详细信息, 请参阅[数据协定序列化程序支持的类型](http://msdn.microsoft.com/library/7381b200-437a-4506-9556-d77bf1bc3f34)和[使用 XmlSerializer 类](http://msdn.microsoft.com/library/c680602d-39d3-44f1-bf22-8e6654ad5069)。</span><span class="sxs-lookup"><span data-stu-id="69015-121">For more information about types that can be serialized by Windows Communication Foundation (WCF), see [Types Supported by the Data Contract Serializer](http://msdn.microsoft.com/library/7381b200-437a-4506-9556-d77bf1bc3f34) and [Using the XmlSerializer Class](http://msdn.microsoft.com/library/c680602d-39d3-44f1-bf22-8e6654ad5069).</span></span>  
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.InvalidOperationException"><span data-ttu-id="2f7ee-122">SharePoint 命令的参数类型与 <paramref name="T" /> 类型不匹配。</span><span class="sxs-lookup"><span data-stu-id="2f7ee-122">The parameter type of the SharePoint command does not match the <paramref name="T" /> type.</span></span></exception>
-        <exception cref="T:Microsoft.VisualStudio.SharePoint.SharePointConnectionException"><span data-ttu-id="2f7ee-123">与 SharePoint 连接时发生错误。</span><span class="sxs-lookup"><span data-stu-id="2f7ee-123">An error occurred while connecting to SharePoint.</span></span></exception>
-        <exception cref="T:System.ArgumentOutOfRangeException"><span data-ttu-id="2f7ee-124"><paramref name="commandId" /> 与任何可用的 SharePoint 命令都不匹配。</span><span class="sxs-lookup"><span data-stu-id="2f7ee-124"><paramref name="commandId" /> does not match any available SharePoint commands.</span></span></exception>
-        <exception cref="T:Microsoft.VisualStudio.SharePoint.SharePointCommandException"><span data-ttu-id="2f7ee-125">SharePoint 命令失败引发异常。</span><span class="sxs-lookup"><span data-stu-id="2f7ee-125">An exception was thrown by the SharePoint command.</span></span></exception>
+        <exception cref="T:System.InvalidOperationException"><span data-ttu-id="69015-122">SharePoint 命令的参数类型与 <paramref name="T" /> 类型不匹配。</span><span class="sxs-lookup"><span data-stu-id="69015-122">The parameter type of the SharePoint command does not match the <paramref name="T" /> type.</span></span></exception>
+        <exception cref="T:Microsoft.VisualStudio.SharePoint.SharePointConnectionException"><span data-ttu-id="69015-123">与 SharePoint 连接时发生错误。</span><span class="sxs-lookup"><span data-stu-id="69015-123">An error occurred while connecting to SharePoint.</span></span></exception>
+        <exception cref="T:System.ArgumentOutOfRangeException"><span data-ttu-id="69015-124"><paramref name="commandId" /> 与任何可用的 SharePoint 命令都不匹配。</span><span class="sxs-lookup"><span data-stu-id="69015-124"><paramref name="commandId" /> does not match any available SharePoint commands.</span></span></exception>
+        <exception cref="T:Microsoft.VisualStudio.SharePoint.SharePointCommandException"><span data-ttu-id="69015-125">SharePoint 命令失败引发异常。</span><span class="sxs-lookup"><span data-stu-id="69015-125">An exception was thrown by the SharePoint command.</span></span></exception>
       </Docs>
     </Member>
     <Member MemberName="ExecuteCommand&lt;TResult&gt;">
@@ -131,24 +131,24 @@
         <Parameter Name="commandId" Type="System.String" />
       </Parameters>
       <Docs>
-        <typeparam name="TResult"><span data-ttu-id="2f7ee-126">要执行的 SharePoint 命令的返回值的类型。</span><span class="sxs-lookup"><span data-stu-id="2f7ee-126">The type of the return value of the SharePoint command to execute.</span></span> <span data-ttu-id="2f7ee-127">这必须是可由 Windows Communication Foundation (WCF) 序列化的类型。</span><span class="sxs-lookup"><span data-stu-id="2f7ee-127">This must be a type that can be serialized by Windows Communication Foundation (WCF).</span></span></typeparam>
-        <param name="commandId"><span data-ttu-id="2f7ee-128">要执行的 SharePoint 命令的标识符。</span><span class="sxs-lookup"><span data-stu-id="2f7ee-128">The identifier of the SharePoint command to execute.</span></span></param>
-        <summary><span data-ttu-id="2f7ee-129">使用指定的标识符和返回值类型执行 SharePoint 命令。</span><span class="sxs-lookup"><span data-stu-id="2f7ee-129">Executes the SharePoint command with the specified identifier and return value type.</span></span></summary>
-        <returns><span data-ttu-id="2f7ee-130">SharePoint 命令的返回值。</span><span class="sxs-lookup"><span data-stu-id="2f7ee-130">The return value of the SharePoint command.</span></span></returns>
+        <typeparam name="TResult"><span data-ttu-id="69015-126">要执行的 SharePoint 命令的返回值的类型。</span><span class="sxs-lookup"><span data-stu-id="69015-126">The type of the return value of the SharePoint command to execute.</span></span> <span data-ttu-id="69015-127">这必须是可由 Windows Communication Foundation (WCF) 序列化的类型。</span><span class="sxs-lookup"><span data-stu-id="69015-127">This must be a type that can be serialized by Windows Communication Foundation (WCF).</span></span></typeparam>
+        <param name="commandId"><span data-ttu-id="69015-128">要执行的 SharePoint 命令的标识符。</span><span class="sxs-lookup"><span data-stu-id="69015-128">The identifier of the SharePoint command to execute.</span></span></param>
+        <summary><span data-ttu-id="69015-129">使用指定的标识符和返回值类型执行 SharePoint 命令。</span><span class="sxs-lookup"><span data-stu-id="69015-129">Executes the SharePoint command with the specified identifier and return value type.</span></span></summary>
+        <returns><span data-ttu-id="69015-130">SharePoint 命令的返回值。</span><span class="sxs-lookup"><span data-stu-id="69015-130">The return value of the SharePoint command.</span></span></returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="2f7ee-131">使用此方法来执行 SharePoint 命令的返回值，但没有自定义参数。</span><span class="sxs-lookup"><span data-stu-id="2f7ee-131">Use this method to execute a SharePoint command that has a return value but no custom parameter.</span></span> <span data-ttu-id="2f7ee-132">有关详细信息，请参阅[如何： 创建 SharePoint 命令](/visualstudio/sharepoint/how-to-create-a-sharepoint-command)并[如何： 执行 SharePoint 命令](/visualstudio/sharepoint/how-to-execute-a-sharepoint-command)。</span><span class="sxs-lookup"><span data-stu-id="2f7ee-132">For more information, see [How to: Create a SharePoint Command](/visualstudio/sharepoint/how-to-create-a-sharepoint-command) and [How to: Execute a SharePoint Command](/visualstudio/sharepoint/how-to-execute-a-sharepoint-command).</span></span>  
+ <span data-ttu-id="69015-131">使用此方法执行具有返回值但没有自定义参数的 SharePoint 命令。</span><span class="sxs-lookup"><span data-stu-id="69015-131">Use this method to execute a SharePoint command that has a return value but no custom parameter.</span></span> <span data-ttu-id="69015-132">有关详细信息，请参阅[如何：创建 SharePoint 命令](/visualstudio/sharepoint/how-to-create-a-sharepoint-command)和[如何:执行 SharePoint 命令](/visualstudio/sharepoint/how-to-execute-a-sharepoint-command)。</span><span class="sxs-lookup"><span data-stu-id="69015-132">For more information, see [How to: Create a SharePoint Command](/visualstudio/sharepoint/how-to-create-a-sharepoint-command) and [How to: Execute a SharePoint Command](/visualstudio/sharepoint/how-to-execute-a-sharepoint-command).</span></span>  
   
- <span data-ttu-id="2f7ee-133">有关可序列化由 Windows Communication Foundation (WCF) 的类型的详细信息，请参阅[类型支持的数据协定序列化程序](http://msdn.microsoft.com/library/7381b200-437a-4506-9556-d77bf1bc3f34)并[使用 XmlSerializer 类](http://msdn.microsoft.com/library/c680602d-39d3-44f1-bf22-8e6654ad5069)。</span><span class="sxs-lookup"><span data-stu-id="2f7ee-133">For more information about types that can be serialized by Windows Communication Foundation (WCF), see [Types Supported by the Data Contract Serializer](http://msdn.microsoft.com/library/7381b200-437a-4506-9556-d77bf1bc3f34) and [Using the XmlSerializer Class](http://msdn.microsoft.com/library/c680602d-39d3-44f1-bf22-8e6654ad5069).</span></span>  
+ <span data-ttu-id="69015-133">有关可由 Windows Communication Foundation (WCF) 序列化的类型的详细信息, 请参阅[数据协定序列化程序支持的类型](http://msdn.microsoft.com/library/7381b200-437a-4506-9556-d77bf1bc3f34)和[使用 XmlSerializer 类](http://msdn.microsoft.com/library/c680602d-39d3-44f1-bf22-8e6654ad5069)。</span><span class="sxs-lookup"><span data-stu-id="69015-133">For more information about types that can be serialized by Windows Communication Foundation (WCF), see [Types Supported by the Data Contract Serializer](http://msdn.microsoft.com/library/7381b200-437a-4506-9556-d77bf1bc3f34) and [Using the XmlSerializer Class](http://msdn.microsoft.com/library/c680602d-39d3-44f1-bf22-8e6654ad5069).</span></span>  
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.InvalidOperationException"><span data-ttu-id="2f7ee-134">SharePoint 命令的返回值类型与 <paramref name="TResult" /> 类型不匹配。</span><span class="sxs-lookup"><span data-stu-id="2f7ee-134">The return value type of the SharePoint command does not match the <paramref name="TResult" /> type.</span></span></exception>
-        <exception cref="T:Microsoft.VisualStudio.SharePoint.SharePointConnectionException"><span data-ttu-id="2f7ee-135">与 SharePoint 连接时发生错误。</span><span class="sxs-lookup"><span data-stu-id="2f7ee-135">An error occurred while connecting to SharePoint.</span></span></exception>
-        <exception cref="T:System.ArgumentOutOfRangeException"><span data-ttu-id="2f7ee-136"><paramref name="commandId" /> 与任何可用的 SharePoint 命令都不匹配。</span><span class="sxs-lookup"><span data-stu-id="2f7ee-136"><paramref name="commandId" /> does not match any available SharePoint commands.</span></span></exception>
-        <exception cref="T:Microsoft.VisualStudio.SharePoint.SharePointCommandException"><span data-ttu-id="2f7ee-137">SharePoint 命令失败引发异常。</span><span class="sxs-lookup"><span data-stu-id="2f7ee-137">An exception was thrown by the SharePoint command.</span></span></exception>
+        <exception cref="T:System.InvalidOperationException"><span data-ttu-id="69015-134">SharePoint 命令的返回值类型与 <paramref name="TResult" /> 类型不匹配。</span><span class="sxs-lookup"><span data-stu-id="69015-134">The return value type of the SharePoint command does not match the <paramref name="TResult" /> type.</span></span></exception>
+        <exception cref="T:Microsoft.VisualStudio.SharePoint.SharePointConnectionException"><span data-ttu-id="69015-135">与 SharePoint 连接时发生错误。</span><span class="sxs-lookup"><span data-stu-id="69015-135">An error occurred while connecting to SharePoint.</span></span></exception>
+        <exception cref="T:System.ArgumentOutOfRangeException"><span data-ttu-id="69015-136"><paramref name="commandId" /> 与任何可用的 SharePoint 命令都不匹配。</span><span class="sxs-lookup"><span data-stu-id="69015-136"><paramref name="commandId" /> does not match any available SharePoint commands.</span></span></exception>
+        <exception cref="T:Microsoft.VisualStudio.SharePoint.SharePointCommandException"><span data-ttu-id="69015-137">SharePoint 命令失败引发异常。</span><span class="sxs-lookup"><span data-stu-id="69015-137">An exception was thrown by the SharePoint command.</span></span></exception>
       </Docs>
     </Member>
     <Member MemberName="ExecuteCommand&lt;T,TResult&gt;">
@@ -172,29 +172,29 @@
         <Parameter Name="arg" Type="T" />
       </Parameters>
       <Docs>
-        <typeparam name="T"><span data-ttu-id="2f7ee-138">要执行的 SharePoint 命令的参数的类型。</span><span class="sxs-lookup"><span data-stu-id="2f7ee-138">The type of the parameter of the SharePoint command to execute.</span></span> <span data-ttu-id="2f7ee-139">这必须是可由 Windows Communication Foundation (WCF) 序列化的类型。</span><span class="sxs-lookup"><span data-stu-id="2f7ee-139">This must be a type that can be serialized by Windows Communication Foundation (WCF).</span></span></typeparam>
-        <typeparam name="TResult"><span data-ttu-id="2f7ee-140">要执行的 SharePoint 命令的返回值的类型。</span><span class="sxs-lookup"><span data-stu-id="2f7ee-140">The type of the return value of the SharePoint command to execute.</span></span> <span data-ttu-id="2f7ee-141">这必须是可由 Windows Communication Foundation (WCF) 序列化的类型。</span><span class="sxs-lookup"><span data-stu-id="2f7ee-141">This must be a type that can be serialized by Windows Communication Foundation (WCF).</span></span></typeparam>
-        <param name="commandId"><span data-ttu-id="2f7ee-142">要执行的 SharePoint 命令的标识符。</span><span class="sxs-lookup"><span data-stu-id="2f7ee-142">The identifier of the SharePoint command to execute.</span></span></param>
-        <param name="arg"><span data-ttu-id="2f7ee-143">要传递给 SharePoint 命令的参数。</span><span class="sxs-lookup"><span data-stu-id="2f7ee-143">The argument to pass to the SharePoint command.</span></span></param>
-        <summary><span data-ttu-id="2f7ee-144">使用指定的标识符、参数类型和返回值类型执行 SharePoint 命令。</span><span class="sxs-lookup"><span data-stu-id="2f7ee-144">Executes the SharePoint command with the specified identifier, parameter type, and return value type.</span></span></summary>
-        <returns><span data-ttu-id="2f7ee-145">SharePoint 命令的返回值。</span><span class="sxs-lookup"><span data-stu-id="2f7ee-145">The return value of the SharePoint command.</span></span></returns>
+        <typeparam name="T"><span data-ttu-id="69015-138">要执行的 SharePoint 命令的参数的类型。</span><span class="sxs-lookup"><span data-stu-id="69015-138">The type of the parameter of the SharePoint command to execute.</span></span> <span data-ttu-id="69015-139">这必须是可由 Windows Communication Foundation (WCF) 序列化的类型。</span><span class="sxs-lookup"><span data-stu-id="69015-139">This must be a type that can be serialized by Windows Communication Foundation (WCF).</span></span></typeparam>
+        <typeparam name="TResult"><span data-ttu-id="69015-140">要执行的 SharePoint 命令的返回值的类型。</span><span class="sxs-lookup"><span data-stu-id="69015-140">The type of the return value of the SharePoint command to execute.</span></span> <span data-ttu-id="69015-141">这必须是可由 Windows Communication Foundation (WCF) 序列化的类型。</span><span class="sxs-lookup"><span data-stu-id="69015-141">This must be a type that can be serialized by Windows Communication Foundation (WCF).</span></span></typeparam>
+        <param name="commandId"><span data-ttu-id="69015-142">要执行的 SharePoint 命令的标识符。</span><span class="sxs-lookup"><span data-stu-id="69015-142">The identifier of the SharePoint command to execute.</span></span></param>
+        <param name="arg"><span data-ttu-id="69015-143">要传递给 SharePoint 命令的参数。</span><span class="sxs-lookup"><span data-stu-id="69015-143">The argument to pass to the SharePoint command.</span></span></param>
+        <summary><span data-ttu-id="69015-144">使用指定的标识符、参数类型和返回值类型执行 SharePoint 命令。</span><span class="sxs-lookup"><span data-stu-id="69015-144">Executes the SharePoint command with the specified identifier, parameter type, and return value type.</span></span></summary>
+        <returns><span data-ttu-id="69015-145">SharePoint 命令的返回值。</span><span class="sxs-lookup"><span data-stu-id="69015-145">The return value of the SharePoint command.</span></span></returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="2f7ee-146">使用此方法来执行 SharePoint 命令具有返回值和自定义参数。</span><span class="sxs-lookup"><span data-stu-id="2f7ee-146">Use this method to execute a SharePoint command that has a return value and a custom parameter.</span></span> <span data-ttu-id="2f7ee-147">有关详细信息，请参阅[如何： 创建 SharePoint 命令](/visualstudio/sharepoint/how-to-create-a-sharepoint-command)并[如何： 执行 SharePoint 命令](/visualstudio/sharepoint/how-to-execute-a-sharepoint-command)。</span><span class="sxs-lookup"><span data-stu-id="2f7ee-147">For more information, see [How to: Create a SharePoint Command](/visualstudio/sharepoint/how-to-create-a-sharepoint-command) and [How to: Execute a SharePoint Command](/visualstudio/sharepoint/how-to-execute-a-sharepoint-command).</span></span>  
+ <span data-ttu-id="69015-146">使用此方法执行具有返回值和自定义参数的 SharePoint 命令。</span><span class="sxs-lookup"><span data-stu-id="69015-146">Use this method to execute a SharePoint command that has a return value and a custom parameter.</span></span> <span data-ttu-id="69015-147">有关详细信息，请参阅[如何：创建 SharePoint 命令](/visualstudio/sharepoint/how-to-create-a-sharepoint-command)和[如何:执行 SharePoint 命令](/visualstudio/sharepoint/how-to-execute-a-sharepoint-command)。</span><span class="sxs-lookup"><span data-stu-id="69015-147">For more information, see [How to: Create a SharePoint Command](/visualstudio/sharepoint/how-to-create-a-sharepoint-command) and [How to: Execute a SharePoint Command](/visualstudio/sharepoint/how-to-execute-a-sharepoint-command).</span></span>  
   
- <span data-ttu-id="2f7ee-148">有关可序列化由 Windows Communication Foundation (WCF) 的类型的详细信息，请参阅[类型支持的数据协定序列化程序](http://msdn.microsoft.com/library/7381b200-437a-4506-9556-d77bf1bc3f34)并[使用 XmlSerializer 类](http://msdn.microsoft.com/library/c680602d-39d3-44f1-bf22-8e6654ad5069)。</span><span class="sxs-lookup"><span data-stu-id="2f7ee-148">For more information about types that can be serialized by Windows Communication Foundation (WCF), see [Types Supported by the Data Contract Serializer](http://msdn.microsoft.com/library/7381b200-437a-4506-9556-d77bf1bc3f34) and [Using the XmlSerializer Class](http://msdn.microsoft.com/library/c680602d-39d3-44f1-bf22-8e6654ad5069).</span></span>  
+ <span data-ttu-id="69015-148">有关可由 Windows Communication Foundation (WCF) 序列化的类型的详细信息, 请参阅[数据协定序列化程序支持的类型](http://msdn.microsoft.com/library/7381b200-437a-4506-9556-d77bf1bc3f34)和[使用 XmlSerializer 类](http://msdn.microsoft.com/library/c680602d-39d3-44f1-bf22-8e6654ad5069)。</span><span class="sxs-lookup"><span data-stu-id="69015-148">For more information about types that can be serialized by Windows Communication Foundation (WCF), see [Types Supported by the Data Contract Serializer](http://msdn.microsoft.com/library/7381b200-437a-4506-9556-d77bf1bc3f34) and [Using the XmlSerializer Class](http://msdn.microsoft.com/library/c680602d-39d3-44f1-bf22-8e6654ad5069).</span></span>  
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.InvalidOperationException"><span data-ttu-id="2f7ee-149">SharePoint 命令的参数类型与 <paramref name="T" /> 类型不匹配。</span><span class="sxs-lookup"><span data-stu-id="2f7ee-149">The parameter type of the SharePoint command does not match the <paramref name="T" /> type.</span></span>  
+        <exception cref="T:System.InvalidOperationException"><span data-ttu-id="69015-149">SharePoint 命令的参数类型与 <paramref name="T" /> 类型不匹配。</span><span class="sxs-lookup"><span data-stu-id="69015-149">The parameter type of the SharePoint command does not match the <paramref name="T" /> type.</span></span>  
   
-<span data-ttu-id="2f7ee-150">或</span><span class="sxs-lookup"><span data-stu-id="2f7ee-150">or</span></span> 
-<span data-ttu-id="2f7ee-151">SharePoint 命令的返回值类型与 <paramref name="TResult" /> 类型不匹配。</span><span class="sxs-lookup"><span data-stu-id="2f7ee-151">The return value type of the SharePoint command does not match the <paramref name="TResult" /> type.</span></span></exception>
-        <exception cref="T:Microsoft.VisualStudio.SharePoint.SharePointConnectionException"><span data-ttu-id="2f7ee-152">与 SharePoint 连接时发生错误。</span><span class="sxs-lookup"><span data-stu-id="2f7ee-152">An error occurred while connecting to SharePoint.</span></span></exception>
-        <exception cref="T:System.ArgumentOutOfRangeException"><span data-ttu-id="2f7ee-153"><paramref name="commandId" /> 与任何可用的 SharePoint 命令都不匹配。</span><span class="sxs-lookup"><span data-stu-id="2f7ee-153"><paramref name="commandId" /> does not match any available SharePoint commands.</span></span></exception>
-        <exception cref="T:Microsoft.VisualStudio.SharePoint.SharePointCommandException"><span data-ttu-id="2f7ee-154">SharePoint 命令失败引发异常。</span><span class="sxs-lookup"><span data-stu-id="2f7ee-154">An exception was thrown by the SharePoint command.</span></span></exception>
+<span data-ttu-id="69015-150">or</span><span class="sxs-lookup"><span data-stu-id="69015-150">or</span></span> 
+<span data-ttu-id="69015-151">SharePoint 命令的返回值类型与 <paramref name="TResult" /> 类型不匹配。</span><span class="sxs-lookup"><span data-stu-id="69015-151">The return value type of the SharePoint command does not match the <paramref name="TResult" /> type.</span></span></exception>
+        <exception cref="T:Microsoft.VisualStudio.SharePoint.SharePointConnectionException"><span data-ttu-id="69015-152">与 SharePoint 连接时发生错误。</span><span class="sxs-lookup"><span data-stu-id="69015-152">An error occurred while connecting to SharePoint.</span></span></exception>
+        <exception cref="T:System.ArgumentOutOfRangeException"><span data-ttu-id="69015-153"><paramref name="commandId" /> 与任何可用的 SharePoint 命令都不匹配。</span><span class="sxs-lookup"><span data-stu-id="69015-153"><paramref name="commandId" /> does not match any available SharePoint commands.</span></span></exception>
+        <exception cref="T:Microsoft.VisualStudio.SharePoint.SharePointCommandException"><span data-ttu-id="69015-154">SharePoint 命令失败引发异常。</span><span class="sxs-lookup"><span data-stu-id="69015-154">An exception was thrown by the SharePoint command.</span></span></exception>
       </Docs>
     </Member>
     <Member MemberName="IsEnabled">
@@ -210,8 +210,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="2f7ee-155">获取或设置一个指示是否已启用连接的标志。</span><span class="sxs-lookup"><span data-stu-id="2f7ee-155">Gets or sets the flag indicating if the connection is enabled.</span></span></summary>
-        <value><span data-ttu-id="2f7ee-156">如果启用该连接，则为 <see langword="true" />；否则为 <see langword="false" />。</span><span class="sxs-lookup"><span data-stu-id="2f7ee-156"><see langword="true" /> if the connection is enabled; otherwise, <see langword="false" />.</span></span></value>
+        <summary><span data-ttu-id="69015-155">获取或设置一个指示是否已启用连接的标志。</span><span class="sxs-lookup"><span data-stu-id="69015-155">Gets or sets the flag indicating if the connection is enabled.</span></span></summary>
+        <value><span data-ttu-id="69015-156">如果启用该连接，则为 <see langword="true" />；否则为 <see langword="false" />。</span><span class="sxs-lookup"><span data-stu-id="69015-156"><see langword="true" /> if the connection is enabled; otherwise, <see langword="false" />.</span></span></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -228,8 +228,8 @@
         <ReturnType>System.Uri</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="2f7ee-157">获取连接到的 SharePoint 网站的 URL。</span><span class="sxs-lookup"><span data-stu-id="2f7ee-157">Gets the URL to the SharePoint site that is connected to.</span></span></summary>
-        <value><span data-ttu-id="2f7ee-158">连接到的 SharePoint 网站的 URL。</span><span class="sxs-lookup"><span data-stu-id="2f7ee-158">The URL to the SharePoint site that is connected to.</span></span></value>
+        <summary><span data-ttu-id="69015-157">获取连接到的 SharePoint 网站的 URL。</span><span class="sxs-lookup"><span data-stu-id="69015-157">Gets the URL to the SharePoint site that is connected to.</span></span></summary>
+        <value><span data-ttu-id="69015-158">连接到的 SharePoint 网站的 URL。</span><span class="sxs-lookup"><span data-stu-id="69015-158">The URL to the SharePoint site that is connected to.</span></span></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

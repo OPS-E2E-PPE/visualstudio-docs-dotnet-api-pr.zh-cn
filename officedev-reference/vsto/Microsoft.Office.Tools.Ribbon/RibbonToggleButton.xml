@@ -1,5 +1,5 @@
 <Type Name="RibbonToggleButton" FullName="Microsoft.Office.Tools.Ribbon.RibbonToggleButton">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="0e01e252d2aab6adbb9ab20192f1b9e6b81863d5" /><Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="09/19/2018" /><Meta Name="ms.locfileid" Value="46455761" /></Metadata><TypeSignature Language="C#" Value="public interface RibbonToggleButton : IDisposable, Microsoft.Office.Tools.Ribbon.RibbonControl, System.ComponentModel.IComponent" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="5e7766b722a4a0bc1991cb1c7989602fd33eafd4" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69002073" /></Metadata><TypeSignature Language="C#" Value="public interface RibbonToggleButton : IDisposable, Microsoft.Office.Tools.Ribbon.RibbonControl, System.ComponentModel.IComponent" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract RibbonToggleButton implements class Microsoft.Office.Tools.Ribbon.RibbonComponent, class Microsoft.Office.Tools.Ribbon.RibbonControl, class System.ComponentModel.IComponent, class System.IDisposable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Ribbon.RibbonToggleButton" />
   <AssemblyInfo>
@@ -7,6 +7,9 @@
     <AssemblyVersion>10.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Office.Tools.Ribbon.RibbonComponent</InterfaceName>
+    </Interface>
     <Interface>
       <InterfaceName>Microsoft.Office.Tools.Ribbon.RibbonControl</InterfaceName>
     </Interface>
@@ -23,24 +26,24 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary><span data-ttu-id="4f86f-101">表示功能区上的一个切换按钮控件。</span><span class="sxs-lookup"><span data-stu-id="4f86f-101">Represents a toggle button control on a Ribbon.</span></span></summary>
+    <summary><span data-ttu-id="846d0-101">表示功能区上的一个切换按钮控件。</span><span class="sxs-lookup"><span data-stu-id="846d0-101">Represents a toggle button control on a Ribbon.</span></span></summary>
     <remarks>
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="4f86f-102">一个<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton>可用于显示某项被选定。</span><span class="sxs-lookup"><span data-stu-id="4f86f-102">A <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton> can be used to show whether an item is selected.</span></span>  
+ <span data-ttu-id="846d0-102"><xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton>可用于显示是否选择了某个项。</span><span class="sxs-lookup"><span data-stu-id="846d0-102">A <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton> can be used to show whether an item is selected.</span></span>  
   
- <span data-ttu-id="4f86f-103">您可以创建<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton>在运行时通过使用<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.CreateRibbonToggleButton%2A>方法的<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory>对象。</span><span class="sxs-lookup"><span data-stu-id="4f86f-103">You can create a <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton> at run time by using the <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.CreateRibbonToggleButton%2A> method of the <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory> object.</span></span>  
+ <span data-ttu-id="846d0-103">您可以通过<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.CreateRibbonToggleButton%2A>使用<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton> <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory>对象的方法在运行时创建。</span><span class="sxs-lookup"><span data-stu-id="846d0-103">You can create a <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton> at run time by using the <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.CreateRibbonToggleButton%2A> method of the <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory> object.</span></span>  
   
- <span data-ttu-id="4f86f-104">可通过两种方法来访问 <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory> 对象：</span><span class="sxs-lookup"><span data-stu-id="4f86f-104">There are two ways to access the <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory> object:</span></span>  
+ <span data-ttu-id="846d0-104">可通过两种方法来访问 <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory> 对象：</span><span class="sxs-lookup"><span data-stu-id="846d0-104">There are two ways to access the <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory> object:</span></span>  
   
--   <span data-ttu-id="4f86f-105">通过使用 Ribbon 类的 `Factory` 属性。</span><span class="sxs-lookup"><span data-stu-id="4f86f-105">By using the `Factory` property of the Ribbon class.</span></span> <span data-ttu-id="4f86f-106">可从 Ribbon 类中的代码使用此方法。</span><span class="sxs-lookup"><span data-stu-id="4f86f-106">Use this approach from code in your Ribbon class.</span></span>  
+-   <span data-ttu-id="846d0-105">通过使用 Ribbon 类的 `Factory` 属性。</span><span class="sxs-lookup"><span data-stu-id="846d0-105">By using the `Factory` property of the Ribbon class.</span></span> <span data-ttu-id="846d0-106">可从 Ribbon 类中的代码使用此方法。</span><span class="sxs-lookup"><span data-stu-id="846d0-106">Use this approach from code in your Ribbon class.</span></span>  
   
--   <span data-ttu-id="4f86f-107">通过使用 `Globals.Factory.GetRibbonFactory` 方法。</span><span class="sxs-lookup"><span data-stu-id="4f86f-107">By using the `Globals.Factory.GetRibbonFactory` method.</span></span> <span data-ttu-id="4f86f-108">可从 Ribbon 类外的代码使用此方法。</span><span class="sxs-lookup"><span data-stu-id="4f86f-108">Use this approach from code outside your Ribbon class.</span></span>  
+-   <span data-ttu-id="846d0-107">通过使用 `Globals.Factory.GetRibbonFactory` 方法。</span><span class="sxs-lookup"><span data-stu-id="846d0-107">By using the `Globals.Factory.GetRibbonFactory` method.</span></span> <span data-ttu-id="846d0-108">可从 Ribbon 类外的代码使用此方法。</span><span class="sxs-lookup"><span data-stu-id="846d0-108">Use this approach from code outside your Ribbon class.</span></span>  
   
  [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
   
-## <a name="usage"></a><span data-ttu-id="4f86f-109">用法</span><span class="sxs-lookup"><span data-stu-id="4f86f-109">Usage</span></span>  
+## <a name="usage"></a><span data-ttu-id="846d0-109">用法</span><span class="sxs-lookup"><span data-stu-id="846d0-109">Usage</span></span>  
  [!INCLUDE[vsto_net35mref](~/includes/vsto-net35mref-md.md)]  
   
  ]]></format>
@@ -60,20 +63,20 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="4f86f-110">获取或设置一个值，该值指示是否按下了切换按钮。</span><span class="sxs-lookup"><span data-stu-id="4f86f-110">Gets or sets a value that indicates whether the toggle button is pressed or not pressed.</span></span></summary>
-        <value><span data-ttu-id="4f86f-111">如果按下了切换按钮，则为 <see langword="true" />；否则为 <see langword="false" />。</span><span class="sxs-lookup"><span data-stu-id="4f86f-111"><see langword="true" /> if the toggle button is pressed; otherwise, <see langword="false" />.</span></span> <span data-ttu-id="4f86f-112">默认值为 <see langword="false" />。</span><span class="sxs-lookup"><span data-stu-id="4f86f-112">The default is <see langword="false" />.</span></span></value>
+        <summary><span data-ttu-id="846d0-110">获取或设置一个值，该值指示是否按下了切换按钮。</span><span class="sxs-lookup"><span data-stu-id="846d0-110">Gets or sets a value that indicates whether the toggle button is pressed or not pressed.</span></span></summary>
+        <value><span data-ttu-id="846d0-111">如果按下了切换按钮，则为 <see langword="true" />；否则为 <see langword="false" />。</span><span class="sxs-lookup"><span data-stu-id="846d0-111"><see langword="true" /> if the toggle button is pressed; otherwise, <see langword="false" />.</span></span> <span data-ttu-id="846d0-112">默认值为 <see langword="false" />。</span><span class="sxs-lookup"><span data-stu-id="846d0-112">The default is <see langword="false" />.</span></span></value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="4f86f-113"><xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Checked%2A>属性可以在运行时更改。</span><span class="sxs-lookup"><span data-stu-id="4f86f-113">The <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Checked%2A> property can be changed at run time.</span></span>  
+ <span data-ttu-id="846d0-113">可以<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Checked%2A>在运行时更改该属性。</span><span class="sxs-lookup"><span data-stu-id="846d0-113">The <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Checked%2A> property can be changed at run time.</span></span>  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="Click">
-      <MemberSignature Language="C#" Value="public event Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler Click;" />
+      <MemberSignature Language="C#" Value="event Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler Click;" />
       <MemberSignature Language="ILAsm" Value=".event class Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler Click" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Click" />
       <MemberType>Event</MemberType>
@@ -85,12 +88,12 @@
         <ReturnType>Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="4f86f-114">当用户单击 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonToggleButton" /> 控件时发生。</span><span class="sxs-lookup"><span data-stu-id="4f86f-114">Occurs when the user clicks the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonToggleButton" /> control.</span></span></summary>
+        <summary><span data-ttu-id="846d0-114">当用户单击 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonToggleButton" /> 控件时发生。</span><span class="sxs-lookup"><span data-stu-id="846d0-114">Occurs when the user clicks the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonToggleButton" /> control.</span></span></summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="4f86f-115">当用户单击<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton>控件，<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Checked%2A>属性更改前<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Click>引发事件。</span><span class="sxs-lookup"><span data-stu-id="4f86f-115">When the user clicks the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton> control, the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Checked%2A> property changes before the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Click> event is raised.</span></span>  
+ <span data-ttu-id="846d0-115">当用户单击<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton>控件时, 在<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Checked%2A>引发<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Click>事件之前, 属性会发生更改。</span><span class="sxs-lookup"><span data-stu-id="846d0-115">When the user clicks the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton> control, the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Checked%2A> property changes before the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Click> event is raised.</span></span>  
   
  ]]></format>
         </remarks>
@@ -109,15 +112,15 @@
         <ReturnType>Microsoft.Office.Core.RibbonControlSize</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="4f86f-116">获取或设置 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonToggleButton" /> 控件的大小。</span><span class="sxs-lookup"><span data-stu-id="4f86f-116">Gets or sets the size of the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonToggleButton" /> control.</span></span></summary>
-        <value><span data-ttu-id="4f86f-117">一个<c>Microsoft.Office.Core.RibbonControlSize</c>表示大小的<see cref="T:Microsoft.Office.Tools.Ribbon.RibbonToggleButton" />控件。</span><span class="sxs-lookup"><span data-stu-id="4f86f-117">A <c>Microsoft.Office.Core.RibbonControlSize</c> that represents the size of the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonToggleButton" /> control.</span></span></value>
+        <summary><span data-ttu-id="846d0-116">获取或设置 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonToggleButton" /> 控件的大小。</span><span class="sxs-lookup"><span data-stu-id="846d0-116">Gets or sets the size of the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonToggleButton" /> control.</span></span></summary>
+        <value><span data-ttu-id="846d0-117">一个<c>RibbonControlSize</c> , 它表示<see cref="T:Microsoft.Office.Tools.Ribbon.RibbonToggleButton" />控件的大小。</span><span class="sxs-lookup"><span data-stu-id="846d0-117">A <c>Microsoft.Office.Core.RibbonControlSize</c> that represents the size of the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonToggleButton" /> control.</span></span></value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="4f86f-118">如果该按钮菜单的一部分，则此属性无效。</span><span class="sxs-lookup"><span data-stu-id="4f86f-118">This property has no effect if the button is part of a menu.</span></span> <span data-ttu-id="4f86f-119">`Microsoft.Office.Core.RibbonControlSize`菜单上显示的按钮始终设置为`Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeRegular`。</span><span class="sxs-lookup"><span data-stu-id="4f86f-119">The `Microsoft.Office.Core.RibbonControlSize` of a button that appears on a menu is always set to `Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeRegular`.</span></span>  
+ <span data-ttu-id="846d0-118">如果按钮是菜单的一部分, 则此属性不起作用。</span><span class="sxs-lookup"><span data-stu-id="846d0-118">This property has no effect if the button is part of a menu.</span></span> <span data-ttu-id="846d0-119">菜单上显示的按钮的将始终设置为`Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeRegular`。 `Microsoft.Office.Core.RibbonControlSize`</span><span class="sxs-lookup"><span data-stu-id="846d0-119">The `Microsoft.Office.Core.RibbonControlSize` of a button that appears on a menu is always set to `Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeRegular`.</span></span>  
   
- <span data-ttu-id="4f86f-120">若要更改的大小<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton>在菜单上，使用<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ItemSize%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="4f86f-120">To change the size of a <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton> on a menu, use the <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ItemSize%2A> property.</span></span>  
+ <span data-ttu-id="846d0-120">若要更改菜单<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton>上的大小, 请<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ItemSize%2A>使用属性。</span><span class="sxs-lookup"><span data-stu-id="846d0-120">To change the size of a <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton> on a menu, use the <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ItemSize%2A> property.</span></span>  
   
  ]]></format>
         </remarks>
@@ -136,15 +139,15 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="4f86f-121">获取或设置菜单中此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonToggleButton" /> 控件上显示的文本。</span><span class="sxs-lookup"><span data-stu-id="4f86f-121">Gets or sets the text that appears on this <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonToggleButton" /> control in a menu.</span></span></summary>
-        <value><span data-ttu-id="4f86f-122">一个 <see cref="T:System.String" />，表示控件上的文本。</span><span class="sxs-lookup"><span data-stu-id="4f86f-122">A <see cref="T:System.String" /> that represents the text on the control.</span></span></value>
+        <summary><span data-ttu-id="846d0-121">获取或设置菜单中此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonToggleButton" /> 控件上显示的文本。</span><span class="sxs-lookup"><span data-stu-id="846d0-121">Gets or sets the text that appears on this <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonToggleButton" /> control in a menu.</span></span></summary>
+        <value><span data-ttu-id="846d0-122">一个 <see cref="T:System.String" />，表示控件上的文本。</span><span class="sxs-lookup"><span data-stu-id="846d0-122">A <see cref="T:System.String" /> that represents the text on the control.</span></span></value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="4f86f-123"><xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Description%2A>时，会出现<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton>嵌套在另一个菜单，并<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ItemSize%2A>父菜单的属性设置为`Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge`。</span><span class="sxs-lookup"><span data-stu-id="4f86f-123">The <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Description%2A> appears when <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton> is nested in another menu, and the <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ItemSize%2A> property of the parent menu is set to `Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge`.</span></span> <span data-ttu-id="4f86f-124">如果<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ItemSize%2A>设置为`Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeRegular`，说明未显示。</span><span class="sxs-lookup"><span data-stu-id="4f86f-124">If the <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ItemSize%2A> is set to `Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeRegular`, the description does not appear.</span></span>  
+ <span data-ttu-id="846d0-123">如果<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Description%2A> 嵌套<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton>在另一个菜单中`Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge`, 并且父菜单的属性设置为,则会显示。<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ItemSize%2A></span><span class="sxs-lookup"><span data-stu-id="846d0-123">The <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Description%2A> appears when <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton> is nested in another menu, and the <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ItemSize%2A> property of the parent menu is set to `Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge`.</span></span> <span data-ttu-id="846d0-124">如果将设置为`Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeRegular`, 则不会显示说明。 <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ItemSize%2A></span><span class="sxs-lookup"><span data-stu-id="846d0-124">If the <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ItemSize%2A> is set to `Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeRegular`, the description does not appear.</span></span>  
   
- <span data-ttu-id="4f86f-125">可以在运行时更改此属性。</span><span class="sxs-lookup"><span data-stu-id="4f86f-125">This property can be changed at run time.</span></span>  
+ <span data-ttu-id="846d0-125">可以在运行时更改此属性。</span><span class="sxs-lookup"><span data-stu-id="846d0-125">This property can be changed at run time.</span></span>  
   
  ]]></format>
         </remarks>
@@ -163,19 +166,19 @@
         <ReturnType>System.Drawing.Image</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="4f86f-126">获取或设置控件上显示的图像。</span><span class="sxs-lookup"><span data-stu-id="4f86f-126">Gets or sets the image that is displayed on the control.</span></span></summary>
-        <value><span data-ttu-id="4f86f-127">一个在控件上显示的 <see cref="T:System.Drawing.Image" />。</span><span class="sxs-lookup"><span data-stu-id="4f86f-127">An <see cref="T:System.Drawing.Image" /> that is displayed on the control.</span></span></value>
+        <summary><span data-ttu-id="846d0-126">获取或设置控件上显示的图像。</span><span class="sxs-lookup"><span data-stu-id="846d0-126">Gets or sets the image that is displayed on the control.</span></span></summary>
+        <value><span data-ttu-id="846d0-127">一个在控件上显示的 <see cref="T:System.Drawing.Image" />。</span><span class="sxs-lookup"><span data-stu-id="846d0-127">An <see cref="T:System.Drawing.Image" /> that is displayed on the control.</span></span></value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="4f86f-128">建议的图像格式是 PNG，因为 PNG 格式的图像支持通过其 alpha 通道的透明度。</span><span class="sxs-lookup"><span data-stu-id="4f86f-128">The recommended image format is PNG, because images in the PNG format support transparency through their alpha channel.</span></span>  
+ <span data-ttu-id="846d0-128">建议的图像格式为 PNG, 因为 PNG 格式的图像通过其 alpha 通道支持透明度。</span><span class="sxs-lookup"><span data-stu-id="846d0-128">The recommended image format is PNG, because images in the PNG format support transparency through their alpha channel.</span></span>  
   
- <span data-ttu-id="4f86f-129"><xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A>属性标识控件显示的图像。</span><span class="sxs-lookup"><span data-stu-id="4f86f-129">The <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A> property identifies an image that is displayed by the control.</span></span> <span data-ttu-id="4f86f-130">在设计时或在运行时，可以设置此属性。</span><span class="sxs-lookup"><span data-stu-id="4f86f-130">This property can be set at design time or at run time.</span></span> <span data-ttu-id="4f86f-131">如果在运行时中更新此属性，该控件的外观被更新以反映更改。</span><span class="sxs-lookup"><span data-stu-id="4f86f-131">If you update this property at run time, the control's appearance is updated to reflect the change.</span></span>  
+ <span data-ttu-id="846d0-129"><xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A>属性标识控件显示的图像。</span><span class="sxs-lookup"><span data-stu-id="846d0-129">The <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A> property identifies an image that is displayed by the control.</span></span> <span data-ttu-id="846d0-130">此属性可在设计时或运行时设置。</span><span class="sxs-lookup"><span data-stu-id="846d0-130">This property can be set at design time or at run time.</span></span> <span data-ttu-id="846d0-131">如果在运行时更新此属性, 控件的外观将更新以反映更改。</span><span class="sxs-lookup"><span data-stu-id="846d0-131">If you update this property at run time, the control's appearance is updated to reflect the change.</span></span>  
   
- <span data-ttu-id="4f86f-132">如果<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A>设置属性，则<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.OfficeImageId%2A>和<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ImageName%2A>属性将被忽略。</span><span class="sxs-lookup"><span data-stu-id="4f86f-132">If the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A> property is set, the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.OfficeImageId%2A> and <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ImageName%2A> properties are ignored.</span></span> <span data-ttu-id="4f86f-133">尽管<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A>属性可让您更好地控制比其他两个属性，这一点可以是速度较慢，因为每次更新控件时，图像对象发送到 Office 应用程序。</span><span class="sxs-lookup"><span data-stu-id="4f86f-133">Although the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A> property gives you more control than the other two properties do, it can be slower because the image object is sent to the Office application every time the control is updated.</span></span>  
+ <span data-ttu-id="846d0-132">如果设置了<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.OfficeImageId%2A> <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ImageName%2A>属性, 则将忽略和属性。 <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A></span><span class="sxs-lookup"><span data-stu-id="846d0-132">If the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A> property is set, the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.OfficeImageId%2A> and <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ImageName%2A> properties are ignored.</span></span> <span data-ttu-id="846d0-133"><xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A>尽管属性比其他两个属性提供的控件更多, 但它可能会变慢, 因为每次更新控件时, 都会将 image 对象发送到 Office 应用程序。</span><span class="sxs-lookup"><span data-stu-id="846d0-133">Although the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A> property gives you more control than the other two properties do, it can be slower because the image object is sent to the Office application every time the control is updated.</span></span>  
   
- <span data-ttu-id="4f86f-134"><xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ShowImage%2A>属性必须为`true`控件来显示图像。</span><span class="sxs-lookup"><span data-stu-id="4f86f-134">The <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ShowImage%2A> property must be `true` for the control to display the image.</span></span> <span data-ttu-id="4f86f-135">当您将设置<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A>属性在设计时，Visual Studio 将自动设置<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ShowImage%2A>属性设置为`true`。</span><span class="sxs-lookup"><span data-stu-id="4f86f-135">When you set the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A> property at design time, Visual Studio automatically sets the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ShowImage%2A> property to `true`.</span></span> <span data-ttu-id="4f86f-136">如果您设置<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A>在运行时属性，则你必须设置<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ShowImage%2A>属性设置为`true`在代码中。</span><span class="sxs-lookup"><span data-stu-id="4f86f-136">If you set the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A> property at run time, you must set the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ShowImage%2A> property to `true` in your code.</span></span>  
+ <span data-ttu-id="846d0-134"><xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ShowImage%2A> 属性`true`必须为, 控件才能显示图像。</span><span class="sxs-lookup"><span data-stu-id="846d0-134">The <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ShowImage%2A> property must be `true` for the control to display the image.</span></span> <span data-ttu-id="846d0-135">在设计时设置<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A>属性时, Visual Studio 会将<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ShowImage%2A>属性自动设置为`true`。</span><span class="sxs-lookup"><span data-stu-id="846d0-135">When you set the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A> property at design time, Visual Studio automatically sets the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ShowImage%2A> property to `true`.</span></span> <span data-ttu-id="846d0-136">如果在运行时<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A>设置属性, 必须在代码中<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ShowImage%2A>将属性设置为`true` 。</span><span class="sxs-lookup"><span data-stu-id="846d0-136">If you set the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A> property at run time, you must set the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ShowImage%2A> property to `true` in your code.</span></span>  
   
  ]]></format>
         </remarks>
@@ -194,36 +197,36 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="4f86f-137">获取或设置一个名称，该名称可用于在 <see cref="E:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage" /> 事件处理程序中标识控件图像。</span><span class="sxs-lookup"><span data-stu-id="4f86f-137">Gets or sets the name that you can use in the <see cref="E:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage" /> event handler to identify an image for the control.</span></span></summary>
-        <value><span data-ttu-id="4f86f-138">一个字符串，可用于在 <see cref="E:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage" /> 事件处理程序中标识控件图像。</span><span class="sxs-lookup"><span data-stu-id="4f86f-138">A string that you can use in the <see cref="E:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage" /> event handler to identify an image for the control.</span></span></value>
+        <summary><span data-ttu-id="846d0-137">获取或设置一个名称，该名称可用于在 <see cref="E:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage" /> 事件处理程序中标识控件图像。</span><span class="sxs-lookup"><span data-stu-id="846d0-137">Gets or sets the name that you can use in the <see cref="E:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage" /> event handler to identify an image for the control.</span></span></summary>
+        <value><span data-ttu-id="846d0-138">一个字符串，可用于在 <see cref="E:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage" /> 事件处理程序中标识控件图像。</span><span class="sxs-lookup"><span data-stu-id="846d0-138">A string that you can use in the <see cref="E:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage" /> event handler to identify an image for the control.</span></span></value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="4f86f-139"><xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ImageName%2A>属性标识控件显示的图像。</span><span class="sxs-lookup"><span data-stu-id="4f86f-139">The <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ImageName%2A> property identifies an image that is displayed by the control.</span></span> <span data-ttu-id="4f86f-140">Office 应用程序此映像从你的解决方案只检索一次，以提高性能。</span><span class="sxs-lookup"><span data-stu-id="4f86f-140">The Office application retrieves this image from your solution only once, to improve performance.</span></span> <span data-ttu-id="4f86f-141">此属性可以设置只能在设计时，因为它标识的图像加载过程<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>事件。</span><span class="sxs-lookup"><span data-stu-id="4f86f-141">This property can be set only at design time, because the image it identifies is loaded during the <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage> event.</span></span> <span data-ttu-id="4f86f-142"><xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage> 时将引发一次每个映像名称显示在功能区。</span><span class="sxs-lookup"><span data-stu-id="4f86f-142"><xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage> is raised only once per image name, when the Ribbon is displayed.</span></span> <span data-ttu-id="4f86f-143">之后，不能使用此属性更改控件图像。</span><span class="sxs-lookup"><span data-stu-id="4f86f-143">After that, the control image cannot be changed by using this property.</span></span>  
+ <span data-ttu-id="846d0-139"><xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ImageName%2A>属性标识控件显示的图像。</span><span class="sxs-lookup"><span data-stu-id="846d0-139">The <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ImageName%2A> property identifies an image that is displayed by the control.</span></span> <span data-ttu-id="846d0-140">Office 应用程序仅从解决方案中检索一次此映像, 以提高性能。</span><span class="sxs-lookup"><span data-stu-id="846d0-140">The Office application retrieves this image from your solution only once, to improve performance.</span></span> <span data-ttu-id="846d0-141">只能在设计时设置此属性, 因为该属性标识的图像将在<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>事件中加载。</span><span class="sxs-lookup"><span data-stu-id="846d0-141">This property can be set only at design time, because the image it identifies is loaded during the <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage> event.</span></span> <span data-ttu-id="846d0-142"><xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>当显示功能区时, 每个映像名称只引发一次。</span><span class="sxs-lookup"><span data-stu-id="846d0-142"><xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage> is raised only once per image name, when the Ribbon is displayed.</span></span> <span data-ttu-id="846d0-143">之后, 不能使用此属性更改控制图像。</span><span class="sxs-lookup"><span data-stu-id="846d0-143">After that, the control image cannot be changed by using this property.</span></span>  
   
- <span data-ttu-id="4f86f-144">若要加载图像，将代码添加到<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="4f86f-144">To load the image, add code to the <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage> event handler.</span></span> <span data-ttu-id="4f86f-145">检查<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs.ImageName%2A>的属性<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs>并设置<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs.Image%2A>属性的<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs>到想要加载的图像的对象。</span><span class="sxs-lookup"><span data-stu-id="4f86f-145">Check the <xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs.ImageName%2A> property of the <xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs> and set the <xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs.Image%2A> property of the <xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs> object to the image that you want to load.</span></span>  
+ <span data-ttu-id="846d0-144">若要加载图像, 请将代码添加<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>到事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="846d0-144">To load the image, add code to the <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage> event handler.</span></span> <span data-ttu-id="846d0-145"><xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs.Image%2A>检查的<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs>属性,并<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs>将对象的属性设置为要加载的图像。 <xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs.ImageName%2A></span><span class="sxs-lookup"><span data-stu-id="846d0-145">Check the <xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs.ImageName%2A> property of the <xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs> and set the <xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs.Image%2A> property of the <xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs> object to the image that you want to load.</span></span>  
   
- <span data-ttu-id="4f86f-146">如果忽略此属性<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A>属性或<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.OfficeImageId%2A>属性设置。</span><span class="sxs-lookup"><span data-stu-id="4f86f-146">This property is ignored if either the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A> property or the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.OfficeImageId%2A> property is set.</span></span> <span data-ttu-id="4f86f-147">标识的图像<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ImageName%2A>属性可以稍快于标识的图像加载<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A>显示属性，因为 Office 应用程序中检索映像解决方案仅在首次从功能区。</span><span class="sxs-lookup"><span data-stu-id="4f86f-147">Images identified by the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ImageName%2A> property can be loaded slightly faster than images identified by the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A> property, because the Office application retrieves the image from your solution only the first time the Ribbon is displayed.</span></span>  
+ <span data-ttu-id="846d0-146">如果设置了<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A>属性<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.OfficeImageId%2A>或属性, 则忽略此属性。</span><span class="sxs-lookup"><span data-stu-id="846d0-146">This property is ignored if either the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A> property or the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.OfficeImageId%2A> property is set.</span></span> <span data-ttu-id="846d0-147">与<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A>属性标识的<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ImageName%2A>图像相比, 属性所标识的映像的加载速度要快得多, 因为 Office 应用程序只会在首次显示功能区时从你的解决方案中检索该图像。</span><span class="sxs-lookup"><span data-stu-id="846d0-147">Images identified by the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ImageName%2A> property can be loaded slightly faster than images identified by the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A> property, because the Office application retrieves the image from your solution only the first time the Ribbon is displayed.</span></span>  
   
- <span data-ttu-id="4f86f-148"><xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ShowImage%2A>属性必须为`true`控件来显示图像。</span><span class="sxs-lookup"><span data-stu-id="4f86f-148">The <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ShowImage%2A> property must be `true` for the control to display the image.</span></span> <span data-ttu-id="4f86f-149">当您将设置<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ImageName%2A>属性在设计时，Visual Studio 将自动设置<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ShowImage%2A>属性设置为`true`。</span><span class="sxs-lookup"><span data-stu-id="4f86f-149">When you set the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ImageName%2A> property at design time, Visual Studio automatically sets the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ShowImage%2A> property to `true`.</span></span> <span data-ttu-id="4f86f-150">如果您设置<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ImageName%2A>在运行时属性，则你必须设置<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ShowImage%2A>属性设置为`true`在代码中。</span><span class="sxs-lookup"><span data-stu-id="4f86f-150">If you set the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ImageName%2A> property at run time, you must set the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ShowImage%2A> property to `true` in your code.</span></span>  
+ <span data-ttu-id="846d0-148"><xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ShowImage%2A> 属性`true`必须为, 控件才能显示图像。</span><span class="sxs-lookup"><span data-stu-id="846d0-148">The <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ShowImage%2A> property must be `true` for the control to display the image.</span></span> <span data-ttu-id="846d0-149">在设计时设置<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ImageName%2A>属性时, Visual Studio 会将<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ShowImage%2A>属性自动设置为`true`。</span><span class="sxs-lookup"><span data-stu-id="846d0-149">When you set the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ImageName%2A> property at design time, Visual Studio automatically sets the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ShowImage%2A> property to `true`.</span></span> <span data-ttu-id="846d0-150">如果在运行时<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ImageName%2A>设置属性, 必须在代码中<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ShowImage%2A>将属性设置为`true` 。</span><span class="sxs-lookup"><span data-stu-id="846d0-150">If you set the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ImageName%2A> property at run time, you must set the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ShowImage%2A> property to `true` in your code.</span></span>  
   
    
   
 ## Examples  
- <span data-ttu-id="4f86f-151">下面的示例将缓存两个按钮的的图像。</span><span class="sxs-lookup"><span data-stu-id="4f86f-151">The following example caches the images for two buttons.</span></span>  
+ <span data-ttu-id="846d0-151">下面的示例为两个按钮缓存图像。</span><span class="sxs-lookup"><span data-stu-id="846d0-151">The following example caches the images for two buttons.</span></span>  
   
- <span data-ttu-id="4f86f-152">若要运行此代码示例，必须首先执行以下步骤：</span><span class="sxs-lookup"><span data-stu-id="4f86f-152">To run this code example, you must first perform the following steps:</span></span>  
+ <span data-ttu-id="846d0-152">若要运行此代码示例, 必须首先执行以下步骤:</span><span class="sxs-lookup"><span data-stu-id="846d0-152">To run this code example, you must first perform the following steps:</span></span>  
   
-1.  <span data-ttu-id="4f86f-153">添加**功能区 （可视化设计器）** 到 Office 项目的项。</span><span class="sxs-lookup"><span data-stu-id="4f86f-153">Add a **Ribbon (Visual Designer)** item to an Office project.</span></span>  
+1.  <span data-ttu-id="846d0-153">向 Office 项目添加 "**功能区 (可视化设计器)** " 项。</span><span class="sxs-lookup"><span data-stu-id="846d0-153">Add a **Ribbon (Visual Designer)** item to an Office project.</span></span>  
   
-2.  <span data-ttu-id="4f86f-154">将组添加到自定义选项卡。</span><span class="sxs-lookup"><span data-stu-id="4f86f-154">Add a group to the custom tab.</span></span>  
+2.  <span data-ttu-id="846d0-154">将组添加到自定义选项卡。</span><span class="sxs-lookup"><span data-stu-id="846d0-154">Add a group to the custom tab.</span></span>  
   
-3.  <span data-ttu-id="4f86f-155">将两个按钮添加到组。</span><span class="sxs-lookup"><span data-stu-id="4f86f-155">Add two buttons to the group.</span></span>  
+3.  <span data-ttu-id="846d0-155">将两个按钮添加到组。</span><span class="sxs-lookup"><span data-stu-id="846d0-155">Add two buttons to the group.</span></span>  
   
-4.  <span data-ttu-id="4f86f-156">将两个映像添加到项目资源。</span><span class="sxs-lookup"><span data-stu-id="4f86f-156">Add two images to the project resources.</span></span>  
+4.  <span data-ttu-id="846d0-156">将两个图像添加到项目资源。</span><span class="sxs-lookup"><span data-stu-id="846d0-156">Add two images to the project resources.</span></span>  
   
- <span data-ttu-id="4f86f-157">然后可以在生成的功能区类中运行此代码。</span><span class="sxs-lookup"><span data-stu-id="4f86f-157">You can then run this code in the generated Ribbon class.</span></span>  
+ <span data-ttu-id="846d0-157">然后, 你可以在生成的功能区类中运行此代码。</span><span class="sxs-lookup"><span data-stu-id="846d0-157">You can then run this code in the generated Ribbon class.</span></span>  
   
  [!code-csharp[Trin_Ribbon_ObjectModel#6](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_Ribbon_ObjectModel/CS/Ribbon1.cs#6)]
  [!code-vb[Trin_Ribbon_ObjectModel#6](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_Ribbon_ObjectModel/VB/Ribbon1.vb#6)]  
@@ -245,19 +248,19 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="4f86f-158">获取或设置切换按钮的键盘快捷键。</span><span class="sxs-lookup"><span data-stu-id="4f86f-158">Gets or sets the keyboard shortcut of the toggle button.</span></span></summary>
-        <value><span data-ttu-id="4f86f-159">此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonToggleButton" /> 当前的键盘快捷键。</span><span class="sxs-lookup"><span data-stu-id="4f86f-159">The current keyboard shortcut of this <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonToggleButton" />.</span></span></value>
+        <summary><span data-ttu-id="846d0-158">获取或设置切换按钮的键盘快捷键。</span><span class="sxs-lookup"><span data-stu-id="846d0-158">Gets or sets the keyboard shortcut of the toggle button.</span></span></summary>
+        <value><span data-ttu-id="846d0-159">此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonToggleButton" /> 当前的键盘快捷键。</span><span class="sxs-lookup"><span data-stu-id="846d0-159">The current keyboard shortcut of this <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonToggleButton" />.</span></span></value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="4f86f-160">Keytip 必须包含 1 到 3 个字符，不能包含空格、 制表符或换行字符。</span><span class="sxs-lookup"><span data-stu-id="4f86f-160">A KeyTip must have from 1 to 3 characters, and must not contain spaces, tabs, or newline characters.</span></span>  
+ <span data-ttu-id="846d0-160">KeyTip 必须有1到3个字符, 并且不得包含空格、制表符或换行符。</span><span class="sxs-lookup"><span data-stu-id="846d0-160">A KeyTip must have from 1 to 3 characters, and must not contain spaces, tabs, or newline characters.</span></span>  
   
- <span data-ttu-id="4f86f-161">Keytip 有时也称为访问密钥或加速器和用作激活控件的快捷组合键。</span><span class="sxs-lookup"><span data-stu-id="4f86f-161">KeyTips are sometimes known as access keys or accelerators and are used as shortcut key combinations that activate controls.</span></span> <span data-ttu-id="4f86f-162">按下 ALT 键时，键提示将显示在功能区上。</span><span class="sxs-lookup"><span data-stu-id="4f86f-162">KeyTips appear on the Ribbon when you press the ALT key.</span></span> <span data-ttu-id="4f86f-163">如果内置控件或从其他加载项，你的快捷键提示与键提示冲突，Microsoft Office 可能会自动分配非冲突快捷键提示值。</span><span class="sxs-lookup"><span data-stu-id="4f86f-163">If your KeyTip conflicts with KeyTips for built-in controls or from other add-ins, Microsoft Office might assign non-conflicting KeyTip values automatically.</span></span>  
+ <span data-ttu-id="846d0-161">Keytip 有时称为 "访问键" 或 "加速器", 用作激活控件的快捷键组合。</span><span class="sxs-lookup"><span data-stu-id="846d0-161">KeyTips are sometimes known as access keys or accelerators and are used as shortcut key combinations that activate controls.</span></span> <span data-ttu-id="846d0-162">按 ALT 键时, 功能区上将显示键提示。</span><span class="sxs-lookup"><span data-stu-id="846d0-162">KeyTips appear on the Ribbon when you press the ALT key.</span></span> <span data-ttu-id="846d0-163">如果 KeyTip 与内置控件或其他外接程序的 keytip 发生冲突, Microsoft Office 可能会自动分配不冲突的 KeyTip 值。</span><span class="sxs-lookup"><span data-stu-id="846d0-163">If your KeyTip conflicts with KeyTips for built-in controls or from other add-ins, Microsoft Office might assign non-conflicting KeyTip values automatically.</span></span>  
   
- <span data-ttu-id="4f86f-164">有关详细信息，请参阅[使用键盘处理功能区程序](http://go.microsoft.com/fwlink/?LinkId=93523)。</span><span class="sxs-lookup"><span data-stu-id="4f86f-164">For more information, see [Use the keyboard to work with Ribbon programs](http://go.microsoft.com/fwlink/?LinkId=93523).</span></span>  
+ <span data-ttu-id="846d0-164">有关详细信息, 请参阅[使用键盘处理功能区程序](http://go.microsoft.com/fwlink/?LinkId=93523)。</span><span class="sxs-lookup"><span data-stu-id="846d0-164">For more information, see [Use the keyboard to work with Ribbon programs](http://go.microsoft.com/fwlink/?LinkId=93523).</span></span>  
   
- <span data-ttu-id="4f86f-165">可以在运行时更改此属性。</span><span class="sxs-lookup"><span data-stu-id="4f86f-165">This property can be changed at run time.</span></span>  
+ <span data-ttu-id="846d0-165">可以在运行时更改此属性。</span><span class="sxs-lookup"><span data-stu-id="846d0-165">This property can be changed at run time.</span></span>  
   
  ]]></format>
         </remarks>
@@ -276,13 +279,13 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="4f86f-166">获取或设置切换按钮上的文本。</span><span class="sxs-lookup"><span data-stu-id="4f86f-166">Gets or sets the text on the toggle button.</span></span></summary>
-        <value><span data-ttu-id="4f86f-167">在此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonToggleButton" /> 控件上显示的文本。</span><span class="sxs-lookup"><span data-stu-id="4f86f-167">The text that appears on this <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonToggleButton" /> control.</span></span></value>
+        <summary><span data-ttu-id="846d0-166">获取或设置切换按钮上的文本。</span><span class="sxs-lookup"><span data-stu-id="846d0-166">Gets or sets the text on the toggle button.</span></span></summary>
+        <value><span data-ttu-id="846d0-167">在此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonToggleButton" /> 控件上显示的文本。</span><span class="sxs-lookup"><span data-stu-id="846d0-167">The text that appears on this <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonToggleButton" /> control.</span></span></value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="4f86f-168">可以在运行时更改此属性。</span><span class="sxs-lookup"><span data-stu-id="4f86f-168">This property can be changed at run time.</span></span>  
+ <span data-ttu-id="846d0-168">可以在运行时更改此属性。</span><span class="sxs-lookup"><span data-stu-id="846d0-168">This property can be changed at run time.</span></span>  
   
  ]]></format>
         </remarks>
@@ -301,32 +304,32 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="4f86f-169">如果要使用内置 Microsoft Office 图标，请获取或设置要在 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonToggleButton" /> 上显示的图像。</span><span class="sxs-lookup"><span data-stu-id="4f86f-169">Gets or sets the image to display on the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonToggleButton" />, if you want to use a built-in Microsoft Office icon.</span></span></summary>
-        <value><span data-ttu-id="4f86f-170">作为此控件图标的内置 Microsoft Office 图标的 ID。</span><span class="sxs-lookup"><span data-stu-id="4f86f-170">The ID of a built-in Microsoft Office icon that serves as the icon for this control.</span></span></value>
+        <summary><span data-ttu-id="846d0-169">如果要使用内置 Microsoft Office 图标，请获取或设置要在 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonToggleButton" /> 上显示的图像。</span><span class="sxs-lookup"><span data-stu-id="846d0-169">Gets or sets the image to display on the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonToggleButton" />, if you want to use a built-in Microsoft Office icon.</span></span></summary>
+        <value><span data-ttu-id="846d0-170">作为此控件图标的内置 Microsoft Office 图标的 ID。</span><span class="sxs-lookup"><span data-stu-id="846d0-170">The ID of a built-in Microsoft Office icon that serves as the icon for this control.</span></span></value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="4f86f-171"><xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.OfficeImageId%2A>属性标识的控件显示 Office 图标。</span><span class="sxs-lookup"><span data-stu-id="4f86f-171">The <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.OfficeImageId%2A> property identifies an Office icon that is displayed by the control.</span></span> <span data-ttu-id="4f86f-172">属性值是一个字符串，标识`imageMso`所选图标的值。</span><span class="sxs-lookup"><span data-stu-id="4f86f-172">The property value is a string that identifies the `imageMso` value of the selected icon.</span></span> <span data-ttu-id="4f86f-173">在设计时或在运行时，可以设置此属性。</span><span class="sxs-lookup"><span data-stu-id="4f86f-173">This property can be set at design time or at run time.</span></span> <span data-ttu-id="4f86f-174">如果在运行时中更新此属性，该控件的外观被更新以反映更改。</span><span class="sxs-lookup"><span data-stu-id="4f86f-174">If you update this property at run time, the control's appearance is updated to reflect the change.</span></span>  
+ <span data-ttu-id="846d0-171"><xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.OfficeImageId%2A>属性标识控件显示的 Office 图标。</span><span class="sxs-lookup"><span data-stu-id="846d0-171">The <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.OfficeImageId%2A> property identifies an Office icon that is displayed by the control.</span></span> <span data-ttu-id="846d0-172">属性值是标识`imageMso`所选图标的值的字符串。</span><span class="sxs-lookup"><span data-stu-id="846d0-172">The property value is a string that identifies the `imageMso` value of the selected icon.</span></span> <span data-ttu-id="846d0-173">此属性可在设计时或运行时设置。</span><span class="sxs-lookup"><span data-stu-id="846d0-173">This property can be set at design time or at run time.</span></span> <span data-ttu-id="846d0-174">如果在运行时更新此属性, 控件的外观将更新以反映更改。</span><span class="sxs-lookup"><span data-stu-id="846d0-174">If you update this property at run time, the control's appearance is updated to reflect the change.</span></span>  
   
- <span data-ttu-id="4f86f-175">有关一系列`imageMso`值，请参阅 Microsoft 下载中心页[2010 Office System 外接程序： 图标库](http://go.microsoft.com/fwlink/?LinkID=220760)。</span><span class="sxs-lookup"><span data-stu-id="4f86f-175">For a list of `imageMso` values, see the Microsoft Download Center page [2010 Office System Add-In: Icons Gallery](http://go.microsoft.com/fwlink/?LinkID=220760).</span></span>  
+ <span data-ttu-id="846d0-175">有关`imageMso`值的列表, 请参阅 Microsoft 下载中心页面[2010 Office 系统外接程序:图标库](http://go.microsoft.com/fwlink/?LinkID=220760)。</span><span class="sxs-lookup"><span data-stu-id="846d0-175">For a list of `imageMso` values, see the Microsoft Download Center page [2010 Office System Add-In: Icons Gallery](http://go.microsoft.com/fwlink/?LinkID=220760).</span></span>  
   
- <span data-ttu-id="4f86f-176">如果忽略此属性<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A>属性设置。</span><span class="sxs-lookup"><span data-stu-id="4f86f-176">This property is ignored if the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A> property is set.</span></span> <span data-ttu-id="4f86f-177">标识的图像<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.OfficeImageId%2A>属性可以稍快于标识的图像加载<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A>属性，因为这些图像缓存在 Office 应用程序。</span><span class="sxs-lookup"><span data-stu-id="4f86f-177">Images identified by the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.OfficeImageId%2A> property can be loaded slightly faster than images identified by the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A> property, because the images are cached in the Office application.</span></span>  
+ <span data-ttu-id="846d0-176">如果设置了<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A>属性, 则忽略此属性。</span><span class="sxs-lookup"><span data-stu-id="846d0-176">This property is ignored if the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A> property is set.</span></span> <span data-ttu-id="846d0-177">由于图像缓存在<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.OfficeImageId%2A> Office 应用程序中, 因此可以比<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A>属性标识的图像稍快地加载属性标识的图像。</span><span class="sxs-lookup"><span data-stu-id="846d0-177">Images identified by the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.OfficeImageId%2A> property can be loaded slightly faster than images identified by the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A> property, because the images are cached in the Office application.</span></span>  
   
- <span data-ttu-id="4f86f-178"><xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ShowImage%2A>属性必须为`true`控件来显示图像。</span><span class="sxs-lookup"><span data-stu-id="4f86f-178">The <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ShowImage%2A> property must be `true` for the control to display the image.</span></span> <span data-ttu-id="4f86f-179">当您将设置<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A>属性在设计时，Visual Studio 将自动设置<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ShowImage%2A>属性设置为`true`。</span><span class="sxs-lookup"><span data-stu-id="4f86f-179">When you set the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A> property at design time, Visual Studio automatically sets the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ShowImage%2A> property to `true`.</span></span> <span data-ttu-id="4f86f-180">如果您设置<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A>在运行时属性，则你必须设置<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ShowImage%2A>属性设置为`true`在代码中。</span><span class="sxs-lookup"><span data-stu-id="4f86f-180">If you set the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A> property at run time, you must set the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ShowImage%2A> property to `true` in your code.</span></span>  
+ <span data-ttu-id="846d0-178"><xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ShowImage%2A> 属性`true`必须为, 控件才能显示图像。</span><span class="sxs-lookup"><span data-stu-id="846d0-178">The <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ShowImage%2A> property must be `true` for the control to display the image.</span></span> <span data-ttu-id="846d0-179">在设计时设置<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A>属性时, Visual Studio 会将<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ShowImage%2A>属性自动设置为`true`。</span><span class="sxs-lookup"><span data-stu-id="846d0-179">When you set the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A> property at design time, Visual Studio automatically sets the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ShowImage%2A> property to `true`.</span></span> <span data-ttu-id="846d0-180">如果在运行时<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A>设置属性, 必须在代码中<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ShowImage%2A>将属性设置为`true` 。</span><span class="sxs-lookup"><span data-stu-id="846d0-180">If you set the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A> property at run time, you must set the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ShowImage%2A> property to `true` in your code.</span></span>  
   
    
   
 ## Examples  
- <span data-ttu-id="4f86f-181">下面的示例将 Microsoft Office 图标分配给一个菜单。</span><span class="sxs-lookup"><span data-stu-id="4f86f-181">The following example assigns a Microsoft Office icon to a menu.</span></span>  
+ <span data-ttu-id="846d0-181">下面的示例将 Microsoft Office 图标分配给菜单。</span><span class="sxs-lookup"><span data-stu-id="846d0-181">The following example assigns a Microsoft Office icon to a menu.</span></span>  
   
- <span data-ttu-id="4f86f-182">若要运行此代码示例，必须首先执行以下步骤：</span><span class="sxs-lookup"><span data-stu-id="4f86f-182">To run this code example, you must first perform the following steps:</span></span>  
+ <span data-ttu-id="846d0-182">若要运行此代码示例, 必须首先执行以下步骤:</span><span class="sxs-lookup"><span data-stu-id="846d0-182">To run this code example, you must first perform the following steps:</span></span>  
   
-1.  <span data-ttu-id="4f86f-183">添加**功能区 （可视化设计器）** 到 Office 项目的项。</span><span class="sxs-lookup"><span data-stu-id="4f86f-183">Add a **Ribbon (Visual Designer)** item to an Office project.</span></span>  
+1.  <span data-ttu-id="846d0-183">向 Office 项目添加 "**功能区 (可视化设计器)** " 项。</span><span class="sxs-lookup"><span data-stu-id="846d0-183">Add a **Ribbon (Visual Designer)** item to an Office project.</span></span>  
   
-2.  <span data-ttu-id="4f86f-184">将组添加到自定义选项卡。</span><span class="sxs-lookup"><span data-stu-id="4f86f-184">Add a group to the custom tab.</span></span>  
+2.  <span data-ttu-id="846d0-184">将组添加到自定义选项卡。</span><span class="sxs-lookup"><span data-stu-id="846d0-184">Add a group to the custom tab.</span></span>  
   
-3.  <span data-ttu-id="4f86f-185">向组添加一个切换按钮。</span><span class="sxs-lookup"><span data-stu-id="4f86f-185">Add a toggle button to the group.</span></span>  
+3.  <span data-ttu-id="846d0-185">向组添加切换按钮。</span><span class="sxs-lookup"><span data-stu-id="846d0-185">Add a toggle button to the group.</span></span>  
   
  [!code-csharp[Trin_Ribbon_ControlProperties#8](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_Ribbon_ControlProperties/CS/Ribbon1.cs#8)]
  [!code-vb[Trin_Ribbon_ControlProperties#8](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_Ribbon_ControlProperties/VB/Ribbon1.vb#8)]  
@@ -348,15 +351,15 @@
         <ReturnType>Microsoft.Office.Tools.Ribbon.RibbonPosition</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="4f86f-186">如果控件位于 Microsoft Office 菜单上，请获取或设置 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonToggleButton" /> 的位置。</span><span class="sxs-lookup"><span data-stu-id="4f86f-186">Gets or sets the position of the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonToggleButton" />, if the control is on the Microsoft Office Menu.</span></span></summary>
-        <value><span data-ttu-id="4f86f-187">一个 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonPosition" />，表示 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonToggleButton" /> 的位置（如果该控件位于 Microsoft Office 菜单上）。</span><span class="sxs-lookup"><span data-stu-id="4f86f-187">A <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonPosition" /> that represents the position of the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonToggleButton" />, if the control is on the Microsoft Office Menu.</span></span></value>
+        <summary><span data-ttu-id="846d0-186">如果控件位于 Microsoft Office 菜单上，请获取或设置 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonToggleButton" /> 的位置。</span><span class="sxs-lookup"><span data-stu-id="846d0-186">Gets or sets the position of the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonToggleButton" />, if the control is on the Microsoft Office Menu.</span></span></summary>
+        <value><span data-ttu-id="846d0-187">一个 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonPosition" />，表示 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonToggleButton" /> 的位置（如果该控件位于 Microsoft Office 菜单上）。</span><span class="sxs-lookup"><span data-stu-id="846d0-187">A <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonPosition" /> that represents the position of the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonToggleButton" />, if the control is on the Microsoft Office Menu.</span></span></value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="4f86f-188">不能使用此属性设置的位置<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton>组中的控件。</span><span class="sxs-lookup"><span data-stu-id="4f86f-188">You cannot use this property to set the position of a <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton> control within a group.</span></span> <span data-ttu-id="4f86f-189">若要排列按钮，将它们拖到中的正确位置**功能区设计器**。</span><span class="sxs-lookup"><span data-stu-id="4f86f-189">To arrange buttons, drag them to the correct positions in the **Ribbon Designer**.</span></span>  
+ <span data-ttu-id="846d0-188">不能使用此属性来设置<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton>控件在组中的位置。</span><span class="sxs-lookup"><span data-stu-id="846d0-188">You cannot use this property to set the position of a <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton> control within a group.</span></span> <span data-ttu-id="846d0-189">若要排列按钮, 请将其拖动到**功能区设计器**中的正确位置。</span><span class="sxs-lookup"><span data-stu-id="846d0-189">To arrange buttons, drag them to the correct positions in the **Ribbon Designer**.</span></span>  
   
- <span data-ttu-id="4f86f-190">可以在运行时仅在某些情况下设置此属性。</span><span class="sxs-lookup"><span data-stu-id="4f86f-190">This property can be set at run time only under certain conditions.</span></span> <span data-ttu-id="4f86f-191">有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。</span><span class="sxs-lookup"><span data-stu-id="4f86f-191">For more information, see [Ribbon Object Model Overview](/visualstudio/vsto/ribbon-object-model-overview).</span></span>  
+ <span data-ttu-id="846d0-190">仅在某些情况下, 才能在运行时设置此属性。</span><span class="sxs-lookup"><span data-stu-id="846d0-190">This property can be set at run time only under certain conditions.</span></span> <span data-ttu-id="846d0-191">有关详细信息, 请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。</span><span class="sxs-lookup"><span data-stu-id="846d0-191">For more information, see [Ribbon Object Model Overview](/visualstudio/vsto/ribbon-object-model-overview).</span></span>  
   
  ]]></format>
         </remarks>
@@ -375,17 +378,17 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="4f86f-192">获取或设置当用户将指针移到切换按钮上方时显示的提示文本。</span><span class="sxs-lookup"><span data-stu-id="4f86f-192">Gets or sets tip text that appears when the user moves the pointer over the toggle button.</span></span></summary>
-        <value><span data-ttu-id="4f86f-193">当用户将指针移到切换按钮上方时显示的文本。</span><span class="sxs-lookup"><span data-stu-id="4f86f-193">The text that appears when the user moves the pointer over the toggle button.</span></span></value>
+        <summary><span data-ttu-id="846d0-192">获取或设置当用户将指针移到切换按钮上方时显示的提示文本。</span><span class="sxs-lookup"><span data-stu-id="846d0-192">Gets or sets tip text that appears when the user moves the pointer over the toggle button.</span></span></summary>
+        <value><span data-ttu-id="846d0-193">当用户将指针移到切换按钮上方时显示的文本。</span><span class="sxs-lookup"><span data-stu-id="846d0-193">The text that appears when the user moves the pointer over the toggle button.</span></span></value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="4f86f-194"><xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ScreenTip%2A>值必须是长度小于 1024年个字符。</span><span class="sxs-lookup"><span data-stu-id="4f86f-194">The <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ScreenTip%2A> value must be less than 1024 characters in length.</span></span>  
+ <span data-ttu-id="846d0-194">值<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ScreenTip%2A>的长度必须小于1024个字符。</span><span class="sxs-lookup"><span data-stu-id="846d0-194">The <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ScreenTip%2A> value must be less than 1024 characters in length.</span></span>  
   
- <span data-ttu-id="4f86f-195">当<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.SuperTip%2A>设置属性，则<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ScreenTip%2A>值将显示的标题为<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.SuperTip%2A>。</span><span class="sxs-lookup"><span data-stu-id="4f86f-195">When the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.SuperTip%2A> property is set, the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ScreenTip%2A> value appears as the title of the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.SuperTip%2A>.</span></span>  
+ <span data-ttu-id="846d0-195">设置属性时<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ScreenTip%2A> , 值显示<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.SuperTip%2A>为的标题。 <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.SuperTip%2A></span><span class="sxs-lookup"><span data-stu-id="846d0-195">When the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.SuperTip%2A> property is set, the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ScreenTip%2A> value appears as the title of the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.SuperTip%2A>.</span></span>  
   
- <span data-ttu-id="4f86f-196">此属性可以更改在设计时和运行时。</span><span class="sxs-lookup"><span data-stu-id="4f86f-196">This property can be changed at design time and run time.</span></span>  
+ <span data-ttu-id="846d0-196">此属性可在设计时和运行时进行更改。</span><span class="sxs-lookup"><span data-stu-id="846d0-196">This property can be changed at design time and run time.</span></span>  
   
  ]]></format>
         </remarks>
@@ -404,17 +407,17 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="4f86f-197">获取或设置一个值，该值指示与 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonToggleButton" /> 关联的图像是否可见。</span><span class="sxs-lookup"><span data-stu-id="4f86f-197">Gets or sets a value that indicates whether the image that is associated with the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonToggleButton" /> is visible.</span></span></summary>
-        <value><span data-ttu-id="4f86f-198">如果与 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonToggleButton" /> 关联的图像可见，则为 <see langword="true" />；否则为 <see langword="false" />。</span><span class="sxs-lookup"><span data-stu-id="4f86f-198"><see langword="true" /> if the image that is associated with the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonToggleButton" /> is visible; otherwise, <see langword="false" />.</span></span> <span data-ttu-id="4f86f-199">默认值为 <see langword="false" />。</span><span class="sxs-lookup"><span data-stu-id="4f86f-199">The default is <see langword="false" />.</span></span></value>
+        <summary><span data-ttu-id="846d0-197">获取或设置一个值，该值指示与 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonToggleButton" /> 关联的图像是否可见。</span><span class="sxs-lookup"><span data-stu-id="846d0-197">Gets or sets a value that indicates whether the image that is associated with the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonToggleButton" /> is visible.</span></span></summary>
+        <value><span data-ttu-id="846d0-198">如果与 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonToggleButton" /> 关联的图像可见，则为 <see langword="true" />；否则为 <see langword="false" />。</span><span class="sxs-lookup"><span data-stu-id="846d0-198"><see langword="true" /> if the image that is associated with the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonToggleButton" /> is visible; otherwise, <see langword="false" />.</span></span> <span data-ttu-id="846d0-199">默认值为 <see langword="false" />。</span><span class="sxs-lookup"><span data-stu-id="846d0-199">The default is <see langword="false" />.</span></span></value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="4f86f-200">此属性自动设置为`true`如果您设置<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A>， <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ImageName%2A>，或<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.OfficeImageId%2A>在设计器中的属性。</span><span class="sxs-lookup"><span data-stu-id="4f86f-200">This property is automatically set to `true` if you set the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A>, <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ImageName%2A>, or <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.OfficeImageId%2A> property in the designer.</span></span>  
+ <span data-ttu-id="846d0-200">如果设置了设计器中`true`的<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A>、或<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.OfficeImageId%2A>属性, <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ImageName%2A>则此属性将自动设置为。</span><span class="sxs-lookup"><span data-stu-id="846d0-200">This property is automatically set to `true` if you set the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Image%2A>, <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ImageName%2A>, or <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.OfficeImageId%2A> property in the designer.</span></span>  
   
- <span data-ttu-id="4f86f-201">此属性始终为`true`如果您设置<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ControlSize%2A>属性设置为`Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge`。</span><span class="sxs-lookup"><span data-stu-id="4f86f-201">This property is always `true` if you set the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ControlSize%2A> property to `Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge`.</span></span>  
+ <span data-ttu-id="846d0-201">如果`true` `Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge`将属性设置为, 则此属性始终为。 <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ControlSize%2A></span><span class="sxs-lookup"><span data-stu-id="846d0-201">This property is always `true` if you set the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ControlSize%2A> property to `Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge`.</span></span>  
   
- <span data-ttu-id="4f86f-202">可以在运行时更改此属性。</span><span class="sxs-lookup"><span data-stu-id="4f86f-202">This property can be changed at run time.</span></span>  
+ <span data-ttu-id="846d0-202">可以在运行时更改此属性。</span><span class="sxs-lookup"><span data-stu-id="846d0-202">This property can be changed at run time.</span></span>  
   
  ]]></format>
         </remarks>
@@ -433,15 +436,15 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="4f86f-203">获取或设置一个值，该值指示 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonToggleButton" /> 的标签是否可见。</span><span class="sxs-lookup"><span data-stu-id="4f86f-203">Gets or sets a value that indicates whether the label for the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonToggleButton" /> is visible.</span></span></summary>
-        <value><span data-ttu-id="4f86f-204">如果 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonToggleButton" /> 的标签可见，则为 <see langword="true" />；否则为 <see langword="false" />。</span><span class="sxs-lookup"><span data-stu-id="4f86f-204"><see langword="true" /> if the label for the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonToggleButton" /> is visible; otherwise, <see langword="false" />.</span></span> <span data-ttu-id="4f86f-205">默认值为 <see langword="true" />。</span><span class="sxs-lookup"><span data-stu-id="4f86f-205">The default is <see langword="true" />.</span></span></value>
+        <summary><span data-ttu-id="846d0-203">获取或设置一个值，该值指示 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonToggleButton" /> 的标签是否可见。</span><span class="sxs-lookup"><span data-stu-id="846d0-203">Gets or sets a value that indicates whether the label for the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonToggleButton" /> is visible.</span></span></summary>
+        <value><span data-ttu-id="846d0-204">如果 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonToggleButton" /> 的标签可见，则为 <see langword="true" />；否则为 <see langword="false" />。</span><span class="sxs-lookup"><span data-stu-id="846d0-204"><see langword="true" /> if the label for the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonToggleButton" /> is visible; otherwise, <see langword="false" />.</span></span> <span data-ttu-id="846d0-205">默认值为 <see langword="true" />。</span><span class="sxs-lookup"><span data-stu-id="846d0-205">The default is <see langword="true" />.</span></span></value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="4f86f-206">此属性始终为`true`如果您设置<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.ControlSize%2A>属性设置为`Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge`。</span><span class="sxs-lookup"><span data-stu-id="4f86f-206">This property is always `true` if you set the <xref:Microsoft.Office.Tools.Ribbon.RibbonButton.ControlSize%2A> property to `Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge`.</span></span>  
+ <span data-ttu-id="846d0-206">如果`true` `Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge`将属性设置为, 则此属性始终为。 <xref:Microsoft.Office.Tools.Ribbon.RibbonButton.ControlSize%2A></span><span class="sxs-lookup"><span data-stu-id="846d0-206">This property is always `true` if you set the <xref:Microsoft.Office.Tools.Ribbon.RibbonButton.ControlSize%2A> property to `Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge`.</span></span>  
   
- <span data-ttu-id="4f86f-207">可以在运行时更改此属性。</span><span class="sxs-lookup"><span data-stu-id="4f86f-207">This property can be changed at run time.</span></span>  
+ <span data-ttu-id="846d0-207">可以在运行时更改此属性。</span><span class="sxs-lookup"><span data-stu-id="846d0-207">This property can be changed at run time.</span></span>  
   
  ]]></format>
         </remarks>
@@ -460,17 +463,17 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="4f86f-208">获取或设置用户将指针移到 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonToggleButton" /> 控件上方时显示的多行提示文本。</span><span class="sxs-lookup"><span data-stu-id="4f86f-208">Gets or sets multiline tip text that appears when the user moves the pointer over the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonToggleButton" /> control.</span></span></summary>
-        <value><span data-ttu-id="4f86f-209">包含多行提示文本的字符串。</span><span class="sxs-lookup"><span data-stu-id="4f86f-209">A string that contains multiline tip text.</span></span></value>
+        <summary><span data-ttu-id="846d0-208">获取或设置用户将指针移到 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonToggleButton" /> 控件上方时显示的多行提示文本。</span><span class="sxs-lookup"><span data-stu-id="846d0-208">Gets or sets multiline tip text that appears when the user moves the pointer over the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonToggleButton" /> control.</span></span></summary>
+        <value><span data-ttu-id="846d0-209">包含多行提示文本的字符串。</span><span class="sxs-lookup"><span data-stu-id="846d0-209">A string that contains multiline tip text.</span></span></value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="4f86f-210">字符串必须是长度小于 1024年个字符。</span><span class="sxs-lookup"><span data-stu-id="4f86f-210">The string must be less than 1024 characters in length.</span></span>  
+ <span data-ttu-id="846d0-210">字符串的长度必须小于1024个字符。</span><span class="sxs-lookup"><span data-stu-id="846d0-210">The string must be less than 1024 characters in length.</span></span>  
   
- <span data-ttu-id="4f86f-211"><xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.SuperTip%2A>下显示<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ScreenTip%2A>文本。</span><span class="sxs-lookup"><span data-stu-id="4f86f-211">The <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.SuperTip%2A> appears under <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ScreenTip%2A> text.</span></span> <span data-ttu-id="4f86f-212">与不同<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ScreenTip%2A>，则<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.SuperTip%2A>启用换行符的字符串中。</span><span class="sxs-lookup"><span data-stu-id="4f86f-212">Unlike the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ScreenTip%2A>, the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.SuperTip%2A> enables line breaks in the string.</span></span>  
+ <span data-ttu-id="846d0-211">显示<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.SuperTip%2A>在 " <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ScreenTip%2A>文本" 下。</span><span class="sxs-lookup"><span data-stu-id="846d0-211">The <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.SuperTip%2A> appears under <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ScreenTip%2A> text.</span></span> <span data-ttu-id="846d0-212">与不同<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ScreenTip%2A>的是<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.SuperTip%2A> , 会在字符串中启用分行符。</span><span class="sxs-lookup"><span data-stu-id="846d0-212">Unlike the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.ScreenTip%2A>, the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.SuperTip%2A> enables line breaks in the string.</span></span>  
   
- <span data-ttu-id="4f86f-213">您可以更改<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.SuperTip%2A>在设计时和运行时。</span><span class="sxs-lookup"><span data-stu-id="4f86f-213">You can change the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.SuperTip%2A> at design time and at run time.</span></span>  
+ <span data-ttu-id="846d0-213">您可以在设计<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.SuperTip%2A>时和运行时更改。</span><span class="sxs-lookup"><span data-stu-id="846d0-213">You can change the <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.SuperTip%2A> at design time and at run time.</span></span>  
   
  ]]></format>
         </remarks>

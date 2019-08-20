@@ -1,5 +1,5 @@
 <Type Name="ChangeReason" FullName="Microsoft.Office.Tools.Excel.ChangeReason">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="d1a3dafbd3b659746c6fc413740370a5a0c294a5" /><Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="02/21/2018" /><Meta Name="ms.locfileid" Value="29430527" /></Metadata><TypeSignature Language="C#" Value="public enum ChangeReason" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="070bffb0b7a668c2b87f73ec15a5ac800f5b32db" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69005288" /></Metadata><TypeSignature Language="C#" Value="public enum ChangeReason" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ChangeReason extends System.Enum" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Excel.ChangeReason" />
   <AssemblyInfo>
@@ -10,19 +10,19 @@
     <BaseTypeName>System.Enum</BaseTypeName>
   </Base>
   <Docs>
-    <summary><span data-ttu-id="56ae8-101">提供将原始数据还原为绑定到数据的 <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 的原因。</span><span class="sxs-lookup"><span data-stu-id="56ae8-101">Provides the reason that the original data was restored to a <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> that is bound to data.</span></span></summary>
+    <summary><span data-ttu-id="fe88a-101">提供将原始数据还原为绑定到数据的 <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 的原因。</span><span class="sxs-lookup"><span data-stu-id="fe88a-101">Provides the reason that the original data was restored to a <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> that is bound to data.</span></span></summary>
     <remarks>
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="56ae8-102">当<xref:Microsoft.Office.Tools.Excel.ListObject>绑定到数据和用户执行的操作，不允许，<xref:Microsoft.Office.Tools.Excel.ListObject>将自身还原到以前的状态并引发<xref:Microsoft.Office.Tools.Excel.ListObject.OriginalDataRestored>事件。</span><span class="sxs-lookup"><span data-stu-id="56ae8-102">When the <xref:Microsoft.Office.Tools.Excel.ListObject> is bound to data and the user performs an operation that is not allowed, the <xref:Microsoft.Office.Tools.Excel.ListObject> restores itself to its previous state and raises the <xref:Microsoft.Office.Tools.Excel.ListObject.OriginalDataRestored> event.</span></span> <span data-ttu-id="56ae8-103"><xref:Microsoft.Office.Tools.Excel.ChangeReason>枚举提供了有关此还原的发生原因的信息。</span><span class="sxs-lookup"><span data-stu-id="56ae8-103">The <xref:Microsoft.Office.Tools.Excel.ChangeReason> enumeration provides information about why this restoration occurred.</span></span>  
+ <span data-ttu-id="fe88a-102">当绑定到数据, 并且用户执行不允许的操作时, 会将自身还原<xref:Microsoft.Office.Tools.Excel.ListObject>到其<xref:Microsoft.Office.Tools.Excel.ListObject.OriginalDataRestored>以前的状态, 并引发事件。 <xref:Microsoft.Office.Tools.Excel.ListObject></span><span class="sxs-lookup"><span data-stu-id="fe88a-102">When the <xref:Microsoft.Office.Tools.Excel.ListObject> is bound to data and the user performs an operation that is not allowed, the <xref:Microsoft.Office.Tools.Excel.ListObject> restores itself to its previous state and raises the <xref:Microsoft.Office.Tools.Excel.ListObject.OriginalDataRestored> event.</span></span> <span data-ttu-id="fe88a-103">枚举<xref:Microsoft.Office.Tools.Excel.ChangeReason>提供有关此还原发生的原因的信息。</span><span class="sxs-lookup"><span data-stu-id="fe88a-103">The <xref:Microsoft.Office.Tools.Excel.ChangeReason> enumeration provides information about why this restoration occurred.</span></span>  
   
    
   
 ## Examples  
- <span data-ttu-id="56ae8-104">下面的代码示例创建<xref:System.Data.DataTable>和<xref:Microsoft.Office.Tools.Excel.ListObject>，并将绑定<xref:Microsoft.Office.Tools.Excel.ListObject>到<xref:System.Data.DataTable>。</span><span class="sxs-lookup"><span data-stu-id="56ae8-104">The following code example creates a <xref:System.Data.DataTable> and a <xref:Microsoft.Office.Tools.Excel.ListObject>, and binds the <xref:Microsoft.Office.Tools.Excel.ListObject> to the <xref:System.Data.DataTable>.</span></span> <span data-ttu-id="56ae8-105">然后，它创建<xref:Microsoft.Office.Tools.Excel.ListObject.OriginalDataRestored>事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="56ae8-105">It then creates an <xref:Microsoft.Office.Tools.Excel.ListObject.OriginalDataRestored> event handler.</span></span> <span data-ttu-id="56ae8-106">要测试此事件，请右键单击上方的列字母<xref:Microsoft.Office.Tools.Excel.ListObject>在工作表 1，然后单击**删除**的快捷菜单中。</span><span class="sxs-lookup"><span data-stu-id="56ae8-106">To test the event, right-click a column letter above the <xref:Microsoft.Office.Tools.Excel.ListObject> on sheet 1 and then click **Delete** in the shortcut menu.</span></span> <span data-ttu-id="56ae8-107">事件处理程序替换列和列标题数据，并显示一条指示什么类型的数据已还原消息和，还原原始数据的原因。</span><span class="sxs-lookup"><span data-stu-id="56ae8-107">The event handler replaces the column and column header data and displays a message indicating what kind of data was restored and the reason that the original data was restored.</span></span>  
+ <span data-ttu-id="fe88a-104">下面<xref:System.Data.DataTable>的代码示例创建<xref:Microsoft.Office.Tools.Excel.ListObject>和, <xref:System.Data.DataTable>并将绑定<xref:Microsoft.Office.Tools.Excel.ListObject>到。</span><span class="sxs-lookup"><span data-stu-id="fe88a-104">The following code example creates a <xref:System.Data.DataTable> and a <xref:Microsoft.Office.Tools.Excel.ListObject>, and binds the <xref:Microsoft.Office.Tools.Excel.ListObject> to the <xref:System.Data.DataTable>.</span></span> <span data-ttu-id="fe88a-105">然后, 创建一个<xref:Microsoft.Office.Tools.Excel.ListObject.OriginalDataRestored>事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="fe88a-105">It then creates an <xref:Microsoft.Office.Tools.Excel.ListObject.OriginalDataRestored> event handler.</span></span> <span data-ttu-id="fe88a-106">若要测试该事件, 请右键单击 "工作表 1 <xref:Microsoft.Office.Tools.Excel.ListObject> " 上方的列号, 然后单击快捷菜单中的 "**删除**"。</span><span class="sxs-lookup"><span data-stu-id="fe88a-106">To test the event, right-click a column letter above the <xref:Microsoft.Office.Tools.Excel.ListObject> on sheet 1 and then click **Delete** in the shortcut menu.</span></span> <span data-ttu-id="fe88a-107">该事件处理程序将替换列和列标题数据, 并显示一条消息, 指示已还原的数据类型和还原原始数据的原因。</span><span class="sxs-lookup"><span data-stu-id="fe88a-107">The event handler replaces the column and column header data and displays a message indicating what kind of data was restored and the reason that the original data was restored.</span></span>  
   
- <span data-ttu-id="56ae8-108">此示例适用于文档级自定义。</span><span class="sxs-lookup"><span data-stu-id="56ae8-108">This example is for a document-level customization.</span></span>  
+ <span data-ttu-id="fe88a-108">此示例适用于文档级自定义项。</span><span class="sxs-lookup"><span data-stu-id="fe88a-108">This example is for a document-level customization.</span></span>  
   
  [!code-csharp[Trin_ExcelListObject#25](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelListObject/CS/Trin_ExcelListObject.cs#25)]
  [!code-vb[Trin_ExcelListObject#25](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelListObject/VB/Sheet1.vb#25)]  
@@ -43,8 +43,9 @@
       <ReturnValue>
         <ReturnType>Microsoft.Office.Tools.Excel.ChangeReason</ReturnType>
       </ReturnValue>
+      <MemberValue>3</MemberValue>
       <Docs>
-        <summary><span data-ttu-id="56ae8-109">如果 <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 控件的 <see cref="P:Microsoft.Office.Tools.Excel.ListObject.AutoSetDataBoundColumnHeaders" /> 属性设为 <see langword="true" />，则 <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 控件不允许用户更改列标题。</span><span class="sxs-lookup"><span data-stu-id="56ae8-109">When the <see cref="P:Microsoft.Office.Tools.Excel.ListObject.AutoSetDataBoundColumnHeaders" /> property of the <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> control is set to <see langword="true" />, the <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> control does not allow the user to change the column headers.</span></span></summary>
+        <summary><span data-ttu-id="fe88a-109">如果 <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 控件的 <see cref="P:Microsoft.Office.Tools.Excel.ListObject.AutoSetDataBoundColumnHeaders" /> 属性设为 <see langword="true" />，则 <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 控件不允许用户更改列标题。</span><span class="sxs-lookup"><span data-stu-id="fe88a-109">When the <see cref="P:Microsoft.Office.Tools.Excel.ListObject.AutoSetDataBoundColumnHeaders" /> property of the <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> control is set to <see langword="true" />, the <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> control does not allow the user to change the column headers.</span></span></summary>
       </Docs>
     </Member>
     <Member MemberName="ErrorInCommit">
@@ -59,8 +60,9 @@
       <ReturnValue>
         <ReturnType>Microsoft.Office.Tools.Excel.ChangeReason</ReturnType>
       </ReturnValue>
+      <MemberValue>4</MemberValue>
       <Docs>
-        <summary><span data-ttu-id="56ae8-110">不能将对 <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 控件中数据所做的更改提交到绑定控件的数据源中。</span><span class="sxs-lookup"><span data-stu-id="56ae8-110">A change to data in the <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> control could not be committed to the data source that the control is bound to.</span></span></summary>
+        <summary><span data-ttu-id="fe88a-110">不能将对 <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 控件中数据所做的更改提交到绑定控件的数据源中。</span><span class="sxs-lookup"><span data-stu-id="fe88a-110">A change to data in the <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> control could not be committed to the data source that the control is bound to.</span></span></summary>
       </Docs>
     </Member>
     <Member MemberName="FixedLengthDataSource">
@@ -75,8 +77,9 @@
       <ReturnValue>
         <ReturnType>Microsoft.Office.Tools.Excel.ChangeReason</ReturnType>
       </ReturnValue>
+      <MemberValue>1</MemberValue>
       <Docs>
-        <summary><span data-ttu-id="56ae8-111"><see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 控件绑定的数据源不允许添加或删除行。</span><span class="sxs-lookup"><span data-stu-id="56ae8-111">The data source that the <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> control is bound to does not allow adding or removing rows.</span></span></summary>
+        <summary><span data-ttu-id="fe88a-111"><see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 控件绑定的数据源不允许添加或删除行。</span><span class="sxs-lookup"><span data-stu-id="fe88a-111">The data source that the <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> control is bound to does not allow adding or removing rows.</span></span></summary>
       </Docs>
     </Member>
     <Member MemberName="FixedNumberOfColumnsInDataBoundList">
@@ -91,8 +94,9 @@
       <ReturnValue>
         <ReturnType>Microsoft.Office.Tools.Excel.ChangeReason</ReturnType>
       </ReturnValue>
+      <MemberValue>2</MemberValue>
       <Docs>
-        <summary><span data-ttu-id="56ae8-112"><see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 控件在与数据绑定后，不允许添加或移除列。</span><span class="sxs-lookup"><span data-stu-id="56ae8-112">The <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> control does not allow columns to be added or removed after it is bound to data.</span></span></summary>
+        <summary><span data-ttu-id="fe88a-112"><see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 控件在与数据绑定后，不允许添加或移除列。</span><span class="sxs-lookup"><span data-stu-id="fe88a-112">The <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> control does not allow columns to be added or removed after it is bound to data.</span></span></summary>
       </Docs>
     </Member>
     <Member MemberName="Other">
@@ -107,8 +111,9 @@
       <ReturnValue>
         <ReturnType>Microsoft.Office.Tools.Excel.ChangeReason</ReturnType>
       </ReturnValue>
+      <MemberValue>5</MemberValue>
       <Docs>
-        <summary><span data-ttu-id="56ae8-113">原始数据出于某个原因被还原，该原因不是由任何其他 <see cref="T:Microsoft.Office.Tools.Excel.ChangeReason" /> 值所指定。</span><span class="sxs-lookup"><span data-stu-id="56ae8-113">The original data was restored because of a reason not specified by any of the other <see cref="T:Microsoft.Office.Tools.Excel.ChangeReason" /> values.</span></span></summary>
+        <summary><span data-ttu-id="fe88a-113">原始数据出于某个原因被还原，该原因不是由任何其他 <see cref="T:Microsoft.Office.Tools.Excel.ChangeReason" /> 值所指定。</span><span class="sxs-lookup"><span data-stu-id="fe88a-113">The original data was restored because of a reason not specified by any of the other <see cref="T:Microsoft.Office.Tools.Excel.ChangeReason" /> values.</span></span></summary>
       </Docs>
     </Member>
     <Member MemberName="ReadOnlyDataSource">
@@ -123,8 +128,9 @@
       <ReturnValue>
         <ReturnType>Microsoft.Office.Tools.Excel.ChangeReason</ReturnType>
       </ReturnValue>
+      <MemberValue>0</MemberValue>
       <Docs>
-        <summary><span data-ttu-id="56ae8-114"><see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 控件绑定到的数据源为只读。</span><span class="sxs-lookup"><span data-stu-id="56ae8-114">The data source that the <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> control is bound to is read-only.</span></span></summary>
+        <summary><span data-ttu-id="fe88a-114"><see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> 控件绑定到的数据源为只读。</span><span class="sxs-lookup"><span data-stu-id="fe88a-114">The data source that the <see cref="T:Microsoft.Office.Tools.Excel.ListObject" /> control is bound to is read-only.</span></span></summary>
       </Docs>
     </Member>
   </Members>

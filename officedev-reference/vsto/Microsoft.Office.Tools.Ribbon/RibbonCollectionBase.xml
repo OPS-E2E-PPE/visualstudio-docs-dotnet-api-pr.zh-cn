@@ -1,5 +1,5 @@
 <Type Name="RibbonCollectionBase" FullName="Microsoft.Office.Tools.Ribbon.RibbonCollectionBase">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="a1b3dbe524c9464107036614698b7d9551ed4a47" /><Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="09/19/2018" /><Meta Name="ms.locfileid" Value="46455332" /></Metadata><TypeSignature Language="C#" Value="public abstract class RibbonCollectionBase : Microsoft.Office.Tools.IExtension, System.Collections.Generic.ICollection&lt;Microsoft.Office.Tools.Ribbon.IRibbonExtension&gt;, System.Collections.Generic.IEnumerable&lt;Microsoft.Office.Tools.Ribbon.IRibbonExtension&gt;, System.Collections.Generic.IList&lt;Microsoft.Office.Tools.Ribbon.IRibbonExtension&gt;" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="9da5b489779c8841e375596be97797220b872915" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69002850" /></Metadata><TypeSignature Language="C#" Value="public abstract class RibbonCollectionBase : Microsoft.Office.Tools.IExtension, System.Collections.Generic.ICollection&lt;Microsoft.Office.Tools.Ribbon.IRibbonExtension&gt;, System.Collections.Generic.IEnumerable&lt;Microsoft.Office.Tools.Ribbon.IRibbonExtension&gt;, System.Collections.Generic.IList&lt;Microsoft.Office.Tools.Ribbon.IRibbonExtension&gt;" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit RibbonCollectionBase extends System.Object implements class Microsoft.Office.Tools.IExtension, class System.Collections.Generic.ICollection`1&lt;class Microsoft.Office.Tools.Ribbon.IRibbonExtension&gt;, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Office.Tools.Ribbon.IRibbonExtension&gt;, class System.Collections.Generic.IList`1&lt;class Microsoft.Office.Tools.Ribbon.IRibbonExtension&gt;, class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Ribbon.RibbonCollectionBase" />
   <AssemblyInfo>
@@ -17,23 +17,32 @@
       <InterfaceName>System.Collections.Generic.ICollection&lt;Microsoft.Office.Tools.Ribbon.IRibbonExtension&gt;</InterfaceName>
     </Interface>
     <Interface>
+      <InterfaceName>System.Collections.Generic.ICollection&lt;T&gt;</InterfaceName>
+    </Interface>
+    <Interface>
       <InterfaceName>System.Collections.Generic.IEnumerable&lt;Microsoft.Office.Tools.Ribbon.IRibbonExtension&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;T&gt;</InterfaceName>
     </Interface>
     <Interface>
       <InterfaceName>System.Collections.Generic.IList&lt;Microsoft.Office.Tools.Ribbon.IRibbonExtension&gt;</InterfaceName>
     </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
+    </Interface>
   </Interfaces>
   <Docs>
-    <summary><span data-ttu-id="2a216-101">提供对功能区自定义中 <see cref="T:Microsoft.Office.Tools.Ribbon.IRibbonExtension" /> 对象的访问。</span><span class="sxs-lookup"><span data-stu-id="2a216-101">Provides access to the <see cref="T:Microsoft.Office.Tools.Ribbon.IRibbonExtension" /> objects in a Ribbon customization.</span></span></summary>
+    <summary><span data-ttu-id="aa81e-101">提供对功能区自定义中 <see cref="T:Microsoft.Office.Tools.Ribbon.IRibbonExtension" /> 对象的访问。</span><span class="sxs-lookup"><span data-stu-id="aa81e-101">Provides access to the <see cref="T:Microsoft.Office.Tools.Ribbon.IRibbonExtension" /> objects in a Ribbon customization.</span></span></summary>
     <remarks>
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="2a216-102">此集合包含所有与 Office 自定义功能区。</span><span class="sxs-lookup"><span data-stu-id="2a216-102">This collection contains all of the Ribbons that are associated with your Office customization.</span></span> <span data-ttu-id="2a216-103">访问<xref:Microsoft.Office.Tools.Ribbon.RibbonCollectionBase>对象中的 Office 项目中，使用`Globals.Ribbons`属性。</span><span class="sxs-lookup"><span data-stu-id="2a216-103">To access the <xref:Microsoft.Office.Tools.Ribbon.RibbonCollectionBase> object in an Office project, use the `Globals.Ribbons` property.</span></span> <span data-ttu-id="2a216-104">有关详细信息，请参阅[对 Office 项目中的对象的全局访问](/visualstudio/vsto/global-access-to-objects-in-office-projects)。</span><span class="sxs-lookup"><span data-stu-id="2a216-104">For more information, see [Global Access to Objects in Office Projects](/visualstudio/vsto/global-access-to-objects-in-office-projects).</span></span>  
+ <span data-ttu-id="aa81e-102">此集合包含与 Office 自定义项关联的所有功能区。</span><span class="sxs-lookup"><span data-stu-id="aa81e-102">This collection contains all of the Ribbons that are associated with your Office customization.</span></span> <span data-ttu-id="aa81e-103">若要访问<xref:Microsoft.Office.Tools.Ribbon.RibbonCollectionBase> Office 项目中的对象, 请`Globals.Ribbons`使用属性。</span><span class="sxs-lookup"><span data-stu-id="aa81e-103">To access the <xref:Microsoft.Office.Tools.Ribbon.RibbonCollectionBase> object in an Office project, use the `Globals.Ribbons` property.</span></span> <span data-ttu-id="aa81e-104">有关详细信息, 请参阅[对 Office 项目中对象的全局访问](/visualstudio/vsto/global-access-to-objects-in-office-projects)。</span><span class="sxs-lookup"><span data-stu-id="aa81e-104">For more information, see [Global Access to Objects in Office Projects](/visualstudio/vsto/global-access-to-objects-in-office-projects).</span></span>  
   
- <span data-ttu-id="2a216-105">此集合可以包含要么都<xref:Microsoft.Office.Tools.Ribbon.IRibbonExtension>在功能区自定义，或只是任何类型的对象<xref:Microsoft.Office.Tools.Ribbon.IRibbonExtension>特定消息类或 Microsoft Office 应用程序的对象。</span><span class="sxs-lookup"><span data-stu-id="2a216-105">This collection can contain either all <xref:Microsoft.Office.Tools.Ribbon.IRibbonExtension> objects of any type in a Ribbon customization, or only those <xref:Microsoft.Office.Tools.Ribbon.IRibbonExtension> objects for a particular message class or Microsoft Office application.</span></span>  
+ <span data-ttu-id="aa81e-105">此集合可以包含功能区<xref:Microsoft.Office.Tools.Ribbon.IRibbonExtension>自定义项中任何类型的所有对象, 或<xref:Microsoft.Office.Tools.Ribbon.IRibbonExtension>仅包含特定邮件类或 Microsoft Office 应用程序的对象。</span><span class="sxs-lookup"><span data-stu-id="aa81e-105">This collection can contain either all <xref:Microsoft.Office.Tools.Ribbon.IRibbonExtension> objects of any type in a Ribbon customization, or only those <xref:Microsoft.Office.Tools.Ribbon.IRibbonExtension> objects for a particular message class or Microsoft Office application.</span></span>  
   
-## <a name="usage"></a><span data-ttu-id="2a216-106">用法</span><span class="sxs-lookup"><span data-stu-id="2a216-106">Usage</span></span>  
+## <a name="usage"></a><span data-ttu-id="aa81e-106">用法</span><span class="sxs-lookup"><span data-stu-id="aa81e-106">Usage</span></span>  
  [!INCLUDE[vsto_net4utilities](~/includes/vsto-net4utilities-md.md)]  
   
  ]]></format>
@@ -71,8 +80,8 @@
         <ReturnType>System.Collections.Generic.IList&lt;Microsoft.Office.Tools.Ribbon.IRibbonExtension&gt;</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="2a216-107">获取 <see cref="T:System.Collections.Generic.IList`1" /> 中的 <see cref="T:Microsoft.Office.Tools.Ribbon.IRibbonExtension" /> 对象的 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonCollectionBase" />。</span><span class="sxs-lookup"><span data-stu-id="2a216-107">Gets a <see cref="T:System.Collections.Generic.IList`1" /> of <see cref="T:Microsoft.Office.Tools.Ribbon.IRibbonExtension" /> objects in the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonCollectionBase" />.</span></span></summary>
-        <value><span data-ttu-id="2a216-108">一个 <see cref="T:System.Collections.Generic.IList`1" /> 中的 <see cref="T:Microsoft.Office.Tools.Ribbon.IRibbonExtension" /> 对象的 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonCollectionBase" />。</span><span class="sxs-lookup"><span data-stu-id="2a216-108">A <see cref="T:System.Collections.Generic.IList`1" /> of <see cref="T:Microsoft.Office.Tools.Ribbon.IRibbonExtension" /> objects in the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonCollectionBase" />.</span></span></value>
+        <summary><span data-ttu-id="aa81e-107">获取 <see cref="T:System.Collections.Generic.IList`1" /> 中的 <see cref="T:Microsoft.Office.Tools.Ribbon.IRibbonExtension" /> 对象的 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonCollectionBase" />。</span><span class="sxs-lookup"><span data-stu-id="aa81e-107">Gets a <see cref="T:System.Collections.Generic.IList`1" /> of <see cref="T:Microsoft.Office.Tools.Ribbon.IRibbonExtension" /> objects in the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonCollectionBase" />.</span></span></summary>
+        <value><span data-ttu-id="aa81e-108">一个 <see cref="T:System.Collections.Generic.IList`1" /> 中的 <see cref="T:Microsoft.Office.Tools.Ribbon.IRibbonExtension" /> 对象的 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonCollectionBase" />。</span><span class="sxs-lookup"><span data-stu-id="aa81e-108">A <see cref="T:System.Collections.Generic.IList`1" /> of <see cref="T:Microsoft.Office.Tools.Ribbon.IRibbonExtension" /> objects in the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonCollectionBase" />.</span></span></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -99,7 +108,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="2a216-109">若要在项目中访问功能区，请调用`Ribbons`属性的`Globals`类。</span><span class="sxs-lookup"><span data-stu-id="2a216-109">To access Ribbons in your project, call the `Ribbons` property of the `Globals` class.</span></span> <span data-ttu-id="2a216-110">有关详细信息，请参阅[访问在运行时功能区](/visualstudio/vsto/accessing-the-ribbon-at-run-time)。</span><span class="sxs-lookup"><span data-stu-id="2a216-110">For more information, see [Accessing the Ribbon at Run Time](/visualstudio/vsto/accessing-the-ribbon-at-run-time).</span></span>  
+ <span data-ttu-id="aa81e-109">若要访问项目中的功能区, `Ribbons`请调用`Globals`类的属性。</span><span class="sxs-lookup"><span data-stu-id="aa81e-109">To access Ribbons in your project, call the `Ribbons` property of the `Globals` class.</span></span> <span data-ttu-id="aa81e-110">有关详细信息，请参阅 [Accessing the Ribbon at Run Time](/visualstudio/vsto/accessing-the-ribbon-at-run-time)。</span><span class="sxs-lookup"><span data-stu-id="aa81e-110">For more information, see [Accessing the Ribbon at Run Time](/visualstudio/vsto/accessing-the-ribbon-at-run-time).</span></span>  
   
  ]]></format>
         </remarks>
@@ -129,7 +138,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="2a216-111">若要在项目中访问功能区，请调用`Ribbons`属性的`Globals`类。</span><span class="sxs-lookup"><span data-stu-id="2a216-111">To access Ribbons in your project, call the `Ribbons` property of the `Globals` class.</span></span> <span data-ttu-id="2a216-112">有关详细信息，请参阅[访问在运行时功能区](/visualstudio/vsto/accessing-the-ribbon-at-run-time)。</span><span class="sxs-lookup"><span data-stu-id="2a216-112">For more information, see [Accessing the Ribbon at Run Time](/visualstudio/vsto/accessing-the-ribbon-at-run-time).</span></span>  
+ <span data-ttu-id="aa81e-111">若要访问项目中的功能区, `Ribbons`请调用`Globals`类的属性。</span><span class="sxs-lookup"><span data-stu-id="aa81e-111">To access Ribbons in your project, call the `Ribbons` property of the `Globals` class.</span></span> <span data-ttu-id="aa81e-112">有关详细信息，请参阅 [Accessing the Ribbon at Run Time](/visualstudio/vsto/accessing-the-ribbon-at-run-time)。</span><span class="sxs-lookup"><span data-stu-id="aa81e-112">For more information, see [Accessing the Ribbon at Run Time](/visualstudio/vsto/accessing-the-ribbon-at-run-time).</span></span>  
   
  ]]></format>
         </remarks>
@@ -160,7 +169,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="2a216-113">若要在项目中访问功能区，请调用`Ribbons`属性的`Globals`类。</span><span class="sxs-lookup"><span data-stu-id="2a216-113">To access Ribbons in your project, call the `Ribbons` property of the `Globals` class.</span></span> <span data-ttu-id="2a216-114">有关详细信息，请参阅[访问在运行时功能区](/visualstudio/vsto/accessing-the-ribbon-at-run-time)。</span><span class="sxs-lookup"><span data-stu-id="2a216-114">For more information, see [Accessing the Ribbon at Run Time](/visualstudio/vsto/accessing-the-ribbon-at-run-time).</span></span>  
+ <span data-ttu-id="aa81e-113">若要访问项目中的功能区, `Ribbons`请调用`Globals`类的属性。</span><span class="sxs-lookup"><span data-stu-id="aa81e-113">To access Ribbons in your project, call the `Ribbons` property of the `Globals` class.</span></span> <span data-ttu-id="aa81e-114">有关详细信息，请参阅 [Accessing the Ribbon at Run Time](/visualstudio/vsto/accessing-the-ribbon-at-run-time)。</span><span class="sxs-lookup"><span data-stu-id="aa81e-114">For more information, see [Accessing the Ribbon at Run Time](/visualstudio/vsto/accessing-the-ribbon-at-run-time).</span></span>  
   
  ]]></format>
         </remarks>
@@ -193,7 +202,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="2a216-115">若要在项目中访问功能区，请调用`Ribbons`属性的`Globals`类。</span><span class="sxs-lookup"><span data-stu-id="2a216-115">To access Ribbons in your project, call the `Ribbons` property of the `Globals` class.</span></span> <span data-ttu-id="2a216-116">有关详细信息，请参阅[访问在运行时功能区](/visualstudio/vsto/accessing-the-ribbon-at-run-time)。</span><span class="sxs-lookup"><span data-stu-id="2a216-116">For more information, see [Accessing the Ribbon at Run Time](/visualstudio/vsto/accessing-the-ribbon-at-run-time).</span></span>  
+ <span data-ttu-id="aa81e-115">若要访问项目中的功能区, `Ribbons`请调用`Globals`类的属性。</span><span class="sxs-lookup"><span data-stu-id="aa81e-115">To access Ribbons in your project, call the `Ribbons` property of the `Globals` class.</span></span> <span data-ttu-id="aa81e-116">有关详细信息，请参阅 [Accessing the Ribbon at Run Time](/visualstudio/vsto/accessing-the-ribbon-at-run-time)。</span><span class="sxs-lookup"><span data-stu-id="aa81e-116">For more information, see [Accessing the Ribbon at Run Time](/visualstudio/vsto/accessing-the-ribbon-at-run-time).</span></span>  
   
  ]]></format>
         </remarks>
@@ -204,6 +213,9 @@
       <MemberSignature Language="ILAsm" Value=".property instance object Microsoft.Office.Tools.IExtension.ExtensionBase" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Ribbon.RibbonCollectionBase.Microsoft#Office#Tools#IExtension#ExtensionBase" />
       <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Microsoft.Office.Tools.IExtension.ExtensionBase</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -222,6 +234,9 @@
       <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.Generic.ICollection&lt;Microsoft.Office.Tools.Ribbon.IRibbonExtension&gt;.Add(class Microsoft.Office.Tools.Ribbon.IRibbonExtension item) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Ribbon.RibbonCollectionBase.System#Collections#Generic#ICollection&lt;Microsoft#Office#Tools#Ribbon#IRibbonExtension&gt;#Add(Microsoft.Office.Tools.Ribbon.IRibbonExtension)" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Collections.Generic.ICollection`1.Add(`0)</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -243,6 +258,9 @@
       <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.Generic.ICollection&lt;Microsoft.Office.Tools.Ribbon.IRibbonExtension&gt;.Clear() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Ribbon.RibbonCollectionBase.System#Collections#Generic#ICollection&lt;Microsoft#Office#Tools#Ribbon#IRibbonExtension&gt;#Clear" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Collections.Generic.ICollection`1.Clear</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -261,6 +279,9 @@
       <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Collections.Generic.ICollection&lt;Microsoft.Office.Tools.Ribbon.IRibbonExtension&gt;.Contains(class Microsoft.Office.Tools.Ribbon.IRibbonExtension item) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Ribbon.RibbonCollectionBase.System#Collections#Generic#ICollection&lt;Microsoft#Office#Tools#Ribbon#IRibbonExtension&gt;#Contains(Microsoft.Office.Tools.Ribbon.IRibbonExtension)" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Collections.Generic.ICollection`1.Contains(`0)</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -306,6 +327,9 @@
       <MemberSignature Language="ILAsm" Value=".property instance int32 System.Collections.Generic.ICollection&lt;Microsoft.Office.Tools.Ribbon.IRibbonExtension&gt;.Count" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Ribbon.RibbonCollectionBase.System#Collections#Generic#ICollection&lt;Microsoft#Office#Tools#Ribbon#IRibbonExtension&gt;#Count" />
       <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:System.Collections.Generic.ICollection`1.Count</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -324,6 +348,9 @@
       <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.Generic.ICollection&lt;Microsoft.Office.Tools.Ribbon.IRibbonExtension&gt;.IsReadOnly" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Ribbon.RibbonCollectionBase.System#Collections#Generic#ICollection&lt;Microsoft#Office#Tools#Ribbon#IRibbonExtension&gt;#IsReadOnly" />
       <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:System.Collections.Generic.ICollection`1.IsReadOnly</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -342,6 +369,9 @@
       <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Collections.Generic.ICollection&lt;Microsoft.Office.Tools.Ribbon.IRibbonExtension&gt;.Remove(class Microsoft.Office.Tools.Ribbon.IRibbonExtension item) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Ribbon.RibbonCollectionBase.System#Collections#Generic#ICollection&lt;Microsoft#Office#Tools#Ribbon#IRibbonExtension&gt;#Remove(Microsoft.Office.Tools.Ribbon.IRibbonExtension)" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Collections.Generic.ICollection`1.Remove(`0)</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -364,6 +394,9 @@
       <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.Generic.IEnumerator`1&lt;class Microsoft.Office.Tools.Ribbon.IRibbonExtension&gt; System.Collections.Generic.IEnumerable&lt;Microsoft.Office.Tools.Ribbon.IRibbonExtension&gt;.GetEnumerator() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Ribbon.RibbonCollectionBase.System#Collections#Generic#IEnumerable&lt;Microsoft#Office#Tools#Ribbon#IRibbonExtension&gt;#GetEnumerator" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Collections.Generic.IEnumerable`1.GetEnumerator</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -383,6 +416,9 @@
       <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.Generic.IList&lt;Microsoft.Office.Tools.Ribbon.IRibbonExtension&gt;.IndexOf(class Microsoft.Office.Tools.Ribbon.IRibbonExtension item) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Ribbon.RibbonCollectionBase.System#Collections#Generic#IList&lt;Microsoft#Office#Tools#Ribbon#IRibbonExtension&gt;#IndexOf(Microsoft.Office.Tools.Ribbon.IRibbonExtension)" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Collections.Generic.IList`1.IndexOf(`0)</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -405,6 +441,9 @@
       <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.Generic.IList&lt;Microsoft.Office.Tools.Ribbon.IRibbonExtension&gt;.Insert(int32 index, class Microsoft.Office.Tools.Ribbon.IRibbonExtension item) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Ribbon.RibbonCollectionBase.System#Collections#Generic#IList&lt;Microsoft#Office#Tools#Ribbon#IRibbonExtension&gt;#Insert(System.Int32,Microsoft.Office.Tools.Ribbon.IRibbonExtension)" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Collections.Generic.IList`1.Insert(System.Int32,`0)</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -428,6 +467,9 @@
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Tools.Ribbon.IRibbonExtension System.Collections.Generic.IList&lt;Microsoft.Office.Tools.Ribbon.IRibbonExtension&gt;.Item(int32)" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Tools.Ribbon.RibbonCollectionBase.System#Collections#Generic#IList&lt;Microsoft#Office#Tools#Ribbon#IRibbonExtension&gt;#Item(System.Int32)" />
       <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:System.Collections.Generic.IList`1.Item(System.Int32)</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -450,6 +492,9 @@
       <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.Generic.IList&lt;Microsoft.Office.Tools.Ribbon.IRibbonExtension&gt;.RemoveAt(int32 index) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Ribbon.RibbonCollectionBase.System#Collections#Generic#IList&lt;Microsoft#Office#Tools#Ribbon#IRibbonExtension&gt;#RemoveAt(System.Int32)" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Collections.Generic.IList`1.RemoveAt(System.Int32)</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -471,6 +516,9 @@
       <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Tools.Ribbon.RibbonCollectionBase.System#Collections#IEnumerable#GetEnumerator" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Collections.IEnumerable.GetEnumerator</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Tools.Common.v4.0.Utilities</AssemblyName>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>

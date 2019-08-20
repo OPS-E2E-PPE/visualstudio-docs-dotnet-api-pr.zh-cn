@@ -1,5 +1,5 @@
 <Type Name="Action" FullName="Microsoft.Office.Tools.Excel.Action">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="1f8b186b3b2e3f0f69c04ec2101a9b5c720b660a" /><Meta Name="ms.sourcegitcommit" Value="5a5a038b6c783bec52842c940b22504bfc62a810" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/03/2018" /><Meta Name="ms.locfileid" Value="29430514" /></Metadata><TypeSignature Language="C#" Value="public interface Action : Microsoft.Office.Tools.ActionBase" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="0f5dd76e15a4dbe547280ef20e903d34df1334e3" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69005404" /></Metadata><TypeSignature Language="C#" Value="public interface Action : Microsoft.Office.Tools.ActionBase" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Action implements class Microsoft.Office.Tools.ActionBase" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Excel.Action" />
   <AssemblyInfo>
@@ -17,24 +17,24 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary><span data-ttu-id="26a03-101">表示一个 Excel 工作簿中的智能标记操作，该工作簿通过使用 Visual Studio 中的 Office 开发工具进行自定义。</span><span class="sxs-lookup"><span data-stu-id="26a03-101">Represents a smart tag action in an Excel workbook that is customized by using the Office development tools in Visual Studio.</span></span></summary>
+    <summary><span data-ttu-id="61260-101">表示一个 Excel 工作簿中的智能标记操作，该工作簿通过使用 Visual Studio 中的 Office 开发工具进行自定义。</span><span class="sxs-lookup"><span data-stu-id="61260-101">Represents a smart tag action in an Excel workbook that is customized by using the Office development tools in Visual Studio.</span></span></summary>
     <remarks>
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="26a03-102">特定类型的智能标记识别时，操作是在智能标记快捷菜单上的可用选项。</span><span class="sxs-lookup"><span data-stu-id="26a03-102">Actions are the choices available on the smart tag shortcut menu when a smart tag of a certain type is recognized.</span></span> <span data-ttu-id="26a03-103">若要创建操作，请使用`Globals.Factory.CreateAction`方法来创建<xref:Microsoft.Office.Tools.Excel.Action>对象...</span><span class="sxs-lookup"><span data-stu-id="26a03-103">To create an action, use the `Globals.Factory.CreateAction` method to create an <xref:Microsoft.Office.Tools.Excel.Action> object..</span></span>  
+ <span data-ttu-id="61260-102">操作是在识别特定类型的智能标记时, 智能标记快捷菜单上可用的选项。</span><span class="sxs-lookup"><span data-stu-id="61260-102">Actions are the choices available on the smart tag shortcut menu when a smart tag of a certain type is recognized.</span></span> <span data-ttu-id="61260-103">若要创建操作, 请使用`Globals.Factory.CreateAction`方法<xref:Microsoft.Office.Tools.Excel.Action>创建对象。</span><span class="sxs-lookup"><span data-stu-id="61260-103">To create an action, use the `Globals.Factory.CreateAction` method to create an <xref:Microsoft.Office.Tools.Excel.Action> object..</span></span>  
   
  [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
   
-## <a name="usage"></a><span data-ttu-id="26a03-104">用法</span><span class="sxs-lookup"><span data-stu-id="26a03-104">Usage</span></span>  
- <span data-ttu-id="26a03-105">此类型旨在用于 Excel 2007 仅在项目中。</span><span class="sxs-lookup"><span data-stu-id="26a03-105">This type is intended to be used only in projects for Excel 2007.</span></span> <span data-ttu-id="26a03-106">Excel 2010 中已弃用智能标记。</span><span class="sxs-lookup"><span data-stu-id="26a03-106">Smart tags are deprecated in Excel 2010..</span></span>  
+## <a name="usage"></a><span data-ttu-id="61260-104">用法</span><span class="sxs-lookup"><span data-stu-id="61260-104">Usage</span></span>  
+ <span data-ttu-id="61260-105">此类型仅适用于 Excel 2007 的项目。</span><span class="sxs-lookup"><span data-stu-id="61260-105">This type is intended to be used only in projects for Excel 2007.</span></span> <span data-ttu-id="61260-106">Excel 2010 中已弃用智能标记。</span><span class="sxs-lookup"><span data-stu-id="61260-106">Smart tags are deprecated in Excel 2010..</span></span>  
   
  [!INCLUDE[vsto_net35mref](~/includes/vsto-net35mref-md.md)]  
   
    
   
 ## Examples  
- <span data-ttu-id="26a03-107">下面的代码示例将创建<xref:Microsoft.Office.Tools.Excel.SmartTag>与<xref:Microsoft.Office.Tools.Excel.Action>评选，术语"销售"和正则表达式"[我&#124;我] ssue\s\d{5,6}"。</span><span class="sxs-lookup"><span data-stu-id="26a03-107">The following code example creates a <xref:Microsoft.Office.Tools.Excel.SmartTag> with an <xref:Microsoft.Office.Tools.Excel.Action> that recognizes the term "sale" and the regular expression "[I&#124;i]ssue\s\d{5,6}".</span></span> <span data-ttu-id="26a03-108">该操作修改在运行时操作的菜单标题，并显示已识别的文本的地址。</span><span class="sxs-lookup"><span data-stu-id="26a03-108">The action modifies the menu caption of the action at run time and displays the address of the text that was recognized.</span></span> <span data-ttu-id="26a03-109">若要测试该示例，在一个单元格中键入单词"销售"和字符串"问题的 12345"在另一个单元格中，然后重试的智能标记操作。</span><span class="sxs-lookup"><span data-stu-id="26a03-109">To test the example, type the word "sale" in one cell and the string "issue 12345" in another cell, and then try the smart tag action.</span></span>  
+ <span data-ttu-id="61260-107">下面的代码示例创建一个<xref:Microsoft.Office.Tools.Excel.SmartTag> <xref:Microsoft.Office.Tools.Excel.Action> , 它具有可识别字词 "甩卖" 和正则表达式 "[i&#124;i] ssue\s\d{5,6}" 的。</span><span class="sxs-lookup"><span data-stu-id="61260-107">The following code example creates a <xref:Microsoft.Office.Tools.Excel.SmartTag> with an <xref:Microsoft.Office.Tools.Excel.Action> that recognizes the term "sale" and the regular expression "[I&#124;i]ssue\s\d{5,6}".</span></span> <span data-ttu-id="61260-108">操作在运行时修改操作的菜单标题, 并显示已识别的文本的地址。</span><span class="sxs-lookup"><span data-stu-id="61260-108">The action modifies the menu caption of the action at run time and displays the address of the text that was recognized.</span></span> <span data-ttu-id="61260-109">若要测试该示例, 请在一个单元格中键入 "甩卖" 一词, 并在另一个单元格中键入字符串 "issue 12345", 然后尝试智能标记操作。</span><span class="sxs-lookup"><span data-stu-id="61260-109">To test the example, type the word "sale" in one cell and the string "issue 12345" in another cell, and then try the smart tag action.</span></span>  
   
  [!code-csharp[Trin_ExcelSmartTags#1](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelSmartTags/CS/Trin_ExcelSmartTags.cs#1)]
  [!code-vb[Trin_ExcelSmartTags#1](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelSmartTags/VB/ThisWorkbook.vb#1)]  
@@ -44,7 +44,7 @@
   </Docs>
   <Members>
     <Member MemberName="BeforeCaptionShow">
-      <MemberSignature Language="C#" Value="public event Microsoft.Office.Tools.Excel.BeforeCaptionShowEventHandler BeforeCaptionShow;" />
+      <MemberSignature Language="C#" Value="event Microsoft.Office.Tools.Excel.BeforeCaptionShowEventHandler BeforeCaptionShow;" />
       <MemberSignature Language="ILAsm" Value=".event class Microsoft.Office.Tools.Excel.BeforeCaptionShowEventHandler BeforeCaptionShow" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.Excel.Action.BeforeCaptionShow" />
       <MemberType>Event</MemberType>
@@ -56,19 +56,19 @@
         <ReturnType>Microsoft.Office.Tools.Excel.BeforeCaptionShowEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="26a03-110">在用户单击智能标记图标之后、智能标记菜单显示之前发生。</span><span class="sxs-lookup"><span data-stu-id="26a03-110">Occurs after the user clicks the smart tags icon, and before the smart tag menu is displayed.</span></span> [!INCLUDE[vsto_smart_tags](~/includes/vsto-smart-tags-md.md)]<span data-ttu-id="26a03-111">。</span><span class="sxs-lookup"><span data-stu-id="26a03-111">.</span></span></summary>
+        <summary><span data-ttu-id="61260-110">在用户单击智能标记图标之后、智能标记菜单显示之前发生。</span><span class="sxs-lookup"><span data-stu-id="61260-110">Occurs after the user clicks the smart tags icon, and before the smart tag menu is displayed.</span></span> [!INCLUDE[vsto_smart_tags](~/includes/vsto-smart-tags-md.md)]<span data-ttu-id="61260-111">。</span><span class="sxs-lookup"><span data-stu-id="61260-111">.</span></span></summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="26a03-112">此事件可用于更改基于上下文的智能标记标题。</span><span class="sxs-lookup"><span data-stu-id="26a03-112">This event gives you an opportunity to change the smart tag caption based on context.</span></span>  
+ <span data-ttu-id="61260-112">此事件使您有机会根据上下文更改智能标记标题。</span><span class="sxs-lookup"><span data-stu-id="61260-112">This event gives you an opportunity to change the smart tag caption based on context.</span></span>  
   
    
   
 ## Examples  
- <span data-ttu-id="26a03-113">下面的代码示例演示了一个处理程序<xref:Microsoft.Office.Tools.Excel.Action.BeforeCaptionShow>事件。</span><span class="sxs-lookup"><span data-stu-id="26a03-113">The following code example demonstrates a handler for the <xref:Microsoft.Office.Tools.Excel.Action.BeforeCaptionShow> event.</span></span> <span data-ttu-id="26a03-114">事件处理程序将修改操作的菜单标题。</span><span class="sxs-lookup"><span data-stu-id="26a03-114">The event handler modifies the menu caption of the action.</span></span> <span data-ttu-id="26a03-115">此代码示例是为提供一个更大示例的一部分<xref:Microsoft.Office.Tools.Excel.Action>接口。</span><span class="sxs-lookup"><span data-stu-id="26a03-115">This code example is part of a larger example provided for the <xref:Microsoft.Office.Tools.Excel.Action> interface.</span></span>  
+ <span data-ttu-id="61260-113">下面的代码示例演示<xref:Microsoft.Office.Tools.Excel.Action.BeforeCaptionShow>事件的处理程序。</span><span class="sxs-lookup"><span data-stu-id="61260-113">The following code example demonstrates a handler for the <xref:Microsoft.Office.Tools.Excel.Action.BeforeCaptionShow> event.</span></span> <span data-ttu-id="61260-114">事件处理程序修改操作的菜单标题。</span><span class="sxs-lookup"><span data-stu-id="61260-114">The event handler modifies the menu caption of the action.</span></span> <span data-ttu-id="61260-115">此代码示例是为<xref:Microsoft.Office.Tools.Excel.Action>接口提供的更大示例的一部分。</span><span class="sxs-lookup"><span data-stu-id="61260-115">This code example is part of a larger example provided for the <xref:Microsoft.Office.Tools.Excel.Action> interface.</span></span>  
   
- <span data-ttu-id="26a03-116">此示例适用于文档级自定义。</span><span class="sxs-lookup"><span data-stu-id="26a03-116">This example is for a document-level customization.</span></span>  
+ <span data-ttu-id="61260-116">此示例适用于文档级自定义项。</span><span class="sxs-lookup"><span data-stu-id="61260-116">This example is for a document-level customization.</span></span>  
   
  [!code-csharp[Trin_ExcelSmartTags#3](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelSmartTags/CS/Trin_ExcelSmartTags.cs#3)]
  [!code-vb[Trin_ExcelSmartTags#3](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelSmartTags/VB/ThisWorkbook.vb#3)]  
@@ -78,7 +78,7 @@
       </Docs>
     </Member>
     <Member MemberName="Click">
-      <MemberSignature Language="C#" Value="public event Microsoft.Office.Tools.Excel.ActionClickEventHandler Click;" />
+      <MemberSignature Language="C#" Value="event Microsoft.Office.Tools.Excel.ActionClickEventHandler Click;" />
       <MemberSignature Language="ILAsm" Value=".event class Microsoft.Office.Tools.Excel.ActionClickEventHandler Click" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.Excel.Action.Click" />
       <MemberType>Event</MemberType>
@@ -90,14 +90,14 @@
         <ReturnType>Microsoft.Office.Tools.Excel.ActionClickEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="26a03-117">在智能标记菜单中的操作被单击时发生。</span><span class="sxs-lookup"><span data-stu-id="26a03-117">Occurs when the action in the smart tag menu is clicked.</span></span> [!INCLUDE[vsto_smart_tags](~/includes/vsto-smart-tags-md.md)]<span data-ttu-id="26a03-118">。</span><span class="sxs-lookup"><span data-stu-id="26a03-118">.</span></span></summary>
+        <summary><span data-ttu-id="61260-117">在智能标记菜单中的操作被单击时发生。</span><span class="sxs-lookup"><span data-stu-id="61260-117">Occurs when the action in the smart tag menu is clicked.</span></span> [!INCLUDE[vsto_smart_tags](~/includes/vsto-smart-tags-md.md)]<span data-ttu-id="61260-118">。</span><span class="sxs-lookup"><span data-stu-id="61260-118">.</span></span></summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- <span data-ttu-id="26a03-119">下面的代码示例演示了一个处理程序<xref:Microsoft.Office.Tools.Excel.Action.Click>事件。</span><span class="sxs-lookup"><span data-stu-id="26a03-119">The following code example demonstrates a handler for the <xref:Microsoft.Office.Tools.Excel.Action.Click> event.</span></span> <span data-ttu-id="26a03-120">事件处理程序会显示包含识别的智能标记术语或表达式的单元格的地址。</span><span class="sxs-lookup"><span data-stu-id="26a03-120">The event handler displays the address of the cell that contains the recognized smart tag term or expression.</span></span> <span data-ttu-id="26a03-121">此代码示例是为提供一个更大示例的一部分<xref:Microsoft.Office.Tools.Excel.Action>接口。</span><span class="sxs-lookup"><span data-stu-id="26a03-121">This code example is part of a larger example provided for the <xref:Microsoft.Office.Tools.Excel.Action> interface.</span></span>  
+ <span data-ttu-id="61260-119">下面的代码示例演示<xref:Microsoft.Office.Tools.Excel.Action.Click>事件的处理程序。</span><span class="sxs-lookup"><span data-stu-id="61260-119">The following code example demonstrates a handler for the <xref:Microsoft.Office.Tools.Excel.Action.Click> event.</span></span> <span data-ttu-id="61260-120">事件处理程序将显示包含已识别的智能标记字词或表达式的单元格的地址。</span><span class="sxs-lookup"><span data-stu-id="61260-120">The event handler displays the address of the cell that contains the recognized smart tag term or expression.</span></span> <span data-ttu-id="61260-121">此代码示例是为<xref:Microsoft.Office.Tools.Excel.Action>接口提供的更大示例的一部分。</span><span class="sxs-lookup"><span data-stu-id="61260-121">This code example is part of a larger example provided for the <xref:Microsoft.Office.Tools.Excel.Action> interface.</span></span>  
   
- <span data-ttu-id="26a03-122">此示例适用于文档级自定义。</span><span class="sxs-lookup"><span data-stu-id="26a03-122">This example is for a document-level customization.</span></span>  
+ <span data-ttu-id="61260-122">此示例适用于文档级自定义项。</span><span class="sxs-lookup"><span data-stu-id="61260-122">This example is for a document-level customization.</span></span>  
   
  [!code-csharp[Trin_ExcelSmartTags#4](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_ExcelSmartTags/CS/Trin_ExcelSmartTags.cs#4)]
  [!code-vb[Trin_ExcelSmartTags#4](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ExcelSmartTags/VB/ThisWorkbook.vb#4)]  

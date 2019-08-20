@@ -1,5 +1,5 @@
 <Type Name="ICustomAssembly" FullName="Microsoft.VisualStudio.SharePoint.Packages.ICustomAssembly">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="8f53bcff62422b83b4f46694d2f44725c406b56a" /><Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="02/21/2018" /><Meta Name="ms.locfileid" Value="29407101" /></Metadata><TypeSignature Language="C#" Value="public interface ICustomAssembly : Microsoft.VisualStudio.SharePoint.Packages.IAssembly" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="805a8c6d0c4e9fcf83779a13de3faa0bd238570a" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69010874" /></Metadata><TypeSignature Language="C#" Value="public interface ICustomAssembly : Microsoft.VisualStudio.SharePoint.Packages.IAssembly" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ICustomAssembly implements class Microsoft.VisualStudio.SharePoint.IObservableModelElement, class Microsoft.VisualStudio.SharePoint.Packages.IAssembly" />
   <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.SharePoint.Packages.ICustomAssembly" />
   <AssemblyInfo>
@@ -8,11 +8,14 @@
   </AssemblyInfo>
   <Interfaces>
     <Interface>
+      <InterfaceName>Microsoft.VisualStudio.SharePoint.IObservableModelElement</InterfaceName>
+    </Interface>
+    <Interface>
       <InterfaceName>Microsoft.VisualStudio.SharePoint.Packages.IAssembly</InterfaceName>
     </Interface>
   </Interfaces>
   <Docs>
-    <summary><span data-ttu-id="ba40a-101">表示包内包含的程序集。</span><span class="sxs-lookup"><span data-stu-id="ba40a-101">Represents an assembly included within a package.</span></span></summary>
+    <summary><span data-ttu-id="d6e59-101">表示包内包含的程序集。</span><span class="sxs-lookup"><span data-stu-id="d6e59-101">Represents an assembly included within a package.</span></span></summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -29,19 +32,19 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="ba40a-102">获取或设置要包含在包中的程序集的名称和路径。</span><span class="sxs-lookup"><span data-stu-id="ba40a-102">Gets or sets the name and path of the assembly to be included in the package.</span></span> <span data-ttu-id="ba40a-103">路径对包项目的根目录可以是绝对的，也可以是相对的。</span><span class="sxs-lookup"><span data-stu-id="ba40a-103">The path can be either absolute or relative to the package project's root directory.</span></span></summary>
-        <value><span data-ttu-id="ba40a-104">表示的路径和名称的程序集的字符串。</span><span class="sxs-lookup"><span data-stu-id="ba40a-104">A string that represents the path and name of an assembly.</span></span></value>
+        <summary><span data-ttu-id="d6e59-102">获取或设置要包含在包中的程序集的名称和路径。</span><span class="sxs-lookup"><span data-stu-id="d6e59-102">Gets or sets the name and path of the assembly to be included in the package.</span></span> <span data-ttu-id="d6e59-103">路径对包项目的根目录可以是绝对的，也可以是相对的。</span><span class="sxs-lookup"><span data-stu-id="d6e59-103">The path can be either absolute or relative to the package project's root directory.</span></span></summary>
+        <value><span data-ttu-id="d6e59-104">一个表示程序集的路径和名称的字符串。</span><span class="sxs-lookup"><span data-stu-id="d6e59-104">A string that represents the path and name of an assembly.</span></span></value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="ba40a-105">下面是相对路径与绝对路径的示例：</span><span class="sxs-lookup"><span data-stu-id="ba40a-105">Following are examples of relative versus absolute paths:</span></span>  
+ <span data-ttu-id="d6e59-105">下面是相对路径和绝对路径的示例:</span><span class="sxs-lookup"><span data-stu-id="d6e59-105">Following are examples of relative versus absolute paths:</span></span>  
   
- <span data-ttu-id="ba40a-106">相对路径:...\Project\Bin\Debug\SiblingProject.dll。</span><span class="sxs-lookup"><span data-stu-id="ba40a-106">Relative path: ..\Project\Bin\Debug\SiblingProject.dll.</span></span>  
+ <span data-ttu-id="d6e59-106">相对路径:。。\Project\Bin\Debug\SiblingProject.dll.</span><span class="sxs-lookup"><span data-stu-id="d6e59-106">Relative path: ..\Project\Bin\Debug\SiblingProject.dll.</span></span>  
   
- <span data-ttu-id="ba40a-107">绝对路径： R:\Folder\Project\Bin\Debug\OtherProject.dll。</span><span class="sxs-lookup"><span data-stu-id="ba40a-107">Absolute path: R:\Folder\Project\Bin\Debug\OtherProject.dll.</span></span>  
+ <span data-ttu-id="d6e59-107">绝对路径:R:\Folder\Project\Bin\Debug\OtherProject.dll.</span><span class="sxs-lookup"><span data-stu-id="d6e59-107">Absolute path: R:\Folder\Project\Bin\Debug\OtherProject.dll.</span></span>  
   
- <span data-ttu-id="ba40a-108">有关详细信息，请参阅[ASP.NET Web 站点路径](http://go.microsoft.com/fwlink/?LinkID=155924)。</span><span class="sxs-lookup"><span data-stu-id="ba40a-108">For more information, see [ASP.NET Web Site Paths](http://go.microsoft.com/fwlink/?LinkID=155924).</span></span>  
+ <span data-ttu-id="d6e59-108">有关详细信息, 请参阅[ASP.NET 网站路径](http://go.microsoft.com/fwlink/?LinkID=155924)。</span><span class="sxs-lookup"><span data-stu-id="d6e59-108">For more information, see [ASP.NET Web Site Paths](http://go.microsoft.com/fwlink/?LinkID=155924).</span></span>  
   
  ]]></format>
         </remarks>

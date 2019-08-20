@@ -1,5 +1,5 @@
 <Type Name="RibbonBox" FullName="Microsoft.Office.Tools.Ribbon.RibbonBox">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="6f809694d888a9b9b6df147d672eff55fde7dc1b" /><Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="09/19/2018" /><Meta Name="ms.locfileid" Value="46455293" /></Metadata><TypeSignature Language="C#" Value="public interface RibbonBox : IDisposable, Microsoft.Office.Tools.Ribbon.RibbonControl, System.ComponentModel.IComponent" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="7e897f0b8eaa8ce98ba5d5ef2517079f23f00103" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69002997" /></Metadata><TypeSignature Language="C#" Value="public interface RibbonBox : IDisposable, Microsoft.Office.Tools.Ribbon.RibbonControl, System.ComponentModel.IComponent" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract RibbonBox implements class Microsoft.Office.Tools.Ribbon.RibbonComponent, class Microsoft.Office.Tools.Ribbon.RibbonControl, class System.ComponentModel.IComponent, class System.IDisposable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Ribbon.RibbonBox" />
   <AssemblyInfo>
@@ -7,6 +7,9 @@
     <AssemblyVersion>10.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Office.Tools.Ribbon.RibbonComponent</InterfaceName>
+    </Interface>
     <Interface>
       <InterfaceName>Microsoft.Office.Tools.Ribbon.RibbonControl</InterfaceName>
     </Interface>
@@ -23,28 +26,28 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary><span data-ttu-id="f1e31-101">排列和对齐自定义功能区上的控件。</span><span class="sxs-lookup"><span data-stu-id="f1e31-101">Arranges and aligns controls on a custom Ribbon.</span></span></summary>
+    <summary><span data-ttu-id="52222-101">排列和对齐自定义功能区上的控件。</span><span class="sxs-lookup"><span data-stu-id="52222-101">Arranges and aligns controls on a custom Ribbon.</span></span></summary>
     <remarks>
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="f1e31-102"><xref:Microsoft.Office.Tools.Ribbon.RibbonBox>自动对齐功能区控件，如拖放到它。</span><span class="sxs-lookup"><span data-stu-id="f1e31-102">The <xref:Microsoft.Office.Tools.Ribbon.RibbonBox> automatically aligns Ribbon controls as you drop them onto it.</span></span>  
+ <span data-ttu-id="52222-102">当<xref:Microsoft.Office.Tools.Ribbon.RibbonBox>功能区控件置于其上时, 它会自动对齐。</span><span class="sxs-lookup"><span data-stu-id="52222-102">The <xref:Microsoft.Office.Tools.Ribbon.RibbonBox> automatically aligns Ribbon controls as you drop them onto it.</span></span>  
   
- <span data-ttu-id="f1e31-103">使用<xref:Microsoft.Office.Tools.Ribbon.RibbonBox.BoxStyle%2A>水平排列子控件的属性 （默认值） 或垂直。</span><span class="sxs-lookup"><span data-stu-id="f1e31-103">Use the <xref:Microsoft.Office.Tools.Ribbon.RibbonBox.BoxStyle%2A> property to arrange child controls horizontally (default) or vertically.</span></span> <span data-ttu-id="f1e31-104">如果控件被设置为垂直排列并且没有足够的空间，在多个列中排列它们。</span><span class="sxs-lookup"><span data-stu-id="f1e31-104">If controls are set to be arranged vertically and there is not enough space, they are arranged in multiple columns.</span></span>  
+ <span data-ttu-id="52222-103"><xref:Microsoft.Office.Tools.Ribbon.RibbonBox.BoxStyle%2A>使用属性可水平 (默认) 或垂直排列子控件。</span><span class="sxs-lookup"><span data-stu-id="52222-103">Use the <xref:Microsoft.Office.Tools.Ribbon.RibbonBox.BoxStyle%2A> property to arrange child controls horizontally (default) or vertically.</span></span> <span data-ttu-id="52222-104">如果控件设置为垂直排列, 并且没有足够的空间, 则它们将按多列排列。</span><span class="sxs-lookup"><span data-stu-id="52222-104">If controls are set to be arranged vertically and there is not enough space, they are arranged in multiple columns.</span></span>  
   
- <span data-ttu-id="f1e31-105">只能在功能区加载到 Office 应用程序之前，可以设置此控件的某些属性。</span><span class="sxs-lookup"><span data-stu-id="f1e31-105">Some properties of this control can be set only before the Ribbon is loaded into the Office application.</span></span> <span data-ttu-id="f1e31-106">有关如何设置这些属性的信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。</span><span class="sxs-lookup"><span data-stu-id="f1e31-106">For information about setting these properties, see [Ribbon Object Model Overview](/visualstudio/vsto/ribbon-object-model-overview).</span></span>  
+ <span data-ttu-id="52222-105">此控件的某些属性只能在功能区加载到 Office 应用程序中之前设置。</span><span class="sxs-lookup"><span data-stu-id="52222-105">Some properties of this control can be set only before the Ribbon is loaded into the Office application.</span></span> <span data-ttu-id="52222-106">有关设置这些属性的信息, 请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。</span><span class="sxs-lookup"><span data-stu-id="52222-106">For information about setting these properties, see [Ribbon Object Model Overview](/visualstudio/vsto/ribbon-object-model-overview).</span></span>  
   
- <span data-ttu-id="f1e31-107">您可以创建<xref:Microsoft.Office.Tools.Ribbon.RibbonBox>在运行时通过使用<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.CreateRibbonBox%2A>方法的<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory>对象。</span><span class="sxs-lookup"><span data-stu-id="f1e31-107">You can create a <xref:Microsoft.Office.Tools.Ribbon.RibbonBox> at run time by using the <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.CreateRibbonBox%2A> method of the <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory> object.</span></span>  
+ <span data-ttu-id="52222-107">您可以通过<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.CreateRibbonBox%2A>使用<xref:Microsoft.Office.Tools.Ribbon.RibbonBox> <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory>对象的方法在运行时创建。</span><span class="sxs-lookup"><span data-stu-id="52222-107">You can create a <xref:Microsoft.Office.Tools.Ribbon.RibbonBox> at run time by using the <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.CreateRibbonBox%2A> method of the <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory> object.</span></span>  
   
- <span data-ttu-id="f1e31-108">可通过两种方法来访问 <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory> 对象：</span><span class="sxs-lookup"><span data-stu-id="f1e31-108">There are two ways to access the <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory> object:</span></span>  
+ <span data-ttu-id="52222-108">可通过两种方法来访问 <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory> 对象：</span><span class="sxs-lookup"><span data-stu-id="52222-108">There are two ways to access the <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory> object:</span></span>  
   
--   <span data-ttu-id="f1e31-109">通过使用 Ribbon 类的 `Factory` 属性。</span><span class="sxs-lookup"><span data-stu-id="f1e31-109">By using the `Factory` property of the Ribbon class.</span></span> <span data-ttu-id="f1e31-110">可从 Ribbon 类中的代码使用此方法。</span><span class="sxs-lookup"><span data-stu-id="f1e31-110">Use this approach from code in your Ribbon class.</span></span>  
+-   <span data-ttu-id="52222-109">通过使用 Ribbon 类的 `Factory` 属性。</span><span class="sxs-lookup"><span data-stu-id="52222-109">By using the `Factory` property of the Ribbon class.</span></span> <span data-ttu-id="52222-110">可从 Ribbon 类中的代码使用此方法。</span><span class="sxs-lookup"><span data-stu-id="52222-110">Use this approach from code in your Ribbon class.</span></span>  
   
--   <span data-ttu-id="f1e31-111">通过使用 `Globals.Factory.GetRibbonFactory` 方法。</span><span class="sxs-lookup"><span data-stu-id="f1e31-111">By using the `Globals.Factory.GetRibbonFactory` method.</span></span> <span data-ttu-id="f1e31-112">可从 Ribbon 类外的代码使用此方法。</span><span class="sxs-lookup"><span data-stu-id="f1e31-112">Use this approach from code outside your Ribbon class.</span></span>  
+-   <span data-ttu-id="52222-111">通过使用 `Globals.Factory.GetRibbonFactory` 方法。</span><span class="sxs-lookup"><span data-stu-id="52222-111">By using the `Globals.Factory.GetRibbonFactory` method.</span></span> <span data-ttu-id="52222-112">可从 Ribbon 类外的代码使用此方法。</span><span class="sxs-lookup"><span data-stu-id="52222-112">Use this approach from code outside your Ribbon class.</span></span>  
   
  [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
   
-## <a name="usage"></a><span data-ttu-id="f1e31-113">用法</span><span class="sxs-lookup"><span data-stu-id="f1e31-113">Usage</span></span>  
+## <a name="usage"></a><span data-ttu-id="52222-113">用法</span><span class="sxs-lookup"><span data-stu-id="52222-113">Usage</span></span>  
  [!INCLUDE[vsto_net35mref](~/includes/vsto-net35mref-md.md)]  
   
  ]]></format>
@@ -64,19 +67,19 @@
         <ReturnType>Microsoft.Office.Tools.Ribbon.RibbonBoxStyle</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="f1e31-114">获取一个 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBox" /> 值，该值指示此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBoxStyle" /> 上放置的控件是水平放置还是垂直放置。</span><span class="sxs-lookup"><span data-stu-id="f1e31-114">Gets a <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBoxStyle" /> value that indicates whether controls placed on this <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBox" /> will be placed horizontally or vertically.</span></span></summary>
-        <value><span data-ttu-id="f1e31-115">一个 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBoxStyle" /> 枚举值，该值指示此 <see cref="P:Microsoft.Office.Tools.Ribbon.RibbonBox.BoxStyle" /> 如何排列其上放置的控件。</span><span class="sxs-lookup"><span data-stu-id="f1e31-115">A <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBoxStyle" /> enumeration value that indicates how this <see cref="P:Microsoft.Office.Tools.Ribbon.RibbonBox.BoxStyle" /> arranges controls placed on it.</span></span></value>
+        <summary><span data-ttu-id="52222-114">获取一个 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBox" /> 值，该值指示此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBoxStyle" /> 上放置的控件是水平放置还是垂直放置。</span><span class="sxs-lookup"><span data-stu-id="52222-114">Gets a <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBoxStyle" /> value that indicates whether controls placed on this <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBox" /> will be placed horizontally or vertically.</span></span></summary>
+        <value><span data-ttu-id="52222-115">一个 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBoxStyle" /> 枚举值，该值指示此 <see cref="P:Microsoft.Office.Tools.Ribbon.RibbonBox.BoxStyle" /> 如何排列其上放置的控件。</span><span class="sxs-lookup"><span data-stu-id="52222-115">A <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBoxStyle" /> enumeration value that indicates how this <see cref="P:Microsoft.Office.Tools.Ribbon.RibbonBox.BoxStyle" /> arranges controls placed on it.</span></span></value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="f1e31-116">可以在运行时仅在某些情况下设置此属性。</span><span class="sxs-lookup"><span data-stu-id="f1e31-116">This property can be set at run time only under certain conditions.</span></span> <span data-ttu-id="f1e31-117">有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。</span><span class="sxs-lookup"><span data-stu-id="f1e31-117">For more information, see [Ribbon Object Model Overview](/visualstudio/vsto/ribbon-object-model-overview).</span></span>  
+ <span data-ttu-id="52222-116">仅在某些情况下, 才能在运行时设置此属性。</span><span class="sxs-lookup"><span data-stu-id="52222-116">This property can be set at run time only under certain conditions.</span></span> <span data-ttu-id="52222-117">有关详细信息, 请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。</span><span class="sxs-lookup"><span data-stu-id="52222-117">For more information, see [Ribbon Object Model Overview](/visualstudio/vsto/ribbon-object-model-overview).</span></span>  
   
- <span data-ttu-id="f1e31-118">功能区设计器排列控件拖放到上面<xref:Microsoft.Office.Tools.Ribbon.RibbonBox>以不同的方式具体取决于值<xref:Microsoft.Office.Tools.Ribbon.RibbonBox.BoxStyle%2A>属性：</span><span class="sxs-lookup"><span data-stu-id="f1e31-118">The Ribbon Designer arranges controls dropped onto a <xref:Microsoft.Office.Tools.Ribbon.RibbonBox> differently depending on the value of the <xref:Microsoft.Office.Tools.Ribbon.RibbonBox.BoxStyle%2A> property:</span></span>  
+ <span data-ttu-id="52222-118">功能区设计器根据<xref:Microsoft.Office.Tools.Ribbon.RibbonBox> <xref:Microsoft.Office.Tools.Ribbon.RibbonBox.BoxStyle%2A>属性的值, 将控件按不同的方式排列在一起:</span><span class="sxs-lookup"><span data-stu-id="52222-118">The Ribbon Designer arranges controls dropped onto a <xref:Microsoft.Office.Tools.Ribbon.RibbonBox> differently depending on the value of the <xref:Microsoft.Office.Tools.Ribbon.RibbonBox.BoxStyle%2A> property:</span></span>  
   
--   <span data-ttu-id="f1e31-119"><xref:Microsoft.Office.Tools.Ribbon.RibbonBoxStyle.Horizontal> 指定到左侧和右侧并排放置控件。</span><span class="sxs-lookup"><span data-stu-id="f1e31-119"><xref:Microsoft.Office.Tools.Ribbon.RibbonBoxStyle.Horizontal> specifies that controls are placed beside one another to the left and right.</span></span>  
+-   <span data-ttu-id="52222-119"><xref:Microsoft.Office.Tools.Ribbon.RibbonBoxStyle.Horizontal>指定将控件向左和向右并排放置。</span><span class="sxs-lookup"><span data-stu-id="52222-119"><xref:Microsoft.Office.Tools.Ribbon.RibbonBoxStyle.Horizontal> specifies that controls are placed beside one another to the left and right.</span></span>  
   
--   <span data-ttu-id="f1e31-120"><xref:Microsoft.Office.Tools.Ribbon.RibbonBoxStyle.Vertical> 指定控件的上方和下方另一个放置。</span><span class="sxs-lookup"><span data-stu-id="f1e31-120"><xref:Microsoft.Office.Tools.Ribbon.RibbonBoxStyle.Vertical> specifies that controls are placed above and below one another.</span></span> <span data-ttu-id="f1e31-121">如果没有足够的空间来显示对此的所有控件<xref:Microsoft.Office.Tools.Ribbon.RibbonBox>在一个专栏中，则使用其他列。</span><span class="sxs-lookup"><span data-stu-id="f1e31-121">If there is not enough room to display all the controls on this <xref:Microsoft.Office.Tools.Ribbon.RibbonBox> in one column, additional columns are used.</span></span>  
+-   <span data-ttu-id="52222-120"><xref:Microsoft.Office.Tools.Ribbon.RibbonBoxStyle.Vertical>指定将控件置于上方和下方。</span><span class="sxs-lookup"><span data-stu-id="52222-120"><xref:Microsoft.Office.Tools.Ribbon.RibbonBoxStyle.Vertical> specifies that controls are placed above and below one another.</span></span> <span data-ttu-id="52222-121">如果空间不足, 无法在一列中显示此<xref:Microsoft.Office.Tools.Ribbon.RibbonBox>项上的所有控件, 则使用其他列。</span><span class="sxs-lookup"><span data-stu-id="52222-121">If there is not enough room to display all the controls on this <xref:Microsoft.Office.Tools.Ribbon.RibbonBox> in one column, additional columns are used.</span></span>  
   
  ]]></format>
         </remarks>
@@ -95,13 +98,13 @@
         <ReturnType>System.Collections.Generic.IList&lt;Microsoft.Office.Tools.Ribbon.RibbonControl&gt;</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="f1e31-122">获取此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBox" /> 对象上的控件集合。</span><span class="sxs-lookup"><span data-stu-id="f1e31-122">Gets a collection of the controls that are on this <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBox" /> object.</span></span></summary>
-        <value><span data-ttu-id="f1e31-123">一个控件集合，可用于访问在设计时添加到此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBox" /> 的控件。</span><span class="sxs-lookup"><span data-stu-id="f1e31-123">A collection of controls that can be used to access the controls that were added to this <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBox" /> at design time.</span></span></value>
+        <summary><span data-ttu-id="52222-122">获取此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBox" /> 对象上的控件集合。</span><span class="sxs-lookup"><span data-stu-id="52222-122">Gets a collection of the controls that are on this <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBox" /> object.</span></span></summary>
+        <value><span data-ttu-id="52222-123">一个控件集合，可用于访问在设计时添加到此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBox" /> 的控件。</span><span class="sxs-lookup"><span data-stu-id="52222-123">A collection of controls that can be used to access the controls that were added to this <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonBox" /> at design time.</span></span></value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="f1e31-124">可以在运行时仅在某些情况下设置此属性。</span><span class="sxs-lookup"><span data-stu-id="f1e31-124">This property can be set at run time only under certain conditions.</span></span> <span data-ttu-id="f1e31-125">有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。</span><span class="sxs-lookup"><span data-stu-id="f1e31-125">For more information, see [Ribbon Object Model Overview](/visualstudio/vsto/ribbon-object-model-overview).</span></span>  
+ <span data-ttu-id="52222-124">仅在某些情况下, 才能在运行时设置此属性。</span><span class="sxs-lookup"><span data-stu-id="52222-124">This property can be set at run time only under certain conditions.</span></span> <span data-ttu-id="52222-125">有关详细信息, 请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。</span><span class="sxs-lookup"><span data-stu-id="52222-125">For more information, see [Ribbon Object Model Overview](/visualstudio/vsto/ribbon-object-model-overview).</span></span>  
   
  ]]></format>
         </remarks>

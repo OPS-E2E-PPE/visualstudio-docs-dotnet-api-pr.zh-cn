@@ -1,5 +1,5 @@
 <Type Name="RibbonDropDown" FullName="Microsoft.Office.Tools.Ribbon.RibbonDropDown">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="b6a01534586d0a3232740be4d4bfebb51b628b46" /><Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="09/19/2018" /><Meta Name="ms.locfileid" Value="46459791" /></Metadata><TypeSignature Language="C#" Value="public interface RibbonDropDown : IDisposable, Microsoft.Office.Tools.Ribbon.RibbonControl, System.ComponentModel.IComponent" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="ae5d703232f0a4082c2dbbe41ec4db4939c4e902" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69002606" /></Metadata><TypeSignature Language="C#" Value="public interface RibbonDropDown : IDisposable, Microsoft.Office.Tools.Ribbon.RibbonControl, System.ComponentModel.IComponent" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract RibbonDropDown implements class Microsoft.Office.Tools.Ribbon.RibbonComponent, class Microsoft.Office.Tools.Ribbon.RibbonControl, class System.ComponentModel.IComponent, class System.IDisposable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" />
   <AssemblyInfo>
@@ -7,6 +7,9 @@
     <AssemblyVersion>10.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Office.Tools.Ribbon.RibbonComponent</InterfaceName>
+    </Interface>
     <Interface>
       <InterfaceName>Microsoft.Office.Tools.Ribbon.RibbonControl</InterfaceName>
     </Interface>
@@ -23,48 +26,48 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary><span data-ttu-id="eb2cb-101">表示一个用户可从中选择的项列表，以及一个用户可单击的功能区列表。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-101">Represents a list of items that a user can choose from and a list of Ribbon buttons that a user can click.</span></span></summary>
+    <summary><span data-ttu-id="1ec25-101">表示一个用户可从中选择的项列表，以及一个用户可单击的功能区列表。</span><span class="sxs-lookup"><span data-stu-id="1ec25-101">Represents a list of items that a user can choose from and a list of Ribbon buttons that a user can click.</span></span></summary>
     <remarks>
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="eb2cb-102">一个<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>可以包含<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem>对象和<xref:Microsoft.Office.Tools.Ribbon.RibbonButton>控件。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-102">A <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown> can contain <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem> objects and <xref:Microsoft.Office.Tools.Ribbon.RibbonButton> controls.</span></span>  
+ <span data-ttu-id="1ec25-102">可以包含<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem>对象和<xref:Microsoft.Office.Tools.Ribbon.RibbonButton>控件。 <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown></span><span class="sxs-lookup"><span data-stu-id="1ec25-102">A <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown> can contain <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem> objects and <xref:Microsoft.Office.Tools.Ribbon.RibbonButton> controls.</span></span>  
   
- <span data-ttu-id="eb2cb-103">您可以创建<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>在运行时通过使用<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.CreateRibbonDropDown%2A>方法的<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory>对象。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-103">You can create a <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown> at run time by using the <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.CreateRibbonDropDown%2A> method of the <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory> object.</span></span>  
+ <span data-ttu-id="1ec25-103">您可以通过<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.CreateRibbonDropDown%2A>使用<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown> <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory>对象的方法在运行时创建。</span><span class="sxs-lookup"><span data-stu-id="1ec25-103">You can create a <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown> at run time by using the <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.CreateRibbonDropDown%2A> method of the <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory> object.</span></span>  
   
- <span data-ttu-id="eb2cb-104">可通过两种方法来访问 <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory> 对象：</span><span class="sxs-lookup"><span data-stu-id="eb2cb-104">There are two ways to access the <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory> object:</span></span>  
+ <span data-ttu-id="1ec25-104">可通过两种方法来访问 <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory> 对象：</span><span class="sxs-lookup"><span data-stu-id="1ec25-104">There are two ways to access the <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory> object:</span></span>  
   
--   <span data-ttu-id="eb2cb-105">通过使用 Ribbon 类的 `Factory` 属性。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-105">By using the `Factory` property of the Ribbon class.</span></span> <span data-ttu-id="eb2cb-106">可从 Ribbon 类中的代码使用此方法。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-106">Use this approach from code in your Ribbon class.</span></span>  
+-   <span data-ttu-id="1ec25-105">通过使用 Ribbon 类的 `Factory` 属性。</span><span class="sxs-lookup"><span data-stu-id="1ec25-105">By using the `Factory` property of the Ribbon class.</span></span> <span data-ttu-id="1ec25-106">可从 Ribbon 类中的代码使用此方法。</span><span class="sxs-lookup"><span data-stu-id="1ec25-106">Use this approach from code in your Ribbon class.</span></span>  
   
--   <span data-ttu-id="eb2cb-107">通过使用 `Globals.Factory.GetRibbonFactory` 方法。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-107">By using the `Globals.Factory.GetRibbonFactory` method.</span></span> <span data-ttu-id="eb2cb-108">可从 Ribbon 类外的代码使用此方法。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-108">Use this approach from code outside your Ribbon class.</span></span>  
+-   <span data-ttu-id="1ec25-107">通过使用 `Globals.Factory.GetRibbonFactory` 方法。</span><span class="sxs-lookup"><span data-stu-id="1ec25-107">By using the `Globals.Factory.GetRibbonFactory` method.</span></span> <span data-ttu-id="1ec25-108">可从 Ribbon 类外的代码使用此方法。</span><span class="sxs-lookup"><span data-stu-id="1ec25-108">Use this approach from code outside your Ribbon class.</span></span>  
   
- <span data-ttu-id="eb2cb-109">您不能添加到按钮<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Buttons%2A>在运行时在功能区加载到 Office 后的集合。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-109">You cannot add buttons to the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Buttons%2A> collection at run time after the Ribbon has been loaded into Office.</span></span>  
+ <span data-ttu-id="1ec25-109">在功能区加载到 Office <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Buttons%2A>后, 不能在运行时向集合中添加按钮。</span><span class="sxs-lookup"><span data-stu-id="1ec25-109">You cannot add buttons to the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Buttons%2A> collection at run time after the Ribbon has been loaded into Office.</span></span>  
   
- <span data-ttu-id="eb2cb-110">下面的过程介绍如何添加<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem>对象和<xref:Microsoft.Office.Tools.Ribbon.RibbonButton>控件添加到<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-110">The procedures below explain how to add <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem> objects and <xref:Microsoft.Office.Tools.Ribbon.RibbonButton> controls to a <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>.</span></span>  
+ <span data-ttu-id="1ec25-110">下面的过程说明如何向添加<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem>对象和<xref:Microsoft.Office.Tools.Ribbon.RibbonButton>控件<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>。</span><span class="sxs-lookup"><span data-stu-id="1ec25-110">The procedures below explain how to add <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem> objects and <xref:Microsoft.Office.Tools.Ribbon.RibbonButton> controls to a <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>.</span></span>  
   
-### <a name="to-add-ribbondropdownitem-objects-at-design-time"></a><span data-ttu-id="eb2cb-111">若要在设计时添加 RibbonDropDownItem 对象</span><span class="sxs-lookup"><span data-stu-id="eb2cb-111">To add RibbonDropDownItem objects at design time</span></span>  
+### <a name="to-add-ribbondropdownitem-objects-at-design-time"></a><span data-ttu-id="1ec25-111">在设计时添加 RibbonDropDownItem 对象</span><span class="sxs-lookup"><span data-stu-id="1ec25-111">To add RibbonDropDownItem objects at design time</span></span>  
   
-1.  <span data-ttu-id="eb2cb-112">单击**项**属性中的**属性**窗口。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-112">Click the **Items** property in the **Properties** window.</span></span>  
+1.  <span data-ttu-id="1ec25-112">在 "**属性**" 窗口中单击 " **Items** " 属性。</span><span class="sxs-lookup"><span data-stu-id="1ec25-112">Click the **Items** property in the **Properties** window.</span></span>  
   
-2.  <span data-ttu-id="eb2cb-113">单击省略号 (**...**).</span><span class="sxs-lookup"><span data-stu-id="eb2cb-113">Click the ellipsis (**...**).</span></span>  
+2.  <span data-ttu-id="1ec25-113">单击省略号 (**...**)。</span><span class="sxs-lookup"><span data-stu-id="1ec25-113">Click the ellipsis (**...**).</span></span>  
   
-3.  <span data-ttu-id="eb2cb-114">在中**下拉列表中集合编辑器**、 添加、 排序和编辑新项。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-114">In the **DropDown Collection Editor**, add, order, and edit new items.</span></span>  
+3.  <span data-ttu-id="1ec25-114">在**下拉集合编辑器**中, 添加、排序和编辑新项。</span><span class="sxs-lookup"><span data-stu-id="1ec25-114">In the **DropDown Collection Editor**, add, order, and edit new items.</span></span>  
   
- <span data-ttu-id="eb2cb-115">您可以添加<xref:Microsoft.Office.Tools.Ribbon.RibbonButton>控件添加到<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>在设计时。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-115">You can add <xref:Microsoft.Office.Tools.Ribbon.RibbonButton> controls to a <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown> at design time.</span></span>  
+ <span data-ttu-id="1ec25-115">您可以<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>在<xref:Microsoft.Office.Tools.Ribbon.RibbonButton>设计时将控件添加到。</span><span class="sxs-lookup"><span data-stu-id="1ec25-115">You can add <xref:Microsoft.Office.Tools.Ribbon.RibbonButton> controls to a <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown> at design time.</span></span>  
   
-### <a name="to-add-ribbonbutton-controls-at-design-time"></a><span data-ttu-id="eb2cb-116">若要将 RibbonButton 控件添加设计时</span><span class="sxs-lookup"><span data-stu-id="eb2cb-116">To add RibbonButton controls at design time</span></span>  
+### <a name="to-add-ribbonbutton-controls-at-design-time"></a><span data-ttu-id="1ec25-116">在设计时添加 RibbonButton 控件</span><span class="sxs-lookup"><span data-stu-id="1ec25-116">To add RibbonButton controls at design time</span></span>  
   
-1.  <span data-ttu-id="eb2cb-117">单击**按钮**属性中的**属性**窗口。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-117">Click the **Buttons** property in the **Properties** window.</span></span>  
+1.  <span data-ttu-id="1ec25-117">单击 "**属性**" 窗口中的 "**按钮**" 属性。</span><span class="sxs-lookup"><span data-stu-id="1ec25-117">Click the **Buttons** property in the **Properties** window.</span></span>  
   
-2.  <span data-ttu-id="eb2cb-118">单击省略号 (**...**).</span><span class="sxs-lookup"><span data-stu-id="eb2cb-118">Click the ellipsis (**...**).</span></span>  
+2.  <span data-ttu-id="1ec25-118">单击省略号 (**...**)。</span><span class="sxs-lookup"><span data-stu-id="1ec25-118">Click the ellipsis (**...**).</span></span>  
   
-3.  <span data-ttu-id="eb2cb-119">在中**按钮集合编辑器**、 添加、 排序和编辑新的按钮控件。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-119">In the **Button Collection Editor**, add, order, and edit new button controls.</span></span>  
+3.  <span data-ttu-id="1ec25-119">在**按钮集合编辑器**中, 添加、排序和编辑新的按钮控件。</span><span class="sxs-lookup"><span data-stu-id="1ec25-119">In the **Button Collection Editor**, add, order, and edit new button controls.</span></span>  
   
- <span data-ttu-id="eb2cb-120">只能在功能区加载到 Office 应用程序之前，可以设置此类型的某些成员。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-120">Some members of this type can be set only before the Ribbon is loaded into the Office application.</span></span> <span data-ttu-id="eb2cb-121">有关如何设置这些属性的信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-121">For information about setting these properties, see [Ribbon Object Model Overview](/visualstudio/vsto/ribbon-object-model-overview).</span></span>  
+ <span data-ttu-id="1ec25-120">只有在功能区加载到 Office 应用程序中之前, 才能设置此类型的某些成员。</span><span class="sxs-lookup"><span data-stu-id="1ec25-120">Some members of this type can be set only before the Ribbon is loaded into the Office application.</span></span> <span data-ttu-id="1ec25-121">有关设置这些属性的信息, 请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。</span><span class="sxs-lookup"><span data-stu-id="1ec25-121">For information about setting these properties, see [Ribbon Object Model Overview](/visualstudio/vsto/ribbon-object-model-overview).</span></span>  
   
  [!INCLUDE[vsto_interface](~/includes/vsto-interface-md.md)]  
   
-## <a name="usage"></a><span data-ttu-id="eb2cb-122">用法</span><span class="sxs-lookup"><span data-stu-id="eb2cb-122">Usage</span></span>  
+## <a name="usage"></a><span data-ttu-id="1ec25-122">用法</span><span class="sxs-lookup"><span data-stu-id="1ec25-122">Usage</span></span>  
  [!INCLUDE[vsto_net35mref](~/includes/vsto-net35mref-md.md)]  
   
  ]]></format>
@@ -72,7 +75,7 @@
   </Docs>
   <Members>
     <Member MemberName="ButtonClick">
-      <MemberSignature Language="C#" Value="public event Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler ButtonClick;" />
+      <MemberSignature Language="C#" Value="event Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler ButtonClick;" />
       <MemberSignature Language="ILAsm" Value=".event class Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler ButtonClick" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ButtonClick" />
       <MemberType>Event</MemberType>
@@ -84,12 +87,12 @@
         <ReturnType>Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="eb2cb-123">用户单击 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" /> 上的按钮时发生。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-123">Occurs when a user clicks a button on a <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" />.</span></span></summary>
+        <summary><span data-ttu-id="1ec25-123">用户单击 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" /> 上的按钮时发生。</span><span class="sxs-lookup"><span data-stu-id="1ec25-123">Occurs when a user clicks a button on a <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" />.</span></span></summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="eb2cb-124">在用户单击时不会引发此事件`Item`上<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-124">This event is not raised when a user clicks an `Item` on a <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>.</span></span>  
+ <span data-ttu-id="1ec25-124">当用户单击`Item` <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>上的时, 不会引发此事件。</span><span class="sxs-lookup"><span data-stu-id="1ec25-124">This event is not raised when a user clicks an `Item` on a <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>.</span></span>  
   
  ]]></format>
         </remarks>
@@ -108,15 +111,15 @@
         <ReturnType>System.Collections.Generic.IList&lt;Microsoft.Office.Tools.Ribbon.RibbonButton&gt;</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="eb2cb-125">获取属于此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" /> 的 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonButton" /> 对象集合。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-125">Gets a collection of <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonButton" /> objects that belong to this <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" />.</span></span></summary>
-        <value><span data-ttu-id="eb2cb-126">一个属于此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" /> 的 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonButton" /> 对象集合。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-126">A collection of <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonButton" /> objects that belong to this <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" />.</span></span></value>
+        <summary><span data-ttu-id="1ec25-125">获取属于此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" /> 的 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonButton" /> 对象集合。</span><span class="sxs-lookup"><span data-stu-id="1ec25-125">Gets a collection of <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonButton" /> objects that belong to this <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" />.</span></span></summary>
+        <value><span data-ttu-id="1ec25-126">一个属于此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" /> 的 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonButton" /> 对象集合。</span><span class="sxs-lookup"><span data-stu-id="1ec25-126">A collection of <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonButton" /> objects that belong to this <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" />.</span></span></value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="eb2cb-127"><xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>控件可同时包含<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem>控件和<xref:Microsoft.Office.Tools.Ribbon.RibbonButton>控件。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-127">The <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown> control can contain both <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem> controls and <xref:Microsoft.Office.Tools.Ribbon.RibbonButton> controls.</span></span>  
+ <span data-ttu-id="1ec25-127">控件可以同时<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem>包含控件和<xref:Microsoft.Office.Tools.Ribbon.RibbonButton>控件。 <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown></span><span class="sxs-lookup"><span data-stu-id="1ec25-127">The <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown> control can contain both <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem> controls and <xref:Microsoft.Office.Tools.Ribbon.RibbonButton> controls.</span></span>  
   
- <span data-ttu-id="eb2cb-128">您可以将按钮添加到<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Buttons%2A>只能在功能区加载之前的属性。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-128">You can add buttons to the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Buttons%2A> property only before the Ribbon loads.</span></span> <span data-ttu-id="eb2cb-129">有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-129">For more information, see [Ribbon Object Model Overview](/visualstudio/vsto/ribbon-object-model-overview).</span></span>  
+ <span data-ttu-id="1ec25-128">只能将按钮添加到<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Buttons%2A>属性, 然后才能加载功能区。</span><span class="sxs-lookup"><span data-stu-id="1ec25-128">You can add buttons to the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Buttons%2A> property only before the Ribbon loads.</span></span> <span data-ttu-id="1ec25-129">有关详细信息, 请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。</span><span class="sxs-lookup"><span data-stu-id="1ec25-129">For more information, see [Ribbon Object Model Overview](/visualstudio/vsto/ribbon-object-model-overview).</span></span>  
   
  ]]></format>
         </remarks>
@@ -135,19 +138,19 @@
         <ReturnType>System.Drawing.Image</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="eb2cb-130">获取或设置显示在此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" /> 上的图像。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-130">Gets or sets an image this is displayed on this <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" />.</span></span></summary>
-        <value><span data-ttu-id="eb2cb-131">显示在 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" /> 上的图像。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-131">The image that is displayed on this <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" />.</span></span></value>
+        <summary><span data-ttu-id="1ec25-130">获取或设置显示在此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" /> 上的图像。</span><span class="sxs-lookup"><span data-stu-id="1ec25-130">Gets or sets an image this is displayed on this <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" />.</span></span></summary>
+        <value><span data-ttu-id="1ec25-131">显示在 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" /> 上的图像。</span><span class="sxs-lookup"><span data-stu-id="1ec25-131">The image that is displayed on this <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" />.</span></span></value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="eb2cb-132">建议的图像格式是 PNG，因为 PNG 格式的图像支持通过其 alpha 通道的透明度。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-132">The recommended image format is PNG, because images in the PNG format support transparency through their alpha channel.</span></span>  
+ <span data-ttu-id="1ec25-132">建议的图像格式为 PNG, 因为 PNG 格式的图像通过其 alpha 通道支持透明度。</span><span class="sxs-lookup"><span data-stu-id="1ec25-132">The recommended image format is PNG, because images in the PNG format support transparency through their alpha channel.</span></span>  
   
- <span data-ttu-id="eb2cb-133"><xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Image%2A>属性标识控件显示的图像。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-133">The <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Image%2A> property identifies an image that is displayed by the control.</span></span> <span data-ttu-id="eb2cb-134">在设计时或在运行时，可以设置此属性。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-134">This property can be set at design time or at run time.</span></span> <span data-ttu-id="eb2cb-135">如果在运行时中更新此属性，该控件的外观被更新以反映更改。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-135">If you update this property at run time, the control's appearance is updated to reflect the change.</span></span>  
+ <span data-ttu-id="1ec25-133"><xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Image%2A>属性标识控件显示的图像。</span><span class="sxs-lookup"><span data-stu-id="1ec25-133">The <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Image%2A> property identifies an image that is displayed by the control.</span></span> <span data-ttu-id="1ec25-134">此属性可在设计时或运行时设置。</span><span class="sxs-lookup"><span data-stu-id="1ec25-134">This property can be set at design time or at run time.</span></span> <span data-ttu-id="1ec25-135">如果在运行时更新此属性, 控件的外观将更新以反映更改。</span><span class="sxs-lookup"><span data-stu-id="1ec25-135">If you update this property at run time, the control's appearance is updated to reflect the change.</span></span>  
   
- <span data-ttu-id="eb2cb-136">如果<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Image%2A>设置属性，则<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.OfficeImageId%2A>和<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ImageName%2A>属性将被忽略。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-136">If the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Image%2A> property is set, the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.OfficeImageId%2A> and <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ImageName%2A> properties are ignored.</span></span> <span data-ttu-id="eb2cb-137">尽管<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Image%2A>属性可让您更好地控制比其他两个属性，这一点可以是速度较慢，因为每次更新控件时，图像对象发送到 Office 应用程序。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-137">Although the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Image%2A> property gives you more control than the other two properties do, it can be slower because the image object is sent to the Office application every time the control is updated.</span></span>  
+ <span data-ttu-id="1ec25-136">如果设置了<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.OfficeImageId%2A> <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ImageName%2A>属性, 则将忽略和属性。 <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Image%2A></span><span class="sxs-lookup"><span data-stu-id="1ec25-136">If the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Image%2A> property is set, the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.OfficeImageId%2A> and <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ImageName%2A> properties are ignored.</span></span> <span data-ttu-id="1ec25-137"><xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Image%2A>尽管属性比其他两个属性提供的控件更多, 但它可能会变慢, 因为每次更新控件时, 都会将 image 对象发送到 Office 应用程序。</span><span class="sxs-lookup"><span data-stu-id="1ec25-137">Although the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Image%2A> property gives you more control than the other two properties do, it can be slower because the image object is sent to the Office application every time the control is updated.</span></span>  
   
- <span data-ttu-id="eb2cb-138"><xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ShowImage%2A>属性必须为`true`控件来显示图像。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-138">The <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ShowImage%2A> property must be `true` for the control to display the image.</span></span> <span data-ttu-id="eb2cb-139">当您将设置<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Image%2A>属性在设计时，Visual Studio 将自动设置<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ShowImage%2A>属性设置为`true`。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-139">When you set the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Image%2A> property at design time, Visual Studio automatically sets the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ShowImage%2A> property to `true`.</span></span> <span data-ttu-id="eb2cb-140">如果您设置<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Image%2A>在运行时属性，则你必须设置<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ShowImage%2A>属性设置为`true`在代码中。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-140">If you set the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Image%2A> property at run time, you must set the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ShowImage%2A> property to `true` in your code.</span></span>  
+ <span data-ttu-id="1ec25-138"><xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ShowImage%2A> 属性`true`必须为, 控件才能显示图像。</span><span class="sxs-lookup"><span data-stu-id="1ec25-138">The <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ShowImage%2A> property must be `true` for the control to display the image.</span></span> <span data-ttu-id="1ec25-139">在设计时设置<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Image%2A>属性时, Visual Studio 会将<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ShowImage%2A>属性自动设置为`true`。</span><span class="sxs-lookup"><span data-stu-id="1ec25-139">When you set the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Image%2A> property at design time, Visual Studio automatically sets the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ShowImage%2A> property to `true`.</span></span> <span data-ttu-id="1ec25-140">如果在运行时<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Image%2A>设置属性, 必须在代码中<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ShowImage%2A>将属性设置为`true` 。</span><span class="sxs-lookup"><span data-stu-id="1ec25-140">If you set the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Image%2A> property at run time, you must set the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ShowImage%2A> property to `true` in your code.</span></span>  
   
  ]]></format>
         </remarks>
@@ -166,19 +169,19 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="eb2cb-141">获取或设置一个名称，该名称可用于在 <see cref="E:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage" /> 事件处理程序中标识控件图像。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-141">Gets or sets the name that you can use in the <see cref="E:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage" /> event handler to identify an image for the control.</span></span></summary>
-        <value><span data-ttu-id="eb2cb-142">一个字符串，可用于在 <see cref="E:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage" /> 事件处理程序中标识控件图像。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-142">A string that you can use in the <see cref="E:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage" /> event handler to identify an image for the control.</span></span></value>
+        <summary><span data-ttu-id="1ec25-141">获取或设置一个名称，该名称可用于在 <see cref="E:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage" /> 事件处理程序中标识控件图像。</span><span class="sxs-lookup"><span data-stu-id="1ec25-141">Gets or sets the name that you can use in the <see cref="E:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage" /> event handler to identify an image for the control.</span></span></summary>
+        <value><span data-ttu-id="1ec25-142">一个字符串，可用于在 <see cref="E:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage" /> 事件处理程序中标识控件图像。</span><span class="sxs-lookup"><span data-stu-id="1ec25-142">A string that you can use in the <see cref="E:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage" /> event handler to identify an image for the control.</span></span></value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="eb2cb-143"><xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ImageName%2A>属性标识控件显示的图像。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-143">The <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ImageName%2A> property identifies an image that is displayed by the control.</span></span> <span data-ttu-id="eb2cb-144">Office 应用程序此映像从你的解决方案只检索一次，以提高性能。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-144">The Office application retrieves this image from your solution only once, to improve performance.</span></span> <span data-ttu-id="eb2cb-145">此属性可以设置只能在设计时，因为它标识的图像加载过程<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>事件。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-145">This property can be set only at design time, because the image it identifies is loaded during the <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage> event.</span></span> <span data-ttu-id="eb2cb-146"><xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage> 时将引发一次每个映像名称显示在功能区。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-146"><xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage> is raised only once per image name, when the Ribbon is displayed.</span></span> <span data-ttu-id="eb2cb-147">之后，不能使用此属性更改控件图像。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-147">After that, the control image cannot be changed by using this property.</span></span> <span data-ttu-id="eb2cb-148">有关如何设置此属性的详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-148">For more information about setting this property, see [Ribbon Object Model Overview](/visualstudio/vsto/ribbon-object-model-overview).</span></span>  
+ <span data-ttu-id="1ec25-143"><xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ImageName%2A>属性标识控件显示的图像。</span><span class="sxs-lookup"><span data-stu-id="1ec25-143">The <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ImageName%2A> property identifies an image that is displayed by the control.</span></span> <span data-ttu-id="1ec25-144">Office 应用程序仅从解决方案中检索一次此映像, 以提高性能。</span><span class="sxs-lookup"><span data-stu-id="1ec25-144">The Office application retrieves this image from your solution only once, to improve performance.</span></span> <span data-ttu-id="1ec25-145">只能在设计时设置此属性, 因为该属性标识的图像将在<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>事件中加载。</span><span class="sxs-lookup"><span data-stu-id="1ec25-145">This property can be set only at design time, because the image it identifies is loaded during the <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage> event.</span></span> <span data-ttu-id="1ec25-146"><xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>当显示功能区时, 每个映像名称只引发一次。</span><span class="sxs-lookup"><span data-stu-id="1ec25-146"><xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage> is raised only once per image name, when the Ribbon is displayed.</span></span> <span data-ttu-id="1ec25-147">之后, 不能使用此属性更改控制图像。</span><span class="sxs-lookup"><span data-stu-id="1ec25-147">After that, the control image cannot be changed by using this property.</span></span> <span data-ttu-id="1ec25-148">有关设置此属性的详细信息, 请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。</span><span class="sxs-lookup"><span data-stu-id="1ec25-148">For more information about setting this property, see [Ribbon Object Model Overview](/visualstudio/vsto/ribbon-object-model-overview).</span></span>  
   
- <span data-ttu-id="eb2cb-149">若要加载图像，将代码添加到<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-149">To load the image, add code to the <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage> event handler.</span></span> <span data-ttu-id="eb2cb-150">检查<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs.ImageName%2A>的属性<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs>并设置<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs.Image%2A>属性的<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs>到想要加载的图像的对象。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-150">Check the <xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs.ImageName%2A> property of the <xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs> and set the <xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs.Image%2A> property of the <xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs> object to the image that you want to load.</span></span>  
+ <span data-ttu-id="1ec25-149">若要加载图像, 请将代码添加<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>到事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="1ec25-149">To load the image, add code to the <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage> event handler.</span></span> <span data-ttu-id="1ec25-150"><xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs.Image%2A>检查的<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs>属性,并<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs>将对象的属性设置为要加载的图像。 <xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs.ImageName%2A></span><span class="sxs-lookup"><span data-stu-id="1ec25-150">Check the <xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs.ImageName%2A> property of the <xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs> and set the <xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs.Image%2A> property of the <xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventArgs> object to the image that you want to load.</span></span>  
   
- <span data-ttu-id="eb2cb-151">如果忽略此属性<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Image%2A>属性或<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.OfficeImageId%2A>属性设置。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-151">This property is ignored if either the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Image%2A> property or the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.OfficeImageId%2A> property is set.</span></span> <span data-ttu-id="eb2cb-152">标识的图像<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ImageName%2A>属性可以稍快于标识的图像加载<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Image%2A>显示属性，因为 Office 应用程序中检索映像解决方案仅在首次从功能区。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-152">Images identified by the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ImageName%2A> property can be loaded slightly faster than images identified by the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Image%2A> property, because the Office application retrieves the image from your solution only the first time the Ribbon is displayed.</span></span>  
+ <span data-ttu-id="1ec25-151">如果设置了<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Image%2A>属性<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.OfficeImageId%2A>或属性, 则忽略此属性。</span><span class="sxs-lookup"><span data-stu-id="1ec25-151">This property is ignored if either the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Image%2A> property or the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.OfficeImageId%2A> property is set.</span></span> <span data-ttu-id="1ec25-152">与<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Image%2A>属性标识的<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ImageName%2A>图像相比, 属性所标识的映像的加载速度要快得多, 因为 Office 应用程序只会在首次显示功能区时从你的解决方案中检索该图像。</span><span class="sxs-lookup"><span data-stu-id="1ec25-152">Images identified by the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ImageName%2A> property can be loaded slightly faster than images identified by the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Image%2A> property, because the Office application retrieves the image from your solution only the first time the Ribbon is displayed.</span></span>  
   
- <span data-ttu-id="eb2cb-153"><xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ShowImage%2A>属性必须为`true`控件来显示图像。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-153">The <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ShowImage%2A> property must be `true` for the control to display the image.</span></span> <span data-ttu-id="eb2cb-154">当您将设置<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ImageName%2A>属性在设计时，Visual Studio 将自动设置<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ShowImage%2A>属性设置为`true`。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-154">When you set the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ImageName%2A> property at design time, Visual Studio automatically sets the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ShowImage%2A> property to `true`.</span></span> <span data-ttu-id="eb2cb-155">如果您设置<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ImageName%2A>在运行时属性，则你必须设置<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ShowImage%2A>属性设置为`true`在代码中。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-155">If you set the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ImageName%2A> property at run time, you must set the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ShowImage%2A> property to `true` in your code.</span></span>  
+ <span data-ttu-id="1ec25-153"><xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ShowImage%2A> 属性`true`必须为, 控件才能显示图像。</span><span class="sxs-lookup"><span data-stu-id="1ec25-153">The <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ShowImage%2A> property must be `true` for the control to display the image.</span></span> <span data-ttu-id="1ec25-154">在设计时设置<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ImageName%2A>属性时, Visual Studio 会将<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ShowImage%2A>属性自动设置为`true`。</span><span class="sxs-lookup"><span data-stu-id="1ec25-154">When you set the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ImageName%2A> property at design time, Visual Studio automatically sets the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ShowImage%2A> property to `true`.</span></span> <span data-ttu-id="1ec25-155">如果在运行时<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ImageName%2A>设置属性, 必须在代码中<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ShowImage%2A>将属性设置为`true` 。</span><span class="sxs-lookup"><span data-stu-id="1ec25-155">If you set the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ImageName%2A> property at run time, you must set the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ShowImage%2A> property to `true` in your code.</span></span>  
   
  ]]></format>
         </remarks>
@@ -197,20 +200,20 @@
         <ReturnType>System.Collections.Generic.IList&lt;Microsoft.Office.Tools.Ribbon.RibbonDropDownItem&gt;</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="eb2cb-156">获取此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" /> 中项的集合。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-156">Gets a collection of the items in this <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" />.</span></span></summary>
-        <value><span data-ttu-id="eb2cb-157"><see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" /> 中项的集合。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-157">A collection of collection of items in the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" />.</span></span></value>
+        <summary><span data-ttu-id="1ec25-156">获取此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" /> 中项的集合。</span><span class="sxs-lookup"><span data-stu-id="1ec25-156">Gets a collection of the items in this <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" />.</span></span></summary>
+        <value><span data-ttu-id="1ec25-157"><see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" /> 中项的集合。</span><span class="sxs-lookup"><span data-stu-id="1ec25-157">A collection of collection of items in the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" />.</span></span></value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="eb2cb-158">您可以添加<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem>对象添加到<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>在设计时或在运行时。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-158">You can add <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem> objects to a <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown> at design time or at run time.</span></span>  
+ <span data-ttu-id="1ec25-158">可以<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>在设计<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem>时或运行时向添加对象。</span><span class="sxs-lookup"><span data-stu-id="1ec25-158">You can add <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem> objects to a <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown> at design time or at run time.</span></span>  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="ItemsLoading">
-      <MemberSignature Language="C#" Value="public event Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler ItemsLoading;" />
+      <MemberSignature Language="C#" Value="event Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler ItemsLoading;" />
       <MemberSignature Language="ILAsm" Value=".event class Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler ItemsLoading" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ItemsLoading" />
       <MemberType>Event</MemberType>
@@ -222,14 +225,14 @@
         <ReturnType>Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="eb2cb-159">在向 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" /> 中加载控件时发生。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-159">Occurs when controls are loaded into the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" />.</span></span></summary>
+        <summary><span data-ttu-id="1ec25-159">在向 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" /> 中加载控件时发生。</span><span class="sxs-lookup"><span data-stu-id="1ec25-159">Occurs when controls are loaded into the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" />.</span></span></summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="eb2cb-160">第一次在用户展开下拉列表菜单被引发此事件。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-160">This event is raised the first time the user expands the drop-down menu.</span></span>  
+ <span data-ttu-id="1ec25-160">用户第一次展开下拉菜单时, 将引发此事件。</span><span class="sxs-lookup"><span data-stu-id="1ec25-160">This event is raised the first time the user expands the drop-down menu.</span></span>  
   
- <span data-ttu-id="eb2cb-161">如果在运行时修改菜单上的控件或更改任何属性的这<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>，也是首次在用户展开菜单后所做的更改将引发此事件。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-161">If you modify the controls on the menu at run time or change any properties of this <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>, this event is also raised the first time the user expands the menu after the change is made.</span></span>  
+ <span data-ttu-id="1ec25-161">如果在运行时修改菜单上的控件或更改此<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>的任何属性, 则当用户首次在更改之后展开菜单时, 也会引发此事件。</span><span class="sxs-lookup"><span data-stu-id="1ec25-161">If you modify the controls on the menu at run time or change any properties of this <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>, this event is also raised the first time the user expands the menu after the change is made.</span></span>  
   
  ]]></format>
         </remarks>
@@ -248,17 +251,17 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="eb2cb-162">获取或设置此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" /> 的键盘快捷键。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-162">Gets or sets the keyboard shortcut for this <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" />.</span></span></summary>
-        <value><span data-ttu-id="eb2cb-163">此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" /> 的当前键盘快捷键。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-163">The current keyboard shortcut for this <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" />.</span></span></value>
+        <summary><span data-ttu-id="1ec25-162">获取或设置此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" /> 的键盘快捷键。</span><span class="sxs-lookup"><span data-stu-id="1ec25-162">Gets or sets the keyboard shortcut for this <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" />.</span></span></summary>
+        <value><span data-ttu-id="1ec25-163">此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" /> 的当前键盘快捷键。</span><span class="sxs-lookup"><span data-stu-id="1ec25-163">The current keyboard shortcut for this <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" />.</span></span></value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="eb2cb-164">Keytip 必须包含 1 到 3 个大写字符，不能包含空格、 制表符或换行字符。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-164">A KeyTip must have from 1 to 3 uppercase characters, and must not contain spaces, tabs, or newline characters.</span></span>  
+ <span data-ttu-id="1ec25-164">KeyTip 必须包含1至3个大写字符, 不能包含空格、制表符或换行符。</span><span class="sxs-lookup"><span data-stu-id="1ec25-164">A KeyTip must have from 1 to 3 uppercase characters, and must not contain spaces, tabs, or newline characters.</span></span>  
   
- <span data-ttu-id="eb2cb-165">Keytip 有时也称为访问密钥或加速器和用作激活控件的快捷组合键。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-165">KeyTips are sometimes known as access keys or accelerators and are used as shortcut key combinations that activate controls.</span></span> <span data-ttu-id="eb2cb-166">按下 ALT 键时，键提示将显示在功能区上。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-166">KeyTips appear on the Ribbon when you press the ALT key.</span></span> <span data-ttu-id="eb2cb-167">如果内置控件或从其他加载项，你的快捷键提示与键提示冲突，Microsoft Office 可能会自动分配非冲突快捷键提示值。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-167">If your KeyTip conflicts with KeyTips for built-in controls or from other add-ins, Microsoft Office might assign non-conflicting KeyTip values automatically.</span></span>  
+ <span data-ttu-id="1ec25-165">Keytip 有时称为 "访问键" 或 "加速器", 用作激活控件的快捷键组合。</span><span class="sxs-lookup"><span data-stu-id="1ec25-165">KeyTips are sometimes known as access keys or accelerators and are used as shortcut key combinations that activate controls.</span></span> <span data-ttu-id="1ec25-166">按 ALT 键时, 功能区上将显示键提示。</span><span class="sxs-lookup"><span data-stu-id="1ec25-166">KeyTips appear on the Ribbon when you press the ALT key.</span></span> <span data-ttu-id="1ec25-167">如果 KeyTip 与内置控件或其他外接程序的 keytip 发生冲突, Microsoft Office 可能会自动分配不冲突的 KeyTip 值。</span><span class="sxs-lookup"><span data-stu-id="1ec25-167">If your KeyTip conflicts with KeyTips for built-in controls or from other add-ins, Microsoft Office might assign non-conflicting KeyTip values automatically.</span></span>  
   
- <span data-ttu-id="eb2cb-168">有关详细信息，请参阅[使用键盘处理功能区程序](http://go.microsoft.com/fwlink/?LinkId=93523)。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-168">For more information, see [Use the keyboard to work with Ribbon programs](http://go.microsoft.com/fwlink/?LinkId=93523).</span></span>  
+ <span data-ttu-id="1ec25-168">有关详细信息, 请参阅[使用键盘处理功能区程序](http://go.microsoft.com/fwlink/?LinkId=93523)。</span><span class="sxs-lookup"><span data-stu-id="1ec25-168">For more information, see [Use the keyboard to work with Ribbon programs](http://go.microsoft.com/fwlink/?LinkId=93523).</span></span>  
   
  ]]></format>
         </remarks>
@@ -277,8 +280,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="eb2cb-169">获取或设置此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" /> 上显示的文本。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-169">Gets or sets the text that appears on this <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" />.</span></span></summary>
-        <value><span data-ttu-id="eb2cb-170">此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" /> 上显示的文本。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-170">The text that appears on this <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" />.</span></span></value>
+        <summary><span data-ttu-id="1ec25-169">获取或设置此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" /> 上显示的文本。</span><span class="sxs-lookup"><span data-stu-id="1ec25-169">Gets or sets the text that appears on this <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" />.</span></span></summary>
+        <value><span data-ttu-id="1ec25-170">此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" /> 上显示的文本。</span><span class="sxs-lookup"><span data-stu-id="1ec25-170">The text that appears on this <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" />.</span></span></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -295,32 +298,32 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="eb2cb-171">如果要使用内置 Microsoft Office 图标，请获取或设置要在 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" /> 上显示的图像。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-171">Gets or sets the image to display on the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" />, if you want to use a built-in Microsoft Office icon.</span></span></summary>
-        <value><span data-ttu-id="eb2cb-172">作为此控件图标的内置 Microsoft Office 图标的 ID。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-172">The ID of a built-in Microsoft Office icon that serves as the icon for this control.</span></span></value>
+        <summary><span data-ttu-id="1ec25-171">如果要使用内置 Microsoft Office 图标，请获取或设置要在 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" /> 上显示的图像。</span><span class="sxs-lookup"><span data-stu-id="1ec25-171">Gets or sets the image to display on the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" />, if you want to use a built-in Microsoft Office icon.</span></span></summary>
+        <value><span data-ttu-id="1ec25-172">作为此控件图标的内置 Microsoft Office 图标的 ID。</span><span class="sxs-lookup"><span data-stu-id="1ec25-172">The ID of a built-in Microsoft Office icon that serves as the icon for this control.</span></span></value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="eb2cb-173"><xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.OfficeImageId%2A>属性标识的控件显示 Office 图标。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-173">The <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.OfficeImageId%2A> property identifies an Office icon that is displayed by the control.</span></span> <span data-ttu-id="eb2cb-174">属性值是一个字符串，标识`imageMso`所选图标的值。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-174">The property value is a string that identifies the `imageMso` value of the selected icon.</span></span> <span data-ttu-id="eb2cb-175">在设计时或在运行时，可以设置此属性。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-175">This property can be set at design time or at run time.</span></span> <span data-ttu-id="eb2cb-176">如果在运行时中更新此属性，该控件的外观被更新以反映更改。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-176">If you update this property at run time, the control's appearance is updated to reflect the change.</span></span>  
+ <span data-ttu-id="1ec25-173"><xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.OfficeImageId%2A>属性标识控件显示的 Office 图标。</span><span class="sxs-lookup"><span data-stu-id="1ec25-173">The <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.OfficeImageId%2A> property identifies an Office icon that is displayed by the control.</span></span> <span data-ttu-id="1ec25-174">属性值是标识`imageMso`所选图标的值的字符串。</span><span class="sxs-lookup"><span data-stu-id="1ec25-174">The property value is a string that identifies the `imageMso` value of the selected icon.</span></span> <span data-ttu-id="1ec25-175">此属性可在设计时或运行时设置。</span><span class="sxs-lookup"><span data-stu-id="1ec25-175">This property can be set at design time or at run time.</span></span> <span data-ttu-id="1ec25-176">如果在运行时更新此属性, 控件的外观将更新以反映更改。</span><span class="sxs-lookup"><span data-stu-id="1ec25-176">If you update this property at run time, the control's appearance is updated to reflect the change.</span></span>  
   
- <span data-ttu-id="eb2cb-177">有关一系列`imageMso`值，请参阅 Microsoft 下载中心页[Office 2010 外接程序： 图标库](http://go.microsoft.com/fwlink/?LinkID=220760)。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-177">For a list of `imageMso` values, see the Microsoft Download Center page [Office 2010 Add-In: Icons Gallery](http://go.microsoft.com/fwlink/?LinkID=220760).</span></span>  
+ <span data-ttu-id="1ec25-177">有关`imageMso`值的列表, 请参阅 Microsoft 下载中心页面[Office 2010 外接程序:图标库](http://go.microsoft.com/fwlink/?LinkID=220760)。</span><span class="sxs-lookup"><span data-stu-id="1ec25-177">For a list of `imageMso` values, see the Microsoft Download Center page [Office 2010 Add-In: Icons Gallery](http://go.microsoft.com/fwlink/?LinkID=220760).</span></span>  
   
- <span data-ttu-id="eb2cb-178">如果忽略此属性<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Image%2A>属性设置。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-178">This property is ignored if the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Image%2A> property is set.</span></span> <span data-ttu-id="eb2cb-179">标识的图像<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.OfficeImageId%2A>属性可以稍快于标识的图像加载<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Image%2A>属性，因为这些图像缓存在 Office 应用程序。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-179">Images identified by the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.OfficeImageId%2A> property can be loaded slightly faster than images identified by the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Image%2A> property, because the images are cached in the Office application.</span></span>  
+ <span data-ttu-id="1ec25-178">如果设置了<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Image%2A>属性, 则忽略此属性。</span><span class="sxs-lookup"><span data-stu-id="1ec25-178">This property is ignored if the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Image%2A> property is set.</span></span> <span data-ttu-id="1ec25-179">由于图像缓存在<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.OfficeImageId%2A> Office 应用程序中, 因此可以比<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Image%2A>属性标识的图像稍快地加载属性标识的图像。</span><span class="sxs-lookup"><span data-stu-id="1ec25-179">Images identified by the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.OfficeImageId%2A> property can be loaded slightly faster than images identified by the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Image%2A> property, because the images are cached in the Office application.</span></span>  
   
- <span data-ttu-id="eb2cb-180"><xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ShowImage%2A>属性必须为`true`控件来显示图像。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-180">The <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ShowImage%2A> property must be `true` for the control to display the image.</span></span> <span data-ttu-id="eb2cb-181">当您将设置<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.OfficeImageId%2A>属性在设计时，Visual Studio 将自动设置<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ShowImage%2A>属性设置为`true`。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-181">When you set the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.OfficeImageId%2A> property at design time, Visual Studio automatically sets the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ShowImage%2A> property to `true`.</span></span> <span data-ttu-id="eb2cb-182">如果您设置<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.OfficeImageId%2A>在运行时属性，则你必须设置<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ShowImage%2A>属性设置为`true`在代码中。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-182">If you set the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.OfficeImageId%2A> property at run time, you must set the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ShowImage%2A> property to `true` in your code.</span></span>  
+ <span data-ttu-id="1ec25-180"><xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ShowImage%2A> 属性`true`必须为, 控件才能显示图像。</span><span class="sxs-lookup"><span data-stu-id="1ec25-180">The <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ShowImage%2A> property must be `true` for the control to display the image.</span></span> <span data-ttu-id="1ec25-181">在设计时设置<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.OfficeImageId%2A>属性时, Visual Studio 会将<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ShowImage%2A>属性自动设置为`true`。</span><span class="sxs-lookup"><span data-stu-id="1ec25-181">When you set the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.OfficeImageId%2A> property at design time, Visual Studio automatically sets the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ShowImage%2A> property to `true`.</span></span> <span data-ttu-id="1ec25-182">如果在运行时<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.OfficeImageId%2A>设置属性, 必须在代码中<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ShowImage%2A>将属性设置为`true` 。</span><span class="sxs-lookup"><span data-stu-id="1ec25-182">If you set the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.OfficeImageId%2A> property at run time, you must set the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ShowImage%2A> property to `true` in your code.</span></span>  
   
    
   
 ## Examples  
- <span data-ttu-id="eb2cb-183">下面的示例为下拉列表框中指定一个 Microsoft Office 图标。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-183">The following example assigns a Microsoft Office icon to a drop down box.</span></span>  
+ <span data-ttu-id="1ec25-183">下面的示例将 Microsoft Office 图标分配给下拉框。</span><span class="sxs-lookup"><span data-stu-id="1ec25-183">The following example assigns a Microsoft Office icon to a drop down box.</span></span>  
   
- <span data-ttu-id="eb2cb-184">若要运行此代码示例，必须首先执行以下步骤：</span><span class="sxs-lookup"><span data-stu-id="eb2cb-184">To run this code example, you must first perform the following steps:</span></span>  
+ <span data-ttu-id="1ec25-184">若要运行此代码示例, 必须首先执行以下步骤:</span><span class="sxs-lookup"><span data-stu-id="1ec25-184">To run this code example, you must first perform the following steps:</span></span>  
   
-1.  <span data-ttu-id="eb2cb-185">添加**功能区 （可视化设计器）** 到 Office 项目的项。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-185">Add a **Ribbon (Visual Designer)** item to an Office project.</span></span>  
+1.  <span data-ttu-id="1ec25-185">向 Office 项目添加 "**功能区 (可视化设计器)** " 项。</span><span class="sxs-lookup"><span data-stu-id="1ec25-185">Add a **Ribbon (Visual Designer)** item to an Office project.</span></span>  
   
-2.  <span data-ttu-id="eb2cb-186">将组添加到自定义选项卡。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-186">Add a group to the custom tab.</span></span>  
+2.  <span data-ttu-id="1ec25-186">将组添加到自定义选项卡。</span><span class="sxs-lookup"><span data-stu-id="1ec25-186">Add a group to the custom tab.</span></span>  
   
-3.  <span data-ttu-id="eb2cb-187">添加到组下拉框。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-187">Add a drop down box to the group.</span></span>  
+3.  <span data-ttu-id="1ec25-187">向组中添加一个下拉框。</span><span class="sxs-lookup"><span data-stu-id="1ec25-187">Add a drop down box to the group.</span></span>  
   
  [!code-csharp[Trin_Ribbon_ControlProperties#3](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_Ribbon_ControlProperties/CS/Ribbon1.cs#3)]
  [!code-vb[Trin_Ribbon_ControlProperties#3](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_Ribbon_ControlProperties/VB/Ribbon1.vb#3)]  
@@ -342,15 +345,15 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="eb2cb-188">获取或设置用户将指针移到 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" /> 上方时显示的提示文本。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-188">Gets or sets tip text that appears when the user moves the pointer over the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" />.</span></span></summary>
-        <value><span data-ttu-id="eb2cb-189">用户将指针移到控件上方时显示的文本。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-189">The text that appears when the user moves the pointer over the control.</span></span></value>
+        <summary><span data-ttu-id="1ec25-188">获取或设置用户将指针移到 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" /> 上方时显示的提示文本。</span><span class="sxs-lookup"><span data-stu-id="1ec25-188">Gets or sets tip text that appears when the user moves the pointer over the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" />.</span></span></summary>
+        <value><span data-ttu-id="1ec25-189">用户将指针移到控件上方时显示的文本。</span><span class="sxs-lookup"><span data-stu-id="1ec25-189">The text that appears when the user moves the pointer over the control.</span></span></value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="eb2cb-190">屏幕提示值必须是长度小于 1024年个字符。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-190">The ScreenTip value must be less than 1024 characters in length.</span></span>  
+ <span data-ttu-id="1ec25-190">屏幕提示值的长度必须小于1024个字符。</span><span class="sxs-lookup"><span data-stu-id="1ec25-190">The ScreenTip value must be less than 1024 characters in length.</span></span>  
   
- <span data-ttu-id="eb2cb-191">当<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SuperTip%2A>设置属性，则<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ScreenTip%2A>值将显示的标题为<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SuperTip%2A>。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-191">When the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SuperTip%2A> property is set, the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ScreenTip%2A> value appears as the title of the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SuperTip%2A>.</span></span>  
+ <span data-ttu-id="1ec25-191">设置属性时<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ScreenTip%2A> , 值显示<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SuperTip%2A>为的标题。 <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SuperTip%2A></span><span class="sxs-lookup"><span data-stu-id="1ec25-191">When the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SuperTip%2A> property is set, the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ScreenTip%2A> value appears as the title of the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SuperTip%2A>.</span></span>  
   
  ]]></format>
         </remarks>
@@ -374,17 +377,17 @@
         <ReturnType>Microsoft.Office.Tools.Ribbon.RibbonDropDownItem</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="eb2cb-192">获取或设置当前选定的 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem" />。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-192">Gets or sets the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem" /> that is currently selected.</span></span></summary>
-        <value><span data-ttu-id="eb2cb-193">当前选定的 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem" />。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-193">The <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem" /> that is currently selected.</span></span></value>
+        <summary><span data-ttu-id="1ec25-192">获取或设置当前选定的 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem" />。</span><span class="sxs-lookup"><span data-stu-id="1ec25-192">Gets or sets the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem" /> that is currently selected.</span></span></summary>
+        <value><span data-ttu-id="1ec25-193">当前选定的 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem" />。</span><span class="sxs-lookup"><span data-stu-id="1ec25-193">The <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem" /> that is currently selected.</span></span></value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="eb2cb-194">此属性设置为<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem>导致要显示在下拉列表的文本框部分中的项。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-194">Setting this property to a <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem> causes the item to appear in the text box portion of the drop-down list.</span></span> <span data-ttu-id="eb2cb-195"><xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem>引用将分配给<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectedItem%2A>属性必须存在于这<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>对象的<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Items%2A>集合。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-195">The <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem> reference that you assign to the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectedItem%2A> property must exist in this <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown> object's <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Items%2A> collection.</span></span> <span data-ttu-id="eb2cb-196">否则为<xref:System.ArgumentException>将引发。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-196">Otherwise, an <xref:System.ArgumentException> will be thrown.</span></span>  
+ <span data-ttu-id="1ec25-194">如果将此属性设置<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem>为, 则该项目将显示在下拉列表的文本框部分中。</span><span class="sxs-lookup"><span data-stu-id="1ec25-194">Setting this property to a <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem> causes the item to appear in the text box portion of the drop-down list.</span></span> <span data-ttu-id="1ec25-195">分配给属性的<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>引用必须存在于此对象的<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Items%2A>集合中。 <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem> <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectedItem%2A></span><span class="sxs-lookup"><span data-stu-id="1ec25-195">The <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem> reference that you assign to the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectedItem%2A> property must exist in this <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown> object's <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Items%2A> collection.</span></span> <span data-ttu-id="1ec25-196">否则, <xref:System.ArgumentException>将引发。</span><span class="sxs-lookup"><span data-stu-id="1ec25-196">Otherwise, an <xref:System.ArgumentException> will be thrown.</span></span>  
   
- <span data-ttu-id="eb2cb-197">分配到一个新值<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectedItem%2A>属性不会导致<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectionChanged>事件被引发。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-197">Assigning a new value to the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectedItem%2A> property does not cause a <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectionChanged> event to be raised.</span></span>  
+ <span data-ttu-id="1ec25-197">为<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectedItem%2A>属性分配新值不<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectionChanged>会引发事件。</span><span class="sxs-lookup"><span data-stu-id="1ec25-197">Assigning a new value to the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectedItem%2A> property does not cause a <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectionChanged> event to be raised.</span></span>  
   
- <span data-ttu-id="eb2cb-198">如果<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Items%2A>集合不为空，则此属性不是`null`。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-198">If the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Items%2A> collection is not empty, then this property is not `null`.</span></span> <span data-ttu-id="eb2cb-199">默认情况下，此属性引用中的第一项<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Items%2A>集合。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-199">By default, this property refers to the first item in the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Items%2A> collection.</span></span>  
+ <span data-ttu-id="1ec25-198">如果集合不为空, 则此属性不`null`为。 <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Items%2A></span><span class="sxs-lookup"><span data-stu-id="1ec25-198">If the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Items%2A> collection is not empty, then this property is not `null`.</span></span> <span data-ttu-id="1ec25-199">默认情况下, 此属性引用<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Items%2A>集合中的第一项。</span><span class="sxs-lookup"><span data-stu-id="1ec25-199">By default, this property refers to the first item in the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Items%2A> collection.</span></span>  
   
  ]]></format>
         </remarks>
@@ -408,26 +411,26 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="eb2cb-200">获取或设置当前选定的 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem" /> 的索引。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-200">Gets or sets the index of the currently selected <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem" />.</span></span></summary>
-        <value><span data-ttu-id="eb2cb-201">当前选定的 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem" /> 的索引。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-201">The index of the currently selected <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem" />.</span></span></value>
+        <summary><span data-ttu-id="1ec25-200">获取或设置当前选定的 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem" /> 的索引。</span><span class="sxs-lookup"><span data-stu-id="1ec25-200">Gets or sets the index of the currently selected <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem" />.</span></span></summary>
+        <value><span data-ttu-id="1ec25-201">当前选定的 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem" /> 的索引。</span><span class="sxs-lookup"><span data-stu-id="1ec25-201">The index of the currently selected <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem" />.</span></span></value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="eb2cb-202">设置<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectedItemIndex%2A>属性设置为索引号将导致<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem>在该位置中<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Items%2A>集合才会出现在下拉列表的文本框部分。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-202">Setting the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectedItemIndex%2A> property to an index number causes the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem> in that position in the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Items%2A> collection to appear in the text box portion of the drop-down list.</span></span>  
+ <span data-ttu-id="1ec25-202">如果将<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem> <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Items%2A>属性设置为索引号, 则集合中该位置的会出现在下拉列表的文本框部分中。 <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectedItemIndex%2A></span><span class="sxs-lookup"><span data-stu-id="1ec25-202">Setting the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectedItemIndex%2A> property to an index number causes the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDownItem> in that position in the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Items%2A> collection to appear in the text box portion of the drop-down list.</span></span>  
   
- <span data-ttu-id="eb2cb-203">分配到一个新值<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectedItemIndex%2A>属性不会导致<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectionChanged>事件被引发。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-203">Assigning a new value to the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectedItemIndex%2A> property does not cause a <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectionChanged> event to be raised.</span></span>  
+ <span data-ttu-id="1ec25-203">为<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectedItemIndex%2A>属性分配新值不<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectionChanged>会引发事件。</span><span class="sxs-lookup"><span data-stu-id="1ec25-203">Assigning a new value to the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectedItemIndex%2A> property does not cause a <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectionChanged> event to be raised.</span></span>  
   
- <span data-ttu-id="eb2cb-204">分配给值<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectedItemIndex%2A>必须为从 0 （零） 通过 (`Items.Count` -1)。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-204">Values assigned to the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectedItemIndex%2A> must be from 0 (zero) through (`Items.Count` - 1).</span></span>  
+ <span data-ttu-id="1ec25-204">分配给的<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectedItemIndex%2A>值必须介于 0 (零) 到 (`Items.Count` -1) 之间。</span><span class="sxs-lookup"><span data-stu-id="1ec25-204">Values assigned to the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectedItemIndex%2A> must be from 0 (zero) through (`Items.Count` - 1).</span></span>  
   
- <span data-ttu-id="eb2cb-205">如果<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Items%2A>集合为空，则此属性返回-1。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-205">If the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Items%2A> collection is empty, this property returns -1.</span></span>  
+ <span data-ttu-id="1ec25-205"><xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Items%2A>如果集合为空, 则此属性返回-1。</span><span class="sxs-lookup"><span data-stu-id="1ec25-205">If the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Items%2A> collection is empty, this property returns -1.</span></span>  
   
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="SelectionChanged">
-      <MemberSignature Language="C#" Value="public event Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler SelectionChanged;" />
+      <MemberSignature Language="C#" Value="event Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler SelectionChanged;" />
       <MemberSignature Language="ILAsm" Value=".event class Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler SelectionChanged" />
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectionChanged" />
       <MemberType>Event</MemberType>
@@ -439,18 +442,18 @@
         <ReturnType>Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="eb2cb-206">当用户在功能区下拉控件中选择新项时发生。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-206">Occurs when a user selects a new item on a Ribbon drop-down control.</span></span></summary>
+        <summary><span data-ttu-id="1ec25-206">当用户在功能区下拉控件中选择新项时发生。</span><span class="sxs-lookup"><span data-stu-id="1ec25-206">Occurs when a user selects a new item on a Ribbon drop-down control.</span></span></summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="eb2cb-207"><xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectionChanged>仅当选定的项发生更改，并不处于以下情况下引发事件：</span><span class="sxs-lookup"><span data-stu-id="eb2cb-207">The <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectionChanged> event is raised only when the selected item changes, and not in the following circumstances:</span></span>  
+ <span data-ttu-id="1ec25-207">仅当选定项发生更改, 而不是在以下情况下引发事件:<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectionChanged></span><span class="sxs-lookup"><span data-stu-id="1ec25-207">The <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectionChanged> event is raised only when the selected item changes, and not in the following circumstances:</span></span>  
   
--   <span data-ttu-id="eb2cb-208">当用户选择已选中的项。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-208">When the user selects the item that was already selected.</span></span>  
+-   <span data-ttu-id="1ec25-208">当用户选择已选择的项时。</span><span class="sxs-lookup"><span data-stu-id="1ec25-208">When the user selects the item that was already selected.</span></span>  
   
--   <span data-ttu-id="eb2cb-209">当用户单击一个按钮。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-209">When a user clicks a button.</span></span>  
+-   <span data-ttu-id="1ec25-209">用户单击按钮时。</span><span class="sxs-lookup"><span data-stu-id="1ec25-209">When a user clicks a button.</span></span>  
   
--   <span data-ttu-id="eb2cb-210">当将新值赋给<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectedItem%2A>或<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectedItemIndex%2A>在代码中的属性。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-210">When you assign a new value to the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectedItem%2A> or <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectedItemIndex%2A> properties in your code.</span></span>  
+-   <span data-ttu-id="1ec25-210">在代码中向<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectedItem%2A>或<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectedItemIndex%2A>属性分配新值时。</span><span class="sxs-lookup"><span data-stu-id="1ec25-210">When you assign a new value to the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectedItem%2A> or <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectedItemIndex%2A> properties in your code.</span></span>  
   
  ]]></format>
         </remarks>
@@ -469,15 +472,15 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="eb2cb-211">获取或设置一个值，该值指示与 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" /> 关联的图像是否可见。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-211">Gets or sets a value that indicates whether the image that is associated with the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" /> is visible.</span></span></summary>
-        <value><span data-ttu-id="eb2cb-212">如果与控件关联的图像可见，则为 <see langword="true" />；否则为 <see langword="false" />。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-212"><see langword="true" /> if the image that is associated with the control is visible; otherwise, <see langword="false" />.</span></span> <span data-ttu-id="eb2cb-213">默认值为 <see langword="false" />。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-213">The default is <see langword="false" />.</span></span></value>
+        <summary><span data-ttu-id="1ec25-211">获取或设置一个值，该值指示与 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" /> 关联的图像是否可见。</span><span class="sxs-lookup"><span data-stu-id="1ec25-211">Gets or sets a value that indicates whether the image that is associated with the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" /> is visible.</span></span></summary>
+        <value><span data-ttu-id="1ec25-212">如果与控件关联的图像可见，则为 <see langword="true" />；否则为 <see langword="false" />。</span><span class="sxs-lookup"><span data-stu-id="1ec25-212"><see langword="true" /> if the image that is associated with the control is visible; otherwise, <see langword="false" />.</span></span> <span data-ttu-id="1ec25-213">默认值为 <see langword="false" />。</span><span class="sxs-lookup"><span data-stu-id="1ec25-213">The default is <see langword="false" />.</span></span></value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="eb2cb-214">此属性自动设置为`true`如果您设置<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Image%2A>， <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ImageName%2A>，或<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.OfficeImageId%2A>在功能区设计器中的属性。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-214">This property is automatically set to `true` if you set the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Image%2A>, <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ImageName%2A>, or <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.OfficeImageId%2A> property in the Ribbon Designer.</span></span> <span data-ttu-id="eb2cb-215">可以将其设置为`false`以与要隐藏此控件关联的图像。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-215">You can set it to `false` to cause the image associated with this control to be hidden.</span></span>  
+ <span data-ttu-id="1ec25-214">如果在功能区设计器`true`中<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Image%2A>设置、或<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.OfficeImageId%2A>属性<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ImageName%2A>, 则此属性将自动设置为。</span><span class="sxs-lookup"><span data-stu-id="1ec25-214">This property is automatically set to `true` if you set the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Image%2A>, <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ImageName%2A>, or <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.OfficeImageId%2A> property in the Ribbon Designer.</span></span> <span data-ttu-id="1ec25-215">您可以将其设置`false`为, 以使与此控件关联的图像处于隐藏状态。</span><span class="sxs-lookup"><span data-stu-id="1ec25-215">You can set it to `false` to cause the image associated with this control to be hidden.</span></span>  
   
- <span data-ttu-id="eb2cb-216">设置<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Image%2A>， <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ImageName%2A>，或<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.OfficeImageId%2A>在运行时属性的值不更改<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ShowImage%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-216">Setting the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Image%2A>, <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ImageName%2A>, or <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.OfficeImageId%2A> property at run time does not change the value of the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ShowImage%2A> property.</span></span>  
+ <span data-ttu-id="1ec25-216">在运行<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.OfficeImageId%2A> <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ImageName%2A> <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Image%2A>时设置、或属性不会更改<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ShowImage%2A>属性的值。</span><span class="sxs-lookup"><span data-stu-id="1ec25-216">Setting the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Image%2A>, <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ImageName%2A>, or <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.OfficeImageId%2A> property at run time does not change the value of the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ShowImage%2A> property.</span></span>  
   
  ]]></format>
         </remarks>
@@ -496,13 +499,13 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="eb2cb-217">获取或设置一个值，该值指示是否为下拉菜单中的项显示图像。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-217">Gets or sets a value that indicates whether images are displayed for the items in the drop-down menu.</span></span></summary>
-        <value><span data-ttu-id="eb2cb-218">如果显示图像，则为 <see langword="true" />；否则为 <see langword="false" />。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-218"><see langword="true" /> if the images are displayed; otherwise, <see langword="false" />.</span></span> <span data-ttu-id="eb2cb-219">默认值为 <see langword="false" />。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-219">The default is <see langword="false" />.</span></span></value>
+        <summary><span data-ttu-id="1ec25-217">获取或设置一个值，该值指示是否为下拉菜单中的项显示图像。</span><span class="sxs-lookup"><span data-stu-id="1ec25-217">Gets or sets a value that indicates whether images are displayed for the items in the drop-down menu.</span></span></summary>
+        <value><span data-ttu-id="1ec25-218">如果显示图像，则为 <see langword="true" />；否则为 <see langword="false" />。</span><span class="sxs-lookup"><span data-stu-id="1ec25-218"><see langword="true" /> if the images are displayed; otherwise, <see langword="false" />.</span></span> <span data-ttu-id="1ec25-219">默认值为 <see langword="false" />。</span><span class="sxs-lookup"><span data-stu-id="1ec25-219">The default is <see langword="false" />.</span></span></value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="eb2cb-220">可以在运行时仅在某些情况下设置此属性。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-220">This property can be set at run time only under certain conditions.</span></span> <span data-ttu-id="eb2cb-221">有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-221">For more information, see [Ribbon Object Model Overview](/visualstudio/vsto/ribbon-object-model-overview).</span></span>  
+ <span data-ttu-id="1ec25-220">仅在某些情况下, 才能在运行时设置此属性。</span><span class="sxs-lookup"><span data-stu-id="1ec25-220">This property can be set at run time only under certain conditions.</span></span> <span data-ttu-id="1ec25-221">有关详细信息, 请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。</span><span class="sxs-lookup"><span data-stu-id="1ec25-221">For more information, see [Ribbon Object Model Overview](/visualstudio/vsto/ribbon-object-model-overview).</span></span>  
   
  ]]></format>
         </remarks>
@@ -521,13 +524,13 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="eb2cb-222">获取或设置一个值，该值指示是否为下拉菜单中的项显示标签。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-222">Gets or sets a value that indicates whether labels are displayed for the items in the drop-down menu.</span></span></summary>
-        <value><span data-ttu-id="eb2cb-223">如果显示标签，则为 <see langword="true" />；否则为 <see langword="false" />。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-223"><see langword="true" /> if the labels are displayed; otherwise, <see langword="false" />.</span></span> <span data-ttu-id="eb2cb-224">默认值为 <see langword="false" />。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-224">The default is <see langword="false" />.</span></span></value>
+        <summary><span data-ttu-id="1ec25-222">获取或设置一个值，该值指示是否为下拉菜单中的项显示标签。</span><span class="sxs-lookup"><span data-stu-id="1ec25-222">Gets or sets a value that indicates whether labels are displayed for the items in the drop-down menu.</span></span></summary>
+        <value><span data-ttu-id="1ec25-223">如果显示标签，则为 <see langword="true" />；否则为 <see langword="false" />。</span><span class="sxs-lookup"><span data-stu-id="1ec25-223"><see langword="true" /> if the labels are displayed; otherwise, <see langword="false" />.</span></span> <span data-ttu-id="1ec25-224">默认值为 <see langword="false" />。</span><span class="sxs-lookup"><span data-stu-id="1ec25-224">The default is <see langword="false" />.</span></span></value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="eb2cb-225">不能在运行时设置此属性。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-225">This property cannot be set at run time.</span></span>  
+ <span data-ttu-id="1ec25-225">不能在运行时设置此属性。</span><span class="sxs-lookup"><span data-stu-id="1ec25-225">This property cannot be set at run time.</span></span>  
   
  ]]></format>
         </remarks>
@@ -546,8 +549,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="eb2cb-226">获取或设置一个值，该值指示此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" /> 的标签是否可见。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-226">Gets or sets a value that indicates whether the label for this <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" /> is visible.</span></span></summary>
-        <value><span data-ttu-id="eb2cb-227">如果标签可见，则为 <see langword="true" />；否则为 <see langword="false" />。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-227"><see langword="true" /> if the label is visible; otherwise, <see langword="false" />.</span></span> <span data-ttu-id="eb2cb-228">默认值为 <see langword="true" />。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-228">The default is <see langword="true" />.</span></span></value>
+        <summary><span data-ttu-id="1ec25-226">获取或设置一个值，该值指示此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" /> 的标签是否可见。</span><span class="sxs-lookup"><span data-stu-id="1ec25-226">Gets or sets a value that indicates whether the label for this <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" /> is visible.</span></span></summary>
+        <value><span data-ttu-id="1ec25-227">如果标签可见，则为 <see langword="true" />；否则为 <see langword="false" />。</span><span class="sxs-lookup"><span data-stu-id="1ec25-227"><see langword="true" /> if the label is visible; otherwise, <see langword="false" />.</span></span> <span data-ttu-id="1ec25-228">默认值为 <see langword="true" />。</span><span class="sxs-lookup"><span data-stu-id="1ec25-228">The default is <see langword="true" />.</span></span></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -564,15 +567,15 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="eb2cb-229">获取或设置一个字符串，该字符串确定 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" /> 的大小。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-229">Gets or sets a string that determines the size of the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" />.</span></span></summary>
-        <value><span data-ttu-id="eb2cb-230">一个字符串，其长度可确定此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" /> 的大小。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-230">A string, the length of which determines the size of this <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" />.</span></span></value>
+        <summary><span data-ttu-id="1ec25-229">获取或设置一个字符串，该字符串确定 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" /> 的大小。</span><span class="sxs-lookup"><span data-stu-id="1ec25-229">Gets or sets a string that determines the size of the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" />.</span></span></summary>
+        <value><span data-ttu-id="1ec25-230">一个字符串，其长度可确定此 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" /> 的大小。</span><span class="sxs-lookup"><span data-stu-id="1ec25-230">A string, the length of which determines the size of this <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" />.</span></span></value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="eb2cb-231">当您将设置<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SizeString%2A>中功能区设计器中，Visual Studio 尝试大小属性<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>，以便将大小足以显示整个字符串。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-231">When you set the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SizeString%2A> property in the Ribbon Designer, Visual Studio tries to size the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown> so that it will be large enough to display the entire string.</span></span> <span data-ttu-id="eb2cb-232">尽管 Visual Studio 允许的长度最多为 1024年个字符的字符串，但在实践中可用的字符串长度可能要短得多。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-232">Although Visual Studio allows a string of up to 1024 characters in length, in practice the usable string length might be much shorter.</span></span>  
+ <span data-ttu-id="1ec25-231">在功能区设计<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SizeString%2A>器中设置属性时, Visual Studio 会尝试<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>调整大小以使其足够大以显示整个字符串。</span><span class="sxs-lookup"><span data-stu-id="1ec25-231">When you set the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SizeString%2A> property in the Ribbon Designer, Visual Studio tries to size the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown> so that it will be large enough to display the entire string.</span></span> <span data-ttu-id="1ec25-232">尽管 Visual Studio 允许长度最多为1024个字符的字符串, 但实际上, 使用的字符串长度可能要短得多。</span><span class="sxs-lookup"><span data-stu-id="1ec25-232">Although Visual Studio allows a string of up to 1024 characters in length, in practice the usable string length might be much shorter.</span></span>  
   
- <span data-ttu-id="eb2cb-233">可以在运行时仅在某些情况下设置此属性。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-233">This property can be set at run time only under certain conditions.</span></span> <span data-ttu-id="eb2cb-234">有关详细信息，请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-234">For more information, see [Ribbon Object Model Overview](/visualstudio/vsto/ribbon-object-model-overview).</span></span>  
+ <span data-ttu-id="1ec25-233">仅在某些情况下, 才能在运行时设置此属性。</span><span class="sxs-lookup"><span data-stu-id="1ec25-233">This property can be set at run time only under certain conditions.</span></span> <span data-ttu-id="1ec25-234">有关详细信息, 请参阅[功能区对象模型概述](/visualstudio/vsto/ribbon-object-model-overview)。</span><span class="sxs-lookup"><span data-stu-id="1ec25-234">For more information, see [Ribbon Object Model Overview](/visualstudio/vsto/ribbon-object-model-overview).</span></span>  
   
  ]]></format>
         </remarks>
@@ -591,15 +594,15 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="eb2cb-235">获取或设置用户将指针移到 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" /> 上时显示的多行提示文本。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-235">Gets or sets multiline tip text that appears when the user moves the pointer over the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" />.</span></span></summary>
-        <value><span data-ttu-id="eb2cb-236">包含多行提示文本的字符串。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-236">A string that contains multiline tip text.</span></span></value>
+        <summary><span data-ttu-id="1ec25-235">获取或设置用户将指针移到 <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" /> 上时显示的多行提示文本。</span><span class="sxs-lookup"><span data-stu-id="1ec25-235">Gets or sets multiline tip text that appears when the user moves the pointer over the <see cref="T:Microsoft.Office.Tools.Ribbon.RibbonDropDown" />.</span></span></summary>
+        <value><span data-ttu-id="1ec25-236">包含多行提示文本的字符串。</span><span class="sxs-lookup"><span data-stu-id="1ec25-236">A string that contains multiline tip text.</span></span></value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="eb2cb-237">字符串必须是长度小于 1024年个字符。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-237">The string must be less than 1024 characters in length.</span></span>  
+ <span data-ttu-id="1ec25-237">字符串的长度必须小于1024个字符。</span><span class="sxs-lookup"><span data-stu-id="1ec25-237">The string must be less than 1024 characters in length.</span></span>  
   
- <span data-ttu-id="eb2cb-238"><xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SuperTip%2A>下显示<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ScreenTip%2A>文本。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-238">The <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SuperTip%2A> appears under <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ScreenTip%2A> text.</span></span> <span data-ttu-id="eb2cb-239">与不同<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ScreenTip%2A>，则<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SuperTip%2A>启用换行符的字符串中。</span><span class="sxs-lookup"><span data-stu-id="eb2cb-239">Unlike the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ScreenTip%2A>, the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SuperTip%2A> enables line breaks in the string.</span></span>  
+ <span data-ttu-id="1ec25-238">显示<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SuperTip%2A>在 " <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ScreenTip%2A>文本" 下。</span><span class="sxs-lookup"><span data-stu-id="1ec25-238">The <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SuperTip%2A> appears under <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ScreenTip%2A> text.</span></span> <span data-ttu-id="1ec25-239">与不同<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ScreenTip%2A>的是<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SuperTip%2A> , 会在字符串中启用分行符。</span><span class="sxs-lookup"><span data-stu-id="1ec25-239">Unlike the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ScreenTip%2A>, the <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SuperTip%2A> enables line breaks in the string.</span></span>  
   
  ]]></format>
         </remarks>

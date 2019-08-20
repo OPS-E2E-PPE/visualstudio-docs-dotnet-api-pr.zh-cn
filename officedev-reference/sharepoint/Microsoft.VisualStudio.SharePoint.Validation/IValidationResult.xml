@@ -1,5 +1,5 @@
 <Type Name="IValidationResult" FullName="Microsoft.VisualStudio.SharePoint.Validation.IValidationResult">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="1da7a57897c5c17b37222f23b64b8ce23b261099" /><Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="02/21/2018" /><Meta Name="ms.locfileid" Value="29408661" /></Metadata><TypeSignature Language="C#" Value="public interface IValidationResult" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="25569485db2e4ce8dd698eaf088689076d20f284" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69008907" /></Metadata><TypeSignature Language="C#" Value="public interface IValidationResult" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IValidationResult" />
   <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.SharePoint.Validation.IValidationResult" />
   <AssemblyInfo>
@@ -8,7 +8,7 @@
   </AssemblyInfo>
   <Interfaces />
   <Docs>
-    <summary><span data-ttu-id="a56f2-101">表示功能或包验证的结果。</span><span class="sxs-lookup"><span data-stu-id="a56f2-101">Represents the result of a feature or package validation.</span></span></summary>
+    <summary><span data-ttu-id="e20f9-101">表示功能或包验证的结果。</span><span class="sxs-lookup"><span data-stu-id="e20f9-101">Represents the result of a feature or package validation.</span></span></summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -25,9 +25,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="a56f2-102">了解是否存在任何规则验证冲突错误。</span><span class="sxs-lookup"><span data-stu-id="a56f2-102">Gets whether any of the rule validation violations are errors.</span></span></summary>
-        <value>
-          <span data-ttu-id="a56f2-103"><see langword="True" /> 如果任何规则冲突的严重性属性是<see langword="ValidationRuleViolationSeverity.Error" />;<see langword="false" />否则为。</span><span class="sxs-lookup"><span data-stu-id="a56f2-103"><see langword="True" /> if the Severity property of any of the rule violations is <see langword="ValidationRuleViolationSeverity.Error" />; <see langword="false" /> otherwise.</span></span></value>
+        <summary><span data-ttu-id="e20f9-102">了解是否存在任何规则验证冲突错误。</span><span class="sxs-lookup"><span data-stu-id="e20f9-102">Gets whether any of the rule validation violations are errors.</span></span></summary>
+        <value><span data-ttu-id="e20f9-103"><see langword="True" />如果任何规则冲突的严重性属性为<see langword="ValidationRuleViolationSeverity.Error" />, 则为;<see langword="false" />否则为。</span><span class="sxs-lookup"><span data-stu-id="e20f9-103"><see langword="True" /> if the Severity property of any of the rule violations is <see langword="ValidationRuleViolationSeverity.Error" />; <see langword="false" /> otherwise.</span></span></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -44,9 +43,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="a56f2-104">了解是否存在任何规则验证冲突警告。</span><span class="sxs-lookup"><span data-stu-id="a56f2-104">Gets whether any of the rule validation violations are warnings.</span></span></summary>
-        <value>
-          <span data-ttu-id="a56f2-105"><see langword="True" /> 如果<see cref="T:Microsoft.VisualStudio.Package.Severity" />的任何规则冲突的属性是<see langword="ValidationRuleViolationSeverity.Warning" />;<see langword="false" />否则为。</span><span class="sxs-lookup"><span data-stu-id="a56f2-105"><see langword="True" /> if the <see cref="T:Microsoft.VisualStudio.Package.Severity" /> property of any of the rule violations is <see langword="ValidationRuleViolationSeverity.Warning" />; <see langword="false" /> otherwise.</span></span></value>
+        <summary><span data-ttu-id="e20f9-104">了解是否存在任何规则验证冲突警告。</span><span class="sxs-lookup"><span data-stu-id="e20f9-104">Gets whether any of the rule validation violations are warnings.</span></span></summary>
+        <value><span data-ttu-id="e20f9-105"><see langword="True" />如果任何规则冲突的<see langword="ValidationRuleViolationSeverity.Warning" />属性为,则为;<see cref="T:Microsoft.VisualStudio.Package.Severity" /><see langword="false" />否则为。</span><span class="sxs-lookup"><span data-stu-id="e20f9-105"><see langword="True" /> if the <see cref="T:Microsoft.VisualStudio.Package.Severity" /> property of any of the rule violations is <see langword="ValidationRuleViolationSeverity.Warning" />; <see langword="false" /> otherwise.</span></span></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -63,13 +61,13 @@
         <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.VisualStudio.SharePoint.Validation.IValidationRuleViolation&gt;</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="a56f2-106">获取验证过程中所发现的规则验证冲突集合。</span><span class="sxs-lookup"><span data-stu-id="a56f2-106">Gets the collection of rule validation violations found during validation.</span></span></summary>
-        <value><span data-ttu-id="a56f2-107">表示规则验证冲突的对象的集合。</span><span class="sxs-lookup"><span data-stu-id="a56f2-107">A collection of objects representing rule validation violations.</span></span></value>
+        <summary><span data-ttu-id="e20f9-106">获取验证过程中所发现的规则验证冲突集合。</span><span class="sxs-lookup"><span data-stu-id="e20f9-106">Gets the collection of rule validation violations found during validation.</span></span></summary>
+        <value><span data-ttu-id="e20f9-107">表示规则验证冲突的对象的集合。</span><span class="sxs-lookup"><span data-stu-id="e20f9-107">A collection of objects representing rule validation violations.</span></span></value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="a56f2-108">此集合不包括已取消的冲突。</span><span class="sxs-lookup"><span data-stu-id="a56f2-108">This collection does not include violations that were suppressed.</span></span>  
+ <span data-ttu-id="e20f9-108">此集合不包含已取消的冲突。</span><span class="sxs-lookup"><span data-stu-id="e20f9-108">This collection does not include violations that were suppressed.</span></span>  
   
  ]]></format>
         </remarks>

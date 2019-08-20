@@ -1,5 +1,5 @@
 <Type Name="ISafeControlCollection" FullName="Microsoft.VisualStudio.SharePoint.Packages.ISafeControlCollection">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="b60dfc48aa3ec24f8e8c20a855f54da28fdd36ad" /><Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="09/19/2018" /><Meta Name="ms.locfileid" Value="46459063" /></Metadata><TypeSignature Language="C#" Value="public interface ISafeControlCollection : System.Collections.Generic.ICollection&lt;Microsoft.VisualStudio.SharePoint.Packages.ISafeControl&gt;, System.Collections.Generic.IEnumerable&lt;Microsoft.VisualStudio.SharePoint.Packages.ISafeControl&gt;, System.Collections.Generic.IList&lt;Microsoft.VisualStudio.SharePoint.Packages.ISafeControl&gt;" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="58b6140f4f7ad59c27f78abf50f62a00737afaf2" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69010598" /></Metadata><TypeSignature Language="C#" Value="public interface ISafeControlCollection : System.Collections.Generic.ICollection&lt;Microsoft.VisualStudio.SharePoint.Packages.ISafeControl&gt;, System.Collections.Generic.IEnumerable&lt;Microsoft.VisualStudio.SharePoint.Packages.ISafeControl&gt;, System.Collections.Generic.IList&lt;Microsoft.VisualStudio.SharePoint.Packages.ISafeControl&gt;" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISafeControlCollection implements class System.Collections.Generic.ICollection`1&lt;class Microsoft.VisualStudio.SharePoint.Packages.ISafeControl&gt;, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.VisualStudio.SharePoint.Packages.ISafeControl&gt;, class System.Collections.Generic.IList`1&lt;class Microsoft.VisualStudio.SharePoint.Packages.ISafeControl&gt;, class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.SharePoint.Packages.ISafeControlCollection" />
   <AssemblyInfo>
@@ -11,19 +11,28 @@
       <InterfaceName>System.Collections.Generic.ICollection&lt;Microsoft.VisualStudio.SharePoint.Packages.ISafeControl&gt;</InterfaceName>
     </Interface>
     <Interface>
+      <InterfaceName>System.Collections.Generic.ICollection&lt;T&gt;</InterfaceName>
+    </Interface>
+    <Interface>
       <InterfaceName>System.Collections.Generic.IEnumerable&lt;Microsoft.VisualStudio.SharePoint.Packages.ISafeControl&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;T&gt;</InterfaceName>
     </Interface>
     <Interface>
       <InterfaceName>System.Collections.Generic.IList&lt;Microsoft.VisualStudio.SharePoint.Packages.ISafeControl&gt;</InterfaceName>
     </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
+    </Interface>
   </Interfaces>
   <Docs>
-    <summary><span data-ttu-id="65543-101">表示安全控件的集合。</span><span class="sxs-lookup"><span data-stu-id="65543-101">Represents a collection of safe controls.</span></span></summary>
+    <summary><span data-ttu-id="948d2-101">表示安全控件的集合。</span><span class="sxs-lookup"><span data-stu-id="948d2-101">Represents a collection of safe controls.</span></span></summary>
     <remarks>
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="65543-102">安全控件是控件标记为安全控件的作者。</span><span class="sxs-lookup"><span data-stu-id="65543-102">Safe controls are controls that marked as secure by the control's author.</span></span> <span data-ttu-id="65543-103">安全控件来 contributors （参与者）。</span><span class="sxs-lookup"><span data-stu-id="65543-103">Safe controls can be used by contributors.</span></span> <span data-ttu-id="65543-104">请参阅[SharePoint 解决方案的安全性](/visualstudio/sharepoint/security-for-sharepoint-solutions)。</span><span class="sxs-lookup"><span data-stu-id="65543-104">see [Security for SharePoint Solutions](/visualstudio/sharepoint/security-for-sharepoint-solutions).</span></span>  
+ <span data-ttu-id="948d2-102">安全控件是控件作者标记为安全的控件。</span><span class="sxs-lookup"><span data-stu-id="948d2-102">Safe controls are controls that marked as secure by the control's author.</span></span> <span data-ttu-id="948d2-103">参与者可以使用安全控件。</span><span class="sxs-lookup"><span data-stu-id="948d2-103">Safe controls can be used by contributors.</span></span> <span data-ttu-id="948d2-104">请参阅[SharePoint 解决方案的安全性](/visualstudio/sharepoint/security-for-sharepoint-solutions)。</span><span class="sxs-lookup"><span data-stu-id="948d2-104">see [Security for SharePoint Solutions](/visualstudio/sharepoint/security-for-sharepoint-solutions).</span></span>  
   
  ]]></format>
     </remarks>
@@ -43,13 +52,13 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary><span data-ttu-id="65543-105">将新的安全控件添加到集合。</span><span class="sxs-lookup"><span data-stu-id="65543-105">Adds a new safe control to the collection.</span></span></summary>
-        <returns><span data-ttu-id="65543-106">表示添加到集合的新的安全控件的对象。</span><span class="sxs-lookup"><span data-stu-id="65543-106">An object representing the new safe control added to the collection.</span></span></returns>
+        <summary><span data-ttu-id="948d2-105">将新的安全控件添加到集合。</span><span class="sxs-lookup"><span data-stu-id="948d2-105">Adds a new safe control to the collection.</span></span></summary>
+        <returns><span data-ttu-id="948d2-106">表示添加到集合的新的安全控件的对象。</span><span class="sxs-lookup"><span data-stu-id="948d2-106">An object representing the new safe control added to the collection.</span></span></returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="65543-107">安全控件是控件标记为安全控件的作者。</span><span class="sxs-lookup"><span data-stu-id="65543-107">Safe controls are controls that marked as secure by the control's author.</span></span> <span data-ttu-id="65543-108">安全控件来 contributors （参与者）。</span><span class="sxs-lookup"><span data-stu-id="65543-108">Safe controls can be used by contributors.</span></span> <span data-ttu-id="65543-109">请参阅[SharePoint 解决方案的安全性](/visualstudio/sharepoint/security-for-sharepoint-solutions)。</span><span class="sxs-lookup"><span data-stu-id="65543-109">see [Security for SharePoint Solutions](/visualstudio/sharepoint/security-for-sharepoint-solutions).</span></span>  
+ <span data-ttu-id="948d2-107">安全控件是控件作者标记为安全的控件。</span><span class="sxs-lookup"><span data-stu-id="948d2-107">Safe controls are controls that marked as secure by the control's author.</span></span> <span data-ttu-id="948d2-108">参与者可以使用安全控件。</span><span class="sxs-lookup"><span data-stu-id="948d2-108">Safe controls can be used by contributors.</span></span> <span data-ttu-id="948d2-109">请参阅[SharePoint 解决方案的安全性](/visualstudio/sharepoint/security-for-sharepoint-solutions)。</span><span class="sxs-lookup"><span data-stu-id="948d2-109">see [Security for SharePoint Solutions](/visualstudio/sharepoint/security-for-sharepoint-solutions).</span></span>  
   
  ]]></format>
         </remarks>

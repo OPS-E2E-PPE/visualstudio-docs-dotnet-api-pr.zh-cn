@@ -1,5 +1,5 @@
 <Type Name="ISharePointProjectItemTypeDefinition" FullName="Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="d9851c5f8861ba4e52027b306516f87bc5864db9" /><Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="02/21/2018" /><Meta Name="ms.locfileid" Value="29410143" /></Metadata><TypeSignature Language="C#" Value="public interface ISharePointProjectItemTypeDefinition : Microsoft.VisualStudio.SharePoint.IAnnotatedObject, Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents, Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFileEvents" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="065604224a87059a5374395cb7c5ffbbae75c06f" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69007542" /></Metadata><TypeSignature Language="C#" Value="public interface ISharePointProjectItemTypeDefinition : Microsoft.VisualStudio.SharePoint.IAnnotatedObject, Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents, Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFileEvents" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISharePointProjectItemTypeDefinition implements class Microsoft.VisualStudio.SharePoint.IAnnotatedObject, class Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents, class Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFileEvents" />
   <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition" />
   <AssemblyInfo>
@@ -18,14 +18,14 @@
     </Interface>
   </Interfaces>
   <Docs>
-    <summary><span data-ttu-id="fdc2b-101">帮助定义 SharePoint 项目项的类型。</span><span class="sxs-lookup"><span data-stu-id="fdc2b-101">Helps define the type of a SharePoint project item.</span></span></summary>
+    <summary><span data-ttu-id="5ef36-101">帮助定义 SharePoint 项目项的类型。</span><span class="sxs-lookup"><span data-stu-id="5ef36-101">Helps define the type of a SharePoint project item.</span></span></summary>
     <remarks>
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="fdc2b-102">属性可以设置内部的仅<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider.InitializeType%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="fdc2b-102">Properties can be set only inside of the <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider.InitializeType%2A> method.</span></span>  
+ <span data-ttu-id="5ef36-102">仅可在<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider.InitializeType%2A>方法内设置属性。</span><span class="sxs-lookup"><span data-stu-id="5ef36-102">Properties can be set only inside of the <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider.InitializeType%2A> method.</span></span>  
   
- <span data-ttu-id="fdc2b-103"><xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition> 允许将自定义数据与类型关联，因为它继承自<xref:Microsoft.VisualStudio.SharePoint.IAnnotatedObject>接口。</span><span class="sxs-lookup"><span data-stu-id="fdc2b-103"><xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition> allows to associate custom data with a type because it inherits from the <xref:Microsoft.VisualStudio.SharePoint.IAnnotatedObject> interface.</span></span>  
+ <span data-ttu-id="5ef36-103"><xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition>允许将自定义数据与类型相关联, 因为它继承<xref:Microsoft.VisualStudio.SharePoint.IAnnotatedObject>自接口。</span><span class="sxs-lookup"><span data-stu-id="5ef36-103"><xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition> allows to associate custom data with a type because it inherits from the <xref:Microsoft.VisualStudio.SharePoint.IAnnotatedObject> interface.</span></span>  
   
  ]]></format>
     </remarks>
@@ -44,13 +44,13 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="fdc2b-104">获取或设置设计器中显示的项目项类型的名称。</span><span class="sxs-lookup"><span data-stu-id="fdc2b-104">Gets or sets the name of the project item type shown in designers.</span></span> <span data-ttu-id="fdc2b-105">默认情况下，它是 ID。</span><span class="sxs-lookup"><span data-stu-id="fdc2b-105">By default it is the ID.</span></span></summary>
-        <value><span data-ttu-id="fdc2b-106">表示项目项类型名称的字符串。</span><span class="sxs-lookup"><span data-stu-id="fdc2b-106">A string representing a project item type name.</span></span></value>
+        <summary><span data-ttu-id="5ef36-104">获取或设置设计器中显示的项目项类型的名称。</span><span class="sxs-lookup"><span data-stu-id="5ef36-104">Gets or sets the name of the project item type shown in designers.</span></span> <span data-ttu-id="5ef36-105">默认情况下，它是 ID。</span><span class="sxs-lookup"><span data-stu-id="5ef36-105">By default it is the ID.</span></span></summary>
+        <value><span data-ttu-id="5ef36-106">一个表示项目项类型名称的字符串。</span><span class="sxs-lookup"><span data-stu-id="5ef36-106">A string representing a project item type name.</span></span></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="ProjectItemStartupUrlRequested">
-      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.VisualStudio.SharePoint.SharePointProjectItemStartupUrlRequestedEventArgs&gt; ProjectItemStartupUrlRequested;" />
+      <MemberSignature Language="C#" Value="event EventHandler&lt;Microsoft.VisualStudio.SharePoint.SharePointProjectItemStartupUrlRequestedEventArgs&gt; ProjectItemStartupUrlRequested;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.VisualStudio.SharePoint.SharePointProjectItemStartupUrlRequestedEventArgs&gt; ProjectItemStartupUrlRequested" />
       <MemberSignature Language="DocId" Value="E:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition.ProjectItemStartupUrlRequested" />
       <MemberType>Event</MemberType>
@@ -62,7 +62,7 @@
         <ReturnType>System.EventHandler&lt;Microsoft.VisualStudio.SharePoint.SharePointProjectItemStartupUrlRequestedEventArgs&gt;</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="fdc2b-107">为 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem" /> 请求启动 URL 时会发生。</span><span class="sxs-lookup"><span data-stu-id="fdc2b-107">Occurs when a startup URL is requested for an <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem" />.</span></span></summary>
+        <summary><span data-ttu-id="5ef36-107">为 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem" /> 请求启动 URL 时会发生。</span><span class="sxs-lookup"><span data-stu-id="5ef36-107">Occurs when a startup URL is requested for an <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem" />.</span></span></summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -79,8 +79,8 @@
         <ReturnType>Microsoft.VisualStudio.SharePoint.ISharePointProjectItemType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="fdc2b-108">获取由此 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition" /> 实例定义的 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemType" />。</span><span class="sxs-lookup"><span data-stu-id="fdc2b-108">Gets the <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemType" /> being defined by this <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition" /> instance.</span></span></summary>
-        <value><span data-ttu-id="fdc2b-109">一个表示项目项类型的对象。</span><span class="sxs-lookup"><span data-stu-id="fdc2b-109">An object representing a project item type.</span></span></value>
+        <summary><span data-ttu-id="5ef36-108">获取由此 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition" /> 实例定义的 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemType" />。</span><span class="sxs-lookup"><span data-stu-id="5ef36-108">Gets the <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemType" /> being defined by this <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition" /> instance.</span></span></summary>
+        <value><span data-ttu-id="5ef36-109">一个表示项目项类型的对象。</span><span class="sxs-lookup"><span data-stu-id="5ef36-109">An object representing a project item type.</span></span></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -97,8 +97,8 @@
         <ReturnType>Microsoft.VisualStudio.SharePoint.ISharePointProjectService</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="fdc2b-110">获取 SharePoint 项目服务的实例。</span><span class="sxs-lookup"><span data-stu-id="fdc2b-110">Gets an instance of the SharePoint project service.</span></span></summary>
-        <value><span data-ttu-id="fdc2b-111">表示的 SharePoint 项目服务实例的对象。</span><span class="sxs-lookup"><span data-stu-id="fdc2b-111">An object representing an instance of the SharePoint project service.</span></span></value>
+        <summary><span data-ttu-id="5ef36-110">获取 SharePoint 项目服务的实例。</span><span class="sxs-lookup"><span data-stu-id="5ef36-110">Gets an instance of the SharePoint project service.</span></span></summary>
+        <value><span data-ttu-id="5ef36-111">一个对象, 该对象表示 SharePoint 项目服务的实例。</span><span class="sxs-lookup"><span data-stu-id="5ef36-111">An object representing an instance of the SharePoint project service.</span></span></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -115,8 +115,8 @@
         <ReturnType>Microsoft.VisualStudio.SharePoint.SupportedAssemblyDeploymentTargets</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="fdc2b-112">获取或设置此项目项支持的程序集的部署位置。</span><span class="sxs-lookup"><span data-stu-id="fdc2b-112">Gets or sets the deployment location of the assembly that is supported by this project item.</span></span></summary>
-        <value><span data-ttu-id="fdc2b-113">表示程序集的部署位置的对象。</span><span class="sxs-lookup"><span data-stu-id="fdc2b-113">An object representing an assembly deployment location.</span></span></value>
+        <summary><span data-ttu-id="5ef36-112">获取或设置此项目项支持的程序集的部署位置。</span><span class="sxs-lookup"><span data-stu-id="5ef36-112">Gets or sets the deployment location of the assembly that is supported by this project item.</span></span></summary>
+        <value><span data-ttu-id="5ef36-113">一个表示程序集部署位置的对象。</span><span class="sxs-lookup"><span data-stu-id="5ef36-113">An object representing an assembly deployment location.</span></span></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -133,13 +133,13 @@
         <ReturnType>Microsoft.VisualStudio.SharePoint.SupportedDeploymentScopes</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="fdc2b-114">获取或设置 SharePoint 中支持 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem" /> 部署的范围。</span><span class="sxs-lookup"><span data-stu-id="fdc2b-114">Gets or sets the scope at which the deployment of the <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem" /> is supported in SharePoint.</span></span></summary>
-        <value><span data-ttu-id="fdc2b-115">表示项目项部署范围的对象。</span><span class="sxs-lookup"><span data-stu-id="fdc2b-115">An object representing a project item deployment scope.</span></span></value>
+        <summary><span data-ttu-id="5ef36-114">获取或设置 SharePoint 中支持 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem" /> 部署的范围。</span><span class="sxs-lookup"><span data-stu-id="5ef36-114">Gets or sets the scope at which the deployment of the <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem" /> is supported in SharePoint.</span></span></summary>
+        <value><span data-ttu-id="5ef36-115">一个表示项目项部署范围的对象。</span><span class="sxs-lookup"><span data-stu-id="5ef36-115">An object representing a project item deployment scope.</span></span></value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="fdc2b-116">除了别的之外<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition.SupportedDeploymentScopes%2A>中选择兼容的功能包括，为和限制功能和包设计器用户接口使用。</span><span class="sxs-lookup"><span data-stu-id="fdc2b-116">Among other things, <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition.SupportedDeploymentScopes%2A> is used in selecting a compatible feature for auto-add, and for restricting the feature and package designer user interfaces.</span></span>  
+ <span data-ttu-id="5ef36-116">除此之外, <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition.SupportedDeploymentScopes%2A>还用于为自动添加选择兼容功能, 并用于限制功能和包设计器用户界面。</span><span class="sxs-lookup"><span data-stu-id="5ef36-116">Among other things, <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition.SupportedDeploymentScopes%2A> is used in selecting a compatible feature for auto-add, and for restricting the feature and package designer user interfaces.</span></span>  
   
  ]]></format>
         </remarks>
@@ -158,8 +158,8 @@
         <ReturnType>Microsoft.VisualStudio.SharePoint.SupportedTrustLevels</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="fdc2b-117">获取或设置 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem" /> 支持的 SharePoint 中的信任级别。</span><span class="sxs-lookup"><span data-stu-id="fdc2b-117">Gets or sets the trust levels in SharePoint supported by the <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem" />.</span></span></summary>
-        <value><span data-ttu-id="fdc2b-118">表示信任级别的对象。</span><span class="sxs-lookup"><span data-stu-id="fdc2b-118">An object representing trust levels.</span></span></value>
+        <summary><span data-ttu-id="5ef36-117">获取或设置 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem" /> 支持的 SharePoint 中的信任级别。</span><span class="sxs-lookup"><span data-stu-id="5ef36-117">Gets or sets the trust levels in SharePoint supported by the <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem" />.</span></span></summary>
+        <value><span data-ttu-id="5ef36-118">表示信任级别的对象。</span><span class="sxs-lookup"><span data-stu-id="5ef36-118">An object representing trust levels.</span></span></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
