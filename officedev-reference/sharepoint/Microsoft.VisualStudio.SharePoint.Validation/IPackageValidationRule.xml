@@ -1,5 +1,5 @@
 <Type Name="IPackageValidationRule" FullName="Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationRule">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="60e81cd52802bd2d37734540af75ae0e7683bde2" /><Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="09/19/2018" /><Meta Name="ms.locfileid" Value="46453850" /></Metadata><TypeSignature Language="C#" Value="public interface IPackageValidationRule" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="27dbdc740e90f03caa4e8bdfd2f593cc87410f70" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69008969" /></Metadata><TypeSignature Language="C#" Value="public interface IPackageValidationRule" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IPackageValidationRule" />
   <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationRule" />
   <AssemblyInfo>
@@ -8,14 +8,14 @@
   </AssemblyInfo>
   <Interfaces />
   <Docs>
-    <summary>表示要在验证 SharePoint 项目中的包时应用的规则。</summary>
+    <summary>Represents a rule to applied when validating a package in a SharePoint project.</summary>
     <remarks>
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 实现<xref:Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationRule>接口可定义自定义验证规则，以帮助验证 SharePoint 项目中的包是否有效。 有关详细信息，请参阅[如何： 创建自定义功能和为 SharePoint 解决方案包验证规则](/visualstudio/sharepoint/how-to-create-custom-feature-and-package-validation-rules-for-sharepoint-solutions)。  
+ 实现此<xref:Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationRule>接口可定义自定义验证规则, 以帮助验证 SharePoint 项目中的包是否有效。 有关详细信息，请参阅[如何：为 SharePoint 解决方案](/visualstudio/sharepoint/how-to-create-custom-feature-and-package-validation-rules-for-sharepoint-solutions)创建自定义功能和包验证规则。  
   
- 实现此接口的类必须包含<xref:System.ComponentModel.Composition.ExportAttribute?displayProperty=fullName>由项目系统发现。  
+ 实现此接口的类必须包含要<xref:System.ComponentModel.Composition.ExportAttribute?displayProperty=fullName>由项目系统发现的。  
   
    
   
@@ -23,7 +23,7 @@
   
 |日期|历史记录|原因|  
 |----------|-------------|------------|  
-|[!INCLUDE[dev10_cpub1](~/includes/dev10-cpub1-md.md)]|其中包含指向演示如何实现此接口的主题添加了新注释|[!INCLUDE[enhancement](~/includes/enhancement-md.md)]|  
+|[!INCLUDE[dev10_cpub1](~/includes/dev10-cpub1-md.md)]|添加了新的备注, 其中包含指向演示如何实现此接口的主题的链接|[!INCLUDE[enhancement](~/includes/enhancement-md.md)]|  
   
  ]]></format>
     </remarks>
@@ -46,14 +46,14 @@
         <Parameter Name="feature" Type="Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature" />
       </Parameters>
       <Docs>
-        <param name="context">与包和验证关联的上下文数据。</param>
-        <param name="feature">用来验证包的功能。</param>
-        <summary>确定如果添加指定的功能，包是否会与此规则冲突。</summary>
+        <param name="context">Contextual data associated with the package and validation.</param>
+        <param name="feature">The feature with which to validate the package.</param>
+        <summary>Determines whether a package would violate this rule if the specified feature were added.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果此规则仅应用于包中的项目项，则此方法没有任何影响。  
+ 如果此规则仅适用于包中的项目项, 则此方法不执行任何操作。  
   
  ]]></format>
         </remarks>
@@ -75,8 +75,8 @@
         <Parameter Name="context" Type="Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationContext" />
       </Parameters>
       <Docs>
-        <param name="context">与包和验证关联的上下文数据。</param>
-        <summary>确定包当前是否与此规则冲突。</summary>
+        <param name="context">Contextual data associated with the package and validation.</param>
+        <summary>Determines whether a package currently violates this rule.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -97,14 +97,14 @@
         <Parameter Name="projectItem" Type="Microsoft.VisualStudio.SharePoint.ISharePointProjectItem" />
       </Parameters>
       <Docs>
-        <param name="context">与包和验证关联的上下文数据。</param>
-        <param name="projectItem">用来验证包的项目项。</param>
-        <summary>确定如果添加指定的项目项，包是否会与此规则冲突。</summary>
+        <param name="context">Contextual data associated with the package and validation.</param>
+        <param name="projectItem">The project item with which to validate the package.</param>
+        <summary>Determines whether a package would violate this rule if the specified project item is added.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果此规则仅适用于在包中的功能，则此方法没有任何影响。  
+ 如果此规则仅适用于包中的功能, 则此方法不执行任何操作。  
   
  ]]></format>
         </remarks>

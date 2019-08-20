@@ -1,5 +1,5 @@
 <Type Name="WindowEventHandler" FullName="Microsoft.Office.Tools.Word.WindowEventHandler">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="089a0b72e66188538691bdb3fcc2750c19b80458" /><Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="02/21/2018" /><Meta Name="ms.locfileid" Value="29430540" /></Metadata><TypeSignature Language="C#" Value="public delegate void WindowEventHandler(object sender, WindowEventArgs e);" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="2af9945bdb521636c65d12ad268e0d2d3a5807ab" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="68999676" /></Metadata><TypeSignature Language="C#" Value="public delegate void WindowEventHandler(object sender, WindowEventArgs e);" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed WindowEventHandler extends System.MulticastDelegate" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Tools.Word.WindowEventHandler" />
   <AssemblyInfo>
@@ -13,11 +13,6 @@
   <Base>
     <BaseTypeName>System.Delegate</BaseTypeName>
   </Base>
-  <Attributes>
-    <Attribute>
-      <AttributeName>System.Runtime.InteropServices.TypeIdentifier("4207AD1E-362C-4DB4-A3A7-7CC03A7EF41B", "Microsoft.Office.Tools.Word.WindowEventHandler")</AttributeName>
-    </Attribute>
-  </Attributes>
   <Parameters>
     <Parameter Name="sender" Type="System.Object" />
     <Parameter Name="e" Type="Microsoft.Office.Tools.Word.WindowEventArgs" />
@@ -26,21 +21,21 @@
     <ReturnType>System.Void</ReturnType>
   </ReturnValue>
   <Docs>
-    <param name="sender">事件源。</param>
-    <param name="e">包含事件数据的 <see cref="T:Microsoft.Office.Tools.Word.SaveEventArgs" />。</param>
-    <summary>表示 <see cref="E:Microsoft.Office.Tools.Word.Document.ActivateEvent" />、<see cref="E:Microsoft.Office.Tools.Word.Document.Deactivate" /> 和 <see cref="E:Microsoft.Office.Tools.Word.Document.WindowSize" /> 事件的处理方法。</summary>
+    <param name="sender">The source of the event.</param>
+    <param name="e">A <see cref="T:Microsoft.Office.Tools.Word.SaveEventArgs" /> that contains the event data.</param>
+    <summary>Represents the method that will handle the <see cref="E:Microsoft.Office.Tools.Word.Document.ActivateEvent" />, <see cref="E:Microsoft.Office.Tools.Word.Document.Deactivate" />, and <see cref="E:Microsoft.Office.Tools.Word.Document.WindowSize" /> events.</summary>
     <remarks>
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 创建 <xref:Microsoft.Office.Tools.Word.WindowEventHandler> 委托时，需要标识将处理该事件的方法。 若要将事件与事件处理程序关联，请将该委托的一个实例添加到事件中。 每当发生该事件时，直到移除了该委托，都会调用事件处理程序。  
+ 创建 <xref:Microsoft.Office.Tools.Word.WindowEventHandler> 委托时，需要标识将处理该事件的方法。 若要将事件与事件处理程序关联，请将该委托的一个实例添加到事件中。 事件发生时, 将调用事件处理程序, 直到删除委托。  
   
    
   
 ## Examples  
- 下面的代码示例创建的事件处理程序<xref:Microsoft.Office.Tools.Word.Document.WindowSize>事件。 事件处理程序的窗口标题中显示的已调整窗口大小时的次数。  
+ 下面的代码示例为<xref:Microsoft.Office.Tools.Word.Document.WindowSize>事件创建事件处理程序。 事件处理程序将在窗口标题中显示窗口已调整大小的次数。  
   
- 此示例适用于文档级自定义。  
+ 此示例适用于文档级自定义项。  
   
  [!code-csharp[Trin_WordDocument#197](~/snippets/csharp/VS_Snippets_OfficeSP/Trin_WordDocument/CS/ThisDocument.cs#197)]
  [!code-vb[Trin_WordDocument#197](~/snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordDocument/VB/ThisDocument.vb#197)]  
