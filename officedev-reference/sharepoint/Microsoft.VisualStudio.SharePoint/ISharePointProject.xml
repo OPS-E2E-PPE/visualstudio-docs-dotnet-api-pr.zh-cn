@@ -1,5 +1,5 @@
 <Type Name="ISharePointProject" FullName="Microsoft.VisualStudio.SharePoint.ISharePointProject">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="f8b20fe3d95763cdf76c22617a14204d3156cbf4" /><Meta Name="ms.sourcegitcommit" Value="66ccc1ab172558cdfd2b9ffb616a60e4c9105be3" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="09/19/2018" /><Meta Name="ms.locfileid" Value="46459316" /></Metadata><TypeSignature Language="C#" Value="public interface ISharePointProject : Microsoft.VisualStudio.SharePoint.ISharePointProjectMember, System.ComponentModel.INotifyPropertyChanged" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="7fdf64296be854ee177c05880132caead6ced1ee" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69007984" /></Metadata><TypeSignature Language="C#" Value="public interface ISharePointProject : Microsoft.VisualStudio.SharePoint.ISharePointProjectMember, System.ComponentModel.INotifyPropertyChanged" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISharePointProject implements class Microsoft.VisualStudio.SharePoint.IAnnotatedObject, class Microsoft.VisualStudio.SharePoint.INotifyObjectDisposed, class Microsoft.VisualStudio.SharePoint.INotifyObjectDisposing, class Microsoft.VisualStudio.SharePoint.ISharePointProjectMember, class System.ComponentModel.INotifyPropertyChanged" />
   <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.SharePoint.ISharePointProject" />
   <AssemblyInfo>
@@ -7,6 +7,15 @@
     <AssemblyVersion>15.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.VisualStudio.SharePoint.IAnnotatedObject</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>Microsoft.VisualStudio.SharePoint.INotifyObjectDisposed</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>Microsoft.VisualStudio.SharePoint.INotifyObjectDisposing</InterfaceName>
+    </Interface>
     <Interface>
       <InterfaceName>Microsoft.VisualStudio.SharePoint.ISharePointProjectMember</InterfaceName>
     </Interface>
@@ -56,9 +65,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 可以为语言字符串中使用此 GUID<xref:EnvDTE80.Solution2.GetProjectItemTemplate%2A>函数以检索到模板的路径。  
+ 此 GUID 可作为函数中<xref:EnvDTE80.Solution2.GetProjectItemTemplate%2A>的语言字符串, 用于检索模板的路径。  
   
- 通常情况下，<xref:EnvDTE80.Solution2.GetProjectItemTemplate%2A>接受语言字符串，如"CSharp"或"VB"可检索特定于语言的模板。 SharePoint 项目使用 Guid 而不是字符串，来隐藏非 SharePoint 项目中的 SharePoint 项目项模板。  
+ 通常, <xref:EnvDTE80.Solution2.GetProjectItemTemplate%2A>接受语言字符串 (如 "CSharp" 或 "VB") 来检索特定于语言的模板。 SharePoint 项目使用 Guid 而不是字符串来隐藏非 SharePoint 项目中的 SharePoint 项目项模板。  
   
  ]]></format>
         </remarks>
@@ -119,9 +128,9 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 默认情况下，SharePoint 解决方案调试完成后从 SharePoint 收回。 但是，此属性设置为`false`，可防止该解决方案在调试后被撤消。  
+ 默认情况下, 调试完成后, SharePoint 解决方案从 SharePoint 中收回。 但是, 通过将此属性`false`设置为, 可以防止解决方案在调试后被收回。  
   
- 为该属性公开**调试后自动收回**选项**SharePoint** SharePoint 项目属性页的选项卡。  
+ 在 SharePoint 项目属性页的 " **sharepoint** " 选项卡中, 此属性公开为 "**调试后自动收回**" 选项。  
   
  ]]></format>
         </remarks>
@@ -416,7 +425,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 有关使用此属性将数据保存在 SharePoint 项目的详细信息，请参阅[扩展 SharePoint 项目系统中保存数据](/visualstudio/sharepoint/saving-data-in-extensions-of-the-sharepoint-project-system)。  
+ 有关使用此属性在 SharePoint 项目中保存数据的详细信息, 请参阅[在 Sharepoint 项目系统的扩展中保存数据](/visualstudio/sharepoint/saving-data-in-extensions-of-the-sharepoint-project-system)。  
   
  ]]></format>
         </remarks>
@@ -513,7 +522,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 如果<xref:Microsoft.VisualStudio.SharePoint.ISharePointProject.StartupItem%2A>公开非 null 的绝对 Url，使用它。 如果`StartupItem`公开非 null，相对 Url，将其与结合`SiteUrl`。 否则，默认为<xref:Microsoft.VisualStudio.SharePoint.ISharePointProject.SiteUrl%2A>。  
+ <xref:Microsoft.VisualStudio.SharePoint.ISharePointProject.StartupItem%2A>如果公开非 null 绝对 Url, 请使用。 如果公开非 null 的相对 Url, 则将其`SiteUrl`与结合使用。 `StartupItem` 否则, 默认为<xref:Microsoft.VisualStudio.SharePoint.ISharePointProject.SiteUrl%2A>。  
   
  ]]></format>
         </remarks>
@@ -538,7 +547,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- 此方法通常称为项目或项模板向导中访问 SharePoint 项目对象模型之前。 否则，在模板向导完成后，将更新 SharePoint 项目对象模型。  
+ 在访问 SharePoint 项目对象模型之前, 通常会在项目或项模板向导中调用此方法。 否则, 在模板向导完成后, 将更新 SharePoint 项目对象模型。  
   
  ]]></format>
         </remarks>
@@ -557,7 +566,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>获取所需的 SharePoint 或 Office 版本：“14.0”或“15.0”。 默认为 14.0。</summary>
+        <summary>获取必需的 SharePoint 或 Office 版本：“14.0”或“15.0”。 默认为 14.0。</summary>
         <value>所需的 SharePoint 或 Office 版本。</value>
         <remarks>To be added.</remarks>
       </Docs>
