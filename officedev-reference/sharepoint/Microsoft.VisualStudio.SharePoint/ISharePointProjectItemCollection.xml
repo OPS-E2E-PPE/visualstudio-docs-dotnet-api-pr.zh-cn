@@ -1,5 +1,5 @@
 <Type Name="ISharePointProjectItemCollection" FullName="Microsoft.VisualStudio.SharePoint.ISharePointProjectItemCollection">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="d901f7a862dd8d49dec9612ff20583737e6c5480" /><Meta Name="ms.sourcegitcommit" Value="bb8a3a96823cedeffbdbcc0c41a8118399de8074" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="02/21/2018" /><Meta Name="ms.locfileid" Value="29410338" /></Metadata><TypeSignature Language="C#" Value="public interface ISharePointProjectItemCollection : Microsoft.VisualStudio.SharePoint.ISharePointCollection&lt;Microsoft.VisualStudio.SharePoint.ISharePointProjectItem&gt;, System.Collections.Generic.IEnumerable&lt;Microsoft.VisualStudio.SharePoint.ISharePointProjectItem&gt;, System.Collections.Specialized.INotifyCollectionChanged, System.ComponentModel.INotifyPropertyChanged" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="d38fe3b65a86ccc1977e6c80725a799e9f5306d4" /><Meta Name="ms.sourcegitcommit" Value="7439021cdeee6a9ef5d4640250701344f6cbba15" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="zh-CN" /><Meta Name="ms.lasthandoff" Value="08/13/2019" /><Meta Name="ms.locfileid" Value="69007724" /></Metadata><TypeSignature Language="C#" Value="public interface ISharePointProjectItemCollection : Microsoft.VisualStudio.SharePoint.ISharePointCollection&lt;Microsoft.VisualStudio.SharePoint.ISharePointProjectItem&gt;, System.Collections.Generic.IEnumerable&lt;Microsoft.VisualStudio.SharePoint.ISharePointProjectItem&gt;, System.Collections.Specialized.INotifyCollectionChanged, System.ComponentModel.INotifyPropertyChanged" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISharePointProjectItemCollection implements class Microsoft.VisualStudio.SharePoint.ISharePointCollection`1&lt;class Microsoft.VisualStudio.SharePoint.ISharePointProjectItem&gt;, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.VisualStudio.SharePoint.ISharePointProjectItem&gt;, class System.Collections.IEnumerable, class System.Collections.Specialized.INotifyCollectionChanged, class System.ComponentModel.INotifyPropertyChanged" />
   <TypeSignature Language="DocId" Value="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemCollection" />
   <AssemblyInfo>
@@ -14,6 +14,12 @@
       <InterfaceName>System.Collections.Generic.IEnumerable&lt;Microsoft.VisualStudio.SharePoint.ISharePointProjectItem&gt;</InterfaceName>
     </Interface>
     <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;T&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
+    </Interface>
+    <Interface>
       <InterfaceName>System.Collections.Specialized.INotifyCollectionChanged</InterfaceName>
     </Interface>
     <Interface>
@@ -21,7 +27,7 @@
     </Interface>
   </Interfaces>
   <Docs>
-    <summary><span data-ttu-id="812a8-101">表示 SharePoint 项目项的集合。</span><span class="sxs-lookup"><span data-stu-id="812a8-101">Represents a collection of SharePoint project items.</span></span></summary>
+    <summary><span data-ttu-id="2509e-101">表示 SharePoint 项目项的集合。</span><span class="sxs-lookup"><span data-stu-id="2509e-101">Represents a collection of SharePoint project items.</span></span></summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -42,17 +48,17 @@
         <Parameter Name="projectItemType" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="name"><span data-ttu-id="812a8-102">要添加的 SharePoint 项目项的名称。</span><span class="sxs-lookup"><span data-stu-id="812a8-102">The name of SharePoint project item to add.</span></span></param>
-        <param name="projectItemType"><span data-ttu-id="812a8-103">要添加的 SharePoint 项目项的类型 ID。</span><span class="sxs-lookup"><span data-stu-id="812a8-103">The type ID of the SharePoint project item to add.</span></span></param>
-        <summary><span data-ttu-id="812a8-104">创建并添加 SharePoint 项目项的新实例。</span><span class="sxs-lookup"><span data-stu-id="812a8-104">Creates and adds a new instance of a SharePoint project item.</span></span></summary>
-        <returns><span data-ttu-id="812a8-105">已添加的 SharePoint 项目项的实例。</span><span class="sxs-lookup"><span data-stu-id="812a8-105">An instance of the SharePoint project item that was added.</span></span></returns>
+        <param name="name"><span data-ttu-id="2509e-102">要添加的 SharePoint 项目项的名称。</span><span class="sxs-lookup"><span data-stu-id="2509e-102">The name of SharePoint project item to add.</span></span></param>
+        <param name="projectItemType"><span data-ttu-id="2509e-103">要添加的 SharePoint 项目项的类型 ID。</span><span class="sxs-lookup"><span data-stu-id="2509e-103">The type ID of the SharePoint project item to add.</span></span></param>
+        <summary><span data-ttu-id="2509e-104">创建并添加 SharePoint 项目项的新实例。</span><span class="sxs-lookup"><span data-stu-id="2509e-104">Creates and adds a new instance of a SharePoint project item.</span></span></summary>
+        <returns><span data-ttu-id="2509e-105">已添加的 SharePoint 项目项的实例。</span><span class="sxs-lookup"><span data-stu-id="2509e-105">An instance of the SharePoint project item that was added.</span></span></returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException"><span data-ttu-id="812a8-106">当任一参数为 <see langword="null" /> 时发生。</span><span class="sxs-lookup"><span data-stu-id="812a8-106">Occurs if any of the arguments are <see langword="null" />.</span></span></exception>
-        <exception cref="T:System.ArgumentException"><span data-ttu-id="812a8-107">在以下情况下发生：</span><span class="sxs-lookup"><span data-stu-id="812a8-107">Occurs in the following cases:</span></span>  
+        <exception cref="T:System.ArgumentNullException"><span data-ttu-id="2509e-106">当任一参数为 <see langword="null" /> 时发生。</span><span class="sxs-lookup"><span data-stu-id="2509e-106">Occurs if any of the arguments are <see langword="null" />.</span></span></exception>
+        <exception cref="T:System.ArgumentException"><span data-ttu-id="2509e-107">在以下情况下发生：</span><span class="sxs-lookup"><span data-stu-id="2509e-107">Occurs in the following cases:</span></span>  
   
--   <span data-ttu-id="812a8-108">如果任一参数为空字符串。</span><span class="sxs-lookup"><span data-stu-id="812a8-108">If any of the parameters are empty strings.</span></span>  
+<span data-ttu-id="2509e-108">-   如果任何参数为空字符串。</span><span class="sxs-lookup"><span data-stu-id="2509e-108">-   If any of the parameters are empty strings.</span></span>  
   
--   <span data-ttu-id="812a8-109">如果已存在具有所提供名称的 SharePoint 项目项。</span><span class="sxs-lookup"><span data-stu-id="812a8-109">If a SharePoint project item with the provided name already exists.</span></span></exception>
+<span data-ttu-id="2509e-109">-   如果已有包含所提供名称的 SharePoint 项目项。</span><span class="sxs-lookup"><span data-stu-id="2509e-109">-   If a SharePoint project item with the provided name already exists.</span></span></exception>
       </Docs>
     </Member>
     <Member MemberName="Add">
@@ -73,18 +79,18 @@
         <Parameter Name="skipAutoPackage" Type="System.Boolean" />
       </Parameters>
       <Docs>
-        <param name="name"><span data-ttu-id="812a8-110">要添加的 SharePoint 项目项的名称。</span><span class="sxs-lookup"><span data-stu-id="812a8-110">The name of a SharePoint project item to add.</span></span></param>
-        <param name="projectItemType"><span data-ttu-id="812a8-111">要添加的 SharePoint 项目项的类型 ID。</span><span class="sxs-lookup"><span data-stu-id="812a8-111">The type ID of the SharePoint project item to add.</span></span></param>
-        <param name="skipAutoPackage"><span data-ttu-id="812a8-112">如果为 <see langword="true" />，则跳过自动添加，转到第一个可用功能。</span><span class="sxs-lookup"><span data-stu-id="812a8-112">Skips auto-add to a first available feature if <see langword="true" />.</span></span></param>
-        <summary><span data-ttu-id="812a8-113">创建并添加 SharePoint 项目项的新实例。</span><span class="sxs-lookup"><span data-stu-id="812a8-113">Creates and adds a new instance of SharePoint project item.</span></span></summary>
-        <returns><span data-ttu-id="812a8-114">已添加的 SharePoint 项目项的实例。</span><span class="sxs-lookup"><span data-stu-id="812a8-114">An instance of the SharePoint project item that was added.</span></span></returns>
+        <param name="name"><span data-ttu-id="2509e-110">要添加的 SharePoint 项目项的名称。</span><span class="sxs-lookup"><span data-stu-id="2509e-110">The name of a SharePoint project item to add.</span></span></param>
+        <param name="projectItemType"><span data-ttu-id="2509e-111">要添加的 SharePoint 项目项的类型 ID。</span><span class="sxs-lookup"><span data-stu-id="2509e-111">The type ID of the SharePoint project item to add.</span></span></param>
+        <param name="skipAutoPackage"><span data-ttu-id="2509e-112">如果为 <see langword="true" />，则跳过自动添加，转到第一个可用功能。</span><span class="sxs-lookup"><span data-stu-id="2509e-112">Skips auto-add to a first available feature if <see langword="true" />.</span></span></param>
+        <summary><span data-ttu-id="2509e-113">创建并添加 SharePoint 项目项的新实例。</span><span class="sxs-lookup"><span data-stu-id="2509e-113">Creates and adds a new instance of SharePoint project item.</span></span></summary>
+        <returns><span data-ttu-id="2509e-114">已添加的 SharePoint 项目项的实例。</span><span class="sxs-lookup"><span data-stu-id="2509e-114">An instance of the SharePoint project item that was added.</span></span></returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException"><span data-ttu-id="812a8-115">当任一参数为 <see langword="null" /> 时发生。</span><span class="sxs-lookup"><span data-stu-id="812a8-115">Occurs if any of the arguments are <see langword="null" />.</span></span></exception>
-        <exception cref="T:System.ArgumentException"><span data-ttu-id="812a8-116">在以下情况下发生：</span><span class="sxs-lookup"><span data-stu-id="812a8-116">Occurs in the following cases:</span></span>  
+        <exception cref="T:System.ArgumentNullException"><span data-ttu-id="2509e-115">当任一参数为 <see langword="null" /> 时发生。</span><span class="sxs-lookup"><span data-stu-id="2509e-115">Occurs if any of the arguments are <see langword="null" />.</span></span></exception>
+        <exception cref="T:System.ArgumentException"><span data-ttu-id="2509e-116">在以下情况下发生：</span><span class="sxs-lookup"><span data-stu-id="2509e-116">Occurs in the following cases:</span></span>  
   
--   <span data-ttu-id="812a8-117">如果任一参数为空字符串。</span><span class="sxs-lookup"><span data-stu-id="812a8-117">If any of the parameters are empty strings.</span></span>  
+<span data-ttu-id="2509e-117">-   如果任何参数为空字符串。</span><span class="sxs-lookup"><span data-stu-id="2509e-117">-   If any of the parameters are empty strings.</span></span>  
   
--   <span data-ttu-id="812a8-118">如果已存在具有所提供名称的 SharePoint 项目项。</span><span class="sxs-lookup"><span data-stu-id="812a8-118">If a SharePoint project item with the provided name already exists.</span></span></exception>
+<span data-ttu-id="2509e-118">-   如果已有包含所提供名称的 SharePoint 项目项。</span><span class="sxs-lookup"><span data-stu-id="2509e-118">-   If a SharePoint project item with the provided name already exists.</span></span></exception>
       </Docs>
     </Member>
     <Member MemberName="Add">
@@ -105,20 +111,20 @@
         <Parameter Name="projectItemType" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="path"><span data-ttu-id="812a8-119">项目中创建新的 SharePoint 项的子文件夹。</span><span class="sxs-lookup"><span data-stu-id="812a8-119">The subfolder in the project where the new SharePoint item is created.</span></span></param>
-        <param name="name"><span data-ttu-id="812a8-120">要添加的 SharePoint 项目项的名称。</span><span class="sxs-lookup"><span data-stu-id="812a8-120">The name of SharePoint project item to be added.</span></span></param>
-        <param name="projectItemType"><span data-ttu-id="812a8-121">要添加的 SharePoint 项目项的类型 ID。</span><span class="sxs-lookup"><span data-stu-id="812a8-121">The type ID of the SharePoint project item to be added.</span></span></param>
-        <summary><span data-ttu-id="812a8-122">创建并添加 SharePoint 项目项的新实例。</span><span class="sxs-lookup"><span data-stu-id="812a8-122">Creates and adds a new instance of SharePoint project item.</span></span></summary>
-        <returns><span data-ttu-id="812a8-123">已添加的 SharePoint 项目项的实例。</span><span class="sxs-lookup"><span data-stu-id="812a8-123">An instance of the SharePoint project item that was added.</span></span></returns>
+        <param name="path"><span data-ttu-id="2509e-119">项目中创建新的 SharePoint 项的子文件夹。</span><span class="sxs-lookup"><span data-stu-id="2509e-119">The subfolder in the project where the new SharePoint item is created.</span></span></param>
+        <param name="name"><span data-ttu-id="2509e-120">要添加的 SharePoint 项目项的名称。</span><span class="sxs-lookup"><span data-stu-id="2509e-120">The name of SharePoint project item to be added.</span></span></param>
+        <param name="projectItemType"><span data-ttu-id="2509e-121">要添加的 SharePoint 项目项的类型 ID。</span><span class="sxs-lookup"><span data-stu-id="2509e-121">The type ID of the SharePoint project item to be added.</span></span></param>
+        <summary><span data-ttu-id="2509e-122">创建并添加 SharePoint 项目项的新实例。</span><span class="sxs-lookup"><span data-stu-id="2509e-122">Creates and adds a new instance of SharePoint project item.</span></span></summary>
+        <returns><span data-ttu-id="2509e-123">已添加的 SharePoint 项目项的实例。</span><span class="sxs-lookup"><span data-stu-id="2509e-123">An instance of the SharePoint project item that was added.</span></span></returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException"><span data-ttu-id="812a8-124">当任一参数为 <see langword="null" /> 时发生。</span><span class="sxs-lookup"><span data-stu-id="812a8-124">Occurs if any of the arguments are <see langword="null" />.</span></span></exception>
-        <exception cref="T:System.ArgumentException"><span data-ttu-id="812a8-125">在以下情况下发生：</span><span class="sxs-lookup"><span data-stu-id="812a8-125">Occurs in the following cases:</span></span>  
+        <exception cref="T:System.ArgumentNullException"><span data-ttu-id="2509e-124">当任一参数为 <see langword="null" /> 时发生。</span><span class="sxs-lookup"><span data-stu-id="2509e-124">Occurs if any of the arguments are <see langword="null" />.</span></span></exception>
+        <exception cref="T:System.ArgumentException"><span data-ttu-id="2509e-125">在以下情况下发生：</span><span class="sxs-lookup"><span data-stu-id="2509e-125">Occurs in the following cases:</span></span>  
   
--   <span data-ttu-id="812a8-126">如果任一参数为空字符串。</span><span class="sxs-lookup"><span data-stu-id="812a8-126">If any of the parameters are empty strings.</span></span>  
+<span data-ttu-id="2509e-126">-   如果任何参数为空字符串。</span><span class="sxs-lookup"><span data-stu-id="2509e-126">-   If any of the parameters are empty strings.</span></span>  
   
--   <span data-ttu-id="812a8-127">如果路径不是有效的绝对路径（即不在项目根路径下）。</span><span class="sxs-lookup"><span data-stu-id="812a8-127">If the path is not a valid absolute path (that is, not under the project root path).</span></span>  
+<span data-ttu-id="2509e-127">-   如果路径不是有效的绝对路径（即不在项目根路径下）。</span><span class="sxs-lookup"><span data-stu-id="2509e-127">-   If the path is not a valid absolute path (that is, not under the project root path).</span></span>  
   
--   <span data-ttu-id="812a8-128">如果已存在具有所提供名称的 SharePoint 项目项。</span><span class="sxs-lookup"><span data-stu-id="812a8-128">If a SharePoint project item with the provided name already exists.</span></span></exception>
+<span data-ttu-id="2509e-128">-   如果已有包含所提供名称的 SharePoint 项目项。</span><span class="sxs-lookup"><span data-stu-id="2509e-128">-   If a SharePoint project item with the provided name already exists.</span></span></exception>
       </Docs>
     </Member>
     <Member MemberName="Add">
@@ -140,21 +146,21 @@
         <Parameter Name="skipAutoPackage" Type="System.Boolean" />
       </Parameters>
       <Docs>
-        <param name="path"><span data-ttu-id="812a8-129">项目项的基路径。</span><span class="sxs-lookup"><span data-stu-id="812a8-129">The base path of the project item.</span></span> <span data-ttu-id="812a8-130">可以是相对项目路径，也可以是绝对项目路径。</span><span class="sxs-lookup"><span data-stu-id="812a8-130">Can be either relative to the project path or absolute.</span></span></param>
-        <param name="name"><span data-ttu-id="812a8-131">项目项的名称。</span><span class="sxs-lookup"><span data-stu-id="812a8-131">The name of the project item.</span></span> <span data-ttu-id="812a8-132">名称应该为文件系统友好型。</span><span class="sxs-lookup"><span data-stu-id="812a8-132">The name should be file system-friendly.</span></span></param>
-        <param name="projectItemType"><span data-ttu-id="812a8-133">项目项的类型。</span><span class="sxs-lookup"><span data-stu-id="812a8-133">The type of the project item.</span></span></param>
-        <param name="skipAutoPackage"><span data-ttu-id="812a8-134">如果为 <see langword="true" />，项目系统不会自动添加项目项的功能或包。</span><span class="sxs-lookup"><span data-stu-id="812a8-134">If <see langword="true" />, the project system will not automatically add a feature or package for the project item.</span></span></param>
-        <summary><span data-ttu-id="812a8-135">创建 SharePoint 项目项，并将其添加到项目。</span><span class="sxs-lookup"><span data-stu-id="812a8-135">Creates and adds a SharePoint project item to the project.</span></span></summary>
-        <returns><span data-ttu-id="812a8-136">新项目项的实例。</span><span class="sxs-lookup"><span data-stu-id="812a8-136">An instance of the new project item.</span></span></returns>
+        <param name="path"><span data-ttu-id="2509e-129">项目项的基路径。</span><span class="sxs-lookup"><span data-stu-id="2509e-129">The base path of the project item.</span></span> <span data-ttu-id="2509e-130">可以是相对项目路径，也可以是绝对项目路径。</span><span class="sxs-lookup"><span data-stu-id="2509e-130">Can be either relative to the project path or absolute.</span></span></param>
+        <param name="name"><span data-ttu-id="2509e-131">项目项的名称。</span><span class="sxs-lookup"><span data-stu-id="2509e-131">The name of the project item.</span></span> <span data-ttu-id="2509e-132">名称应该为文件系统友好型。</span><span class="sxs-lookup"><span data-stu-id="2509e-132">The name should be file system-friendly.</span></span></param>
+        <param name="projectItemType"><span data-ttu-id="2509e-133">项目项的类型。</span><span class="sxs-lookup"><span data-stu-id="2509e-133">The type of the project item.</span></span></param>
+        <param name="skipAutoPackage"><span data-ttu-id="2509e-134">如果为 <see langword="true" />，项目系统不会自动添加项目项的功能或包。</span><span class="sxs-lookup"><span data-stu-id="2509e-134">If <see langword="true" />, the project system will not automatically add a feature or package for the project item.</span></span></param>
+        <summary><span data-ttu-id="2509e-135">创建 SharePoint 项目项，并将其添加到项目。</span><span class="sxs-lookup"><span data-stu-id="2509e-135">Creates and adds a SharePoint project item to the project.</span></span></summary>
+        <returns><span data-ttu-id="2509e-136">新项目项的实例。</span><span class="sxs-lookup"><span data-stu-id="2509e-136">An instance of the new project item.</span></span></returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.ArgumentNullException"><span data-ttu-id="812a8-137">当任一参数为 <see langword="null" /> 时发生。</span><span class="sxs-lookup"><span data-stu-id="812a8-137">Occurs if any of the arguments are <see langword="null" />.</span></span></exception>
-        <exception cref="T:System.ArgumentException"><span data-ttu-id="812a8-138">在以下情况下发生：</span><span class="sxs-lookup"><span data-stu-id="812a8-138">Occurs in the following cases:</span></span>  
+        <exception cref="T:System.ArgumentNullException"><span data-ttu-id="2509e-137">当任一参数为 <see langword="null" /> 时发生。</span><span class="sxs-lookup"><span data-stu-id="2509e-137">Occurs if any of the arguments are <see langword="null" />.</span></span></exception>
+        <exception cref="T:System.ArgumentException"><span data-ttu-id="2509e-138">在以下情况下发生：</span><span class="sxs-lookup"><span data-stu-id="2509e-138">Occurs in the following cases:</span></span>  
   
--   <span data-ttu-id="812a8-139">如果任一参数为空字符串。</span><span class="sxs-lookup"><span data-stu-id="812a8-139">If any of the parameters are empty strings.</span></span>  
+<span data-ttu-id="2509e-139">-   如果任何参数为空字符串。</span><span class="sxs-lookup"><span data-stu-id="2509e-139">-   If any of the parameters are empty strings.</span></span>  
   
--   <span data-ttu-id="812a8-140">如果路径不是有效的绝对路径（即不在项目根路径下）。</span><span class="sxs-lookup"><span data-stu-id="812a8-140">If the path is not a valid absolute path (that is, not under the project root path).</span></span>  
+<span data-ttu-id="2509e-140">-   如果路径不是有效的绝对路径（即不在项目根路径下）。</span><span class="sxs-lookup"><span data-stu-id="2509e-140">-   If the path is not a valid absolute path (that is, not under the project root path).</span></span>  
   
--   <span data-ttu-id="812a8-141">如果已存在具有所提供名称的 SharePoint 项目项。</span><span class="sxs-lookup"><span data-stu-id="812a8-141">If a SharePoint project item with the provided name already exists.</span></span></exception>
+<span data-ttu-id="2509e-141">-   如果已有包含所提供名称的 SharePoint 项目项。</span><span class="sxs-lookup"><span data-stu-id="2509e-141">-   If a SharePoint project item with the provided name already exists.</span></span></exception>
       </Docs>
     </Member>
     <Member MemberName="Find">
@@ -173,9 +179,9 @@
         <Parameter Name="id" Type="System.Guid" />
       </Parameters>
       <Docs>
-        <param name="id"><span data-ttu-id="812a8-142">要查找的 SharePoint 项目项实例的 ID。</span><span class="sxs-lookup"><span data-stu-id="812a8-142">The ID of the SharePoint project item instance to find.</span></span></param>
-        <summary><span data-ttu-id="812a8-143">按其 ID 查找 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem" /> 实例。</span><span class="sxs-lookup"><span data-stu-id="812a8-143">Finds a <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem" /> instance by its ID.</span></span></summary>
-        <returns><span data-ttu-id="812a8-144">如果找到，则为表示 SharePoint 项目项实例的对象；否则为 <see langword="null" />。</span><span class="sxs-lookup"><span data-stu-id="812a8-144">An object representing the SharePoint project item instance if it found; <see langword="null" /> otherwise.</span></span></returns>
+        <param name="id"><span data-ttu-id="2509e-142">要查找的 SharePoint 项目项实例的 ID。</span><span class="sxs-lookup"><span data-stu-id="2509e-142">The ID of the SharePoint project item instance to find.</span></span></param>
+        <summary><span data-ttu-id="2509e-143">按其 ID 查找 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem" /> 实例。</span><span class="sxs-lookup"><span data-stu-id="2509e-143">Finds a <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem" /> instance by its ID.</span></span></summary>
+        <returns><span data-ttu-id="2509e-144">如果找到，则为表示 SharePoint 项目项实例的对象；否则为 <see langword="null" />。</span><span class="sxs-lookup"><span data-stu-id="2509e-144">An object representing the SharePoint project item instance if it found; <see langword="null" /> otherwise.</span></span></returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -195,14 +201,14 @@
         <Parameter Name="folderPath" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="folderPath"><span data-ttu-id="812a8-145"><see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem" /> 文件夹路径。</span><span class="sxs-lookup"><span data-stu-id="812a8-145">A <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem" /> folder path.</span></span></param>
-        <summary><span data-ttu-id="812a8-146">按其文件夹路径获取 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem" /> 的实例。</span><span class="sxs-lookup"><span data-stu-id="812a8-146">Gets an instance of a <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem" /> by its folder path.</span></span></summary>
-        <value><span data-ttu-id="812a8-147">如果它找到，则 SharePoint 项目项的实例<see langword="null" />或<see langword="Nothing" />否则为。</span><span class="sxs-lookup"><span data-stu-id="812a8-147">An instance of a SharePoint project item if it is found; <see langword="null" /> or <see langword="Nothing" /> otherwise.</span></span></value>
+        <param name="folderPath"><span data-ttu-id="2509e-145"><see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem" /> 文件夹路径。</span><span class="sxs-lookup"><span data-stu-id="2509e-145">A <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem" /> folder path.</span></span></param>
+        <summary><span data-ttu-id="2509e-146">按其文件夹路径获取 <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem" /> 的实例。</span><span class="sxs-lookup"><span data-stu-id="2509e-146">Gets an instance of a <see cref="T:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem" /> by its folder path.</span></span></summary>
+        <value><span data-ttu-id="2509e-147">如果找到 SharePoint 项目项, 则为该实例; 否则为。<see langword="null" />否则为<see langword="Nothing" /> 。</span><span class="sxs-lookup"><span data-stu-id="2509e-147">An instance of a SharePoint project item if it is found; <see langword="null" /> or <see langword="Nothing" /> otherwise.</span></span></value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <span data-ttu-id="812a8-148">`folderPath` 可以是绝对文件夹路径或项目文件夹的相对路径。</span><span class="sxs-lookup"><span data-stu-id="812a8-148">`folderPath` can be either an absolute folder path or a relative path to the project folder.</span></span>  
+ <span data-ttu-id="2509e-148">`folderPath`可以是绝对文件夹路径, 也可以是项目文件夹的相对路径。</span><span class="sxs-lookup"><span data-stu-id="2509e-148">`folderPath` can be either an absolute folder path or a relative path to the project folder.</span></span>  
   
  ]]></format>
         </remarks>
@@ -221,8 +227,8 @@
         <ReturnType>Microsoft.VisualStudio.SharePoint.ISharePointProject</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="812a8-149">获取拥有此集合的项目实例。</span><span class="sxs-lookup"><span data-stu-id="812a8-149">Gets the project instance owning this collection.</span></span></summary>
-        <value><span data-ttu-id="812a8-150">表示一个项目实例的对象。</span><span class="sxs-lookup"><span data-stu-id="812a8-150">An object representing a project instance.</span></span></value>
+        <summary><span data-ttu-id="2509e-149">获取拥有此集合的项目实例。</span><span class="sxs-lookup"><span data-stu-id="2509e-149">Gets the project instance owning this collection.</span></span></summary>
+        <value><span data-ttu-id="2509e-150">一个表示项目实例的对象。</span><span class="sxs-lookup"><span data-stu-id="2509e-150">An object representing a project instance.</span></span></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
