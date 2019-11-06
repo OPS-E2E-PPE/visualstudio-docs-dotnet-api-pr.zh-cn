@@ -13,14 +13,16 @@
       "type_mapping": {
         "Conceptual": "Content",
         "ManagedReference": "Content",
-        "RestApi": "Content"
+        "RestApi": "Content",
+        "NetEnum":"Content",
+        "NetDelegate":"Content",
+        "NetNamespace":"Content",
+        "NetMember":"Content",
+        "NetType":"Content"
       },
       "build_entry_point": "docs",
       "template_folder": "_themes",
       "version": 0,
-      "customized_template_paths": [
-        "_dependentPackages/memberpage.plugins/content"
-      ],
       "customized_tasks": {
         "docset_prebuild": [
           "_dependentPackages/ECMA2Yaml/tools/Run.ps1",
@@ -71,13 +73,6 @@
       "path_to_root": "_dependentPackages/ECMA2Yaml",
       "target_framework": "net45",
       "version": "latest"
-    },
-    {
-      "path_to_root": "_dependentPackages/memberpage.plugins",
-      "target_framework": "net45",
-      "version": "latest",
-      "id": "memberpage.plugins",
-      "nuget_feed": "https://www.myget.org/F/docfx/api/v2"
     }
   ],
   "ECMA2Yaml": [
@@ -86,35 +81,48 @@
       "SourceXmlFolder": "visualstudiosdk",
       "OutputYamlFolder": "dotnet-vssdk/api",
       "SourceMetadataFolder": "dotnet-vssdk\\add\\metadata",
-      "Flatten": true
+      "Flatten": true,
+      "SDPMode": true
     },
     {
       "id": "vssdk-officedev-reference-sharepoint",
       "SourceXmlFolder": "officedev-reference/sharepoint",
       "OutputYamlFolder": "dotnet-vssdk/api",
       "SourceMetadataFolder": "dotnet-vssdk\\add\\metadata",
-      "Flatten": true
+      "Flatten": true,
+      "SDPMode": true
     },
     {
       "id": "vssdk-officedev-reference-vsto",
       "SourceXmlFolder": "officedev-reference/vsto",
       "OutputYamlFolder": "dotnet-vssdk/api",
       "SourceMetadataFolder": "dotnet-vssdk\\add\\metadata",
-      "Flatten": true
+      "Flatten": true,
+      "SDPMode": true
     },
     {
       "id": "vssdk-mstest",
       "SourceXmlFolder": "mstest",
       "OutputYamlFolder": "dotnet-vssdk/api",
       "SourceMetadataFolder": "dotnet-vssdk\\add\\metadata",
-      "Flatten": true
+      "Flatten": true,
+      "SDPMode": true
+    },
+    {
+      "id": "vssdk-relatedpackages",
+      "SourceXmlFolder": "relatedpackages",
+      "OutputYamlFolder": "dotnet-vssdk/api",
+      "SourceMetadataFolder": "dotnet-vssdk\\add\\metadata",
+      "Flatten": true,
+      "SDPMode": true
     }
   ],
   "SplitTOC": [
     "dotnet-vssdk/api/vssdk-visualstudiosdk/toc.yml",
     "dotnet-vssdk/api/vssdk-officedev-reference-sharepoint/toc.yml",
     "dotnet-vssdk/api/vssdk-officedev-reference-vsto/toc.yml",
-    "dotnet-vssdk/api/vssdk-mstest/toc.yml"
+    "dotnet-vssdk/api/vssdk-mstest/toc.yml",
+    "dotnet-vssdk/api/vssdk-relatedpackages/toc.yml"
   ],
   "DiffFolder": [
     "dotnet-vssdk/api"
